@@ -949,14 +949,14 @@ a=qb+r_1=qb+r_2
 <section id="computações-com-python" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" data-anchor-id="computações-com-python"><span class="header-section-number">3.2.1</span> Computações com Python</h3>
 <p>Vamos ver agora como calcular o quociente e o resto na linguagem Python. O quociente de dois números naturais pode ser calculado por “//” e o resto por “%”. Considere o seguinte exemplo:</p>
-<div id="d084ff22" class="cell" data-execution_count="1">
+<div id="a92c2baa" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">11</span><span class="op">//</span><span class="dv">5</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">11</span> <span class="op">%</span> <span class="dv">5</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Normalmente usamos variáveis para guardar os números que usamos na computação. Refazemos a computatação anterior usando variáveis:</p>
-<div id="076db932" class="cell" data-execution_count="2">
+<div id="d5c341bf" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">11</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a<span class="op">//</span>b</span>
@@ -965,13 +965,13 @@ a=qb+r_1=qb+r_2
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Verifiquemos que o quociente e o resto satisfaz a igualdade no Teorema da Divisão:</p>
-<div id="e391b930" class="cell" data-execution_count="3">
+<div id="ed0dac5c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> q <span class="op">=</span> a<span class="op">//</span>b<span class="op">;</span> r <span class="op">=</span> a <span class="op">%</span> b</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">==</span> q<span class="op">*</span>b<span class="op">+</span>r</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Precisa-se prestar atenção quando trabalhamos com números negativos. Quando <span class="math inline">\(a\)</span> é negativo e <span class="math inline">\(b\)</span> é positivo, o quociente e o resto calculado por Python coincide com o que segue do Teorema.</p>
-<div id="fac8599f" class="cell" data-execution_count="4">
+<div id="f9c8513f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="op">-</span><span class="dv">11</span><span class="op">;</span> b <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a<span class="op">//</span>b</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">3</span></span>
@@ -979,7 +979,7 @@ a=qb+r_1=qb+r_2
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Mas quando <span class="math inline">\(b\)</span> for negativo, o Python devolve um resto negativo que não é compatível com nosso Teorema.</p>
-<div id="cdd3b31d" class="cell" data-execution_count="5">
+<div id="4eca8479" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">11</span><span class="op">;</span> b <span class="op">=</span> <span class="op">-</span><span class="dv">5</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a<span class="op">//</span>b</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">3</span></span>
@@ -988,7 +988,7 @@ a=qb+r_1=qb+r_2
 </div>
 <p>Nestes casos o output dado por Python precisa ser modificado para ser compatível com o Teorema de Divisão enunciado anteriormente.</p>
 <p>Python possui a função <a href="https://docs.python.org/3/library/functions.html#divmod"><code>divmod</code></a> que calcula o quociente e o resto no mesmo tempo. Quando precisa-se calcular os dois, o uso desta função é preferível sobre usar as operações <code>//</code> e <code>%</code> separadamente.</p>
-<div id="3f854eaa" class="cell" data-execution_count="6">
+<div id="b7c63842" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> q, r <span class="op">=</span> <span class="bu">divmod</span>( <span class="dv">11</span>, <span class="dv">5</span> )</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> q, r</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>, <span class="dv">1</span>)</span>
@@ -1003,7 +1003,7 @@ a=qb+r_1=qb+r_2
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A função <code>divmod</code> pode ser modificado para devolver o quociente e o resto que satisfaz a condição do Teorema como foi enunciado por nós.</p>
-<div id="04e1f765" class="cell" data-execution_count="7">
+<div id="a67092ba" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_divmod( a, b ):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculamos o quociente e resto com divmod</span></span>
@@ -1017,7 +1017,7 @@ a=qb+r_1=qb+r_2
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> q<span class="op">+</span><span class="dv">1</span>, r<span class="op">-</span>b</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O resultado devolvido por esta nova função está de acordo com a nossa definição de quociente e resto.</p>
-<div id="c51ea23b" class="cell" data-execution_count="8">
+<div id="ee4f3fd7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> my_divmod(<span class="dv">13</span>,<span class="dv">5</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
