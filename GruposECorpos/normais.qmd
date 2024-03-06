@@ -1,0 +1,121 @@
+---
+title: "Subgrupos normais e homomorfismos"
+number-sections: true
+lang: pt-BR
+---
+
+## Subgrupos normais
+
+:::{#def-normal}
+Um subgrupo $H$ de $G$ é dito normal se $gH=Hg$ para todo $g\in G$. Esta condição pode ser expressa por dizer que $g^{-1}Hg=H$ para todo $g\in G$. Escrevemos que $H\unlhd G$, ou $H\lhd G$ quando $H< G$.
+:::
+
+As afirmações dos seguintes exemplos podem ser justificadas ou por exercícios anteriores ou por contas triviais.
+
+:::{#exm-normal}
+- $\{1\}$ e $G$ são normais em $G$.
+- Em um grupo abeliano, todo subgrupo é normal.
+- O subgrupo $SL(n,\F)$ é normal em $GL(n,\F)$.
+- Se $|G:H|=2$, então $H$ é normal em $G$.
+- $\left<(1,2)(3,4),(1,3)(2,4)\right>=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$ é normal em $S_4$.
+- $\left<(1,2)\right>=\{1,(1,2)\}$ não é normal em $S_3$.
+:::
+
+## Grupos quocientes
+
+:::{#def-quotient}
+Seja $N$ um subgrupo normal em um grupo $G$. Definimos uma operação no conjunto das classes laterais $Ng$ (onde $g\in G$) no modo seguinte:
+$$
+(Ng_1)(Ng_2)=Ng_1g_2.
+$$
+Como $N$ é normal, esta operação é bem definida. Além disso, ela é associativa, $N1=N$ é elemento neutro, e todo elemento $Ng$ tem inverso (nomeadamente, $Ng^{-1}$). Assim o conjunto das classes laterais com esta operação é um grupo denotado por $G/N$. O grupo $G/N$ é dito grupo quociente (de $G$ por $N$). Temos que $|G/N|=|G:N|$. Em particular, se $G$ é finito, então $|G/N|=|G|/|N|$.
+:::
+
+:::{#exm-quot}
+Considere o grupo aditivo $\Z$, seja $n\geq 2$ e seja $n\Z=\left<n\right>=\{nk\mid k\in \Z\}$. Se $a\in\Z$, então a classe lateral $n\Z+a$ é a classe residual $\{nk+a\mid k\in\Z\}$ e a operação entre classes laterais é definida como
+$$
+(n\Z+a)+(n\Z+b)=n\Z+(a+b)
+$$
+e esta operação corresponde à operação $+$ entre classes residuais modulo $n$. Temos então que o grupo $\Z_n$ pode ser visto como o grupo quociente $\Z/n\Z$.
+:::
+
+:::{#def-quot}
+Sejam $G$ e $H$ grupos. Um mapa $\varphi:G\to H$ é dito homomorfismo se
+$$
+\varphi(ab)=\varphi(a)\varphi(b)\quad\mbox{para todo}\quad a,b\in G.
+$$.
+:::
+
+:::{#exr-hom}
+Verifique as seguintes propriedades de um homomorfismo $\varphi:G\to H$.
+
+
+Se $g\in G$ e $n\in\Z$, então $\varphi(g^n)=\varphi(g)^n$. Em particular, $\varphi(g^{-1})=\varphi(g)^{-1}$.
+$\varphi(1_G)=\varphi(1_H)$.
+:::
+
+:::{#exm-hom}
+Se $G$ e $H$ são grupos, então o mapa $\varphi:G\to H$ definido por $\varphi(g)=1_H$ é um homomorfismo.
+Se $G\leq H$, então o mapa $\varphi:G\to H$ definido por $\varphi(g)=g$ é um homorfismo. Este mapa é chamado de inclusão ou mergulho de $G$ em $H$.
+
+Se $N$ é um subgrupo normal de $G$ então o mapa $\varphi:G\to G/N$ definido por $\varphi(g)=Ng$ é um homomorfismo. Este mapa é chamado de homomorfismo natural ou projeção natural de $G$ em $G/N$.
+Pelo raciocínio anterior, o mapa $\varphi :\Z\to \Z_n$ definido por $\varphi(k)=k+n\Z$ é um homomorfismo.
+:::
+
+Em relação com homomorfismos usamos as seguintes expressões.
+
+* Morfismo é a mesma coisa que homomorfismo. A palavra morfismo está mais usada ma teoria de categorias
+* Monomorfismo: homomorfismo injetivo.
+* Epimorfismo: homomorfismo sobrejetivo.
+* Isomorfismo: homomorfismo injetivo e sobrejetivo.
+* Endomorfismo: um homomorfismo $G\to G$.
+* Automorfismo: um isomorfismo $G\to G$.
+
+:::{#def-isom}
+Dois grupos $G$ e $H$ são ditos isomorfos que existe um isomorfismo (ou seja, um homomorfismo injetivo e sobrejetivo) $G\to H$. O conjunto de automorfismos $G\to G$ é um grupo chamado do grupo de automorfismos de $G$. Este grupo é denotado por $\mbox{Aut}(G)$.
+:::
+
+:::{#def-ker-im}
+Dado um homorfismo $\varphi:G\to H$, definimos
+\begin{eqnarray*}
+\mbox{Im}\,\varphi&=&\{\varphi(g)\mid g\in G\}\\
+\ker\varphi&=&\{g\in G\mid \varphi(g)=1_H\}.
+\end{eqnarray*}
+:::
+
+O seguinte resultado resuma as propriedades mais importantes de homomorfismos.
+
+:::{#thm-ker-im}
+Seja $\varphi:G\to H$ um homomorfismo. As seguintes afirmações são verdadeiras.
+
+1. $\mbox{Im}\,\varphi\leq H$;
+2. $\ker\varphi\unlhd G$;
+3. $\varphi$ é injetivo se e somente se $\ker\varphi=\{1_G\}$;
+4. $G/\ker\varphi\cong \mbox{Im}\,\varphi$.
+:::
+
+:::{.proof}
+1. Exercício.
+
+2. Assuma que $g\in G$ e $h\in\ker\varphi$. Então
+$$
+\varphi(g^{-1}hg)=\varphi(g^{-1})\varphi(h)\varphi(g)=\varphi(g)^{-1}\varphi(g)=1_H
+$$
+que diz que $g^{-1}hg\in\ker \varphi$. O mesmo argumento implica que $ghg^{-1}\in\ker\varphi$. Um exercício em cima mostra que $\ker\varphi\unlhd G$.
+
+3. Se $\varphi$ é injetivo, então $1_G$ deve ser o único elemento cuja imagem é $1_H$, então $\ker\varphi=\{1_G\}$. Assuma agora que $\varphi$ é injetivo e sejam $a,b\in G$ tais que $\varphi(a)=\varphi(b)$. Isto implica que
+$$
+1_H=\varphi(a)\varphi(b)^{-1}=\varphi(ab^{-1}),
+$$
+ou seja, $ab^{-1}\in \ker\varphi=\{1_G\}$. Daqui obtemos que $ab^{-1}=1_H$; ou seja $a=b$. Assim, temos que $\varphi$ é injetivo.
+
+4. Seja $N=\ker\varphi$ e defina
+$$
+\bar \varphi:G/N\to \mbox{Im}\,\varphi,\quad Ng\mapsto \varphi(g).
+$$
+É fácil ver que $\bar\varphi$ é um homomorfismo bem definido e ele é sobrejetivo. Assuma que $g\in G$ tal que $\bar\varphi(Ng)=1_H$. Isto implica que $\varphi(g)=1_H$; ou seja, $g\in N$ e $Ng=N=1_{G/N}$. Portanto $\ker\bar\varphi=\{1_{G/N}\}$ e isto implica que $\bar\varphi$ é injetivo. Logo $\bar\varphi$ é um isomorfismo e $G/\ker\varphi\cong \mbox{Im}\,\varphi$.
+:::
+
+:::{#exm-ker-hom}
+Sejam $\F$ um corpo, $n\geq 2$ e $\varphi: GL(n,\F)\to \F^*=\F\setminus\{0\}$ definido com $\varphi(X)=\det X$. Temos que $\varphi$ é um homomorfismo sobrejetivo e que $\ker\varphi=SL(n,\F)$. Pelo teorema anterior, obtemos que $GL(n,\F)/SL(n,\F)\cong \F^*$.
+:::

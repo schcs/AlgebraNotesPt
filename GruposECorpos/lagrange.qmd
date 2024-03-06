@@ -1,0 +1,129 @@
+---
+title: "Subgrupos e classes laterais"
+number-sections: true
+lang: pt-BR
+---
+
+
+## Subgrupos
+
+:::{#def-subgroup}
+Seja $X$ um grupo, e $Y\subseteq X$ não vazio. Dizemos que $Y$ é um *subgrupo* de $X$ se $Y$ é fechado para produto e para inversos; ou seja, para todo $x,y\in Y$,
+
+* $x\cdot y\in Y$;
+* $x^{-1}\in Y$.
+
+Se $Y$ é um subgrupo de $X$, então escrevemos $Y\leq X$. Note que a definição implica que o elemento neutro de $X$ pertence a cada subgrupo $Y$ e ele é o elemento neutro de $Y$.
+:::
+
+:::{#exm-exs-subgroups}
+* Se $G$ é um grupo, então $G\leq G$. Um subgrupo de $G$ diferente de $G$ é dito subgrupo *próprio*. Escreve-se $H<G$ para enfatizar que  $H$ é um subgrupo próprio de $G$.  
+* Se $G$ é um grupo, então $\{1\}\leq G$ e este é o único subgrupo com um elemento. Se $H$ é um subgrupo e $H\neq\{1\}$, então $H$ é dito *não trivial*.
+* $SL(V)\leq GL(V)\leq \sym V$ e $SL(n,\K)\leq GL(n,\K)$.
+* $\{2n\mid n\in\Z\}\leq \Z$, mas $\{2n+1\mid n\in\Z\}\not\leq \Z$ (considerando a operação $+$).
+* $\{1,-1\}\leq\{1,-1,i,-i\}\leq \C^*$.
+* As simetrias rotacionais formam um subgrupo de $D_n$, mas as simetrias reflexivas não (explique porque).
+:::
+
+## Classes laterais
+
+:::{#def-coclass}
+Seja $G$ um grupo e $H\leq G$ (subgrupo de $G$). Se $g\in G$, então o conjunto
+$$
+gH=\{gh\mid h\in H\}
+$$
+é chamado de *classe lateral à esquerda* (de $H$ em $G$). O conjunto
+$$
+Hg=\{hg\mid h\in H\}
+$$
+é chamado de *classe lateral à direita* (de $H$ em $G$).
+:::
+
+:::{#exm-coclass0}
+O leitor já deve conhecer vários exemplos de classes laterais. 
+
+- Considere o grupo $(\Z,+)$. Seja $n\in\N$ e seja $H=n\Z=\{qn\mid q\in\Z\}\leq \Z$ o subgrupo formado pelos múltiplos de $n$. Se $a\in\Z$, a classe lateral 
+$$
+H+a=\{qn+a\mid q\in\Z\}=\{qn+r\mid q\in \Z\}=H+r
+$$
+onde $r\in\{0,\ldots,n-1\}$ é o resto de $a$ quando dividido por $n$. Portanto, a classe lateral $H+a$ coincide com a classe residual 
+$$
+H+r=\{qn+r\mid q\in\Z\}
+$$
+dos inteiros que dão resto $q$ quando divididos por $n$. Ou seja, o número de classes laterais é $n$ (finito) e $a_1,a_2\in\Z$ pertencem a mesma classe lateral se $a_1\equiv a_2\pmod n$. 
+- Considere o grupo $(\R^3,+)$ e considere o subgrupo 
+$$
+H=\{(x,y,z)\mid x+y+z=0\}.
+$$
+O supgrupo $H$ pode ser visto como um plano em $\R^3$. Se $v=(x_0,y_0,z_0)$, então a classe lateral 
+$$
+H+v=\{(x,y,z)\mid x+y+z=x_0+y_0+z_0\}
+$$
+é o plano paralelo a $H$ e passa pelo vetor $v$. Além disso, cada plano paralelo a $H$ é uma classe lateral de $H$. Neste caso, temos um número infinito de classes laterais. 
+- Seja $\F$ um corpo, $\alpha\in\F^*$ e seja $A\in\GL n\F$ uma matriz com $\det A=\alpha$.  Então a classe lateral $\SL n\F A$ é o conjunto de  matrizes $n\times n$ com determinante $\alpha$. O número de classes laterais de $\SL n\F$ em $\GL n\F$ é $|\F^*|$.
+:::
+
+:::{#exm-coclass}
+Seja $G=S_3$ e seja $H=\{1,(1,2)\}$. Então temos as seguintes classes laterais:
+\begin{eqnarray*}
+H\cdot 1&=&H(1,2)=H=\{1,(1,2)\};\\
+H(1,3)&=&H(1,2,3)=\{(1,3),(1,2,3)\};\\
+H(2,3)&=&H(1,3,2)=\{(2,3),(1,3,2)\};\\
+1H&=&(1,2)H=H=\{1,(1,2)\};\\
+(1,3)H&=&(1,3,2)H=\{(1,3),(1,3,2)\};\\
+(2,3)H&=&(1,2,3)H=\{(2,3),(1,2,3)\}.
+\end{eqnarray*}
+Portanto, $H$ tem três classes laterais à direita e três classes laterais à esquerda.
+:::
+
+No seguinte lema, vamos enunciar algumas propriedades das classes laterais. Nós vamos tratar apenas classes laterais à direita, propriedades análogas podem ser verificadas para classes laterais à esquerda.
+
+:::{#lem-coclass}
+As seguintes afirmações são verdadeiras para um subgrupo $H\leq G$ e para $g,g_1,g_2\in G$:
+
+1. $Hg\subseteq G$;
+2. se $g_1,g_2\in G$, então $Hg_1=Hg_2$ se e somente se $g_1g_2^{-1}\in H$; em particular $Hg=H$ se e somente se $g\in H$.
+3. $|Hg|=|H|$;
+4. $H(g_1g_2)=(Hg_1)g_2$;
+5. se $g_1,g_2\in G$ tais que $Hg_1\cap Hg_2\neq \emptyset$, então $Hg_1=Hg_2$.
+:::
+
+:::{.proof}
+Demonstração: Itens 1., 2., e 4. serão exercícios.
+
+:::{}
+3. Defina $\psi:H\to Hg$, como $\psi(h)=hg$. Então $\psi$ é sobrejetivo pela definição de $Hg$. Se $\psi(h_1)=\psi(h_2)$, então $h_1g=h_2g$, que implica que $h_1=h_2$. Portanto $\psi$ é injetivo, e em particular $\psi$ é uma bijeção entre $H$ e $Hg$. Isto implica que $|H|=|Hg|$.
+:::
+
+:::{}
+5. Assuma que $x\in Hg_1\cap Hg_2$. Portanto $x=h_1g_1=h_2g_2$ com $h_1,h_2\in H$. Isto implica que $h_2^{-1}h_1=g_2g_1^{-1}$ e em particular que $g_2g_1^{-1}\in H$. Ora, item 2. implica que $Hg_2=Hg_1$.
+:::
+:::
+
+## O Teorema de Lagrange
+
+![Joseph-Louis Lagrange (1736-1813)](https://upload.wikimedia.org/wikipedia/commons/1/19/Lagrange_portrait.jpg)
+
+Se  $H\leq G$, então o lema anterior implica que as classes laterais $Hg$ à direita (ou à esquerda) formam uma partição do conjunto $G$. Além disso, cada classe lateral tem a mesma cardinalidade (igual à cardinalidade de $H$). Assuma $G$ é finito e que $Hg_1,\ldots,Hg_k$ são as classes laterais distintas de $H$. Temos que
+$$
+G=Hg_1\cup \cdots\cup Hg_k
+$$
+onde a união é disjunta. Portanto
+$$
+|G|=|Hg_1|+\cdots+|Hg_k|=|H|+\cdots+|H|=k|H|.
+$$
+Assim obtemos o Teorema de Lagrange.
+
+:::{#thm-lagrange}
+(O Teorema de [Lagrange](https://pt.wikipedia.org/wiki/Joseph-Louis_Lagrange))
+Seja $G$ um grupo finito e $H$ um subgrupo de $G$. Então $|H|$ é um divisor de $|G|$.
+:::
+
+:::{#def-index}
+O número de classes laterais de $H$ em $G$ é chamado de *índice de $H$ em $G$* e é denotado por $|G:H|$. 
+:::
+
+Note que se $G$ for finito e $H\leq G$, então $|G:H|=|G|/|H|$.
+
+
+

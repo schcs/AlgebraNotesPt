@@ -1,0 +1,251 @@
+---
+title: "As primeiras definições"
+number-sections: true
+lang: pt-BR
+---
+
+
+## Operações binárias e grupos
+
+:::{#def-binary-op}
+Seja $X$ um conjunto. Uma função $f\colon X\times X\to X$ é dita uma *operação binária* ou simplesmente uma *operação*. Se $x,y\in X$, então o resultado da operação entre $x$ e $y$ é $f(x,y)$. Normalmente o resultado de uma operação entre $x,y\in X$ será escrito como $x\cdot y$, $x+y$, $x\circ y$, $x\diamond y$, ou, quando não houver risco de ambiguidade, simplesmente como $xy$.
+:::
+
+:::{#def-props-binary-op}
+Sejam $X$ um conjunto e $\cdot$ uma operação em $X$.
+
+* A operação $\cdot$ é dita *associativa*, se $(x\cdot y)\cdot z=x\cdot(y\cdot z)$ para todo $x,y,z\in X$.
+* A operação $\cdot$ é dita *comutativa*, se $x\cdot y=y\cdot x$ para todo $x,y\in X$.
+* $X$ possui *elemento neutro* para a operação $\cdot$, se existir um elemento $e\in X$ tal que $ex=xe=x$ para todo $x\in X$.
+* Assuma que $X$ possui elemento neutro $e$ para a operação $\cdot$ e seja $x\in X$. Diz-se que $x$ possui *inverso*, se existe $y\in X$ tal que $xy=yx=e$. O elemento $y$ é dito *um inverso* de $x$ (o inverso pode não ser único).
+:::
+
+:::{#def-grp}
+Assuma que $X$ é um conjunto com uma operação $\cdot$. Dizemos que $X$ é um *grupo* se
+
+* a operação $\cdot$ é associativa;
+* $X$ possui elemento neutro;
+* todo elemento de $X$ possui inverso.
+
+Além disso, se a $\cdot$ é comutativa, então $X$ é dito *grupo comutativo* ou *grupo abeliano*.
+:::
+
+Se $G$ é um grupo com a operação $\cdot$, então, para evitar ambiguidade, escrevemos que *$(G,\cdot)$ é um grupo*. Quando não há perigo de ambiguidade, escreve-se simplesmente que *$G$ é um grupo*. Por exemplo, $(\Z,+)$ é um grupo, mas $(\Z,\cdot)$ não é.
+
+:::{#lem-unique}
+Seja $G$ um grupo.
+
+* O elemento neutro de $G$ é único.
+* Se $g\in G$, o inverso de $G$ é único.
+:::
+
+:::{.proof}
+Exercício.
+:::
+
+## Notações 
+
+Usamos dois sistemas principais de notações quando consideramos grupos:
+
+*Notação aditiva:* a operação é denotada por $+$, o elemento neutro por $0$, o inverso de $g$ por $-g$. A soma $g+\cdots+g$ ($n$ vezes) está escrita como $n\cdot g$ ou $ng$. Se $n$ for um número natural, elemento $n(-g)=-(ng)$ será escrita como $-ng$. Concordamos também que $0g=0$. Esta notação é usada principalmente em grupos abelianos.
+
+*Notação multiplicativa:* A operação é denotada por $\cdot$ ou simplesmente por concatenação, por exemplo $xy$. O elemento neutro é denotado por $1$, o inverso de $g$ por $g^{-1}$. O produto $g\cdots g$ ($n$ vezes) será escrito como $g^n$. Se $n$ for um número natural, o elemento $(g^{-1})^n=(g^n)^{-1}$ será escrito como $g^{-n}$. Além disso, $g^0=1$. Esta notação é mais comum que a notação aditiva e pode ser usada em grupos abelianos e também em grupos não abelianos.
+
+## Os primeiros exemplos
+
+:::{#exm-first-examples}
+Aqui são os primeiros exemplos de grupos. Ao longo da disciplina, nós vamos estudar exemplos mais complexos. Assumimos que os alunos sabem pelo menos a definição de um corpo e conhecem os exemplos básicos, tais como $\Q$, $\R$, $\C$, ou $\Z_p$.
+
+- $(\Z,+)$ é um grupo abeliano.
+- Os conjuntos $\{1,-1\}$, $\{1,-1,i,-i\}$ são grupos abelianos com a multiplicação ($i$ é a unidade imaginária).
+- Se $\F$ é um corpo, então $(\F,+)$ e $(\F\setminus\{0\},\cdot)$ são grupos abelianos. O conjunto $\F\setminus\{0\}$ será denotado por $\F^*$. 
+- Se $R$ é um anel, então $(R,+)$ é um grupo abeliano. Se $R^*$ é o conjunto dos elementos invertíveis de $R$, então $(R^*,\cdot)$ é também um grupo abeliano. 
+- Seja $X$ um conjunto não vaziu. Definimos
+$$
+\sym X=\{f\colon X\to X\mid \mbox{$f$ é bijetiva}\}.
+$$
+O conjunto $\sym X$ é um grupo com a operação de composição e o nome deste grupo é o *grupo simétrico* sobre o conjunto $X$. Os elementos de $\sym X$ são chamadas de *permutações* (do conjunto $X$). Frequentemente, $X=\{1,\ldots,n\}$ e neste caso escrevemos $\sym X=S_n$ e o nome do grupo é *grupo simétrico de grau $n$*.
+- Se $V$ é um espaço vetorial sobre um corpo $\F$, então definimos
+$$
+\GLV V=\{f\colon V\to V\mid \mbox{$f$ é linear a bijetiva}\}.
+$$
+O conjunto $\GLV V$ é um grupo com a operação de composição. O grupo $\GLV V$ é chamado de *grupo geral linear*. Se $V$ tem dimensão finita, então pode-se definir
+$$
+\SLV V=\{f\in \GLV V\mid \det f=1\}.
+$$
+(Note que o determinante de um operador linear de um espaço de dimensão finita é bem definido e independe da base.) O grupo $\SLV V$ é chamado de *grupo especial linear*.
+- Seja $\F$ um corpo e $n\geq 1$. Defina
+$$
+\GL n\F=\{A\in M_{n\times n}(\F)\mid \mbox{$A$ é invertível}\}
+$$
+e
+$$
+\SL n\F=\{A\in \GL n\F\mid \det A=1\}.
+$$
+Estes conjuntos são grupos com a operação de multiplicação matricial.
+Os grupos $\GL n\F$ e $\SL n\F$ são também chamados de grupo geral linear e grupo especial linear. Se $\F=\Z_p$, então escrevemos $\GL np$ e $\SL np$ para $\GL n{\Z_p}$ e para $\SL n{\Z_p}$. Similarmente, se $\F$ é um corpo finito de ordem $q$, então escreve-se $\GL n\F=\GL nq$. Esta notação usa o fato que um corpo finito está unicamente determinado, a menos de isomorfismo, pela sua cardinalidade. Se $V$ é um espaço vetorial de dimensão $n$ sobre $\F$, então os grupos $\GLV V$, $\GL n\F$, e $\SLV V$, $\SL n\F$ são claramente relacionados, e nós vamos estudar esta relação mais tarde quando tratarmos o conceito de isomorfismo. Neste momento é importante entender que $\GLV V$ e $\GL n\F$ não são idênticos (iguais).
+- Seja $n\geq 3$ e considere um polígono regular com $n$ lados desenhado no plano. Este polígono possui $n$ simetrias de rotação (por $360/n$ graus para $n=0,\ldots,n-1$) e $n$ simetrias reflexivas. A coleção destas simetrias é fechada para a composição e é chamada de *grupo diedral* de grau $n$. O grupo diedral é denotado por $D_n$.
+:::
+
+## Ordem de grupo, ordem de elemento
+
+:::{#def-order}
+A *ordem* de um grupo $X$ é a cardinalidade de $X$ e é denotada por $|X|$. Se $|X|$ é finita, então dizemos que $X$ é um *grupo finito*. Caso contrário, diz-se que $X$ é um *grupo infinito*. Se $x\in X$, então a *ordem* $|x|$ de $x$ é definida na maneira seguinte. Se existir $n\geq 1$ tal que $x^n=1$, então $|x|$ é igual ao menor tal $n\geq 1$. Se tal número $n$ não existir, então $|x|$ é infinito.
+:::
+
+:::{#exm-order}
+- A ordem de $S_n$ (e mais geralmente a ordem de $\sym X$ quando $|X|=n$) é o número total de permutações do conjunto $\{1,\ldots,n\}$. Sabemos de Análise Combinatória que este número é $n!$ (n fatorial). Logo $|S_n|=n!$. 
+- $|D_n|=2n$.
+- A ordem de $\operatorname{GL}(n,p)$ é 
+  $$
+  p^{n(n-1)/2}\prod_{k=1}^n (p^k-1).
+  $$
+  Mais geralmente, se $\mathbb F$ é um corpo finito com $q$ elementos, então a ordem de $\operatorname{GL}(n,q)$ pode ser calculada usando a mesma fórmula, só substituindo $p$ com $q$. O leitor vai verificar isso nos exercícios.
+:::
+
+
+:::{#exm-order-el}
+- Se $G$ for um grupo, o único elemento de ordem $1$ é a identidade $1$. 
+- Se $a\in\Z\setminus\{0\}$, então $|a|=\infty$.
+- Se $2\in \Z_6$, então $|2|=3$.
+- Se $2\in\Z_5^*$, então $|2|=4$. 
+- Seja $M$ a matriz 
+  $$
+  \begin{pmatrix} 0 & i \\ i & 0\end{pmatrix}\in\operatorname{GL}(2,\C).
+  $$
+  Então $|M|=4$.
+- Seja $A$ a matriz 
+$$
+\begin{pmatrix} 1 & 1 \\ 0 & 1\end{pmatrix}\in\operatorname{GL}(2,\C).
+$$
+Então $|A|=\infty$. 
+:::
+
+:::{#exr-oder}
+Demonstre que se $G$ é um grupo finito e $a\in G$, então $|a|$ é finito.
+:::
+
+:::{#lem-order-div}
+Assuma que $a\in G$ e $a^k=1$ com algum $k\geq 1$. Então $|a|$ é um divisor de $k$. 
+:::
+
+:::{.proof}
+Primeiro, a definição de $|a|$ implica que $|a|$ é finito. Assuma que $m=|a|$ e escreva, $k=qm+r$ com $r\in\{0,\ldots,m-1\}$. Temos que 
+$$
+1=a^k=a^{qm+r}=(a^m)^qa^r=a^r.
+$$
+Ou seja, $a^r=1$. Como $m$ é o menor inteiro positivo tal que $a^m=1$, obtemos que $r=0$. Logo $m\mid k$, como foi afirmado.
+:::
+
+:::{#exm-fermat-euler}
+Seja $p$ um primo e seja $\Z_p^*=\Z_p\setminus\{0\}$. Considere o grupo $(\Z_p,\cdot)$. Pelo Pequeno Teorema de Fermat, temos que 
+$a^{p-1}=1$ para todo $a\in \Z_p^*$. O lema anterior implica que 
+$|a|\mid p-1$.
+
+Similarmente, denote the por $\Z_n^*$ o conjunto de elementos invertíveis de $\Z_n$. Então $\Z_n^*$ é um grupo para a multiplicação entre classes residuais. Sabemos do Teorema de Euler que 
+$$
+a^{\varphi(n)}=1\quad\mbox{para todo}\quad a\in\Z_n^*.
+$$ 
+Logo, $|a|\mid\varphi(n)$ vale para todo $a\in\Z_n^*$. 
+:::
+
+## A notação cíclica para permutações
+
+O grupo simétrico está entre os grupos mais importantes. Portanto é importante entender a notação usada para os elementos de $S_n$.
+
+Primeiro, se $\sigma\in\sym\Omega$ e $\alpha\in\Omega$, então a imagem de $\alpha$ por $\sigma$ será denotada por 
+$$
+\alpha\sigma.
+$$
+Ou seja, a bijeção $\sigma$ será escrita no lado direito de $\alpha$! Quando necessário, poderá-se usar parêntesis e escrever $(\alpha)\sigma$.
+
+É uma consequência desta notação que as permutações serão compostas da esquerda para a direita. Ou seja, a composição $\sigma_1\sigma_2$ será calculada por aplicar $\sigma_1$ primeiro e $\sigma_2$ depois. 
+
+ Considere por exemplo $S_8$; ou seja, o grupo de permutações do conjunto $\Omega=\{1,\ldots,8\}$. Uma permutação $\sigma\in S_8$ é uma bijeção $\sigma:\Omega\to\Omega$. Uma notação sensata é fazer uma lista de $\Omega$ com as imagens dos seus elementos. Por exemplo, 
+$$
+\sigma_1=\left[\begin{array}{cccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+2 & 3 & 4 & 8 & 7 & 6 & 1 & 5
+\end{array}\right].
+$$ 
+Neste caso, $1\sigma_1=2$, $2\sigma_1=3$, $3\sigma_1=4$, etc. Se
+$\sigma_2$ for um outro elemento de $S_8$, por exemplo,
+$$
+\sigma_2=\left[\begin{array}{cccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+4 & 6 & 1 & 3 & 5 & 8 & 7 & 2 
+\end{array}\right],
+$$ 
+então, lembrando que $\sigma_1\sigma_2$ significa "$\sigma_1$ primeiro e depois $\sigma_2$", 
+$$
+\sigma_1\sigma_2=\left[\begin{array}{cccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+6 & 1 & 3 & 2 & 7 & 8 & 4 & 5
+\end{array}\right].
+$$
+
+A *notação cíclica* nos permite usar uma notação mais compacta para permutações. 
+
+:::{#def-cycle}
+Seja $\Omega$ um conjunto e $a_1,\ldots,a_k\in\Omega$ elementos dois a dois distintos. O cíclo $(a_1,a_2,\ldots,a_k)$ é a permutação de $\sym\Omega$ que leva
+$$
+a_1\mapsto a_2,\ a_2\mapsto a_3,\ldots, a_{k-1}\mapsto a_k,\ a_k\mapsto a_1
+$$
+e deixa todo outro elemento de $\Omega$ fixado. 
+:::
+
+:::{exm-cycle}
+Por exemplo, o cíclo $(1,2,3,4,8,5,7)\in S_8$ é a permutação de $\Omega=\{1,\ldots,8\}$ que leva
+$$
+\left[\begin{array}{cccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+2 & 3 & 4 & 8 & 7 & 6 & 1 & 5
+\end{array}\right].
+$$
+Ou seja, este ciclo coincide com a permutação $\sigma_1$ em cima. Este mesmo ciclo pode ser também escrito como $(1,2,3,4,8,5,7)(6)$ para indicar que o número $6$ está fixado. O mesmo ciclo pode ser escrito também como $(3,4,8,5,7,1,2)$; ou seja, começando com um outro elemento de $\Omega$. Os ciclos $(1,2,3,4,8,5,7)$ e $(3,4,8,5,7,1,2)$ são iguais como permutações.
+:::
+
+:::{#def-distinct-cycle}
+Sejam $a_1,\ldots,a_k\in \Omega$ dois a dois distintos e 
+$b_1,\ldots,b_m\in \Omega$ também dois a dois distintos. Os ciclos $(a_1,\ldots,a_k)$ e $(b_1,\ldots,b_m)$ são *disjuntos* se 
+$$
+\{a_1,\ldots,a_k\}\cap\{b_1,\ldots,b_m\}=\emptyset.
+$$
+:::
+
+:::{#lem-distinct-commute}
+Ciclos disjuntos comutam. Ou seja, se $\sigma_1,\sigma_2\in\sym\Omega$ são ciclos disjuntos, então $\sigma_1\sigma_2=\sigma_2\sigma_1$.
+:::
+
+:::{.proof}
+Exercício.
+:::
+
+:::{#exm-prod-cycle}
+A permutação $\sigma_2$ em cima não é um ciclo, mas pode ser escrita como um produto de ciclos disjuntos:
+$$
+\sigma_2=(1,4,3)(2,6,8)=(1,4,3)(2,6,8)(5)(7).
+$$
+
+A permutação $\sigma_1\sigma_2$ pode ser escrita como 
+$$
+\sigma_1\sigma_2=(1,6,8,5,7,4,2)=(1,6,8,5,7,4,2)(3).
+$$
+Portanto, a equação a multiplicação (composição) de $\sigma_1$ e $\sigma_2$ pode ser escrita como 
+$$
+\sigma_1\sigma_2=(1,2,3,4,8,5,7)(1,4,3)(2,6,8)=(1,6,8,5,7,4,2).
+$$
+:::
+
+Enunciamos o seguinte teorema sem demonstração. A demonstração não é difícil, convidamos o leitor para prová-lo.
+
+:::{#thm-cycle-decomp}
+Todo elemento de $S_n$ pode ser escrito como produto de ciclos disjuntos. Além disso, esta decomposição é única a menos da ordem dos ciclos.
+:::
+
+:::{#exm-veritassium}
+O seguinte vídeo apresenta um puzzle que pode ser resolvido usando a notação cíclica de permutações.
+
+{{< video https://www.youtube.com/embed/iSNsgj1OCLA width="560" height="315" >}}
+:::
+

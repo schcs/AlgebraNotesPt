@@ -1,0 +1,129 @@
+---
+title: "O grupo alternado"
+number-sections: true
+lang: pt-BR
+---
+
+
+
+Seja $n$ um número natural e considere o grupo simétrico $S_n$. O grupo $S_n$ age sobre o a conjunto $\Q[x_1,\ldots,x_n]$ de polinômios permutando as variáveis. Considere o polinômio
+$$
+\Psi=\Psi(x_1,\ldots,x_n)=\prod_{1\leq i<j\leq n} (x_i-x_j).
+$$
+Se $\sigma\in S_n$, então $\Psi \sigma\in\{\Psi,-\Psi\}$; ou seja, a órbita de $\Psi$ contém apenas dois elementos, nomeadamente $\Psi$ e $-\Psi$.
+
+Uma permutação $\sigma\in S_n$ é dita par se $\Psi\sigma=\Psi$; caso contrário ela é dita ímpar. O conjunto $A_n$ das permutações pares é o estabilizador de $\Psi$ pela ação de $S_n$ sobre $\Q[x_1,\ldots,x_n]$ e portanto é um subgrupo de $S_n$. Este grupo chama-se grupo alternado de grau $n$. Além disso,
+$$
+|S_n:A_n|=|\Psi S_n|=2
+$$
+e em particular $A_n$ é um subgrupo normal em $S_n$. Note que
+$$
+|A_n|=|S_n|/2=n!/2.
+$$
+
+<div class="exercise">
+Mostre, para  $\sigma\in S_n$, que $\sigma\in A_n$ se e somente se
+$$
+|\{(i,j)\mid 1\leq i<j\leq n \mbox{ tais que }\ i\sigma > j\sigma\}|
+$$
+é um número par.
+</div>
+
+As seguintes afirmações nos ajudam determinar se uma permutação particular é par ou ímpar.
+
+<div class="lemma">
+Seja $n$ um número natural com $n\geq 3$ e sejam $\sigma,\pi$ elementos de $S_n$.
+
+Se $\sigma,\pi\in A_n$, então $\sigma\pi\in A_n$.
+Se $\sigma,\pi\in S_n\setminus A_n$, então $\sigma\pi\in A_n$.
+Se $\sigma\in A_n$ e $\pi\in S_n\setminus A_n$, então $\sigma\pi,\pi\sigma\in S_n\setminus A_n$.
+Se $1\leq a< b\leq n$, então $(a,b)\not\in A_n$.
+Um ciclo de comprimento $m$ é par se e somente se $m$ é ímpar.
+</div>
+<div class="proof">
+Afirmações 1-3 são consequências imediatas da definição.
+
+1. Como $A_n$ é normal em $S_n$, ele é fechado para conjugação e é suficiente mostrar esta afirmação para $\sigma=(1,2)$. Note que
+\begin{eqnarray*}
+\Psi\sigma&=&\left[\prod_{1\leq i<j\leq n}(x_i-x_j)\right]\sigma\\&=&\left[(x_1-x_2)\prod_{i=3}^n(x_1-x_i)\prod_{i=3}^n(x_2-x_i)\prod_{3\leq i<j\leq n}(x_i-x_j)\right]\sigma\\&=&
+(x_2-x_1)\prod_{i=3}^n(x_2-x_i)\prod_{i=3}^n(x_1-x_i)\prod_{3\leq i<j\leq n}(x_i-x_j)\\
+&=&-\Psi.
+\end{eqnarray*}
+
+5. Como no item anterior, basta provar esta afirmação para o ciclo $\sigma=(1,2,\ldots,m)$. Note que
+$$
+\sigma=(1,2,\ldots,m)=(1,2)(1,3)\cdots(1,m).
+$$
+Portanto $\sigma=(1,2,\ldots,m)$ é um produto de $m-1$ ciclos de comprimento 2. Combinando os itens anteriores, temos que $\sigma\in A_n$ se e somente se $m$ é ímpar.
+</div>
+
+<div class="definition">
+Um grupo $G\neq\{1\}$ chama-se simples se $G$ não possui subgrupo normal além dos subgrupos $\{1\}$ e $G$.
+</div>
+
+<div class="definition">
+Seja $G$ um grupo abeliano. Mostre que $G$ é simples se e somente se $G$ é um grupo cíclico de ordem prima.
+</div>
+
+<div class="theorem">
+Se $n=3$ ou se $n\geq 5$, então o grupo alternado $A_n$ é simples.
+</div>
+<div class="proof">
+Note que $A_3=\left<(1,2,3)\right>$ então $A_3$ é um grupo cíclico de ordem três, portanto simples.
+
+O grupo $\left<(1,2)(3,4),(1,3)(2,4)\right>$ é normal em $A_4$, então $A_4$ não é simples.
+
+Nós vamos provar a afirmação do teorema apenas quando $n=5$. O caso $n\geq 6$ pode ser feito por indução, mas nós não vamos fazer isso nesta disciplina.
+
+Primeiro, determinemos as classes de conjugação de $A_5$. Lembre que as classes de conjugação de $S_5$ foram determinadas na aula anterior. Para determinar as classes de $A_5$, vamos primeiro fazer as seguintes observações. Seja $C$ uma classe de conjugação de $S_5$ e seja $\sigma\in C$.
+
+Como $A_5\unlhd S_5$, a classe $C$ ou é contido em $A_5$ ou está completamente fora de $A_5$ (ou seja, $C\cap A_5=\emptyset$).
+Se $C\subseteq A_5$, então $C$ é uma união de classes de conjugação de $A_5$.
+Assuma que $C\subseteq A_5$. Note que
+$$
+C_{A_5}(\sigma)=A_5\cap C_{S_5}(\sigma).
+$$
+Se $C_{S_5}(\sigma)\leq A_5$, então $C_{S_5}(\sigma)=C_{A_5}(\sigma)$ e
+$$
+|\sigma^{A_5}|=|A_5:C_{A_5}(\sigma)|=|S_5:C_{S_5}(\sigma)|/2=|\sigma^{S_5}|/2.
+$$
+Ou seja, neste caso, a $S_5$-classe $C$ é uma união de duas $A_5$-classes $C'$ e $C''$.
+Se $C_{S_5}(\sigma)\not\leq A_5$, então $C_{S_5}(\sigma)A_5=S_5$ e
+$$
+|S_5|=\frac{|C_{S_5}(\sigma)||A_5|}{|C_{S_5}(\sigma)\cap A_5|}=\frac{|C_{S_5}(\sigma)||A_5|}{|C_{A_5}(\sigma)|}
+$$
+e isto implica que $|C_{A_5}(\sigma)|=|C_{S_5}(\sigma)|/2$. Portanto
+$$
+|\sigma^{A_5}|=|A_5:C_{A_5}(\sigma)|=|S_5:C_{S_5}(\sigma)|=|\sigma^{S_5}|.
+$$
+Ou seja, neste caso, a $S_5$-classe $C$ será uma classe em $A_5$.
+
+Agora usando a tabela das classes na aula anterior e estas observações, é possível obter uma tabela das classes de conjugação de $A_5$.
+
+[table id=4 /]
+
+Seja $N$ um subgrupo normal de $A_5$. Então temos que $|N|\mid 60$ e $N$ é uma união de classes de conjugação contendo a classe $\{1\}$. Portanto
+$$
+|N|=1+\alpha_1\cdot 15+\alpha_2\cdot 20+\alpha_3\cdot 12
+$$
+onde $\alpha_1,\alpha_2\in\{0,1\}$ e $\alpha_3\in\{0,1,2\}$. Uma consideração fácil mostra que as únicas possibilidades para $|N|$ são $|N|=1$ ou $|N|=60$. Portanto $A_5$ não possui subgrupo normal difrente de $\{1\}$ ou $A_n$.
+
+Assuma que $A_n$ é simples para algum $n\geq 5$ considere $G=A_{n+1}$. Seja $G_i$ o estabilizador do ponto $i$ em $G$. Como $G$ é transitivo, os $G_i$ são conjugados. Além disso, $G_i\cong A_n$. Seja $N\unlhd G$.  A interseção $N\cap G_1$ é normal em $G_1$. Logo $N\cap G_1=G_1$ ou $N\cap G_1=1$. No primeiro caso, como $N$ é normal e os $G_i$ são conjugados, temos que $G_i\leq N$ para todo $i$ que implica que $N=G$.
+
+Assuma agora que $N\cap G_i=1$ para todo $i$. Assuma que $N\neq 1$. Neste caso $NG_1=G$ ($G_1$ é maximal) e $N$ é regular. Em particular $|N|=n+1$. Assuma que $\sigma\in N\setminus\{1\}$ e escreva $\sigma$ como um produto $\sigma=\sigma_1\cdots \sigma_m$ de ciclos disjuntos onde  $\sigma_i$ é um $r_i$-ciclo com $r_1\geq r_2\geq\cdots\geq r_m$. Assuma que $r_1\geq 3$ e seja $\sigma_1=(1,2,\ldots,k)$ com $k\geq 3$. Seja $\varrho=(3,4,5)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1\setminus\{1\}$ que é uma contradição. Portanto $r_1=\cdots=r_m=2$. Assuma que $\sigma=(1,2)(3,4)$ e seja $\varrho=(4,5,6)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1$ que é uma contradição.
+</div>
+
+Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O teorema da classificação afirma o seguinte.
+
+<div class="theorem">
+Os grupos simples finitos são
+
+* os grupos cíclicos de ordem prima;
+* os grupos alternados $A_n$ com $n\geq 5$;
+* os grupos finitos de tipo Lie definidos sobre um corpo finito;
+* os 26 grupos esporádicos.
+</div>
+
+Um exemplo de um grupo simples de tipo Lie é $PSL(n,q)=SL(n,q)/Z$ onde $Z$ é o centro de $SL(n,q)$. Pode se provar, para $n\geq 2$, que $PSL(n,q)$ é simples a menos que $(n,q)\in\{(2,2),(2,3)\}$.
+
+A demonstração do teorema de classificação é extremamente profunda e, se fosse escrita em um único documento, ocuparia cerca de 10 mil páginas.

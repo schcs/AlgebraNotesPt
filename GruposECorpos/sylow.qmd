@@ -1,0 +1,81 @@
+---
+title: "Os Teoremas de Sylow"
+number-sections: true
+lang: pt-BR
+---
+
+
+Lembremos, para um primo $p$, que um grupo finito chama-se $p$-grupo se $|G|$ é uma potência de $p$.
+
+Lembremos também o Teorema de Lagrange que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo $A_4$ não possui subgrupo de ordem $6$ (verifique).
+
+<div class="definition">
+Seja $G$ um grupo finito de ordem $n$. Assuma que $p$ é um primo e $\alpha\geq 0$ é um número inteiro tal que $p^\alpha\mid n$, mas $p^{\alpha+1}\nmid n$. Se $H$ é um subgrupo de $G$ tal que $|H|=p^\alpha$, então $H$ é dito $p$-subgrupo de Sylow de $G$.
+</div>
+
+<div class="example">
+
+* Se $p\nmid |G|$, então $\{1\}$ é um $p$-subgrupo de Sylow de $G$.
+* Seja $G=S_3$. Os subgrupos $\left<(i,j)\right>$ com $1\leq i<j\leq 3$ são $2$-subgrupos de Sylow de $G$. O subgrupo $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
+* Seja $G=S_4$. Então $D_4=\left<(1,2,3,4),(1,3)\right>$ é um $2$-subgrupo de Sylow de $G$, enquanto $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
+* Seja $G=GL(n,p)$. Temos que
+\[
+|G|=p^{n(n-1)/2}\prod_{i=1}^n(p^i-1).
+\]
+* Portanto um $p$-subgrupo de Sylow de $G$ tem cardinalidade $p^{n(n-1)/2}$. Considere o subgrupo $U$ de matrizes triangulares superiores com uns no diagonal. Como $|U|=p^{n(n-1)/2}$, temos que $U$ é um $p$-subgrupo de Sylow de $G$. O mesmo $U$ é um $p$-subgrupo de Sylow de $SL(n,p)$.
+</div>
+
+<div class="exercise">Seja $G$ um grupo e sejam $H$ e $K$ subgrupos de $G$ tal que $H$ é normalizado por $K$ (ou seja, $H^x=H$ para todo $x\in K$). Mostre que $HK$ é um subgrupo de $G$. Em particular, se $H$ é um subgrupo de $G$ e $K$ é um subgrupo normal de $G$, então $HK$ é um subgrupo de $G$.
+</div>
+
+<div class="theorem">Seja $G$ um grupo finito de ordem $n$, seja $p$ um primo, e assuma que $p^\alpha$ (com $\alpha\geq 0$) é a maior potência de $p$ que divide $n$. As seguintes são verdadeiras.
+
+* $G$ possui um $p$-subgrupo de Sylow.
+* Se $P$ e $Q$ são dois $p$-subgrupos de Sylow em $G$, então $P$ e $Q$ são conjugados.
+* Se $n_p$ é o número de $p$-subgrupos de Sylow em $G$, então $n_p\equiv 1\pmod p$.
+</div>
+<div class="proof">
+
+1. Demonstramos a afirmação por indução em $n$. Se $n=1$, ou se $n$ é um primo, então o resultado é trivialmente verdadeiro. Assuma que a afirmação é verdadeira para grupos de ordem menor que $n$. Assuma que $p^\alpha$ é a maior potência de $p$ que divide $n$. Se $G$ possui um subgrupo próprio $H$ tal que $p^\alpha\mid |H|$, então, pela hipótese de indução, $H$ possui um $p$-subgrupo de Sylow e o mesmo será um $p$-subgrupo de Sylow de $G$. Assuma então que a ordem de nenhum subgrupo $H$ de $G$ é divisível por $p^\alpha$. Considere a equação das classes de $G$:
+$$
+|G|=|Z(G)|+|C_1|+\cdots+|C_k|
+$$
+onde $C_1,\ldots,C_k$ são as classes de conjugação de $G$ com cardinalidade maior que um. Como $G$ não possui subgrupo próprio com ordem divisível por $p^\alpha$, o centralizador $C_G(g)$ de um elemento $g\in C_i$ satisfaz $p^\alpha\nmid |C_G(g)|$; ou seja $p\mid |C_i|$ para todo $i\geq 1$. Como os dois lados da equação das classes são divisíveis por $p$, temos que $p\mid |Z(G)|$. Por um exercício anterior, $Z(G)$, sendo um grupo abeliano, possui um elemento $g$ de ordem $p$. Seja $H=\left<g\right>$. Então $H\unlhd G$. Ponha $Q=G/H$ e observe que a maior potência de $p$ que divide $|Q|$ é $p^{n-1}$. Portanto, pela hipótese de indução, $Q$ possui um subgrupo $X$ de ordem $p^{\alpha-1}$. Seja
+$$
+Y=\{y\in G\mid Hy\in X\}.
+$$
+É fácil verificar que $Y$ é um subgrupo de $G$ que contém $X$ e que $X=Y/H$. Portanto $|Y|=p^\alpha$; ou seja, $Y$ é um $p$-subgrupo de Sylow de $G$.
+
+2. Seja $C=\{P^g\mid g\in G\}$ a classe de conjugação de $P$ em $G$. Note que os elementos de $C$ são $p$-subgrupos de Sylow de $G$. O grupo $G$ age no conjunto $C$ e o grupo $Q$ também age neste conjunto. Pelo Teorema Órbita-Estabilizador,
+$$
+|C|=|G:N_G(P)|.
+$$
+Como $P\leq N_G(P)$, temos que $p^\alpha\mid |N_G(P)|$. Em particular $p\nmid |C|$. Assuma que $C_1,\ldots,C_r$ são as $Q$-órbitas em $C$. Aplicando de novo o Teorema Órbita-Estabilizador, temos que $|C_i|=p^{a_i}$ com $a_i\geq 0$ e temos que
+$$
+|C|=p^{a_1}+\cdots+p^{a_r}.
+$$
+Como $p\nmid |C|$, obtemos que existe algum $i$ tal que $a_i=0$; ou seja, existe uma $Q$-órbita tal que $|C_i|=1$. Suponha que $C_i=\{R\}$. Então $R$ é um $p$-subgrupo de Sylow tal que $R$ é normalizado por $Q$. Pelo exercício antes do teorema, $RQ$ é um subgrupo de $G$ de ordem $|R||Q|/|R\cap Q|=p^{2\alpha}/|R\cap Q|$. Como $p^\alpha$ é  a maior potência que divide a ordem de $G$, o Teorema de Lagrange implica que $R=.Q$. Ou seja $Q$ é igual um conjugado de $P$.
+
+3. Seja $S$ o conjunto de $p$-subgrupos de Sylow de $G$ e seja $P\in S$. Temos que $P$ age em $S$ por conjugação e $\{P\}$ é uma $P$-órbita. Afirmamos que $\{P\}$ é a única $p$-órbita com cardinalidade uma. Assuma que $\{R\}$ é uma outra $P$-órbita. O raciocínio no parágrafo anterior mostra que $RP$ é um subgrupo de $G$, e portanto $R=P$. Sejam $S_1,\ldots,S_m$ as $P$-órbitas com cardinalidade maior que um. Temos pelo Teorema Órbita-Estabilizador que $|S_i|=p^{b_i}$ com $b_i\geq 1$ para todo $i$ e
+$$
+|S|=1+|S_1|+\cdots+|S_m|=1+p^{b_1}+\cdots+p^{b_m}\equiv 1\pmod p.
+$$
+</div>
+
+<div class="corollary">
+Sejam $G$ um grupo finito,  $p$ um primo, e $H$ um $p$-subgrupo de Sylow em $G$ com $|H|=p^\alpha$.
+
+* O subgrupo $H$ é normal em $G$ se e somente se ele é o único $p$-subgrupo de Sylow de $G$.
+* O número $n_p$ de $p$-subgrupos de $G$ satisfaz as condições
+$$
+n_p\equiv 1\pmod p,\quad n_p\mid |G|/p^\alpha.
+$$
+</div>
+
+<div class="exercise">
+Seja $G$ um grupo finito, $p$ um primo e $H$ um $p$-subgrupo de $G$. Mostre que $H$ está contido em um $p$-subgrupo de Sylow de $G$. [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]
+</div>
+
+<div class="example">
+Não existe um grupo simples de ordem 100. De fato, se $G$ é um grupo de ordem 100, então  o número de $5$-subgrupos de Sylow de $G$ é congruente com 1 módulo 5 mas também é um divisor de $100/25=4$. Portanto, $G$ possui único $5$-subgrupo de Sylow que precisa ser normal e assim $G$ não pode ser um grupo simples.
+</div>

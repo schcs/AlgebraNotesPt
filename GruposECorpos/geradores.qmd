@@ -1,0 +1,120 @@
+---
+title: "Conjuntos geradores e grupos cíclicos"
+number-sections: true
+lang: pt-BR
+---
+
+## Conjuntos geradores
+
+:::{#def-generators}
+Seja $G$ um grupo e $X$ um subconjunto não vazio de $G$. Denotamos por $\left<X\right>$ o *subgrupo gerado por $X$*. Quando $X=\{x_1,\ldots,x_k\}$, escrevemos $\left<x_1,\ldots,x_k\right>$. 
+Um subconjunto $X\subseteq G$ é dito *conjunto gerador* se $G=\left<X\right>$.
+:::
+
+O subgrupo $\left<X\right>$ pode ser caraterizado como o conjunto de todos os produtos nos elementos de $X$ e seus inversos:
+$$
+\left<X\right>=\left\{x_1^{\pm 1}\cdots x_m^{\pm 1}\mid m\geq 1 \mbox{ e } x_i\in X\right\};
+$$
+o mesmo subgrupo pode ser descrito também como a interseção de todos os subgrupos de $G$ que contêm $X$:
+$$
+\left<X\right>=\bigcap_{X\subseteq H\leq G}H.
+$$
+
+## Grupo cíclico
+
+:::{#def-cyclic}
+Um grupo gerado por um elemento é dito grupo cíclico. Em outras palavras, $G$ é dito cíclico se $G=\left<g\right>$ para algum elemento  $g\in G$. Se $G$ é cíclico e $G=\left<g\right>$. então
+$$
+G=\{1=g^0,g^1,g^{-1},g^2,g^{-2},g^3,g^{-3},\ldots\};
+$$
+ou seja, $G$ é composto pelas potências de $g$. Como $g^a$ e $g^b$ comutam para todo $a,b\in\mathbb Z$, obtemos que um grupo cíclico é abeliano.
+:::
+
+:::{#exr-cyclic-order}
+Seja $g\in G$. Demonstre que $|\left<g\right>|=|g|$. Portanto, se $G$ é um grupo finito e $g\in G$, então $|g|$ divide $|G|$.   Em particular, temos neste caso que $g^{|G|}=1$. Consequentemente, um grupo finito $G$ é cíclico se e somente se $G$ possui um elemento de ordem $|G|$.
+:::
+
+
+:::{#exm-cyclic}
+O grupo $(\mathbb Z,+)$ é cíclico gerado por $1$.
+Seja $n\geq 2$. Então o grupo aditivo $(\mathbb Z_n,+)$ é cíclico gerado pelo elemento $1$.
+O grupo $\{i,-i,1,-1\}$ é cíclico gerado por $i$.
+O grupo de rotações de um polígono com $n$ lados é cíclico e é gerado pela rotação por $360/n$ graus.
+
+O grupo simétrico $S_3$ não é cíclico, pois ele não é abeliano.
+O grupo $K=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$ é abeliano, mas não é cíclico pois não possui um elemento de ordem $4$.
+:::
+
+:::{#lem-subgroup-cyclic}
+Se $G$ é um grupo cíclico e $H\leq G$, então $H$ é cíclico.
+:::
+
+:::{.proof}
+Assuma que $G=\left<g\right>$ e seja $k\geq 1$ menor tal que $g^k\in H$. Afirmamos que $H=\left<g^k\right>$. Claramente $\left<g^k\right>\leq H$. Ora, seja $x\in H$. Como $G$ é cíclico, $x=g^m$ com algum $m\geq 0$. Pondo $m=qk+r$ com $r\in\{0,\ldots,k-1\}$, obtemos que 
+$$
+x=g^m=g^{qk+r}=(g^k)^qg^r.
+$$
+Isso implica que  
+$$
+g^r=(g^k)^{-q}x\in H
+$$
+Como $k$ foi menor positivo tal que $x^k\in H$, obtemos que $r=0$. Ou seja, $x=g^{qk}=(g^k)^q$. Assim, todo elemento de $H$ é uma potência de $g^k$ e $H=\left<g^k\right>$.
+:::
+
+O seguinte teorema sai como uma consequência do Teorema de Lagrange.
+
+:::{#thm-prime-cyclic}
+Seja $p$ um primo e seja $G$ um grupo com $p$ elementos. Então $G$ é cíclico. Em particular, $G$ é abeliano.
+:::
+
+:::{.proof}
+Seja $g\in G\setminus\{1\}$ e seja $H=\left<g\right>$. Temos que $1<|H|$ e que $|H|\mid |G|=p$. Logo, $|H|=|G|$ e obtemos que $H=G$. Isso significa que $G=\left<g\right>$; ou seja, $G$ é cíclico.
+:::
+
+O resultado seguinte é particularmente útil no estudo de grupos multiplicativos de corpos. Antes do resultado relembremos que se $n\in\mathbb N$, então
+$$
+\varphi(n)=|\{k\mid 1\leq k\leq n,\ \mbox{mdc}(n,k)=1\}|.
+$$
+A seguinte igualdade é bem conhecida:
+$$
+\sum_{d\mid n}\varphi(d)=n.
+$$
+
+:::{#thm-field-cyclic}
+Seja $G$ um subgrupo finito do grupo multiplicativo de um corpo $\mathbb F$. Então $G$ é cíclico.
+:::
+
+:::{.proof}
+Ponha $n=|G|$. Se $g\in G$, então a ordem de $g$ divide $|G|=n$ por um exercício anterior. Seja $d$ um divisor de $n$ e assuma que existe um elemento $g\in G$ com ordem $d$. Seja $H=\left<g\right>$. Sabe-se que $|H|=|g|=d$. Então $h^d=1$ vale para todo $h\in H$ e os elementos de $H$ são soluções da equação polinomial
+$$
+x^d-1=0.
+$$
+Esta é uma equação de grau $d$ então possui no máximo $d$ soluções em $\mathbb F$. Mas o subgrupo $H$ já possui $d$ soluções, então temos obrigatoriamente que
+$$
+H=\{x\in \mathbb F\mid x^d=1\}.
+$$
+Se $h\in H$, então $h=g^i$ com algum $i=0,\ldots,d-1$ e $|h|=|g|/\mbox{mdc}(d,i)$. Isto quer dizer que $|h|=d$ se e somente se $\mbox{mdc}(d,i)=1$; ou seja, o número de elementos em $H$ com ordem $d$ é $\varphi(d)$.
+
+Seja $m_d$ o número de elementos de $G$ com ordem $d$. O que acabamos de provar com o argumento no parágrafo anterior é a seguinte afirmação:  Se $d\mid n$, então $m_d=0$ ou $m_d=\varphi(d)$; caso contrário $m_d=0$. Em particular $m_d\leq\varphi(d)$ para todo $d$.
+
+Contando os elementos de $G$, obtemos que
+$$
+|G|=n=\sum_{d\mid n}m_d\leq \sum_{d\mid n}\varphi(d)=n.
+$$
+(A última igualdade é por causa do resultado citado sobre $\varphi(n)$ antes do teorema.) Note que a igualdade na linha anterior implica que a desigualdade no meio precisa ser igualdade. Mas isso é possível somente quando $m_d=\varphi(d)$ vale para todo $d\mid n$. Em particular, $m_n=\varphi(n)$; ou seja, $G$ possui um elemento de ordem $n$. Se $g\in G$ é tal elemento, então $G=\left<g\right>$.
+:::
+
+:::{#cor-ff-cylic}
+O grupo $(\mathbb Z_p\setminus\{0\},\cdot)$ é cíclico.
+:::
+
+:::{#def-ff.primitive}
+Se $g\in \mathbb Z_p\setminus\{0\}$ é um gerador do grupo multiplicativo de $\mathbb Z_p$, então o elemento $g$ é chamado de *elemento primitivo* de $\mathbb Z_p$. Se $g\in \mathbb Z_p$ é um elemento primitivo, então
+$$
+\mathbb Z_p=\{0,1=g^0,g^1,g^2,\ldots,g^{p-2}\}.
+$$
+:::
+
+:::{#exr-ff-primitives}
+Mostre que o número dos elementos primitivos em $\mathbb Z_p$ é $\varphi(p-1)$. 
+:::

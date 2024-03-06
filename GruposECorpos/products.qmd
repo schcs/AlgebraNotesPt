@@ -1,0 +1,114 @@
+---
+title: "Produtos de grupos"
+number-sections: true
+lang: pt-BR
+---
+
+## O produto direto
+
+:::{.definition}
+Definition.
+Sejam $G$ e $H$ grupos. Defininimos o *produto direto* $G\times H$ como o grupo
+$$ 
+    G\times H=\{(g,h)\mid g\in G,\ h\in H\}
+$$
+com a operação definida na segiunte forma:
+$$
+(g_1,h_1)(g_2,h_2)=(g_1h_1,g_2h_2).
+$$ 
+:::
+
+:::{.lemma}
+Lemma.
+O conjunto $G\times H$ é um grupo com o produto definido na linha anterior. Além disso, pondo
+$$
+\bar G=\{(g,1)\mid g\in G\}\quad\mbox{e}\quad \bar H=\{(1,h)\mid h\in H\} 
+$$ 
+temos que 
+
+- $\bar G,\bar H\unlhd G\times H$.
+- $\bar G\bar H=G\times H$;
+- $\bar G\cap\bar H=1$.
+:::
+
+:::{.proof}
+Demonstração. Fácil, o leitor pode fazer.
+:::
+
+O produto direto acima definido é frequentamente chamado de produto direto externo. Simnilarmente a espaços vetoriais, existe uma versão interna do produto direto. 
+
+:::{.lemma}
+Suponha que $G$ é um grupo e $N,M\unlhd G$ are subgrupos normais tais que 
+
+- $NM=G$ e 
+- $N\cap M=1$.
+
+Então $G\cong N\times M$. 
+:::
+
+:::{.proof}
+Primeiro mostremos que todo elemento $g\in G$ pode ser escrito unicamente como $g=nm$ com $n\in N$ e $m\in M$. Primeiro, como $NM=G$, a decomposição de $g$ existe. Ora, assuma que $g=n_1m_1=n_2m_2$ com $n_1,n_2\in N$ e $m_1,m_2\in M$. Isso implica que 
+$$
+n_2^{-1}n_1=m_2m_1^{-1}\in N\cap M.
+$$
+Como $N\cap M=1$, temos que $n_2^{-1}n_1=m_2m_1^{-1}=1$; ou seja, 
+$n_1=n_2$ e $m_1=m_2$ e a unicidade está verificada.
+
+Próximo, observe, para $n\in N$ e $m\in M$, que 
+$$
+[n,m]=n^{-1}m^{-1}nm=(m^{-1})^nm=n^{-1}n^m\in M\cap N=1.
+$$
+Portanto $[n,m]=1$ e em particular $N$ comuta com $M$. Isso implica que se $n\in N$ e $m\in M$, então $nm=mn$.
+
+Agora defina $\psi:G\to N\times M$ como $\psi(g)=(n,m)$ onde $g=nm$ com $n\in N$ e $m\in M$. 
+O mapa $\psi$ está bem definida pela unicidade da decomposição $g=mn$. 
+Além disso, $\psi$ é um homomorfismo, pois se $g_1=n_1m_1,\ g_2=n_2m_2\in G$, então 
+\begin{align*}
+\psi(g_1g_2)&=\psi(n_1m_1n_2m_2)\psi(n_1n_2m_1m_2)\\&=(n_1n_2,m_1m_2)=
+(n_1,m_1)(n_2,m_2)\\&=\psi(g_1)\psi(g_2).
+\end{align*}
+Se $g\in\ker\psi$, então $g=1\cdot 1=1$, logo $\psi$ é injetiva. Finalmente, se $n\in N$ e $m\in M$, então $\psi(nm)=(n,m)$ e $\psi$ é sobrejetiva. Portanto, $\psi$ é um isomorfismo e $G\cong N\times M$.
+:::
+
+:::{.definition}
+Definição. Se $G$, $N$ e $M$ são como no resultado anterior, escrevemos que $G=N\times M$ e dizemos que $G$ é *produto direto (interno) de $N$ e $M$*. 
+:::
+
+## Produto semidireto
+
+:::{.definition}
+Definition. Para definir o *produto semidireto (interno)*, seja $G$ um grupo $H\leq G$ e $N\unlhd G$ tais que 
+
+- $NH=G$ e
+- $N\cap H=1$. 
+
+Neste caso dizemos que $G$ é produto semidireto de $N$ e $H$ e escrevemos que $G=N\rtimes H$.
+:::
+
+Seja $G=N\rtimes H$ como na definição anterior. Assuma que $g_1,g_2\in G$ tal que $g_1=n_1h_1$ e $g_2=n_2h_2$ onde $n_1,n_2\in N$ e $h_1h_2\in H$. Note que estas expressões para $g_1$ e $g_2$ são únicas e isso pode ser verificado facilmente usando o argumento na demonstração anterior. Se $h\in H$, a normalidade de $N$ implica que o mapa 
+$$
+\psi_h:n\mapsto n^h=h^{-1}nh
+$$ 
+é um automorfismo de $N$ e a aplicação $h\mapsto \psi_h$ é um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Usando esta observação, obtemos que 
+$$
+g_1g_2=n_1h_1n_2h_2=(n_1n_2^{h_1^{-1}})(h_1h_2)=n_1(n_2(h_2^{-1}\psi))h_1h_2.
+$$
+
+Esta conta nos dá uma ideia como definir produto semidireto externo.
+
+:::{.definition}
+Sejam $N$ e $H$ grupos e assuma que está dado um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Defina o produto semidireto (relativo ao homomorfismo $\psi$) $N\rtimes_\psi N$ de $N$ e $H$ como o grupo sobre o conjunto $N\times H$ com a operação 
+$$
+(n_1,h_1)(n_2,h_2)=(n_1(n_2((h_2^{-1})\psi),h_1h_2).
+$$
+:::
+
+:::{.lemma}
+O produto semidireto $N\rtimes_\psi H$ é um grupo com a multiplicação definida.
+:::
+
+:::{.proof}
+Demonstração.
+Deixamos a demonstração para o leitor. Aqui só comentamos que o elemento neutro de $N\rtimes_\psi H$ é $(1,1)$ e que $(n,h)^{-1}=
+((n^{-1})^h,h^{-1})$. 
+:::

@@ -1,0 +1,36 @@
+---
+number-sections: false
+lang: pt
+---
+
+# Grupos e Corpos {.unnumbered}
+
+Material para a disciplina "Grupos e Corpos" no curso de Graduação em Matemática, na UFMG. 
+
+2024/01
+
+
+Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
+
+## Apostilas
+
+### Bloco 1: Grupos 
+
+* [As primeiras definições](definitions.qmd)
+* [Classes laterais e o Teorema de Lagrange](lagrange.qmd)
+* [Conjuntos geradores e grupos cíclicos](geradores.qmd)
+* [Subgrupos normais e homomorfismos](normais.qmd)
+* [O subgrupo derivado](derivado.qmd)
+* [Produtos diretos e semidiretos](products.qmd)
+* [Grupos solúveis](soluble.qmd)
+* [Ações de grupos e O Teorema Órbita-Estabilizador](actions.qmd)
+* [Grupos livres](livres.qmd)
+* [Grupos abelianos]
+* [Classes de conjugação](classes.qmd)
+* [O grupo alternado](alternado.qmd)
+* [O Lema de Iwasawa e a simplicidade de $PSL(n,q)$](psl.qmd)
+* [Os Teoremas de Sylow](sylow.qmd)
+* [Grupos nilpotentes](nilpotent.qmd)
+
+
+TODO: Grupos abelianos, Teorema de Cayley, produto direto, os Teoremas de Homomorfismo
