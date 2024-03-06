@@ -138,7 +138,7 @@ Explique porque $r\neq -3$ nos itens 2 e 4.
 
 ### Computações com Python
 Vamos ver agora como calcular o quociente e o resto na linguagem Python. O quociente de dois números naturais pode ser calculado por "//" e o resto por "%". Considere o seguinte exemplo:
-```{python}
+```python
 >>> 11//5
 2
 >>> 11 % 5
@@ -146,7 +146,7 @@ Vamos ver agora como calcular o quociente e o resto na linguagem Python. O quoci
 ```
 
 Normalmente usamos variáveis para guardar os números que usamos na computação. Refazemos a computatação anterior usando variáveis:
-```{python}
+```python
 >>> a = 11
 >>> b = 5
 >>> a//b
@@ -156,7 +156,7 @@ Normalmente usamos variáveis para guardar os números que usamos na computaçã
 ```
 
 Verifiquemos que o quociente e o resto satisfaz a igualdade no Teorema da Divisão:
-```{python}
+```python
 >>> q = a//b; r = a % b
 >>> a == q*b+r
 True
@@ -164,7 +164,7 @@ True
 
 Precisa-se prestar atenção quando trabalhamos com números negativos. Quando $a$ é negativo e $b$ é positivo, o quociente e o resto calculado por Python coincide com o que segue do Teorema.
 
-```{python}
+```python
 >>> a = -11; b = 5
 >>> a//b
 -3
@@ -173,7 +173,7 @@ Precisa-se prestar atenção quando trabalhamos com números negativos. Quando $
 ```
 
 Mas quando $b$ for negativo, o Python devolve um resto negativo que não é compatível com nosso Teorema.
-```{python}
+```python
 >>> a = 11; b = -5
 >>> a//b
 -3
@@ -185,7 +185,7 @@ Nestes casos o output dado por Python precisa ser modificado para ser compatíve
 
 Python possui a função [```divmod```](https://docs.python.org/3/library/functions.html#divmod) que calcula o quociente e o resto no mesmo tempo. Quando precisa-se calcular os dois, o uso desta função é preferível sobre usar as operações ```//```  e ```%``` separadamente.
 
-```{python}
+```python
 >>> q, r = divmod( 11, 5 )
 >>> q, r
 (2, 1)
@@ -201,7 +201,7 @@ Python possui a função [```divmod```](https://docs.python.org/3/library/functi
 ```
 
 A função ```divmod``` pode ser modificado para devolver o quociente e o resto que satisfaz a condição do Teorema como foi enunciado por nós.
-```{python}
+```python
 def my_divmod( a, b ):
 
     # calculamos o quociente e resto com divmod
@@ -216,7 +216,7 @@ def my_divmod( a, b ):
 ```
 
 O resultado devolvido por esta nova função está de acordo com a nossa definição de quociente e resto.
-```{python}
+```python
 >>> my_divmod(13,5)
 (2, 3)
 
