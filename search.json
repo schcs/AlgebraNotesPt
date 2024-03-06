@@ -1,0 +1,531 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Álgebra",
+    "section": "",
+    "text": "Apostilas\nMateriais para várias disciplinas ” no curso de Graduação em Matemática, na UFMG.\n2024/01\nSite criado por Csaba Schneider",
+    "crumbs": [
+      "Apostilas"
+    ]
+  },
+  {
+    "objectID": "index.html#disciplinas",
+    "href": "index.html#disciplinas",
+    "title": "Álgebra",
+    "section": "Disciplinas",
+    "text": "Disciplinas\n\nIniciação à Matemática\nFundamentos de Álgebra\nÁlgebra Linear II\nGrupos e Corpos",
+    "crumbs": [
+      "Apostilas"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/index.html",
+    "href": "IniciacaoAMatematica/index.html",
+    "title": "Iniciação à Matemática",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Iniciação à Matemática"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/prop.html",
+    "href": "IniciacaoAMatematica/prop.html",
+    "title": "1  Proposições ou sentenças",
+    "section": "",
+    "text": "1.1 Proposições simples\nEntender o significado de afirmações na matemática exige o conhecimento dos elementos da lógica básica que vamos estudar nesta página. Além disso, a compreensão deste conteúdo é importante também no trabalho com expressões lógicas (booleanas) nas linguagens de programação.\nNa matemática, uma proposição (ou sentença) é uma afirmação que afirma um fato. Por exemplo, as seguintes afirmações são proposições:\nCada proposição deve ser ou verdadeira ou falsa, mas não pode ser verdadeira e falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se valor lógico ou valor de verdade. Cada proposição tem exatamente um dos dois valores lógicos: verdadeiro ou falso. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico falso).\nNesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como “O Pedro é estudante” são frequentamente demasiado polémicas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.)\nAs seguintes não são proposições.\nNos dois casos, a afirmação é subjetiva, pode ser verdadeira para uma pessoa e falsa para uma outra.\nAs proposições no exemplo anterior e na lista em cima são proposições simples.",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposições ou sentenças</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/prop.html#proposições-simples",
+    "href": "IniciacaoAMatematica/prop.html#proposições-simples",
+    "title": "1  Proposições ou sentenças",
+    "section": "",
+    "text": "\\(1\\neq 2\\);\n\\(\\pi &lt; \\sqrt{10}\\);\n\\(1+2=3\\).\n\n\n\n\n\nO número \\(10\\) é interessante.\nVocê deve estudar mais.\n\n\n\nExemplo 1.1 A propisição que “2 é um número par” é verdadeira, enquanto a proposição “3 é um número negativo” é falsa. Similarmente, a proposição “\\(2+3=5\\)” é verdadeira, enquanto a proposição “\\(2+3&lt;5\\)” é falsa.",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposições ou sentenças</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/prop.html#proposições-compostas",
+    "href": "IniciacaoAMatematica/prop.html#proposições-compostas",
+    "title": "1  Proposições ou sentenças",
+    "section": "1.2 Proposições compostas",
+    "text": "1.2 Proposições compostas\nUsando as operações lógicas, pode-se formar proposições compostas a partir das proposições simples (ou atómicas). As principais operações lógicas (ou conectivos) são conjunção (e), disjunção (ou) e a negação (não).\nSejam \\(A\\) e \\(B\\) proposições.\nA conjunção (\\(\\land\\)): A conjunção das proposições \\(A\\) e \\(B\\) é a proposição \\(A\\land B\\) (leia-se “\\(A\\) e \\(B\\)”). A proposição \\(A\\land B\\) é verdadeira se e somente se \\(A\\) é verdadeira e \\(B\\) é verdadeira. Caso contrário, \\(A\\land B\\) é falsa.\nA disjunção (\\(\\lor\\)): A disjunção das proposições \\(A\\) e \\(B\\) é a proposição \\(A\\lor B\\) (leia-se “\\(A\\) ou \\(B\\)”). A proposição \\(A\\lor B\\) é verdadeira se e somente se \\(A\\) é verdadeira ou \\(B\\) é verdadeira. Em particular, se ambas de \\(A\\) e \\(B\\) são verdadeiras, então \\(A\\lor B\\) é verdadeira. Caso contrário, \\(A\\lor B\\) é falsa.\nA negação (\\(\\neg\\)): A negação da proposição \\(A\\) é \\(\\neg A\\) (leia-se “não \\(A\\)”). A proposição \\(\\neg A\\) é verdadeira se e somente se \\(A\\) é falsa. Caso contrário \\(\\neg A\\) é falsa\n\nExemplo 1.2 Considere por exemplo as seguintes duas proposições \\(A\\) e \\(B\\). \\[\\begin{align*}\nA&:2+4=3;\\\\\nB&:\\mbox{$9$ é múltiplo de $3$}.\n\\end{align*}\\] Os valores lógicos das proposições que podemos formar com as operações \\(\\land\\), \\(\\lor\\), \\(\\neg\\) são os seguintes: \\[\\begin{align*}\nA&:\\mbox{falsa}\\\\\nB&:\\mbox{verdadeira}\\\\\n\\neg A&:\\mbox{verdadeira}\\\\\n\\neg B&:\\mbox{falsa}\\\\\nA\\land B&:\\mbox{falsa}\\\\\nA\\lor B&:\\mbox{verdadeira}\\\\\n\\neg A\\land B&:\\mbox{verdadeira}\\\\\nA\\land \\neg B&:\\mbox{falsa}\\\\\n\\neg A\\land \\neg B&:\\mbox{falsa}\\\\\n\\neg(A\\land B)&:\\mbox{verdadeira}\\\\\n\\neg A\\lor B&:\\mbox{verdadeira}\\\\\nA\\lor \\neg B&:\\mbox{falsa}\\\\\n\\neg A\\lor \\neg B&:\\mbox{verdadeira}\\\\\n\\neg(A\\lor B)&:\\mbox{falsa}\\\\\n\\end{align*}\\]\n\nAs operações \\(\\neg\\), \\(\\lor\\) e \\(\\land\\) podem ser combinadas para obter afirmações mais complexas. Por exemplo a afirmação \\[\n[\\neg(A\\land B)]\\lor [\\neg(A\\lor B)]\n\\] é verdadeira, pois ela é a disjunção de duas afirmações, a primeira sendo verdadeira, enquanto a segunda sendo falsa.\nNote que nós usamos parênteses para indicar a ordem das operações. A última expressão poderia ser escrita também como \\[\n\\neg(A\\land B)\\lor \\neg(A\\lor B)\n\\] sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar os parênteses que omitir. Às vezes, os parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão \\[\nA\\lor B \\land C\n\\] está ambígua, pois pode denotar \\((A\\lor B)\\land C\\) ou \\(A\\lor(B\\land C)\\). Se \\(A\\) é verdadeira e \\(C\\) é falsa, então \\((A\\lor B)\\land C\\) é falsa, mas \\(A\\lor (B\\land C)\\) é verdadeira (independentemente do valor lógico de \\(B\\)). Nestes casos, as operações são feitas da esquerda para a direita, e a proposição deve ser interpretada como \\((A\\lor B)\\land C\\). Tendo dito isso, é melhor colocar as parénteses.\nOutras operações lógicas que são frequentamente usadas são a disjunção exclusiva \\(\\lxor\\), a condicional \\(\\cond\\) e bicondicional \\(\\bicond\\).\nDisjunção exclusiva (\\(\\lxor\\)): A disjunção exclusiva (XOR ou XOU) das proposições \\(A\\) e \\(B\\) é a proposição \\(A\\lxor B\\) (ou \\(A\\) ou \\(B\\) mas não ambos). A proposição \\(A\\lxor B\\) é verdadeira se e somente se \\(A\\) é verdadeira ou \\(B\\) é verdadeira, mas não quando \\(A\\) e \\(B\\) são ambas verdadeiras. Caso contrário \\(A\\lxor B\\) é falsa.\nCondicional (\\(\\cond\\)): A condicional das proposições \\(A\\) e \\(B\\) é a proposição \\(A\\cond B\\) (leia-se “\\(A\\) implica \\(B\\)”). A proposição \\(A\\cond B\\) é verdadeira se e somente se \\(A\\) é falsa, ou \\(A\\) e \\(B\\) são ambas verdadeiras.\nBicondicional (\\(\\bicond\\)): A bicondicional das proposições \\(A\\) e \\(B\\) é a proposição \\(A\\bicond B\\) (leia-se “\\(A\\) é equivalente a \\(B\\)”). A proposição \\(A\\bicond B\\) é verdadeira se e somente se \\(A\\) é \\(B\\) têm o mesmo valor lógico; ou seja, \\(A\\) e \\(B\\) são ambas verdadeiras ou \\(A\\) e \\(B\\) são ambas falsas.\nNote que a disjunção exclusiva \\(\\lxor\\) está mais próxima ao significado cotadiano da palavra “ou”. Nas expressões de matemática “ou” normalmente significa disjunção inclusiva e quando queremos disjunção exclusiva, isso deve ser claramente indicada. Por exemplo a proposição \\[\n\\mbox{($6$ é par)}\\lor \\mbox{($6$ é um múltiplo de $3$)}\n\\] é considerada verdadeira, mas \\[\n\\mbox{($6$ é par)}\\lxor \\mbox{($6$ é um múltiplo de $3$)}\n\\] é falsa.\nNote também que a condicional \\(A\\cond B\\) é verdadeira sempre quando \\(A\\) é falsa. Em outras palavras, a implicação é considerada verdadeira sempre quando a premissa \\(A\\) é falsa. Por exemplo, a proposição \\[\n\\mbox{($5$ é par)}\\cond\\mbox{($10$ é um múltiplo de $3$)}\n\\] é considerada verdadeira. É importante notar que isso não quer dizer de forma nenhuma que \\(10\\) é um múltiplo de \\(3\\)! Quer dizer apenas que a afirmação que “\\(5\\) é par” implica que “\\(10\\) é múltiplo de \\(3\\)”. Ou seja, uma afirmação falsa implica qualquer outra afirmação. Nós vamos ver situações ainda nesta disciplina que vão explicar melhor o porquê desta regra.",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposições ou sentenças</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/prop.html#a-tabela-verdade",
+    "href": "IniciacaoAMatematica/prop.html#a-tabela-verdade",
+    "title": "1  Proposições ou sentenças",
+    "section": "1.3 A tabela-verdade",
+    "text": "1.3 A tabela-verdade\nA veracidade de proposições compostas pode ser estudada usando tabelas-verdade. Sejam \\(P\\) e \\(Q\\) proposições simples. A tabela verdade da proposição \\(P\\land Q\\) é a seguinte.\n\n\n\n\\(P\\)\n\\(Q\\)\n\\(P\\land Q\\)\n\n\n\n\nV\nV\nV\n\n\nV\nF\nF\n\n\nF\nV\nF\n\n\nF\nF\nF\n\n\n\nConsidere a seguinte expressão. \\[\n(P \\land \\neg Q) \\lor (\\neg P \\land Q).\n\\] A sua tabela-verdade pode ser escrita como\n\n\n\n\n\n\n\n\n\n\n\n\n\\(P\\)\n\\(Q\\)\n\\(\\neg P\\)\n\\(\\neg Q\\)\n\\(P \\land \\neg Q\\)\n\\(\\neg P \\land Q\\)\n\\((P \\land \\neg Q) \\lor (\\neg P \\land Q)\\)\n\n\n\n\nV\nV\nF\nF\nF\nF\nF\n\n\nV\nF\nF\nV\nV\nF\nV\n\n\nF\nV\nV\nF\nF\nV\nV\n\n\nF\nF\nV\nV\nF\nF\nF\n\n\n\nNote que a expressão \\((P \\land \\neg Q) \\lor (\\neg P \\land Q)\\) é verdadeira se e somente se \\(P\\) é verdadeira ou \\(Q\\) é verdadeira, mas elas não são verdadeiras no mesmo tempo. Logo, pode se concluir que \\[\n(P \\land \\neg Q) \\lor (\\neg P \\land Q) \\bicond P \\lxor Q\n\\] para qualquer proposição \\(P\\) e \\(Q\\)\n\nExercício 1.1 Usando tabelas-verdade, verifique, para proposições \\(P\\) e \\(Q\\), que \\[\nP\\cond Q \\bicond (\\neg P) \\lor Q\n\\] e \\[\nP\\bicond Q \\bicond (P \\land Q) \\lor (\\neg P \\land \\neg Q).\n\\]\n\n\nExercício 1.2 Exercício. Demonstre as seguintes afirmações usando tabelas-verdade. \\[\n\\neg(P\\lor Q)\\bicond \\neg P \\land \\neg Q\n\\] e \\[\n\\neg(P\\land Q) \\bicond \\neg P \\lor \\neg Q\n\\]\n\nAs afirmações no exercício anterior são conhecidas como as identidades de de Morgan. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se \\[\nP:\\ \\mbox{$2$ é primo}, \\quad Q:\\ \\mbox{$3$ divide $7$}\n\\] então \\[\\begin{align*}\nP\\land Q&:\\ \\mbox{$2$ é primo e $3$ divide $7$}\\\\\nP\\lor Q&:\\ \\mbox{$2$ é primo ou $3$ divide $7$}\\\\\n\\neg(P\\land Q)&:\\ \\mbox{$2$ não é primo ou  $3$ não divide $7$}\\\\\n\\neg(P\\lor Q)&:\\ \\mbox{$2$ não é primo e $3$ não divide $7$}\\\\\n\\end{align*}\\]",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposições ou sentenças</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/conjuntos.html",
+    "href": "IniciacaoAMatematica/conjuntos.html",
+    "title": "2  Conjuntos",
+    "section": "",
+    "text": "2.1 Como definir conjuntos\nConjuntos são objetos básicos na matemática. A teoria dos conjuntos é um ramo relativamente novo que foi desenvolvido a partir do final do século XIX por matemáticos tais como Cantor, Hilbert, Zorn, Zermelo e Fraenkel. A teoria rigorosa dos conjuntos é um assunto avançado que nós não vamos abordar nesta disciplina. O que nós vamos estudar neste semestre é chamado “Teoria Ingênua dos Conjuntos”. Para estudar matemática moderna e avançada, esta teoria não é suficiente, mas ela serve para introduzir os conceitos básicos e fundamentar os estudos nas disciplinas da graduação.\nUm conjunto \\(A\\) é uma coleção de objetos. Se \\(x\\) é um objeto, então a proposição “\\(x\\in A\\)” tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que \\(x\\) pertence ao conjunto \\(A\\). Caso contrário, dizemos que \\(x\\) não pertence a \\(A\\) e escrevemos \\(x\\not\\in A\\). Para um conjunto ser bem definido, é necessário que para qualquer objeto \\(x\\) seja possível decidir se \\(x\\in A\\) ou \\(x\\not\\in A\\). Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto \\(X\\) de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.\nNotação: Conjuntos são delimitados por “\\(\\{\\)” e “\\(\\}\\)”. Com os conjuntos mais simples, nós listamos os elementos do conjunto entre “\\(\\{\\)” e “\\(\\}\\)”. Por exemplo, para denotar o conjunto que contém os números \\(-1\\), \\(2\\), \\(5\\), escrevemos \\(A=\\{-1,2,5\\}\\). Temos que \\[\n-1\\in A,\\quad 2\\in A,\\quad 5\\in A,\n\\] mas \\[\nx\\not\\in A\\quad\\mbox{se}\\quad x\\neq -1, 2, 5.\n\\] Para denotar conjuntos usaremos principalmente letras maiúsculas. Por exemplo \\(A=\\{-1,2,5\\}\\). No caso de conjuntos infinitos, pode-se usar \\(\\ldots\\) se não há ambuguidade. Por exemplo, para denotar o conjunto dos números positivos pares, podemos escrever \\(B=\\{2,4,6,\\ldots\\}\\). Por outro lado, se escrevemos \\(\\{1,2,3,5,\\ldots\\}\\), não se sabe qual conjunto queremos definir.\nOs conjuntos não são ordenados e contém seus elementos apenas uma vez. Por exemplo, os conjuntos \\(\\{-1,2,5\\}\\), \\(\\{5,2,-1,2\\}\\), \\(\\{2,2,-1,-1,5\\}\\) são todos iguais ao conjunto \\(\\{-1,2,5\\}\\). Pode acontecer que precisamos “conjuntos” ordenados ou “conjuntos” que contém seus elementos com multiplicidade, mas nestes casos seu professor vai criar um objeto adequado.\nNote que o uso do símbolo \\(\\ldots\\) está usado no segundo exemplo.\nConjuntos podem ser definidos também como uma coleção de elementos em um conjunto maior. Por exemplo, seja \\[\n    X=\\{n\\in\\N\\mid \\mbox{$n$ é múltipo de $2$}\\}.\n\\] Em outras palávras, \\(X\\) é o conjunto dos números \\(n\\) que pertencem ao conjunto \\(\\N\\) e são pares. Note que a definição de \\(X\\) tem duas partes. Na primeira parte ``\\(n\\in\\N\\)’’, nós indicamos que os elementos de \\(X\\) serão elementos de \\(\\N\\), enquanto na segunda parte, especificamos quais elementos de \\(\\N\\) serão elementos de \\(X\\). Neste caso, os elementos de \\(X\\) são os elementos de \\(\\N\\) qua são múltiplos de \\(2\\).\nExiste um conjunto que não possui elementos. Este conjunto é chamado de conjunto vazio e é denotado por \\(\\emptyset\\). Por definição \\(x\\not\\in \\emptyset\\) para todo objeto \\(x\\). O conjunto vazio pode ser escrito também como \\(\\{\\}\\).",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/conjuntos.html#como-definir-conjuntos",
+    "href": "IniciacaoAMatematica/conjuntos.html#como-definir-conjuntos",
+    "title": "2  Conjuntos",
+    "section": "",
+    "text": "Exemplo 2.1 Exemplos \\(\\label{ex:conjuntos}\\) - Podemos considerar por exemplo o conjunto \\(X=\\{1,2,3,4,5\\}\\). Neste caso \\(1\\in X\\), mas \\(-1\\not\\in X\\). - Pode-se também considerar o conjunto \\(\\N\\) dos números naturais. Temos que \\(\\N=\\{1,2,3,\\ldots\\}\\). Em particular, \\(2\\in\\N\\), mas \\(-1\\not\\in\\N\\). Nós também não vamos considerar zero como natural, então \\(0\\not\\in \\N\\).",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/conjuntos.html#subconjuntos",
+    "href": "IniciacaoAMatematica/conjuntos.html#subconjuntos",
+    "title": "2  Conjuntos",
+    "section": "2.2 Subconjuntos",
+    "text": "2.2 Subconjuntos\n\nDefinição 2.1 Definição. Assuma que \\(A\\) e \\(B\\) são conjuntos. Dizemos que \\(A\\) é subconjunto de \\(B\\), se para todo \\(x\\in A\\) temos que \\(x\\in B\\). Temos que \\(x\\in A\\cond x\\in B\\).\n\nSe \\(A\\) é subconjunto de \\(B\\), então escrevemos que \\(A\\subseteq B\\). Se \\(A\\) não é subconjunto de \\(B\\), então escrevemos que \\(A\\not\\subseteq B\\).\n\nExemplo 2.2 Exemplos. \\(\\{1,2,3\\}\\subseteq \\{1,2,3,4,5\\}\\) e \\(\\{1,2,3,4,5\\}\\subseteq \\N\\), mas \\(\\{0,1,2\\}\\not\\subseteq \\N\\).\nPara todo conjunto \\(X\\), temos que \\(X\\subseteq X\\) e \\(\\emptyset\\subseteq X\\).\n\n\nDefinição 2.2 Definição. Se \\(A\\) e \\(B\\) são conjuntos, então dizemos que \\(A\\) é igual a \\(B\\) quando \\(A\\subseteq B\\) e \\(B\\subseteq A\\).\n\nSe \\(A\\) é igual a \\(B\\), então escrevemos que \\(A=B\\). Se \\(A\\) não é igual a \\(B\\), então escreve-se que \\(A\\neq B\\).\nQuando \\(A\\subseteq B\\) mas \\(A\\neq B\\), então escrevemos que \\(A\\subset B\\) e dizemos que \\(A\\) é subconjunto próprio de \\(B\\).",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html",
+    "href": "FundamentosDeAlgebra/index.html",
+    "title": "Fundamentos de Álgebra",
+    "section": "",
+    "text": "Conteúdo\nBloco 1. Números inteiros: os princípios de boa ordenação e indução; o Lema  de Divisão de Euclides; critérios de divisibilidade; representação de inteiros e racionais em bases; máximo divisor comum e mínimo múltiplo comum; o MDC como combinação linear; equações diofantinas lineares; números primos; fatoração; o Teorema Fundamental da Aritmética.\nBloco 2. Congruências: definição e propriedades elementares; congruências lineares; a função de Euler; os teoremas de Fermat Euler, Wilson e do resto chinês; testes de primalidade; a criptografia RSA.\nBloco 3. Polinômios sobre um corpo; divisibilidade; o Lema de Divisão; máximo divisor comum e mínimo múltiplo comum; raízes, fórmulas para raízes para polinômios de 2o e 3o grau; irredutibilidade e fatoração sobre Q, R e C; o Teorema Fundamental da Álgebra;  o Lema de Gauss e o Critério de Eisenstein; anéis; definição e exemplos; ideais; domínios de integridade; divisores de zero; anéis euclidianos.",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#literatura-recomendada",
+    "href": "FundamentosDeAlgebra/index.html#literatura-recomendada",
+    "title": "Fundamentos de Álgebra",
+    "section": "Literatura recomendada",
+    "text": "Literatura recomendada\n\nA. Vidigal, D. Avritzer, E. Farias e Soares, H. P. Bueno, M. C. C. Ferreira, e E. M. C. de Faria.  Fundamentos de Álgebra. Editora UFMG. 2005.\nS. C. Coutinho. Teoria de números e criptografia RSA. IMPA-SBM ,segunda edição,  2014.\nA. Hefez. Curso de Álgebra (vol 1). Coleção Matemática Universitária, IMPA - SBM, quinta edição, 2016.\nAdilson Gonçalves. Introdução à álgebra, IMPA, sexta edição, 2017.\nArnaldo Garcia e Yves Lequain. Elementos de álgebra, IMPA, sexta edição, 2018.\nF. C. P. Milies e S. P Coelho. Números: uma introdução à Matemática. Ed. USP, terceira edição, 2013.\nL. S. Childs. A concrete introduction to higher algebra, UTM, Springer-Verlag, 2009.",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#canais-de-youtube",
+    "href": "FundamentosDeAlgebra/index.html#canais-de-youtube",
+    "title": "Fundamentos de Álgebra",
+    "section": "Canais de YouTube",
+    "text": "Canais de YouTube\n\nTeoria dos números por Michael Penn (inglês)\nTeoria dos números por Richard Borcherds (inglês)\nIntrudução à teoria dos números por Richard Borcherds, Universidade de Berkeley, 2022 (inglês)",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
+    "href": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
+    "title": "Fundamentos de Álgebra",
+    "section": "Notas e apostilas",
+    "text": "Notas e apostilas\n\nBloco 1: Inteiros\n\nDivisão, quociente, e resto entre números inteiros; O Teorema de Divisão de Euclides\nExpansão de números inteiros em uma base \\(b\\)\nCritérios de divisibilidade\nExpansão decimal de números racionais\nO maior divisor comum\nO Algoritmo de Euclides\nPropriedades do MDC\nNúmeros primos\nO Teorema Fundamental da Aritmética\nO número dos primos\nEquações diofantinas lineares em duas variáveis\nO Teorema Chinês dos Restos (Versão 1.0)\nA função \\(\\varphi\\) de Euler\n\n\n\nBloco 2: Congruências\n\nCongruências\nClasses residuais\n\\(\\Z_n\\)\nCongruências com incógnitas\nO Teorema Chinês dos Restos (Versão 2.0)\nO Pequeno Teorema de Fermat e o Teorema de Euler\nO Teorema de Wilson\nA ordem de um elemento de \\(\\Z_n\\)\nElementos primitivos: O enunciado\nQuadrados em \\(\\Z_p\\) e resíduos quadráticos\nO Algoritmo de Exponenciação Rápida\nO Teste de Primalidade de Fermat\nOs números de Carmichael\nO Teste de Primalidade de Miller\nCriptografia RSA: A Teoria\nCriptografia RSA: Um Exemplo Computacional\n\n\n\nBloco 3: Polinômios\n\nAnéis, domínios e corpos\nNúmeros complexos\nPolinômios sobre anéis\nO anel dos polinômios\nDivisibilidade entre polinômios\nO Teorema de Divisão para Polinômios\nO MDC de dois polinômios e o Algoritmo de Euclides\nRaízes e divisibilidade\nElementos Primitivos: A demonstração\nPolinômios irredutíveis\nO Teorema da Fatoração para Polinômios\nDomínios de Fatoração Única (DFU)\nPolinômios em \\(\\Q[x]\\). Parte I: O Lema de Gauss\nPolinômios em \\(\\Q[x]\\). Parte II: O Critério de Eisenstein\nEquações polinomiais do segundo grau\nEquações polinomiais do terceiro grau",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/divisao.html",
+    "href": "FundamentosDeAlgebra/divisao.html",
+    "title": "3  Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides",
+    "section": "",
+    "text": "3.1 Definições e propriedades básicas\nOs números naturais são os números \\(1\\), \\(2\\), \\(3\\), etc. Alguns autores consideram o número zero também natural, mas nesta disciplina os números naturais começam com \\(1\\). O conjunto dos números naturais é denotado por \\(\\N\\), enquanto \\(\\N_0\\) denota o conjunto \\(\\{0\\}\\cup\\N\\). Os números inteiros são os números naturais e os seus negativos. O conjunto dos números inteiros é denotado por \\(\\Z\\) (pela palavra zahlen em alemão); ou seja \\[\n\\Z=\\{0,\\pm 1,\\pm 2,\\pm 3,\\ldots\\}.\n\\]\nQuando \\(a,b\\in\\Z\\) e \\(a\\mid b\\), então existe (por definição), um \\(q\\in\\Z\\) tal que \\(b=qa\\). Se \\(a\\neq 0\\), então o número \\(q\\) é único e \\(q=b/a\\); ou seja, \\(q\\) é o quociente de \\(b\\) por \\(a\\). Quando \\(a=b=0\\), temos que \\(a\\mid b\\), mas o quociente \\(0/0\\) não é definido.",
+    "crumbs": [
+      "Fundamentos de Álgebra",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides</span>"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/divisao.html#definições-e-propriedades-básicas",
+    "href": "FundamentosDeAlgebra/divisao.html#definições-e-propriedades-básicas",
+    "title": "3  Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides",
+    "section": "",
+    "text": "Definição 3.1 Sejam \\(a,b\\in\\Z\\). Dizemos que “\\(a\\) divide \\(b\\)”, ou “\\(b\\) é um múltiplo de \\(a\\)” ou “\\(b\\) é divisível por \\(a\\)” se existir \\(q\\in\\Z\\) tal que \\(b=qa\\). Quando \\(a\\) divide \\(b\\), escrevemos \\(a\\mid b\\), e quando \\(a\\) não divide \\(b\\), escrevemos \\(a\\nmid b\\).\n\n\nExemplo 3.1  \n\n\\(2\\mid 4\\), \\(-2\\mid 4\\), \\(3\\nmid 5\\);\n\\(a\\mid 0\\) para todo \\(a\\in\\Z\\); em particular \\(0\\mid 0\\);\n\\(0\\nmid a\\) para todo \\(a\\in\\Z\\setminus\\{0\\}\\).\n\n\n\n\nLema 3.1 (As propriedades da divisibilidade.) Sejam \\(a,b,c\\in\\Z\\). As seguintes afirmações são verdadeiras.\n\n\\(a\\mid a\\);\nse \\(a\\mid b\\) e \\(b\\mid c\\), então \\(a\\mid c\\);\nse \\(a\\mid b\\) e \\(b\\mid a\\)., então \\(a=\\pm b\\);\nse \\(a\\mid b\\), então \\(a\\mid bc\\);\nse \\(a\\mid b\\) e \\(a\\mid c\\), então \\(a\\mid b\\pm c\\).\n\n\n\nComprovação. Demonstraremos apenas duas destas afirmações, o resto é exercício.\n\nA afirmação é trivialmente verdadeira pelas observações anteriores quando \\(a=0\\) ou \\(b=0\\). Assumamos portanto que \\(a\\neq 0\\) e \\(b\\neq 0\\). Suponha que \\(a\\mid b\\) e \\(b\\mid a\\). Então existem \\(q_1,q_2\\in\\Z\\) tais que \\[\\begin{align*}\nb &=q_1a;\\\\\na &=q_2b.\n\\end{align*}\\] Substituindo \\(b=q_1a\\) na segunda equação, obtemos que \\[\na=q_2b=q_2q_1a.\n\\] Como \\(a\\neq 0\\), a última equação destacada implica que \\(q_2q_1=1\\); ou seja (lembrando que \\(q_1\\) e \\(q_2\\) são inteiros) \\(q_1=q_2=1\\) ou \\(q_1=q_2=-1\\). Obtemos portanto que \\(a=\\pm b\\).\nAssuma que \\(a\\mid b\\) e \\(a\\mid c\\). Existem \\(q_1,q_2\\in\\Z\\) tais que \\(b=q_1a\\) e \\(c=q_2a\\). Isso implica que \\[\nb+c=q_1a+q_2a=(q_1+q_2)a;\n\\] ou seja, \\(a\\mid b+c\\). Pode-se modificar o argumento trivialmente para mostrar que \\(a\\mid b-c\\).",
+    "crumbs": [
+      "Fundamentos de Álgebra",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides</span>"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/divisao.html#o-teorema-da-divisão-de-euclides",
+    "href": "FundamentosDeAlgebra/divisao.html#o-teorema-da-divisão-de-euclides",
+    "title": "3  Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides",
+    "section": "3.2 O Teorema da Divisão de Euclides",
+    "text": "3.2 O Teorema da Divisão de Euclides\n\nTeorema 3.1 (O Teorema da Divisão de Euclides) Sejam \\(a,b\\in\\Z\\) tais que \\(b\\neq 0\\). Então existem unicamente \\(q,r\\in\\Z\\) tais que \\[\na=qb+r\\quad\\mbox{e}\\quad 0\\leq r&lt;|b|.\n\\]\n\n\nComprovação. Existência. Suponha primeiro que \\(b\\) é positivo. Vamos demonstrar a existência primeiro para \\(a\\) não negativo por indução em \\(a\\). Quando \\(a=0\\), pode escolher \\(q=r=0\\) e a afirmação sobre a existência destes números está válida. Assuma que a afirmação da existência é verdadeira para algum \\(a\\geq 0\\); ou seja existem \\(q,r\\in\\Z\\) tais que \\(a=qb+r\\) e \\(0\\leq r&lt;b\\). O número \\(a+1\\) pode ser escrito como \\[\na+1=qb+r+1\n\\] e temos ainda que \\(1\\leq r+1\\leq b\\). Se \\(r+1&lt;b\\), então a expressão para \\(a\\) na equação anterior é como desejada. Por outro lado, se \\(r+1=b\\), então \\[\na+1=qb+r+1=qb+b=(q+1)b=(q+1)b+0\n\\] e obtemos uma expressão para \\(a+1\\) que satisfaz as condições do teorema.Acabamos de provar a afirmação da existência para \\(a\\) não negativo e \\(b\\) positivo.\nAssuma agora que \\(a\\) é negativo, mas \\(b\\) contínua positivo. Como \\(-a\\) é positivo, o teorema está válido para \\(-a\\) e \\(b\\) e existem \\(q,r\\in\\Z\\) tais que \\[\n-a=qb+r\\quad\\mbox{e}\\quad 0\\leq r&lt; b.\n\\] Se \\(r=0\\), então obtemos que \\(a=(-q)b+0\\) que dá a expressão procurada. Caso contrário, quando \\(0&lt;r&lt;b\\), obtemos que \\[\na=(-q)b-r=(-q-1)b+(-r+b)\\quad\\mbox{e}\\quad 0&lt; -r+b&lt; b\n\\] como foi desejado.\nAgora consideremos os caso quando \\(b\\) é negativo e \\(a\\) é arbitrário. Neste caso \\(-b\\) é positivo e existem \\(q,r\\in\\Z\\) tais que \\[\na=q(-b)+r\\quad\\mbox{e}\\quad 0\\leq r&lt; |b|\n\\] e isso implica que \\[\na=(-q)b+r\\quad\\mbox{e}\\quad 0\\leq r&lt; |b|\n\\] e podemos tomar os números \\(-q\\) e \\(r\\).\nUnicidade. Assuma que para algum \\(a,b\\in\\Z\\) (com \\(b\\neq 0\\)), temos \\(q_1,q_2,r_1,r_2\\in\\Z\\) tais que \\[\na=q_1b+r_1\\quad\\mbox{e}\\quad 0\\leq r_1&lt;|b|\n\\] e \\[\na=q_2b+r_2\\quad\\mbox{e}\\quad 0\\leq r_2&lt;|b|.\n\\] Assuma sem perder generalidade que \\(r_2\\geq r_1\\). Neste caso temos que \\(0\\leq r_2-r_1\\leq r_2&lt;|b|\\) e das duas equações anteriores obtemos também que \\[\n(q_1-q_2)b=(r_2-r_1).\n\\] Como \\((q_1-q_2)b\\) é um múltiplo de \\(b\\), este número só pode cair no intervalo \\([0,|b|-1]\\) se \\((q_1-q_2)b=0\\). Como \\(b\\neq 0\\), a lei cancelativa implica que \\(q_1-q_2=0\\); ou seja \\(q_1=q_2=q\\). Ora \\[\na=qb+r_1=qb+r_2\n\\] a aplicando a lei cancelativa aditivamente obtemos que \\(r_1=r_2\\). Então a decomposição do número \\(a\\) no teorema é única.\n\nOs números \\(q\\) e \\(r\\) são chamados do quociente e o resto, respetivamente, de \\(a\\) por \\(b\\).\n\nExemplo 3.2 Vamos ver alguns exemplos do quiciente \\(q\\) e do resto \\(r\\) no Teorema da Divisão para alguns valores \\(a,b\\). Pode-se verificar facilmente as seguintes afirmações.\n\nSe \\(a=13\\) e \\(b=5\\), então \\(q=2\\) e \\(r=3\\).\nSe \\(a=-13\\) e \\(b=5\\), então \\(q=-3\\) e \\(r=2\\).\nSe \\(a=13\\) e \\(b=-5\\), então \\(q=-2\\) e \\(r=3\\).\nSe \\(a=-13\\) e \\(b=-5\\), então \\(q=3\\) e \\(r=2\\).\n\nExplique porque \\(r\\neq -3\\) nos itens 2 e 4.\n\n\n3.2.1 Computações com Python\nVamos ver agora como calcular o quociente e o resto na linguagem Python. O quociente de dois números naturais pode ser calculado por “//” e o resto por “%”. Considere o seguinte exemplo:\n\n&gt;&gt;&gt; 11//5\n2\n&gt;&gt;&gt; 11 % 5\n1\n\nNormalmente usamos variáveis para guardar os números que usamos na computação. Refazemos a computatação anterior usando variáveis:\n\n&gt;&gt;&gt; a = 11\n&gt;&gt;&gt; b = 5\n&gt;&gt;&gt; a//b\n2\n&gt;&gt;&gt; a % b\n1\n\nVerifiquemos que o quociente e o resto satisfaz a igualdade no Teorema da Divisão:\n\n&gt;&gt;&gt; q = a//b; r = a % b\n&gt;&gt;&gt; a == q*b+r\nTrue\n\nPrecisa-se prestar atenção quando trabalhamos com números negativos. Quando \\(a\\) é negativo e \\(b\\) é positivo, o quociente e o resto calculado por Python coincide com o que segue do Teorema.\n\n&gt;&gt;&gt; a = -11; b = 5\n&gt;&gt;&gt; a//b\n-3\n&gt;&gt;&gt; a%b\n4\n\nMas quando \\(b\\) for negativo, o Python devolve um resto negativo que não é compatível com nosso Teorema.\n\n&gt;&gt;&gt; a = 11; b = -5\n&gt;&gt;&gt; a//b\n-3\n&gt;&gt;&gt; a%b\n-4\n\nNestes casos o output dado por Python precisa ser modificado para ser compatível com o Teorema de Divisão enunciado anteriormente.\nPython possui a função divmod que calcula o quociente e o resto no mesmo tempo. Quando precisa-se calcular os dois, o uso desta função é preferível sobre usar as operações // e % separadamente.\n\n&gt;&gt;&gt; q, r = divmod( 11, 5 )\n&gt;&gt;&gt; q, r\n(2, 1)\n&gt;&gt;&gt; q, r = divmod( -11, 5 )\n&gt;&gt;&gt; q, r\n(-3, 4)\n&gt;&gt;&gt; q, r = divmod( 11, -5 )\n&gt;&gt;&gt; q, r \n(-3, -4)\n&gt;&gt;&gt; q, r = divmod( -11, -5 )\n&gt;&gt;&gt; q, r \n(2, -1)\n\nA função divmod pode ser modificado para devolver o quociente e o resto que satisfaz a condição do Teorema como foi enunciado por nós.\n\ndef my_divmod( a, b ):\n\n    # calculamos o quociente e resto com divmod\n    q, r = divmod( a, b )\n    \n    # se o resto é não negativo, estamos pronto\n    if r &gt;= 0:\n        return q, r\n        # caso contrário, o resto é negativo e devolvemos q e r modificados\n    else:\n        return q+1, r-b\n\nO resultado devolvido por esta nova função está de acordo com a nossa definição de quociente e resto.\n\n&gt;&gt;&gt; my_divmod(13,5)\n(2, 3)\n\n&gt;&gt;&gt; my_divmod(-13,5)\n(-3, 2)\n\n&gt;&gt;&gt; my_divmod(-13,-5)\n(3, 2)\n\n&gt;&gt;&gt; my_divmod(13,-5)\n(-2, 3)",
+    "crumbs": [
+      "Fundamentos de Álgebra",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/index.html",
+    "href": "AlgebraLinearII/index.html",
+    "title": "Álgebra Linear II",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Álgebra Linear II"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/chapter1.html",
+    "href": "AlgebraLinearII/chapter1.html",
+    "title": "4  Sample chapter",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Sample chapter</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html",
+    "href": "GruposECorpos/index.html",
+    "title": "Grupos e Corpos",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Grupos e Corpos"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html#apostilas",
+    "href": "GruposECorpos/index.html#apostilas",
+    "title": "Grupos e Corpos",
+    "section": "",
+    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nO subgrupo derivado\nProdutos diretos e semidiretos\nGrupos solúveis\nAções de grupos e O Teorema Órbita-Estabilizador\nGrupos livres\n[Grupos abelianos]\nClasses de conjugação\nO grupo alternado\nO Lema de Iwasawa e a simplicidade de \\(PSL(n,q)\\)\nOs Teoremas de Sylow\nGrupos nilpotentes\n\nTODO: Grupos abelianos, Teorema de Cayley, produto direto, os Teoremas de Homomorfismo",
+    "crumbs": [
+      "Grupos e Corpos"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html",
+    "href": "GruposECorpos/definitions.html",
+    "title": "5  As primeiras definições",
+    "section": "",
+    "text": "5.1 Operações binárias e grupos\nSe \\(G\\) é um grupo com a operação \\(\\cdot\\), então, para evitar ambiguidade, escrevemos que \\((G,\\cdot)\\) é um grupo. Quando não há perigo de ambiguidade, escreve-se simplesmente que \\(G\\) é um grupo. Por exemplo, \\((\\Z,+)\\) é um grupo, mas \\((\\Z,\\cdot)\\) não é.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html#operações-binárias-e-grupos",
+    "href": "GruposECorpos/definitions.html#operações-binárias-e-grupos",
+    "title": "5  As primeiras definições",
+    "section": "",
+    "text": "Definição 5.1 Seja \\(X\\) um conjunto. Uma função \\(f\\colon X\\times X\\to X\\) é dita uma operação binária ou simplesmente uma operação. Se \\(x,y\\in X\\), então o resultado da operação entre \\(x\\) e \\(y\\) é \\(f(x,y)\\). Normalmente o resultado de uma operação entre \\(x,y\\in X\\) será escrito como \\(x\\cdot y\\), \\(x+y\\), \\(x\\circ y\\), \\(x\\diamond y\\), ou, quando não houver risco de ambiguidade, simplesmente como \\(xy\\).\n\n\nDefinição 5.2 Sejam \\(X\\) um conjunto e \\(\\cdot\\) uma operação em \\(X\\).\n\nA operação \\(\\cdot\\) é dita associativa, se \\((x\\cdot y)\\cdot z=x\\cdot(y\\cdot z)\\) para todo \\(x,y,z\\in X\\).\nA operação \\(\\cdot\\) é dita comutativa, se \\(x\\cdot y=y\\cdot x\\) para todo \\(x,y\\in X\\).\n\\(X\\) possui elemento neutro para a operação \\(\\cdot\\), se existir um elemento \\(e\\in X\\) tal que \\(ex=xe=x\\) para todo \\(x\\in X\\).\nAssuma que \\(X\\) possui elemento neutro \\(e\\) para a operação \\(\\cdot\\) e seja \\(x\\in X\\). Diz-se que \\(x\\) possui inverso, se existe \\(y\\in X\\) tal que \\(xy=yx=e\\). O elemento \\(y\\) é dito um inverso de \\(x\\) (o inverso pode não ser único).\n\n\n\nDefinição 5.3 Assuma que \\(X\\) é um conjunto com uma operação \\(\\cdot\\). Dizemos que \\(X\\) é um grupo se\n\na operação \\(\\cdot\\) é associativa;\n\\(X\\) possui elemento neutro;\ntodo elemento de \\(X\\) possui inverso.\n\nAlém disso, se a \\(\\cdot\\) é comutativa, então \\(X\\) é dito grupo comutativo ou grupo abeliano.\n\n\n\nLema 5.1 Seja \\(G\\) um grupo.\n\nO elemento neutro de \\(G\\) é único.\nSe \\(g\\in G\\), o inverso de \\(G\\) é único.\n\n\n\nComprovação. Exercício.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html#notações",
+    "href": "GruposECorpos/definitions.html#notações",
+    "title": "5  As primeiras definições",
+    "section": "5.2 Notações",
+    "text": "5.2 Notações\nUsamos dois sistemas principais de notações quando consideramos grupos:\nNotação aditiva: a operação é denotada por \\(+\\), o elemento neutro por \\(0\\), o inverso de \\(g\\) por \\(-g\\). A soma \\(g+\\cdots+g\\) (\\(n\\) vezes) está escrita como \\(n\\cdot g\\) ou \\(ng\\). Se \\(n\\) for um número natural, elemento \\(n(-g)=-(ng)\\) será escrita como \\(-ng\\). Concordamos também que \\(0g=0\\). Esta notação é usada principalmente em grupos abelianos.\nNotação multiplicativa: A operação é denotada por \\(\\cdot\\) ou simplesmente por concatenação, por exemplo \\(xy\\). O elemento neutro é denotado por \\(1\\), o inverso de \\(g\\) por \\(g^{-1}\\). O produto \\(g\\cdots g\\) (\\(n\\) vezes) será escrito como \\(g^n\\). Se \\(n\\) for um número natural, o elemento \\((g^{-1})^n=(g^n)^{-1}\\) será escrito como \\(g^{-n}\\). Além disso, \\(g^0=1\\). Esta notação é mais comum que a notação aditiva e pode ser usada em grupos abelianos e também em grupos não abelianos.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html#os-primeiros-exemplos",
+    "href": "GruposECorpos/definitions.html#os-primeiros-exemplos",
+    "title": "5  As primeiras definições",
+    "section": "5.3 Os primeiros exemplos",
+    "text": "5.3 Os primeiros exemplos\n\nExemplo 5.1 Aqui são os primeiros exemplos de grupos. Ao longo da disciplina, nós vamos estudar exemplos mais complexos. Assumimos que os alunos sabem pelo menos a definição de um corpo e conhecem os exemplos básicos, tais como \\(\\Q\\), \\(\\R\\), \\(\\C\\), ou \\(\\Z_p\\).\n\n\\((\\Z,+)\\) é um grupo abeliano.\nOs conjuntos \\(\\{1,-1\\}\\), \\(\\{1,-1,i,-i\\}\\) são grupos abelianos com a multiplicação (\\(i\\) é a unidade imaginária).\nSe \\(\\F\\) é um corpo, então \\((\\F,+)\\) e \\((\\F\\setminus\\{0\\},\\cdot)\\) são grupos abelianos. O conjunto \\(\\F\\setminus\\{0\\}\\) será denotado por \\(\\F^*\\).\nSe \\(R\\) é um anel, então \\((R,+)\\) é um grupo abeliano. Se \\(R^*\\) é o conjunto dos elementos invertíveis de \\(R\\), então \\((R^*,\\cdot)\\) é também um grupo abeliano.\nSeja \\(X\\) um conjunto não vaziu. Definimos \\[\n\\sym X=\\{f\\colon X\\to X\\mid \\mbox{$f$ é bijetiva}\\}.\n\\] O conjunto \\(\\sym X\\) é um grupo com a operação de composição e o nome deste grupo é o grupo simétrico sobre o conjunto \\(X\\). Os elementos de \\(\\sym X\\) são chamadas de permutações (do conjunto \\(X\\)). Frequentemente, \\(X=\\{1,\\ldots,n\\}\\) e neste caso escrevemos \\(\\sym X=S_n\\) e o nome do grupo é grupo simétrico de grau \\(n\\).\nSe \\(V\\) é um espaço vetorial sobre um corpo \\(\\F\\), então definimos \\[\n\\GLV V=\\{f\\colon V\\to V\\mid \\mbox{$f$ é linear a bijetiva}\\}.\n\\] O conjunto \\(\\GLV V\\) é um grupo com a operação de composição. O grupo \\(\\GLV V\\) é chamado de grupo geral linear. Se \\(V\\) tem dimensão finita, então pode-se definir \\[\n\\SLV V=\\{f\\in \\GLV V\\mid \\det f=1\\}.\n\\] (Note que o determinante de um operador linear de um espaço de dimensão finita é bem definido e independe da base.) O grupo \\(\\SLV V\\) é chamado de grupo especial linear.\nSeja \\(\\F\\) um corpo e \\(n\\geq 1\\). Defina \\[\n\\GL n\\F=\\{A\\in M_{n\\times n}(\\F)\\mid \\mbox{$A$ é invertível}\\}\n\\] e \\[\n\\SL n\\F=\\{A\\in \\GL n\\F\\mid \\det A=1\\}.\n\\] Estes conjuntos são grupos com a operação de multiplicação matricial. Os grupos \\(\\GL n\\F\\) e \\(\\SL n\\F\\) são também chamados de grupo geral linear e grupo especial linear. Se \\(\\F=\\Z_p\\), então escrevemos \\(\\GL np\\) e \\(\\SL np\\) para \\(\\GL n{\\Z_p}\\) e para \\(\\SL n{\\Z_p}\\). Similarmente, se \\(\\F\\) é um corpo finito de ordem \\(q\\), então escreve-se \\(\\GL n\\F=\\GL nq\\). Esta notação usa o fato que um corpo finito está unicamente determinado, a menos de isomorfismo, pela sua cardinalidade. Se \\(V\\) é um espaço vetorial de dimensão \\(n\\) sobre \\(\\F\\), então os grupos \\(\\GLV V\\), \\(\\GL n\\F\\), e \\(\\SLV V\\), \\(\\SL n\\F\\) são claramente relacionados, e nós vamos estudar esta relação mais tarde quando tratarmos o conceito de isomorfismo. Neste momento é importante entender que \\(\\GLV V\\) e \\(\\GL n\\F\\) não são idênticos (iguais).\nSeja \\(n\\geq 3\\) e considere um polígono regular com \\(n\\) lados desenhado no plano. Este polígono possui \\(n\\) simetrias de rotação (por \\(360/n\\) graus para \\(n=0,\\ldots,n-1\\)) e \\(n\\) simetrias reflexivas. A coleção destas simetrias é fechada para a composição e é chamada de grupo diedral de grau \\(n\\). O grupo diedral é denotado por \\(D_n\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html#ordem-de-grupo-ordem-de-elemento",
+    "href": "GruposECorpos/definitions.html#ordem-de-grupo-ordem-de-elemento",
+    "title": "5  As primeiras definições",
+    "section": "5.4 Ordem de grupo, ordem de elemento",
+    "text": "5.4 Ordem de grupo, ordem de elemento\n\nDefinição 5.4 A ordem de um grupo \\(X\\) é a cardinalidade de \\(X\\) e é denotada por \\(|X|\\). Se \\(|X|\\) é finita, então dizemos que \\(X\\) é um grupo finito. Caso contrário, diz-se que \\(X\\) é um grupo infinito. Se \\(x\\in X\\), então a ordem \\(|x|\\) de \\(x\\) é definida na maneira seguinte. Se existir \\(n\\geq 1\\) tal que \\(x^n=1\\), então \\(|x|\\) é igual ao menor tal \\(n\\geq 1\\). Se tal número \\(n\\) não existir, então \\(|x|\\) é infinito.\n\n\nExemplo 5.2  \n\nA ordem de \\(S_n\\) (e mais geralmente a ordem de \\(\\sym X\\) quando \\(|X|=n\\)) é o número total de permutações do conjunto \\(\\{1,\\ldots,n\\}\\). Sabemos de Análise Combinatória que este número é \\(n!\\) (n fatorial). Logo \\(|S_n|=n!\\).\n\\(|D_n|=2n\\).\nA ordem de \\(\\operatorname{GL}(n,p)\\) é \\[\np^{n(n-1)/2}\\prod_{k=1}^n (p^k-1).\n\\] Mais geralmente, se \\(\\mathbb F\\) é um corpo finito com \\(q\\) elementos, então a ordem de \\(\\operatorname{GL}(n,q)\\) pode ser calculada usando a mesma fórmula, só substituindo \\(p\\) com \\(q\\). O leitor vai verificar isso nos exercícios.\n\n\n\nExemplo 5.3  \n\nSe \\(G\\) for um grupo, o único elemento de ordem \\(1\\) é a identidade \\(1\\).\nSe \\(a\\in\\Z\\setminus\\{0\\}\\), então \\(|a|=\\infty\\).\nSe \\(2\\in \\Z_6\\), então \\(|2|=3\\).\nSe \\(2\\in\\Z_5^*\\), então \\(|2|=4\\).\nSeja \\(M\\) a matriz \\[\n\\begin{pmatrix} 0 & i \\\\ i & 0\\end{pmatrix}\\in\\operatorname{GL}(2,\\C).\n\\] Então \\(|M|=4\\).\nSeja \\(A\\) a matriz \\[\n\\begin{pmatrix} 1 & 1 \\\\ 0 & 1\\end{pmatrix}\\in\\operatorname{GL}(2,\\C).\n\\] Então \\(|A|=\\infty\\).\n\n\n\nExercício 5.1 Demonstre que se \\(G\\) é um grupo finito e \\(a\\in G\\), então \\(|a|\\) é finito.\n\n\nLema 5.2 Assuma que \\(a\\in G\\) e \\(a^k=1\\) com algum \\(k\\geq 1\\). Então \\(|a|\\) é um divisor de \\(k\\).\n\n\nComprovação. Primeiro, a definição de \\(|a|\\) implica que \\(|a|\\) é finito. Assuma que \\(m=|a|\\) e escreva, \\(k=qm+r\\) com \\(r\\in\\{0,\\ldots,m-1\\}\\). Temos que \\[\n1=a^k=a^{qm+r}=(a^m)^qa^r=a^r.\n\\] Ou seja, \\(a^r=1\\). Como \\(m\\) é o menor inteiro positivo tal que \\(a^m=1\\), obtemos que \\(r=0\\). Logo \\(m\\mid k\\), como foi afirmado.\n\n\nExemplo 5.4 Seja \\(p\\) um primo e seja \\(\\Z_p^*=\\Z_p\\setminus\\{0\\}\\). Considere o grupo \\((\\Z_p,\\cdot)\\). Pelo Pequeno Teorema de Fermat, temos que \\(a^{p-1}=1\\) para todo \\(a\\in \\Z_p^*\\). O lema anterior implica que \\(|a|\\mid p-1\\).\nSimilarmente, denote the por \\(\\Z_n^*\\) o conjunto de elementos invertíveis de \\(\\Z_n\\). Então \\(\\Z_n^*\\) é um grupo para a multiplicação entre classes residuais. Sabemos do Teorema de Euler que \\[\na^{\\varphi(n)}=1\\quad\\mbox{para todo}\\quad a\\in\\Z_n^*.\n\\] Logo, \\(|a|\\mid\\varphi(n)\\) vale para todo \\(a\\in\\Z_n^*\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/definitions.html#a-notação-cíclica-para-permutações",
+    "href": "GruposECorpos/definitions.html#a-notação-cíclica-para-permutações",
+    "title": "5  As primeiras definições",
+    "section": "5.5 A notação cíclica para permutações",
+    "text": "5.5 A notação cíclica para permutações\nO grupo simétrico está entre os grupos mais importantes. Portanto é importante entender a notação usada para os elementos de \\(S_n\\).\nPrimeiro, se \\(\\sigma\\in\\sym\\Omega\\) e \\(\\alpha\\in\\Omega\\), então a imagem de \\(\\alpha\\) por \\(\\sigma\\) será denotada por \\[\n\\alpha\\sigma.\n\\] Ou seja, a bijeção \\(\\sigma\\) será escrita no lado direito de \\(\\alpha\\)! Quando necessário, poderá-se usar parêntesis e escrever \\((\\alpha)\\sigma\\).\nÉ uma consequência desta notação que as permutações serão compostas da esquerda para a direita. Ou seja, a composição \\(\\sigma_1\\sigma_2\\) será calculada por aplicar \\(\\sigma_1\\) primeiro e \\(\\sigma_2\\) depois.\nConsidere por exemplo \\(S_8\\); ou seja, o grupo de permutações do conjunto \\(\\Omega=\\{1,\\ldots,8\\}\\). Uma permutação \\(\\sigma\\in S_8\\) é uma bijeção \\(\\sigma:\\Omega\\to\\Omega\\). Uma notação sensata é fazer uma lista de \\(\\Omega\\) com as imagens dos seus elementos. Por exemplo, \\[\n\\sigma_1=\\left[\\begin{array}{cccccccc}\n1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\\\\n2 & 3 & 4 & 8 & 7 & 6 & 1 & 5\n\\end{array}\\right].\n\\] Neste caso, \\(1\\sigma_1=2\\), \\(2\\sigma_1=3\\), \\(3\\sigma_1=4\\), etc. Se \\(\\sigma_2\\) for um outro elemento de \\(S_8\\), por exemplo, \\[\n\\sigma_2=\\left[\\begin{array}{cccccccc}\n1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\\\\n4 & 6 & 1 & 3 & 5 & 8 & 7 & 2\n\\end{array}\\right],\n\\] então, lembrando que \\(\\sigma_1\\sigma_2\\) significa “\\(\\sigma_1\\) primeiro e depois \\(\\sigma_2\\)”, \\[\n\\sigma_1\\sigma_2=\\left[\\begin{array}{cccccccc}\n1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\\\\n6 & 1 & 3 & 2 & 7 & 8 & 4 & 5\n\\end{array}\\right].\n\\]\nA notação cíclica nos permite usar uma notação mais compacta para permutações.\n\nDefinição 5.5 Seja \\(\\Omega\\) um conjunto e \\(a_1,\\ldots,a_k\\in\\Omega\\) elementos dois a dois distintos. O cíclo \\((a_1,a_2,\\ldots,a_k)\\) é a permutação de \\(\\sym\\Omega\\) que leva \\[\na_1\\mapsto a_2,\\ a_2\\mapsto a_3,\\ldots, a_{k-1}\\mapsto a_k,\\ a_k\\mapsto a_1\n\\] e deixa todo outro elemento de \\(\\Omega\\) fixado.\n\n\nPor exemplo, o cíclo \\((1,2,3,4,8,5,7)\\in S_8\\) é a permutação de \\(\\Omega=\\{1,\\ldots,8\\}\\) que leva \\[\n\\left[\\begin{array}{cccccccc}\n1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\\\\n2 & 3 & 4 & 8 & 7 & 6 & 1 & 5\n\\end{array}\\right].\n\\] Ou seja, este ciclo coincide com a permutação \\(\\sigma_1\\) em cima. Este mesmo ciclo pode ser também escrito como \\((1,2,3,4,8,5,7)(6)\\) para indicar que o número \\(6\\) está fixado. O mesmo ciclo pode ser escrito também como \\((3,4,8,5,7,1,2)\\); ou seja, começando com um outro elemento de \\(\\Omega\\). Os ciclos \\((1,2,3,4,8,5,7)\\) e \\((3,4,8,5,7,1,2)\\) são iguais como permutações.\n\n\nDefinição 5.6 Sejam \\(a_1,\\ldots,a_k\\in \\Omega\\) dois a dois distintos e \\(b_1,\\ldots,b_m\\in \\Omega\\) também dois a dois distintos. Os ciclos \\((a_1,\\ldots,a_k)\\) e \\((b_1,\\ldots,b_m)\\) são disjuntos se \\[\n\\{a_1,\\ldots,a_k\\}\\cap\\{b_1,\\ldots,b_m\\}=\\emptyset.\n\\]\n\n\nLema 5.3 Ciclos disjuntos comutam. Ou seja, se \\(\\sigma_1,\\sigma_2\\in\\sym\\Omega\\) são ciclos disjuntos, então \\(\\sigma_1\\sigma_2=\\sigma_2\\sigma_1\\).\n\n\nComprovação. Exercício.\n\n\nExemplo 5.5 A permutação \\(\\sigma_2\\) em cima não é um ciclo, mas pode ser escrita como um produto de ciclos disjuntos: \\[\n\\sigma_2=(1,4,3)(2,6,8)=(1,4,3)(2,6,8)(5)(7).\n\\]\nA permutação \\(\\sigma_1\\sigma_2\\) pode ser escrita como \\[\n\\sigma_1\\sigma_2=(1,6,8,5,7,4,2)=(1,6,8,5,7,4,2)(3).\n\\] Portanto, a equação a multiplicação (composição) de \\(\\sigma_1\\) e \\(\\sigma_2\\) pode ser escrita como \\[\n\\sigma_1\\sigma_2=(1,2,3,4,8,5,7)(1,4,3)(2,6,8)=(1,6,8,5,7,4,2).\n\\]\n\nEnunciamos o seguinte teorema sem demonstração. A demonstração não é difícil, convidamos o leitor para prová-lo.\n\nTeorema 5.1 Todo elemento de \\(S_n\\) pode ser escrito como produto de ciclos disjuntos. Além disso, esta decomposição é única a menos da ordem dos ciclos.\n\n\nExemplo 5.6 O seguinte vídeo apresenta um puzzle que pode ser resolvido usando a notação cíclica de permutações.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>As primeiras definições</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/lagrange.html",
+    "href": "GruposECorpos/lagrange.html",
+    "title": "6  Subgrupos e classes laterais",
+    "section": "",
+    "text": "6.1 Subgrupos",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Subgrupos e classes laterais</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/lagrange.html#subgrupos",
+    "href": "GruposECorpos/lagrange.html#subgrupos",
+    "title": "6  Subgrupos e classes laterais",
+    "section": "",
+    "text": "Definição 6.1 Seja \\(X\\) um grupo, e \\(Y\\subseteq X\\) não vazio. Dizemos que \\(Y\\) é um subgrupo de \\(X\\) se \\(Y\\) é fechado para produto e para inversos; ou seja, para todo \\(x,y\\in Y\\),\n\n\\(x\\cdot y\\in Y\\);\n\\(x^{-1}\\in Y\\).\n\nSe \\(Y\\) é um subgrupo de \\(X\\), então escrevemos \\(Y\\leq X\\). Note que a definição implica que o elemento neutro de \\(X\\) pertence a cada subgrupo \\(Y\\) e ele é o elemento neutro de \\(Y\\).\n\n\nExemplo 6.1  \n\nSe \\(G\\) é um grupo, então \\(G\\leq G\\). Um subgrupo de \\(G\\) diferente de \\(G\\) é dito subgrupo próprio. Escreve-se \\(H&lt;G\\) para enfatizar que \\(H\\) é um subgrupo próprio de \\(G\\).\n\nSe \\(G\\) é um grupo, então \\(\\{1\\}\\leq G\\) e este é o único subgrupo com um elemento. Se \\(H\\) é um subgrupo e \\(H\\neq\\{1\\}\\), então \\(H\\) é dito não trivial.\n\\(SL(V)\\leq GL(V)\\leq \\sym V\\) e \\(SL(n,\\K)\\leq GL(n,\\K)\\).\n\\(\\{2n\\mid n\\in\\Z\\}\\leq \\Z\\), mas \\(\\{2n+1\\mid n\\in\\Z\\}\\not\\leq \\Z\\) (considerando a operação \\(+\\)).\n\\(\\{1,-1\\}\\leq\\{1,-1,i,-i\\}\\leq \\C^*\\).\nAs simetrias rotacionais formam um subgrupo de \\(D_n\\), mas as simetrias reflexivas não (explique porque).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Subgrupos e classes laterais</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/lagrange.html#classes-laterais",
+    "href": "GruposECorpos/lagrange.html#classes-laterais",
+    "title": "6  Subgrupos e classes laterais",
+    "section": "6.2 Classes laterais",
+    "text": "6.2 Classes laterais\n\nDefinição 6.2 Seja \\(G\\) um grupo e \\(H\\leq G\\) (subgrupo de \\(G\\)). Se \\(g\\in G\\), então o conjunto \\[\ngH=\\{gh\\mid h\\in H\\}\n\\] é chamado de classe lateral à esquerda (de \\(H\\) em \\(G\\)). O conjunto \\[\nHg=\\{hg\\mid h\\in H\\}\n\\] é chamado de classe lateral à direita (de \\(H\\) em \\(G\\)).\n\n\nExemplo 6.2 O leitor já deve conhecer vários exemplos de classes laterais.\n\nConsidere o grupo \\((\\Z,+)\\). Seja \\(n\\in\\N\\) e seja \\(H=n\\Z=\\{qn\\mid q\\in\\Z\\}\\leq \\Z\\) o subgrupo formado pelos múltiplos de \\(n\\). Se \\(a\\in\\Z\\), a classe lateral \\[\nH+a=\\{qn+a\\mid q\\in\\Z\\}=\\{qn+r\\mid q\\in \\Z\\}=H+r\n\\] onde \\(r\\in\\{0,\\ldots,n-1\\}\\) é o resto de \\(a\\) quando dividido por \\(n\\). Portanto, a classe lateral \\(H+a\\) coincide com a classe residual \\[\nH+r=\\{qn+r\\mid q\\in\\Z\\}\n\\] dos inteiros que dão resto \\(q\\) quando divididos por \\(n\\). Ou seja, o número de classes laterais é \\(n\\) (finito) e \\(a_1,a_2\\in\\Z\\) pertencem a mesma classe lateral se \\(a_1\\equiv a_2\\pmod n\\).\nConsidere o grupo \\((\\R^3,+)\\) e considere o subgrupo \\[\nH=\\{(x,y,z)\\mid x+y+z=0\\}.\n\\] O supgrupo \\(H\\) pode ser visto como um plano em \\(\\R^3\\). Se \\(v=(x_0,y_0,z_0)\\), então a classe lateral \\[\nH+v=\\{(x,y,z)\\mid x+y+z=x_0+y_0+z_0\\}\n\\] é o plano paralelo a \\(H\\) e passa pelo vetor \\(v\\). Além disso, cada plano paralelo a \\(H\\) é uma classe lateral de \\(H\\). Neste caso, temos um número infinito de classes laterais.\nSeja \\(\\F\\) um corpo, \\(\\alpha\\in\\F^*\\) e seja \\(A\\in\\GL n\\F\\) uma matriz com \\(\\det A=\\alpha\\). Então a classe lateral \\(\\SL n\\F A\\) é o conjunto de matrizes \\(n\\times n\\) com determinante \\(\\alpha\\). O número de classes laterais de \\(\\SL n\\F\\) em \\(\\GL n\\F\\) é \\(|\\F^*|\\).\n\n\n\nExemplo 6.3 Seja \\(G=S_3\\) e seja \\(H=\\{1,(1,2)\\}\\). Então temos as seguintes classes laterais: \\[\\begin{eqnarray*}\nH\\cdot 1&=&H(1,2)=H=\\{1,(1,2)\\};\\\\\nH(1,3)&=&H(1,2,3)=\\{(1,3),(1,2,3)\\};\\\\\nH(2,3)&=&H(1,3,2)=\\{(2,3),(1,3,2)\\};\\\\\n1H&=&(1,2)H=H=\\{1,(1,2)\\};\\\\\n(1,3)H&=&(1,3,2)H=\\{(1,3),(1,3,2)\\};\\\\\n(2,3)H&=&(1,2,3)H=\\{(2,3),(1,2,3)\\}.\n\\end{eqnarray*}\\] Portanto, \\(H\\) tem três classes laterais à direita e três classes laterais à esquerda.\n\nNo seguinte lema, vamos enunciar algumas propriedades das classes laterais. Nós vamos tratar apenas classes laterais à direita, propriedades análogas podem ser verificadas para classes laterais à esquerda.\n\nLema 6.1 As seguintes afirmações são verdadeiras para um subgrupo \\(H\\leq G\\) e para \\(g,g_1,g_2\\in G\\):\n\n\\(Hg\\subseteq G\\);\nse \\(g_1,g_2\\in G\\), então \\(Hg_1=Hg_2\\) se e somente se \\(g_1g_2^{-1}\\in H\\); em particular \\(Hg=H\\) se e somente se \\(g\\in H\\).\n\\(|Hg|=|H|\\);\n\\(H(g_1g_2)=(Hg_1)g_2\\);\nse \\(g_1,g_2\\in G\\) tais que \\(Hg_1\\cap Hg_2\\neq \\emptyset\\), então \\(Hg_1=Hg_2\\).\n\n\n\nComprovação. Demonstração: Itens 1., 2., e 4. serão exercícios.\n\n\nDefina \\(\\psi:H\\to Hg\\), como \\(\\psi(h)=hg\\). Então \\(\\psi\\) é sobrejetivo pela definição de \\(Hg\\). Se \\(\\psi(h_1)=\\psi(h_2)\\), então \\(h_1g=h_2g\\), que implica que \\(h_1=h_2\\). Portanto \\(\\psi\\) é injetivo, e em particular \\(\\psi\\) é uma bijeção entre \\(H\\) e \\(Hg\\). Isto implica que \\(|H|=|Hg|\\).\n\n\n\n\nAssuma que \\(x\\in Hg_1\\cap Hg_2\\). Portanto \\(x=h_1g_1=h_2g_2\\) com \\(h_1,h_2\\in H\\). Isto implica que \\(h_2^{-1}h_1=g_2g_1^{-1}\\) e em particular que \\(g_2g_1^{-1}\\in H\\). Ora, item 2. implica que \\(Hg_2=Hg_1\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Subgrupos e classes laterais</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/lagrange.html#o-teorema-de-lagrange",
+    "href": "GruposECorpos/lagrange.html#o-teorema-de-lagrange",
+    "title": "6  Subgrupos e classes laterais",
+    "section": "6.3 O Teorema de Lagrange",
+    "text": "6.3 O Teorema de Lagrange\n\n\n\nJoseph-Louis Lagrange (1736-1813)\n\n\nSe  \\(H\\leq G\\), então o lema anterior implica que as classes laterais \\(Hg\\) à direita (ou à esquerda) formam uma partição do conjunto \\(G\\). Além disso, cada classe lateral tem a mesma cardinalidade (igual à cardinalidade de \\(H\\)). Assuma \\(G\\) é finito e que \\(Hg_1,\\ldots,Hg_k\\) são as classes laterais distintas de \\(H\\). Temos que \\[\nG=Hg_1\\cup \\cdots\\cup Hg_k\n\\] onde a união é disjunta. Portanto \\[\n|G|=|Hg_1|+\\cdots+|Hg_k|=|H|+\\cdots+|H|=k|H|.\n\\] Assim obtemos o Teorema de Lagrange.\n\nTeorema 6.1 (O Teorema de Lagrange) Seja \\(G\\) um grupo finito e \\(H\\) um subgrupo de \\(G\\). Então \\(|H|\\) é um divisor de \\(|G|\\).\n\n\nDefinição 6.3 O número de classes laterais de \\(H\\) em \\(G\\) é chamado de índice de \\(H\\) em \\(G\\) e é denotado por \\(|G:H|\\).\n\nNote que se \\(G\\) for finito e \\(H\\leq G\\), então \\(|G:H|=|G|/|H|\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Subgrupos e classes laterais</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/geradores.html",
+    "href": "GruposECorpos/geradores.html",
+    "title": "7  Conjuntos geradores e grupos cíclicos",
+    "section": "",
+    "text": "7.1 Conjuntos geradores\nO subgrupo \\(\\left&lt;X\\right&gt;\\) pode ser caraterizado como o conjunto de todos os produtos nos elementos de \\(X\\) e seus inversos: \\[\n\\left&lt;X\\right&gt;=\\left\\{x_1^{\\pm 1}\\cdots x_m^{\\pm 1}\\mid m\\geq 1 \\mbox{ e } x_i\\in X\\right\\};\n\\] o mesmo subgrupo pode ser descrito também como a interseção de todos os subgrupos de \\(G\\) que contêm \\(X\\): \\[\n\\left&lt;X\\right&gt;=\\bigcap_{X\\subseteq H\\leq G}H.\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conjuntos geradores e grupos cíclicos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/geradores.html#conjuntos-geradores",
+    "href": "GruposECorpos/geradores.html#conjuntos-geradores",
+    "title": "7  Conjuntos geradores e grupos cíclicos",
+    "section": "",
+    "text": "Definição 7.1 Seja \\(G\\) um grupo e \\(X\\) um subconjunto não vazio de \\(G\\). Denotamos por \\(\\left&lt;X\\right&gt;\\) o subgrupo gerado por \\(X\\). Quando \\(X=\\{x_1,\\ldots,x_k\\}\\), escrevemos \\(\\left&lt;x_1,\\ldots,x_k\\right&gt;\\). Um subconjunto \\(X\\subseteq G\\) é dito conjunto gerador se \\(G=\\left&lt;X\\right&gt;\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conjuntos geradores e grupos cíclicos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/geradores.html#grupo-cíclico",
+    "href": "GruposECorpos/geradores.html#grupo-cíclico",
+    "title": "7  Conjuntos geradores e grupos cíclicos",
+    "section": "7.2 Grupo cíclico",
+    "text": "7.2 Grupo cíclico\n\nDefinição 7.2 Um grupo gerado por um elemento é dito grupo cíclico. Em outras palavras, \\(G\\) é dito cíclico se \\(G=\\left&lt;g\\right&gt;\\) para algum elemento  \\(g\\in G\\). Se \\(G\\) é cíclico e \\(G=\\left&lt;g\\right&gt;\\). então \\[\nG=\\{1=g^0,g^1,g^{-1},g^2,g^{-2},g^3,g^{-3},\\ldots\\};\n\\] ou seja, \\(G\\) é composto pelas potências de \\(g\\). Como \\(g^a\\) e \\(g^b\\) comutam para todo \\(a,b\\in\\mathbb Z\\), obtemos que um grupo cíclico é abeliano.\n\n\nExercício 7.1 Seja \\(g\\in G\\). Demonstre que \\(|\\left&lt;g\\right&gt;|=|g|\\). Portanto, se \\(G\\) é um grupo finito e \\(g\\in G\\), então \\(|g|\\) divide \\(|G|\\).   Em particular, temos neste caso que \\(g^{|G|}=1\\). Consequentemente, um grupo finito \\(G\\) é cíclico se e somente se \\(G\\) possui um elemento de ordem \\(|G|\\).\n\n\nExemplo 7.1 O grupo \\((\\mathbb Z,+)\\) é cíclico gerado por \\(1\\). Seja \\(n\\geq 2\\). Então o grupo aditivo \\((\\mathbb Z_n,+)\\) é cíclico gerado pelo elemento \\(1\\). O grupo \\(\\{i,-i,1,-1\\}\\) é cíclico gerado por \\(i\\). O grupo de rotações de um polígono com \\(n\\) lados é cíclico e é gerado pela rotação por \\(360/n\\) graus.\nO grupo simétrico \\(S_3\\) não é cíclico, pois ele não é abeliano. O grupo \\(K=\\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\\}\\) é abeliano, mas não é cíclico pois não possui um elemento de ordem \\(4\\).\n\n\nLema 7.1 Se \\(G\\) é um grupo cíclico e \\(H\\leq G\\), então \\(H\\) é cíclico.\n\n\nComprovação. Assuma que \\(G=\\left&lt;g\\right&gt;\\) e seja \\(k\\geq 1\\) menor tal que \\(g^k\\in H\\). Afirmamos que \\(H=\\left&lt;g^k\\right&gt;\\). Claramente \\(\\left&lt;g^k\\right&gt;\\leq H\\). Ora, seja \\(x\\in H\\). Como \\(G\\) é cíclico, \\(x=g^m\\) com algum \\(m\\geq 0\\). Pondo \\(m=qk+r\\) com \\(r\\in\\{0,\\ldots,k-1\\}\\), obtemos que \\[\nx=g^m=g^{qk+r}=(g^k)^qg^r.\n\\] Isso implica que\n\\[\ng^r=(g^k)^{-q}x\\in H\n\\] Como \\(k\\) foi menor positivo tal que \\(x^k\\in H\\), obtemos que \\(r=0\\). Ou seja, \\(x=g^{qk}=(g^k)^q\\). Assim, todo elemento de \\(H\\) é uma potência de \\(g^k\\) e \\(H=\\left&lt;g^k\\right&gt;\\).\n\nO seguinte teorema sai como uma consequência do Teorema de Lagrange.\n\nTeorema 7.1 Seja \\(p\\) um primo e seja \\(G\\) um grupo com \\(p\\) elementos. Então \\(G\\) é cíclico. Em particular, \\(G\\) é abeliano.\n\n\nComprovação. Seja \\(g\\in G\\setminus\\{1\\}\\) e seja \\(H=\\left&lt;g\\right&gt;\\). Temos que \\(1&lt;|H|\\) e que \\(|H|\\mid |G|=p\\). Logo, \\(|H|=|G|\\) e obtemos que \\(H=G\\). Isso significa que \\(G=\\left&lt;g\\right&gt;\\); ou seja, \\(G\\) é cíclico.\n\nO resultado seguinte é particularmente útil no estudo de grupos multiplicativos de corpos. Antes do resultado relembremos que se \\(n\\in\\mathbb N\\), então \\[\n\\varphi(n)=|\\{k\\mid 1\\leq k\\leq n,\\ \\mbox{mdc}(n,k)=1\\}|.\n\\] A seguinte igualdade é bem conhecida: \\[\n\\sum_{d\\mid n}\\varphi(d)=n.\n\\]\n\nTeorema 7.2 Seja \\(G\\) um subgrupo finito do grupo multiplicativo de um corpo \\(\\mathbb F\\). Então \\(G\\) é cíclico.\n\n\nComprovação. Ponha \\(n=|G|\\). Se \\(g\\in G\\), então a ordem de \\(g\\) divide \\(|G|=n\\) por um exercício anterior. Seja \\(d\\) um divisor de \\(n\\) e assuma que existe um elemento \\(g\\in G\\) com ordem \\(d\\). Seja \\(H=\\left&lt;g\\right&gt;\\). Sabe-se que \\(|H|=|g|=d\\). Então \\(h^d=1\\) vale para todo \\(h\\in H\\) e os elementos de \\(H\\) são soluções da equação polinomial \\[\nx^d-1=0.\n\\] Esta é uma equação de grau \\(d\\) então possui no máximo \\(d\\) soluções em \\(\\mathbb F\\). Mas o subgrupo \\(H\\) já possui \\(d\\) soluções, então temos obrigatoriamente que \\[\nH=\\{x\\in \\mathbb F\\mid x^d=1\\}.\n\\] Se \\(h\\in H\\), então \\(h=g^i\\) com algum \\(i=0,\\ldots,d-1\\) e \\(|h|=|g|/\\mbox{mdc}(d,i)\\). Isto quer dizer que \\(|h|=d\\) se e somente se \\(\\mbox{mdc}(d,i)=1\\); ou seja, o número de elementos em \\(H\\) com ordem \\(d\\) é \\(\\varphi(d)\\).\nSeja \\(m_d\\) o número de elementos de \\(G\\) com ordem \\(d\\). O que acabamos de provar com o argumento no parágrafo anterior é a seguinte afirmação:  Se \\(d\\mid n\\), então \\(m_d=0\\) ou \\(m_d=\\varphi(d)\\); caso contrário \\(m_d=0\\). Em particular \\(m_d\\leq\\varphi(d)\\) para todo \\(d\\).\nContando os elementos de \\(G\\), obtemos que \\[\n|G|=n=\\sum_{d\\mid n}m_d\\leq \\sum_{d\\mid n}\\varphi(d)=n.\n\\] (A última igualdade é por causa do resultado citado sobre \\(\\varphi(n)\\) antes do teorema.) Note que a igualdade na linha anterior implica que a desigualdade no meio precisa ser igualdade. Mas isso é possível somente quando \\(m_d=\\varphi(d)\\) vale para todo \\(d\\mid n\\). Em particular, \\(m_n=\\varphi(n)\\); ou seja, \\(G\\) possui um elemento de ordem \\(n\\). Se \\(g\\in G\\) é tal elemento, então \\(G=\\left&lt;g\\right&gt;\\).\n\n\nCorolário 7.1 O grupo \\((\\mathbb Z_p\\setminus\\{0\\},\\cdot)\\) é cíclico.\n\n\nDefinição 7.3 Se \\(g\\in \\mathbb Z_p\\setminus\\{0\\}\\) é um gerador do grupo multiplicativo de \\(\\mathbb Z_p\\), então o elemento \\(g\\) é chamado de elemento primitivo de \\(\\mathbb Z_p\\). Se \\(g\\in \\mathbb Z_p\\) é um elemento primitivo, então \\[\n\\mathbb Z_p=\\{0,1=g^0,g^1,g^2,\\ldots,g^{p-2}\\}.\n\\]\n\n\nExercício 7.2 Mostre que o número dos elementos primitivos em \\(\\mathbb Z_p\\) é \\(\\varphi(p-1)\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conjuntos geradores e grupos cíclicos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/normais.html",
+    "href": "GruposECorpos/normais.html",
+    "title": "8  Subgrupos normais e homomorfismos",
+    "section": "",
+    "text": "8.1 Subgrupos normais\nAs afirmações dos seguintes exemplos podem ser justificadas ou por exercícios anteriores ou por contas triviais.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subgrupos normais e homomorfismos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/normais.html#subgrupos-normais",
+    "href": "GruposECorpos/normais.html#subgrupos-normais",
+    "title": "8  Subgrupos normais e homomorfismos",
+    "section": "",
+    "text": "Definição 8.1 Um subgrupo \\(H\\) de \\(G\\) é dito normal se \\(gH=Hg\\) para todo \\(g\\in G\\). Esta condição pode ser expressa por dizer que \\(g^{-1}Hg=H\\) para todo \\(g\\in G\\). Escrevemos que \\(H\\unlhd G\\), ou \\(H\\lhd G\\) quando \\(H&lt; G\\).\n\n\n\nExemplo 8.1  \n\n\\(\\{1\\}\\) e \\(G\\) são normais em \\(G\\).\nEm um grupo abeliano, todo subgrupo é normal.\nO subgrupo \\(SL(n,\\F)\\) é normal em \\(GL(n,\\F)\\).\nSe \\(|G:H|=2\\), então \\(H\\) é normal em \\(G\\).\n\\(\\left&lt;(1,2)(3,4),(1,3)(2,4)\\right&gt;=\\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\\}\\) é normal em \\(S_4\\).\n\\(\\left&lt;(1,2)\\right&gt;=\\{1,(1,2)\\}\\) não é normal em \\(S_3\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subgrupos normais e homomorfismos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/normais.html#grupos-quocientes",
+    "href": "GruposECorpos/normais.html#grupos-quocientes",
+    "title": "8  Subgrupos normais e homomorfismos",
+    "section": "8.2 Grupos quocientes",
+    "text": "8.2 Grupos quocientes\n\nDefinição 8.2 Seja \\(N\\) um subgrupo normal em um grupo \\(G\\). Definimos uma operação no conjunto das classes laterais \\(Ng\\) (onde \\(g\\in G\\)) no modo seguinte: \\[\n(Ng_1)(Ng_2)=Ng_1g_2.\n\\] Como \\(N\\) é normal, esta operação é bem definida. Além disso, ela é associativa, \\(N1=N\\) é elemento neutro, e todo elemento \\(Ng\\) tem inverso (nomeadamente, \\(Ng^{-1}\\)). Assim o conjunto das classes laterais com esta operação é um grupo denotado por \\(G/N\\). O grupo \\(G/N\\) é dito grupo quociente (de \\(G\\) por \\(N\\)). Temos que \\(|G/N|=|G:N|\\). Em particular, se \\(G\\) é finito, então \\(|G/N|=|G|/|N|\\).\n\n\nExemplo 8.2 Considere o grupo aditivo \\(\\Z\\), seja \\(n\\geq 2\\) e seja \\(n\\Z=\\left&lt;n\\right&gt;=\\{nk\\mid k\\in \\Z\\}\\). Se \\(a\\in\\Z\\), então a classe lateral \\(n\\Z+a\\) é a classe residual \\(\\{nk+a\\mid k\\in\\Z\\}\\) e a operação entre classes laterais é definida como \\[\n(n\\Z+a)+(n\\Z+b)=n\\Z+(a+b)\n\\] e esta operação corresponde à operação \\(+\\) entre classes residuais modulo \\(n\\). Temos então que o grupo \\(\\Z_n\\) pode ser visto como o grupo quociente \\(\\Z/n\\Z\\).\n\n\nDefinição 8.3 Sejam \\(G\\) e \\(H\\) grupos. Um mapa \\(\\varphi:G\\to H\\) é dito homomorfismo se \\[\n\\varphi(ab)=\\varphi(a)\\varphi(b)\\quad\\mbox{para todo}\\quad a,b\\in G.\n\\].\n\n\nExercício 8.1 Verifique as seguintes propriedades de um homomorfismo \\(\\varphi:G\\to H\\).\nSe \\(g\\in G\\) e \\(n\\in\\Z\\), então \\(\\varphi(g^n)=\\varphi(g)^n\\). Em particular, \\(\\varphi(g^{-1})=\\varphi(g)^{-1}\\). \\(\\varphi(1_G)=\\varphi(1_H)\\).\n\n\nExemplo 8.3 Se \\(G\\) e \\(H\\) são grupos, então o mapa \\(\\varphi:G\\to H\\) definido por \\(\\varphi(g)=1_H\\) é um homomorfismo. Se \\(G\\leq H\\), então o mapa \\(\\varphi:G\\to H\\) definido por \\(\\varphi(g)=g\\) é um homorfismo. Este mapa é chamado de inclusão ou mergulho de \\(G\\) em \\(H\\).\nSe \\(N\\) é um subgrupo normal de \\(G\\) então o mapa \\(\\varphi:G\\to G/N\\) definido por \\(\\varphi(g)=Ng\\) é um homomorfismo. Este mapa é chamado de homomorfismo natural ou projeção natural de \\(G\\) em \\(G/N\\). Pelo raciocínio anterior, o mapa \\(\\varphi :\\Z\\to \\Z_n\\) definido por \\(\\varphi(k)=k+n\\Z\\) é um homomorfismo.\n\nEm relação com homomorfismos usamos as seguintes expressões.\n\nMorfismo é a mesma coisa que homomorfismo. A palavra morfismo está mais usada ma teoria de categorias\nMonomorfismo: homomorfismo injetivo.\nEpimorfismo: homomorfismo sobrejetivo.\nIsomorfismo: homomorfismo injetivo e sobrejetivo.\nEndomorfismo: um homomorfismo \\(G\\to G\\).\nAutomorfismo: um isomorfismo \\(G\\to G\\).\n\n\nDefinição 8.4 Dois grupos \\(G\\) e \\(H\\) são ditos isomorfos que existe um isomorfismo (ou seja, um homomorfismo injetivo e sobrejetivo) \\(G\\to H\\). O conjunto de automorfismos \\(G\\to G\\) é um grupo chamado do grupo de automorfismos de \\(G\\). Este grupo é denotado por \\(\\mbox{Aut}(G)\\).\n\n\nDefinição 8.5 Dado um homorfismo \\(\\varphi:G\\to H\\), definimos \\[\\begin{eqnarray*}\n\\mbox{Im}\\,\\varphi&=&\\{\\varphi(g)\\mid g\\in G\\}\\\\\n\\ker\\varphi&=&\\{g\\in G\\mid \\varphi(g)=1_H\\}.\n\\end{eqnarray*}\\]\n\nO seguinte resultado resuma as propriedades mais importantes de homomorfismos.\n\nTeorema 8.1 Seja \\(\\varphi:G\\to H\\) um homomorfismo. As seguintes afirmações são verdadeiras.\n\n\\(\\mbox{Im}\\,\\varphi\\leq H\\);\n\\(\\ker\\varphi\\unlhd G\\);\n\\(\\varphi\\) é injetivo se e somente se \\(\\ker\\varphi=\\{1_G\\}\\);\n\\(G/\\ker\\varphi\\cong \\mbox{Im}\\,\\varphi\\).\n\n\n\nComprovação. \n\nExercício.\nAssuma que \\(g\\in G\\) e \\(h\\in\\ker\\varphi\\). Então \\[\n\\varphi(g^{-1}hg)=\\varphi(g^{-1})\\varphi(h)\\varphi(g)=\\varphi(g)^{-1}\\varphi(g)=1_H\n\\] que diz que \\(g^{-1}hg\\in\\ker \\varphi\\). O mesmo argumento implica que \\(ghg^{-1}\\in\\ker\\varphi\\). Um exercício em cima mostra que \\(\\ker\\varphi\\unlhd G\\).\nSe \\(\\varphi\\) é injetivo, então \\(1_G\\) deve ser o único elemento cuja imagem é \\(1_H\\), então \\(\\ker\\varphi=\\{1_G\\}\\). Assuma agora que \\(\\varphi\\) é injetivo e sejam \\(a,b\\in G\\) tais que \\(\\varphi(a)=\\varphi(b)\\). Isto implica que \\[\n1_H=\\varphi(a)\\varphi(b)^{-1}=\\varphi(ab^{-1}),\n\\] ou seja, \\(ab^{-1}\\in \\ker\\varphi=\\{1_G\\}\\). Daqui obtemos que \\(ab^{-1}=1_H\\); ou seja \\(a=b\\). Assim, temos que \\(\\varphi\\) é injetivo.\nSeja \\(N=\\ker\\varphi\\) e defina \\[\n\\bar \\varphi:G/N\\to \\mbox{Im}\\,\\varphi,\\quad Ng\\mapsto \\varphi(g).\n\\] É fácil ver que \\(\\bar\\varphi\\) é um homomorfismo bem definido e ele é sobrejetivo. Assuma que \\(g\\in G\\) tal que \\(\\bar\\varphi(Ng)=1_H\\). Isto implica que \\(\\varphi(g)=1_H\\); ou seja, \\(g\\in N\\) e \\(Ng=N=1_{G/N}\\). Portanto \\(\\ker\\bar\\varphi=\\{1_{G/N}\\}\\) e isto implica que \\(\\bar\\varphi\\) é injetivo. Logo \\(\\bar\\varphi\\) é um isomorfismo e \\(G/\\ker\\varphi\\cong \\mbox{Im}\\,\\varphi\\).\n\n\n\nExemplo 8.4 Sejam \\(\\F\\) um corpo, \\(n\\geq 2\\) e \\(\\varphi: GL(n,\\F)\\to \\F^*=\\F\\setminus\\{0\\}\\) definido com \\(\\varphi(X)=\\det X\\). Temos que \\(\\varphi\\) é um homomorfismo sobrejetivo e que \\(\\ker\\varphi=SL(n,\\F)\\). Pelo teorema anterior, obtemos que \\(GL(n,\\F)/SL(n,\\F)\\cong \\F^*\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subgrupos normais e homomorfismos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/derivado.html",
+    "href": "GruposECorpos/derivado.html",
+    "title": "9  O subgrupo derivado",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>O subgrupo derivado</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/products.html",
+    "href": "GruposECorpos/products.html",
+    "title": "10  Produtos de grupos",
+    "section": "",
+    "text": "10.1 O produto direto\nO produto direto acima definido é frequentamente chamado de produto direto externo. Simnilarmente a espaços vetoriais, existe uma versão interna do produto direto.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Produtos de grupos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/products.html#o-produto-direto",
+    "href": "GruposECorpos/products.html#o-produto-direto",
+    "title": "10  Produtos de grupos",
+    "section": "",
+    "text": "Definition. Sejam \\(G\\) e \\(H\\) grupos. Defininimos o produto direto \\(G\\times H\\) como o grupo \\[\n    G\\times H=\\{(g,h)\\mid g\\in G,\\ h\\in H\\}\n\\] com a operação definida na segiunte forma: \\[\n(g_1,h_1)(g_2,h_2)=(g_1h_1,g_2h_2).\n\\]\n\n\nLemma. O conjunto \\(G\\times H\\) é um grupo com o produto definido na linha anterior. Além disso, pondo \\[\n\\bar G=\\{(g,1)\\mid g\\in G\\}\\quad\\mbox{e}\\quad \\bar H=\\{(1,h)\\mid h\\in H\\}\n\\] temos que\n\n\\(\\bar G,\\bar H\\unlhd G\\times H\\).\n\\(\\bar G\\bar H=G\\times H\\);\n\\(\\bar G\\cap\\bar H=1\\).\n\n\n\nComprovação. Demonstração. Fácil, o leitor pode fazer.\n\n\n\nSuponha que \\(G\\) é um grupo e \\(N,M\\unlhd G\\) are subgrupos normais tais que\n\n\\(NM=G\\) e\n\\(N\\cap M=1\\).\n\nEntão \\(G\\cong N\\times M\\).\n\n\nComprovação. Primeiro mostremos que todo elemento \\(g\\in G\\) pode ser escrito unicamente como \\(g=nm\\) com \\(n\\in N\\) e \\(m\\in M\\). Primeiro, como \\(NM=G\\), a decomposição de \\(g\\) existe. Ora, assuma que \\(g=n_1m_1=n_2m_2\\) com \\(n_1,n_2\\in N\\) e \\(m_1,m_2\\in M\\). Isso implica que \\[\nn_2^{-1}n_1=m_2m_1^{-1}\\in N\\cap M.\n\\] Como \\(N\\cap M=1\\), temos que \\(n_2^{-1}n_1=m_2m_1^{-1}=1\\); ou seja, \\(n_1=n_2\\) e \\(m_1=m_2\\) e a unicidade está verificada.\nPróximo, observe, para \\(n\\in N\\) e \\(m\\in M\\), que \\[\n[n,m]=n^{-1}m^{-1}nm=(m^{-1})^nm=n^{-1}n^m\\in M\\cap N=1.\n\\] Portanto \\([n,m]=1\\) e em particular \\(N\\) comuta com \\(M\\). Isso implica que se \\(n\\in N\\) e \\(m\\in M\\), então \\(nm=mn\\).\nAgora defina \\(\\psi:G\\to N\\times M\\) como \\(\\psi(g)=(n,m)\\) onde \\(g=nm\\) com \\(n\\in N\\) e \\(m\\in M\\). O mapa \\(\\psi\\) está bem definida pela unicidade da decomposição \\(g=mn\\). Além disso, \\(\\psi\\) é um homomorfismo, pois se \\(g_1=n_1m_1,\\ g_2=n_2m_2\\in G\\), então \\[\\begin{align*}\n\\psi(g_1g_2)&=\\psi(n_1m_1n_2m_2)\\psi(n_1n_2m_1m_2)\\\\&=(n_1n_2,m_1m_2)=\n(n_1,m_1)(n_2,m_2)\\\\&=\\psi(g_1)\\psi(g_2).\n\\end{align*}\\] Se \\(g\\in\\ker\\psi\\), então \\(g=1\\cdot 1=1\\), logo \\(\\psi\\) é injetiva. Finalmente, se \\(n\\in N\\) e \\(m\\in M\\), então \\(\\psi(nm)=(n,m)\\) e \\(\\psi\\) é sobrejetiva. Portanto, \\(\\psi\\) é um isomorfismo e \\(G\\cong N\\times M\\).\n\n\nDefinição. Se \\(G\\), \\(N\\) e \\(M\\) são como no resultado anterior, escrevemos que \\(G=N\\times M\\) e dizemos que \\(G\\) é produto direto (interno) de \\(N\\) e \\(M\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Produtos de grupos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/products.html#produto-semidireto",
+    "href": "GruposECorpos/products.html#produto-semidireto",
+    "title": "10  Produtos de grupos",
+    "section": "10.2 Produto semidireto",
+    "text": "10.2 Produto semidireto\n\nDefinition. Para definir o produto semidireto (interno), seja \\(G\\) um grupo \\(H\\leq G\\) e \\(N\\unlhd G\\) tais que\n\n\\(NH=G\\) e\n\\(N\\cap H=1\\).\n\nNeste caso dizemos que \\(G\\) é produto semidireto de \\(N\\) e \\(H\\) e escrevemos que \\(G=N\\rtimes H\\).\n\nSeja \\(G=N\\rtimes H\\) como na definição anterior. Assuma que \\(g_1,g_2\\in G\\) tal que \\(g_1=n_1h_1\\) e \\(g_2=n_2h_2\\) onde \\(n_1,n_2\\in N\\) e \\(h_1h_2\\in H\\). Note que estas expressões para \\(g_1\\) e \\(g_2\\) são únicas e isso pode ser verificado facilmente usando o argumento na demonstração anterior. Se \\(h\\in H\\), a normalidade de \\(N\\) implica que o mapa \\[\n\\psi_h:n\\mapsto n^h=h^{-1}nh\n\\] é um automorfismo de \\(N\\) e a aplicação \\(h\\mapsto \\psi_h\\) é um homomorfismo \\(\\psi:H\\to \\operatorname{Aut}(N)\\). Usando esta observação, obtemos que \\[\ng_1g_2=n_1h_1n_2h_2=(n_1n_2^{h_1^{-1}})(h_1h_2)=n_1(n_2(h_2^{-1}\\psi))h_1h_2.\n\\]\nEsta conta nos dá uma ideia como definir produto semidireto externo.\n\nSejam \\(N\\) e \\(H\\) grupos e assuma que está dado um homomorfismo \\(\\psi:H\\to \\operatorname{Aut}(N)\\). Defina o produto semidireto (relativo ao homomorfismo \\(\\psi\\)) \\(N\\rtimes_\\psi N\\) de \\(N\\) e \\(H\\) como o grupo sobre o conjunto \\(N\\times H\\) com a operação \\[\n(n_1,h_1)(n_2,h_2)=(n_1(n_2((h_2^{-1})\\psi),h_1h_2).\n\\]\n\n\nO produto semidireto \\(N\\rtimes_\\psi H\\) é um grupo com a multiplicação definida.\n\n\nComprovação. Demonstração. Deixamos a demonstração para o leitor. Aqui só comentamos que o elemento neutro de \\(N\\rtimes_\\psi H\\) é \\((1,1)\\) e que \\((n,h)^{-1}=\n((n^{-1})^h,h^{-1})\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Produtos de grupos</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html",
+    "href": "GruposECorpos/soluble.html",
+    "title": "11  Grupos solúveis",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/actions.html",
+    "href": "GruposECorpos/actions.html",
+    "title": "12  Ações de grupos e o Teorema de Órbita-Estabilizador",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ações de grupos e o Teorema de Órbita-Estabilizador</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/livres.html",
+    "href": "GruposECorpos/livres.html",
+    "title": "13  Grupos livres",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Grupos livres</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/classes.html",
+    "href": "GruposECorpos/classes.html",
+    "title": "14  Classes de conjugação",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Classes de conjugação</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/alternado.html",
+    "href": "GruposECorpos/alternado.html",
+    "title": "15  O grupo alternado",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>O grupo alternado</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/psl.html",
+    "href": "GruposECorpos/psl.html",
+    "title": "16  O Lema de Iwasawa e a simplicadade de \\(PSL(n,q)\\)",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>O Lema de Iwasawa e a simplicadade de $PSL(n,q)$</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/sylow.html",
+    "href": "GruposECorpos/sylow.html",
+    "title": "17  Os Teoremas de Sylow",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/nilpotent.html",
+    "href": "GruposECorpos/nilpotent.html",
+    "title": "18  Grupos nilpotentes",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Grupos nilpotentes</span>"
+    ]
+  }
+]
