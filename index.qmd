@@ -1,0 +1,20 @@
+---
+number-sections: true
+lang: pt
+---
+
+## Apostilas {.unnumbered}
+
+Materiais para várias disciplinas " no curso de Graduação em Matemática, na UFMG. 
+
+2024/01
+
+
+Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
+
+## Disciplinas
+
+- [Iniciação à Matemática](IniciacaoAMatematica/index.qmd)
+- [Fundamentos de Álgebra](FundamentosDeAlgebra/index.qmd)
+- [Álgebra Linear II](AlgebraLinearII/index.qmd)
+- [Grupos e Corpos](GruposECorpos/index.qmd)

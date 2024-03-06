@@ -1,0 +1,16 @@
+---
+number-sections: false
+lang: pt
+---
+
+# Iniciação à Matemática {.unnumbered}
+
+Material para a disciplina "Iniciação à Matemática" no curso de Graduação em Matemática, na UFMG. 
+
+2024/01
+
+
+Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
+
+## Apostilas
+

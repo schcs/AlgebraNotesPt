@@ -1,0 +1,231 @@
+---
+title: "Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides"
+number-sections: true
+lang: pt-BR
+execute:
+    output: false
+
+website:
+    sidebar:
+        contents:
+            - definitions.qmd
+---
+
+
+## Definições e propriedades básicas
+
+Os números naturais são os números $1$, $2$, $3$, etc. Alguns autores consideram o número zero também natural, mas nesta disciplina os números naturais começam com $1$. O conjunto dos números naturais é denotado por $\N$, enquanto $\N_0$ denota o conjunto $\{0\}\cup\N$. Os números inteiros são os números naturais e os seus negativos. O conjunto dos números inteiros é denotado por $\Z$ (pela palavra *zahlen* em alemão); ou seja
+$$
+\Z=\{0,\pm 1,\pm 2,\pm 3,\ldots\}.
+$$
+
+:::{#def-division}
+Sejam $a,b\in\Z$. Dizemos que "$a$ divide $b$", ou "$b$ é um múltiplo de $a$" ou "$b$ é divisível por $a$" se existir $q\in\Z$ tal que $b=qa$. Quando $a$ divide $b$, escrevemos $a\mid b$, e quando $a$ não divide $b$, escrevemos $a\nmid b$.
+:::
+
+:::{#exm-division}
+
+- $2\mid 4$, $-2\mid 4$, $3\nmid 5$;
+- $a\mid 0$ para todo $a\in\Z$; em particular $0\mid 0$;
+- $0\nmid a$ para todo $a\in\Z\setminus\{0\}$.
+:::
+
+Quando $a,b\in\Z$ e $a\mid b$, então existe (por definição), um $q\in\Z$ tal que $b=qa$. Se $a\neq 0$, então o número $q$ é único e $q=b/a$; ou seja, $q$ é o quociente de $b$ por $a$. Quando $a=b=0$, temos que $a\mid b$, mas o quociente $0/0$ não é definido.
+
+
+:::{#lem-props-div}
+(As propriedades da divisibilidade.) Sejam $a,b,c\in\Z$. As seguintes afirmações são verdadeiras.
+
+- $a\mid a$;
+- se $a\mid b$ e $b\mid c$, então $a\mid c$;
+- se $a\mid b$ e $b\mid a$., então $a=\pm b$;
+- se $a\mid b$, então $a\mid bc$;
+- se $a\mid b$ e $a\mid c$, então $a\mid b\pm c$.
+:::
+
+:::{.proof}
+Demonstraremos apenas duas destas afirmações, o resto é exercício.
+
+3. A afirmação é trivialmente verdadeira pelas observações anteriores quando $a=0$ ou $b=0$. Assumamos portanto que $a\neq 0$ e $b\neq 0$. Suponha que $a\mid b$ e $b\mid a$. Então existem $q_1,q_2\in\Z$ tais que
+\begin{align*}
+b &=q_1a;\\
+a &=q_2b.
+\end{align*}
+Substituindo $b=q_1a$ na segunda equação, obtemos que
+$$
+a=q_2b=q_2q_1a.
+$$
+Como $a\neq 0$, a última equação destacada implica que $q_2q_1=1$; ou seja (lembrando que $q_1$ e $q_2$ são inteiros) $q_1=q_2=1$ ou $q_1=q_2=-1$. Obtemos portanto que $a=\pm b$.
+
+5. Assuma que $a\mid b$ e $a\mid c$. Existem $q_1,q_2\in\Z$ tais que $b=q_1a$ e $c=q_2a$. Isso implica que
+$$
+b+c=q_1a+q_2a=(q_1+q_2)a;
+$$
+ou seja, $a\mid b+c$. Pode-se modificar o argumento trivialmente para mostrar que $a\mid b-c$.
+:::
+
+## O Teorema da Divisão de Euclides
+
+:::{#thm-euclides}
+(O Teorema da Divisão de Euclides) Sejam $a,b\in\Z$ tais que $b\neq 0$. Então existem unicamente $q,r\in\Z$ tais que
+$$
+a=qb+r\quad\mbox{e}\quad 0\leq r<|b|.
+$$
+:::
+
+:::{.proof}
+**Existência.** Suponha primeiro que $b$ é positivo. Vamos demonstrar a existência primeiro para $a$ não negativo por indução em $a$. Quando $a=0$, pode escolher $q=r=0$ e a afirmação sobre a existência destes números está válida. Assuma que a afirmação da existência é verdadeira para algum $a\geq 0$; ou seja existem $q,r\in\Z$ tais que $a=qb+r$ e $0\leq r<b$. O número $a+1$ pode ser escrito como
+$$
+a+1=qb+r+1
+$$
+e temos ainda que $1\leq r+1\leq b$. Se $r+1<b$, então a expressão para $a$ na equação anterior é como desejada. Por outro lado, se $r+1=b$, então
+$$
+a+1=qb+r+1=qb+b=(q+1)b=(q+1)b+0
+$$
+e obtemos uma expressão para $a+1$ que satisfaz as condições do teorema.Acabamos de provar a afirmação da existência para $a$ não negativo e $b$ positivo.
+
+Assuma agora que $a$ é negativo, mas $b$ contínua positivo. Como $-a$ é positivo, o teorema está válido para $-a$ e $b$ e existem $q,r\in\Z$ tais que
+$$
+-a=qb+r\quad\mbox{e}\quad 0\leq r< b.
+$$
+Se $r=0$, então obtemos que $a=(-q)b+0$ que dá a expressão procurada. Caso contrário, quando $0<r<b$, obtemos que
+$$
+a=(-q)b-r=(-q-1)b+(-r+b)\quad\mbox{e}\quad 0< -r+b< b
+$$
+como foi desejado.
+
+Agora consideremos os caso quando $b$ é negativo e $a$ é arbitrário. Neste caso $-b$ é positivo e existem $q,r\in\Z$ tais que
+$$
+a=q(-b)+r\quad\mbox{e}\quad 0\leq r< |b|
+$$
+e isso implica que
+$$
+a=(-q)b+r\quad\mbox{e}\quad 0\leq r< |b|
+$$
+e podemos tomar os números $-q$ e $r$.
+
+**Unicidade.** Assuma que para algum $a,b\in\Z$ (com $b\neq 0$), temos $q_1,q_2,r_1,r_2\in\Z$ tais que
+$$
+a=q_1b+r_1\quad\mbox{e}\quad 0\leq r_1<|b|
+$$
+e
+$$
+a=q_2b+r_2\quad\mbox{e}\quad 0\leq r_2<|b|.
+$$
+Assuma sem perder generalidade que $r_2\geq r_1$. Neste caso temos que $0\leq r_2-r_1\leq r_2<|b|$ e das duas equações anteriores obtemos também que
+$$
+(q_1-q_2)b=(r_2-r_1).
+$$
+Como $(q_1-q_2)b$ é um múltiplo de $b$, este número só pode cair no intervalo $[0,|b|-1]$ se $(q_1-q_2)b=0$. Como $b\neq 0$, a lei cancelativa implica que $q_1-q_2=0$; ou seja $q_1=q_2=q$. Ora
+$$
+a=qb+r_1=qb+r_2
+$$
+a aplicando a lei cancelativa aditivamente obtemos que $r_1=r_2$. Então a decomposição do número $a$ no teorema é única.
+:::
+
+Os números $q$ e $r$ são chamados do *quociente* e o *resto*, respetivamente, de $a$ por $b$.
+
+:::{#exm-euclides}
+Vamos ver alguns exemplos do quiciente $q$ e do resto $r$ no Teorema da Divisão para alguns valores $a,b$. Pode-se verificar facilmente as seguintes afirmações.
+
+- Se $a=13$ e $b=5$, então $q=2$ e $r=3$.
+- Se $a=-13$ e $b=5$, então $q=-3$ e $r=2$.
+- Se $a=13$ e $b=-5$, então $q=-2$ e $r=3$.
+- Se $a=-13$ e $b=-5$, então $q=3$ e $r=2$.
+
+Explique porque $r\neq -3$ nos itens 2 e 4.
+:::
+
+### Computações com Python
+Vamos ver agora como calcular o quociente e o resto na linguagem Python. O quociente de dois números naturais pode ser calculado por "//" e o resto por "%". Considere o seguinte exemplo:
+```{python}
+>>> 11//5
+2
+>>> 11 % 5
+1
+```
+
+Normalmente usamos variáveis para guardar os números que usamos na computação. Refazemos a computatação anterior usando variáveis:
+```{python}
+>>> a = 11
+>>> b = 5
+>>> a//b
+2
+>>> a % b
+1
+```
+
+Verifiquemos que o quociente e o resto satisfaz a igualdade no Teorema da Divisão:
+```{python}
+>>> q = a//b; r = a % b
+>>> a == q*b+r
+True
+```
+
+Precisa-se prestar atenção quando trabalhamos com números negativos. Quando $a$ é negativo e $b$ é positivo, o quociente e o resto calculado por Python coincide com o que segue do Teorema.
+
+```{python}
+>>> a = -11; b = 5
+>>> a//b
+-3
+>>> a%b
+4
+```
+
+Mas quando $b$ for negativo, o Python devolve um resto negativo que não é compatível com nosso Teorema.
+```{python}
+>>> a = 11; b = -5
+>>> a//b
+-3
+>>> a%b
+-4
+```
+
+Nestes casos o output dado por Python precisa ser modificado para ser compatível com o Teorema de Divisão enunciado anteriormente.
+
+Python possui a função [```divmod```](https://docs.python.org/3/library/functions.html#divmod) que calcula o quociente e o resto no mesmo tempo. Quando precisa-se calcular os dois, o uso desta função é preferível sobre usar as operações ```//```  e ```%``` separadamente.
+
+```{python}
+>>> q, r = divmod( 11, 5 )
+>>> q, r
+(2, 1)
+>>> q, r = divmod( -11, 5 )
+>>> q, r
+(-3, 4)
+>>> q, r = divmod( 11, -5 )
+>>> q, r 
+(-3, -4)
+>>> q, r = divmod( -11, -5 )
+>>> q, r 
+(2, -1)
+```
+
+A função ```divmod``` pode ser modificado para devolver o quociente e o resto que satisfaz a condição do Teorema como foi enunciado por nós.
+```{python}
+def my_divmod( a, b ):
+
+    # calculamos o quociente e resto com divmod
+    q, r = divmod( a, b )
+    
+    # se o resto é não negativo, estamos pronto
+    if r >= 0:
+        return q, r
+        # caso contrário, o resto é negativo e devolvemos q e r modificados
+    else:
+        return q+1, r-b
+```
+
+O resultado devolvido por esta nova função está de acordo com a nossa definição de quociente e resto.
+```{python}
+>>> my_divmod(13,5)
+(2, 3)
+
+>>> my_divmod(-13,5)
+(-3, 2)
+
+>>> my_divmod(-13,-5)
+(3, 2)
+
+>>> my_divmod(13,-5)
+(-2, 3)
+```

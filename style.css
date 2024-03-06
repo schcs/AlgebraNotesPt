@@ -1,0 +1,188 @@
+header {
+  background-color: #f5f5f5; 
+  color: #333;  
+  padding: 10px; 
+  font-size: 16px; 
+  text-align: center; 
+}
+
+pre {
+	font-family: monospace;
+  white-space: pre-wrap;	
+}
+
+.code {
+	border: 3px outset grey;
+	background-color: #f2f2f2;
+	padding: 5px;
+	font-family: monospace;
+  white-space: pre-wrap;
+	display: block;
+}
+
+/* body {
+    width: 50%;
+    margin: auto;
+}
+
+*/
+
+/*
+.conjecture:before {
+  border: 3px outset green;
+	padding: 5px;
+  background-color: #e6ffff;
+}
+*/
+
+/* 
+
+.theorem.definition:before {
+content: "Defini\00E7\00E3 o. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.theorem {
+  border: 3px outset hotpink;
+  background-color: #fff2e6;
+	padding: 5px;
+}
+
+/* 
+
+.theorem.theorem:before {
+content: "Teorema. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.theorem[text]:before {
+content: "Teorema (" attr(text) ") ";
+}
+
+.theorem.definition {
+  border: 3px outset green;
+	padding: 5px;
+  background-color: #e6ffff;
+}
+
+.theorem.definition[text]:before {
+content: "Defini\00E7\00E3 o (" attr(text) ") ";
+}
+
+
+.theorem.example {
+  border: 3px outset #00aaff;
+  background-color: #e6f7ff;
+	padding: 5px;
+}
+
+/*
+.example:before {
+content: "Exemplo. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.example[text]:before {
+content: "Exemplo (" attr(text) ") ";
+}
+
+.theorem.exercise {
+  border: 3px outset #00aaff;
+  background-color: #e6f7ff;
+	padding: 5px;
+}
+/* 
+.exercise:before {
+content: "Exerc\00ed cio. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+
+.theorem.exercise[text]:before {
+content: "Exemplo (" attr(text) ") ";
+}
+
+
+.theorem.lemma {
+  border: 3px outset hotpink;
+  background-color: #fff2e6;
+	padding: 5px;
+}
+
+/*
+.theorem.lemma:before {
+content: "Lema. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.lemma[text]:before {
+content: "Lema (" attr(text) ") ";
+}
+
+
+.theorem.corollary {
+  border: 3px outset hotpink;
+  background-color: #fff2e6;
+	padding: 5px;
+}
+
+/*
+
+.theorem.corollary:before {
+content: "Corol\00E1 rio. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.corollary[text]:before {
+content: "Corol\00E1 rio (" attr(text) ") ";
+}
+
+.proof {
+  border: 3px outset green;
+	padding: 5px;
+  background-color: #e6ffcc;
+}
+
+/*
+
+.theorem.proof:before {
+content: "Demonstra\00E7\00E3 o. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.proof[text]:before {
+content: "Demonstra\00E7\00E3 o (" attr(text) ") ";
+}
+
+.theorem.conjecture {
+  border: 3px outset hotpink;
+  background-color: #fff2e6;
+	padding: 5px;
+}
+
+/*
+
+.theorem.conjecture:before {
+content: "Conjectura. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+.theorem.conjecture[text]:before {
+content: "Conjecture (" attr(text) ") ";
+}

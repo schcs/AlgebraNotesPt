@@ -1,0 +1,90 @@
+---
+number-sections: true 
+lang: pt
+---
+
+# Fundamentos de Álgebra
+
+Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
+
+## Conteúdo{.unnumbered}
+
+**Bloco 1.** Números inteiros: os princípios de boa ordenação e indução; o Lema  de Divisão de Euclides; critérios de divisibilidade; representação de inteiros e racionais em bases; máximo divisor comum e mínimo múltiplo comum; o MDC como combinação linear; equações diofantinas lineares; números primos; fatoração; o Teorema Fundamental da Aritmética.
+
+**Bloco 2.** Congruências: definição e propriedades elementares; congruências lineares; a função de Euler; os teoremas de Fermat Euler, Wilson e do resto chinês; testes de primalidade; a criptografia RSA.
+
+**Bloco 3.** Polinômios sobre um corpo; divisibilidade; o Lema de Divisão; máximo divisor comum e mínimo múltiplo comum; raízes, fórmulas para raízes para polinômios de 2o e 3o grau; irredutibilidade e fatoração sobre Q, R e C; o Teorema Fundamental da Álgebra;  o Lema de Gauss e o Critério de Eisenstein; anéis; definição e exemplos; ideais; domínios de integridade; divisores de zero; anéis euclidianos.
+
+## Literatura recomendada{.unnumbered}
+
+- A. Vidigal, D. Avritzer, E. Farias e Soares, H. P. Bueno, M. C. C. Ferreira, e E. M. C. de Faria.  Fundamentos de Álgebra. Editora UFMG. 2005.
+- S. C. Coutinho. Teoria de números e criptografia RSA. IMPA-SBM ,segunda edição,  2014.
+- A. Hefez. Curso de Álgebra (vol 1). Coleção Matemática Universitária, IMPA - SBM, quinta edição, 2016.
+- Adilson Gonçalves. Introdução à álgebra, IMPA, sexta edição, 2017.
+- Arnaldo Garcia e Yves Lequain. Elementos de álgebra, IMPA, sexta edição, 2018.
+- F. C. P. Milies e S. P Coelho. Números: uma introdução à Matemática. Ed. USP, terceira edição, 2013.
+- L. S. Childs. A concrete introduction to higher algebra, UTM, Springer-Verlag, 2009.
+
+## Canais de YouTube{.unnumbered}
+
+- Teoria dos números por Michael Penn (inglês)
+- Teoria dos números por Richard Borcherds (inglês)
+- Intrudução à teoria dos números por Richard Borcherds, Universidade de Berkeley, 2022 (inglês)
+
+## Notas e apostilas{.unnumbered}
+
+### Bloco 1: Inteiros{.unnumbered}
+
+- [Divisão, quociente, e resto entre números inteiros; O Teorema de Divisão de Euclides](divisao.qmd)
+- Expansão de números inteiros em uma base $b$
+- Critérios de divisibilidade
+- Expansão decimal de números racionais
+- O maior divisor comum
+- O Algoritmo de Euclides
+- Propriedades do MDC
+- Números primos
+- O Teorema Fundamental da Aritmética
+- O número dos primos
+- Equações diofantinas lineares em duas variáveis
+- O Teorema Chinês dos Restos (Versão 1.0)
+- A função $\varphi$ de Euler
+
+### Bloco 2: Congruências{.unnumbered}
+
+- Congruências
+- Classes residuais
+- $\Z_n$
+- Congruências com incógnitas
+- O Teorema Chinês dos Restos (Versão 2.0)
+- O Pequeno Teorema de Fermat e o Teorema de Euler
+- O Teorema de Wilson
+- A ordem de um elemento de $\Z_n$
+- Elementos primitivos: O enunciado
+- Quadrados em $\Z_p$ e resíduos quadráticos
+- O Algoritmo de Exponenciação Rápida
+- O Teste de Primalidade de Fermat
+- Os números de Carmichael 
+- O Teste de Primalidade de Miller
+- Criptografia RSA: A Teoria
+- Criptografia RSA: Um Exemplo Computacional
+
+### Bloco 3: Polinômios{.unnumbered}
+
+- Anéis, domínios e corpos 
+- Números complexos
+- Polinômios sobre anéis
+- O anel dos polinômios
+- Divisibilidade entre polinômios
+- O Teorema de Divisão para Polinômios
+- O MDC de dois polinômios e o Algoritmo de Euclides
+- Raízes e divisibilidade
+- Elementos Primitivos: A demonstração
+- Polinômios irredutíveis
+- O Teorema da Fatoração para Polinômios
+- Domínios de Fatoração Única (DFU)
+- Polinômios em $\Q[x]$. Parte I: O Lema de Gauss
+- Polinômios em $\Q[x]$. Parte II: O Critério de Eisenstein
+- Equações polinomiais do segundo grau 
+- Equações polinomiais do terceiro grau
+
+

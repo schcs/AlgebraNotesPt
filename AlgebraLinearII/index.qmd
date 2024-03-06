@@ -1,0 +1,17 @@
+---
+number-sections: false
+lang: pt
+---
+
+# Álgebra Linear II {.unnumbered}
+
+Material para a disciplina "Álgebra Linear II" no curso de Graduação em Matemática, na UFMG. 
+
+2024/01
+
+
+Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
+
+## Apostilas
+
+
