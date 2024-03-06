@@ -1,6 +1,9 @@
 project:
   type: book
 
+execute: 
+  freeze: auto
+
 book:
   title: "Álgebra"
   subtitle: Apostilas para disciplinas, UFMG, 2024
