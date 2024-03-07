@@ -163,9 +163,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -818,10 +818,11 @@ window.Quarto = {
 
 <p>Lembremos, para um primo <span class="math inline">\(p\)</span>, que um grupo finito chama-se <span class="math inline">\(p\)</span>-grupo se <span class="math inline">\(|G|\)</span> é uma potência de <span class="math inline">\(p\)</span>.</p>
 <p>Lembremos também o Teorema de Lagrange que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo <span class="math inline">\(A_4\)</span> não possui subgrupo de ordem <span class="math inline">\(6\)</span> (verifique).</p>
-<div class="definition">
-<p>Seja <span class="math inline">\(G\)</span> um grupo finito de ordem <span class="math inline">\(n\)</span>. Assuma que <span class="math inline">\(p\)</span> é um primo e <span class="math inline">\(\alpha\geq 0\)</span> é um número inteiro tal que <span class="math inline">\(p^\alpha\mid n\)</span>, mas <span class="math inline">\(p^{\alpha+1}\nmid n\)</span>. Se <span class="math inline">\(H\)</span> é um subgrupo de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(|H|=p^\alpha\)</span>, então <span class="math inline">\(H\)</span> é dito <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</p>
+<div id="def-sylow" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 17.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo finito de ordem <span class="math inline">\(n\)</span>. Assuma que <span class="math inline">\(p\)</span> é um primo e <span class="math inline">\(\alpha\geq 0\)</span> é um número inteiro tal que <span class="math inline">\(p^\alpha\mid n\)</span>, mas <span class="math inline">\(p^{\alpha+1}\nmid n\)</span>. Se <span class="math inline">\(H\)</span> é um subgrupo de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(|H|=p^\alpha\)</span>, então <span class="math inline">\(H\)</span> é dito <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="example">
+<div id="exm-sylow" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 17.1</strong></span> &nbsp;</p>
 <ul>
 <li>Se <span class="math inline">\(p\nmid |G|\)</span>, então <span class="math inline">\(\{1\}\)</span> é um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</li>
 <li>Seja <span class="math inline">\(G=S_3\)</span>. Os subgrupos <span class="math inline">\(\left&lt;(i,j)\right&gt;\)</span> com <span class="math inline">\(1\leq i&lt;j\leq 3\)</span> são <span class="math inline">\(2\)</span>-subgrupos de Sylow de <span class="math inline">\(G\)</span>. O subgrupo <span class="math inline">\(\left&lt;(1,2,3)\right&gt;\)</span> é um <span class="math inline">\(3\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</li>
@@ -830,11 +831,11 @@ window.Quarto = {
 <li>Portanto um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span> tem cardinalidade <span class="math inline">\(p^{n(n-1)/2}\)</span>. Considere o subgrupo <span class="math inline">\(U\)</span> de matrizes triangulares superiores com uns no diagonal. Como <span class="math inline">\(|U|=p^{n(n-1)/2}\)</span>, temos que <span class="math inline">\(U\)</span> é um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>. O mesmo <span class="math inline">\(U\)</span> é um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(SL(n,p)\)</span>.</li>
 </ul>
 </div>
-<div class="exercise">
-<p>Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span> e <span class="math inline">\(K\)</span> subgrupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(H\)</span> é normalizado por <span class="math inline">\(K\)</span> (ou seja, <span class="math inline">\(H^x=H\)</span> para todo <span class="math inline">\(x\in K\)</span>). Mostre que <span class="math inline">\(HK\)</span> é um subgrupo de <span class="math inline">\(G\)</span>. Em particular, se <span class="math inline">\(H\)</span> é um subgrupo de <span class="math inline">\(G\)</span> e <span class="math inline">\(K\)</span> é um subgrupo normal de <span class="math inline">\(G\)</span>, então <span class="math inline">\(HK\)</span> é um subgrupo de <span class="math inline">\(G\)</span>.</p>
+<div id="exr-sylow" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 17.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span> e <span class="math inline">\(K\)</span> subgrupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(H\)</span> é normalizado por <span class="math inline">\(K\)</span> (ou seja, <span class="math inline">\(H^x=H\)</span> para todo <span class="math inline">\(x\in K\)</span>). Mostre que <span class="math inline">\(HK\)</span> é um subgrupo de <span class="math inline">\(G\)</span>. Em particular, se <span class="math inline">\(H\)</span> é um subgrupo de <span class="math inline">\(G\)</span> e <span class="math inline">\(K\)</span> é um subgrupo normal de <span class="math inline">\(G\)</span>, então <span class="math inline">\(HK\)</span> é um subgrupo de <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="theorem">
-<p>Seja <span class="math inline">\(G\)</span> um grupo finito de ordem <span class="math inline">\(n\)</span>, seja <span class="math inline">\(p\)</span> um primo, e assuma que <span class="math inline">\(p^\alpha\)</span> (com <span class="math inline">\(\alpha\geq 0\)</span>) é a maior potência de <span class="math inline">\(p\)</span> que divide <span class="math inline">\(n\)</span>. As seguintes são verdadeiras.</p>
+<div id="thm-sylow" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 17.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo finito de ordem <span class="math inline">\(n\)</span>, seja <span class="math inline">\(p\)</span> um primo, e assuma que <span class="math inline">\(p^\alpha\)</span> (com <span class="math inline">\(\alpha\geq 0\)</span>) é a maior potência de <span class="math inline">\(p\)</span> que divide <span class="math inline">\(n\)</span>. As seguintes são verdadeiras.</p>
 <ul>
 <li><span class="math inline">\(G\)</span> possui um <span class="math inline">\(p\)</span>-subgrupo de Sylow.</li>
 <li>Se <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> são dois <span class="math inline">\(p\)</span>-subgrupos de Sylow em <span class="math inline">\(G\)</span>, então <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> são conjugados.</li>
@@ -859,8 +860,8 @@ Y=\{y\in G\mid Hy\in X\}.
 \]</span></p></li>
 </ol>
 </div>
-<div class="corollary">
-<p>Sejam <span class="math inline">\(G\)</span> um grupo finito,&nbsp; <span class="math inline">\(p\)</span> um primo, e <span class="math inline">\(H\)</span> um <span class="math inline">\(p\)</span>-subgrupo de Sylow em <span class="math inline">\(G\)</span> com <span class="math inline">\(|H|=p^\alpha\)</span>.</p>
+<div id="cor-sylow" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 17.1</strong></span> Sejam <span class="math inline">\(G\)</span> um grupo finito,&nbsp; <span class="math inline">\(p\)</span> um primo, e <span class="math inline">\(H\)</span> um <span class="math inline">\(p\)</span>-subgrupo de Sylow em <span class="math inline">\(G\)</span> com <span class="math inline">\(|H|=p^\alpha\)</span>.</p>
 <ul>
 <li>O subgrupo <span class="math inline">\(H\)</span> é normal em <span class="math inline">\(G\)</span> se e somente se ele é o único <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</li>
 <li>O número <span class="math inline">\(n_p\)</span> de <span class="math inline">\(p\)</span>-subgrupos de <span class="math inline">\(G\)</span> satisfaz as condições <span class="math display">\[
@@ -868,11 +869,11 @@ n_p\equiv 1\pmod p,\quad n_p\mid |G|/p^\alpha.
 \]</span></li>
 </ul>
 </div>
-<div class="exercise">
-<p>Seja <span class="math inline">\(G\)</span> um grupo finito, <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(H\)</span> um <span class="math inline">\(p\)</span>-subgrupo de <span class="math inline">\(G\)</span>. Mostre que <span class="math inline">\(H\)</span> está contido em um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>. [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]</p>
+<div id="exr-psg-sylow" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 17.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo finito, <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(H\)</span> um <span class="math inline">\(p\)</span>-subgrupo de <span class="math inline">\(G\)</span>. Mostre que <span class="math inline">\(H\)</span> está contido em um <span class="math inline">\(p\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>. [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]</p>
 </div>
-<div class="example">
-<p>Não existe um grupo simples de ordem 100. De fato, se <span class="math inline">\(G\)</span> é um grupo de ordem 100, então&nbsp; o número de <span class="math inline">\(5\)</span>-subgrupos de Sylow de <span class="math inline">\(G\)</span> é congruente com 1 módulo 5 mas também é um divisor de <span class="math inline">\(100/25=4\)</span>. Portanto, <span class="math inline">\(G\)</span> possui único <span class="math inline">\(5\)</span>-subgrupo de Sylow que precisa ser normal e assim <span class="math inline">\(G\)</span> não pode ser um grupo simples.</p>
+<div id="exm-simple100" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 17.2</strong></span> Não existe um grupo simples de ordem 100. De fato, se <span class="math inline">\(G\)</span> é um grupo de ordem 100, então&nbsp; o número de <span class="math inline">\(5\)</span>-subgrupos de Sylow de <span class="math inline">\(G\)</span> é congruente com 1 módulo 5 mas também é um divisor de <span class="math inline">\(100/25=4\)</span>. Portanto, <span class="math inline">\(G\)</span> possui único <span class="math inline">\(5\)</span>-subgrupo de Sylow que precisa ser normal e assim <span class="math inline">\(G\)</span> não pode ser um grupo simples.</p>
 </div>
 
 
@@ -1304,4 +1305,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

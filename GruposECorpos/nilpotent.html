@@ -162,9 +162,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -553,7 +553,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -815,42 +815,41 @@ window.Quarto = {
 </header>
 
 
-<div class="definition">
-<p>Se <span class="math inline">\(G\)</span> é um grupo e <span class="math inline">\(A,B\leq G\)</span>, então <span class="math display">\[
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 18.1</strong></span> Se <span class="math inline">\(G\)</span> é um grupo e <span class="math inline">\(A,B\leq G\)</span>, então <span class="math display">\[
 [A,B]=\left&lt;[a,b]\mid a\in A,\ b\in B\right&gt;.
 \]</span></p>
 </div>
-<div class="exercise">
-<p>Se <span class="math inline">\(A,B\unlhd G\)</span>, então <span class="math inline">\([A,B]\unlhd G\)</span>.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 18.1</strong></span> Se <span class="math inline">\(A,B\unlhd G\)</span>, então <span class="math inline">\([A,B]\unlhd G\)</span>.</p>
 </div>
-<div class="lemma">
-<p>Seja <span class="math inline">\(K\unlhd G\)</span>, e <span class="math inline">\(H\leq G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.&nbsp; Então <span class="math inline">\([H,G]\leq K\)</span> se e somente se <span class="math inline">\(H/K\leq Z(G/K)\)</span>.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 18.1</strong></span> Seja <span class="math inline">\(K\unlhd G\)</span>, e <span class="math inline">\(H\leq G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.&nbsp; Então <span class="math inline">\([H,G]\leq K\)</span> se e somente se <span class="math inline">\(H/K\leq Z(G/K)\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-Exercício.
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<div class="definition">
-<p>Uma série normal <span class="math display">\[
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 18.2</strong></span> Uma série normal <span class="math display">\[
 G_0&gt;\cdots&gt; G_k
 \]</span> de um grupo <span class="math inline">\(G\)</span> é dito série central&nbsp;se <span class="math display">\[
 G_i/G_{i+1}\leq Z(G/G_{i+1}).
 \]</span> Note que se <span class="math inline">\(G_i\)</span> é uma série central, então os quocientes <span class="math inline">\(G_i/G_{i+1}\)</span> são abelianos.</p>
 </div>
-<div class="definition">
-<p>Em um grupo <span class="math inline">\(G\)</span>, definimos a série <span class="math inline">\(\gamma_i(G)\)</span>&nbsp; recursivamente como <span class="math inline">\(\gamma_1(G)=G\)</span>, e <span class="math inline">\(\gamma_{i+1}(G)=[G,\gamma_i(G)]\)</span> para <span class="math inline">\(i\geq 1\)</span>. Note que <span class="math inline">\(\gamma_2(G)=G'\)</span>. A série <span class="math inline">\(\gamma_i(G)\)</span> é chamada de série central descendente.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 18.3</strong></span> Em um grupo <span class="math inline">\(G\)</span>, definimos a série <span class="math inline">\(\gamma_i(G)\)</span>&nbsp; recursivamente como <span class="math inline">\(\gamma_1(G)=G\)</span>, e <span class="math inline">\(\gamma_{i+1}(G)=[G,\gamma_i(G)]\)</span> para <span class="math inline">\(i\geq 1\)</span>. Note que <span class="math inline">\(\gamma_2(G)=G'\)</span>. A série <span class="math inline">\(\gamma_i(G)\)</span> é chamada de série central descendente.</p>
 <p>Similarmente, definimos <span class="math inline">\(\zeta_0(G)=1\)</span> e recursivamente <span class="math inline">\(\zeta_{i+1}(G)\)</span> é definido como o subgrupo de <span class="math inline">\(G\)</span> que contém <span class="math inline">\(\zeta_{i}(G)\)</span> e satisfaz que <span class="math display">\[
 Z(G/\zeta_{i}(G))=\zeta_{i+1}(G)/\zeta_i(G).
 \]</span> A série <span class="math inline">\(\zeta_i(G)\)</span> é chamada de série central ascendente de <span class="math inline">\(G\)</span>. O termo <span class="math inline">\(\zeta_i(G)\)</span> é dito <span class="math inline">\(i\)</span>-ésimo centro de <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="lemma">
-<p>As séries <span class="math inline">\(\gamma_i(G)\)</span> e <span class="math inline">\(\zeta_i(G)\)</span> são centrais.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 18.2</strong></span> As séries <span class="math inline">\(\gamma_i(G)\)</span> e <span class="math inline">\(\zeta_i(G)\)</span> são centrais.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>É claro no caso de <span class="math inline">\(\zeta_i(G)\)</span>. O caso de <span class="math inline">\(\gamma_i(G)\)</span> segue do lema anterior.</p>
 </div>
-<div class="lemma">
-<p>Seja <span class="math inline">\(G\)</span> um grupo.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 18.3</strong></span> Seja <span class="math inline">\(G\)</span> um grupo.</p>
 <ul>
 <li>Se <span class="math display">\[
 G_1=G&gt;G_2&gt;\cdots&gt; G_k
@@ -873,34 +872,33 @@ H_{i+1}\zeta_{i}(G)/\zeta_i(G) \leq Z(G/\zeta_i(G))=\zeta_{i+1}(G)/\zeta_i(G).
 \]</span> Portanto, <span class="math inline">\(H_{i+1}\leq \zeta_{i+1}(G)\)</span>.</p></li>
 </ol>
 </div>
-<div class="corollary">
-<p>Em um grupo <span class="math inline">\(G\)</span> tem se que <span class="math inline">\(\zeta_c(G)=G\)</span> se e somente se <span class="math inline">\(\gamma_{c+1}(G)=1\)</span>. Neste caso <span class="math display">\[
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 18.1</strong></span> Em um grupo <span class="math inline">\(G\)</span> tem se que <span class="math inline">\(\zeta_c(G)=G\)</span> se e somente se <span class="math inline">\(\gamma_{c+1}(G)=1\)</span>. Neste caso <span class="math display">\[
 \gamma_{i+1}(G)\leq \zeta_{c-i}(G)
 \]</span> para todo <span class="math inline">\(i\geq 0\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-Segue do lema anterior.
+<p><span class="proof-title"><em>Comprovação</em>. </span>Segue do lema anterior.</p>
 </div>
-<div class="definition">
-<p>Um grupo <span class="math inline">\(G\)</span> é dito nilpotente se existe um <span class="math inline">\(c\geq 1\)</span> tal que <span class="math inline">\(\gamma_{c+1}(G)=1\)</span>. O menor tal <span class="math inline">\(c\)</span> é dito a classe de nilpotência de <span class="math inline">\(G\)</span>. Claramente, um grupo nilpotente é solúvel, mas um grupo solúvel não é necessariamente nilpotente (e.g.&nbsp;<span class="math inline">\(S_3\)</span>).</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 18.4</strong></span> Um grupo <span class="math inline">\(G\)</span> é dito nilpotente se existe um <span class="math inline">\(c\geq 1\)</span> tal que <span class="math inline">\(\gamma_{c+1}(G)=1\)</span>. O menor tal <span class="math inline">\(c\)</span> é dito a classe de nilpotência de <span class="math inline">\(G\)</span>. Claramente, um grupo nilpotente é solúvel, mas um grupo solúvel não é necessariamente nilpotente (e.g.&nbsp;<span class="math inline">\(S_3\)</span>).</p>
 </div>
-<div class="theorem">
-<p>Seja <span class="math inline">\(G\)</span> um grupo.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 18.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo.</p>
 <ul>
 <li>Se <span class="math inline">\(G\)</span> é nilpotente <span class="math inline">\(H\leq G\)</span> e <span class="math inline">\(N\unlhd G\)</span>, então <span class="math inline">\(H\)</span> e <span class="math inline">\(G/N\)</span> são nilpotentes.</li>
 <li>Se <span class="math inline">\(G\)</span> é nilpotente, então <span class="math inline">\(Z(G)\neq 1\)</span>. <span class="math inline">\(G\)</span> é nilpotente se e somente se <span class="math inline">\(G/Z(G)\)</span> é nilpotente.</li>
 <li>Se <span class="math inline">\(G\)</span> e <span class="math inline">\(H\)</span> são nilpotentes, então <span class="math inline">\(G\times H\)</span> é nilpotente.</li>
 </ul>
 </div>
-<div class="theorem">
-<p>Um <span class="math inline">\(p\)</span>-grupo finito é nilpotente.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 18.2</strong></span> Um <span class="math inline">\(p\)</span>-grupo finito é nilpotente.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Indução pela ordem de <span class="math inline">\(G\)</span>. A afirmação é verdadeira para grupos de ordem <span class="math inline">\(p\)</span> ou <span class="math inline">\(p^2\)</span>. Assuma que a afirmação é verdadeira para grupo cuja ordem é menor que <span class="math inline">\(p^n\)</span> e seja <span class="math inline">\(G\)</span> um grupo de ordem <span class="math inline">\(p^n\)</span>. Como <span class="math inline">\(Z(G)\neq 1\)</span>, temos pela hipótese de indução que <span class="math inline">\(G/Z(G)\)</span> é nilpotente e pelo corolário anterior obtemos que <span class="math inline">\(G\)</span> é nilpotente.</p>
 </div>
-<div class="lemma">
-<p>Seja <span class="math inline">\(G\)</span> um grupo nilpotente.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 18.4</strong></span> Seja <span class="math inline">\(G\)</span> um grupo nilpotente.</p>
 <ul>
 <li>Se <span class="math inline">\(H&lt;G\)</span>, então <span class="math inline">\(H&lt;N_G(H)\)</span>;</li>
 <li>Se <span class="math inline">\(1\neq N\unlhd G\)</span>, então <span class="math inline">\(N\cap Z(G)\neq 1\)</span>.</li>
@@ -919,11 +917,11 @@ Segue do lema anterior.
 <li><p>Seja <span class="math inline">\(M\)</span> um subgrupo maximal de <span class="math inline">\(G\)</span>. Por parte (1), tem-se que <span class="math inline">\(N_G(M)=G\)</span>, então <span class="math inline">\(M\)</span> é normal em <span class="math inline">\(G\)</span>. Pela maximalidade de <span class="math inline">\(M\)</span>, o quociente <span class="math inline">\(G/M\)</span> não possui um subgrupo próprio, não trivial. Portanto <span class="math inline">\(G/M\cong C_p\)</span> com algum primo <span class="math inline">\(p\)</span>. Em particular, <span class="math inline">\(|G:M|=p\)</span>.</p></li>
 </ol>
 </div>
-<div class="exercise">
-<p>Seja <span class="math inline">\(G\)</span> um grupo finito, e <span class="math inline">\(P\)</span> um subgrupo de Sylow. Mostre que <span class="math inline">\(N_G(N_G(P))=N_G(P)\)</span>.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 18.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo finito, e <span class="math inline">\(P\)</span> um subgrupo de Sylow. Mostre que <span class="math inline">\(N_G(N_G(P))=N_G(P)\)</span>.</p>
 </div>
-<div class="theorem">
-<p>Um grupo finito é nilpotente se e somente se ele é produto direto dos seus subgrupos de Sylow.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 18.3</strong></span> Um grupo finito é nilpotente se e somente se ele é produto direto dos seus subgrupos de Sylow.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Se <span class="math inline">\(G\)</span> é produto direto dos <span class="math inline">\(p\)</span>-subgrupos de Sylow, então <span class="math inline">\(G\)</span> é nilpotente.</p>
@@ -1356,4 +1354,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

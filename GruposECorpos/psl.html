@@ -163,9 +163,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -816,16 +816,14 @@ window.Quarto = {
 </header>
 
 
-<div class="lemma">
-<blockquote class="blockquote">
-<p>(Iwasawa)&nbsp; Assuma que um grupo <span class="math inline">\(G\)</span> age primitivamente no conjunto <span class="math inline">\(\Omega\)</span> e um estabilizador <span class="math inline">\(G_\alpha\)</span> possui um subgrupo normal abeliano <span class="math inline">\(A\)</span> tal que <span class="math inline">\(\left&lt;A^g\mid g\in G\right&gt;=G\)</span>. Suponha ainda que <span class="math inline">\(G\)</span> é perfeito (ou seja, <span class="math inline">\(G'=G\)</span>). Denotando por <span class="math inline">\(K\)</span> o núcleo da ação de <span class="math inline">\(G\)</span> em <span class="math inline">\(\Omega\)</span>, tem-se que <span class="math inline">\(G/K\)</span> é simples.</p>
-</blockquote>
+<div id="lem-iwa" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 16.1</strong></span> (Iwasawa)&nbsp; Assuma que um grupo <span class="math inline">\(G\)</span> age primitivamente no conjunto <span class="math inline">\(\Omega\)</span> e um estabilizador <span class="math inline">\(G_\alpha\)</span> possui um subgrupo normal abeliano <span class="math inline">\(A\)</span> tal que <span class="math inline">\(\left&lt;A^g\mid g\in G\right&gt;=G\)</span>. Suponha ainda que <span class="math inline">\(G\)</span> é perfeito (ou seja, <span class="math inline">\(G'=G\)</span>). Denotando por <span class="math inline">\(K\)</span> o núcleo da ação de <span class="math inline">\(G\)</span> em <span class="math inline">\(\Omega\)</span>, tem-se que <span class="math inline">\(G/K\)</span> é simples.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Trocando <span class="math inline">\(G\)</span> por <span class="math inline">\(G/K\)</span>, podemos assumir sem perder generalidade que <span class="math inline">\(K=1\)</span>; ou seja <span class="math inline">\(G\)</span> é um subgrupo de <span class="math inline">\(S(\Omega)\)</span>. Seja <span class="math inline">\(N\neq 1\)</span> um subgrupo normal de <span class="math inline">\(G\)</span>. Como <span class="math inline">\(G_\alpha\)</span> é maximal, <span class="math inline">\(G_\alpha N=G\)</span> e todo elemento <span class="math inline">\(x\in G\)</span> pode ser escrito como <span class="math inline">\(x=gn\)</span> onde <span class="math inline">\(g\in G_\alpha\)</span> e <span class="math inline">\(n\in N\)</span>. Em particular, <span class="math inline">\(A^x=A^{(gn)}=A^n\)</span>. Logo <span class="math inline">\(AN=G\)</span> e <span class="math inline">\(G/N=A/(A\cap N)\)</span> é abeliano. Como <span class="math inline">\(G'=G\)</span>, obtemos que <span class="math inline">\((G/N)'=G/N\)</span>, que implica que <span class="math inline">\(N=G\)</span>.&nbsp; Ou seja <span class="math inline">\(G\)</span> é simples.</p>
 </div>
-<div class="theorem">
-<p>Seja <span class="math inline">\(n\geq 2\)</span> e <span class="math inline">\(\F\)</span> um corpo (finito ou infinito) tal que <span class="math inline">\((n,|\F|)\neq (2,2), (2,3)\)</span>. Então o grupo <span class="math inline">\(PSL(n,\F)\)</span> é simples.</p>
+<div id="thm-psl-simple" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 16.1</strong></span> Seja <span class="math inline">\(n\geq 2\)</span> e <span class="math inline">\(\F\)</span> um corpo (finito ou infinito) tal que <span class="math inline">\((n,|\F|)\neq (2,2), (2,3)\)</span>. Então o grupo <span class="math inline">\(PSL(n,\F)\)</span> é simples.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Nós vamos mostrar que as condições do Lema de Iwasawa estão válidas.</p>
@@ -1289,4 +1287,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

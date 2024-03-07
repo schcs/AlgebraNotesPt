@@ -163,9 +163,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -820,11 +820,11 @@ window.Quarto = {
 w=x_1x_2\cdots x_k
 \]</span> onde <span class="math inline">\(k\geq 0\)</span> e <span class="math inline">\(x_i\in X\cup X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(k=0\)</span>, então <span class="math inline">\(w\)</span> é denotado por <span class="math inline">\(e\)</span> e é dita a palavra vazia. O comprimento da palavra <span class="math inline">\(w\)</span> acima é <span class="math inline">\(k\)</span>. Uma palavra <span class="math inline">\(w=x_1x_2\cdots x_k\)</span> é dita reduzida se <span class="math inline">\(w=e\)</span> ou o comprimento de <span class="math inline">\(w\)</span> é maior que <span class="math inline">\(0\)</span> e <span class="math inline">\(w\)</span> não contém nenhuma ocorrência da subpalavra <span class="math inline">\(xx^{-1}\)</span> ou <span class="math inline">\(x^{-1}x\)</span> com <span class="math inline">\(x\in X\)</span>. Se <span class="math inline">\(w\)</span> é uma palavra, então cancelando as ocorrências de subpalavras na forma <span class="math inline">\(xx^{-1}\)</span> ou&nbsp;<span class="math inline">\(x^{-1}x\)</span>, obtemos uma palavra <span class="math inline">\(\bar w\)</span> reduzida.</p>
 <p>Denotaremos por <span class="math inline">\(F_X\)</span> o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto <span class="math inline">\(F_X\)</span>. Sejam <span class="math inline">\(w_1,w_2\in F_X\)</span>. Definimos <span class="math inline">\(w_1\cdot w_2=\overline{w_1w_2}\)</span> onde <span class="math inline">\(w_1w_2\)</span> significa a concatenação de palavras.</p>
-<div class="theorem">
-<p><span class="math inline">\((F_X,\cdot)\)</span> é um grupo.</p>
+<div id="thm-freegp" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 13.1</strong></span> <span class="math inline">\((F_X,\cdot)\)</span> é um grupo.</p>
 </div>
-<div class="definition">
-<p>O grupo <span class="math inline">\(F_X\)</span> é chamado de grupo livre gerado por <span class="math inline">\(X\)</span>.</p>
+<div id="def-freegp" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 13.1</strong></span> O grupo <span class="math inline">\(F_X\)</span> é chamado de grupo livre gerado por <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>A operação em <span class="math inline">\(F_X\)</span> é bem definida. Além disso, <span class="math inline">\(e\)</span> é elemento neutro, e se <span class="math inline">\(x_1\cdots x_k\in F_X\)</span>, então <span class="math display">\[
@@ -839,39 +839,39 @@ x_1\cdots x_kx^{-1}&amp;\mbox{no caso contrário.}\end{array}\right.
 \psi(x_1\cdots x_k)=\psi_{x_1}\cdots \psi_{x_k}.
 \]</span> Como <span class="math inline">\(\mathcal F_X\)</span> é gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>, <span class="math inline">\(\psi\)</span> é sobrejetivo. Além disso, se <span class="math inline">\(\psi(x_1\cdots x_k)=\psi(y_1\cdots y_m)\)</span>, então <span class="math inline">\(\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}\)</span>. Por outro lado, <span class="math inline">\(x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m\)</span>. Portanto <span class="math inline">\(\psi\)</span> é injetiva, e então <span class="math inline">\(\psi\)</span> é bijetiva. Como <span class="math inline">\(\psi\)</span> também satisfaz a igualdade <span class="math inline">\(\psi(w_1w_2)=\psi(w_1)\psi(w_2)\)</span>, obtemos que <span class="math inline">\(\psi\)</span> é um isomorfismo entre as estruturas <span class="math inline">\(F_X\)</span> e <span class="math inline">\(\mathcal F_X\)</span> com as suas respetivas multiplicações. Como <span class="math inline">\(\mathcal F_X\)</span> é associativa, obtemos que <span class="math inline">\(F_X\)</span> também é. Portanto <span class="math inline">\(F_X\)</span> é um grupo.</p>
 </div>
-<div class="theorem">
-<p>(Propriedade Universal).&nbsp;Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(F_X\)</span> um grupo livre gerado por <span class="math inline">\(X\)</span>. Seja <span class="math inline">\(\varphi:X\rightarrow G\)</span> um mapa arbitrário. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> tal que <span class="math inline">\(\psi|_X=\varphi\)</span>. (Todo mapa <span class="math inline">\(X\rightarrow G\)</span> pode ser estendido a um homomorfismo <span class="math inline">\(F_X\rightarrow G\)</span>.)</p>
+<div id="thm-free-univ" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 13.2</strong></span> (Propriedade Universal).&nbsp;Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(F_X\)</span> um grupo livre gerado por <span class="math inline">\(X\)</span>. Seja <span class="math inline">\(\varphi:X\rightarrow G\)</span> um mapa arbitrário. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> tal que <span class="math inline">\(\psi|_X=\varphi\)</span>. (Todo mapa <span class="math inline">\(X\rightarrow G\)</span> pode ser estendido a um homomorfismo <span class="math inline">\(F_X\rightarrow G\)</span>.)</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(w=x_1\cdots x_k\in F_X\)</span> e defina <span class="math inline">\(\psi(w)=\varphi(x_1)\cdots\varphi(x_k)\)</span>. Então <span class="math inline">\(\psi\)</span> é um homomorfismo e claramente <span class="math inline">\(\psi(x)=\varphi(x)\)</span> para todo <span class="math inline">\(x\in X\)</span>.</p>
 </div>
-<div class="corollary">
-<p>Seja <span class="math inline">\(G\)</span> um grupo gerado por um conjunto <span class="math inline">\(X\)</span>. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> sobrejetivo tal que <span class="math inline">\(\psi|_X=\mbox{id}_X\)</span>. Em particular <span class="math inline">\(G\cong F/\ker\psi\)</span>. (Cada grupo é quociente de um grupo livre.)</p>
+<div id="cor-free-quot" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 13.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo gerado por um conjunto <span class="math inline">\(X\)</span>. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> sobrejetivo tal que <span class="math inline">\(\psi|_X=\mbox{id}_X\)</span>. Em particular <span class="math inline">\(G\cong F/\ker\psi\)</span>. (Cada grupo é quociente de um grupo livre.)</p>
 </div>
-<div class="definition">
-<p>Seja <span class="math inline">\(X\)</span> um conjunto, <span class="math inline">\(F_X\)</span> o grupo livre gerado por <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\subseteq F_X\)</span>. Seja <span class="math inline">\(\left&lt;Y\right&gt;^{F_X}\)</span> o subgrupo normal gerado por <span class="math inline">\(Y\)</span>. O grupo quociente <span class="math inline">\(G=F_X/\left&lt;Y\right&gt;^{F_X}\)</span> é denotado por <span class="math display">\[\begin{equation}\label{eq:pres}
+<div id="def-pres" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 13.2</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto, <span class="math inline">\(F_X\)</span> o grupo livre gerado por <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\subseteq F_X\)</span>. Seja <span class="math inline">\(\left&lt;Y\right&gt;^{F_X}\)</span> o subgrupo normal gerado por <span class="math inline">\(Y\)</span>. O grupo quociente <span class="math inline">\(G=F_X/\left&lt;Y\right&gt;^{F_X}\)</span> é denotado por <span class="math display">\[\begin{equation}\label{eq:pres}
 \left&lt;X \mid Y\right&gt;.
 \end{equation}\]</span> A expressão~<span class="math inline">\(\eqref{eq:pres}\)</span> é dita uma apresentação para o grupo <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="example">
-<p>O grupo cíclico <span class="math inline">\(C_n\)</span> é apresentado pela apresentação <span class="math display">\[
+<div id="exm-pres" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 13.1</strong></span> O grupo cíclico <span class="math inline">\(C_n\)</span> é apresentado pela apresentação <span class="math display">\[
 \left&lt;x\mid x^n\right&gt;.
 \]</span></p>
 </div>
-<div class="example">
-<p>Seja <span class="math inline">\(G\)</span> o grupo dihedral <span class="math inline">\(D_n\)</span> com <span class="math inline">\(n\geq 3\)</span>. Afirmamos que <span class="math inline">\(G\)</span> é apresentado por <span class="math display">\[
+<div id="exm-pres-dih" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 13.2</strong></span> Seja <span class="math inline">\(G\)</span> o grupo dihedral <span class="math inline">\(D_n\)</span> com <span class="math inline">\(n\geq 3\)</span>. Afirmamos que <span class="math inline">\(G\)</span> é apresentado por <span class="math display">\[
 \left&lt; a,b\mid a^n,b^2,baba\right&gt;.
 \]</span> Seja <span class="math inline">\(\bar a\in D_n\)</span> a rotação de ordem <span class="math inline">\(n\)</span> e <span class="math inline">\(\bar b\in D_n\)</span> uma reflexão. Seja <span class="math inline">\(X=\{a,b\}\)</span> e considere o grupo livre <span class="math inline">\(F_X\)</span>. Pela Propriedade Universal, o mapa <span class="math inline">\(a\mapsto \bar a\)</span>, <span class="math inline">\(b\mapsto \bar b\)</span>, pode ser estendido a um homomorfismo sobrejetivo <span class="math inline">\(\psi:F_X\rightarrow D_n\)</span>. Como <span class="math inline">\(\bar a^n=\bar b^2=\bar b\bar a\bar b\bar a=1\)</span>, tem-se que <span class="math inline">\(a^n,b^n,baba\in \ker\psi\)</span>. Denotando por <span class="math inline">\(N=\left&lt;a^n,b^2,baba\right&gt;^{F_X}\)</span>, obtemos que <span class="math inline">\(N\leq \ker\psi\)</span>. Portanto, podemos definir um homomorfismo sobrejetivo <span class="math inline">\(\bar\psi:F_X/N\rightarrow D_n\)</span> e isto implica que <span class="math inline">\(|F_X/N|\geq 2n\)</span>.. Para provar que <span class="math inline">\(\bar\psi\)</span> é um isomorfismo, precisamos provar que <span class="math inline">\(|F_X/N|\leq 2n\)</span>, mas isso segue da observação que, usando <span class="math inline">\(a^n\in N\)</span>, <span class="math inline">\(b^2\in N\)</span> e <span class="math inline">\(baN=a^{-1}bN\)</span>,&nbsp; todo elemento de <span class="math inline">\(F/N\)</span> pode ser escrito como <span class="math inline">\(a^\alpha b^\beta N\)</span> onde <span class="math inline">\(0\leq \alpha\leq n-1\)</span> e <span class="math inline">\(0\leq \beta\leq 1\)</span>.</p>
 </div>
-<div class="example">
-<p>O grupo dos quaternions <span class="math inline">\(Q_8\)</span> pode ser apresentado pelas apresentações <span class="math display">\[
+<div id="exm-quot" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 13.3</strong></span> O grupo dos quaternions <span class="math inline">\(Q_8\)</span> pode ser apresentado pelas apresentações <span class="math display">\[
 \left&lt;a,b\mid a^4,b^2a^2,bab^{-1}a\right&gt;
 \]</span> e <span class="math display">\[
 \left&lt;a,b\mid abab^{-1},a^2b^{-2}\right&gt;
 \]</span></p>
 </div>
-<div class="example">
-<p>O grupo simétrico é gerado pelas transposições <span class="math inline">\(a_i=(i,i+1)\)</span> com <span class="math inline">\(i\in\{1,\ldots,n-1\}\)</span> e ele pode ser apresentado pela apresentação <span class="math display">\[
+<div id="exm-sym-pres" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 13.4</strong></span> O grupo simétrico é gerado pelas transposições <span class="math inline">\(a_i=(i,i+1)\)</span> com <span class="math inline">\(i\in\{1,\ldots,n-1\}\)</span> e ele pode ser apresentado pela apresentação <span class="math display">\[
 \left&lt;a_1,\ldots,a_{n-1}\mid a_i^2,(a_ia_{i+1})^3, [a_i,a_j] \mbox{ se $|i-j|\geq 2$}\right&gt;.
 \]</span> Esta apresentação é referida com a apresentação de Coxeter.</p>
 </div>
@@ -1305,4 +1305,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

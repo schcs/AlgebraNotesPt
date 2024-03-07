@@ -163,9 +163,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -819,20 +819,20 @@ window.Quarto = {
 <p>Considere a ação de <span class="math inline">\(G\)</span> em <span class="math inline">\(\Omega=G\)</span> por conjugação; ou seja, <span class="math inline">\((x,g)\mapsto x^g=g^{-1}xg\)</span>. Se <span class="math inline">\(x\in \Omega\)</span> então a órbita <span class="math inline">\(x^G=\{x^g \mid g\in G\}\)</span> é chamada de classe de conjugação de <span class="math inline">\(x\)</span> em <span class="math inline">\(G\)</span>. O estabilizador de <span class="math inline">\(x\in \Omega\)</span> nesta ação é o subgrupo <span class="math display">\[\begin{eqnarray*}
 G_x&amp;=&amp;C_G(x)=\{g\in G\mid g^{-1}xg= x\}\\&amp;=&amp;\{g\in G\mid xg= gx\}.
 \end{eqnarray*}\]</span> Este subgrupo chama-se o centralizador de <span class="math inline">\(x\)</span> em <span class="math inline">\(G\)</span>. Temos pelo Teorema Órbita-Estabilizador que <span class="math inline">\(|x^G|=|G:C_G(x)|\)</span>. Em particular, se <span class="math inline">\(G\)</span> é finito, obtemos o seguinte resultado.</p>
-<div class="propisition">
+<div id="prop-class-cent">
 <p>Se <span class="math inline">\(G\)</span> é um grupo finito e <span class="math inline">\(x\in G\)</span>, então <span class="math display">\[
 |x^G|=\frac{|G|}{|C_G(x)|}.
 \]</span></p>
 </div>
-<div class="example">
-<p>Sejam <span class="math inline">\(\pi,\sigma\in S_n\)</span>. Escreva <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span> como produto de ciclos disjuntos e assuma que <span class="math inline">\(\pi\)</span> contém <span class="math inline">\(k_i\)</span> ciclos de comprimento <span class="math inline">\(i\)</span> e que <span class="math inline">\(\sigma\)</span> contém <span class="math inline">\(\ell_i\)</span> ciclos de comprimento <span class="math inline">\(i\)</span> para todo <span class="math inline">\(i=1,\ldots,n\)</span>.&nbsp; Note que as sequências <span class="math inline">\(k_1,\ldots,k_n\)</span> e <span class="math inline">\(\ell_1,\ldots,\ell_n\)</span> são unicamente determinadas pelas permutações <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span>. Demonstre que <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span> são conjugados em <span class="math inline">\(S_n\)</span> se e somente se <span class="math inline">\(k_i=\ell_i\)</span> para todo <span class="math inline">\(i=1,\ldots,n\)</span>.</p>
+<div id="exm-class-cent" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 14.1</strong></span> Sejam <span class="math inline">\(\pi,\sigma\in S_n\)</span>. Escreva <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span> como produto de ciclos disjuntos e assuma que <span class="math inline">\(\pi\)</span> contém <span class="math inline">\(k_i\)</span> ciclos de comprimento <span class="math inline">\(i\)</span> e que <span class="math inline">\(\sigma\)</span> contém <span class="math inline">\(\ell_i\)</span> ciclos de comprimento <span class="math inline">\(i\)</span> para todo <span class="math inline">\(i=1,\ldots,n\)</span>.&nbsp; Note que as sequências <span class="math inline">\(k_1,\ldots,k_n\)</span> e <span class="math inline">\(\ell_1,\ldots,\ell_n\)</span> são unicamente determinadas pelas permutações <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span>. Demonstre que <span class="math inline">\(\pi\)</span> e <span class="math inline">\(\sigma\)</span> são conjugados em <span class="math inline">\(S_n\)</span> se e somente se <span class="math inline">\(k_i=\ell_i\)</span> para todo <span class="math inline">\(i=1,\ldots,n\)</span>.</p>
 </div>
-<div class="example">
-<p>Considere o grupo <span class="math inline">\(S_5\)</span>. Pelo exercício anterior este grupo tem 7 classes de conjugação com os seguintes representantes: <span class="math inline">\(1\)</span>, <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,2)(3,4)\)</span>, <span class="math inline">\((1,2)(3,4,5)\)</span>, <span class="math inline">\((1,2,3)\)</span>, <span class="math inline">\((1,2,3,4)\)</span>, e <span class="math inline">\((1,2,3,4,5)\)</span>. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.</p>
+<div id="exm-classes-s5" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 14.2</strong></span> Considere o grupo <span class="math inline">\(S_5\)</span>. Pelo exercício anterior este grupo tem 7 classes de conjugação com os seguintes representantes: <span class="math inline">\(1\)</span>, <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,2)(3,4)\)</span>, <span class="math inline">\((1,2)(3,4,5)\)</span>, <span class="math inline">\((1,2,3)\)</span>, <span class="math inline">\((1,2,3,4)\)</span>, e <span class="math inline">\((1,2,3,4,5)\)</span>. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.</p>
 </div>
 <p>[table id=2 /]</p>
-<div class="definition">
-<p>O centro de um grupo <span class="math inline">\(G\)</span> está definido como <span class="math display">\[\begin{eqnarray*}
+<div id="def-center" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 14.1</strong></span> O centro de um grupo <span class="math inline">\(G\)</span> está definido como <span class="math display">\[\begin{eqnarray*}
 Z(G)&amp;=&amp;\{g\in G\mid gh=hg\mbox{ para todo }h\in G\}\\&amp;=&amp;\{g\in G\mid g^h=g\mbox{ para todo }h\in G\}.
 \end{eqnarray*}\]</span></p>
 </div>
@@ -842,27 +842,27 @@ G=Z(G)\cup C_1\cup\cdots\cup C_m
 |G|=|Z(G)|+ |C_1|+\cdots+|C_m|.
 \end{eqnarray}\]</span> A equação <span class="math inline">\(\eqref{eq:class}\)</span> é chamada de&nbsp;equação das classes de <span class="math inline">\(G\)</span>.</p>
 <p>Considerando a equação das classes para grupos cuja ordem é uma potência de um primo, obtemos o seguinte resultado importante.</p>
-<div class="theorem">
-<p>&nbsp; Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(G\)</span> um grupo tal que <span class="math inline">\(|G|=p^k\)</span> com algum <span class="math inline">\(k\geq 1\)</span>. Então o centro <span class="math inline">\(Z(G)\)</span> é não trivial (ou seja, <span class="math inline">\(|Z(G)|&gt;1\)</span>).</p>
+<div id="thm-center-pgp" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 14.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(G\)</span> um grupo tal que <span class="math inline">\(|G|=p^k\)</span> com algum <span class="math inline">\(k\geq 1\)</span>. Então o centro <span class="math inline">\(Z(G)\)</span> é não trivial (ou seja, <span class="math inline">\(|Z(G)|&gt;1\)</span>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Considere a equação <span class="math inline">\(\eqref{eq:class}\)</span> para o grupo <span class="math inline">\(G\)</span>. Como as classes <span class="math inline">\(C_i\)</span> são <span class="math inline">\(G\)</span>-órbitas para uma ação de <span class="math inline">\(G\)</span> (nomeadamente, a conjugação de <span class="math inline">\(G\)</span> em <span class="math inline">\(G\)</span>), temos que <span class="math inline">\(|C_i|\)</span> é um divisor de <span class="math inline">\(|G|=p^k\)</span>; ou seja <span class="math inline">\(|C_i|=p^{k_i}\)</span> com algum <span class="math inline">\(k_i\geq 1\)</span>. O lado esquerdo da equação das classes é uma potência de <span class="math inline">\(p\)</span>, e os termos <span class="math inline">\(|C_i|\)</span> no lado direito também são potências de <span class="math inline">\(p\)</span>. Isso quer dizer que <span class="math inline">\(p\mid |Z(G)|\)</span> e em particular que <span class="math inline">\(|Z(G)|&gt;1\)</span>.</p>
 <p>Note que um grupo finito <span class="math inline">\(G\)</span> tal que <span class="math inline">\(|G|=p^k\)</span> onde <span class="math inline">\(p\)</span> é primo é chamado de <span class="math inline">\(p\)</span>-grupo finito. Por exemplo, <span class="math inline">\(D_4\)</span> é um 2-grupo finito. O teorema anterior diz que o centro de um <span class="math inline">\(p\)</span>-grupo finito é não trivial.</p>
 </div>
-<div class="exercise">
-<p>&nbsp;Sejam <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(G\)</span> um grupo tal que <span class="math inline">\(|G|=p^2\)</span>. Mostre que <span class="math inline">\(G\)</span> é abeliano e que exatamente uma das seguintes afirmações é válida:</p>
+<div id="exr-grp-p2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 14.1</strong></span> Sejam <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(G\)</span> um grupo tal que <span class="math inline">\(|G|=p^2\)</span>. Mostre que <span class="math inline">\(G\)</span> é abeliano e que exatamente uma das seguintes afirmações é válida:</p>
 <ul>
 <li><span class="math inline">\(G\)</span> é cíclico</li>
 <li><span class="math inline">\(G=\left&lt;a,b\right&gt;\)</span> onde <span class="math inline">\(|a|=|b|=p\)</span> e <span class="math inline">\(ab=ba\)</span>.</li>
 </ul>
 </div>
-<div class="definition">
-<p>Um grupo <span class="math inline">\(G\)</span> chama-se solúvel se <span class="math inline">\(G\)</span> possui uma cadeia de subgrupos <span class="math display">\[
+<div id="def-solvable2" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 14.2</strong></span> Um grupo <span class="math inline">\(G\)</span> chama-se solúvel se <span class="math inline">\(G\)</span> possui uma cadeia de subgrupos <span class="math display">\[
 G_0=1&lt;G_1&lt;\cdots&lt;G_{k}&lt;G_{k+1}=G
 \]</span> tal que <span class="math inline">\(G_i\)</span> é normal em <span class="math inline">\(G_{i+1}\)</span> (para todo <span class="math inline">\(i\)</span>) e cada quociente <span class="math inline">\(G_{i+1}/G_{i}\)</span> é abeliano.</p>
 </div>
-<div class="example">
-<p>Os seguintes grupos são solúveis.</p>
+<div id="exm-solvable" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 14.3</strong></span> Os seguintes grupos são solúveis.</p>
 <ul>
 <li>Grupos abelianos.</li>
 <li>Grupos diedrais.</li>
@@ -870,8 +870,8 @@ G_0=1&lt;G_1&lt;\cdots&lt;G_{k}&lt;G_{k+1}=G
 </ul>
 </div>
 <p>Grupos solúveis são chamados assim, pois eles correspondem a equações polinomiais que são resolúveis por radicais. As equações polinomiais de grau 2, 3, 4 são resolúveis por radicais porque os grupos <span class="math inline">\(S_2\)</span>, <span class="math inline">\(S_3\)</span>, e <span class="math inline">\(S_4\)</span> são solúveis. Nós vamos ver na aula seguinte que <span class="math inline">\(S_5\)</span> não é um grupo solúvel e isso implica (de modo não trivial) que as equações polinomiais de grau 5 não são resolúveis por radicais.</p>
-<div class="corollary">
-<p>Um <span class="math inline">\(p\)</span>-grupo finito <span class="math inline">\(G\)</span> é solúvel.</p>
+<div id="cor-solvable" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 14.1</strong></span> Um <span class="math inline">\(p\)</span>-grupo finito <span class="math inline">\(G\)</span> é solúvel.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Se <span class="math inline">\(G\)</span> é abeliano, então não há nada para provar. Assuma que <span class="math inline">\(G\)</span> não é abeliano, e considere <span class="math inline">\(G_1=Z(G)\)</span>. Note que <span class="math inline">\(G_1\)</span> é normal em <span class="math inline">\(G\)</span> e <span class="math inline">\(G_1\neq \{1\}\)</span>&nbsp; Se <span class="math inline">\(G/G_1\)</span> é abeliano, então a cadeia <span class="math inline">\(1&lt;G_1&lt;G\)</span> possui quocientes abelianos e <span class="math inline">\(G\)</span> é solúvel.. Se <span class="math inline">\(G/G_1\)</span> não for abeliano, então considere <span class="math inline">\(Z(G/G_1)\)</span>. Temos que <span class="math inline">\(Z(G/G_1)\)</span> é normal em <span class="math inline">\(G/G_1\)</span> e que <span class="math inline">\(Z(G/G_1)\neq\{1\}\)</span>. Seja <span class="math inline">\(G_2=\{g\in G\mid G_1g\in Z(G/G_1)\}\)</span>. É fácil mostrar que <span class="math inline">\(G_2\)</span> é um subgrupo normal em <span class="math inline">\(G\)</span> tal que <span class="math inline">\(G_2/G_1=Z(G/G_1)\)</span> que implica que <span class="math inline">\(G_2/G_1\)</span> é um grupo abeliano. Se <span class="math inline">\(G/G_2\)</span> é abeliano, então consideramos a cadeia <span class="math inline">\(1&lt;G_1&lt;G_2&lt;G\)</span> e estamos prontos. Se <span class="math inline">\(G/G_2\)</span> for não abeliano, então repetimos o passo anterior até obtivermos um subgrupo <span class="math inline">\(G_k\)</span> tal que <span class="math inline">\(G/G_k\)</span> seja abeliano.</p>
@@ -1306,4 +1306,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

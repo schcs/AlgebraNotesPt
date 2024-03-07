@@ -163,9 +163,9 @@ window.Quarto = {
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
 \]</span></p>
-</div>
+:::
 
-</main>
+</div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+::: <!-- /content -->
 
 
 
@@ -824,14 +824,14 @@ window.Quarto = {
 \]</span> e em particular <span class="math inline">\(A_n\)</span> é um subgrupo normal em <span class="math inline">\(S_n\)</span>. Note que <span class="math display">\[
 |A_n|=|S_n|/2=n!/2.
 \]</span></p>
-<div class="exercise">
-<p>Mostre, para&nbsp; <span class="math inline">\(\sigma\in S_n\)</span>, que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math display">\[
+<div id="exr-alter" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 15.1</strong></span> Mostre, para&nbsp; <span class="math inline">\(\sigma\in S_n\)</span>, que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math display">\[
 |\{(i,j)\mid 1\leq i&lt;j\leq n \mbox{ tais que }\ i\sigma &gt; j\sigma\}|
 \]</span> é um número par.</p>
 </div>
 <p>As seguintes afirmações nos ajudam determinar se uma permutação particular é par ou ímpar.</p>
-<div class="lemma">
-<p>Seja <span class="math inline">\(n\)</span> um número natural com <span class="math inline">\(n\geq 3\)</span> e sejam <span class="math inline">\(\sigma,\pi\)</span> elementos de <span class="math inline">\(S_n\)</span>.</p>
+<div id="lem-alter" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 15.1</strong></span> Seja <span class="math inline">\(n\)</span> um número natural com <span class="math inline">\(n\geq 3\)</span> e sejam <span class="math inline">\(\sigma,\pi\)</span> elementos de <span class="math inline">\(S_n\)</span>.</p>
 <p>Se <span class="math inline">\(\sigma,\pi\in A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>. Se <span class="math inline">\(\sigma,\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>. Se <span class="math inline">\(\sigma\in A_n\)</span> e <span class="math inline">\(\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi,\pi\sigma\in S_n\setminus A_n\)</span>. Se <span class="math inline">\(1\leq a&lt; b\leq n\)</span>, então <span class="math inline">\((a,b)\not\in A_n\)</span>. Um ciclo de comprimento <span class="math inline">\(m\)</span> é par se e somente se <span class="math inline">\(m\)</span> é ímpar.</p>
 </div>
 <div class="proof">
@@ -847,14 +847,14 @@ window.Quarto = {
 \]</span> Portanto <span class="math inline">\(\sigma=(1,2,\ldots,m)\)</span> é um produto de <span class="math inline">\(m-1\)</span> ciclos de comprimento 2. Combinando os itens anteriores, temos que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math inline">\(m\)</span> é ímpar.</p></li>
 </ol>
 </div>
-<div class="definition">
-<p>Um grupo <span class="math inline">\(G\neq\{1\}\)</span> chama-se simples se <span class="math inline">\(G\)</span> não possui subgrupo normal além dos subgrupos <span class="math inline">\(\{1\}\)</span> e <span class="math inline">\(G\)</span>.</p>
+<div id="def-altergp" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 15.1</strong></span> Um grupo <span class="math inline">\(G\neq\{1\}\)</span> chama-se simples se <span class="math inline">\(G\)</span> não possui subgrupo normal além dos subgrupos <span class="math inline">\(\{1\}\)</span> e <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="definition">
-<p>Seja <span class="math inline">\(G\)</span> um grupo abeliano. Mostre que <span class="math inline">\(G\)</span> é simples se e somente se <span class="math inline">\(G\)</span> é um grupo cíclico de ordem prima.</p>
+<div id="exr-simple-ab" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 15.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo abeliano. Mostre que <span class="math inline">\(G\)</span> é simples se e somente se <span class="math inline">\(G\)</span> é um grupo cíclico de ordem prima.</p>
 </div>
-<div class="theorem">
-<p>Se <span class="math inline">\(n=3\)</span> ou se <span class="math inline">\(n\geq 5\)</span>, então o grupo alternado <span class="math inline">\(A_n\)</span> é simples.</p>
+<div id="thm-ansimple" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 15.1</strong></span> Se <span class="math inline">\(n=3\)</span> ou se <span class="math inline">\(n\geq 5\)</span>, então o grupo alternado <span class="math inline">\(A_n\)</span> é simples.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Note que&nbsp;<span class="math inline">\(A_3=\left&lt;(1,2,3)\right&gt;\)</span> então <span class="math inline">\(A_3\)</span> é um grupo cíclico de ordem três, portanto simples.</p>
@@ -879,8 +879,8 @@ C_{A_5}(\sigma)=A_5\cap C_{S_5}(\sigma).
 <p>Assuma agora que <span class="math inline">\(N\cap G_i=1\)</span> para todo <span class="math inline">\(i\)</span>. Assuma que <span class="math inline">\(N\neq 1\)</span>. Neste caso <span class="math inline">\(NG_1=G\)</span> (<span class="math inline">\(G_1\)</span> é maximal) e <span class="math inline">\(N\)</span> é regular. Em particular <span class="math inline">\(|N|=n+1\)</span>. Assuma que <span class="math inline">\(\sigma\in N\setminus\{1\}\)</span> e escreva <span class="math inline">\(\sigma\)</span> como um produto <span class="math inline">\(\sigma=\sigma_1\cdots \sigma_m\)</span> de ciclos disjuntos onde&nbsp; <span class="math inline">\(\sigma_i\)</span> é um <span class="math inline">\(r_i\)</span>-ciclo com <span class="math inline">\(r_1\geq r_2\geq\cdots\geq r_m\)</span>. Assuma que <span class="math inline">\(r_1\geq 3\)</span> e seja <span class="math inline">\(\sigma_1=(1,2,\ldots,k)\)</span> com <span class="math inline">\(k\geq 3\)</span>. Seja <span class="math inline">\(\varrho=(3,4,5)\)</span>. Então <span class="math inline">\(\sigma^\varrho\sigma^{-1}\in N\cap G_1\setminus\{1\}\)</span> que é uma contradição. Portanto <span class="math inline">\(r_1=\cdots=r_m=2\)</span>. Assuma que <span class="math inline">\(\sigma=(1,2)(3,4)\)</span> e seja <span class="math inline">\(\varrho=(4,5,6)\)</span>. Então <span class="math inline">\(\sigma^\varrho\sigma^{-1}\in N\cap G_1\)</span> que é uma contradição.</p>
 </div>
 <p>Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O teorema da classificação afirma o seguinte.</p>
-<div class="theorem">
-<p>Os grupos simples finitos são</p>
+<div id="thm-cfsg" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 15.2</strong></span> Os grupos simples finitos são</p>
 <ul>
 <li>os grupos cíclicos de ordem prima;</li>
 <li>os grupos alternados <span class="math inline">\(A_n\)</span> com <span class="math inline">\(n\geq 5\)</span>;</li>
@@ -1320,4 +1320,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</div></body></html>

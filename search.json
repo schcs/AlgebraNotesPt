@@ -194,7 +194,7 @@
     "href": "AlgebraLinearII/chapter1.html",
     "title": "4  Sample chapter",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Álgebra Linear II",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Sample chapter</span>"
@@ -401,7 +401,7 @@
     "href": "GruposECorpos/derivado.html",
     "title": "9  O subgrupo derivado",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>O subgrupo derivado</span>"
@@ -445,7 +445,7 @@
     "href": "GruposECorpos/soluble.html",
     "title": "11  Grupos solúveis",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Grupos solúveis</span>"
@@ -456,7 +456,7 @@
     "href": "GruposECorpos/actions.html",
     "title": "12  Ações de grupos e o Teorema de Órbita-Estabilizador",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ações de grupos e o Teorema de Órbita-Estabilizador</span>"
@@ -467,7 +467,7 @@
     "href": "GruposECorpos/livres.html",
     "title": "13  Grupos livres",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Grupos livres</span>"
@@ -478,7 +478,7 @@
     "href": "GruposECorpos/classes.html",
     "title": "14  Classes de conjugação",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Classes de conjugação</span>"
@@ -489,7 +489,7 @@
     "href": "GruposECorpos/alternado.html",
     "title": "15  O grupo alternado",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>O grupo alternado</span>"
@@ -500,7 +500,7 @@
     "href": "GruposECorpos/psl.html",
     "title": "16  O Lema de Iwasawa e a simplicadade de \\(PSL(n,q)\\)",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>O Lema de Iwasawa e a simplicadade de $PSL(n,q)$</span>"
@@ -511,7 +511,7 @@
     "href": "GruposECorpos/sylow.html",
     "title": "17  Os Teoremas de Sylow",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
@@ -522,7 +522,7 @@
     "href": "GruposECorpos/nilpotent.html",
     "title": "18  Grupos nilpotentes",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\]\n:::",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Grupos nilpotentes</span>"
