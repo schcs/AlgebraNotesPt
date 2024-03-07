@@ -816,43 +816,38 @@ window.Quarto = {
 </header>
 
 
-<div class="definition">
-<p>Seja <span class="math inline">\(G\)</span> um grupo. Se <span class="math inline">\(x,y\in G\)</span>, então o comutador <span class="math inline">\([x,y]\)</span> de <span class="math inline">\(x,y\)</span> é definido por <span class="math inline">\([x,y]=x^{-1}y^{-1}xy\)</span>. Em um grupo <span class="math inline">\(G\)</span>, denotamos por <span class="math inline">\(G'\)</span> o subgrupo <span class="math inline">\(G'=\left&lt; [x,y] \mid x,y\in G\right&gt;\)</span> (o subgrupo gerado por comutadores). O subgrupo <span class="math inline">\(G'\)</span> é chamado de subgrupo derivado,&nbsp;ou subgrupo comutador de <span class="math inline">\(G\)</span>.</p>
+<div id="def-charsub" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.1</strong></span> Um subgroupo <span class="math inline">\(H\leq G\)</span> é dito caraterístico, se <span class="math inline">\(H\)</span> é invariente por automorfismos de <span class="math inline">\(G\)</span>. Um subgrupo caraterístico é normal.</p>
 </div>
-<div class="definition">
-<p>Um subgroupo <span class="math inline">\(H\leq G\)</span> é dito caraterístico, se <span class="math inline">\(H\)</span> é invariente por automorfismos de <span class="math inline">\(G\)</span>. Um subgrupo caraterístico é normal.</p>
-</div>
-<div class="lemma">
-<p>Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span>, <span class="math inline">\(K\)</span> subgroupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.</p>
+<div id="lem-comm-HK" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 11.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span>, <span class="math inline">\(K\)</span> subgroupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.</p>
 <ul>
 <li>Se <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(H\)</span> e <span class="math inline">\(H\)</span> é caraterístico em <span class="math inline">\(G\)</span>, então <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(G\)</span>.</li>
 <li>Se <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(H\)</span> e <span class="math inline">\(H\)</span> é normal em <span class="math inline">\(G\)</span>, então <span class="math inline">\(K\)</span> é normal em <span class="math inline">\(G\)</span>.</li>
 </ul>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-Exercício.
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<div class="lemma">
-<p><span class="math inline">\(G'\)</span> é um subgrupo caraterístico de <span class="math inline">\(G\)</span>. Em particular, <span class="math inline">\(G'\)</span> é um subgrupo normal. Além disso, <span class="math inline">\(G/G'\)</span> é um grupo abeliano e se <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano, então <span class="math inline">\(G'\leq N\)</span>. (Pode-se dizer que <span class="math inline">\(G'\)</span> é o menor subgrupo normal de <span class="math inline">\(G\)</span> com quociente abeliano.)</p>
+<div id="lem-comutator-abeliano" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 11.2</strong></span> <span class="math inline">\(G'\)</span> é um subgrupo caraterístico de <span class="math inline">\(G\)</span>. Em particular, <span class="math inline">\(G'\)</span> é um subgrupo normal. Além disso, <span class="math inline">\(G/G'\)</span> é um grupo abeliano e se <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano, então <span class="math inline">\(G'\leq N\)</span>. (Pode-se dizer que <span class="math inline">\(G'\)</span> é o menor subgrupo normal de <span class="math inline">\(G\)</span> com quociente abeliano.)</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-Exercício.
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<div class="definition">
-<p>Podemos definir recursivamente <span class="math inline">\(G''=(G')'\)</span>, <span class="math inline">\(G'''=(G'')'\)</span>. Obtemos uma série chamada de série derivada ou série comutador de <span class="math inline">\(G\)</span>. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em <span class="math inline">\(G\)</span>. Os termos da série derivada são denotados também por <span class="math inline">\(G=G^{(0)}\)</span>, <span class="math inline">\(G'=G^{(1)}\)</span>, <span class="math inline">\(G''=G^{(2)}\)</span>, etc.</p>
+<div id="def-sgs-derivied" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.2</strong></span> Podemos definir recursivamente <span class="math inline">\(G''=(G')'\)</span>, <span class="math inline">\(G'''=(G'')'\)</span>. Obtemos uma série chamada de série derivada ou série comutador de <span class="math inline">\(G\)</span>. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em <span class="math inline">\(G\)</span>. Os termos da série derivada são denotados também por <span class="math inline">\(G=G^{(0)}\)</span>, <span class="math inline">\(G'=G^{(1)}\)</span>, <span class="math inline">\(G''=G^{(2)}\)</span>, etc.</p>
 </div>
-<div class="lemma">
-<p>Seja <span class="math inline">\(G\)</span> um grupo e seja&nbsp;<span class="math inline">\(G_0=G&gt;\cdots&gt; G_k&gt;\cdots\)</span> uma série subnormal tal que <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano para todo <span class="math inline">\(i\)</span>. Então <span class="math inline">\(G^{(i)}\leq G_i\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>.</p>
+<div id="def-derived-series" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.3</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e seja&nbsp;<span class="math inline">\(G_0=G&gt;\cdots&gt; G_k&gt;\cdots\)</span> uma série subnormal tal que <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano para todo <span class="math inline">\(i\)</span>. Então <span class="math inline">\(G^{(i)}\leq G_i\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>A afirmação é trivialmente verdadeira para <span class="math inline">\(i=0\)</span>. Assuma que <span class="math inline">\(G^{(i)}\leq G_i\)</span>. Como <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano, temos que <span class="math inline">\(G_i'\leq G_{i+1}\)</span>. Logo <span class="math display">\[
 G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 \]</span> Então a afirmação é verdadeira para <span class="math inline">\(i+1\)</span> e segue por indução que ela é verdadeira para todo <span class="math inline">\(i\)</span>.</p>
 </div>
-<div class="corollary">
-<p>As seguintes são equivalentes para um grupo <span class="math inline">\(G\)</span>.</p>
+<div id="thm-solvable" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 11.1</strong></span> As seguintes são equivalentes para um grupo <span class="math inline">\(G\)</span>.</p>
 <ul>
 <li>Existe uma série normal <span class="math inline">\(G_0=G&gt;\cdots &gt;G_k=1\)</span> com quocientes abelianos.</li>
 <li>Existe&nbsp; uma série subnormal&nbsp;<span class="math inline">\(G_0=G&gt;\cdots&gt; G_k=1\)</span> com quocientes abelianos.</li>
@@ -860,17 +855,17 @@ G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 </ul>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-<blockquote class="blockquote">
-<p>Segue dos resultados anteriores.</p>
-</blockquote>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Segue dos resultados anteriores.</p>
 </div>
-<div class="definition">
-<p>Um grupo <span class="math inline">\(G\)</span> é dito solúvel se uma das afirmações do corolário anterior é válida para <span class="math inline">\(G\)</span>. O menor <span class="math inline">\(k\)</span> tal que <span class="math inline">\(G^{(k)}=1\)</span> é chamado de comprimento derivado de <span class="math inline">\(G\)</span>.</p>
+<div id="def-solvable" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.4</strong></span> Um grupo <span class="math inline">\(G\)</span> é dito solúvel se uma das afirmações do corolário anterior é válida para <span class="math inline">\(G\)</span>. O menor <span class="math inline">\(k\)</span> tal que <span class="math inline">\(G^{(k)}=1\)</span> é chamado de comprimento derivado de <span class="math inline">\(G\)</span>.</p>
 </div>
-<p>Um grupo abeliano finito é dito grupo abeliano elementar,,&nbsp;se existe um primo <span class="math inline">\(p\)</span>, tal que <span class="math inline">\(x^p=1\)</span> para todo <span class="math inline">\(x\in G\)</span>. Pelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que <span class="math inline">\(G\)</span> é grupo abeliano elementar se e somente se <span class="math inline">\(G=C_p\times\cdots \times C_p\)</span> com algum primo <span class="math inline">\(p\)</span>. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo <span class="math inline">\(\mathbb F_p\)</span>.</p>
-<div class="lemma">
-<p>As seguintes afirmações são válidas para um grupo <span class="math inline">\(G\)</span>.</p>
+<div id="def-elabel" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.5</strong></span> Um grupo abeliano finito é dito grupo abeliano elementar,,&nbsp;se existe um primo <span class="math inline">\(p\)</span>, tal que <span class="math inline">\(x^p=1\)</span> para todo <span class="math inline">\(x\in G\)</span>.</p>
+</div>
+<p>Pelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que <span class="math inline">\(G\)</span> é grupo abeliano elementar se e somente se <span class="math inline">\(G=C_p\times\cdots \times C_p\)</span> com algum primo <span class="math inline">\(p\)</span>. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo <span class="math inline">\(\mathbb F_p\)</span>.</p>
+<div id="thm-solvable" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 11.2</strong></span> As seguintes afirmações são válidas para um grupo <span class="math inline">\(G\)</span>.</p>
 <ul>
 <li>Se <span class="math inline">\(\varphi:G\rightarrow K\)</span> é um homomorfismo, então <span class="math display">\[
 \varphi(G^{(i)})=\varphi(G)^{(i)}
@@ -894,10 +889,7 @@ G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 <li><p>Seja <span class="math inline">\(\varphi:G\rightarrow G/N\)</span> o homomorfismo natural. Por parte (1), tem-se que <span class="math display">\[
 Q^{(i)}=\varphi(G)^{(i)}=\varphi(G^{(i)})=G^{(i)}N/N.
 \]</span></p></li>
-<li><p>Assuma que <span class="math inline">\(G\)</span> é solúvel e assuma que <span class="math inline">\(G^{(k)}=1\)</span> para algum <span class="math inline">\(k\)</span>. Pode-se verificar por indução que <span class="math inline">\(H^{(i)}\leq G^{(i)}\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>. Portanto, <span class="math inline">\(H^{(k)}=1\)</span> e segue que <span class="math inline">\(H\)</span> é solúvel.</p></li>
-</ol>
-<p>Seja agora <span class="math inline">\(N\unlhd G\)</span> e assuma que <span class="math inline">\(Q=G/N\)</span>. Por parte (2), temos que <span class="math inline">\((G/N)^{(k)}= G^{(k)}N/N=1\)</span>. Logo <span class="math inline">\((G/N)^k=1\)</span> e portanto <span class="math inline">\(G/N\)</span> é solúvel.</p>
-<ol start="4" type="1">
+<li><p>Assuma que <span class="math inline">\(G\)</span> é solúvel e assuma que <span class="math inline">\(G^{(k)}=1\)</span> para algum <span class="math inline">\(k\)</span>. Pode-se verificar por indução que <span class="math inline">\(H^{(i)}\leq G^{(i)}\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>. Portanto, <span class="math inline">\(H^{(k)}=1\)</span> e segue que <span class="math inline">\(H\)</span> é solúvel. Seja agora <span class="math inline">\(N\unlhd G\)</span> e assuma que <span class="math inline">\(Q=G/N\)</span>. Por parte (2), temos que <span class="math inline">\((G/N)^{(k)}= G^{(k)}N/N=1\)</span>. Logo <span class="math inline">\((G/N)^k=1\)</span> e portanto <span class="math inline">\(G/N\)</span> é solúvel.</p></li>
 <li><p>Assuma que <span class="math inline">\(N\unlhd G\)</span> e <span class="math inline">\(G/N\)</span> são solúveis. Seja <span class="math inline">\(Q=G/N\)</span>. Existe <span class="math inline">\(m\)</span> tal que <span class="math inline">\(Q^{(m)}=1\)</span>. Isto quer dizer que <span class="math inline">\(G^{(m)}\leq N\)</span>. Existe <span class="math inline">\(l\)</span> tal que <span class="math inline">\(N^{(l)}=1\)</span>. Afirmamos que <span class="math inline">\(G^{(m+l)}=1\)</span>. De fato, <span class="math display">\[
 G^{(m+l)}=(G^{(m)})^{(l)}\leq N^{(l)}=1.
 \]</span> Logo, <span class="math inline">\(G\)</span> é solúvel.</p></li>
