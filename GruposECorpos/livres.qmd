@@ -12,14 +12,16 @@ onde $k\geq 0$ e $x_i\in X\cup X^{-1}$.  Se $k=0$, então $w$ é denotado por $
 
 Denotaremos por $F_X$ o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto $F_X$. Sejam $w_1,w_2\in F_X$. Definimos $w_1\cdot w_2=\overline{w_1w_2}$ onde $w_1w_2$ significa a concatenação de palavras.
 
-<div class="theorem">
+:::{#thm-freegp}
 $(F_X,\cdot)$ é um grupo.
-</div>
+:::
 
-<div class="definition">O grupo $F_X$ é chamado de grupo livre gerado por $X$.
-</div>
+:::{#def-freegp}
+O grupo $F_X$ é chamado de grupo livre gerado por $X$.
+:::
 
-<div class="proof">A operação em $F_X$ é bem definida. Além disso, $e$ é elemento neutro, e se $x_1\cdots x_k\in F_X$, então
+:::{.proof}
+A operação em $F_X$ é bem definida. Além disso, $e$ é elemento neutro, e se $x_1\cdots x_k\in F_X$, então
 $$
 (x_1\cdots x_k)(x_k^{-1}\cdots x_1^{-1})=(x_k^{-1}\cdots x_1^{-1})(x_1\cdots x_k)=e.
 $$
@@ -41,40 +43,45 @@ $$
 Como $\mathcal F_X$ é gerado por $\{\psi_x\mid x\in X\}$, $\psi$ é sobrejetivo. Além disso, se $\psi(x_1\cdots x_k)=\psi(y_1\cdots y_m)$, então
 $\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}$. Por outro lado,
 $x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m$. Portanto $\psi$ é injetiva, e então $\psi$ é bijetiva. Como $\psi$ também satisfaz a igualdade $\psi(w_1w_2)=\psi(w_1)\psi(w_2)$, obtemos que $\psi$ é um isomorfismo entre as estruturas $F_X$ e $\mathcal F_X$ com as suas respetivas multiplicações. Como $\mathcal F_X$ é associativa, obtemos que $F_X$ também é. Portanto $F_X$ é um grupo.
-</div>
+:::
 
-<div class="theorem">(Propriedade Universal). Seja $G$ um grupo e $F_X$ um grupo livre gerado por $X$. Seja $\varphi:X\rightarrow G$ um mapa arbitrário. Então existe um homomorfismo $\psi:F_X\rightarrow G$ tal que $\psi|_X=\varphi$. (Todo mapa $X\rightarrow G$ pode ser estendido a um homomorfismo $F_X\rightarrow G$.)
-</div>
+:::{#thm-free-univ}
+(Propriedade Universal). Seja $G$ um grupo e $F_X$ um grupo livre gerado por $X$. Seja $\varphi:X\rightarrow G$ um mapa arbitrário. Então existe um homomorfismo $\psi:F_X\rightarrow G$ tal que $\psi|_X=\varphi$. (Todo mapa $X\rightarrow G$ pode ser estendido a um homomorfismo $F_X\rightarrow G$.)
+:::
 
-<div class="proof">
+:::{.proof}
 Seja $w=x_1\cdots x_k\in F_X$ e defina $\psi(w)=\varphi(x_1)\cdots\varphi(x_k)$. Então $\psi$ é um homomorfismo e claramente $\psi(x)=\varphi(x)$ para todo $x\in X$.
-</div>
+:::
 
-<div class="corollary">Seja $G$ um grupo gerado por um conjunto $X$. Então existe um homomorfismo $\psi:F_X\rightarrow G$ sobrejetivo tal que $\psi|_X=\mbox{id}_X$. Em particular $G\cong F/\ker\psi$. (Cada grupo é quociente de um grupo livre.)
-</div>
+:::{#cor-free-quot}
+Seja $G$ um grupo gerado por um conjunto $X$. Então existe um homomorfismo $\psi:F_X\rightarrow G$ sobrejetivo tal que $\psi|_X=\mbox{id}_X$. Em particular $G\cong F/\ker\psi$. (Cada grupo é quociente de um grupo livre.)
+:::
 
-<div class="definition">
+:::{#def-pres}
 Seja $X$ um conjunto, $F_X$ o grupo livre gerado por $X$ e $Y\subseteq F_X$. Seja $\left<Y\right>^{F_X}$ o subgrupo normal gerado por $Y$. O grupo quociente $G=F_X/\left<Y\right>^{F_X}$ é denotado por
 \begin{equation}\label{eq:pres}
 \left<X \mid Y\right>.
 \end{equation}
 A expressão~\eqref{eq:pres} é dita uma apresentação para o grupo $G$.
-</div>
+:::
 
-<div class="example">O grupo cíclico $C_n$ é apresentado pela apresentação
+:::{#exm-pres}
+O grupo cíclico $C_n$ é apresentado pela apresentação
 $$
 \left<x\mid x^n\right>.
 $$
-</div>
+:::
 
-<div class="example">Seja $G$ o grupo dihedral $D_n$ com $n\geq 3$. Afirmamos que $G$ é apresentado por
+:::{#exm-pres-dih}
+Seja $G$ o grupo dihedral $D_n$ com $n\geq 3$. Afirmamos que $G$ é apresentado por
 $$
 \left< a,b\mid a^n,b^2,baba\right>.
 $$
 Seja $\bar a\in D_n$ a rotação de ordem $n$ e $\bar b\in D_n$ uma reflexão. Seja $X=\{a,b\}$ e considere o grupo livre $F_X$. Pela Propriedade Universal, o mapa $a\mapsto \bar a$, $b\mapsto \bar b$, pode ser estendido a um homomorfismo sobrejetivo $\psi:F_X\rightarrow D_n$. Como $\bar a^n=\bar b^2=\bar b\bar a\bar b\bar a=1$, tem-se que $a^n,b^n,baba\in \ker\psi$. Denotando por $N=\left<a^n,b^2,baba\right>^{F_X}$, obtemos que $N\leq \ker\psi$. Portanto, podemos definir um homomorfismo sobrejetivo $\bar\psi:F_X/N\rightarrow D_n$ e isto implica que $|F_X/N|\geq 2n$.. Para provar que $\bar\psi$ é um isomorfismo, precisamos provar que $|F_X/N|\leq 2n$, mas isso segue da observação que, usando $a^n\in N$, $b^2\in N$ e $baN=a^{-1}bN$,  todo elemento de $F/N$ pode ser escrito como $a^\alpha b^\beta N$ onde $0\leq \alpha\leq n-1$ e $0\leq \beta\leq 1$.
-</div>
+:::
 
-<div class="example">O grupo dos quaternions $Q_8$ pode ser apresentado pelas apresentações
+:::{#exm-quot}
+O grupo dos quaternions $Q_8$ pode ser apresentado pelas apresentações
 $$
 \left<a,b\mid a^4,b^2a^2,bab^{-1}a\right>
 $$
@@ -82,11 +89,12 @@ e
 $$
 \left<a,b\mid abab^{-1},a^2b^{-2}\right>
 $$
-</div>
+:::
 
-<div class="example">O grupo simétrico é gerado pelas transposições $a_i=(i,i+1)$ com $i\in\{1,\ldots,n-1\}$ e ele pode ser apresentado pela apresentação
+:::{#exm-sym-pres}
+O grupo simétrico é gerado pelas transposições $a_i=(i,i+1)$ com $i\in\{1,\ldots,n-1\}$ e ele pode ser apresentado pela apresentação
 $$
 \left<a_1,\ldots,a_{n-1}\mid a_i^2,(a_ia_{i+1})^3, [a_i,a_j] \mbox{ se $|i-j|\geq 2$}\right>.
 $$
 Esta apresentação é referida com a apresentação de Coxeter.
-</div>
+:::

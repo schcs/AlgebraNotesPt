@@ -4,23 +4,26 @@ number-sections: true
 lang: pt-BR
 ---
 
-<div class="definition">
+:::{#def-}
 Se $G$ é um grupo e $A,B\leq G$, então
 $$
 [A,B]=\left<[a,b]\mid a\in A,\ b\in B\right>.
 $$
-</div>
+:::
 
-<div class="exercise">
+:::{#exr-}
 Se $A,B\unlhd G$, então $[A,B]\unlhd G$.
-</div>
+:::
 
-<div class="lemma">
+:::{#lem-}
 Seja $K\unlhd G$, e $H\leq G$ tal que $K\leq H\leq G$.  Então $[H,G]\leq K$ se e somente se $H/K\leq Z(G/K)$.
-</div>
-<div class="proof">Exercício.</div>
+:::
 
-<div class="definition">
+:::{.proof}
+Exercício.
+:::
+
+:::{#def-}
 Uma série normal
 $$
 G_0>\cdots> G_k
@@ -30,8 +33,9 @@ $$
 G_i/G_{i+1}\leq Z(G/G_{i+1}).
 $$
 Note que se $G_i$ é uma série central, então os quocientes $G_i/G_{i+1}$ são abelianos.
-</div>
-<div class="definition">
+:::
+
+:::{#def-}
 Em um grupo $G$, definimos a série $\gamma_i(G)$  recursivamente como $\gamma_1(G)=G$, e $\gamma_{i+1}(G)=[G,\gamma_i(G)]$ para $i\geq 1$. Note que $\gamma_2(G)=G'$. A série $\gamma_i(G)$ é chamada de série central descendente.
 
 Similarmente, definimos $\zeta_0(G)=1$ e recursivamente $\zeta_{i+1}(G)$ é definido como o subgrupo de $G$ que contém $\zeta_{i}(G)$ e satisfaz que
@@ -39,16 +43,18 @@ $$
 Z(G/\zeta_{i}(G))=\zeta_{i+1}(G)/\zeta_i(G).
 $$
 A série $\zeta_i(G)$ é chamada de série central ascendente de $G$. O termo $\zeta_i(G)$ é dito $i$-ésimo centro de $G$.
-</div>
+:::
 
-<div class="lemma">As séries $\gamma_i(G)$ e $\zeta_i(G)$ são centrais.
-</div>
+:::{#lem-}
+As séries $\gamma_i(G)$ e $\zeta_i(G)$ são centrais.
+:::
 
-<div class="proof">
+:::{.proof}
 É claro no caso de $\zeta_i(G)$. O caso de $\gamma_i(G)$ segue do lema anterior.
-</div>
+:::
 
-<div class="lemma">Seja $G$ um grupo.
+:::{#lem-}
+Seja $G$ um grupo.
 
 * Se
 $$
@@ -60,10 +66,9 @@ $$
 1=H_0<H_1<\cdots<H_m
 $$
 é uma série central então $H_i\leq \zeta_i(G)$ para todo $i$.
-</div>
+:::
 
-<div class="proof">
-
+:::{.proof}
 1. Indução por $i$. A afirmação é clara para $i=1$. Assuma que $\gamma_i(G)\leq G_i$ para $i\geq 1$. Então
 $$
 \gamma_{i+1}(G)=[\gamma_i(G),G]=[G_i,G]\leq G_{i+1}.
@@ -79,44 +84,49 @@ $$
 H_{i+1}\zeta_{i}(G)/\zeta_i(G) \leq Z(G/\zeta_i(G))=\zeta_{i+1}(G)/\zeta_i(G).
 $$
 Portanto, $H_{i+1}\leq \zeta_{i+1}(G)$.
-</div>
+:::
 
-<div class="corollary">Em um grupo $G$ tem se que $\zeta_c(G)=G$ se e somente se $\gamma_{c+1}(G)=1$. Neste caso $$
+:::{#cor-}
+Em um grupo $G$ tem se que $\zeta_c(G)=G$ se e somente se $\gamma_{c+1}(G)=1$. Neste caso $$
 \gamma_{i+1}(G)\leq \zeta_{c-i}(G)
 $$
 para todo $i\geq 0$.
-</div>
+:::
 
-<div class="proof">Segue do lema anterior.</div>
+:::{.proof}
+Segue do lema anterior.
+:::
 
-<div class="definition">
+:::{#def-}
 Um grupo $G$ é dito nilpotente se existe um $c\geq 1$ tal que $\gamma_{c+1}(G)=1$. O menor tal $c$ é dito a classe de nilpotência de $G$. Claramente, um grupo nilpotente é solúvel, mas um grupo solúvel não é necessariamente nilpotente (e.g. $S_3$).
-</div>
+:::
 
-<div class="theorem">
+:::{#thm-}
 Seja $G$ um grupo.
 
 * Se $G$ é nilpotente $H\leq G$ e $N\unlhd G$, então $H$ e $G/N$ são nilpotentes.
 * Se $G$ é nilpotente, então $Z(G)\neq 1$.
 $G$ é nilpotente se e somente se $G/Z(G)$ é nilpotente.
 * Se $G$ e $H$ são nilpotentes, então $G\times H$ é nilpotente.
-</div>
+:::
 
-<div class="theorem">Um $p$-grupo finito é nilpotente.
-</div>
+:::{#thm-}
+Um $p$-grupo finito é nilpotente.
+:::
 
-<div class="proof">
+:::{.proof}
 Indução pela ordem de $G$. A afirmação é verdadeira para grupos de ordem $p$ ou $p^2$. Assuma que a afirmação é verdadeira para grupo cuja ordem é menor que $p^n$ e seja $G$ um grupo de ordem $p^n$. Como $Z(G)\neq 1$, temos pela hipótese de indução que $G/Z(G)$ é nilpotente e pelo corolário anterior obtemos que $G$ é nilpotente.
-</div>
+:::
 
-<div class="lemma">Seja $G$ um grupo nilpotente.
+:::{#lem-}
+Seja $G$ um grupo nilpotente.
 
 * Se $H<G$, então $H<N_G(H)$;
 * Se $1\neq N\unlhd G$, então $N\cap Z(G)\neq 1$.
 * Se $M$ é um subgrupo maximal de $G$, então $M$ é normal e $|G:M|$ é primo.
-</div>
+:::
 
-<div class="proof"> 
+:::{.proof} 
 1. Seja $i$ tal que $\gamma_{i-1}(G)\not\leq H$, mas $\gamma_i(G)\leq H$. Então
 $$
 [\gamma_{i-1}(G),H]\leq [\gamma_{i-1}(G),G]=\gamma_i(G)\leq H.
@@ -130,17 +140,19 @@ $$
 Isto implica que $N\cap \zeta_m(G)\leq Z(G)$.
 
 3. Seja $M$ um subgrupo maximal de $G$. Por parte (1), tem-se que $N_G(M)=G$, então $M$ é normal em $G$. Pela maximalidade de $M$, o quociente $G/M$ não possui um subgrupo próprio, não trivial. Portanto $G/M\cong C_p$ com algum primo $p$. Em particular, $|G:M|=p$.
-</div>
+:::
 
-<div class="exercise">Seja $G$ um grupo finito, e $P$ um subgrupo de Sylow. Mostre que $N_G(N_G(P))=N_G(P)$.
-</div>
+:::{#exr-}
+Seja $G$ um grupo finito, e $P$ um subgrupo de Sylow. Mostre que $N_G(N_G(P))=N_G(P)$.
+:::
 
-<div class="theorem">
+:::{#thm-}
 Um grupo finito é nilpotente se e somente se ele é produto direto dos seus subgrupos de Sylow.
-</div>
+:::
 
-<div class="proof">Se $G$ é produto direto dos $p$-subgrupos de Sylow, então $G$ é nilpotente.
+:::{.proof}
+Se $G$ é produto direto dos $p$-subgrupos de Sylow, então $G$ é nilpotente.
 
 Assuma que $G$ é finito e nilpotente. Seja $P$ um $p$-subgrupo de Sylow de $G$ e seja $N=N_G(P)$. Pelo exercício anterior, $N_G(N)=N$. O lema anterior implica que $N=G$, então $P$ é normal em $G$. Sejam $p_1,\ldots,p_k$ os divisores primos de $|G|$ e sejam $P_1,\ldots,P_k$ os subgrupos de Sylow correspondentes. Como todo $P_i$ é normal em $G$,
 $[P_i,P_j]\leq P_i\cap P_j=1$ (se $i\neq j$), então $P_1\times\cdots\times P_k$ é um subgrupo de $G$. Comparando ordens, $G=P_1\times\cdots\times P_k$.
-</div>
+:::

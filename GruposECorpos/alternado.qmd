@@ -21,17 +21,17 @@ $$
 |A_n|=|S_n|/2=n!/2.
 $$
 
-<div class="exercise">
+:::{#exr-alter}
 Mostre, para  $\sigma\in S_n$, que $\sigma\in A_n$ se e somente se
 $$
 |\{(i,j)\mid 1\leq i<j\leq n \mbox{ tais que }\ i\sigma > j\sigma\}|
 $$
 é um número par.
-</div>
+:::
 
 As seguintes afirmações nos ajudam determinar se uma permutação particular é par ou ímpar.
 
-<div class="lemma">
+:::{#lem-alter}
 Seja $n$ um número natural com $n\geq 3$ e sejam $\sigma,\pi$ elementos de $S_n$.
 
 Se $\sigma,\pi\in A_n$, então $\sigma\pi\in A_n$.
@@ -39,8 +39,9 @@ Se $\sigma,\pi\in S_n\setminus A_n$, então $\sigma\pi\in A_n$.
 Se $\sigma\in A_n$ e $\pi\in S_n\setminus A_n$, então $\sigma\pi,\pi\sigma\in S_n\setminus A_n$.
 Se $1\leq a< b\leq n$, então $(a,b)\not\in A_n$.
 Um ciclo de comprimento $m$ é par se e somente se $m$ é ímpar.
-</div>
-<div class="proof">
+:::
+
+:::{.proof}
 Afirmações 1-3 são consequências imediatas da definição.
 
 1. Como $A_n$ é normal em $S_n$, ele é fechado para conjugação e é suficiente mostrar esta afirmação para $\sigma=(1,2)$. Note que
@@ -55,20 +56,20 @@ $$
 \sigma=(1,2,\ldots,m)=(1,2)(1,3)\cdots(1,m).
 $$
 Portanto $\sigma=(1,2,\ldots,m)$ é um produto de $m-1$ ciclos de comprimento 2. Combinando os itens anteriores, temos que $\sigma\in A_n$ se e somente se $m$ é ímpar.
-</div>
+:::
 
-<div class="definition">
+:::{#def-altergp}
 Um grupo $G\neq\{1\}$ chama-se simples se $G$ não possui subgrupo normal além dos subgrupos $\{1\}$ e $G$.
-</div>
+:::
 
-<div class="definition">
+:::{#exr-simple-ab}
 Seja $G$ um grupo abeliano. Mostre que $G$ é simples se e somente se $G$ é um grupo cíclico de ordem prima.
-</div>
+:::
 
-<div class="theorem">
+:::{#thm-ansimple}
 Se $n=3$ ou se $n\geq 5$, então o grupo alternado $A_n$ é simples.
-</div>
-<div class="proof">
+:::
+:::{.proof}
 Note que $A_3=\left<(1,2,3)\right>$ então $A_3$ é um grupo cíclico de ordem três, portanto simples.
 
 O grupo $\left<(1,2)(3,4),(1,3)(2,4)\right>$ é normal em $A_4$, então $A_4$ não é simples.
@@ -111,18 +112,18 @@ onde $\alpha_1,\alpha_2\in\{0,1\}$ e $\alpha_3\in\{0,1,2\}$. Uma consideração 
 Assuma que $A_n$ é simples para algum $n\geq 5$ considere $G=A_{n+1}$. Seja $G_i$ o estabilizador do ponto $i$ em $G$. Como $G$ é transitivo, os $G_i$ são conjugados. Além disso, $G_i\cong A_n$. Seja $N\unlhd G$.  A interseção $N\cap G_1$ é normal em $G_1$. Logo $N\cap G_1=G_1$ ou $N\cap G_1=1$. No primeiro caso, como $N$ é normal e os $G_i$ são conjugados, temos que $G_i\leq N$ para todo $i$ que implica que $N=G$.
 
 Assuma agora que $N\cap G_i=1$ para todo $i$. Assuma que $N\neq 1$. Neste caso $NG_1=G$ ($G_1$ é maximal) e $N$ é regular. Em particular $|N|=n+1$. Assuma que $\sigma\in N\setminus\{1\}$ e escreva $\sigma$ como um produto $\sigma=\sigma_1\cdots \sigma_m$ de ciclos disjuntos onde  $\sigma_i$ é um $r_i$-ciclo com $r_1\geq r_2\geq\cdots\geq r_m$. Assuma que $r_1\geq 3$ e seja $\sigma_1=(1,2,\ldots,k)$ com $k\geq 3$. Seja $\varrho=(3,4,5)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1\setminus\{1\}$ que é uma contradição. Portanto $r_1=\cdots=r_m=2$. Assuma que $\sigma=(1,2)(3,4)$ e seja $\varrho=(4,5,6)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1$ que é uma contradição.
-</div>
+:::
 
 Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O teorema da classificação afirma o seguinte.
 
-<div class="theorem">
+:::{#thm-cfsg}
 Os grupos simples finitos são
 
 * os grupos cíclicos de ordem prima;
 * os grupos alternados $A_n$ com $n\geq 5$;
 * os grupos finitos de tipo Lie definidos sobre um corpo finito;
 * os 26 grupos esporádicos.
-</div>
+:::
 
 Um exemplo de um grupo simples de tipo Lie é $PSL(n,q)=SL(n,q)/Z$ onde $Z$ é o centro de $SL(n,q)$. Pode se provar, para $n\geq 2$, que $PSL(n,q)$ é simples a menos que $(n,q)\in\{(2,2),(2,3)\}$.
 

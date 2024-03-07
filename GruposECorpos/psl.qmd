@@ -4,18 +4,22 @@ number-sections: true
 lang: pt-BR
 ---
 
-<div class="lemma">>(Iwasawa) 
+:::{#lem-iwa}
+(Iwasawa) 
 Assuma que um grupo $G$ age primitivamente no conjunto $\Omega$ e um estabilizador $G_\alpha$ possui um subgrupo normal abeliano $A$ tal que $\left<A^g\mid g\in G\right>=G$. Suponha ainda que $G$ é perfeito (ou seja, $G'=G$). Denotando por $K$ o núcleo da ação de $G$ em $\Omega$, tem-se que $G/K$ é simples.
-</div>
+:::
 
-<div class="proof">Trocando $G$ por $G/K$, podemos assumir sem perder generalidade que $K=1$; ou seja $G$ é um subgrupo de $S(\Omega)$. Seja $N\neq 1$ um subgrupo normal de $G$. Como $G_\alpha$ é maximal, $G_\alpha N=G$ e todo elemento $x\in G$ pode ser escrito como $x=gn$ onde $g\in G_\alpha$ e $n\in N$. Em particular, $A^x=A^{(gn)}=A^n$. Logo $AN=G$ e $G/N=A/(A\cap N)$ é abeliano. Como $G'=G$, obtemos que $(G/N)'=G/N$, que implica que $N=G$.  Ou seja $G$ é simples.
-</div>
+:::{.proof}
+Trocando $G$ por $G/K$, podemos assumir sem perder generalidade que $K=1$; ou seja $G$ é um subgrupo de $S(\Omega)$. Seja $N\neq 1$ um subgrupo normal de $G$. Como $G_\alpha$ é maximal, $G_\alpha N=G$ e todo elemento $x\in G$ pode ser escrito como $x=gn$ onde $g\in G_\alpha$ e $n\in N$. Em particular, $A^x=A^{(gn)}=A^n$. Logo $AN=G$ e $G/N=A/(A\cap N)$ é abeliano. Como $G'=G$, obtemos que $(G/N)'=G/N$, que implica que $N=G$.  Ou seja $G$ é simples.
+:::
 
-<div class="theorem">Seja $n\geq 2$ e $\F$ um corpo (finito ou infinito) tal que $(n,|\F|)\neq (2,2), (2,3)$. Então o grupo $PSL(n,\F)$ é simples.
-</div>
+:::{#thm-psl-simple}
+Seja $n\geq 2$ e $\F$ um corpo (finito ou infinito) tal que $(n,|\F|)\neq (2,2), (2,3)$. Então o grupo $PSL(n,\F)$ é simples.
+:::
 
 
-<div class="proof">Nós vamos mostrar que as condições do Lema de Iwasawa estão válidas.
+:::{.proof}
+Nós vamos mostrar que as condições do Lema de Iwasawa estão válidas.
 
 Ação: Considere o grupo $G=SL(n,\F)$ com sua ação em $\Omega=\{\left<v\right>\mid v\in\F^n\setminus\{0\}\}$. Mostramos anteriormente na aula que $SL(n,\F)$ é 2-transitivo em $\Omega$ e portanto primitivo. O núcleo da ação é
 $$
@@ -66,4 +70,4 @@ Se $n=2$, e $|\F|\geq 4$, então sejam $x\in \F$ e $a\in\F^*$ tais que $a\neq \p
 $$
 I+\lambda e_{12}=\left[\begin{pmatrix} 1 & x \\ 0 & 1 \end{pmatrix},\begin{pmatrix} a & 0 \\ 0 & a^{-1} \end{pmatrix}\right].
 $$
-</div>
+:::

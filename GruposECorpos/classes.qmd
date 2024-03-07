@@ -12,29 +12,29 @@ G_x&=&C_G(x)=\{g\in G\mid g^{-1}xg= x\}\\&=&\{g\in G\mid xg= gx\}.
 \end{eqnarray*}
 Este subgrupo chama-se o centralizador de $x$ em $G$. Temos pelo Teorema Órbita-Estabilizador que $|x^G|=|G:C_G(x)|$. Em particular, se $G$ é finito, obtemos o seguinte resultado.
 
-<div class="propisition">
+:::{#prop-class-cent}
 Se $G$ é um grupo finito e $x\in G$, então
 $$
 |x^G|=\frac{|G|}{|C_G(x)|}.
 $$
-</div>
+:::
 
-<div class="example">
+:::{#exm-class-cent}
 Sejam $\pi,\sigma\in S_n$. Escreva $\pi$ e $\sigma$ como produto de ciclos disjuntos e assuma que $\pi$ contém $k_i$ ciclos de comprimento $i$ e que $\sigma$ contém $\ell_i$ ciclos de comprimento $i$ para todo $i=1,\ldots,n$.  Note que as sequências $k_1,\ldots,k_n$ e $\ell_1,\ldots,\ell_n$ são unicamente determinadas pelas permutações $\pi$ e $\sigma$. Demonstre que $\pi$ e $\sigma$ são conjugados em $S_n$ se e somente se $k_i=\ell_i$ para todo $i=1,\ldots,n$.
-</div>
+:::
 
-<div class="example">
+:::{#exm-classes-s5}
 Considere o grupo $S_5$. Pelo exercício anterior este grupo tem 7 classes de conjugação com os seguintes representantes: $1$, $(1,2)$, $(1,2)(3,4)$, $(1,2)(3,4,5)$, $(1,2,3)$, $(1,2,3,4)$, e $(1,2,3,4,5)$. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.
-</div>
+:::
 
 [table id=2 /]
 
-<div class="definition">
+:::{#def-center}
 O centro de um grupo $G$ está definido como
 \begin{eqnarray*}
 Z(G)&=&\{g\in G\mid gh=hg\mbox{ para todo }h\in G\}\\&=&\{g\in G\mid g^h=g\mbox{ para todo }h\in G\}.
 \end{eqnarray*}
-</div>
+:::
 
 Para $g\in G$, observe que $\{g\}$ é uma classe de conjugação se e somente se $g\in Z(G)$. (Pode-se deduzir da tabela em cima que $Z(S_5)=\{1\}$.) Se $G$ é um grupo finito e $C_1,\ldots,C_m$ são as classes de $G$ com cardinalidade maior ou igual a dois, então podemos escrever o grupo $G$ como uma união disjunta
 $$
@@ -48,43 +48,45 @@ A equação \eqref{eq:class} é chamada de equação das classes de $G$.
 
 Considerando a equação das classes para grupos cuja ordem é uma potência de um primo, obtemos o seguinte resultado importante.
 
-<div class="theorem"> 
+:::{#thm-center-pgp}
 Seja $p$ um primo e seja $G$ um grupo tal que $|G|=p^k$ com algum $k\geq 1$. Então o centro $Z(G)$ é não trivial (ou seja, $|Z(G)|>1$).
-</div>
+:::
 
-<div class="proof">
+:::{.proof}
 Considere a equação \eqref{eq:class} para o grupo $G$. Como as classes $C_i$ são $G$-órbitas para uma ação de $G$ (nomeadamente, a conjugação de $G$ em $G$), temos que $|C_i|$ é um divisor de $|G|=p^k$; ou seja $|C_i|=p^{k_i}$ com algum $k_i\geq 1$. O lado esquerdo da equação das classes é uma potência de $p$, e os termos $|C_i|$ no lado direito também são potências de $p$. Isso quer dizer que $p\mid |Z(G)|$ e em particular que $|Z(G)|>1$.
 
 Note que um grupo finito $G$ tal que $|G|=p^k$ onde $p$ é primo é chamado de $p$-grupo finito. Por exemplo, $D_4$ é um 2-grupo finito. O teorema anterior diz que o centro de um $p$-grupo finito é não trivial.
-</div>
+:::
 
-<div class="exercise"> Sejam $p$ um primo e $G$ um grupo tal que $|G|=p^2$. Mostre que $G$ é abeliano e que exatamente uma das seguintes afirmações é válida:
+:::{#exr-grp-p2}
+Sejam $p$ um primo e $G$ um grupo tal que $|G|=p^2$. Mostre que $G$ é abeliano e que exatamente uma das seguintes afirmações é válida:
 
 * $G$ é cíclico
 * $G=\left<a,b\right>$ onde $|a|=|b|=p$ e $ab=ba$.
-</div>
+:::
 
-<div class="definition">
+:::{#def-solvable2}
 Um grupo $G$ chama-se solúvel se $G$ possui uma cadeia de subgrupos
 $$
 G_0=1<G_1<\cdots<G_{k}<G_{k+1}=G
 $$
 tal que $G_i$ é normal em $G_{i+1}$ (para todo $i$) e cada quociente $G_{i+1}/G_{i}$ é abeliano.
-</div>
+:::
 
-<div class="example">
+:::{#exm-solvable}
 Os seguintes grupos são solúveis.
 
 * Grupos abelianos.
 * Grupos diedrais.
 * $S_4$.
-</div>
+:::
 
 Grupos solúveis são chamados assim, pois eles correspondem a equações polinomiais que são resolúveis por radicais. As equações polinomiais de grau 2, 3, 4 são resolúveis por radicais porque os grupos $S_2$, $S_3$, e $S_4$ são solúveis. Nós vamos ver na aula seguinte que $S_5$ não é um grupo solúvel e isso implica (de modo não trivial) que as equações polinomiais de grau 5 não são resolúveis por radicais.
 
-<div class="corollary">
+:::{#cor-solvable}
 Um $p$-grupo finito $G$ é solúvel.
-</div>
+:::
 
-<div class="proof">Se $G$ é abeliano, então não há nada para provar. Assuma que $G$ não é abeliano, e considere $G_1=Z(G)$. Note que $G_1$ é normal em $G$ e $G_1\neq \{1\}$  Se $G/G_1$ é abeliano, então a cadeia $1<G_1<G$ possui quocientes abelianos e $G$ é solúvel.. Se $G/G_1$ não for abeliano, então considere $Z(G/G_1)$. Temos que $Z(G/G_1)$ é normal em $G/G_1$ e que $Z(G/G_1)\neq\{1\}$. Seja $G_2=\{g\in G\mid G_1g\in Z(G/G_1)\}$. É fácil mostrar que $G_2$ é um subgrupo normal em $G$ tal que $G_2/G_1=Z(G/G_1)$ que implica que $G_2/G_1$ é um grupo abeliano. Se $G/G_2$ é abeliano, então consideramos a cadeia $1<G_1<G_2<G$ e estamos prontos. Se $G/G_2$ for não abeliano, então repetimos o passo anterior até obtivermos um subgrupo $G_k$ tal que $G/G_k$ seja abeliano.
-</div>
+:::{.proof}
+Se $G$ é abeliano, então não há nada para provar. Assuma que $G$ não é abeliano, e considere $G_1=Z(G)$. Note que $G_1$ é normal em $G$ e $G_1\neq \{1\}$  Se $G/G_1$ é abeliano, então a cadeia $1<G_1<G$ possui quocientes abelianos e $G$ é solúvel.. Se $G/G_1$ não for abeliano, então considere $Z(G/G_1)$. Temos que $Z(G/G_1)$ é normal em $G/G_1$ e que $Z(G/G_1)\neq\{1\}$. Seja $G_2=\{g\in G\mid G_1g\in Z(G/G_1)\}$. É fácil mostrar que $G_2$ é um subgrupo normal em $G$ tal que $G_2/G_1=Z(G/G_1)$ que implica que $G_2/G_1$ é um grupo abeliano. Se $G/G_2$ é abeliano, então consideramos a cadeia $1<G_1<G_2<G$ e estamos prontos. Se $G/G_2$ for não abeliano, então repetimos o passo anterior até obtivermos um subgrupo $G_k$ tal que $G/G_k$ seja abeliano.
+:::
