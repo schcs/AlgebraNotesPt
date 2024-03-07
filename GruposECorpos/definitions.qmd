@@ -130,7 +130,7 @@ Assuma que $a\in G$ e $a^k=1$ com algum $k\geq 1$. Então $|a|$ é um divisor de
 :::
 
 :::{.proof}
-Primeiro, a definição de $|a|$ implica que $|a|$ é finito. Assuma que $m=|a|$ e escreva, $k=qm+r$ com $r\in\{0,\ldots,m-1\}$. Temos que 
+Primeiro, a definição de $|a|$ implica que $|a|$ é finito. Assuma que $m=|a|$ e escreva, $k=qm+r$ com $r\in\{0,\ldots,m-1\}$ (@thm-euclides). Temos que 
 $$
 1=a^k=a^{qm+r}=(a^m)^qa^r=a^r.
 $$

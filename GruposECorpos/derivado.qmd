@@ -5,8 +5,7 @@ lang: pt-BR
 ---
 
 
-:::{.definition}
-Definição.
+:::{#def-commutator}
 Seja $G$ um grupo, $g,h\in G$. O comutador $[g,h]$ de $g$ e $h$ é definido como 
 $$
 [g,h]=g^{-1}h^{-1}gh
@@ -15,8 +14,7 @@ $$
 
 Note que $[g,h]=1$ se e somente se $gh=hg$; ou seja, $g$ e $h$ comutam. 
 
-:::.{definition}
-Definição. 
+:::{#def-commutator-sg}
 Seja $G$ um grupo. O subgrupo derivado $G'$ está definida como 
 $$
 G'=\left<[g,h]\mid g,h\in G\right>.
@@ -27,8 +25,7 @@ Em outras palavras, o subgrupo derivado $G'$ é um subgrupo gerado por todos os 
 
 Note também que $G'=1$ se e somente se $G$ é abeliano.
 
-:::{.theorem}
-Teorema.
+:::{#thm-comm-sg}
 Seja $G$ um grupo. As seguintes afirmações são verdadeiras.
 
 - $G'\unlhd G$;
@@ -39,7 +36,6 @@ A terceira afirmação diz que $G'$ é o menor subgrupo normal de $G$ com quocie
 :::
 
 :::{.proof}
-Demonstração.
 Primeiro, se $g,h,x\in G$, então
 $$
 [g^x,h^x]=[x^{-1}gx,x^{-1}hx]=x^{-1}g^{-1}xx^{-1}h^{-1}xx^{-1}gxx^{-1}hx=x^{-1}g^{-1}h^{-1}ghx=[g,h]^x.

@@ -6,8 +6,7 @@ lang: pt-BR
 
 ## O produto direto
 
-:::{.definition}
-Definition.
+:::{#def-dirprod}
 Sejam $G$ e $H$ grupos. Defininimos o *produto direto* $G\times H$ como o grupo
 $$ 
     G\times H=\{(g,h)\mid g\in G,\ h\in H\}
@@ -18,8 +17,7 @@ $$
 $$ 
 :::
 
-:::{.lemma}
-Lemma.
+:::{#lem-dirprod}
 O conjunto $G\times H$ é um grupo com o produto definido na linha anterior. Além disso, pondo
 $$
 \bar G=\{(g,1)\mid g\in G\}\quad\mbox{e}\quad \bar H=\{(1,h)\mid h\in H\} 
@@ -32,12 +30,12 @@ temos que
 :::
 
 :::{.proof}
-Demonstração. Fácil, o leitor pode fazer.
+Fácil, o leitor pode fazer.
 :::
 
 O produto direto acima definido é frequentamente chamado de produto direto externo. Simnilarmente a espaços vetoriais, existe uma versão interna do produto direto. 
 
-:::{.lemma}
+:::{#lem-dirprod-inner}
 Suponha que $G$ é um grupo e $N,M\unlhd G$ are subgrupos normais tais que 
 
 - $NM=G$ e 
@@ -70,13 +68,13 @@ Além disso, $\psi$ é um homomorfismo, pois se $g_1=n_1m_1,\ g_2=n_2m_2\in G$, 
 Se $g\in\ker\psi$, então $g=1\cdot 1=1$, logo $\psi$ é injetiva. Finalmente, se $n\in N$ e $m\in M$, então $\psi(nm)=(n,m)$ e $\psi$ é sobrejetiva. Portanto, $\psi$ é um isomorfismo e $G\cong N\times M$.
 :::
 
-:::{.definition}
+:::{#def-dirprod-inner}
 Definição. Se $G$, $N$ e $M$ são como no resultado anterior, escrevemos que $G=N\times M$ e dizemos que $G$ é *produto direto (interno) de $N$ e $M$*. 
 :::
 
 ## Produto semidireto
 
-:::{.definition}
+:::{#def-semidir}
 Definition. Para definir o *produto semidireto (interno)*, seja $G$ um grupo $H\leq G$ e $N\unlhd G$ tais que 
 
 - $NH=G$ e
@@ -96,19 +94,18 @@ $$
 
 Esta conta nos dá uma ideia como definir produto semidireto externo.
 
-:::{.definition}
+:::{#def-semidir-exter}
 Sejam $N$ e $H$ grupos e assuma que está dado um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Defina o produto semidireto (relativo ao homomorfismo $\psi$) $N\rtimes_\psi N$ de $N$ e $H$ como o grupo sobre o conjunto $N\times H$ com a operação 
 $$
 (n_1,h_1)(n_2,h_2)=(n_1(n_2((h_2^{-1})\psi),h_1h_2).
 $$
 :::
 
-:::{.lemma}
+:::{#lem-semidir-exter}
 O produto semidireto $N\rtimes_\psi H$ é um grupo com a multiplicação definida.
 :::
 
 :::{.proof}
-Demonstração.
 Deixamos a demonstração para o leitor. Aqui só comentamos que o elemento neutro de $N\rtimes_\psi H$ é $(1,1)$ e que $(n,h)^{-1}=
 ((n^{-1})^h,h^{-1})$. 
 :::

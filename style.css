@@ -49,15 +49,16 @@ font-style: normal;
   background-color: #fff2e6;
 	padding: 5px;
 }
+ 
 
 /* 
-
 .theorem.theorem:before {
-content: "Teorema. ";
+content: "⚠";
 font-weight: bold;
 font-style: normal;
 }
 */
+
 
 .theorem.theorem[text]:before {
 content: "Teorema (" attr(text) ") ";

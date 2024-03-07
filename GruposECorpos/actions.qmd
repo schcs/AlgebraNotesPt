@@ -6,7 +6,7 @@ lang: pt-BR
 
 
 
-<div class="definition">
+:::{#def-action}
 Seja $G$ um grupo e $\Omega$ um conjunto. Dizemos que $G$ age em $\Omega$ se está dada uma função
 $$
 \Omega\times G\to \Omega,\quad (\omega,g)\mapsto \omega g
@@ -17,10 +17,10 @@ com as seguintes propriedades:
 * $\alpha(gh)=(\alpha g)h$ para todo $\alpha\in \Omega$, $g,h\in G$.
 
 Se $\alpha\in\Omega$, o elemento $\alpha g$ é dito imagem de $\alpha$ por $g$.
-</div>
+:::
 
-<div class="example">
-Nos seguintes exemplos apresentamos ações importantes de grupos. O leitor deve verificar que cada item define uma ação.
+:::{#exm-action}
+Os exemplos apresentamos ações importantes de grupos. O leitor deve verificar que cada item define uma ação.
 
 * Seja $G\leq\mbox{Sym}(\Omega)$. Neste caso $G$ é dito um grupo de permutação sobre $\Omega$. O grupo  $G$ age naturalmente em $\Omega$.
 * Seja $G=D_4$ e $\Omega$ o conjunto das quatro pontas no quadrado. O grupo $G$ age em $\Omega$ naturalmente.
@@ -29,14 +29,15 @@ Nos seguintes exemplos apresentamos ações importantes de grupos. O leitor deve
 * Seja $G$ um grupo arbitrário e seja $\Omega=G$. O grupo $G$ age em $\Omega$ pela ação $(x,g)\mapsto xg$ para todo $x\in \Omega$ e $g\in G$.
 * Sejam $G$ um grupo $H\leq G$ e $\Omega=\{Hg\mid g\in G\}$. O grupo $G$ age em $\Omega$ e a ação é $(Hx,g)\mapsto Hxg$ para todo $Hx\in\Omega$ e $g\in G$.
 * Seja $G$ um grupo e ponha $\Omega=G$. Então $G$ age em $\Omega$ pela ação de conjugação: $(x,g)\mapsto x^g=g^{-1}xg$.
-</div>
+:::
 
-<div class="definition">
+:::{#def-orbit}
 Assuma que $G$ age em $\Omega$. Defina a seguinte relação $\equiv$ sobre $\Omega$. Se $\alpha,\beta\in\Omega$ então $\alpha\equiv\beta$ se existe $g\in G$ tal que $\alpha g=\beta$.
-</div>
+:::
 
-<div class="exercise">A relação $\equiv$ é uma equivalência.
-</div>
+:::{#exr-orbit}
+A relação $\equiv$ é uma equivalência.
+:::
 
 As classes de equivalência da relação $\equiv$ são chamadas de órbitas. Se $\alpha\in\Omega$, então por definição, a órbita que contém $\alpha$ é o conjunto
 \begin{eqnarray*}
@@ -47,36 +48,36 @@ As classes de equivalência da relação $\equiv$ são chamadas de órbitas. Se 
 
 Se $G$ age em $\Omega$, então as órbitas de $G$ em $\Omega$ formam uma partição de $\Omega$.
 
-<div class="example">
+:::{#exm-orbit}
 Assuma que $G=GL(n,\F)$ e considere a ação de $G$ em $\Omega=\F^n$. Então $G$ tem duas órbitas em $\Omega$; nomeadamente, $\{0\}$ e $\Omega\setminus\{0\}$.
-</div>
+:::
 
-<div class="definition">
+:::{#def-transitive}
 O grupo $G$  é dito transitivo se $\Omega$ é uma órbita de $G$. Equivalentemente, $G$ é transitivo em $\Omega$, se para todo $\alpha,\beta\in\Omega$, existe $g\in G$ tal que $\alpha g=\beta$.
-</div>
+:::
 
-<div class="example">
+:::{#exm-transitive}
 Seja $G=GL(n,\F)$ e considere a ação de $G$ sobe o espaço projetivo $\{\left<v\right>\mid v\in \F^n\setminus\{0\}\}$. O grupo $G$ é transitivo sobre $\Omega$.
-</div>
+:::
 
-<div class="definition">
+:::{#def-stab}
 Dado $\alpha\in\Omega$, definimos o estabilizador de $\alpha$ em $G$ como
 $$
 G_\alpha=\{g\in G\mid \alpha g=\alpha\}.
 $$
-</div>
+:::
 
-<div class="example">
+:::{#exr-stab}
 $G_\alpha$ é um subgrupo de $G$.
-</div>
+:::
 
-<div class="example">
+:::{#exm-orbits}
 Considere a ação de $G=GL(n,\F)$ sobre $\Omega=\{\left<v\right>\mid v\in\F^n\setminus\{0\}\}$. Seja $\alpha=\left<(1,0,\ldots,0)\right>$. Então o estabilizador $G_\alpha$ é o subgrupo de matrizes na forma
 $$
 \begin{pmatrix} a & \underline 0\\ \underline u & B\end{pmatrix}
 $$
 onde $a\in\F\setminus\{0\}$, $\underline 0\in\F^{n-1}$ é o vetor nulo, $\underline u\in\F^{n-1}$ e $B$ é uma matriz $(n-1)\times(n-1)$ invertivel.
-</div>
+:::
 
 Assuma que $\Omega$, $G$, e $\alpha\in\Omega$ são como acima. Para $\beta\in \alpha G$, considere o conjunto
 $$
@@ -103,11 +104,11 @@ $$
 \varphi:\alpha G\to \{G_\alpha g\mid g\in G\}.
 $$
 
-<div class="lemma">
+:::{#lem-orbit-stab}
 Usando a notação introduzida acima, a aplicação $\varphi:\alpha G\to \{G_\alpha g\mid g\in G\}$ está bem definida e ela é uma bijeção entre $\alpha G$ e $\{G_\alpha g\mid g\in G\}$.
-</div>
+:::
 
-<div class="proof">
+:::{.proof}
 Boa definição: Assuma que $g_1,g_2\in G$ tais que $\alpha g_1=\alpha g_2=\beta$. Então $g_1g_2^{-1}\in G_\alpha$ e isto implica que $G_\alpha g_1=G_\alpha g_2$. Logo, a aplicação $\varphi$ está bem definida.
 
 Sobrejetiva: Se $G_\alpha g$ é uma classe lateral de $G_\alpha$, então $G_\alpha g=\varphi(\alpha g)$.
@@ -117,42 +118,44 @@ $$
 G_\alpha g_1=\varphi(\alpha g_1)=\varphi(\beta_1)=\varphi(\beta_2)=\varphi(\alpha g_2)=G_\alpha g_2.
 $$
 Ou seja, $g_1g_2^{-1}\in G_\alpha$. Mas isto implica que $\alpha g_1g_2^{-1}=\alpha$ e que $\beta_1=\alpha g_1=\alpha g_2=\beta_2$. Portanto o mapa $\varphi$ é injetivo.
-</div>
+:::
 
-<div class="theorem">
+:::{#thm-orbit-stab}
 (Teorema Órbita-Estabilizador) Assuma que um grupo finito $G$ age transitivamente em um conjunto $\Omega$ e seja $\alpha\in\Omega$. Então $|G|=|G_\alpha||\Omega|$. Em particular $|\Omega|$ é um divisor de $|G|$.
-</div>
+:::
 
-<div class="definition">
+:::{#def-block}
 Assuma que $G$ age transitivamente em $\Omega$. Um conjunto $\Delta\subseteq \Omega$ é dito bloco se $\Delta g=\Delta$ ou $\Delta g\cap\Delta=\emptyset$ para todo $g\in G$.  Uma partição $\mathcal P$ de $\Omega$ é dito $G$-invariante se $\Delta g\in \mathcal P$ para todo $\Delta\in \mathcal P$.
-</div>
+:::
 
-<div class="lemma">
+:::{#lem-blocks}
 Assuma que $G$ age em $\Omega$ transitivamente. As seguintes são verdadeiras.
 
 * Se $\Delta$ é um bloco então $\mathcal P=\{\Delta g\mid g\in G\}$ é uma partição  $G$-invariante de $\Omega$.
 * Se $\mathcal P$ é uma partição $G$ invariante de $\Omega$ e $\Delta\in\mathcal P$, então $\Delta$ é um bloco.
 * Seja $\omega\in\Omega$ fixo. O mapa $\Delta\mapsto \{\Delta g\mid g\in G\}$ é uma bijeção entre o conjunto de blocos $\Delta$ tal que $\omega\in\Delta$ e o conjunto de partições $G$-invariantes de $G$.
-</div>
+:::
 
-<div class="proof"> Exercício.</div>
+:::{.proof}
+Exercício.
+:::
 
-<div class="definition">
+:::{#def-primitive}
 Se $G$ age em $\Omega$ transitivamente e $\omega\in\Omega$, então $\{\omega\}$ e $\Omega$ são blocos. Similarmente $\{\{\omega\}\mid\omega\in\Omega\}$ e $\{\Omega\}$ são partições $G$-invariantes. Um grupo transitivo é dito primitivo se estes são os únicos blocos. No caso contrario o grupo e chamado de imprimitivo.
-</div>
+:::
 
 
 Assuma que $G$ age transitivamente em $\Omega$ e seja $\omega\in\Omega$ fixo. Se $\Delta$ é um bloco tal que $\omega\in\Delta$, então denota por $G_\Delta$ o estabilizador de $\Delta$ em $G$. Se $H\leq G$ tal que $G_\omega\leq H$, então denote por $\omega H$ a $H$-órbita que contém $\omega$.
 
-<div class="theorem">
+:::{#thm-primitive}
 As seguintes são verdadeiras.
 
 * Se $\Delta$ é um bloco tal que $\omega\in\Delta$, então $G_\omega \leq G_\Delta\leq G$.
 * Se $H$ é um subgrupo de $G$ tal que $G_\omega\leq H$, então $\Delta=\omega H$ é um bloco tal que $\omega\in\Delta$.
 * Se $\Delta$ é um bloco tal que $\omega\in\Delta$, então $\omega(G_\Delta)=\Delta$. Se $H\leq G$ tal que $G_\omega\leq H$, então $G_{\omega H}=H$. Em particular os mapas $\Delta\mapsto G_\Delta$ e $H\mapsto \omega H$ são bijeções entre o conjunto de blocos $\Delta$ tal que $\omega\in\Delta$ e o conjunto de subgrupos $H$ tal que $G_\omega\leq H$.
-</div>
+:::
 
-<div class="proof">
+:::{.proof}
 1. Claramente, $G_\Delta\leq G$. Seja $g\in G_\omega$. Então $\omega\in \Delta\cap \Delta g$, então $\Delta g=\Delta$. Logo $G_\omega\in G_\Delta$.
 
 2. Seja  $\Delta=\omega H$ e seja $g\in G$ tal que $\alpha \in \Delta\cap \Delta g=\omega H\cap \omega Hg$. Então existem $h_1,h_2\in H$ tal que $\alpha=\omega h_1=\omega h_2g$. Portanto, $\omega h_2gh_1^{-1}=\omega$, e $h_2gh_1^{-1}\in G_\omega$. Como $h_1,h_2\in H\geq G_\omega$, obtemos que $g\in H$ que implica que $\Delta g=\omega Hg=\omega H=\Delta$.
@@ -160,18 +163,20 @@ As seguintes são verdadeiras.
 3. Seja $\Delta$ um bloco tal que $\omega\in \Delta$ e seja $H=G_\Delta$. Afirmamos que $\omega H=\Delta$. Se $h\in H$, então $\omega h\in \Delta$ pela definição de $H$. Portanto $\omega H\subseteq \Delta$. Se $\delta\in\Delta$, então existe um $g\in G$ tal que $\omega g=\delta$. Neste caso, $\delta=\omega g\in \Delta\cap \Delta g$ que implica que $g\in G_\Delta$. Logo $\delta\in \omega H$.  Logo $\Delta\subseteq \omega H$ e obtemos a igualdade $\Delta= \omega H$.
 
 Seja agora $H\leq G$ tal que $G_\omega\leq H$ e seja $\Delta=\omega H$. Afirmamos que $H=G_\Delta$. Se $h\in H$ e $\delta\in \Delta$, então $\delta h=\omega gh\in\Delta$ com $g\in H$. Portanto $H\subseteq G_\Delta$. Se $g\in G_\Delta$, então $\omega g\in\Delta$ e $\omega g=\omega h$ com $h\in H$. Logo $\omega gh^{-1}=\omega$ e $gh^{-1}\in G_\omega$. Como $G_\omega\leq H$, tem-se que $gh^{-1}\in H$ e $g\in H$. Portanto $G_\Delta\leq H$ e $G_\Delta=H$.
-</div>
+:::
 
-<div class="exercise">>Assuma que $G$ age em $\Omega$ transitivamente, seja $\alpha\in\Omega$ e seja $H\leq G$. Então $H$ é transitivo se e somente se $G_\alpha H=G$.
-</div>
+:::{#exr-primitive}
+Assuma que $G$ age em $\Omega$ transitivamente, seja $\alpha\in\Omega$ e seja $H\leq G$. Então $H$ é transitivo se e somente se $G_\alpha H=G$.
+:::
 
-<div class="corollary">Seja $G$ um grupo transitivo agindo em $\Omega$ e seja $\omega\in\Omega$. Então $G$ é primitivo se e somente se $G_\omega$ é um subgrupo maximal.
-</div>
+:::{#cor-primitive-max}
+Seja $G$ um grupo transitivo agindo em $\Omega$ e seja $\omega\in\Omega$. Então $G$ é primitivo se e somente se $G_\omega$ é um subgrupo maximal.
+:::
 
-<div class="definition">
+:::{#def-2-trams}
 Um grupo $G$ agindo em $\Omega$ é dito 2-transitivo se  para todo $\alpha,\beta,\gamma,\delta\in\Omega$ com $\alpha\neq \beta$ e $\gamma\neq \delta$ existe $g\in G$ tal que $\alpha g=\gamma$ e $\beta g=\delta$.
-</div>
+:::
 
-<div class="exercise">
+:::{#exr-2-trans}
 Demonstre que um grupo 2-transitivo é primitivo. Demonstre que $S_n$, $A_n$, $PSL(n,q)$. $PGL(n,q)$ são 2-transitivos e portanto primitivos.
-</div>
+:::

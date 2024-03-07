@@ -6,62 +6,70 @@ lang: pt-BR
 
 
 
-<div class="definition">
-Seja $G$ um grupo. Se $x,y\in G$, então o comutador $[x,y]$ de $x,y$ é definido por $[x,y]=x^{-1}y^{-1}xy$. Em um grupo $G$, denotamos por $G'$ o subgrupo $G'=\left< [x,y] \mid x,y\in G\right>$ (o subgrupo gerado por comutadores). O subgrupo $G'$ é chamado de subgrupo derivado, ou subgrupo comutador de $G$.
-</div>
 
-<div class="definition">
+:::{#def-charsub}
 Um subgroupo $H\leq G$ é dito caraterístico, se $H$ é invariente por automorfismos de $G$. Um subgrupo caraterístico é normal.
-</div>
+:::
 
-<div class="lemma">
+:::{#lem-comm-HK}
 Seja $G$ um grupo e sejam $H$, $K$ subgroupos de $G$ tal que $K\leq H\leq G$.
 
 * Se $K$ é caraterístico em $H$ e $H$ é caraterístico em $G$, então $K$ é caraterístico em $G$.
 * Se $K$ é caraterístico em $H$ e $H$ é normal em $G$, então $K$ é normal em $G$.
-</div>
-<div class="proof">Exercício.</div>
+:::
 
-<div class="lemma">
+:::{.proof}
+Exercício.
+:::
+
+:::{#lem-comutator-abeliano}
 $G'$ é um subgrupo caraterístico de $G$. Em particular, $G'$ é um subgrupo normal. Além disso, $G/G'$ é um grupo abeliano e se $N\unlhd G$ tal que $G/N$ é abeliano, então $G'\leq N$. (Pode-se dizer que $G'$ é o menor subgrupo normal de $G$ com quociente abeliano.)
-</div>
+:::
 
-<div class="proof">Exercício.</div>
+:::{.proof}
+Exercício.
+:::
 
-<div class="definition">
+:::{#def-sgs-derivied}
 Podemos definir recursivamente $G''=(G')'$, $G'''=(G'')'$. Obtemos uma série chamada de série derivada ou série comutador de $G$. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em $G$. Os termos da série derivada são denotados também por $G=G^{(0)}$, $G'=G^{(1)}$, $G''=G^{(2)}$, etc.
-</div>
+:::
 
-<div class="lemma">
+:::{#def-derived-series}
 Seja $G$ um grupo e seja $G_0=G>\cdots> G_k>\cdots$ uma série subnormal tal que $G_i/G_{i+1}$ é abeliano para todo $i$. Então $G^{(i)}\leq G_i$ vale para todo $i\geq 0$.
-</div>
+:::
 
-<div class="proof">
+:::{.proof}
 A afirmação é trivialmente verdadeira para $i=0$. Assuma que $G^{(i)}\leq G_i$. Como $G_i/G_{i+1}$ é abeliano, temos que $G_i'\leq G_{i+1}$. Logo
 $$
 G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 $$
 Então a afirmação é verdadeira para $i+1$ e segue por indução que ela é verdadeira para todo $i$.
-</div>
+:::
 
-<div class="corollary">
+:::{#thm-solvable}
 As seguintes são equivalentes para um grupo $G$.
 
 * Existe uma série normal $G_0=G>\cdots >G_k=1$ com quocientes abelianos.
 * Existe  uma série subnormal $G_0=G>\cdots> G_k=1$ com quocientes abelianos.
 * Existe $k$ tal que $G^{(k)}=1$.
-</div>
+:::
 
-<div class="proof">>Segue dos resultados anteriores.
-</div>
+:::{.proof}
+Segue dos resultados anteriores.
+:::
 
-<div class="definition">
+:::{#def-solvable}
 Um grupo $G$ é dito solúvel se uma das afirmações do corolário anterior é válida para $G$. O menor $k$ tal que $G^{(k)}=1$ é chamado de comprimento derivado de $G$.
-</div>
+:::
 
-Um grupo abeliano finito é dito grupo abeliano elementar,, se existe um primo $p$, tal que $x^p=1$ para todo $x\in G$. Pelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que $G$ é grupo abeliano elementar se e somente se $G=C_p\times\cdots \times C_p$ com algum primo $p$. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo $\mathbb F_p$.
+:::{#def-elabel}
+Um grupo abeliano finito é dito grupo abeliano elementar,, se existe um primo $p$, tal que $x^p=1$ para todo $x\in G$. 
+:::
 
-<div class="lemma">
+Pelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que $G$ é grupo abeliano elementar se e somente se $G=C_p\times\cdots \times C_p$ com algum primo $p$. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo $\mathbb F_p$.
+
+
+:::{#thm-solvable}
 As seguintes afirmações são válidas para um grupo $G$.
 
 * Se $\varphi:G\rightarrow K$ é um homomorfismo, então
@@ -75,9 +83,9 @@ para todo $i\geq 0$.
 * Se $G$ é um p-grupo finito, então $G$ é solúvel.
 * Se $G$ é finito, então $G$ é solúvel se e somente se os fatores de composição de $G$ são todos grupos cíclicos de ordem prima.
 * Se $G$ é finito e solúvel e $N$ é um subgrupo minimal normal de $G$, então $N$ é abeliano elementar.
-</div>
+:::
 
-<div class="proof">
+:::{.proof}
 1. Indução por $i$. Se $i=0$, então não há nada para provar. Assuma que a afirmação é verdadeira para $i\geq 0$.
 O subgrupo $G^{(i+1)}$ é gerado por elementos da forma $[x,y]$ onde $x,y\in G^{(i)}$. Como
 $$
@@ -89,15 +97,11 @@ $$
 [u,v]=\varphi([x,y])\in \varphi(G^{(i+1)})
 $$
 e $\varphi(G)^{(i+1)}\leq \varphi(G^{(i+1)})$.  Temos equality.
-
-1. Seja $\varphi:G\rightarrow G/N$ o homomorfismo natural. Por parte (1), tem-se que
+2. Seja $\varphi:G\rightarrow G/N$ o homomorfismo natural. Por parte (1), tem-se que
 $$
 Q^{(i)}=\varphi(G)^{(i)}=\varphi(G^{(i)})=G^{(i)}N/N.
 $$
-
-3. Assuma que $G$ é solúvel e assuma que $G^{(k)}=1$ para algum $k$. Pode-se verificar por indução que $H^{(i)}\leq G^{(i)}$ vale para todo $i\geq 0$. Portanto, $H^{(k)}=1$ e segue que $H$ é solúvel.
-
-Seja agora $N\unlhd G$ e assuma que $Q=G/N$. Por parte (2), temos que $(G/N)^{(k)}= G^{(k)}N/N=1$. Logo $(G/N)^k=1$ e portanto $G/N$ é solúvel.
+3. Assuma que $G$ é solúvel e assuma que $G^{(k)}=1$ para algum $k$. Pode-se verificar por indução que $H^{(i)}\leq G^{(i)}$ vale para todo $i\geq 0$. Portanto, $H^{(k)}=1$ e segue que $H$ é solúvel. Seja agora $N\unlhd G$ e assuma que $Q=G/N$. Por parte (2), temos que $(G/N)^{(k)}= G^{(k)}N/N=1$. Logo $(G/N)^k=1$ e portanto $G/N$ é solúvel.
 
 4. Assuma que $N\unlhd G$ e $G/N$ são solúveis. Seja $Q=G/N$. Existe $m$ tal que $Q^{(m)}=1$. Isto quer dizer que $G^{(m)}\leq N$. Existe $l$ tal que $N^{(l)}=1$. Afirmamos que $G^{(m+l)}=1$. De fato,
 $$
@@ -114,4 +118,4 @@ $$
 N^p=\{x^p\mid x\in N\}
 $$
 é um subgrupo caraterístico em $N$ que implica que $N^p=1$; ou seja $N$ é abeliano elementar.
-</div>
+:::
