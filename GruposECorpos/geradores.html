@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 7&nbsp; Conjuntos geradores e grupos cíclicos</title>
+<title>Álgebra - 49&nbsp; Conjuntos geradores e grupos cíclicos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,10 +162,12 @@ window.Quarto = {
 \newcommand{\lxor}{\dot\lor}
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
+\newcommand{\mdc}[2]{\operatorname{mdc}(#1,#2)}
+\newcommand{\grau}[1]{\operatorname{grau}(#1)}
 \]</span></p>
-:::
+</div>
 
-</div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -554,7 +556,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-::: <!-- /content -->
+</div> <!-- /content -->
 
 
 
@@ -603,7 +605,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/geradores.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/geradores.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -672,6 +674,258 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/expansao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/criterios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Critérios de divisibildade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/racionais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/mdc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">O MDC</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/primos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Os números primos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/tfa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/numprimes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">O número dos primos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/diof.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/chinese_v1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V1.0)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/phi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A função φ de Euler</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/cong.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Congruências</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/res_classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Classes residuais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/z_n.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">ℤ<sub>n</sub></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/cong_incog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Congruências com incôgnitas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/chines_v2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V2.0)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/fermat_euler.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Pequeno Teorema de Fermat e o Teorema de Euler</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/wilson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">O Teorema de Wilson</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/ordr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">A ordem de uma classe residual</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/primitive_p1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (enunciado)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/quadrados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Os quadrados de ℤ<sub>n</sub></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">O algoritmo de exponenciação rápida</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/test_fermat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Fermat</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/carmichael.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Números de Carmichael</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/miller.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Miller</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/rsa_p1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Criptografia RSA: A teoria</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/rsa_p2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Criptografia RSA: Um exemplo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/aneis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Anéis, domínios e corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/complex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Números complexos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/pols.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/pol_anel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">O anel dos polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/div_pol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Divisibilidade de polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/euclid_pol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">O Teorema de Divisão para polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/mdc_pol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O MDC de polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/roots.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Raízes e irredutibilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/primitive_p2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (demonstração)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/irred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Polinômios irredutíveis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/tfa_pol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">O Teorema da Fatoração para polinômios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/dfu.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/gauss_pt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">O Lema de Gauss</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/eisenstein.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O Critério de Eisenstein</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/quadratic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Equações quadráticas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FundamentosDeAlgebra/cubic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Equações do terceiro grau</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -686,7 +940,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sample chapter</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sample chapter</span></span></a>
   </div>
 </li>
       </ul>
@@ -703,85 +957,85 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/lagrange.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/geradores.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/normais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/derivado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O subgrupo derivado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">O subgrupo derivado</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/soluble.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/actions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/alternado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de <span class="math inline">\(PSL(n,q)\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de <span class="math inline">\(PSL(n,q)\)</span></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/sylow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/nilpotent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
       </ul>
@@ -796,17 +1050,17 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#conjuntos-geradores" id="toc-conjuntos-geradores" class="nav-link active" data-scroll-target="#conjuntos-geradores"><span class="header-section-number">7.1</span> Conjuntos geradores</a></li>
-  <li><a href="#grupo-cíclico" id="toc-grupo-cíclico" class="nav-link" data-scroll-target="#grupo-cíclico"><span class="header-section-number">7.2</span> Grupo cíclico</a></li>
+  <li><a href="#conjuntos-geradores" id="toc-conjuntos-geradores" class="nav-link active" data-scroll-target="#conjuntos-geradores"><span class="header-section-number">49.1</span> Conjuntos geradores</a></li>
+  <li><a href="#grupo-cíclico" id="toc-grupo-cíclico" class="nav-link" data-scroll-target="#grupo-cíclico"><span class="header-section-number">49.2</span> Grupo cíclico</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/geradores.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/geradores.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></h1>
+<h1 class="title"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></h1>
 </div>
 
 
@@ -823,10 +1077,10 @@ window.Quarto = {
 </header>
 
 
-<section id="conjuntos-geradores" class="level2" data-number="7.1">
-<h2 data-number="7.1" data-anchor-id="conjuntos-geradores"><span class="header-section-number">7.1</span> Conjuntos geradores</h2>
+<section id="conjuntos-geradores" class="level2" data-number="49.1">
+<h2 data-number="49.1" data-anchor-id="conjuntos-geradores"><span class="header-section-number">49.1</span> Conjuntos geradores</h2>
 <div id="def-generators" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 7.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(X\)</span> um subconjunto não vazio de <span class="math inline">\(G\)</span>. Denotamos por <span class="math inline">\(\left&lt;X\right&gt;\)</span> o <em>subgrupo gerado por <span class="math inline">\(X\)</span></em>. Quando <span class="math inline">\(X=\{x_1,\ldots,x_k\}\)</span>, escrevemos <span class="math inline">\(\left&lt;x_1,\ldots,x_k\right&gt;\)</span>. Um subconjunto <span class="math inline">\(X\subseteq G\)</span> é dito <em>conjunto gerador</em>&nbsp;se <span class="math inline">\(G=\left&lt;X\right&gt;\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 49.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(X\)</span> um subconjunto não vazio de <span class="math inline">\(G\)</span>. Denotamos por <span class="math inline">\(\left&lt;X\right&gt;\)</span> o <em>subgrupo gerado por <span class="math inline">\(X\)</span></em>. Quando <span class="math inline">\(X=\{x_1,\ldots,x_k\}\)</span>, escrevemos <span class="math inline">\(\left&lt;x_1,\ldots,x_k\right&gt;\)</span>. Um subconjunto <span class="math inline">\(X\subseteq G\)</span> é dito <em>conjunto gerador</em>&nbsp;se <span class="math inline">\(G=\left&lt;X\right&gt;\)</span>.</p>
 </div>
 <p>O subgrupo <span class="math inline">\(\left&lt;X\right&gt;\)</span> pode ser caraterizado como o conjunto de todos os produtos nos elementos de <span class="math inline">\(X\)</span> e seus inversos: <span class="math display">\[
 \left&lt;X\right&gt;=\left\{x_1^{\pm 1}\cdots x_m^{\pm 1}\mid m\geq 1 \mbox{ e } x_i\in X\right\};
@@ -834,22 +1088,22 @@ window.Quarto = {
 \left&lt;X\right&gt;=\bigcap_{X\subseteq H\leq G}H.
 \]</span></p>
 </section>
-<section id="grupo-cíclico" class="level2" data-number="7.2">
-<h2 data-number="7.2" data-anchor-id="grupo-cíclico"><span class="header-section-number">7.2</span> Grupo cíclico</h2>
+<section id="grupo-cíclico" class="level2" data-number="49.2">
+<h2 data-number="49.2" data-anchor-id="grupo-cíclico"><span class="header-section-number">49.2</span> Grupo cíclico</h2>
 <div id="def-cyclic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 7.2</strong></span> Um grupo gerado por um elemento é dito grupo cíclico. Em outras palavras, <span class="math inline">\(G\)</span> é dito cíclico se <span class="math inline">\(G=\left&lt;g\right&gt;\)</span> para algum elemento&nbsp; <span class="math inline">\(g\in G\)</span>. Se <span class="math inline">\(G\)</span> é cíclico e <span class="math inline">\(G=\left&lt;g\right&gt;\)</span>. então <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 49.2</strong></span> Um grupo gerado por um elemento é dito grupo cíclico. Em outras palavras, <span class="math inline">\(G\)</span> é dito cíclico se <span class="math inline">\(G=\left&lt;g\right&gt;\)</span> para algum elemento&nbsp; <span class="math inline">\(g\in G\)</span>. Se <span class="math inline">\(G\)</span> é cíclico e <span class="math inline">\(G=\left&lt;g\right&gt;\)</span>. então <span class="math display">\[
 G=\{1=g^0,g^1,g^{-1},g^2,g^{-2},g^3,g^{-3},\ldots\};
 \]</span> ou seja, <span class="math inline">\(G\)</span> é composto pelas potências de <span class="math inline">\(g\)</span>. Como <span class="math inline">\(g^a\)</span> e <span class="math inline">\(g^b\)</span> comutam para todo <span class="math inline">\(a,b\in\mathbb Z\)</span>, obtemos que um grupo cíclico é abeliano.</p>
 </div>
 <div id="exr-cyclic-order" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 7.1</strong></span> Seja <span class="math inline">\(g\in G\)</span>. Demonstre que <span class="math inline">\(|\left&lt;g\right&gt;|=|g|\)</span>. Portanto, se <span class="math inline">\(G\)</span> é um grupo finito e <span class="math inline">\(g\in G\)</span>, então <span class="math inline">\(|g|\)</span> divide <span class="math inline">\(|G|\)</span>.&nbsp; &nbsp;Em particular, temos neste caso que <span class="math inline">\(g^{|G|}=1\)</span>. Consequentemente, um grupo finito <span class="math inline">\(G\)</span> é cíclico se e somente se <span class="math inline">\(G\)</span> possui um elemento de ordem <span class="math inline">\(|G|\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 49.1</strong></span> Seja <span class="math inline">\(g\in G\)</span>. Demonstre que <span class="math inline">\(|\left&lt;g\right&gt;|=|g|\)</span>. Portanto, se <span class="math inline">\(G\)</span> é um grupo finito e <span class="math inline">\(g\in G\)</span>, então <span class="math inline">\(|g|\)</span> divide <span class="math inline">\(|G|\)</span>.&nbsp; &nbsp;Em particular, temos neste caso que <span class="math inline">\(g^{|G|}=1\)</span>. Consequentemente, um grupo finito <span class="math inline">\(G\)</span> é cíclico se e somente se <span class="math inline">\(G\)</span> possui um elemento de ordem <span class="math inline">\(|G|\)</span>.</p>
 </div>
 <div id="exm-cyclic" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 7.1</strong></span> O grupo <span class="math inline">\((\mathbb Z,+)\)</span> é cíclico gerado por <span class="math inline">\(1\)</span>. Seja <span class="math inline">\(n\geq 2\)</span>. Então o grupo aditivo <span class="math inline">\((\mathbb Z_n,+)\)</span> é cíclico gerado pelo elemento <span class="math inline">\(1\)</span>. O grupo <span class="math inline">\(\{i,-i,1,-1\}\)</span> é cíclico gerado por <span class="math inline">\(i\)</span>. O grupo de rotações de um polígono com <span class="math inline">\(n\)</span> lados é cíclico e é gerado pela rotação por <span class="math inline">\(360/n\)</span> graus.</p>
+<p><span class="theorem-title"><strong>Exemplo 49.1</strong></span> O grupo <span class="math inline">\((\mathbb Z,+)\)</span> é cíclico gerado por <span class="math inline">\(1\)</span>. Seja <span class="math inline">\(n\geq 2\)</span>. Então o grupo aditivo <span class="math inline">\((\mathbb Z_n,+)\)</span> é cíclico gerado pelo elemento <span class="math inline">\(1\)</span>. O grupo <span class="math inline">\(\{i,-i,1,-1\}\)</span> é cíclico gerado por <span class="math inline">\(i\)</span>. O grupo de rotações de um polígono com <span class="math inline">\(n\)</span> lados é cíclico e é gerado pela rotação por <span class="math inline">\(360/n\)</span> graus.</p>
 <p>O grupo simétrico <span class="math inline">\(S_3\)</span> não é cíclico, pois ele não é abeliano. O grupo <span class="math inline">\(K=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}\)</span> é abeliano, mas não é cíclico pois não possui um elemento de ordem <span class="math inline">\(4\)</span>.</p>
 </div>
 <div id="lem-subgroup-cyclic" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 7.1</strong></span> Se <span class="math inline">\(G\)</span> é um grupo cíclico e <span class="math inline">\(H\leq G\)</span>, então <span class="math inline">\(H\)</span> é cíclico.</p>
+<p><span class="theorem-title"><strong>Lema 49.1</strong></span> Se <span class="math inline">\(G\)</span> é um grupo cíclico e <span class="math inline">\(H\leq G\)</span>, então <span class="math inline">\(H\)</span> é cíclico.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(G=\left&lt;g\right&gt;\)</span> e seja <span class="math inline">\(k\geq 1\)</span> menor tal que <span class="math inline">\(g^k\in H\)</span>. Afirmamos que <span class="math inline">\(H=\left&lt;g^k\right&gt;\)</span>. Claramente <span class="math inline">\(\left&lt;g^k\right&gt;\leq H\)</span>. Ora, seja <span class="math inline">\(x\in H\)</span>. Como <span class="math inline">\(G\)</span> é cíclico, <span class="math inline">\(x=g^m\)</span> com algum <span class="math inline">\(m\geq 0\)</span>. Pondo <span class="math inline">\(m=qk+r\)</span> com <span class="math inline">\(r\in\{0,\ldots,k-1\}\)</span>, obtemos que <span class="math display">\[
@@ -861,7 +1115,7 @@ g^r=(g^k)^{-q}x\in H
 </div>
 <p>O seguinte teorema sai como uma consequência do Teorema de Lagrange.</p>
 <div id="thm-prime-cyclic" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 7.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(G\)</span> um grupo com <span class="math inline">\(p\)</span> elementos. Então <span class="math inline">\(G\)</span> é cíclico. Em particular, <span class="math inline">\(G\)</span> é abeliano.</p>
+<p><span class="theorem-title"><strong>Teorema 49.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(G\)</span> um grupo com <span class="math inline">\(p\)</span> elementos. Então <span class="math inline">\(G\)</span> é cíclico. Em particular, <span class="math inline">\(G\)</span> é abeliano.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g\in G\setminus\{1\}\)</span> e seja <span class="math inline">\(H=\left&lt;g\right&gt;\)</span>. Temos que <span class="math inline">\(1&lt;|H|\)</span> e que <span class="math inline">\(|H|\mid |G|=p\)</span>. Logo, <span class="math inline">\(|H|=|G|\)</span> e obtemos que <span class="math inline">\(H=G\)</span>. Isso significa que <span class="math inline">\(G=\left&lt;g\right&gt;\)</span>; ou seja, <span class="math inline">\(G\)</span> é cíclico.</p>
@@ -872,7 +1126,7 @@ g^r=(g^k)^{-q}x\in H
 \sum_{d\mid n}\varphi(d)=n.
 \]</span></p>
 <div id="thm-field-cyclic" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 7.2</strong></span> Seja <span class="math inline">\(G\)</span> um subgrupo finito do grupo multiplicativo de um corpo <span class="math inline">\(\mathbb F\)</span>. Então <span class="math inline">\(G\)</span> é cíclico.</p>
+<p><span class="theorem-title"><strong>Teorema 49.2</strong></span> Seja <span class="math inline">\(G\)</span> um subgrupo finito do grupo multiplicativo de um corpo <span class="math inline">\(\mathbb F\)</span>. Então <span class="math inline">\(G\)</span> é cíclico.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Ponha <span class="math inline">\(n=|G|\)</span>. Se <span class="math inline">\(g\in G\)</span>, então a ordem de <span class="math inline">\(g\)</span> divide <span class="math inline">\(|G|=n\)</span> por um exercício anterior. Seja <span class="math inline">\(d\)</span> um divisor de <span class="math inline">\(n\)</span> e assuma que existe um elemento <span class="math inline">\(g\in G\)</span> com ordem <span class="math inline">\(d\)</span>. Seja <span class="math inline">\(H=\left&lt;g\right&gt;\)</span>. Sabe-se que <span class="math inline">\(|H|=|g|=d\)</span>. Então <span class="math inline">\(h^d=1\)</span> vale para todo <span class="math inline">\(h\in H\)</span> e os elementos de <span class="math inline">\(H\)</span> são soluções da equação polinomial <span class="math display">\[
@@ -886,15 +1140,15 @@ H=\{x\in \mathbb F\mid x^d=1\}.
 \]</span> (A última igualdade é por causa do resultado citado sobre <span class="math inline">\(\varphi(n)\)</span> antes do teorema.) Note que a igualdade na linha anterior implica que a desigualdade no meio precisa ser igualdade. Mas isso é possível somente quando <span class="math inline">\(m_d=\varphi(d)\)</span> vale para todo <span class="math inline">\(d\mid n\)</span>. Em particular, <span class="math inline">\(m_n=\varphi(n)\)</span>; ou seja, <span class="math inline">\(G\)</span> possui um elemento de ordem <span class="math inline">\(n\)</span>. Se <span class="math inline">\(g\in G\)</span> é tal elemento, então <span class="math inline">\(G=\left&lt;g\right&gt;\)</span>.</p>
 </div>
 <div id="cor-ff-cylic" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 7.1</strong></span> O grupo <span class="math inline">\((\mathbb Z_p\setminus\{0\},\cdot)\)</span> é cíclico.</p>
+<p><span class="theorem-title"><strong>Corolário 49.1</strong></span> O grupo <span class="math inline">\((\mathbb Z_p\setminus\{0\},\cdot)\)</span> é cíclico.</p>
 </div>
 <div id="def-ff.primitive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 7.3</strong></span> Se <span class="math inline">\(g\in \mathbb Z_p\setminus\{0\}\)</span> é um gerador do grupo multiplicativo de <span class="math inline">\(\mathbb Z_p\)</span>, então o elemento <span class="math inline">\(g\)</span> é chamado de <em>elemento primitivo</em> de <span class="math inline">\(\mathbb Z_p\)</span>. Se <span class="math inline">\(g\in \mathbb Z_p\)</span> é um elemento primitivo, então <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 49.3</strong></span> Se <span class="math inline">\(g\in \mathbb Z_p\setminus\{0\}\)</span> é um gerador do grupo multiplicativo de <span class="math inline">\(\mathbb Z_p\)</span>, então o elemento <span class="math inline">\(g\)</span> é chamado de <em>elemento primitivo</em> de <span class="math inline">\(\mathbb Z_p\)</span>. Se <span class="math inline">\(g\in \mathbb Z_p\)</span> é um elemento primitivo, então <span class="math display">\[
 \mathbb Z_p=\{0,1=g^0,g^1,g^2,\ldots,g^{p-2}\}.
 \]</span></p>
 </div>
 <div id="exr-ff-primitives" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 7.2</strong></span> Mostre que o número dos elementos primitivos em <span class="math inline">\(\mathbb Z_p\)</span> é <span class="math inline">\(\varphi(p-1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 49.2</strong></span> Mostre que o número dos elementos primitivos em <span class="math inline">\(\mathbb Z_p\)</span> é <span class="math inline">\(\varphi(p-1)\)</span>.</p>
 </div>
 
 
@@ -1313,12 +1567,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../GruposECorpos/lagrange.html" class="pagination-link" aria-label="Subgrupos e classes laterais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../GruposECorpos/normais.html" class="pagination-link" aria-label="Subgrupos normais e homomorfismos">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1327,4 +1581,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</div></body></html>
+</body></html>
