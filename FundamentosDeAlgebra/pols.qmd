@@ -1,0 +1,37 @@
+
+---
+title: "Polinômios"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#def-}
+Seja $R$ um anel. Um **polinômio** sobre $R$ (ou polinômio com coeficientes em $R$) é uma expressão formal
+$$
+f=f(x)=\alpha_n x^n+\alpha_{n-1}x^{n-1}+\cdots+\alpha_1 x+\alpha_0
+$$
+onde $\alpha_i\in R$. O símbolo $x$ é uma incógnita. Por exemplo
+$$
+\frac 12x^2+2x-1
+$$
+pode ser considerado como um polinômio sobre $\Q$, $\R$ ou $\C$. O conjunto de todos os polinômios na incógnita $x$ sobre $R$ é denotado por $R[x]$. Seja $f(x)\in R[x]$ um polinômio como acima e assuma agora que $\alpha_n\neq 0$. O termo $\alpha_nx^n$ é chamado **termo líder** de $f(x)$ enquanto o coeficiente $\alpha_n$ é o **coeficiente líder**. O número $n$ é dito o **grau** de $f(x)$ e é denotado por $\grau{f(x)}$. Um polinômio $f(x)$ é dito **mônico** se o seu coeficiente líder é igual a $1$. Para o polinômio $0$ estes termos não são definidos
+:::
+
+Se $\alpha\in R$ então $\alpha$ pode ser identificado com o elemento $\alpha=\alpha x^0\in R[x]$ e assim os elementos de $R$ podem ser considerados como polinômios de grau zero em $R[x]$. Os polinômios de grau zero são também chamados de **polinômios constantes**.
+
+Por exemplo considere $f(x)\in\Z_5[x]$ onde
+$$
+f(x) = \overline 2x^2+\overline 1.
+$$
+O termo líder de $f(x)$ é $\overline 2x^2$, o coeficiente líder é $\overline 2$, o grau de $f(x)$ é $2$ e $f(x)$ não é mônico, pois  seu coeficiente líder é diferente de $\overline 1$.
+
+Nesta disciplina, polinômios são considerados principalmente como expressões simbólicas e não como funções. No entanto, dado um polinômio $f(x)\in R[x]$  e $\alpha\in R$ pode-se substituir $\alpha$ em $f(x)$ e obter $f(\alpha)\in R$. O elemento $\alpha\in R$ é dito **raiz** de $f(x)$ se $f(\alpha)=0$.
+
+Podemos também definir a função polinomial
+$$
+\hat f:R\to R,\quad \hat f(\alpha)= f(\alpha).
+$$
+No entanto, note que para $p$ um primo, $f(x)=x$ e $g(x)=x^p$ são dois polinômios distintos de $\Z_p[x]$, mas pelo Pequeno Teorema de Fermat, as funções $\hat f,\hat g:\Z_p\to \Z_p$ são iguais. Assim, quando falamos de polinômios sobre um anel arbitrário, precisa-se distinguir entre o polinômio como expressão formal e a função polinomial.
+
+

@@ -1,0 +1,97 @@
+
+---
+title: "O Teorema de Divisão para polinômios"
+number-sections: true
+lang: pt-BR
+---
+
+:::{#exm-}
+Considere $f(x)=x^3-2x^2+x-1$ e $g(x)=x^2-1$ como polinômios em $\Q[x]$. Usando o método bem conhecido do ensino médio, pode-se calcular o quociente de $f(x)$ por $g(x)$ e o resto:
+\begin{align*}
+&x^3-2x^2+x-1 : x^2-1 = x-2\\
+&- [x^3-x] \\\hline
+&-2x^2+2x-1\\
+-& [-2x^2+2]\\\hline
+&2x-3
+\end{align*}
+Obtemos que
+$$
+f(x)=(x-2)g(x)+(2x-3)
+$$
+Pode-se dizer que o quociente de $f(x)$ por $g(x)$ é $x-2$ e o resto de $f(x)$ por $g(x)$ é $2x-3$
+:::
+
+A conta que fizemos no exemplo anterior nos lembra da Teorema de Divisão de Euclides que enunciamos na primeira parte da disciplina para números inteiros. De fato, existe um teorema análogo para polinômios que vamos enunciar e provar nesta página.
+
+:::{#thm-}
+(Teorema de Divisão de Euclides para Polinômios)
+Seja $\F$ um corpo (por exemplo $\Q$, $\R$, $\C$, ou $\Z_p$ com $p$ primo) e assuma que $f(x),g(x)\in \F[x]$ com $g(x)\neq 0$. Então existem unicamente polinômios $q(x),r(x)\in \F[x]$ tais que
+$$
+f(x)=q(x)g(x)+r(x)\quad\mbox{e}\quad r(x)=0\mbox{ ou }\grau{r(x)} < \grau{g(x)}.
+$$
+:::
+
+
+:::{.proof}
+**Existência:** Vamos provar a existência por indução no grau de $f(x)$. Se $f(x)=0$, então pode-se tomar $q(x)=r(x)=0$. Assuma então que $f(x)\neq 0$ e seja $k=\grau{f(x)}$. Se $k=0$, então $f(x)$ é constante; por exemplo $f(x)=\alpha$ onde $\alpha\in\F$. Se $\grau{g(x)}=0$ então $g(x)=\beta$ com $\beta\in \F$ e pode tomar $q(x)=\alpha/\beta$ e $r(x)=0$. Se $\grau{g(x)} > 0$, então podemos tomar $q(x)=0$ e $r(x)=f(x)=\alpha$. É fácil verificar que estas escolhas para $q(x)$ e $r(x)$ satisfazem a equação no teorema.
+
+Assuma agora que $k\geq 0$ e que a afirmação da existência no teorema está válida para polinômios $f(x),g(x)\in\F[x]$ com $g(x)\neq 0$ e $\grau{f(x)} < k$. Seja $f(x)$ um polinômio de grau $k$. Se $\grau{g(x)} >  \grau{f(x)}$ então podemos tomar $q(x)=0$ e $r(x)=f(x)$. Assuma então que $\grau{g(x)}\leq \grau{f(x)}$. Assuma que
+\begin{align*}
+f(x)&=\alpha_k x^k+\mbox{termos de menor grau};\\
+g(x)&=\beta_\ell x^\ell+\mbox{termos de menor grau};
+\end{align*}
+com $\alpha_k,\beta_\ell\in\F\setminus\{0\}$. Considere
+$$
+f_1(x)=f(x)-(\alpha_k/\beta_\ell)x^{k-\ell}g(x).
+$$
+Temos que $\grau{f_1(x)} < \grau{f(x)}$ então a hipótese da indução se aplica para $f_1(x)$ e podemos escrever
+$$
+f_1(x)=q_1(x)g(x)+r(x)
+$$
+onde
+$r(x)=0$ ou $\grau{r(x)} < \grau{g(x)}$. Ora, obtemos que
+\begin{align*}
+f(x)&=f_1(x)+(\alpha_k/\beta_m)x^{k-\ell}g(x)\\&=q_1(x)g(x)+r(x)+(\alpha_k/\beta_m)x^{k-\ell}g(x)\\&=
+(q_1(x)+(\alpha_k/\beta_m)x^{k-\ell})g(x)+r(x).
+\end{align*}
+Podemos tomar então $q(x)=q_1(x)+(\alpha_k/\beta_m)x^{k-\ell}$ e $r(x)$ como acima.
+
+**Unicidade:** Assuma que temos para algum $f(x),g(x)\in\F[x]$ com $g(x)\neq 0$ que
+$$
+f(x)=q_1(x)g(x)+r_1(x)=q_2(x)g(x)+r_2(x)
+$$
+com $r_1(x)=0$ ou $\grau{r_1(x)} < \grau{g(x)}$ e $r_2(x)=0$ ou $\grau{r_2(x)} < \grau{g(x)}$. A equação acima implica que
+$$
+(q_1(x)-q_2(x))g(x)=r_2(x)-r_1(x).
+$$
+O lado esquerdo desta equação é um polinômio que ou é igual a zero ou seu grau é maior ou igual a grau de $g(x)$. No lado direito, temos um polinômio que é ou zero ou seu grau é menor que o grau de $g(x)$. Isso é possível apenas quando os polinômios nos dois lados da equação são iguais a zero. Ou seja,
+$$
+(q_1(x)-q_2(x))g(x)=0.
+$$
+Como $\F[x]$ é um domínio e $g(x)\neq 0$, temos que $q_1(x)-q_2(x)=0$; ou seja $q_1(x)=q_2(x)$. Denotando $q_1(x)=q_2(x)=q(x)$, obtemos que
+$$
+f(x)=q(x)g(x)+r_1(x)=q(x)g(x)+r_2(x),
+$$
+mas isso implica que $r_1(x)=r_2(x)$. Obtivemos assim que a decomposição de $f(x)$ é única.
+
+:::
+
+
+:::{#def-}
+O polinômio $q(x)$ no teorema anterior chama-se o **quociente** de $f(x)$ por $g(x)$, enquanto $r(x)$ chama-se o **resto**
+:::
+
+A biblioteca <a href="https://www.sympy.org/">SymPy</a> da linguagem Python pode ser usada para fazer computações com polinômios. Vamos por exemplo refazer o exemplo no início desta página em Python.
+```python
+>>> from sympy import poly, QQ
+>>> from sympy.abc import x
+>>> f = poly( x**3-2*x**2+x-1, domain = QQ )
+>>> g = poly( x**2-1, domain = QQ )
+>>> f//g
+Poly(x−2,x,domain=ℚ)
+>>> f % g 
+Poly(2x−3,x,domain=ℚ)
+>>> g*(f//g)+f%g  == f
+True
+```
+

@@ -1,0 +1,144 @@
+
+---
+title: "Os quadrados de ℤ<sub>n</sub>"
+number-sections: true
+lang: pt-BR
+---
+
+Lembre da notação $\Z_p^*=\Z_p\setminus\{\overline 0\}$ ($p$ é primo).
+
+:::{#def-}
+Seja $p\in\N$ um primo. Um elemento $\overline a\in\Z_p^*$ é dito quadrado se $\overline a=\overline b^2$ com algum $\overline b\in\Z_p^*$
+:::
+
+
+:::{#exm-}
+Em $\Z_5^*$, os elementos são $\overline 1,\overline 2,\overline 3,\overline 4$, os seus quadrados são $\overline 1,\overline 4,\overline 4,\overline 1$. Então $\Z_5^*$ possui dois quadrados, nomeadamente $\overline 1$ e $\overline 4$.  Uma conta simples mostra que os quadrados dos elementos de $\Z_7^*$ são $\overline 1,\overline 4,\overline 2,\overline 2,\overline 4,\overline 1$. Então os quadrados de $\Z_7^*$ são $\overline 1$, $\overline 2$ e $\overline 4$
+:::
+
+No resto da página $p$ é um primo com $p\geq 3$.
+
+:::{#exr-}
+Seja $p$ um primo ímpar e seja $\overline a\in\Z_p^*$. Mostre que $\overline a^{(p-1)/2}\in\{\overline 1,\overline{-1}\}$
+:::
+
+
+:::{#exm-}
+Motivado pelo exercício anterior, vamos calcular $\overline a^3$ para todo $\overline a\in\Z_7^*$.
+\begin{array}{|c||c|c|c|c|c|c|}
+\hline
+\overline a & \overline 1 & \overline 2 & \overline 3& \overline 4& \overline 5 & \overline 6 \\\hline
+\overline a^3 & \overline 1 & \overline 1 & \overline{-1}& \overline 1& \overline {-1} & \overline {-1} \\\hline
+\end{array}
+Observamos duas coisas:
+
+
+-  Se $\overline a\in\Z_7^*$ é quadrado, então $\overline a^3=\overline 1$.
+-  Se $\overline a\in\Z_7^*$ não é quadrado, então $\overline a^3=\overline{-1}$.
+
+:::
+
+No lema seguinte demonstramos que as observações feitas no exemplo anterior não são coincidências.
+
+:::{#lem-}
+Seja $p$ um primo com $p\geq 3$. O número de quadrados em $\Z_p^*$ é $(p-1)/2$. Além disso, $\overline a\in\Z_p^*$ é um quadrado se e somente se $\overline a^{(p-1)/2}=\overline 1$ e $\overline a$ não é quadrado se e somente se $\overline a^{(p-1)/2}=\overline{-1}$
+:::
+
+
+:::{.proof}
+Considere
+$$
+\psi:\Z_p^*\to\Z_p^*,\quad \overline a\mapsto \overline a^{2}.
+$$
+Temos que a imagem de $\psi$ é precisamente o conjunto dos quadrados em $\Z_p^*$. Além disso, assuma que $\overline a,\overline b\in\Z_p^*$ tais que $\psi(\overline a)=\psi(\overline b)$; ou seja $\overline a^2=\overline b^2$. A última equação é equivalente ao fato que $p\mid a^2-b^2=(a-b)(a+b)$ implicando que $p\mid a-b$ ou $p\mid a+b$ e assim
+$$
+b\equiv \pm a\pmod p\quad\mbox{e}\quad \overline b=\pm\overline a.
+$$
+Além disso, $\overline a$ e $\overline{-a}$ são distintos, pois se $\overline a=\overline{-a}$, então $\overline 2\overline a=\overline 0$ que implica (como $\overline 2$ é invertível) que $\overline a=0$ que não é o caso, pois $\overline a\in\Z_p^*$.
+
+Portanto cada elemento $\overline b$ na imagem de $\psi$ existem precisamente dois elementos $\overline a$ e $-\overline a$ tal que $\psi(\overline a)=\psi(-\overline a)=\overline b$. Como $|\Z_p^*|=p-1$ a imagem de $\psi$ contém $(p-1)/2$ elementos e assim há $(p-1)/2$ quadrados em $\Z_p^*$.
+
+Assuma que $\overline a\in\Z_p^*$ é um quadrado. Seja $\overline b\in\Z_p^*$ tal que $\overline a=\overline b^2$. O Pequeno Teorema de Fermat implica que
+$$
+\overline a^{(p-1)/2}=(\overline b^2)^{(p-1)/2}=\overline b^{p-1}=\overline 1.
+$$
+
+Agora assuma que $\overline a\in\Z_p^*$ não é um quadrado. Defina
+$$
+\vartheta:\Z_p^*\to\Z_p^*,\quad \overline b\mapsto \overline a/\overline b=\overline a\overline b^{-1}.
+$$
+Note que $\vartheta$ é uma bijeção e que $\vartheta(\overline b)=\overline c$ se e somente se $\vartheta(\overline c)=\overline b$. Além disso $\overline b\vartheta(\overline b)=\overline a$ para todo $\overline b\in\Z_p^*$ e o fato que $\overline a$ não é quadrado implica que $\vartheta(\overline b)\neq\overline b$ para todo $\overline b\in\Z_p^*$.
+
+Vamos enumerar os elementos de $\Z_p^*$ como
+$$
+\Z_p^*=\{\overline b_1,\vartheta(\overline b_1),\overline b_2,\vartheta(\overline b_2),\ldots,\overline b_
+{(p-1)/2},\vartheta(\overline b_{(p-1)/2})\}.
+$$
+Ora, o Teorema de Wilson nos diz que
+$$
+-1\equiv (p-1)!\equiv 1\cdot 2\cdots (p-1)\pmod p
+$$
+e isso implica que
+\begin{align*}
+\overline{-1}&= \overline 1\cdot \overline 2\cdots \overline{p-1}\\&=(\overline b_1\vartheta(\overline b_1))(\overline b_2\vartheta(\overline b_2))\cdots(\overline b_{(p-1)/2}\vartheta(\overline b_{(p-1)/2}))\\&=\overline a^{(p-1)/2}.
+\end{align*}
+
+:::
+
+
+:::{#def-}
+Seja $p$ um primo com $p\geq 3$ e seja $a\in\Z$ tal que $p \nmid a$. O número $a$ é dito resíduo quadrático módulo $p$ se $a\equiv b^2\pmod p$ com algum $b\in\Z$. Caso contrário, $a$ é dito resíduo não quadrático (módulo $p$)
+:::
+
+É imediato da definição que $a$ é resíduo quadrático módulo $p$ se e somente se $\overline a$ é um quadrado em $\Z_p$.
+
+:::{#exm-}
+Um número $a\in\Z$ é resíduo quadrático módulo $7$ se e somente se
+$$
+a\equiv 1,2,4\pmod 7
+$$
+enquanto $a$ é resíduo não quadrático se e somente se
+$$
+a\equiv 3,5,6\pmod 7.
+$$
+Se $a\equiv 0\pmod 7$, então o conceito não é definido para $a$
+:::
+
+
+:::{#def-}
+Seja $p$ um primo com $p\geq 3$ e $a\in\Z$. Definimos o símbolo de Legendre $(\frac ap)$ como
+$$
+\left(\frac ap\right)=\left\{\begin{array}{ll} 1 & \mbox{se $a$ é resíduo quadrático módulo $p$;}\\
+-1& \mbox{se $a$ é resíduo não quadrático módulo $p$;}\\
+0 & \mbox{se $p\mid a$}.\end{array}\right.
+$$
+:::
+
+
+:::{#exm-}
+Considerando $p=7$ temos que
+$$
+\left(\frac a7\right)=\left\{\begin{array}{ll} 1 & \mbox{se $a\equiv 1,2,4\pmod 7$;}\\
+-1& \mbox{se $a\equiv 3,5,6\pmod 7$;}\\
+0 & \mbox{se $a\equiv 0\pmod 7$.}\end{array}\right.
+$$
+:::
+
+
+:::{#thm-}
+Se $p$ é um primo com $p\geq 3$ e $a\in\Z$, então
+$$
+\left(\frac ap\right)\equiv a^{(p-1)/2} \pmod p.
+$$
+:::
+
+O seguinte teorema famoso é conhecido como a Lei da Reciprocidade Quadrática. Este teorema será apresentado sem demonstração.
+
+:::{#thm-}
+Sejam $p$ e $q$ primos com $p,q\geq 3$. Então
+$$
+\left(\frac pq\right)\left(\frac qp\right)=(-1)^{\frac{p-1}2\frac{q-1}2}
+$$
+:::
+
+Para saber mais detalhes sobre o assunto, assista o <a href="https://youtu.be/X63MWZIN3gM">vídeo</a> no canal Mathologer.

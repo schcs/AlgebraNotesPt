@@ -1,0 +1,118 @@
+
+---
+title: "A ordem de uma classe residual"
+number-sections: true
+lang: pt-BR
+---
+
+Seja $n\in\N$ e considere o conjunto $\Z_n$ das classes residuais. Comecemos com um exemplo motivador.
+
+:::{#exm-}
+Considere $\Z_{20}$, tome um elemento invertível $\overline a\in\Z_{20}$ (ou seja, $\mdc a{20}=1$), e vamos olhar na sequência
+$$
+\overline a^0,\overline a,\overline a^2,\overline a^3,\ldots
+$$
+Por convenção, $\overline a^0=\overline 1$. Tomando por exemplo, $\overline a=\overline 3$, obtemos a sequência
+$$
+\overline 1,\overline 3,\overline 9,\overline 7,\overline 1,\overline 3,\overline 9,\overline 7,\overline 1,\overline 3,\overline 9,\overline 7,\ldots
+$$
+Tomando, $\overline a =\overline 7$, obtemos a sequência
+$$
+\overline 1,\overline 7,\overline 9,\overline 3,\overline 1,\overline 7,\overline 9,\overline 3,\overline 1,\overline 7,\overline 9,\overline 3,\ldots
+$$
+Tomando $\overline a=\overline 9$, obtemos
+$$
+\overline 1,\overline 9, \overline 1,\overline 9,\overline 1,\overline 9,\ldots
+$$
+Olhando nestes exemplos, podemos fazer algumas observações (que, como o leitor pode verificar, são válidas para qualquer $\overline a\in\Z_n^*$):
+
+
+-  A sequência sempre começa com $\overline 1$.
+-  Sempre existe algum $k\in\N$ tal que $\overline a^k=\overline 1$.
+-  A sequência é periódica, pois quando $\overline a^k=\overline 1$, a sequência começa a se repetir.
+-  Seja $k\in\N$ o menor tal que $\overline a^k=\overline 1$. Os elementos $\overline a^0,\overline a,\ldots,\overline a^{k-1}$ são dois a dois distintos.
+
+:::
+
+No resto desta página vamos provar que as observações feitas no exemplo anterior são válidas para todo $\overline a\in\Z_n^*$.
+
+Note que o resultado seguinte segue do Teorema de Euler, mas nós vamos dar uma demonstração diferente.
+
+:::{#lem-}
+Se $\overline a\in\Z_n$ é invertível, então existe $k\geq 1$ tal que $\overline a^k=\overline 1$
+:::
+
+
+:::{.proof}
+Considere a sequência $\overline a,\overline a^2,\overline a^3,\ldots$. Note, para todo $i\in\N$, que $\overline a^i\in\Z_n$ então existem finitas possibilidades para o valor de $\overline a^i$. Portanto precisam existir alguns $i,j\geq 1$ tal que $i < j$ e $\overline a^i=\overline a^j$. Como $\overline a$ é invertível, temos que $\overline a^i$ também é, e
+$$
+(\overline a^i)^{-1}=(\overline a^{-1})^i=\overline a^{-i}.
+$$
+Multiplicando a equação $\overline a^i=\overline a^j$ por $\overline a^{-i}$ obtemos que
+$$
+\overline 1 =\overline a^{j-i}.
+$$
+Como $j-i\geq 1$, o lema fica verificado
+:::
+
+
+:::{#def-}
+Seja $\overline a\in\Z_n$ uma classe invertível. O menor número natural $k$ tal que $\overline a^k=\overline 1$ chama-se a ordem de $\overline a$ (em $\Z_n$). A ordem de $\overline a$ em $\Z_n$ é denotado por $|\overline a|_n$ ou por $|\overline a|$ quando não há perigo de confusão
+:::
+
+
+:::{#lem-}
+Seja $\overline a\in\Z_n$ um elemento  invertível e ponha $b=|\overline a|_n$.
+
+
+-  Seja $k\in\N_0$ tal que $\overline a^k=\overline 1$. Então $k$ é um múltiplo de $b$.
+-  As classes $\overline a^0,\overline a,\overline a^2,\ldots,\overline a^{b-1}$ são dois a dois distintas.
+-  $b$ é um divisor de $\varphi(n)$.
+-  Se $n$ é um primo, então $b$ é um divisor de $n-1$.
+
+:::
+
+
+:::{.proof}
+(1) Assuma que $\overline a^k=\overline 1$ e escreva $k=qb+r$ com $r\in\{0,\ldots,b-1\}$. Ora
+$$
+\overline 1=\overline a^k=\overline a^{qb+r}=(\overline a^b)^q\overline a^r=\overline a^r.
+$$
+A definição de $b=|\overline a|_n$ e o fato que $0\leq r\leq b-1$ implicam que $r=0$, ou seja $k=q|\overline a|_n$ como foi afirmado.
+
+(2) Assuma que $\overline a^i=\overline a^j$ com algum $i,j\in\{0,\ldots,b-1\}$ e $i\leq j$. Pelo raciocínio da demonstração do lema anterior, obtemos que
+$$
+\overline 1=\overline a^{j-i}.
+$$
+Como $0\leq j-i\leq b-1$, a definição de $|\overline a|_n$ implica que $j-i=0$; ou seja $i=j$.
+
+(3) Essa afirmação segue do Teorema de Euler que implica que $\overline a^{\varphi(n)}=\overline 1$ e da primeira parte do lema.
+
+(4) Esta parte segue diretamente da parte (3) e do fato que $\varphi(n)=n-1$ quando $n$ é primo.
+
+:::
+
+É possível escrever os resultados desta página na linguagem das congruências.
+
+:::{#def-}
+Seja $a\in\Z$ e seja $n\in\N$. Assuma que $a$ é invertível módulo $n$; ou seja $\mdc an=1$. A ordem de $a$ módulo $n$ é o menor inteiro positivo $k$ tal que $a^k\equiv 1\pmod n$. Denotamos a ordem de $a$ módulo $n$ por $|a|_n$
+:::
+
+
+:::{#lem-}
+Seja $a\in\Z$ e $n\in\N$ tais que $\mdc an=1$. As seguintes afirmações são válidas.
+
+
+-  A ordem $|a|_n$ existe.
+-  Se $a^k\equiv 1\pmod n$ com algum $k\in\N_0$. então $k$ é um múltiplo de $|a|_n$.
+-  Se $i,j\in\{0,\ldots,|a|_n-1\}$ são tais que $a^i\equiv a^j\pmod n$, então $i=j$.
+-  $|a|_n$ é um divisor de $\varphi(n)$.
+-  Se $n$ é um primo, então $|a|_n$ é um divisor de $n-1$.
+
+:::
+
+
+:::{.proof}
+As partes deste resultado seguem das afirmações correspondentes sobre $\overline a\in\Z_n$
+:::
+

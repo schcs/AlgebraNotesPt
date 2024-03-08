@@ -1,0 +1,240 @@
+
+---
+title: "Equações diofantinas lineares"
+number-sections: true
+lang: pt-BR
+---
+
+Uma equação linear diofantina em duas variáveis tem a seguinte forma geral:
+$$
+ax+by=c
+$$
+onde $a,b,c\in\Z$. As variáveis da equação são $x$ e $y$, os números $a$, $b$, $c$ são parâmetros.  O termo "diofantina" refere-se ao fato que nós procuramos as soluções no conjunto dos números inteiros. Por exemplo
+$$
+5x+6y=-2
+$$
+é uma equação linear diofantina em duas variáveis. As possíveis soluções da equação  são números inteiros.
+
+Dado uma equação diofantina $ax+by=c$, nós queremos achar respostas principalmente às seguintes três perguntas:
+
+
+-  A equação possui soluções? (Vamos considerar apenas soluções inteiras.)
+-  Se sim, ache uma solução particular.
+-  Ache a solução geral; ou seja, o conjunto de todas as soluções.
+
+
+:::{#exm-}
+Considere a equação $5x-15y=6$. Observamos que o MDC dos coeficientes $5$ e $-15$ é igual a $5$. Portanto, quaisquer que sejam os números $x,y\in\Z$, o número  $5x-15y$ será divisível por $5$. Por outro lado, $5$ não divide o número $6$ e obtemos que esta equação não possui soluções
+:::
+
+
+:::{#exm-}
+Considere a equação
+$$
+21x-15y=12.
+$$
+Neste caso, $\mdc {21}{-15}=3$ divide 12. De fato vamos ver que esta equação possui soluções e nós vamos determinar o conjunto de todas as soluções.
+
+Primeiro vamos achar uma solução particular da equação
+$$
+21x-15y=\mdc {21}{-15}=3.
+$$
+Sabe-se do Algoritmo de Euclides que esta equação possui solução inteira. De fato, usando o Algoritmo de Euclides, fazemos a seguinte sequência de divisões:
+\begin{eqnarray*}
+21&=&1\cdot 15+6;\\
+15&=&2\cdot 6+3;\\
+6&=&2\cdot 3+0.
+\end{eqnarray*}
+Obtemos então que $\mdc {21}{-15}=3$. Além disso, considerando as equações acima,
+\begin{eqnarray*}
+6&=&21-15;\\
+3&=&15-2\cdot 6=15-2\cdot(21-15)=-2\cdot 21+3\cdot 15.
+\end{eqnarray*}
+Obtivemos então que
+$$
+21\cdot(-2)-15\cdot(-3)=3.
+$$
+Agora multiplicamos a equação acima por $4$ e obtemos que
+$$
+21\cdot(-8)-15\cdot(-12)=12.
+$$
+Obtivemos que o par $(x_0,y_0)=(-8,-12)$ é uma solução particular da equação $21x-15y=12$.
+
+Vamos agora determinar a solução geral da equação; ou seja, vamos determinar o conjunto de todas as soluções. A ideia é a seguinte: se $x_1,y_1\in\Z$ são tais que
+$$
+21x_1-15y_1=0,
+$$
+então $(x_0+x_1,y_0+y_1)$ é uma outra solução da equação original e de fato todas as soluções podem ser obtidas nesta forma.  Esta última equação é  equivalente a equação
+$$
+7x_1=5y_1;
+$$
+ou seja,
+$$
+y_1=\frac{7 x_1}{5}.
+$$
+Como queremos obter apenas as soluções inteiras, e $\mdc 75=1$, uma solução $x_1$ precisa ser divisível por $5$. Então $x_1=5k$ para algum $k\in\Z$ e isto dá $y_1=7k$. É fácil verificar que se $k\in\Z$, o par $(x_1,y_1)=(5k,7k)$ é de fato uma solução da equação $21x_1-15y_1=0$. Portanto o conjunto das soluções da equação
+$$
+21x_1-15y_1=0
+$$
+é dado por
+$$
+\{(x_1,y_1)=(5k,7k)\mid k\in \Z\}.
+$$
+Finalmente, obtemos o conjunto das soluções (ou seja, a solução geral) da equação
+$$
+21x-15y=12
+$$
+como
+$$
+(x,y)=(-8+5k,-12+7k)\quad\mbox{onde}\quad k\in\Z.
+$$
+
+:::
+
+A conta que fizemos nos últimos dois exemplos pode ser feita simbolicamente com uma equação geral na forma $ax+by=c$. Isto nos leva ao seguinte teorema.
+
+:::{#thm-}
+Considere uma equação diofantina na forma
+$$
+ax+by=c
+$$
+onde $a,b,c\in\Z$ e $(a,b)\neq (0,0)$. Seja $d=\mdc ab$.
+
+
+-  Se $d\nmid c$ então a equação não possui solução inteira.
+-  Se $d\mid c$ então a equação possui infinitas soluções. Seja $(x_0.y_0)$ uma solução particular (que pode ser obtida pelo Algoritmo de Euclides). Então a solução geral da equação está dada por
+$$
+(x,y)=\left(x_0+k \frac bd,y_0-k\frac ad\right)\quad \mbox{onde}\quad k\in\Z.
+$$
+
+:::
+
+
+:::{.proof}
+(1) Seja $d=\mdc ab$. Note que $d\mid ax+by$ para todo $x,y\in \Z$. Portanto, se $d\nmid c$, então  não existem $x,y\in\Z$ tais que $ax+by=c$ e a equação não possui soluções inteiras.
+
+(2) Assuma agora que $d\mid c$. Sabemos pelo algoritmo de Euclides que existem $x_1,y_1\in\Z$ tais que
+$$
+ax_1+by_1=d.
+$$
+Tomando $x_0=x_1c/d$ e $y_0=y_1c/d$, obtemos que $x_0,y_0\in\Z$ e
+$$
+ax_0+by_0=ax_1c/d+by_1c/d=(ax_1+by_1)c/d=c.
+$$
+
+Vamos verificar agora que a expressão $(x,y)$ acima dá a solução geral da equação. Primeiro afirmamos que o par $(x,y)$ dado acima é uma solução da equação para $ax+by=c$ para todo $k\in\Z$. De fato, substituindo, obtemos que
+\begin{align*}
+ax+by&=a(x_0+kb/d)+b(y_0-ka/d)\\&=ax_0+by_0+akb/d-bka/d=c.
+\end{align*}
+Agora resta mostrar que toda solução da equação está na forma dada pelo teorema. Assuma que $(x_1,y_1)\in\Z\times \Z$ é uma solução da equação. Então
+$$
+ax_1+by_1=ax_0+by_0=c,
+$$
+ou seja
+$$
+a(x_1-x_0)=b(y_0-y_1).
+$$
+A última equação pode ser dividido por $d$ e obtemos que
+$$
+\frac ad(x_1-x_0)=\frac bd(y_0-y_1).
+$$
+Note que $\mdc {a/d}{b/d}=1$ e isso implica que $x_1-x_0=k(b/d)$; ou seja
+$$
+x_1=x_0+k\frac bd
+$$
+com algum $k\in\Z$. Daqui, tem-se que
+$$
+y_0-y_1=\frac{a(x_1-x_0)}b=\frac{akb}{db}=\frac{ak}d;
+$$
+ou seja
+$$
+y_1=y_0-k\frac ad.
+$$
+Consequentemente
+$$
+(x_1,y_1)=\left(x_0+k\frac bd,y_0-k\frac ad\right)
+$$
+como foi afirmado.
+
+:::
+
+Vamos ver como implementar o procedimento na linguagem Python. Primeiro, precisamos de uma nova versão da função XMDC que aceita também números negativos.
+```python
+# algoritmo extendido de Euclides
+def XMDC(a,b):
+
+    assert a != 0 or b != 0 
+
+    # nós trabalhamos com números positivos, mas aceitamos argumentos negativos
+    sign_a, sign_b = 1, 1
+    if a < 0: 
+        a, sign_a = -a, -1
+    
+    if b < 0: 
+        b, sign_b = -b, -1
+        
+    prevu, u = 1, 0; prevv, v = 0, 1 
+    # r_{-1} = a = 1*a + 0*b, r_0 = b = 0*a + 1*b
+    
+    while b != 0:
+        q = a//b
+        u, prevu = prevu - q*u, u
+        v, prevv = prevv - q*v, v
+        a, b = b, a % b
+   
+    return a, sign_a*prevu, sign_b*prevv
+```
+
+Ora, o procedimento apresentado na demonstração do teorema acima pode ser implementado com a seguinte função.
+```python
+# Resolver a equação ax + by = c
+def ResolvaDiofantina( a, b, c ):
+    
+    d, x0, y0 = XMDC( a, b )
+    
+    # verificar se a equação tem solução
+    if c % d != 0:
+        return false
+    
+    # obter uma solução particular
+    # temos x0*a + y0*b = d
+    x0, y0 = x0*c//d, y0*c//d
+    
+    # sol(k) é a solução com parámetro k
+    sol = lambda k : (x0+k*b//d, y0-k*a//d)
+    
+    return sol
+```
+
+Note que quando a equação possui soluções, ela vai possuir infinitas soluções, mas a função claramente não pode devolver uma lista infinita. Portanto, a função acima devolve uma expressão lambda (ou função lambda) que depende de um parâmetro $k$ e para cada $k\in\Z$ devolve uma solução da equação e todas as soluções podem ser obtidas assim. Resolvemos por exemplo a equação
+$$
+13x + 9y = 1
+$$
+usando nossa função.
+```python
+# 13*x + 9*y = 1
+>>> sol = ResolvaDiofantina( 13, 9, 1 )
+>>> sol(-9)
+(-83, 120)
+```
+
+A computação acima mostra que $(-83,120)$ é uma solução particular.
+
+Podemos também gerar as soluções da equação para os valores $k\in\{-5,\ldots,5\}$ com o seguinte código
+```python
+>>> lista_sols = [ sol( k ) for k in range(-5, 6 )]
+>>> lista_sols
+[(-47, 68),
+ (-38, 55),
+ (-29, 42),
+ (-20, 29),
+ (-11, 16),
+ (-2, 3),
+ (7, -10),
+ (16, -23),
+ (25, -36),
+ (34, -49),
+ (43, -62)]
+```
+
+Cada par da lista em cima é uma solução de equação diofantina $13x + 9y = 1$.

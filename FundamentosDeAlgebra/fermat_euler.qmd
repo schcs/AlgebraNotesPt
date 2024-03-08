@@ -1,0 +1,134 @@
+
+---
+title: "O Pequeno Teorema de Fermat e o Teorema de Euler"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#exr-}
+Sejam $a,b\in\Z$ e seja $p\in\N$ um primo. Mostre que
+$$
+(a+b)^p\equiv a^p+b^p\pmod p
+$$
+:::
+
+A afirmação do exercício anterior é conhecido como o <em>sonho do calouro</em>.
+
+:::{#thm-}
+(O Pequeno Teorema de Fermat, versão com congruência) Seja $p\in\N$ um primo e $a\in\Z$. Então
+$$
+a^p\equiv a\pmod p.
+$$
+Além disso, se $p\nmid a$, então
+$$
+a^{p-1}\equiv 1\pmod p.
+$$
+:::
+
+
+:::{.proof}
+Vamos provar a primeira afirmação. Como todo inteiro negativo é congruente com algum inteiro positivo módulo $p$, é suficiente provar a afirmação para $a\in\N$. De fato, é suficiente provar para $a\in\{0,\ldots,p-1\}$, mas isso não simplifica nosso argumento. A prova vai por indução em $a$. Como $0^p=0\equiv 0\pmod p$, a afirmação é verdadeira para $a=0$. Assuma que a afirmação para algum $a$ e use o exercício anterior para obter que
+$$
+(a+1)^p\equiv a^p+1^p=a+1\pmod p.
+$$
+
+Agora a segunda afirmação. Se $p\nmid a$, então $a$ possui inverso módulo $p$. Multiplicando a congruência $a^p\equiv a\pmod p$ pelo inverso de $a$, obtemos que $a^{p-1}\equiv 1\pmod p$.
+
+:::
+
+Uma forma alternativa do Pequeno Teorema de Fermat usando $\Z_n$ é a seguinte.
+
+:::{#thm-}
+ (Pequeno Teorema de Fermat, versão $\Z_n$). Seja $p\in\N$ primo e $\overline a\in\Z_n$. Então
+$$
+\overline a^p=\overline a.
+$$
+Além disso, se $\overline a\neq\overline 0$, então
+$$
+\overline a^{p-1}= \overline 1.
+$$
+:::
+
+
+:::{#cor-}
+Seja $p\in\N$ primo e $a\in\Z$ tal que $p\nmid a$. Então $a^{p-2}$ é um inverso de $a$ módulo $p$. Equivalentemente
+$$
+\overline a^{-1}=\overline a^{p-2}.
+$$
+:::
+
+
+:::{.proof}
+O Pequeno Teorema de Fermat implica que
+$$
+1\equiv a^{p-1}=a\cdot a^{p-2}.
+$$
+Ora a definição do inverso modular implica que $a^{p-2}$ é um inverso de $a$ módulo $p$. A segunda afirmação segue imediatamente da primeira
+:::
+
+
+:::{#exr-}
+Seja $n\in\N$ e seja
+$$
+\Z_n^*=\{\overline a\in\Z_n\mid\mbox{$\overline a$ é invertível}\}.
+$$
+Demonstre as seguintes propriedades de $\Z_n^*$:
+
+
+-  $\overline 1,\overline{-1}\in\Z_n^*$, mas $\overline 0\not\in\Z_n^*$;
+-  $\Z_n^*$ é fechado para a multiplicação; ou seja, se $\overline a,\overline b\in\Z_n^*$ então $\overline a\overline b\in\Z_n^*$;
+-  $|\Z_n^*|=\varphi(n)$.
+
+:::
+
+
+:::{#exr-}
+Usando a notação do exercício anterior, para $\overline a\in\Z_n$ defina
+$$
+\mu_{\overline a}:\Z_n\to \Z_n,\quad \mu_{\overline a}(\overline b)=\overline a\overline b.
+$$
+Mostre que as seguinte afirmações são equivalentes:
+
+
+-  $\mu_{\overline a}$ é injetiva;
+-  $\mu_{\overline a}$ é sobrejetiva;
+-  $\mu_{\overline a}$ é bijetiva;
+-  $\overline a\in\Z_n^*$.
+
+:::
+
+
+:::{#thm-}
+ (O Teorema de Euler.) Seja $n\in\N$ e $a\in\Z$ tal que $\mdc an=1$. Então
+$$
+a^{\varphi(n)}\equiv 1\pmod n.
+$$
+Equivalentemente
+$$
+\overline a^{\varphi(n)}=\overline 1.
+$$
+:::
+
+
+:::{.proof}
+As duas afirmações são claramente equivalentes e desta vez nós vamos provar a segunda.
+Usando o exercício imediatamente anterior a esse teorema, assuma que
+$$
+\Z_n^*=\{\overline a_1,\overline a_2,\ldots,\overline a_{\varphi(n)}\}.
+$$
+Note que $\overline a\in\Z_n^*$, pois $\mdc an=1$. Considere o conjunto
+$$
+\overline a\Z_n^*=\{\overline a\overline a_1,\overline a\overline a_2,\ldots,\overline a\overline a_{\varphi(n)}\}
+$$
+Note que todo elemento de $\overline a\Z_n^*$ está contido em $\Z_n^*$ (exercício anterior) e se $i\neq j$, então $\overline a\overline a_i\neq \overline a\overline a_j$. Portanto $\overline a\Z_n^*=\Z_n^*$. Isso quer dizer que multiplicando os elementos de $\Z_n^*$ e os elementos de $\overline a \Z_n^*$ nós obtemos o mesmo elemento de $\Z_n$. De fato
+$$
+\prod_{i=1}^{\varphi(n)}{\overline a_i}=\prod_{i=1}^{\varphi(n)}{\overline a\overline a_i}=\overline a^{\varphi(n)}\prod_{i=1}^{\varphi(n)}{\overline a_i}.
+$$
+Ora, $\prod {\overline a_i}$ é um elemento invertível (primeiro exercício) e podemos multiplicar os dois lados da última equação acima com seu inverso. Fazendo isso, obtemos que
+$$
+\overline 1=\overline a^{\varphi(n)}.
+$$
+:::
+
+Note que o Teorema de Euler implica o Pequeno Teorema de Fermat (tomando $n=p$ primo e observando que $\varphi(p)=p-1$), mas nós decidimos deduzir o PTF de fatos mais elementares.

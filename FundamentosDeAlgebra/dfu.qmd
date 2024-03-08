@@ -1,0 +1,72 @@
+
+---
+title: "Domínios de Fatoração Única"
+number-sections: true
+lang: pt-BR
+---
+
+O Teorema Fundamental da Aritmética e o Teorema da Fatoração para Polinômios são resultados parecidos no sentido que os dois afirmam que os objetos em $\Z$ e em $\F[x]$ podem ser escritos unicamente como produtos de "indecomponíveis". Os "indecomponíveis" em $\Z$ são os primos, enquanto os "indecomponíveis" em $\F[x]$ são os polinômios irredutíveis. Nós queremos generalizar esta observação para uma classe maior de estruturas algébricas.
+
+Lembre que o conceito de elemento irredutível (ou redutível) foi definido na página <a href="http://localhost/index.php/ensino/fundamentos-de-algebra/polinomios-irredutiveis/">Polinômios Irredutíveis</a>.
+
+:::{#def-}
+Um domínio $R$ é dito **domínio de fatoração única** (ou **DFU**) se todo elemento $a\in R\setminus\{0\}$ tal que $a$ não é invertível pode ser escrito como
+$$
+a=q_1\cdots q_k
+$$
+onde os $q_i$ são irredutíveis e esta fatoração é única no seguinte sentido. Se
+$$
+a=q_1\cdots q_k=r_1\cdots r_m
+$$
+tais que os $q_i$ e os $r_j$ são irredutíveis, então $k=m$ e os fatores $r_1,\ldots,r_m$ podem ser reindexados em tal modo que
+$$
+r_i=\alpha_i q_i
+$$
+vale com $\alpha_i\in R$ invertível para todo $i\in\{1,\ldots,k\}$
+:::
+
+
+:::{#exm-}
+Para entender melhor a interpretação da unicidade na definição anterior, considere por exemplo $R=\R[x]$. O polinômio $x^2-1\in\R[x]$ pode ser escrito de várias maneiras como produto de irredutíveis:
+$$
+x^2-1=(x+1)(x-1)=(2x+2)\left(\frac x2-\frac 12\right)=\left(\frac x3-\frac 13\right)(3x+3).
+$$
+Em todas estas fatorações, um dos fatores é $\alpha_1(x+1)$ enquanto o outro é $\alpha_2(x-1)$ onde $\alpha_1,\alpha_2\in\R\setminus\{0\}$; ou seja $\alpha_1,\alpha_2$ são elemento invertíveis em $\R[x]$.  É fácil verificar usando os resultados estudados que todas as fatorações de $x^2-1$ em fatores irredutíveis são na forma
+$$
+x^2-1=(\alpha_1(x+1))(\alpha_2(x-1))
+$$
+ou
+$$
+x^2-1=(\alpha_1(x-1))(\alpha_2(x+1))
+$$
+onde $\alpha_1,\alpha_2\in\R\setminus\{0\}$ (e $\alpha_1\alpha_2=1$)
+:::
+
+
+:::{#exm-}
+Se $R$ é um corpo, então ele é DFU pois $R\setminus\{0\}$ não possui elementos não invertíveis. Então a condição na definição de DFU é trivialmente válida para $R$.
+
+Pelo Teorema Fundamental da Aritmética, $\Z$ é DFU. Pelo Teorema da Fatoração para Polinômios, $\F[x]$ é DFU sempre que $\F$ é um corpo.
+
+:::
+
+O seguinte teorema é útil para construir domínios de fatoração única, mas a demonstração não será apresentada nesta disciplina.
+
+:::{#thm-}
+Se $R$ é DFU, então $R[x]$ é DFU
+:::
+
+
+:::{#exm-}
+O teorema anterior implica que $\Z[x]$ é DFU. Para um anel $R$, o conjunto $R[x,y]$ de polinômios em duas variáveis pode ser visto como o anel $(R[x])[y]$ de polinômios na variável $y$ sobre o anel $R[x]$ dos polinômios na variável $x$. Similarmente, nós podemos olhar em $R[x_1,\ldots,x_k]$ recursivamente como o anel $(R[x_1,\ldots,x_{k-1}])[x_k]$. Logo, o teorema anterior implica que se $R$ é um DFU, então $R[x_1,\ldots,x_k]$ é DFU para todo $k\geq 1$. Em particular, $\Z[x_1,\ldots,x_k]$ é DFU e, se $\F$ é um corpo, $\F[x_1,\ldots,x_k]$ também é DFU
+:::
+
+
+:::{#exm-}
+O domínio mais conhecido que não é DFU é $\Z[\sqrt{-5}]$. Neste domínio, podemos fatorar o elemento $6$ como
+$$
+6=2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5}).
+$$
+Pode-se verificar que os fatores nas duas descomposições são irredutíveis, mas os fatores na segunda decomposição não são múltiplos dos fatores na primeira decomposição por elementos invertíveis, pois os únicos invertíveis em $\Z[\sqrt{-5}]$ são $1$ e $-1$
+:::
+

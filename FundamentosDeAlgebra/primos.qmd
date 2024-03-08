@@ -1,0 +1,53 @@
+
+---
+title: "Os números primos"
+number-sections: true
+lang: pt-BR
+---
+
+:::{#def-}
+Um número inteiro $n$ diferente de $\pm 1$ e de $0$ é dito <em>primo</em> se os únicos divisores de $n$ são $\pm 1$ e $\pm n$. No caso contrário, o número é dito <em>composto</em>. Os números $1$, $-1$, e $0$ não são considerados nem primos nem compostos
+:::
+
+Por exemplo, o número $-5$ é primo, pois ele é divisível por apenas $\pm 1$ e $\pm 5$. O número $6$ é composto, pois ele é divisível, por exemplo, por $2$. É fácil verificar que um número $n$ é primo (composto) se e somente se $-n$ é primo (composto).
+
+A demonstração do seguinte resultado é imediato da definição dos números primos.
+
+:::{#lem-}
+Todo número diferente de $1$ ou $-1$ é divisível por um primo
+:::
+
+A seguinte é uma propriedade importante dos números primos.
+
+:::{#lem-}
+Sejam $p$ um primo e $a,b\in\Z$ tais que $p\mid ab$. Então $p\mid a$ ou $p\mid b$
+:::
+
+
+:::{.proof}
+Assuma que as condições do Teorema estão válidas e que $p\nmid a$. Então $\mdc pa=1$ e obtemos do Algoritmo de Euclides que existem $u,v\in\Z$ tais que $up+va=1$. Multiplicando por $b$, obtemos que
+$$
+upb+vab=b.
+$$
+Como $p$ divide $ab$, o número $p$ divide $vab$, então $p$ divide as duas parcelas no lado esquerdo da última equação. Mas isso implica que $p\mid b$
+:::
+
+Se $n$ é um número grande (centenas ou milhares de dígitos), então pode ser difícil verificar se $n$ é primo. O <a href="https://pt.wikipedia.org/wiki/Teste_de_primalidade_AKS">primeiro algoritmo teoricamente eficaz</a> para testar primalidade de um número grande foi apresentado por <a title="Manindra Agrawal" href="https://pt.wikipedia.org/wiki/Manindra_Agrawal">Manindra Agrawal</a>, <a title="Neeraj Kayal" href="https://pt.wikipedia.org/wiki/Neeraj_Kayal">Neeraj Kayal</a> e <a href="https://en.wikipedia.org/wiki/Nitin_Saxena">Nitin Saxena</a> em 2002. Este algoritmo é conhecido como o Algoritmo AKS.
+
+O seguinte teorema foi conhecido já na antiguidade por <a href="https://pt.wikipedia.org/wiki/Euclides">Euclides</a>.
+
+:::{#thm-}
+Existem infinitos primos
+:::
+
+
+:::{.proof}
+Suponha com o objetivo de obter uma contradição que existem apenas finitos primos. Vamos então fazer uma  lista dos primos positivos: $p_1=2$, $p_2=3$, $p_3=5,\ldots,p_m$. Considere o número
+$$
+N=p_1p_2p_3\cdots p_m+1.
+$$
+Ora $N$ é positivo e é maior que dois. Além disso, $N$ deve ser divisível por algum primo $p$. Por outro lado, os primos $p_1,\ldots,p_m$ não dividem $N$, pois o resto de $N$ quando for dividido por estes primos é igual a $1$. Isto implica que $p$ precisa ser um novo primo que não está na suposta lista de todos os primos. Isto é uma contradição que significa que a nossa suposição foi errada; ou seja, o número dos primos precisa ser infinito
+:::
+
+
+

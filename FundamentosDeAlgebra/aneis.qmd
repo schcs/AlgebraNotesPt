@@ -1,0 +1,152 @@
+
+---
+title: "Anéis, domínios e corpos"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#def-}
+Assuma que $R$ é um conjunto com pelo menos dois elementos equipado por duas operações $+$ (adição) e $\cdot$ (multiplicação) que satisfazem as seguintes propriedades para todo $a,b,c\in R$:
+
+
+-  $a+(b+c)=(a+b)+c$ (associatividade da adição);
+-  $a+b=b+a$ (comutatividade da adição);
+-  existe um elemento $0\in R$ (elemento neutro aditivo) tal que $a+0=a$;
+-  para todo elemento $a\in R$ existe um elemento denotado por $-a$ (simétrico de $a$) tal que $a+(-a)=0$;
+-  $a\cdot(b\cdot c)=(a\cdot b)\cdot c$ (associatividade da multiplicação);
+-  $a\cdot b=b\cdot a$ (comutatividade da multiplicação);
+-  existe um elemento $1\in R$ (elemento neutro multiplicativo) tal que $1\cdot a=a$;
+-  $a\cdot (b+c)=a\cdot b+a\cdot c$ (distributividade).
+
+O conjunto $R$ com as operações $+$ e $\cdot$ é chamado **anel**. As vezes escrevemos que a estrutura $(R,+,\cdot)$ é um anel.
+
+:::
+
+Na definição anterior, o fato que $+$ e $\cdot$ são operações sobre $R$ quer dizer que $R$ é fechado para estas operações. Ou seja, se $a,b\in R$, então $a+b,a\cdot b\in R$. O produto $a\cdot b$ é também denotado simplesmente por $ab$ quando não há perigo de confusão.
+
+Na verdade, o nosso conceito de anéis é conhecido na literatura como **anel comutativo com identidade**, mas, como nós não vamos estudar outros tipos de anéis, optamos por simplificar a terminologia a chamar estes objetos simplesmente como anéis. Mas o leitor deve ficar ciente que em muitos livros a definição de anel não exige que a multiplicação seja comutativa e as vezes os livros não assumem a existência do elemento neutro para a multiplicação.
+
+:::{#exm-}
+Os exemplos mais comuns de anéis são os conjuntos $\Z$, $\Q$, $\R$, $\C$ com as suas respetivas operações $+$ e $\cdot$. Pelo que estudamos na segunda parte da disciplina, podemos afirmar que $(\Z_n,+,\cdot)$ também é um anel para todo $n\geq 2$. Um exemplo interessante de anéis é o anel de inteiros gaussianos:
+$$
+\Z[i]=\{a+bi\mid a,b\in\Z\}.
+$$
+É fácil verificar que $\Z[i]$ é um anel com as operações de $+$ e $\cdot$. Um exemplo similar é o anel
+$$
+\Z[\sqrt 2]=\{a+b\sqrt 2\mid a,b\in\Z\}.
+$$
+O leitor pode verificar que $\Z[\sqrt 2]$ é um anel.
+
+Exemplos importantes de anéis aparecem na área de cálculo e análise. Considere por exemplo o conjunto
+$$
+C([0,1])=\{f:[0,1]\to \R\mid \mbox{$f$ é contínua}\}.
+$$
+Tomando $f,g\in C([0,1])$,  a soma $f+g$ e o produto $f\cdot g$ podem ser definidos como
+\begin{align*}
+f+g&:[0,1]\to \R,\ (f+g)(x)=f(x)+g(x)\mbox{ para todo } x\in[0,1];\\
+f\cdot g&:[0,1]\to \R,\ (f\cdot g)(x)=f(x)\cdot g(x)\mbox{ para todo } x\in[0,1].
+\end{align*}
+É fácil verificar que $(C([0,1]),+,\cdot)$ é um anel.
+
+Vamos terminar a lista dos exemplos com alguns exemplos que não são anéis. Por exemplo, o conjunto de números pares $\{0,\pm 2,\pm 4,\ldots\}$ com as operações usuais não é anel, pois não possui elemento neutro. O conjunto de matrizes $2\times 2$ sobre $\R$ com a soma e produto entre matrizes não é anel (por nossa definição), pois a multiplicação não é comutativa. O conjunto $\N_0$ dos inteiros não negativos também não é anel, pois os os elementos positivos não têm simétricos.
+
+:::
+
+Podemos observar que nos exemplo conhecidos, os elementos neutros $0$ e $1$ e o simétrico de qualquer $a\in R$ são únicos. Teoricamente poderia existir algum anel esquisito que possui dois elementos neutros, ou algum elemento com dois simétricos, mas o lema seguinte implica que isso é impossível.
+
+:::{#lem-}
+Seja $R$ um anel. Os elementos neutros $0$ e $1$ e, para $a\in R$, o simétrico de $a$ são únicos. Além disso, $0\cdot a =0$ para todo $a\in R$
+:::
+
+
+:::{.proof}
+Assuma por exemplo que $0_1$ e $0_2$ são elementos neutros para adição em um anel $R$. Usando os axiomas do anel, obtemos que
+$$
+0_1=0_1+0_2=0_2+0_1=0_2.
+$$
+Então $0_1=0_2$ e o elemento neutro para a soma é único. Pode-se usar o mesmo argumento para provar que o elemento neutro para a multiplicação também é único. Assuma que $a\in R$ e sejam $b,c\in R$ tais que $b$ e $c$ são simétricos de $a$. De novo, usamos os axiomas para obter que
+$$
+b=b+0=b+(a+c)=(b+a)+c=(a+b)+c=0+c=c.
+$$
+Ou seja $b=c$, e o simétrico de $a$ é único.
+
+Finalmente, assuma que $a\in R$. Então
+$$
+0\cdot a=(0+0)\cdot a=0\cdot a+0\cdot a.
+$$
+Somando o negativo $-(0\cdot a)$ de $0\cdot a$ aos dois lados da equação anterior, obtemos que $0=0\cdot a$ como foi afirmado.
+
+:::
+
+Se $R$ é um anel e $a,b\in R$ então escrevemos $a-b$ para denotar $a+(-b)$.
+
+:::{#def-}
+Seja $R$ um anel e seja $a\in R$. O elemento $a$ é dito **invertível** (ou **unidade**) se existir $b\in R$ tal que $ab=1$. O elemento $a$ é dito **divisor de zero** se $a\neq 0$ e existe $b\in R\setminus\{0\}$ tal que $ab=0$
+:::
+
+
+:::{#exm-}
+Por exemplo, os elementos invertíveis em $\Z$ e em $\Z[\sqrt 2]$ são $1$ e $-1$. Em $\Z[i]$, os invertíveis são $1,-1,i,-i$. Em $\Z_{10}$ os invertíveis são $\overline 1,\overline 3,\overline 7,\overline 9$. Em $\Q$, $\R$, $\C$ e em $\Z_p$, para $p$ primo, todos os elementos não nulos são invertíveis.
+
+Os anéis $\Z$, $\Z[i]$, $\Z[\sqrt 2]$, $\Q$, $\R$, $\C$ e $\Z_p$, para $p$ primo, não possuem divisores de zero. Os divisores de zero em $\Z_{10}$ são $\overline 2$, $\overline 4$, $\overline 5$, $\overline 6$, $\overline 8$.
+
+:::
+
+Note que segue do fato que $0\cdot a =0$ para todo $a\in R$ que $0$ nunca é invertível.
+
+Usando o mesmo argumento que o simétrico de um elemento é único, pode-se provar que o inverso de um elemento $a\in R$ invertível é único. Assim, o inverso de $a\in R$ (quando existir) é escrito como $a^{-1}$.
+
+:::{#exr-}
+Seja $a\in R$ um elemento invertível de um anel $R$. Mostre que $a$ não é divisor de zero
+:::
+
+
+:::{#lem-}
+(A lei do cancelamento)
+Seja $R$ um anel, $a,b,c\in R$ tal que $a\neq 0$, $a$ não é divisor de zero e
+$$
+ab=ac.
+$$
+Então $b=c$
+:::
+
+
+:::{.proof}
+Assuma que $ab=ac$; ou seja
+$$
+0=ab-ac=a(b-c).
+$$
+Como $a$ não é zero e não é divisor de zero, segue que $b-c=0$; ou seja $b=c$
+:::
+
+
+:::{#exm-}
+Sejam $a=\overline 4$, $b=\overline 1$, $c=\overline 3$ elementos em $\Z_8$. Então temos que
+$$
+a\cdot b=\overline 4=\overline{12}=a\cdot c
+$$
+mas $b\neq c$. Então a condição no lema anterior que $a$ não pode ser um divisor de zero é necessária
+:::
+
+
+:::{#def-}
+Um anel $R$ chama-se **domínio de integridade** ou simplesmente **domínio**  se $R$ não possui divisores de zero. O anel $R$ chama-se **corpo** se todo elemento $a\in R\setminus\{0\}$ é invertivel
+:::
+
+Se $R$ é um domínio de integridade e $a,b\in R$ tais que $ab=0$, então $a=0$ ou $b=0$.
+
+:::{#exm-}
+Entre os exemplos acima, $\Z$, $\Z[i]$, $\Z[\sqrt 2]$ são domínios, mas eles não são corpos. Os anéis $\Q$, $\R$, $\C$ e $\Z_p$, para $p$ primo, são corpos. Se $n$ é um número composto, então $\Z_n$ não é corpo nem é domínio
+:::
+
+
+:::{#lem-}
+Se $R$ é corpo, ele é domínio
+:::
+
+
+:::{.proof}
+Assuma que $R$ é um corpo e $a\in R\setminus\{0\}$. O fato que $R$ é corpo implica que $a$ é invertível e obtemos do exercício acima que $a$ não é divisor de zero
+:::
+

@@ -1,0 +1,53 @@
+
+---
+title: "Equações quadráticas"
+number-sections: true
+lang: pt-BR
+---
+
+Considere um polinômio
+$$
+f(x)=x^2+bx+c\in\F[x]
+$$
+onde $\F$ é corpo arbitrário no qual $1+1\neq 0$. Queremos determinar as raízes de $f(x)$. Note que
+$$
+x^2+bx+c=(x+b/2)^2-b^2/4+c,
+$$
+e assim a equação $f(x)=0$ é equivalente à equação
+$$
+(x+b/2)^2=b^2/4-c=\frac{b^2-4c}4;
+$$
+ou seja
+$$
+x+b/2=\pm\frac{\sqrt{b^2-4c}}2.
+$$
+Assim as raízes do polinômio são $x_1$ e $x_2$ onde
+$$
+x_1=\frac{-b+\sqrt{b^2-4c}}2\quad\mbox{e}\quad x_2=\frac{-b-\sqrt{b^2-4c}}2.
+$$
+As duas raízes são frequentemente escritas na forma
+$$
+x_{1,2}=\frac{-b\pm\sqrt{b^2-4c}}2.
+$$
+
+Quando o polinômio $f(x)\in\F[x]$ está na forma mais geral $f(x)=ax^2+bx+c$ com $a\neq 0$, as raízes de $f(x)$ são as mesmas que as raízes de
+$$
+x^2+(b/a)x+c/a
+$$
+que são
+$$
+\frac{-b/a\pm\sqrt{(b/a)^2-4c/a}}2=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+$$
+
+:::{#exm-}
+Vamos achar todos os números inteiros $x\in\Z$ para os quais $2x^2+3x-7\equiv 0\pmod{11}$. A congruência é equivalente à equação quadrática
+$$
+\overline 2x^2+\overline 3x+\overline 4=\overline 0
+$$
+sobre $\Z_{11}$. As soluções nesta equação são
+\begin{align*}
+x_{1,2}&=\frac{-\overline 3\pm\sqrt{\overline 3^2-4\cdot \overline 2\cdot \overline 4}}{\overline 4}\\&=\frac{-\overline 3\pm\sqrt{-\overline {23}}}{\overline 4}\\&=\frac{-\overline 3\pm\sqrt{-\overline 1}}{\overline 4}.
+\end{align*}
+Como $11\equiv 3\pmod 4$, $-\overline 1$ não é quadrado em $\Z_{11}$; ou seja, $\sqrt{-\overline 1}$ não existe em $\Z_{11}$ e a equação não possui soluções. Portanto não existe $x\in\Z$ tal que $2x^2+3x-7\equiv 0\pmod{11}$
+:::
+

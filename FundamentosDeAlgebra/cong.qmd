@@ -1,0 +1,156 @@
+
+---
+title: "Congruências"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#def-}
+Sejam $a,b\in\Z$ e seja $n\in\N$. Dizemos que $a$ é congruente com $b$ módulo $n$ se $n\mid a-b$. Neste caso, escrevemos que $a\equiv b\pmod n$ ou $a\equiv b\,(n)$
+:::
+
+
+:::{#exm-}
+Por exemplo, $2\equiv 7\pmod 5$, $1\equiv -5\pmod6$, mas $-2\not\equiv 3\pmod 4$
+:::
+
+
+:::{#lem-}
+Sejam $a,b,n$ como na definição anterior e escreva $a=q_an+r_a$ e $b=q_bn+r_b$ com $r_a,r_b\in\{0,\ldots,n-1\}$. Temos que $a\equiv b\pmod n$ se e somente se $r_a=r_b$
+:::
+
+
+:::{.proof}
+Assuma que $r_a=r_b$. Então
+$$
+a-b=q_an+r_a-q_bn-r_b=n(q_a-q_b)
+$$
+e neste caso $n\mid a-b$. Assuma agora que $n\mid a-b$ e assuma ainda sem perder generalidade que $r_a\geq r_b$. Ora
+$$
+a-b=(q_a-q_b)n+(r_a-r_b).
+$$
+Como $n\mid a-b$, temos que $n\mid r_a-r_b$. Por outro lado, pelas suposições,
+$$
+0\leq r_a-r_b\leq n-1.
+$$
+O único número entre $0$ e $n-1$ que seja divsível por $n$ é o zero e assim $r_a-r_b=0$; ou seja $r_a=r_b$
+:::
+
+Pelo resultado anterior, temos que $a\equiv b\pmod n$ se e somente se os restos de $a$ e $b$ quando divididos por $n$ são iguais.
+
+:::{#exm-}
+Seja $a=31$, $b=-83$ e $n=6$. Temos que
+$$
+31=5\cdot 6+1\quad\mbox{e}\quad -83=-14\cdot 6+1.
+$$
+Logo $31\equiv -83\pmod 6$. De fato, pode-se verificar o mesmo fato diretamente da definição, pois
+$$
+31-(-83)=114
+$$
+é divisível por $6$
+:::
+
+
+:::{#lem-}
+(As propriedades básicas)
+As seguintes são verdadeiras para todo $a,b,c\in\Z$ e $n\in\N$.
+
+
+-   $a\equiv a\pmod n$ (reflexividade).
+-   Se $a\equiv b\pmod n$, então $b\equiv a\pmod n$ (simetria).
+-   Se $a\equiv b\pmod n$ e $b\equiv c\pmod n$, então $a\equiv c\pmod n$ (transitividade).
+
+Em outras palavras, a relação de "ser congruênte módulo $n$" é uma relação de equivalência no conjunto $\Z$.
+
+:::
+
+
+:::{.proof}
+As propriedades 1. e 2. são tão simples que vamos deixar a prova para o leitor. Considere afirmação 3. Assuma que
+$a\equiv b\pmod n$ e $b\equiv c\pmod n$. Por definição, $n\mid a-b$ e $n\mid b-c$, e assim
+$$
+n\mid (a-b)+(b-c)=a-c.
+$$
+Usando a definição de novo, $a\equiv c\pmod n$
+:::
+
+Quando trabalhamos com números inteiros, usamos freqêntamente que em expressões algébricas, quantidades podem ser substituídas por outras quantidades iguais. Por exemplo, se $a_1=a_2$ e $b_1=b_2$, então
+$$
+a_1+b_1=a_2+b_2\quad\mbox{e}\quad a_1\cdot b_1=a_2\cdot b_2.
+$$
+Pelo lema seguinte, a mesma coisa está válida para congruências.
+
+:::{#lem-}
+(As regras da arimética)
+Assuma que $a_1,a_2,b_1,b_2\in\Z$ e $n\in \N$ tais que
+$$
+a_1\equiv a_2\pmod n\quad\mbox{e}\quad b_1\equiv b_2\pmod n.
+$$
+Neste caso,
+$$
+a_1+b_1\equiv a_2+b_2\!\pmod n\quad\mbox{e}\quad a_1\cdot b_1\equiv a_2\cdot b_2\!\pmod n.
+$$
+:::
+
+
+:::{.proof}
+Vamos provar apenas a segunda afirmação; o leitor pode verificar facilmente a primeira. Como $a_1\equiv a_2\pmod n$ e $b_1\equiv b_2\pmod n$, segue que $n\mid a_1-a_2$ e $n\mid b_1-b_2$. Logo
+\begin{align*}
+n&\mid b_1(a_1-a_2)+a_2(b_1-b_2)=b_1a_1-b_1a_2+a_2b_1-a_2b_2\\&=a_1b_1-a_2b_2.
+\end{align*}
+Logo $a_1b_1\equiv a_2b_2\pmod n$
+:::
+
+
+:::{#exm-}
+Temos que
+$$
+6\equiv -4\quad\mbox{e}\quad 12\equiv -3\pmod 5.
+$$
+Então
+$$
+6+12\equiv -4-3\quad\mbox{e}\quad 6\cdot 12\equiv(-4)\cdot(-3)\pmod 5.
+$$
+De fato a primeira congruência diz que $18\equiv -7\pmod 5$ enquanto a segunda diz que $72\equiv 12\pmod 5$ e as duas são obviamente certas
+:::
+
+Apresentaremos, como uma aplicação destas regras da aritmética, uma forma alternativa dos critérios da divisibilidade.
+
+:::{#thm-}
+(Os critérios da divisibilidade)
+Seja $a=[a_na_{n-1}\cdots a_1a_0]_{10}$ um número natural escrito na base decimal. As seguintes afirmações são verdadeiras.
+
+
+-  $a\equiv a_0\pmod 2$;
+-  $a\equiv \sum_{i\geq 0} a_i\pmod 3$;
+-  $a\equiv [a_1a_0]_{10}\pmod 4$;
+-  $a\equiv a_0\pmod 5$;
+-  $a\equiv 3([a_n\cdots a_1]_{10}-2a_0)\pmod 7$;
+-  $a\equiv [a_2a_1a_0]_{10}\pmod 8$;
+-  $a\equiv \sum_{i\geq 0} a_i\pmod 9$;
+-  $a\equiv \sum_{i\geq 0} (-1)^ia_i\pmod{11}$
+
+:::
+
+
+:::{.proof}
+Vamos demonstrar as afirmações 2. e 5.; o resto será exercício.
+
+(2) Note primeiro que $10\equiv 1\pmod 3$ e assim o lema anterior implica que
+$$
+10^k=10\cdots 10\equiv 1\cdots 1=1\pmod 3.
+$$
+Ou seja, $10^k\equiv 1\pmod 3$ para todo $k\geq 0$. Ora,
+$$
+a=\sum_{k=0}^n a_k10^k\equiv \sum_{k=0}^n a_k\cdot 1=\sum_{k=0}^n a_k\pmod 3.
+$$
+
+(5) Calculemos que
+\begin{align*}
+3([a_n\cdots a_1]_{10}-2a_0)&=3\frac{a-a_0}{10}-2a_0\\&=3\frac{a-21a_0}{10}\equiv 10\frac{a-21\cdot a_0}{10}\\&=a-21a_0\equiv a\pmod 7
+\end{align*}
+
+:::
+
+Note que o teorema anterior pode ser visto como uma forma forte dos critérios da divisibilidade.

@@ -1,0 +1,120 @@
+
+---
+title: "O Teste de Primalidade de Miller"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#thm-}
+(<a href="https://en.wikipedia.org/wiki/Gary_Miller_(computer_scientist)">Miller</a>, 1976)
+Seja $n$ um número ímpar $n\geq 3$ e $b\in\{1,\ldots,n-1\}$. Seja $n-1=2^kq$ onde $k\geq 1$ e $q$ é ímpar. Se $n$ for primo, então ou $b^q\equiv 1\pmod n$, ou
+$$
+b^{2^iq}\equiv -1\pmod n\quad\mbox{para algum} \quad i=0,\ldots,k-1.
+$$
+:::
+
+
+:::{.proof}
+Como $n$ é ímpar, $n-1$ é par e $n-1$ pode ser escrito como $n-1=2^kq$ com $k\geq 1$ e $q$ ímpar. Assuma que $n$ é primo. Pelo Pequeno Teorema de Fermat,
+$$
+b^{n-1}=(b^{q})^{2^k}\equiv 1\pmod n.
+$$
+Isto quer dizer que, pelo menos um termo na sequência
+$$
+b^q,\ (b^q)^2,\ (b^q)^4,\ldots,(b^q)^{2^k}
+$$
+é congruente com $1$ módulo $n$. Assuma que $j\geq 0$ é o menor índice tal que
+$$
+(b^q)^{2^j}\equiv 1\pmod n.
+$$
+Se $j=0$, então $b^q\equiv 1\pmod n$ e a primeira alternativa do teorema está válida. Se $j\geq 1$, então $(b^q)^{2^j}\equiv 1\pmod n$ ímplica que
+$$
+(b^q)^{2^j}-1=((b^q)^{2^{j-1}}-1)((b^q)^{2^{j-1}}+1)
+$$
+é divisível por $n$. Como $n$ é primo, um dos fatores $(b^q)^{2^{j-1}}-1$ ou $(b^q)^{2^{j-1}}+1$ precisa ser divisível por $n$. Mas, pela minimalidade de $j$, o número $n$ não divide $(b^q)^{2^{j-1}}-1$, e isso significa que $(b^q)^{2^{j-1}}+1$ é divisível por $n$. Mas isso é equivalente a afirmação que $(b^q)^{2^{j-1}}\equiv -1\pmod n$
+:::
+
+
+:::{#exm-}
+Seja $n=21$ e seja $b=2$. Escreva $21-1=20=2^2\cdot 5$. Podemos calcular que $2^5=32\equiv 11$ e $2^{2\cdot 5}\equiv 16\pmod{21}$. Temos então que o a conclusão do teorema anterior não está válida e assim $21$ não é primo
+:::
+
+O Teorema acima pode ser usado para criar um teste de primalidade um pouco mais sofisticado que o Teste de Fermat.
+
+:::{#def-}
+Seja $n$ um número natural ímpar, $n\geq 3$ e escreva $n-1=2^kq$ onde $k\geq 1$ e $q$ é ímpar. Seja $b\in\{2,\ldots,n-1\}$. O número $n$ é dito pseudoprimo forte para a base $b$ se $b^q\equiv 1\pmod n$, ou
+$$
+b^{2^iq}\equiv -1\pmod n\quad\mbox{para algum} \quad i=0,\ldots,k-1.
+$$
+:::
+
+O Teorema de Miller acima implica que um número primo $p$ é pseudoprimo forte para todas as bases $b\in\{2,\ldots,p-1\}$.
+
+A seguinte função de Python verifica se um número é pseudoprimo forte para uma base $b$.
+```python
+def PseudoPrimoForte( n, b ):
+    
+    # primeiro escrevemos n - 1 = 2^k*q
+    q = n-1
+    k = 0
+    while q % 2 == 0:
+        q = q//2
+        k = k+1
+    
+    # se b^q é congruente com 1 mod n então True
+    r = ExpModN( b, q, n )
+    if r == 1:
+        return True
+    
+    # se existe algum i entre 0 e k-1 tal que 
+    # b^(2^iq) é congruente com -1 mod n então true
+    for i in range( 0, k ):
+        if r == n-1:
+            return True
+        r = r*r % n
+    
+    # caso contrário devolva false
+    return False      
+```
+
+Na primeira versão do Teste de Miller, checamos se um número $n$ é pseudoprimo forte para as bases entre $2$ e $2(\log n)^2$.
+```python
+def TesteMiller( n ):
+        
+    k = min(n-1,int(2*log( n )**2))
+    for b in range( 2, k+1 ):
+        if not PseudoPrimoForte( n, b ):
+            return "COMPOSTO"
+        
+    return "PRIMO (HGR)"
+```
+
+É interessante notar que se a <a href="https://pt.wikipedia.org/wiki/Hip%C3%B3tese_generalizada_de_Riemann">Hipótese Generalizada de Riemann</a> (HGR) for verdadeira, o Teste de Miller pode ser usado para obter um teste de primalidade que precisa de tempo polinomial.
+<div class="conjecture">
+Suponha que $n$ é um número composto ímpar. Então existe uma base $b\in\{2,\ldots,\lfloor 2(\log n)^2\rfloor\}$ tal que o número $n$ não é pseudoprimo forte para a base $b$
+:::
+
+A veracidade da conjectura seria implicada pela veracidade da HGR que é considerada entre os problemas mais difíceis da matemática. De fato a <a href="https://pt.wikipedia.org/wiki/Hip%C3%B3tese_de_Riemann">Hipótese de Riemann</a> aparece entre o <a href="https://pt.wikipedia.org/wiki/Problemas_do_Pr%C3%A9mio_Millennium">Problemas do Prêmio Millennium</a> e uma solução correta para este problema resultaria (além da fama eterna) em um prêmio de um milhão de dólares.
+
+A cota $\lfloor 2(\log n)^2\rfloor$ aparece no trabalho de <a href="https://en.wikipedia.org/wiki/Eric_Bach">Bach </a>(1990).
+
+Se a <a href="https://pt.wikipedia.org/wiki/Hip%C3%B3tese_generalizada_de_Riemann">Hipótese Generalizada de Riemann</a> (HGR) for verificada, o Teste de Miller poderá ser usado para obter um teste de primalidade que precisa de tempo polinomial.
+
+Uma versão probabilística do Teste de Miller foi sugerida pelo matemático <a href="https://en.wikipedia.org/wiki/Michael_O._Rabin">Michael Rabin</a>. Nesta versão, nós verificamos se $n$ for pseudoprimo forte para $k$ bases aleatórias entre $\{2,\ldots,n-2\}$ e o número $k$ faz parte do input. O teste probabilístico está baseado no seguinte resultado que nós apresentamos sem demonstração.
+
+:::{#thm-}
+Seja $n$ um número composto ímpar. Então a proporção das bases $b\in\{2,\ldots,n-2\}$ para os quais $n$ é pseudoprimo forte é no máximo $1/4$
+:::
+
+```python
+def TesteMillerRabin( n, k ):
+        
+    for i in range( k ):
+        b = random.randint( 2, n-1 )
+        if not PseudoPrimoForte( n, b ):
+            return "COMPOSTO"
+        
+    return "PROVAVELMENTE PRIMO"
+```
+

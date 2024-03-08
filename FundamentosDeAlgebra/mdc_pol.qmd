@@ -1,0 +1,170 @@
+
+---
+title: "O MDC de polinômios"
+number-sections: true
+lang: pt-BR
+---
+
+Nesta página $\F$ é um corpo. Por exemplo, pode tomar $\Q$, $\R$, $\C$, ou $\Z_p$ ($p$ sendo primo) como $\F$.
+
+:::{#def-}
+Sejam $f(x),g(x)\in\F[x]$. Dizemos que $d(x)\in\F[x]$ é **maior divisor comum** de $f(x)$ e $g(x)$ se
+
+
+-  $d(x)$ é mônico;
+-  $d(x)\mid f(x)$ e $d(x)\mid g(x)$;
+-  se $c(x)\in\F[x]$ tal que $c(x)\mid f(x)$ e $c(x)\mid g(x)$, então $c(x)\mid d(x)$.
+
+:::
+
+
+:::{#lem-}
+As seguintes afirmações são válidas:
+
+
+-  Se o maior divisor comum de $f(x)$ e $g(x)$ existe, então ele é único.
+-  Se existe o maior divisor comum de $f(x)$ e $g(x)$ e $\alpha,\beta\in\F\setminus\{0\}$, então existe o maior divisor comum de $\alpha f(x)$ e $\beta g(x)$ e é igual a maior divisor comum de $f(x)$ e $g(x)$.
+-  Se $f(x)\neq 0$ e $g(x)=0$, então o maior divisor comum de $f(x)$ e $g(x)$ é $(1/\alpha)f(x)$ onde $\alpha\in\F$ é o coeficiente líder de $f(x)$.
+
+:::
+
+
+:::{.proof}
+(1) Assuma que $d_1(x)$ e $d_2(x)$ são maiores divisores comuns de $f(x)$ e $g(x)$. Então $d_1(x)\mid f(x)$ e $d_1(x)\mid g(x)$ (segunda propriedade), e assim $d_1(x)\mid d_2(x)$ (terceira propriedade). Trocando os papéis de $d_1(x)$ e $d_2(x)$, obtemos que $d_2(x)\mid d_1(x)$. Como $\F$ é um corpo (e em particular, $\F$ é um domínio), obtemos por um resultado anterior que $d_2(x)=\beta d_1(x)$ com $\beta\in\F\setminus\{0\}$. Usando a primeira propriedade, temos que $d_1(x)$ e $d_2(x)$ são polinômios mônicos e temos que $\beta=1$ e que $d_1(x)=d_2(x)$.
+
+(2)-(3) Exercício.
+
+:::
+
+A primeira afirmação no lema anterior diz que o maior divisor comum, quando existir, é único. Este fato nos permute escrever o maior divisor comum de dois polinômios $f(x),g(x)\in\F[x]$ como $\mdc{f(x)}{g(x)}$. Neste momento não sabemos que o mdc de fato existe, mas provaremos isso usando o mesmo argumento que foi aplicado no caso de números inteiros.
+
+:::{#lem-}
+Sejam $f(x),g(x),h(x)\in\F[x]$. Temos que existe o mdc de $f(x)$ e $g(x)$ se e somente se existe o mdc de $g(x)$ e $f(x)+h(x)g(x)$. Além disso,
+$$
+\mdc{f(x)}{g(x)}=\mdc{g(x)}{f(x)+h(x)g(x)}.
+$$
+:::
+
+
+:::{.proof}
+Assuma primeiro que $d(x)=\mdc{f(x)}{g(x)}$. Afirmamos que $d(x)$ é mdc de $g(x)$ e $f(x)+h(x)g(x)$. Primeiro, $d(x)$ é mônico, pois ele é um mdc. Além disso, $d(x)\mid g(x)$ e $d(x)\mid f(x)+h(x)g(x)$. Assuma que $c(x)\mid g(x)$ e $c(x)\mid f(x)+h(x)g(x)$ com algum $c(x)\in\F[x]$. Então
+$$
+c(x)\mid (f(x)+h(x)g(x))-h(x)g(x)=f(x);
+$$
+ou seja $c(x)\mid f(x)$ e $c(x)\mid g(x)$. Como $d(x)=\mdc{f(x)}{g(x)}$ temos que $c(x)\mid d(x)$. Então temos que $d(x)=\mdc{g(x)}{f(x)+h(x)g(x)}$.
+
+Para provar a volta, só observe que $f(x)=(f(x)+h(x)g(x))-h(x)g(x)$ e aplique a afirmação da ida para $f_1(x)=g(x)$, $g_1(x)=f(x)+h(x)g(x)$ e $h_1(x)=-h(x)$.
+
+:::
+
+Usaremos o lema anterior em combinação com o Teorema de Divisão para Polinômios.
+
+:::{#cor-}
+Seja $f(x),g(x)\in\F[x]$ com $g(x)\neq 0$. Escreva, usando o Teorema de Divisão, $f(x)=q(x)g(x)+r(x)$ onde $r(x)=0$ ou $\grau{r(x)} < \grau{g(x)}$. Então existe mdc de $f(x)$ e $g(x)$ se e somente se existe o mdc de $g(x)$ e $r(x)$ e
+$$
+\mdc{f(x)}{g(x)}=\mdc{g(x)}{r(x)}.
+$$
+:::
+
+
+:::{.proof}
+Segue do lema anterior
+:::
+
+O resultado anterior implica que o mdc de dois polinômios pode ser calculado similarmente ao mdc de dois números inteiros usando o algoritmo de Euclides. O algoritmo funciona na mesma maneira como funcionou para números inteiros. Repetimos a divisão de Euclides até o resto fica igual a zero. O processo termina depois de um número finito de passos, pois a grau do resto se diminui em cada passo executado. Se $r(x)$ é o último resto não nulo, então $\alpha^{-1}r(x)$ é o mdc de $f(x)$ e $g(x)$ onde $\alpha$ é o coeficiente líder de $r(x)$. A multiplicação por $\alpha^{-1}$ é necessário, pois o mdc é um polinômio mônico.
+
+O código do procedimento em Python é o seguinte.
+```python
+from sympy.polys.polytools import LC
+def MDC(a,b):
+
+    while b != 0:
+        a, b = b, a % b  
+
+    return a//LC(a)
+```
+
+
+:::{#cor-}
+Se $f(x),g(x)\in\F[x]$ não simultaneamente nulos, então existe $\mdc{f(x)}{g(x)}$. Além disso, existem polinômios $u(x),v(x)\in \F[x]$ tais que
+$$
+u(x)f(x)+v(x)g(x)=\mdc{f(x)}{g(x)}.
+$$
+:::
+
+
+:::{.proof}
+Ambas afirmações seguem do algoritmo de Euclides
+:::
+
+O Algoritmo Extendido de Euclides que devolve o mdc e os dois polinômios $u(x)$ e $v(x)$ no resultado anterior funciona na mesma forma
+```python
+from sympy.polys.polytools import LC
+def XMDC(a,b):
+        
+    prevu, u = 1, 0; prevv, v = 0, 1 
+    
+    while b != 0:
+        q = a//b
+        u, prevu = prevu - q*u, u
+        v, prevv = prevv - q*v, v
+        a, b = b, a % b
+   
+    c = LC(a)
+    return a//c, prevu//c, prevv//c
+```
+
+
+:::{#def-}
+Dois polinômios $f(x),g(x)\in\F[x]$ são **primos entre si** ou **coprimos** se $\mdc{f(x)}{g(x)}=1$
+:::
+
+
+:::{#cor-}
+Dois polinômios $f(x),g(x)\in\F[x]$ são primos entre si se e somente se existem $u(x),v(x)\in\F[x]$ tais que
+$$
+u(x)f(x)+v(x)g(x)=1.
+$$
+:::
+
+
+:::{#exm-}
+Vamos calcular $\mdc{f(x)}{g(x)}$ onde $f(x)=x^6-2x^2+x-1$ e $g(x)=x^4-1$ em $\Q[x]$. Primeiro, escrevemos
+$$
+f(x)=q_1(x)g(x)+r_1(x)=x^2g(x)+(-x^2+x-1).
+$$
+Depois
+$$
+g(x)=q_2(x)r_1(x)+r_2(x)=(-x^2-x)r_1(x)+(-x-1).
+$$
+No próximo passo, obtemos
+$$
+r_1(x)=q_3(x)r_2(x)+r_3(x)=(x-2)r_2(x)+(-3).
+$$
+Finalmente,
+$$
+r_2(x)=q_4(x)r_3(x)+r_4(x)=(1/3x+1/3)r_3(x)+0.
+$$
+O último resto não nulo foi $-3$ (considerando como um polinômio de grau zero). Como o mdc precisa ser um polinômio mônico,
+$$
+\mbox{mdc}(f(x),g(x))=1.
+$$
+Em particular, $f(x)$ e $g(x)$ são primos entre si.
+
+A computação pode ser usada também para obter que
+\begin{align*}
+-3&=r_3(x)=r_1(x)-q_3(x)r_2(x)\\&=f(x)-q_1(x)g(x)-q_3(x)(g(x)-q_2(x)r_1(x))\\
+&=f(x)-q_1(x)g(x)-q_3(x)(g(x)-q_2(x)(f(x)-q_1(x)g(x)))\\
+&=(1+q_2(x)q_3(x))f(x)+(-q_1(x)-q_3(x)-q_1(x)q_2(x)q_3(x))g(x).
+\end{align*}
+Calculando os coeficientes explicitamente, obtemos que
+$$
+-3 = (-x^3+x^2+2x+1)f(x)+(x^5-x^4-2x^3-x^2-x+2)g(x)
+$$
+e que
+\begin{align*}
+&\mdc{f(x)}{g(x)}=1 \\&= \frac 13(x^3-x^2-2x-1)f(x)-\frac 13(x^5-x^4-2x^3-x^2-x+2)g(x)
+\end{align*}
+
+:::
+

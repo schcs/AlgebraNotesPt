@@ -1,0 +1,105 @@
+
+---
+title: "Criptografia RSA: A teoria"
+number-sections: true
+lang: pt-BR
+---
+
+Na área da criptografia, a suposição geral é que dois parceiros (que podem ser duas pessoas, ou dois computadores) querem trocar informação sigilosa usando um canal de comunicação que está disponível para terceiros. Os dois parceiros geralmente chamam-se A(lice) e B(ob) e um possível terceiro chama-se E(va). Assume-se que as mensagens enviadas por Alice e Bob são números. A Eva consegue interceptar as mensagens enviadas. O objetivo é desenvolver métodos seguros de codificação para as mensagens que podem garantir que Eva não vai conseguir descodificar as mensagens interceptadas.
+
+Um método, conhecido como criptografia RSA, foi desenvolvido pelos matemáticos  <a title="Ron Rivest" href="https://en.wikipedia.org/wiki/Ron_Rivest">Ron Rivest</a>, <a title="Adi Shamir" href="https://en.wikipedia.org/wiki/Adi_Shamir">Adi Shamir</a>, and <a title="Leonard Adleman" href="https://en.wikipedia.org/wiki/Leonard_Adleman">Leonard Adleman </a>e foi publicado em 1977.
+
+:::{#exr-}
+Lembre que a função $\varphi$ de Euler é definida como
+$$
+\varphi(n)=|\{a\in\{1,\ldots,n\}\mid \mbox{mdc}(a,n)=1\}|
+$$
+para todo natural $n$. Demonstra, para primos $p$ e $q$ distintos, que
+$$
+\varphi(pq)=(p-1)(q-1).
+$$
+:::
+
+Assuma que Alice quer enviar uma mensagem para Bob. Eles seguem os seguintes passos:
+
+
+-  Bob escolhe um número $n$ tal que $n$ é produto de dois primos $p$ e $q$ e escolhe um número $e\in\{2,\ldots,n-1\}$ tal que $\mbox{mdc}(e,\varphi(n))=1$. Isso implica que $e$ é invertível módulo $\varphi(n)$; ou seja existe $d\in\{1,\ldots,\varphi(n)\}$ tal que
+$$
+ed\equiv 1\pmod{\varphi(n)}.
+$$
+-  Bob publica o par $(n,e)$ dos números. Este é a chave pública do Bob e está disponível publicamente para toda pessoa que quer enviar mensagem sigilosa para o Bob. Em particular esta chave é conhecida por Alice.
+-  O Bob guarda os números $(\varphi(n),d)$ em sigilo. Esta é a chave privada do Bob.
+-  A mensagem da Alice é um número $b$ entre $1$ e $n$. A Alice vai calcular
+$$
+C(b)=\mbox{o resto de $b^e$ por $n$}.
+$$
+Note que Alice conhece os números $e$ e $n$ e consegue calcular $C(b)$ (usando o algoritmo de exponenciação rápida.) O número $C(b)$ é a mensagem codificada.
+-  Alice envia $C(b)$ para o Bob.
+-  Ao receber a mensagem $c=C(b)$ da Alice, Bob calcula
+$$
+D( c)=\mbox{o resto de $c^d$ módulo $n$}.
+$$
+O número obtido $D(c)$ é a mensagem descodificada.
+-  O número $D(c)$ coincide com a mensagem original $b$ da Alice; ou seja, o Bob conseguiu descodificar a mensagem da Alice.
+
+
+:::{#exm-}
+Assuma que $n=11\cdot 7=77$. Neste caso, $\varphi(n)=10\cdot 6=60$ e pode-se escolher $e=13$. A chave pública de Bob é $(77,13)$ e esta chave é disponível publicamente. O inverso $d$ de $e$ módulo 60 satisfaz a equação
+$$
+de+60k=1
+$$
+com algum $k$ e assim pode ser encontrado usando o Algoritmo de Euclides. De fato, $d=37$.  A mensagem que a Alice manda para o Bob é um número entre $1$ e $76$. Assuma que a mensagem da Alice é o número 30. Então Alice calcula o resto de $30^{13}$ módulo $77$ que dá $72$. Então o mensagem da Alice é $C(30)=72$. Ao receber esta mensagem, o Bob calcula  o resto de $D(72)=72^{37}\equiv 30\pmod{77}$ que foi a mensagem original da Alice
+:::
+
+Vimos no exemplo como o método funciona, mas queremos entender teoricamente porque ele funciona.
+
+:::{#thm-}
+Usando a notação acima, $D(C(b))=b$ para todo $b\in\{1,\ldots,n-1\}$. Ou seja, usando a função $D$, o Bob consegue descodificar a mensagem da Alice
+:::
+
+
+:::{.proof}
+Lembre que
+$$
+D(C(b))=(b^e)^d=b^{ed}\pmod n.
+$$
+Para provar que $D(C(b))=b$, precisa-se verificar que $b^{ed}\equiv b\pmod n$; ou seja $n\mid (b^{ed}-b)$. Como $n=pq$ é produto de dois primos, é suficiente (e necessário) verificar que $p\mid (b^{ed}-b)$ e $q\mid (b^{ed}-b)$. Nós fazemos esta verificação para $p$, o primo $q$ pode ser tratado com argumento igual.
+
+Primeiro, se $p\mid b$, então $p\mid (b^{ed}-b)$ e a afirmação é verdadeira. Assuma agora que $p\nmid b$ e lembre que o Pequeno Teorema de Fermat implica neste caso que $b^{p-1}\equiv 1\pmod p$. Como $ed\equiv 1\pmod{\varphi(n)}$, tem-se que
+$$
+ed=k\varphi(n)+1=k(p-1)(q-1)+1
+$$
+com algum $k$ inteiro.  Então
+$$
+b^{ed}=b^{k(p-1)(q-1)+1}=(b^{p-1})^{k(q-1)}\cdot b\equiv b\pmod p.
+$$
+Obtivemos então que $b^{ed}\equiv b\pmod n$ que equivale à afirmação que $D(C(b))=b$ que implica que o método usado por Bob vai descodificar a mensagem da Alice.
+
+:::
+
+A segurança do método está baseado no fato que para aplicar a função $D$ de descodificação, o Bob precisa calcular o valor de $d$ que precisa do valor de $\varphi(n)=(p-1)(q-1)$. Claramente, se alguém sabe $p$ e $q$ então consegue calcular $\varphi(n)$ e também a chave privada $d$. Mas a chave pública contém o apenas o número $n$ e não os seus fatores $p$ e $q$. Neste momento nós não conhecemos nenhum algoritmo que pode ser usado para fatorar números muito grandes.
+
+O seguinte resultado implica que a determinação de $\varphi(n)$ é computacionalmente equivalente à determinação dos fatores $p$ e $q$ de $n$.
+
+:::{#lem-}
+Conhecendo o valor de $\varphi(n)$ (além do valor de $n$), pode-se determinar os primos $p$ e $q$ com uma computação eficiente
+:::
+
+
+:::{.proof}
+AAssuma que conhecemos o valor de $n$ e $\varphi(n)$. Primeiro,
+$$
+\varphi(n)=(p-1)(q-1)=pq-(p+q)+1=n-(p+q)+1
+$$
+e assim conhecemos $p+q=n-\varphi(n)+1$. Além disso,
+$$
+(p+q)^2-4n=p^2+2pq+q^2-4pq=p^2-2pq+q^2=(p-q)^2
+$$
+e assim
+$$
+p-q=\sqrt{(p+q)^2-4n}.
+$$
+Isto implica, que conseguimos determinar o valor de $p-q$. Sabendo $p+q$ e $p-q$, é fácil determinar $p$ e $q$
+:::
+
+Vale mencionar que existe um algoritmo quântico eficiente para determinar a fatoração de um número. Este algoritmo é conhecido como o <a href="https://pt.wikipedia.org/wiki/Algoritmo_de_Shor">Algoritmo de Shor</a> e foi publicado em 1994. Este algoritmo neste momento não implica nenhum perigo para a segurança de mensagens criptografadas, mas no futuro os computadores quânticos podem se desenvolver o suficiente para poder quebrar o algoritmo RSA. Neste momento muitos matemáticos trabalham no desenvolvimento e algoritmos que são seguros contra ataques de computadores quânticos (<a href="https://pt.wikipedia.org/wiki/Criptografia_p%C3%B3s-qu%C3%A2ntica">criptografia pós-quântica</a>).

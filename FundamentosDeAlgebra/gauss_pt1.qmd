@@ -1,0 +1,140 @@
+
+---
+title: "O Lema de Gauss"
+number-sections: true
+lang: pt-BR
+---
+
+Polinômios irredutíveis têm descrição muito simples em $\C[x]$ e em $\R[x]$. A situação é bem mais complicada em $\Q[x]$. Assuma que $f(x)\in\Q[x]$. Então $f(x)$ pode ser escrito como
+$$
+f(x)=\frac{a_n}{b_n} x^n+\cdots +\frac{a_1}{b_1}x+\frac{a_0}{b_0}
+$$
+onde $a_i,b_j\in\Z$.
+Multiplicando $f(x)$ por um múltiplo comum dos denominadores, obtemos um polinômio
+$$
+f_1(x)=c_nx^n+\cdots+c_1x+c_0\in\Z[x].
+$$
+Além disso, como $f_1(x)$ foi obtido como um múltiplo de $f(x)$ por um constante não nulo, temos que $f(x)$ é irredutível em $\Q[x]$ se e somente se $f_1(x)$ é irredutível em $\Q[x]$. Portanto, quando consideramos a questão da irredutibilidade de um  polinômio $f(x)\in\Q[x]$, podemos assumir sem perder a generalidade que $f(x)\in\Z[x]$.
+
+Dados $a_1,\ldots,a_k\in\Z$ não simultaneamente zero com $k\geq 2$, então o MDC dos números $a_i$ é definido como o número $d$ que satisfaz as propriedades que
+
+
+-  $d\geq 0$;
+-  $d\mid a_i$ para todo $i\in\{1,\ldots,k\}$;
+-  Se $c\in\Z$ tal que $c\mid a_i$ para todo $i$, então $c\mid d$.
+
+Pode-se monstrar como no caso do $\mdc ab$ que o MDC de $a_1,\ldots,a_k$ existe unicamente e assim pode ser escrito como $\mbox{mdc}(a_1,\ldots,a_k)$. Além disso, para $k\geq 3$, vale que
+$$
+\mbox{mdc}(a_1,\ldots,a_k)=\mbox{mdc}(\mbox{mdc}(a_1,\ldots,a_{k-1}),a_k).
+$$
+
+O $\mbox{mmc}(a_1,\ldots,a_k)$ pode ser definido de modo análogo.
+
+:::{#def-}
+Seja $f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]\setminus\{0\}$. O **conteúdo** de $f(x)$ é definido como $\mbox{mdc}(a_n,\ldots,a_1,a_0)$. O polinômio $f(x)$ é dito **primitivo** se seu conteúdo é igual a $1$
+:::
+
+
+:::{#exm-}
+O conteúdo do polinômio $2x^2+4x-2\in\Z[x]$ é $2$, então ele não é primitivo. O conteúdo do polinômio $2x^3-4x^2-1\in\Z[x]$ é $1$, então ele é primitivo
+:::
+
+Se $f(x)\in\Z[x]$ e $\alpha\in\Z$ é seu conteúdo, então $f(x)=\alpha f_0(x)$ onde $f_0(x)\in\Z[x]$ é um polinômio primitivo. Por exemplo, $2x^2+4x-2=2(x^2+2x-1)$ onde $x^2+2x-1$ é primitivo.
+
+:::{#def-}
+Seja
+$$
+f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]
+$$
+e $p\in\N$ um primo. Definimos a redução $\overline{f(x)}$ de $f(x)$ módulo $p$ como o polinômio
+$$
+\overline{f(x)}=\overline{a_n}x^n+\cdots+\overline{a_1}x+\overline{a_0}\in\Z_p[x]
+$$
+onde $\overline{a_i}\in\Z_p$ é a classe residual que contém $a_i$
+:::
+
+
+:::{#exm-}
+A redução do polinômio $10x^2+7x-3$ módulo $5$ é $\overline 2x+\overline 2\in\Z_5[x]$.
+Note que a redução de um polinômio $a_nx^n+\cdots+a_1x+a_0$ módulo $p$ é $0$ se e somente se $p\mid a_i$ para todo $i$
+:::
+
+
+:::{#exr-}
+Sejam $f(x),g(x)\in\Z[x]$ e $p$ um primo. Mostre para os polinômios reduzidos módulo $p$ que
+\begin{align*}
+\overline{f(x)+g(x)}&=\overline{f(x)}+\overline{g(x)}\\
+\overline{f(x)g(x)}&=\overline{f(x)}\cdot\overline{g(x)}\\
+\end{align*}
+:::
+
+
+:::{#exr-}
+Seja $f(x)\in\Z[x]$ um polinômio primitivo e redutível (em $\Z[x]$) e seja $p$ um primo. Assuma que a redução $\overline{f(x)}$ módulo $p$ tem o mesmo grau que $f(x)$. Mostre que $\overline{f(x)}$ é redutível em $\Z_p[x]$
+:::
+
+
+:::{#lem-}
+Sejam $f(x),g(x)\in\Z[x]$ polinômios primitivos. Então $f(x)g(x)$ é primitivo
+:::
+
+
+:::{.proof}
+Seja $h(x)=f(x)g(x)$ e assuma que $h(x)$ não é primitivo. Então existe um primo $p$ tal que $p$ divide todos os coeficientes de $h(x)$. Sejam $\overline{f(x)}$, $\overline{g(x)}$, $\overline{h(x)}$ as reduções de $f(x)$, $g(x)$ e $h(x)$, respetivamente, módulo $p$. A frase anterior implica que $\overline{h(x)}=0$ e segue do exercício anterior que
+$$
+0=\overline{h(x)}=\overline{f(x)}\cdot \overline{g(x)}\in\Z_p[x].
+$$
+Como $\Z_p[x]$ é um domínio, temos que $\overline{f(x)}=0$ ou $\overline{g(x)}=0$; ou seja $p$ divide os coeficientes de $f(x)$ ou $p$ divide os coeficientes de $g(x)$. Mas isso implica que $f(x)$ não é primitivo ou $g(x)$ não é primitivo que contradiz às suposições do lema
+:::
+
+Dado um polinômio primitivo $f(x)\in\Z[x]$, nos perguntamos se $f(x)$ é redutível em $\Q[x]$ ou em $\Z[x]$. Se $f(x)$ é redutível em $\Z[x]$, então ele é claramente redutível em $\Q[x]$. O caso contrário não é tão óbvio, mas segue do seguinte resultado conhecido como o Lema de <a href="https://pt.wikipedia.org/wiki/Carl_Friedrich_Gauss">Gauss</a>.
+
+:::{#thm-}
+(Lema de Gauss)
+Seja $f(x)\in\Z[x]$ um polinômio redutível em $\Q[x]$. Então $f(x)$ é redutível em $\Z[x]$
+:::
+
+
+:::{.proof}
+Dividir $f(x)$ com seu conteúdo não altera a redutibilidade do polinômio em $\Q[x]$ e assim nós podemos assumir sem perder generalidade que $f(x)$ é primitivo.
+Assuma que $f(x)$ é redutível em $\Q[x]$ e pode ser fatorado como
+$$
+f(x)=g(x)h(x)
+$$
+onde $g(x),h(x)\in\Q[x]$ e $1\leq \grau{g(x)},\grau{h(x)}\leq \grau{f(x)}-1$. Precisamos provar que $f(x)$ pode ser fatorado como produto de polinômios em $\Z[x]$. Seja
+\begin{align*}
+g(x)&=\frac{u_n}{v_n}x^n+\cdots+\frac{u_1}{v_1}x+\frac{u_0}{v_0}\\
+h(x)&=\frac{a_m}{b_m}x^m+\cdots+\frac{a_1}{b_1}x+\frac{a_0}{b_0}
+\end{align*}
+onde os $u_i$, $v_i$, $a_i$, $b_i$ são inteiros. Ponha $v=\mbox{mmc}(v_n,\ldots,v_0)$ e $b=\mbox{mmc}(b_m,\ldots,b_0)$ e multiplique a equação $f(x)=g(x)h(x)$ com $vb$ para obter que
+$$
+vbf(x)=(vg(x))(bh(x)).
+$$
+Observe que $vbf(x), vg(x), bh(x)\in\Z[x]$. Sejam $c_1$ e $c_2$ os conteúdos de $vg(x)$ e $bh(x)$, respetivamente. Então
+\begin{align*}
+vg(x)&=c_1g_0(x)\\
+bh(x)&=c_2h_0(x)
+\end{align*}
+onde $g_0(x),h_0(x)$ são polinômios primitivos. Assim,
+$$
+vbf(x)=(vg(x))(bh(x))=(c_1g_0(x))(c_2h_0(x))=c_1c_2g_0(x)h_0(x).
+$$
+Como $f(x)$ é primitivo, o conteúdo de $vbf(x)$ é $vb$. Por outro lado, o lema anterior implica que $g_0(x)h_0(x)$ é primitivo, então o conteúdo do lado direito é $c_1c_2$. Como os dois lados da equação são (obviamente) iguais, temos que $vb=c_1c_2$ e este termo pode ser cancelado. Assim
+$$
+f(x)=g_0(x)h_0(x)
+$$
+é uma fatoração de $f(x)$ com $g_0(x),h_0(x)\in\Z[x]$ e $\grau{g_0(x)}=\grau{g(x)}$ e $\grau{h_0(x)}=\grau{h(x)}$. Assim $f(x)$ é redutível em $\Z[x]$
+:::
+
+O significado do lema do Gauss é o seguinte: Se $f(x)\in\Z[x]$ pode ser fatorado como produto de polinômios $g(x),h(x)\in\Q[x]$ com grau maior ou igual que $1$, então o mesmo pode ser fatorado como produto de polinômios $g_0(x),h_0(x)\in\Z[x]$ onde $\grau{g_0(x)}=\grau{g(x)}$ e $\grau{h_0(x)}=\grau{h(x)}$.
+
+:::{#exm-}
+Seja $f(x)=x^4+x^2+x+1\in\Z[x]$ e vamos mostrar que $f(x)$ é irredutível em $\Q[x]$. Pelo Teorema das Raízes Racionais, $f(x)$ não tem raízes em $\Q$. Logo, se $f(x)$ fosse redutível, $f(x)=g(x)h(x)$ onde $g(x),h(x)\in\Q[x]$ ambos de grau $2$. Ora, o Lema de Gauss diz que nós podemos assumir sem perder generalidade que $g(x),h(x)\in\Z[x]$. Assim $f(x)$ pode ser fatorado como
+\begin{align*}
+f(x)&=(x^2+ax+b)(x^2+cx+d)\\&=x^4+(a+c)x^3+(d+b+ac)x^2+(ad+bc)x+bd
+\end{align*}
+onde $a,b,c,d\in\Z$.
+Comparando os coeficientes de $f(x)$ com os coeficientes do polinômio na última equação, obtemos que
+$a+c=0$ e $bd=1$. Assim, $b=d=1$ ou $b=d=-1$  e $1=ad+bc=\pm(a+c)$ que contradiz à equação que $a+c=0$. Portanto, tal fatoração não existe e $f(x)$ é irredutível
+:::
+

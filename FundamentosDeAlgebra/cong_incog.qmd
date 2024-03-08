@@ -1,0 +1,98 @@
+
+---
+title: "Congruências com incôgnitas"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#exm-}
+Seja $x$ uma incógnita e considere a congruência
+$$
+x\equiv 4\pmod 6.
+$$
+As soluções desta congruência são números inteiros que são congruentes com $4$ módulo $6$. Claramente $x=4$ é uma solução particular desta congruência e o conjunto das soluções é
+$$
+\{6k+4\mid k\in\Z\}.
+$$
+:::
+
+
+:::{#exm-}
+Considere agora o seguinte exemplo um pouco mais complicado:
+$$
+3x\equiv 4\pmod {10}.
+$$
+Note que $3$ é invertível módulo $10$ e o seu inverso é $7$, pois $3\cdot 7=21\equiv 1\pmod {10}$. Multiplicando os dois lados desta congruência por $7$, obtemos que
+$$
+x\equiv 21x=7\cdot 3x=7\cdot 4=28\equiv 8\pmod{10}.
+$$
+Logo, a congruência neste exemplo é equivalente à congruência
+$$
+x\equiv 8\pmod{10}.
+$$
+As soluções desta última congruência, e também da congruência anterior, são números no conjunto
+$$
+\{10k+8\mid k\in\Z\}.
+$$
+:::
+
+
+:::{#exm-}
+Considere a congruência
+$$
+3x\equiv 5\pmod 6.
+$$
+Note que uma solução $x\in\Z$ desta congruência satisfaz a equação diofantina $3x-5=6k$ com algum $k\in\Z$, ou seja
+$$
+3x-6k=5.
+$$
+Mas, como $\mdc 36\nmid 5$, esta equação diofantina não possui solução e assim a conguência anterior também não possui solução
+:::
+
+
+:::{#exm-}
+Considere a congruência
+$$
+6x\equiv 4\pmod {10}.
+$$
+Note que $x$ é solução desta congruência se e somente se $10\mid 6x-4$ que ocorre se e somente se $5\mid 3x-2$. Ou seja, a congruência original deste exemplo é equivalente à congruência
+$$
+3x\equiv 2\pmod{5}.
+$$
+Multiplicando os dois lados desta congruência com $2$ (que é o inverso modular de $3$ módulo $5$), obtemos que
+$$
+x\equiv 4\pmod 5
+$$
+e as soluções são
+$$
+\{5k+4\mid k \in\Z\}.
+$$
+:::
+
+
+:::{#thm-}
+Sejam $a,b\in\Z$ e $n\in\N$. Considere a congruência
+$$
+ax\equiv b\pmod n.
+$$
+A congruência possui solução se e somente se $\mdc an\mid b$. Neste caso, pondo $d=\mdc an$, $a_1=a/d$, $b_1=b/d$ e $n_1=n/d$ (e notando que estes são inteiros), a congruência é equivalente à congruência
+$$
+a_1 x\equiv b_1\pmod{n_1}
+$$
+onde $\mdc {a_1}{n_1}=1$. Seja $c\in\Z$ inverso de $a_1$ módulo $n_1$. Então uma solução particular desta congruência é $x_0=cb_1$ e a solução geral é
+$$
+\{cb_1+kn_1\mid k\in\Z\}.
+$$
+:::
+
+
+:::{.proof}
+Seja $d=\mdc an$. Então $x$ é solução da congruência original se e somente se $n\mid ax-b$. Se $d\nmid b$, então esta divisibilide é impossível, pois $d\mid n$ e $d\mid ax$ e a congruência não possiu solução. Caso $d\mid b$, a divisibilidade $n\mid ax-b$ ocorre se e somente se $n_1\mid a_1x-b_1$ e neste caso, a congruência original é equivalente à congruência
+$$
+a_1 x\equiv b_1\pmod{n_1}.
+$$
+Agora $\mdc{a_1}{n_1}=1$ e $a_1$ é invertível módulo $n_1$. A afirmção final do teorema pode ser verificada multiplicando os dois lados da última congruência por um inverso modular $c$ de $a_1$
+:::
+
+

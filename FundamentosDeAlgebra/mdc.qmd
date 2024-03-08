@@ -1,0 +1,108 @@
+
+---
+title: "O MDC"
+number-sections: true
+lang: pt-BR
+---
+
+:::{#def-}
+Sejam $a$ e $b$ números inteiros não simultaneamente iguais a zero. Definimos o <em>maior divisor comum de $a$ e $b$</em> como sendo o inteiro $d$ que satisfaz as seguintes propriedades:
+
+
+-  $d\geq 0$;
+-  $d|a$ e $d|b$;
+-  se $c$ é um inteiro tal que $c|a$ e $c|b$ então $c|d$.
+
+:::
+
+Não é imediatamente claro da definição que o maior divisor comum existe (isso será verificado depois). No entanto, o seguinte lema é válido
+
+:::{#lem-}
+Se o maior divisor comum de dois números $a,b\in\Z$ existir, então ele é  único
+:::
+
+
+:::{.proof}
+Se $d_1$ e $d_2$ são ambos maiores divisores comuns de $a$ e $b$, então a definição implica que $d_1|d_2$ e $d_2|d_1$. Ora temos por um lema anterior que $d_1=\pm d_2$, mas como $d_1$ e $d_2$ são não negativos, isso é possível apenas quando $d_1=d_2$
+:::
+
+O maior divisor comum de $a$ e $b$ (quando existir) será denotado por $\mdc ab$.
+
+:::{#lem-}
+As seguintes afirmações são verdadeiras para $a,b\in\Z$.
+
+
+-  Se existe $\mdc ab$, então existe $\mdc ba$ e os dois são iguais.
+-  Se existe $\mdc ab$, então existe $\mdc{\pm a}{\pm b}$ e todos são iguais.
+-  Para todo $a\neq 0$, existe $\mdc a0$ e $\mdc a0=|a|$.
+-  Para todo $a\neq 0$, existe $\mdc aa$ e $\mdc aa=|a|$.
+
+:::
+
+
+:::{.proof}
+Exercício
+:::
+
+O $\mdc 00$ não tá definido.
+
+Se $a$ e $b$ são inteiros tais que $\mdc ab=1$, então dizemos que $a$ e $b$ são <em>primos entre si</em> ou que eles são <em>coprimos</em>.
+
+:::{#lem-}
+Sejam $a,b,q$ números inteiros. Então existe $\mdc ab$ se e somente se existe $\mdc b{a+qb}$. Quando os dois MDCs existirem, então
+$$
+\mdc ab=\mdc b{a+qb}.
+$$
+:::
+
+
+:::{.proof}
+Assuma primeiro que existe $d=\mdc ab$. Vamos provar que $\mdc b{a+qb}=d$ verificando as propriedades 1.-3. na definição do MDC.
+
+1. Como $d=\mdc ab$, ele é não negativo, então propriedade 1. está OK para $d$.
+
+2. Como $d\mid a$ e $d\mid b$, temos que $d\mid b$ e $d\mid a+qb$. Ou seja, propriedade 2. está válida para $d$.
+
+3. Assuma que $c\mid b$ e $c\mid a+qb$. Então $c\mid a+qb-qb=a$ e assim $c\mid a$. Como $d=\mdc ab$, obtemos que $c\mid d$ e a propriedade 3. também está certa para $d$.
+
+Assim podemos concluir que $d=\mdc b{a+qb}$. A outra direção quando a suposição é que existe $\mdc b{a+qb}$ é análoga.
+
+:::
+
+
+:::{#cor-}
+Sejam $a,b\in\Z$ com $b\neq 0$ e escreve $a=qb+r$ com $0\leq r<|b|$ como no Teorema de Divisão de Euclides. Então existe $\mdc ab$ se e somente se existe $\mdc br$. Quando os dois MDCs existirem, eles são iguais
+:::
+
+
+:::{.proof}
+Segue do lema anterior
+:::
+
+
+:::{#exm-}
+O lema anterior pode ser usado para determinar o MDC de dois números naturais do modo seguinte. Sejam, por exemplo, $a=115$ e $b=25$. Escreva
+$$
+115=4\cdot 25+15
+$$
+Logo $\mdc {115}{25}$ e $\mdc{25}{10}$ existem (ou não) simultaneamente e, se existirem, são iguais. Depois escreva
+$$
+25=1\cdot 15+10.
+$$
+Concluímos que $\mdc{25}{10}$ e $\mdc{10}{5}$ existem (ou não) simultaneamente e, se existirem, são iguais.
+Depois
+$$
+15=1\cdot 10+5
+$$
+e
+$$
+10=2\cdot 5+0
+$$
+que implica que $\mdc{10}5$ e $\mdc 50$ existem (ou não) simultaneamente e, se existirem, são iguais. Mas agora sabe-se que $\mdc 50$ existe e $\mdc 50=5$. Logo
+\begin{align*}
+\mdc {115}{25}&=\mdc{25}{15}=\mdc{15}{10}=\mdc{10}{5}\\&=\mdc 50=5.
+\end{align*}
+Esta conta segue essencialmente o Algoritmo de Euclides que será o conteúdo da matéria seguinte
+:::
+
+

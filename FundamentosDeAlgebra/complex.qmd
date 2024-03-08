@@ -1,0 +1,304 @@
+
+---
+title: "Números complexos"
+number-sections: true
+lang: pt-BR
+---
+
+$\newcommand{\real}[1]{\mathfrak R(#1)}\newcommand{\imag}[1]{\mathfrak I(#1)}\newcommand{\argz}[1]{\mbox{arg}(#1)}\DeclareMathOperator{\sen}{sen}\newcommand{\cis}[1]{\cos #1+i\sen #1}$
+Um <b>número complexo</b> é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
+$$
+i^2=-1.
+$$
+As operações da soma e multiplicação entre números complexos são definidos na seguinte maneira:
+\begin{align*}
+(a_1+a_2i)+(b_1+b_2i)&=(a_1+b_1)+(a_2+b_2)i;\\
+(a_1+a_2i)(b_1+b_2i)&=a_1b_1-a_2b_2+(a_1b_2+a_2b_1)i.\\
+\end{align*}
+Ou seja, a soma está calculada por coordenadas, enquanto a multiplicação está feita usando a  lei distributiva e a regra que $i^2=-1$.
+
+O conjunto de todos os números complexos é denotado por $\C$. Em outras palavras,
+$$
+\C=\{a+bi\mid a,b\in \R\}=\R+\R i.
+$$
+Os números complexos podem ser visualizados em um plano chamado de <b>plano complexo</b>. Cada número complexo pode ser visto como um vetor neste plano e a soma entre números complexos corresponde à soma de vetores.
+
+Se $z=a+bi\in\C$, então $a\in\R$ é dita <b>parte real</b> e $b\in\R$ é chamado de <b>parte imaginária</b> de $z$. Escrevemos que
+$$
+a=\real z \qquad\mbox{e}\qquad b=\imag z.
+$$
+Assim, temos que $z=\real z+\imag z i$.
+
+Note que $\R$ pode ser identificado com o subconjunto
+$$
+\{a+0i\mid a\in\R\}
+$$
+dentro de $\C$ e assim nós podemos considerar $\R$ como um subconjunto de $\C$. Se $a+0i,b+0i\in \R$, então a sua soma e produto são os mesmos que nós já conhecemos em $\R$:
+\begin{align*}
+(a+0i)+(b+0i)=(a+b)+0i;\\
+(a+0i)(b+0i)=(ab)+0i.
+\end{align*}
+
+Uma outra maneira de enxergar $\C$ é visualizar como um espaço vetoriais de dimensão 2 sobre $\R$. De fato, se $a\in \R$ e $z=b_1+b_2i$ então
+$$
+az=(a+0i)(b_1+b_2i)=ab_1+ab_2i.
+$$
+Ou seja, multiplicação por $a$ corresponde ao múltiplo escalar de vetores em $\R^2$.
+
+:::{#lem-}
+
+As seguintes propriedades são válidas para todo número complexo $z_1$, $z_2$, $z_3$:
+
+
+-  A soma é associativa: $(z_1+z_2)+z_3=z_1+(z_2+z_3)$.
+-  A soma é comutativa: $z_1+z_2=z_2+z_1$.
+-  $0=0+0i$ é elemento neutro da soma: $z_1+0=0+z_1=z_1$.
+-  $-z=-a-bi$ é negativo de $z=a+bi$; ou seja, $z+(-z)=0$.
+-  O produto é associativo: $(z_1z_2)z_3=z_1(z_2z_3)$.
+-  O produto é comutativo: $z_1z_2=z_2z_1$.
+-  $1=1+0i$ é elemento neutro do produto: $1z_1=z_11=z_1$.
+-  a lei distributiva: $z_1(z_2+z_3)=z_1z_2+z_1z_3$ e $(z_1+z_2)z_3=z_1z_3+z_2z_3$.
+
+:::
+
+
+:::{.proof}
+Exercício
+:::
+
+Para um número complexo, $z=a+bi$, definimos $\bar z=a-bi$. O número $\bar z$ é dito <b>conjugado complexo</b>. Pode-se também definir a <b>norma</b>, <b>comprimento</b>, ou <b>módulo</b> de um número complexo $z=a+bi\in\C$:
+$$
+|z|=\sqrt{a^2+b^2}.
+$$
+Note que a norma de $z$ está definida usando o Teorema de Pitágoras e a norma dos números complexos satisfaz as propriedades já conhecidas do comprimento de vetores em $\R^2$.
+
+:::{#lem-}
+    As seguintes propriedades estão válidas para a norma $|z|$ de um número complexo $z\in\C$.
+
+
+-  $|z|$ é um número real não negativo.
+-  $|z|=0$ se e somente se $z=0$;
+-  $|z_1+z_2|\leq |z_1|+|z_2|$;
+-  $|z_1z_2|= |z_1||z_2|$.
+
+:::
+
+
+:::{#lem-}
+Temos que
+
+
+-  $z=\bar z$ se e somente se $z\in\R$;
+-  $z+\bar z=2\cdot \real z$;
+-  $z-\bar z=2i\cdot \imag z$;
+-  $z\bar z=|z|^2$;
+-  $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$;
+-  $\overline{z_1z_2}=\overline{z_1}\overline{z_2}$.
+
+:::
+
+Se $z=a+bi\in\C\setminus\{0\}$, então temos que $z\bar z=|z|^2=a^2+b^2\neq 0$. Logo
+$$
+1=z\left(\frac{\bar z}{|z|^2}\right)=z\left(\frac{a-bi}{a^2+b^2}\right).
+$$
+Em outras palavras, $\bar z/|z|^2=(a-bi)/(a^2+b^2)$ é inverso multiplicativo de $z$.
+
+:::{#lem-}
+Todo número complexo $z=a+bi$ não nulo possui inverso multiplicativo $z^{-1}$. Além disso,
+$$
+z^{-1}=\frac{\bar z}{|z|^2}=\frac{a-bi}{a^2+b^2}.
+$$
+Em particular, $(\C,+,\cdot)$ é um corpo
+:::
+
+Com o inverso multiplicativo, podemos dividir números complexos. De fato, se $z_1,z_2\in\C$ com  $z_2\neq 0$, então definimos
+$$
+\frac{z_1}{z_2}=z_1/z_2=z_1\cdot z_2^{-1}.
+$$
+Note que divisão por zero não é permitido nem com números complexos!
+
+Seja $z=a+bi\in \C$. O argumento $\argz z$ de $z$ é o ângulo $\vartheta$ que o vetor $z$ tem com a meia reta $[0,\infty]$. Usando o argumento, se pode escrever $z$ como
+$$
+z=|z|(\cos\vartheta+i\sen\vartheta).
+$$
+A forma $z=a+bi$ é chamada <b>forma vetorial</b> do número complexo $z$. A forma  $z=|z|(\cos\vartheta+i\sen\vartheta)$ é chamada <b>forma polar</b>. O argumento de um número complexo não é unicamente definido, pois  se $\vartheta$ é argumento de $z\in\C$, então os outros argumentos são ângulos na forma $\vartheta+2k\pi$ onde $k\in\Z$. Note que existe único argumento de $z$ no intervalo $[0,2\pi)$ e também no intervalo $(-\pi,\pi]$.
+
+Mais geralmente cada expressão
+$$
+z=r(\cis\vartheta),\quad r\in[0,\infty)\mbox{ e } \vartheta\in\R
+$$
+define um número complexo. O número $r$ é igual à norma de $z$ (e assim precisa ser um número real não negativo) e $\vartheta$ é um dos argumentos. Note que se $r=0$, então $z=0\cdot(\cis\vartheta)=0$ para todo $\vartheta$. O argumento do número zero não está definido. Por outro lado, se $r_1,r_2>0$ então
+$$
+r_1(\cis{\vartheta_1})=r_2(\cis{\vartheta_2})
+$$
+se e somente se
+$$
+r_1=r_2 \quad\mbox{e}\quad \vartheta_1-\vartheta_2=2k\pi\quad\mbox{com}\quad k\in\Z.
+$$
+O número $z=r(\cis \vartheta)$ está ferquentamente escrito como
+$$
+r(\cis\vartheta)=r\exp(i\vartheta)=r\cdot e^{i\vartheta}.
+$$
+Neste momento, tratamos esta expressão apenas como notação. Ela pode ser justificada, por exemplo, considerando as séries de Taylor das funções $\exp$, $\cos$, $\sen$. Um caso particular, desta equação é a famosa <a href="https://pt.wikipedia.org/wiki/Identidade_de_Euler">Identidade de Euler</a>
+$$
+-1=\cos \pi+i\sen\pi=\exp(i\pi)=e^{i\pi}.
+$$
+Para aprender mais sobre esta identidade fascinante, recomendamos assistir os vídeos dos canais <a href="https://youtu.be/v0YEaeIClKY?si=Ec8UYXpLYhfKbGkS">3Blue1Brown</a> e <a href="https://youtu.be/-dhHrg-KbJ0?si=8g2901NUCQZ6iLFX">Mathologer</a>.
+
+Note que fazer a adição com a forma vetorial é fácil, mas a multiplicação é bagunçada. A vantagem da forma polar é que a multiplicação vira mais natural. Antes de explictar esta observação, lembremos as identidades trigonométricas bem conhecidas:
+\begin{align*}
+\sen{(\alpha+\beta)}&=\sen\alpha\cos\beta+\cos\alpha\sen\beta\\
+\cos{(\alpha+\beta)}&=\cos\alpha\cos\beta-\sen\alpha\sen\beta.
+\end{align*}
+
+:::{#lem-}
+Sejam
+\begin{align*}
+z_1&=r_1(\cos\vartheta_1+i\sen\vartheta_1)=r_1\exp(i\vartheta_1)\mbox{ e}\\
+z_2&=r_2(\cos\vartheta_2+i\sen\vartheta_2)=r_1\exp(i\vartheta_2)
+\end{align*}
+números complexos. Então
+$$
+z_1z_2=r_1r_2(\cos(\vartheta_1+\vartheta_2)+i\sen(\vartheta_1+\vartheta_2))=
+r_1r_2\exp(i(\vartheta_1+\vartheta_2)).
+$$
+Consequentemente, $\argz{z_1z_2}=\argz{z_1}+\argz{z_2}$
+:::
+
+
+:::{.proof}
+Vamos calcular que
+\begin{align*}
+z_2z_2&=r_1(\cos\vartheta_1+i\sen\vartheta_1)r_2(\cos\vartheta_2+i\sen\vartheta_2)\\&=
+r_1r_2(\cos\vartheta_1\cos\vartheta_2-\sen\vartheta_1\sen\vartheta_2+i(\sen\vartheta_1\cos\vartheta_2+\cos\vartheta_1\sen\vartheta_2))\\
+&=r_1r_2(\cos{(\vartheta_1+\vartheta_2)}+i\sen{(\vartheta_1+\vartheta_2)}).
+\end{align*}
+Pronto
+:::
+
+
+:::{#cor-}
+Se
+$$
+z=r(\cis\vartheta)=r\exp(i\vartheta)\in\C\setminus\{0\}
+$$
+(ou seja, $r\neq 0$), então
+$$
+z^{-1}=r^{-1}(\cis{(-\vartheta)}).
+$$
+Além disso, se
+\begin{align*}
+z_1&=r_1(\cos\vartheta_1+i\sen\vartheta_1)=r_1\exp(i\vartheta_1);\\
+z_2&=r_2(\cos\vartheta_2+i\sen\vartheta_2)=r_1\exp(i\vartheta_2)
+\end{align*}
+com $z_2\neq 0$, então
+$$
+\frac{z_1}{z_2}=z_1z_2^{-1}=\frac{r_1}{r_2}(\cis{(\vartheta_1-\vartheta_2)})=
+\frac{r_1}{r_2}\exp{(i(\vartheta_1-\vartheta_2))}.
+$$
+:::
+
+
+:::{.proof}
+Vamos calcular que
+\begin{align*}
+z\cdot r^{-1}(\cis{(-\vartheta)})&=r(\cis{(\vartheta)})\cdot r^{-1}(\cis{(-\vartheta)})\\&=rr^{-1}(\cis{0})=1.
+\end{align*}
+Isso implica que $z^{-1}=r^{-1}(\cis{(-\vartheta)})$. A outra igualdade sobre $z_1$ e $z_2$ é consequência disso
+:::
+
+
+:::{#cor-}
+Se $z=r(\cos\vartheta+i\sen\vartheta)$, e $k\geq 1$, então
+$$
+z^k=r^k(\cos(k\vartheta)+i\sen{(k\vartheta)}).
+$$
+:::
+
+
+:::{.proof}
+Segue imediatamente do lema anterior
+:::
+
+Se $k\in\Z$ negativo e $z\in\C\setminus\{0\}$, então $z^k$ está definido como $(z^{-1})^{-k}$. Por exemplo, $z^{-5}=(z^{-1})^5$. Note que para $z=r(\cos\vartheta+i\sen\vartheta)$ não nulo, a igualdade
+$$
+z^k=r^k(\cos(k\vartheta)+i\sen{(k\vartheta)}).
+$$
+está válida para todo $k\in\Z$ (ou seja, também para $k$ negativo). A verificação deste fato será tarefa do leitor.
+
+Um número complexo $z\in\C$ é dita <b>$k$-ésima raiz da unidade</b> se $z^k=1$.
+
+:::{#lem-}
+Se $k\geq 1$, então $\C$ possui $k$ $k$-ésimas raízes distintas da unidade; nomeadamente,
+$$
+\xi_j=\cos{\frac{2j\pi}{k}}+i\sen{\frac{2j\pi}{k}}\quad\mbox{com}\quad j=0,\ldots,k-1.
+$$
+:::
+
+
+:::{.proof}
+Primeiro,
+$$
+\xi_j^k=\cos{(2j\pi)}+i\sen{(2j\pi)}=1.
+$$
+Então $\xi_j$ é $k$-ésima raiz da unidade para todo $j$. Afirmamos que os $\xi_j$ são distintos. Se $\xi_j=\xi_m$ com $0\leq j\leq m\leq k-1$, então $2m\pi/k-2j\pi/k$ é um múltiplo de $2\pi$. Assuma que $2m\pi/k-2j\pi/k=2\ell\pi$ com $\ell\in\Z$. Por outro lado,
+$$
+\frac{2m\pi}k-\frac{2j\pi}k=\frac{2(m-j)\pi}k.
+$$
+Como $0\leq m-j\leq k-1$, obtemos que  $2(m-j)\pi/k=2\ell\pi$ é possível apenas para $\ell=0$. Logo $m=j$ e os $\xi_j$ com $j\in\{0,\ldots,k-1\}$ são distintos.
+
+Para provar que elas são as únicas raízes, assuma que $\xi=r(\cos\vartheta+i\sen\vartheta)$ é uma $k$-ésima raiz da unidade; ou seja, $\xi^k=1$.  Primeiro, observe que $1=|1|=|\xi^k|=r^k$ e isso implica que $r=1$ e $\xi=\cos\vartheta+i\sen\vartheta$. Ademais,
+$$
+1=\xi^k=\cos{(k\xi)}+i\sen{(k\xi)}.
+$$
+Portanto $k\xi=2j\pi$ com algum $j\in\Z$. Assumindo sem perder generalidade que $\xi\in[0,2\pi)$, $j=0,\ldots,k-1$ e $\xi=2j\pi/k$ com $j=0,\ldots,k-1$. Isso implica que $\xi=\xi_j$.
+
+:::
+
+Note que $\xi_0=1$ e quando $k$ for par, então $\xi_{k/2}=-1$.
+
+:::{#cor-}
+Seja $z\in\C$ um número complexo não nulo e $k\geq 1$. Existem exatamente $k$ números distintos $z_0,\ldots,z_{k-1}\in\C$ tais que $z_j^k=z$. Os números $z_j$ são chamados $k$-ésimas raízes de $z$
+:::
+
+
+:::{.proof}
+Seja $z=r(\cos\vartheta+\sen\vartheta)$ e ponha
+$$
+z_0=\sqrt[k]r(\cos{(\vartheta/k)}+i\sen{(\vartheta/k)}).
+$$
+Claramente,
+$$
+z_0^k=(\sqrt[k]r)^k(\cos\vartheta+i\sen\vartheta)=z.
+$$
+Além disso, sejam $\xi_0,\ldots,\xi_{k-1}$ as $k$-ésimas raízes da unidade com $\xi_0=1$ e defina
+$$
+z_j=\xi_jz_0\quad\mbox{para todo}\quad j\in\{0,\ldots,k-1\}.
+$$
+Temos que
+$$
+(z_j)^k=(\xi_jz_0)^k=\xi_j^jz_0^k=z.
+$$
+Para provar que $z_0,\ldots,z_{k-1}$ são distintos, note que se $z_j=z_m$, então $\xi_jz_0=\xi_mz_0$ e a lei cancelativa implica que $\xi_j=\xi_m$ e $j=m$.
+
+Para provar que não tem mais $k$-ésimas raízes de $z$, note que se se $\zeta\in\C$ tal que $\zeta^k=z$, então $(\zeta z_0^{-1})^k=1$ e $\zeta z_0^{-1}$ é uma $k$-ésima raiz da unidade. Isso implica que $\zeta z_0^{-1}=\xi_j$ com algum $j$. Portanto $\zeta=\xi_jz_0$ e assim obtivemos todas as $k$-ésimas raízes de $z$.
+
+:::
+
+O argumento da prova anterior dá expressões explícitas para as $k$-ésimas raízes de $z\in\C$.
+
+:::{#cor-}
+Assuma que $z=r(\cis{\vartheta})\in\C$ com $r\neq 0$ e $k\geq 0$. As $k$-ésimas raízes de $z$ são
+$$
+z_j=\sqrt[k]r\left(\cis{\frac{\vartheta+2j\pi}{k}}\right)\quad\mbox{com}\quad j=0,\ldots,k-1.
+$$
+:::
+
+
+:::{.proof}
+Calculando o produto $z_j=z_0\xi_j$ na demonstração anterior, temos que
+\begin{align*}
+z_j&=z_0\xi_j=\sqrt[k]r(\cos{(\vartheta/k)}+i\sen{(\vartheta/k)})\left(\cos{\frac{2j\pi}{k}}+i\sen{\frac{2j\pi}{k}}\right)\\&=\sqrt[k]r\left(\cis{\frac{\vartheta+2j\pi}{k}}\right)x.
+\end{align*}
+:::
+

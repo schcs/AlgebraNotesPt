@@ -1,0 +1,92 @@
+
+---
+title: "Polinômios irredutíveis"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#def-}
+Seja $R$ um domínio e seja $a\in R$ tal que $a\neq 0$ e $a$ não é invertível (em $R$). O elemento $a$ é dito **redutível** se existem $b,c\in R$ tal que $a=bc$ e nem $b$ nem $c$ é invertível.  Caso contrário, o elemento $a$ é dito **irredutível**. O elemento $0\in R$ e os elementos invertíveis de $R$ não são nem redutíveis nem irredutíveis
+:::
+
+
+:::{#exm-}
+Seja $R=\Z$. Neste caso os invertíveis de $\Z$ são $1$ e $-1$ e um elemento $a\in \Z$ é irredutível se e somente se $a$ não pode ser escrito como $a=bc$ com $b,c\not\in\{1,-1\}$. Ou seja, os elemento irredutíveis de $\Z$ são os inteiros primos, enquanto os redutíveis são os compostos
+:::
+
+
+:::{#exr-}
+Seja $a\in R$ e seja $u\in R$ invertível. Mostre que $a$ é irredutível se e somente se $ua$ é irredutível
+:::
+
+
+:::{#lem-}
+As seguintes afirmações são verdadeiras para um polinômio $f(x)\in\F[x]$ onde $\F$ é um corpo.
+
+
+-  Seja $\alpha\in\F\setminus\{0\}$. Temos que $f(x)$ é irredutível se e somente se $\alpha f(x)$ é irredutível.
+-  Se $\grau{f(x)}=1$ então $f(x)$ é irredutível.
+-  Se $\grau{f(x)} > 1$ e $f(x)$ possui raiz em $\F$ então $f(x)$ é redutível.
+-  Se $\grau{f(x)} \in\{2,3\}$ então $f(x)$ é redutível se e somente se $f(x)$ possui raiz em $\F$.
+
+:::
+
+
+:::{.proof}
+(1) Segue do exercício anterior notando que $\alpha$ é invertível em $\F[x]$.
+
+(2) Assuma que $f(x)\in\F[x]$ do primeiro grau e escreva $f(x)=g(x)h(x)$ com $g(x),h(x)\in\F[x]$. Temos pelas propriedades do grau que
+$$
+1=\grau{f(x)}=\grau{g(x)h(x)}=\grau{g(x)}+\grau{h(x)}
+$$
+e assim $\grau{g(x)}=0$ ou $\grau{h(x)}=0$. Logo um dos polinômios de $g(x)$ ou $h(x)$ é escalar não nulo. Como tais polinômios de $\F[x]$ são invertíveis, temos que $f(x)$ é irredutível.
+
+(3) Se $\grau{f(x)} > 1$ e $\alpha\in\F$ é raiz de $f(x)$, então $x-\alpha\mid f(x)$ e $f(x)=(x-\alpha)g(x)$ com $g(x)\in\F[x]$. Ademais, $\grau{g(x)}=\grau{f(x)}-1\geq 1$ e assim $f(x)$ pode ser fatorado como um produto de dois polinômios em tal forma que nenhum dos fatores é invertível. Portanto $f(x)$ é redutível.
+
+(4) Assuma que $\grau{f(x)}\in\{2,3\}$. Se $f(x)$ possui raiz, então ele é redutível pelo tericeiro item. Vice versa, se $f(x)$ é redutível, então  $f(x)=g(x)h(x)$. Considerando que $f(x)$ tem grau dois ou três, temos que ou $g(x)$ ou $h(x)$ tem grau $1$. Assim $f(x)$ é divisível por um polinômio na forma $\alpha x+\beta$ com $\alpha\neq 0$ e assim $-\beta/\alpha$ é raiz de $f(x)$.
+
+:::
+
+
+:::{#exr-}
+(O Teorema das Raízes Racionais)
+Seja $f(x)=\alpha_n x^n+\alpha_{n-1}x^{n-1}+\cdots+\alpha_1x+\alpha_0\in\Z[x]$ e assuma que $\alpha/\beta\in\Q$ tal que $\mdc{\alpha}\beta=1$ é uma raiz de $f(x)$. Mostre que $\alpha\mid \alpha_0$ e $\beta\mid \alpha_n$
+:::
+
+
+:::{#exm-}
+
+
+-  Se $\alpha\in\F\setminus\{0\}$ e $\beta\in\F$, então $\alpha x+\beta$ é um polinômio irredutível.
+-  No exemplo anterior, precisamos que $\F$ seja um corpo. Por exemplo $f(x)=2x+2\in\Z[x]$ é redutível, pois $f(x)=2(x+1)$ e nenhum fator é invertível em $\Z[x]$.
+-  Seja $f(x)=x^3+x+1\in \Q[x]$ usando o Teorema das Raízes Racionais, vemos que $f(x)$ não tem raiz em $\Q$ e assim $f(x)$ é irredutível em $\Q[x]$.
+-  Considerando $f(x)=x^3+x+1\in\R[x]$ temos que $f(x)$ possui raiz real (tendo grau ímpar) e assim $f(x)$ é redutível em $\R[x]$. O mesmo polinômio também é redutível em $\C[x]$.
+-  Seja $f(x)=x^3+x+\overline 1\in \Z_3[x]$. Claramente, $\overline 1\in\Z_3$ é raiz de $f(x)$ e assim $f(x)$ é redutível em $\Z_3[x]$.
+-  Seja $f(x)=x^4+2x^2+1\in\R[x]$. Então $f(x)=(x^2+1)^2$ e assim $f(x)$ é redutível mesmo que $f(x)$ não possui raíz em $\R$.
+
+:::
+
+
+:::{#thm-}
+
+
+-  Um polinômio $f(x)\in\C[x]$ é irredutível se e somente se $\grau{f(x)}=1$.
+-  Um polinômio $f(x)\in\R[x]$ é irredutível se e somente se $\grau{f(x)}=1$ ou $\grau{f(x)}=2$ e $f(x)$ tem discriminante negativo.
+
+:::
+
+
+:::{.proof}
+(1) Seja $f(x)\in\C[x]$. Se $\grau{f(x)}=1$ então $f(x)$ é irredutível pelo lema anterior. Se $\grau{f(x)}\geq 2$, então $f(x)$ possui raiz complexa (pelo Teorema Fundamental da Álgebra) e $f(x)$ é redutível pelo lema anterior.
+
+(2) Seja $f(x)\in\R[x]$. Se $\grau{f(x)}=1$, então $f(x)$ é irredutível pelo lema anterior. Se $\grau{f(x)}=2$ e o discriminante de $f(x)$ é negativo, então $f(x)$ não possui raiz real e $f(x)$ é irredutível pelo lema anterior. Se $\grau{f(x)}=2$ e o discriminante de $f(x)$ é não negativo, então $f(x)$ possui raiz real e $f(x)$ é redutível pelo lema anterior. Assuma que $\grau{f(x)} \geq 3$. Usando um Teorema na semana passada, $f(x)$ pode ser escrito como um produto
+$$
+f(x)=\alpha\prod_{i=1}^r (x-\alpha_i)\prod_{j=1}^s(x^2+\beta_jx+\gamma_j)
+$$
+onde $\alpha\in\R$ é o coeficiente líder de $f(x)$.
+O fato que $\grau{f(x)}\geq 3$ implica que o número dos fatores é maior ou igual a dois e assim $f(x)$ é redutível.
+
+:::
+
+O problema de decidir se um polinômio é redutível ou irredutível em $\Q[x]$ ou $\Z_p[x]$ é bem mais complicado como nós também vamos ver nas aulas seguintes.

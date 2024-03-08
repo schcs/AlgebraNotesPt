@@ -1,0 +1,51 @@
+
+---
+title: "O Teorema do Elemento Primitivo (demonstração)"
+number-sections: true
+lang: pt-BR
+---
+
+Nesta página nós vamos provar o Teorema dos Elementos Primitivos que enunciamos no segundo bloco da disciplina sem demonstração.
+
+:::{#exr-}
+Seja $n\in\N$. Mostre que
+$$
+\sum_{k\in\N,\ k\mid n}\varphi(k)=n.
+$$
+:::
+
+
+:::{#thm-}
+Se $p\in\N$ for um primo, então $\Z_p$ possui um elemento primitivo (ou seja, um elemento de ordem $p-1$)
+:::
+
+
+:::{.proof}
+Seja $a\in\Z_p$ de ordem $k$. Isso quer dizer que $a^k=\overline 1$ e $k$ é o menor natural que satisfaz esta propriedade. O Pequeno Teorema de Fermat e as propriedades da ordem implicam que $k\mid p-1$. Se $m\in\{0,\ldots,k-1\}$, temos que $(a^m)^k=\overline 1$, então os elementos $a^m$ são raízes do polinômio $x^k-\overline 1\in\Z_p[x]$. Por outro lado, este polinômio tem no máximo $k$ raízes e segue que $a^0,a,a^2,\ldots,a^{k-1}$ são todas as raízes de $x^k-\overline 1\in\Z_p[x]$. Isso implica que
+$$
+\{b\in\Z_p\mid b^k=\overline 1\}=\{1,a,a^2,\ldots,a^{k-1}\}.
+$$
+
+Vamos contar o número dos elementos $b$ de ordem $k$. Tal elemento $b$ está na forma $a^m$ com algum $m\in\{0,\ldots,k-1\}$ pelo argumento acima. Além disso,
+$$
+|a^m|=k/\mdc mk
+$$
+e $|a^m|=k$ se e somente se $\mdc mk=1$. Portanto
+$$
+\{b\in\Z_p\mid |b|=k\}=\{a^m\mid m\in\{0,\ldots,k-1\},\ \mdc mk=1\}.
+$$
+Portanto
+$$
+|\{b\in\Z_p\mid |b|=k\}|=\varphi(k).
+$$
+
+O argumento até agora implica que a seguinte afirmação está verdadeira em $\Z_p$: <em>Se $\Z_p$ possui um elemento de ordem $k$, então $\Z_p$ possui $\varphi(k)$ elementos de ordem $k$.</em>
+
+Para $k\mid p-1$, seja $\psi(k)$ o número de elementos de ordem $k$ em $\Z_p$. Pela afirmação em itálico, $\psi(k)\leq \varphi(k)$. Por outro lado, usando o exercício acima,
+$$
+p-1=|\Z_p\setminus\{\overline 0\}|=\sum_{k\in\N,\ k\mid p-1}\psi(k)\leq \sum_{k\in\N,\ k\mid p-1}\varphi(k)=p-1.
+$$
+Isso implica que a desigualdade no meio precisa ser igualdade e também que  $\psi(k)=\varphi(k)$ para todo $k\mid p-1$. Em particular $\psi(p-1)=\varphi(p-1)$ e $\Z_p$ contém $\varphi(p-1) > 0$ elementos de ordem $p-1$.
+
+:::
+

@@ -1,0 +1,59 @@
+
+---
+title: "Critérios de divisibildade"
+number-sections: true
+lang: pt-BR
+---
+
+Seja $a$ um número natural escrito na base $10$ (decimal) como
+$$
+a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
+$$
+É bem conhecido que, para alguns valores de $b$, a divisibilidade de $a$ por $b$ pode ser determinado olhando apenas os dígitos de $a$.
+
+:::{#exr-}
+Demonstre que para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$
+:::
+
+
+:::{#thm-}
+(Critérios de divisibilidade)
+As seguintes afirmações são verdadeiras para um número natural $a=[a_na_{n-1}\cdots a_1a_0]$ escrito na base decimal.
+
+
+-  $2\mid a$ se e somente se $2\mid a_0$;
+-  $3\mid a$ se e somente se $3\mid a_n+a_{n-1}+\cdots+a_0$;
+-  $4\mid a$ se e somente se $4\mid [a_1a_0]$;
+-  $5\mid a$ se e somente se $5\mid a_0$;
+-  $7\mid a$ se e somente se $7\mid [a_n\cdots a_1]-2a_0$;
+-  $8\mid a$ se e somente se $8\mid [a_2a_1a_0]$;
+-  $9\mid a$ se e somente se $9\mid a_n+a_{n-1}+\cdots+a_0$;
+-  $10\mid a$ se e somente se $10\mid a_0$ (ou seja, $a_0=0$);
+-  $11\mid a$ se e somente se $11\mid (-1)^na_n+(-1)^{n-1}a_{n-1}+\cdots-a_1+a_0$;
+
+:::
+
+
+:::{.proof}
+Demonstraremos algumas destas afirmações, o resto será exercício.
+
+1. Considere que
+\begin{align*}
+a&=[a_na_{n-1}\cdots a_1a_0]=\sum_{k=0}^n10^ka_k=10\left(\sum_{k=1}^n10^{k-1}a_k\right)+a_0\\&=10q+a_0
+\end{align*}
+com
+$$
+q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
+$$
+Como $2\mid 10$, obtemos que o número $a$ é divisível por $2$ se e somente se o algarismo $a_0$ é divisível por $2$.
+
+3. Temos, pelo exercício antes do teorema, para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$. Agora considere
+\begin{align*}
+a&=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&=3\sum_{k=0}^nq_ka_k+
+\sum_{k=0}^na_k.
+\end{align*}
+No última expressão, a primeira parcela é um múltiplo de $3$. Logo $a$ é divisível por $3$ se e somente se a segunda parcela na última expressão é divisível por $3$, mas esta segunda parcela é justamente a soma dos dígitos de $a$.
+
+:::
+
+

@@ -1,0 +1,62 @@
+
+---
+title: "O Teorema Fundamental da Aritmética"
+number-sections: true
+lang: pt-BR
+---
+
+
+:::{#thm-}
+Todo número natural $n\geq 2$, pode ser decomposto em um produto de primos positivos. Além disso, esta decomposição de $n$ é única a menos da ordem dos fatores
+:::
+
+
+:::{.proof}
+**Existência.** Nós provaremos por indução em $n$. Na base da indução, seja $n$ um primo. Neste caso, $n$ pode ser considerado como o produto de um único fator que é primo.
+
+Assuma agora que $n$ é composto (em particular, $n\geq 4$) e que a afirmação da existência do teorema é verdadeira para números menores que $n$. Como $n$ é composto, podemos escrever $n=n_1n_2$ onde $2\leq n_1,n_2 < n$ e pela hipótese da indução, os números $n_1$ e $n_2$ podem ser escritos como
+$$
+n_1=p_1\cdots p_r\quad\mbox{e}\quad n_2=q_1\cdots q_s
+$$
+onde $p_1,\ldots,p_r,q_1,\ldots,q_s$ são primos positivos. Ora
+$$
+n=n_1n_2=p_1\cdots p_rq_1\cdots q_s;
+$$
+ou seja, $n$ é produto de primos positivos.
+
+**Unicidade.** Assuma que $n\geq 2$ e
+$$
+n=p_1p_2\cdots p_r=q_1q_2\cdots q_s
+$$
+onde os $p_i$ e os $q_j$ são primos positivos. Assuma ainda sem perder generalidade que $r\leq s$. Nós precisamos provar que $r=s$ e que os primos que aparecem na primeira fatoração são os mesmos que aparecem na segunda. Provaremos isso por indução em $r$.
+
+Na base da indução, assuma que $r=1$. Neste caso, $n=p_1$ é primo, e segue pela definição de números primos que $s=1$ e que $p_1=q_1$. Logo, a unicidade está verificada.
+
+Assuma agora que $r\geq 2$ e a unicidade é válida para números com menos que $r$ fatores. Temos pela primeira fatoração que $p_1\mid n$, e como $p_1$ é primo isso implica que $p_1\mid q_i$ com algum $i$. Mas como $p_1$ e $q_i$ são primos positivos segue que $p_1=q_i$. Depois de possivelmente reordenar os fatores $q_1,\ldots,q_s$, podemos assumir sem perder generalidade que $p_1=q_1$. Neste caso
+$$
+n=p_1p_2\cdots p_r=p_1q_2\cdots q_s
+$$
+e obtemos pela lei cancelativa que
+$$
+p_2\cdots p_r=q_2\cdots q_s.
+$$
+Ora, o número na última equação possui uma fatoração com $r-1$ fatores. Portanto, pela hipótese da indução, $r-1=s-1$ e os fatores $p_2,\ldots,p_r$ e $q_2,\ldots,q_s$ são os mesmos a menos da sua ordem. Isso implica que $r=s$ e que os fatores $p_1,\ldots,p_r$ e $q_1,\ldots,q_s$ são os mesmos a menos da sua ordem.
+
+:::
+
+Por exemplo, se $n=15$, então obtemos duas decomposições que satisfazem a afirmação do Teorema:
+$$
+15=3\cdot 5=5\cdot 3.
+$$
+Mas estas duas decomposições são consideradas idênticas, pois elas diferem-se apenas na ordem dos fatores. Note que permitindo primos positivos e negativos, obtemos quatro fatorações, nomeadamente,
+$$
+15=3\cdot 5=5\cdot 3=(-3)\cdot(-5)=(-5)\cdot(-3).
+$$
+O Teorema Fundamental da Aritmética pode ser estendido para números negativos por afirmar que se $n\in\Z$ com $n\leq -2$, então
+$$
+n=-p_1\cdots p_r
+$$
+onde os $p_i$ são primos positivos e eles são únicos a menos da ordem dos fatores.
+
+
+

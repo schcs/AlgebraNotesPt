@@ -1,0 +1,58 @@
+
+---
+title: "O algoritmo de exponenciação rápida"
+number-sections: true
+lang: pt-BR
+---
+
+Nas várias computações relacionadas com congruências nós precisamos calcular $a^k$ módulo $n$ para números $a$, $k$, $n$ que são grandes com centenas ou milhares de dígitos. Nestes casos multiplicar $k$ vezes o número $a$ e  tomar o resto do resultado módulo $n$ não pode ser feito.
+
+Assuma que $k=[k_m\cdots k_1k_0]_2$; ou seja,
+$$
+k=2^mk_m+2^{m-1}k_{m-1}+\cdots+2k_1+k_0.
+$$
+Então
+$$
+a^k=a^{2^mk_m+2^{m-1}k_{m-1}+\cdots+2k_1+k_0}=\prod_{i=0}^m a^{2^ik_i}=\prod_{k_i\neq 0} a^{2^i}.
+$$
+
+Note que as potências $a,a^2,a^4,a^8,\ldots$ (módulo $n$) podem ser computadas como $a^{2^{i+1}}=(a^{2^i})^2$ e calcular a sequência $a,a^2,\ldots,a^{2^m}$ módulo $n$ precisa de $m-1$ multiplicações e $m-1$ divisões euclidianas. Depois multiplicar estas potências na ordem certa precisa de no máximo $m-1$ multiplicações e $m-1$ divisões euclidianas.
+
+Então $a^k\pmod n$ pode ser calculado usando no máximo $2m-2$ multiplicações e divisões euclidianas onde $m=\lfloor \log_2 k\rfloor$.
+
+:::{#exm-}
+Vamos calcular os últimos 2 dígitos de $2^{81}$. Para isso, precisamos calcular $2^{81}\pmod{100}$. Como
+$$
+81=[1010001]_2=64+16+1
+$$
+precisamos determinar $2,2^2,2^4,2^8,2^{16},2^{32},2^{64}$ módulo $100$. Cada termo desta sequência pode ser determinado como o quadrado do termo anterior e tomar o resto módulo $100$:
+\begin{align*}
+2&\equiv 2,\quad 2^2\equiv 4,\quad 2^4\equiv 16,\quad 2^8\equiv 56, \\
+2^{16}&\equiv 36,\quad 2^{32}\equiv 96,\quad 2^{64}\equiv 16\pmod{100}.
+\end{align*}
+Logo
+$$
+2^{81}\equiv 2^{1}\cdot 2^{16}\cdot 2^{64}=2\cdot 36\cdot 16\equiv 52\pmod{100}.
+$$
+:::
+
+O algoritmo que obtemos assim é chamado Algoritmo de Exponenciação (Potenciação) Rápida, ou Algoritmo de Exponenciação (Potenciação) Modular.
+
+A seguinte função em Python implementa o Algoritmo de Exponenciação Rápida.
+```python
+def ExpModN( a, k, n ):
+    A = a; P = 1; K = k;
+    
+    while K != 0:
+        
+        D = K % 2 
+        #o último dígito de K  
+        if D == 1: 
+            P = (A*P) % n
+            K = (K-1)//2
+        else:
+            K = K//2
+        A = A*A % n
+    return P
+```
+

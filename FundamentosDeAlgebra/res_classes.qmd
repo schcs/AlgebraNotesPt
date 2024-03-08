@@ -1,0 +1,52 @@
+
+---
+title: "Classes residuais"
+number-sections: true
+lang: pt-BR
+---
+
+Nesta página $n\in\N$ é um número fixado. De modo geral, para evitar trivialidades, pode assumir também que $n\geq 2$, mas isso não é necessário.
+
+Seja $a\in\Z$. Denotaremos por $\bar a$ a classe de equivalência de $a$ sob a relação de equivalência $\equiv_n$ definida na página anterior. Em outras palavras,
+$$
+\bar a=\{b\in\Z\mid a\equiv b\pmod n\}.
+$$
+Temos então que $\bar a\subseteq\Z$ e que $\bar a$ contém os inteiros que têm o mesmo resto que $a$ quando divididos por $n$. O conjunto $\bar a$ é chamado de *classe residual* ou *classe de congruência* do elemento $a$ (módulo $n$).
+
+:::{#exm-}
+Considere $n=5$. Temos $5$ classes residuais que são as seguintes:
+\begin{align*}
+\bar 0&=\{0,\pm 5,\pm 10,\pm 15,\ldots\};\\
+\bar 1&=\{1,-4,6,-9,11,-14,\ldots\};\\
+\bar 2&=\{2,-3,7,-8,12,-13,\ldots\};\\
+\bar 3&=\{3,-2,8,-7,13,-12,\ldots\};\\
+\bar 4&=\{4,-1,9,-6,14,-11,\ldots\}.
+\end{align*}
+É fácil verificar que se $a\in\Z$, então $a$ pertence a exatamente uma destas classes; ou seja $\bar a$ coincide com exatamente uma destas classes
+:::
+
+
+:::{#lem-}
+Sejam $a,b\in\Z$.
+
+
+-  $a\in\bar a$;
+-  $\bar a=\bar b$ se e somente se se $a\in\bar b$ se e somente se $b\in\bar a$ se e somente se $a\equiv b\pmod n$.
+
+:::
+
+
+:::{.proof}
+EExercício
+:::
+
+
+:::{#cor-}
+Há $n$ classes residuais módulo $n$; nomeadamenta, $\bar 0,\bar 1,\ldots,\overline{n-1}$. Além disso, cada número $a\in\Z$ pertence a exatamente uma dessas classes. Mais precisamente, se $a=qn+r$ com $r\in\{0,\ldots,n-1\}$, então $a\in\bar r$ e $\bar a=\bar r$
+:::
+
+
+:::{.proof}
+SSe $a\in\Z$, então escreva $a=qn+r$ como no enunciado do corolário. O Lema anterior implica que $\bar a=\bar r$. Por outro lado, as classes $\bar 0,\bar 1,\ldots,\overline{n-1}$ são distintas, pois se $0\leq a < b\leq n-1$, então $a\not\equiv b\pmod n$, e $\bar a \neq \bar b$ pelo lema anterior. As classes $\bar 0,\bar 1,\ldots,\overline{n-1}$ são ainda disjuntas dois a dois e assim todo número $a\in\Z$ pertence a exatamente uma destas classes
+:::
+
