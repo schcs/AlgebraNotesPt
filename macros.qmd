@@ -19,5 +19,7 @@ $$
 \newcommand{\lxor}{\dot\lor}
 \newcommand{\cond}{\Rightarrow}
 \newcommand{\bicond}{\Leftrightarrow}
+\newcommand{\mdc}[2]{\operatorname{mdc}(#1,#2)}
+\newcommand{\grau}[1]{\operatorname{grau}(#1)}
 $$
 :::

@@ -18,6 +18,49 @@ book:
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd
+        - FundamentosDeAlgebra/expansao.qmd
+        - FundamentosDeAlgebra/criterios.qmd
+        - FundamentosDeAlgebra/racionais.qmd
+        - FundamentosDeAlgebra/mdc.qmd
+        - FundamentosDeAlgebra/primos.qmd
+        - FundamentosDeAlgebra/tfa.qmd
+        - FundamentosDeAlgebra/numprimes.qmd
+        - FundamentosDeAlgebra/diof.qmd
+        - FundamentosDeAlgebra/chinese_v1.qmd
+        - FundamentosDeAlgebra/phi.qmd
+        - FundamentosDeAlgebra/cong.qmd
+        - FundamentosDeAlgebra/res_classes.qmd
+        - FundamentosDeAlgebra/z_n.qmd
+        - FundamentosDeAlgebra/cong_incog.qmd
+        - FundamentosDeAlgebra/chines_v2.qmd
+        - FundamentosDeAlgebra/fermat_euler.qmd
+        - FundamentosDeAlgebra/wilson.qmd
+        - FundamentosDeAlgebra/ordr.qmd
+        - FundamentosDeAlgebra/primitive_p1.qmd
+        - FundamentosDeAlgebra/quadrados.qmd
+        - FundamentosDeAlgebra/exp.qmd
+        - FundamentosDeAlgebra/test_fermat.qmd
+        - FundamentosDeAlgebra/carmichael.qmd
+        - FundamentosDeAlgebra/miller.qmd
+        - FundamentosDeAlgebra/rsa_p1.qmd
+        - FundamentosDeAlgebra/rsa_p2.qmd
+        - FundamentosDeAlgebra/aneis.qmd
+        - FundamentosDeAlgebra/complex.qmd
+        - FundamentosDeAlgebra/pols.qmd
+        - FundamentosDeAlgebra/pol_anel.qmd
+        - FundamentosDeAlgebra/div_pol.qmd
+        - FundamentosDeAlgebra/euclid_pol.qmd
+        - FundamentosDeAlgebra/mdc_pol.qmd
+        - FundamentosDeAlgebra/roots.qmd
+        - FundamentosDeAlgebra/primitive_p2.qmd
+        - FundamentosDeAlgebra/irred.qmd
+        - FundamentosDeAlgebra/tfa_pol.qmd
+        - FundamentosDeAlgebra/dfu.qmd
+        - FundamentosDeAlgebra/gauss_pt1.qmd
+        - FundamentosDeAlgebra/eisenstein.qmd
+        - FundamentosDeAlgebra/quadratic.qmd
+        - FundamentosDeAlgebra/cubic.qmd
+
     - part: AlgebraLinearII/index.qmd
       chapters: 
         - AlgebraLinearII/chapter1.qmd

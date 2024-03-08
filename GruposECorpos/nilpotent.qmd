@@ -126,7 +126,8 @@ Seja $G$ um grupo nilpotente.
 * Se $M$ é um subgrupo maximal de $G$, então $M$ é normal e $|G:M|$ é primo.
 :::
 
-:::{.proof} 
+:::{.proof}
+  
 1. Seja $i$ tal que $\gamma_{i-1}(G)\not\leq H$, mas $\gamma_i(G)\leq H$. Então
 $$
 [\gamma_{i-1}(G),H]\leq [\gamma_{i-1}(G),G]=\gamma_i(G)\leq H.

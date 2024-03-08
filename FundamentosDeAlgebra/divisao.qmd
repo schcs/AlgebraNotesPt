@@ -4,11 +4,6 @@ number-sections: true
 lang: pt-BR
 execute:
     output: false
-
-website:
-    sidebar:
-        contents:
-            - definitions.qmd
 ---
 
 
