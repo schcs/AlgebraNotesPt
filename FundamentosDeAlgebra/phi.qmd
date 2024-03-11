@@ -1,6 +1,6 @@
 
 ---
-title: "A função φ de Euler"
+title: "A função 𝜑 de Euler"
 number-sections: true
 lang: pt-BR
 ---

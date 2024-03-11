@@ -19,7 +19,7 @@ Se $Y$ é um subgrupo de $X$, então escrevemos $Y\leq X$. Note que a definiçã
 :::{#exm-exs-subgroups}
 * Se $G$ é um grupo, então $G\leq G$. Um subgrupo de $G$ diferente de $G$ é dito subgrupo *próprio*. Escreve-se $H<G$ para enfatizar que  $H$ é um subgrupo próprio de $G$.  
 * Se $G$ é um grupo, então $\{1\}\leq G$ e este é o único subgrupo com um elemento. Se $H$ é um subgrupo e $H\neq\{1\}$, então $H$ é dito *não trivial*.
-* $SL(V)\leq GL(V)\leq \sym V$ e $SL(n,\K)\leq GL(n,\K)$.
+* $\SLV V\leq \GLV V\leq \sym V$ e $\SL n\F\leq \GL n\F$.
 * $\{2n\mid n\in\Z\}\leq \Z$, mas $\{2n+1\mid n\in\Z\}\not\leq \Z$ (considerando a operação $+$).
 * $\{1,-1\}\leq\{1,-1,i,-i\}\leq \C^*$.
 * As simetrias rotacionais formam um subgrupo de $D_n$, mas as simetrias reflexivas não (explique porque).
@@ -50,12 +50,12 @@ onde $r\in\{0,\ldots,n-1\}$ é o resto de $a$ quando dividido por $n$. Portanto,
 $$
 H+r=\{qn+r\mid q\in\Z\}
 $$
-dos inteiros que dão resto $q$ quando divididos por $n$. Ou seja, o número de classes laterais é $n$ (finito) e $a_1,a_2\in\Z$ pertencem a mesma classe lateral se $a_1\equiv a_2\pmod n$. 
+dos inteiros que dão resto $q$ quando divididos por $n$ (veja @sec-resclasses). Ou seja, o número de classes laterais é $n$ (finito) e $a_1,a_2\in\Z$ pertencem a mesma classe lateral se $a_1\equiv a_2\pmod n$. 
 - Considere o grupo $(\R^3,+)$ e considere o subgrupo 
 $$
 H=\{(x,y,z)\mid x+y+z=0\}.
 $$
-O supgrupo $H$ pode ser visto como um plano em $\R^3$. Se $v=(x_0,y_0,z_0)$, então a classe lateral 
+O subgrupo $H$ pode ser visto como um plano em $\R^3$. Se $v=(x_0,y_0,z_0)$, então a classe lateral 
 $$
 H+v=\{(x,y,z)\mid x+y+z=x_0+y_0+z_0\}
 $$

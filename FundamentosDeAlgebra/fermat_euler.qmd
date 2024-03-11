@@ -15,7 +15,7 @@ $$
 
 A afirmação do exercício anterior é conhecido como o <em>sonho do calouro</em>.
 
-:::{#thm-}
+:::{#thm-ptf}
 (O Pequeno Teorema de Fermat, versão com congruência) Seja $p\in\N$ um primo e $a\in\Z$. Então
 $$
 a^p\equiv a\pmod p.
@@ -99,7 +99,7 @@ Mostre que as seguinte afirmações são equivalentes:
 :::
 
 
-:::{#thm-}
+:::{#thm-euler}
  (O Teorema de Euler.) Seja $n\in\N$ e $a\in\Z$ tal que $\mdc an=1$. Então
 $$
 a^{\varphi(n)}\equiv 1\pmod n.

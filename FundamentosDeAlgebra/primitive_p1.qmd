@@ -31,7 +31,7 @@ Este lema segue do fato que $|\Z_n^*|=\varphi(n)$ e do resultado anterior que os
 
 Enunciaremos agora o Teorema do Elemento Primitivo. A demonstração deste teorema não é muito difícil, mas precisa de alguns fatos sobre polinômios e suas raízes que vamos aprender depois da segunda prova e a demonstração será adiada.
 
-:::{#thm-}
+:::{#thm-primitive1}
 Se $p\in\N$ é um primo, então $\Z_p^*$ possui elementos primitivos
 :::
 

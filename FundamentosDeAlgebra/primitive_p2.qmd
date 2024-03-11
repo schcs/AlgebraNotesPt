@@ -15,7 +15,7 @@ $$
 :::
 
 
-:::{#thm-}
+:::{#thm-primitive2}
 Se $p\in\N$ for um primo, então $\Z_p$ possui um elemento primitivo (ou seja, um elemento de ordem $p-1$)
 :::
 

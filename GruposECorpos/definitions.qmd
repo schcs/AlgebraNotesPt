@@ -40,7 +40,7 @@ Seja $G$ um grupo.
 :::
 
 :::{.proof}
-Exercício.
+Exercício. Consulte, @lem-unique-inverse-zn para a unicidade do inverso.
 :::
 
 ## Notações 
@@ -138,11 +138,11 @@ Ou seja, $a^r=1$. Como $m$ é o menor inteiro positivo tal que $a^m=1$, obtemos 
 :::
 
 :::{#exm-fermat-euler}
-Seja $p$ um primo e seja $\Z_p^*=\Z_p\setminus\{0\}$. Considere o grupo $(\Z_p,\cdot)$. Pelo Pequeno Teorema de Fermat, temos que 
+Seja $p$ um primo e seja $\Z_p^*=\Z_p\setminus\{0\}$. Considere o grupo $(\Z_p,\cdot)$. Pelo Pequeno Teorema de Fermat (@thm-ptf), temos que 
 $a^{p-1}=1$ para todo $a\in \Z_p^*$. O lema anterior implica que 
 $|a|\mid p-1$.
 
-Similarmente, denote the por $\Z_n^*$ o conjunto de elementos invertíveis de $\Z_n$. Então $\Z_n^*$ é um grupo para a multiplicação entre classes residuais. Sabemos do Teorema de Euler que 
+Similarmente, denote the por $\Z_n^*$ o conjunto de elementos invertíveis de $\Z_n$. Então $\Z_n^*$ é um grupo para a multiplicação entre classes residuais. Sabemos do Teorema de Euler (@thm-euler) que 
 $$
 a^{\varphi(n)}=1\quad\mbox{para todo}\quad a\in\Z_n^*.
 $$ 

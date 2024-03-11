@@ -5,6 +5,8 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Classes residuais {#sec-resclasses}
+
 Nesta página $n\in\N$ é um número fixado. De modo geral, para evitar trivialidades, pode assumir também que $n\geq 2$, mas isso não é necessário.
 
 Seja $a\in\Z$. Denotaremos por $\bar a$ a classe de equivalência de $a$ sob a relação de equivalência $\equiv_n$ definida na página anterior. Em outras palavras,

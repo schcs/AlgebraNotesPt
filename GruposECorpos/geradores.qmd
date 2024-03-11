@@ -20,6 +20,21 @@ $$
 \left<X\right>=\bigcap_{X\subseteq H\leq G}H.
 $$
 
+:::{#exr-sym-gen1}
+Verifique as seguintes afirmações. 
+
+1. O grupo $\Z_6$ é gerado pelos conjuntos $\{1\}$ e também por $\{2,3\}$. Note, nos dois casos, que estes 
+são conjuntos minimais de geradores (no sentido que ao omitir algum elemento, o conjunto obtido não é gerador). 
+2. O grupo $\Z_7^*$ é gerado por $3$, mas não por $2$. 
+3. O grupo simétrico $S_n$ é gerado pelas transposilções $(i,j)$ com $1\leq i<j\leq n$. 
+4. O grupo simétrico $S_n$ é gerado também pelas transposilções $(1,2)$, $(2,3),\ldots,(n,n-1)$. 
+5. O grupo simétrico é gerado pelos elementos $(1,2)$, $(1,2,\ldots,n)$. 
+6. Seja $a\in D_n$ a rotação por $360/n$ graus e $b\in D_n$ uma reflexão qualquer. Então $D_n=\left<a,b\right>$. 
+6. O grupo $\SL n\F$ é gerado por matrizes elementares $E_{i,j}(\alpha)$ com $i\neq j$ e $\alpha\in\F$. A matriz elementar $E_{i,j}(\alpha)$ 
+está  definido como a matriz identidade, exceto na entrada $(i,j)$ onde temos $\alpha$. 
+7. O grupo $\SL np$ é gerado por matrizes elementares $E_{i,j}(1)$ com $i\neq j$. 
+:::
+
 ## Grupo cíclico
 
 :::{#def-cyclic}
@@ -36,13 +51,12 @@ Seja $g\in G$. Demonstre que $|\left<g\right>|=|g|$. Portanto, se $G$ é um grup
 
 
 :::{#exm-cyclic}
-O grupo $(\mathbb Z,+)$ é cíclico gerado por $1$.
-Seja $n\geq 2$. Então o grupo aditivo $(\mathbb Z_n,+)$ é cíclico gerado pelo elemento $1$.
-O grupo $\{i,-i,1,-1\}$ é cíclico gerado por $i$.
-O grupo de rotações de um polígono com $n$ lados é cíclico e é gerado pela rotação por $360/n$ graus.
-
-O grupo simétrico $S_3$ não é cíclico, pois ele não é abeliano.
-O grupo $K=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$ é abeliano, mas não é cíclico pois não possui um elemento de ordem $4$.
+1. O grupo $(\mathbb Z,+)$ é cíclico gerado por $1$.
+2. Seja $n\geq 2$. Então o grupo aditivo $(\mathbb Z_n,+)$ é cíclico gerado pelo elemento $1$.
+3. O grupo $\{i,-i,1,-1\}$ é cíclico gerado por $i$.
+4. O grupo de rotações de um polígono com $n$ lados é cíclico e é gerado pela rotação por $360/n$ graus.
+5. O grupo simétrico $S_3$ não é cíclico, pois ele não é abeliano.
+6. O grupo $K=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$ é abeliano, mas não é cíclico pois não possui um elemento de ordem $4$.
 :::
 
 :::{#lem-subgroup-cyclic}
@@ -50,7 +64,7 @@ Se $G$ é um grupo cíclico e $H\leq G$, então $H$ é cíclico.
 :::
 
 :::{.proof}
-Assuma que $G=\left<g\right>$ e seja $k\geq 1$ menor tal que $g^k\in H$. Afirmamos que $H=\left<g^k\right>$. Claramente $\left<g^k\right>\leq H$. Ora, seja $x\in H$. Como $G$ é cíclico, $x=g^m$ com algum $m\geq 0$. Pondo $m=qk+r$ com $r\in\{0,\ldots,k-1\}$, obtemos que 
+Assuma que $G=\left<g\right>$ e seja $k\geq 1$ menor tal que $g^k\in H$. Afirmamos que $H=\left<g^k\right>$. Claramente $\left<g^k\right>\leq H$. Ora, seja $x\in H$. Como $G$ é cíclico, $x=g^m$ com algum $m\geq 0$. Pondo $m=qk+r$ com $r\in\{0,\ldots,k-1\}$ (@thm-euclides), obtemos que 
 $$
 x=g^m=g^{qk+r}=(g^k)^qg^r.
 $$
@@ -61,7 +75,7 @@ $$
 Como $k$ foi menor positivo tal que $x^k\in H$, obtemos que $r=0$. Ou seja, $x=g^{qk}=(g^k)^q$. Assim, todo elemento de $H$ é uma potência de $g^k$ e $H=\left<g^k\right>$.
 :::
 
-O seguinte teorema sai como uma consequência do Teorema de Lagrange.
+O seguinte teorema sai como uma consequência do Teorema de Lagrange (@thm-lagrange).
 
 :::{#thm-prime-cyclic}
 Seja $p$ um primo e seja $G$ um grupo com $p$ elementos. Então $G$ é cíclico. Em particular, $G$ é abeliano.
@@ -77,8 +91,9 @@ $$
 $$
 A seguinte igualdade é bem conhecida:
 $$
-\sum_{d\mid n}\varphi(d)=n.
+\sum_{d\mid n}\varphi(d)=n. 
 $$
+Um caso particular deste teorema foi provado na disciplina Fundamentos de Álgebra (@thm-primitive1 e @thm-primitive2).
 
 :::{#thm-field-cyclic}
 Seja $G$ um subgrupo finito do grupo multiplicativo de um corpo $\mathbb F$. Então $G$ é cíclico.

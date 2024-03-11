@@ -1,5 +1,5 @@
 ---
-title: "O Lema de Iwasawa e a simplicadade de $PSL(n,q)$"
+title: "O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)"
 number-sections: true
 lang: pt-BR
 ---

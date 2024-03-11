@@ -6,7 +6,7 @@ lang: pt-BR
 ---
 
 $\newcommand{\real}[1]{\mathfrak R(#1)}\newcommand{\imag}[1]{\mathfrak I(#1)}\newcommand{\argz}[1]{\mbox{arg}(#1)}\DeclareMathOperator{\sen}{sen}\newcommand{\cis}[1]{\cos #1+i\sen #1}$
-Um <b>número complexo</b> é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
+Um **número complexo** é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
 $$
 i^2=-1.
 $$
@@ -21,9 +21,9 @@ O conjunto de todos os números complexos é denotado por $\C$. Em outras palavr
 $$
 \C=\{a+bi\mid a,b\in \R\}=\R+\R i.
 $$
-Os números complexos podem ser visualizados em um plano chamado de <b>plano complexo</b>. Cada número complexo pode ser visto como um vetor neste plano e a soma entre números complexos corresponde à soma de vetores.
+Os números complexos podem ser visualizados em um plano chamado de **plano complexo**. Cada número complexo pode ser visto como um vetor neste plano e a soma entre números complexos corresponde à soma de vetores.
 
-Se $z=a+bi\in\C$, então $a\in\R$ é dita <b>parte real</b> e $b\in\R$ é chamado de <b>parte imaginária</b> de $z$. Escrevemos que
+Se $z=a+bi\in\C$, então $a\in\R$ é dita **parte real** e $b\in\R$ é chamado de **parte imaginária** de $z$. Escrevemos que
 $$
 a=\real z \qquad\mbox{e}\qquad b=\imag z.
 $$
@@ -66,7 +66,7 @@ As seguintes propriedades são válidas para todo número complexo $z_1$, $z_2$,
 Exercício
 :::
 
-Para um número complexo, $z=a+bi$, definimos $\bar z=a-bi$. O número $\bar z$ é dito <b>conjugado complexo</b>. Pode-se também definir a <b>norma</b>, <b>comprimento</b>, ou <b>módulo</b> de um número complexo $z=a+bi\in\C$:
+Para um número complexo, $z=a+bi$, definimos $\bar z=a-bi$. O número $\bar z$ é dito **conjugado complexo**. Pode-se também definir a **norma**, **comprimento**, ou **módulo** de um número complexo $z=a+bi\in\C$:
 $$
 |z|=\sqrt{a^2+b^2}.
 $$
@@ -121,7 +121,7 @@ Seja $z=a+bi\in \C$. O argumento $\argz z$ de $z$ é o ângulo $\vartheta$ que o
 $$
 z=|z|(\cos\vartheta+i\sen\vartheta).
 $$
-A forma $z=a+bi$ é chamada <b>forma vetorial</b> do número complexo $z$. A forma  $z=|z|(\cos\vartheta+i\sen\vartheta)$ é chamada <b>forma polar</b>. O argumento de um número complexo não é unicamente definido, pois  se $\vartheta$ é argumento de $z\in\C$, então os outros argumentos são ângulos na forma $\vartheta+2k\pi$ onde $k\in\Z$. Note que existe único argumento de $z$ no intervalo $[0,2\pi)$ e também no intervalo $(-\pi,\pi]$.
+A forma $z=a+bi$ é chamada **forma vetorial** do número complexo $z$. A forma  $z=|z|(\cos\vartheta+i\sen\vartheta)$ é chamada **forma polar**. O argumento de um número complexo não é unicamente definido, pois  se $\vartheta$ é argumento de $z\in\C$, então os outros argumentos são ângulos na forma $\vartheta+2k\pi$ onde $k\in\Z$. Note que existe único argumento de $z$ no intervalo $[0,2\pi)$ e também no intervalo $(-\pi,\pi]$.
 
 Mais geralmente cada expressão
 $$
@@ -226,7 +226,7 @@ z^k=r^k(\cos(k\vartheta)+i\sen{(k\vartheta)}).
 $$
 está válida para todo $k\in\Z$ (ou seja, também para $k$ negativo). A verificação deste fato será tarefa do leitor.
 
-Um número complexo $z\in\C$ é dita <b>$k$-ésima raiz da unidade</b> se $z^k=1$.
+Um número complexo $z\in\C$ é dita **$k$-ésima raiz da unidade** se $z^k=1$.
 
 :::{#lem-}
 Se $k\geq 1$, então $\C$ possui $k$ $k$-ésimas raízes distintas da unidade; nomeadamente,
