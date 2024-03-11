@@ -10,7 +10,8 @@ lang: pt
 
 Conjuntos são objetos básicos na matemática. A teoria dos conjuntos é um ramo relativamente novo que foi desenvolvido a partir do final do século XIX por matemáticos tais como [Cantor](https://pt.wikipedia.org/wiki/Georg_Cantor), [Hilbert](https://pt.wikipedia.org/wiki/David_Hilbert), [Zorn](https://pt.wikipedia.org/wiki/Max_August_Zorn), [Zermelo](https://pt.wikipedia.org/wiki/Ernst_Zermelo) e [Fraenkel](https://pt.wikipedia.org/wiki/Adolf_Abraham_Halevi_Fraenkel). A [teoria rigorosa dos conjuntos](https://pt.wikipedia.org/wiki/Axiomas_de_Zermelo-Fraenkel) é um assunto avançado que nós não vamos abordar nesta disciplina. O que nós vamos estudar neste semestre é chamado "[Teoria Ingênua dos Conjuntos](https://pt.wikipedia.org/wiki/Teoria_ing%C3%AAnua_dos_conjuntos)". Para estudar matemática moderna e avançada, esta teoria não é suficiente, mas ela serve para introduzir os conceitos básicos e fundamentar os estudos nas disciplinas da graduação.
 
-Um *conjunto* $A$ é uma coleção de objetos. Se $x$ é um objeto, então a proposição "$x\in A$" tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que *$x$ pertence ao conjunto $A$*. Caso contrário,  dizemos que *$x$ não pertence a $A$* e escrevemos $x\not\in A$. Para um conjunto ser bem definido, é necessário que para qualquer objeto $x$ seja possível decidir se $x\in A$ ou $x\not\in A$. Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto $X$ de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.
+Um *conjunto* $A$ é uma coleção de objetos. Se $x$ é um objeto, então a proposição "$x\in A$" tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que *$x$ pertence ao conjunto $A$*
+ou que *$a$ é elemento de $A$*. Caso contrário,  dizemos que *$x$ não pertence a $A$* ou que *$a$ não é elemento de $A$* e escrevemos $x\not\in A$. Para um conjunto ser bem definido, é necessário que para qualquer objeto $x$ seja possível decidir se $x\in A$ ou $x\not\in A$. Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto $X$ de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.
 
 **Notação**: Conjuntos são delimitados por "$\{$" e "$\}$". Com os conjuntos mais simples, nós listamos os elementos do conjunto entre "$\{$" e "$\}$". Por exemplo, para denotar o conjunto que contém os números $-1$, $2$, $5$, escrevemos $A=\{-1,2,5\}$. Temos que 
 $$
@@ -25,41 +26,38 @@ Para denotar conjuntos usaremos principalmente letras maiúsculas. Por exemplo $
 Os conjuntos não são ordenados e contém seus elementos apenas uma vez. Por exemplo, os conjuntos $\{-1,2,5\}$, $\{5,2,-1,2\}$, $\{2,2,-1,-1,5\}$ são todos iguais ao conjunto $\{-1,2,5\}$. Pode acontecer que precisamos "conjuntos" ordenados ou "conjuntos" que contém seus elementos com multiplicidade, mas nestes casos seu professor vai criar um objeto adequado. 
 
 :::{#exm-conjuntos}
-**Exemplos** $\label{ex:conjuntos}$
 - Podemos considerar por exemplo o conjunto $X=\{1,2,3,4,5\}$. Neste caso $1\in X$, mas $-1\not\in X$. 
 - Pode-se também considerar o conjunto $\N$ dos números naturais. Temos que $\N=\{1,2,3,\ldots\}$. Em particular, $2\in\N$, mas $-1\not\in\N$. Nós também não vamos considerar zero como natural, então $0\not\in \N$. 
 :::
 
 Note que o uso do símbolo $\ldots$ está usado no segundo exemplo. 
 
-Conjuntos podem ser definidos também como uma coleção de elementos em um conjunto maior. Por exemplo, seja
-$$
-    X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}.
-$$
-Em outras palávras, $X$ é o conjunto dos números $n$ que pertencem ao conjunto $\N$ e são  pares. Note que a definição de $X$ tem duas partes. Na primeira parte ``$n\in\N$'', nós indicamos que os elementos de $X$ serão elementos de $\N$, enquanto na segunda parte, especificamos quais elementos de $\N$ serão elementos de $X$. Neste caso, os elementos de $X$ são os elementos de $\N$ qua são múltiplos de $2$.  
 
 Existe um conjunto que não possui elementos. Este conjunto é chamado de *conjunto vazio* e é denotado por $\emptyset$. Por definição $x\not\in \emptyset$ para todo objeto $x$. O conjunto vazio pode ser escrito também como $\{\}$. 
 
 ## Subconjuntos
 
 :::{#def-subconjunto}
-**Definição.**
-Assuma que $A$ e $B$ são conjuntos. Dizemos que $A$ é *subconjunto* de $B$, se para todo $x\in A$ temos que $x\in B$. Temos que $x\in A\cond x\in B$.
+Assuma que $A$ e $B$ são conjuntos. Dizemos que $A$ é *subconjunto* de $B$, se todo elemento de $A$ é elemento de $B$. 
 :::
 
 Se $A$ é subconjunto de $B$, então escrevemos que $A\subseteq B$. Se $A$ não é subconjunto de $B$, então escrevemos que $A\not\subseteq B$. 
 
 
 :::{#exm-subconjunto}
-**Exemplos.** $\{1,2,3\}\subseteq \{1,2,3,4,5\}$ e 
+$\{1,2,3\}\subseteq \{1,2,3,4,5\}$ e 
 $\{1,2,3,4,5\}\subseteq \N$, mas $\{0,1,2\}\not\subseteq \N$. 
 
 Para todo conjunto $X$, temos que $X\subseteq X$ e 
 $\emptyset\subseteq X$.
 :::
 
+:::{#exm-subconjunto1}
+É importante entender a diferença entre os símbolos $\in$ e $\subseteq$. Por exemplo, se $A=\{1,2,3\}$, então $1\in A$, $\{1\}\subseteq A$. Mas é errado afirmar que $1\subseteq A$ ou $\{1\}\in A$!
+:::
+
 :::{#def-conjunto-equal}
-**Definição.** Se $A$ e $B$ são conjuntos, então dizemos que $A$ é *igual* a $B$ quando $A\subseteq B$ e $B\subseteq A$. 
+Se $A$ e $B$ são conjuntos, então dizemos que $A$ é *igual* a $B$ quando $A\subseteq B$ e $B\subseteq A$. 
 :::
 
 Se $A$ é igual a $B$, então escrevemos que $A=B$. Se $A$ não é igual a $B$, então escreve-se que $A\neq B$. 
@@ -67,4 +65,114 @@ Se $A$ é igual a $B$, então escrevemos que $A=B$. Se $A$ não é igual a $B$, 
 
 Quando $A\subseteq B$ mas $A\neq B$, então escrevemos que $A\subset B$ e dizemos que $A$ é *subconjunto próprio* de $B$. 
 
+:::{#exm-subsets}
+Seja $A=\{1,2,3\}$. Os subconjuntos de $A$ são 
+$$
+\emptyset,\ \{1\},\ \{2\},\ \{3\},\ \{1,2\},\ \{1,3\},\ \{2,3\},\ \{1,2,3\}.
+$$
+Ou seja, $A$ possui $2^3=8$ subconjuntos.
+:::
 
+## As operações básicas de conjuntos
+
+:::{#def-set-operations}
+Sejam $A$ e $B$ conjuntos. 
+
+1. A *união* $A\cup B$ de $A$ é $B$ é o conjunto dos objetos que pertencem ao conjunto $A$ ou ao conjunto $B$ (incluindo a possibilidade que perntencem aos dois).
+2. A *interseção* $A\cap B$ de $A$ e $B$ é o conjunto dos objetos que pertencem a ambos dos conjuntos $A$ e $B$.
+3. A *diferença* $A\setminus B$ (ou $A-B$) é o conjunto dos objetos que pertencem ao conjunto $A$ mas não ao conjunto $B$.  
+:::
+
+:::{#exm-set-operations}
+Sejam 
+$$
+A=\{1,2,3,5,6,7\}\quad \mbox{e}\quad A=\{2,3,4,6,8,9\}.
+$$
+Então temos que 
+\begin{align*}
+A\cup B &=\{1,2,3,4,5,6,7,8,9\};\\
+A\cap B &=\{2,3,6\};\\
+A\setminus B&=\{1,5,7\}.
+\end{align*}
+:::
+
+:::{#lem-set-operations}
+Sejam $A$ e $B$ conjuntos. As seguintes afirmações são verdadeiras.
+
+1. $A\subseteq A\cup B$, $B\subseteq A\cup B$;
+2. $A\cap B\subseteq A$, $A\cap B\subseteq A$;
+3. $A\setminus B\subseteq A$. 
+:::
+
+## Conjuntos definidos com predicato
+Conjuntos podem ser definidos também como uma coleção de elementos em um conjunto maior. Por exemplo, seja
+$$
+    X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}.
+$$
+Em outras palávras, $X$ é o conjunto dos números $n$ que pertencem ao conjunto $\N$ e são  pares. Note que a definição de $X$ tem duas partes. Na primeira parte ``$n\in\N$'', nós indicamos que os elementos de $X$ serão elementos de $\N$, enquanto na segunda parte, especificamos quais elementos de $\N$ serão elementos de $X$. Neste caso, os elementos de $X$ são os elementos de $\N$ que são múltiplos de $2$.  
+
+A sentença "$n$ é múltiplo de $2$" não é uma proposição, pois contém a variável $n$. Por outro lado, ao substituir elementos de $\N$ no lugar de $n$, obtemos uma proposição que tem valor lógico Falso ou Verdadeiro. Por exemplo "$4$ é múltiplo de $2$" é uma proposição verdadeira, enquanto "$5$ é um múltiplo de $2$" é falsa. Dizemos que  "$n$ é múltiplo de $2$" é um *predicato*.
+
+
+## Propriedades adicionais das operações dos conjuntos
+
+:::{#lem-props-sets}
+Sejam $A$, $B$ e $C$ conjuntos. As seguintes afirmações são verdadeiras.
+
+1. $A\cap (B\cup C)=(A\cup B)\cap (A\cup C)$;
+2. $A\cup (B\cap C)=(A\cap B)\cup (A\cap C)$.
+:::
+
+:::{.proof}
+Vamor provar 1. Provaremos primeiro que $A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)$. 
+\begin{align*}
+x&\in A\cap (B\cup C)\implies\\ 
+x&\in A \mbox{ e }x\in B\cup C \implies\\
+x&\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)\implies \\
+(x&\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)\implies \\
+x&\in A\cap B\mbox{ ou } x\in A\cap C\implies \\
+x&\in (A\cap B)\cup (A\cap C).
+\end{align*}
+Isso implica que $A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)$. 
+
+Agora, precisamos verificar que $(A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)$. Observe que temos que reverter o argumento em cima:
+\begin{align*}
+x&\in (A\cap B)\cup (A\cap C)\implies \\
+x&\in A\cap B\mbox{ ou } x\in A\cap C\implies \\
+(x&\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)\implies \\
+x&\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)\implies \\
+x&\in A \mbox{ e }x\in B\cup C \implies\\
+x&\in A\cap (B\cup C).
+\end{align*}
+Ou seja, $(A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)$. Portanto $A\cap (B\cup C)=(A\cup B)\cap (A\cup C)$.
+
+A prova da afirmação 2. é similar e será exercício para o leitor.
+:::
+
+## O complemento
+
+:::{#def-complement}
+Sejam $A$ e $B$ conjuntos tais que $A\subseteq B$. O *complemento* de $A$ em $B$ é o conjunto $A\setminus B$.  O complemento é denotado por $A^c$. Note que o complemento depende de $B$, mesmo que isso não está indicado na notação. 
+:::
+
+:::{#lem-de-morgan}
+Sejam $A,B\subseteq C$. Temos que 
+
+1. $(A\cup B)^c=A^c\cap B^c$;
+2. $(A\cap B)^c=A^c\cup B^c$.
+:::
+
+:::{.proof}
+Provaremos afirmação 1. Primeiro verificamos que $(A\cup B)^c\subseteq A^c\cap B^c$. 
+\begin{align*}
+x&\in (A\cup B)^c\implies \\
+x &\in C\mbox{ e }x\not \in A\cup B\implies \\ 
+x &\in C\mbox{ e } (x\not \in A\mbox{ e } x\not\in B)\implies \\
+(x &\in C\mbox{ e } x\not \in A) \mbox{ e } (x\in C\mbox{ e }x\not\in B)\implies \\
+x & \in A^c \mbox{ e } x \in B^c\implies \\
+x & \in A^c\cap B^c.
+\end{align*}
+Logo, $(A\cup B)^c\subseteq A^c\cap B^c$. Revertendo o argumento, obtemos que $A^c\cap B^c\subseteq (A\cup B)^c$.
+
+A verificação da afirmação 2. é exercício.
+:::

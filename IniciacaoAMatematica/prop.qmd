@@ -18,7 +18,7 @@ Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que afirm
 
 Cada proposição deve ser ou *verdadeira* ou *falsa*, mas não pode ser verdadeira *e* falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico *falso*).
 
-Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como "O Pedro é estudante" são frequentamente demasiado polémicas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.) 
+Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como "O Pedro é estudante" são frequentamente demasiado ambíguas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.) 
 
 As seguintes não são proposições. 
 
@@ -152,29 +152,30 @@ Note que a expressão $(P \land \neg Q) \lor (\neg P \land Q)$ é verdadeira se 
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \bicond P \lxor Q
 $$
-para qualquer proposição $P$ e $Q$
+para qualquer proposição $P$ e $Q$. Neste caso escrevemos também que 
+$$
+(P \land \neg Q) \equiv (\neg P \land Q) \bicond P \lxor Q.
+$$
 
 :::{#exr-true-table}
 Usando tabelas-verdade, verifique, para proposições $P$ e $Q$, que 
 $$
-P\cond Q \bicond (\neg P) \lor Q
+P\cond Q \equiv (\neg P) \lor Q
 $$
 e 
 $$
-P\bicond Q \bicond (P \land Q) \lor (\neg P \land \neg Q).
+P\bicond Q \equiv (P \land Q) \lor (\neg P \land \neg Q).
 $$
 :::
 
 :::{#exr-true-table2}
 Exercício.
 Demonstre as seguintes afirmações usando tabelas-verdade.
-$$
-\neg(P\lor Q)\bicond \neg P \land \neg Q
-$$
-e 
-$$
-\neg(P\land Q) \bicond \neg P \lor \neg Q
-$$
+
+1. $\neg(P\lor Q)\equiv \neg P \land \neg Q$;
+2. $\neg(P\land Q) \equiv \neg P \lor \neg Q$;
+3. $P\land(Q\lor R)\equiv (P\land Q)\lor (P\land R)$;
+4. $P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)$.
 :::
 
 As afirmações no exercício anterior são conhecidas como as *identidades de de Morgan*. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
@@ -185,8 +186,8 @@ então
 \begin{align*}
 P\land Q&:\ \mbox{$2$ é primo e $3$ divide $7$}\\
 P\lor Q&:\ \mbox{$2$ é primo ou $3$ divide $7$}\\
-\neg(P\land Q)&:\ \mbox{$2$ não é primo ou  $3$ não divide $7$}\\
-\neg(P\lor Q)&:\ \mbox{$2$ não é primo e $3$ não divide $7$}\\
+\neg(P\land Q)\equiv \neg P\lor \neg Q&:\ \mbox{$2$ não é primo ou  $3$ não divide $7$}\\
+\neg(P\lor Q)\equiv \neg P\land \neg Q&:\ \mbox{$2$ não é primo e $3$ não divide $7$}.
 \end{align*}
 
 
