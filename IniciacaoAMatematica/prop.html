@@ -1088,7 +1088,7 @@ window.Quarto = {
 <li><span class="math inline">\(1+2=3\)</span>.</li>
 </ul>
 <p>Cada proposição deve ser ou <em>verdadeira</em> ou <em>falsa</em>, mas não pode ser verdadeira <em>e</em> falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se <em>valor lógico</em> ou <em>valor de verdade</em>. Cada proposição tem exatamente um dos dois valores lógicos: <em>verdadeiro</em> ou <em>falso</em>. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico <em>falso</em>).</p>
-<p>Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como “O Pedro é estudante” são frequentamente demasiado polémicas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.)</p>
+<p>Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como “O Pedro é estudante” são frequentamente demasiado ambíguas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.)</p>
 <p>As seguintes não são proposições.</p>
 <ul>
 <li>O número <span class="math inline">\(10\)</span> é interessante.</li>
@@ -1248,28 +1248,32 @@ A\lor B \land C
 </table>
 <p>Note que a expressão <span class="math inline">\((P \land \neg Q) \lor (\neg P \land Q)\)</span> é verdadeira se e somente se <span class="math inline">\(P\)</span> é verdadeira ou <span class="math inline">\(Q\)</span> é verdadeira, mas elas não são verdadeiras no mesmo tempo. Logo, pode se concluir que <span class="math display">\[
 (P \land \neg Q) \lor (\neg P \land Q) \bicond P \lxor Q
-\]</span> para qualquer proposição <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span></p>
+\]</span> para qualquer proposição <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span>. Neste caso escrevemos também que <span class="math display">\[
+(P \land \neg Q) \equiv (\neg P \land Q) \bicond P \lxor Q.
+\]</span></p>
 <div id="exr-true-table" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 1.1</strong></span> Usando tabelas-verdade, verifique, para proposições <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span>, que <span class="math display">\[
-P\cond Q \bicond (\neg P) \lor Q
+P\cond Q \equiv (\neg P) \lor Q
 \]</span> e <span class="math display">\[
-P\bicond Q \bicond (P \land Q) \lor (\neg P \land \neg Q).
+P\bicond Q \equiv (P \land Q) \lor (\neg P \land \neg Q).
 \]</span></p>
 </div>
 <div id="exr-true-table2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 1.2</strong></span> Exercício. Demonstre as seguintes afirmações usando tabelas-verdade. <span class="math display">\[
-\neg(P\lor Q)\bicond \neg P \land \neg Q
-\]</span> e <span class="math display">\[
-\neg(P\land Q) \bicond \neg P \lor \neg Q
-\]</span></p>
+<p><span class="theorem-title"><strong>Exercício 1.2</strong></span> Exercício. Demonstre as seguintes afirmações usando tabelas-verdade.</p>
+<ol type="1">
+<li><span class="math inline">\(\neg(P\lor Q)\equiv \neg P \land \neg Q\)</span>;</li>
+<li><span class="math inline">\(\neg(P\land Q) \equiv \neg P \lor \neg Q\)</span>;</li>
+<li><span class="math inline">\(P\land(Q\lor R)\equiv (P\land Q)\lor (P\land R)\)</span>;</li>
+<li><span class="math inline">\(P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)\)</span>.</li>
+</ol>
 </div>
 <p>As afirmações no exercício anterior são conhecidas como as <em>identidades de de Morgan</em>. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se <span class="math display">\[
 P:\ \mbox{$2$ é primo}, \quad Q:\ \mbox{$3$ divide $7$}
 \]</span> então <span class="math display">\[\begin{align*}
 P\land Q&amp;:\ \mbox{$2$ é primo e $3$ divide $7$}\\
 P\lor Q&amp;:\ \mbox{$2$ é primo ou $3$ divide $7$}\\
-\neg(P\land Q)&amp;:\ \mbox{$2$ não é primo ou  $3$ não divide $7$}\\
-\neg(P\lor Q)&amp;:\ \mbox{$2$ não é primo e $3$ não divide $7$}\\
+\neg(P\land Q)\equiv \neg P\lor \neg Q&amp;:\ \mbox{$2$ não é primo ou  $3$ não divide $7$}\\
+\neg(P\lor Q)\equiv \neg P\land \neg Q&amp;:\ \mbox{$2$ não é primo e $3$ não divide $7$}.
 \end{align*}\]</span></p>
 
 
