@@ -731,7 +731,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/phi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A função φ de Euler</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1023,7 +1023,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de <span class="math inline">\(PSL(n,q)\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1070,7 +1070,7 @@ window.Quarto = {
 </header>
 
 
-Seja <span class="math inline">\(n\in\N\)</span> um número natural e seja <span class="math inline">\(a\in\Z\)</span>. Nós definimos em uma aula anterior a classe residual (ou a classe de congruência de <span class="math inline">\(a\)</span>) módulo <span class="math inline">\(n\)</span> como <span class="math display">\[
+<p>Seja <span class="math inline">\(n\in\N\)</span> um número natural e seja <span class="math inline">\(a\in\Z\)</span>. Nós definimos em uma aula anterior a classe residual (ou a classe de congruência de <span class="math inline">\(a\)</span>) módulo <span class="math inline">\(n\)</span> como <span class="math display">\[
 \overline a=\{a+kn\mid k\in\Z\}=\{b\in\Z\mid b\equiv a\pmod n\}.
 \]</span> Provamos ainda que <span class="math inline">\(\overline a=\overline b\)</span> se e somente se <span class="math inline">\(a\equiv b\pmod n\)</span>. Assim há exatamente <span class="math inline">\(n\)</span> classes residuais módulo <span class="math inline">\(n\)</span>, nomeadamente, <span class="math display">\[
 \overline 0, \overline 1,\ldots,\overline{n-1}.
@@ -1081,15 +1081,12 @@ Seja <span class="math inline">\(n\in\N\)</span> um número natural e seja <span
 \]</span> Nós podemos definir duas operações, uma soma e uma multiplicação, no conjunto das classes residuais pondo <span class="math display">\[\begin{align*}
 \overline a+\overline b&amp;=\overline{a+b};\\
 \overline a\cdot\overline b&amp;=\overline{a\cdot b}
-\end{align*}\]</span> para todo <span class="math inline">\(\overline a,\overline b\in\Z_n\)</span>.
-<p></p>
+\end{align*}\]</span> para todo <span class="math inline">\(\overline a,\overline b\in\Z_n\)</span>.</p>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 16.1</strong></span> Por exemplo, se <span class="math inline">\(\bar 2,\bar 4\in \Z_6\)</span>, então<span class="math display">\[\begin{align*}\bar 2+\bar 4&amp;=\overline{2+4}=\bar 6=\bar 0;\\\bar 2\cdot \bar 4&amp;=\overline{2\cdot 4}=\bar 8=\bar 2.\end{align*}\]</span></p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 16.1</strong></span> &nbsp;</p>
-As operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> são bem definidas no conjunto <span class="math inline">\(\Z_n\)</span>. Além disso estas operações satisfazem as seguintes propriedades para todo <span class="math inline">\(\overline a,\overline b,\overline c\in\Z_n\)</span>:
-<p></p>
+<p><span class="theorem-title"><strong>Lema 16.1</strong></span> As operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> são bem definidas no conjunto <span class="math inline">\(\Z_n\)</span>. Além disso estas operações satisfazem as seguintes propriedades para todo <span class="math inline">\(\overline a,\overline b,\overline c\in\Z_n\)</span>:</p>
 <ul>
 <li><span class="math inline">\((\overline a+\overline b)+\overline c=\overline a+(\overline b+\overline c)\)</span> (associatividade da adição);</li>
 <li><span class="math inline">\(\overline a+\overline b=\overline b+\overline a\)</span> (comutatividade da adição);</li>
@@ -1102,138 +1099,142 @@ As operações <span class="math inline">\(+\)</span> e <span class="math inline
 </ul>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-O fato que a operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> são bem definidas é equivalente ao seginte fato. Se <span class="math inline">\(a_1,a_2,b_1,b_2\in\Z\)</span> tais que <span class="math inline">\(\overline{a_1}=\overline{a_2}\)</span> e <span class="math inline">\(\overline{b_1}=\overline{b_2}\)</span>, então <span class="math display">\[\begin{align*}
+<p><span class="proof-title"><em>Comprovação</em>. </span>O fato que a operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> são bem definidas é equivalente ao seginte fato. Se <span class="math inline">\(a_1,a_2,b_1,b_2\in\Z\)</span> tais que <span class="math inline">\(\overline{a_1}=\overline{a_2}\)</span> e <span class="math inline">\(\overline{b_1}=\overline{b_2}\)</span>, então <span class="math display">\[\begin{align*}
 \overline{a_1}+\overline{b_1}&amp;=\overline{a_2}+\overline{b_2}\\
 \overline{a_1}\overline{b_1}&amp;=\overline{a_2}\overline{b_2}\\
 \end{align*}\]</span> As equações acima são equivalentes às congruências <span class="math display">\[\begin{align*}
 a_1+b_1&amp;\equiv a_2+b_2\pmod n\\
 a_1b_1&amp;=a_2b_2\pmod n\\
-\end{align*}\]</span> Mas estas congruências são verdadeiras por um resultado que provamos na aula sobre congruẽncias.
-<p></p>
-As propriedades listadas são mais ou menos óbvias. Vamos provar a distributividade. Obtemos usando a definição das operações que <span class="math display">\[
+\end{align*}\]</span> Mas estas congruências são verdadeiras por um resultado que provamos na aula sobre congruẽncias. As propriedades listadas são mais ou menos óbvias. Vamos provar a distributividade. Obtemos usando a definição das operações que <span class="math display">\[
 \overline a(\overline b+\overline c)=\overline a\overline{b+c}=\overline{a(b+c)}=\overline{ab+ac}=\overline{ab}+\overline{ac}=\overline a\overline b+\overline a\overline c.
-\]</span>
-<p></p>
+\]</span></p>
 </div>
-As seguintes tabelas contém as tabelas da adição e multiplicação em <span class="math inline">\(\Z_5\)</span>.
-<p></p>
-<p>:::</p>
-<div>
-<!-- wp:table {"align":"center","className":"is-style-regular"} -->
-<figure class="wp-block-table aligncenter is-style-regular figure" ,="" style="color:#000000;">
-<table data-quarto-postprocess="true" class="table">
-<tbody>
-<tr class="odd">
-<td>$+$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
-</tr>
-<tr class="even">
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
-</tr>
-<tr class="odd">
-<td>$\bar 1$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
-<td>$\bar 0$</td>
-</tr>
-<tr class="even">
-<td>$\bar 2$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-</tr>
-<tr class="odd">
-<td>$\bar 3$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-</tr>
-<tr class="even">
-<td>$\bar 4$</td>
-<td>$\bar 4$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-</tr>
-</tbody>
-</table>
-<figcaption>
-Tabela da adição em $\Z_5$
+<p>As seguintes tabelas contém as tabelas da adição e multiplicação em <span class="math inline">\(\Z_5\)</span>.</p>
+<div id="tbl-" class="quarto-float">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;16.1: Tabela da adição em <span class="math inline">\(\Z_5\)</span>.
 </figcaption>
-</figure>
-<!-- /wp:table --> <!-- wp:table {"align":"center","className":"is-style-regular"} -->
-<figure class="wp-block-table aligncenter is-style-regular figure" data-,="" style="color:#000000;">
-<table data-quarto-postprocess="true" class="table">
+<div aria-describedby="tbl--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(+\)</span></th>
+<th><span class="math inline">\(\bar 0\)</span></th>
+<th><span class="math inline">\(\bar 1\)</span></th>
+<th><span class="math inline">\(\bar 2\)</span></th>
+<th><span class="math inline">\(\bar 3\)</span></th>
+<th><span class="math inline">\(\bar 4\)</span></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td>$\cdot$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
 </tr>
 <tr class="even">
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
-<td>$\bar 0$</td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
 </tr>
 <tr class="odd">
-<td>$\bar 1$</td>
-<td>$\bar 0$</td>
-<td>$\bar 1$</td>
-<td>$\bar 2$</td>
-<td>$\bar 3$</td>
-<td>$\bar 4$</td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
 </tr>
 <tr class="even">
-<td>$\bar 2$</td>
-<td>$\bar 0$</td>
-<td>$\bar 2$</td>
-<td>$\bar 4$</td>
-<td>$\bar 1$</td>
-<td>$\bar 3$</td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
 </tr>
 <tr class="odd">
-<td>$\bar 3$</td>
-<td>$\bar 0$</td>
-<td>$\bar 3$</td>
-<td>$\bar 1$</td>
-<td>$\bar 4$</td>
-<td>$\bar 2$</td>
-</tr>
-<tr class="even">
-<td>$\bar 4$</td>
-<td>$\bar 0$</td>
-<td>$\bar 4$</td>
-<td>$\bar 3$</td>
-<td>$\bar 2$</td>
-<td>$\bar 1$</td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
 </tr>
 </tbody>
 </table>
+</div>
 </figure>
-<figcaption>Tabela da multiplicação em $\Z_5$</figcaption>
+</div>
+<div id="tbl-" class="quarto-float">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;16.2: Tabela da multiplicação em <span class="math inline">\(\Z_5\)</span>
+</figcaption>
+<div aria-describedby="tbl--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\cdot\)</span></th>
+<th><span class="math inline">\(\bar 0\)</span></th>
+<th><span class="math inline">\(\bar 1\)</span></th>
+<th><span class="math inline">\(\bar 2\)</span></th>
+<th><span class="math inline">\(\bar 3\)</span></th>
+<th><span class="math inline">\(\bar 4\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 0\)</span></td>
+<td><span class="math inline">\(\bar 4\)</span></td>
+<td><span class="math inline">\(\bar 3\)</span></td>
+<td><span class="math inline">\(\bar 2\)</span></td>
+<td><span class="math inline">\(\bar 1\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 16.1</strong></span> Dizemos que um elemento <span class="math inline">\(\overline a\in\Z_n\)</span> é invertível se existe <span class="math inline">\(\overline b\in\Z_n\)</span> tal que <span class="math inline">\(\overline a\overline b=\overline 1\)</span>. Neste caso <span class="math inline">\(\overline b\)</span> é dito inverso de <span class="math inline">\(\overline a\)</span> e escrevemos <span class="math inline">\(\overline b=\overline a^{-1}\)</span></p>
@@ -1242,7 +1243,7 @@ Tabela da adição em $\Z_5$
 <p><span class="theorem-title"><strong>Exemplo 16.2</strong></span> Por exemplo <span class="math inline">\(\bar 3\in\Z_{10}\)</span> é invertível, pois <span class="math inline">\(\bar 3\cdot \bar 7=\bar 1\)</span>. Logo <span class="math inline">\(\bar 3^{-1}=\bar 7\)</span>. Por outro lado, <span class="math inline">\(\bar 2\in\Z_{10}\)</span> não é invertível</p>
 </div>
 <p>Pode-se observar para <span class="math inline">\(n\geq 2\)</span> que os elementos <span class="math inline">\(\bar 1,\overline{-1}=\overline{n-1}\)</span> são sempre invertíveis, enquanto <span class="math inline">\(\bar 0\)</span> nunca é invertível. Denotamos por <span class="math inline">\(\Z_n^*\)</span> o conjunto de classes invertíveis em <span class="math inline">\(\Z_n\)</span>. Por exemplo, <span class="math inline">\(\Z_6^*=\{\bar 1,\bar 5\}\)</span>.</p>
-<div id="lem-" class="theorem lemma">
+<div id="lem-unique-inverse-zn" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 16.2</strong></span> Um elemento <span class="math inline">\(\overline a\in\Z_n\)</span> é invertível se e somente se <span class="math inline">\(\mdc an=1\)</span>. Neste caso, o inverso de <span class="math inline">\(\overline a\)</span> é único e ele pode ser encontrado usando o Algoritmo Estendido de Euclides</p>
 </div>
 <div class="proof">

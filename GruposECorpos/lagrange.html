@@ -731,7 +731,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/phi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A função φ de Euler</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1023,7 +1023,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de <span class="math inline">\(PSL(n,q)\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1094,7 +1094,7 @@ window.Quarto = {
 <li>Se <span class="math inline">\(G\)</span> é um grupo, então <span class="math inline">\(G\leq G\)</span>. Um subgrupo de <span class="math inline">\(G\)</span> diferente de <span class="math inline">\(G\)</span> é dito subgrupo <em>próprio</em>. Escreve-se <span class="math inline">\(H&lt;G\)</span> para enfatizar que <span class="math inline">\(H\)</span> é um subgrupo próprio de <span class="math inline">\(G\)</span>.<br>
 </li>
 <li>Se <span class="math inline">\(G\)</span> é um grupo, então <span class="math inline">\(\{1\}\leq G\)</span> e este é o único subgrupo com um elemento. Se <span class="math inline">\(H\)</span> é um subgrupo e <span class="math inline">\(H\neq\{1\}\)</span>, então <span class="math inline">\(H\)</span> é dito <em>não trivial</em>.</li>
-<li><span class="math inline">\(SL(V)\leq GL(V)\leq \sym V\)</span> e <span class="math inline">\(SL(n,\K)\leq GL(n,\K)\)</span>.</li>
+<li><span class="math inline">\(\SLV V\leq \GLV V\leq \sym V\)</span> e <span class="math inline">\(\SL n\F\leq \GL n\F\)</span>.</li>
 <li><span class="math inline">\(\{2n\mid n\in\Z\}\leq \Z\)</span>, mas <span class="math inline">\(\{2n+1\mid n\in\Z\}\not\leq \Z\)</span> (considerando a operação <span class="math inline">\(+\)</span>).</li>
 <li><span class="math inline">\(\{1,-1\}\leq\{1,-1,i,-i\}\leq \C^*\)</span>.</li>
 <li>As simetrias rotacionais formam um subgrupo de <span class="math inline">\(D_n\)</span>, mas as simetrias reflexivas não (explique porque).</li>
@@ -1117,10 +1117,10 @@ Hg=\{hg\mid h\in H\}
 H+a=\{qn+a\mid q\in\Z\}=\{qn+r\mid q\in \Z\}=H+r
 \]</span> onde <span class="math inline">\(r\in\{0,\ldots,n-1\}\)</span> é o resto de <span class="math inline">\(a\)</span> quando dividido por <span class="math inline">\(n\)</span>. Portanto, a classe lateral <span class="math inline">\(H+a\)</span> coincide com a classe residual <span class="math display">\[
 H+r=\{qn+r\mid q\in\Z\}
-\]</span> dos inteiros que dão resto <span class="math inline">\(q\)</span> quando divididos por <span class="math inline">\(n\)</span>. Ou seja, o número de classes laterais é <span class="math inline">\(n\)</span> (finito) e <span class="math inline">\(a_1,a_2\in\Z\)</span> pertencem a mesma classe lateral se <span class="math inline">\(a_1\equiv a_2\pmod n\)</span>.</li>
+\]</span> dos inteiros que dão resto <span class="math inline">\(q\)</span> quando divididos por <span class="math inline">\(n\)</span> (veja <a href="../FundamentosDeAlgebra/res_classes.html#sec-resclasses" class="quarto-xref"><span>Seção 15.1</span></a>). Ou seja, o número de classes laterais é <span class="math inline">\(n\)</span> (finito) e <span class="math inline">\(a_1,a_2\in\Z\)</span> pertencem a mesma classe lateral se <span class="math inline">\(a_1\equiv a_2\pmod n\)</span>.</li>
 <li>Considere o grupo <span class="math inline">\((\R^3,+)\)</span> e considere o subgrupo <span class="math display">\[
 H=\{(x,y,z)\mid x+y+z=0\}.
-\]</span> O supgrupo <span class="math inline">\(H\)</span> pode ser visto como um plano em <span class="math inline">\(\R^3\)</span>. Se <span class="math inline">\(v=(x_0,y_0,z_0)\)</span>, então a classe lateral <span class="math display">\[
+\]</span> O subgrupo <span class="math inline">\(H\)</span> pode ser visto como um plano em <span class="math inline">\(\R^3\)</span>. Se <span class="math inline">\(v=(x_0,y_0,z_0)\)</span>, então a classe lateral <span class="math display">\[
 H+v=\{(x,y,z)\mid x+y+z=x_0+y_0+z_0\}
 \]</span> é o plano paralelo a <span class="math inline">\(H\)</span> e passa pelo vetor <span class="math inline">\(v\)</span>. Além disso, cada plano paralelo a <span class="math inline">\(H\)</span> é uma classe lateral de <span class="math inline">\(H\)</span>. Neste caso, temos um número infinito de classes laterais.</li>
 <li>Seja <span class="math inline">\(\F\)</span> um corpo, <span class="math inline">\(\alpha\in\F^*\)</span> e seja <span class="math inline">\(A\in\GL n\F\)</span> uma matriz com <span class="math inline">\(\det A=\alpha\)</span>. Então a classe lateral <span class="math inline">\(\SL n\F A\)</span> é o conjunto de matrizes <span class="math inline">\(n\times n\)</span> com determinante <span class="math inline">\(\alpha\)</span>. O número de classes laterais de <span class="math inline">\(\SL n\F\)</span> em <span class="math inline">\(\GL n\F\)</span> é <span class="math inline">\(|\F^*|\)</span>.</li>
