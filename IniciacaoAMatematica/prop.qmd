@@ -13,7 +13,7 @@ Entender o significado de afirmações na matemática exige o conhecimento dos e
 Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que afirma um fato. Por exemplo, as seguintes afirmações são proposições:
 
 - $1\neq 2$;
-- $\pi < \sqrt{10}$;
+- $\pi > \sqrt{10}$;
 - $1+2=3$.
 
 Cada proposição deve ser ou *verdadeira* ou *falsa*, mas não pode ser verdadeira *e* falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico *falso*).
@@ -42,14 +42,14 @@ Sejam $A$ e $B$ proposições.
 
 
 **A conjunção ($\land$)**: 
-A conjunção das proposições $A$ e $B$ é a proposição $A\land B$ (leia-se "$A$ e $B$"). A proposição $A\land B$ é verdadeira se e somente se $A$ é verdadeira e $B$ é verdadeira. Caso contrário, $A\land B$ é falsa.
+A conjunção das proposições $A$ e $B$ é a proposição $A\land B$ (leia-se "$A$ e $B$"). A proposição $A\land B$ é verdadeira se $A$ é verdadeira e $B$ é verdadeira. Caso contrário, $A\land B$ é falsa.
 
 
 **A disjunção ($\lor$)**: 
-A disjunção das proposições $A$ e $B$ é a proposição $A\lor B$ (leia-se "$A$ ou $B$"). A proposição $A\lor B$  é verdadeira se e somente se $A$ é verdadeira ou $B$ é verdadeira. Em particular, se ambas de $A$ e $B$ são verdadeiras, então $A\lor B$ é verdadeira. Caso contrário, $A\lor B$ é falsa.
+A disjunção das proposições $A$ e $B$ é a proposição $A\lor B$ (leia-se "$A$ ou $B$"). A proposição $A\lor B$  é verdadeira se  $A$ é verdadeira ou $B$ é verdadeira. Em particular, se ambas de $A$ e $B$ são verdadeiras, então $A\lor B$ é verdadeira. Caso contrário, $A\lor B$ é falsa.
 
 **A negação ($\neg$)**: 
-A negação da proposição $A$ é $\neg A$ (leia-se "não $A$"). A proposição  $\neg A$ é verdadeira se e somente se $A$ é falsa. Caso contrário $\neg A$ é falsa
+A negação da proposição $A$ é $\neg A$ (leia-se "não $A$"). A proposição  $\neg A$ é verdadeira se $A$ é falsa. Caso contrário $\neg A$ é falsa
 
 :::{#exm-prop-composta}
 Considere por exemplo as seguintes duas proposições $A$ e $B$.
@@ -96,12 +96,12 @@ $A\lor(B\land C)$. Se $A$ é verdadeira e $C$ é falsa, então $(A\lor B)\land C
 Outras operações lógicas que são frequentamente usadas são a disjunção exclusiva $\lxor$, a condicional $\cond$ e bicondicional $\bicond$.
 
 **Disjunção exclusiva ($\lxor$)**: 
-A disjunção exclusiva (XOR ou XOU) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou $A$ ou $B$ mas não ambos). A proposição $A\lxor B$ é verdadeira se e somente se $A$ é verdadeira ou $B$ é verdadeira, mas não quando $A$ e $B$ são ambas verdadeiras. Caso contrário $A\lxor B$ é falsa.
+A disjunção exclusiva (XOR ou XOU) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou $A$ ou $B$ mas não ambos). A proposição $A\lxor B$ é verdadeira se $A$ é verdadeira ou $B$ é verdadeira, mas não quando $A$ e $B$ são ambas verdadeiras. Caso contrário $A\lxor B$ é falsa.
 
 **Condicional ($\cond$)**: 
-A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia-se "$A$ implica $B$"). A proposição $A\cond B$ é verdadeira se e somente se $A$ é falsa, ou $A$ e $B$ são ambas verdadeiras. 
+A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia-se "$A$ implica $B$"). A proposição $A\cond B$ é verdadeira se $A$ é falsa, ou $A$ e $B$ são ambas verdadeiras. 
 
-**Bicondicional ($\bicond$)**: A bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia-se "$A$ é equivalente a $B$"). A proposição $A\bicond B$ é verdadeira se e somente se $A$ é $B$ têm o mesmo valor lógico; ou seja, $A$ e $B$ são ambas verdadeiras ou $A$ e $B$ são ambas falsas.
+**Bicondicional ($\bicond$)**: A bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia-se "$A$ é equivalente a $B$"). A proposição $A\bicond B$ é verdadeira se $A$ é $B$ têm o mesmo valor lógico; ou seja, $A$ e $B$ são ambas verdadeiras ou $A$ e $B$ são ambas falsas.
 
 
 Note que a disjunção exclusiva $\lxor$ está mais próxima ao  significado cotadiano da palavra "ou". Nas expressões de matemática "ou" normalmente significa disjunção inclusiva e quando queremos disjunção exclusiva, isso deve ser claramente indicada. Por exemplo a proposição 
@@ -154,7 +154,7 @@ $$
 $$
 para qualquer proposição $P$ e $Q$. Neste caso escrevemos também que 
 $$
-(P \land \neg Q) \equiv (\neg P \land Q) \bicond P \lxor Q.
+(P \land \neg Q) \lor (\neg P \land Q) \equiv P \lxor Q.
 $$
 
 :::{#exr-true-table}
@@ -178,7 +178,7 @@ Demonstre as seguintes afirmações usando tabelas-verdade.
 4. $P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)$.
 :::
 
-As afirmações no exercício anterior são conhecidas como as *identidades de de Morgan*. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
+As primeiras duas afirmações no exercício anterior são conhecidas como as *identidades de de Morgan*. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
 $$
 P:\ \mbox{$2$ é primo}, \quad Q:\ \mbox{$3$ divide $7$}
 $$
