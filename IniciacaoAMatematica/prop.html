@@ -1087,7 +1087,7 @@ window.Quarto = {
 <li><span class="math inline">\(\pi &gt; \sqrt{10}\)</span>;</li>
 <li><span class="math inline">\(1+2=3\)</span>.</li>
 </ul>
-<p>Cada proposição deve ser ou <em>verdadeira</em> ou <em>falsa</em>, mas não pode ser verdadeira <em>e</em> falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se <em>valor lógico</em> ou <em>valor de verdade</em>. Cada proposição tem exatamente um dos dois valores lógicos: <em>verdadeiro</em> ou <em>falso</em>. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico <em>falso</em>).</p>
+<p>Cada proposição deve ser ou <em>verdadeira</em> ou <em>falsa</em>, mas não pode ser verdadeira <em>e</em> falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se <em>valor lógico</em> ou <em>valor de verdade</em>. Cada proposição tem exatamente um dos dois valores lógicos: <em>verdadeiro</em> ou <em>falso</em>. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico <em>falso</em>).</p>
 <p>Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como “O Pedro é estudante” são frequentamente demasiado ambíguas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.)</p>
 <p>As seguintes não são proposições.</p>
 <ul>
@@ -1133,13 +1133,13 @@ A\lor \neg B&amp;:\mbox{falsa}\\
 \]</span> é verdadeira, pois ela é a disjunção de duas afirmações, a primeira sendo verdadeira, enquanto a segunda sendo falsa.</p>
 <p>Note que nós usamos parênteses para indicar a ordem das operações. A última expressão poderia ser escrita também como <span class="math display">\[
 \neg(A\land B)\lor \neg(A\lor B)
-\]</span> sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar os parênteses que omitir. Às vezes, os parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão <span class="math display">\[
+\]</span> sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar as parênteses que omitir. Às vezes, as parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão <span class="math display">\[
 A\lor B \land C
 \]</span> está ambígua, pois pode denotar <span class="math inline">\((A\lor B)\land C\)</span> ou <span class="math inline">\(A\lor(B\land C)\)</span>. Se <span class="math inline">\(A\)</span> é verdadeira e <span class="math inline">\(C\)</span> é falsa, então <span class="math inline">\((A\lor B)\land C\)</span> é falsa, mas <span class="math inline">\(A\lor (B\land C)\)</span> é verdadeira (independentemente do valor lógico de <span class="math inline">\(B\)</span>). Nestes casos, as operações são feitas da esquerda para a direita, e a proposição deve ser interpretada como <span class="math inline">\((A\lor B)\land C\)</span>. Tendo dito isso, é melhor colocar as parénteses.</p>
-<p>Outras operações lógicas que são frequentamente usadas são a disjunção exclusiva <span class="math inline">\(\lxor\)</span>, a condicional <span class="math inline">\(\cond\)</span> e bicondicional <span class="math inline">\(\bicond\)</span>.</p>
-<p><strong>Disjunção exclusiva (<span class="math inline">\(\lxor\)</span>)</strong>: A disjunção exclusiva (XOR ou XOU) das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\lxor B\)</span> (ou <span class="math inline">\(A\)</span> ou <span class="math inline">\(B\)</span> mas não ambos). A proposição <span class="math inline">\(A\lxor B\)</span> é verdadeira se <span class="math inline">\(A\)</span> é verdadeira ou <span class="math inline">\(B\)</span> é verdadeira, mas não quando <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras. Caso contrário <span class="math inline">\(A\lxor B\)</span> é falsa.</p>
-<p><strong>Condicional (<span class="math inline">\(\cond\)</span>)</strong>: A condicional das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\cond B\)</span> (leia-se “<span class="math inline">\(A\)</span> implica <span class="math inline">\(B\)</span>”). A proposição <span class="math inline">\(A\cond B\)</span> é verdadeira se <span class="math inline">\(A\)</span> é falsa, ou <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras.</p>
-<p><strong>Bicondicional (<span class="math inline">\(\bicond\)</span>)</strong>: A bicondicional das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\bicond B\)</span> (leia-se “<span class="math inline">\(A\)</span> é equivalente a <span class="math inline">\(B\)</span>”). A proposição <span class="math inline">\(A\bicond B\)</span> é verdadeira se <span class="math inline">\(A\)</span> é <span class="math inline">\(B\)</span> têm o mesmo valor lógico; ou seja, <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras ou <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas falsas.</p>
+<p>Outras operações lógicas que são frequentamente usadas são a <strong>disjunção exclusiva</strong> <span class="math inline">\(\lxor\)</span>, a <strong>condicional</strong> <span class="math inline">\(\cond\)</span> e <strong>bicondicional</strong> <span class="math inline">\(\bicond\)</span>.</p>
+<p><strong>Disjunção exclusiva (<span class="math inline">\(\lxor\)</span>)</strong>: A disjunção exclusiva (XOR ou XOU) das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\lxor B\)</span> (ou <span class="math inline">\(A\)</span> ou <span class="math inline">\(B\)</span> mas não ambas). A proposição <span class="math inline">\(A\lxor B\)</span> é verdadeira se <span class="math inline">\(A\)</span> é verdadeira ou <span class="math inline">\(B\)</span> é verdadeira, mas não quando <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras. Caso contrário <span class="math inline">\(A\lxor B\)</span> é falsa.</p>
+<p><strong>Condicional (<span class="math inline">\(\cond\)</span>)</strong>: A condicional das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\cond B\)</span> (leia-se “<span class="math inline">\(A\)</span> implica <span class="math inline">\(B\)</span>”). A proposição <span class="math inline">\(A\cond B\)</span> é verdadeira se <span class="math inline">\(A\)</span> é falsa, ou <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras. Caso contrário, <span class="math inline">\(A\cond B\)</span> é falsa.</p>
+<p><strong>Bicondicional (<span class="math inline">\(\bicond\)</span>)</strong>: A bicondicional das proposições <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é a proposição <span class="math inline">\(A\bicond B\)</span> (leia-se “<span class="math inline">\(A\)</span> é equivalente a <span class="math inline">\(B\)</span>”). A proposição <span class="math inline">\(A\bicond B\)</span> é verdadeira se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> têm o mesmo valor lógico; ou seja, <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas verdadeiras ou <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são ambas falsas. Caso contrário, <span class="math inline">\(A\bicond B\)</span> é falsa.</p>
 <p>Note que a disjunção exclusiva <span class="math inline">\(\lxor\)</span> está mais próxima ao significado cotadiano da palavra “ou”. Nas expressões de matemática “ou” normalmente significa disjunção inclusiva e quando queremos disjunção exclusiva, isso deve ser claramente indicada. Por exemplo a proposição <span class="math display">\[
 \mbox{($6$ é par)}\lor \mbox{($6$ é um múltiplo de $3$)}
 \]</span> é considerada verdadeira, mas <span class="math display">\[
@@ -1248,7 +1248,7 @@ A\lor B \land C
 </table>
 <p>Note que a expressão <span class="math inline">\((P \land \neg Q) \lor (\neg P \land Q)\)</span> é verdadeira se e somente se <span class="math inline">\(P\)</span> é verdadeira ou <span class="math inline">\(Q\)</span> é verdadeira, mas elas não são verdadeiras no mesmo tempo. Logo, pode se concluir que <span class="math display">\[
 (P \land \neg Q) \lor (\neg P \land Q) \bicond P \lxor Q
-\]</span> para qualquer proposição <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span>. Neste caso escrevemos também que <span class="math display">\[
+\]</span> é verdadeira para quaisquer proposições <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> (independentemente seu valor lógico). Neste caso escrevemos também que <span class="math display">\[
 (P \land \neg Q) \lor (\neg P \land Q) \equiv P \lxor Q.
 \]</span></p>
 <div id="exr-true-table" class="theorem exercise">
@@ -1259,7 +1259,7 @@ P\bicond Q \equiv (P \land Q) \lor (\neg P \land \neg Q).
 \]</span></p>
 </div>
 <div id="exr-true-table2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 1.2</strong></span> Exercício. Demonstre as seguintes afirmações usando tabelas-verdade.</p>
+<p><span class="theorem-title"><strong>Exercício 1.2</strong></span> Demonstre as seguintes afirmações usando tabelas-verdade.</p>
 <ol type="1">
 <li><span class="math inline">\(\neg(P\lor Q)\equiv \neg P \land \neg Q\)</span>;</li>
 <li><span class="math inline">\(\neg(P\land Q) \equiv \neg P \lor \neg Q\)</span>;</li>
@@ -1267,7 +1267,7 @@ P\bicond Q \equiv (P \land Q) \lor (\neg P \land \neg Q).
 <li><span class="math inline">\(P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)\)</span>.</li>
 </ol>
 </div>
-<p>As primeiras duas afirmações no exercício anterior são conhecidas como as <em>identidades de de Morgan</em>. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se <span class="math display">\[
+<p>As primeiras duas afirmações no exercício anterior são conhecidas como as <a href="https://pt.wikipedia.org/wiki/Teoremas_de_De_Morgan"><em>Leis de de Morgan</em></a>. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se <span class="math display">\[
 P:\ \mbox{$2$ é primo}, \quad Q:\ \mbox{$3$ divide $7$}
 \]</span> então <span class="math display">\[\begin{align*}
 P\land Q&amp;:\ \mbox{$2$ é primo e $3$ divide $7$}\\
@@ -1275,6 +1275,7 @@ P\lor Q&amp;:\ \mbox{$2$ é primo ou $3$ divide $7$}\\
 \neg(P\land Q)\equiv \neg P\lor \neg Q&amp;:\ \mbox{$2$ não é primo ou  $3$ não divide $7$}\\
 \neg(P\lor Q)\equiv \neg P\land \neg Q&amp;:\ \mbox{$2$ não é primo e $3$ não divide $7$}.
 \end{align*}\]</span></p>
+<p>O terceiro e quarto itens do <a href="#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a> podem ser vistos como uma forma da distributividade entre as conectivas <span class="math inline">\(\lor\)</span> e <span class="math inline">\(\land\)</span>.</p>
 
 
 </section>

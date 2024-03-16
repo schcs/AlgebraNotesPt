@@ -1084,12 +1084,12 @@ window.Quarto = {
 <section id="como-definir-conjuntos" class="level2" data-number="2.1">
 <h2 data-number="2.1" data-anchor-id="como-definir-conjuntos"><span class="header-section-number">2.1</span> Como definir conjuntos</h2>
 <p>Conjuntos são objetos básicos na matemática. A teoria dos conjuntos é um ramo relativamente novo que foi desenvolvido a partir do final do século XIX por matemáticos tais como <a href="https://pt.wikipedia.org/wiki/Georg_Cantor">Cantor</a>, <a href="https://pt.wikipedia.org/wiki/David_Hilbert">Hilbert</a>, <a href="https://pt.wikipedia.org/wiki/Max_August_Zorn">Zorn</a>, <a href="https://pt.wikipedia.org/wiki/Ernst_Zermelo">Zermelo</a> e <a href="https://pt.wikipedia.org/wiki/Adolf_Abraham_Halevi_Fraenkel">Fraenkel</a>. A <a href="https://pt.wikipedia.org/wiki/Axiomas_de_Zermelo-Fraenkel">teoria rigorosa dos conjuntos</a> é um assunto avançado que nós não vamos abordar nesta disciplina. O que nós vamos estudar neste semestre é chamado “<a href="https://pt.wikipedia.org/wiki/Teoria_ing%C3%AAnua_dos_conjuntos">Teoria Ingênua dos Conjuntos</a>”. Para estudar matemática moderna e avançada, esta teoria não é suficiente, mas ela serve para introduzir os conceitos básicos e fundamentar os estudos nas disciplinas da graduação.</p>
-<p>Um <em>conjunto</em> <span class="math inline">\(A\)</span> é uma coleção de objetos. Se <span class="math inline">\(x\)</span> é um objeto, então a proposição “<span class="math inline">\(x\in A\)</span>” tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que <em><span class="math inline">\(x\)</span> pertence ao conjunto <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(a\)</span> é elemento de <span class="math inline">\(A\)</span></em>. Caso contrário, dizemos que <em><span class="math inline">\(x\)</span> não pertence a <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(a\)</span> não é elemento de <span class="math inline">\(A\)</span></em> e escrevemos <span class="math inline">\(x\not\in A\)</span>. Para um conjunto ser bem definido, é necessário que para qualquer objeto <span class="math inline">\(x\)</span> seja possível decidir se <span class="math inline">\(x\in A\)</span> ou <span class="math inline">\(x\not\in A\)</span>. Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto <span class="math inline">\(X\)</span> de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.</p>
+<p>Um <em>conjunto</em> <span class="math inline">\(A\)</span> é uma coleção de objetos. Se <span class="math inline">\(x\)</span> é um objeto, então a proposição “<span class="math inline">\(x\in A\)</span>” tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que <em><span class="math inline">\(x\)</span> pertence ao conjunto <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(x\)</span> é elemento de <span class="math inline">\(A\)</span></em>. Caso contrário, dizemos que <em><span class="math inline">\(x\)</span> não pertence a <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(x\)</span> não é elemento de <span class="math inline">\(A\)</span></em> e escrevemos <span class="math inline">\(x\not\in A\)</span>. Para um conjunto ser bem definido, é necessário que para qualquer objeto <span class="math inline">\(x\)</span> seja possível decidir se <span class="math inline">\(x\in A\)</span> ou <span class="math inline">\(x\not\in A\)</span>. Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto <span class="math inline">\(X\)</span> de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.</p>
 <p><strong>Notação</strong>: Conjuntos são delimitados por “<span class="math inline">\(\{\)</span>” e “<span class="math inline">\(\}\)</span>”. Com os conjuntos mais simples, nós listamos os elementos do conjunto entre “<span class="math inline">\(\{\)</span>” e “<span class="math inline">\(\}\)</span>”. Por exemplo, para denotar o conjunto que contém os números <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(5\)</span>, escrevemos <span class="math inline">\(A=\{-1,2,5\}\)</span>. Temos que <span class="math display">\[
 -1\in A,\quad 2\in A,\quad 5\in A,
 \]</span> mas <span class="math display">\[
 x\not\in A\quad\mbox{se}\quad x\neq -1, 2, 5.
-\]</span> Para denotar conjuntos usaremos principalmente letras maiúsculas. Por exemplo <span class="math inline">\(A=\{-1,2,5\}\)</span>. No caso de conjuntos infinitos, pode-se usar <span class="math inline">\(\ldots\)</span> se não há ambuguidade. Por exemplo, para denotar o conjunto dos números positivos pares, podemos escrever <span class="math inline">\(B=\{2,4,6,\ldots\}\)</span>. Por outro lado, se escrevemos <span class="math inline">\(\{1,2,3,5,\ldots\}\)</span>, não se sabe qual conjunto queremos definir.</p>
+\]</span> Para denotar conjuntos usaremos principalmente letras maiúsculas. Por exemplo <span class="math inline">\(A=\{-1,2,5\}\)</span>. No caso de conjuntos infinitos, pode-se usar “<span class="math inline">\(\ldots\)</span>” se não há ambuguidade. Por exemplo, para denotar o conjunto dos números positivos pares, podemos escrever <span class="math inline">\(B=\{2,4,6,\ldots\}\)</span>. Por outro lado, se escrevemos <span class="math inline">\(\{1,2,3,5,\ldots\}\)</span>, não se sabe qual conjunto queremos definir.</p>
 <p>Os conjuntos não são ordenados e contém seus elementos apenas uma vez. Por exemplo, os conjuntos <span class="math inline">\(\{-1,2,5\}\)</span>, <span class="math inline">\(\{5,2,-1,2\}\)</span>, <span class="math inline">\(\{2,2,-1,-1,5\}\)</span> são todos iguais ao conjunto <span class="math inline">\(\{-1,2,5\}\)</span>. Pode acontecer que precisamos “conjuntos” ordenados ou “conjuntos” que contém seus elementos com multiplicidade, mas nestes casos seu professor vai criar um objeto adequado.</p>
 <div id="exm-conjuntos" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 2.1</strong></span> &nbsp;</p>
@@ -1098,7 +1098,7 @@ x\not\in A\quad\mbox{se}\quad x\neq -1, 2, 5.
 <li>Pode-se também considerar o conjunto <span class="math inline">\(\N\)</span> dos números naturais. Temos que <span class="math inline">\(\N=\{1,2,3,\ldots\}\)</span>. Em particular, <span class="math inline">\(2\in\N\)</span>, mas <span class="math inline">\(-1\not\in\N\)</span>. Nós também não vamos considerar zero como natural, então <span class="math inline">\(0\not\in \N\)</span>.</li>
 </ul>
 </div>
-<p>Note que o uso do símbolo <span class="math inline">\(\ldots\)</span> está usado no segundo exemplo.</p>
+<p>Note que o símbolo “<span class="math inline">\(\ldots\)</span>”” está usado no segundo exemplo.</p>
 <p>Existe um conjunto que não possui elementos. Este conjunto é chamado de <em>conjunto vazio</em> e é denotado por <span class="math inline">\(\emptyset\)</span>. Por definição <span class="math inline">\(x\not\in \emptyset\)</span> para todo objeto <span class="math inline">\(x\)</span>. O conjunto vazio pode ser escrito também como <span class="math inline">\(\{\}\)</span>.</p>
 </section>
 <section id="subconjuntos" class="level2" data-number="2.2">
@@ -1130,7 +1130,7 @@ x\not\in A\quad\mbox{se}\quad x\neq -1, 2, 5.
 <div id="def-set-operations" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 2.3</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos.</p>
 <ol type="1">
-<li>A <em>união</em> <span class="math inline">\(A\cup B\)</span> de <span class="math inline">\(A\)</span> é <span class="math inline">\(B\)</span> é o conjunto dos objetos que pertencem ao conjunto <span class="math inline">\(A\)</span> ou ao conjunto <span class="math inline">\(B\)</span> (incluindo a possibilidade que perntencem aos dois).</li>
+<li>A <em>união</em> <span class="math inline">\(A\cup B\)</span> de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto dos objetos que pertencem ao conjunto <span class="math inline">\(A\)</span> ou ao conjunto <span class="math inline">\(B\)</span> (incluindo a possibilidade que perntencem aos dois).</li>
 <li>A <em>interseção</em> <span class="math inline">\(A\cap B\)</span> de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto dos objetos que pertencem a ambos dos conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</li>
 <li>A <em>diferença</em> <span class="math inline">\(A\setminus B\)</span> (ou <span class="math inline">\(A-B\)</span>) é o conjunto dos objetos que pertencem ao conjunto <span class="math inline">\(A\)</span> mas não ao conjunto <span class="math inline">\(B\)</span>.<br>
 </li>
@@ -1138,18 +1138,26 @@ x\not\in A\quad\mbox{se}\quad x\neq -1, 2, 5.
 </div>
 <div id="exm-set-operations" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 2.5</strong></span> Sejam <span class="math display">\[
-A=\{1,2,3,5,6,7\}\quad \mbox{e}\quad A=\{2,3,4,6,8,9\}.
+A=\{1,2,3,5,6,7\}\quad \mbox{e}\quad B=\{2,3,4,6,8,9\}.
 \]</span> Então temos que <span class="math display">\[\begin{align*}
 A\cup B &amp;=\{1,2,3,4,5,6,7,8,9\};\\
 A\cap B &amp;=\{2,3,6\};\\
-A\setminus B&amp;=\{1,5,7\}.
+A\setminus B&amp;=\{1,5,7\};\\
+B\setminus A&amp;=\{4,8,9\}.
 \end{align*}\]</span></p>
 </div>
 <div id="lem-set-operations" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 2.1</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos. As seguintes afirmações são verdadeiras.</p>
+<p><span class="theorem-title"><strong>Lema 2.1</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> conjuntos. As seguintes afirmações são verdadeiras.</p>
 <ol type="1">
-<li><span class="math inline">\(A\subseteq A\cup B\)</span>, <span class="math inline">\(B\subseteq A\cup B\)</span>;</li>
-<li><span class="math inline">\(A\cap B\subseteq A\)</span>, <span class="math inline">\(A\cap B\subseteq A\)</span>;</li>
+<li><span class="math inline">\(A\cup B=B\cup A\)</span>;</li>
+<li><span class="math inline">\((A\cup B)\cup C=A\cup (B\cup C)\)</span>;</li>
+<li><span class="math inline">\(A\cup\emptyset =A\)</span>;</li>
+<li><span class="math inline">\(A\cap B=B\cap A\)</span>;</li>
+<li><span class="math inline">\((A\cap B)\cap C=A\cap (B\cap C)\)</span>;</li>
+<li><span class="math inline">\(A\cap\emptyset =\emptyset\)</span>;</li>
+<li><span class="math inline">\(A\cup A=A\cap A=A\)</span>;</li>
+<li><span class="math inline">\(A\subseteq A\cup B\)</span> e <span class="math inline">\(B\subseteq A\cup B\)</span>;</li>
+<li><span class="math inline">\(A\cap B\subseteq A\)</span> e <span class="math inline">\(A\cap B\subseteq A\)</span>;</li>
 <li><span class="math inline">\(A\setminus B\subseteq A\)</span>.</li>
 </ol>
 </div>
@@ -1160,9 +1168,13 @@ A\setminus B&amp;=\{1,5,7\}.
     X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}.
 \]</span> Em outras palávras, <span class="math inline">\(X\)</span> é o conjunto dos números <span class="math inline">\(n\)</span> que pertencem ao conjunto <span class="math inline">\(\N\)</span> e são pares. Note que a definição de <span class="math inline">\(X\)</span> tem duas partes. Na primeira parte ``<span class="math inline">\(n\in\N\)</span>’’, nós indicamos que os elementos de <span class="math inline">\(X\)</span> serão elementos de <span class="math inline">\(\N\)</span>, enquanto na segunda parte, especificamos quais elementos de <span class="math inline">\(\N\)</span> serão elementos de <span class="math inline">\(X\)</span>. Neste caso, os elementos de <span class="math inline">\(X\)</span> são os elementos de <span class="math inline">\(\N\)</span> que são múltiplos de <span class="math inline">\(2\)</span>.</p>
 <p>A sentença “<span class="math inline">\(n\)</span> é múltiplo de <span class="math inline">\(2\)</span>” não é uma proposição, pois contém a variável <span class="math inline">\(n\)</span>. Por outro lado, ao substituir elementos de <span class="math inline">\(\N\)</span> no lugar de <span class="math inline">\(n\)</span>, obtemos uma proposição que tem valor lógico Falso ou Verdadeiro. Por exemplo “<span class="math inline">\(4\)</span> é múltiplo de <span class="math inline">\(2\)</span>” é uma proposição verdadeira, enquanto “<span class="math inline">\(5\)</span> é um múltiplo de <span class="math inline">\(2\)</span>” é falsa. Dizemos que “<span class="math inline">\(n\)</span> é múltiplo de <span class="math inline">\(2\)</span>” é um <em>predicato</em>.</p>
+<p>Em nosso exemplo, podemos escrever que <span class="math display">\[
+    X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}=\{2,4,6,8,\ldots\}.
+\]</span></p>
 </section>
 <section id="propriedades-adicionais-das-operações-dos-conjuntos" class="level2" data-number="2.5">
 <h2 data-number="2.5" data-anchor-id="propriedades-adicionais-das-operações-dos-conjuntos"><span class="header-section-number">2.5</span> Propriedades adicionais das operações dos conjuntos</h2>
+<p>Temos as seguintes regras de distributividade para as operações com conjuntos (compare com <a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>).</p>
 <div id="lem-props-sets" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 2.2</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> conjuntos. As seguintes afirmações são verdadeiras.</p>
 <ol type="1">
@@ -1172,22 +1184,22 @@ A\setminus B&amp;=\{1,5,7\}.
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Vamor provar 1. Provaremos primeiro que <span class="math inline">\(A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)\)</span>. <span class="math display">\[\begin{align*}
-x&amp;\in A\cap (B\cup C)\implies\\
-x&amp;\in A \mbox{ e }x\in B\cup C \implies\\
-x&amp;\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)\implies \\
-(x&amp;\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)\implies \\
-x&amp;\in A\cap B\mbox{ ou } x\in A\cap C\implies \\
-x&amp;\in (A\cap B)\cup (A\cap C).
-\end{align*}\]</span> Isso implica que <span class="math inline">\(A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)\)</span>.</p>
+x\in A\cap (B\cup C)&amp;\implies\\
+x\in A \mbox{ e }x\in B\cup C &amp;\implies\\
+x\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)&amp;\implies \\
+(x\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)&amp;\implies \\
+x\in A\cap B\mbox{ ou } x\in A\cap C&amp;\implies \\
+x\in (A\cap B)\cup (A\cap C)&amp;.
+\end{align*}\]</span> Isso implica que <span class="math inline">\(A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)\)</span>. Note que a terceira implicação do argumento usa item 3. do <a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>.</p>
 <p>Agora, precisamos verificar que <span class="math inline">\((A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)\)</span>. Observe que temos que reverter o argumento em cima: <span class="math display">\[\begin{align*}
-x&amp;\in (A\cap B)\cup (A\cap C)\implies \\
-x&amp;\in A\cap B\mbox{ ou } x\in A\cap C\implies \\
-(x&amp;\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)\implies \\
-x&amp;\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)\implies \\
-x&amp;\in A \mbox{ e }x\in B\cup C \implies\\
-x&amp;\in A\cap (B\cup C).
+x\in (A\cap B)\cup (A\cap C)&amp;\implies \\
+x\in A\cap B\mbox{ ou } x\in A\cap C&amp;\implies \\
+(x\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)&amp;\implies \\
+x\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)&amp;\implies \\
+x\in A \mbox{ e }x\in B\cup C &amp;\implies\\
+x\in A\cap (B\cup C)&amp;.
 \end{align*}\]</span> Ou seja, <span class="math inline">\((A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)\)</span>. Portanto <span class="math inline">\(A\cap (B\cup C)=(A\cup B)\cap (A\cup C)\)</span>.</p>
-<p>A prova da afirmação 2. é similar e será exercício para o leitor.</p>
+<p>A prova da afirmação 2. é similar e será exercício do leitor.</p>
 </div>
 </section>
 <section id="o-complemento" class="level2" data-number="2.6">
@@ -1195,6 +1207,7 @@ x&amp;\in A\cap (B\cup C).
 <div id="def-complement" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 2.4</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos tais que <span class="math inline">\(A\subseteq B\)</span>. O <em>complemento</em> de <span class="math inline">\(A\)</span> em <span class="math inline">\(B\)</span> é o conjunto <span class="math inline">\(A\setminus B\)</span>. O complemento é denotado por <span class="math inline">\(A^c\)</span>. Note que o complemento depende de <span class="math inline">\(B\)</span>, mesmo que isso não está indicado na notação.</p>
 </div>
+<p>O seguinte resultado é uma versão das Leis de De Morgan (<a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>) para conjuntos.</p>
 <div id="lem-de-morgan" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 2.3</strong></span> Sejam <span class="math inline">\(A,B\subseteq C\)</span>. Temos que</p>
 <ol type="1">
@@ -1204,12 +1217,12 @@ x&amp;\in A\cap (B\cup C).
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Provaremos afirmação 1. Primeiro verificamos que <span class="math inline">\((A\cup B)^c\subseteq A^c\cap B^c\)</span>. <span class="math display">\[\begin{align*}
-x&amp;\in (A\cup B)^c\implies \\
-x &amp;\in C\mbox{ e }x\not \in A\cup B\implies \\
-x &amp;\in C\mbox{ e } (x\not \in A\mbox{ e } x\not\in B)\implies \\
-(x &amp;\in C\mbox{ e } x\not \in A) \mbox{ e } (x\in C\mbox{ e }x\not\in B)\implies \\
-x &amp; \in A^c \mbox{ e } x \in B^c\implies \\
-x &amp; \in A^c\cap B^c.
+x\in (A\cup B)^c&amp;\implies \\
+x \in C\mbox{ e }x\not \in A\cup B&amp;\implies \\
+x \in C\mbox{ e } (x\not \in A\mbox{ e } x\not\in B)&amp;\implies \\
+(x \in C\mbox{ e } x\not \in A) \mbox{ e } (x\in C\mbox{ e }x\not\in B)&amp;\implies \\
+x  \in A^c \mbox{ e } x \in B^c&amp;\implies \\
+x  \in A^c\cap B^c.
 \end{align*}\]</span> Logo, <span class="math inline">\((A\cup B)^c\subseteq A^c\cap B^c\)</span>. Revertendo o argumento, obtemos que <span class="math inline">\(A^c\cap B^c\subseteq (A\cup B)^c\)</span>.</p>
 <p>A verificação da afirmação 2. é exercício.</p>
 </div>
