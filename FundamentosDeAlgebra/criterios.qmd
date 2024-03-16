@@ -57,3 +57,4 @@ No última expressão, a primeira parcela é um múltiplo de $3$. Logo $a$ é di
 :::
 
 
+De

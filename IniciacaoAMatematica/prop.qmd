@@ -16,7 +16,7 @@ Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que afirm
 - $\pi > \sqrt{10}$;
 - $1+2=3$.
 
-Cada proposição deve ser ou *verdadeira* ou *falsa*, mas não pode ser verdadeira *e* falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a terceira proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico *falso*).
+Cada proposição deve ser ou *verdadeira* ou *falsa*, mas não pode ser verdadeira *e* falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico *falso*).
 
 Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como "O Pedro é estudante" são frequentamente demasiado ambíguas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.) 
 
@@ -86,22 +86,22 @@ Note que nós usamos parênteses para indicar a ordem das operações. A última
 $$
 \neg(A\land B)\lor \neg(A\lor B)
 $$
-sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar os parênteses que omitir. Às vezes, os parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão 
+sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar as parênteses que omitir. Às vezes, as parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão 
 $$
 A\lor B \land C
 $$
 está ambígua, pois pode denotar $(A\lor B)\land C$ ou 
 $A\lor(B\land C)$. Se $A$ é verdadeira e $C$ é falsa, então $(A\lor B)\land C$ é falsa, mas $A\lor (B\land C)$ é verdadeira (independentemente do valor lógico de $B$). Nestes casos, as operações são feitas da esquerda para a direita, e a proposição deve ser interpretada como $(A\lor B)\land C$. Tendo dito isso, é melhor colocar as parénteses. 
 
-Outras operações lógicas que são frequentamente usadas são a disjunção exclusiva $\lxor$, a condicional $\cond$ e bicondicional $\bicond$.
+Outras operações lógicas que são frequentamente usadas são a **disjunção exclusiva** $\lxor$, a **condicional** $\cond$ e **bicondicional** $\bicond$.
 
 **Disjunção exclusiva ($\lxor$)**: 
-A disjunção exclusiva (XOR ou XOU) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou $A$ ou $B$ mas não ambos). A proposição $A\lxor B$ é verdadeira se $A$ é verdadeira ou $B$ é verdadeira, mas não quando $A$ e $B$ são ambas verdadeiras. Caso contrário $A\lxor B$ é falsa.
+A disjunção exclusiva (XOR ou XOU) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou $A$ ou $B$ mas não ambas). A proposição $A\lxor B$ é verdadeira se $A$ é verdadeira ou $B$ é verdadeira, mas não quando $A$ e $B$ são ambas verdadeiras. Caso contrário $A\lxor B$ é falsa.
 
 **Condicional ($\cond$)**: 
-A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia-se "$A$ implica $B$"). A proposição $A\cond B$ é verdadeira se $A$ é falsa, ou $A$ e $B$ são ambas verdadeiras. 
+A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia-se "$A$ implica $B$"). A proposição $A\cond B$ é verdadeira se $A$ é falsa, ou $A$ e $B$ são ambas verdadeiras. Caso contrário, $A\cond B$ é falsa.
 
-**Bicondicional ($\bicond$)**: A bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia-se "$A$ é equivalente a $B$"). A proposição $A\bicond B$ é verdadeira se $A$ é $B$ têm o mesmo valor lógico; ou seja, $A$ e $B$ são ambas verdadeiras ou $A$ e $B$ são ambas falsas.
+**Bicondicional ($\bicond$)**: A bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia-se "$A$ é equivalente a $B$"). A proposição $A\bicond B$ é verdadeira se $A$ e $B$ têm o mesmo valor lógico; ou seja, $A$ e $B$ são ambas verdadeiras ou $A$ e $B$ são ambas falsas. Caso contrário, $A\bicond B$ é falsa.
 
 
 Note que a disjunção exclusiva $\lxor$ está mais próxima ao  significado cotadiano da palavra "ou". Nas expressões de matemática "ou" normalmente significa disjunção inclusiva e quando queremos disjunção exclusiva, isso deve ser claramente indicada. Por exemplo a proposição 
@@ -152,7 +152,7 @@ Note que a expressão $(P \land \neg Q) \lor (\neg P \land Q)$ é verdadeira se 
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \bicond P \lxor Q
 $$
-para qualquer proposição $P$ e $Q$. Neste caso escrevemos também que 
+é verdadeira para quaisquer proposições $P$ e $Q$ (independentemente seu valor lógico). Neste caso escrevemos também que 
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \equiv P \lxor Q.
 $$
@@ -169,7 +169,6 @@ $$
 :::
 
 :::{#exr-true-table2}
-Exercício.
 Demonstre as seguintes afirmações usando tabelas-verdade.
 
 1. $\neg(P\lor Q)\equiv \neg P \land \neg Q$;
@@ -178,7 +177,7 @@ Demonstre as seguintes afirmações usando tabelas-verdade.
 4. $P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)$.
 :::
 
-As primeiras duas afirmações no exercício anterior são conhecidas como as *identidades de de Morgan*. Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
+As primeiras duas afirmações no exercício anterior são conhecidas como as [*Leis de de Morgan*](https://pt.wikipedia.org/wiki/Teoremas_de_De_Morgan). Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
 $$
 P:\ \mbox{$2$ é primo}, \quad Q:\ \mbox{$3$ divide $7$}
 $$
@@ -190,4 +189,4 @@ P\lor Q&:\ \mbox{$2$ é primo ou $3$ divide $7$}\\
 \neg(P\lor Q)\equiv \neg P\land \neg Q&:\ \mbox{$2$ não é primo e $3$ não divide $7$}.
 \end{align*}
 
-
+O terceiro e quarto itens do @exr-true-table2 podem ser vistos como uma forma da distributividade entre as conectivas $\lor$ e $\land$. 
