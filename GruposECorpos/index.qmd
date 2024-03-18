@@ -28,9 +28,28 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 * [Grupos abelianos]
 * [Classes de conjugação](classes.qmd)
 * [O grupo alternado](alternado.qmd)
-* [O Lema de Iwasawa e a simplicidade de $PSL(n,q)$](psl.qmd)
+* [O Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)](psl.qmd)
 * [Os Teoremas de Sylow](sylow.qmd)
 * [Grupos nilpotentes](nilpotent.qmd)
 
+### Bloco 2: Corpos
 
-TODO: Grupos abelianos, Teorema de Cayley, produto direto, os Teoremas de Homomorfismo
+TODO: Grupos abelianos, Teorema de Cayley
+
+## Bibliografia
+* Joseph Gallian. Contemporary abstract algebra. Cengage Learning, 2016.
+* Sérgio Tadao Martins e Eduardo Tengan. Álgebra exemplar. IMPA, 2020.
+* Hygino Domingues e Gelson Iezzi. Álgebra moderna. Saraivauni, 2018.
+* Arnaldo Garcia e Yves Lequain. Elementos de álgebra. IMPA, 2018.
+* Adilson Gonçalves. Introdução à Álgebra. IMPA, 2017.
+
+## Vídeos interesantes e relavantes no YouTube
+* [Life, Death and the Monster](https://youtu.be/xOCe5HUObD4) (John Conway) - Numberphile
+* [Monster Group](https://youtu.be/MXKiih4JJvQ) (John Conway) - Numberphile
+* [Monster Group](https://youtu.be/MXKiih4JJvQ) (a little extra bit) - Numberphile
+* [Euler's formula with introductory group theory](https://youtu.be/mvmuCPvRoWQ) - 3Blue1Brown
+* [Group theory and why I love 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000](https://youtu.be/mH0oCDa74tE) - 3Blue1Brown
+* [Essence of group theory](https://youtu.be/EsBn7G2yhB8) - Mathemaniac
+* [2000 years unsolved: Why is doubling cubes and squaring circles impossible?](https://youtu.be/O1sPvUr0YC0) - Mathologger
+* [Symmetry](https://youtu.be/yCxacFBLHIY) - The Biggest Ideas in the Universe part, Sean Carrol
+

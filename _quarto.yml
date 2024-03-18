@@ -15,6 +15,7 @@ book:
       chapters: 
         - IniciacaoAMatematica/prop.qmd
         - IniciacaoAMatematica/conjuntos.qmd
+        - IniciacaoAMatematica/quant.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd

@@ -4,6 +4,7 @@ number-sections: true
 lang: pt-BR
 ---
 
+## O comutador 
 
 :::{#def-commutator}
 Seja $G$ um grupo, $g,h\in G$. O comutador $[g,h]$ de $g$ e $h$ é definido como 
@@ -13,6 +14,8 @@ $$
 :::
 
 Note que $[g,h]=1$ se e somente se $gh=hg$; ou seja, $g$ e $h$ comutam. 
+
+## O subgrupo derivado
 
 :::{#def-commutator-sg}
 Seja $G$ um grupo. O subgrupo derivado $G'$ está definida como 

@@ -10,18 +10,22 @@ lang: pt-BR
 Um subgrupo $H$ de $G$ é dito normal se $gH=Hg$ para todo $g\in G$. Esta condição pode ser expressa por dizer que $g^{-1}Hg=H$ para todo $g\in G$. Escrevemos que $H\unlhd G$, ou $H\lhd G$ quando $H< G$.
 :::
 
+:::{#exr-normal-conj}
+Mostre que $H\leq G$ é normal em $G$ se e somente se $g^{-1}Hg\subseteq H$ para todo $g\in G$. 
+:::
+
 As afirmações dos seguintes exemplos podem ser justificadas ou por exercícios anteriores ou por contas triviais.
 
 :::{#exm-normal}
 - $\{1\}$ e $G$ são normais em $G$.
 - Em um grupo abeliano, todo subgrupo é normal.
-- O subgrupo $SL(n,\F)$ é normal em $GL(n,\F)$.
+- O subgrupo $\operatorname{SL}(n,\F)$ é normal em $\operatorname{GL}(n,\F)$.
 - Se $|G:H|=2$, então $H$ é normal em $G$.
 - $\left<(1,2)(3,4),(1,3)(2,4)\right>=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$ é normal em $S_4$.
 - $\left<(1,2)\right>=\{1,(1,2)\}$ não é normal em $S_3$.
 :::
 
-## Grupos quocientes
+## O Grupo quociente
 
 :::{#def-quotient}
 Seja $N$ um subgrupo normal em um grupo $G$. Definimos uma operação no conjunto das classes laterais $Ng$ (onde $g\in G$) no modo seguinte:
@@ -39,7 +43,9 @@ $$
 e esta operação corresponde à operação $+$ entre classes residuais modulo $n$. Temos então que o grupo $\Z_n$ pode ser visto como o grupo quociente $\Z/n\Z$.
 :::
 
-:::{#def-quot}
+## Homomorfismos
+
+:::{#def-hom}
 Sejam $G$ e $H$ grupos. Um mapa $\varphi:G\to H$ é dito homomorfismo se
 $$
 \varphi(ab)=\varphi(a)\varphi(b)\quad\mbox{para todo}\quad a,b\in G.
@@ -50,8 +56,7 @@ $$.
 Verifique as seguintes propriedades de um homomorfismo $\varphi:G\to H$.
 
 
-Se $g\in G$ e $n\in\Z$, então $\varphi(g^n)=\varphi(g)^n$. Em particular, $\varphi(g^{-1})=\varphi(g)^{-1}$.
-$\varphi(1_G)=\varphi(1_H)$.
+Se $g\in G$ e $n\in\Z$, então $\varphi(g^n)=\varphi(g)^n$. Em particular, $\varphi(g^{-1})=\varphi(g)^{-1}$ e $\varphi(1_G)=\varphi(1_H)$.
 :::
 
 :::{#exm-hom}
@@ -64,16 +69,18 @@ Pelo raciocínio anterior, o mapa $\varphi :\Z\to \Z_n$ definido por $\varphi(k)
 
 Em relação com homomorfismos usamos as seguintes expressões.
 
-* Morfismo é a mesma coisa que homomorfismo. A palavra morfismo está mais usada ma teoria de categorias
-* Monomorfismo: homomorfismo injetivo.
-* Epimorfismo: homomorfismo sobrejetivo.
-* Isomorfismo: homomorfismo injetivo e sobrejetivo.
-* Endomorfismo: um homomorfismo $G\to G$.
-* Automorfismo: um isomorfismo $G\to G$.
+* **Morfismo** é a mesma coisa que homomorfismo. A palavra morfismo está mais usada ma teoria de categorias.
+* **Monomorfismo:** homomorfismo injetivo.
+* **Epimorfismo:** homomorfismo sobrejetivo.
+* **Isomorfismo:** homomorfismo injetivo e sobrejetivo.
+* **Endomorfismo:** um homomorfismo $G\to G$.
+* **Automorfismo:** um isomorfismo $G\to G$.
 
 :::{#def-isom}
 Dois grupos $G$ e $H$ são ditos isomorfos que existe um isomorfismo (ou seja, um homomorfismo injetivo e sobrejetivo) $G\to H$. O conjunto de automorfismos $G\to G$ é um grupo chamado do grupo de automorfismos de $G$. Este grupo é denotado por $\mbox{Aut}(G)$.
 :::
+
+## O Teorema de Núcleo e Imagem
 
 :::{#def-ker-im}
 Dado um homorfismo $\varphi:G\to H$, definimos
@@ -101,7 +108,7 @@ Seja $\varphi:G\to H$ um homomorfismo. As seguintes afirmações são verdadeira
 $$
 \varphi(g^{-1}hg)=\varphi(g^{-1})\varphi(h)\varphi(g)=\varphi(g)^{-1}\varphi(g)=1_H
 $$
-que diz que $g^{-1}hg\in\ker \varphi$. O mesmo argumento implica que $ghg^{-1}\in\ker\varphi$. Um exercício em cima mostra que $\ker\varphi\unlhd G$.
+que diz que $g^{-1}hg\in\ker \varphi$. Ora @exr-normal-conj mostra que $\ker\varphi\unlhd G$.
 
 3. Se $\varphi$ é injetivo, então $1_G$ deve ser o único elemento cuja imagem é $1_H$, então $\ker\varphi=\{1_G\}$. Assuma agora que $\varphi$ é injetivo e sejam $a,b\in G$ tais que $\varphi(a)=\varphi(b)$. Isto implica que
 $$
@@ -116,6 +123,136 @@ $$
 É fácil ver que $\bar\varphi$ é um homomorfismo bem definido e ele é sobrejetivo. Assuma que $g\in G$ tal que $\bar\varphi(Ng)=1_H$. Isto implica que $\varphi(g)=1_H$; ou seja, $g\in N$ e $Ng=N=1_{G/N}$. Portanto $\ker\bar\varphi=\{1_{G/N}\}$ e isto implica que $\bar\varphi$ é injetivo. Logo $\bar\varphi$ é um isomorfismo e $G/\ker\varphi\cong \mbox{Im}\,\varphi$.
 :::
 
+A afirmação 4. no @thm-ker-im está conhecido como O Teorema do Núcleo e a Imagem.
+
 :::{#exm-ker-hom}
-Sejam $\F$ um corpo, $n\geq 2$ e $\varphi: GL(n,\F)\to \F^*=\F\setminus\{0\}$ definido com $\varphi(X)=\det X$. Temos que $\varphi$ é um homomorfismo sobrejetivo e que $\ker\varphi=SL(n,\F)$. Pelo teorema anterior, obtemos que $GL(n,\F)/SL(n,\F)\cong \F^*$.
+1. Sejam $\F$ um corpo, $n\geq 2$ e $\varphi: \operatorname{GL}(n,\F)\to \F^*=\F\setminus\{0\}$ definido com $\varphi(X)=\det X$. Temos que $\varphi$ é um homomorfismo sobrejetivo e que $\ker\varphi=\operatorname{SL}(n,\F)$. Pelo teorema anterior, obtemos que $\operatorname{GL}(n,\F)/\operatorname{SL}(n,\F)\cong \F^*$.
+
+2. Seja $n\geq 2$ e considere a homorfismo $\psi:\Z\to \Z_n$, $\psi(k)=k\in \Z_n$. Então $\psi$ é um homomorfismo com núcleo $n\Z$. Obtemos mais uma forma para justificar que $\Z/n\Z\cong \Z_n$.  
+:::
+
+
+## Os outros teoremas de isomorfismo 
+
+:::{#exr-NH}
+Seja $H\leq G$ e $N\unlhd G$. Mostre que $HN\leq G$. 
+:::
+
+:::{#thm-isom}
+Seja $G$ um grupo. 
+
+1. Se $H\leq G$ e $N\unlhd G$, então $H\cap N\unlhd H$ e $HN/N\cong H/(H\cap N)$.
+2. Se $M\unlhd N\unlhd G$, então $(G/M)/(N/M) \cong G/M$. 
+:::
+
+:::{.proof}
+1. Primeiro, se $n\in H\cap N$ e $h\in H$, então $h^{-1}nh\in H$ e $h^{-1}nh\in N$ (pois $N$ é normal). Portanto $h^{-1}nh\in H\cap N$. @exr-normal-conj implica que $H\cap N\unlhd H$. Por definição, os elementos de $HN/N$ são classes laterais na forma 
+$hnN$ com $h\in H$ e $n\in N$, mas $nN=N$, então 
+$$
+HN/N=\{hnN\mid h\in H\mbox{ and }n\in N\}=\{hN\mid h\in H\}.
+$$
+Defina uma aplicação 
+$$
+\psi:H\to HN/N,\quad h\mapsto hN.
+$$
+O argumento nas linhas anteriores implica que $\psi$ é sobrejetiva. Vamos calcular $\ker\psi$. Assuma que $h\in H$ e calculemos que 
+$$
+h\in \ker\psi\bicond hN=N\bicond h\in N\bicond h\in H\cap N. 
+$$
+Logo $\ker\psi=H\cap N$. Ora item 4. do @thm-ker-im implica que $H/(H\cap N)\cong HN/N$. 
+
+2. Exercício.
+:::
+
+:::{#thm-corresp}
+Seja $G$ um grupo e $N\unlhd G$. Existe uma bijeção entre os conjuntos 
+$$
+\{H\leq G\mid N\leq H\}\quad\mbox{e}\quad \{K\leq G/N\}.
+$$
+dada por $H\mapsto H/N$. Além disso, esta bijeção restringe a uma bijeção entre os conjuntos 
+$$
+\{H\unlhd G\mid N\leq H\}\quad\mbox{e}\quad \{K\unlhd G/N\}.
+$$ 
+:::
+:::{.proof}
+Sejam $X$ e $Y$ os dois conjuntos na primeira linha destacada do teorema. Seja $\pi:G\to G/N$ a projeção natural e defina 
+$$
+\psi:X\to Y,\quad \psi(H)=H/N
+$$
+e 
+$$
+\varphi:Y\to X,\quad \varphi(K)=\pi^{-1}(K).
+$$
+Uma conta elementar (que deixamos para o leitor) mostra que $\psi\circ \varphi=\operatorname{id}_Y$ e  $\varphi\circ\psi=\operatorname{id}_X$. Isso implica que $\psi$ e $\varphi$ são bijeções. A verificação da segunda afirmação é exercício do leitor. 
+:::
+
+## A conjugação
+
+:::{#def-conjugado}
+Seja $G$ um grupo e $g,h\in G$. O elemento $g^h:=h^{-1}gh$ é dito *conjugado de $g$ por $h$*.
+:::
+
+Seja $h\in G$ como no @def-conjugado. Defina o mapa 
+$$
+c_h: G\to G,\quad gc_h=h^{-1}gh.
+$$
+Note que $c_h$ está no lado direito do seu argumento. 
+
+:::{#lem-conjugado}
+As seguintes afirmações são verdadeiras. 
+
+1. $c_h\in \operatorname{Aut}(G)$. 
+2. A aplicação $c:h\mapsto c_h$ é um homomorfismo $G\to \operatorname{Aut}(G)$. 
+3. $\operatorname{Im}\,c\unlhd \operatorname{Aut}(G)$. 
+4. $\ker c=\{x\in G\mid xy=yx\mbox{ para todo }y\in G\}$.
+:::
+
+:::{.proof}
+1. Note que 
+$$
+(g_1g_2)c_h=h^{-1}g_1g_2h=h^{-1}g_1hh^{-1}g_2h=(g_1c_h)(g_2c_h).
+$$
+Logo, $c_h$ é homomorfismo. Note que $c_{h^{-1}}$ é inverso de $c_h$, pois 
+$$
+gc_hc_{h^{-1}}=(h^{-1}gh)c_{h^{-1}}=hh^{-1}ghh^{-1}=g
+$$
+e similarmente $gc_{h^{-1}}c_{h}=g$ para todo $g\in G$. Portanto $c_h$ é uma bijeção. Isso implica que $c_h\in\operatorname{Aut}(G)$. 
+
+2. Note que 
+$$
+gc_{h_1h_2}=(h_1h_2)^{-1}gh_1h_2=h_2^{-1}h_1^{-1}gh_1h_2=h_2^{-1}(gc_{h_1})h_2=gc_{h_1}c_{h_2}.
+$$
+Logo a aplicação $h\mapsto c_h$ é um homomorfismo $G\to\operatorname{Aut}(G)$. 
+
+3. Seja $h\in G$ e $\alpha\in\operatorname{Aut}(G)$. Se $g\in G$, então 
+$$
+g\alpha^{-1}c_h\alpha=(h^{-1}(g\alpha^{-1}) h)\alpha=((h^{-1}\alpha)g(h\alpha))=gc_{h\alpha}.
+$$
+Portanto, $\alpha^{-1}c_h\alpha=c_{h\alpha}$. @exr-normal-conj implica que $\operatorname{Im}\,c\unlhd\operatorname{Aut}(G)$. 
+
+4. Temos que $h\in\ker c$ se e somente se $gc_h=g$ para todo $g\in G$. Isso vale se e somente se $h^{-1}gh=g$; ou seja $gh=hg$ para todo $g\in G$. 
+:::
+
+:::{#def-center}
+O conjunto 
+$$
+\{x\in G\mid xy=yx\mbox{ para todo }y\in G\}
+$$
+é chamado de *centro de $G$* e é denotado por $Z(G)$. Com esta notação, podemos escrever que $\ker c= Z(G)$. 
+:::
+
+O seguinte lema é imadiato.
+
+:::{#lem-cent-abel}
+Temos que $Z(G)=G$ se e somente se $G$ é abeliano.
+:::
+
+:::{#def-inner-aut}
+Um automorfismo na forma $g\mapsto h^{-1}gh$ com $h\in G$ fixado, é dito *automorfismo* interno de $G$. A afirmação 3. no @lem-conjugado diz que os automorfismos internos formam um subgrupo normal em $\operatorname{Aut}(G)$. O grupo dos automorfismos internos é denotado por $\operatorname{Inn}(G)$. 
+:::
+
+O teorema seguinte segue das considerações anteriores.
+
+:::{#thm-inner-aut}
+$Z(G)\unlhd G$ e $\operatorname{Inn}(G)\cong G/Z(G)$.
 :::
