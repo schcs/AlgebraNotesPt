@@ -5,7 +5,61 @@ lang: pt-BR
 ---
 
 
+## O comutador 
 
+:::{#def-commutator}
+Seja $G$ um grupo, $g,h\in G$. O comutador $[g,h]$ de $g$ e $h$ é definido como 
+$$
+[g,h]=g^{-1}h^{-1}gh
+$$
+:::
+
+Note que $[g,h]=1$ se e somente se $gh=hg$; ou seja, $g$ e $h$ comutam. 
+
+## O subgrupo derivado
+
+:::{#def-commutator-sg}
+Seja $G$ um grupo. O subgrupo derivado $G'$ está definida como 
+$$
+G'=\left<[g,h]\mid g,h\in G\right>.
+$$
+:::
+
+Em outras palavras, o subgrupo derivado $G'$ é um subgrupo gerado por todos os comutadores em $G$. Note que o conjunto dos comutadores geralmente não é fechado para multiplicação e assim ele não é um subgrupo de $G$.
+
+Note também que $G'=1$ se e somente se $G$ é abeliano.
+
+:::{#thm-comm-sg}
+Seja $G$ um grupo. As seguintes afirmações são verdadeiras.
+
+- $G'\unlhd G$;
+- $G/G'$ é um grupo abeliano;
+- se $N\unlhd G$ tal que $G/N$ é abeliano, então $G'\leq N$.  
+
+A terceira afirmação diz que $G'$ é o menor subgrupo normal de $G$ com quociente abeliano.
+:::
+
+:::{.proof}
+Primeiro, se $g,h,x\in G$, então
+$$
+[g^x,h^x]=[x^{-1}gx,x^{-1}hx]=x^{-1}g^{-1}xx^{-1}h^{-1}xx^{-1}gxx^{-1}hx=x^{-1}g^{-1}h^{-1}ghx=[g,h]^x.
+$$
+O seja, um conjugado de um comutador é comutador. Como o subgrupo derivado contém produtos de comutadores, ele é normal.
+
+Sejam $g,h\in G$. Temos que 
+$$
+[gG',hG']=(g^{-1}G')(h^{-1}G')(gG')(hG')=[g,h]G'=G'.
+$$
+Logo, $G/G'$ é abeliano.
+
+Ora seja $N\unlhd G$ tal que $G/N$ é abeliano e seja $g,h\in G$. Temos que 
+$$
+1=[gN,hN]=[g,h]N.
+$$
+Ou seja, $[g,h]\in N$. Como $G'$ é gerado por elementos na forma $[g,h]$, temos que $G'\leq N$. 
+:::
+
+## Subgrupos caraterísticos
 
 :::{#def-charsub}
 Um subgroupo $H\leq G$ é dito caraterístico, se $H$ é invariente por automorfismos de $G$. Um subgrupo caraterístico é normal.
@@ -29,6 +83,8 @@ $G'$ é um subgrupo caraterístico de $G$. Em particular, $G'$ é um subgrupo no
 :::{.proof}
 Exercício.
 :::
+
+## Série derivada
 
 :::{#def-sgs-derivied}
 Podemos definir recursivamente $G''=(G')'$, $G'''=(G'')'$. Obtemos uma série chamada de série derivada ou série comutador de $G$. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em $G$. Os termos da série derivada são denotados também por $G=G^{(0)}$, $G'=G^{(1)}$, $G''=G^{(2)}$, etc.
@@ -57,6 +113,8 @@ As seguintes são equivalentes para um grupo $G$.
 :::{.proof}
 Segue dos resultados anteriores.
 :::
+
+## Grupos solúveis
 
 :::{#def-solvable}
 Um grupo $G$ é dito solúvel se uma das afirmações do corolário anterior é válida para $G$. O menor $k$ tal que $G^{(k)}=1$ é chamado de comprimento derivado de $G$.

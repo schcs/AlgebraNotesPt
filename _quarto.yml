@@ -71,11 +71,10 @@ book:
         - GruposECorpos/lagrange.qmd
         - GruposECorpos/geradores.qmd
         - GruposECorpos/normais.qmd
-        - GruposECorpos/derivado.qmd
         - GruposECorpos/products.qmd
-        - GruposECorpos/soluble.qmd
         - GruposECorpos/actions.qmd
         - GruposECorpos/livres.qmd
+        - GruposECorpos/soluble.qmd
         - GruposECorpos/classes.qmd
         - GruposECorpos/alternado.qmd
         - GruposECorpos/psl.qmd
