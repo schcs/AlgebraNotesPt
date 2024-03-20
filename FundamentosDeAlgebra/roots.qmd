@@ -1,4 +1,5 @@
 
+
 ---
 title: "Raízes e irredutibilidade"
 number-sections: true

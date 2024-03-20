@@ -23,6 +23,8 @@ book:
         - FundamentosDeAlgebra/criterios.qmd
         - FundamentosDeAlgebra/racionais.qmd
         - FundamentosDeAlgebra/mdc.qmd
+        - FundamentosDeAlgebra/euclid.qmd
+        - FundamentosDeAlgebra/prop_mdc.qmd        
         - FundamentosDeAlgebra/primos.qmd
         - FundamentosDeAlgebra/tfa.qmd
         - FundamentosDeAlgebra/numprimes.qmd

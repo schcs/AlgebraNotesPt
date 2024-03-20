@@ -1,0 +1,75 @@
+
+
+---
+title: "As propriedades do MDC"
+number-sections: true
+lang: pt-BR
+---
+
+O último resultado na página do Algoritmo de Euclides implica várias propriedades importantes do MDC.
+
+:::{#lem-}
+Sejam $a,b,c\in\Z\setminus\{0\}$. As seguintes afirmações são verdadeiras.
+
+- Se $c\mid ab$ e $\mdc bc=1$, então $c\mid a$.
+- Se $\mdc ac=\mdc bc=1$, então $\mdc {ab}c=1$.
+- Se $\mdc ab=d$, então $\mdc{a/d}{b/d}=1$.
+- Se $a\mid c$ e $b\mid c$, então $(ab/\mdc ab)\mid c$.
+- Se $a\mid c$, $b\mid c$ e $\mdc ab=1$, então $ab\mid c$.
+:::
+
+
+:::{.proof}
+1. Como $\mdc bc=1$, existem $u,v\in\Z$ tais que $ub+vc=1$. Multiplique esta igualdade por $a$ para obter
+$$
+a=uab+vac.
+$$
+Como $c\mid ab$, o lado direito da última equação é divisível por $c$, e assim $c\mid a$.
+
+2. Seja $d=\mdc{ab}c$. Como $\mdc ac=1$, existem $u,v\in\Z$ tais que
+$$
+1=ua+vc.
+$$
+Multiplique os dois lados desta igualdade por $b$ e obtenha
+$$
+b=uab+vbc.
+$$
+Pela definição de $d$, tem-se  que $d\mid c$ e $d\mid ab$. Logo, pela última igualdade, obtemos que $d\mid b$. Logo $d\mid \mdc bc=1$; ou seja $d=\mdc{ab}c=1$.
+
+3. Seja $d=\mdc ab$. Existem inteiros $q_1,q_2\in\Z$ tais que
+$$
+a=q_1d\quad\mbox{e}\quad b=q_2d.
+$$
+Além disso existem $u,v\in\Z$ tais que
+$$
+d=ua+vb=uq_1d+vq_2d.
+$$
+Dividindo os dois lados por $d$, obtemos que
+$$
+1=uq_1+vq_2.
+$$
+Note que se $d_1=\mdc{q_1}{q_2}$, então $d_1\mid 1$, logo $d_1=1$. Portanto
+$$
+\mdc{a/d}{b/d}=\mdc{q_1}{q_2}=1.
+$$
+
+4. Seja $d=\mdc ab$. Existem $u,v\in\Z$ tais que
+$$
+d=ua+vb.
+$$
+Multiplicando por $c$,
+$$
+cd=uac+vbc.
+$$
+Pelas condições, existem inteiros $q_1$, $q_2$ tais que $c=aq_1=bq_2$ e assim
+$$
+dc=uabq_2+vbaq_1=ab(uq_2+vq_1);
+$$
+ou seja
+$$
+c=\frac{ab}d(uq_2+vq_1).
+$$
+Isso implica que $ab/d\mid c$.
+
+5. Segue da afirmação 4.
+:::

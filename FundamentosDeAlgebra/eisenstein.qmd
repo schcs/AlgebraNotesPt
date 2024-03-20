@@ -1,4 +1,5 @@
 
+
 ---
 title: "O Critério de Eisenstein"
 number-sections: true

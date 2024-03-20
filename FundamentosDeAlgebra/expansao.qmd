@@ -1,4 +1,5 @@
 
+
 ---
 title: "Expansão dos naturais na base $b$"
 number-sections: true

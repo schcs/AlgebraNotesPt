@@ -1,4 +1,5 @@
 
+
 ---
 title: "O algoritmo de exponenciação rápida"
 number-sections: true

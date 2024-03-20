@@ -1,4 +1,12 @@
 
+
+
+---
+number-sections: true
+lang: pt-BR
+---
+
+
 ---
 title: "Equações quadráticas"
 number-sections: true

@@ -1,3 +1,5 @@
+
+
 ---
 title: "Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides"
 number-sections: true

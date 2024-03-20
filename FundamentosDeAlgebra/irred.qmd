@@ -1,4 +1,5 @@
 
+
 ---
 title: "Polinômios irredutíveis"
 number-sections: true

@@ -1,4 +1,5 @@
 
+
 ---
 title: "O Teorema do Elemento Primitivo (enunciado)"
 number-sections: true

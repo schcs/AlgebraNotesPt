@@ -1,4 +1,5 @@
 
+
 ---
 title: "A expansão dos racionais na base $b$"
 number-sections: true

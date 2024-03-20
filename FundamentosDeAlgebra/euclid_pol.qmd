@@ -1,4 +1,5 @@
 
+
 ---
 title: "O Teorema de Divisão para polinômios"
 number-sections: true

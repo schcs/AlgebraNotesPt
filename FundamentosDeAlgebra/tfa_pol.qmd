@@ -1,4 +1,5 @@
 
+
 ---
 title: "O Teorema da Fatoração para polinômios"
 number-sections: true

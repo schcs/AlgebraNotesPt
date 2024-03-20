@@ -1,4 +1,5 @@
 
+
 ---
 title: "O anel dos polinômios"
 number-sections: true
