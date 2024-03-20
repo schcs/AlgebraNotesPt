@@ -164,6 +164,11 @@ window.Quarto = {
 \newcommand{\bicond}{\Leftrightarrow}
 \newcommand{\mdc}[2]{\operatorname{mdc}(#1,#2)}
 \newcommand{\grau}[1]{\operatorname{grau}(#1)}
+\newcommand{\real}[1]{\mathfrak R(#1)}
+\newcommand{\imag}[1]{\mathfrak I(#1)}
+\newcommand{\argz}[1]{\mbox{arg}(#1)}
+\DeclareMathOperator{\sen}{sen}
+\newcommand{\cis}[1]{\cos #1+i\sen #1}
 \]</span></p>
 </div>
 
@@ -1082,14 +1087,14 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Exercício 24.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo ímpar e seja <span class="math inline">\(\overline a\in\Z_p^*\)</span>. Mostre que <span class="math inline">\(\overline a^{(p-1)/2}\in\{\overline 1,\overline{-1}\}\)</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 24.2</strong></span> &nbsp;</p>
-Motivado pelo exercício anterior, vamos calcular <span class="math inline">\(\overline a^3\)</span> para todo <span class="math inline">\(\overline a\in\Z_7^*\)</span>.
-<span class="math display">\[\begin{array}{|c||c|c|c|c|c|c|}
+<p><span class="theorem-title"><strong>Exemplo 24.2</strong></span> Motivado pelo exercício anterior, vamos calcular <span class="math inline">\(\overline a^3\)</span> para todo <span class="math inline">\(\overline a\in\Z_7^*\)</span>.</p>
+<p><span class="math display">\[
+\begin{array}{|c||c|c|c|c|c|c|}
 \hline
 \overline a &amp; \overline 1 &amp; \overline 2 &amp; \overline 3&amp; \overline 4&amp; \overline 5 &amp; \overline 6 \\\hline
 \overline a^3 &amp; \overline 1 &amp; \overline 1 &amp; \overline{-1}&amp; \overline 1&amp; \overline {-1} &amp; \overline {-1} \\\hline
-\end{array}\]</span>
-<p>Observamos duas coisas:</p>
+\end{array}
+\]</span> Observamos duas coisas:</p>
 <ul>
 <li>Se <span class="math inline">\(\overline a\in\Z_7^*\)</span> é quadrado, então <span class="math inline">\(\overline a^3=\overline 1\)</span>.</li>
 <li>Se <span class="math inline">\(\overline a\in\Z_7^*\)</span> não é quadrado, então <span class="math inline">\(\overline a^3=\overline{-1}\)</span>.</li>
