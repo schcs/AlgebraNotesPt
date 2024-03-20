@@ -80,6 +80,33 @@ Em relação com homomorfismos usamos as seguintes expressões.
 Dois grupos $G$ e $H$ são ditos isomorfos que existe um isomorfismo (ou seja, um homomorfismo injetivo e sobrejetivo) $G\to H$. O conjunto de automorfismos $G\to G$ é um grupo chamado do grupo de automorfismos de $G$. Este grupo é denotado por $\mbox{Aut}(G)$.
 :::
 
+:::{#exm-isom1}
+Assumindo que $V$ é um $\F$-espaço vetorial de dimensão finita $n$ com base $B$, obtemos um isomorfismo 
+$$
+\GLV V\to \GL n\F,\quad f\mapsto [f]_B^B
+$$
+onde $[f]_B^B$ a matriz da transformação linear $f\in\GLV V$. O fato que esta correspondência é um isomorfismo segue do fácil argumento de álgebra linear. Temos então que $\GLV V$ e $\GL n\F$ são grupos isomorfos e escrevemos que $\GLV V\cong\GL n\F$. 
+:::
+
+:::{#exm-isom2}
+Sejam $G$ e $H$ grupos cíclicos da mesma ordem (finita ou infinita). Assuma que $G=\left<g\right>$ e $H=\left<h\right>$. Temos que a aplicação
+$$
+G\to H,\quad g^k\mapsto h^k \mbox{ para todo } k\in\Z 
+$$
+é um isomorfismo. Obtemos que $G\cong H$; ou seja, dois grupos cíclicos da mesma ordem são isomorfos. Em particular, se $G$ é grupo cíclico de ordem $n$, então $G\cong\Z_n$. 
+:::
+
+
+
+:::{#cor-order-p}
+Seja $p$ um primo e seja $G$ um grupo de ordem $p$. Então $G\cong\Z_p$. 
+:::
+
+:::{.proof}
+Se $G$ é um grupo de ordem $p$, então obtemos do @thm-prime-cyclic que $G$ é cíclico. Ora, $G\cong\Z_p$ segue do @exm-isom2.
+:::
+
+
 ## O Teorema de Núcleo e Imagem
 
 :::{#def-ker-im}

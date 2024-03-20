@@ -5,7 +5,6 @@ number-sections: true
 lang: pt-BR
 ---
 
-$\newcommand{\real}[1]{\mathfrak R(#1)}\newcommand{\imag}[1]{\mathfrak I(#1)}\newcommand{\argz}[1]{\mbox{arg}(#1)}\DeclareMathOperator{\sen}{sen}\newcommand{\cis}[1]{\cos #1+i\sen #1}$
 Um **número complexo** é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
 $$
 i^2=-1.

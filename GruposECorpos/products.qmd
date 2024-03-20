@@ -4,6 +4,87 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Produto de subgrupos
+
+:::{#def-group-prod}
+Sejam $H,K\leq G$. Definimos o produto $HK\subseteq G$ como 
+$$
+HK=\{hk\mid h\in H,\ k\in K\}
+$$
+:::
+
+:::{#exm-group-prod}
+Assuma que $H=\left<(1,2)\right>$, $K=\left<(2,3)\right>$ são subgrupos de $S_3$. Então 
+$$
+HK=\{1,(1,2),(2,3),(1,3,2)\}
+$$
+Em particular $HK$ não é subgrupo de $S_3$. Além disso, 
+$$
+KH=\{1,(1,2),(2,3),(1,2,3)\}
+$$
+que também não é subgrupo de $G$ e observamos ainda que $HK\neq KH$. 
+
+Agora, se $N=\left<(1,2,3)\right>$, então
+$$
+HN=S_3.
+$$
+:::
+
+:::{#lem-prod-subg}
+Sejam $H,K\leq G$. As segiuntes afirmações são verdadeiras.
+
+1. $HK\leq G$ se e somente se $HK=KH$.
+2. Se $H$ e $K$ são finitos, então $|HK|=|H||K|/|H\cap K|$.
+3. Se $K$ é normal, então $HK=KH$ e $HK\leq G$.
+:::
+
+:::{.proof}
+1. Assuma que $HK\leq G$. Isso implica que
+$$
+HKHK=HK
+$$
+e que 
+$$
+KH= H^{-1}HKK^{-1}=HK.
+$$
+Reciprocamente, se $HK=KH$, então 
+$$
+HKHK=HHKK=HK
+$$
+e $HK$ é fechado para multplicação. Similarmente,
+$$
+(HK)^{-1}=K^{-1}H^{-1}=KH=HK
+$$
+e $HK$ é fechado para inversos. Logo $HK\leq G$.
+
+2. Defina $\varphi:H\times K\to HK$ por $\varphi(h,k)=hk$. Temos que $\varphi$ é sobrejetiva e vamos calcular a pré-imagem $\varphi^{-1}(\{hk\})$ de um elemento $hk\in HK$. Se $x\in H\cap K$, então $\varphi(hx,x^{-1}k)=hxx^{-1}k=hk=\varphi(h,k)$. Logo 
+$$
+\{(hx,x^{-1}k)\mid x\in H\cap K\}\subseteq \varphi^{-1}(\{hk\}).
+$$
+Ora, se $h_1\in H$ e $k_1\in K$ então
+$$
+\varphi(h,k)=\varphi(h_1,k_1)\bicond hk=h_1k_1\bicond h^{-1}h_1=kk_1^{-1}\in H\cap K.
+$$
+Escrevendo $x=h^{-1}h_1=kk_1^{-1}$, temos que 
+$$
+h_1=hx\quad \mbox{e}\quad k_1=x^{-1}k
+$$
+e assim $(h_1,k_1)\in\{(hx,x^{-1}k)\mid x\in H\cap K\}$. Temos então que 
+$$
+|\varphi^{-1}(\{hk\})|=|H\cap K|
+$$ 
+e obtemos por um fácil argumento de contagem que 
+$$
+|HK|=|\mbox{Im}(\varphi)|=|H||K|/|H\cap K|.
+$$
+
+3. Se $K$ é normal, então 
+$$
+hk=k^{h^{-1}}h\in KH
+$$ 
+e $HK\subseteq KH$ e argumento similar implica que $KH\subseteq HK$. Logo $HK=KH$ e item 1.\ implica que $HK\leq G$. 
+:::
+
 ## O produto direto
 
 :::{#def-dirprod}

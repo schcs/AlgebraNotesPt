@@ -94,6 +94,6 @@ format:
       body-width: 800px
       margin-width: 600px
       gutter-width: 1.5rem
-#  pdf:
-#    include-in-header:
-#      - file: "macros.tex"
+  pdf:
+    include-in-header:
+      - file: "macros.tex"

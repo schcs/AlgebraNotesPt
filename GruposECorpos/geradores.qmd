@@ -64,7 +64,7 @@ Se $G$ é um grupo cíclico e $H\leq G$, então $H$ é cíclico.
 :::
 
 :::{.proof}
-Assuma que $G=\left<g\right>$ e seja $k\geq 1$ menor tal que $g^k\in H$. Afirmamos que $H=\left<g^k\right>$. Claramente $\left<g^k\right>\leq H$. Ora, seja $x\in H$. Como $G$ é cíclico, $x=g^m$ com algum $m\geq 0$. Pondo $m=qk+r$ com $r\in\{0,\ldots,k-1\}$ (@thm-euclides), obtemos que 
+Primeiro note que o subgrupo trivial de $G$ é cíclico e podemos assumir que $H\neq 1$.  Assuma que $G=\left<g\right>$ e seja $k\geq 1$ menor tal que $g^k\in H$. Afirmamos que $H=\left<g^k\right>$. Claramente $\left<g^k\right>\leq H$. Ora, seja $x\in H$. Como $G$ é cíclico, $x=g^m$ com algum $m\geq 0$. Pondo $m=qk+r$ com $r\in\{0,\ldots,k-1\}$ (@thm-euclides), obtemos que 
 $$
 x=g^m=g^{qk+r}=(g^k)^qg^r.
 $$
