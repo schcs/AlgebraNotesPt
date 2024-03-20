@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 54&nbsp; Produtos de grupos</title>
+<title>Álgebra - 9&nbsp; O algoritmo de Euclides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/actions.html" rel="next">
-<link href="../GruposECorpos/normais.html" rel="prev">
+<link href="../FundamentosDeAlgebra/prop_mdc.html" rel="next">
+<link href="../FundamentosDeAlgebra/mdc.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -610,7 +644,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/products.html"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/euclid.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -711,7 +745,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/euclid.html" class="sidebar-item-text sidebar-link">
+  <a href="../FundamentosDeAlgebra/euclid.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></span></a>
   </div>
 </li>
@@ -1003,7 +1037,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
   </div>
 </li>
@@ -1063,22 +1097,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
-   
-  <ul>
-  <li><a href="#produto-de-subgrupos" id="toc-produto-de-subgrupos" class="nav-link active" data-scroll-target="#produto-de-subgrupos"><span class="header-section-number">54.1</span> Produto de subgrupos</a></li>
-  <li><a href="#o-produto-direto" id="toc-o-produto-direto" class="nav-link" data-scroll-target="#o-produto-direto"><span class="header-section-number">54.2</span> O produto direto</a></li>
-  <li><a href="#produto-semidireto" id="toc-produto-semidireto" class="nav-link" data-scroll-target="#produto-semidireto"><span class="header-section-number">54.3</span> Produto semidireto</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/products.html"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/euclid.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></h1>
 </div>
 
 
@@ -1095,138 +1121,96 @@ window.Quarto = {
 </header>
 
 
-<section id="produto-de-subgrupos" class="level2" data-number="54.1">
-<h2 data-number="54.1" data-anchor-id="produto-de-subgrupos"><span class="header-section-number">54.1</span> Produto de subgrupos</h2>
-<div id="def-group-prod" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 54.1</strong></span> Sejam <span class="math inline">\(H,K\leq G\)</span>. Definimos o produto <span class="math inline">\(HK\subseteq G\)</span> como <span class="math display">\[
-HK=\{hk\mid h\in H,\ k\in K\}
-\]</span></p>
-</div>
-<div id="exm-group-prod" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 54.1</strong></span> Assuma que <span class="math inline">\(H=\left&lt;(1,2)\right&gt;\)</span>, <span class="math inline">\(K=\left&lt;(2,3)\right&gt;\)</span> são subgrupos de <span class="math inline">\(S_3\)</span>. Então <span class="math display">\[
-HK=\{1,(1,2),(2,3),(1,3,2)\}
-\]</span> Em particular <span class="math inline">\(HK\)</span> não é subgrupo de <span class="math inline">\(S_3\)</span>. Além disso, <span class="math display">\[
-KH=\{1,(1,2),(2,3),(1,2,3)\}
-\]</span> que também não é subgrupo de <span class="math inline">\(G\)</span> e observamos ainda que <span class="math inline">\(HK\neq KH\)</span>.</p>
-<p>Agora, se <span class="math inline">\(N=\left&lt;(1,2,3)\right&gt;\)</span>, então <span class="math display">\[
-HN=S_3.
-\]</span></p>
-</div>
-<div id="lem-prod-subg" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 54.1</strong></span> Sejam <span class="math inline">\(H,K\leq G\)</span>. As segiuntes afirmações são verdadeiras.</p>
-<ol type="1">
-<li><span class="math inline">\(HK\leq G\)</span> se e somente se <span class="math inline">\(HK=KH\)</span>.</li>
-<li>Se <span class="math inline">\(H\)</span> e <span class="math inline">\(K\)</span> são finitos, então <span class="math inline">\(|HK|=|H||K|/|H\cap K|\)</span>.</li>
-<li>Se <span class="math inline">\(K\)</span> é normal, então <span class="math inline">\(HK=KH\)</span> e <span class="math inline">\(HK\leq G\)</span>.</li>
-</ol>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-<ol type="1">
-<li><p>Assuma que <span class="math inline">\(HK\leq G\)</span>. Isso implica que <span class="math display">\[
-HKHK=HK
-\]</span> e que <span class="math display">\[
-KH= H^{-1}HKK^{-1}=HK.
-\]</span> Reciprocamente, se <span class="math inline">\(HK=KH\)</span>, então <span class="math display">\[
-HKHK=HHKK=HK
-\]</span> e <span class="math inline">\(HK\)</span> é fechado para multplicação. Similarmente, <span class="math display">\[
-(HK)^{-1}=K^{-1}H^{-1}=KH=HK
-\]</span> e <span class="math inline">\(HK\)</span> é fechado para inversos. Logo <span class="math inline">\(HK\leq G\)</span>.</p></li>
-<li><p>Defina <span class="math inline">\(\varphi:H\times K\to HK\)</span> por <span class="math inline">\(\varphi(h,k)=hk\)</span>. Temos que <span class="math inline">\(\varphi\)</span> é sobrejetiva e vamos calcular a pré-imagem <span class="math inline">\(\varphi^{-1}(\{hk\})\)</span> de um elemento <span class="math inline">\(hk\in HK\)</span>. Se <span class="math inline">\(x\in H\cap K\)</span>, então <span class="math inline">\(\varphi(hx,x^{-1}k)=hxx^{-1}k=hk=\varphi(h,k)\)</span>. Logo <span class="math display">\[
-\{(hx,x^{-1}k)\mid x\in H\cap K\}\subseteq \varphi^{-1}(\{hk\}).
-\]</span> Ora, se <span class="math inline">\(h_1\in H\)</span> e <span class="math inline">\(k_1\in K\)</span> então <span class="math display">\[
-\varphi(h,k)=\varphi(h_1,k_1)\bicond hk=h_1k_1\bicond h^{-1}h_1=kk_1^{-1}\in H\cap K.
-\]</span> Escrevendo <span class="math inline">\(x=h^{-1}h_1=kk_1^{-1}\)</span>, temos que <span class="math display">\[
-h_1=hx\quad \mbox{e}\quad k_1=x^{-1}k
-\]</span> e assim <span class="math inline">\((h_1,k_1)\in\{(hx,x^{-1}k)\mid x\in H\cap K\}\)</span>. Temos então que <span class="math display">\[
-|\varphi^{-1}(\{hk\})|=|H\cap K|
-\]</span> e obtemos por um fácil argumento de contagem que <span class="math display">\[
-|HK|=|\mbox{Im}(\varphi)|=|H||K|/|H\cap K|.
-\]</span></p></li>
-<li><p>Se <span class="math inline">\(K\)</span> é normal, então <span class="math display">\[
-hk=k^{h^{-1}}h\in KH
-\]</span> e <span class="math inline">\(HK\subseteq KH\)</span> e argumento similar implica que <span class="math inline">\(KH\subseteq HK\)</span>. Logo <span class="math inline">\(HK=KH\)</span> e item 1.&nbsp;implica que <span class="math inline">\(HK\leq G\)</span>.</p></li>
-</ol>
-</div>
-</section>
-<section id="o-produto-direto" class="level2" data-number="54.2">
-<h2 data-number="54.2" data-anchor-id="o-produto-direto"><span class="header-section-number">54.2</span> O produto direto</h2>
-<div id="def-dirprod" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 54.2</strong></span> Sejam <span class="math inline">\(G\)</span> e <span class="math inline">\(H\)</span> grupos. Defininimos o <em>produto direto</em> <span class="math inline">\(G\times H\)</span> como o grupo <span class="math display">\[
-    G\times H=\{(g,h)\mid g\in G,\ h\in H\}
-\]</span> com a operação definida na segiunte forma: <span class="math display">\[
-(g_1,h_1)(g_2,h_2)=(g_1h_1,g_2h_2).
-\]</span></p>
-</div>
-<div id="lem-dirprod" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 54.2</strong></span> O conjunto <span class="math inline">\(G\times H\)</span> é um grupo com o produto definido na linha anterior. Além disso, pondo <span class="math display">\[
-\bar G=\{(g,1)\mid g\in G\}\quad\mbox{e}\quad \bar H=\{(1,h)\mid h\in H\}
-\]</span> temos que</p>
+<p>Sejam <span class="math inline">\(a,b\in\N_0\)</span> com <span class="math inline">\(b&lt;a\)</span>. O resultado provado no final da página anterior sugere o seguinte processo recursivo para calcular o <span class="math inline">\(\mbox{mdc}(a,b)\)</span>:</p>
 <ul>
-<li><span class="math inline">\(\bar G,\bar H\unlhd G\times H\)</span>.</li>
-<li><span class="math inline">\(\bar G\bar H=G\times H\)</span>;</li>
-<li><span class="math inline">\(\bar G\cap\bar H=1\)</span>.</li>
+<li><strong>Passo 1:</strong> Se <span class="math inline">\(b=0\)</span>, então <span class="math inline">\(\mdc ab=a\)</span>.</li>
+<li><strong>Passo 2:</strong> Se <span class="math inline">\(b \neq 0\)</span> então use o Teorema de Divisão de Euclides para escrever <span class="math inline">\(a=qb+r\)</span> com <span class="math inline">\(r\in\{0,\ldots,b-1\}\)</span>.</li>
+<li><strong>Passo 3:</strong> <span class="math inline">\(\mdc ab=\mdc br\)</span>.</li>
 </ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Fácil, o leitor pode fazer.</p>
-</div>
-<p>O produto direto acima definido é frequentamente chamado de produto direto externo. Simnilarmente a espaços vetoriais, existe uma versão interna do produto direto.</p>
-<div id="lem-dirprod-inner" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 54.3</strong></span> Suponha que <span class="math inline">\(G\)</span> é um grupo e <span class="math inline">\(N,M\unlhd G\)</span> are subgrupos normais tais que</p>
-<ul>
-<li><span class="math inline">\(NM=G\)</span> e</li>
-<li><span class="math inline">\(N\cap M=1\)</span>.</li>
-</ul>
-<p>Então <span class="math inline">\(G\cong N\times M\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro mostremos que todo elemento <span class="math inline">\(g\in G\)</span> pode ser escrito unicamente como <span class="math inline">\(g=nm\)</span> com <span class="math inline">\(n\in N\)</span> e <span class="math inline">\(m\in M\)</span>. Primeiro, como <span class="math inline">\(NM=G\)</span>, a decomposição de <span class="math inline">\(g\)</span> existe. Ora, assuma que <span class="math inline">\(g=n_1m_1=n_2m_2\)</span> com <span class="math inline">\(n_1,n_2\in N\)</span> e <span class="math inline">\(m_1,m_2\in M\)</span>. Isso implica que <span class="math display">\[
-n_2^{-1}n_1=m_2m_1^{-1}\in N\cap M.
-\]</span> Como <span class="math inline">\(N\cap M=1\)</span>, temos que <span class="math inline">\(n_2^{-1}n_1=m_2m_1^{-1}=1\)</span>; ou seja, <span class="math inline">\(n_1=n_2\)</span> e <span class="math inline">\(m_1=m_2\)</span> e a unicidade está verificada.</p>
-<p>Próximo, observe, para <span class="math inline">\(n\in N\)</span> e <span class="math inline">\(m\in M\)</span>, que <span class="math display">\[
-[n,m]=n^{-1}m^{-1}nm=(m^{-1})^nm=n^{-1}n^m\in M\cap N=1.
-\]</span> Portanto <span class="math inline">\([n,m]=1\)</span> e em particular <span class="math inline">\(N\)</span> comuta com <span class="math inline">\(M\)</span>. Isso implica que se <span class="math inline">\(n\in N\)</span> e <span class="math inline">\(m\in M\)</span>, então <span class="math inline">\(nm=mn\)</span>.</p>
-<p>Agora defina <span class="math inline">\(\psi:G\to N\times M\)</span> como <span class="math inline">\(\psi(g)=(n,m)\)</span> onde <span class="math inline">\(g=nm\)</span> com <span class="math inline">\(n\in N\)</span> e <span class="math inline">\(m\in M\)</span>. O mapa <span class="math inline">\(\psi\)</span> está bem definida pela unicidade da decomposição <span class="math inline">\(g=mn\)</span>. Além disso, <span class="math inline">\(\psi\)</span> é um homomorfismo, pois se <span class="math inline">\(g_1=n_1m_1,\ g_2=n_2m_2\in G\)</span>, então <span class="math display">\[\begin{align*}
-\psi(g_1g_2)&amp;=\psi(n_1m_1n_2m_2)\psi(n_1n_2m_1m_2)\\&amp;=(n_1n_2,m_1m_2)=
-(n_1,m_1)(n_2,m_2)\\&amp;=\psi(g_1)\psi(g_2).
-\end{align*}\]</span> Se <span class="math inline">\(g\in\ker\psi\)</span>, então <span class="math inline">\(g=1\cdot 1=1\)</span>, logo <span class="math inline">\(\psi\)</span> é injetiva. Finalmente, se <span class="math inline">\(n\in N\)</span> e <span class="math inline">\(m\in M\)</span>, então <span class="math inline">\(\psi(nm)=(n,m)\)</span> e <span class="math inline">\(\psi\)</span> é sobrejetiva. Portanto, <span class="math inline">\(\psi\)</span> é um isomorfismo e <span class="math inline">\(G\cong N\times M\)</span>.</p>
-</div>
-<div id="def-dirprod-inner" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 54.3</strong></span> Definição. Se <span class="math inline">\(G\)</span>, <span class="math inline">\(N\)</span> e <span class="math inline">\(M\)</span> são como no resultado anterior, escrevemos que <span class="math inline">\(G=N\times M\)</span> e dizemos que <span class="math inline">\(G\)</span> é <em>produto direto (interno) de <span class="math inline">\(N\)</span> e <span class="math inline">\(M\)</span></em>.</p>
-</div>
-</section>
-<section id="produto-semidireto" class="level2" data-number="54.3">
-<h2 data-number="54.3" data-anchor-id="produto-semidireto"><span class="header-section-number">54.3</span> Produto semidireto</h2>
-<div id="def-semidir" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 54.4</strong></span> Definition. Para definir o <em>produto semidireto (interno)</em>, seja <span class="math inline">\(G\)</span> um grupo <span class="math inline">\(H\leq G\)</span> e <span class="math inline">\(N\unlhd G\)</span> tais que</p>
-<ul>
-<li><span class="math inline">\(NH=G\)</span> e</li>
-<li><span class="math inline">\(N\cap H=1\)</span>.</li>
-</ul>
-<p>Neste caso dizemos que <span class="math inline">\(G\)</span> é produto semidireto de <span class="math inline">\(N\)</span> e <span class="math inline">\(H\)</span> e escrevemos que <span class="math inline">\(G=N\rtimes H\)</span>.</p>
-</div>
-<p>Seja <span class="math inline">\(G=N\rtimes H\)</span> como na definição anterior. Assuma que <span class="math inline">\(g_1,g_2\in G\)</span> tal que <span class="math inline">\(g_1=n_1h_1\)</span> e <span class="math inline">\(g_2=n_2h_2\)</span> onde <span class="math inline">\(n_1,n_2\in N\)</span> e <span class="math inline">\(h_1h_2\in H\)</span>. Note que estas expressões para <span class="math inline">\(g_1\)</span> e <span class="math inline">\(g_2\)</span> são únicas e isso pode ser verificado facilmente usando o argumento na demonstração anterior. Se <span class="math inline">\(h\in H\)</span>, a normalidade de <span class="math inline">\(N\)</span> implica que o mapa <span class="math display">\[
-\psi_h:n\mapsto n^h=h^{-1}nh
-\]</span> é um automorfismo de <span class="math inline">\(N\)</span> e a aplicação <span class="math inline">\(h\mapsto \psi_h\)</span> é um homomorfismo <span class="math inline">\(\psi:H\to \operatorname{Aut}(N)\)</span>. Usando esta observação, obtemos que <span class="math display">\[
-g_1g_2=n_1h_1n_2h_2=(n_1n_2^{h_1^{-1}})(h_1h_2)=n_1(n_2(h_2^{-1}\psi))h_1h_2.
+<p>O processo funciona, pois no Passo 3., os números <span class="math inline">\(b\)</span> e <span class="math inline">\(r\)</span> são menores que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>. Logo, mais cedo ou mais tarde, o processo vai chegar até uma situação quando <span class="math inline">\(b=0\)</span> e neste caso o valor do <span class="math inline">\(\mdc ab\)</span> será igual a <span class="math inline">\(a\)</span> pelo Passo 1. Veja o exemplo na página anterior para uma computação detalhada seguindo este processo.</p>
+<p>Este algoritmo pode ser implementado em Python com a seguinte função recursiva.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MDC_recursivo( a, b ):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> b <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> MDC_recursivo( b, a <span class="op">%</span> b ) </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para melhor analisarmos o algoritmo, nós escrevemos o processo em uma maneira linear (não recursiva). O processo descrito abaixo é chamado Algoritmo de Euclides. Sejam <span class="math inline">\(a,b\)</span> como acima. <span class="math display">\[
+\begin{align*}
+r_{-1}&amp;=a\\
+r_0&amp;=b\\
+a=r_{-1}&amp;=q_1b+r_1\quad 0&lt;r_1&lt;b\\
+b=r_0&amp;=q_2r_1+r_2\quad 0&lt;r_2&lt;r_1\\
+r_1&amp;=q_3r_2+r_3\quad 0&lt;r_3&lt;r_2\\
+&amp;\vdots\\
+r_{i-1}&amp;=q_{i+1}r_{i}+r_{i+1}\quad 0&lt;r_{i+1}&lt;r_{i}\\
+r_{i}&amp;=q_{i+2}r_{i+1}+r_{i+2}\quad 0&lt;r_{i+2}&lt;r_{i+1}\\
+&amp;\vdots\\
+r_{d-2}&amp;=q_{d}r_{d-1}+r_{d}\quad 0&lt;r_{d}&lt;r_{d-1}\\
+r_{d-1}&amp;=q_{d+1}r_d+0
+\end{align*}
 \]</span></p>
-<p>Esta conta nos dá uma ideia como definir produto semidireto externo.</p>
-<div id="def-semidir-exter" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 54.5</strong></span> Sejam <span class="math inline">\(N\)</span> e <span class="math inline">\(H\)</span> grupos e assuma que está dado um homomorfismo <span class="math inline">\(\psi:H\to \operatorname{Aut}(N)\)</span>. Defina o produto semidireto (relativo ao homomorfismo <span class="math inline">\(\psi\)</span>) <span class="math inline">\(N\rtimes_\psi N\)</span> de <span class="math inline">\(N\)</span> e <span class="math inline">\(H\)</span> como o grupo sobre o conjunto <span class="math inline">\(N\times H\)</span> com a operação <span class="math display">\[
-(n_1,h_1)(n_2,h_2)=(n_1(n_2((h_2^{-1})\psi),h_1h_2).
+<p>A sequência dos restos calculados satisfaz as desigualdades <span class="math display">\[
+a&gt;b&gt;r_1&gt;r_2&gt;\cdots&gt;r_i&gt;\cdots&gt;r_d&gt;r_{d+1}=0.
+\]</span> Em outras palavras, a sequência dos restos é uma sequência decrescente de números positivos. Note que tal sequência sempre atinge o número zero em um número finitos de passos; ou seja, existe algum <span class="math inline">\(d\)</span> tal que <span class="math inline">\(r_{d+1}=0\)</span>. Pelo raciocínio acima, obtemos que <span class="math display">\[\begin{align*}
+\mdc ab&amp;=\mdc b{r_1}=\mdc{r_1}{r_2}=\cdots=\mdc{r_i}{r_{i+1}}=\cdots\\&amp;=\mdc{r_{d-1}}{r_d}=\mdc{r_d}0=r_d.
+\end{align*}\]</span></p>
+<p>Isso justifica o seguinte resultado.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 9.1</strong></span> Se <span class="math inline">\(a,b\in \N_0\)</span> tais que <span class="math inline">\(b\neq 0\)</span>, então o último resto não nulo <span class="math inline">\(r_d\)</span> calculado pelo Algoritmo de Euclides é igual a <span class="math inline">\(\mdc ab\)</span>. O algoritmo termina depois de um número finito de passos.</p>
+</div>
+<p>Note que nos resultados acima, nós assumimos que <span class="math inline">\(a,b\)</span> são números não negativos. No entanto, o procedimento pode ser usado mesmo quando <span class="math inline">\(a\)</span> ou <span class="math inline">\(b\)</span> (ou os dois) são negativos, pois neste caso, simplesmente podemos trocar o número negativo pelo seu simétrico (que vai ser positivo) pelo fato que <span class="math inline">\(\mdc ab=\mdc{\pm a}{\pm b}\)</span>.</p>
+<p>Em particular nós finalmente conseguimos concluir o seguinte resultado sobre a existência do <span class="math inline">\(\mdc ab\)</span>.</p>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 9.1</strong></span> Se <span class="math inline">\(a,b\in\Z\)</span> tais que <span class="math inline">\((a,b)\neq (0,0)\)</span>, então existe <span class="math inline">\(\mdc ab\)</span>.</p>
+</div>
+<p>O procedimento acima pode também ser implementado em Python com a seguinte função.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MDC(a,b):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> b <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">%</span> b  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Uma outra consequência do Algoritmo de Euclides é o seguinte resultado extremamente útil e bem conhecido.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 9.1</strong></span> Sejam <span class="math inline">\(a,b\in\Z\)</span> com <span class="math inline">\((a,b)\neq 0\)</span>. Então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+\mdc ab=ua+vb.
+\]</span> Em particular, se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são primos entre si, então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+1=ua+vb.
 \]</span></p>
 </div>
-<div id="lem-semidir-exter" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 54.4</strong></span> O produto semidireto <span class="math inline">\(N\rtimes_\psi H\)</span> é um grupo com a multiplicação definida.</p>
-</div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Deixamos a demonstração para o leitor. Aqui só comentamos que o elemento neutro de <span class="math inline">\(N\rtimes_\psi H\)</span> é <span class="math inline">\((1,1)\)</span> e que <span class="math inline">\((n,h)^{-1}=
-((n^{-1})^h,h^{-1})\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Nós podemos assumir sem perda de generalidade que <span class="math inline">\(0&lt;b&lt;a\)</span>. Com esta suposição, podemos executar o algoritmo de Euclides para <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>.</p>
+<p>Afirmamos que, para todo <span class="math inline">\(i\geq 1\)</span>, o resto <span class="math inline">\(r_i\)</span> pode ser escrito como <span class="math inline">\(u_ia+v_ib\)</span> com coeficientes <span class="math inline">\(u_i,v_i\in\Z\)</span>. Verificaremos a afirmação por indução em <span class="math inline">\(i\)</span>. A afirmação está verdadeira para <span class="math inline">\(i=1\)</span>, pois <span class="math display">\[
+r_1=a-q_1b\quad\text{e assim}\quad u_1=1,\ v_1=-q_1.
+\]</span> Assuma que <span class="math inline">\(i\geq 1\)</span> e, para <span class="math inline">\(j\leq i\)</span> existem <span class="math inline">\(u_j,v_j\in \Z\)</span> tais que <span class="math display">\[
+r_j=u_ja+v_jb.
+\]</span> Ora, segue da equação para <span class="math inline">\(r_{i-1}\)</span> que <span class="math display">\[\begin{align*}
+r_{i+1}&amp;=r_{i-1}-q_{i+1}r_{i}=u_{i-1}a+v_{i-1}b-q_{i+1}(u_{i}a+v_{i}b)\\&amp;=
+(u_{i-1}-q_{i+1}u_i)a+(v_{i-1}-q_{i+1}v_i)b.
+\end{align*}\]</span> Ou seja, podemos tomar <span class="math display">\[
+u_{i+1}=u_{i-1}-q_{i+1}u_i\quad\mbox{e}\quad v_{i+1}=v_{i-1}-q_{i+1}v_i.
+\]</span></p>
+<p>Agora, temos que <span class="math display">\[
+\mdc ab=r_d=u_da+v_db
+\]</span> e o teorema está válido com <span class="math inline">\(u=u_d\)</span> e <span class="math inline">\(v=v_d\)</span>.</p>
 </div>
+<p>Note que a demonstração acima dá um algoritmo para calcular os coeficientes <span class="math inline">\(u,v\)</span> e este algoritmo pode ser executado em paralelo com a computação do <span class="math inline">\(\mdc ab\)</span>. O algoritmo que calcula o <span class="math inline">\(\mdc ab\)</span> junto com os coeficientes <span class="math inline">\(u,v\)</span> tais que <span class="math display">\[
+\mdc ab=ua+vb
+\]</span> é geralmente chamado Algoritmo Estendido de Euclides. A seguinte é uma implementação simples do Algoritmo Estendido em Python.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    prevu, u <span class="op">=</span> <span class="dv">1</span>, <span class="dv">0</span><span class="op">;</span> prevv, v <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> b <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        q <span class="op">=</span> a<span class="op">//</span>b</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        u, prevu <span class="op">=</span> prevu <span class="op">-</span> q<span class="op">*</span>u, u</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        v, prevv <span class="op">=</span> prevv <span class="op">-</span> q<span class="op">*</span>v, v</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">%</span> b</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, prevu, prevv</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1640,13 +1624,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/normais.html" class="pagination-link" aria-label="Subgrupos normais e homomorfismos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span>
+      <a href="../FundamentosDeAlgebra/mdc.html" class="pagination-link" aria-label="O MDC">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">O MDC</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/actions.html" class="pagination-link" aria-label="Ações de grupos e o Teorema de Órbita-Estabilizador">
-        <span class="nav-page-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../FundamentosDeAlgebra/prop_mdc.html" class="pagination-link" aria-label="As propriedades do MDC">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">As propriedades do MDC</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
