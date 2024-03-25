@@ -170,15 +170,15 @@ $$
 $$ 
 é um automorfismo de $N$ e a aplicação $h\mapsto \psi_h$ é um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Usando esta observação, obtemos que 
 $$
-g_1g_2=n_1h_1n_2h_2=(n_1n_2^{h_1^{-1}})(h_1h_2)=n_1(n_2(h_2^{-1}\psi))h_1h_2.
+g_1g_2=n_1h_1n_2h_2=(n_1n_2^{h_1^{-1}})(h_1h_2)=n_1(n_2(h_1^{-1}\psi))h_1h_2.
 $$
 
 Esta conta nos dá uma ideia como definir produto semidireto externo.
 
 :::{#def-semidir-exter}
-Sejam $N$ e $H$ grupos e assuma que está dado um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Defina o produto semidireto (relativo ao homomorfismo $\psi$) $N\rtimes_\psi N$ de $N$ e $H$ como o grupo sobre o conjunto $N\times H$ com a operação 
+Sejam $N$ e $H$ grupos e assuma que está dado um homomorfismo $\psi:H\to \operatorname{Aut}(N)$. Defina o produto semidireto (relativo ao homomorfismo $\psi$) $N\rtimes_\psi H$ de $N$ e $H$ como o grupo sobre o conjunto $N\times H$ com a operação 
 $$
-(n_1,h_1)(n_2,h_2)=(n_1(n_2((h_2^{-1})\psi),h_1h_2).
+(n_1,h_1)(n_2,h_2)=(n_1(n_2(h_1^{-1}\psi)),h_1h_2).
 $$
 :::
 

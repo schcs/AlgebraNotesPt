@@ -1,0 +1,137 @@
+---
+title: "Pares ordenados e produtos cartesianos"
+number-sections: true 
+lang: pt
+---
+
+## Pares ordenados
+
+A ordem dos elementos em um conjunto não faz diferença; ou seja, os conjuntos $\{a,b\}$ e $\{b,a\}$ são iguais. Além disso, os conjuntos 
+$\{a,a,b\}$ e $\{b,b,a\}$ são também iguais ao conjunto $\{a,b\}$ e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os *pares ordenados*. O par ordenado dos objetos $a,b$ é denotado 
+por $(a,b)$. 
+
+A propriedade fundamental de pares ordenados é que 
+$$
+(a,b)=(c,d)\quad \bicond\quad  a=c\mbox{ e }b=d.
+$$
+
+
+Uma possível definição formal de um par ordenado é devido ao matemático [Kuratowski](https://pt.wikipedia.org/wiki/Kazimierz_Kuratowski). Ele definiu o par ordenado $(a,b)$ como o conjunto $\{\{a\},\{a,b\}\}$. O leitor pode verificar que definindo assim pares ordenados, o conceito obtido satisfaz a propriedade fundamental. 
+
+:::{#exm-par-ord}
+No plano cartesiano, um ponto $P$ está definido com suas coordenadas $(x,y)$; ou seja, com o par ordenado $(x,y)$. Por exemplo, 
+o ponto $P=(1,2)$ é diferente do ponto $Q=(2,1)$ e precisamos também falar do ponto $R=(-1,-1)$. De fato, dois pontos $P_1=(x_1,y_1)$ e $P_2=(x_2,y_2)$ são iguais se e somente se $x_1=x_2$ e $y_1=y_2$.  
+:::
+
+## O produto cartesiano
+
+:::{#def-prod-cart}
+O *produto cartesiano* de dois conjuntos $A$ e $B$ é o conjunto de pares ordenados $(a,b)$ tais que $a\in A$ e $b\in B$. Em símbolos, 
+$$
+A\times B=\{(a,b)\mid a\in A\mbox{ e }b\in B\}
+$$
+:::
+
+
+:::{#exm-prod-cart}
+Por exemplo, se $A=\{1,2\}$ e $B=\{1,3,4\}$, então 
+$$
+A\times B=\{(1,1),(1,3),(1,4),(2,1),(2,3),(2,4)\}
+$$
+:::
+
+:::{#exm-prod-R2}
+O conjunto dos pontos no plano cartesiano pode ser identificado com o conjunto 
+$$
+\R\times \R=\{(x,y)\mid x,y\in \R\}.
+$$ 
+:::
+
+## Relações
+
+:::{#def-relation}
+Sejam $A$ e $B$ conjuntos. Uma relação entre $A$ e $B$ é um subconjunto 
+$$
+R\subseteq A\times B.
+$$
+Quando $A=B$ e $R\subseteq A\times A$, dizemos que $R$ é uma relação sobre $A$.  
+:::
+
+:::{#exm-relation}
+Por exemplo, considerando o conjunto no @exm-prod-cart, o conjunto 
+$$
+R=\{(1,2),(1,3),(2,1)\}
+$$ 
+é uma relação entre $A$ e $B$.   
+:::
+
+:::{#def-relation2}
+Seja $R\subseteq A\times B$. Quando $(a,b)\in R$ dizemos que $a$ está relacionado com $B$, $a$ está em relação com $b$, ou que $a$ e $b$ estão relacionados.  Neste caso escrevemos 
+$$
+aRb.
+$$
+:::
+
+:::{#exm-relation2}
+No @exm-relation, temos que $1$ está relacionado com $2$ pela relação $R$ e escrevemos que $1R2$. Por outro lado, $2$ não está relacionado com $3$ pela mesma relação e escrevemos que $2\not R3$.   
+:::
+
+Quando trabalhamos com relações teoricamente, denotamo-nas com letras como $R$, $Q$, $S$, etc. Quando trabalhamos com relações particulares, usaremos símbolos tais como $=$, $\leq$, $<$, $\prec$, etc, como nos seguintes exemplos. 
+
+:::{#exm-relations3}
+Os seguintes são exemplos importantes de relações. 
+
+1. Em qualquer conjunto $A\neq\emptyset$, temos a relação *igualdade* $=$. Formalmente, a *igualdade* é a relação 
+$$
+\{(a,a)\mid a\in A\}\subseteq A\times A.
+$$ 
+Dois elementos $a,b\in A$ estão relacionados se e somente se $a=b$. 
+
+2. Se $A\subseteq \R$ não vazio, então temos a relação *menor* $<$. Esta relação está definido com o conjunto 
+$$
+\{(a,b)\in A\times A\mid a<b\}\subseteq A\times A.
+$$
+Podemos definir similarmente a relação *menor ou igual* $\leq$ como o conjunto 
+$$
+\{(a,b)\in A\times A\mid a\leq b\}\subseteq A\times A.
+$$
+Além disso, o leitor pode também definir as relações *maior* e *maior ou igual*.
+
+3. No conjunto $\Z$ podemos definir a relação *divisor* $\mid$. Esta relação está definida formalmente como 
+$$
+\{(a,b)\in\Z\times\Z\mid b=qa\textrm{ com algum }q\in \Z\}.
+$$
+:::
+
+## Propriedades de relações
+
+:::{#def-rel-props}
+Seja $R$ uma relação sobre $A$. 
+
+1. Dizemos que $R$ é *reflexiva* se $aRa$ para todo $a\in A$ (ou seja $(a,a)\in R$ para todo $a\in A$). 
+2. Dizemos que $R$ é *simétrica* se $aRb$ implica que $bRa$ para todo $a,b\in A$. 
+3. Dizemos que $R$ é *antisimétrica* se $aRb$ e $bRa$ implicm que $a=b$ para todo $a,b\in A$. 
+4. Dizemos que $R$ é *transitiva* se $aRb$ e $bRc$ implicam que $aRc$ para todo $a,b,c\in A$. 
+:::
+
+:::{#exm-rel-props}
+Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade e divisor são simétricas. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são reflexivas. Por outro lado, a relação no @exm-relation não é reflexiva, pois $1R2$ e $2R1$, mas $1\not R1$. 
+:::
+
+## $k$-uplas ordenadas e produto cartesiano de vários conjuntos
+
+Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
+$$
+(a_1,a_2,\ldots,a_k)=(b_1,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
+$$
+
+Podemos definir o produto cartesiano de conjuntos $A_1,\ldots,A_k$ como 
+$$
+A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\}\colon a_i\in A_i\}.
+$$
+
+:::{#exm-k-upla}
+Similarmente ao plano cartesiano, um ponto no espaço cartesiano pode ser caraterizado por uma $3$-upla  (tripla) $(x,y,z)\in\R\times \R\times \R=\R^3$. Assim o espaço cartesiano pode ser identificado com o conjunto $\R^3=\R\times \R\times\R$. 
+
+Na disciplina GAAL, vocês estudam o espaço $\R^n$ que pode ser visto como o produto cartesiano $\R\times\cdots\times\R$ de $n$ cópias de $\R$ e seus elementos são $n$-uplas $(x_1,\ldots,x_n)$ com $x_i\in \R$.
+:::
