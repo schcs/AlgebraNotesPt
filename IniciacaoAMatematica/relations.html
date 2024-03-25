@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.551">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 15&nbsp; O número dos primos</title>
+<title>Álgebra - 4&nbsp; Pares ordenados e produtos cartesianos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/diof.html" rel="next">
-<link href="../FundamentosDeAlgebra/tfa.html" rel="prev">
+<link href="../IniciacaoAMatematica/equivalence.html" rel="next">
+<link href="../IniciacaoAMatematica/quant.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -644,7 +610,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/numprimes.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O número dos primos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/relations.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -704,7 +670,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/relations.html" class="sidebar-item-text sidebar-link">
+  <a href="../IniciacaoAMatematica/relations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></span></a>
   </div>
 </li>
@@ -781,7 +747,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/numprimes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../FundamentosDeAlgebra/numprimes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O número dos primos</span></span></a>
   </div>
 </li>
@@ -1109,14 +1075,24 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#pares-ordenados" id="toc-pares-ordenados" class="nav-link active" data-scroll-target="#pares-ordenados"><span class="header-section-number">4.1</span> Pares ordenados</a></li>
+  <li><a href="#o-produto-cartesiano" id="toc-o-produto-cartesiano" class="nav-link" data-scroll-target="#o-produto-cartesiano"><span class="header-section-number">4.2</span> O produto cartesiano</a></li>
+  <li><a href="#relações" id="toc-relações" class="nav-link" data-scroll-target="#relações"><span class="header-section-number">4.3</span> Relações</a></li>
+  <li><a href="#propriedades-de-relações" id="toc-propriedades-de-relações" class="nav-link" data-scroll-target="#propriedades-de-relações"><span class="header-section-number">4.4</span> Propriedades de relações</a></li>
+  <li><a href="#k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" id="toc-k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" class="nav-link" data-scroll-target="#k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos"><span class="header-section-number">4.5</span> <span class="math inline">\(k\)</span>-uplas ordenadas e produto cartesiano de vários conjuntos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/numprimes.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O número dos primos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/relations.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O número dos primos</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></h1>
 </div>
 
 
@@ -1133,50 +1109,103 @@ window.Quarto = {
 </header>
 
 
-<p>Para <span class="math inline">\(n\in\N\)</span>, defina <span class="math display">\[
-\pi(n)=|\{k\in\{2,\ldots,n\}\mid k\mbox{ é primo}\}|.
-\]</span> Ou seja, <span class="math inline">\(\pi(n)\)</span> é o número dos primos entre <span class="math inline">\(2\)</span> e <span class="math inline">\(n\)</span>. É fácil computar o valor de <span class="math inline">\(\pi(n)\)</span> para <span class="math inline">\(n\)</span> pequeno: <span class="math display">\[
-\pi(1)=0,\quad \pi(2)=1,\quad \pi(3)=\pi(4)=2,\quad \pi(5)=\pi(6)=3,\ldots
-\]</span> No entanto, se <span class="math inline">\(n\)</span> for grande, determinar o valor de <span class="math inline">\(\pi(n)\)</span> pode ser difícil.</p>
-<p>O Crivo de <a href="https://pt.wikipedia.org/wiki/Erat%C3%B3stenes">Eratóstenes</a>, é um algoritmo que pode ser usado para obter os primos que são menores ou iguais a um número fixo <span class="math inline">\(n\)</span>. A ideia do crivo é a seguinte. Assuma que você quer determinar todos os primos entre <span class="math inline">\(1\)</span> e algum outro número <span class="math inline">\(n\)</span>.</p>
-<ul>
-<li>Escreva os números de <span class="math inline">\(1\)</span> até <span class="math inline">\(n\)</span> em uma lista na ordem crescente.</li>
-<li>Comece por eliminar o número <span class="math inline">\(1\)</span> da sua lista, pois ele não é primo.</li>
-<li>O menor número não eliminado na lista é <span class="math inline">\(2\)</span> que é primo. Elimine os múltiplos de <span class="math inline">\(2\)</span> a partir de <span class="math inline">\(4\)</span> da lista, pois eles não são primos.</li>
-<li>Menor número não eliminado depois de <span class="math inline">\(2\)</span> é o <span class="math inline">\(3\)</span>. Elimine os múltiplos de <span class="math inline">\(3\)</span> a partir de <span class="math inline">\(3^2=9\)</span> da lista, pois eles não são primos.</li>
-<li>O menor número não eliminado depois de <span class="math inline">\(3\)</span> é o <span class="math inline">\(5\)</span>. Ele é primo. Elimine os múltiplos de <span class="math inline">\(5\)</span> da lista a partir de <span class="math inline">\(5^2=25\)</span>, pois eles não são primos.</li>
-<li>No passo geral, ache o menor número <span class="math inline">\(p\)</span> depois do último primo encontrado. Este número <span class="math inline">\(p\)</span> será primo. Elimine os múltiplos de <span class="math inline">\(p\)</span> a partir de <span class="math inline">\(p^2\)</span> da lista, pois eles não são primos. Note que os demais múltiplos compostos de <span class="math inline">\(p\)</span> (que são menores de <span class="math inline">\(p^2\)</span>) já foram eliminados.</li>
-<li>Repita o passo geral até <span class="math inline">\(p &gt; \sqrt n\)</span>.</li>
-<li>Os números que não foram eliminados da lista são os primos entre <span class="math inline">\(1\)</span> e <span class="math inline">\(n\)</span>.</li>
-</ul>
-<p>Uma implementação simples em Python deste algoritmo é o seguinte.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> eratosthenes( n ):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    prims <span class="op">=</span> [ <span class="va">True</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">+</span><span class="dv">1</span>) ]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    prims[<span class="dv">0</span>] <span class="op">=</span> <span class="va">False</span><span class="op">;</span> prims[<span class="dv">1</span>] <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    sqrn <span class="op">=</span> <span class="bu">int</span>(n<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,sqrn<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> prims[i]: </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            st <span class="op">=</span> i<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> st <span class="op">&lt;=</span> n:</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                prims[st] <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                st <span class="op">=</span> st <span class="op">+</span> i</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prims</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>O Crivo de Eratóstenes não é um algoritmo eficiente, pois o passo geral precisa ser executada <span class="math inline">\(\sqrt n\)</span> vezes. Na prática (por exemplo, na criptografia), nós precisamos lidar com números com <span class="math inline">\(500\)</span> ou mais algarismos. Se por exemplo, <span class="math inline">\(n\approx 10^{500}\)</span>, então <span class="math inline">\(\sqrt n\approx 10^{250}\)</span> e na prática fica impossível realizar a computação até com um supercomputador.</p>
-<p>Está bem conhecido que a função <span class="math inline">\(\pi(n)\)</span> pode ser aproximada pelas funções <span class="math display">\[
-\lambda(n)=\frac n{\log n}
-\]</span> e <span class="math display">\[
-\sigma(n)=\int_2^n \frac{dt}{\log t}.
-\]</span> Por exemplo, o número dos primos entre <span class="math inline">\(1\)</span> e <span class="math inline">\(10.000.000\)</span> é <span class="math inline">\(664579\)</span>. Ou seja <span class="math display">\[
-\pi(10.000.000)=664579,
-\]</span> enquanto <span class="math display">\[
-\lambda(10.000.000)\approx 620420\quad\mbox{e}\quad \sigma(10.000.000)\approx 664917.
-\]</span> Geralmente, a aproximação dada por <span class="math inline">\(\sigma(n)\)</span> é melhor, mas é mais difícil de calcular.</p>
-<p>Atualmente (novembro de 2021), o <a href="https://pt.wikipedia.org/wiki/Maior_n%C3%BAmero_primo_conhecido">maior primo conhecido</a> é <span class="math inline">\(2^{82.589.933} − 1\)</span>. Este número tem <span class="math inline">\(24.862.048\)</span> algarismos na base decimal e foi encontrado em 2018. Este número é um exemplo dos <a href="https://pt.wikipedia.org/wiki/Primo_de_Mersenne">primos de Mersenne</a>, ou seja primos na forma <span class="math inline">\(2^p-1\)</span> onde <span class="math inline">\(p\)</span> é um primo.</p>
+<section id="pares-ordenados" class="level2" data-number="4.1">
+<h2 data-number="4.1" data-anchor-id="pares-ordenados"><span class="header-section-number">4.1</span> Pares ordenados</h2>
+<p>A ordem dos elementos em um conjunto não faz diferença; ou seja, os conjuntos <span class="math inline">\(\{a,b\}\)</span> e <span class="math inline">\(\{b,a\}\)</span> são iguais. Além disso, os conjuntos <span class="math inline">\(\{a,a,b\}\)</span> e <span class="math inline">\(\{b,b,a\}\)</span> são também iguais ao conjunto <span class="math inline">\(\{a,b\}\)</span> e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os <em>pares ordenados</em>. O par ordenado dos objetos <span class="math inline">\(a,b\)</span> é denotado por <span class="math inline">\((a,b)\)</span>.</p>
+<p>A propriedade fundamental de pares ordenados é que <span class="math display">\[
+(a,b)=(c,d)\quad \bicond\quad  a=c\mbox{ e }b=d.
+\]</span></p>
+<p>Uma possível definição formal de um par ordenado é devido ao matemático <a href="https://pt.wikipedia.org/wiki/Kazimierz_Kuratowski">Kuratowski</a>. Ele definiu o par ordenado <span class="math inline">\((a,b)\)</span> como o conjunto <span class="math inline">\(\{\{a\},\{a,b\}\}\)</span>. O leitor pode verificar que definindo assim pares ordenados, o conceito obtido satisfaz a propriedade fundamental.</p>
+<div id="exm-par-ord" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.1</strong></span> No plano cartesiano, um ponto <span class="math inline">\(P\)</span> está definido com suas coordenadas <span class="math inline">\((x,y)\)</span>; ou seja, com o par ordenado <span class="math inline">\((x,y)\)</span>. Por exemplo, o ponto <span class="math inline">\(P=(1,2)\)</span> é diferente do ponto <span class="math inline">\(Q=(2,1)\)</span> e precisamos também falar do ponto <span class="math inline">\(R=(-1,-1)\)</span>. De fato, dois pontos <span class="math inline">\(P_1=(x_1,y_1)\)</span> e <span class="math inline">\(P_2=(x_2,y_2)\)</span> são iguais se e somente se <span class="math inline">\(x_1=x_2\)</span> e <span class="math inline">\(y_1=y_2\)</span>.</p>
+</div>
+</section>
+<section id="o-produto-cartesiano" class="level2" data-number="4.2">
+<h2 data-number="4.2" data-anchor-id="o-produto-cartesiano"><span class="header-section-number">4.2</span> O produto cartesiano</h2>
+<div id="def-prod-cart" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 4.1</strong></span> O <em>produto cartesiano</em> de dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto de pares ordenados <span class="math inline">\((a,b)\)</span> tais que <span class="math inline">\(a\in A\)</span> e <span class="math inline">\(b\in B\)</span>. Em símbolos, <span class="math display">\[
+A\times B=\{(a,b)\mid a\in A\mbox{ e }b\in B\}
+\]</span></p>
+</div>
+<div id="exm-prod-cart" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.2</strong></span> Por exemplo, se <span class="math inline">\(A=\{1,2\}\)</span> e <span class="math inline">\(B=\{1,3,4\}\)</span>, então <span class="math display">\[
+A\times B=\{(1,1),(1,3),(1,4),(2,1),(2,3),(2,4)\}
+\]</span></p>
+</div>
+<div id="exm-prod-R2" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.3</strong></span> O conjunto dos pontos no plano cartesiano pode ser identificado com o conjunto <span class="math display">\[
+\R\times \R=\{(x,y)\mid x,y\in \R\}.
+\]</span></p>
+</div>
+</section>
+<section id="relações" class="level2" data-number="4.3">
+<h2 data-number="4.3" data-anchor-id="relações"><span class="header-section-number">4.3</span> Relações</h2>
+<div id="def-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 4.2</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos. Uma relação entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é um subconjunto <span class="math display">\[
+R\subseteq A\times B.
+\]</span> Quando <span class="math inline">\(A=B\)</span> e <span class="math inline">\(R\subseteq A\times A\)</span>, dizemos que <span class="math inline">\(R\)</span> é uma relação sobre <span class="math inline">\(A\)</span>.</p>
+</div>
+<div id="exm-relation" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.4</strong></span> Por exemplo, considerando o conjunto no <a href="#exm-prod-cart" class="quarto-xref">Exemplo&nbsp;<span>4.2</span></a>, o conjunto <span class="math display">\[
+R=\{(1,2),(1,3),(2,1)\}
+\]</span> é uma relação entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</p>
+</div>
+<div id="def-relation2" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 4.3</strong></span> Seja <span class="math inline">\(R\subseteq A\times B\)</span>. Quando <span class="math inline">\((a,b)\in R\)</span> dizemos que <span class="math inline">\(a\)</span> está relacionado com <span class="math inline">\(B\)</span>, <span class="math inline">\(a\)</span> está em relação com <span class="math inline">\(b\)</span>, ou que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> estão relacionados. Neste caso escrevemos <span class="math display">\[
+aRb.
+\]</span></p>
+</div>
+<div id="exm-relation2" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.5</strong></span> No <a href="#exm-relation" class="quarto-xref">Exemplo&nbsp;<span>4.4</span></a>, temos que <span class="math inline">\(1\)</span> está relacionado com <span class="math inline">\(2\)</span> pela relação <span class="math inline">\(R\)</span> e escrevemos que <span class="math inline">\(1R2\)</span>. Por outro lado, <span class="math inline">\(2\)</span> não está relacionado com <span class="math inline">\(3\)</span> pela mesma relação e escrevemos que <span class="math inline">\(2\not R3\)</span>.</p>
+</div>
+<p>Quando trabalhamos com relações teoricamente, denotamo-nas com letras como <span class="math inline">\(R\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(S\)</span>, etc. Quando trabalhamos com relações particulares, usaremos símbolos tais como <span class="math inline">\(=\)</span>, <span class="math inline">\(\leq\)</span>, <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\prec\)</span>, etc, como nos seguintes exemplos.</p>
+<div id="exm-relations3" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.6</strong></span> Os seguintes são exemplos importantes de relações.</p>
+<ol type="1">
+<li><p>Em qualquer conjunto <span class="math inline">\(A\neq\emptyset\)</span>, temos a relação <em>igualdade</em> <span class="math inline">\(=\)</span>. Formalmente, a <em>igualdade</em> é a relação <span class="math display">\[
+\{(a,a)\mid a\in A\}\subseteq A\times A.
+\]</span> Dois elementos <span class="math inline">\(a,b\in A\)</span> estão relacionados se e somente se <span class="math inline">\(a=b\)</span>.</p></li>
+<li><p>Se <span class="math inline">\(A\subseteq \R\)</span> não vazio, então temos a relação <em>menor</em> <span class="math inline">\(&lt;\)</span>. Esta relação está definido com o conjunto <span class="math display">\[
+\{(a,b)\in A\times A\mid a&lt;b\}\subseteq A\times A.
+\]</span> Podemos definir similarmente a relação <em>menor ou igual</em> <span class="math inline">\(\leq\)</span> como o conjunto <span class="math display">\[
+\{(a,b)\in A\times A\mid a\leq b\}\subseteq A\times A.
+\]</span> Além disso, o leitor pode também definir as relações <em>maior</em> e <em>maior ou igual</em>.</p></li>
+<li><p>No conjunto <span class="math inline">\(\Z\)</span> podemos definir a relação <em>divisor</em> <span class="math inline">\(\mid\)</span>. Esta relação está definida formalmente como <span class="math display">\[
+\{(a,b)\in\Z\times\Z\mid b=qa\textrm{ com algum }q\in \Z\}.
+\]</span></p></li>
+</ol>
+</div>
+</section>
+<section id="propriedades-de-relações" class="level2" data-number="4.4">
+<h2 data-number="4.4" data-anchor-id="propriedades-de-relações"><span class="header-section-number">4.4</span> Propriedades de relações</h2>
+<div id="def-rel-props" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 4.4</strong></span> Seja <span class="math inline">\(R\)</span> uma relação sobre <span class="math inline">\(A\)</span>.</p>
+<ol type="1">
+<li>Dizemos que <span class="math inline">\(R\)</span> é <em>reflexiva</em> se <span class="math inline">\(aRa\)</span> para todo <span class="math inline">\(a\in A\)</span> (ou seja <span class="math inline">\((a,a)\in R\)</span> para todo <span class="math inline">\(a\in A\)</span>).</li>
+<li>Dizemos que <span class="math inline">\(R\)</span> é <em>simétrica</em> se <span class="math inline">\(aRb\)</span> implica que <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>.</li>
+<li>Dizemos que <span class="math inline">\(R\)</span> é <em>antisimétrica</em> se <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRa\)</span> implicm que <span class="math inline">\(a=b\)</span> para todo <span class="math inline">\(a,b\in A\)</span>.</li>
+<li>Dizemos que <span class="math inline">\(R\)</span> é <em>transitiva</em> se <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implicam que <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>.</li>
+</ol>
+</div>
+<div id="exm-rel-props" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.7</strong></span> Considerando as relações no <a href="#exm-relations3" class="quarto-xref">Exemplo&nbsp;<span>4.6</span></a>, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade e divisor são simétricas. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são reflexivas. Por outro lado, a relação no <a href="#exm-relation" class="quarto-xref">Exemplo&nbsp;<span>4.4</span></a> não é reflexiva, pois <span class="math inline">\(1R2\)</span> e <span class="math inline">\(2R1\)</span>, mas <span class="math inline">\(1\not R1\)</span>.</p>
+</div>
+</section>
+<section id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" class="level2" data-number="4.5">
+<h2 data-number="4.5" data-anchor-id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos"><span class="header-section-number">4.5</span> <span class="math inline">\(k\)</span>-uplas ordenadas e produto cartesiano de vários conjuntos</h2>
+<p>Similarmente ao par ordenado, podemos considerar coleções ordenadas <span class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> (chamadas de <span class="math inline">\(k\)</span>-uplas) de objetos. A propriedade fundamental destes <span class="math inline">\(k\)</span>-uplas é que <span class="math display">\[
+(a_1,a_2,\ldots,a_k)=(b_1,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
+\]</span></p>
+<p>Podemos definir o produto cartesiano de conjuntos <span class="math inline">\(A_1,\ldots,A_k\)</span> como <span class="math display">\[
+A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\}\colon a_i\in A_i\}.
+\]</span></p>
+<div id="exm-k-upla" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4.8</strong></span> Similarmente ao plano cartesiano, um ponto no espaço cartesiano pode ser caraterizado por uma <span class="math inline">\(3\)</span>-upla (tripla) <span class="math inline">\((x,y,z)\in\R\times \R\times \R=\R^3\)</span>. Assim o espaço cartesiano pode ser identificado com o conjunto <span class="math inline">\(\R^3=\R\times \R\times\R\)</span>.</p>
+<p>Na disciplina GAAL, vocês estudam o espaço <span class="math inline">\(\R^n\)</span> que pode ser visto como o produto cartesiano <span class="math inline">\(\R\times\cdots\times\R\)</span> de <span class="math inline">\(n\)</span> cópias de <span class="math inline">\(\R\)</span> e seus elementos são <span class="math inline">\(n\)</span>-uplas <span class="math inline">\((x_1,\ldots,x_n)\)</span> com <span class="math inline">\(x_i\in \R\)</span>.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1590,13 +1619,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../FundamentosDeAlgebra/tfa.html" class="pagination-link" aria-label="O Teorema Fundamental da Aritmética">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></span>
+      <a href="../IniciacaoAMatematica/quant.html" class="pagination-link" aria-label="Quantificadores">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/diof.html" class="pagination-link" aria-label="Equações diofantinas lineares">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../IniciacaoAMatematica/equivalence.html" class="pagination-link" aria-label="Relações de equivalência">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
