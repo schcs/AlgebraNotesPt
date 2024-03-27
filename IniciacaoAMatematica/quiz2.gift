@@ -1,0 +1,56 @@
+::Q6::
+Sejam \(A\=\\\{1,2,3,5,7,9,11\\\}\) e \(B\=\\\{1,2,4,6,8\\\}\). Combine os conjuntos iguais.  
+{=\(A\cup B\) -> \{1,2,3,4,5,6,7,8,9,11\}
+= \(A\cap B\) -> \{1,2\}
+= \(A\setminus B\) -> \{3,5,7,9,11\} 
+= \(B\setminus A\) -> \{4,6,8\}
+}
+
+::Q7:: 
+Sejam \(A\=\\\{3,4,6,8,10\\\}\) e \(B\=\\\{3,6,10\\\}\) marque as afirmações certas.
+{
+    ~%-100%\(A\subseteq B\) #não é verdade que todo elemento de A é elemento de B
+    ~%33.3333%\(B\subseteq B\) #todo elemento de A pertence a B
+    ~%-100%\(3\subseteq A\) #3 não é conjunto e não pode ser subconjunto de A
+    ~%33.3333%\(3\in A\) #sim, 3 pertence a A
+    ~%33.3333%\(\\\{3\\\}\subseteq A\) #sim 
+    ~%-100%\(\\\{3\\\}\in A\) #o conjunto \{3\} não é elemento de A
+}
+
+
+::Q8::
+Sejam \(A\), \(B\) e \(C\) subconjuntos de um conjunto \(X\) e denote o complemento de \(A\) por \(A^\circ\). Combine os conjuntos que são iguais.
+{
+    =\((A\cap B)\cup C\) -> (A ∪ C) ∩ (B ∪ C)
+    =\((A\cup B)\cap C\) -> (A ∩ C) ∪ (B ∩ C)
+    =\((A\cap B)^c\) -> A⁰ ∪ B⁰
+    =\((A\cup B)^c\) -> A⁰ ∩ B⁰
+}
+
+::Q9::
+Verifique quais proposições são verdadeiras para o conjunto \(A\=\\\{3,4,9,11,15,17\\\}\).
+{
+    ~%-100%\(\forall a\in A\:a\) é primo
+    ~%20%\(\exists a\in A\:a\) é primo
+    ~%20%\(\forall a\in A\:a\\in\\mathbb N\) 
+    ~%20%\(\forall a\in A\:a\\in\\mathbb Z\)
+    ~%-100%\(\forall a\in A\:3\\mid a\)
+    ~%20%\(\exists a\in A\:3\\mid a\)
+    ~%-100%\(\exists a\in A\:7\\mid a\)
+    ~%-100%\(\forall a\in A\:a>3\)
+    ~%20%\(\exists a\in A\:a>3\)
+    ~%-100%\(\forall a\in A\:a &lt; 4\)
+}
+
+::Q10:: Quais das seguintes proposições são verdadeira para os conjuntos \(A\=\\\{-2,0,2,4,6\\\}\) e \(B\=\\\{-1,0,1,3,9\\\}\).
+{
+    ~%25%\(\forall a\in A\:(\exists b\in B\: a &lt; b)\)
+    ~%25%\(\exists b\in B\:(\forall a\in A\: a &lt; b)\)
+    ~%25%\(\forall b\in B\:(\exists a\in A\: a &lt; b)\)
+    ~%25%\(\exists a\in A\:(\forall b\in B\: a &lt; b)\)
+    ~%-100%\(\forall a\in A\:(\exists b\in B\: a>b)\)
+    ~%-100%\(\exists b\in B\:(\forall a\in A\: a>b)\)
+    ~%-100%\(\forall b\in B\:(\exists a\in A\: a>b)\)
+    ~%-100%\(\exists a\in A\:(\forall b\in B\: a>b)\)
+}  
+

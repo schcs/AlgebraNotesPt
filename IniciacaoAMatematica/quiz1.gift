@@ -1,0 +1,27 @@
+// múltipla escolha
+::Q1:: Se \(A\) é uma proposição verdadeira e \(B\) é uma proposição falsa, qual é o valor lógico de \((\neg A\dot\lor B)\Rightarrow B\)? 
+{ =Verdadeiro #certo, pois a premissa é falsa e assim a implicação é verdadeira  
+~Falso #observe que a premissa é falsa 
+~Indefinido #indefinido não é um valor lógico  }
+
+::Q2:: Sejam \(a\) um número natural, \(P\) a proposição '\(a\) é primo' e \(Q\) a proposição '\(a\) é maior que 5'. Qual é a negação certa de \(P\lor Q\)?
+{~\(a\) é composto ou \(a\) é menor que \(5\) #a negação de \(\lor\) é \(\land\)
+~\(a\) é composto ou \(a\) é menor ou igual a \(5\) #a negação de \(\lor\) é \(\land\)
+=\(a\) é composto e \(a\) é menor ou igual a \(5\) #certo! a negação de \(P\lor Q\) é \(\neg P\land \neg Q\)
+~\(a\) é composto e \(a\) é igual a \(5\) #a negação de 'maior ou igual a 5' não é 'igual a 5'!}
+
+
+::Q3:: Sejam \(a\) um número natural,  \(P\) a proposição '\(a\) é primo' e \(Q\) a proposição '\(a\) é maior que 5'. Qual é a negação certa de \(P\land Q\)?
+{~\(a\) é composto ou \(a\) é menor que \(5\) #negação de 'maior ou igual a 5' não é 'menor que 5'!
+=\(a\) é composto ou \(a\) é menor ou igual a \(5\) #certo! a negação de \(P\land Q\) é \(\neg P\lor \neg Q\)
+~\(a\) é composto e \(a\) é menor ou igual a \(5\) #a negação de \(\land\) é \(\lor\)
+~\(a\) é composto e \(a\) é igual a \(5\) #a negação de \(\land\) é \(\lor\)}
+
+::Q4:: Combine as proposições equivalentes.
+{ =\(P\dot\lor Q\) -> (P ∧ ¬Q) ∨ (¬P ∧ Q)
+  =\(P\Rightarrow Q\) -> ¬P ∨ Q 
+  =\(P\Leftrightarrow Q\) -> (P ∧ Q) ∨ (¬P ∧ ¬Q)}
+
+  ::Q5:: Combine as proposições equivalentes.
+{ = \(P\land (Q\lor R)\) -> (P ∨ Q) ∧ (P ∨ R) 
+  = \(P\lor (Q\land R)\) -> (P ∧ Q) ∨ (P ∧ R)}
