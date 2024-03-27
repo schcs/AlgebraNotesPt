@@ -1,0 +1,85 @@
+---
+number-sections: true
+lang: pt-BR
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{1}
+---
+
+# Lista de Exercícios 2
+## Iniciação à Matemática, 2024/I {.unnumbered}
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+:::{#exr-}
+Sejam $A=\{-4,-2,0,2,4\}$ e $B=\{0,1,2,3,4\}$. Determine os seguintes conjuntos.
+
+1. $A\cup B$; 
+2. $A\cap B$; 
+3. $A\smallsetminus B$; 
+4. $B\smallsetminus A$;
+5. $(A\smallsetminus B)\cup B\smallsetminus A$;
+6. $(A\smallsetminus B)\cap B\smallsetminus A$;
+:::
+
+:::{#exr-}
+Demonstre as seguintes afirmações para conjuntos $A$, $B$, e $C$.
+
+1. $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
+2. Assumindo que $A$ e $B$ são subconjuntos de $X$, $(A\cap B)^c=A^c\cup B^c$. 
+:::
+
+:::{#exr-}
+Demonstre que as seguintes afirmações são equivalentes para conjuntos $A$ e $B$:
+
+1. $A\subseteq B$;
+2. $A\cup B=B$;
+3. $A\cap B=A$. 
+
+[Dica: Demonstre que 1. implica 2., que 2. implica 3. e que 3. implica 1.]
+:::
+
+:::{#exr-}
+Quais dos seguintes conjuntos são vazios?
+
+1. $\{x\in \R\mid x^2-6x+5=0\}$;
+2. $\{x\in \R\mid x^2+6x+5=0\}$;
+3. $\{x\in \N\mid x^2-x-1=0\}$;
+4. $\{x\in \N\mid 3<x<4\}$;
+5. $\{x\in \R\mid 3<x<4\}$.
+:::
+
+
+:::{#exr-}
+Demonstre para conjuntos $A$ e $B$ que 
+$$
+(A\smallsetminus B)\cup (B\smallsetminus A)=(A\cup B)\smallsetminus(A\cap B).
+$$
+:::
+
+:::{#exr-}
+Assuma que $A$ é o conjunto dos inteiros pares e $B$ é conjunto dos inteiros que são múltiplos de $3$. Descreva o conjunto 
+$$
+(A\smallsetminus B)\cup (B\smallsetminus A).
+$$
+:::
+
+:::{#exr-}
+Seja $A=\{6k\mid k\in\N\}$ e $B=\{9k\mid k\in\N\}$. Decida quais das seguintes proposições são verdadeiras.
+
+1. $\forall a\in A:(\exists b\in B:a\mid b)$;
+2. $\exists a\in A:(\forall b\in B:a\mid b)$;
+3. $\forall a\in A:(\exists b\in B:a< b)$;
+4. $\exists a\in A:(\forall b\in B:a< b)$;
+:::
+
+:::{#exr-}
+Escreva a negação de todas as proposições no exercício anterior. 
+:::

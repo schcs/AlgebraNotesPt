@@ -1,0 +1,106 @@
+---
+number-sections: true
+lang: pt-BR
+
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{1}
+---
+
+# Lista de Exercícios
+
+## Grupos e Corpos, 2024/I {.unnumbered}
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+:::{#exr-}
+Considere o grupo $K=\left<(1,2)(3,4),(1,3)(2,4)\right>$. 
+
+1. Determine o número dos elementos de $K$.
+2. Demonstre que $K$ é abeliano, mas não é cíclico.
+3. Faça uma lista das classes laterais de $K$ em $S_4$ e demonstre que $K\unlhd S_4$. 
+:::
+
+:::{#exr-}
+Faça uma lista dos subgrupos dos seguintes grupos.
+
+1. $\Z_6$;
+2. $S_3$;
+3. $D_4$.
+:::
+
+:::{#exr-}
+O expoente $\exp (G)$ de um grupo $G$ é definido como o menor natural $k\geq 1$ tal que $g^k=1$ para todo $g\in G$. Se não existir tal $k$, então $\exp (G)=\infty$.  
+
+1. Determine $\exp (S_3)$, $\exp (D_4)$, $\exp (\Z_7^*)$.
+2. Demonstre que $\exp (G)=\mbox{mmc}\{|g|\mid g\in G\}$.
+3. Demonstre que $\exp (G)\mid |G|$.
+4. Exiba um exemplo de um grupo infinito com expoente finito. 
+:::
+
+:::{#exr-}
+Demonstre que todo grupo de ordem $4$ é abaliano. 
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial sobre $\Z_p$ e seja $B=\{b_1,\ldots,b_n\}$ uma base de $V$. 
+
+1. Demonstre que o grupo $(V,+)$ tem expoente $p$. 
+2. Demonstre que $(V,+)$ é gerado por $B$ como grupo.
+3. Explique porque um espaço vetorial sobre um corpo arbitrário geralmente não é gerado como um grupo por uma base.  
+:::
+
+
+:::{#exr-}
+Determine a cardinalidade dos seguintes grupos.
+
+1. $\left<(1,2)\right>$;
+2. $\left<(1,2,3)\right>$;
+3. $\left<(1,2,3),(1,2)\right>$; 
+4. $\left<(1,2,3,4),(1,2)(3,4)\right>$; 
+5. $\left<2\right>\leq \Z_7^*$;
+6. $\left<6\right>\leq \Z_7^*$;
+7. $\left<3\right>\leq \Z_7^*$.
+:::
+
+:::{#exr-}
+Seja $\sigma=(1,3,5)(2,4,6,8)\in S_8$. 
+
+1. Escreva $\sigma$ como produto das transposições $(i,j)$ com $1\leq i<j\leq 8$. 
+2. Escreva $\sigma$ como produto das transposições $(1,2),(2,3),\ldots,(7,8)$. 
+:::
+
+
+:::{#exr-}
+Dê uma demonstração formal que os seguintes conjuntos são geradores para $S_n$.
+
+1. $\{(i,j)\mid 1\leq i< j<n\}$;
+2. $\{(1,2),(2,3),\ldots,(n-1,n)\}$;
+3. $\{(1,2,\ldots,n),(1,2)\}$.
+:::
+
+:::{#exr-}
+Considere a matriz
+$$
+A=\begin{pmatrix} 1 & 2 & 0 \\ 0 & -1 & 1 \\ 1 & 1 & 0 \end{pmatrix}\in\operatorname{SL}(3,\R).  
+$$
+Escreva $A$ como produto de matrizes na forma $E_{i,j}(\alpha)$ com $i\neq j$ e $\alpha\in\R$ onde $E_{i,j}(\alpha)$ é a matriz que tem 
+
+a. $1$ nas entradas diagonais;
+b. $\alpha$ na entrada da posição $(i,j)$;
+c. $0$ nas demais entradas. 
+:::
+
+:::{#exr-}
+1. Dê uma demonstração formal que o grupo $\operatorname{SL}(n,\F)$ está gerado por matrizes na forma $E_{i,j}(\alpha)$ com $1\leq i\neq j\leq n$ e $\alpha\in \F$. 
+2. Deduza que $\operatorname{SL}(n,\Z_p)$ está gerado por matrizes na forma $E_{i,j}(1)$. 
+:::
+
+

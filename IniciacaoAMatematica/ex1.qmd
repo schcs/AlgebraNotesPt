@@ -1,0 +1,95 @@
+---
+number-sections: true
+lang: pt-BR
+
+---
+
+# Lista de Exercícios 2
+## Iniciação à Matemática, 2024/I {.unnumbered}
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+:::{#exr-}
+Determine o valor verdade das seguintes proposições.
+
+1. $1+2=3$;
+2. $1+2\leq 3$;
+3. $1+2\geq 3$;
+4. $1+2> 3$;
+5. $1+2< 3$;
+6. $1-4=3-5$;
+7. $1-4\leq 3-5$;
+8. $1-4\geq 3-5$;
+9. $1-4<3-5$;
+10. $1-4>3-5$;
+:::
+
+:::{#exr-}
+Considere as proposições
+$$
+A:2+3\leq 5,\qquad B:\mbox{$10$ é múltiplo de $5$}.
+$$
+Determine o valor verdade das seguintes proposições:
+
+1. $A\land B$;
+2. $A\lor B$;
+3. $A\lxor B$;
+4. $A\cond B$;
+5. $A\bicond B$;
+6. $\neg A\land B$;
+7. $\neg A\lor B$;
+8. $\neg A\lxor B$;
+9. $\neg A\cond B$;
+10. $\neg A\bicond B$;
+11. $A\land \neg B$;
+12. $A\lor \neg B$;
+13. $A\lxor \neg B$;
+14. $A\cond \neg B$;
+15. $A\bicond \neg B$;
+16. $\neg A\land \neg B$;
+17. $\neg A\lor \neg B$;
+18. $\neg A\lxor \neg B$;
+19. $\neg A\cond \neg B$;
+20. $\neg A\bicond \neg B$;
+21. $\neg (A\land B)$;
+22. $\neg (A\lor B)$;
+23. $\neg (A\lxor B)$;
+24. $\neg (A\cond B)$;
+25. $\neg (A\bicond B)$;
+:::
+
+:::{#exr-}
+1. Determine a tabela-verdade da proposição $(\neg P)\lor Q$.
+2. Determine a tabela verdade da proposição $(P\land Q)\lor(\neg P\land\neg Q)$.
+3. Deduza que $P\cond Q\equiv (\neg P)\lor Q$ e que $P\bicond Q\equiv (P\land Q)\lor(\neg P\land\neg Q)$. 
+:::
+
+:::{#exr-}
+Usando tabelas-verdade, justifique as segintes afirmações.
+
+1. $\neg(P\lor Q)\equiv \neg P\land \neg Q$;
+2. $\neg(P\land Q)\equiv \neg P\lor\neg Q$;
+3. $P\land (Q\lor R)\equiv (P\land Q)\lor (P\land R)$;
+3. $P\lor (Q\land R)\equiv (P\lor Q)\land (P\lor R)$;
+3. $P\land (Q\lor R)\not\equiv (P\land Q)\lor R$.
+:::
+
+
+:::{#exr-}
+Seja $a$ um número natural e  seja $P$ a proposição que '$a$ é primo' e seja $Q$ a proposição que '$a\geq 3$'. Escreva em palavras as seguintes proposições.
+
+1. $\neg (P\lor Q)$;
+2. $\neg (P\land Q)$.
+
+Dê exemplos de números $a$ tais que 
+
+3. $\neg (P\lor Q)$ e $\neg (P\land Q)$ são verdadeiras. 
+4. $\neg (P\lor Q)$ e $\neg (P\land Q)$ são falsas.
+5. $\neg (P\lor Q)$ é verdadeira e  $\neg (P\land Q)$ é falsa. 
+6. $\neg (P\lor Q)$ é falsa e  $\neg (P\land Q)$ é verdadeira. 
+:::
+

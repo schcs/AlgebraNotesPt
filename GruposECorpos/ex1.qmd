@@ -1,0 +1,119 @@
+---
+number-sections: true
+lang: pt-BR
+
+---
+
+# Lista de Exercícios 1 
+## Grupos e Corpos, 2024/I {.unnumbered}
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+:::{#exr-}
+Seja $G$ um grupo e seja $a\in G$.
+
+1. Demonstre que o elemento neutro de $G$ é único.
+2. Demonstre que o inverso $a^{-1}$ de $a$ é único.
+:::
+
+:::{#exr-}
+Seja $G$ um grupo tal que $a^2=1$ para todo $a\in G$. Mostre que $G$ é abeliano.
+
+[Dica: Tome $a,b\in G$ e calcule $(ab)^2=abab$.]
+:::
+
+:::{#exr-}
+Faça uma lista dos elementos dos seguintes grupos escrevendo cada elemento como produto de ciclos disjuntos. Determine a ordem de cada elemento.
+
+1. $S_3$;
+2. $S_4$; 
+3. $D_4$;
+4. $D_5$;
+5. $D_6$.
+:::
+
+:::{#exr-}
+Faça uma lista dos elementos dos seguintes grupos. Determine a ordem de cada elemento.
+
+1. $\Z_3$;
+2. $\Z_3^*$; 
+3. $\Z_4$;
+4. $\Z_4^*$; 
+5. $\Z_5$;
+6. $\Z_5^*$; 
+7. $\Z_6$;
+8. $\Z_6^*$;
+9. $\Z_8$;
+10. $\Z_8^*$; 
+:::
+
+
+:::{#exr-}
+Sejam $\sigma_1$ e $\sigma_2$ ciclos disjuntos. Demonstre que $\sigma_1\sigma_2=\sigma_2\sigma_1$. 
+:::
+
+:::{#exr-}
+Vamos determinar a ordem do grupo $\operatorname{GL}(n,p)$. Lembre que 
+$$
+\operatorname{GL}(n,p)=\{A\in M_{n\times n}(\Z_p)\mid \mbox{$A$ é invertível}\}.
+$$
+
+Seja $A\in\operatorname{GL}(n,p)$. 
+
+a. Primeiro observe que a primeira linha de $A$ pode ser qualquer vetor não nulo de $\Z_p^n$. Conte o número de possibilidades para a primeira linha.
+b. Tendo escolhodo as primeiras $i$ linhas linearmente independentes de $A$ (com $1\leq i\leq n-1$), a $(i+1)$-ésima linha pode ser qualquer vetor linearmente independente das primeiras $i$ linhas. Ou seja, a $(i+1)$-ésima linha é um vetor $v$ qualquer em $\Z_p^n$ tal que $v$ não pertence ao subespaço gerado pelas primeiras $i$ linhas de $A$. Conte o número de possibilidades para a $(i+1)$-ésima linha. 
+c. Juntando os itens anteriores, monstre que 
+$$
+|\operatorname{GL}(n,p)|=p^{n(n-1)/2}\prod_{i=1}^n(p^i-1).
+$$
+:::
+
+:::{#exr-}
+Seja $G$ um grupo.
+
+1. Sejam $a,b\in G$ tal que $a$ e $b$ têm ordem finita e eles comutam (ou seja, $ab=ba$). Mostre que 
+$$
+|ab|\mid \mbox{mmc}(|a|,|b|).
+$$ 
+2. Verifique, exibindo um exemplo, que $|ab|$ pode ser um divisor próprio de $\mbox{mmc}(|a|,|b|)$.
+3. Ache dois elementos $a,b\in S_3$ tal que $|a|=|b|=2$, mas $|ab|=3$. 
+Deduza que a condição que $a$ e $b$ comutam não pode ser omitido no item 1.
+:::
+
+:::{#exr-}
+1. Mostre que se $\sigma\in S_n$ é um ciclo de comprimento $k$, então $|\sigma|=k$. 
+2. Seja $\sigma\in S_n$ e escreva $\sigma=\sigma_1\cdots\sigma_m$ onde 
+os $\sigma_i$ são ciclos disjuntos dois a dois. Assuma que o comprimento de $\sigma_i$ é $c_i$. Mostre que 
+$$
+|\sigma|=\mbox{mmc}(c_1,\ldots,c_m). 
+$$
+:::
+
+:::{#exr-}
+Seja $G$ um grupo e $a\in G$ de ordem finita. Mostre que 
+$$
+|a^k|=|a|/\mbox{mdc}(|a|,k).
+$$
+:::
+
+:::{#exr-}
+Seja $a\in G$ e assuma que $|a|=k$ é finita. Pondo, $a^0=1$, mostre que os elementos 
+$$
+a^0,\ a^1,\ a^2,\ldots,a^{k-1}
+$$ 
+são dois a dois distintos.
+:::
+
+:::{#exr-}
+Determine as classes laterais $aH$ e $Ha$ nos grupos $G$ nos seguintes exemplos:
+
+1. $G=S_3$, $H=\{1,(1,2)\}$, $a=(1,2,3)$;
+2. $G=S_3$, $H=\{1,(1,2,3),(1,3,2)\}$, $a=(1,2)$;
+3. $G=S_4$, $H=\{1,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$, $a=(1,2,3,4)$; 
+4. $G=\Z_{10}^*$, $H=\{1,9\}$, $a=3$;
+5. $G=\Z_7^*$, $H=\{1,2,4\}$, $a=3$.
+:::
