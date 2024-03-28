@@ -94,7 +94,7 @@ $$
 $$
 com a operação definida na segiunte forma:
 $$
-(g_1,h_1)(g_2,h_2)=(g_1h_1,g_2h_2).
+(g_1,h_1)(g_2,h_2)=(g_1hg_2,h_1h_2).
 $$ 
 :::
 
