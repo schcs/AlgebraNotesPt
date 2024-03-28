@@ -22,13 +22,13 @@ Se $\alpha\in\Omega$, o elemento $\alpha g$ é dito imagem de $\alpha$ por $g$.
 :::{#exm-action}
 Os exemplos apresentamos ações importantes de grupos. O leitor deve verificar que cada item define uma ação.
 
-* Seja $G\leq\mbox{Sym}(\Omega)$. Neste caso $G$ é dito um grupo de permutação sobre $\Omega$. O grupo  $G$ age naturalmente em $\Omega$.
-* Seja $G=D_4$ e $\Omega$ o conjunto das quatro pontas no quadrado. O grupo $G$ age em $\Omega$ naturalmente.
-* Seja $G\leq \GL n\F$ e $\Omega=\F^n$. O grupo $G$ age em $\Omega$ pela ação $(v,g)\mapsto vg$ para todo $v\in \F^n$ e $g\in G$.
-* Seja $G\leq \GL n\F$ e seja $\Omega=\{\left<v\right>\mid v\in \F^n\setminus\{0\}\}$. O conjunto $\Omega$ é chamado de espaço projetivo. O grupo $G$ age em $\Omega$ e a ação é $(\left<v\right>,g)\mapsto \left<vg\right>$ para todo $v\in \F^n$ e $g\in G$.
-* Seja $G$ um grupo arbitrário e seja $\Omega=G$. O grupo $G$ age em $\Omega$ pela ação $(x,g)\mapsto xg$ para todo $x\in \Omega$ e $g\in G$.
-* Sejam $G$ um grupo $H\leq G$ e $\Omega=\{Hg\mid g\in G\}$. O grupo $G$ age em $\Omega$ e a ação é $(Hx,g)\mapsto Hxg$ para todo $Hx\in\Omega$ e $g\in G$.
-* Seja $G$ um grupo e ponha $\Omega=G$. Então $G$ age em $\Omega$ pela ação de conjugação: $(x,g)\mapsto x^g=g^{-1}xg$.
+1. Seja $G\leq\mbox{Sym}(\Omega)$. Neste caso $G$ é dito um grupo de permutação sobre $\Omega$. O grupo  $G$ age naturalmente em $\Omega$.
+2. Seja $G=D_4$ e $\Omega$ o conjunto das quatro pontas no quadrado. O grupo $G$ age em $\Omega$ naturalmente.
+3. Seja $G\leq \GL n\F$ e $\Omega=\F^n$. O grupo $G$ age em $\Omega$ pela ação $(v,g)\mapsto vg$ para todo $v\in \F^n$ e $g\in G$.
+4. Seja $G\leq \GL n\F$ e seja $\Omega=\{\left<v\right>\mid v\in \F^n\setminus\{0\}\}$. O conjunto $\Omega$ é chamado de espaço projetivo. O grupo $G$ age em $\Omega$ e a ação é $(\left<v\right>,g)\mapsto \left<vg\right>$ para todo $v\in \F^n$ e $g\in G$.
+5. Seja $G$ um grupo arbitrário e seja $\Omega=G$. O grupo $G$ age em $\Omega$ pela ação $(x,g)\mapsto xg$ para todo $x\in \Omega$ e $g\in G$.
+6. Sejam $G$ um grupo $H\leq G$ e $\Omega=\{Hg\mid g\in G\}$. O grupo $G$ age em $\Omega$ e a ação é $(Hx,g)\mapsto Hxg$ para todo $Hx\in\Omega$ e $g\in G$.
+7. Seja $G$ um grupo e ponha $\Omega=G$. Então $G$ age em $\Omega$ pela ação de conjugação: $(x,g)\mapsto x^g=g^{-1}xg$.
 :::
 
 :::{#lem-action-hom}
@@ -40,11 +40,7 @@ Exercício.
 
 ## O Teorema de Cayley
 
-Considere o penúltimo exemplo no @exm-action com $H=1$ (subgrupo trivial). Neste caso o conjunto das classes laterais 
-$$
-\{Hg\mid g\in G\}=\{\{1\}g\mid g\in G\}=\{\{g\}\mid g\in G\}
-$$ 
-pode ser identificado com $G$. Ou seja, $G$ age no conjunto $G$ por multiplicação $(x,g)\mapsto xg$ (essa ação de $G$ em $G$ é chamada de *ação regular à direita* de $G$). Pelo @lem-action-hom, obtemos um homomorfismo $\psi:G\to\sym G$. Este homomorfismo é injetivo, pois se $g\in\ker\psi$, então $\psi(g)=\mbox{id}_G$ e $xg=x\psi(g)=x$ para todo $x\in G$ que implica que $g=1$. Logo $\ker\psi=1$ e $\psi$ é injetivo. Portanto 
+Considere o item 5. no @exm-action. Ou seja, $G$ age no conjunto $G$ por multiplicação $(x,g)\mapsto xg$ (essa ação de $G$ em $G$ é chamada de *ação regular à direita* de $G$). Pelo @lem-action-hom, obtemos um homomorfismo $\psi:G\to\sym G$. Este homomorfismo é injetivo, pois se $g\in\ker\psi$, então $\psi(g)=\mbox{id}_G$ e $xg=x\psi(g)=x$ para todo $x\in G$ que implica que $g=1$. Logo $\ker\psi=1$ e $\psi$ é injetivo. Portanto 
 $$
 G\cong\mbox{Im}(\psi)\leq \sym G.
 $$ 
