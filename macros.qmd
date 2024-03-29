@@ -26,5 +26,9 @@ $$
 \newcommand{\argz}[1]{\mbox{arg}(#1)}
 \DeclareMathOperator{\sen}{sen}
 \newcommand{\cis}[1]{\cos #1+i\sen #1}
+\newcommand{\E}{\mathbb E}
+\newcommand{\aut}[1]{\textrm{Aut}(#1)}
+\newcommand{\fix}[1]{\textrm{Fix}(#1)}
+\newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
 $$
 :::

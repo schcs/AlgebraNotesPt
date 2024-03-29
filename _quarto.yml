@@ -84,7 +84,11 @@ book:
         - GruposECorpos/psl.qmd
         - GruposECorpos/sylow.qmd
         - GruposECorpos/nilpotent.qmd 
-    
+        - GruposECorpos/ringsfields.qmd
+        - GruposECorpos/extensions.qmd
+        - GruposECorpos/decompfields.qmd
+        - GruposECorpos/fieldauts.qmd
+        - GruposECorpos/galois.qmd
 format:
   html:
     theme: cosmo

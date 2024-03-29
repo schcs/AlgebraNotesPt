@@ -1,0 +1,118 @@
+
+---
+title: "Automorfismos de corpos"
+number-sections: true
+lang: pt-BR
+---
+
+:::{#def-field-aut}
+Seja $\E$ um corpo. Lembre que um mapa $\varphi:\E\to\E$ bijetivo é dito automorfismo de $\E$ se $\varphi(x+y)=\varphi(x)+\varphi(y)$ e $\varphi(xy)=\varphi(x)\varphi(y)$ vale para todo $x,y\in\E$. O conjunto de automorfismos de $\E$ é um grupo com a operação de composição e este grupo é denotado por $\aut \E$. Se $\varphi\in\aut\E$, então definimos
+$$
+\fix\varphi=\{x\in \E\mid \varphi(x)=x\}.
+$$
+:::
+
+:::{#exr-field-aut}
+$\fix\varphi$ é um corpo, portanto $\E:\fix\varphi$ é uma extensão de corpos.
+:::
+
+:::{#exr-field-aut}
+A conjugação complexa $\varphi: x+iy\mapsto x-iy$ é um automorfismo de  $\C$ e  $\fix\varphi = \R$.
+:::
+
+:::{#exm-field-aut}
+Seja $p$ um primo e seja $f(x)\in\F_p[x]$ um polinômio irredutível de grau $d$. Defina $\E=\F_p[x]/(f(x))$ e note que $\E$ é um corpo de $q=p^d$ elementos. Afirmamos que o mapa $\varphi:\E\to\E$ definido como $\alpha\mapsto \alpha^p$ é um automorfismo. É bem conhecido que $(\alpha+\beta)^p=\alpha^p+\beta^p$ e $(\alpha\beta)^p=\alpha^p\beta^p$, então precisamos verificar apenas que $\varphi$ é uma bijeção. Como $\E$ é um corpo finito, é suficiente verificar que $\varphi$ é injetivo. Isso é verdade, pois se $\alpha,\beta\in\E$ tais que $\varphi(\alpha)=\varphi(\beta)$, então
+$$
+0=\alpha^p-\beta^p=(\alpha-\beta)^p
+$$
+que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\varphi\in\aut\E$. Além disso, $\fix\varphi$ é o conjunto de soluções da equação $x^p=x$ e esta equação tem precisamente $p$ soluções, nomeadamente, os elementos de $\F_p$. Logo $\fix\varphi=\F_p$. O automorfismo $\varphi$ é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.
+:::
+
+:::{#def-galois-group}
+Seja $\E:\F$ uma extensão de corpos. Defina
+$$
+\gal \E\F=\{\alpha\in\aut\E\mid \F\subseteq\fix\alpha\}.
+$$
+Em outras palavras, $\gal\E\F$ é o conjunto de automorfismos $\varphi$ de $\E$ tais que $\varphi(x)=x$ para todo $x\in\F$. É fácil verificar que $\gal\E\F$ é um subgrupo de $\aut\E$. Este subgrupo é chamado de grupo de <a href="https://pt.wikipedia.org/wiki/%C3%89variste_Galois">Galois</a> da extensão $\E:\F$ ou de grupo de Galois de $\E$ sobre $\F$.
+:::
+
+:::{#exr-gal-group}
+Se $\varphi\in\gal\E\F$, então $\varphi$ é uma transformação $\F$-linear de $\E$.
+:::
+
+:::{#lem-aut-pol}
+Seja $\E:\F$ uma extensão, $f(x)\in\F[x]$, $\alpha\in\E$ tal que $f(\alpha)=0$, e $\varphi\in\gal\E\F$. Então $f(\varphi(\alpha))=0$.
+:::
+
+:::{.proof}
+Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio.
+:::
+
+:::{#exm-gal}
+Determinemos $\gal\C\R$. Seja $\varphi\in\gal\C\R$. Como $\varphi$ é uma transformação $\R$-linear, as imagens $\varphi(1)$ e $\varphi(i)$ determinam $\varphi$. Como $1\in\R$, temos que $\varphi(1)=1$. Note que $\varphi(i)$ é raiz do polinômio $x^2+1$, então $\varphi(i)$ será raiz do mesmo polinômio que implica que $\varphi(i)=\pm i$. Escolhendo $\varphi(i)=i$, obtemos que $\varphi=\mbox{id}_\C$, enquanto escolhendo $\varphi(i)=-i$, obtemos a conjugação complexa. Obtivemos então que $\gal\C\R$ é um grupo de ordem 2.
+:::
+
+:::{exm-gal2}
+Seja $\xi=\exp(2\pi i/3)$ (terceira raiz da unidade) e considere a extensão $\E=\Q(\xi)$ de $\Q$. Note que $\xi$ é raiz do polinômio $x^3-1=(x-1)(x^2+x+1)$ e que o polinômio $x^2+x+1$ é irredutível sobre $\Q$. Em particular, $m_\xi(x)=x^2+x+1$ e $\E$ é um espaço vetorial de dimensão $2$ sobre $\Q$. Além disso,
+$$
+\E=\left<1,\xi\right>_\Q=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
+$$
+e para determinar os automorfismos $\varphi\in\gal\E\Q$, é suficiente saber $\varphi(1)$ e $\varphi(\xi)$. Como no exemplo, anterior, $\varphi(1)=1$ e $\varphi(\xi)$ é raiz de $x^2+x+1$; consequentemente $\varphi(\xi)=\xi$ ou $\varphi(\xi)=\xi^2=\bar\xi$ (conjugado complexo). O primeiro caso dá o automorfismo identidade, enquanto o segundo dá o automorfismo
+$$
+\alpha+\beta\xi\mapsto \alpha+\beta\bar\xi \quad\mbox{onde}\quad\alpha,\beta\in\Q.
+$$
+(Na verdade, precisa verificar que isso é um automorfismo, mas isso é uma conta simples que o leitor pode fazer.) Então $|\gal\E\Q|=2$.
+:::
+
+:::{#thm-transitive}
+Seja $\F$ um corpo de caraterística zero ou um corpo finito. Assuma que $\E$ é um corpo de decomposição de um polinômio irredutível $f(x)\in\F[x]$ com $\mbox{grau}\,f(x)=k$. Então $G=\gal\E\F$ permuta as raízes de $f(x)$ transitivamente e $G$ pode ser visto como um subgrupo transitivo de $S_k$. Em particular $k$ divide $|G|$.
+:::
+
+:::{.proof}
+Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. De fato, nós provamos em um resultado anterior que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Por um outro teorema anterior, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
+
+Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do Teorema Orbita-Estabilizador.
+:::
+
+:::{#exr-}
+Seja $\E$ um corpo e sejam $\varphi_1,\ldots,\varphi_k\in\aut\E$. Assuma que $\alpha_1,\ldots,\alpha_k\in\E$ tais que $\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0$. Mostre que $\alpha_1=\cdots=\alpha_k=0$.
+:::
+
+:::{#lem-gal-ff}
+Seja $\E:\F$ uma extensão finita. Então $|\gal\E\F|\leq \dim_\F\E$.
+:::
+
+:::{.proof}
+Seja $n=\dim_\F\E$ e assuma que $\varphi_1,\ldots,\varphi_{n+1}$ são elementos distintos de $\gal\E\F$. Vamos obter uma contradição. Seja $e_1,\ldots,e_n$ uma base de $\E$ sobre $\F$. Considere o sistema de equações lineares sobre $\E$:
+\begin{eqnarray*}
+\varphi_1(e_1)x_1+\cdots+\varphi_{n+1}(e_1)x_{n+1}&=&0\\
+&\vdots&\\
+\varphi_1(e_n)x_1+\cdots+\varphi_{n+1}(e_n)x_{n+1}&=&0.
+\end{eqnarray*}
+Como temos $n$ equações para $n+1$ incógnitas, existe uma solução não trivial $(\alpha_1,\ldots,\alpha_{n+1})\in\E^{n+1}$ e obtemos usando esta solução que
+$$
+0=\alpha_1\varphi_1(e_i)+\cdots+\alpha_{n+1}\varphi_{n+1}(e_i)=(\alpha_1\varphi_1+\cdots+\alpha_{n+1}\varphi_{n+1})(e_i)
+$$
+para todo $i\in\{1,\ldots,n\}$.
+Isso implica que $\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0$, mas isso é impossível pelo exercício anterior.
+:::
+
+:::{#lem-simple-ext}
+Seja $\F$ um corpo infinito (por exemplo um corpo de caraterística zero), $\E$ uma extensão de $\F$ e sejam $\alpha,\beta\in\E$ elementos algébricos sobre $\F$. Então existe um elemento $\gamma\in\E$ tal que $\F(\alpha,\beta)=\F(\gamma)$.
+:::
+
+:::{.proof}
+Exercício.
+:::
+
+:::{#thm-gg-order}
+Seja $\F$ um corpo de caraterística zero, $f(x)\in\F[x]$ um polinômio irredutível, e seja $\E$ o corpo de decomposição de $f(x)$. Então $|\gal \E\F|=\dim_\F\E$.
+:::
+
+:::{.proof}
+Seja $h=|\gal\E\F|$.. Pelo  resultado anterior, $h\leq\dim_\F\E$, então basta provar a outra desigualdade. Pelo lema anterior, temos que $\E=\F(\alpha)$ com algum $\alpha\in\E$. Afirmamos que $\mbox{grau}\,m_\alpha(x)\leq h$ e isso vai implicar que $\dim_\F\E\leq h$. Note que é suficiente achar um polinômio $g(x)\in\F[x]$ de grau $h$ tal que $\alpha$ é raiz de $g(x)$. Assuma que $\{\sigma_1,\ldots,\sigma_h\}=\gal\E\F$ com $\sigma_1=1$ e considere o polinômio
+$$
+g(x)=(x-\sigma_1(\alpha))\cdots(x-\sigma_h(\alpha))=x^h+\beta_{h-1}x^{h-1}+\cdots+\beta_1h+\beta_0.
+$$
+Como $g(x)$ é invariante por todo elemento $\sigma_i$ de $\gal\E\F$, temos que $g(x)\in\F[x]$. Além disso, $g(\alpha)=g(\sigma_1(\alpha))=0$ e a demonstração está pronta.
+:::

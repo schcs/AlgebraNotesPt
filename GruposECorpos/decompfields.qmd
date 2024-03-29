@@ -1,0 +1,128 @@
+
+---
+number-sections: true
+title: "Corpos de decomposição"
+lang: pt-BR
+---
+
+:::{#lem-root}
+Seja $\F$ um corpo e $f(x)\in\F[x]$ com grau maior ou igual a $1$.
+
+
+1. Existe uma extensão finita $\E:\F$ tal que $f(x)$ possui raiz em $\E$.
+2. Existe uma extensão $\K:\F$  finita tal que $f(x)$ pode ser escrito na forma
+$$
+f(x)=\alpha_0(x-\alpha_1)\cdots(x-\alpha_m).
+$$
+:::
+
+:::{.proof}
+1. Escreva $f(x)=g_1(x)\cdots g_m(x)$ onde os $g_i(x)\in\F[x]$ são polinômios irredutíveis. Defina $\E=\F[x]/(g_1(x))$  e observe que $\alpha=x+(g_1(x))\in\E$ é uma raiz de $g_1(x)$ e portanto $\alpha$ é raiz de $f(x)$.
+
+2. Provamos por indução no grau de $f(x)$. Se $f(x)$ tem grau 1, então podemos tomar $\K=\F$  e a afirmação é verdadeira. Assuma que a afirmação é verdadeira para polinômios de grau menor que $k$ e seja $f(x)\in\F[x]$ um polinômio de grau $k$. Pela afirmação 1., existe uma extensão finita $\E$ tal que $f(x)$ possui raiz em $\E$ e assim $f(x)=(x-\alpha_1)g(x)$ onde $\alpha\in\E$ e $g(x)\in\E[x]$ é um polinômio de grau $k-1$. Pela hipótese de indução, existe uma extensão finita $\K$ de $\E$ tal que
+$$
+g(x)=\alpha_0(x-\alpha_2)\cdots(x-\alpha_k)
+$$
+com $\alpha_0,\alpha_2,\ldots,\alpha_k\in\K$. Ora, escrevemos
+$$
+f(x)=(x-\alpha_1)g(x)=\alpha_0(x-\alpha_1)(x-\alpha_2)\cdots (x-\alpha_k).
+$$
+Como as extensões $\K:\E$ e $\E:\F$ são finitas, a extensão $\K:\F$ também é finita.
+:::
+
+:::{#def-decompfield}
+Seja $\F$ um corpo e seja $f(x)\in\F[x]$ um polinômio com grau maior ou iguai a um. Seja $\K$ uma extensão (finita) de $\F$ tal que
+$$
+f(x)=\alpha_0(x-\alpha_1)\cdots(x-\alpha_k)
+$$
+e considere $\E=\F(\alpha_1,\ldots,\alpha_k)$. O corpo $\E$ é chamado de um <em>corpo de decomposição</em> para o polinômio $f(x)$. Note que $\E$ é o menor subcorpo de $\K$ que contém todas as raízes de $f(x)$; ou seja, ele é o menor subcorpo de $\K$ sobre o qual $f(x)$ se decompõe para produto de polinômios lineares (de grau um).
+:::
+
+O corpo de decomposição de um polinômio não é único, pois depende do corpo $\K$. No entanto, o seguinte resultado implica que ele é determinado unicamente a menos de isomorfismos.
+
+Nos seguintes resultados vamos usar a seguinte observação. Se $\varphi:\F_1\to\F_2$ é um isomorfismo de corpos, então $\varphi$ induz um isomorfismo $\F_1[x]\to\F_2[x]$ dos anéis de polinômios
+$$
+\alpha_0+\alpha_1x+\cdots+\alpha_kx^k\mapsto \varphi(\alpha_0)+\varphi(\alpha_1)x+\cdots+\varphi(\alpha_k)x^k.
+$$
+Arriscando confusão, o isomorfismo $\F_1[x]\to\F_2[x]$ será denotado também por $\varphi$.
+
+:::{#lem-decompfield-unique}
+Sejam $\F_1$ e $\F_2$ corpos e assuma que $\varphi:\F_1\to\F_2$ é um isomorfismo. Seja  $f(x)\in\F_1[x]$ um polinômio irredutível e considere a imagem $\varphi(f(x))\in\F_2[x]$ (que também é irredutível). Suponha que $\alpha$ e $\beta$ são raízes de $f(x)$ e $\varphi(f(x))$ em alguma extensão de $\F_1$ e $\F_2$, respetivamente. Então existe um ismorfismo $\psi:\F_1(\alpha)\to\F_2(\beta)$ tal que $\psi|_{\F_1}=\varphi$ e $\psi(\alpha)=\beta$.
+:::
+
+:::{.proof}
+Adaptar a demonstração do lema similar na aula anterior.
+:::
+
+:::{#thm-decompfield-unique}
+Sejam $\F_1$ e $\F_2$ corpos e seja $\varphi:\F_1\to\F_2$ um isomorfismo. Seja $f(x)\in\F_1[x]$ não constante e assuma que $\K_1$ e $\K_2$ são corpos de decomposição dos polinômios $f(x)$ e $\varphi(f(x))$, respetivamente. Então existe um isomorfismo $\psi: \K_1\to \K_2$ tal que $\psi|_{\F_1}=\varphi$.
+:::
+
+:::{.proof} 
+Por indução no grau de $f(x)$. Se $\mbox{grau}\,f(x)=1$, então $\K_1=\F_1$ e $\K_2=\F_2$ e podemos tomar $\psi=\varphi$. Assuma que o lema é válido para polinômios de grau menor que $k\geq 2$ e seja $f(x)\in\F_1[x]$ um polinômio de grau $k$. Seja $p(x)\in\F_1[x]$ um  fator  irredutível de $f(x)$. Então $\varphi(p(x))\in\F_2[x]$ é um fator irredutível de $\varphi(f(x))$ e defina os corpos $\E_1=\F_1[x]/(p(x))$ e $\E_2=\F_2[x]/(\varphi(p(x))$. Existem $\alpha\in\E_1$ e $\beta\in\E_2$ tais que $m_\alpha(x)=p(x)$ e $m_{\beta}(x)=\varphi(p(x))$ e o lema anterior implica que existe um isomorfismo $\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)$ tal que  $\vartheta|_{\F_2}=\varphi$ e $\vartheta(\alpha)=\beta$. Escreva $f(x)=(x-\alpha)f_1(x)$ e
+$$
+\varphi(f(x))=\vartheta(f(x))=\vartheta((x-\alpha)f_1(x))=(x-\beta)\vartheta(f_1(x)).
+$$
+Escolha corpos de decomposição $\K_1$ e $\K_2$ para os polinômios $f_1(x)$ e $\vartheta(f_1(x))$ sobre $\F_1(\alpha)$ e $\F_2(\beta)$, respetivamente. Isso implica que $\K_1$ e $\K_2$ são corpos de decomposição para os polinômios $f(x)$ e $\vartheta(f(x))$ sobre $\F_1$ e $\F_2$, respetivamente. Pela hipótese de indução, existe um isomorfismo $\psi:\K_1\to\K_2$ tal que $\psi|_{\F_1(\alpha)}=\vartheta$, e portanto $\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi$.
+:::
+
+
+:::{#cor-decomp-field-unique}
+Sejam $\F$ um corpo, $f(x)\in\F[x]$ um polinômio não constante, e sejam $\K_1$ e $\K_2$ corpos de decomposição de $f(x)$. Então existe $\varphi:\K_1\to \K_2$ isomorfismo tal que $\varphi(\alpha)=\alpha$ para todo $\alpha\in\F$.
+:::
+
+:::{#exr-Fp}
+Seja $p$ um primo e $d\geq 1$. Mostre que $x^{p^d}-x\in\F_p[x]$ não tem raízes múltiplas em nenhuma extensão de $\F_p$.
+:::
+
+:::{#exr-charp}
+Seja $\F$ um corpo de caraterística $p$. Mostre que
+$$
+(x+y)^{p^d}=x^{p^d}+y^{p^d}
+$$
+vale para todo $x,y\in\F$ e $d\geq 0$.
+:::
+
+:::{#thm-finite-field}
+As seguintes afirmações são verdadeiras.
+
+
+1. Se $\F$ é um corpo finito então $|\F|=p^d$ com algum primo $p$ e $d\geq 1$.
+2. Se $p$ é um primo e $d\geq 1$, então existe um corpo $\F$ com $p^d$ elementos e $\F$ é um corpo de decomposição do polinômio $x^{p^d}-x\in\F_p[x]$.
+3. Se $\F_1$ e $\F_2$ são corpos finitos tais que $|\F_1|=|\F_2|$ então $\F_1$ e $\F_2$ são isomorfos.
+:::
+
+:::{.proof}
+1. Como $\F$ é finito, a sua caraterística é um primo $p$ e tem-se que $\F$ é uma extensão de $\F_p$. Tomando $d=\dim_{\F_p}\F$, temos que $|\F|=p^d$.
+
+2. Ponha $q=p^d$, seja $\K$ o corpo de decomposição do polinômio $g(x)=x^{q}-x$ e seja $\F$ o conjunto de raízes de  $g(x)$ em $\K$. Note que se $\alpha,\beta\in\F$, então $\alpha^q=\alpha$ e $\beta^q=\beta$ e temos que
+$$
+(\alpha\pm\beta)^q=(\alpha^q\pm\beta)^{p^d}=\alpha\pm\beta \quad\mbox{e}\quad(\alpha/\beta)^q=\alpha/\beta^q=\alpha/\beta.
+$$
+Claramente, $0\in\F$ e $1\in\F$. Portanto $\F$ é um corpo e como $\K$ foi corpo de decomposição, segue que  $\F=\K$. Além disso, como, pelo exercício anterior, $g(x)$ não possui raízes múltiplas em $\K$, temos que $|\F|=q=p^d$ e $\F$ é um corpo de ordem desejada.
+
+Se $\E$ é um corpo arbitrário de $q=p^d$ elementos, então $\E^{*}=\E\setminus\{0\}$ é um grupo de $q-1$ elementos, e o Teorema de Lagrange implica que $x^q=x$ para todo $x\in\E^*$. Mas esta equação vale para $0\in\E$ também. Segue que
+$$
+x^q-x=\prod_{\alpha\in\E}(x-\alpha)
+$$
+e portanto $\E$ é um corpo de decomposição de $x^q-x$. Em particular $\E$ é isomorfo ao corpo $\F$ no parágrafo anterior e assim verificamos também a afirmação 3.
+:::
+
+
+Se $q=p^d$ com algum primo $p$, então existe (a menos de isomorfismo) um único corpo de cardinalidade $q$ e este corpo é denotado por $\F_q$.
+
+O seguinte teorema segue diretamente de um resultado que provamos quando estudamos grupos cíclicos.
+
+:::{#thm-F-cyclic}
+Se $\F$ é um corpo finito, então $\F^*$ é um grupo cíclico.
+:::
+
+:::{#cor-irred-pol}
+Seja $\E:\F$ uma extensão de corpos finitos. Então $\E=\F(\alpha)$ com algum $\alpha\in\E$. Em particular, existe um polinômio irredutível $f(x)\in\F[x]$ tal que $\E\cong \F[x]/(f(x))$. Em particular se $\E$ é um corpo de $p^d$ elementos, então $\E\cong \F_p[x]/(f(x))$ onde $f(x)\in\F_p[x]$ é um polinômio irredutível de grau $d$.
+:::
+
+:::{.proof}
+O grupo $\E^*$ é cíclico e seja $\alpha$ um gerador de $\E^*$. Então $\F(\alpha)=\E$. Tomando $f(x)=m_\alpha(x)\in\F[x]$, temos que $\E=\F(\alpha)\cong \F[x]/(f(x))$.
+:::
+
+Uma consequência particular do corolário anterior é que para todo $p$ primo e para todo $d$ natural, existe um polinômio irredutível $f(x)\in\F_p[x]$ de grau $d$. O corpo $\F_{p^d}$ pode ser construído como $\F_p[x]/(f(x))$.

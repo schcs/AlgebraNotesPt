@@ -1,0 +1,119 @@
+
+---
+title: "Extensões de corpos"
+number-sections: true
+lang: pt-BR
+---
+
+:::{#def-extension}
+Sejam $\F$ e $\E$ corpos tais que $\F\subseteq\E$. Dizemos que $\E$ é uma <em>extensão</em> de $\F$. Escrevemos que $\E:\F$ é uma extensão.
+:::
+
+:::{exm-extension}
+$\R$ é uma extensão de $\Q$ e $\C$ é uma extensão de $\R$.  Se $f(x)$ é um polinômio irredutível sobre um corpo $\F$, então $\F[x]/(f(x))$ é uma extensão $\F$.
+:::
+
+:::{#def-degree-ext}
+Assuma que $\E$ é uma extensão de $\F$. Neste caso $\E$ é um espaço vetorial sobre $\F$ e podemos considerar a dimensão $\dim_\F\E$. Esta quantidade será referida como o <em>grau da extensão</em> de $\E$ sobre $\F$.
+:::
+
+:::{#exm-degree-ext}
+$\R:\Q$ é uma extensão de grau infinita, o grau da extensão $\C:\R$ é igual a dois e se $f(x)\in\F[x]$ for irredutível, então $\F[x]/(f(x)):\F$ é uma extensão com grau igual ao grau do polinômio $f(x)$.
+:::
+
+:::{#def-ext2}
+Uma extensão $\E:\F$ é dita <em>finita</em> se $\dim_\F\E$ é finita. Se $\E:\F$ é uma extensão e $\alpha\in\E$, então $\alpha$ é dito <em>algébrico</em> (sobre $\F$) se existe um polinômio $f(x)\in\F[x]$ não nulo tal que $f(\alpha)=0$. Caso contrário, $\alpha$ é dito <em>transcendental </em>(sobre $\F$). Uma extensão $\E:\F$ é dita <em>algébrica </em>se todos os elementos de $\E$ são algébricos sobre $\F$. Caso contrário $\E$ é dito <em>transcendental</em> sobre $\F$.
+:::
+
+:::{#lem-ext-alg}
+Se $\E:\F$ é uma extensão finita, então ela é algébrica.
+:::
+
+:::{.proof}
+Seja $\alpha\in\E$. Como $\dim_\F\E$ é finita, a sequência $\alpha^0,\alpha,\alpha^2,\ldots$ é linearmente dependente; ou seja existe algum $k\geq 0$ tal que $\alpha^0,\alpha,\alpha^2,\ldots,\alpha^{k}$ são linearmente dependetes. Em outras palavras, existem coeficientes $\beta_0,\ldots,\beta_{k}$ tal que
+$$
+\beta_0\alpha^0+\beta_1\alpha+\beta_2\alpha^2+\cdots+\beta_k\alpha^k=0.
+$$
+Isso implica que $\alpha$ é raiz do polinômio $f(x)=\beta_0+\beta_1x+\cdots+\beta_kx^k$ e portanto $\alpha$ é algébrico. Como $\alpha$ foi escolhido arbitrariamente, $\E:\F$ é uma extensão algébrica.
+:::
+
+:::{#def-pol-min}
+Se $\E:\F$ é uma extensão e $\alpha\in\E\setminus\{0\}$ é algébrico, então o conjunto
+$$
+I_\alpha=\{f(x)\in\F[x]\mid f(\alpha)=0\}
+$$
+é um ideal não trivial. Como os ideais de $\F[x]$ são principais, existe um único polinômio mônico $m_\alpha(x)$ tal que $I_\alpha=(m_\alpha(x))$. O polinômio $m_\alpha(x)$ é chamado de polinômio minimal de $\alpha$ (sobre $\F$).
+:::
+
+:::{#lem-pol-min}
+Com as suposições do parágrafo anterior, as seguintes são verdadeiras.
+
+1. O polinômio $m_\alpha(x)$ é  irredutível.
+2. se $f(x)\in\F[x]$ é irredutível e mônico tal que $f(\alpha)=0$, então $f(x)=m_\alpha(x)$.
+:::
+
+:::{.proof}
+1. Assuma que $m_\alpha(x)=a(x)b(x)$. Tem-se que
+$$
+0=m_\alpha(\alpha)=a(\alpha)b(\alpha),
+$$
+que implica que $a(\alpha)=0$ ou $b(\alpha)=0$. No primeiro caso $a(x)\in I_\alpha$ e então $a(x)$ é um múltiplo de $m_\alpha(x)$. Mas no mesmo tempo $a(x)$ é um divisor de $m_\alpha(x)$ que implica que $a(x)$ tem de ser um associado (múltiplo escalar) de $m_\alpha(x)$. Se $b(x)=0$, obtemos similarmente que $b(x)$ é um associado de $m_\alpha(x)$. Isso significa que $m_\alpha(x)$ é irredutível.
+
+2. Assuma que $f(x)\in\F[x]$ irredutível e mônico tal que $f(\alpha)=0$. Neste caso $f(x)\in I_\alpha$ e $(f(x))\subseteq I_\alpha$. Por outro lado, $f(x)$ sendo irredutível, $(f(x))$ é um ideal maximal. Como $I_\alpha\neq \F[x]$, temos que $(m_\alpha(x))=I_\alpha=(f(x))$. Isso implica que $m_\alpha(x)$ é um associado de $f(x)$. Como os dois são mônicos, obtemos que $m_\alpha(x)=f(x)$.
+
+Seja $\E:\F$ uma extensão  assuma que $\alpha_1,\ldots,\alpha_k\in\E$. O menor subcorpo de $\E$ que contém $\F$ e $\alpha_1,\ldots,\alpha_k$ é chamado do <em>corpo gerado por $\alpha_1,\ldots,\alpha_k$ </em>(sobre $\F$) e é denotado por $\F(\alpha_1,\ldots,\alpha_k)$.
+
+
+:::{#def-ext-finite}
+O corpo $\F(\alpha_1,\ldots,\alpha_k)$ coincide com o conjunto de todas as expressões racionais em $\alpha_1,\ldots,\alpha_k$ com coeficientes em $\F$:
+\begin{eqnarray*}
+\F(\alpha_1,\ldots,\alpha_k)&=&\left\{f(\alpha_1,\ldots,\alpha_k)/g(\alpha_1,\ldots,\alpha_k)\mid\right.\\&& \left.f(x_1,\ldots,x_k),g(x_1,\ldots,x_k)\in\F[x_1,\ldots,x_k]
+\mbox{ e }g(\alpha_1,\ldots,\alpha_k)\neq 0\right\}.
+\end{eqnarray*}
+:::
+
+No seguinte lema descrevemos extensões da forma $\F(\alpha)$ quando $\alpha$ é um elemento algébrico em uma extensão.
+
+:::{#lem-Fa}
+Seja $\E:\F$ uma extensão e $\alpha\in\E\setminus\{0\}$ algébrico. Assuma que $m_\alpha(x)$ tem grau $k$. Então $\F(\alpha)\cong \F[x]/(m_\alpha(x))$ e
+$$
+\F(\alpha)=\{\beta_0+\beta_1\alpha+\cdots+\beta_{k-1}\alpha^{k-1}\mid \beta_i\in\F\}.
+$$.
+:::
+
+:::{.proof}
+Defina $\varphi:\F[x]\rightarrow \F(\alpha)$ por $f(x)\mapsto f(\alpha)$. Note que $\varphi$ é um homomorfismo de anéis e que $\ker\varphi = I_\alpha$. Portanto
+$$
+\mbox{Im}\,\varphi\cong \F[x]/\ker\varphi=\F[x]/I_\alpha=\F[x]/(m_\alpha(x)).
+$$
+Como $m_\alpha(x)$ é irredutível, temos que $\F[x]/(m_\alpha(x))$ é um corpo e portanto (por isomorfismo) $\mbox{Im}\,\varphi$ é também um corpo. Além disso, o corpo $\mbox{Im}\,\varphi$ contém $\F$ e $\alpha$, e então $\mbox{Im}\,\varphi=\F(\alpha)$. Isso implica que
+$$
+\F(\alpha)\cong\F[x]/(m_\alpha(x)).
+$$
+
+A segunda afirmação segue da primeira. De fato, como $\varphi$ é um isomorfismo, ele precisa ser sobrejetivo, e portanto todo elemento de $\F(\alpha)$ pode ser escrito como $f(\alpha)$ onde $f(x)\in\F[x]$. Escreva $f(x)=q(x)m_\alpha(x)+r(x)$  onde $r(x)=0$ ou ele é um polinômio de grau menor que $m_\alpha(x)$. Ora
+$$
+f(\alpha)=q(\alpha)m_\alpha(\alpha)+r(\alpha)=r(\alpha).
+$$
+Isso implica que
+\begin{eqnarray*}
+\F(\alpha)&=&\{r(\alpha)\mid r(x)\in\F[x],\ r(x)=0\mbox{ ou } \mbox{grau}\,r(x)<\mbox{grau}\,m_\alpha(x) \}\\&=&\{\beta_0+\beta_1\alpha+\cdots+\beta_{k-1}\alpha^{k-1}\mid \beta_i\in\F\}.
+\end{eqnarray*}
+:::
+
+:::{#def-ext-simple}
+Uma extensão da forma $\F(\alpha)$ chama-se <em>extensão simples</em>.
+:::
+
+:::{#cor-simple}
+Sejam $\E_1$ e $\E_2$ duas extensões de um corpo $\F$ e sejam $\alpha_1\in\E_1$ e $\alpha_2\in\E_2$ tais que $m_{\alpha_1}(x)=m_{\alpha_2}(x)$ (sobre $\F$). Então existe um isomorfismo $\varphi:\F(\alpha_1)\to\F(\alpha_2)$ tal que $\varphi(\beta)=\beta$ para todo $\beta\in\F$ e $\varphi(\alpha_1)=\alpha_2$. 
+:::
+
+:::{.proof}
+Seja $g(x)= m_{\alpha_1}(x)=m_{\alpha_2}(x)$ e sejam $\varphi_1:\F[x]/(g(x))\to\F(\alpha_1)$ e $\varphi:\F[x]/(g(x))\to\F(\alpha_2)$ os isomorfismos dados pelo lema anterior. Então a composição
+$$
+\varphi_2\varphi_1^{-1}:\F(\alpha_1)\to \F(\alpha_2)
+$$
+é como exigido.
+:::
+ 

@@ -13,7 +13,7 @@ Seja $A$ um conjunto. Uma relação $R\subseteq A\times A$ é dita *relação de
 2. $R$ é simétrica (ou seja $aRb$ implica $bRa$ para todo $a,b\in A$); e
 3. $R$ é transitiva (ou seja $aRb$ e $bRc$ implica $aRc$ para todo $a,b,c\in A$).
 
-As relações de equivalência são normalmente denotados com os símbolos $\equiv$, $\cong$, etc, e escrevemos $a\equiv b$ ou $a\cong g$ em vez de $aRb$. 
+As relações de equivalência são normalmente denotados com os símbolos $\equiv$, $\cong$, etc, e escrevemos $a\equiv b$ ou $a\cong b$ em vez de $aRb$. 
 :::
 
 :::{#exm-eq-eg}
@@ -78,7 +78,7 @@ Seja $A$ um conjunto e assuma que $\equiv$ é uma relação de equivalência. Te
 :::{.proof}
 1. Note que $a\in[a]$ é equivalente a dizer que $a\equiv a$ e isso vale pois a relação $\equiv$ é reflexiva. 
 2. Assuma que $c\in [a]\cap [b]$. Isso quer dizer que $a\equiv c$ e $b\equiv c$. Por simetria temos também que $c\equiv a$. 
-Afirmamos que $[a]=[b]$. Provaremos isso verificando que $[a]\subseteq [b]$ e $[b]\subseteq [a]$. Assuma primeiro que $x\in[a]$. Então 
+Afirmamos que $[a]=[b]$. Provaremos isso verificando que $[a]\subseteq [b]$ e $[b]\subseteq [a]$. Assuma primeiro que $x\in[a]$; ou seja $a\equiv x$. Então 
 $$
 b\equiv c\equiv a\equiv x.
 $$ 
@@ -88,7 +88,7 @@ Aplicando a transitividade, obtemos que $b\equiv x$ e $x\in [b]$. Portanto obtem
 ## Partições
 
 :::{#def-partition}
-Seja $A$ um conjunto. Um conjunto $\mathcal P$ de subconjuntos de $A$ é dita *partição* de $A$ se 
+Seja $A$ um conjunto. Um conjunto $\mathcal P$ de subconjuntos de $A$ é dito *partição* de $A$ se 
 
 1. todo elemento $a\in A$ pertence a um subconjunto $X\in \mathcal P$; e
 2. se $X,Y\in \mathcal P$ são distintos, então $X\cap Y=\emptyset$. 

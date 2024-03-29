@@ -1,0 +1,80 @@
+
+---
+title: "O Teorema Fundamental da Teoria de Galois"
+number-sections: true
+lang: pt-BR
+---
+
+Nós enunciaremos o teorema para corpos de caraterística zero, mas ressaltamos que o teorema é válido com condições mais gerais.
+
+:::{#def-normal}
+Seja $\E:\F$ uma extensão de corpos de caraterística zero. Dizemos que a extensão é <em>normal </em>se $\E$ é corpo de decomposição de um polinômio sobre $\F$.
+:::
+
+O seguinte teorema será enunciado sem demonstração, embora a demonstração não seja difícil.
+
+:::{#thm-}
+Seja $\E:\F$ uma extensão normal e seja $f(x)\in\F[x]$ um polinômio irredutível. Se $f(x)$ possui uma raiz em $\E$, então $f(x)$ se decompõe como produto de polinômios lineares de $\E[x]$.
+:::
+
+:::{#thm-fundamental-galois}
+(Teorema Fundamental da Teoria de Galois) 
+Seja $\E:\F$ uma extensão normal de corpos de caraterística zero. Seja $\K$ um subcorpo de $\E$ tal que $\F\subseteq\K$.
+
+- $\E:\K$ é uma extensão normal e $\gal\E\K$ é um subgrupo de $\gal\E\F$.
+- $\mbox{Fix}\, \gal\E\K=\K$.
+- A extensão $\K:\F$ é normal se e somente se $\gal\E\K$ é um subgrupo normal de $\gal\E\F$. Neste caso $\gal\K\F\cong \gal\E\F/\gal\E\K$.
+- O mapa $\mbox{Gal}$ é uma bijeção do conjunto de corpos $\K$ tais que $\F\subseteq\K\subseteq\E$ para o conjunto de subgrupos de $\gal\E\F$. Esta bijeção preserva normalidade (de subgrupos e extensões) e reverte inclusão no sentido que $\K_1\subseteq \K_2$ se e somente se $\gal\E{\K_1}\supseteq\gal\E{\K_2}$.
+:::
+
+Infelizmente, a demonstração do Teorema não cabe no calendário do semestre, mas vamos fazer dois exemplos para ilustrar a correspondência.
+
+:::{#exm-tfg1}
+Seja $\E$ o corpo de decomposição do polinômio $x^3-2\in\Q[x]$ e considere a extensão $\E:\Q$. Esta extensão é normal. As raízes do polinômio são $\sqrt[3]2$, $\xi\sqrt[3]2$ e $\xi^2\sqrt[3]2$ onde $\xi=\exp(2\pi i/3)$ é uma terceira raíz da unidade. Como $\E$ é gerado por estas raízes sobre $\Q$, temos que
+$$
+\E=\Q(\sqrt[3]2, \xi\sqrt[3]2,\xi^2\sqrt[3]2)=\Q(\sqrt[3]2, \xi).
+$$
+Além disso, $m_{\sqrt[3]2}(x)=x^3-2$ e $m_{\xi}(x)=x^2+x+1$ e temos que
+$$
+\dim_\Q\E=\dim_\Q\Q(\sqrt[3]2)\cdot\dim_{\Q(\sqrt[3]2)}\E=3\cdot 2=6.
+$$
+Por um teorema que provamos na aula anterior, segue que $|\gal\E\F|=6$.
+Se $\varphi\in\gal\E\Q$, então $\varphi$ está determinado pelas imagens $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$. Note que $\sqrt[3]2$ e $\xi$ são raízes dos polinômios irredutíveis $x^3-2$ e $x^2+x+1$ (respetivamente), então $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$ precisam ser raízes do  mesmo polinômio. Temos então que
+$$
+\varphi(\sqrt[3]2)\in\{\sqrt[3]2,\xi\sqrt[3]2,\xi^2\sqrt[3]2\}\quad\mbox{e}\quad \varphi(\xi)\in\{\xi,\xi^2\}.
+$$
+Isso dá seis possibilidades para o automorfismo $\varphi$ e como já deduzimos que $|\gal\E\Q|=6$, todas destas possibilidades precisam resultar em um elemento de $\gal\E\F$. Na verdade, todo elemento de $\gal\E\F$ induz uma permutação do conjunto $R=\{\sqrt[3]2, \xi\sqrt[3]2,\xi^2\sqrt[3]2\}$ das raízes do polinômio $x^3-2$ e convêm considerar $\gal\E\Q$ como um grupo de permutações de $R$. Como $|R|=3$, toda permutação das três raízes resulta em um elemento de $\gal\E\F$. Em particular $\gal\E\F\cong\mbox{Sym}\,R\cong S_3$.
+
+Na seguinte tabela, nós apresentamos explicitamente a correspondência entre os subgrupos de $\mbox{Sym}\,R$ e os subcorpos de $\E$.
+
+[table id=5 /]
+:::
+
+:::{#exm-tfg2}
+Considere o corpo de decomposição $\E$ do polinômio $x^4-2$ sobre $\Q$. Similarmente ao exemplo anterior, temos que
+$$
+\E=\Q(\sqrt[4]2,i)
+$$
+e
+$$
+\dim_\Q\E=\dim_\Q\Q(\sqrt[4]2)\cdot\dim_{\Q(\sqrt[4]2)}\E=4\cdot 2=8
+$$
+que implica que $|\gal\E\Q|=8$. Além disso, um elemento $\varphi\in\gal\E\Q$ é determinado pelas imagens
+$$
+\varphi(\sqrt[4]2)\in\{\sqrt[4]2,-\sqrt[4]2,i\sqrt[4]2,-i\sqrt[4]2\}\quad\mbox{e}\quad
+\varphi(i)\in\{i,-i\}.
+$$
+Há oito opções na linha anterior, e o fato que $|\gal\E\Q|=8$ implica que todas destas opções resultam em um automorfismo de $\gal\E\Q$. Como no exemplo anterior, convêm considerar os elementos de $\gal\E\Q$ como permutações do conjunto $R=\{\sqrt[4]2,-\sqrt[4]2,i\sqrt[4]2,-i\sqrt[4]2\}$ das raízes de $x^4-2$. Os automorfismos
+$$
+\varphi_1:\sqrt[4]2\mapsto i\sqrt[4]2,\  i\mapsto i\quad\mbox{e}\quad\varphi_2:\sqrt[4]2\mapsto \sqrt[4]2,\ i\mapsto -i
+$$
+correspondem às permutações
+$$
+a=(\sqrt[4]2,i\sqrt[4]2,-\sqrt[4]2,-i\sqrt[4]2)\quad\mbox{e}\quad b=(i\sqrt[4]2,-i\sqrt[4]2)
+$$
+e estas duas permutações geram um subgrupo de $S_4$ isomorfo a $D_4$.
+
+Na seguinte tabela, nós apresentamos explicitamente a correspondência entre os subgrupos de $\mbox{Sym}\,R$ e os subcorpos de $\E$.
+
+[table id=6 /]
+:::

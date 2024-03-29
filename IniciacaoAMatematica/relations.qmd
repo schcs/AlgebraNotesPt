@@ -60,7 +60,7 @@ Quando $A=B$ e $R\subseteq A\times A$, dizemos que $R$ é uma relação sobre $A
 :::{#exm-relation}
 Por exemplo, considerando o conjunto no @exm-prod-cart, o conjunto 
 $$
-R=\{(1,2),(1,3),(2,1)\}
+R=\{(1,3),(1,4),(2,1)\}
 $$ 
 é uma relação entre $A$ e $B$.   
 :::
@@ -73,7 +73,7 @@ $$
 :::
 
 :::{#exm-relation2}
-No @exm-relation, temos que $1$ está relacionado com $2$ pela relação $R$ e escrevemos que $1R2$. Por outro lado, $2$ não está relacionado com $3$ pela mesma relação e escrevemos que $2\not R3$.   
+No @exm-relation, temos que $1$ está relacionado com $3$ pela relação $R$ e escrevemos que $1R3$. Por outro lado, $2$ não está relacionado com $3$ pela mesma relação e escrevemos que $2\not R3$.   
 :::
 
 Quando trabalhamos com relações teoricamente, denotamo-nas com letras como $R$, $Q$, $S$, etc. Quando trabalhamos com relações particulares, usaremos símbolos tais como $=$, $\leq$, $<$, $\prec$, etc, como nos seguintes exemplos. 
@@ -110,19 +110,19 @@ Seja $R$ uma relação sobre $A$.
 
 1. Dizemos que $R$ é *reflexiva* se $aRa$ para todo $a\in A$ (ou seja $(a,a)\in R$ para todo $a\in A$). 
 2. Dizemos que $R$ é *simétrica* se $aRb$ implica que $bRa$ para todo $a,b\in A$. 
-3. Dizemos que $R$ é *antisimétrica* se $aRb$ e $bRa$ implicm que $a=b$ para todo $a,b\in A$. 
+3. Dizemos que $R$ é *antisimétrica* se $aRb$ e $bRa$ implicam que $a=b$ para todo $a,b\in A$. 
 4. Dizemos que $R$ é *transitiva* se $aRb$ e $bRc$ implicam que $aRc$ para todo $a,b,c\in A$. 
 :::
 
 :::{#exm-rel-props}
-Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade e divisor são simétricas. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são transitivas.
+Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são transitivas.
 :::
 
 ## $k$-uplas ordenadas e produto cartesiano de vários conjuntos
 
 Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
 $$
-(a_1,a_2,\ldots,a_k)=(b_1,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
+(a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
 $$
 
 Podemos definir o produto cartesiano de conjuntos $A_1,\ldots,A_k$ como 
