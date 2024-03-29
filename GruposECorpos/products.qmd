@@ -94,7 +94,7 @@ $$
 $$
 com a operação definida na segiunte forma:
 $$
-(g_1,h_1)(g_2,h_2)=(g_1hg_2,h_1h_2).
+(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2).
 $$ 
 :::
 
@@ -117,7 +117,7 @@ Fácil, o leitor pode fazer.
 O produto direto acima definido é frequentamente chamado de produto direto externo. Simnilarmente a espaços vetoriais, existe uma versão interna do produto direto. 
 
 :::{#lem-dirprod-inner}
-Suponha que $G$ é um grupo e $N,M\unlhd G$ are subgrupos normais tais que 
+Suponha que $G$ é um grupo e $N,M\unlhd G$ são subgrupos normais tais que 
 
 - $NM=G$ e 
 - $N\cap M=1$.
