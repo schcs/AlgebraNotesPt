@@ -169,6 +169,10 @@ window.Quarto = {
 \newcommand{\argz}[1]{\mbox{arg}(#1)}
 \DeclareMathOperator{\sen}{sen}
 \newcommand{\cis}[1]{\cos #1+i\sen #1}
+\newcommand{\E}{\mathbb E}
+\newcommand{\aut}[1]{\textrm{Aut}(#1)}
+\newcommand{\fix}[1]{\textrm{Fix}(#1)}
+\newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
 \]</span></p>
 </div>
 
@@ -1067,6 +1071,36 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/galois.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1147,7 +1181,7 @@ R\subseteq A\times B.
 </div>
 <div id="exm-relation" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 4.4</strong></span> Por exemplo, considerando o conjunto no <a href="#exm-prod-cart" class="quarto-xref">Exemplo&nbsp;<span>4.2</span></a>, o conjunto <span class="math display">\[
-R=\{(1,2),(1,3),(2,1)\}
+R=\{(1,3),(1,4),(2,1)\}
 \]</span> é uma relação entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</p>
 </div>
 <div id="def-relation2" class="theorem definition">
@@ -1156,7 +1190,7 @@ aRb.
 \]</span></p>
 </div>
 <div id="exm-relation2" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 4.5</strong></span> No <a href="#exm-relation" class="quarto-xref">Exemplo&nbsp;<span>4.4</span></a>, temos que <span class="math inline">\(1\)</span> está relacionado com <span class="math inline">\(2\)</span> pela relação <span class="math inline">\(R\)</span> e escrevemos que <span class="math inline">\(1R2\)</span>. Por outro lado, <span class="math inline">\(2\)</span> não está relacionado com <span class="math inline">\(3\)</span> pela mesma relação e escrevemos que <span class="math inline">\(2\not R3\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 4.5</strong></span> No <a href="#exm-relation" class="quarto-xref">Exemplo&nbsp;<span>4.4</span></a>, temos que <span class="math inline">\(1\)</span> está relacionado com <span class="math inline">\(3\)</span> pela relação <span class="math inline">\(R\)</span> e escrevemos que <span class="math inline">\(1R3\)</span>. Por outro lado, <span class="math inline">\(2\)</span> não está relacionado com <span class="math inline">\(3\)</span> pela mesma relação e escrevemos que <span class="math inline">\(2\not R3\)</span>.</p>
 </div>
 <p>Quando trabalhamos com relações teoricamente, denotamo-nas com letras como <span class="math inline">\(R\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(S\)</span>, etc. Quando trabalhamos com relações particulares, usaremos símbolos tais como <span class="math inline">\(=\)</span>, <span class="math inline">\(\leq\)</span>, <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\prec\)</span>, etc, como nos seguintes exemplos.</p>
 <div id="exm-relations3" class="theorem example">
@@ -1183,18 +1217,18 @@ aRb.
 <ol type="1">
 <li>Dizemos que <span class="math inline">\(R\)</span> é <em>reflexiva</em> se <span class="math inline">\(aRa\)</span> para todo <span class="math inline">\(a\in A\)</span> (ou seja <span class="math inline">\((a,a)\in R\)</span> para todo <span class="math inline">\(a\in A\)</span>).</li>
 <li>Dizemos que <span class="math inline">\(R\)</span> é <em>simétrica</em> se <span class="math inline">\(aRb\)</span> implica que <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>.</li>
-<li>Dizemos que <span class="math inline">\(R\)</span> é <em>antisimétrica</em> se <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRa\)</span> implicm que <span class="math inline">\(a=b\)</span> para todo <span class="math inline">\(a,b\in A\)</span>.</li>
+<li>Dizemos que <span class="math inline">\(R\)</span> é <em>antisimétrica</em> se <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRa\)</span> implicam que <span class="math inline">\(a=b\)</span> para todo <span class="math inline">\(a,b\in A\)</span>.</li>
 <li>Dizemos que <span class="math inline">\(R\)</span> é <em>transitiva</em> se <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implicam que <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>.</li>
 </ol>
 </div>
 <div id="exm-rel-props" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 4.7</strong></span> Considerando as relações no <a href="#exm-relations3" class="quarto-xref">Exemplo&nbsp;<span>4.6</span></a>, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade e divisor são simétricas. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são transitivas.</p>
+<p><span class="theorem-title"><strong>Exemplo 4.7</strong></span> Considerando as relações no <a href="#exm-relations3" class="quarto-xref">Exemplo&nbsp;<span>4.6</span></a>, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são transitivas.</p>
 </div>
 </section>
 <section id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" class="level2" data-number="4.5">
 <h2 data-number="4.5" data-anchor-id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos"><span class="header-section-number">4.5</span> <span class="math inline">\(k\)</span>-uplas ordenadas e produto cartesiano de vários conjuntos</h2>
 <p>Similarmente ao par ordenado, podemos considerar coleções ordenadas <span class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> (chamadas de <span class="math inline">\(k\)</span>-uplas) de objetos. A propriedade fundamental destes <span class="math inline">\(k\)</span>-uplas é que <span class="math display">\[
-(a_1,a_2,\ldots,a_k)=(b_1,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
+(a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
 \]</span></p>
 <p>Podemos definir o produto cartesiano de conjuntos <span class="math inline">\(A_1,\ldots,A_k\)</span> como <span class="math display">\[
 A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\}\colon a_i\in A_i\}.

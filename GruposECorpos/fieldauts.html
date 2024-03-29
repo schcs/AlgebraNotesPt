@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 58&nbsp; Grupos livres</title>
+<title>Álgebra - 68&nbsp; Automorfismos de corpos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/soluble.html" rel="next">
-<link href="../GruposECorpos/actions.html" rel="prev">
+<link href="../GruposECorpos/galois.html" rel="next">
+<link href="../GruposECorpos/decompfields.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -614,7 +614,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1031,7 +1031,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
@@ -1091,7 +1091,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
+  <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
   </div>
 </li>
@@ -1114,9 +1114,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></h1>
+<h1 class="title"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></h1>
 </div>
 
 
@@ -1133,64 +1133,81 @@ window.Quarto = {
 </header>
 
 
-<p>Sejam <span class="math inline">\(X,X^{-1}\)</span> dois conjuntos distintos e assuma que existe uma bijeção <span class="math inline">\(x\mapsto x^{-1}\)</span> entre <span class="math inline">\(X\)</span> e <span class="math inline">\(X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(x^{-1}\in X^{-1}\)</span>, então escrevemos <span class="math inline">\((x^{-1})^{-1}=x\)</span>. Uma palavra em <span class="math inline">\(X\)</span> é uma expressão na forma <span class="math display">\[
-w=x_1x_2\cdots x_k
-\]</span> onde <span class="math inline">\(k\geq 0\)</span> e <span class="math inline">\(x_i\in X\cup X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(k=0\)</span>, então <span class="math inline">\(w\)</span> é denotado por <span class="math inline">\(e\)</span> e é dita a palavra vazia. O comprimento da palavra <span class="math inline">\(w\)</span> acima é <span class="math inline">\(k\)</span>. Uma palavra <span class="math inline">\(w=x_1x_2\cdots x_k\)</span> é dita reduzida se <span class="math inline">\(w=e\)</span> ou o comprimento de <span class="math inline">\(w\)</span> é maior que <span class="math inline">\(0\)</span> e <span class="math inline">\(w\)</span> não contém nenhuma ocorrência da subpalavra <span class="math inline">\(xx^{-1}\)</span> ou <span class="math inline">\(x^{-1}x\)</span> com <span class="math inline">\(x\in X\)</span>. Se <span class="math inline">\(w\)</span> é uma palavra, então cancelando as ocorrências de subpalavras na forma <span class="math inline">\(xx^{-1}\)</span> ou&nbsp;<span class="math inline">\(x^{-1}x\)</span>, obtemos uma palavra <span class="math inline">\(\bar w\)</span> reduzida.</p>
-<p>Denotaremos por <span class="math inline">\(F_X\)</span> o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto <span class="math inline">\(F_X\)</span>. Sejam <span class="math inline">\(w_1,w_2\in F_X\)</span>. Definimos <span class="math inline">\(w_1\cdot w_2=\overline{w_1w_2}\)</span> onde <span class="math inline">\(w_1w_2\)</span> significa a concatenação de palavras.</p>
-<div id="thm-freegp" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.1</strong></span> <span class="math inline">\((F_X,\cdot)\)</span> é um grupo.</p>
-</div>
-<div id="def-freegp" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.1</strong></span> O grupo <span class="math inline">\(F_X\)</span> é chamado de grupo livre gerado por <span class="math inline">\(X\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>A operação em <span class="math inline">\(F_X\)</span> é bem definida. Além disso, <span class="math inline">\(e\)</span> é elemento neutro, e se <span class="math inline">\(x_1\cdots x_k\in F_X\)</span>, então <span class="math display">\[
-(x_1\cdots x_k)(x_k^{-1}\cdots x_1^{-1})=(x_k^{-1}\cdots x_1^{-1})(x_1\cdots x_k)=e.
-\]</span> Logo, todo elemento possui inverso. A parte não trivial desta demonstração é mostrar que a operação em <span class="math inline">\(F_X\)</span> é associativa. Mostraremos isso utilizando o truque de van der Waerden. Seja <span class="math inline">\(x\in X\)</span>. Definimos as funções <span class="math inline">\(\psi_x,\psi_{x^{-1}}:F_X\rightarrow F_X\)</span> como <span class="math display">\[
-\psi_x(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x^{-1}$};\\
-x_1\cdots x_kx&amp;\mbox{no caso contrário;}\end{array}\right.
-\]</span> e <span class="math display">\[
-\psi_{x^{-1}}(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x$};\\
-x_1\cdots x_kx^{-1}&amp;\mbox{no caso contrário.}\end{array}\right.
-\]</span> Nas definições destas funções, assumimos que o argumento <span class="math inline">\(x_1\cdots x_k\)</span> é uma palavra reduzida. Claramente, as funções <span class="math inline">\(\psi_x\)</span> e <span class="math inline">\(\psi_{x^{-1}}\)</span> são bem definidas. Além disso, note que <span class="math inline">\(\psi_x\circ \psi_{x^{-1}}=\psi_{x^{-1}}\circ \psi_x=\mbox{id}_{F_X}\)</span>. Portanto <span class="math inline">\(\psi_x,\psi_{x^{-1}}\)</span> são bijetivas e <span class="math inline">\(\psi_x^{-1}=\psi_{x^{-1}}\)</span>. Em outras palavras, <span class="math inline">\(\psi_x,\psi_{x^{-1}}\in S(F_X)\)</span>. Seja <span class="math inline">\(\mathcal F_X\)</span> o subgrupo de <span class="math inline">\(S(F_X)\)</span> gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>. Defina <span class="math inline">\(\psi: F_X\rightarrow \mathcal F_X\)</span>, <span class="math display">\[
-\psi(x_1\cdots x_k)=\psi_{x_1}\cdots \psi_{x_k}.
-\]</span> Como <span class="math inline">\(\mathcal F_X\)</span> é gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>, <span class="math inline">\(\psi\)</span> é sobrejetivo. Além disso, se <span class="math inline">\(\psi(x_1\cdots x_k)=\psi(y_1\cdots y_m)\)</span>, então <span class="math inline">\(\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}\)</span>. Por outro lado, <span class="math inline">\(x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m\)</span>. Portanto <span class="math inline">\(\psi\)</span> é injetiva, e então <span class="math inline">\(\psi\)</span> é bijetiva. Como <span class="math inline">\(\psi\)</span> também satisfaz a igualdade <span class="math inline">\(\psi(w_1w_2)=\psi(w_1)\psi(w_2)\)</span>, obtemos que <span class="math inline">\(\psi\)</span> é um isomorfismo entre as estruturas <span class="math inline">\(F_X\)</span> e <span class="math inline">\(\mathcal F_X\)</span> com as suas respetivas multiplicações. Como <span class="math inline">\(\mathcal F_X\)</span> é associativa, obtemos que <span class="math inline">\(F_X\)</span> também é. Portanto <span class="math inline">\(F_X\)</span> é um grupo.</p>
-</div>
-<div id="thm-free-univ" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.2</strong></span> (Propriedade Universal).&nbsp;Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(F_X\)</span> um grupo livre gerado por <span class="math inline">\(X\)</span>. Seja <span class="math inline">\(\varphi:X\rightarrow G\)</span> um mapa arbitrário. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> tal que <span class="math inline">\(\psi|_X=\varphi\)</span>. (Todo mapa <span class="math inline">\(X\rightarrow G\)</span> pode ser estendido a um homomorfismo <span class="math inline">\(F_X\rightarrow G\)</span>.)</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(w=x_1\cdots x_k\in F_X\)</span> e defina <span class="math inline">\(\psi(w)=\varphi(x_1)\cdots\varphi(x_k)\)</span>. Então <span class="math inline">\(\psi\)</span> é um homomorfismo e claramente <span class="math inline">\(\psi(x)=\varphi(x)\)</span> para todo <span class="math inline">\(x\in X\)</span>.</p>
-</div>
-<div id="cor-free-quot" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 58.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo gerado por um conjunto <span class="math inline">\(X\)</span>. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> sobrejetivo tal que <span class="math inline">\(\psi|_X=\mbox{id}_X\)</span>. Em particular <span class="math inline">\(G\cong F/\ker\psi\)</span>. (Cada grupo é quociente de um grupo livre.)</p>
-</div>
-<div id="def-pres" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.2</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto, <span class="math inline">\(F_X\)</span> o grupo livre gerado por <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\subseteq F_X\)</span>. Seja <span class="math inline">\(\left&lt;Y\right&gt;^{F_X}\)</span> o subgrupo normal gerado por <span class="math inline">\(Y\)</span>. O grupo quociente <span class="math inline">\(G=F_X/\left&lt;Y\right&gt;^{F_X}\)</span> é denotado por <span class="math display">\[\begin{equation}\label{eq:pres}
-\left&lt;X \mid Y\right&gt;.
-\end{equation}\]</span> A expressão~<span class="math inline">\(\eqref{eq:pres}\)</span> é dita uma apresentação para o grupo <span class="math inline">\(G\)</span>.</p>
-</div>
-<div id="exm-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.1</strong></span> O grupo cíclico <span class="math inline">\(C_n\)</span> é apresentado pela apresentação <span class="math display">\[
-\left&lt;x\mid x^n\right&gt;.
+<div id="def-field-aut" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 68.1</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo. Lembre que um mapa <span class="math inline">\(\varphi:\E\to\E\)</span> bijetivo é dito automorfismo de <span class="math inline">\(\E\)</span> se&nbsp;<span class="math inline">\(\varphi(x+y)=\varphi(x)+\varphi(y)\)</span> e <span class="math inline">\(\varphi(xy)=\varphi(x)\varphi(y)\)</span> vale para todo <span class="math inline">\(x,y\in\E\)</span>. O conjunto de automorfismos de <span class="math inline">\(\E\)</span> é um grupo com a operação de composição e este grupo é denotado por <span class="math inline">\(\aut \E\)</span>. Se <span class="math inline">\(\varphi\in\aut\E\)</span>, então definimos <span class="math display">\[
+\fix\varphi=\{x\in \E\mid \varphi(x)=x\}.
 \]</span></p>
 </div>
-<div id="exm-pres-dih" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.2</strong></span> Seja <span class="math inline">\(G\)</span> o grupo dihedral <span class="math inline">\(D_n\)</span> com <span class="math inline">\(n\geq 3\)</span>. Afirmamos que <span class="math inline">\(G\)</span> é apresentado por <span class="math display">\[
-\left&lt; a,b\mid a^n,b^2,baba\right&gt;.
-\]</span> Seja <span class="math inline">\(\bar a\in D_n\)</span> a rotação de ordem <span class="math inline">\(n\)</span> e <span class="math inline">\(\bar b\in D_n\)</span> uma reflexão. Seja <span class="math inline">\(X=\{a,b\}\)</span> e considere o grupo livre <span class="math inline">\(F_X\)</span>. Pela Propriedade Universal, o mapa <span class="math inline">\(a\mapsto \bar a\)</span>, <span class="math inline">\(b\mapsto \bar b\)</span>, pode ser estendido a um homomorfismo sobrejetivo <span class="math inline">\(\psi:F_X\rightarrow D_n\)</span>. Como <span class="math inline">\(\bar a^n=\bar b^2=\bar b\bar a\bar b\bar a=1\)</span>, tem-se que <span class="math inline">\(a^n,b^n,baba\in \ker\psi\)</span>. Denotando por <span class="math inline">\(N=\left&lt;a^n,b^2,baba\right&gt;^{F_X}\)</span>, obtemos que <span class="math inline">\(N\leq \ker\psi\)</span>. Portanto, podemos definir um homomorfismo sobrejetivo <span class="math inline">\(\bar\psi:F_X/N\rightarrow D_n\)</span> e isto implica que <span class="math inline">\(|F_X/N|\geq 2n\)</span>.. Para provar que <span class="math inline">\(\bar\psi\)</span> é um isomorfismo, precisamos provar que <span class="math inline">\(|F_X/N|\leq 2n\)</span>, mas isso segue da observação que, usando <span class="math inline">\(a^n\in N\)</span>, <span class="math inline">\(b^2\in N\)</span> e <span class="math inline">\(baN=a^{-1}bN\)</span>,&nbsp; todo elemento de <span class="math inline">\(F/N\)</span> pode ser escrito como <span class="math inline">\(a^\alpha b^\beta N\)</span> onde <span class="math inline">\(0\leq \alpha\leq n-1\)</span> e <span class="math inline">\(0\leq \beta\leq 1\)</span>.</p>
+<div id="exr-field-aut" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 68.1</strong></span> <span class="math inline">\(\fix\varphi\)</span> é um corpo, portanto <span class="math inline">\(\E:\fix\varphi\)</span> é uma extensão de corpos.</p>
 </div>
-<div id="exm-quot" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.3</strong></span> O grupo dos quaternions <span class="math inline">\(Q_8\)</span> pode ser apresentado pelas apresentações <span class="math display">\[
-\left&lt;a,b\mid a^4,b^2a^2,bab^{-1}a\right&gt;
-\]</span> e <span class="math display">\[
-\left&lt;a,b\mid abab^{-1},a^2b^{-2}\right&gt;
-\]</span></p>
+<div id="exr-field-aut" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 68.2</strong></span> A conjugação complexa&nbsp;<span class="math inline">\(\varphi: x+iy\mapsto x-iy\)</span> é um automorfismo de&nbsp; <span class="math inline">\(\C\)</span> e&nbsp; <span class="math inline">\(\fix\varphi = \R\)</span>.</p>
 </div>
-<div id="exm-sym-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.4</strong></span> O grupo simétrico é gerado pelas transposições <span class="math inline">\(a_i=(i,i+1)\)</span> com <span class="math inline">\(i\in\{1,\ldots,n-1\}\)</span> e ele pode ser apresentado pela apresentação <span class="math display">\[
-\left&lt;a_1,\ldots,a_{n-1}\mid a_i^2,(a_ia_{i+1})^3, [a_i,a_j] \mbox{ se $|i-j|\geq 2$}\right&gt;.
-\]</span> Esta apresentação é referida com a apresentação de Coxeter.</p>
+<div id="exm-field-aut" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 68.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(f(x)\in\F_p[x]\)</span> um polinômio irredutível de grau <span class="math inline">\(d\)</span>. Defina <span class="math inline">\(\E=\F_p[x]/(f(x))\)</span> e note que <span class="math inline">\(\E\)</span> é um corpo de <span class="math inline">\(q=p^d\)</span> elementos. Afirmamos que o mapa <span class="math inline">\(\varphi:\E\to\E\)</span> definido como <span class="math inline">\(\alpha\mapsto \alpha^p\)</span> é um automorfismo. É bem conhecido que <span class="math inline">\((\alpha+\beta)^p=\alpha^p+\beta^p\)</span> e <span class="math inline">\((\alpha\beta)^p=\alpha^p\beta^p\)</span>, então precisamos verificar apenas que <span class="math inline">\(\varphi\)</span> é uma bijeção. Como <span class="math inline">\(\E\)</span> é um corpo finito, é suficiente verificar que <span class="math inline">\(\varphi\)</span> é injetivo. Isso é verdade, pois se <span class="math inline">\(\alpha,\beta\in\E\)</span> tais que <span class="math inline">\(\varphi(\alpha)=\varphi(\beta)\)</span>, então <span class="math display">\[
+0=\alpha^p-\beta^p=(\alpha-\beta)^p
+\]</span> que implica que <span class="math inline">\(\alpha-\beta=0\)</span>; ou seja <span class="math inline">\(\alpha=\beta\)</span>. Temos então que <span class="math inline">\(\varphi\in\aut\E\)</span>. Além disso, <span class="math inline">\(\fix\varphi\)</span> é o conjunto de soluções da equação <span class="math inline">\(x^p=x\)</span> e esta equação tem precisamente <span class="math inline">\(p\)</span> soluções, nomeadamente, os elementos de <span class="math inline">\(\F_p\)</span>. Logo&nbsp;<span class="math inline">\(\fix\varphi=\F_p\)</span>. O automorfismo <span class="math inline">\(\varphi\)</span> é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.</p>
+</div>
+<div id="def-galois-group" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 68.2</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão de corpos. Defina <span class="math display">\[
+\gal \E\F=\{\alpha\in\aut\E\mid \F\subseteq\fix\alpha\}.
+\]</span> Em outras palavras, <span class="math inline">\(\gal\E\F\)</span> é o conjunto de automorfismos <span class="math inline">\(\varphi\)</span> de <span class="math inline">\(\E\)</span> tais que <span class="math inline">\(\varphi(x)=x\)</span> para todo <span class="math inline">\(x\in\F\)</span>. É fácil verificar que <span class="math inline">\(\gal\E\F\)</span> é um subgrupo de <span class="math inline">\(\aut\E\)</span>. Este subgrupo é chamado de grupo de <a href="https://pt.wikipedia.org/wiki/%C3%89variste_Galois">Galois</a> da extensão <span class="math inline">\(\E:\F\)</span> ou de grupo de Galois de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>.</p>
+</div>
+<div id="exr-gal-group" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 68.3</strong></span> Se <span class="math inline">\(\varphi\in\gal\E\F\)</span>, então <span class="math inline">\(\varphi\)</span> é uma transformação <span class="math inline">\(\F\)</span>-linear de <span class="math inline">\(\E\)</span>.</p>
+</div>
+<div id="lem-aut-pol" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 68.1</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão, <span class="math inline">\(f(x)\in\F[x]\)</span>, <span class="math inline">\(\alpha\in\E\)</span> tal que <span class="math inline">\(f(\alpha)=0\)</span>, e <span class="math inline">\(\varphi\in\gal\E\F\)</span>. Então <span class="math inline">\(f(\varphi(\alpha))=0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio.</p>
+</div>
+<div id="exm-gal" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 68.2</strong></span> Determinemos <span class="math inline">\(\gal\C\R\)</span>. Seja <span class="math inline">\(\varphi\in\gal\C\R\)</span>. Como <span class="math inline">\(\varphi\)</span> é uma transformação <span class="math inline">\(\R\)</span>-linear, as imagens <span class="math inline">\(\varphi(1)\)</span> e <span class="math inline">\(\varphi(i)\)</span> determinam <span class="math inline">\(\varphi\)</span>. Como <span class="math inline">\(1\in\R\)</span>, temos que <span class="math inline">\(\varphi(1)=1\)</span>. Note que <span class="math inline">\(\varphi(i)\)</span> é raiz do polinômio <span class="math inline">\(x^2+1\)</span>, então <span class="math inline">\(\varphi(i)\)</span> será raiz do mesmo polinômio que implica que <span class="math inline">\(\varphi(i)=\pm i\)</span>. Escolhendo <span class="math inline">\(\varphi(i)=i\)</span>, obtemos que <span class="math inline">\(\varphi=\mbox{id}_\C\)</span>, enquanto escolhendo <span class="math inline">\(\varphi(i)=-i\)</span>, obtemos a conjugação complexa. Obtivemos então que <span class="math inline">\(\gal\C\R\)</span> é um grupo de ordem 2.</p>
+</div>
+<div class="{exm-gal2}">
+<p>Seja <span class="math inline">\(\xi=\exp(2\pi i/3)\)</span> (terceira raiz da unidade) e considere a extensão <span class="math inline">\(\E=\Q(\xi)\)</span> de <span class="math inline">\(\Q\)</span>. Note que <span class="math inline">\(\xi\)</span> é raiz do polinômio <span class="math inline">\(x^3-1=(x-1)(x^2+x+1)\)</span> e que o polinômio <span class="math inline">\(x^2+x+1\)</span> é irredutível sobre <span class="math inline">\(\Q\)</span>. Em particular, <span class="math inline">\(m_\xi(x)=x^2+x+1\)</span> e <span class="math inline">\(\E\)</span> é um espaço vetorial de dimensão <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\Q\)</span>. Além disso, <span class="math display">\[
+\E=\left&lt;1,\xi\right&gt;_\Q=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
+\]</span> e para determinar os automorfismos <span class="math inline">\(\varphi\in\gal\E\Q\)</span>, é suficiente saber <span class="math inline">\(\varphi(1)\)</span> e <span class="math inline">\(\varphi(\xi)\)</span>. Como no exemplo, anterior, <span class="math inline">\(\varphi(1)=1\)</span> e <span class="math inline">\(\varphi(\xi)\)</span> é raiz de <span class="math inline">\(x^2+x+1\)</span>; consequentemente <span class="math inline">\(\varphi(\xi)=\xi\)</span> ou <span class="math inline">\(\varphi(\xi)=\xi^2=\bar\xi\)</span> (conjugado complexo). O primeiro caso dá o automorfismo identidade, enquanto o segundo dá o automorfismo <span class="math display">\[
+\alpha+\beta\xi\mapsto \alpha+\beta\bar\xi \quad\mbox{onde}\quad\alpha,\beta\in\Q.
+\]</span> (Na verdade, precisa verificar que isso é um automorfismo, mas isso é uma conta simples que o leitor pode fazer.) Então <span class="math inline">\(|\gal\E\Q|=2\)</span>.</p>
+</div>
+<div id="thm-transitive" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 68.1</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística zero ou um corpo finito. Assuma que <span class="math inline">\(\E\)</span> é um corpo de decomposição de um polinômio irredutível <span class="math inline">\(f(x)\in\F[x]\)</span> com <span class="math inline">\(\mbox{grau}\,f(x)=k\)</span>. Então <span class="math inline">\(G=\gal\E\F\)</span> permuta as raízes de <span class="math inline">\(f(x)\)</span> transitivamente e <span class="math inline">\(G\)</span> pode ser visto como um subgrupo transitivo de <span class="math inline">\(S_k\)</span>. Em particular <span class="math inline">\(k\)</span> divide <span class="math inline">\(|G|\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(\alpha,\beta\in\E\)</span> duas raízes de <span class="math inline">\(f(x)\)</span>. Note que <span class="math inline">\(m_\alpha(x)=m_\beta(x)=f(x)\)</span>, e&nbsp; <span class="math inline">\(\F(\alpha)\cong\F(\beta)\)</span>. De fato, nós provamos em um resultado anterior que existe um isomorfismo <span class="math inline">\(\psi:\F(\alpha)\to\F(\beta)\)</span> tal que <span class="math inline">\(\psi|_\F=\mbox{id}_\F\)</span> e <span class="math inline">\(\psi(\alpha)=\beta\)</span>. Agora observe que <span class="math inline">\(f(x)\)</span> pode ser visto como um polinômio sobre <span class="math inline">\(\F(\alpha)\)</span> e também sobre <span class="math inline">\(\F(\beta)\)</span> e <span class="math inline">\(\E\)</span> é corpo de decomposição de <span class="math inline">\(f(x)\)</span> sobre estes corpos. Por um outro teorema anterior, existe isomorfismo (na verdade um automorfismo) <span class="math inline">\(\varphi:\E\to\E\)</span> tal que <span class="math inline">\(\varphi|_{\F(\alpha)}=\psi\)</span>. Ora, observe que <span class="math inline">\(\varphi\in\gal\E\F\)</span> tal que <span class="math inline">\(\varphi(\alpha)=\beta\)</span>. Isso implica que <span class="math inline">\(\gal\E\F\)</span> permuta transitivamente as raízes de <span class="math inline">\(f(x)\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\gal\E\F\)</span> pode ser considerado como um subgrupo de <span class="math inline">\(S_k\)</span>, observe que <span class="math inline">\(f(x)\)</span> não possui raízes múltiplas em <span class="math inline">\(\E\)</span> (pois <span class="math inline">\(\mbox{mdc}(f(x),f'(x))=1)\)</span> e isso significa que <span class="math inline">\(f(x)\)</span> tem precisamente <span class="math inline">\(k\)</span> raízes, nomeadamente <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> mutualmente distintas. Se um elemento <span class="math inline">\(\sigma\)</span> de <span class="math inline">\(\gal\E\F\)</span> está no núcleo da ação em <span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span>, então <span class="math inline">\(\sigma\)</span> fixa todas as raízes. Mas como <span class="math inline">\(\E\)</span> é gerado por estas raízes (sendo corpo de decomposição), <span class="math inline">\(\sigma=\mbox{id}_\E\)</span>. Então <span class="math inline">\(\gal\E\F\)</span> pode ser visto como um subgrupo do grupo simétrico do conjunto&nbsp;&nbsp;<span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span> e este grupo simétrico é claramente isomorfo a <span class="math inline">\(S_k\)</span>. Finalmente, o fato que <span class="math inline">\(k\mid |\gal\E\F|\)</span> segue do Teorema Orbita-Estabilizador.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 68.4</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo e sejam <span class="math inline">\(\varphi_1,\ldots,\varphi_k\in\aut\E\)</span>. Assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span> tais que <span class="math inline">\(\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0\)</span>. Mostre que <span class="math inline">\(\alpha_1=\cdots=\alpha_k=0\)</span>.</p>
+</div>
+<div id="lem-gal-ff" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 68.2</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão finita. Então <span class="math inline">\(|\gal\E\F|\leq \dim_\F\E\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(n=\dim_\F\E\)</span> e assuma que <span class="math inline">\(\varphi_1,\ldots,\varphi_{n+1}\)</span> são elementos distintos de <span class="math inline">\(\gal\E\F\)</span>. Vamos obter uma contradição. Seja <span class="math inline">\(e_1,\ldots,e_n\)</span> uma base de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>. Considere o sistema de equações lineares sobre <span class="math inline">\(\E\)</span>: <span class="math display">\[\begin{eqnarray*}
+\varphi_1(e_1)x_1+\cdots+\varphi_{n+1}(e_1)x_{n+1}&amp;=&amp;0\\
+&amp;\vdots&amp;\\
+\varphi_1(e_n)x_1+\cdots+\varphi_{n+1}(e_n)x_{n+1}&amp;=&amp;0.
+\end{eqnarray*}\]</span> Como temos <span class="math inline">\(n\)</span> equações para <span class="math inline">\(n+1\)</span> incógnitas, existe uma solução não trivial <span class="math inline">\((\alpha_1,\ldots,\alpha_{n+1})\in\E^{n+1}\)</span> e obtemos usando esta solução que <span class="math display">\[
+0=\alpha_1\varphi_1(e_i)+\cdots+\alpha_{n+1}\varphi_{n+1}(e_i)=(\alpha_1\varphi_1+\cdots+\alpha_{n+1}\varphi_{n+1})(e_i)
+\]</span> para todo <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>. Isso implica que <span class="math inline">\(\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0\)</span>, mas isso é impossível pelo exercício anterior.</p>
+</div>
+<div id="lem-simple-ext" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 68.3</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo infinito (por exemplo um corpo de caraterística zero), <span class="math inline">\(\E\)</span> uma extensão de <span class="math inline">\(\F\)</span> e sejam <span class="math inline">\(\alpha,\beta\in\E\)</span> elementos algébricos sobre <span class="math inline">\(\F\)</span>. Então existe um elemento <span class="math inline">\(\gamma\in\E\)</span> tal que <span class="math inline">\(\F(\alpha,\beta)=\F(\gamma)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
+</div>
+<div id="thm-gg-order" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 68.2</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística zero, <span class="math inline">\(f(x)\in\F[x]\)</span> um polinômio irredutível, e seja <span class="math inline">\(\E\)</span> o corpo de decomposição de <span class="math inline">\(f(x)\)</span>. Então <span class="math inline">\(|\gal \E\F|=\dim_\F\E\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(h=|\gal\E\F|\)</span>.. Pelo&nbsp; resultado anterior, <span class="math inline">\(h\leq\dim_\F\E\)</span>, então basta provar a outra desigualdade. Pelo lema anterior, temos que <span class="math inline">\(\E=\F(\alpha)\)</span> com algum <span class="math inline">\(\alpha\in\E\)</span>. Afirmamos que <span class="math inline">\(\mbox{grau}\,m_\alpha(x)\leq h\)</span> e isso vai implicar que <span class="math inline">\(\dim_\F\E\leq h\)</span>. Note que é suficiente achar um polinômio <span class="math inline">\(g(x)\in\F[x]\)</span> de grau <span class="math inline">\(h\)</span> tal que <span class="math inline">\(\alpha\)</span> é raiz de <span class="math inline">\(g(x)\)</span>. Assuma que <span class="math inline">\(\{\sigma_1,\ldots,\sigma_h\}=\gal\E\F\)</span> com <span class="math inline">\(\sigma_1=1\)</span> e considere o polinômio <span class="math display">\[
+g(x)=(x-\sigma_1(\alpha))\cdots(x-\sigma_h(\alpha))=x^h+\beta_{h-1}x^{h-1}+\cdots+\beta_1h+\beta_0.
+\]</span> Como <span class="math inline">\(g(x)\)</span> é invariante por todo elemento <span class="math inline">\(\sigma_i\)</span> de <span class="math inline">\(\gal\E\F\)</span>, temos que <span class="math inline">\(g(x)\in\F[x]\)</span>. Além disso, <span class="math inline">\(g(\alpha)=g(\sigma_1(\alpha))=0\)</span> e a demonstração está pronta.</p>
 </div>
 
 
@@ -1607,13 +1624,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/actions.html" class="pagination-link" aria-label="Ações de grupos e o Teorema de Órbita-Estabilizador">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span>
+      <a href="../GruposECorpos/decompfields.html" class="pagination-link" aria-label="Corpos de decomposição">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/soluble.html" class="pagination-link" aria-label="Grupos solúveis">
-        <span class="nav-page-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/galois.html" class="pagination-link" aria-label="O Teorema Fundamental da Teoria de Galois">
+        <span class="nav-page-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

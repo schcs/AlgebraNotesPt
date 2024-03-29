@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 58&nbsp; Grupos livres</title>
+<title>Álgebra - 66&nbsp; Extensões de corpos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/soluble.html" rel="next">
-<link href="../GruposECorpos/actions.html" rel="prev">
+<link href="../GruposECorpos/decompfields.html" rel="next">
+<link href="../GruposECorpos/ringsfields.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -614,7 +614,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/extensions.html"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1031,7 +1031,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
@@ -1079,7 +1079,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
+  <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
   </div>
 </li>
@@ -1114,9 +1114,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/extensions.html"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></h1>
+<h1 class="title"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></h1>
 </div>
 
 
@@ -1133,64 +1133,82 @@ window.Quarto = {
 </header>
 
 
-<p>Sejam <span class="math inline">\(X,X^{-1}\)</span> dois conjuntos distintos e assuma que existe uma bijeção <span class="math inline">\(x\mapsto x^{-1}\)</span> entre <span class="math inline">\(X\)</span> e <span class="math inline">\(X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(x^{-1}\in X^{-1}\)</span>, então escrevemos <span class="math inline">\((x^{-1})^{-1}=x\)</span>. Uma palavra em <span class="math inline">\(X\)</span> é uma expressão na forma <span class="math display">\[
-w=x_1x_2\cdots x_k
-\]</span> onde <span class="math inline">\(k\geq 0\)</span> e <span class="math inline">\(x_i\in X\cup X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(k=0\)</span>, então <span class="math inline">\(w\)</span> é denotado por <span class="math inline">\(e\)</span> e é dita a palavra vazia. O comprimento da palavra <span class="math inline">\(w\)</span> acima é <span class="math inline">\(k\)</span>. Uma palavra <span class="math inline">\(w=x_1x_2\cdots x_k\)</span> é dita reduzida se <span class="math inline">\(w=e\)</span> ou o comprimento de <span class="math inline">\(w\)</span> é maior que <span class="math inline">\(0\)</span> e <span class="math inline">\(w\)</span> não contém nenhuma ocorrência da subpalavra <span class="math inline">\(xx^{-1}\)</span> ou <span class="math inline">\(x^{-1}x\)</span> com <span class="math inline">\(x\in X\)</span>. Se <span class="math inline">\(w\)</span> é uma palavra, então cancelando as ocorrências de subpalavras na forma <span class="math inline">\(xx^{-1}\)</span> ou&nbsp;<span class="math inline">\(x^{-1}x\)</span>, obtemos uma palavra <span class="math inline">\(\bar w\)</span> reduzida.</p>
-<p>Denotaremos por <span class="math inline">\(F_X\)</span> o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto <span class="math inline">\(F_X\)</span>. Sejam <span class="math inline">\(w_1,w_2\in F_X\)</span>. Definimos <span class="math inline">\(w_1\cdot w_2=\overline{w_1w_2}\)</span> onde <span class="math inline">\(w_1w_2\)</span> significa a concatenação de palavras.</p>
-<div id="thm-freegp" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.1</strong></span> <span class="math inline">\((F_X,\cdot)\)</span> é um grupo.</p>
+<div id="def-extension" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.1</strong></span> Sejam <span class="math inline">\(\F\)</span> e <span class="math inline">\(\E\)</span> corpos tais que <span class="math inline">\(\F\subseteq\E\)</span>. Dizemos que <span class="math inline">\(\E\)</span> é uma <em>extensão</em> de <span class="math inline">\(\F\)</span>. Escrevemos que <span class="math inline">\(\E:\F\)</span> é uma extensão.</p>
 </div>
-<div id="def-freegp" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.1</strong></span> O grupo <span class="math inline">\(F_X\)</span> é chamado de grupo livre gerado por <span class="math inline">\(X\)</span>.</p>
+<div class="{exm-extension}">
+<p><span class="math inline">\(\R\)</span> é uma extensão de <span class="math inline">\(\Q\)</span> e <span class="math inline">\(\C\)</span> é uma extensão de <span class="math inline">\(\R\)</span>.&nbsp;&nbsp;Se <span class="math inline">\(f(x)\)</span> é um polinômio irredutível sobre um corpo <span class="math inline">\(\F\)</span>, então <span class="math inline">\(\F[x]/(f(x))\)</span> é uma extensão <span class="math inline">\(\F\)</span>.</p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>A operação em <span class="math inline">\(F_X\)</span> é bem definida. Além disso, <span class="math inline">\(e\)</span> é elemento neutro, e se <span class="math inline">\(x_1\cdots x_k\in F_X\)</span>, então <span class="math display">\[
-(x_1\cdots x_k)(x_k^{-1}\cdots x_1^{-1})=(x_k^{-1}\cdots x_1^{-1})(x_1\cdots x_k)=e.
-\]</span> Logo, todo elemento possui inverso. A parte não trivial desta demonstração é mostrar que a operação em <span class="math inline">\(F_X\)</span> é associativa. Mostraremos isso utilizando o truque de van der Waerden. Seja <span class="math inline">\(x\in X\)</span>. Definimos as funções <span class="math inline">\(\psi_x,\psi_{x^{-1}}:F_X\rightarrow F_X\)</span> como <span class="math display">\[
-\psi_x(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x^{-1}$};\\
-x_1\cdots x_kx&amp;\mbox{no caso contrário;}\end{array}\right.
-\]</span> e <span class="math display">\[
-\psi_{x^{-1}}(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x$};\\
-x_1\cdots x_kx^{-1}&amp;\mbox{no caso contrário.}\end{array}\right.
-\]</span> Nas definições destas funções, assumimos que o argumento <span class="math inline">\(x_1\cdots x_k\)</span> é uma palavra reduzida. Claramente, as funções <span class="math inline">\(\psi_x\)</span> e <span class="math inline">\(\psi_{x^{-1}}\)</span> são bem definidas. Além disso, note que <span class="math inline">\(\psi_x\circ \psi_{x^{-1}}=\psi_{x^{-1}}\circ \psi_x=\mbox{id}_{F_X}\)</span>. Portanto <span class="math inline">\(\psi_x,\psi_{x^{-1}}\)</span> são bijetivas e <span class="math inline">\(\psi_x^{-1}=\psi_{x^{-1}}\)</span>. Em outras palavras, <span class="math inline">\(\psi_x,\psi_{x^{-1}}\in S(F_X)\)</span>. Seja <span class="math inline">\(\mathcal F_X\)</span> o subgrupo de <span class="math inline">\(S(F_X)\)</span> gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>. Defina <span class="math inline">\(\psi: F_X\rightarrow \mathcal F_X\)</span>, <span class="math display">\[
-\psi(x_1\cdots x_k)=\psi_{x_1}\cdots \psi_{x_k}.
-\]</span> Como <span class="math inline">\(\mathcal F_X\)</span> é gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>, <span class="math inline">\(\psi\)</span> é sobrejetivo. Além disso, se <span class="math inline">\(\psi(x_1\cdots x_k)=\psi(y_1\cdots y_m)\)</span>, então <span class="math inline">\(\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}\)</span>. Por outro lado, <span class="math inline">\(x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m\)</span>. Portanto <span class="math inline">\(\psi\)</span> é injetiva, e então <span class="math inline">\(\psi\)</span> é bijetiva. Como <span class="math inline">\(\psi\)</span> também satisfaz a igualdade <span class="math inline">\(\psi(w_1w_2)=\psi(w_1)\psi(w_2)\)</span>, obtemos que <span class="math inline">\(\psi\)</span> é um isomorfismo entre as estruturas <span class="math inline">\(F_X\)</span> e <span class="math inline">\(\mathcal F_X\)</span> com as suas respetivas multiplicações. Como <span class="math inline">\(\mathcal F_X\)</span> é associativa, obtemos que <span class="math inline">\(F_X\)</span> também é. Portanto <span class="math inline">\(F_X\)</span> é um grupo.</p>
+<div id="def-degree-ext" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.2</strong></span> Assuma que <span class="math inline">\(\E\)</span> é uma extensão de <span class="math inline">\(\F\)</span>. Neste caso <span class="math inline">\(\E\)</span> é um espaço vetorial sobre <span class="math inline">\(\F\)</span> e podemos considerar a dimensão <span class="math inline">\(\dim_\F\E\)</span>. Esta quantidade será referida como o <em>grau da extensão</em> de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>.</p>
 </div>
-<div id="thm-free-univ" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.2</strong></span> (Propriedade Universal).&nbsp;Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(F_X\)</span> um grupo livre gerado por <span class="math inline">\(X\)</span>. Seja <span class="math inline">\(\varphi:X\rightarrow G\)</span> um mapa arbitrário. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> tal que <span class="math inline">\(\psi|_X=\varphi\)</span>. (Todo mapa <span class="math inline">\(X\rightarrow G\)</span> pode ser estendido a um homomorfismo <span class="math inline">\(F_X\rightarrow G\)</span>.)</p>
+<div id="exm-degree-ext" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 66.1</strong></span> <span class="math inline">\(\R:\Q\)</span> é uma extensão de grau infinita, o grau da extensão <span class="math inline">\(\C:\R\)</span> é igual a dois e se <span class="math inline">\(f(x)\in\F[x]\)</span> for irredutível, então <span class="math inline">\(\F[x]/(f(x)):\F\)</span> é uma extensão com grau igual ao grau do polinômio <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div id="def-ext2" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.3</strong></span> Uma extensão <span class="math inline">\(\E:\F\)</span> é dita <em>finita</em> se <span class="math inline">\(\dim_\F\E\)</span> é finita. Se <span class="math inline">\(\E:\F\)</span> é uma extensão e <span class="math inline">\(\alpha\in\E\)</span>, então <span class="math inline">\(\alpha\)</span> é dito <em>algébrico</em> (sobre <span class="math inline">\(\F\)</span>) se existe um polinômio <span class="math inline">\(f(x)\in\F[x]\)</span> não nulo tal que <span class="math inline">\(f(\alpha)=0\)</span>. Caso contrário, <span class="math inline">\(\alpha\)</span> é dito <em>transcendental </em>(sobre <span class="math inline">\(\F\)</span>). Uma extensão <span class="math inline">\(\E:\F\)</span> é dita <em>algébrica&nbsp;</em>se todos os elementos de <span class="math inline">\(\E\)</span> são algébricos sobre <span class="math inline">\(\F\)</span>. Caso contrário <span class="math inline">\(\E\)</span> é dito <em>transcendental</em> sobre <span class="math inline">\(\F\)</span>.</p>
+</div>
+<div id="lem-ext-alg" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 66.1</strong></span> Se <span class="math inline">\(\E:\F\)</span> é uma extensão finita, então ela é algébrica.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(w=x_1\cdots x_k\in F_X\)</span> e defina <span class="math inline">\(\psi(w)=\varphi(x_1)\cdots\varphi(x_k)\)</span>. Então <span class="math inline">\(\psi\)</span> é um homomorfismo e claramente <span class="math inline">\(\psi(x)=\varphi(x)\)</span> para todo <span class="math inline">\(x\in X\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(\alpha\in\E\)</span>. Como <span class="math inline">\(\dim_\F\E\)</span> é finita, a sequência <span class="math inline">\(\alpha^0,\alpha,\alpha^2,\ldots\)</span> é linearmente dependente; ou seja existe algum <span class="math inline">\(k\geq 0\)</span> tal que <span class="math inline">\(\alpha^0,\alpha,\alpha^2,\ldots,\alpha^{k}\)</span> são linearmente dependetes. Em outras palavras, existem coeficientes <span class="math inline">\(\beta_0,\ldots,\beta_{k}\)</span> tal que <span class="math display">\[
+\beta_0\alpha^0+\beta_1\alpha+\beta_2\alpha^2+\cdots+\beta_k\alpha^k=0.
+\]</span> Isso implica que <span class="math inline">\(\alpha\)</span> é raiz do polinômio <span class="math inline">\(f(x)=\beta_0+\beta_1x+\cdots+\beta_kx^k\)</span> e portanto <span class="math inline">\(\alpha\)</span> é algébrico. Como <span class="math inline">\(\alpha\)</span> foi escolhido arbitrariamente, <span class="math inline">\(\E:\F\)</span> é uma extensão algébrica.</p>
 </div>
-<div id="cor-free-quot" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 58.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo gerado por um conjunto <span class="math inline">\(X\)</span>. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> sobrejetivo tal que <span class="math inline">\(\psi|_X=\mbox{id}_X\)</span>. Em particular <span class="math inline">\(G\cong F/\ker\psi\)</span>. (Cada grupo é quociente de um grupo livre.)</p>
+<div id="def-pol-min" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.4</strong></span> Se <span class="math inline">\(\E:\F\)</span> é uma extensão e <span class="math inline">\(\alpha\in\E\setminus\{0\}\)</span> é algébrico, então o conjunto <span class="math display">\[
+I_\alpha=\{f(x)\in\F[x]\mid f(\alpha)=0\}
+\]</span> é um ideal não trivial. Como os ideais de <span class="math inline">\(\F[x]\)</span> são principais, existe um único polinômio mônico <span class="math inline">\(m_\alpha(x)\)</span> tal que <span class="math inline">\(I_\alpha=(m_\alpha(x))\)</span>. O polinômio <span class="math inline">\(m_\alpha(x)\)</span> é chamado de polinômio minimal de <span class="math inline">\(\alpha\)</span> (sobre <span class="math inline">\(\F\)</span>).</p>
 </div>
-<div id="def-pres" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.2</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto, <span class="math inline">\(F_X\)</span> o grupo livre gerado por <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\subseteq F_X\)</span>. Seja <span class="math inline">\(\left&lt;Y\right&gt;^{F_X}\)</span> o subgrupo normal gerado por <span class="math inline">\(Y\)</span>. O grupo quociente <span class="math inline">\(G=F_X/\left&lt;Y\right&gt;^{F_X}\)</span> é denotado por <span class="math display">\[\begin{equation}\label{eq:pres}
-\left&lt;X \mid Y\right&gt;.
-\end{equation}\]</span> A expressão~<span class="math inline">\(\eqref{eq:pres}\)</span> é dita uma apresentação para o grupo <span class="math inline">\(G\)</span>.</p>
+<div id="lem-pol-min" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 66.2</strong></span> Com as suposições do parágrafo anterior, as seguintes são verdadeiras.</p>
+<ol type="1">
+<li>O polinômio <span class="math inline">\(m_\alpha(x)\)</span> é&nbsp; irredutível.</li>
+<li>se <span class="math inline">\(f(x)\in\F[x]\)</span> é irredutível e mônico tal que <span class="math inline">\(f(\alpha)=0\)</span>, então <span class="math inline">\(f(x)=m_\alpha(x)\)</span>.</li>
+</ol>
 </div>
-<div id="exm-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.1</strong></span> O grupo cíclico <span class="math inline">\(C_n\)</span> é apresentado pela apresentação <span class="math display">\[
-\left&lt;x\mid x^n\right&gt;.
+<p>:::{.proof} 1.&nbsp;Assuma que <span class="math inline">\(m_\alpha(x)=a(x)b(x)\)</span>. Tem-se que <span class="math display">\[
+0=m_\alpha(\alpha)=a(\alpha)b(\alpha),
+\]</span> que implica que <span class="math inline">\(a(\alpha)=0\)</span> ou <span class="math inline">\(b(\alpha)=0\)</span>. No primeiro caso <span class="math inline">\(a(x)\in I_\alpha\)</span> e então <span class="math inline">\(a(x)\)</span> é um múltiplo de <span class="math inline">\(m_\alpha(x)\)</span>. Mas no mesmo tempo <span class="math inline">\(a(x)\)</span> é um divisor de <span class="math inline">\(m_\alpha(x)\)</span> que implica que <span class="math inline">\(a(x)\)</span> tem de ser um associado (múltiplo escalar) de <span class="math inline">\(m_\alpha(x)\)</span>. Se <span class="math inline">\(b(x)=0\)</span>, obtemos similarmente que <span class="math inline">\(b(x)\)</span> é um associado de <span class="math inline">\(m_\alpha(x)\)</span>. Isso significa que <span class="math inline">\(m_\alpha(x)\)</span> é irredutível.</p>
+<ol start="2" type="1">
+<li>Assuma que <span class="math inline">\(f(x)\in\F[x]\)</span> irredutível e mônico tal que <span class="math inline">\(f(\alpha)=0\)</span>. Neste caso <span class="math inline">\(f(x)\in I_\alpha\)</span> e <span class="math inline">\((f(x))\subseteq I_\alpha\)</span>. Por outro lado, <span class="math inline">\(f(x)\)</span> sendo irredutível, <span class="math inline">\((f(x))\)</span> é um ideal maximal. Como <span class="math inline">\(I_\alpha\neq \F[x]\)</span>, temos que <span class="math inline">\((m_\alpha(x))=I_\alpha=(f(x))\)</span>. Isso implica que <span class="math inline">\(m_\alpha(x)\)</span> é um associado de <span class="math inline">\(f(x)\)</span>. Como os dois são mônicos, obtemos que <span class="math inline">\(m_\alpha(x)=f(x)\)</span>.</li>
+</ol>
+<p>Seja <span class="math inline">\(\E:\F\)</span> uma extensão&nbsp; assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span>. O menor subcorpo de <span class="math inline">\(\E\)</span> que contém <span class="math inline">\(\F\)</span> e <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> é chamado do <em>corpo gerado por <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> </em>(sobre <span class="math inline">\(\F\)</span>) e é denotado por <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span>.</p>
+<div id="def-ext-finite" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.5</strong></span> O corpo <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span> coincide com o conjunto de todas as expressões racionais em <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> com coeficientes em <span class="math inline">\(\F\)</span>: <span class="math display">\[\begin{eqnarray*}
+\F(\alpha_1,\ldots,\alpha_k)&amp;=&amp;\left\{f(\alpha_1,\ldots,\alpha_k)/g(\alpha_1,\ldots,\alpha_k)\mid\right.\\&amp;&amp; \left.f(x_1,\ldots,x_k),g(x_1,\ldots,x_k)\in\F[x_1,\ldots,x_k]
+\mbox{ e }g(\alpha_1,\ldots,\alpha_k)\neq 0\right\}.
+\end{eqnarray*}\]</span></p>
+</div>
+<p>No seguinte lema descrevemos extensões da forma <span class="math inline">\(\F(\alpha)\)</span> quando <span class="math inline">\(\alpha\)</span> é um elemento algébrico em uma extensão.</p>
+<div id="lem-Fa" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 66.3</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão e <span class="math inline">\(\alpha\in\E\setminus\{0\}\)</span> algébrico. Assuma que <span class="math inline">\(m_\alpha(x)\)</span> tem grau <span class="math inline">\(k\)</span>. Então&nbsp;<span class="math inline">\(\F(\alpha)\cong \F[x]/(m_\alpha(x))\)</span> e <span class="math display">\[
+\F(\alpha)=\{\beta_0+\beta_1\alpha+\cdots+\beta_{k-1}\alpha^{k-1}\mid \beta_i\in\F\}.
+\]</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Defina <span class="math inline">\(\varphi:\F[x]\rightarrow \F(\alpha)\)</span> por <span class="math inline">\(f(x)\mapsto f(\alpha)\)</span>. Note que <span class="math inline">\(\varphi\)</span> é um homomorfismo de anéis e que <span class="math inline">\(\ker\varphi = I_\alpha\)</span>. Portanto <span class="math display">\[
+\mbox{Im}\,\varphi\cong \F[x]/\ker\varphi=\F[x]/I_\alpha=\F[x]/(m_\alpha(x)).
+\]</span> Como <span class="math inline">\(m_\alpha(x)\)</span> é irredutível, temos que <span class="math inline">\(\F[x]/(m_\alpha(x))\)</span> é um corpo e portanto (por isomorfismo) <span class="math inline">\(\mbox{Im}\,\varphi\)</span> é também um corpo. Além disso, o corpo <span class="math inline">\(\mbox{Im}\,\varphi\)</span> contém <span class="math inline">\(\F\)</span> e <span class="math inline">\(\alpha\)</span>, e então <span class="math inline">\(\mbox{Im}\,\varphi=\F(\alpha)\)</span>. Isso implica que <span class="math display">\[
+\F(\alpha)\cong\F[x]/(m_\alpha(x)).
 \]</span></p>
+<p>A segunda afirmação segue da primeira. De fato, como <span class="math inline">\(\varphi\)</span> é um isomorfismo, ele precisa ser sobrejetivo, e portanto todo elemento de <span class="math inline">\(\F(\alpha)\)</span> pode ser escrito como <span class="math inline">\(f(\alpha)\)</span> onde <span class="math inline">\(f(x)\in\F[x]\)</span>. Escreva <span class="math inline">\(f(x)=q(x)m_\alpha(x)+r(x)\)</span>&nbsp; onde <span class="math inline">\(r(x)=0\)</span> ou ele é um polinômio de grau menor que <span class="math inline">\(m_\alpha(x)\)</span>. Ora <span class="math display">\[
+f(\alpha)=q(\alpha)m_\alpha(\alpha)+r(\alpha)=r(\alpha).
+\]</span> Isso implica que <span class="math display">\[\begin{eqnarray*}
+\F(\alpha)&amp;=&amp;\{r(\alpha)\mid r(x)\in\F[x],\ r(x)=0\mbox{ ou } \mbox{grau}\,r(x)&lt;\mbox{grau}\,m_\alpha(x) \}\\&amp;=&amp;\{\beta_0+\beta_1\alpha+\cdots+\beta_{k-1}\alpha^{k-1}\mid \beta_i\in\F\}.
+\end{eqnarray*}\]</span></p>
 </div>
-<div id="exm-pres-dih" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.2</strong></span> Seja <span class="math inline">\(G\)</span> o grupo dihedral <span class="math inline">\(D_n\)</span> com <span class="math inline">\(n\geq 3\)</span>. Afirmamos que <span class="math inline">\(G\)</span> é apresentado por <span class="math display">\[
-\left&lt; a,b\mid a^n,b^2,baba\right&gt;.
-\]</span> Seja <span class="math inline">\(\bar a\in D_n\)</span> a rotação de ordem <span class="math inline">\(n\)</span> e <span class="math inline">\(\bar b\in D_n\)</span> uma reflexão. Seja <span class="math inline">\(X=\{a,b\}\)</span> e considere o grupo livre <span class="math inline">\(F_X\)</span>. Pela Propriedade Universal, o mapa <span class="math inline">\(a\mapsto \bar a\)</span>, <span class="math inline">\(b\mapsto \bar b\)</span>, pode ser estendido a um homomorfismo sobrejetivo <span class="math inline">\(\psi:F_X\rightarrow D_n\)</span>. Como <span class="math inline">\(\bar a^n=\bar b^2=\bar b\bar a\bar b\bar a=1\)</span>, tem-se que <span class="math inline">\(a^n,b^n,baba\in \ker\psi\)</span>. Denotando por <span class="math inline">\(N=\left&lt;a^n,b^2,baba\right&gt;^{F_X}\)</span>, obtemos que <span class="math inline">\(N\leq \ker\psi\)</span>. Portanto, podemos definir um homomorfismo sobrejetivo <span class="math inline">\(\bar\psi:F_X/N\rightarrow D_n\)</span> e isto implica que <span class="math inline">\(|F_X/N|\geq 2n\)</span>.. Para provar que <span class="math inline">\(\bar\psi\)</span> é um isomorfismo, precisamos provar que <span class="math inline">\(|F_X/N|\leq 2n\)</span>, mas isso segue da observação que, usando <span class="math inline">\(a^n\in N\)</span>, <span class="math inline">\(b^2\in N\)</span> e <span class="math inline">\(baN=a^{-1}bN\)</span>,&nbsp; todo elemento de <span class="math inline">\(F/N\)</span> pode ser escrito como <span class="math inline">\(a^\alpha b^\beta N\)</span> onde <span class="math inline">\(0\leq \alpha\leq n-1\)</span> e <span class="math inline">\(0\leq \beta\leq 1\)</span>.</p>
+<div id="def-ext-simple" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.6</strong></span> Uma extensão da forma <span class="math inline">\(\F(\alpha)\)</span> chama-se <em>extensão simples</em>.</p>
 </div>
-<div id="exm-quot" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.3</strong></span> O grupo dos quaternions <span class="math inline">\(Q_8\)</span> pode ser apresentado pelas apresentações <span class="math display">\[
-\left&lt;a,b\mid a^4,b^2a^2,bab^{-1}a\right&gt;
-\]</span> e <span class="math display">\[
-\left&lt;a,b\mid abab^{-1},a^2b^{-2}\right&gt;
-\]</span></p>
+<div id="cor-simple" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 66.1</strong></span> Sejam <span class="math inline">\(\E_1\)</span> e <span class="math inline">\(\E_2\)</span> duas extensões de um corpo <span class="math inline">\(\F\)</span> e sejam <span class="math inline">\(\alpha_1\in\E_1\)</span> e <span class="math inline">\(\alpha_2\in\E_2\)</span> tais que <span class="math inline">\(m_{\alpha_1}(x)=m_{\alpha_2}(x)\)</span> (sobre <span class="math inline">\(\F\)</span>). Então existe um isomorfismo <span class="math inline">\(\varphi:\F(\alpha_1)\to\F(\alpha_2)\)</span> tal que <span class="math inline">\(\varphi(\beta)=\beta\)</span> para todo <span class="math inline">\(\beta\in\F\)</span> e <span class="math inline">\(\varphi(\alpha_1)=\alpha_2\)</span>.</p>
 </div>
-<div id="exm-sym-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.4</strong></span> O grupo simétrico é gerado pelas transposições <span class="math inline">\(a_i=(i,i+1)\)</span> com <span class="math inline">\(i\in\{1,\ldots,n-1\}\)</span> e ele pode ser apresentado pela apresentação <span class="math display">\[
-\left&lt;a_1,\ldots,a_{n-1}\mid a_i^2,(a_ia_{i+1})^3, [a_i,a_j] \mbox{ se $|i-j|\geq 2$}\right&gt;.
-\]</span> Esta apresentação é referida com a apresentação de Coxeter.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g(x)= m_{\alpha_1}(x)=m_{\alpha_2}(x)\)</span> e sejam <span class="math inline">\(\varphi_1:\F[x]/(g(x))\to\F(\alpha_1)\)</span> e <span class="math inline">\(\varphi:\F[x]/(g(x))\to\F(\alpha_2)\)</span> os isomorfismos dados pelo lema anterior. Então a composição <span class="math display">\[
+\varphi_2\varphi_1^{-1}:\F(\alpha_1)\to \F(\alpha_2)
+\]</span> é como exigido.</p>
 </div>
 
 
@@ -1607,13 +1625,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/actions.html" class="pagination-link" aria-label="Ações de grupos e o Teorema de Órbita-Estabilizador">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span>
+      <a href="../GruposECorpos/ringsfields.html" class="pagination-link" aria-label="Anéis e corpos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/soluble.html" class="pagination-link" aria-label="Grupos solúveis">
-        <span class="nav-page-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/decompfields.html" class="pagination-link" aria-label="Corpos de decomposição">
+        <span class="nav-page-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

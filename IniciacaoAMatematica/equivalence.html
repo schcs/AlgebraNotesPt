@@ -169,6 +169,10 @@ window.Quarto = {
 \newcommand{\argz}[1]{\mbox{arg}(#1)}
 \DeclareMathOperator{\sen}{sen}
 \newcommand{\cis}[1]{\cos #1+i\sen #1}
+\newcommand{\E}{\mathbb E}
+\newcommand{\aut}[1]{\textrm{Aut}(#1)}
+\newcommand{\fix}[1]{\textrm{Fix}(#1)}
+\newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
 \]</span></p>
 </div>
 
@@ -1067,6 +1071,36 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../GruposECorpos/galois.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -1116,7 +1150,7 @@ window.Quarto = {
 <li><span class="math inline">\(R\)</span> é simétrica (ou seja <span class="math inline">\(aRb\)</span> implica <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>); e</li>
 <li><span class="math inline">\(R\)</span> é transitiva (ou seja <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implica <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>).</li>
 </ol>
-<p>As relações de equivalência são normalmente denotados com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong g\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
+<p>As relações de equivalência são normalmente denotados com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong b\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
 </div>
 <div id="exm-eq-eg" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 5.1</strong></span> O protôtipo das relações de equivalência é a relação de igualdade. A relação de igualdade <span class="math display">\[
@@ -1161,7 +1195,7 @@ a\equiv b\quad\mbox{se e somente se}\quad 2\mid a-b.
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
 <li>Note que <span class="math inline">\(a\in[a]\)</span> é equivalente a dizer que <span class="math inline">\(a\equiv a\)</span> e isso vale pois a relação <span class="math inline">\(\equiv\)</span> é reflexiva.</li>
-<li>Assuma que <span class="math inline">\(c\in [a]\cap [b]\)</span>. Isso quer dizer que <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(b\equiv c\)</span>. Por simetria temos também que <span class="math inline">\(c\equiv a\)</span>. Afirmamos que <span class="math inline">\([a]=[b]\)</span>. Provaremos isso verificando que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Assuma primeiro que <span class="math inline">\(x\in[a]\)</span>. Então <span class="math display">\[
+<li>Assuma que <span class="math inline">\(c\in [a]\cap [b]\)</span>. Isso quer dizer que <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(b\equiv c\)</span>. Por simetria temos também que <span class="math inline">\(c\equiv a\)</span>. Afirmamos que <span class="math inline">\([a]=[b]\)</span>. Provaremos isso verificando que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Assuma primeiro que <span class="math inline">\(x\in[a]\)</span>; ou seja <span class="math inline">\(a\equiv x\)</span>. Então <span class="math display">\[
 b\equiv c\equiv a\equiv x.
 \]</span> Aplicando a transitividade, obtemos que <span class="math inline">\(b\equiv x\)</span> e <span class="math inline">\(x\in [b]\)</span>. Portanto obtemos que <span class="math inline">\([a]\subseteq [b]\)</span>. A inclusão que <span class="math inline">\([b]\subseteq [c]\)</span> pode ser verificado por argumento similar.</li>
 </ol>
@@ -1170,7 +1204,7 @@ b\equiv c\equiv a\equiv x.
 <section id="partições" class="level2" data-number="5.3">
 <h2 data-number="5.3" data-anchor-id="partições"><span class="header-section-number">5.3</span> Partições</h2>
 <div id="def-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.3</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Um conjunto <span class="math inline">\(\mathcal P\)</span> de subconjuntos de <span class="math inline">\(A\)</span> é dita <em>partição</em> de <span class="math inline">\(A\)</span> se</p>
+<p><span class="theorem-title"><strong>Definição 5.3</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Um conjunto <span class="math inline">\(\mathcal P\)</span> de subconjuntos de <span class="math inline">\(A\)</span> é dito <em>partição</em> de <span class="math inline">\(A\)</span> se</p>
 <ol type="1">
 <li>todo elemento <span class="math inline">\(a\in A\)</span> pertence a um subconjunto <span class="math inline">\(X\in \mathcal P\)</span>; e</li>
 <li>se <span class="math inline">\(X,Y\in \mathcal P\)</span> são distintos, então <span class="math inline">\(X\cap Y=\emptyset\)</span>.</li>

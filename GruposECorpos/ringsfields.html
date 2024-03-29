@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 58&nbsp; Grupos livres</title>
+<title>Álgebra - 65&nbsp; Anéis e corpos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/soluble.html" rel="next">
-<link href="../GruposECorpos/actions.html" rel="prev">
+<link href="../GruposECorpos/extensions.html" rel="next">
+<link href="../GruposECorpos/nilpotent.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -614,7 +614,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/ringsfields.html"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1031,7 +1031,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
@@ -1073,7 +1073,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
+  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
   </div>
 </li>
@@ -1114,9 +1114,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/livres.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/ringsfields.html"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Grupos livres</span></h1>
+<h1 class="title"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></h1>
 </div>
 
 
@@ -1133,64 +1133,112 @@ window.Quarto = {
 </header>
 
 
-<p>Sejam <span class="math inline">\(X,X^{-1}\)</span> dois conjuntos distintos e assuma que existe uma bijeção <span class="math inline">\(x\mapsto x^{-1}\)</span> entre <span class="math inline">\(X\)</span> e <span class="math inline">\(X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(x^{-1}\in X^{-1}\)</span>, então escrevemos <span class="math inline">\((x^{-1})^{-1}=x\)</span>. Uma palavra em <span class="math inline">\(X\)</span> é uma expressão na forma <span class="math display">\[
-w=x_1x_2\cdots x_k
-\]</span> onde <span class="math inline">\(k\geq 0\)</span> e <span class="math inline">\(x_i\in X\cup X^{-1}\)</span>.&nbsp; Se <span class="math inline">\(k=0\)</span>, então <span class="math inline">\(w\)</span> é denotado por <span class="math inline">\(e\)</span> e é dita a palavra vazia. O comprimento da palavra <span class="math inline">\(w\)</span> acima é <span class="math inline">\(k\)</span>. Uma palavra <span class="math inline">\(w=x_1x_2\cdots x_k\)</span> é dita reduzida se <span class="math inline">\(w=e\)</span> ou o comprimento de <span class="math inline">\(w\)</span> é maior que <span class="math inline">\(0\)</span> e <span class="math inline">\(w\)</span> não contém nenhuma ocorrência da subpalavra <span class="math inline">\(xx^{-1}\)</span> ou <span class="math inline">\(x^{-1}x\)</span> com <span class="math inline">\(x\in X\)</span>. Se <span class="math inline">\(w\)</span> é uma palavra, então cancelando as ocorrências de subpalavras na forma <span class="math inline">\(xx^{-1}\)</span> ou&nbsp;<span class="math inline">\(x^{-1}x\)</span>, obtemos uma palavra <span class="math inline">\(\bar w\)</span> reduzida.</p>
-<p>Denotaremos por <span class="math inline">\(F_X\)</span> o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto <span class="math inline">\(F_X\)</span>. Sejam <span class="math inline">\(w_1,w_2\in F_X\)</span>. Definimos <span class="math inline">\(w_1\cdot w_2=\overline{w_1w_2}\)</span> onde <span class="math inline">\(w_1w_2\)</span> significa a concatenação de palavras.</p>
-<div id="thm-freegp" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.1</strong></span> <span class="math inline">\((F_X,\cdot)\)</span> é um grupo.</p>
+<div id="def-ring" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 65.1</strong></span> Seja <span class="math inline">\(R\)</span> um conjunto não vazio equipado com duas operações <span class="math inline">\(+\)</span> (adição) e <span class="math inline">\(\cdot\)</span> (multiplicação) que satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in R\)</span>:</p>
+<ul>
+<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
+<li><span class="math inline">\(a+b=b+a\)</span>;</li>
+<li>existe elemento neutro <span class="math inline">\(0\)</span> para a adição: <span class="math inline">\(0+a=a+0=a\)</span>;</li>
+<li><span class="math inline">\(a\in R\)</span> possui negativo; ou seja existe <span class="math inline">\(-a\in R\)</span> tal que <span class="math inline">\(a+(-a)=0\)</span>;</li>
+<li><span class="math inline">\((ab)c=a(bc)\)</span>;</li>
+<li><span class="math inline">\(ab=ba\)</span>;</li>
+<li>existe elemento neutro <span class="math inline">\(1\)</span> para multiplicação: <span class="math inline">\(1\cdot a=a\cdot 1=a\)</span>;</li>
+<li><span class="math inline">\(a(b+c)=ab+ac\)</span>.</li>
+</ul>
+<p>A estrutura <span class="math inline">\((R,+,\cdot)\)</span> chama-se <em>anel comutativo com identidade</em>. Como nesta parte da disciplina nós não vamos tratar anéis que não são comutativos com identidade, nós vamos chamar a estrutura <span class="math inline">\(R\)</span> simplesmente <em>anel</em>.</p>
 </div>
-<div id="def-freegp" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.1</strong></span> O grupo <span class="math inline">\(F_X\)</span> é chamado de grupo livre gerado por <span class="math inline">\(X\)</span>.</p>
+<p>Em particular, se <span class="math inline">\((R,+,\cdot)\)</span> é um anel então <span class="math inline">\((R,+)\)</span> é&nbsp; um grupo abeliano.</p>
+<div id="def-field" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 65.2</strong></span> Um anel <span class="math inline">\(R\)</span> com pelo menos dois elementos é dito <em>corpo,&nbsp;</em>se, além das propriedades 1-8 acima, todo elemento <span class="math inline">\(a\in R\setminus\{0\}\)</span> possui inverso multiplicativo. Ou seja, se <span class="math inline">\(a\in R\setminus\{0\}\)</span>, então existe <span class="math inline">\(a^{-1}\in R\)</span> tal que <span class="math inline">\(aa^{-1}=1\)</span>. Isto significa, que se <span class="math inline">\((R,+,\cdot)\)</span> é um corpo, então <span class="math inline">\((R,+)\)</span> e <span class="math inline">\((R\setminus\{0\},\cdot)\)</span> são grupos abelianos.</p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>A operação em <span class="math inline">\(F_X\)</span> é bem definida. Além disso, <span class="math inline">\(e\)</span> é elemento neutro, e se <span class="math inline">\(x_1\cdots x_k\in F_X\)</span>, então <span class="math display">\[
-(x_1\cdots x_k)(x_k^{-1}\cdots x_1^{-1})=(x_k^{-1}\cdots x_1^{-1})(x_1\cdots x_k)=e.
-\]</span> Logo, todo elemento possui inverso. A parte não trivial desta demonstração é mostrar que a operação em <span class="math inline">\(F_X\)</span> é associativa. Mostraremos isso utilizando o truque de van der Waerden. Seja <span class="math inline">\(x\in X\)</span>. Definimos as funções <span class="math inline">\(\psi_x,\psi_{x^{-1}}:F_X\rightarrow F_X\)</span> como <span class="math display">\[
-\psi_x(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x^{-1}$};\\
-x_1\cdots x_kx&amp;\mbox{no caso contrário;}\end{array}\right.
-\]</span> e <span class="math display">\[
-\psi_{x^{-1}}(x_1\cdots x_k)=\left\{\begin{array}{ll} x_1\cdots x_{k-1}&amp;\mbox{se $x_k=x$};\\
-x_1\cdots x_kx^{-1}&amp;\mbox{no caso contrário.}\end{array}\right.
-\]</span> Nas definições destas funções, assumimos que o argumento <span class="math inline">\(x_1\cdots x_k\)</span> é uma palavra reduzida. Claramente, as funções <span class="math inline">\(\psi_x\)</span> e <span class="math inline">\(\psi_{x^{-1}}\)</span> são bem definidas. Além disso, note que <span class="math inline">\(\psi_x\circ \psi_{x^{-1}}=\psi_{x^{-1}}\circ \psi_x=\mbox{id}_{F_X}\)</span>. Portanto <span class="math inline">\(\psi_x,\psi_{x^{-1}}\)</span> são bijetivas e <span class="math inline">\(\psi_x^{-1}=\psi_{x^{-1}}\)</span>. Em outras palavras, <span class="math inline">\(\psi_x,\psi_{x^{-1}}\in S(F_X)\)</span>. Seja <span class="math inline">\(\mathcal F_X\)</span> o subgrupo de <span class="math inline">\(S(F_X)\)</span> gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>. Defina <span class="math inline">\(\psi: F_X\rightarrow \mathcal F_X\)</span>, <span class="math display">\[
-\psi(x_1\cdots x_k)=\psi_{x_1}\cdots \psi_{x_k}.
-\]</span> Como <span class="math inline">\(\mathcal F_X\)</span> é gerado por <span class="math inline">\(\{\psi_x\mid x\in X\}\)</span>, <span class="math inline">\(\psi\)</span> é sobrejetivo. Além disso, se <span class="math inline">\(\psi(x_1\cdots x_k)=\psi(y_1\cdots y_m)\)</span>, então <span class="math inline">\(\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}\)</span>. Por outro lado, <span class="math inline">\(x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m\)</span>. Portanto <span class="math inline">\(\psi\)</span> é injetiva, e então <span class="math inline">\(\psi\)</span> é bijetiva. Como <span class="math inline">\(\psi\)</span> também satisfaz a igualdade <span class="math inline">\(\psi(w_1w_2)=\psi(w_1)\psi(w_2)\)</span>, obtemos que <span class="math inline">\(\psi\)</span> é um isomorfismo entre as estruturas <span class="math inline">\(F_X\)</span> e <span class="math inline">\(\mathcal F_X\)</span> com as suas respetivas multiplicações. Como <span class="math inline">\(\mathcal F_X\)</span> é associativa, obtemos que <span class="math inline">\(F_X\)</span> também é. Portanto <span class="math inline">\(F_X\)</span> é um grupo.</p>
+<div id="exr-unique" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 65.1</strong></span> Mostre em um anel <span class="math inline">\(R\)</span> que os elementos <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span> são únicos. Mostre, para <span class="math inline">\(a\in R\)</span> que <span class="math inline">\(-a\)</span> e (caso exista) <span class="math inline">\(a^{-1}\)</span> são únicos.</p>
 </div>
-<div id="thm-free-univ" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 58.2</strong></span> (Propriedade Universal).&nbsp;Seja <span class="math inline">\(G\)</span> um grupo e <span class="math inline">\(F_X\)</span> um grupo livre gerado por <span class="math inline">\(X\)</span>. Seja <span class="math inline">\(\varphi:X\rightarrow G\)</span> um mapa arbitrário. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> tal que <span class="math inline">\(\psi|_X=\varphi\)</span>. (Todo mapa <span class="math inline">\(X\rightarrow G\)</span> pode ser estendido a um homomorfismo <span class="math inline">\(F_X\rightarrow G\)</span>.)</p>
+<div id="exm-ring" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 65.1</strong></span> Os principais exemplos de anéis são <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Z_n\)</span> e <span class="math inline">\(\F[x]\)</span> (com <span class="math inline">\(\F\)</span> sendo um corpo). Os principais exemplos de corpos são <span class="math inline">\(\mathbb Z_p\)</span> (com <span class="math inline">\(p\)</span> primo), <span class="math inline">\(\mathbb Q\)</span>, <span class="math inline">\(\mathbb R\)</span>, e <span class="math inline">\(\mathbb C\)</span>.</p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(w=x_1\cdots x_k\in F_X\)</span> e defina <span class="math inline">\(\psi(w)=\varphi(x_1)\cdots\varphi(x_k)\)</span>. Então <span class="math inline">\(\psi\)</span> é um homomorfismo e claramente <span class="math inline">\(\psi(x)=\varphi(x)\)</span> para todo <span class="math inline">\(x\in X\)</span>.</p>
+<div id="def-ideal" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 65.3</strong></span> Um conjunto não vazio <span class="math inline">\(I\)</span> de um anel é dito ideal se</p>
+<ul>
+<li><span class="math inline">\(a\pm b\in I\)</span> para todo <span class="math inline">\(a,b\in I\)</span> (em outras palavras <span class="math inline">\(I\)</span> é um subgrupo de <span class="math inline">\((R,+)\)</span>);</li>
+<li><span class="math inline">\(ab\in I\)</span> para todo <span class="math inline">\(a\in I\)</span> e <span class="math inline">\(b\in R\)</span>.</li>
+</ul>
 </div>
-<div id="cor-free-quot" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 58.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo gerado por um conjunto <span class="math inline">\(X\)</span>. Então existe um homomorfismo <span class="math inline">\(\psi:F_X\rightarrow G\)</span> sobrejetivo tal que <span class="math inline">\(\psi|_X=\mbox{id}_X\)</span>. Em particular <span class="math inline">\(G\cong F/\ker\psi\)</span>. (Cada grupo é quociente de um grupo livre.)</p>
+<div id="exm-ideal" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 65.2</strong></span> Se <span class="math inline">\(R\)</span> é um anel e <span class="math inline">\(a\in R\)</span>, então <span class="math display">\[
+(a)=Ra=\{ba\mid b\in R\}
+\]</span> é um ideal de <span class="math inline">\(R\)</span>. Um ideal desta forma chama-se<em> ideal principal</em>.</p>
 </div>
-<div id="def-pres" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 58.2</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto, <span class="math inline">\(F_X\)</span> o grupo livre gerado por <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\subseteq F_X\)</span>. Seja <span class="math inline">\(\left&lt;Y\right&gt;^{F_X}\)</span> o subgrupo normal gerado por <span class="math inline">\(Y\)</span>. O grupo quociente <span class="math inline">\(G=F_X/\left&lt;Y\right&gt;^{F_X}\)</span> é denotado por <span class="math display">\[\begin{equation}\label{eq:pres}
-\left&lt;X \mid Y\right&gt;.
-\end{equation}\]</span> A expressão~<span class="math inline">\(\eqref{eq:pres}\)</span> é dita uma apresentação para o grupo <span class="math inline">\(G\)</span>.</p>
+<div id="exr-ideal" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 65.2</strong></span> Usando a notação do parágrafo anterior, mostre que <span class="math inline">\((a)=R\)</span> se e somente se existe <span class="math inline">\(a^{-1}\in R\)</span>.</p>
 </div>
-<div id="exm-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.1</strong></span> O grupo cíclico <span class="math inline">\(C_n\)</span> é apresentado pela apresentação <span class="math display">\[
-\left&lt;x\mid x^n\right&gt;.
+<div id="def-ring-quot" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 65.4</strong></span> Se <span class="math inline">\(R\)</span> é um anel e <span class="math inline">\(I\)</span> é um ideal, então o quociente <span class="math display">\[
+R/I=\{I+r\mid r\in R\}
+\]</span> pode ser considerado como um anel com as operações <span class="math display">\[
+(I+a)+(I+b)=I+(a+b),\quad (I+a)(I+b)=I+ab.
 \]</span></p>
 </div>
-<div id="exm-pres-dih" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.2</strong></span> Seja <span class="math inline">\(G\)</span> o grupo dihedral <span class="math inline">\(D_n\)</span> com <span class="math inline">\(n\geq 3\)</span>. Afirmamos que <span class="math inline">\(G\)</span> é apresentado por <span class="math display">\[
-\left&lt; a,b\mid a^n,b^2,baba\right&gt;.
-\]</span> Seja <span class="math inline">\(\bar a\in D_n\)</span> a rotação de ordem <span class="math inline">\(n\)</span> e <span class="math inline">\(\bar b\in D_n\)</span> uma reflexão. Seja <span class="math inline">\(X=\{a,b\}\)</span> e considere o grupo livre <span class="math inline">\(F_X\)</span>. Pela Propriedade Universal, o mapa <span class="math inline">\(a\mapsto \bar a\)</span>, <span class="math inline">\(b\mapsto \bar b\)</span>, pode ser estendido a um homomorfismo sobrejetivo <span class="math inline">\(\psi:F_X\rightarrow D_n\)</span>. Como <span class="math inline">\(\bar a^n=\bar b^2=\bar b\bar a\bar b\bar a=1\)</span>, tem-se que <span class="math inline">\(a^n,b^n,baba\in \ker\psi\)</span>. Denotando por <span class="math inline">\(N=\left&lt;a^n,b^2,baba\right&gt;^{F_X}\)</span>, obtemos que <span class="math inline">\(N\leq \ker\psi\)</span>. Portanto, podemos definir um homomorfismo sobrejetivo <span class="math inline">\(\bar\psi:F_X/N\rightarrow D_n\)</span> e isto implica que <span class="math inline">\(|F_X/N|\geq 2n\)</span>.. Para provar que <span class="math inline">\(\bar\psi\)</span> é um isomorfismo, precisamos provar que <span class="math inline">\(|F_X/N|\leq 2n\)</span>, mas isso segue da observação que, usando <span class="math inline">\(a^n\in N\)</span>, <span class="math inline">\(b^2\in N\)</span> e <span class="math inline">\(baN=a^{-1}bN\)</span>,&nbsp; todo elemento de <span class="math inline">\(F/N\)</span> pode ser escrito como <span class="math inline">\(a^\alpha b^\beta N\)</span> onde <span class="math inline">\(0\leq \alpha\leq n-1\)</span> e <span class="math inline">\(0\leq \beta\leq 1\)</span>.</p>
+<div id="exm-ideal" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 65.3</strong></span> Caso <span class="math inline">\(R=\mathbb Z\)</span> e <span class="math inline">\(n\in \mathbb Z\)</span>, o ideal principal <span class="math inline">\((n)\)</span> é o conjunto <span class="math inline">\(\{bn\mid b\in\mathbb Z\}\)</span> dos múltiplos de <span class="math inline">\(n\)</span>. Se <span class="math inline">\(n\geq 2\)</span>, então o quociente <span class="math inline">\(\mathbb Z/(n)\)</span> é o anel <span class="math inline">\(\mathbb Z_n\)</span> das classes residuais.</p>
 </div>
-<div id="exm-quot" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.3</strong></span> O grupo dos quaternions <span class="math inline">\(Q_8\)</span> pode ser apresentado pelas apresentações <span class="math display">\[
-\left&lt;a,b\mid a^4,b^2a^2,bab^{-1}a\right&gt;
-\]</span> e <span class="math display">\[
-\left&lt;a,b\mid abab^{-1},a^2b^{-2}\right&gt;
-\]</span></p>
+<p>Nós vamos trabalhar principalmente com anéis de polinômios e com seus ideais. Eu assumo que vocês têm familiaridade com alguns conceitos relacionados com polinômios que estudamos na disciplina Fundamentos de Álgebra:</p>
+<ul>
+<li>conceito de polinômio sobre um corpo;</li>
+<li>grau de um polinômio;</li>
+<li>polinômio mônico;</li>
+<li>divisibilidade entre polinômios;</li>
+<li>o MDC de dois polinômios;</li>
+<li>polinômios coprimos (primos entre si);</li>
+<li>o Algoritmo de Euclides para polinômios;</li>
+<li>Polinômios irredutíveis;</li>
+<li>a caraterização de polinômios irredutíveis sobre <span class="math inline">\(\mathbb C\)</span> e <span class="math inline">\(\mathbb R\)</span>;</li>
+<li>O critério de Eisenstein para irredutibilidade de um polinômio sobre <span class="math inline">\(\mathbb Q\)</span>.</li>
+</ul>
+<p>Seja <span class="math inline">\(\F\)</span> um corpo e considere o anel <span class="math inline">\(R=\F[x]\)</span> de polinômios sobre <span class="math inline">\(\F\)</span>. Seja <span class="math inline">\(f(x)\)</span> um polinômio de <span class="math inline">\(\F[x]\)</span> com grau maior ou igual a <span class="math inline">\(1\)</span>. Pelo exemplo acima,&nbsp; o conjunto <span class="math display">\[
+(f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}
+\]</span> é um ideal de <span class="math inline">\(\F[x]\)</span>.&nbsp;Se <span class="math inline">\(g(x)\in \F[x]\)</span> então denote por <span class="math inline">\(\overline{g(x)}\)</span> o elemento <span class="math inline">\((f(x))+g(x)\)</span> do quociente <span class="math inline">\(\F[x]/(f(x))\)</span>. Usando o Teorema de Divisão de Euclides para polinômios, pode-se escrever que <span class="math display">\[
+g(x)=q(x)f(x)+r(x)\quad \mbox{onde}\quad r(x)=0\mbox{ ou }\mbox{grau}\,r(x)&lt;\mbox{grau}\,f(x),
+\]</span> mas isso implica que <span class="math display">\[
+\overline{r(x)}=\overline{g(x)-q(x)f(x)}=\overline{g(x)}-\overline{q(x)}\overline{f(x)}=
+\overline{g(x)}.
+\]</span> Ou seja, <span class="math inline">\(\overline{g(x)}\)</span> e <span class="math inline">\(\overline{r(x)}\)</span> são elementos iguais em <span class="math inline">\(\F[x]/(f(x))\)</span>. Além disso, se <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>, então a penúltima equação destacada implica que <span class="math inline">\(g(x)=r(x)\)</span>. Estas considerações demonstram o seguinte resultado.</p>
+<div id="lem-euclid-quot" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 65.1</strong></span> Usando a notação acima, todo elemento de <span class="math inline">\(\F[x]/(f(x))\)</span> pode ser escrito unicamente como <span class="math inline">\(\overline{g(x)}\)</span> onde <span class="math inline">\(g(x)\in\F[x]\)</span> com <span class="math inline">\(g(x)=0\)</span> ou <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>. Em particular, pondo <span class="math inline">\(k=\mbox{grau}\,f(x)\)</span>, <span class="math display">\[
+\F[x]/(f(x))=\{\overline{g(x)}\mid g(x)=0\mbox{ ou grau}\,g(x)&lt;k\}=
+\{\alpha_0+\alpha_1\overline x+\cdots+\alpha_{k-1}\overline x^{k-1}\mid \alpha_0,\ldots,\alpha_{k-1}\in\F\}.
+\]</span> e <span class="math inline">\(\F[x]/(f(x))\)</span> é um espaço vetorial de dimensão <span class="math inline">\(k\)</span> sobre <span class="math inline">\(\F\)</span>.</p>
 </div>
-<div id="exm-sym-pres" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 58.4</strong></span> O grupo simétrico é gerado pelas transposições <span class="math inline">\(a_i=(i,i+1)\)</span> com <span class="math inline">\(i\in\{1,\ldots,n-1\}\)</span> e ele pode ser apresentado pela apresentação <span class="math display">\[
-\left&lt;a_1,\ldots,a_{n-1}\mid a_i^2,(a_ia_{i+1})^3, [a_i,a_j] \mbox{ se $|i-j|\geq 2$}\right&gt;.
-\]</span> Esta apresentação é referida com a apresentação de Coxeter.</p>
+<div id="thm-quot" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 65.1</strong></span> Se <span class="math inline">\(I\neq\{0\}\)</span> é um ideal de <span class="math inline">\(\F[x]\)</span> então existe um único polinômio mônico <span class="math inline">\(f(x)\in I\)</span> tal que <span class="math display">\[
+I=(f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}.
+\]</span> Além disso as seguintes são equivalentes:</p>
+<ul>
+<li><span class="math inline">\(I\)</span> é um ideal maximal;</li>
+<li><span class="math inline">\(f(x)\)</span> é um polinômio irredutível;</li>
+<li><span class="math inline">\(\F[x]/I\)</span> é um corpo.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(I\subseteq \F[x]\)</span> um ideal não nulo e seja <span class="math inline">\(f(x)\)</span> um polinômio não nulo em <span class="math inline">\(I\)</span> de grau minimal. Multiplicando <span class="math inline">\(f(x)\)</span> com um escalar, podemos assumir que <span class="math inline">\(f(x)\)</span> é um polinômio mônico. Claramente, <span class="math inline">\((f(x))\subseteq I\)</span>. Seja <span class="math inline">\(g(x)\in I\)</span> um polinômio arbitrário. Pelo Teorema de Divisão de Euclides para polinômios, existem <span class="math inline">\(q(x),r(x)\in\F[x]\)</span> únicos tais que <span class="math display">\[
+g(x)=f(x)q(x)+r(x)\quad \mbox{onde}\quad r(x)=0\mbox{ ou }\mbox{grau}\,r(x)&lt;\mbox{grau}\,f(x).
+\]</span> Como <span class="math inline">\(f(x),g(x)\in I\)</span>, vimos que <span class="math inline">\(r(x)\in I\)</span>. Pela minimalidade de <span class="math inline">\(\mbox{grau}\,f(x)\)</span> entre os polinômios não nulos de <span class="math inline">\(I\)</span>, segue obrigatoriamente que <span class="math inline">\(r(x)=0\)</span>. Ou seja <span class="math inline">\(g(x)=f(x)q(x)\)</span>. Isto mostra que <span class="math inline">\(I\subseteq (f(x))\)</span> e portanto&nbsp;<span class="math inline">\(I=(f(x))\)</span>.</p>
+<p>Para a primeira afirmação, precisamos mostrar ainda que <span class="math inline">\(f(x)\)</span> é único. Suponha que existem <span class="math inline">\(f_1(x),f_2(x)\in I\)</span> ambos mônicos tais que <span class="math inline">\(I=(f_1(x))=(f_2(x))\)</span>. Neste caso <span class="math inline">\(f_1(x)\)</span> é um múltiplo de <span class="math inline">\(f_2(x)\)</span> e <span class="math inline">\(f_2(x)\)</span> é um múltiplo de <span class="math inline">\(f_1(x)\)</span>. Como os dois destes polinômios são mônicos, segue que <span class="math inline">\(f_1(x)=f_2(x)\)</span>. Então o polinômio <span class="math inline">\(f(x)\)</span> no lema é único.</p>
+<p>Mostremos agora que as três afirmações no lema são equivalentes. Assuma que <span class="math inline">\(I\)</span> é maximal. Como <span class="math inline">\(I\neq\F[x]\)</span>, temos que <span class="math inline">\(f(x)\)</span> não é invertível; ou seja <span class="math inline">\(\mbox{grau}\,f(x)\geq 1\)</span>. Escreva <span class="math inline">\(f(x)=g(x)h(x)\)</span> com <span class="math inline">\(g(x),h(x)\in\F[x]\)</span> e <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>. Observe que <span class="math inline">\(I=(f(x))\subseteq (g(x))\)</span>. Pela maximalidade de <span class="math inline">\(I=(f(x))\)</span>, tem-se que <span class="math inline">\((g(x))=\F[x]\)</span> ou <span class="math inline">\((g(x))=I\)</span>. A segunda opção não é possível pois <span class="math inline">\(f(x)\)</span> é um polinômio de menor grau em <span class="math inline">\(I\)</span>, enquanto na primeira opção <span class="math inline">\(g(x)\)</span> é constante. Obtivemos que <span class="math inline">\(f(x)\)</span> é irredutível.</p>
+<p>Assuma agora que <span class="math inline">\(f(x)\)</span> é irredutível. Seja <span class="math inline">\(g(x)\in \F[x]\)</span> tal que <span class="math inline">\(\overline{g(x)}=g(x)+I\in \F[x]/I\)</span> é um elemento não nulo; ou seja <span class="math inline">\(g(x)\not\in I\)</span>, ou, equivalentemente, <span class="math inline">\(f(x)\nmid g(x)\)</span>. Como <span class="math inline">\(f(x)\)</span> é irredutível, temos que <span class="math inline">\(\mbox{mdc}(f(x),g(x))=1\)</span> e existem (pelo Algoritmo de Euclides) <span class="math inline">\(u(x),v(x)\in\F[x]\)</span> tais que <span class="math display">\[
+u(x)f(x)+v(x)g(x)=1.
+\]</span> Passando para o quociente, isto quer dizer que <span class="math display">\[
+\overline 1=\overline{u(x)f(x)+v(x)g(x)}=\overline{u(x)}\overline{f(x)}+\overline{v(x)}\overline{g(x)}=
+\overline{v(x)}\overline{g(x)}.
+\]</span> Ou seja, <span class="math inline">\(\overline{v(x)}\)</span> é inverso de <span class="math inline">\(\overline{g(x)}\)</span>. Como <span class="math inline">\(g(x)\)</span> foi escolhido arbitrariamente, sujeito à condição que <span class="math inline">\(\overline{g(x)}\neq 0\)</span>, temos que todo elemento não nulo de <span class="math inline">\(\F[x]/I\)</span> possui inverso e que <span class="math inline">\(\F[x]/I\)</span> é um corpo.</p>
+<p>Assuma agora que <span class="math inline">\(\F[x]/I\)</span> é um corpo e seja <span class="math inline">\(J\)</span> um ideal de <span class="math inline">\(\F[x]\)</span> tal que <span class="math inline">\(I\subset J\)</span>. Seja <span class="math inline">\(g(x)\in J\setminus I\)</span>. Como <span class="math inline">\(\F[x]/I\)</span> é um corpo, <span class="math inline">\(\overline{g(x)}\)</span> possui inverso em <span class="math inline">\(\F[x]/I\)</span>; ou seja, existe <span class="math inline">\(h(x)\in \F[x]\)</span> tal que <span class="math inline">\(\overline{g(x)}\overline{h(x)}=\overline 1\)</span>, mas isto é equivalente ao afirmar que <span class="math inline">\(g(x)h(x)=1+q(x)f(x)\)</span>. Como <span class="math inline">\(g(x),f(x)\in J\)</span>, temos que <span class="math inline">\(1\in J\)</span> e isto implica que <span class="math inline">\(J=\F[x]\)</span> e que <span class="math inline">\(I\)</span> é um ideal maximal.</p>
+</div>
+<div id="exm-quot-pol" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 65.4</strong></span> Seja <span class="math inline">\(\F=\mathbb R\)</span> e considere o polinômio <span class="math inline">\(f(x)=x^2+1\in\mathbb R[x]\)</span>. Como <span class="math inline">\(f(x)\)</span> é um polinômio irredutível (porque?), temos que o quociente <span class="math inline">\(\mathbb K=\mathbb R[x]/(x^2+1)\)</span> é um corpo. Pelas considerações acima, <span class="math display">\[
+\mathbb K=\{\alpha_0+\alpha_1\overline x\mid \alpha_0,\alpha_1\in \mathbb R\}.
+\]</span> Além disso, temos que <span class="math inline">\(\overline x^2+1=0\)</span> que implica que <span class="math inline">\(\overline x^2=-1\)</span>. Escrevendo <span class="math inline">\(\overline x=i\)</span>, temos que <span class="math display">\[
+\mathbb K=\{\alpha_0+\alpha_1 i\mid \alpha_0,\alpha_1\in\mathbb R\}\quad\mbox{onde}\quad i^2=-1.
+\]</span> Vemos então que o corpo quociente <span class="math inline">\(\mathbb K\)</span> é nada mais que o corpo bem conhecido <span class="math inline">\(\mathbb C\)</span>. Obtivemos então que <span class="math inline">\(\mathbb C=\mathbb R[x]/(x^2+1)\)</span>.</p>
 </div>
 
 
@@ -1607,13 +1655,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/actions.html" class="pagination-link" aria-label="Ações de grupos e o Teorema de Órbita-Estabilizador">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span>
+      <a href="../GruposECorpos/nilpotent.html" class="pagination-link" aria-label="Grupos nilpotentes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/soluble.html" class="pagination-link" aria-label="Grupos solúveis">
-        <span class="nav-page-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/extensions.html" class="pagination-link" aria-label="Extensões de corpos">
+        <span class="nav-page-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
