@@ -124,7 +124,7 @@ Assuma primeiro que $\equiv$ é uma relação de equivalência. Seja $\mathcal C
 
 Assuma agora que $\mathcal P$ é uma partição de $A$ e defina $\equiv_{\mathcal P}$ como no enunciado do teorema. Vamos verificar as três propriedades na definição @def-eq-rel. 
 
-1. Reflexividade: se $a\in A$, então $a$ e $a$ claramente pertencem à mesma parte de $\mathcal P$ e $a\equiv_{\mathcal P} a$. Logo $\equiv_{\mathcal P}$ é reflexiva. 
+1. Reflexividade: se $a\in A$, então $a$ claramente pertence à mesma parte de $\mathcal P$ que $a$ e $a\equiv_{\mathcal P} a$. Logo $\equiv_{\mathcal P}$ é reflexiva. 
 2.  Simetria: se $a\equiv_{\mathcal P}b$, então $a,b$ pertencem à mesma parte de $\mathcal P$. Logo $b,a$ também pertencem à mesma parte e assim $b\equiv_{\mathcal P}a$. Portanto $\equiv_{\mathcal P}$ é simétrica. 
 3. Transitividade: se $a\equiv_{\mathcal P}b$ e $b\equiv_{\mathcal P}c$, então $a$ e $b$ pertencem à mesma parte de $\mathcal P$ e $b$ e $c$ também pertencem à mesma parte de $\mathcal P$. Isso implica que $a$ e $c$ pertencem à mesma parte de $\mathcal P$. Portanto $a\equiv_{\mathcal P}c$ e a relação $\equiv_{\mathcal P}$ é transitiva.
 :::
