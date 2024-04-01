@@ -1,0 +1,97 @@
+---
+number-sections: true
+lang: pt-BR
+
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{3}
+---
+
+# Lista de Exercícios
+
+## Grupos e Corpos, 2024/I {.unnumbered}
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+
+:::{#exr-}
+Dê exemplos de grupos $G$ e $H$ tais que existem homomorfismos injetivos $G\to H$ e $H\to G$, mas $G\not\cong H$. [Dica: Considere as páginas indicadas pelo Caio no Fórum da Semana 4.]
+:::
+
+:::{#exr-}
+Mostre que $\SL 23\neq S_4$ mesmo que $|\SL 23|=|S_4|=24$. [Dica: Compare os centros.] 
+:::
+
+:::{#exr-}
+Seja $G=\Z_n$ e assuma que $a,b\in \Z_n$ tal que $\mbox{mmc}(a,b)=n$. Demonstre que $\Z_n=\left<a\right>\times \left<b\right>$. 
+:::
+
+
+:::{#exr-}
+Escreva os grupos $S_3$, $D_4$, $D_5$, $D_n$ como produtos semidiretos de dois subgrupos próprios. Mostre que $Q_8$ não possui tal decomposição.
+:::
+
+:::{#exr-}
+Sejam $G$ e $H$ dois grupos cíclicos finitos tais que $\mdc{|G|}{|H|}=1$. Mostre que $G\times H$ é cíclico. 
+:::
+
+:::{#exr-}
+Se $G$ age em um conjunto $\Omega$, então $G$ age também no conjunto 
+$$
+\Omega^2=\{(\alpha,\beta)\mid \alpha,\beta\in \Omega\}
+$$
+pela ação
+$$
+(\alpha,\beta)g=(\alpha g,\beta g).
+$$
+Determine as órbitas de $S_5$ em $\{1,\ldots,5\}^2$ e determine o estabilizador de um elemento de cada órbita. 
+:::
+
+:::{#exr-}
+Considere a ação de $\GL n\F$ sobre $\mathbb P\F^n$. Mostre que o núcleo desta ação é o subgrupo formado por matrizes na forma $\alpha \cdot1$ onde 
+$1\in \GL n\F$ é a matriz identidade e $\alpha\in\F^*$. 
+:::
+
+
+:::{#exr-}
+Assuma que $G$ age em $\Omega$. O grupo $G$ é dito $k$-transitivo em $\Omega$, se $G$ é transitivo no conjunto 
+$$
+\Omega^{(k)}=\{(\alpha_1,\ldots,\alpha_k)\mid \alpha_i\in\Omega\mbox{ e }\alpha_i\neq \alpha_j\mbox{ se }i\neq j\}.
+$$
+Mostre que 
+
+1. $G$ é 1-transitivo em $\Omega$ se e somente se $G$ é transitivo em $\Omega$. 
+2. $G$ é $2$-transitivo em $\Omega$ se e somente se $G_\alpha$ é transitivo em $\Omega\smallsetminus\{\alpha\}$ para todo $\alpha\in\Omega$. 
+3. Se $|\Omega|=n$, então o único subgrupo $n$-transitivo de $S_n$ é o próprio $S_n$. 
+4. $\GL 2\F$ é 3-transitivo em $\mathbb P\F^2$.
+5. Se $n\geq 3$, então $\GL n\F$ é $2$-transitivo, mas não é $3$-transitivo em $\mathbb P\F^n$. 
+:::
+
+
+
+:::{#exr-}
+Suponha que $G$ age em $\Omega$ e seja $\alpha,\beta\in\Omega$ pontos na mesma órbita. Assuma que $\alpha g=\beta$. Mostre que 
+$$
+G_\beta=(G_\alpha)^g=g^{-1}G_\alpha g.
+$$
+:::
+
+:::{#exr-}
+Assuma que $G$ age transitivamente em $\Omega$ e seja $\alpha\in \Omega$. Mostre que o núcleo da ação de $G$ coincide com o subgrupo 
+$$
+\mbox{Core}_G(G_\alpha):=\bigcap_{g\in G} (G_\alpha)^g
+$$
+:::
+
+:::{#exr-}
+Assuma que $G\leq S_n$ um subgrupo abeliano e transitivo. Mostre que $|G|=n$.
+:::
+
+

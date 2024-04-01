@@ -4,47 +4,88 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Classes de conjugação
 
 
-Considere a ação de $G$ em $\Omega=G$ por conjugação; ou seja, $(x,g)\mapsto x^g=g^{-1}xg$. Se $x\in \Omega$ então a órbita $x^G=\{x^g \mid g\in G\}$ é chamada de classe de conjugação de $x$ em $G$. O estabilizador de $x\in \Omega$ nesta ação é o subgrupo
+
+
+Considere a ação de $G$ em $\Omega=G$ por conjugação já estudada no @exm-cent; ou seja, $(x,g)\mapsto x^g=g^{-1}xg$. Se $x\in \Omega$ então a órbita $x^G=\{x^g \mid g\in G\}$ é chamada de *classe de conjugação* de $x$ em $G$. O estabilizador de $x\in \Omega$ nesta ação é o subgrupo
 \begin{eqnarray*}
 G_x&=&C_G(x)=\{g\in G\mid g^{-1}xg= x\}\\&=&\{g\in G\mid xg= gx\}.
 \end{eqnarray*}
-Este subgrupo chama-se o centralizador de $x$ em $G$. Temos pelo Teorema Órbita-Estabilizador que $|x^G|=|G:C_G(x)|$. Em particular, se $G$ é finito, obtemos o seguinte resultado.
+Este subgrupo chama-se o *centralizador* de $x$ em $G$. Temos pelo Teorema Órbita-Estabilizador que $|x^G|=|G:C_G(x)|$. Em particular, se $G$ é finito, obtemos o seguinte resultado.
 
-:::{#prop-class-cent}
+:::{#prp-class-cent}
 Se $G$ é um grupo finito e $x\in G$, então
 $$
 |x^G|=\frac{|G|}{|C_G(x)|}.
 $$
 :::
 
+## Classes de conjugação em $S_n$
+
+:::{#def-partition}
+Se $n\in\N$, então uma *partição* de $n$ é um conjunto $\lambda=\{k_1,\ldots,k_m\}$ tal que  $k_1+\cdots+k_m=n$. Neste caso escrevemos que 
+$\lambda\vdash n$. 
+:::
+
+:::{#exm-p5}
+Por exemplo, as partições de $5$ são 
+$$
+\{1,1,1,1,1\},\ \{2,1,1,1\},\ \{2,2,1\},\ \{3,1,1\},\ \{3,2\},\ \{4,1\},\ \{5\} 
+$$
+:::
+
+[Partições](https://en.wikipedia.org/wiki/Integer_partition) são importantes em várias áreas da matemática e estatística. O número de partições de um inteiro $n$ aparece como a sequência [A000041](https://oeis.org/A000041) na [Online Encyclopedia of Integer Sequences](https://oeis.org/).
+
+:::{#exm-perm-part}
+Cada permutação $\sigma\in S_n$ determina uma partição de $n$. De fato, assuma que $\sigma$ é produto de ciclos de comprimento $\lambda_1,\ldots,\lambda_m$ contando também os ciclos de comprimento $1$. Então $\lambda=\{\lambda_1,\ldots,\lambda_m\}\vdash n$. 
+:::
+
 :::{#exm-class-cent}
-Sejam $\pi,\sigma\in S_n$. Escreva $\pi$ e $\sigma$ como produto de ciclos disjuntos e assuma que $\pi$ contém $k_i$ ciclos de comprimento $i$ e que $\sigma$ contém $\ell_i$ ciclos de comprimento $i$ para todo $i=1,\ldots,n$.  Note que as sequências $k_1,\ldots,k_n$ e $\ell_1,\ldots,\ell_n$ são unicamente determinadas pelas permutações $\pi$ e $\sigma$. Demonstre que $\pi$ e $\sigma$ são conjugados em $S_n$ se e somente se $k_i=\ell_i$ para todo $i=1,\ldots,n$.
+Se $(i_1,\ldots,i_k)\in S_n$ é um ciclo e $\sigma\in S_n$, então 
+$$ 
+    (i_1,\ldots,i_k)^\sigma=(i_1\sigma,\ldots,i_k\sigma). 
+$$
+Demonstre que $\sigma_1,\sigma_2\in S_n$ são conjugados em $S_n$ se e somente eles determinam a mesma partição de $n$. 
 :::
 
 :::{#exm-classes-s5}
-Considere o grupo $S_5$. Pelo exercício anterior este grupo tem 7 classes de conjugação com os seguintes representantes: $1$, $(1,2)$, $(1,2)(3,4)$, $(1,2)(3,4,5)$, $(1,2,3)$, $(1,2,3,4)$, e $(1,2,3,4,5)$. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.
+Considere o grupo $S_5$. Pelo @exm-p5, este grupo tem 7 classes de conjugação com os seguintes representantes: $1$, $(1,2)$, $(1,2)(3,4)$, $(1,2,3)$, $(1,2,3)(4,5)$, $(1,2,3,4)$, e $(1,2,3,4,5)$. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.
+
+
+| $x$                | $|x^{S_5}|$        | $|C_{S_5}(x)|$           | $C_{S_5}(x)$                           | 
+| ------------------ | ------------------ | ------------------------ | -------------------------------------- |
+| $1$                | $1$                | $120$                    | $S_5$                                  |
+| $(1,2)$            | $10$               | $12$                     | $\left<(1,2),(3,4),(3,4,5)\right>$     | 
+| $(1,2)(3,4)$       | $15$               | $8$                      | $\left<(1,2),(1,3,2,4)\right>$         |   
+| $(1,2,3)$          | $20$               | $6$                      | $\left<(1,2,3),(4,5)\right>$           |
+| $(1,2,3)(4,5)$     | $20$               | $6$                      | $\left<(1,2,3),(4,5)\right>$           |
+| $(1,2,3,4)$        | $30$               | $4$                      | $\left<(1,2,3,4)\right>$               |
+| $(1,2,3,4,5)$      | $24$               | $5$                      | $\left<(1,2,3,4,5)\right>$
 :::
 
-[table id=2 /]
+:::{#exr-s6}
+Determine as tabelas das classes de comjugação para os grupos $S_3$, $S_4$, e $S_6$. 
+:::
 
-:::{#def-center}
-O centro de um grupo $G$ está definido como
+## O centro de um grupo
+
+O centro $Z(G)$ de um grupo $G$ foi definido no @def-center como
 \begin{eqnarray*}
 Z(G)&=&\{g\in G\mid gh=hg\mbox{ para todo }h\in G\}\\&=&\{g\in G\mid g^h=g\mbox{ para todo }h\in G\}.
 \end{eqnarray*}
-:::
+
 
 Para $g\in G$, observe que $\{g\}$ é uma classe de conjugação se e somente se $g\in Z(G)$. (Pode-se deduzir da tabela em cima que $Z(S_5)=\{1\}$.) Se $G$ é um grupo finito e $C_1,\ldots,C_m$ são as classes de $G$ com cardinalidade maior ou igual a dois, então podemos escrever o grupo $G$ como uma união disjunta
 $$
 G=Z(G)\cup C_1\cup\cdots\cup C_m
 $$
 e isso implica que
-\begin{eqnarray}\label{eq:class}
+$$
 |G|=|Z(G)|+ |C_1|+\cdots+|C_m|.
-\end{eqnarray}
-A equação \eqref{eq:class} é chamada de equação das classes de $G$.
+$${#eq-class}
+A equação @eq-class é chamada de equação das classes de $G$.
 
 Considerando a equação das classes para grupos cuja ordem é uma potência de um primo, obtemos o seguinte resultado importante.
 
@@ -53,17 +94,20 @@ Seja $p$ um primo e seja $G$ um grupo tal que $|G|=p^k$ com algum $k\geq 1$. Ent
 :::
 
 :::{.proof}
-Considere a equação \eqref{eq:class} para o grupo $G$. Como as classes $C_i$ são $G$-órbitas para uma ação de $G$ (nomeadamente, a conjugação de $G$ em $G$), temos que $|C_i|$ é um divisor de $|G|=p^k$; ou seja $|C_i|=p^{k_i}$ com algum $k_i\geq 1$. O lado esquerdo da equação das classes é uma potência de $p$, e os termos $|C_i|$ no lado direito também são potências de $p$. Isso quer dizer que $p\mid |Z(G)|$ e em particular que $|Z(G)|>1$.
+Considere a equação @eq-class para o grupo $G$. Como as classes $C_i$ são $G$-órbitas para uma ação de $G$ (nomeadamente, a conjugação de $G$ em $G$), temos que $|C_i|$ é um divisor de $|G|=p^k$; ou seja $|C_i|=p^{k_i}$ com algum $k_i\geq 1$. O lado esquerdo da equação das classes é uma potência de $p$, e os termos $|C_i|$ no lado direito também são potências de $p$. Isso quer dizer que $p\mid |Z(G)|$ e em particular que $|Z(G)|>1$.
+:::
 
 Note que um grupo finito $G$ tal que $|G|=p^k$ onde $p$ é primo é chamado de $p$-grupo finito. Por exemplo, $D_4$ é um 2-grupo finito. O teorema anterior diz que o centro de um $p$-grupo finito é não trivial.
-:::
+
 
 :::{#exr-grp-p2}
 Sejam $p$ um primo e $G$ um grupo tal que $|G|=p^2$. Mostre que $G$ é abeliano e que exatamente uma das seguintes afirmações é válida:
 
-* $G$ é cíclico
-* $G=\left<a,b\right>$ onde $|a|=|b|=p$ e $ab=ba$.
+* $G$ é cíclico e $G\cong \Z_{p^2}$;
+* $G=\left<a,b\right>$ onde $|a|=|b|=p$ e $ab=ba$. Neste caso $G\cong \Z_p\times \Z_p$. 
 :::
+
+## Primeiro encontro com grupos solúveis
 
 :::{#def-solvable2}
 Um grupo $G$ chama-se solúvel se $G$ possui uma cadeia de subgrupos
@@ -88,5 +132,16 @@ Um $p$-grupo finito $G$ é solúvel.
 :::
 
 :::{.proof}
-Se $G$ é abeliano, então não há nada para provar. Assuma que $G$ não é abeliano, e considere $G_1=Z(G)$. Note que $G_1$ é normal em $G$ e $G_1\neq \{1\}$  Se $G/G_1$ é abeliano, então a cadeia $1<G_1<G$ possui quocientes abelianos e $G$ é solúvel.. Se $G/G_1$ não for abeliano, então considere $Z(G/G_1)$. Temos que $Z(G/G_1)$ é normal em $G/G_1$ e que $Z(G/G_1)\neq\{1\}$. Seja $G_2=\{g\in G\mid G_1g\in Z(G/G_1)\}$. É fácil mostrar que $G_2$ é um subgrupo normal em $G$ tal que $G_2/G_1=Z(G/G_1)$ que implica que $G_2/G_1$ é um grupo abeliano. Se $G/G_2$ é abeliano, então consideramos a cadeia $1<G_1<G_2<G$ e estamos prontos. Se $G/G_2$ for não abeliano, então repetimos o passo anterior até obtivermos um subgrupo $G_k$ tal que $G/G_k$ seja abeliano.
+Seja $G$ um $p$-grupo. Ponha $Z_0=1$. Pelo @thm-center-pgp, temos que $Z_1=Z(G)\neq 1$ e considere o quociente $G/Z(G)$. Este grupo é um $p$-grupo também e $Z(G/Z(G))\neq 1$. Pelo @thm-corresp, temos que existe um subgrupo normal $Z_2\unlhd G$ tal que $Z(G)< Z_2$ e $Z(G/Z(G))=Z_2/Z_(G)$. Continuando deste jeito, assuma que foi determinado uma cadeia de subgrupos normais $Z_0<Z_1<Z_2<\cdots<Z_k$ tal que 
+$$
+Z(G/Z_{i-1})=Z_i/Z_{i-1}\quad\mbox{para todo}i\in\{1,\ldots,k\}
+$$
+Se $Z_k=G$, então não temos nada mais para fazer. Se $Z_k<G$, então defina $Z_{k+1}$ usando o @thm-corresp tal que $Z(G/Z_k)=Z_{k+1}/Z_k$. 
+Como $G$ é finito, obtemos uma cadeia de subgrupos 
+$$
+Z_0=1<Z_1<\cdots<Z_m=G
+$$
+com a propriedade que $Z(G/Z_{i-1})=Z_{i}/Z_{i-1}$ para todo $i\in\{1,\ldots,m\}$. Como o centro de qualquer grupo é abeliano, obtemos que todo quociente $Z_i/Z_{i-1}$ é abeliano e $G$ é solúvel. 
 :::
+
+A cadeia construída na demonstração do @cor-solvable chama se *cadeia central superior* de $G$. O argumento na demonstração na verdade demonstra que um $p$-grupo finito $G$ é nilpotente que é uma propriedade mais forte que ser solúvel.
