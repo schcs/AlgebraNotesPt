@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 3&nbsp; Quantificadores</title>
+<title>Álgebra - 6&nbsp; Exemplos de relações de equivalência</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../IniciacaoAMatematica/relations.html" rel="next">
-<link href="../IniciacaoAMatematica/conjuntos.html" rel="prev">
+<link href="../FundamentosDeAlgebra/index.html" rel="next">
+<link href="../IniciacaoAMatematica/equivalence.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -614,7 +614,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/quant.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence_examples.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -668,7 +668,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/quant.html" class="sidebar-item-text sidebar-link active">
+  <a href="../IniciacaoAMatematica/quant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></span></a>
   </div>
 </li>
@@ -686,7 +686,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/equivalence_examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../IniciacaoAMatematica/equivalence_examples.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></span></a>
   </div>
 </li>
@@ -1119,19 +1119,16 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#predicatos" id="toc-predicatos" class="nav-link active" data-scroll-target="#predicatos"><span class="header-section-number">3.1</span> Predicatos</a></li>
-  <li><a href="#quantificador-universal-e-existencial" id="toc-quantificador-universal-e-existencial" class="nav-link" data-scroll-target="#quantificador-universal-e-existencial"><span class="header-section-number">3.2</span> Quantificador universal e existencial</a></li>
-  <li><a href="#negação-de-proposições-com-quantificador" id="toc-negação-de-proposições-com-quantificador" class="nav-link" data-scroll-target="#negação-de-proposições-com-quantificador"><span class="header-section-number">3.3</span> Negação de proposições com quantificador</a></li>
-  <li><a href="#proposições-com-várias-quantificadores" id="toc-proposições-com-várias-quantificadores" class="nav-link" data-scroll-target="#proposições-com-várias-quantificadores"><span class="header-section-number">3.4</span> Proposições com várias quantificadores</a></li>
+  <li><a href="#classes-residuais" id="toc-classes-residuais" class="nav-link active" data-scroll-target="#classes-residuais"><span class="header-section-number">6.1</span> Classes residuais</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/quant.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence_examples.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></h1>
 </div>
 
 
@@ -1148,89 +1145,35 @@ window.Quarto = {
 </header>
 
 
-<section id="predicatos" class="level2" data-number="3.1">
-<h2 data-number="3.1" data-anchor-id="predicatos"><span class="header-section-number">3.1</span> Predicatos</h2>
-<p>Um <em>predicato</em> é um sentença com variáveis. Por exemplo <span class="math display">\[
-P(x):\mbox{$x$ é par}
-\]</span><br>
-é um predicato com variável <span class="math inline">\(x\)</span>. Neste caso, podemos substituir objetos no lugar de <span class="math inline">\(x\)</span>. Por exemplo, substituindo <span class="math inline">\(x=2\)</span>, obtemos a proposição verdadeira <span class="math display">\[
-P(2): \mbox{$2$ é par}.
-\]</span> Se substituimos <span class="math inline">\(x=3\)</span>, então obtemos a proposição <span class="math display">\[
-P(3): \mbox{3 é par}
-\]</span> que é uma proposição falsa. Se substituimos <span class="math inline">\(x=\pi\)</span>, então <span class="math display">\[
-P(\pi): \mbox{$\pi$ é par}
-\]</span> não obtemos uma proposição válida, pois o conceito de ser par não faz sentido para o número <span class="math inline">\(\pi\)</span>.</p>
-<div id="def-predicato" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 3.1</strong></span> Sejam <span class="math inline">\(P(x)\)</span> um predicato e <span class="math inline">\(A\)</span> um conjunto. Dizemos que o predicato <span class="math inline">\(P(x)\)</span> é <em>válido</em> para <span class="math inline">\(A\)</span> se <span class="math inline">\(P(a)\)</span> é uma proposição (falsa ou verdadeira) para todo <span class="math inline">\(a\in A\)</span>.</p>
+<section id="classes-residuais" class="level2" data-number="6.1">
+<h2 data-number="6.1" data-anchor-id="classes-residuais"><span class="header-section-number">6.1</span> Classes residuais</h2>
+<p>Como nós já discutimos, dizemos que <span class="math inline">\(a\)</span> divide <span class="math inline">\(b\)</span> (<span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são números inteiros) se <span class="math inline">\(b=ka\)</span> com algum <span class="math inline">\(k\)</span> inteiro. Neste caso pode-se dizer também que <span class="math inline">\(a\)</span> é um divisor de <span class="math inline">\(b\)</span> ou que <span class="math inline">\(b\)</span> é múltiplo de <span class="math inline">\(a\)</span>. Se <span class="math inline">\(a\)</span> divide <span class="math inline">\(b\)</span>, então escrevemos <span class="math inline">\(a\mid b\)</span>.</p>
+<p>Defina a seguinte relação sobre <span class="math inline">\(\Z\)</span>: <span class="math display">\[
+a\equiv_3 b\quad\bicond\quad b-a=3k\mbox{ com algum }k\in\Z.
+\]</span> Pode também dizer que <span class="math inline">\(a\equiv_3 b\)</span> se e somente se <span class="math inline">\(3\mid b-a\)</span>.</p>
+<div id="lem-resid" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 6.1</strong></span> A relação <span class="math inline">\(\equiv_3\)</span> é uma relação de equivalência sobre <span class="math inline">\(\Z\)</span>.</p>
 </div>
-<div id="exm-predicato" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.1</strong></span> Por exemplo, a predicato ‘<span class="math inline">\(P(x)\)</span>: <span class="math inline">\(x\)</span> é par’ é valido para o conjunto <span class="math inline">\(\N\)</span> de números naturais, pois cada natural ou é par ou é impar. Similarmente, o mesmo predicato é válido para o conjunto <span class="math inline">\(\Z\)</span> dos inteiros, mas ele não é válido para o conjunto <span class="math inline">\(\Q\)</span> de racionais, pois a propriedade de ser par não faz sentido para um número racional que não é inteiro.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Por definição, <a href="equivalence.html#def-eq-rel" class="quarto-xref">Definição&nbsp;<span>5.1</span></a>, precisamos verificar que a relação é reflexiva, simétrica, e transitiva.</p>
+<p><strong>Reflexividade:</strong> Se <span class="math inline">\(a\in\Z\)</span>, então <span class="math inline">\(n\mid a-a=0=3\cdot 0\)</span>. Logo <span class="math inline">\(a\equiv_3 a\)</span>.</p>
+<p><strong>Simetria:</strong> Sejam <span class="math inline">\(a,b\in\Z\)</span> tal que <span class="math inline">\(a\equiv_3 b\)</span>. Então <span class="math inline">\(b-a=3k\)</span> e assim <span class="math inline">\(a-b=-(b-a)=-3k=3(-k)\)</span>.</p>
+<p><strong>Transitividade:</strong> Sejam <span class="math inline">\(a,b,c\in\Z\)</span> tais que <span class="math inline">\(a\equiv_3 b\)</span> e <span class="math inline">\(b\equiv_3 c\)</span>; ou seja <span class="math inline">\(b-a=3k_1\)</span> e <span class="math inline">\(c-b=3k_2\)</span>. Neste caso <span class="math display">\[
+c-a=(b-a)+(c-b)=3k_1+3k_2=3(k_1+k_2).
+\]</span> Pronto.</p>
 </div>
-</section>
-<section id="quantificador-universal-e-existencial" class="level2" data-number="3.2">
-<h2 data-number="3.2" data-anchor-id="quantificador-universal-e-existencial"><span class="header-section-number">3.2</span> Quantificador universal e existencial</h2>
-<div id="def-quant-uni-exis" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 3.2</strong></span> Sejam <span class="math inline">\(A\)</span> um conjunto e <span class="math inline">\(P(x)\)</span> um predicato válido para <span class="math inline">\(A\)</span>. A proposição <span class="math display">\[
-\forall x\in A: P(x)
-\]</span> (leia se: ‘para todo <span class="math inline">\(x\in A\)</span>, <span class="math inline">\(P(x)\)</span>’) é verdadeira se <span class="math inline">\(P(x)\)</span> é uma proposição verdadeira para todo <span class="math inline">\(x\in A\)</span>. Caso contrário a proposição <span class="math inline">\(\forall x\in A: P(x)\)</span> é falsa.</p>
-<p>A proposição <span class="math display">\[
-\exists x\in A: P(x)
-\]</span> (leia se:‘existe <span class="math inline">\(x\in A\)</span> tal que <span class="math inline">\(P(x)\)</span>’) é verdadeira se <span class="math inline">\(P(x)\)</span> é verdadeira para algum <span class="math inline">\(x\in A\)</span>. Caso contrário a proposição <span class="math inline">\(\exists x\in A: P(x)\)</span> é falsa.</p>
+<div id="exm-resid" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 6.1</strong></span> Por exemplo <span class="math inline">\(2\equiv_3 5\)</span>, pois <span class="math inline">\(5-2=3=3\cdot 1\)</span>. Temos também que <span class="math inline">\(1\equiv_3 -2\)</span>, pois <span class="math inline">\(-2-1=-3=3\cdot (-1)\)</span>. Por outro lado, <span class="math inline">\(1\not\equiv_3 -1\)</span>, pois <span class="math inline">\(-1-1=-2\neq 3k\)</span>.</p>
 </div>
-<div id="exm-quantificador" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.2</strong></span> Seja <span class="math inline">\(A=\{2,3,5,7,11\}\)</span> e seja ‘<span class="math inline">\(P(x)\)</span>: <span class="math inline">\(x\)</span> é primo’. Então temos que a proposição <span class="math inline">\(\forall x\in A:P(x)\)</span> é verdadeira. Consequentemente, a proposição <span class="math inline">\(\exists x\in A:P(x)\)</span> é também verdadeira. Por outro lado, se ‘<span class="math inline">\(Q(x)\)</span>: <span class="math inline">\(x\)</span> é par’, então <span class="math inline">\(\forall x\in A:Q(x)\)</span> é falsa, mas <span class="math inline">\(\exists x\in A:Q(x)\)</span> é verdadeira. Se ‘<span class="math inline">\(R(x)\)</span>: <span class="math inline">\(x\)</span> é negativo’, então <span class="math inline">\(\forall x\in A:R(x)\)</span> e <span class="math inline">\(\exists x\in A:R(x)\)</span> são falsas.</p>
-</div>
-</section>
-<section id="negação-de-proposições-com-quantificador" class="level2" data-number="3.3">
-<h2 data-number="3.3" data-anchor-id="negação-de-proposições-com-quantificador"><span class="header-section-number">3.3</span> Negação de proposições com quantificador</h2>
-<p>Considere a proposição <span class="math inline">\(\forall x\in A: P(x)\)</span>. Esta proposição afirma que a proposição <span class="math inline">\(P(x)\)</span> está verdadeira para todo <span class="math inline">\(x\in A\)</span>. A negação dessa proposição afirma que isso não é verdade; ou seja, <span class="math inline">\(P(x)\)</span> não é verdadeira para algum <span class="math inline">\(x\in A\)</span>. Portanto, <span class="math display">\[
-\neg(\forall x\in A: P(x))\equiv \exists x\in A:\neg P(x).
+<p>Quais são as classes de equivalência (<a href="equivalence.html#def-class-eq" class="quarto-xref">Definição&nbsp;<span>5.2</span></a>)? Por exemplo, qual conjunto é a classe <span class="math inline">\([0]\)</span> de <span class="math inline">\(0\)</span>? Temos pela definição da classe <span class="math inline">\([0]\)</span> que <span class="math display">\[
+[0]=\{a\in\Z\mid 0\equiv_3 a\}=\{a\in\Z\mid a-0=3k\}=\{a\in\Z\mid a=3k\}.
+\]</span> Ou seja, <span class="math display">\[
+[0]=\{0,3,-3,6,-6,\ldots\}=\{3k\mid k\in\Z\}.
+\]</span> Similarmente <span class="math display">\[
+[1]=\{a\in\Z\mid 1\equiv_3 a\}=\{a\in\Z\mid a-1=3k\}=\{a\in\Z\mid a=3k+1\}=\{1,-2,4,-5,7,-8,10,\ldots\}
+\]</span> e <span class="math display">\[
+[2]=\{a\in\Z\mid 2\equiv_3 a\}=\{a\in\Z\mid a-2=3k\}=\{a\in\Z\mid a=3k+2\}=\{2,-1,5,-4,8,-7,\ldots\}
 \]</span></p>
-<div id="exm-neg-forall" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.3</strong></span> Considere <span class="math inline">\(A=\{-1,0,1\}\)</span> e seja ‘<span class="math inline">\(P(x)\)</span>: <span class="math inline">\(x&gt;0\)</span>’. Temos que a proposição <span class="math inline">\(\forall x\in A: P(x)\)</span> é falsa, pois tomando <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(P(x)=P(-1)\)</span> é falsa. Por outro lado <span class="math display">\[
-\neg (\forall x\in A:P(x))\equiv \exists x\in A:\neg P(x)\equiv \exists x\in A:x\leq 0
-\]</span> é verdadeira.</p>
-</div>
-<p>Similarmente, a negação da proposição <span class="math inline">\(\exists x\in A: P(x)\)</span> é <span class="math inline">\(\forall x\in A: \neg P(x)\)</span>.</p>
-<div id="exm-neg-forall" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.4</strong></span> Considere <span class="math inline">\(A=\{-1,0,1\}\)</span> e seja ‘<span class="math inline">\(P(x)\)</span>: <span class="math inline">\(x&gt;0\)</span>’. Temos que a proposição <span class="math inline">\(\exists x\in A: P(x)\)</span> é verdadeira, pois tomando <span class="math inline">\(x=1\)</span>, <span class="math inline">\(P(x)=P(1)\)</span> é verdadeira. Por outro lado <span class="math display">\[
-\neg (\exists x\in A:P(x))\equiv \forall x\in A:\neg P(x)\equiv \forall x\in A:x\leq 0
-\]</span> é falsa.</p>
-</div>
-</section>
-<section id="proposições-com-várias-quantificadores" class="level2" data-number="3.4">
-<h2 data-number="3.4" data-anchor-id="proposições-com-várias-quantificadores"><span class="header-section-number">3.4</span> Proposições com várias quantificadores</h2>
-<p>Na matemática, precisamos estudar frequentemente proposições que têm várias quantificadores. Considere o seguinte exemplo.</p>
-<div id="exm-quantif-mult" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.5</strong></span> Sejam <span class="math display">\[
-A=\{2,3,5,7\}\quad \mbox{e}\quad B=\{6,8,9,10,12,14\}
-\]</span> e considere a proposição <span class="math display">\[
-\forall x\in A:(\exists y\in B:x\mid y).
-\]</span> (Lembre que ‘<span class="math inline">\(x\mid y\)</span>’ signfica que ‘<span class="math inline">\(y\)</span> é múltiplo de <span class="math inline">\(x\)</span>’; ou sejaj, ‘<span class="math inline">\(x\)</span> é divisor de <span class="math inline">\(y\)</span>’.) Esta proposição quer dizer que para todo <span class="math inline">\(x\in A\)</span> existe <span class="math inline">\(y\in B\)</span> tal que <span class="math inline">\(x\mid y\)</span>. Esta proposição é verdadeira pois cada elemento de <span class="math inline">\(A\)</span> possui um múltiplo em <span class="math inline">\(B\)</span>. A negação desta proposição, pode ser escrita na maneira seguite: <span class="math display">\[\begin{align*}
-\neg(\forall x\in A:(\exists y\in B:x\mid y))&amp;\equiv\\
-\exists x\in A:\neg (\exists y\in B:x\mid y)&amp;\equiv\\
-\exists x\in A:(\forall y\in B:x\nmid y).
-\end{align*}\]</span></p>
-<p>Considere agora a proposição <span class="math display">\[
-\exists y\in B:(\forall x\in A:x\mid y).
-\]</span> Esta proposição quer dizer que existe um elemento <span class="math inline">\(y\in B\)</span> tal que <span class="math inline">\(y\)</span> é múltiplo de todo elemento de <span class="math inline">\(A\)</span>. Inspeção dos dois conjuntos mostra que isso não é verdade. A negação desta proposição pode ser determinada com a seguinte conta: <span class="math display">\[\begin{align*}
-\neg(\exists y\in B:(\forall x\in A:x\mid y))&amp;\equiv\\
-\forall y\in B:\neg (\forall x\in A:x\mid y)&amp;\equiv\\
-\forall y\in B:(\exists x\in A:x\nmid y).
-\end{align*}\]</span></p>
-</div>
-<div id="exm-conv" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 3.6</strong></span> Proposições com vários quantificadores são comuns na área de cálculo. Por exemplo, para uma sequência infinita <span class="math inline">\(a_1,a_2,a_2,\ldots\)</span> de números reais, a definição que <span class="math inline">\(\lim_{n\to \infty}a_n=a\)</span> é escrita na seguinte maneira: <span class="math display">\[
-\forall \varepsilon\in \R_+:(\exists N\in \N:(\forall n\in\{N,N+1,N+2,\ldots\}:|a-a_n|\leq \varepsilon)).
-\]</span> Aqui <span class="math inline">\(\R_+\)</span> é o conjunto dos números reais positivos. Esta mesma proposição está frequentamente escrita mais informalmente como <span class="math display">\[
-\forall \varepsilon&gt;0:(\exists N&gt;1:(\forall n\geq N:|a-a_n|\leq \varepsilon)).
-\]</span> Geralmente, fica claro do contexto que <span class="math inline">\(\varepsilon\)</span> é um número real, e <span class="math inline">\(N\)</span> e <span class="math inline">\(n\)</span> são números naturais.</p>
-<p>A negação (ou seja, a afirmação que <span class="math inline">\(\lim_{n\to \infty}a_n\neq a\)</span>) está escrita como <span class="math display">\[
-\exists\varepsilon\in\R_+:(\forall N\in\N:(\exists n\in\{N,N+1,N+2,\ldots\}:|a-a_n|&gt;\varepsilon)).
-\]</span> Mais informalmente, a negação está escrita como <span class="math display">\[
-\exists\varepsilon&gt;0:(\forall N&gt;1:(\exists n\geq N:|a-a_n|&gt;\varepsilon)).
-\]</span></p>
-</div>
 
 
 </section>
@@ -1647,13 +1590,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../IniciacaoAMatematica/conjuntos.html" class="pagination-link" aria-label="Conjuntos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conjuntos</span></span>
+      <a href="../IniciacaoAMatematica/equivalence.html" class="pagination-link" aria-label="Relações de equivalência">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../IniciacaoAMatematica/relations.html" class="pagination-link" aria-label="Pares ordenados e produtos cartesianos">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../FundamentosDeAlgebra/index.html" class="pagination-link" aria-label="Fundamentos de Álgebra">
+        <span class="nav-page-text">Fundamentos de Álgebra</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
