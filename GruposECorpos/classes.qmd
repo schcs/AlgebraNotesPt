@@ -42,7 +42,7 @@ $$
 Cada permutação $\sigma\in S_n$ determina uma partição de $n$. De fato, assuma que $\sigma$ é produto de ciclos de comprimento $\lambda_1,\ldots,\lambda_m$, em ordem não crescente, contando também os ciclos de comprimento $1$. Então $\lambda=(\lambda_1,\ldots,\lambda_m)\vdash n$. Por exemplo, a partição determinada pela permutação $(1,2)(3,4)(5,6,7)\in S_8$ é $(3,2,2,1)$. 
 :::
 
-:::{#exm-class-cent}
+:::{#exr-class-cent}
 Se $(i_1,\ldots,i_k)\in S_n$ é um ciclo e $\sigma\in S_n$, então 
 $$ 
     (i_1,\ldots,i_k)^\sigma=(i_1\sigma,\ldots,i_k\sigma). 
@@ -71,7 +71,7 @@ Determine as tabelas das classes de comjugação para os grupos $S_3$, $S_4$, e 
 
 ## O centro de um grupo
 
-O centro $Z(G)$ de um grupo $G$ foi definido no @def-center como
+O centro $Z(G)$ de um grupo $G$ foi definido na @def-center como
 \begin{eqnarray*}
 Z(G)&=&\{g\in G\mid gh=hg\mbox{ para todo }h\in G\}\\&=&\{g\in G\mid g^h=g\mbox{ para todo }h\in G\}.
 \end{eqnarray*}
@@ -132,11 +132,11 @@ Um $p$-grupo finito $G$ é solúvel.
 :::
 
 :::{.proof}
-Seja $G$ um $p$-grupo. Ponha $Z_0=1$. Pelo @thm-center-pgp, temos que $Z_1=Z(G)\neq 1$ e considere o quociente $G/Z(G)$. Este grupo é um $p$-grupo também e $Z(G/Z(G))\neq 1$. Pelo @thm-corresp, temos que existe um subgrupo normal $Z_2\unlhd G$ tal que $Z(G)< Z_2$ e $Z(G/Z(G))=Z_2/Z_(G)$. Continuando deste jeito, assuma que foi determinado uma cadeia de subgrupos normais $Z_0<Z_1<Z_2<\cdots<Z_k$ tal que 
+Seja $G$ um $p$-grupo. Ponha $Z_0=1$. Pelo @thm-center-pgp, temos que $Z_1=Z(G)\neq 1$. Se $Z(G)=G$, então $G$ é abeliano e é solúvel. Assuma que $Z(G)\neq G$ e considere o quociente $G/Z(G)$ (que é não trivial). Este grupo é um $p$-grupo também e $Z(G/Z(G))\neq 1$. Pelo @thm-corresp, temos que existe um subgrupo normal $Z_2\unlhd G$ tal que $Z(G)< Z_2$ e $Z(G/Z(G))=Z_2/Z_(G)$. Continuando deste jeito, assuma que foi determinado uma cadeia de subgrupos normais $Z_0<Z_1<Z_2<\cdots<Z_k$ tal que 
 $$
 Z(G/Z_{i-1})=Z_i/Z_{i-1}\quad\mbox{para todo}i\in\{1,\ldots,k\}
 $$
-Se $Z_k=G$, então não temos nada mais para fazer. Se $Z_k<G$, então defina $Z_{k+1}$ usando o @thm-corresp tal que $Z(G/Z_k)=Z_{k+1}/Z_k$. 
+Se $Z_k=G$, então não temos nada mais para fazer. Se $Z_k<G$, então defina $Z_{k+1}$ usando o @thm-corresp tal que $Z(G/Z_k)=Z_{k+1}/Z_k$. Como $G/Z_k$ é um $p$-grupo finito, temos por @thm-center-pgp que $Z_k<Z_{k+1}$.  
 Como $G$ é finito, obtemos uma cadeia de subgrupos 
 $$
 Z_0=1<Z_1<\cdots<Z_m=G
@@ -144,4 +144,4 @@ $$
 com a propriedade que $Z(G/Z_{i-1})=Z_{i}/Z_{i-1}$ para todo $i\in\{1,\ldots,m\}$. Como o centro de qualquer grupo é abeliano, obtemos que todo quociente $Z_i/Z_{i-1}$ é abeliano e $G$ é solúvel. 
 :::
 
-A cadeia construída na demonstração do @cor-solvable chama se *cadeia central superior* de $G$. O argumento na demonstração na verdade demonstra que um $p$-grupo finito $G$ é nilpotente que é uma propriedade mais forte que ser solúvel.
+A cadeia construída na demonstração do @cor-solvable chama se *cadeia central superior* de $G$. O argumento na demonstração na verdade demonstra que um $p$-grupo finito $G$ é nilpotente (veja @sec-nilpotent) que é uma propriedade mais forte que ser solúvel.

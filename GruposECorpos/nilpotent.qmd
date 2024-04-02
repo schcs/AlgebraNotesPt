@@ -1,8 +1,9 @@
 ---
-title: "Grupos nilpotentes"
 number-sections: true
 lang: pt-BR
 ---
+
+# Grupos nilpotentes {#sec-nilpotent}
 
 :::{#def-}
 Se $G$ é um grupo e $A,B\leq G$, então
