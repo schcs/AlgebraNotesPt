@@ -1162,16 +1162,16 @@ G_x&amp;=&amp;C_G(x)=\{g\in G\mid g^{-1}xg= x\}\\&amp;=&amp;\{g\in G\mid xg= gx\
 <section id="classes-de-conjugação-em-s_n" class="level2" data-number="59.2">
 <h2 data-number="59.2" data-anchor-id="classes-de-conjugação-em-s_n"><span class="header-section-number">59.2</span> Classes de conjugação em <span class="math inline">\(S_n\)</span></h2>
 <div id="def-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 59.1</strong></span> Se <span class="math inline">\(n\in\N\)</span>, então uma <em>partição</em> de <span class="math inline">\(n\)</span> é um conjunto <span class="math inline">\(\lambda=\{k_1,\ldots,k_m\}\)</span> tal que <span class="math inline">\(k_1+\cdots+k_m=n\)</span>. Neste caso escrevemos que <span class="math inline">\(\lambda\vdash n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 59.1</strong></span> Se <span class="math inline">\(n\in\N\)</span>, então uma <em>partição</em> de <span class="math inline">\(n\)</span> é uma sequẽncia <span class="math inline">\(\lambda=(k_1,\ldots,k_m)\)</span> tal que <span class="math inline">\(k_1\geq k_2\geq\cdots\geq k_m\)</span> e <span class="math inline">\(k_1+\cdots+k_m=n\)</span>. Neste caso escrevemos que <span class="math inline">\(\lambda\vdash n\)</span>.</p>
 </div>
 <div id="exm-p5" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 59.1</strong></span> Por exemplo, as partições de <span class="math inline">\(5\)</span> são <span class="math display">\[
-\{1,1,1,1,1\},\ \{2,1,1,1\},\ \{2,2,1\},\ \{3,1,1\},\ \{3,2\},\ \{4,1\},\ \{5\}
+(1,1,1,1,1),\ (2,1,1,1),\ (2,2,1),\ (3,1,1),\ (3,2),\ (4,1),\ (5)
 \]</span></p>
 </div>
 <p><a href="https://en.wikipedia.org/wiki/Integer_partition">Partições</a> são importantes em várias áreas da matemática e estatística. O número de partições de um inteiro <span class="math inline">\(n\)</span> aparece como a sequência <a href="https://oeis.org/A000041">A000041</a> na <a href="https://oeis.org/">Online Encyclopedia of Integer Sequences</a>.</p>
 <div id="exm-perm-part" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 59.2</strong></span> Cada permutação <span class="math inline">\(\sigma\in S_n\)</span> determina uma partição de <span class="math inline">\(n\)</span>. De fato, assuma que <span class="math inline">\(\sigma\)</span> é produto de ciclos de comprimento <span class="math inline">\(\lambda_1,\ldots,\lambda_m\)</span> contando também os ciclos de comprimento <span class="math inline">\(1\)</span>. Então <span class="math inline">\(\lambda=\{\lambda_1,\ldots,\lambda_m\}\vdash n\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 59.2</strong></span> Cada permutação <span class="math inline">\(\sigma\in S_n\)</span> determina uma partição de <span class="math inline">\(n\)</span>. De fato, assuma que <span class="math inline">\(\sigma\)</span> é produto de ciclos de comprimento <span class="math inline">\(\lambda_1,\ldots,\lambda_m\)</span>, em ordem não crescente, contando também os ciclos de comprimento <span class="math inline">\(1\)</span>. Então <span class="math inline">\(\lambda=(\lambda_1,\ldots,\lambda_m)\vdash n\)</span>. Por exemplo, a partição determinada pela permutação <span class="math inline">\((1,2)(3,4)(5,6,7)\in S_8\)</span> é <span class="math inline">\((3,2,2,1)\)</span>.</p>
 </div>
 <div id="exm-class-cent" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 59.3</strong></span> Se <span class="math inline">\((i_1,\ldots,i_k)\in S_n\)</span> é um ciclo e <span class="math inline">\(\sigma\in S_n\)</span>, então <span class="math display">\[
@@ -1179,7 +1179,7 @@ G_x&amp;=&amp;C_G(x)=\{g\in G\mid g^{-1}xg= x\}\\&amp;=&amp;\{g\in G\mid xg= gx\
 \]</span> Demonstre que <span class="math inline">\(\sigma_1,\sigma_2\in S_n\)</span> são conjugados em <span class="math inline">\(S_n\)</span> se e somente eles determinam a mesma partição de <span class="math inline">\(n\)</span>.</p>
 </div>
 <div id="exm-classes-s5" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 59.4</strong></span> Considere o grupo <span class="math inline">\(S_5\)</span>. Pelo <a href="#exm-p5" class="quarto-xref">Exemplo&nbsp;<span>59.1</span></a>, este grupo tem 7 classes de conjugação com os seguintes representantes: <span class="math inline">\(1\)</span>, <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,2)(3,4)\)</span>, <span class="math inline">\((1,2,3)\)</span>, <span class="math inline">\((1,2,3)(4,5)\)</span>, <span class="math inline">\((1,2,3,4)\)</span>, e <span class="math inline">\((1,2,3,4,5)\)</span>. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.</p>
+<p><span class="theorem-title"><strong>Exemplo 59.4</strong></span> Considere o grupo <span class="math inline">\(S_5\)</span>. Pelo <a href="#exm-p5" class="quarto-xref">Exemplo&nbsp;<span>59.1</span></a>, este grupo tem 7 classes de conjugação com os seguintes representantes: <span class="math inline">\(1\)</span>, <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((1,2)(3,4)\)</span>, <span class="math inline">\((1,2,3)\)</span>, <span class="math inline">\((1,2,3)(4,5)\)</span>, <span class="math inline">\((1,2,3,4)\)</span>, e <span class="math inline">\((1,2,3,4,5)\)</span>. Note que cada classe corresponde a uma partição no <a href="#exm-p5" class="quarto-xref">Exemplo&nbsp;<span>59.1</span></a>. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.</p>
 <table class="table">
 <colgroup>
 <col style="width: 18%">
