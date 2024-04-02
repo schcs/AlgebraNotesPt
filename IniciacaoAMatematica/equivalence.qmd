@@ -36,7 +36,7 @@ Então $\equiv$ é uma relação de equivalência.
 :::{#exm-eq2}
 Considere a relação $R$ em $\Z$ definido como 
 $$
-a\equiv b\quad\mbox{se e somente se}\quad 2\mid a-b.
+a\equiv b\quad\mbox{se e somente se}\quad a-b \mbox{ é par}.
 $$
 Note que $\equiv$ é uma relação de equivalência. Também note que $a\equiv b$ se e somente se $a$ e $b$ tem a mesma paridade. Ou seja, $0\equiv 2$, $0\equiv -2$, $0\equiv 4$, $0\equiv -4$, $1\equiv -1$, $1\equiv 3$, $1\equiv -3$, etc. 
 :::
