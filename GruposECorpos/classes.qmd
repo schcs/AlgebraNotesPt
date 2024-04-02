@@ -25,21 +25,21 @@ $$
 ## Classes de conjugação em $S_n$
 
 :::{#def-partition}
-Se $n\in\N$, então uma *partição* de $n$ é um conjunto $\lambda=\{k_1,\ldots,k_m\}$ tal que  $k_1+\cdots+k_m=n$. Neste caso escrevemos que 
+Se $n\in\N$, então uma *partição* de $n$ é uma sequẽncia $\lambda=(k_1,\ldots,k_m)$ tal que  $k_1\geq k_2\geq\cdots\geq k_m$ e $k_1+\cdots+k_m=n$. Neste caso escrevemos que 
 $\lambda\vdash n$. 
 :::
 
 :::{#exm-p5}
 Por exemplo, as partições de $5$ são 
 $$
-\{1,1,1,1,1\},\ \{2,1,1,1\},\ \{2,2,1\},\ \{3,1,1\},\ \{3,2\},\ \{4,1\},\ \{5\} 
+(1,1,1,1,1),\ (2,1,1,1),\ (2,2,1),\ (3,1,1),\ (3,2),\ (4,1),\ (5) 
 $$
 :::
 
 [Partições](https://en.wikipedia.org/wiki/Integer_partition) são importantes em várias áreas da matemática e estatística. O número de partições de um inteiro $n$ aparece como a sequência [A000041](https://oeis.org/A000041) na [Online Encyclopedia of Integer Sequences](https://oeis.org/).
 
 :::{#exm-perm-part}
-Cada permutação $\sigma\in S_n$ determina uma partição de $n$. De fato, assuma que $\sigma$ é produto de ciclos de comprimento $\lambda_1,\ldots,\lambda_m$ contando também os ciclos de comprimento $1$. Então $\lambda=\{\lambda_1,\ldots,\lambda_m\}\vdash n$. 
+Cada permutação $\sigma\in S_n$ determina uma partição de $n$. De fato, assuma que $\sigma$ é produto de ciclos de comprimento $\lambda_1,\ldots,\lambda_m$, em ordem não crescente, contando também os ciclos de comprimento $1$. Então $\lambda=(\lambda_1,\ldots,\lambda_m)\vdash n$. Por exemplo, a partição determinada pela permutação $(1,2)(3,4)(5,6,7)\in S_8$ é $(3,2,2,1)$. 
 :::
 
 :::{#exm-class-cent}
@@ -51,7 +51,7 @@ Demonstre que $\sigma_1,\sigma_2\in S_n$ são conjugados em $S_n$ se e somente e
 :::
 
 :::{#exm-classes-s5}
-Considere o grupo $S_5$. Pelo @exm-p5, este grupo tem 7 classes de conjugação com os seguintes representantes: $1$, $(1,2)$, $(1,2)(3,4)$, $(1,2,3)$, $(1,2,3)(4,5)$, $(1,2,3,4)$, e $(1,2,3,4,5)$. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.
+Considere o grupo $S_5$. Pelo @exm-p5, este grupo tem 7 classes de conjugação com os seguintes representantes: $1$, $(1,2)$, $(1,2)(3,4)$, $(1,2,3)$, $(1,2,3)(4,5)$, $(1,2,3,4)$, e $(1,2,3,4,5)$. Note que cada classe corresponde a uma partição no @exm-p5. A seguinte tabela contém as cardinalidades destas classes, as cardinalidades do centralizador do representante, e geradores do centralizador.
 
 
 | $x$                | $|x^{S_5}|$        | $|C_{S_5}(x)|$           | $C_{S_5}(x)$                           | 

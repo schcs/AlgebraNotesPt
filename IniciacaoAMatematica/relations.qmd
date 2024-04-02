@@ -115,7 +115,7 @@ Seja $R$ uma relação sobre $A$.
 :::
 
 :::{#exm-rel-props}
-Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual e menor ou igual são antisimétricas, e todas as relações neste exemplo são transitivas.
+Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antisimétricas, e todas as relações neste exemplo são transitivas.
 :::
 
 ## $k$-uplas ordenadas e produto cartesiano de vários conjuntos

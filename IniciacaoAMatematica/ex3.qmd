@@ -6,10 +6,10 @@ format:
         number-sections: true
         include-in-header:
             text: |
-                \setcounter{section}{1}
+                \setcounter{section}{2}
 ---
 
-# Lista de Exercícios 2
+# Lista de Exercícios
 ## Iniciação à Matemática, 2024/I {.unnumbered}
 
 ::: {.content-hidden}
@@ -19,67 +19,53 @@ $$
 :::
 
 :::{#exr-}
-Sejam $A=\{-4,-2,0,2,4\}$ e $B=\{0,1,2,3,4\}$. Determine os seguintes conjuntos.
-
-1. $A\cup B$; 
-2. $A\cap B$; 
-3. $A\smallsetminus B$; 
-4. $B\smallsetminus A$;
-5. $(A\smallsetminus B)\cup B\smallsetminus A$;
-6. $(A\smallsetminus B)\cap B\smallsetminus A$;
+Sejam $A=\{0,2,4\}$ e $B=\{1,2,3,4\}$. Faça uma lista dos elementos de $A\times A$, $A\times B$, $B\times A$ e $B\times B$. 
 :::
 
 :::{#exr-}
-Demonstre as seguintes afirmações para conjuntos $A$, $B$, e $C$.
+Seja $A=\{1,2,3,4,5,6\}$. Faça uma lista dos pares ordenados que pertencem às seguintes relações:
 
-1. $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
-2. Assumindo que $A$ e $B$ são subconjuntos de $X$, $(A\cap B)^c=A^c\cup B^c$. 
+1. igualdade ($=$)
+2. menor ($<$)
+3. menor ou igual ($\leq$)
+4. divisor ($\mid$)
 :::
 
 :::{#exr-}
-Demonstre que as seguintes afirmações são equivalentes para conjuntos $A$ e $B$:
+Seja $A=\{1,2,3,4,5,6\}$. Dê exemplo de relação $R$ no conjunto $A$ para cada item que satisfaz as propriedades indicadas no item. 
 
-1. $A\subseteq B$;
-2. $A\cup B=B$;
-3. $A\cap B=A$. 
-
-[Dica: Demonstre que 1. implica 2., que 2. implica 3. e que 3. implica 1.]
-:::
-
-:::{#exr-}
-Quais dos seguintes conjuntos são vazios?
-
-1. $\{x\in \R\mid x^2-6x+5=0\}$;
-2. $\{x\in \R\mid x^2+6x+5=0\}$;
-3. $\{x\in \N\mid x^2-x-1=0\}$;
-4. $\{x\in \N\mid 3<x<4\}$;
-5. $\{x\in \R\mid 3<x<4\}$.
+1. $R$ é reflexiva, mas não é simétrica.
+2. $R$ é simétrica, mas não é reflexiva.
+3. $R$ é simétrica e antisimétrica. 
+4. $R$ é transitiva e simétrica, mas não é reflexiva. 
 :::
 
 
 :::{#exr-}
-Demonstre para conjuntos $A$ e $B$ que 
-$$
-(A\smallsetminus B)\cup (B\smallsetminus A)=(A\cup B)\smallsetminus(A\cap B).
-$$
+Determine quais das seguintes relações são reflexivas, simétricas, antisimétricas, ou transitivas no conjunto $\R$:
+
+1. $aRb$ se e somente se $a-b\leq 1$;
+2. $aRb$ se e somente se $|a-b|\leq 1$;
+3. $aRb$ se e somente se $a-b$ é inteiro;
+4. $aRb$ se e somente se $a^2+b^2=0$;
+5. $aRb$ se e somente se $a^2+b^2=1$;
+6. $aRb$ se e somente se $a-b$ é irracional.
+:::
+
+
+:::{#exr-}
+Sejam $R$ e $Q$ duas relações em um conjunto $A$. Considere $R\cup Q$ e $R\cap Q$ como relações em $A$ e demonstre as seguintes afirmações.
+
+1. Se $R$ e $Q$ são reflexivas, então $R\cup Q$ e $R\cap Q$ são reflexivas. 
+2. Se $R$ e $Q$ são simétricas, então $R\cup Q$ e $R\cap Q$ são simétricas. 
+3. Se $R$ e $Q$ são transitivas, então $R\cap Q$ é transitiva, mas $R\cup Q$ pode não ser transitiva.
 :::
 
 :::{#exr-}
-Assuma que $A$ é o conjunto dos inteiros pares e $B$ é conjunto dos inteiros que são múltiplos de $3$. Descreva o conjunto 
-$$
-(A\smallsetminus B)\cup (B\smallsetminus A).
-$$
+Um aluno gostaria de provar que se $R$ é uma relação transitiva e simétrica sobre um conjunto $A$, então $R$ é reflexiva. O aluno pediu a página ChatGPT (https://chat.openai.com/) para ajuda. A resposta do programa foi a seguinte:
+
+![ChatGPT](img/relations_gpt.png)
+
+Critique a resposta do programa e decida se ela está certa. 
 :::
 
-:::{#exr-}
-Seja $A=\{6k\mid k\in\N\}$ e $B=\{9k\mid k\in\N\}$. Decida quais das seguintes proposições são verdadeiras.
-
-1. $\forall a\in A:(\exists b\in B:a\mid b)$;
-2. $\exists a\in A:(\forall b\in B:a\mid b)$;
-3. $\forall a\in A:(\exists b\in B:a< b)$;
-4. $\exists a\in A:(\forall b\in B:a< b)$;
-:::
-
-:::{#exr-}
-Escreva a negação de todas as proposições no exercício anterior. 
-:::
