@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -1115,7 +1115,17 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#permutações-pares-e-ímpares" id="toc-permutações-pares-e-ímpares" class="nav-link active" data-scroll-target="#permutações-pares-e-ímpares"><span class="header-section-number">60.1</span> Permutações pares e ímpares</a></li>
+  <li><a href="#grupos-simples" id="toc-grupos-simples" class="nav-link" data-scroll-target="#grupos-simples"><span class="header-section-number">60.2</span> Grupos simples</a></li>
+  <li><a href="#grupos-2-transitivos" id="toc-grupos-2-transitivos" class="nav-link" data-scroll-target="#grupos-2-transitivos"><span class="header-section-number">60.3</span> Grupos <span class="math inline">\(2\)</span>-transitivos</a></li>
+  <li><a href="#a_n-é-simples" id="toc-a_n-é-simples" class="nav-link" data-scroll-target="#a_n-é-simples"><span class="header-section-number">60.4</span> <span class="math inline">\(A_n\)</span> é simples</a></li>
+  <li><a href="#outros-grupos-simples" id="toc-outros-grupos-simples" class="nav-link" data-scroll-target="#outros-grupos-simples"><span class="header-section-number">60.5</span> Outros grupos simples</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1139,27 +1149,47 @@ window.Quarto = {
 </header>
 
 
-<p>Seja <span class="math inline">\(n\)</span> um número natural e considere o grupo simétrico <span class="math inline">\(S_n\)</span>. O grupo <span class="math inline">\(S_n\)</span> age sobre o a conjunto <span class="math inline">\(\Q[x_1,\ldots,x_n]\)</span> de polinômios permutando as variáveis. Considere o polinômio <span class="math display">\[
+<section id="permutações-pares-e-ímpares" class="level2" data-number="60.1">
+<h2 data-number="60.1" data-anchor-id="permutações-pares-e-ímpares"><span class="header-section-number">60.1</span> Permutações pares e ímpares</h2>
+<p>Seja <span class="math inline">\(n\)</span> um número natural e considere o grupo simétrico <span class="math inline">\(S_n\)</span>. O grupo <span class="math inline">\(S_n\)</span> age sobre o a conjunto <span class="math inline">\(\Q[x_1,\ldots,x_n]\)</span> de polinômios permutando as variáveis.</p>
+<div id="exr-perm-pol" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 60.1</strong></span> Mostre que esta ação de <span class="math inline">\(S_n\)</span> induz automorfismos da álgebra <span class="math inline">\(\Q[x_1,\ldots,x_n]\)</span>. Ou seja, temos para todo <span class="math inline">\(f,g\in \Q[x_1,\ldots,x_n]\)</span>, <span class="math inline">\(\alpha\in\Q\)</span> e <span class="math inline">\(\sigma\in S_n\)</span> que</p>
+<ol type="1">
+<li><span class="math inline">\((f+g)\sigma=f\sigma+g\sigma\)</span>;</li>
+<li><span class="math inline">\((fg)\sigma=(f\sigma)(g\sigma)\)</span>;</li>
+<li><span class="math inline">\((\alpha f)\sigma=\alpha(f\sigma)\)</span>.</li>
+</ol>
+<p>Ou seja, obtemos um mergulho <span class="math inline">\(S_n\to \aut{\Q[x_1,\ldots,x_n]}\)</span>.</p>
+</div>
+<p>Considere o polinômio <span class="math display">\[
 \Psi=\Psi(x_1,\ldots,x_n)=\prod_{1\leq i&lt;j\leq n} (x_i-x_j).
 \]</span> Se <span class="math inline">\(\sigma\in S_n\)</span>, então <span class="math inline">\(\Psi \sigma\in\{\Psi,-\Psi\}\)</span>; ou seja, a órbita de <span class="math inline">\(\Psi\)</span> contém apenas dois elementos, nomeadamente <span class="math inline">\(\Psi\)</span> e <span class="math inline">\(-\Psi\)</span>.</p>
-<p>Uma permutação <span class="math inline">\(\sigma\in S_n\)</span> é dita par se <span class="math inline">\(\Psi\sigma=\Psi\)</span>; caso contrário ela é dita ímpar. O conjunto <span class="math inline">\(A_n\)</span> das permutações pares é o estabilizador de <span class="math inline">\(\Psi\)</span> pela ação de <span class="math inline">\(S_n\)</span> sobre <span class="math inline">\(\Q[x_1,\ldots,x_n]\)</span> e portanto é um subgrupo de <span class="math inline">\(S_n\)</span>. Este grupo chama-se grupo alternado de grau <span class="math inline">\(n\)</span>. Além disso, <span class="math display">\[
+<div id="def-an" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 60.1</strong></span> Uma permutação <span class="math inline">\(\sigma\in S_n\)</span> é dita <em>par</em> se <span class="math inline">\(\Psi\sigma=\Psi\)</span>; caso contrário ela é dita <em>ímpar</em>. O conjunto <span class="math inline">\(A_n\)</span> das permutações pares é o estabilizador de <span class="math inline">\(\Psi\)</span> pela ação de <span class="math inline">\(S_n\)</span> sobre <span class="math inline">\(\Q[x_1,\ldots,x_n]\)</span> e portanto é um subgrupo de <span class="math inline">\(S_n\)</span>. Este grupo chama-se <em>grupo alternado</em> de grau <span class="math inline">\(n\)</span>. Além disso, <span class="math display">\[
 |S_n:A_n|=|\Psi S_n|=2
 \]</span> e em particular <span class="math inline">\(A_n\)</span> é um subgrupo normal em <span class="math inline">\(S_n\)</span>. Note que <span class="math display">\[
 |A_n|=|S_n|/2=n!/2.
 \]</span></p>
+</div>
 <div id="exr-alter" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 60.1</strong></span> Mostre, para&nbsp; <span class="math inline">\(\sigma\in S_n\)</span>, que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 60.2</strong></span> Mostre, para&nbsp; <span class="math inline">\(\sigma\in S_n\)</span>, que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math display">\[
 |\{(i,j)\mid 1\leq i&lt;j\leq n \mbox{ tais que }\ i\sigma &gt; j\sigma\}|
 \]</span> é um número par.</p>
 </div>
 <p>As seguintes afirmações nos ajudam determinar se uma permutação particular é par ou ímpar.</p>
 <div id="lem-alter" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 60.1</strong></span> Seja <span class="math inline">\(n\)</span> um número natural com <span class="math inline">\(n\geq 3\)</span> e sejam <span class="math inline">\(\sigma,\pi\)</span> elementos de <span class="math inline">\(S_n\)</span>.</p>
-<p>Se <span class="math inline">\(\sigma,\pi\in A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>. Se <span class="math inline">\(\sigma,\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>. Se <span class="math inline">\(\sigma\in A_n\)</span> e <span class="math inline">\(\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi,\pi\sigma\in S_n\setminus A_n\)</span>. Se <span class="math inline">\(1\leq a&lt; b\leq n\)</span>, então <span class="math inline">\((a,b)\not\in A_n\)</span>. Um ciclo de comprimento <span class="math inline">\(m\)</span> é par se e somente se <span class="math inline">\(m\)</span> é ímpar.</p>
+<ol type="1">
+<li>Se <span class="math inline">\(\sigma,\pi\in A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>.</li>
+<li>Se <span class="math inline">\(\sigma,\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi\in A_n\)</span>.</li>
+<li>Se <span class="math inline">\(\sigma\in A_n\)</span> e <span class="math inline">\(\pi\in S_n\setminus A_n\)</span>, então <span class="math inline">\(\sigma\pi,\pi\sigma\in S_n\setminus A_n\)</span>.</li>
+<li>Se <span class="math inline">\(1\leq a&lt; b\leq n\)</span>, então <span class="math inline">\((a,b)\not\in A_n\)</span>.</li>
+<li>Um ciclo de comprimento <span class="math inline">\(m\)</span> é par se e somente se <span class="math inline">\(m\)</span> é ímpar.</li>
+</ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Afirmações 1-3 são consequências imediatas da definição.</p>
-<ol type="1">
+<p><span class="proof-title"><em>Comprovação</em>. </span>1.–3. Afirmações 1-3 podem ser deduzidas imediatamente da definição de <span class="math inline">\(A_n\)</span> mas também do fato que <span class="math inline">\(A_n\)</span> tem índice <span class="math inline">\(2\)</span> em <span class="math inline">\(S_n\)</span>.</p>
+<ol start="4" type="1">
 <li><p>Como <span class="math inline">\(A_n\)</span> é normal em <span class="math inline">\(S_n\)</span>, ele é fechado para conjugação e é suficiente mostrar esta afirmação para <span class="math inline">\(\sigma=(1,2)\)</span>. Note que <span class="math display">\[\begin{eqnarray*}
 \Psi\sigma&amp;=&amp;\left[\prod_{1\leq i&lt;j\leq n}(x_i-x_j)\right]\sigma\\&amp;=&amp;\left[(x_1-x_2)\prod_{i=3}^n(x_1-x_i)\prod_{i=3}^n(x_2-x_i)\prod_{3\leq i&lt;j\leq n}(x_i-x_j)\right]\sigma\\&amp;=&amp;
 (x_2-x_1)\prod_{i=3}^n(x_2-x_i)\prod_{i=3}^n(x_1-x_i)\prod_{3\leq i&lt;j\leq n}(x_i-x_j)\\
@@ -1170,20 +1200,60 @@ window.Quarto = {
 \]</span> Portanto <span class="math inline">\(\sigma=(1,2,\ldots,m)\)</span> é um produto de <span class="math inline">\(m-1\)</span> ciclos de comprimento 2. Combinando os itens anteriores, temos que <span class="math inline">\(\sigma\in A_n\)</span> se e somente se <span class="math inline">\(m\)</span> é ímpar.</p></li>
 </ol>
 </div>
-<div id="def-altergp" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 60.1</strong></span> Um grupo <span class="math inline">\(G\neq\{1\}\)</span> chama-se simples se <span class="math inline">\(G\)</span> não possui subgrupo normal além dos subgrupos <span class="math inline">\(\{1\}\)</span> e <span class="math inline">\(G\)</span>.</p>
+</section>
+<section id="grupos-simples" class="level2" data-number="60.2">
+<h2 data-number="60.2" data-anchor-id="grupos-simples"><span class="header-section-number">60.2</span> Grupos simples</h2>
+<div id="def-simplegroup" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 60.2</strong></span> Um grupo <span class="math inline">\(G\neq\{1\}\)</span> chama-se <em>simples</em> se <span class="math inline">\(G\)</span> não possui subgrupo normal além dos subgrupos <span class="math inline">\(\{1\}\)</span> e <span class="math inline">\(G\)</span>.</p>
 </div>
 <div id="exr-simple-ab" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 60.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo abeliano. Mostre que <span class="math inline">\(G\)</span> é simples se e somente se <span class="math inline">\(G\)</span> é um grupo cíclico de ordem prima.</p>
+<p><span class="theorem-title"><strong>Exercício 60.3</strong></span> Seja <span class="math inline">\(G\)</span> um grupo abeliano. Mostre que <span class="math inline">\(G\)</span> é simples se e somente se <span class="math inline">\(G\)</span> é um grupo cíclico de ordem prima.</p>
 </div>
+<p>Grupos simples podem ser vistos como blocos de construção para grupos em geral.</p>
+</section>
+<section id="grupos-2-transitivos" class="level2" data-number="60.3">
+<h2 data-number="60.3" data-anchor-id="grupos-2-transitivos"><span class="header-section-number">60.3</span> Grupos <span class="math inline">\(2\)</span>-transitivos</h2>
+<div id="def-2trans" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 60.3</strong></span> Um grupo que age em <span class="math inline">\(\Omega\)</span> é dito <em><span class="math inline">\(2\)</span>-transitivo</em> se para todo <span class="math inline">\((\alpha,\beta),(\gamma,\delta)\in\Omega\times\Omega\)</span> tais que <span class="math inline">\(\alpha\neq \beta\)</span> e <span class="math inline">\(\gamma\neq \delta\)</span>, existe <span class="math inline">\(g\in G\)</span> tal que <span class="math inline">\((\alpha,\beta)g=(\gamma,\delta)\)</span> (ou seja, <span class="math inline">\(\alpha g=\gamma\)</span> e <span class="math inline">\(\beta g=\delta\)</span>).</p>
+</div>
+<div id="exr-2trans" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 60.4</strong></span> Mostre que um grupo transitivo <span class="math inline">\(G\)</span> em <span class="math inline">\(\Omega\)</span> é 2-transitivo se e somente se o estabilizador <span class="math inline">\(G_\alpha\)</span> é transitivo em <span class="math inline">\(\Omega\setminus\{\alpha\}\)</span> para todo <span class="math inline">\(\alpha\in\Omega\)</span>.</p>
+</div>
+<div id="exm-2trans" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 60.1</strong></span> Os grupos <span class="math inline">\(S_n\)</span> (<span class="math inline">\(n\geq 2\)</span>) e <span class="math inline">\(A_n\)</span> (<span class="math inline">\(n\geq 4\)</span>) são 2-transitivos. Os grupos <span class="math inline">\(\operatorname{GL}(n,\F)\)</span> e <span class="math inline">\(\operatorname{SL}(n,\F)\)</span> são 2-transitivos em <span class="math inline">\(\mathbb P\F^n\)</span> (<span class="math inline">\(n\geq 2\)</span>).</p>
+</div>
+<div id="def-sgmax" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 60.4</strong></span> Um subgrupo (próprio) <span class="math inline">\(H&lt; G\)</span> de <span class="math inline">\(G\)</span> é dito <em>maximal</em> se não existe subgrupo <span class="math inline">\(K\)</span> de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(H&lt;K&lt;G\)</span>.</p>
+</div>
+<div id="exm-sgmax-p" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 60.2</strong></span> Pelo <a href="lagrange.html#thm-lagrange" class="quarto-xref">Teorema&nbsp;<span>54.1</span></a>, temos que um subgrupo <span class="math inline">\(H\)</span> de índice primo em <span class="math inline">\(G\)</span> é maximal em <span class="math inline">\(G\)</span>.</p>
+</div>
+<div id="lem-2trans" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 60.2</strong></span> Se <span class="math inline">\(G\)</span> é um grupo não trivial, age em <span class="math inline">\(\Omega\)</span> e <span class="math inline">\(G\)</span> é <span class="math inline">\(2\)</span>-transitivo, então <span class="math inline">\(G_\alpha\)</span> é subgrupo maximal para todo <span class="math inline">\(\alpha\in\Omega\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(\alpha\in\Omega\)</span> e considere o estabilizador <span class="math inline">\(G_\alpha\)</span>. Vamos provar, para todo <span class="math inline">\(g\in G\setminus G_\alpha\)</span>, que <span class="math display">\[
+\left&lt;G_\alpha,g\right&gt;=G.
+\]</span> Isso é uma outra forma de dizer que <span class="math inline">\(G_\alpha\)</span> é maximal em <span class="math inline">\(G\)</span>. Seja <span class="math inline">\(g\in G\setminus G_\alpha\)</span> arbitrário. A inclusão <span class="math inline">\(\leq\)</span> está claramente válida, então precisa provar a inclusão <span class="math inline">\(\geq\)</span>. Seja <span class="math inline">\(H=\left&lt;G_\alpha,g\right&gt;\)</span>. Usando a notação da <a href="actions.html#sec-thm-os" class="quarto-xref"><span>Seção 58.5</span></a>, notemos primeiro que <span class="math display">\[
+G_{\alpha\to \alpha}=G_\alpha\subseteq H.
+\]</span> Seja agora <span class="math inline">\(\gamma\in\Omega\setminus\{\alpha\}\)</span>. Como <span class="math inline">\(g\not\in G_\alpha\)</span>, temos que <span class="math inline">\(\beta=\alpha g\neq \alpha\)</span>. Como <span class="math inline">\(G\)</span> é <span class="math inline">\(2\)</span>-transitivo, <a href="#exr-2trans" class="quarto-xref">Exercício&nbsp;<span>60.4</span></a> implica que existe <span class="math inline">\(g_\gamma\in G_\alpha\)</span> tal que <span class="math inline">\(\beta g_\gamma=\gamma\)</span>, e assim <span class="math inline">\(\alpha gg_\gamma=\gamma\)</span>. Usando novamente a notação em <a href="actions.html#sec-thm-os" class="quarto-xref"><span>Seção 58.5</span></a>, isso implica que <span class="math display">\[
+G_{\alpha\to \gamma}=G_\alpha g g_\gamma\subseteq H\quad\mbox{para todo}\quad\gamma\in\Omega\setminus\{\alpha\}.
+\]</span> Portanto, temos que <span class="math display">\[
+G_{\alpha\to \gamma}\subseteq H\quad\mbox{para todo}\quad\gamma\in\Omega.
+\]</span> Mas o <a href="actions.html#thm-orbit-stab" class="quarto-xref">Teorema&nbsp;<span>58.2</span></a> nos diz que os conjuntos <span class="math inline">\(G_{\alpha\to \beta}\)</span> são precisamente as classes laterais de <span class="math inline">\(G_\alpha\)</span> in <span class="math inline">\(G\)</span>. Logo toda classe lateral de <span class="math inline">\(G_\alpha\)</span> está contida de <span class="math inline">\(H\)</span>. Como a união destas classes laterais é o proprio <span class="math inline">\(G\)</span>, temos que <span class="math inline">\(G\leq H\)</span> e que <span class="math inline">\(H=G\)</span>.</p>
+</div>
+<div id="exm-max" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 60.3</strong></span> Obtemos do <a href="#lem-2trans" class="quarto-xref">Lema&nbsp;<span>60.2</span></a> que <span class="math inline">\(S_{n-1}\)</span> é maximal em <span class="math inline">\(S_n\)</span> e <span class="math inline">\(A_{n-1}\)</span> é maximal em <span class="math inline">\(A_n\)</span>.</p>
+</div>
+</section>
+<section id="a_n-é-simples" class="level2" data-number="60.4">
+<h2 data-number="60.4" data-anchor-id="a_n-é-simples"><span class="header-section-number">60.4</span> <span class="math inline">\(A_n\)</span> é simples</h2>
 <div id="thm-ansimple" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 60.1</strong></span> Se <span class="math inline">\(n=3\)</span> ou se <span class="math inline">\(n\geq 5\)</span>, então o grupo alternado <span class="math inline">\(A_n\)</span> é simples.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Note que&nbsp;<span class="math inline">\(A_3=\left&lt;(1,2,3)\right&gt;\)</span> então <span class="math inline">\(A_3\)</span> é um grupo cíclico de ordem três, portanto simples.</p>
-<p>O grupo <span class="math inline">\(\left&lt;(1,2)(3,4),(1,3)(2,4)\right&gt;\)</span> é normal em <span class="math inline">\(A_4\)</span>, então <span class="math inline">\(A_4\)</span> não é simples.</p>
-<p>Nós vamos provar a afirmação do teorema apenas quando <span class="math inline">\(n=5\)</span>. O caso <span class="math inline">\(n\geq 6\)</span> pode ser feito por indução, mas nós não vamos fazer isso nesta disciplina.</p>
-<p>Primeiro, determinemos as classes de conjugação de <span class="math inline">\(A_5\)</span>. Lembre que as classes de conjugação de <span class="math inline">\(S_5\)</span> foram determinadas na aula anterior. Para determinar as classes de <span class="math inline">\(A_5\)</span>, vamos primeiro fazer as seguintes observações. Seja <span class="math inline">\(C\)</span> uma classe de conjugação de <span class="math inline">\(S_5\)</span> e seja <span class="math inline">\(\sigma\in C\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Note que&nbsp;<span class="math inline">\(A_3=\left&lt;(1,2,3)\right&gt;\)</span> então <span class="math inline">\(A_3\)</span> é um grupo cíclico de ordem três, portanto simples. O grupo <span class="math inline">\(\left&lt;(1,2)(3,4),(1,3)(2,4)\right&gt;\)</span> é normal em <span class="math inline">\(A_4\)</span>, então <span class="math inline">\(A_4\)</span> não é simples. O resto da demonstração vai por indução em <span class="math inline">\(n\)</span>, o caso <span class="math inline">\(n=5\)</span> sendo a base da indução.</p>
+<p>Vamos provar primeiro que <span class="math inline">\(A_5\)</span> é simples. Começamos por determinar as classes de conjugação de <span class="math inline">\(A_5\)</span>. Lembre que as classes de conjugação de <span class="math inline">\(S_5\)</span> foram determinadas no <a href="classes.html#exm-classes-s5" class="quarto-xref">Exemplo&nbsp;<span>59.3</span></a>. Para determinar as classes de <span class="math inline">\(A_5\)</span>, vamos primeiro fazer as seguintes observações. Seja <span class="math inline">\(C\)</span> uma classe de conjugação de <span class="math inline">\(S_5\)</span> e seja <span class="math inline">\(\sigma\in C\)</span>.</p>
 <p>Como <span class="math inline">\(A_5\unlhd S_5\)</span>, a classe <span class="math inline">\(C\)</span> ou é contido em <span class="math inline">\(A_5\)</span> ou está completamente fora de <span class="math inline">\(A_5\)</span> (ou seja, <span class="math inline">\(C\cap A_5=\emptyset\)</span>). Se <span class="math inline">\(C\subseteq A_5\)</span>, então <span class="math inline">\(C\)</span> é uma união de classes de conjugação de <span class="math inline">\(A_5\)</span>. Assuma que <span class="math inline">\(C\subseteq A_5\)</span>. Note que <span class="math display">\[
 C_{A_5}(\sigma)=A_5\cap C_{S_5}(\sigma).
 \]</span> Se <span class="math inline">\(C_{S_5}(\sigma)\leq A_5\)</span>, então <span class="math inline">\(C_{S_5}(\sigma)=C_{A_5}(\sigma)\)</span> e <span class="math display">\[
@@ -1194,14 +1264,64 @@ C_{A_5}(\sigma)=A_5\cap C_{S_5}(\sigma).
 |\sigma^{A_5}|=|A_5:C_{A_5}(\sigma)|=|S_5:C_{S_5}(\sigma)|=|\sigma^{S_5}|.
 \]</span> Ou seja, neste caso, a <span class="math inline">\(S_5\)</span>-classe <span class="math inline">\(C\)</span> será uma classe em <span class="math inline">\(A_5\)</span>.</p>
 <p>Agora usando a tabela das classes na aula anterior e estas observações, é possível obter uma tabela das classes de conjugação de <span class="math inline">\(A_5\)</span>.</p>
-<p>[table id=4 /]</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 24%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(|x^{S_5}|\)</span></th>
+<th><span class="math inline">\(|C_{S_5}(x)|\)</span></th>
+<th><span class="math inline">\(C_{S_5}(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(120\)</span></td>
+<td><span class="math inline">\(S_5\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((1,2)(3,4)\)</span></td>
+<td><span class="math inline">\(15\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(\left&lt;(1,2)(3,4),(1,3)(2,4)\right&gt;\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((1,2,3)\)</span></td>
+<td><span class="math inline">\(20\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(\left&lt;(1,2,3)\right&gt;\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((1,2,3,4,5)\)</span></td>
+<td><span class="math inline">\(12\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(\left&lt;(1,2,3,4,5)\right&gt;\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((1,2,3,5,4)\)</span></td>
+<td><span class="math inline">\(12\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(\left&lt;(1,2,3,5,4)\right&gt;\)</span></td>
+</tr>
+</tbody>
+</table>
 <p>Seja <span class="math inline">\(N\)</span> um subgrupo normal de <span class="math inline">\(A_5\)</span>. Então temos que <span class="math inline">\(|N|\mid 60\)</span> e <span class="math inline">\(N\)</span> é uma união de classes de conjugação contendo a classe <span class="math inline">\(\{1\}\)</span>. Portanto <span class="math display">\[
 |N|=1+\alpha_1\cdot 15+\alpha_2\cdot 20+\alpha_3\cdot 12
 \]</span> onde <span class="math inline">\(\alpha_1,\alpha_2\in\{0,1\}\)</span> e <span class="math inline">\(\alpha_3\in\{0,1,2\}\)</span>. Uma consideração fácil mostra que as únicas possibilidades para <span class="math inline">\(|N|\)</span> são <span class="math inline">\(|N|=1\)</span> ou <span class="math inline">\(|N|=60\)</span>. Portanto <span class="math inline">\(A_5\)</span> não possui subgrupo normal difrente de <span class="math inline">\(\{1\}\)</span> ou <span class="math inline">\(A_n\)</span>.</p>
 <p>Assuma que <span class="math inline">\(A_n\)</span> é simples para algum <span class="math inline">\(n\geq 5\)</span> considere <span class="math inline">\(G=A_{n+1}\)</span>. Seja <span class="math inline">\(G_i\)</span> o estabilizador do ponto <span class="math inline">\(i\)</span> em <span class="math inline">\(G\)</span>. Como <span class="math inline">\(G\)</span> é transitivo, os <span class="math inline">\(G_i\)</span> são conjugados. Além disso, <span class="math inline">\(G_i\cong A_n\)</span>. Seja <span class="math inline">\(N\unlhd G\)</span>.&nbsp; A interseção <span class="math inline">\(N\cap G_1\)</span> é normal em <span class="math inline">\(G_1\)</span>. Logo <span class="math inline">\(N\cap G_1=G_1\)</span> ou <span class="math inline">\(N\cap G_1=1\)</span>. No primeiro caso, como <span class="math inline">\(N\)</span> é normal e os <span class="math inline">\(G_i\)</span> são conjugados, temos que <span class="math inline">\(G_i\leq N\)</span> para todo <span class="math inline">\(i\)</span> que implica que <span class="math inline">\(N=G\)</span>.</p>
 <p>Assuma agora que <span class="math inline">\(N\cap G_i=1\)</span> para todo <span class="math inline">\(i\)</span>. Assuma que <span class="math inline">\(N\neq 1\)</span>. Neste caso <span class="math inline">\(NG_1=G\)</span> (<span class="math inline">\(G_1\)</span> é maximal) e <span class="math inline">\(N\)</span> é regular. Em particular <span class="math inline">\(|N|=n+1\)</span>. Assuma que <span class="math inline">\(\sigma\in N\setminus\{1\}\)</span> e escreva <span class="math inline">\(\sigma\)</span> como um produto <span class="math inline">\(\sigma=\sigma_1\cdots \sigma_m\)</span> de ciclos disjuntos onde&nbsp; <span class="math inline">\(\sigma_i\)</span> é um <span class="math inline">\(r_i\)</span>-ciclo com <span class="math inline">\(r_1\geq r_2\geq\cdots\geq r_m\)</span>. Assuma que <span class="math inline">\(r_1\geq 3\)</span> e seja <span class="math inline">\(\sigma_1=(1,2,\ldots,k)\)</span> com <span class="math inline">\(k\geq 3\)</span>. Seja <span class="math inline">\(\varrho=(3,4,5)\)</span>. Então <span class="math inline">\(\sigma^\varrho\sigma^{-1}\in N\cap G_1\setminus\{1\}\)</span> que é uma contradição. Portanto <span class="math inline">\(r_1=\cdots=r_m=2\)</span>. Assuma que <span class="math inline">\(\sigma=(1,2)(3,4)\)</span> e seja <span class="math inline">\(\varrho=(4,5,6)\)</span>. Então <span class="math inline">\(\sigma^\varrho\sigma^{-1}\in N\cap G_1\)</span> que é uma contradição.</p>
 </div>
-<p>Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O teorema da classificação afirma o seguinte.</p>
+</section>
+<section id="outros-grupos-simples" class="level2" data-number="60.5">
+<h2 data-number="60.5" data-anchor-id="outros-grupos-simples"><span class="header-section-number">60.5</span> Outros grupos simples</h2>
+<p>Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O <a href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">teorema da classificação</a> afirma o seguinte.</p>
 <div id="thm-cfsg" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 60.2</strong></span> Os grupos simples finitos são</p>
 <ul>
@@ -1211,10 +1331,11 @@ C_{A_5}(\sigma)=A_5\cap C_{S_5}(\sigma).
 <li>os 26 grupos esporádicos.</li>
 </ul>
 </div>
-<p>Um exemplo de um grupo simples de tipo Lie é <span class="math inline">\(PSL(n,q)=SL(n,q)/Z\)</span> onde <span class="math inline">\(Z\)</span> é o centro de <span class="math inline">\(SL(n,q)\)</span>. Pode se provar, para <span class="math inline">\(n\geq 2\)</span>, que <span class="math inline">\(PSL(n,q)\)</span> é simples a menos que <span class="math inline">\((n,q)\in\{(2,2),(2,3)\}\)</span>.</p>
+<p>Um exemplo de um grupo simples de tipo Lie é <span class="math inline">\(\operatorname{PSL}(n,q)=\operatorname{SL}(n,q)/Z\)</span> onde <span class="math inline">\(Z\)</span> é o centro de <span class="math inline">\(\operatorname{SL}(n,q)\)</span>. Pode se provar, para <span class="math inline">\(n\geq 2\)</span>, que <span class="math inline">\(\operatorname{PSL}(n,q)\)</span> é simples a menos que <span class="math inline">\((n,q)\in\{(2,2),(2,3)\}\)</span>.</p>
 <p>A demonstração do teorema de classificação é extremamente profunda e, se fosse escrita em um único documento, ocuparia cerca de 10 mil páginas.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
