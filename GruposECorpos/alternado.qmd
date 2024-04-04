@@ -5,14 +5,31 @@ lang: pt-BR
 ---
 
 
+## Permutações pares e ímpares       
 
-Seja $n$ um número natural e considere o grupo simétrico $S_n$. O grupo $S_n$ age sobre o a conjunto $\Q[x_1,\ldots,x_n]$ de polinômios permutando as variáveis. Considere o polinômio
+
+Seja $n$ um número natural e considere o grupo simétrico $S_n$. O grupo $S_n$ age sobre o a conjunto $\Q[x_1,\ldots,x_n]$ de polinômios permutando as variáveis. 
+
+:::{#exr-perm-pol}
+Mostre que esta ação de $S_n$ induz automorfismos da álgebra $\Q[x_1,\ldots,x_n]$. Ou seja, temos para todo $f,g\in \Q[x_1,\ldots,x_n]$, 
+$\alpha\in\Q$ e $\sigma\in S_n$ que 
+
+1. $(f+g)\sigma=f\sigma+g\sigma$;
+2. $(fg)\sigma=(f\sigma)(g\sigma)$;
+3. $(\alpha f)\sigma=\alpha(f\sigma)$.
+
+Ou seja, obtemos um mergulho $S_n\to \aut{\Q[x_1,\ldots,x_n]}$.
+:::
+
+Considere o polinômio
 $$
 \Psi=\Psi(x_1,\ldots,x_n)=\prod_{1\leq i<j\leq n} (x_i-x_j).
 $$
 Se $\sigma\in S_n$, então $\Psi \sigma\in\{\Psi,-\Psi\}$; ou seja, a órbita de $\Psi$ contém apenas dois elementos, nomeadamente $\Psi$ e $-\Psi$.
 
-Uma permutação $\sigma\in S_n$ é dita par se $\Psi\sigma=\Psi$; caso contrário ela é dita ímpar. O conjunto $A_n$ das permutações pares é o estabilizador de $\Psi$ pela ação de $S_n$ sobre $\Q[x_1,\ldots,x_n]$ e portanto é um subgrupo de $S_n$. Este grupo chama-se grupo alternado de grau $n$. Além disso,
+
+:::{#def-an}
+Uma permutação $\sigma\in S_n$ é dita *par* se $\Psi\sigma=\Psi$; caso contrário ela é dita *ímpar*. O conjunto $A_n$ das permutações pares é o estabilizador de $\Psi$ pela ação de $S_n$ sobre $\Q[x_1,\ldots,x_n]$ e portanto é um subgrupo de $S_n$. Este grupo chama-se *grupo alternado* de grau $n$. Além disso,
 $$
 |S_n:A_n|=|\Psi S_n|=2
 $$
@@ -20,6 +37,7 @@ e em particular $A_n$ é um subgrupo normal em $S_n$. Note que
 $$
 |A_n|=|S_n|/2=n!/2.
 $$
+:::
 
 :::{#exr-alter}
 Mostre, para  $\sigma\in S_n$, que $\sigma\in A_n$ se e somente se
@@ -34,17 +52,17 @@ As seguintes afirmações nos ajudam determinar se uma permutação particular �
 :::{#lem-alter}
 Seja $n$ um número natural com $n\geq 3$ e sejam $\sigma,\pi$ elementos de $S_n$.
 
-Se $\sigma,\pi\in A_n$, então $\sigma\pi\in A_n$.
-Se $\sigma,\pi\in S_n\setminus A_n$, então $\sigma\pi\in A_n$.
-Se $\sigma\in A_n$ e $\pi\in S_n\setminus A_n$, então $\sigma\pi,\pi\sigma\in S_n\setminus A_n$.
-Se $1\leq a< b\leq n$, então $(a,b)\not\in A_n$.
-Um ciclo de comprimento $m$ é par se e somente se $m$ é ímpar.
+1. Se $\sigma,\pi\in A_n$, então $\sigma\pi\in A_n$.
+2. Se $\sigma,\pi\in S_n\setminus A_n$, então $\sigma\pi\in A_n$.
+3. Se $\sigma\in A_n$ e $\pi\in S_n\setminus A_n$, então $\sigma\pi,\pi\sigma\in S_n\setminus A_n$.
+4. Se $1\leq a< b\leq n$, então $(a,b)\not\in A_n$.
+5. Um ciclo de comprimento $m$ é par se e somente se $m$ é ímpar.
 :::
 
 :::{.proof}
-Afirmações 1-3 são consequências imediatas da definição.
+1.--3. Afirmações 1-3 podem ser deduzidas imediatamente da definição de $A_n$ mas também do fato que $A_n$ tem índice $2$ em $S_n$.
 
-1. Como $A_n$ é normal em $S_n$, ele é fechado para conjugação e é suficiente mostrar esta afirmação para $\sigma=(1,2)$. Note que
+4. Como $A_n$ é normal em $S_n$, ele é fechado para conjugação e é suficiente mostrar esta afirmação para $\sigma=(1,2)$. Note que
 \begin{eqnarray*}
 \Psi\sigma&=&\left[\prod_{1\leq i<j\leq n}(x_i-x_j)\right]\sigma\\&=&\left[(x_1-x_2)\prod_{i=3}^n(x_1-x_i)\prod_{i=3}^n(x_2-x_i)\prod_{3\leq i<j\leq n}(x_i-x_j)\right]\sigma\\&=&
 (x_2-x_1)\prod_{i=3}^n(x_2-x_i)\prod_{i=3}^n(x_1-x_i)\prod_{3\leq i<j\leq n}(x_i-x_j)\\
@@ -58,25 +76,81 @@ $$
 Portanto $\sigma=(1,2,\ldots,m)$ é um produto de $m-1$ ciclos de comprimento 2. Combinando os itens anteriores, temos que $\sigma\in A_n$ se e somente se $m$ é ímpar.
 :::
 
-:::{#def-altergp}
-Um grupo $G\neq\{1\}$ chama-se simples se $G$ não possui subgrupo normal além dos subgrupos $\{1\}$ e $G$.
+## Grupos simples
+
+:::{#def-simplegroup}
+Um grupo $G\neq\{1\}$ chama-se *simples* se $G$ não possui subgrupo normal além dos subgrupos $\{1\}$ e $G$.
 :::
 
 :::{#exr-simple-ab}
 Seja $G$ um grupo abeliano. Mostre que $G$ é simples se e somente se $G$ é um grupo cíclico de ordem prima.
 :::
 
+Grupos simples podem ser vistos como blocos de construção para grupos em geral.
+
+## Grupos $2$-transitivos
+
+:::{#def-2trans}
+Um grupo que age em $\Omega$  é dito *$2$-transitivo* se para todo $(\alpha,\beta),(\gamma,\delta)\in\Omega\times\Omega$ tais que $\alpha\neq \beta$ e $\gamma\neq \delta$, existe $g\in G$ tal que $(\alpha,\beta)g=(\gamma,\delta)$ (ou seja, $\alpha g=\gamma$ e $\beta g=\delta$).
+:::
+
+:::{#exr-2trans}
+Mostre que um grupo transitivo $G$ em $\Omega$ é 2-transitivo se e somente se o estabilizador $G_\alpha$ é transitivo em $\Omega\setminus\{\alpha\}$ para todo $\alpha\in\Omega$.  
+:::
+
+
+:::{#exm-2trans}
+Os grupos $S_n$ ($n\geq 2$) e $A_n$ ($n\geq 4$) são 2-transitivos. Os grupos $\operatorname{GL}(n,\F)$ e $\operatorname{SL}(n,\F)$ são 2-transitivos em $\mathbb P\F^n$ ($n\geq 2$).  
+:::
+
+:::{#def-sgmax}
+Um subgrupo (próprio) $H< G$ de $G$ é dito *maximal* se não existe subgrupo $K$ de $G$ tal que $H<K<G$. 
+:::
+
+:::{#exm-sgmax-p}
+Pelo @thm-lagrange, temos que um subgrupo $H$ de índice primo em $G$ é maximal em $G$.
+:::
+
+:::{#lem-2trans}
+Se $G$ é um grupo não trivial, age em $\Omega$ e $G$ é $2$-transitivo, então $G_\alpha$ é subgrupo maximal para todo $\alpha\in\Omega$. 
+:::
+
+:::{.proof}
+Seja $\alpha\in\Omega$ e considere o estabilizador $G_\alpha$. Vamos provar, para todo $g\in G\setminus G_\alpha$, que 
+$$
+\left<G_\alpha,g\right>=G.
+$$
+Isso é uma outra forma de dizer que $G_\alpha$ é maximal em $G$. Seja  $g\in G\setminus G_\alpha$ arbitrário.
+A inclusão $\leq$ está claramente válida, então precisa provar a inclusão $\geq$. Seja $H=\left<G_\alpha,g\right>$. 
+Usando a notação da @sec-thm-os, notemos primeiro que 
+$$
+G_{\alpha\to \alpha}=G_\alpha\subseteq H.
+$$
+Seja agora $\gamma\in\Omega\setminus\{\alpha\}$. Como $g\not\in G_\alpha$, temos que $\beta=\alpha g\neq \alpha$. Como $G$ é $2$-transitivo, @exr-2trans implica que existe $g_\gamma\in G_\alpha$ tal que $\beta g_\gamma=\gamma$, e assim $\alpha gg_\gamma=\gamma$. 
+Usando novamente a notação em @sec-thm-os, isso implica que 
+$$
+G_{\alpha\to \gamma}=G_\alpha g g_\gamma\subseteq H\quad\mbox{para todo}\quad\gamma\in\Omega\setminus\{\alpha\}.
+$$
+Portanto, temos que 
+$$
+G_{\alpha\to \gamma}\subseteq H\quad\mbox{para todo}\quad\gamma\in\Omega.
+$$
+Mas o @thm-orbit-stab nos diz que os conjuntos $G_{\alpha\to \beta}$ são precisamente as classes laterais de $G_\alpha$ in $G$. Logo toda classe lateral de $G_\alpha$ está contida de $H$. Como a união destas classes laterais é o proprio $G$, temos que $G\leq H$ e que $H=G$. 
+:::
+
+:::{#exm-max}
+Obtemos do @lem-2trans que $S_{n-1}$ é maximal em $S_n$ e $A_{n-1}$ é maximal em $A_n$. 
+:::
+
+## $A_n$ é simples
+ 
 :::{#thm-ansimple}
 Se $n=3$ ou se $n\geq 5$, então o grupo alternado $A_n$ é simples.
 :::
 :::{.proof}
-Note que $A_3=\left<(1,2,3)\right>$ então $A_3$ é um grupo cíclico de ordem três, portanto simples.
+Note que $A_3=\left<(1,2,3)\right>$ então $A_3$ é um grupo cíclico de ordem três, portanto simples. O grupo $\left<(1,2)(3,4),(1,3)(2,4)\right>$ é normal em $A_4$, então $A_4$ não é simples. O resto da demonstração vai por indução em $n$, o caso $n=5$ sendo a base da indução.
 
-O grupo $\left<(1,2)(3,4),(1,3)(2,4)\right>$ é normal em $A_4$, então $A_4$ não é simples.
-
-Nós vamos provar a afirmação do teorema apenas quando $n=5$. O caso $n\geq 6$ pode ser feito por indução, mas nós não vamos fazer isso nesta disciplina.
-
-Primeiro, determinemos as classes de conjugação de $A_5$. Lembre que as classes de conjugação de $S_5$ foram determinadas na aula anterior. Para determinar as classes de $A_5$, vamos primeiro fazer as seguintes observações. Seja $C$ uma classe de conjugação de $S_5$ e seja $\sigma\in C$.
+Vamos provar primeiro que $A_5$ é simples. Começamos por determinar as classes de conjugação de $A_5$. Lembre que as classes de conjugação de $S_5$ foram determinadas no @exm-classes-s5. Para determinar as classes de $A_5$, vamos primeiro fazer as seguintes observações. Seja $C$ uma classe de conjugação de $S_5$ e seja $\sigma\in C$.
 
 Como $A_5\unlhd S_5$, a classe $C$ ou é contido em $A_5$ ou está completamente fora de $A_5$ (ou seja, $C\cap A_5=\emptyset$).
 Se $C\subseteq A_5$, então $C$ é uma união de classes de conjugação de $A_5$.
@@ -101,7 +175,13 @@ Ou seja, neste caso, a $S_5$-classe $C$ será uma classe em $A_5$.
 
 Agora usando a tabela das classes na aula anterior e estas observações, é possível obter uma tabela das classes de conjugação de $A_5$.
 
-[table id=4 /]
+| $x$                | $|x^{S_5}|$        | $|C_{S_5}(x)|$           | $C_{S_5}(x)$                           | 
+| ------------------ | ------------------ | ------------------------ | -------------------------------------- |
+| $1$                | $1$                | $120$                    | $S_5$                                  |
+| $(1,2)(3,4)$       | $15$               | $4$                      | $\left<(1,2)(3,4),(1,3)(2,4)\right>$   |   
+| $(1,2,3)$          | $20$               | $3$                      | $\left<(1,2,3)\right>$                 |
+| $(1,2,3,4,5)$      | $12$               | $5$                      | $\left<(1,2,3,4,5)\right>$             |
+| $(1,2,3,5,4)$      | $12$               | $5$                      | $\left<(1,2,3,5,4)\right>$             |
 
 Seja $N$ um subgrupo normal de $A_5$. Então temos que $|N|\mid 60$ e $N$ é uma união de classes de conjugação contendo a classe $\{1\}$. Portanto
 $$
@@ -114,7 +194,9 @@ Assuma que $A_n$ é simples para algum $n\geq 5$ considere $G=A_{n+1}$. Seja $G_
 Assuma agora que $N\cap G_i=1$ para todo $i$. Assuma que $N\neq 1$. Neste caso $NG_1=G$ ($G_1$ é maximal) e $N$ é regular. Em particular $|N|=n+1$. Assuma que $\sigma\in N\setminus\{1\}$ e escreva $\sigma$ como um produto $\sigma=\sigma_1\cdots \sigma_m$ de ciclos disjuntos onde  $\sigma_i$ é um $r_i$-ciclo com $r_1\geq r_2\geq\cdots\geq r_m$. Assuma que $r_1\geq 3$ e seja $\sigma_1=(1,2,\ldots,k)$ com $k\geq 3$. Seja $\varrho=(3,4,5)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1\setminus\{1\}$ que é uma contradição. Portanto $r_1=\cdots=r_m=2$. Assuma que $\sigma=(1,2)(3,4)$ e seja $\varrho=(4,5,6)$. Então $\sigma^\varrho\sigma^{-1}\in N\cap G_1$ que é uma contradição.
 :::
 
-Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O teorema da classificação afirma o seguinte.
+## Outros grupos simples
+
+Na verdade, os grupos não abelianos simples são bastante complicados. Um projeto para obter uma classificação dos grupos simples finitos foi iniciado nos anos 1950. O resultado foi anunciado em 1979, mas partes da demonstração foram publicadas apenas no início dos anos 2000. O [teorema da classificação](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups) afirma o seguinte.
 
 :::{#thm-cfsg}
 Os grupos simples finitos são
@@ -125,6 +207,6 @@ Os grupos simples finitos são
 * os 26 grupos esporádicos.
 :::
 
-Um exemplo de um grupo simples de tipo Lie é $PSL(n,q)=SL(n,q)/Z$ onde $Z$ é o centro de $SL(n,q)$. Pode se provar, para $n\geq 2$, que $PSL(n,q)$ é simples a menos que $(n,q)\in\{(2,2),(2,3)\}$.
+Um exemplo de um grupo simples de tipo Lie é $\operatorname{PSL}(n,q)=\operatorname{SL}(n,q)/Z$ onde $Z$ é o centro de $\operatorname{SL}(n,q)$. Pode se provar, para $n\geq 2$, que $\operatorname{PSL}(n,q)$ é simples a menos que $(n,q)\in\{(2,2),(2,3)\}$.
 
 A demonstração do teorema de classificação é extremamente profunda e, se fosse escrita em um único documento, ocuparia cerca de 10 mil páginas.

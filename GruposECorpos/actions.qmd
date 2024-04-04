@@ -107,7 +107,7 @@ $$
 onde $a\in\F\setminus\{0\}$, $\underline 0\in\F^{n-1}$ é o vetor nulo, $\underline u\in\F^{n-1}$ e $B$ é uma matriz $(n-1)\times(n-1)$ invertivel.
 :::
 
-## O Teorema Órbita-Estabilizador
+## O Teorema Órbita-Estabilizador{#sec-thm-os}
 
 Assuma que $\Omega$, $G$, e $\alpha\in\Omega$ são como acima. Para $\beta\in \alpha G$, considere o conjunto
 $$
