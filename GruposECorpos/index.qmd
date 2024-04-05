@@ -51,7 +51,7 @@ TODO: Grupos abelianos, Resolubilidade por radicais
 
 ## Vídeos interesantes e relavantes no YouTube
 * [Life, Death and the Monster](https://youtu.be/xOCe5HUObD4) (John Conway) - Numberphile
-* [Monster Group](https://youtu.be/MXKiih4JJvQ) (John Conway) - Numberphile
+* [Monster Group](https://youtu.be/jsSeoGpiWsw?si=9uekLikRuQFGkq8e) (John Conway) - Numberphile
 * [Monster Group](https://youtu.be/MXKiih4JJvQ) (a little extra bit) - Numberphile
 * [Euler's formula with introductory group theory](https://youtu.be/mvmuCPvRoWQ) - 3Blue1Brown
 * [Group theory and why I love 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000](https://youtu.be/mH0oCDa74tE) - 3Blue1Brown
