@@ -30,7 +30,7 @@ Mostre que $\SL 23\neq S_4$ mesmo que $|\SL 23|=|S_4|=24$. [Dica: Compare os cen
 :::
 
 :::{#exr-}
-Seja $G=\Z_n$ e assuma que $a,b\in \Z_n$ tal que $\mbox{mmc}(a,b)=n$. Demonstre que $\Z_n=\left<a\right>\times \left<b\right>$. 
+Seja $G=\Z_n$ e assuma que $n=ab$ com $\mbox{mdc}(a,b)=1$. Demonstre que $\Z_n=\left<a\right>\times \left<b\right>$. 
 :::
 
 
