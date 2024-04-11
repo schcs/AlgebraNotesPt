@@ -133,8 +133,8 @@ Temos as seguintes regras de distributividade para as operações com conjuntos 
 :::{#lem-props-sets}
 Sejam $A$, $B$ e $C$ conjuntos. As seguintes afirmações são verdadeiras.
 
-1. $A\cap (B\cup C)=(A\cup B)\cap (A\cup C)$;
-2. $A\cup (B\cap C)=(A\cap B)\cup (A\cap C)$.
+1. $A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$;
+2. $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
 :::
 
 :::{.proof}
