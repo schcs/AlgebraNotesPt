@@ -4,6 +4,7 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Subgrupos de Sylow
 
 Lembremos, para um primo $p$, que um grupo finito chama-se $p$-grupo se $|G|$ é uma potência de $p$.
 
@@ -22,19 +23,21 @@ Seja $G$ um grupo finito de ordem $n$. Assuma que $p$ é um primo e $\alpha\geq 
 \[
 |G|=p^{n(n-1)/2}\prod_{i=1}^n(p^i-1).
 \]
-* Portanto um $p$-subgrupo de Sylow de $G$ tem cardinalidade $p^{n(n-1)/2}$. Considere o subgrupo $U$ de matrizes triangulares superiores com uns no diagonal. Como $|U|=p^{n(n-1)/2}$, temos que $U$ é um $p$-subgrupo de Sylow de $G$. O mesmo $U$ é um $p$-subgrupo de Sylow de $SL(n,p)$.
+Portanto um $p$-subgrupo de Sylow de $G$ tem cardinalidade $p^{n(n-1)/2}$. Considere o subgrupo $U$ de matrizes triangulares superiores com uns no diagonal. Como $|U|=p^{n(n-1)/2}$, temos que $U$ é um $p$-subgrupo de Sylow de $G$. O mesmo $U$ é um $p$-subgrupo de Sylow de $SL(n,p)$.
 :::
 
 :::{#exr-sylow}
 Seja $G$ um grupo e sejam $H$ e $K$ subgrupos de $G$ tal que $H$ é normalizado por $K$ (ou seja, $H^x=H$ para todo $x\in K$). Mostre que $HK$ é um subgrupo de $G$. Em particular, se $H$ é um subgrupo de $G$ e $K$ é um subgrupo normal de $G$, então $HK$ é um subgrupo de $G$.
 :::
 
+## Os Teoremas de Sylow
+
 :::{#thm-sylow}
 Seja $G$ um grupo finito de ordem $n$, seja $p$ um primo, e assuma que $p^\alpha$ (com $\alpha\geq 0$) é a maior potência de $p$ que divide $n$. As seguintes são verdadeiras.
 
-* $G$ possui um $p$-subgrupo de Sylow.
-* Se $P$ e $Q$ são dois $p$-subgrupos de Sylow em $G$, então $P$ e $Q$ são conjugados.
-* Se $n_p$ é o número de $p$-subgrupos de Sylow em $G$, então $n_p\equiv 1\pmod p$.
+1. $G$ possui um $p$-subgrupo de Sylow.
+2. Se $P$ e $Q$ são dois $p$-subgrupos de Sylow em $G$, então $P$ e $Q$ são conjugados.
+3. Se $n_p$ é o número de $p$-subgrupos de Sylow em $G$, então $n_p\equiv 1\pmod p$.
 :::
 
 :::{.proof}
@@ -63,6 +66,8 @@ $$
 |S|=1+|S_1|+\cdots+|S_m|=1+p^{b_1}+\cdots+p^{b_m}\equiv 1\pmod p.
 $$
 :::
+
+## Consequências dos Teoremas de Sylow
 
 :::{#cor-sylow}
 Sejam $G$ um grupo finito,  $p$ um primo, e $H$ um $p$-subgrupo de Sylow em $G$ com $|H|=p^\alpha$.
