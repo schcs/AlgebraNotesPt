@@ -38,7 +38,7 @@ Considere a relação $R$ em $\Z$ definido como
 $$
 a\equiv b\quad\mbox{se e somente se $a-b$ é par}.
 $$
-Note que $\equiv$ é uma relação de equivalência. Também note que $a\equiv b$ se e somente se $a$ e $b$ tem a mesma paridade. Ou seja, $0\equiv 2$, $0\equiv -2$, $0\equiv 4$, $0\equiv -4$, $1\equiv -1$, $1\equiv 3$, $1\equiv -3$, etc. 
+Note que $\equiv$ é uma relação de equivalência. Também note que $a\equiv b$ se e somente se $a$ e $b$ tem a mesma paridade. Ou seja, $0\equiv 2$, $0\equiv -2$, $0\equiv 4$, $0\equiv -4$, $1\equiv -1$, $1\equiv 3$, $1\equiv -3$, etc, mas $2\not\equiv -1$. 
 :::
 
 ## Classes de equivalência
@@ -128,3 +128,4 @@ Assuma agora que $\mathcal P$ é uma partição de $A$ e defina $\equiv_{\mathca
 2.  Simetria: se $a\equiv_{\mathcal P}b$, então $a,b$ pertencem à mesma parte de $\mathcal P$. Logo $b,a$ também pertencem à mesma parte e assim $b\equiv_{\mathcal P}a$. Portanto $\equiv_{\mathcal P}$ é simétrica. 
 3. Transitividade: se $a\equiv_{\mathcal P}b$ e $b\equiv_{\mathcal P}c$, então $a$ e $b$ pertencem à mesma parte de $\mathcal P$ e $b$ e $c$ também pertencem à mesma parte de $\mathcal P$. Isso implica que $a$ e $c$ pertencem à mesma parte de $\mathcal P$. Portanto $a\equiv_{\mathcal P}c$ e a relação $\equiv_{\mathcal P}$ é transitiva.
 :::
+

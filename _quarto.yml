@@ -19,6 +19,7 @@ book:
         - IniciacaoAMatematica/relations.qmd
         - IniciacaoAMatematica/equivalence.qmd
         - IniciacaoAMatematica/equivalence_examples.qmd
+        - IniciacaoAMatematica/order.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd
