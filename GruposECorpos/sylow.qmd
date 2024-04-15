@@ -125,7 +125,7 @@ Seja $G$ um grupo finito, $p$ um primo e $H$ um $p$-subgrupo de $G$. Mostre que 
 :::
 
 :::{#exr-engel}
-Deduza do @exr-psg-sylow o seguinte versão grupo-teórica do [Teorema de Engel](https://en.wikipedia.org/wiki/Engel%27s_theorem). Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ e assuma que $P\leq \GLV V$ tal que $|P|=p^\alpha$ com algum $\alpha\geq 1$. Deduza do @exr-psg-sylow que existe uma base $B$ de $V$ tal que as matrizes dos endomorfismos de $P$ na base $B$ são unitriangulares (triangulares superiores com $1$ nas entradas diagonais). 
+Deduza do @exr-psg-sylow a seguinte versão grupo-teórica do [Teorema de Engel](https://en.wikipedia.org/wiki/Engel%27s_theorem) (compare também com o [Teorema de Lie](https://en.wikipedia.org/wiki/Lie%27s_theorem)). Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ e assuma que $P\leq \GLV V$ tal que $|P|=p^\alpha$ com algum $\alpha\geq 1$. Deduza do @exr-psg-sylow que existe uma base $B$ de $V$ tal que as matrizes dos endomorfismos de $P$ na base $B$ são unitriangulares (triangulares superiores com $1$ nas entradas diagonais). 
 :::
 
 :::{#exr-engel2}
