@@ -4,36 +4,52 @@ number-sections: true
 lang: pt-BR
 ---
 
+![[Peter Ludvig Meidell Sylow](https://en.wikipedia.org/wiki/Ludvig_Sylow) (1832–1918](https://upload.wikimedia.org/wikipedia/commons/9/9b/Ludwig_Sylow.jpg)
+
 ## Subgrupos de Sylow
 
-Lembremos, para um primo $p$, que um grupo finito chama-se $p$-grupo se $|G|$ é uma potência de $p$.
-
-Lembremos também o Teorema de Lagrange que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo $A_4$ não possui subgrupo de ordem $6$ (verifique).
+Lembremos, para um primo $p$, que um grupo finito chama-se *$p$-grupo finito* se $|G|$ é uma potência de $p$ (@sec-centro). Lembremos também o Teorema de Lagrange (@thm-lagrange) que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo $A_4$ não possui subgrupo de ordem $6$ (verifique).
 
 :::{#def-sylow}
-Seja $G$ um grupo finito de ordem $n$. Assuma que $p$ é um primo e $\alpha\geq 0$ é um número inteiro tal que $p^\alpha\mid n$, mas $p^{\alpha+1}\nmid n$. Se $H$ é um subgrupo de $G$ tal que $|H|=p^\alpha$, então $H$ é dito $p$-subgrupo de Sylow de $G$.
+Seja $G$ um grupo finito de ordem $n$. Assuma que $p$ é um primo e $\alpha\geq 0$ é um número inteiro tal que $p^\alpha\mid n$, mas $p^{\alpha+1}\nmid n$. Se $H$ é um subgrupo de $G$ tal que $|H|=p^\alpha$, então $H$ é dito *$p$-subgrupo de Sylow* de $G$.
 :::
 
 :::{#exm-sylow}
 
-* Se $p\nmid |G|$, então $\{1\}$ é um $p$-subgrupo de Sylow de $G$.
-* Seja $G=S_3$. Os subgrupos $\left<(i,j)\right>$ com $1\leq i<j\leq 3$ são $2$-subgrupos de Sylow de $G$. O subgrupo $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
-* Seja $G=S_4$. Então $D_4=\left<(1,2,3,4),(1,3)\right>$ é um $2$-subgrupo de Sylow de $G$, enquanto $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
-* Seja $G=GL(n,p)$. Temos que
-\[
+1. Se $p\nmid |G|$, então $\{1\}$ é um $p$-subgrupo de Sylow de $G$.
+2. Seja $G=S_3$. Os subgrupos $\left<(i,j)\right>$ com $1\leq i<j\leq 3$ são $2$-subgrupos de Sylow de $G$. O subgrupo $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
+3. Seja $G=S_4$. Então $D_4=\left<(1,2,3,4),(1,3)\right>$ é um $2$-subgrupo de Sylow de $G$, enquanto $\left<(1,2,3)\right>$ é um $3$-subgrupo de Sylow de $G$.
+4. Seja $G=GL(n,p)$. Calculamos no @exm-order que 
+$$
 |G|=p^{n(n-1)/2}\prod_{i=1}^n(p^i-1).
-\]
-Portanto um $p$-subgrupo de Sylow de $G$ tem cardinalidade $p^{n(n-1)/2}$. Considere o subgrupo $U$ de matrizes triangulares superiores com uns no diagonal. Como $|U|=p^{n(n-1)/2}$, temos que $U$ é um $p$-subgrupo de Sylow de $G$. O mesmo $U$ é um $p$-subgrupo de Sylow de $SL(n,p)$.
+$$
+Portanto um $p$-subgrupo de Sylow de $G$ tem cardinalidade $p^{n(n-1)/2}$. Considere o subgrupo $U$ de matrizes triangulares superiores com $1$ nas entradas diagonais. Como $|U|=p^{n(n-1)/2}$, temos que $U$ é um $p$-subgrupo de Sylow de $G$. O mesmo $U$ é um $p$-subgrupo de Sylow de $SL(n,p)$.
 :::
 
-:::{#exr-sylow}
-Seja $G$ um grupo e sejam $H$ e $K$ subgrupos de $G$ tal que $H$ é normalizado por $K$ (ou seja, $H^x=H$ para todo $x\in K$). Mostre que $HK$ é um subgrupo de $G$. Em particular, se $H$ é um subgrupo de $G$ e $K$ é um subgrupo normal de $G$, então $HK$ é um subgrupo de $G$.
-:::
 
 ## Os Teoremas de Sylow
 
+:::{#exr-sylow}
+Seja $G$ um grupo e sejam $H$ e $K$ subgrupos de $G$ tal que $H$ é normalizado por $K$ (ou seja, $H^x=H$ para todo $x\in K$). Mostre que $HK$ é um subgrupo de $G$. 
+(Dica: compare com item 3. do @lem-prod-subg). 
+::: 
+
+:::{#exr-sylow2}
+Para um número natural $k$ e primo $p$, denote por $|k|_p$ a maior potência de $p$ que divide $k$. 
+
+1. Mostre que 
+$$
+|k!|_p=\lfloor k/p\rfloor+\lfloor k/p^2\rfloor+\lfloor k/p^3\rfloor+\cdots.
+$$
+2. Deduze que 
+$$
+p\nmid \binom{k}{|k|_p}.
+$$
+:::
+
+
 :::{#thm-sylow}
-Seja $G$ um grupo finito de ordem $n$, seja $p$ um primo, e assuma que $p^\alpha$ (com $\alpha\geq 0$) é a maior potência de $p$ que divide $n$. As seguintes são verdadeiras.
+Seja $G$ um grupo finito de ordem $n$, seja $p$ um primo. As seguintes são verdadeiras.
 
 1. $G$ possui um $p$-subgrupo de Sylow.
 2. Se $P$ e $Q$ são dois $p$-subgrupos de Sylow em $G$, então $P$ e $Q$ são conjugados.
@@ -41,7 +57,24 @@ Seja $G$ um grupo finito de ordem $n$, seja $p$ um primo, e assuma que $p^\alpha
 :::
 
 :::{.proof}
-1. Demonstramos a afirmação por indução em $n$. Se $n=1$, ou se $n$ é um primo, então o resultado é trivialmente verdadeiro. Assuma que a afirmação é verdadeira para grupos de ordem menor que $n$. Assuma que $p^\alpha$ é a maior potência de $p$ que divide $n$. Se $G$ possui um subgrupo próprio $H$ tal que $p^\alpha\mid |H|$, então, pela hipótese de indução, $H$ possui um $p$-subgrupo de Sylow e o mesmo será um $p$-subgrupo de Sylow de $G$. Assuma então que a ordem de nenhum subgrupo $H$ de $G$ é divisível por $p^\alpha$. Considere a equação das classes de $G$:
+1. Assuma que $p^\alpha$ é a maior potência de $p$ que divide $n$ e ponha 
+$$
+\mathcal S=\{X\subseteq G\mid |X|=p^\alpha\}.
+$$
+Temos que $|\mathcal S|=\binom{n}{p^\alpha}$ e @exr-sylow2 mostra que $p\nmid |\mathcal S|$. O grupo $G$ age em $\mathcal S$ por multiplicação à direita:
+$$
+Sg=\{sg\mid s\in S\}\quad\mbox{para todo}\quad S\in\mathcal S,\ g\in G.
+$$
+Como $p\nmid |\mathcal S|$, existe uma $G$-órbita $\mathcal X$ tal que $p\nmid |\mathcal X|$. Seja $X\in\mathcal X$ e $P$ o estabilizador $G_X$ de $X$. Temos pelo @cor-orbit-stab que 
+$$
+p\nmid |\mathcal X|=|G|/|P| 
+$$ {#eq-sylow-1}
+e em particular $p^\alpha\mid |P|$. Por outro lado, $P$ age em $X$ por multiplicação à direita. Se $x\in X$, o seu estabilizador $P_x$ é o subgrupo trivial, pois se $xs=x$ com algum $s\in P$, então $s=1$, pela lei de cancelamento. Obtemos de novo pelo @cor-orbit-stab que 
+$$
+p^\alpha =|X|\leq |xP|=|P|.
+$$ {#eq-sylow-2}
+Combinando, @eq-sylow-1 e @eq-sylow-2, obtemos que $|P|=p^\alpha$ e $P$ é subgrupo de Sylow de $G$.
+<!-- Demonstramos a afirmação por indução em $n$. Se $n=1$, ou se $n$ é um primo, então o resultado é trivialmente verdadeiro. Assuma que a afirmação é verdadeira para grupos de ordem menor que $n$. Assuma que $p^\alpha$ é a maior potência de $p$ que divide $n$. Se $G$ possui um subgrupo próprio $H$ tal que $p^\alpha\mid |H|$, então, pela hipótese de indução, $H$ possui um $p$-subgrupo de Sylow e o mesmo será um $p$-subgrupo de Sylow de $G$. Assuma então que a ordem de nenhum subgrupo $H$ de $G$ é divisível por $p^\alpha$. Considere a equação das classes de $G$:
 $$
 |G|=|Z(G)|+|C_1|+\cdots+|C_k|
 $$
@@ -49,9 +82,9 @@ onde $C_1,\ldots,C_k$ são as classes de conjugação de $G$ com cardinalidade m
 $$
 Y=\{y\in G\mid Hy\in X\}.
 $$
-É fácil verificar que $Y$ é um subgrupo de $G$ que contém $X$ e que $X=Y/H$. Portanto $|Y|=p^\alpha$; ou seja, $Y$ é um $p$-subgrupo de Sylow de $G$.
+É fácil verificar que $Y$ é um subgrupo de $G$ que contém $X$ e que $X=Y/H$. Portanto $|Y|=p^\alpha$; ou seja, $Y$ é um $p$-subgrupo de Sylow de $G$. -->
 
-2. Seja $C=\{P^g\mid g\in G\}$ a classe de conjugação de $P$ em $G$. Note que os elementos de $C$ são $p$-subgrupos de Sylow de $G$. O grupo $G$ age no conjunto $C$ e o grupo $Q$ também age neste conjunto. Pelo Teorema Órbita-Estabilizador,
+2. Seja $C=\{P^g\mid g\in G\}$ a classe de conjugação de $P$ em $G$. Note que os elementos de $C$ são $p$-subgrupos de Sylow de $G$. O grupo $G$ age no conjunto $C$ e o grupo $Q$ também age neste conjunto. Pelo Teorema Órbita-Estabilizador (@cor-orbit-stab, veja também @exm-norm),
 $$
 |C|=|G:N_G(P)|.
 $$
@@ -59,7 +92,7 @@ Como $P\leq N_G(P)$, temos que $p^\alpha\mid |N_G(P)|$. Em particular $p\nmid |C
 $$
 |C|=p^{a_1}+\cdots+p^{a_r}.
 $$
-Como $p\nmid |C|$, obtemos que existe algum $i$ tal que $a_i=0$; ou seja, existe uma $Q$-órbita tal que $|C_i|=1$. Suponha que $C_i=\{R\}$. Então $R$ é um $p$-subgrupo de Sylow tal que $R$ é normalizado por $Q$. Pelo exercício antes do teorema, $RQ$ é um subgrupo de $G$ de ordem $|R||Q|/|R\cap Q|=p^{2\alpha}/|R\cap Q|$. Como $p^\alpha$ é  a maior potência que divide a ordem de $G$, o Teorema de Lagrange implica que $R=.Q$. Ou seja $Q$ é igual um conjugado de $P$.
+Como $p\nmid |C|$, obtemos que existe algum $i$ tal que $a_i=0$; ou seja, existe uma $Q$-órbita tal que $|C_i|=1$. Suponha que $C_i=\{R\}$. Então $R$ é um $p$-subgrupo de Sylow tal que $R$ é normalizado por $Q$. Pelo @exr-sylow, $RQ$ é um subgrupo de $G$ de ordem $|R||Q|/|R\cap Q|=p^{2\alpha}/|R\cap Q|$. Como $p^\alpha$ é  a maior potência que divide a ordem de $G$, o Teorema de Lagrange (@thm-lagrange) implica que $R=.$. Ou seja $Q$ é igual um conjugado de $P$.
 
 3. Seja $S$ o conjunto de $p$-subgrupos de Sylow de $G$ e seja $P\in S$. Temos que $P$ age em $S$ por conjugação e $\{P\}$ é uma $P$-órbita. Afirmamos que $\{P\}$ é a única $p$-órbita com cardinalidade uma. Assuma que $\{R\}$ é uma outra $P$-órbita. O raciocínio no parágrafo anterior mostra que $RP$ é um subgrupo de $G$, e portanto $R=P$. Sejam $S_1,\ldots,S_m$ as $P$-órbitas com cardinalidade maior que um. Temos pelo Teorema Órbita-Estabilizador que $|S_i|=p^{b_i}$ com $b_i\geq 1$ para todo $i$ e
 $$
@@ -79,10 +112,27 @@ n_p\equiv 1\pmod p,\quad n_p\mid |G|/p^\alpha.
 $$
 :::
 
+:::{#cor-cauchy}
+(Teorema de [Cauchy](https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy))
+Se $G$ é um grupo finito e $p$ um primo tal que $p\mid |G|$, então $G$ possui um elemento de ordem $p$.
+:::
+:::{.proof}
+Seja $P$ um $p$-subgrupo de Sylow de $G$. Assuma que $g\in P\setminus\{1\}$. Então, $|g|=p^k$ com algum $k\geq 1$. Ora, $g^{p^{k-1}}$ é um elemento de ordem $p$. 
+:::  
+
 :::{#exr-psg-sylow}
 Seja $G$ um grupo finito, $p$ um primo e $H$ um $p$-subgrupo de $G$. Mostre que $H$ está contido em um $p$-subgrupo de Sylow de $G$. [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]
+:::
+
+:::{#exr-engel}
+Deduza do @exr-psg-sylow o seguinte versão grupo-teórica do [Teorema de Engel](https://en.wikipedia.org/wiki/Engel%27s_theorem). Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ e assuma que $P\leq \GLV V$ tal que $|P|=p^\alpha$ com algum $\alpha\geq 1$. Deduza do @exr-psg-sylow que existe uma base $B$ de $V$ tal que as matrizes dos endomorfismos de $P$ na base $B$ são unitriangulares (triangulares superiores com $1$ nas entradas diagonais). 
+:::
+
+:::{#exr-engel2}
+Resolve o exercício @exr-engel sem usar os Teoremas de Sylow. [Dica: Considere as $P$-órbitas nos vetores de $V$ e mostre que existe pelo menos uma órbita na forma $\{v\}$ com $v\neq 0$. Depois use indução pela dimensão de $V$.]
 :::
 
 :::{#exm-simple100}
 Não existe um grupo simples de ordem 100. De fato, se $G$ é um grupo de ordem 100, então  o número de $5$-subgrupos de Sylow de $G$ é congruente com 1 módulo 5 mas também é um divisor de $100/25=4$. Portanto, $G$ possui único $5$-subgrupo de Sylow que precisa ser normal e assim $G$ não pode ser um grupo simples.
 :::
+

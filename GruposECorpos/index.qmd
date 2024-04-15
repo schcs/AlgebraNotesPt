@@ -24,11 +24,11 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 * [Ações de grupos e O Teorema Órbita-Estabilizador](actions.qmd)
 * [Classes de conjugação](classes.qmd)
 * [O grupo alternado](alternado.qmd)
+* [Os Teoremas de Sylow](sylow.qmd)
 * [Grupos abelianos]
 * [Grupos solúveis](soluble.qmd)
 * [Grupos livres](livres.qmd)
 * [O Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)](psl.qmd)
-* [Os Teoremas de Sylow](sylow.qmd)
 * [Grupos nilpotentes](nilpotent.qmd)
 
 ### Bloco 2: Corpos

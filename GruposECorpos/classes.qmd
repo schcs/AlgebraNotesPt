@@ -69,7 +69,7 @@ Considere o grupo $S_5$. Pelo @exm-p5, este grupo tem 7 classes de conjugação 
 Determine as tabelas das classes de comjugação para os grupos $S_3$, $S_4$, e $S_6$. 
 :::
 
-## O centro de um grupo
+## O centro de um grupo {#sec-centro}
 
 O centro $Z(G)$ de um grupo $G$ foi definido na @def-center como
 \begin{eqnarray*}

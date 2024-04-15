@@ -80,10 +80,10 @@ book:
         - GruposECorpos/actions.qmd
         - GruposECorpos/classes.qmd
         - GruposECorpos/alternado.qmd
+        - GruposECorpos/sylow.qmd
         - GruposECorpos/livres.qmd
         - GruposECorpos/soluble.qmd
         - GruposECorpos/psl.qmd
-        - GruposECorpos/sylow.qmd
         - GruposECorpos/nilpotent.qmd 
         - GruposECorpos/ringsfields.qmd
         - GruposECorpos/extensions.qmd
