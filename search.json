@@ -973,7 +973,7 @@
     "href": "GruposECorpos/index.html#apostilas",
     "title": "Grupos e Corpos",
     "section": "",
-    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\n[Grupos abelianos]\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nOs Teoremas de Sylow\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\n[Resolubilidade por radicais]\n\nTODO: Grupos abelianos, Resolubilidade por radicais",
+    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\nOs Teoremas de Sylow\n[Grupos abelianos]\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\n[Resolubilidade por radicais]\n\nTODO: Grupos abelianos, Resolubilidade por radicais",
     "crumbs": [
       "Grupos e Corpos"
     ]
@@ -1395,8 +1395,8 @@
     ]
   },
   {
-    "objectID": "GruposECorpos/classes.html#o-centro-de-um-grupo",
-    "href": "GruposECorpos/classes.html#o-centro-de-um-grupo",
+    "objectID": "GruposECorpos/classes.html#sec-centro",
+    "href": "GruposECorpos/classes.html#sec-centro",
     "title": "59  Classes de conjugação",
     "section": "59.3 O centro de um grupo",
     "text": "59.3 O centro de um grupo\nO centro \\(Z(G)\\) de um grupo \\(G\\) foi definido na Definição 56.7 como \\[\\begin{eqnarray*}\nZ(G)&=&\\{g\\in G\\mid gh=hg\\mbox{ para todo }h\\in G\\}\\\\&=&\\{g\\in G\\mid g^h=g\\mbox{ para todo }h\\in G\\}.\n\\end{eqnarray*}\\]\nPara \\(g\\in G\\), observe que \\(\\{g\\}\\) é uma classe de conjugação se e somente se \\(g\\in Z(G)\\). (Pode-se deduzir da tabela em cima que \\(Z(S_5)=\\{1\\}\\).) Se \\(G\\) é um grupo finito e \\(C_1,\\ldots,C_m\\) são as classes de \\(G\\) com cardinalidade maior ou igual a dois, então podemos escrever o grupo \\(G\\) como uma união disjunta \\[\nG=Z(G)\\cup C_1\\cup\\cdots\\cup C_m\n\\] e isso implica que \\[\n|G|=|Z(G)|+ |C_1|+\\cdots+|C_m|.\n\\tag{59.1}\\] A equação Equação 59.1 é chamada de equação das classes de \\(G\\).\nConsiderando a equação das classes para grupos cuja ordem é uma potência de um primo, obtemos o seguinte resultado importante.\n\nTeorema 59.1 Seja \\(p\\) um primo e seja \\(G\\) um grupo tal que \\(|G|=p^k\\) com algum \\(k\\geq 1\\). Então o centro \\(Z(G)\\) é não trivial (ou seja, \\(|Z(G)|&gt;1\\)).\n\n\nComprovação. Considere a equação Equação 59.1 para o grupo \\(G\\). Como as classes \\(C_i\\) são \\(G\\)-órbitas para uma ação de \\(G\\) (nomeadamente, a conjugação de \\(G\\) em \\(G\\)), temos que \\(|C_i|\\) é um divisor de \\(|G|=p^k\\); ou seja \\(|C_i|=p^{k_i}\\) com algum \\(k_i\\geq 1\\). O lado esquerdo da equação das classes é uma potência de \\(p\\), e os termos \\(|C_i|\\) no lado direito também são potências de \\(p\\). Isso quer dizer que \\(p\\mid |Z(G)|\\) e em particular que \\(|Z(G)|&gt;1\\).\n\nNote que um grupo finito \\(G\\) tal que \\(|G|=p^k\\) onde \\(p\\) é primo é chamado de \\(p\\)-grupo finito. Por exemplo, \\(D_4\\) é um 2-grupo finito. O teorema anterior diz que o centro de um \\(p\\)-grupo finito é não trivial.\n\nExercício 59.3 Sejam \\(p\\) um primo e \\(G\\) um grupo tal que \\(|G|=p^2\\). Mostre que \\(G\\) é abeliano e que exatamente uma das seguintes afirmações é válida:\n\n\\(G\\) é cíclico e \\(G\\cong \\Z_{p^2}\\);\n\\(G=\\left&lt;a,b\\right&gt;\\) onde \\(|a|=|b|=p\\) e \\(ab=ba\\). Neste caso \\(G\\cong \\Z_p\\times \\Z_p\\).",
@@ -1483,135 +1483,135 @@
     ]
   },
   {
-    "objectID": "GruposECorpos/livres.html",
-    "href": "GruposECorpos/livres.html",
-    "title": "61  Grupos livres",
-    "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\]",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Grupos livres</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html",
-    "href": "GruposECorpos/soluble.html",
-    "title": "62  Grupos solúveis",
-    "section": "",
-    "text": "62.1 O comutador\nNote que \\([g,h]=1\\) se e somente se \\(gh=hg\\); ou seja, \\(g\\) e \\(h\\) comutam.",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html#o-comutador",
-    "href": "GruposECorpos/soluble.html#o-comutador",
-    "title": "62  Grupos solúveis",
-    "section": "",
-    "text": "Definição 62.1 Seja \\(G\\) um grupo, \\(g,h\\in G\\). O comutador \\([g,h]\\) de \\(g\\) e \\(h\\) é definido como \\[\n[g,h]=g^{-1}h^{-1}gh\n\\]",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html#o-subgrupo-derivado",
-    "href": "GruposECorpos/soluble.html#o-subgrupo-derivado",
-    "title": "62  Grupos solúveis",
-    "section": "62.2 O subgrupo derivado",
-    "text": "62.2 O subgrupo derivado\n\nDefinição 62.2 Seja \\(G\\) um grupo. O subgrupo derivado \\(G'\\) está definida como \\[\nG'=\\left&lt;[g,h]\\mid g,h\\in G\\right&gt;.\n\\]\n\nEm outras palavras, o subgrupo derivado \\(G'\\) é um subgrupo gerado por todos os comutadores em \\(G\\). Note que o conjunto dos comutadores geralmente não é fechado para multiplicação e assim ele não é um subgrupo de \\(G\\).\nNote também que \\(G'=1\\) se e somente se \\(G\\) é abeliano.\n\nTeorema 62.1 Seja \\(G\\) um grupo. As seguintes afirmações são verdadeiras.\n\n\\(G'\\unlhd G\\);\n\\(G/G'\\) é um grupo abeliano;\nse \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano, então \\(G'\\leq N\\).\n\nA terceira afirmação diz que \\(G'\\) é o menor subgrupo normal de \\(G\\) com quociente abeliano.\n\n\nComprovação. Primeiro, se \\(g,h,x\\in G\\), então \\[\n[g^x,h^x]=[x^{-1}gx,x^{-1}hx]=x^{-1}g^{-1}xx^{-1}h^{-1}xx^{-1}gxx^{-1}hx=x^{-1}g^{-1}h^{-1}ghx=[g,h]^x.\n\\] O seja, um conjugado de um comutador é comutador. Como o subgrupo derivado contém produtos de comutadores, ele é normal.\nSejam \\(g,h\\in G\\). Temos que \\[\n[gG',hG']=(g^{-1}G')(h^{-1}G')(gG')(hG')=[g,h]G'=G'.\n\\] Logo, \\(G/G'\\) é abeliano.\nOra seja \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano e seja \\(g,h\\in G\\). Temos que \\[\n1=[gN,hN]=[g,h]N.\n\\] Ou seja, \\([g,h]\\in N\\). Como \\(G'\\) é gerado por elementos na forma \\([g,h]\\), temos que \\(G'\\leq N\\).",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html#subgrupos-caraterísticos",
-    "href": "GruposECorpos/soluble.html#subgrupos-caraterísticos",
-    "title": "62  Grupos solúveis",
-    "section": "62.3 Subgrupos caraterísticos",
-    "text": "62.3 Subgrupos caraterísticos\n\nDefinição 62.3 Um subgroupo \\(H\\leq G\\) é dito caraterístico, se \\(H\\) é invariente por automorfismos de \\(G\\). Um subgrupo caraterístico é normal.\n\n\nLema 62.1 Seja \\(G\\) um grupo e sejam \\(H\\), \\(K\\) subgroupos de \\(G\\) tal que \\(K\\leq H\\leq G\\).\n\nSe \\(K\\) é caraterístico em \\(H\\) e \\(H\\) é caraterístico em \\(G\\), então \\(K\\) é caraterístico em \\(G\\).\nSe \\(K\\) é caraterístico em \\(H\\) e \\(H\\) é normal em \\(G\\), então \\(K\\) é normal em \\(G\\).\n\n\n\nComprovação. Exercício.\n\n\nLema 62.2 \\(G'\\) é um subgrupo caraterístico de \\(G\\). Em particular, \\(G'\\) é um subgrupo normal. Além disso, \\(G/G'\\) é um grupo abeliano e se \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano, então \\(G'\\leq N\\). (Pode-se dizer que \\(G'\\) é o menor subgrupo normal de \\(G\\) com quociente abeliano.)\n\n\nComprovação. Exercício.",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html#série-derivada",
-    "href": "GruposECorpos/soluble.html#série-derivada",
-    "title": "62  Grupos solúveis",
-    "section": "62.4 Série derivada",
-    "text": "62.4 Série derivada\n\nDefinição 62.4 Podemos definir recursivamente \\(G''=(G')'\\), \\(G'''=(G'')'\\). Obtemos uma série chamada de série derivada ou série comutador de \\(G\\). Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em \\(G\\). Os termos da série derivada são denotados também por \\(G=G^{(0)}\\), \\(G'=G^{(1)}\\), \\(G''=G^{(2)}\\), etc.\n\n\nDefinição 62.5 Seja \\(G\\) um grupo e seja \\(G_0=G&gt;\\cdots&gt; G_k&gt;\\cdots\\) uma série subnormal tal que \\(G_i/G_{i+1}\\) é abeliano para todo \\(i\\). Então \\(G^{(i)}\\leq G_i\\) vale para todo \\(i\\geq 0\\).\n\n\nComprovação. A afirmação é trivialmente verdadeira para \\(i=0\\). Assuma que \\(G^{(i)}\\leq G_i\\). Como \\(G_i/G_{i+1}\\) é abeliano, temos que \\(G_i'\\leq G_{i+1}\\). Logo \\[\nG^{(i+1)}=(G^{(i)})'\\leq G_i'\\leq G_{i+1}.\n\\] Então a afirmação é verdadeira para \\(i+1\\) e segue por indução que ela é verdadeira para todo \\(i\\).\n\n\nTeorema 62.2 As seguintes são equivalentes para um grupo \\(G\\).\n\nExiste uma série normal \\(G_0=G&gt;\\cdots &gt;G_k=1\\) com quocientes abelianos.\nExiste  uma série subnormal \\(G_0=G&gt;\\cdots&gt; G_k=1\\) com quocientes abelianos.\nExiste \\(k\\) tal que \\(G^{(k)}=1\\).\n\n\n\nComprovação. Segue dos resultados anteriores.",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/soluble.html#grupos-solúveis",
-    "href": "GruposECorpos/soluble.html#grupos-solúveis",
-    "title": "62  Grupos solúveis",
-    "section": "62.5 Grupos solúveis",
-    "text": "62.5 Grupos solúveis\n\nDefinição 62.6 Um grupo \\(G\\) é dito solúvel se uma das afirmações do corolário anterior é válida para \\(G\\). O menor \\(k\\) tal que \\(G^{(k)}=1\\) é chamado de comprimento derivado de \\(G\\).\n\n\nDefinição 62.7 Um grupo abeliano finito é dito grupo abeliano elementar,, se existe um primo \\(p\\), tal que \\(x^p=1\\) para todo \\(x\\in G\\).\n\nPelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que \\(G\\) é grupo abeliano elementar se e somente se \\(G=C_p\\times\\cdots \\times C_p\\) com algum primo \\(p\\). Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo \\(\\mathbb F_p\\).\n\nTeorema 62.3 As seguintes afirmações são válidas para um grupo \\(G\\).\n\nSe \\(\\varphi:G\\rightarrow K\\) é um homomorfismo, então \\[\n\\varphi(G^{(i)})=\\varphi(G)^{(i)}\n\\] para todo \\(i\\geq 0\\).\nSe \\(N\\unlhd G\\) e \\(Q=G/N\\), então \\(Q^{(i)}= G^{(i)}N/N\\).\nSe \\(G\\) é solúvel e \\(H\\leq G\\), \\(N\\unlhd G\\), então \\(H\\) e \\(G/N\\) são solúveis.\nSe \\(N\\unlhd G\\), tal que \\(N\\) e \\(G/N\\) são solúveis, então \\(G\\) é solúvel.\nSe \\(G\\) é um p-grupo finito, então \\(G\\) é solúvel.\nSe \\(G\\) é finito, então \\(G\\) é solúvel se e somente se os fatores de composição de \\(G\\) são todos grupos cíclicos de ordem prima.\nSe \\(G\\) é finito e solúvel e \\(N\\) é um subgrupo minimal normal de \\(G\\), então \\(N\\) é abeliano elementar.\n\n\n\nComprovação. \n\nIndução por \\(i\\). Se \\(i=0\\), então não há nada para provar. Assuma que a afirmação é verdadeira para \\(i\\geq 0\\). O subgrupo \\(G^{(i+1)}\\) é gerado por elementos da forma \\([x,y]\\) onde \\(x,y\\in G^{(i)}\\). Como \\[\n\\varphi([x,y])=[\\varphi(x),\\varphi(y)]\\in \\varphi(G^{(i)})'=(\\varphi(G)^{(i)})'=\\varphi(G)^{(i+1)},\n\\] obtemos que \\(\\varphi(G^{(i+1)})\\leq \\varphi(G)^{(i+1)}\\). Assuma agora que \\([u,v]\\in\\varphi(G)^{(i+1)}\\) com \\(u,v\\in \\varphi(G)^{(i)}\\). Temos que existem \\(x,y\\in G^{(i)}\\) tal que \\(\\varphi(x)=u\\) e \\(\\varphi(y)=v\\). Logo \\[\n[u,v]=\\varphi([x,y])\\in \\varphi(G^{(i+1)})\n\\] e \\(\\varphi(G)^{(i+1)}\\leq \\varphi(G^{(i+1)})\\).  Temos equality.\nSeja \\(\\varphi:G\\rightarrow G/N\\) o homomorfismo natural. Por parte (1), tem-se que \\[\nQ^{(i)}=\\varphi(G)^{(i)}=\\varphi(G^{(i)})=G^{(i)}N/N.\n\\]\nAssuma que \\(G\\) é solúvel e assuma que \\(G^{(k)}=1\\) para algum \\(k\\). Pode-se verificar por indução que \\(H^{(i)}\\leq G^{(i)}\\) vale para todo \\(i\\geq 0\\). Portanto, \\(H^{(k)}=1\\) e segue que \\(H\\) é solúvel. Seja agora \\(N\\unlhd G\\) e assuma que \\(Q=G/N\\). Por parte (2), temos que \\((G/N)^{(k)}= G^{(k)}N/N=1\\). Logo \\((G/N)^k=1\\) e portanto \\(G/N\\) é solúvel.\nAssuma que \\(N\\unlhd G\\) e \\(G/N\\) são solúveis. Seja \\(Q=G/N\\). Existe \\(m\\) tal que \\(Q^{(m)}=1\\). Isto quer dizer que \\(G^{(m)}\\leq N\\). Existe \\(l\\) tal que \\(N^{(l)}=1\\). Afirmamos que \\(G^{(m+l)}=1\\). De fato, \\[\nG^{(m+l)}=(G^{(m)})^{(l)}\\leq N^{(l)}=1.\n\\] Logo, \\(G\\) é solúvel.\nProvaremos por indução por \\(|G|\\). Se \\(|G|=1\\), não há nada para provar. Assuma que \\(G\\) é um \\(p\\)-grupo finito de ordem \\(p^n\\) e assuma que \\(p\\)-grupos de ordem menor que \\(p^n\\) são solúveis. Como \\(G\\) é um \\(p\\)-grupo finito, \\(Z(G)\\) é um subgrupo normal não trivial de \\(G\\). Além disso, \\(Z(G)\\) é abeliano e, pela hipótese de indução, \\(G/Z(G)\\) é solúvel. Portanto, \\(G\\) é solúvel pela afirmação anterior.\nClaro.\nSeja \\(N\\) um subgrupo minimal normal de \\(G\\). Como \\(N'\\) é um subgrupo caraterístico em \\(N\\), temos que \\(N'\\) é normal de \\(G\\), que implica, pela minimalidade de \\(N\\), que \\(N'=1\\). Logo \\(N\\) é um grupo abeliano finito. Pelo Teorema Fundamental dos Grupos Abelianos Finitos, \\(N=N_{p_1}\\times \\cdots \\times N_{p_k}\\) onde \\(N_{p_i}\\) é o \\(p_i\\)-subgrupo de Sylow de \\(N\\). Cada \\(N_{p_i}\\) é caraterístico em \\(N\\), e normal em \\(G\\). Pela minimalidade de \\(N\\), temos que \\(N=N_{p_1}\\); isto é, \\(N\\) é um \\(p\\)-grupo abeliano. Finalmente, observe que \\[\nN^p=\\{x^p\\mid x\\in N\\}\n\\] é um subgrupo caraterístico em \\(N\\) que implica que \\(N^p=1\\); ou seja \\(N\\) é abeliano elementar.",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos solúveis</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/psl.html",
-    "href": "GruposECorpos/psl.html",
-    "title": "63  O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)",
-    "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\]",
-    "crumbs": [
-      "Grupos e Corpos",
-      "<span class='chapter-number'>63</span>  <span class='chapter-title'>O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span>"
-    ]
-  },
-  {
     "objectID": "GruposECorpos/sylow.html",
     "href": "GruposECorpos/sylow.html",
-    "title": "64  Os Teoremas de Sylow",
+    "title": "61  Os Teoremas de Sylow",
     "section": "",
-    "text": "64.1 Subgrupos de Sylow\nLembremos, para um primo \\(p\\), que um grupo finito chama-se \\(p\\)-grupo se \\(|G|\\) é uma potência de \\(p\\).\nLembremos também o Teorema de Lagrange que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo \\(A_4\\) não possui subgrupo de ordem \\(6\\) (verifique).",
+    "text": "61.1 Subgrupos de Sylow\nLembremos, para um primo \\(p\\), que um grupo finito chama-se \\(p\\)-grupo finito se \\(|G|\\) é uma potência de \\(p\\) (Seção 59.3). Lembremos também o Teorema de Lagrange (Teorema 54.1) que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo \\(A_4\\) não possui subgrupo de ordem \\(6\\) (verifique).",
     "crumbs": [
       "Grupos e Corpos",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
     ]
   },
   {
     "objectID": "GruposECorpos/sylow.html#subgrupos-de-sylow",
     "href": "GruposECorpos/sylow.html#subgrupos-de-sylow",
-    "title": "64  Os Teoremas de Sylow",
+    "title": "61  Os Teoremas de Sylow",
     "section": "",
-    "text": "Definição 64.1 Seja \\(G\\) um grupo finito de ordem \\(n\\). Assuma que \\(p\\) é um primo e \\(\\alpha\\geq 0\\) é um número inteiro tal que \\(p^\\alpha\\mid n\\), mas \\(p^{\\alpha+1}\\nmid n\\). Se \\(H\\) é um subgrupo de \\(G\\) tal que \\(|H|=p^\\alpha\\), então \\(H\\) é dito \\(p\\)-subgrupo de Sylow de \\(G\\).\n\n\nExemplo 64.1  \n\nSe \\(p\\nmid |G|\\), então \\(\\{1\\}\\) é um \\(p\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=S_3\\). Os subgrupos \\(\\left&lt;(i,j)\\right&gt;\\) com \\(1\\leq i&lt;j\\leq 3\\) são \\(2\\)-subgrupos de Sylow de \\(G\\). O subgrupo \\(\\left&lt;(1,2,3)\\right&gt;\\) é um \\(3\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=S_4\\). Então \\(D_4=\\left&lt;(1,2,3,4),(1,3)\\right&gt;\\) é um \\(2\\)-subgrupo de Sylow de \\(G\\), enquanto \\(\\left&lt;(1,2,3)\\right&gt;\\) é um \\(3\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=GL(n,p)\\). Temos que [ |G|=p^{n(n-1)/2}_{i=1}n(pi-1). ] Portanto um \\(p\\)-subgrupo de Sylow de \\(G\\) tem cardinalidade \\(p^{n(n-1)/2}\\). Considere o subgrupo \\(U\\) de matrizes triangulares superiores com uns no diagonal. Como \\(|U|=p^{n(n-1)/2}\\), temos que \\(U\\) é um \\(p\\)-subgrupo de Sylow de \\(G\\). O mesmo \\(U\\) é um \\(p\\)-subgrupo de Sylow de \\(SL(n,p)\\).\n\n\n\nExercício 64.1 Seja \\(G\\) um grupo e sejam \\(H\\) e \\(K\\) subgrupos de \\(G\\) tal que \\(H\\) é normalizado por \\(K\\) (ou seja, \\(H^x=H\\) para todo \\(x\\in K\\)). Mostre que \\(HK\\) é um subgrupo de \\(G\\). Em particular, se \\(H\\) é um subgrupo de \\(G\\) e \\(K\\) é um subgrupo normal de \\(G\\), então \\(HK\\) é um subgrupo de \\(G\\).",
+    "text": "Definição 61.1 Seja \\(G\\) um grupo finito de ordem \\(n\\). Assuma que \\(p\\) é um primo e \\(\\alpha\\geq 0\\) é um número inteiro tal que \\(p^\\alpha\\mid n\\), mas \\(p^{\\alpha+1}\\nmid n\\). Se \\(H\\) é um subgrupo de \\(G\\) tal que \\(|H|=p^\\alpha\\), então \\(H\\) é dito \\(p\\)-subgrupo de Sylow de \\(G\\).\n\n\nExemplo 61.1  \n\nSe \\(p\\nmid |G|\\), então \\(\\{1\\}\\) é um \\(p\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=S_3\\). Os subgrupos \\(\\left&lt;(i,j)\\right&gt;\\) com \\(1\\leq i&lt;j\\leq 3\\) são \\(2\\)-subgrupos de Sylow de \\(G\\). O subgrupo \\(\\left&lt;(1,2,3)\\right&gt;\\) é um \\(3\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=S_4\\). Então \\(D_4=\\left&lt;(1,2,3,4),(1,3)\\right&gt;\\) é um \\(2\\)-subgrupo de Sylow de \\(G\\), enquanto \\(\\left&lt;(1,2,3)\\right&gt;\\) é um \\(3\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(G=GL(n,p)\\). Calculamos no Exemplo 53.2 que \\[\n|G|=p^{n(n-1)/2}\\prod_{i=1}^n(p^i-1).\n\\] Portanto um \\(p\\)-subgrupo de Sylow de \\(G\\) tem cardinalidade \\(p^{n(n-1)/2}\\). Considere o subgrupo \\(U\\) de matrizes triangulares superiores com \\(1\\) nas entradas diagonais. Como \\(|U|=p^{n(n-1)/2}\\), temos que \\(U\\) é um \\(p\\)-subgrupo de Sylow de \\(G\\). O mesmo \\(U\\) é um \\(p\\)-subgrupo de Sylow de \\(SL(n,p)\\).",
     "crumbs": [
       "Grupos e Corpos",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
     ]
   },
   {
     "objectID": "GruposECorpos/sylow.html#os-teoremas-de-sylow",
     "href": "GruposECorpos/sylow.html#os-teoremas-de-sylow",
-    "title": "64  Os Teoremas de Sylow",
-    "section": "64.2 Os Teoremas de Sylow",
-    "text": "64.2 Os Teoremas de Sylow\n\nTeorema 64.1 Seja \\(G\\) um grupo finito de ordem \\(n\\), seja \\(p\\) um primo, e assuma que \\(p^\\alpha\\) (com \\(\\alpha\\geq 0\\)) é a maior potência de \\(p\\) que divide \\(n\\). As seguintes são verdadeiras.\n\n\\(G\\) possui um \\(p\\)-subgrupo de Sylow.\nSe \\(P\\) e \\(Q\\) são dois \\(p\\)-subgrupos de Sylow em \\(G\\), então \\(P\\) e \\(Q\\) são conjugados.\nSe \\(n_p\\) é o número de \\(p\\)-subgrupos de Sylow em \\(G\\), então \\(n_p\\equiv 1\\pmod p\\).\n\n\n\nComprovação. \n\nDemonstramos a afirmação por indução em \\(n\\). Se \\(n=1\\), ou se \\(n\\) é um primo, então o resultado é trivialmente verdadeiro. Assuma que a afirmação é verdadeira para grupos de ordem menor que \\(n\\). Assuma que \\(p^\\alpha\\) é a maior potência de \\(p\\) que divide \\(n\\). Se \\(G\\) possui um subgrupo próprio \\(H\\) tal que \\(p^\\alpha\\mid |H|\\), então, pela hipótese de indução, \\(H\\) possui um \\(p\\)-subgrupo de Sylow e o mesmo será um \\(p\\)-subgrupo de Sylow de \\(G\\). Assuma então que a ordem de nenhum subgrupo \\(H\\) de \\(G\\) é divisível por \\(p^\\alpha\\). Considere a equação das classes de \\(G\\): \\[\n|G|=|Z(G)|+|C_1|+\\cdots+|C_k|\n\\] onde \\(C_1,\\ldots,C_k\\) são as classes de conjugação de \\(G\\) com cardinalidade maior que um. Como \\(G\\) não possui subgrupo próprio com ordem divisível por \\(p^\\alpha\\), o centralizador \\(C_G(g)\\) de um elemento \\(g\\in C_i\\) satisfaz \\(p^\\alpha\\nmid |C_G(g)|\\); ou seja \\(p\\mid |C_i|\\) para todo \\(i\\geq 1\\). Como os dois lados da equação das classes são divisíveis por \\(p\\), temos que \\(p\\mid |Z(G)|\\). Por um exercício anterior, \\(Z(G)\\), sendo um grupo abeliano, possui um elemento \\(g\\) de ordem \\(p\\). Seja \\(H=\\left&lt;g\\right&gt;\\). Então \\(H\\unlhd G\\). Ponha \\(Q=G/H\\) e observe que a maior potência de \\(p\\) que divide \\(|Q|\\) é \\(p^{n-1}\\). Portanto, pela hipótese de indução, \\(Q\\) possui um subgrupo \\(X\\) de ordem \\(p^{\\alpha-1}\\). Seja \\[\nY=\\{y\\in G\\mid Hy\\in X\\}.\n\\] É fácil verificar que \\(Y\\) é um subgrupo de \\(G\\) que contém \\(X\\) e que \\(X=Y/H\\). Portanto \\(|Y|=p^\\alpha\\); ou seja, \\(Y\\) é um \\(p\\)-subgrupo de Sylow de \\(G\\).\nSeja \\(C=\\{P^g\\mid g\\in G\\}\\) a classe de conjugação de \\(P\\) em \\(G\\). Note que os elementos de \\(C\\) são \\(p\\)-subgrupos de Sylow de \\(G\\). O grupo \\(G\\) age no conjunto \\(C\\) e o grupo \\(Q\\) também age neste conjunto. Pelo Teorema Órbita-Estabilizador, \\[\n|C|=|G:N_G(P)|.\n\\] Como \\(P\\leq N_G(P)\\), temos que \\(p^\\alpha\\mid |N_G(P)|\\). Em particular \\(p\\nmid |C|\\). Assuma que \\(C_1,\\ldots,C_r\\) são as \\(Q\\)-órbitas em \\(C\\). Aplicando de novo o Teorema Órbita-Estabilizador, temos que \\(|C_i|=p^{a_i}\\) com \\(a_i\\geq 0\\) e temos que \\[\n|C|=p^{a_1}+\\cdots+p^{a_r}.\n\\] Como \\(p\\nmid |C|\\), obtemos que existe algum \\(i\\) tal que \\(a_i=0\\); ou seja, existe uma \\(Q\\)-órbita tal que \\(|C_i|=1\\). Suponha que \\(C_i=\\{R\\}\\). Então \\(R\\) é um \\(p\\)-subgrupo de Sylow tal que \\(R\\) é normalizado por \\(Q\\). Pelo exercício antes do teorema, \\(RQ\\) é um subgrupo de \\(G\\) de ordem \\(|R||Q|/|R\\cap Q|=p^{2\\alpha}/|R\\cap Q|\\). Como \\(p^\\alpha\\) é  a maior potência que divide a ordem de \\(G\\), o Teorema de Lagrange implica que \\(R=.Q\\). Ou seja \\(Q\\) é igual um conjugado de \\(P\\).\nSeja \\(S\\) o conjunto de \\(p\\)-subgrupos de Sylow de \\(G\\) e seja \\(P\\in S\\). Temos que \\(P\\) age em \\(S\\) por conjugação e \\(\\{P\\}\\) é uma \\(P\\)-órbita. Afirmamos que \\(\\{P\\}\\) é a única \\(p\\)-órbita com cardinalidade uma. Assuma que \\(\\{R\\}\\) é uma outra \\(P\\)-órbita. O raciocínio no parágrafo anterior mostra que \\(RP\\) é um subgrupo de \\(G\\), e portanto \\(R=P\\). Sejam \\(S_1,\\ldots,S_m\\) as \\(P\\)-órbitas com cardinalidade maior que um. Temos pelo Teorema Órbita-Estabilizador que \\(|S_i|=p^{b_i}\\) com \\(b_i\\geq 1\\) para todo \\(i\\) e \\[\n|S|=1+|S_1|+\\cdots+|S_m|=1+p^{b_1}+\\cdots+p^{b_m}\\equiv 1\\pmod p.\n\\]",
+    "title": "61  Os Teoremas de Sylow",
+    "section": "61.2 Os Teoremas de Sylow",
+    "text": "61.2 Os Teoremas de Sylow\n\nExercício 61.1 Seja \\(G\\) um grupo e sejam \\(H\\) e \\(K\\) subgrupos de \\(G\\) tal que \\(H\\) é normalizado por \\(K\\) (ou seja, \\(H^x=H\\) para todo \\(x\\in K\\)). Mostre que \\(HK\\) é um subgrupo de \\(G\\). (Dica: compare com item 3. do Lema 57.1).\n\n\nExercício 61.2 Para um número natural \\(k\\) e primo \\(p\\), denote por \\(|k|_p\\) a maior potência de \\(p\\) que divide \\(k\\).\n\nMostre que \\[\n|k!|_p=\\lfloor k/p\\rfloor+\\lfloor k/p^2\\rfloor+\\lfloor k/p^3\\rfloor+\\cdots.\n\\]\nDeduze que \\[\np\\nmid \\binom{k}{|k|_p}.\n\\]\n\n\n\nTeorema 61.1 Seja \\(G\\) um grupo finito de ordem \\(n\\), seja \\(p\\) um primo. As seguintes são verdadeiras.\n\n\\(G\\) possui um \\(p\\)-subgrupo de Sylow.\nSe \\(P\\) e \\(Q\\) são dois \\(p\\)-subgrupos de Sylow em \\(G\\), então \\(P\\) e \\(Q\\) são conjugados.\nSe \\(n_p\\) é o número de \\(p\\)-subgrupos de Sylow em \\(G\\), então \\(n_p\\equiv 1\\pmod p\\).\n\n\n\nComprovação. \n\nAssuma que \\(p^\\alpha\\) é a maior potência de \\(p\\) que divide \\(n\\) e ponha \\[\n\\mathcal S=\\{X\\subseteq G\\mid |X|=p^\\alpha\\}.\n\\] Temos que \\(|\\mathcal S|=\\binom{n}{p^\\alpha}\\) e Exercício 61.2 mostra que \\(p\\nmid |\\mathcal S|\\). O grupo \\(G\\) age em \\(\\mathcal S\\) por multiplicação à direita: \\[\nSg=\\{sg\\mid s\\in S\\}\\quad\\mbox{para todo}\\quad S\\in\\mathcal S,\\ g\\in G.\n\\] Como \\(p\\nmid |\\mathcal S|\\), existe uma \\(G\\)-órbita \\(\\mathcal X\\) tal que \\(p\\nmid |\\mathcal X|\\). Seja \\(X\\in\\mathcal X\\) e \\(P\\) o estabilizador \\(G_X\\) de \\(X\\). Temos pelo Corolário 58.1 que \\[\np\\nmid |\\mathcal X|=|G|/|P|\n\\tag{61.1}\\] e em particular \\(p^\\alpha\\mid |P|\\). Por outro lado, \\(P\\) age em \\(X\\) por multiplicação à direita. Se \\(x\\in X\\), o seu estabilizador \\(P_x\\) é o subgrupo trivial, pois se \\(xs=x\\) com algum \\(s\\in P\\), então \\(s=1\\), pela lei de cancelamento. Obtemos de novo pelo Corolário 58.1 que \\[\np^\\alpha =|X|\\leq |xP|=|P|.\n\\tag{61.2}\\] Combinando, Equação 61.1 e Equação 61.2, obtemos que \\(|P|=p^\\alpha\\) e \\(P\\) é subgrupo de Sylow de \\(G\\). \nSeja \\(C=\\{P^g\\mid g\\in G\\}\\) a classe de conjugação de \\(P\\) em \\(G\\). Note que os elementos de \\(C\\) são \\(p\\)-subgrupos de Sylow de \\(G\\). O grupo \\(G\\) age no conjunto \\(C\\) e o grupo \\(Q\\) também age neste conjunto. Pelo Teorema Órbita-Estabilizador (Corolário 58.1, veja também Exemplo 58.6), \\[\n|C|=|G:N_G(P)|.\n\\] Como \\(P\\leq N_G(P)\\), temos que \\(p^\\alpha\\mid |N_G(P)|\\). Em particular \\(p\\nmid |C|\\). Assuma que \\(C_1,\\ldots,C_r\\) são as \\(Q\\)-órbitas em \\(C\\). Aplicando de novo o Teorema Órbita-Estabilizador, temos que \\(|C_i|=p^{a_i}\\) com \\(a_i\\geq 0\\) e temos que \\[\n|C|=p^{a_1}+\\cdots+p^{a_r}.\n\\] Como \\(p\\nmid |C|\\), obtemos que existe algum \\(i\\) tal que \\(a_i=0\\); ou seja, existe uma \\(Q\\)-órbita tal que \\(|C_i|=1\\). Suponha que \\(C_i=\\{R\\}\\). Então \\(R\\) é um \\(p\\)-subgrupo de Sylow tal que \\(R\\) é normalizado por \\(Q\\). Pelo Exercício 61.1, \\(RQ\\) é um subgrupo de \\(G\\) de ordem \\(|R||Q|/|R\\cap Q|=p^{2\\alpha}/|R\\cap Q|\\). Como \\(p^\\alpha\\) é  a maior potência que divide a ordem de \\(G\\), o Teorema de Lagrange (Teorema 54.1) implica que \\(R=.\\). Ou seja \\(Q\\) é igual um conjugado de \\(P\\).\nSeja \\(S\\) o conjunto de \\(p\\)-subgrupos de Sylow de \\(G\\) e seja \\(P\\in S\\). Temos que \\(P\\) age em \\(S\\) por conjugação e \\(\\{P\\}\\) é uma \\(P\\)-órbita. Afirmamos que \\(\\{P\\}\\) é a única \\(p\\)-órbita com cardinalidade uma. Assuma que \\(\\{R\\}\\) é uma outra \\(P\\)-órbita. O raciocínio no parágrafo anterior mostra que \\(RP\\) é um subgrupo de \\(G\\), e portanto \\(R=P\\). Sejam \\(S_1,\\ldots,S_m\\) as \\(P\\)-órbitas com cardinalidade maior que um. Temos pelo Teorema Órbita-Estabilizador que \\(|S_i|=p^{b_i}\\) com \\(b_i\\geq 1\\) para todo \\(i\\) e \\[\n|S|=1+|S_1|+\\cdots+|S_m|=1+p^{b_1}+\\cdots+p^{b_m}\\equiv 1\\pmod p.\n\\]",
     "crumbs": [
       "Grupos e Corpos",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
     ]
   },
   {
     "objectID": "GruposECorpos/sylow.html#consequências-dos-teoremas-de-sylow",
     "href": "GruposECorpos/sylow.html#consequências-dos-teoremas-de-sylow",
-    "title": "64  Os Teoremas de Sylow",
-    "section": "64.3 Consequências dos Teoremas de Sylow",
-    "text": "64.3 Consequências dos Teoremas de Sylow\n\nCorolário 64.1 Sejam \\(G\\) um grupo finito,  \\(p\\) um primo, e \\(H\\) um \\(p\\)-subgrupo de Sylow em \\(G\\) com \\(|H|=p^\\alpha\\).\n\nO subgrupo \\(H\\) é normal em \\(G\\) se e somente se ele é o único \\(p\\)-subgrupo de Sylow de \\(G\\).\nO número \\(n_p\\) de \\(p\\)-subgrupos de \\(G\\) satisfaz as condições \\[\nn_p\\equiv 1\\pmod p,\\quad n_p\\mid |G|/p^\\alpha.\n\\]\n\n\n\nExercício 64.2 Seja \\(G\\) um grupo finito, \\(p\\) um primo e \\(H\\) um \\(p\\)-subgrupo de \\(G\\). Mostre que \\(H\\) está contido em um \\(p\\)-subgrupo de Sylow de \\(G\\). [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]\n\n\nExemplo 64.2 Não existe um grupo simples de ordem 100. De fato, se \\(G\\) é um grupo de ordem 100, então  o número de \\(5\\)-subgrupos de Sylow de \\(G\\) é congruente com 1 módulo 5 mas também é um divisor de \\(100/25=4\\). Portanto, \\(G\\) possui único \\(5\\)-subgrupo de Sylow que precisa ser normal e assim \\(G\\) não pode ser um grupo simples.",
+    "title": "61  Os Teoremas de Sylow",
+    "section": "61.3 Consequências dos Teoremas de Sylow",
+    "text": "61.3 Consequências dos Teoremas de Sylow\n\nCorolário 61.1 Sejam \\(G\\) um grupo finito,  \\(p\\) um primo, e \\(H\\) um \\(p\\)-subgrupo de Sylow em \\(G\\) com \\(|H|=p^\\alpha\\).\n\nO subgrupo \\(H\\) é normal em \\(G\\) se e somente se ele é o único \\(p\\)-subgrupo de Sylow de \\(G\\).\nO número \\(n_p\\) de \\(p\\)-subgrupos de \\(G\\) satisfaz as condições \\[\nn_p\\equiv 1\\pmod p,\\quad n_p\\mid |G|/p^\\alpha.\n\\]\n\n\n\nCorolário 61.2 (Teorema de Cauchy) Se \\(G\\) é um grupo finito e \\(p\\) um primo tal que \\(p\\mid |G|\\), então \\(G\\) possui um elemento de ordem \\(p\\).\n\n\nComprovação. Seja \\(P\\) um \\(p\\)-subgrupo de Sylow de \\(G\\). Assuma que \\(g\\in P\\setminus\\{1\\}\\). Então, \\(|g|=p^k\\) com algum \\(k\\geq 1\\). Ora, \\(g^{p^{k-1}}\\) é um elemento de ordem \\(p\\).\n\n\nExercício 61.3 Seja \\(G\\) um grupo finito, \\(p\\) um primo e \\(H\\) um \\(p\\)-subgrupo de \\(G\\). Mostre que \\(H\\) está contido em um \\(p\\)-subgrupo de Sylow de \\(G\\). [Dica: Adapte o argumento na demonstração da afirmação 2 no teorema acima.]\n\n\nExercício 61.4 Deduza do Exercício 61.3 o seguinte versão grupo-teórica do Teorema de Engel. Seja \\(V\\) um espaço vetorial de dimensão finita sobre \\(\\Z_p\\) e assuma que \\(P\\leq \\GLV V\\) tal que \\(|P|=p^\\alpha\\) com algum \\(\\alpha\\geq 1\\). Deduza do Exercício 61.3 que existe uma base \\(B\\) de \\(V\\) tal que as matrizes dos endomorfismos de \\(P\\) na base \\(B\\) são unitriangulares (triangulares superiores com \\(1\\) nas entradas diagonais).\n\n\nExercício 61.5 Resolve o exercício Exercício 61.4 sem usar os Teoremas de Sylow. [Dica: Considere as \\(P\\)-órbitas nos vetores de \\(V\\) e mostre que existe pelo menos uma órbita na forma \\(\\{v\\}\\) com \\(v\\neq 0\\). Depois use indução pela dimensão de \\(V\\).]\n\n\nExemplo 61.2 Não existe um grupo simples de ordem 100. De fato, se \\(G\\) é um grupo de ordem 100, então  o número de \\(5\\)-subgrupos de Sylow de \\(G\\) é congruente com 1 módulo 5 mas também é um divisor de \\(100/25=4\\). Portanto, \\(G\\) possui único \\(5\\)-subgrupo de Sylow que precisa ser normal e assim \\(G\\) não pode ser um grupo simples.",
     "crumbs": [
       "Grupos e Corpos",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/livres.html",
+    "href": "GruposECorpos/livres.html",
+    "title": "62  Grupos livres",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Grupos livres</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html",
+    "href": "GruposECorpos/soluble.html",
+    "title": "63  Grupos solúveis",
+    "section": "",
+    "text": "63.1 O comutador\nNote que \\([g,h]=1\\) se e somente se \\(gh=hg\\); ou seja, \\(g\\) e \\(h\\) comutam.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html#o-comutador",
+    "href": "GruposECorpos/soluble.html#o-comutador",
+    "title": "63  Grupos solúveis",
+    "section": "",
+    "text": "Definição 63.1 Seja \\(G\\) um grupo, \\(g,h\\in G\\). O comutador \\([g,h]\\) de \\(g\\) e \\(h\\) é definido como \\[\n[g,h]=g^{-1}h^{-1}gh\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html#o-subgrupo-derivado",
+    "href": "GruposECorpos/soluble.html#o-subgrupo-derivado",
+    "title": "63  Grupos solúveis",
+    "section": "63.2 O subgrupo derivado",
+    "text": "63.2 O subgrupo derivado\n\nDefinição 63.2 Seja \\(G\\) um grupo. O subgrupo derivado \\(G'\\) está definida como \\[\nG'=\\left&lt;[g,h]\\mid g,h\\in G\\right&gt;.\n\\]\n\nEm outras palavras, o subgrupo derivado \\(G'\\) é um subgrupo gerado por todos os comutadores em \\(G\\). Note que o conjunto dos comutadores geralmente não é fechado para multiplicação e assim ele não é um subgrupo de \\(G\\).\nNote também que \\(G'=1\\) se e somente se \\(G\\) é abeliano.\n\nTeorema 63.1 Seja \\(G\\) um grupo. As seguintes afirmações são verdadeiras.\n\n\\(G'\\unlhd G\\);\n\\(G/G'\\) é um grupo abeliano;\nse \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano, então \\(G'\\leq N\\).\n\nA terceira afirmação diz que \\(G'\\) é o menor subgrupo normal de \\(G\\) com quociente abeliano.\n\n\nComprovação. Primeiro, se \\(g,h,x\\in G\\), então \\[\n[g^x,h^x]=[x^{-1}gx,x^{-1}hx]=x^{-1}g^{-1}xx^{-1}h^{-1}xx^{-1}gxx^{-1}hx=x^{-1}g^{-1}h^{-1}ghx=[g,h]^x.\n\\] O seja, um conjugado de um comutador é comutador. Como o subgrupo derivado contém produtos de comutadores, ele é normal.\nSejam \\(g,h\\in G\\). Temos que \\[\n[gG',hG']=(g^{-1}G')(h^{-1}G')(gG')(hG')=[g,h]G'=G'.\n\\] Logo, \\(G/G'\\) é abeliano.\nOra seja \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano e seja \\(g,h\\in G\\). Temos que \\[\n1=[gN,hN]=[g,h]N.\n\\] Ou seja, \\([g,h]\\in N\\). Como \\(G'\\) é gerado por elementos na forma \\([g,h]\\), temos que \\(G'\\leq N\\).",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html#subgrupos-caraterísticos",
+    "href": "GruposECorpos/soluble.html#subgrupos-caraterísticos",
+    "title": "63  Grupos solúveis",
+    "section": "63.3 Subgrupos caraterísticos",
+    "text": "63.3 Subgrupos caraterísticos\n\nDefinição 63.3 Um subgroupo \\(H\\leq G\\) é dito caraterístico, se \\(H\\) é invariente por automorfismos de \\(G\\). Um subgrupo caraterístico é normal.\n\n\nLema 63.1 Seja \\(G\\) um grupo e sejam \\(H\\), \\(K\\) subgroupos de \\(G\\) tal que \\(K\\leq H\\leq G\\).\n\nSe \\(K\\) é caraterístico em \\(H\\) e \\(H\\) é caraterístico em \\(G\\), então \\(K\\) é caraterístico em \\(G\\).\nSe \\(K\\) é caraterístico em \\(H\\) e \\(H\\) é normal em \\(G\\), então \\(K\\) é normal em \\(G\\).\n\n\n\nComprovação. Exercício.\n\n\nLema 63.2 \\(G'\\) é um subgrupo caraterístico de \\(G\\). Em particular, \\(G'\\) é um subgrupo normal. Além disso, \\(G/G'\\) é um grupo abeliano e se \\(N\\unlhd G\\) tal que \\(G/N\\) é abeliano, então \\(G'\\leq N\\). (Pode-se dizer que \\(G'\\) é o menor subgrupo normal de \\(G\\) com quociente abeliano.)\n\n\nComprovação. Exercício.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html#série-derivada",
+    "href": "GruposECorpos/soluble.html#série-derivada",
+    "title": "63  Grupos solúveis",
+    "section": "63.4 Série derivada",
+    "text": "63.4 Série derivada\n\nDefinição 63.4 Podemos definir recursivamente \\(G''=(G')'\\), \\(G'''=(G'')'\\). Obtemos uma série chamada de série derivada ou série comutador de \\(G\\). Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em \\(G\\). Os termos da série derivada são denotados também por \\(G=G^{(0)}\\), \\(G'=G^{(1)}\\), \\(G''=G^{(2)}\\), etc.\n\n\nDefinição 63.5 Seja \\(G\\) um grupo e seja \\(G_0=G&gt;\\cdots&gt; G_k&gt;\\cdots\\) uma série subnormal tal que \\(G_i/G_{i+1}\\) é abeliano para todo \\(i\\). Então \\(G^{(i)}\\leq G_i\\) vale para todo \\(i\\geq 0\\).\n\n\nComprovação. A afirmação é trivialmente verdadeira para \\(i=0\\). Assuma que \\(G^{(i)}\\leq G_i\\). Como \\(G_i/G_{i+1}\\) é abeliano, temos que \\(G_i'\\leq G_{i+1}\\). Logo \\[\nG^{(i+1)}=(G^{(i)})'\\leq G_i'\\leq G_{i+1}.\n\\] Então a afirmação é verdadeira para \\(i+1\\) e segue por indução que ela é verdadeira para todo \\(i\\).\n\n\nTeorema 63.2 As seguintes são equivalentes para um grupo \\(G\\).\n\nExiste uma série normal \\(G_0=G&gt;\\cdots &gt;G_k=1\\) com quocientes abelianos.\nExiste  uma série subnormal \\(G_0=G&gt;\\cdots&gt; G_k=1\\) com quocientes abelianos.\nExiste \\(k\\) tal que \\(G^{(k)}=1\\).\n\n\n\nComprovação. Segue dos resultados anteriores.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/soluble.html#grupos-solúveis",
+    "href": "GruposECorpos/soluble.html#grupos-solúveis",
+    "title": "63  Grupos solúveis",
+    "section": "63.5 Grupos solúveis",
+    "text": "63.5 Grupos solúveis\n\nDefinição 63.6 Um grupo \\(G\\) é dito solúvel se uma das afirmações do corolário anterior é válida para \\(G\\). O menor \\(k\\) tal que \\(G^{(k)}=1\\) é chamado de comprimento derivado de \\(G\\).\n\n\nDefinição 63.7 Um grupo abeliano finito é dito grupo abeliano elementar,, se existe um primo \\(p\\), tal que \\(x^p=1\\) para todo \\(x\\in G\\).\n\nPelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que \\(G\\) é grupo abeliano elementar se e somente se \\(G=C_p\\times\\cdots \\times C_p\\) com algum primo \\(p\\). Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo \\(\\mathbb F_p\\).\n\nTeorema 63.3 As seguintes afirmações são válidas para um grupo \\(G\\).\n\nSe \\(\\varphi:G\\rightarrow K\\) é um homomorfismo, então \\[\n\\varphi(G^{(i)})=\\varphi(G)^{(i)}\n\\] para todo \\(i\\geq 0\\).\nSe \\(N\\unlhd G\\) e \\(Q=G/N\\), então \\(Q^{(i)}= G^{(i)}N/N\\).\nSe \\(G\\) é solúvel e \\(H\\leq G\\), \\(N\\unlhd G\\), então \\(H\\) e \\(G/N\\) são solúveis.\nSe \\(N\\unlhd G\\), tal que \\(N\\) e \\(G/N\\) são solúveis, então \\(G\\) é solúvel.\nSe \\(G\\) é um p-grupo finito, então \\(G\\) é solúvel.\nSe \\(G\\) é finito, então \\(G\\) é solúvel se e somente se os fatores de composição de \\(G\\) são todos grupos cíclicos de ordem prima.\nSe \\(G\\) é finito e solúvel e \\(N\\) é um subgrupo minimal normal de \\(G\\), então \\(N\\) é abeliano elementar.\n\n\n\nComprovação. \n\nIndução por \\(i\\). Se \\(i=0\\), então não há nada para provar. Assuma que a afirmação é verdadeira para \\(i\\geq 0\\). O subgrupo \\(G^{(i+1)}\\) é gerado por elementos da forma \\([x,y]\\) onde \\(x,y\\in G^{(i)}\\). Como \\[\n\\varphi([x,y])=[\\varphi(x),\\varphi(y)]\\in \\varphi(G^{(i)})'=(\\varphi(G)^{(i)})'=\\varphi(G)^{(i+1)},\n\\] obtemos que \\(\\varphi(G^{(i+1)})\\leq \\varphi(G)^{(i+1)}\\). Assuma agora que \\([u,v]\\in\\varphi(G)^{(i+1)}\\) com \\(u,v\\in \\varphi(G)^{(i)}\\). Temos que existem \\(x,y\\in G^{(i)}\\) tal que \\(\\varphi(x)=u\\) e \\(\\varphi(y)=v\\). Logo \\[\n[u,v]=\\varphi([x,y])\\in \\varphi(G^{(i+1)})\n\\] e \\(\\varphi(G)^{(i+1)}\\leq \\varphi(G^{(i+1)})\\).  Temos equality.\nSeja \\(\\varphi:G\\rightarrow G/N\\) o homomorfismo natural. Por parte (1), tem-se que \\[\nQ^{(i)}=\\varphi(G)^{(i)}=\\varphi(G^{(i)})=G^{(i)}N/N.\n\\]\nAssuma que \\(G\\) é solúvel e assuma que \\(G^{(k)}=1\\) para algum \\(k\\). Pode-se verificar por indução que \\(H^{(i)}\\leq G^{(i)}\\) vale para todo \\(i\\geq 0\\). Portanto, \\(H^{(k)}=1\\) e segue que \\(H\\) é solúvel. Seja agora \\(N\\unlhd G\\) e assuma que \\(Q=G/N\\). Por parte (2), temos que \\((G/N)^{(k)}= G^{(k)}N/N=1\\). Logo \\((G/N)^k=1\\) e portanto \\(G/N\\) é solúvel.\nAssuma que \\(N\\unlhd G\\) e \\(G/N\\) são solúveis. Seja \\(Q=G/N\\). Existe \\(m\\) tal que \\(Q^{(m)}=1\\). Isto quer dizer que \\(G^{(m)}\\leq N\\). Existe \\(l\\) tal que \\(N^{(l)}=1\\). Afirmamos que \\(G^{(m+l)}=1\\). De fato, \\[\nG^{(m+l)}=(G^{(m)})^{(l)}\\leq N^{(l)}=1.\n\\] Logo, \\(G\\) é solúvel.\nProvaremos por indução por \\(|G|\\). Se \\(|G|=1\\), não há nada para provar. Assuma que \\(G\\) é um \\(p\\)-grupo finito de ordem \\(p^n\\) e assuma que \\(p\\)-grupos de ordem menor que \\(p^n\\) são solúveis. Como \\(G\\) é um \\(p\\)-grupo finito, \\(Z(G)\\) é um subgrupo normal não trivial de \\(G\\). Além disso, \\(Z(G)\\) é abeliano e, pela hipótese de indução, \\(G/Z(G)\\) é solúvel. Portanto, \\(G\\) é solúvel pela afirmação anterior.\nClaro.\nSeja \\(N\\) um subgrupo minimal normal de \\(G\\). Como \\(N'\\) é um subgrupo caraterístico em \\(N\\), temos que \\(N'\\) é normal de \\(G\\), que implica, pela minimalidade de \\(N\\), que \\(N'=1\\). Logo \\(N\\) é um grupo abeliano finito. Pelo Teorema Fundamental dos Grupos Abelianos Finitos, \\(N=N_{p_1}\\times \\cdots \\times N_{p_k}\\) onde \\(N_{p_i}\\) é o \\(p_i\\)-subgrupo de Sylow de \\(N\\). Cada \\(N_{p_i}\\) é caraterístico em \\(N\\), e normal em \\(G\\). Pela minimalidade de \\(N\\), temos que \\(N=N_{p_1}\\); isto é, \\(N\\) é um \\(p\\)-grupo abeliano. Finalmente, observe que \\[\nN^p=\\{x^p\\mid x\\in N\\}\n\\] é um subgrupo caraterístico em \\(N\\) que implica que \\(N^p=1\\); ou seja \\(N\\) é abeliano elementar.",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>63</span>  <span class='chapter-title'>Grupos solúveis</span>"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/psl.html",
+    "href": "GruposECorpos/psl.html",
+    "title": "64  O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\]",
+    "crumbs": [
+      "Grupos e Corpos",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span>"
     ]
   },
   {
