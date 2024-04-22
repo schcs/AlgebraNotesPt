@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.553">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 53&nbsp; Sample chapter</title>
+<title>Álgebra - 63&nbsp; Grupos abelianos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/index.html" rel="next">
-<link href="../AlgebraLinearII/index.html" rel="prev">
+<link href="../GruposECorpos/livres.html" rel="next">
+<link href="../GruposECorpos/sylow.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -55,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
@@ -611,11 +611,11 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/chapter1.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Sample chapter</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/abelian.html"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -634,7 +634,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -649,7 +649,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../IniciacaoAMatematica/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Iniciação à Matemática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -702,7 +702,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../FundamentosDeAlgebra/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fundamentos de Álgebra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -983,14 +983,14 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../AlgebraLinearII/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Álgebra Linear II</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/chapter1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/chapter1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Sample chapter</span></span></a>
   </div>
 </li>
@@ -1000,7 +1000,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../GruposECorpos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grupos e Corpos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -1061,7 +1061,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/abelian.html" class="sidebar-item-text sidebar-link">
+  <a href="../GruposECorpos/abelian.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
   </div>
 </li>
@@ -1127,14 +1127,20 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#grupos-abelianos-finitos" id="toc-grupos-abelianos-finitos" class="nav-link active" data-scroll-target="#grupos-abelianos-finitos"><span class="header-section-number">63.1</span> Grupos abelianos finitos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/chapter1.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Sample chapter</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/abelian.html"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Sample chapter</span></h1>
+<h1 class="title"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></h1>
 </div>
 
 
@@ -1151,9 +1157,86 @@ window.Quarto = {
 </header>
 
 
-<p>Chapter text</p>
+<section id="grupos-abelianos-finitos" class="level2" data-number="63.1">
+<h2 data-number="63.1" data-anchor-id="grupos-abelianos-finitos"><span class="header-section-number">63.1</span> Grupos abelianos finitos</h2>
+<div id="exr-sylow-direct" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 63.1</strong></span> Assuma que <span class="math inline">\(G\)</span> é um grupo finito e o <span class="math inline">\(p\)</span>-sugrupo <span class="math inline">\(S_p\)</span> de Sylow é normal para todo primo <span class="math inline">\(p\)</span>. Demonstre que <span class="math display">\[
+G=S_{p_1}\times \cdots\times S_{p_k}
+\]</span> onde <span class="math inline">\(p_1,\ldots,p_k\)</span> são os divisores primos de <span class="math inline">\(|G|\)</span>.</p>
+</div>
+<div id="cor-group-ab-finite" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 63.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo abeliano finito. Então <span class="math inline">\(G\)</span> é isomorfo a um produto direto de <span class="math inline">\(p\)</span>-grupos abelianos. Ou, seja <span class="math display">\[
+G\cong G_{p_1}\times \cdots\times G_{p_k}
+\]</span> onde <span class="math inline">\(p_1,\ldots,p_k\)</span> são os divisores primos distintos de <span class="math inline">\(|G|\)</span> e <span class="math inline">\(G_{p_i}\)</span> é um <span class="math inline">\(p_i\)</span>-grupo abeliano. Além disso, a esta decomposição de <span class="math inline">\(G\)</span> é unica a menos da ordem dos fatores.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>A existência da decomposição segue do exercício anterior e do fato que <span class="math inline">\(G\)</span> é abeliano e assim todo subgrupo de <span class="math inline">\(G\)</span> é normal. A unicidade segue do fato que todo <span class="math inline">\(G_{p_i}\)</span> é um <span class="math inline">\(p_i\)</span>-subgrupo de Sylow de <span class="math inline">\(G\)</span>.</p>
+</div>
+<p>Pelo <a href="#cor-group-ab-finite" class="quarto-xref">Corolário&nbsp;<span>63.1</span></a>, nós precisamos focar em <span class="math inline">\(p\)</span>-grupos abelianos finitos.</p>
+<div id="lem-p-ab-complement" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 63.1</strong></span> Assuma que <span class="math inline">\(G\)</span> é um <span class="math inline">\(p\)</span>-grupo abeliano finito, seja <span class="math inline">\(g_0\)</span> um elemento de ordem maximal em <span class="math inline">\(G\)</span> e ponha <span class="math inline">\(C=\left&lt;g_0\right&gt;\)</span>. Então <span class="math inline">\(G\)</span> possui complemento para <span class="math inline">\(C\)</span>; ou seja, existe <span class="math inline">\(K \leq G\)</span> tal que <span class="math inline">\(G=C\times K\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Nós usamos indução em <span class="math inline">\(|G|\)</span>. Se <span class="math inline">\(G\)</span> for cíclico (em particular, quando <span class="math inline">\(|G|=p\)</span>), então <span class="math inline">\(G=C\)</span> e <span class="math inline">\(G=C\times 1\)</span> como foi afirmado. Assuma que <span class="math inline">\(G\)</span> não é cíclico e que a afirmação do lema vale para todo grupo de ordem menor que <span class="math inline">\(|G|\)</span>. Assuma que <span class="math inline">\(|g_0|=|C|=p^k\)</span>.</p>
+<p>Primeiro, afirmamos que existe <span class="math inline">\(a\in G\setminus C\)</span> com <span class="math inline">\(|a|=p\)</span>. Seja <span class="math inline">\(h\in G\)</span> tal que <span class="math inline">\(h\not\in C\)</span> e assuma que <span class="math inline">\(h\)</span> tem ordem minimal possível. Como <span class="math inline">\(G\)</span> não é cíclico, tal <span class="math inline">\(h\)</span> existe. Como <span class="math inline">\(|h^p|=|h|/p\)</span>, a escolha de <span class="math inline">\(h\)</span> (ter ordem minimal) implica que <span class="math inline">\(h^p\in C\)</span>; ou seja, <span class="math inline">\(h^p=g_0^r\)</span> com algum <span class="math inline">\(r\)</span>. Portanto, <span class="math display">\[
+(g_0^r)^{p^{m-1}}=(h^p)^{p^{m-1}}=h^{p^m}=1
+\]</span> e <span class="math inline">\(p^{m-1}\mid |g_0^r|\)</span>. Em particular, <span class="math inline">\(\left&lt;g_0^r\right&gt;\neq C\)</span> e <span class="math inline">\(g_0^r\)</span> está contido em um subgrupo maximal de <span class="math inline">\(C\)</span>. Por outro lado, <span class="math display">\[
+C^p=\{g^p\mid g\in C\}
+\]</span> é o único subgrupo maximal de <span class="math inline">\(C\)</span> e assim <span class="math inline">\(g_0^r\in C^p\)</span>; ou seja, <span class="math inline">\(g_0^r=g_0^{ps}\)</span> com algum <span class="math inline">\(s\)</span>. Defina <span class="math inline">\(a=g_0^{-s}h\)</span>. Então <span class="math inline">\(a\not \in C\)</span>, e <span class="math display">\[
+a^p=g_0^{-sp}h^p=g_0^{-r}h^p=h^{-p}h^p=1.
+\]</span> Portanto, <span class="math inline">\(a\in G\)</span> é um elemento de ordem <span class="math inline">\(p\)</span> tal que <span class="math inline">\(a\not\in C\)</span>. Em particular, <span class="math inline">\(\left&lt;a\right&gt;\cap C=1\)</span>.</p>
+<p>Considere o quociente <span class="math inline">\(Q=G/\left&lt;a\right&gt;\)</span>. A ordem de um elemento <span class="math inline">\(x\left&lt;a\right&gt;\in Q\)</span> tem ordem menor ou igual a <span class="math inline">\(|x|\)</span>. Além disso a imagem <span class="math inline">\(\overline C=(C\left&lt;a\right&gt;)/\left&lt;a\right&gt;\)</span> em <span class="math inline">\(Q\)</span> está gerada por <span class="math inline">\(g_0\left&lt;a\right&gt;\)</span>. Afirmamos, que <span class="math inline">\(|g_0\left&lt;a\right&gt;|=p^k=|g_0|\)</span>. De fato,<br>
+<span class="math display">\[
+\overline C=(C\left&lt;a\right&gt;)/\left&lt;a\right&gt;\cong C/(C\cap\left&lt;a\right&gt;)=C
+\]</span> e assim <span class="math inline">\(\overline C\)</span> é um subgrupo de ordem <span class="math inline">\(p^k\)</span> em <span class="math inline">\(Q\)</span>. Em particular, <span class="math inline">\(g_0\left&lt;a\right&gt;\)</span> é um elemento de ordem maximal em <span class="math inline">\(Q\)</span> e a hipótese da indução implica que <span class="math display">\[
+Q=\left&lt;g_0\left&lt;x_0\right&gt;\right&gt;\times K=\overline C\times \overline K
+\]</span> com algum <span class="math inline">\(\overline K\leq Q=G/\left&lt;a\right&gt;\)</span>. Seja <span class="math inline">\(K\)</span> a pré-imagem de <span class="math inline">\(\overline K\)</span> em <span class="math inline">\(G/\left&lt;a\right&gt;\)</span>; ou seja, <span class="math inline">\(K\leq G\)</span> tal que <span class="math inline">\(\left&lt;a\right&gt;\leq K\)</span> e <span class="math inline">\(\overline K=K/\left&lt;a\right&gt;\)</span>. Se <span class="math inline">\(x\in C\cap K\)</span>, então <span class="math inline">\(x\left&lt;a\right&gt;\in \overline C\cap \overline K=1\)</span> e assim <span class="math inline">\(x\in \left&lt;a\right&gt;\)</span>. Mas <span class="math inline">\(C\cap \left&lt;a\right&gt;=1\)</span> implica que <span class="math inline">\(x=1\)</span>. Portanto, <span class="math inline">\(x=1\)</span> e obtemos que <span class="math inline">\(C\cap K=1\)</span>. Além disso, <span class="math display">\[
+CK/\left&lt;a\right&gt;=G/\left&lt;a\right&gt;
+\]</span> e o <a href="normais.html#thm-corresp" class="quarto-xref">Teorema&nbsp;<span>57.3</span></a> implica que <span class="math inline">\(CK=G\)</span>. Como <span class="math inline">\(G\)</span> é abeliano, temos que <span class="math inline">\(C,K\unlhd G\)</span> e, portanto, <span class="math display">\[
+G=C\times K.
+\]</span></p>
+</div>
+<div id="exr-Zp-vector" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 63.2</strong></span> Assuma que <span class="math inline">\(p\)</span> é um primo, sejam <span class="math inline">\(\alpha_1,\ldots,\alpha_m\geq 1\)</span> e ponha <span class="math display">\[
+G=\Z_{p^{\alpha_1}}\times \cdots\times \Z_{p^{\alpha_m}}.
+\]</span> Mostre que</p>
+<ol type="1">
+<li><span class="math inline">\(G/G^p\)</span> é um espaço vetorial sobre <span class="math inline">\(\Z_p\)</span>;</li>
+<li><span class="math inline">\(\dim G/G^p=m\)</span>.</li>
+</ol>
+</div>
+<div id="cor-abelian-p-groups" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 63.2</strong></span> Seja <span class="math inline">\(G\)</span> um <span class="math inline">\(p\)</span>-grupo abeliano finito. Então <span class="math inline">\(G\)</span> pode ser escrito como <span class="math display">\[
+G\cong \Z_{p^{\alpha_1}}\times \cdots\times\Z_{p^{\alpha_m}}.
+\]</span> Além disso, os números <span class="math inline">\(\alpha_1,\ldots,\alpha_m\)</span> está unicamente determinados a menos a sua ordem.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Existência: Indução por <span class="math inline">\(|G|\)</span>. Se <span class="math inline">\(|G|=p\)</span>, então <span class="math inline">\(|G|=\Z_p\)</span> e o resultado está certo. Além disso, se <span class="math inline">\(G\)</span> é cíclico, então <span class="math inline">\(G=\Z_{p^\alpha}\)</span> e o resultado está verificado. Assuma que <span class="math inline">\(G\)</span> não é cíclico, seja <span class="math inline">\(g_0\)</span> um elemento de ordem maximal em <span class="math inline">\(G\)</span> e assuma que <span class="math inline">\(C=\left&lt;g_0\right&gt;\)</span>. Assumindo que <span class="math inline">\(|g_0|=p^{\alpha_1}\)</span>, temos que <span class="math inline">\(C=\left&lt;g_0\right&gt;\cong \Z_{p^{\alpha_1}}\)</span> e, pelo <a href="#lem-p-ab-complement" class="quarto-xref">Lema&nbsp;<span>63.1</span></a>, existe <span class="math inline">\(K\leq G\)</span> tal que <span class="math display">\[
+G=\left&lt;g_0\right&gt;\times K\cong \Z_{p^{\alpha_1}}\times K.
+\]</span> Agora, a hipótese da indução implica que <span class="math display">\[
+K\cong \Z_{p^{\alpha_2}}\times \cdots\times\Z_{p^{\alpha_m}}.
+\]</span> Portanto, <span class="math display">\[
+G\cong \Z_{p^{\alpha_1}}\times K\cong \Z_{p^{\alpha_1}}\times \cdots\times\Z_{p^{\alpha_m}}.
+\]</span></p>
+<p>Unicidade: Organizemos a decomposição de <span class="math inline">\(G\)</span> na seguinte forma: <span class="math display">\[
+G=(\Z_{p})^{a_1}\times (\Z_{p^2})^{a_2}\times \cdots\times (\Z_{p^s})^{a_s}
+\]</span> com <span class="math inline">\(1\leq a_i\)</span>. Pelo <a href="#exr-Zp-vector" class="quarto-xref">Exercício&nbsp;<span>63.2</span></a>, <span class="math display">\[
+\dim_{\Z_{p}}G/G^p=a_1+\cdots+a_s.
+\]</span> Ora, <span class="math display">\[
+G^p=(\Z_{p})^{a_2}\times\cdots\times (\Z_{p^{s-1}})^{a_s}
+\]</span> e <span class="math display">\[
+\dim_{\Z_p}G^p/G^{p^2}=a_2+\cdots+a_s.
+\]</span> Portanto, <span class="math inline">\(a_1\)</span> está determinado pelo tipo de isomorfismo de <span class="math inline">\(G\)</span>. Continuando deste jeito, temos que <span class="math inline">\(a_i\)</span> está determinado por <span class="math inline">\(G\)</span> para todo <span class="math inline">\(i\)</span> e a decomposição de <span class="math inline">\(G\)</span> está única.</p>
+</div>
+<div id="thm-fund-abelian-groups" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 63.1</strong></span> (O Teorema Fundamental de Grupos Abelianos Finitos) Seja <span class="math inline">\(G\)</span> um grupo abeliano finito, então<br>
+<span class="math display">\[
+G\cong \Z_{p_1^{\alpha_1}}\times\cdots\times \Z_{p_k^{\alpha_k}}
+\]</span> onde todo <span class="math inline">\(p_i\)</span> é um primo e <span class="math inline">\(C_{p_i^{\alpha_i}}\)</span> é um grupo cíclico de ordem <span class="math inline">\(p_i^{\alpha_i}\)</span>. Além disso, esta decomposição é única a menos da ordem dos fatores.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1210,12 +1293,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1567,13 +1650,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Álgebra Linear II</span>
+      <a href="../GruposECorpos/sylow.html" class="pagination-link" aria-label="Os Teoremas de Sylow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/index.html" class="pagination-link" aria-label="Grupos e Corpos">
-        <span class="nav-page-text">Grupos e Corpos</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/livres.html" class="pagination-link" aria-label="Grupos livres">
+        <span class="nav-page-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Grupos livres</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
