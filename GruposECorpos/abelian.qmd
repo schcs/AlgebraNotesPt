@@ -37,9 +37,9 @@ Assuma que $G$ não é cíclico e que a afirmação do lema vale para todo grupo
 
 Primeiro, afirmamos que existe $a\in G\setminus C$ com $|a|=p$. Seja $h\in G$ tal que $h\not\in C$ e assuma que $h$ tem ordem minimal possível. Como $G$ não é cíclico, tal $h$ existe. Como $|h^p|=|h|/p$, a escolha de $h$ (ter ordem minimal) implica que $h^p\in C$; ou seja, $h^p=g_0^r$ com algum $r$. Portanto, 
 $$
-(g_0^r)^{p^{m-1}}=(h^p)^{p^{m-1}}=h^{p^m}=1
+(g_0^r)^{p^{k-1}}=(h^p)^{p^{k-1}}=h^{p^k}=1
 $$
-e $p^{m-1}\mid |g_0^r|$. Em particular, $\left<g_0^r\right>\neq C$ e $g_0^r$ está contido em um subgrupo maximal de $C$. Por outro lado,
+e $p^{k-1}\mid |g_0^r|$. Em particular, $\left<g_0^r\right>\neq C$ e $g_0^r$ está contido em um subgrupo maximal de $C$. Por outro lado,
 $$
 C^p=\{g^p\mid g\in C\} 
 $$
