@@ -19,6 +19,7 @@ book:
         - IniciacaoAMatematica/relations.qmd
         - IniciacaoAMatematica/equivalence.qmd
         - IniciacaoAMatematica/equivalence_examples.qmd
+        - IniciacaoAMatematica/order.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd
@@ -80,10 +81,11 @@ book:
         - GruposECorpos/actions.qmd
         - GruposECorpos/classes.qmd
         - GruposECorpos/alternado.qmd
+        - GruposECorpos/sylow.qmd
+        - GruposECorpos/abelian.qmd
         - GruposECorpos/livres.qmd
         - GruposECorpos/soluble.qmd
         - GruposECorpos/psl.qmd
-        - GruposECorpos/sylow.qmd
         - GruposECorpos/nilpotent.qmd 
         - GruposECorpos/ringsfields.qmd
         - GruposECorpos/extensions.qmd

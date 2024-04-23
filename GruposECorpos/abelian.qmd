@@ -1,0 +1,130 @@
+---
+title: "Grupos abelianos"
+number-sections: true
+lang: pt-BR
+---
+
+## Grupos abelianos finitos
+
+:::{#exr-sylow-direct}
+Assuma que $G$ é um grupo finito e o $p$-sugrupo $S_p$ de Sylow é normal para todo primo $p$. Demonstre que 
+$$
+G=S_{p_1}\times \cdots\times S_{p_k}
+$$ 
+onde $p_1,\ldots,p_k$ são os divisores primos de $|G|$. 
+:::
+
+:::{#cor-group-ab-finite}
+Seja $G$ um grupo abeliano finito. Então $G$ é isomorfo a um produto direto de $p$-grupos abelianos. Ou, seja 
+$$
+G\cong G_{p_1}\times \cdots\times G_{p_k}
+$$ 
+onde $p_1,\ldots,p_k$ são os divisores primos distintos de $|G|$ e $G_{p_i}$ é  um $p_i$-grupo abeliano. Além disso, a esta decomposição de $G$ é unica a menos da ordem dos fatores. 
+:::
+
+:::{.proof}
+A existência da decomposição segue do exercício anterior e do fato que $G$ é abeliano e assim todo subgrupo de $G$ é normal. A unicidade segue do fato que todo $G_{p_i}$ é um $p_i$-subgrupo de Sylow de $G$.
+:::
+
+Pelo @cor-group-ab-finite, nós precisamos focar em $p$-grupos abelianos finitos. 
+
+:::{#lem-p-ab-complement}
+Assuma que $G$ é um $p$-grupo abeliano finito, seja $g_0$ um elemento de ordem maximal em $G$ e ponha $C=\left<g_0\right>$. Então $G$ possui complemento para $C$; ou seja, existe $K \leq G$ tal que $G=C\times K$. 
+:::
+:::{.proof}
+Nós usamos indução em $|G|$. Se $G$ for cíclico (em particular, quando $|G|=p$), então $G=C$ e $G=C\times 1$ como foi afirmado. 
+Assuma que $G$ não é cíclico e que a afirmação do lema vale para todo grupo de ordem menor que $|G|$.  Assuma que $|g_0|=|C|=p^k$. 
+
+Primeiro, afirmamos que existe $a\in G\setminus C$ com $|a|=p$. Seja $h\in G$ tal que $h\not\in C$ e assuma que $h$ tem ordem minimal possível. Como $G$ não é cíclico, tal $h$ existe. Como $|h^p|=|h|/p$, a escolha de $h$ (ter ordem minimal) implica que $h^p\in C$; ou seja, $h^p=g_0^r$ com algum $r$. Portanto, 
+$$
+(g_0^r)^{p^{m-1}}=(h^p)^{p^{m-1}}=h^{p^m}=1
+$$
+e $p^{m-1}\mid |g_0^r|$. Em particular, $\left<g_0^r\right>\neq C$ e $g_0^r$ está contido em um subgrupo maximal de $C$. Por outro lado,
+$$
+C^p=\{g^p\mid g\in C\} 
+$$
+é o único subgrupo maximal de $C$ e assim $g_0^r\in C^p$; ou seja, $g_0^r=g_0^{ps}$ com algum $s$. Defina $a=g_0^{-s}h$. Então $a\not \in C$, e 
+$$
+a^p=g_0^{-sp}h^p=g_0^{-r}h^p=h^{-p}h^p=1.
+$$
+Portanto, $a\in G$ é um elemento de ordem $p$ tal que $a\not\in C$. Em particular, $\left<a\right>\cap C=1$.  
+
+Considere o quociente $Q=G/\left<a\right>$. A ordem de um elemento $x\left<a\right>\in Q$ tem ordem menor ou igual a $|x|$. Além disso a imagem $\overline C=(C\left<a\right>)/\left<a\right>$ em $Q$ está gerada por $g_0\left<a\right>$. Afirmamos, que $|g_0\left<a\right>|=p^k=|g_0|$.  De fato,    
+$$
+\overline C=(C\left<a\right>)/\left<a\right>\cong C/(C\cap\left<a\right>)=C 
+$$
+e assim $\overline C$ é um subgrupo de ordem $p^k$ em $Q$. Em particular, $g_0\left<a\right>$ é um elemento de ordem maximal em $Q$ e a hipótese da indução implica que 
+$$
+Q=\left<g_0\left<x_0\right>\right>\times K=\overline C\times \overline K
+$$
+com algum $\overline K\leq Q=G/\left<a\right>$. Seja $K$ a pré-imagem de $\overline K$ em $G/\left<a\right>$; ou seja, $K\leq G$ tal que 
+$\left<a\right>\leq K$ e $\overline K=K/\left<a\right>$. Se $x\in C\cap K$, então $x\left<a\right>\in \overline C\cap \overline K=1$ e assim $x\in \left<a\right>$. Mas $C\cap \left<a\right>=1$ implica que $x=1$. Portanto, $x=1$ e obtemos que $C\cap K=1$. Além disso, 
+$$
+CK/\left<a\right>=G/\left<a\right>
+$$ 
+e o @thm-corresp implica que $CK=G$. Como $G$ é abeliano, temos que $C,K\unlhd G$ e, portanto, 
+$$
+G=C\times K.
+$$
+:::
+
+:::{#exr-Zp-vector}
+Assuma que $p$ é um primo, sejam $\alpha_1,\ldots,\alpha_m\geq 1$ e ponha 
+$$
+G=\Z_{p^{\alpha_1}}\times \cdots\times \Z_{p^{\alpha_m}}. 
+$$
+Mostre que 
+
+1. $G/G^p$ é um espaço vetorial sobre $\Z_p$;
+2. $\dim G/G^p=m$. 
+:::
+
+:::{#cor-abelian-p-groups}
+Seja $G$ um $p$-grupo abeliano finito. Então $G$ pode ser escrito como 
+$$
+G\cong \Z_{p^{\alpha_1}}\times \cdots\times\Z_{p^{\alpha_m}}.
+$$
+Além disso, os números $\alpha_1,\ldots,\alpha_m$ está unicamente determinados a menos a sua ordem. 
+:::
+:::{.proof}
+Existência: Indução por $|G|$. Se $|G|=p$, então $|G|=\Z_p$ e o resultado está certo. Além disso, se $G$ é cíclico, então $G=\Z_{p^\alpha}$ e o resultado  está verificado. Assuma que $G$ não é cíclico, seja $g_0$ um elemento de ordem maximal em $G$ e assuma que $C=\left<g_0\right>$. Assumindo que $|g_0|=p^{\alpha_1}$, temos que $C=\left<g_0\right>\cong \Z_{p^{\alpha_1}}$ e, pelo @lem-p-ab-complement, existe $K\leq G$ tal que 
+$$
+G=\left<g_0\right>\times K\cong \Z_{p^{\alpha_1}}\times K. 
+$$
+Agora, a hipótese da indução implica que 
+$$
+K\cong \Z_{p^{\alpha_2}}\times \cdots\times\Z_{p^{\alpha_m}}.
+$$
+Portanto, 
+$$
+G\cong \Z_{p^{\alpha_1}}\times K\cong \Z_{p^{\alpha_1}}\times \cdots\times\Z_{p^{\alpha_m}}.
+$$
+
+Unicidade: Organizemos a decomposição de $G$ na seguinte forma:
+$$
+G=(\Z_{p})^{a_1}\times (\Z_{p^2})^{a_2}\times \cdots\times (\Z_{p^s})^{a_s}
+$$
+com $1\leq a_i$.
+Pelo @exr-Zp-vector, 
+$$
+\dim_{\Z_{p}}G/G^p=a_1+\cdots+a_s.
+$$
+Ora, 
+$$
+G^p=(\Z_{p})^{a_2}\times\cdots\times (\Z_{p^{s-1}})^{a_s} 
+$$
+e
+$$
+\dim_{\Z_p}G^p/G^{p^2}=a_2+\cdots+a_s.
+$$
+Portanto, $a_1$ está determinado pelo tipo de isomorfismo de $G$. Continuando deste jeito, temos que $a_i$ está determinado por $G$ para todo $i$ e a decomposição de $G$ está única.
+:::
+
+:::{#thm-fund-abelian-groups}
+(O Teorema Fundamental de Grupos Abelianos Finitos)
+Seja $G$ um grupo abeliano finito, então  
+$$
+G\cong \Z_{p_1^{\alpha_1}}\times\cdots\times \Z_{p_k^{\alpha_k}}
+$$
+onde todo $p_i$ é um primo e $C_{p_i^{\alpha_i}}$ é um grupo cíclico de ordem $p_i^{\alpha_i}$. Além disso, esta decomposição é única a menos da ordem dos fatores.
+:::

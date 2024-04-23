@@ -1,0 +1,45 @@
+---
+title: "Relações de ordem"
+number-sections: true 
+lang: pt
+---
+
+## A definição
+
+:::{#def-ordem}
+Seja $A$ um conjunto e $R$ uma relação em $A$. Dizemos que $R$ é uma relação de *ordem* (ou *ordem parcial*) em $A$ se 
+
+1. $R$ é reflexiva ($aRa$ para todo $a\in A$);
+2. $R$ é antisimétrica (se $aRb$ e $bRa$ então $a=b$ para todo $a,b\in A$);
+3. $R$ é transitiva (se $aRb$ e $bRc$ então $aRc$ para todo $a,b,c\in A$).
+:::
+
+
+## Exemplos
+
+:::{#exm-relation-order}
+1. Se $A$ é um conjunto de números, então as relações $\leq$ e $\geq$ são relações de ordem, mas as relações $<$ e $>$ não são relações de ordem pela @def-ordem (pois elas não são reflexivas). 
+
+2. Assuma que $X$ é um conjunto e seja 
+$$
+A=\{Y\mid Y\subseteq X\}.
+$$
+As relações $\subseteq$ e $\supseteq$ são relações de ordem sobre $A$. 
+
+3. Seja $A=\N$ e considere a relação $\mid$ de divisibilidade. Em outras palávras, $a\mid b$ se e somente se $b=qa$ com algum $q\in\N$. Então $\mid$ é uma relação de ordem sobre $A$. Note que a mesma relação não é relação de ordem sobre $\Z$, pois $2\mid -2$ e $-2\mid 2$, mas $-2\neq 2$. Ou seja, $\mid$ não é antisimétrica em $\Z$. 
+:::
+
+
+## Ordem total ou linear
+
+:::{#def-ordem-total}
+Seja $R$ uma relação de ordem sobre o conjunto $A$, Dizemos que $R$ é uma ordem total ou ordem linear se 
+$$
+aRb\quad \mbox{ou}\quad bRa
+$$
+vale para todo $a,b\in R$. 
+:::
+
+:::{#exr-ordem-total}
+Entre os exemplos no @exm-relation-order, 1. é ordem total, mas 2. e 3. não são ordens totais. 
+:::

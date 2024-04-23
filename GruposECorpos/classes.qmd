@@ -69,7 +69,7 @@ Considere o grupo $S_5$. Pelo @exm-p5, este grupo tem 7 classes de conjugação 
 Determine as tabelas das classes de comjugação para os grupos $S_3$, $S_4$, e $S_6$. 
 :::
 
-## O centro de um grupo
+## O centro de um grupo {#sec-centro}
 
 O centro $Z(G)$ de um grupo $G$ foi definido na @def-center como
 \begin{eqnarray*}
@@ -145,3 +145,12 @@ com a propriedade que $Z(G/Z_{i-1})=Z_{i}/Z_{i-1}$ para todo $i\in\{1,\ldots,m\}
 :::
 
 A cadeia construída na demonstração do @cor-solvable chama se *cadeia central superior* de $G$. O argumento na demonstração na verdade demonstra que um $p$-grupo finito $G$ é nilpotente (veja @sec-nilpotent) que é uma propriedade mais forte que ser solúvel.
+
+Existem vários teoremas notáveis sobre grupos solúveis. Talvez o mais famoso é o [Teorema de Feit-Thompson](https://en.wikipedia.org/wiki/Feit%E2%80%93Thompson_theorem) (tambem conhecido como o Teorema da Ordem Ímpar) que é o seguinte.
+
+:::{#thm-feit-thompson}
+(Feit-Thompson, 1963)
+Se $G$ é um grupo finito de ordem ímpar, então $G$ é solúvel.
+:::
+
+Este é um teorema profundo, a sua demonstração original  ocupa mais que 200 páginas na revista Pacific Journal of Mathematics.   [John Thompson](https://en.wikipedia.org/wiki/John_G._Thompson) recebeu Medalha de Fields em 1970 por sua contribuição à teoria dos grupos finitos. 

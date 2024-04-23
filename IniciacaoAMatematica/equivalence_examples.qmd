@@ -63,3 +63,29 @@ a\equiv_n b\quad\mbox{se e somente se $b-a=kn$ com algum $k\in \Z$}.
 $$
 Descreve as classes de equivalência para a relação $\equiv_n$. 
 :::
+
+## Mais duas relações
+
+Os seguintes dois exemplos importantes serão tratados como exercícios.
+
+:::{#exr-ntimesn}
+Seja $A=\N\times \N$ e defina a seguinte relação sobre $A$:
+$$
+(a,b)\equiv (c,d)\quad\bicond \quad a+d=b+c.
+$$
+
+1. Mostre que $\equiv$ é uma relação de equivalência.
+2. Ache as classes de equivalência dos elementos $(1,2)$, $(2,4)$, e $(3,5)$. 
+3. Dê uma descrição de todas as classes de equivalência.
+:::
+
+:::{#exr-ztimesz}
+Seja $A=\Z\times \Z$ e defina a seguinte relação sobre $A$:
+$$
+(a,b)\equiv (c,d)\quad\bicond \quad ad=bc.
+$$
+
+1. Mostre que $\equiv$ é uma relação de equivalência.
+2. Ache as classes de equivalência dos elementos $(1,2)$, $(2,4)$, e $(3,6)$. 
+3. Dê uma descrição de todas as classes de equivalência.
+:::

@@ -179,9 +179,9 @@ Ou seja, neste caso, a $S_5$-classe $C$ será uma classe em $A_5$.
 
 Agora usando a tabela das classes de $S_5$ no @exm-classes-s5 e estas observações, é possível obter uma tabela das classes de conjugação de $A_5$.
 
-| $x$                | $|x^{S_5}|$        | $|C_{S_5}(x)|$           | $C_{S_5}(x)$                           | 
+| $x$                | $|x^{A_5}|$        | $|C_{A_5}(x)|$           | $C_{A_5}(x)$                           | 
 | ------------------ | ------------------ | ------------------------ | -------------------------------------- |
-| $1$                | $1$                | $120$                    | $S_5$                                  |
+| $1$                | $1$                | $60$                    | $A_5$                                  |
 | $(1,2)(3,4)$       | $15$               | $4$                      | $\left<(1,2)(3,4),(1,3)(2,4)\right>$   |   
 | $(1,2,3)$          | $20$               | $3$                      | $\left<(1,2,3)\right>$                 |
 | $(1,2,3,4,5)$      | $12$               | $5$                      | $\left<(1,2,3,4,5)\right>$             |
@@ -215,3 +215,18 @@ Os grupos simples finitos são
 Um exemplo de um grupo simples de tipo Lie é $\operatorname{PSL}(n,q)=\operatorname{SL}(n,q)/Z$ onde $Z$ é o centro de $\operatorname{SL}(n,q)$. Pode se provar, para $n\geq 2$, que $\operatorname{PSL}(n,q)$ é simples a menos que $(n,q)\in\{(2,2),(2,3)\}$.
 
 A demonstração do teorema de classificação é extremamente profunda e, se fosse escrita em um único documento, ocuparia cerca de 10 mil páginas.
+
+Entre os grupos esporádicos, o maior e o mais misterioso é o [grupo Monstro](https://en.wikipedia.org/wiki/Monster_group). Nos seguintes vídeos, o lendário [John Conway](https://en.wikipedia.org/wiki/John_Horton_Conway) fala sobre este grupo.
+
+{{< video https://youtu.be/jsSeoGpiWsw?si=9uekLikRuQFGkq8e width="560" height="315" >}}
+
+{{< video https://youtu.be/xOCe5HUObD4?si=qFiOLll_ZWzJuAAD width="560" height="315" >}}
+
+
+Aqui tem mais um vídeo sobre outros grupos esporádicos, incluindo seu irmão caçula o [Baby Monstro](https://en.wikipedia.org/wiki/Baby_monster_group).
+
+{{< video https://youtu.be/MXKiih4JJvQ?si=RDFHuydQ0WR7ewkA width="560" height="315" >}}
+
+Finalmente, aqui vem um vídeo de 3Blue1Brown sobre a mesmo tópico.
+
+{{< video https://youtu.be/mH0oCDa74tE?si=eCfPx-__qxN-IqIe width="560" height="315" >}}
