@@ -1137,11 +1137,10 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#o-comutador" id="toc-o-comutador" class="nav-link active" data-scroll-target="#o-comutador"><span class="header-section-number">66.1</span> O comutador</a></li>
-  <li><a href="#o-subgrupo-derivado" id="toc-o-subgrupo-derivado" class="nav-link" data-scroll-target="#o-subgrupo-derivado"><span class="header-section-number">66.2</span> O subgrupo derivado</a></li>
-  <li><a href="#subgrupos-caraterísticos" id="toc-subgrupos-caraterísticos" class="nav-link" data-scroll-target="#subgrupos-caraterísticos"><span class="header-section-number">66.3</span> Subgrupos caraterísticos</a></li>
-  <li><a href="#série-derivada" id="toc-série-derivada" class="nav-link" data-scroll-target="#série-derivada"><span class="header-section-number">66.4</span> Série derivada</a></li>
-  <li><a href="#grupos-solúveis" id="toc-grupos-solúveis" class="nav-link" data-scroll-target="#grupos-solúveis"><span class="header-section-number">66.5</span> Grupos solúveis</a></li>
+  <li><a href="#comutadores-e-o-subgrupo-derivado" id="toc-comutadores-e-o-subgrupo-derivado" class="nav-link active" data-scroll-target="#comutadores-e-o-subgrupo-derivado"><span class="header-section-number">66.1</span> Comutadores e o subgrupo derivado</a></li>
+  <li><a href="#subgrupos-caraterísticos" id="toc-subgrupos-caraterísticos" class="nav-link" data-scroll-target="#subgrupos-caraterísticos"><span class="header-section-number">66.2</span> Subgrupos caraterísticos</a></li>
+  <li><a href="#série-derivada" id="toc-série-derivada" class="nav-link" data-scroll-target="#série-derivada"><span class="header-section-number">66.3</span> Série derivada</a></li>
+  <li><a href="#grupos-solúveis-revisitados" id="toc-grupos-solúveis-revisitados" class="nav-link" data-scroll-target="#grupos-solúveis-revisitados"><span class="header-section-number">66.4</span> Grupos solúveis revisitados</a></li>
   </ul>
 </nav>
     </div>
@@ -1167,52 +1166,63 @@ window.Quarto = {
 </header>
 
 
-<section id="o-comutador" class="level2" data-number="66.1">
-<h2 data-number="66.1" data-anchor-id="o-comutador"><span class="header-section-number">66.1</span> O comutador</h2>
+<section id="comutadores-e-o-subgrupo-derivado" class="level2" data-number="66.1">
+<h2 data-number="66.1" data-anchor-id="comutadores-e-o-subgrupo-derivado"><span class="header-section-number">66.1</span> Comutadores e o subgrupo derivado</h2>
 <div id="def-commutator" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo, <span class="math inline">\(g,h\in G\)</span>. O comutador <span class="math inline">\([g,h]\)</span> de <span class="math inline">\(g\)</span> e <span class="math inline">\(h\)</span> é definido como <span class="math display">\[
-[g,h]=g^{-1}h^{-1}gh
+<p><span class="theorem-title"><strong>Definição 66.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo, <span class="math inline">\(g,h\in G\)</span>. O <em>comutador</em> <span class="math inline">\([g,h]\)</span> de <span class="math inline">\(g\)</span> e <span class="math inline">\(h\)</span> é definido como <span class="math display">\[
+[g,h]=g^{-1}h^{-1}gh=(h^{-1})^gh=g^{-1}g^h.
 \]</span></p>
 </div>
 <p>Note que <span class="math inline">\([g,h]=1\)</span> se e somente se <span class="math inline">\(gh=hg\)</span>; ou seja, <span class="math inline">\(g\)</span> e <span class="math inline">\(h\)</span> comutam.</p>
-</section>
-<section id="o-subgrupo-derivado" class="level2" data-number="66.2">
-<h2 data-number="66.2" data-anchor-id="o-subgrupo-derivado"><span class="header-section-number">66.2</span> O subgrupo derivado</h2>
 <div id="def-commutator-sg" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo. O subgrupo derivado <span class="math inline">\(G'\)</span> está definida como <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 66.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo. O <em>subgrupo derivado</em> <span class="math inline">\(G'\)</span> está definida como <span class="math display">\[
 G'=\left&lt;[g,h]\mid g,h\in G\right&gt;.
 \]</span></p>
 </div>
 <p>Em outras palavras, o subgrupo derivado <span class="math inline">\(G'\)</span> é um subgrupo gerado por todos os comutadores em <span class="math inline">\(G\)</span>. Note que o conjunto dos comutadores geralmente não é fechado para multiplicação e assim ele não é um subgrupo de <span class="math inline">\(G\)</span>.</p>
 <p>Note também que <span class="math inline">\(G'=1\)</span> se e somente se <span class="math inline">\(G\)</span> é abeliano.</p>
-<div id="thm-comm-sg" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 66.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo. As seguintes afirmações são verdadeiras.</p>
-<ul>
-<li><span class="math inline">\(G'\unlhd G\)</span>;</li>
-<li><span class="math inline">\(G/G'\)</span> é um grupo abeliano;</li>
-<li>se <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano, então <span class="math inline">\(G'\leq N\)</span>.</li>
-</ul>
-<p>A terceira afirmação diz que <span class="math inline">\(G'\)</span> é o menor subgrupo normal de <span class="math inline">\(G\)</span> com quociente abeliano.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro, se <span class="math inline">\(g,h,x\in G\)</span>, então <span class="math display">\[
+<!--:::{#thm-comm-sg}
+Seja $G$ um grupo. As seguintes afirmações são verdadeiras.
+
+- $G'\unlhd G$;
+- $G/G'$ é um grupo abeliano;
+- se $N\unlhd G$ tal que $G/N$ é abeliano, então $G'\leq N$.  
+
+A terceira afirmação diz que $G'$ é o menor subgrupo normal de $G$ com quociente abeliano.
+:::
+
+:::{.proof}
+Primeiro, se $g,h,x\in G$, então
+$$
 [g^x,h^x]=[x^{-1}gx,x^{-1}hx]=x^{-1}g^{-1}xx^{-1}h^{-1}xx^{-1}gxx^{-1}hx=x^{-1}g^{-1}h^{-1}ghx=[g,h]^x.
-\]</span> O seja, um conjugado de um comutador é comutador. Como o subgrupo derivado contém produtos de comutadores, ele é normal.</p>
-<p>Sejam <span class="math inline">\(g,h\in G\)</span>. Temos que <span class="math display">\[
+$$
+O seja, um conjugado de um comutador é comutador. Como o subgrupo derivado contém produtos de comutadores, ele é normal.
+
+Sejam $g,h\in G$. Temos que 
+$$
 [gG',hG']=(g^{-1}G')(h^{-1}G')(gG')(hG')=[g,h]G'=G'.
-\]</span> Logo, <span class="math inline">\(G/G'\)</span> é abeliano.</p>
-<p>Ora seja <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano e seja <span class="math inline">\(g,h\in G\)</span>. Temos que <span class="math display">\[
+$$
+Logo, $G/G'$ é abeliano.
+
+Ora seja $N\unlhd G$ tal que $G/N$ é abeliano e seja $g,h\in G$. Temos que 
+$$
 1=[gN,hN]=[g,h]N.
-\]</span> Ou seja, <span class="math inline">\([g,h]\in N\)</span>. Como <span class="math inline">\(G'\)</span> é gerado por elementos na forma <span class="math inline">\([g,h]\)</span>, temos que <span class="math inline">\(G'\leq N\)</span>.</p>
-</div>
+$$
+Ou seja, $[g,h]\in N$. Como $G'$ é gerado por elementos na forma $[g,h]$, temos que $G'\leq N$. 
+:::
+-->
 </section>
-<section id="subgrupos-caraterísticos" class="level2" data-number="66.3">
-<h2 data-number="66.3" data-anchor-id="subgrupos-caraterísticos"><span class="header-section-number">66.3</span> Subgrupos caraterísticos</h2>
+<section id="subgrupos-caraterísticos" class="level2" data-number="66.2">
+<h2 data-number="66.2" data-anchor-id="subgrupos-caraterísticos"><span class="header-section-number">66.2</span> Subgrupos caraterísticos</h2>
 <div id="def-charsub" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.3</strong></span> Um subgroupo <span class="math inline">\(H\leq G\)</span> é dito caraterístico, se <span class="math inline">\(H\)</span> é invariente por automorfismos de <span class="math inline">\(G\)</span>. Um subgrupo caraterístico é normal.</p>
+<p><span class="theorem-title"><strong>Definição 66.3</strong></span> Um subgroupo <span class="math inline">\(H\leq G\)</span> é dito <em>caraterístico</em>, se <span class="math inline">\(H\)</span> é invariente por automorfismos de <span class="math inline">\(G\)</span>.</p>
+</div>
+<p>Um subgrupo caraterístico precisa ser invariante por automorfismos e, em particular, por automorfismos internos (veja <a href="normais.html#def-inner-aut" class="quarto-xref">Definição&nbsp;<span>58.8</span></a>). Ser invariante por automorfismos internos é ser invariante por conjugação (veja <a href="normais.html#sec-conjugação" class="quarto-xref"><span>Seção 58.6</span></a>) e assim obtemos o seguinte resultado.</p>
+<div id="lem-char-norm" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 66.1</strong></span> Um subgrupo caraterístico é normal.</p>
 </div>
 <div id="lem-comm-HK" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 66.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span>, <span class="math inline">\(K\)</span> subgroupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 66.2</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e sejam <span class="math inline">\(H\)</span>, <span class="math inline">\(K\)</span> subgroupos de <span class="math inline">\(G\)</span> tal que <span class="math inline">\(K\leq H\leq G\)</span>.</p>
 <ul>
 <li>Se <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(H\)</span> e <span class="math inline">\(H\)</span> é caraterístico em <span class="math inline">\(G\)</span>, então <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(G\)</span>.</li>
 <li>Se <span class="math inline">\(K\)</span> é caraterístico em <span class="math inline">\(H\)</span> e <span class="math inline">\(H\)</span> é normal em <span class="math inline">\(G\)</span>, então <span class="math inline">\(K\)</span> é normal em <span class="math inline">\(G\)</span>.</li>
@@ -1222,19 +1232,38 @@ G'=\left&lt;[g,h]\mid g,h\in G\right&gt;.
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
 <div id="lem-comutator-abeliano" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 66.2</strong></span> <span class="math inline">\(G'\)</span> é um subgrupo caraterístico de <span class="math inline">\(G\)</span>. Em particular, <span class="math inline">\(G'\)</span> é um subgrupo normal. Além disso, <span class="math inline">\(G/G'\)</span> é um grupo abeliano e se <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano, então <span class="math inline">\(G'\leq N\)</span>. (Pode-se dizer que <span class="math inline">\(G'\)</span> é o menor subgrupo normal de <span class="math inline">\(G\)</span> com quociente abeliano.)</p>
+<p><span class="theorem-title"><strong>Lema 66.3</strong></span> <span class="math inline">\(G'\)</span> é um subgrupo caraterístico de <span class="math inline">\(G\)</span>. Em particular, <span class="math inline">\(G'\)</span> é um subgrupo normal. Além disso, <span class="math inline">\(G/G'\)</span> é um grupo abeliano e se <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano, então <span class="math inline">\(G'\leq N\)</span>. (Pode-se dizer que <span class="math inline">\(G'\)</span> é o menor subgrupo normal de <span class="math inline">\(G\)</span> com quociente abeliano.)</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Se <span class="math inline">\(\alpha\in\aut G\)</span> e <span class="math inline">\(x,y\in G\)</span>, então <span class="math display">\[
+[x,y]^\alpha=(x^{-1}y^{-1}xy)^\alpha=(x^\alpha)^{-1}(y^\alpha)^{-1}x^\alpha y^\alpha=[x^\alpha,y^\alpha];
+\]</span> ou seja, <span class="math inline">\([x,y]^\alpha\)</span> é um comutador de <span class="math inline">\(G\)</span>. Como <span class="math inline">\(\alpha\)</span> induz uma permutação dos elementos de <span class="math inline">\(G\)</span>, temos que <span class="math inline">\(\alpha\)</span> permuta os comutadores de <span class="math inline">\(G\)</span> e assim <span class="math inline">\((G')^\alpha\)</span> é gerado pelos mesmos comutadores. Portanto <span class="math inline">\((G')^\alpha=G'\)</span> e <span class="math inline">\(G'\)</span> é um subgrupo caraterístico.</p>
+<p>Sejam <span class="math inline">\(g,h\in G\)</span>. Temos que <span class="math display">\[
+[gG',hG']=(g^{-1}G')(h^{-1}G')(gG')(hG')=[g,h]G'=G'.
+\]</span> Logo, <span class="math inline">\(G/G'\)</span> é abeliano.</p>
+<p>Ora seja <span class="math inline">\(N\unlhd G\)</span> tal que <span class="math inline">\(G/N\)</span> é abeliano e seja <span class="math inline">\(g,h\in G\)</span>. Temos que <span class="math display">\[
+1=[gN,hN]=[g,h]N.
+\]</span> Ou seja, <span class="math inline">\([g,h]\in N\)</span>. Como <span class="math inline">\(G'\)</span> é gerado por elementos na forma <span class="math inline">\([g,h]\)</span>, temos que <span class="math inline">\(G'\leq N\)</span>.</p>
 </div>
 </section>
-<section id="série-derivada" class="level2" data-number="66.4">
-<h2 data-number="66.4" data-anchor-id="série-derivada"><span class="header-section-number">66.4</span> Série derivada</h2>
+<section id="série-derivada" class="level2" data-number="66.3">
+<h2 data-number="66.3" data-anchor-id="série-derivada"><span class="header-section-number">66.3</span> Série derivada</h2>
 <div id="def-sgs-derivied" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.4</strong></span> Podemos definir recursivamente <span class="math inline">\(G''=(G')'\)</span>, <span class="math inline">\(G'''=(G'')'\)</span>. Obtemos uma série chamada de série derivada ou série comutador de <span class="math inline">\(G\)</span>. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em <span class="math inline">\(G\)</span>. Os termos da série derivada são denotados também por <span class="math inline">\(G=G^{(0)}\)</span>, <span class="math inline">\(G'=G^{(1)}\)</span>, <span class="math inline">\(G''=G^{(2)}\)</span>, etc.</p>
+<p><span class="theorem-title"><strong>Definição 66.4</strong></span> Podemos definir recursivamente <span class="math inline">\(G''=(G')'\)</span>, <span class="math inline">\(G'''=(G'')'\)</span>. Formalmente, definimos <span class="math inline">\(G^{(0)}=G\)</span> e para <span class="math inline">\(k\geq 0\)</span>, definimos <span class="math inline">\(G^{(k+1)}=(G^k)'\)</span>. Obtemos uma série <span class="math display">\[
+G\geq G'\geq G''\geq G^{(3)}\geq \cdots
+\]</span> chamada de <em>série derivada</em> ou <em>série comutador</em> de <span class="math inline">\(G\)</span>. Os termos desta série são subgrupos caraterísticos, em particular, eles são normais em <span class="math inline">\(G\)</span>.</p>
 </div>
-<div id="def-derived-series" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.5</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e seja&nbsp;<span class="math inline">\(G_0=G&gt;\cdots&gt; G_k&gt;\cdots\)</span> uma série subnormal tal que <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano para todo <span class="math inline">\(i\)</span>. Então <span class="math inline">\(G^{(i)}\leq G_i\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>.</p>
+<div id="def-normal-series" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 66.5</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e assuma que <span class="math display">\[
+G=G_0\geq G_1\geq G_2\geq \cdots.
+\]</span> é uma série não crescente de subgrupos.</p>
+<ol type="1">
+<li>A série é chamada de <em>normal</em> se <span class="math inline">\(G_i\unlhd G\)</span> para todo <span class="math inline">\(i\geq 0\)</span>.</li>
+<li>A série é chamada de <em>subnormal</em> se <span class="math inline">\(G_i\unlhd G_{i-1}\)</span> para todo <span class="math inline">\(i\geq 1\)</span>. Note que uma série normal é subnormal.</li>
+</ol>
+</div>
+<div id="lem-derived-series" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 66.4</strong></span> Seja <span class="math inline">\(G\)</span> um grupo e seja&nbsp;<span class="math inline">\(G_0=G\geq\cdots\geq G_k&gt;\cdots\)</span> uma série subnormal de subgrupos tal que <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano para todo <span class="math inline">\(i\)</span>. Então <span class="math inline">\(G^{(i)}\leq G_i\)</span> vale para todo <span class="math inline">\(i\geq 0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>A afirmação é trivialmente verdadeira para <span class="math inline">\(i=0\)</span>. Assuma que <span class="math inline">\(G^{(i)}\leq G_i\)</span>. Como <span class="math inline">\(G_i/G_{i+1}\)</span> é abeliano, temos que <span class="math inline">\(G_i'\leq G_{i+1}\)</span>. Logo <span class="math display">\[
@@ -1242,7 +1271,7 @@ G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 \]</span> Então a afirmação é verdadeira para <span class="math inline">\(i+1\)</span> e segue por indução que ela é verdadeira para todo <span class="math inline">\(i\)</span>.</p>
 </div>
 <div id="thm-solvable" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 66.2</strong></span> As seguintes são equivalentes para um grupo <span class="math inline">\(G\)</span>.</p>
+<p><span class="theorem-title"><strong>Teorema 66.1</strong></span> As seguintes são equivalentes para um grupo <span class="math inline">\(G\)</span>.</p>
 <ul>
 <li>Existe uma série normal <span class="math inline">\(G_0=G&gt;\cdots &gt;G_k=1\)</span> com quocientes abelianos.</li>
 <li>Existe&nbsp; uma série subnormal&nbsp;<span class="math inline">\(G_0=G&gt;\cdots&gt; G_k=1\)</span> com quocientes abelianos.</li>
@@ -1250,31 +1279,29 @@ G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 </ul>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Segue dos resultados anteriores.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>1.<span class="math inline">\(\cond\)</span> 2.: Cada série normal é também subnormal.</p>
+<p>2.<span class="math inline">\(\cond\)</span> 3.: <a href="#lem-derived-series" class="quarto-xref">Lema&nbsp;<span>66.4</span></a>.</p>
+<p>3.<span class="math inline">\(\cond\)</span> 1. A série <span class="math inline">\(G^{(k)}\)</span> é normal.</p>
 </div>
 </section>
-<section id="grupos-solúveis" class="level2" data-number="66.5">
-<h2 data-number="66.5" data-anchor-id="grupos-solúveis"><span class="header-section-number">66.5</span> Grupos solúveis</h2>
-<div id="def-solvable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.6</strong></span> Um grupo <span class="math inline">\(G\)</span> é dito solúvel se uma das afirmações do corolário anterior é válida para <span class="math inline">\(G\)</span>. O menor <span class="math inline">\(k\)</span> tal que <span class="math inline">\(G^{(k)}=1\)</span> é chamado de comprimento derivado de <span class="math inline">\(G\)</span>.</p>
-</div>
+<section id="grupos-solúveis-revisitados" class="level2" data-number="66.4">
+<h2 data-number="66.4" data-anchor-id="grupos-solúveis-revisitados"><span class="header-section-number">66.4</span> Grupos solúveis revisitados</h2>
+<p>Na <a href="classes.html#sec-soluble" class="quarto-xref"><span>Seção 61.4</span></a> já estudamos grupos solúveis. Na definição <a href="classes.html#def-solvable2" class="quarto-xref">Definição&nbsp;<span>61.2</span></a>, definimos um grupo solúvel como um grupo que satisfaz item 1. do <a href="#thm-solvable" class="quarto-xref">Teorema&nbsp;<span>66.1</span></a>. Agora, aprendemos que os pontos 2. e 3. são equivalentes ao ponto 1. e podem também ser usadas para definir grupos solúveis.</p>
 <div id="def-elabel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 66.7</strong></span> Um grupo abeliano finito é dito grupo abeliano elementar,,&nbsp;se existe um primo <span class="math inline">\(p\)</span>, tal que <span class="math inline">\(x^p=1\)</span> para todo <span class="math inline">\(x\in G\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 66.6</strong></span> Um grupo abeliano finito é dito grupo abeliano elementar,,&nbsp;se existe um primo <span class="math inline">\(p\)</span>, tal que <span class="math inline">\(x^p=1\)</span> para todo <span class="math inline">\(x\in G\)</span>.</p>
 </div>
-<p>Pelo Teorema Fundamental dos Grupos Finitos Abelianos, temos que <span class="math inline">\(G\)</span> é grupo abeliano elementar se e somente se <span class="math inline">\(G=C_p\times\cdots \times C_p\)</span> com algum primo <span class="math inline">\(p\)</span>. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo <span class="math inline">\(\mathbb F_p\)</span>.</p>
-<div id="thm-solvable" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 66.3</strong></span> As seguintes afirmações são válidas para um grupo <span class="math inline">\(G\)</span>.</p>
-<ul>
+<p>Pelo Teorema Fundamental dos Grupos Finitos Abelianos (<a href="abelian.html#thm-fund-abelian-groups" class="quarto-xref">Teorema&nbsp;<span>64.1</span></a>), temos que <span class="math inline">\(G\)</span> é grupo abeliano elementar se e somente se <span class="math inline">\(G=\Z_p\times\cdots \times \Z_p\)</span> com algum primo <span class="math inline">\(p\)</span>. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo <span class="math inline">\(\mathbb F_p\)</span>.</p>
+<div id="thm-solvable2" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 66.2</strong></span> As seguintes afirmações são válidas para um grupo <span class="math inline">\(G\)</span>.</p>
+<ol type="1">
 <li>Se <span class="math inline">\(\varphi:G\rightarrow K\)</span> é um homomorfismo, então <span class="math display">\[
 \varphi(G^{(i)})=\varphi(G)^{(i)}
 \]</span> para todo <span class="math inline">\(i\geq 0\)</span>.</li>
 <li>Se <span class="math inline">\(N\unlhd G\)</span> e <span class="math inline">\(Q=G/N\)</span>, então <span class="math inline">\(Q^{(i)}= G^{(i)}N/N\)</span>.</li>
 <li>Se <span class="math inline">\(G\)</span> é solúvel e <span class="math inline">\(H\leq G\)</span>, <span class="math inline">\(N\unlhd G\)</span>, então <span class="math inline">\(H\)</span> e <span class="math inline">\(G/N\)</span> são solúveis.</li>
 <li>Se <span class="math inline">\(N\unlhd G\)</span>, tal que <span class="math inline">\(N\)</span> e <span class="math inline">\(G/N\)</span> são solúveis, então <span class="math inline">\(G\)</span> é solúvel.</li>
-<li>Se <span class="math inline">\(G\)</span> é um p-grupo finito, então <span class="math inline">\(G\)</span> é solúvel.</li>
-<li>Se <span class="math inline">\(G\)</span> é finito, então <span class="math inline">\(G\)</span> é solúvel se e somente se os fatores de composição de <span class="math inline">\(G\)</span> são todos grupos cíclicos de ordem prima.</li>
-<li>Se <span class="math inline">\(G\)</span> é finito e solúvel e <span class="math inline">\(N\)</span> é um subgrupo minimal normal de <span class="math inline">\(G\)</span>, então <span class="math inline">\(N\)</span> é abeliano elementar.</li>
-</ul>
+<li>Se <span class="math inline">\(G\)</span> é um p-grupo finito, então <span class="math inline">\(G\)</span> é solúvel. <!--* Se $G$ é finito, então $G$ é solúvel se e somente se os fatores de composição de $G$ são todos grupos cíclicos de ordem prima.--> <!--6. Se $G$ é finito e solúvel e $N$ é um subgrupo minimal normal de $G$, então $N$ é abeliano elementar.--></li>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
@@ -1283,7 +1310,7 @@ G^{(i+1)}=(G^{(i)})'\leq G_i'\leq G_{i+1}.
 \varphi([x,y])=[\varphi(x),\varphi(y)]\in \varphi(G^{(i)})'=(\varphi(G)^{(i)})'=\varphi(G)^{(i+1)},
 \]</span> obtemos que <span class="math inline">\(\varphi(G^{(i+1)})\leq \varphi(G)^{(i+1)}\)</span>. Assuma agora que <span class="math inline">\([u,v]\in\varphi(G)^{(i+1)}\)</span> com <span class="math inline">\(u,v\in \varphi(G)^{(i)}\)</span>. Temos que existem <span class="math inline">\(x,y\in G^{(i)}\)</span> tal que <span class="math inline">\(\varphi(x)=u\)</span> e <span class="math inline">\(\varphi(y)=v\)</span>. Logo <span class="math display">\[
 [u,v]=\varphi([x,y])\in \varphi(G^{(i+1)})
-\]</span> e <span class="math inline">\(\varphi(G)^{(i+1)}\leq&nbsp;\varphi(G^{(i+1)})\)</span>.&nbsp; Temos equality.</p></li>
+\]</span> e <span class="math inline">\(\varphi(G)^{(i+1)}\leq&nbsp;\varphi(G^{(i+1)})\)</span>.&nbsp; Temos egualdade.</p></li>
 <li><p>Seja <span class="math inline">\(\varphi:G\rightarrow G/N\)</span> o homomorfismo natural. Por parte (1), tem-se que <span class="math display">\[
 Q^{(i)}=\varphi(G)^{(i)}=\varphi(G^{(i)})=G^{(i)}N/N.
 \]</span></p></li>
@@ -1291,12 +1318,13 @@ Q^{(i)}=\varphi(G)^{(i)}=\varphi(G^{(i)})=G^{(i)}N/N.
 <li><p>Assuma que <span class="math inline">\(N\unlhd G\)</span> e <span class="math inline">\(G/N\)</span> são solúveis. Seja <span class="math inline">\(Q=G/N\)</span>. Existe <span class="math inline">\(m\)</span> tal que <span class="math inline">\(Q^{(m)}=1\)</span>. Isto quer dizer que <span class="math inline">\(G^{(m)}\leq N\)</span>. Existe <span class="math inline">\(l\)</span> tal que <span class="math inline">\(N^{(l)}=1\)</span>. Afirmamos que <span class="math inline">\(G^{(m+l)}=1\)</span>. De fato, <span class="math display">\[
 G^{(m+l)}=(G^{(m)})^{(l)}\leq N^{(l)}=1.
 \]</span> Logo, <span class="math inline">\(G\)</span> é solúvel.</p></li>
-<li><p>Provaremos por indução por <span class="math inline">\(|G|\)</span>. Se <span class="math inline">\(|G|=1\)</span>, não há nada para provar. Assuma que <span class="math inline">\(G\)</span> é um <span class="math inline">\(p\)</span>-grupo finito de ordem <span class="math inline">\(p^n\)</span> e assuma que <span class="math inline">\(p\)</span>-grupos de ordem menor que <span class="math inline">\(p^n\)</span> são solúveis. Como <span class="math inline">\(G\)</span> é um <span class="math inline">\(p\)</span>-grupo finito, <span class="math inline">\(Z(G)\)</span> é um subgrupo normal não trivial de <span class="math inline">\(G\)</span>. Além disso, <span class="math inline">\(Z(G)\)</span> é abeliano e, pela hipótese de indução, <span class="math inline">\(G/Z(G)\)</span> é solúvel. Portanto, <span class="math inline">\(G\)</span> é solúvel pela afirmação anterior.</p></li>
-<li><p>Claro.</p></li>
-<li><p>Seja <span class="math inline">\(N\)</span> um subgrupo minimal normal de <span class="math inline">\(G\)</span>. Como <span class="math inline">\(N'\)</span> é um subgrupo caraterístico em <span class="math inline">\(N\)</span>, temos que <span class="math inline">\(N'\)</span> é normal de <span class="math inline">\(G\)</span>, que implica, pela minimalidade de <span class="math inline">\(N\)</span>, que <span class="math inline">\(N'=1\)</span>. Logo <span class="math inline">\(N\)</span> é um grupo abeliano finito. Pelo Teorema Fundamental dos Grupos Abelianos Finitos, <span class="math inline">\(N=N_{p_1}\times \cdots \times N_{p_k}\)</span> onde <span class="math inline">\(N_{p_i}\)</span> é o <span class="math inline">\(p_i\)</span>-subgrupo de Sylow de <span class="math inline">\(N\)</span>. Cada <span class="math inline">\(N_{p_i}\)</span> é caraterístico em <span class="math inline">\(N\)</span>, e normal em <span class="math inline">\(G\)</span>. Pela minimalidade de <span class="math inline">\(N\)</span>, temos que <span class="math inline">\(N=N_{p_1}\)</span>; isto é, <span class="math inline">\(N\)</span> é um <span class="math inline">\(p\)</span>-grupo abeliano. Finalmente, observe que <span class="math display">\[
-N^p=\{x^p\mid x\in N\}
-\]</span> é um subgrupo caraterístico em <span class="math inline">\(N\)</span> que implica que <span class="math inline">\(N^p=1\)</span>; ou seja <span class="math inline">\(N\)</span> é abeliano elementar.</p></li>
+<li><p>Já foi provado em <a href="classes.html#cor-solvable" class="quarto-xref">Corolário&nbsp;<span>61.1</span></a>.</p></li>
 </ol>
+<!--6. Seja $N$ um subgrupo minimal normal de $G$. Como $N'$ é um subgrupo caraterístico em $N$, temos que $N'$ é normal de $G$, que implica, pela minimalidade de $N$, que $N'=1$. Logo $N$ é um grupo abeliano finito. Pelo Teorema Fundamental dos Grupos Abelianos Finitos, $N=N_{p_1}\times \cdots \times N_{p_k}$ onde $N_{p_i}$ é o $p_i$-subgrupo de Sylow de $N$. Cada $N_{p_i}$ é caraterístico em $N$, e normal em $G$. Pela minimalidade de $N$, temos que $N=N_{p_1}$; isto é, $N$ é um $p$-grupo abeliano. Finalmente, observe que
+$$
+N^p=\{x^p\mid x\in N\}
+$$
+é um subgrupo caraterístico em $N$ que implica que $N^p=1$; ou seja $N$ é abeliano elementar.-->
 </div>
 
 
