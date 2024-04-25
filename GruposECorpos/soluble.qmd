@@ -161,13 +161,13 @@ As seguintes são equivalentes para um grupo $G$.
 Na @sec-soluble já estudamos grupos solúveis. Na definição @def-solvable2, definimos um grupo solúvel como um grupo que satisfaz item 1. do @thm-solvable. Agora, aprendemos que os pontos 2. e 3. são equivalentes ao ponto 1. e podem também ser usadas para definir grupos solúveis. 
 
 
-
+<!--
 :::{#def-elabel}
 Um grupo abeliano finito é dito grupo abeliano elementar,, se existe um primo $p$, tal que $x^p=1$ para todo $x\in G$. 
 :::
 
 Pelo Teorema Fundamental dos Grupos Finitos Abelianos (@thm-fund-abelian-groups), temos que $G$ é grupo abeliano elementar se e somente se $G=\Z_p\times\cdots \times \Z_p$ com algum primo $p$. Em particular, um grupo abeliano elementar pode ser considerado como um espaço vetorial sobre o corpo $\mathbb F_p$.
-
+-->
 
 :::{#thm-solvable2}
 As seguintes afirmações são válidas para um grupo $G$.
