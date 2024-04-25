@@ -107,7 +107,7 @@ Sejam $p$ um primo e $G$ um grupo tal que $|G|=p^2$. Mostre que $G$ é abeliano 
 * $G=\left<a,b\right>$ onde $|a|=|b|=p$ e $ab=ba$. Neste caso $G\cong \Z_p\times \Z_p$. 
 :::
 
-## Primeiro encontro com grupos solúveis
+## Primeiro encontro com grupos solúveis {#sec-soluble}
 
 :::{#def-solvable2}
 Um grupo $G$ chama-se solúvel se $G$ possui uma cadeia de subgrupos

@@ -213,7 +213,7 @@ $$
 Uma conta elementar (que deixamos para o leitor) mostra que $\psi\circ \varphi=\operatorname{id}_Y$ e  $\varphi\circ\psi=\operatorname{id}_X$. Isso implica que $\psi$ e $\varphi$ são bijeções. A verificação da segunda afirmação é exercício do leitor. 
 :::
 
-## A conjugação
+## A conjugação {#sec-conjugação}
 
 :::{#def-conjugado}
 Seja $G$ um grupo e $g,h\in G$. O elemento $g^h:=h^{-1}gh$ é dito *conjugado de $g$ por $h$*.
