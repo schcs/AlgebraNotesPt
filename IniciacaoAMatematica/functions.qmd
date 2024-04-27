@@ -39,7 +39,11 @@ R_5&=\{(1,3),(2,3),(3,3),(2,7)\};\\
 
 
 :::{#def-function-dom}
-Se $R\subseteq A\times B$ é uma função, então escrevemos $R$ na forma $R:A\to B$. O conjunto $A$ é chamado de domínio, o conjunto $B$ é o codomínio ou contradomínio da função $R$. A imagem de $R$ está definida como 
+Se $R\subseteq A\times B$ é uma função, então escrevemos $R$ na forma 
+$$
+R:A\to B,\quad a\mapsto R(a).
+$$ 
+O conjunto $A$ é chamado de *domínio*, o conjunto $B$ é o *codomínio* ou *contradomínio* da função $R$. A *imagem* de $R$ está definida como 
 $$
 \mbox{Im}(R)=R(A)=\{R(a)\mid a\in A\}.
 $$
@@ -49,11 +53,11 @@ Quando definimos uma função, precisa-se explictar três coisas:
 
 1. o domínio da função;
 2. o contradomínio da função;
-3. a correspondência entre os elementos do domínio e os elementos da contradomínio.
+3. a correspondência entre os elementos do domínio e os elementos do contradomínio.
 
-Duas funções serão consideradas iguais, se os seus domínios são iguais, seus codomínios são iguais, e as correspondências entre o domínio e o codomínio são as mesmas.
+Duas funções $f$ e $g$ serão consideradas iguais, se os seus domínios são iguais, seus codomínios são iguais, e as correspondências entre o domínio e o codomínio são as mesmas; ou seja $f(x)=g(x)$ vale para todo elemento $x$ no domínio.
 
-Por exemplo, falar da "função seno" é ambíguo, pois não se sabe assim o seu domínio o contradomínio. Por outro lado, as seguntes funções são bem definidas:
+Por exemplo, falar da "função seno" é ambíguo, pois não se sabe assim o seu domínio e o contradomínio. Por outro lado, as seguntes funções são bem definidas:
 $$
 \sen:\R\to \R,\ x\mapsto \sen x
 $${#eq-sen1}
@@ -61,7 +65,7 @@ ou
 $$
 \sen:\R\to [-1,1],\ x\mapsto \sen x.
 $${#eq-sen2}
-As funções dadas pelas equações @eq-sen1 e @eq-sen2 serão consideradas distintas.
+As funções dadas pelas equações @eq-sen1 e @eq-sen2 serão consideradas distintas; veja também o @exm-functions2 abaixo.
 
 :::{#exm-functions-dom}
 No caso da função $R_1$ do @exm-function, escrevemos que 
@@ -72,7 +76,7 @@ ou que
 $$
 R_1:A\to B,\ 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 5.
 $$
-Observe o uso das flechas $\to$ e $\mapsto$. 
+Observe o uso das flechas "$\to$" e "$\mapsto$". 
 O domínio de $R_1$ é o conjunto $A=\{1,2,3\}$, o contradomínio é $A=\{1,3,5,7\}$, a imagem de $R_1$ é $\{3,5\}$. Note que a imagem é estritamente menor que o contradomínio.
 :::
 
@@ -80,10 +84,12 @@ O domínio de $R_1$ é o conjunto $A=\{1,2,3\}$, o contradomínio é $A=\{1,3,5,
 :::{#def-function-dom}
 Seja $f:A\to B$ uma função.
 
-1. A função $f$ é sobrejetiva (ou sobrejetora) se $\mbox{Im}(f)=B$.
-2. A função $f$ é injetiva (ou injetora) quando $f(a_1)=f(a_2)$ implica que $a_1=a_2$ para todo $a_1,a_2\in A$.
-3. A função $f$ é bijetiva (bijetora) se ela é sobrejetiva e injetiva. 
-4. A função $f$ é dita invertível se ela é bijetiva. 
+1. A função $f$ é *sobrejetiva* (ou *sobrejetora*) se $\mbox{Im}(f)=B$. Formalmente, 
+$$
+\forall b\in B:(\exists a\in A:b=f(a)).
+$$
+2. A função $f$ é *injetiva* (ou *injetora*) quando $f(a_1)=f(a_2)$ implica que $a_1=a_2$ para todo $a_1,a_2\in A$.
+3. A função $f$ é *bijetiva* (*bijetora*) se ela é sobrejetiva e injetiva. 
 :::
 
 
@@ -123,7 +129,7 @@ $$
 :::{#def-comp-func}
 Sejam $f:A\to B$ e $g:B\to C$ funções. Definimos $g\circ f:A\to C$ como a função 
 $$
-g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A
+g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A.
 $$
 :::
 
@@ -138,11 +144,11 @@ f:A\to B,\quad 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 4
 $$
 e 
 $$
-g:B\to C,\quad 3\mapsto 6,\ 4\mapsto 3.
+g:B\to C,\quad 3\mapsto 6,\ 4\mapsto 2.
 $$
 Então 
 $$
-g\circ f:\{1,2,3\}\to \{2,4,6,8\},\quad 1\mapsto 6,\ 2\mapsto 6,\quad 3\mapsto 3.
+g\circ f:\{1,2,3\}\to \{2,4,6,8\},\quad 1\mapsto 6,\ 2\mapsto 6,\ 3\mapsto 2.
 $$
 :::
 
@@ -192,7 +198,7 @@ Sejam $f:A\to B$ e $g:B\to C$ funções.
 :::{.proof}
 1. Assuma que $g\circ f:A\to C$ é sobrejetiva. Seja $c\in C$. Precisa provar que existe $b\in B$ tal que $g(b)=c$. Sabendo que $g\circ f$ é sobrejetiva, existe $a\in A$ tal que 
 $$
-b=(g\circ f)(a)=g(f(a)).
+c=(g\circ f)(a)=g(f(a)).
 $$
 Logo, tomando $b=f(a)$, temos que $g(b)=g(f(a))=c$. Ou seja, $g$ é sobrejetiva. 
 
@@ -241,7 +247,7 @@ $$
 é também inversa à esquerda de $g$. O leitor pode verificar que nem $f$, nem $g$ pussiem inversas.
 :::
 
-Note que no @exm-inverse-func, as inversas existem pois $f$ é sobrejetiva e $g$ é injetiva. Por outro lado, estas funções não bijetivas, e não têm inversas. 
+Note que no @exm-inverse-func, as inversas existem pois $f$ é sobrejetiva e $g$ é injetiva. Por outro lado, estas funções não são bijetivas, e não têm inversas. 
 
 :::{#lem-inverse-func}
 Seja $f:A\to B$ uma função. Então 
@@ -251,9 +257,19 @@ Seja $f:A\to B$ uma função. Então
 3. $f$ tem inversa se e somente se $f$ é bijetiva. Ou seja, uma função $f$ é invertível se e somente se ela é bijetiva. 
 :::
 :::{.proof}
-1. Assuma que $f$ possui inversa $g$ à direita. Então $f\circ g=\mbox{id}_B$. Como $\mbox{id}_B$ é sobrejetiva, temos, por @lem-comp-inj-surj que $f$ é sobrejetiva. 
+1. Assuma que $f$ possui inversa $g$ à direita. Então $f\circ g=\mbox{id}_B$. Como $\mbox{id}_B$ é sobrejetiva, temos, por @lem-comp-inj-surj que $f$ é sobrejetiva. Vice versa, assuma que $f:A\to B$ é sobrejetiva. Defina $g:B\to A$ na seguinte maneira. Se $b\in B$, então existe $a_b\in A$ 
+tal que $f(a_b)=b$ (pois, $f$ é  sobrejetiva). Escolha um tal $a_b$ para todo $b$ (pode existir vários) e defina $g(b)=a_b$. Então temos, para $b\in B$, que 
+$$
+(f\circ g)(b)=f(g(b))=f(a_b)=b.
+$$ 
+Ou seja, $f\circ g=\mbox{id}_B$ e $g$ é inversa à direita de $f$. 
 
-2. Assuma que $f$ tem inversa $g$ à esquerda. Então $g\circ f=\mbox{id}_A$. Como $\mbox{id}_A$ é injetiva, temos que $f$ é injetiva por @lem-comp-inj-surj.
+2. Assuma que $f$ tem inversa $g$ à esquerda. Então $g\circ f=\mbox{id}_A$. Como $\mbox{id}_A$ é injetiva, temos que $f$ é injetiva por @lem-comp-inj-surj. Vice versa, assuma que $f$ é injetiva. Defina a função $g:B\to A$ na seguinte forma. Se $a\in A$, então existe único $b\in B$ tal que $f(a)=b$. Além disso, para este $b\in B$, $a\in A$ é o único elemento tal que $f(a)=b$ (pois $f$ é injetiva). Portanto, pode-se definir $g(b)=a$ para $b\in\mbox{Im}(f)$. Se $b\not\in\mbox{Im}(f)$, escolhe algum elemento arbitrário
+$a\in A$ e defina $g(b)=a$. Note que todo elemento de $a$ é Neste caso, 
+$$
+(g\circ f)(a)=g(f(a))=g(b)=a. 
+$$
+Ou seja, $g\circ f=\mbox{id}_A$ e $g$ é inversa à esquerda de $f$. 
 
 3. Se $f$ tem inversa $g$, então $g$ é inversa de $f$ à direita e à esquerda. Portanto, pelos itens 1.-2., $f$ é sobrejetiva e também injetiva. Portanto, $f$ é bijetiva.
 :::
