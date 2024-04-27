@@ -7,11 +7,20 @@ lang: pt-BR
 ## Definições básicas relacionadas com funções
 
 :::{#def-function}
-Sejam $A$ e $B$ conjuntos. Uma função de $A$ em $B$ é uma relação $R\subseteq A\times B$ tal que 
+Sejam $A$ e $B$ conjuntos. Uma *função* de $A$ em $B$ é uma relação $R\subseteq A\times B$ tal que
+
+1. $\forall a\in A:(\exists b\in B: aRB)$;
+2. Se $aRb_1$ e $aRb_2$ com algum $a\in A$ e $b_1,b_2\in B$, então $b_1=b_2$. 
+
+Em outras palavras,
 $$
-\forall a\in A:(\exists b\in B\mbox{ único }:aRb) 
+\forall a\in A:(\exists b\in B\mbox{ único }:aRb).
 $$
-Quando $R\subseteq A\times B$ é uma função e $aRb$, então escrevermos que $b=R(a)$. Nós frequentemente usamos as palavras, mapa, aplicação, correspondência em vez de função.
+O quantificador "existe único" é frequentamente denotado pelo símbolo "$\exists!$". Usando esta notação, pode-se escrever que 
+$$
+\forall a\in A:(\exists! b\in B:aRb).
+$$
+Quando $R\subseteq A\times B$ é uma função e $aRb$, então escrevermos que $b=R(a)$ ou às vezes que $R:a\mapsto b$. Nós frequentemente usamos as palavras, mapa, mapeamento, aplicação, correspondência em vez de função.
 :::
 
 :::{#exm-function}
@@ -36,8 +45,37 @@ $$
 $$
 :::
 
-Note que $\mbox{Im}(R)\subseteq B$, mas a imagem da função pode ser estritamente menor que o conjunto $B$. 
-Por exemplo, no caso da função $f:\N\to \R,\ f(n)=n+1$,  o codomínio de $f$ é $\R$, mas a sua imagem é o conjunto $\{2,3,\ldots\}$.
+Quando definimos uma função, precisa-se explictar três coisas:
+
+1. o domínio da função;
+2. o contradomínio da função;
+3. a correspondência entre os elementos do domínio e os elementos da contradomínio.
+
+Duas funções serão consideradas iguais, se os seus domínios são iguais, seus codomínios são iguais, e as correspondências entre o domínio e o codomínio são as mesmas.
+
+Por exemplo, falar da "função seno" é ambíguo, pois não se sabe assim o seu domínio o contradomínio. Por outro lado, as seguntes funções são bem definidas:
+$$
+\sen:\R\to \R,\ x\mapsto \sen x
+$${#eq-sen1}
+ou 
+$$
+\sen:\R\to [-1,1],\ x\mapsto \sen x.
+$${#eq-sen2}
+As funções dadas pelas equações @eq-sen1 e @eq-sen2 serão consideradas distintas.
+
+:::{#exm-functions-dom}
+No caso da função $R_1$ do @exm-function, escrevemos que 
+$$
+R_1:A\to B,\ R(1)=3,\ R(2)=3,\ R(3)=5
+$$
+ou que 
+$$
+R_1:A\to B,\ 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 5.
+$$
+Observe o uso das flechas $\to$ e $\mapsto$. 
+O domínio de $R_1$ é o conjunto $A=\{1,2,3\}$, o contradomínio é $A=\{1,3,5,7\}$, a imagem de $R_1$ é $\{3,5\}$. Note que a imagem é estritamente menor que o contradomínio.
+:::
+
 
 :::{#def-function-dom}
 Seja $f:A\to B$ uma função.
@@ -55,20 +93,29 @@ Considere as funções
 $$
 g:\R\to \R,\ g(x)=x^2,\quad f:\R\to \R_+,\ f(x)=x^2.
 $$
-As funções $f$ e $g$ parecem iguais, mas elas são consideradas diferentes, pois os codimonínios são diferentes. De fato, $f$ é sobrejetiva, mas $g$ não é. 
-A função 
+As funções $f$ e $g$ parecem iguais, mas elas são consideradas diferentes, pois os codimonínios são diferentes. De fato, $f$ é sobrejetiva, mas $g$ não é. Se considere a função 
 $$
-h:\R_+\to \R_+,\quad h(x)=x^2
+h:\R_+\to\R_+,\ h(x)=x^2,
 $$
-é sobrejetiva e injetiva, então ela é uma função bijetiva e também é invertível.
+então $h$ é injetiva e sobrejetiva, então ela é bijetiva.
 :::
+
+@exm-functions2 explica porque é importante explicitar o domínio e o contradomínio na definição de uma função. Observe também que a função $\sen$ definida em @eq-sen1 não é sobrejetiva, enquando a função $\sen$ definida em @eq-sen2 é sobrejetiva. Portanto, não faz sentido perguntar se "a função seno é sobrejetiva?" ou se a "função $x^2$ é injetiva?". Precisa esclarecer o domínio e o codomínio para respoder estes tipos de perguntas.
 
 :::{#exm-id-function}
 Se $A$ é um conjunto qualquer, então a função identidade em $A$ é a função 
 $$
-\mbox{id}_A:A\to A, \mbox{id}_A(a)=a.
+\mbox{id}_A:A\to A,\ \mbox{id}_A(a)=a.
 $$ 
 A função $\mbox{id}_A$ é bijetiva. 
+:::
+
+
+:::{#exm-id-function}
+Por exemplo, se $A=\{-1,0,1\}$, então 
+$$
+\mbox{id}_A:A\to A,\ -1\mapsto -1,\ 0\mapsto 0,\ 1\mapsto 1.
+$$
 :::
 
 ## A composição de funções
@@ -81,10 +128,10 @@ $$
 :::
 
 :::{#exr-comp-func}
-Demonstre que $g\circ f:A\to C$ é uma função.
+Verifique que $g\circ f:A\to C$ é de fato uma função.
 :::
 
-:::{#def-comp-func}
+:::{#exm-comp-func}
 Assuma que $A=\{1,2,3\}$, $B=\{3,4\}$, e $C=\{2,4,6,8\}$. Sejam 
 $$
 f:A\to B,\quad 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 4
@@ -99,6 +146,17 @@ g\circ f:\{1,2,3\}\to \{2,4,6,8\},\quad 1\mapsto 6,\ 2\mapsto 6,\quad 3\mapsto 3
 $$
 :::
 
+:::{#exm-comp-func2}
+Sejam 
+$$
+f:\R\to [-1,1],\ f(x)=\sen x\quad\mbox{e}\quad h:[-1,1]\to [0,1],\ h(x)=x^2.
+$$
+Então a composição destas duas funções é a função
+$$
+g\circ f:\R\to [0,1],\ (g\circ f)(x)=\sen^2(x). 
+$$
+:::
+
 :::{#lem-comp-function}
 Sejam $f:A\to B$, $g:B\to C$, $h:C\to D$ funções. Então 
 
@@ -106,28 +164,143 @@ Sejam $f:A\to B$, $g:B\to C$, $h:C\to D$ funções. Então
 2. $f\circ \mbox{id}_A=f$;
 3. $\mbox{id}_B\circ f=f$.
 :::
+:::{.proof}
+1. Note que o domínio de $h\circ (g\circ f)$ e de $(h\circ g)\circ f$ é o conjunto $A$ e o codomínio de ambas é $C$. Então precisa provar que 
+$(h\circ (g\circ f))(a)=((h\circ g)\circ f)(a)$ para todo $a\in A$. Isso segue, pois 
+$$
+(h\circ (g\circ f))(a)=h((g\circ f)(a))=h(g(f(a)))
+$$
+e
+$$
+((h\circ g)\circ f)(a)=(h\circ g)(f(a))=h(g(f(a))).
+$$
+
+2. Note que $f\circ \mbox{id}_A:A\to B$. Precisa provar então que $(f\circ \mbox{id}_A)(a)=f(a)$ para todo $a\in A$. Isso segue, pois 
+$$
+(f\circ \mbox{id}_A)(a)=f(\mbox{id}_A(a))=f(a). 
+$$
+
+3. Use o argumento na demonstração de 2.
+:::
+
+:::{#lem-comp-inj-surj}
+Sejam $f:A\to B$ e $g:B\to C$ funções. 
+
+1. Se $g\circ f:A\to C$ é sobrejetiva, então $g$ é sobrejetiva.
+2. Se $g\circ f:A\to C$ é injetiva, então $f$ é injetiva.
+:::
+:::{.proof}
+1. Assuma que $g\circ f:A\to C$ é sobrejetiva. Seja $c\in C$. Precisa provar que existe $b\in B$ tal que $g(b)=c$. Sabendo que $g\circ f$ é sobrejetiva, existe $a\in A$ tal que 
+$$
+b=(g\circ f)(a)=g(f(a)).
+$$
+Logo, tomando $b=f(a)$, temos que $g(b)=g(f(a))=c$. Ou seja, $g$ é sobrejetiva. 
+
+2. Assuma que $a_1,a_2\in A$ tal que $f(a_1)=f(a_2)$. Precisamos provar que $a_1=a_2$. Primeiro, observe que 
+$$
+(g\circ f)(a_1)=g(f(a_1))=g(f(a_2))=(g\circ f)(a_2).
+$$
+Sabendo que $g\circ f$ é injetiva, isso implica que $a_1=a_2$ e que $f$ é injetiva.
+:::
 
 ## Funções inversas
 
 :::{#def-inverse-func}
-Seja $f:A\to B$ uma função. 
+Sejam $f:A\to B$ e $g:B\to A$ funções. 
 
-1. Uma função $g:B\to A$ é dita inversa de $f$ à direita se $g\circ f=\mbox{id}_A$. 
-2. Uma função $g:B\to A$ é dita inversa de $f$ à esquerda se $f\circ g=\mbox{id}_D$.
-3. Uma função $g:B\to A$ é dita inversa de $f$ se $g\circ f=\mbox{id}_A$ e $$f\circ g=\mbox{id}_D$.
+1. Uma função $g:B\to A$ é dita *inversa de $f$ à esquerda* se $g\circ f=\mbox{id}_A$. 
+2. Uma função $g:B\to A$ é dita *inversa de $f$ à direita* se $f\circ g=\mbox{id}_B$.
+3. Uma função $g:B\to A$ é dita *inversa* de $f$ se $g\circ f=\mbox{id}_A$ e $f\circ g=\mbox{id}_B$. Neste caso, temos que $f$ é *invertível*.
 :::
+
+:::{#exm-inverse-func}
+Seja $A=\{1,2,3\}$ e $B=\{4,5\}$. Considere as funções 
+$$
+f:A\to B,\ 1\mapsto 4,\ 2\mapsto 4,\ 3\mapsto 5
+$$
+e 
+$$
+g:B\to A,\ 4\mapsto 1,\ 5\mapsto 3. 
+$$
+Calculando que 
+$$
+(f\circ g)(4)=f(g(4))=f(1)=4\quad \mbox{e}\quad (f\circ g)(5)=f(g(5))=f(3)=5 
+$$
+obtemos que 
+$$
+f\circ g=\mbox{id}_B.
+$$
+Ou seja $g$ é inversa à direita de $f$ e $f$ é inversa à esquerda de $g$. Note que $g$ não é a única inversa à direita de $f$; de fato, definindo 
+$$
+g_1:B\to A,\ 4\mapsto 2,\ 5\mapsto 3. 
+$$
+é também inversa à direita de $f$. Similarmente, 
+$$
+f_1:A\to B,\ 1\mapsto 4, 2\mapsto 5,\ 3\mapsto 5
+$$
+é também inversa à esquerda de $g$. O leitor pode verificar que nem $f$, nem $g$ pussiem inversas.
+:::
+
+Note que no @exm-inverse-func, as inversas existem pois $f$ é sobrejetiva e $g$ é injetiva. Por outro lado, estas funções não bijetivas, e não têm inversas. 
 
 :::{#lem-inverse-func}
 Seja $f:A\to B$ uma função. Então 
 
 1. $f$ tem inversa à direita se e somente se $f$ é sobrejetiva.
 2. $f$ tem inversa à esquerda se e somente se $f$ é injetiva.
-3. $f$ tem inversa se e somente se $f$ é bijetiva.
+3. $f$ tem inversa se e somente se $f$ é bijetiva. Ou seja, uma função $f$ é invertível se e somente se ela é bijetiva. 
 :::
+:::{.proof}
+1. Assuma que $f$ possui inversa $g$ à direita. Então $f\circ g=\mbox{id}_B$. Como $\mbox{id}_B$ é sobrejetiva, temos, por @lem-comp-inj-surj que $f$ é sobrejetiva. 
+
+2. Assuma que $f$ tem inversa $g$ à esquerda. Então $g\circ f=\mbox{id}_A$. Como $\mbox{id}_A$ é injetiva, temos que $f$ é injetiva por @lem-comp-inj-surj.
+
+3. Se $f$ tem inversa $g$, então $g$ é inversa de $f$ à direita e à esquerda. Portanto, pelos itens 1.-2., $f$ é sobrejetiva e também injetiva. Portanto, $f$ é bijetiva.
+:::
+
 
 :::{#def-inverse-func2}
 Se $f:A\to B$ é uma função e $g:B\to A$ é inversa de $f$, então escrevemos que $g=f^{-1}$. 
 :::
+
+## Um exemplo de GAAL
+
+Considere o espaço $\R^2$ de vetores colunas $\begin{pmatrix} x\\ y\end{pmatrix}$ e seja $A$ uma matriz $(2\times 2)$. Defina a função 
+$$
+f_A:\R^2\to \R^2,\quad f_A\begin{pmatrix} x\\ y\end{pmatrix}=A\begin{pmatrix} x\\ y\end{pmatrix}
+$$
+(multiplicação matricial).
+
+Assuma que $A$ é uma matriz invertível e seja $B$ sua inversa. Temos que $AB=BA=I_2$ onde $I_2$ é a matriz identidade $(2\times 2)$. Neste caso 
+$$
+f_B\circ f_A:\R^2\to \R^2,\quad (f_B\circ f_A) \begin{pmatrix} x\\ y\end{pmatrix}=f_B\left(f_A\begin{pmatrix} x\\ y\end{pmatrix}\right)=BA\begin{pmatrix} x\\ y\end{pmatrix}=I_2\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} x\\ y\end{pmatrix}.
+$$
+Similarmente, 
+$$
+f_A\circ f_B:\R^2\to \R^2,\quad (f_A\circ f_B) \begin{pmatrix} x\\ y\end{pmatrix}=f_A\left(f_B\begin{pmatrix} x\\ y\end{pmatrix}\right)=AB\begin{pmatrix} x\\ y\end{pmatrix}=I_2\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} x\\ y\end{pmatrix}.
+$$
+Portanto $f_B\circ f_A=f_A\circ f_B=\mbox{id}_{\R^2}$. Ou seja, $f_A$ é invertível e sua inversa é $f_B=f_{A^{-1}}$. 
+
+Assuma agora que $A$ é uma matriz não invertível (singular) e considere a função $f_A:\R^2\to \R^2$. Assuma que 
+$$
+A=\begin{pmatrix} a & b \\ c & d\end{pmatrix}.
+$$
+Sabemos de GAAL que o sistema 
+\begin{eqnarray*}
+ax+by&=0\\
+cx+dy&=0
+\end{eqnarray*}
+tem infinitas soluções. Se $\begin{pmatrix} x\\ y\end{pmatrix}$ é uma solução deste sistema, então 
+$$
+f_A\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} 0\\ 0\end{pmatrix}.
+$$
+Em particular, $f_A$ não é injetiva. Similarmente, aprendemos também em GAAL que existe $\begin{pmatrix} b_1\\ b_2\end{pmatrix}\in\R^2$ tal que 
+o sistema 
+\begin{eqnarray*}
+ax+by&=b_1\\
+cx+dy&=b_2
+\end{eqnarray*}
+não possui solução. Neste caso  $\begin{pmatrix} b_1\\ b_2\end{pmatrix}\in\R^2\setminus\mbox{Im}(f_A)$ e $f_A$ não é sobrejetiva. Ou seja, assumindo que $A$ é uma matriz não invertível, $f_A$ não tem nem inversa à direita nem inversa à esquerda.
 
 ## Restrição de $f$
 
@@ -136,4 +309,22 @@ Seja $f:A\to B$ uma função e $C\subseteq A$. Definimos a restrição de $f$ pa
 $$
 f|_C:C\to B,\quad c\mapsto f(c)\quad\mbox{para todo }c\in C.
 $$
+:::
+
+:::{#def-func-restriction}
+Considere a função $\sen:\R\to [-1,1]$. A função $\sen$ é sobrejetiva, mas não é injetiva, pois $\sen(0)=\sen(\pi)=0$. 
+
+![A função $\sen$](sen.png)
+
+Por outro lado, pode-se considerar a restrição 
+$$
+\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to [-1,1].
+$$
+
+![A restrição da função $\sen$](sen_rest.png)
+
+A função $\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to[-1,1]$ é injetiva e sobrejetiva, em particular, ela é invertível. A sua inversa é a função 
+$$
+\mbox{arcssen}:[-1,1]\to [-\pi,\pi].
+$$ 
 :::
