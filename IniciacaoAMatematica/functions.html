@@ -1192,7 +1192,9 @@ R_5&amp;=\{(1,3),(2,3),(3,3),(2,7)\};\\
 \end{align*}\]</span></p>
 </div>
 <div id="def-function-dom" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 8.2</strong></span> Se <span class="math inline">\(R\subseteq A\times B\)</span> é uma função, então escrevemos <span class="math inline">\(R\)</span> na forma <span class="math inline">\(R:A\to B\)</span>. O conjunto <span class="math inline">\(A\)</span> é chamado de domínio, o conjunto <span class="math inline">\(B\)</span> é o codomínio ou contradomínio da função <span class="math inline">\(R\)</span>. A imagem de <span class="math inline">\(R\)</span> está definida como <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 8.2</strong></span> Se <span class="math inline">\(R\subseteq A\times B\)</span> é uma função, então escrevemos <span class="math inline">\(R\)</span> na forma <span class="math display">\[
+R:A\to B,\quad a\mapsto R(a).
+\]</span> O conjunto <span class="math inline">\(A\)</span> é chamado de <em>domínio</em>, o conjunto <span class="math inline">\(B\)</span> é o <em>codomínio</em> ou <em>contradomínio</em> da função <span class="math inline">\(R\)</span>. A <em>imagem</em> de <span class="math inline">\(R\)</span> está definida como <span class="math display">\[
 \mbox{Im}(R)=R(A)=\{R(a)\mid a\in A\}.
 \]</span></p>
 </div>
@@ -1200,28 +1202,29 @@ R_5&amp;=\{(1,3),(2,3),(3,3),(2,7)\};\\
 <ol type="1">
 <li>o domínio da função;</li>
 <li>o contradomínio da função;</li>
-<li>a correspondência entre os elementos do domínio e os elementos da contradomínio.</li>
+<li>a correspondência entre os elementos do domínio e os elementos do contradomínio.</li>
 </ol>
-<p>Duas funções serão consideradas iguais, se os seus domínios são iguais, seus codomínios são iguais, e as correspondências entre o domínio e o codomínio são as mesmas.</p>
-<p>Por exemplo, falar da “função seno” é ambíguo, pois não se sabe assim o seu domínio o contradomínio. Por outro lado, as seguntes funções são bem definidas: <span id="eq-sen1"><span class="math display">\[
+<p>Duas funções <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> serão consideradas iguais, se os seus domínios são iguais, seus codomínios são iguais, e as correspondências entre o domínio e o codomínio são as mesmas; ou seja <span class="math inline">\(f(x)=g(x)\)</span> vale para todo elemento <span class="math inline">\(x\)</span> no domínio.</p>
+<p>Por exemplo, falar da “função seno” é ambíguo, pois não se sabe assim o seu domínio e o contradomínio. Por outro lado, as seguntes funções são bem definidas: <span id="eq-sen1"><span class="math display">\[
 \sen:\R\to \R,\ x\mapsto \sen x
 \tag{8.1}\]</span></span> ou <span id="eq-sen2"><span class="math display">\[
 \sen:\R\to [-1,1],\ x\mapsto \sen x.
-\tag{8.2}\]</span></span> As funções dadas pelas equações <a href="#eq-sen1" class="quarto-xref">Equação&nbsp;<span>8.1</span></a> e <a href="#eq-sen2" class="quarto-xref">Equação&nbsp;<span>8.2</span></a> serão consideradas distintas.</p>
+\tag{8.2}\]</span></span> As funções dadas pelas equações <a href="#eq-sen1" class="quarto-xref">Equação&nbsp;<span>8.1</span></a> e <a href="#eq-sen2" class="quarto-xref">Equação&nbsp;<span>8.2</span></a> serão consideradas distintas; veja também o <a href="#exm-functions2" class="quarto-xref">Exemplo&nbsp;<span>8.3</span></a> abaixo.</p>
 <div id="exm-functions-dom" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 8.2</strong></span> No caso da função <span class="math inline">\(R_1\)</span> do <a href="#exm-function" class="quarto-xref">Exemplo&nbsp;<span>8.1</span></a>, escrevemos que <span class="math display">\[
 R_1:A\to B,\ R(1)=3,\ R(2)=3,\ R(3)=5
 \]</span> ou que <span class="math display">\[
 R_1:A\to B,\ 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 5.
-\]</span> Observe o uso das flechas <span class="math inline">\(\to\)</span> e <span class="math inline">\(\mapsto\)</span>. O domínio de <span class="math inline">\(R_1\)</span> é o conjunto <span class="math inline">\(A=\{1,2,3\}\)</span>, o contradomínio é <span class="math inline">\(A=\{1,3,5,7\}\)</span>, a imagem de <span class="math inline">\(R_1\)</span> é <span class="math inline">\(\{3,5\}\)</span>. Note que a imagem é estritamente menor que o contradomínio.</p>
+\]</span> Observe o uso das flechas “<span class="math inline">\(\to\)</span>” e “<span class="math inline">\(\mapsto\)</span>”. O domínio de <span class="math inline">\(R_1\)</span> é o conjunto <span class="math inline">\(A=\{1,2,3\}\)</span>, o contradomínio é <span class="math inline">\(A=\{1,3,5,7\}\)</span>, a imagem de <span class="math inline">\(R_1\)</span> é <span class="math inline">\(\{3,5\}\)</span>. Note que a imagem é estritamente menor que o contradomínio.</p>
 </div>
 <div id="def-function-dom" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 8.3</strong></span> Seja <span class="math inline">\(f:A\to B\)</span> uma função.</p>
 <ol type="1">
-<li>A função <span class="math inline">\(f\)</span> é sobrejetiva (ou sobrejetora) se <span class="math inline">\(\mbox{Im}(f)=B\)</span>.</li>
-<li>A função <span class="math inline">\(f\)</span> é injetiva (ou injetora) quando <span class="math inline">\(f(a_1)=f(a_2)\)</span> implica que <span class="math inline">\(a_1=a_2\)</span> para todo <span class="math inline">\(a_1,a_2\in A\)</span>.</li>
-<li>A função <span class="math inline">\(f\)</span> é bijetiva (bijetora) se ela é sobrejetiva e injetiva.</li>
-<li>A função <span class="math inline">\(f\)</span> é dita invertível se ela é bijetiva.</li>
+<li>A função <span class="math inline">\(f\)</span> é <em>sobrejetiva</em> (ou <em>sobrejetora</em>) se <span class="math inline">\(\mbox{Im}(f)=B\)</span>. Formalmente, <span class="math display">\[
+\forall b\in B:(\exists a\in A:b=f(a)).
+\]</span></li>
+<li>A função <span class="math inline">\(f\)</span> é <em>injetiva</em> (ou <em>injetora</em>) quando <span class="math inline">\(f(a_1)=f(a_2)\)</span> implica que <span class="math inline">\(a_1=a_2\)</span> para todo <span class="math inline">\(a_1,a_2\in A\)</span>.</li>
+<li>A função <span class="math inline">\(f\)</span> é <em>bijetiva</em> (<em>bijetora</em>) se ela é sobrejetiva e injetiva.</li>
 </ol>
 </div>
 <div id="exm-functions2" class="theorem example">
@@ -1247,7 +1250,7 @@ h:\R_+\to\R_+,\ h(x)=x^2,
 <h2 data-number="8.2" data-anchor-id="a-composição-de-funções"><span class="header-section-number">8.2</span> A composição de funções</h2>
 <div id="def-comp-func" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 8.4</strong></span> Sejam <span class="math inline">\(f:A\to B\)</span> e <span class="math inline">\(g:B\to C\)</span> funções. Definimos <span class="math inline">\(g\circ f:A\to C\)</span> como a função <span class="math display">\[
-g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A
+g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A.
 \]</span></p>
 </div>
 <div id="exr-comp-func" class="theorem exercise">
@@ -1257,9 +1260,9 @@ g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A
 <p><span class="theorem-title"><strong>Exemplo 8.6</strong></span> Assuma que <span class="math inline">\(A=\{1,2,3\}\)</span>, <span class="math inline">\(B=\{3,4\}\)</span>, e <span class="math inline">\(C=\{2,4,6,8\}\)</span>. Sejam <span class="math display">\[
 f:A\to B,\quad 1\mapsto 3,\ 2\mapsto 3,\ 3\mapsto 4
 \]</span> e <span class="math display">\[
-g:B\to C,\quad 3\mapsto 6,\ 4\mapsto 3.
+g:B\to C,\quad 3\mapsto 6,\ 4\mapsto 2.
 \]</span> Então <span class="math display">\[
-g\circ f:\{1,2,3\}\to \{2,4,6,8\},\quad 1\mapsto 6,\ 2\mapsto 6,\quad 3\mapsto 3.
+g\circ f:\{1,2,3\}\to \{2,4,6,8\},\quad 1\mapsto 6,\ 2\mapsto 6,\ 3\mapsto 2.
 \]</span></p>
 </div>
 <div id="exm-comp-func2" class="theorem example">
@@ -1302,7 +1305,7 @@ g\circ f:\R\to [0,1],\ (g\circ f)(x)=\sen^2(x).
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
 <li><p>Assuma que <span class="math inline">\(g\circ f:A\to C\)</span> é sobrejetiva. Seja <span class="math inline">\(c\in C\)</span>. Precisa provar que existe <span class="math inline">\(b\in B\)</span> tal que <span class="math inline">\(g(b)=c\)</span>. Sabendo que <span class="math inline">\(g\circ f\)</span> é sobrejetiva, existe <span class="math inline">\(a\in A\)</span> tal que <span class="math display">\[
-b=(g\circ f)(a)=g(f(a)).
+c=(g\circ f)(a)=g(f(a)).
 \]</span> Logo, tomando <span class="math inline">\(b=f(a)\)</span>, temos que <span class="math inline">\(g(b)=g(f(a))=c\)</span>. Ou seja, <span class="math inline">\(g\)</span> é sobrejetiva.</p></li>
 <li><p>Assuma que <span class="math inline">\(a_1,a_2\in A\)</span> tal que <span class="math inline">\(f(a_1)=f(a_2)\)</span>. Precisamos provar que <span class="math inline">\(a_1=a_2\)</span>. Primeiro, observe que <span class="math display">\[
 (g\circ f)(a_1)=g(f(a_1))=g(f(a_2))=(g\circ f)(a_2).
@@ -1335,7 +1338,7 @@ g_1:B\to A,\ 4\mapsto 2,\ 5\mapsto 3.
 f_1:A\to B,\ 1\mapsto 4, 2\mapsto 5,\ 3\mapsto 5
 \]</span> é também inversa à esquerda de <span class="math inline">\(g\)</span>. O leitor pode verificar que nem <span class="math inline">\(f\)</span>, nem <span class="math inline">\(g\)</span> pussiem inversas.</p>
 </div>
-<p>Note que no <a href="#exm-inverse-func" class="quarto-xref">Exemplo&nbsp;<span>8.8</span></a>, as inversas existem pois <span class="math inline">\(f\)</span> é sobrejetiva e <span class="math inline">\(g\)</span> é injetiva. Por outro lado, estas funções não bijetivas, e não têm inversas.</p>
+<p>Note que no <a href="#exm-inverse-func" class="quarto-xref">Exemplo&nbsp;<span>8.8</span></a>, as inversas existem pois <span class="math inline">\(f\)</span> é sobrejetiva e <span class="math inline">\(g\)</span> é injetiva. Por outro lado, estas funções não são bijetivas, e não têm inversas.</p>
 <div id="lem-inverse-func" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 8.3</strong></span> Seja <span class="math inline">\(f:A\to B\)</span> uma função. Então</p>
 <ol type="1">
@@ -1347,8 +1350,12 @@ f_1:A\to B,\ 1\mapsto 4, 2\mapsto 5,\ 3\mapsto 5
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
-<li><p>Assuma que <span class="math inline">\(f\)</span> possui inversa <span class="math inline">\(g\)</span> à direita. Então <span class="math inline">\(f\circ g=\mbox{id}_B\)</span>. Como <span class="math inline">\(\mbox{id}_B\)</span> é sobrejetiva, temos, por <a href="#lem-comp-inj-surj" class="quarto-xref">Lema&nbsp;<span>8.2</span></a> que <span class="math inline">\(f\)</span> é sobrejetiva.</p></li>
-<li><p>Assuma que <span class="math inline">\(f\)</span> tem inversa <span class="math inline">\(g\)</span> à esquerda. Então <span class="math inline">\(g\circ f=\mbox{id}_A\)</span>. Como <span class="math inline">\(\mbox{id}_A\)</span> é injetiva, temos que <span class="math inline">\(f\)</span> é injetiva por <a href="#lem-comp-inj-surj" class="quarto-xref">Lema&nbsp;<span>8.2</span></a>.</p></li>
+<li><p>Assuma que <span class="math inline">\(f\)</span> possui inversa <span class="math inline">\(g\)</span> à direita. Então <span class="math inline">\(f\circ g=\mbox{id}_B\)</span>. Como <span class="math inline">\(\mbox{id}_B\)</span> é sobrejetiva, temos, por <a href="#lem-comp-inj-surj" class="quarto-xref">Lema&nbsp;<span>8.2</span></a> que <span class="math inline">\(f\)</span> é sobrejetiva. Vice versa, assuma que <span class="math inline">\(f:A\to B\)</span> é sobrejetiva. Defina <span class="math inline">\(g:B\to A\)</span> na seguinte maneira. Se <span class="math inline">\(b\in B\)</span>, então existe <span class="math inline">\(a_b\in A\)</span> tal que <span class="math inline">\(f(a_b)=b\)</span> (pois, <span class="math inline">\(f\)</span> é sobrejetiva). Escolha um tal <span class="math inline">\(a_b\)</span> para todo <span class="math inline">\(b\)</span> (pode existir vários) e defina <span class="math inline">\(g(b)=a_b\)</span>. Então temos, para <span class="math inline">\(b\in B\)</span>, que <span class="math display">\[
+(f\circ g)(b)=f(g(b))=f(a_b)=b.
+\]</span> Ou seja, <span class="math inline">\(f\circ g=\mbox{id}_B\)</span> e <span class="math inline">\(g\)</span> é inversa à direita de <span class="math inline">\(f\)</span>.</p></li>
+<li><p>Assuma que <span class="math inline">\(f\)</span> tem inversa <span class="math inline">\(g\)</span> à esquerda. Então <span class="math inline">\(g\circ f=\mbox{id}_A\)</span>. Como <span class="math inline">\(\mbox{id}_A\)</span> é injetiva, temos que <span class="math inline">\(f\)</span> é injetiva por <a href="#lem-comp-inj-surj" class="quarto-xref">Lema&nbsp;<span>8.2</span></a>. Vice versa, assuma que <span class="math inline">\(f\)</span> é injetiva. Defina a função <span class="math inline">\(g:B\to A\)</span> na seguinte forma. Se <span class="math inline">\(a\in A\)</span>, então existe único <span class="math inline">\(b\in B\)</span> tal que <span class="math inline">\(f(a)=b\)</span>. Além disso, para este <span class="math inline">\(b\in B\)</span>, <span class="math inline">\(a\in A\)</span> é o único elemento tal que <span class="math inline">\(f(a)=b\)</span> (pois <span class="math inline">\(f\)</span> é injetiva). Portanto, pode-se definir <span class="math inline">\(g(b)=a\)</span> para <span class="math inline">\(b\in\mbox{Im}(f)\)</span>. Se <span class="math inline">\(b\not\in\mbox{Im}(f)\)</span>, escolhe algum elemento arbitrário <span class="math inline">\(a\in A\)</span> e defina <span class="math inline">\(g(b)=a\)</span>. Note que todo elemento de <span class="math inline">\(a\)</span> é Neste caso, <span class="math display">\[
+(g\circ f)(a)=g(f(a))=g(b)=a.
+\]</span> Ou seja, <span class="math inline">\(g\circ f=\mbox{id}_A\)</span> e <span class="math inline">\(g\)</span> é inversa à esquerda de <span class="math inline">\(f\)</span>.</p></li>
 <li><p>Se <span class="math inline">\(f\)</span> tem inversa <span class="math inline">\(g\)</span>, então <span class="math inline">\(g\)</span> é inversa de <span class="math inline">\(f\)</span> à direita e à esquerda. Portanto, pelos itens 1.-2., <span class="math inline">\(f\)</span> é sobrejetiva e também injetiva. Portanto, <span class="math inline">\(f\)</span> é bijetiva.</p></li>
 </ol>
 </div>
