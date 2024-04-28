@@ -1365,7 +1365,8 @@ f_1:A\to B,\ 1\mapsto 4, 2\mapsto 5,\ 3\mapsto 5
 </section>
 <section id="um-exemplo-de-gaal" class="level2" data-number="8.4">
 <h2 data-number="8.4" data-anchor-id="um-exemplo-de-gaal"><span class="header-section-number">8.4</span> Um exemplo de GAAL</h2>
-<p>Considere o espaço <span class="math inline">\(\R^2\)</span> de vetores colunas <span class="math inline">\(\begin{pmatrix} x\\ y\end{pmatrix}\)</span> e seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\((2\times 2)\)</span>. Defina a função <span class="math display">\[
+<div id="exm-gaal" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.9</strong></span> Considere o espaço <span class="math inline">\(\R^2\)</span> de vetores colunas <span class="math inline">\(\begin{pmatrix} x\\ y\end{pmatrix}\)</span> e seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\((2\times 2)\)</span>. Defina a função <span class="math display">\[
 f_A:\R^2\to \R^2,\quad f_A\begin{pmatrix} x\\ y\end{pmatrix}=A\begin{pmatrix} x\\ y\end{pmatrix}
 \]</span> (multiplicação matricial).</p>
 <p>Assuma que <span class="math inline">\(A\)</span> é uma matriz invertível e seja <span class="math inline">\(B\)</span> sua inversa. Temos que <span class="math inline">\(AB=BA=I_2\)</span> onde <span class="math inline">\(I_2\)</span> é a matriz identidade <span class="math inline">\((2\times 2)\)</span>. Neste caso <span class="math display">\[
@@ -1384,6 +1385,7 @@ f_A\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} 0\\ 0\end{pmatrix}.
 ax+by&amp;=b_1\\
 cx+dy&amp;=b_2
 \end{eqnarray*}\]</span> não possui solução. Neste caso <span class="math inline">\(\begin{pmatrix} b_1\\ b_2\end{pmatrix}\in\R^2\setminus\mbox{Im}(f_A)\)</span> e <span class="math inline">\(f_A\)</span> não é sobrejetiva. Ou seja, assumindo que <span class="math inline">\(A\)</span> é uma matriz não invertível, <span class="math inline">\(f_A\)</span> não tem nem inversa à direita nem inversa à esquerda.</p>
+</div>
 </section>
 <section id="restrição-de-f" class="level2" data-number="8.5">
 <h2 data-number="8.5" data-anchor-id="restrição-de-f"><span class="header-section-number">8.5</span> Restrição de <span class="math inline">\(f\)</span></h2>
@@ -1392,8 +1394,8 @@ cx+dy&amp;=b_2
 f|_C:C\to B,\quad c\mapsto f(c)\quad\mbox{para todo }c\in C.
 \]</span></p>
 </div>
-<div id="def-func-restriction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 8.8</strong></span> Considere a função <span class="math inline">\(\sen:\R\to [-1,1]\)</span>. A função <span class="math inline">\(\sen\)</span> é sobrejetiva, mas não é injetiva, pois <span class="math inline">\(\sen(0)=\sen(\pi)=0\)</span>.</p>
+<div id="exm-func-restriction" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.10</strong></span> Considere a função <span class="math inline">\(\sen:\R\to [-1,1]\)</span>. A função <span class="math inline">\(\sen\)</span> é sobrejetiva, mas não é injetiva, pois <span class="math inline">\(\sen(0)=\sen(\pi)=0\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="sen.png" class="img-fluid figure-img"></p>
@@ -1412,6 +1414,12 @@ f|_C:C\to B,\quad c\mapsto f(c)\quad\mbox{para todo }c\in C.
 <p>A função <span class="math inline">\(\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to[-1,1]\)</span> é injetiva e sobrejetiva, em particular, ela é invertível. A sua inversa é a função <span class="math display">\[
 \mbox{arcssen}:[-1,1]\to [-\pi,\pi].
 \]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="arcsen.png" class="img-fluid figure-img"></p>
+<figcaption>A função <span class="math inline">\(\mbox{arcsen}\)</span></figcaption>
+</figure>
+</div>
 </div>
 
 
