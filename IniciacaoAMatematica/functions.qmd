@@ -281,6 +281,7 @@ Se $f:A\to B$ é uma função e $g:B\to A$ é inversa de $f$, então escrevemos 
 
 ## Um exemplo de GAAL
 
+:::{#exm-gaal}
 Considere o espaço $\R^2$ de vetores colunas $\begin{pmatrix} x\\ y\end{pmatrix}$ e seja $A$ uma matriz $(2\times 2)$. Defina a função 
 $$
 f_A:\R^2\to \R^2,\quad f_A\begin{pmatrix} x\\ y\end{pmatrix}=A\begin{pmatrix} x\\ y\end{pmatrix}
@@ -317,6 +318,7 @@ ax+by&=b_1\\
 cx+dy&=b_2
 \end{eqnarray*}
 não possui solução. Neste caso  $\begin{pmatrix} b_1\\ b_2\end{pmatrix}\in\R^2\setminus\mbox{Im}(f_A)$ e $f_A$ não é sobrejetiva. Ou seja, assumindo que $A$ é uma matriz não invertível, $f_A$ não tem nem inversa à direita nem inversa à esquerda.
+:::
 
 ## Restrição de $f$
 
@@ -327,7 +329,7 @@ f|_C:C\to B,\quad c\mapsto f(c)\quad\mbox{para todo }c\in C.
 $$
 :::
 
-:::{#def-func-restriction}
+:::{#exm-func-restriction}
 Considere a função $\sen:\R\to [-1,1]$. A função $\sen$ é sobrejetiva, mas não é injetiva, pois $\sen(0)=\sen(\pi)=0$. 
 
 ![A função $\sen$](sen.png)
@@ -343,4 +345,6 @@ A função $\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to[-1,1]$ é injetiva e sobrejetiv
 $$
 \mbox{arcssen}:[-1,1]\to [-\pi,\pi].
 $$ 
+
+![A função $\mbox{arcsen}$](arcsen.png)
 :::
