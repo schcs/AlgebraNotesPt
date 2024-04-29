@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#def-}
+:::{#def-div-pols}
 Seja $R$ um anel e sejam $f(x),g(x)\in R[x]$. Dizemos que $f(x)$ **divide** $g(x)$, ou que $g(x)$ é **divisível** por $f(x)$ ou que $g(x)$ é um **múltiplo** de $f(x)$ se existir $h(x)\in R[x]$ tal que $f(x)h(x)=g(x)$. Quando $f(x)$ divide $g(x)$, escrevemos que $f(x)\mid g(x)$
 :::
 

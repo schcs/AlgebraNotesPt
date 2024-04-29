@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#def-}
+:::{#def-pol}
 Seja $R$ um anel. Um **polinômio** sobre $R$ (ou polinômio com coeficientes em $R$) é uma expressão formal
 $$
 f=f(x)=\alpha_n x^n+\alpha_{n-1}x^{n-1}+\cdots+\alpha_1 x+\alpha_0

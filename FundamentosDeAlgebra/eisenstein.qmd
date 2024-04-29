@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#thm-}
+:::{#thm-eisenstein}
 (O Critério de <a href="https://pt.wikipedia.org/wiki/Gotthold_Eisenstein">Eisenstein</a>) Seja
 $$
 f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]

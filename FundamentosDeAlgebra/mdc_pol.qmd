@@ -6,9 +6,13 @@ number-sections: true
 lang: pt-BR
 ---
 
+
+
 Nesta página $\F$ é um corpo. Por exemplo, pode tomar $\Q$, $\R$, $\C$, ou $\Z_p$ ($p$ sendo primo) como $\F$.
 
-:::{#def-}
+## A definição do MDC para polinômios
+
+:::{#def-mdc-pol}
 Sejam $f(x),g(x)\in\F[x]$. Dizemos que $d(x)\in\F[x]$ é **maior divisor comum** de $f(x)$ e $g(x)$ se
 
 
@@ -26,7 +30,6 @@ As seguintes afirmações são válidas:
 -  Se o maior divisor comum de $f(x)$ e $g(x)$ existe, então ele é único.
 -  Se existe o maior divisor comum de $f(x)$ e $g(x)$ e $\alpha,\beta\in\F\setminus\{0\}$, então existe o maior divisor comum de $\alpha f(x)$ e $\beta g(x)$ e é igual a maior divisor comum de $f(x)$ e $g(x)$.
 -  Se $f(x)\neq 0$ e $g(x)=0$, então o maior divisor comum de $f(x)$ e $g(x)$ é $(1/\alpha)f(x)$ onde $\alpha\in\F$ é o coeficiente líder de $f(x)$.
-
 :::
 
 
@@ -34,8 +37,9 @@ As seguintes afirmações são válidas:
 (1) Assuma que $d_1(x)$ e $d_2(x)$ são maiores divisores comuns de $f(x)$ e $g(x)$. Então $d_1(x)\mid f(x)$ e $d_1(x)\mid g(x)$ (segunda propriedade), e assim $d_1(x)\mid d_2(x)$ (terceira propriedade). Trocando os papéis de $d_1(x)$ e $d_2(x)$, obtemos que $d_2(x)\mid d_1(x)$. Como $\F$ é um corpo (e em particular, $\F$ é um domínio), obtemos por um resultado anterior que $d_2(x)=\beta d_1(x)$ com $\beta\in\F\setminus\{0\}$. Usando a primeira propriedade, temos que $d_1(x)$ e $d_2(x)$ são polinômios mônicos e temos que $\beta=1$ e que $d_1(x)=d_2(x)$.
 
 (2)-(3) Exercício.
-
 :::
+
+## O Algoritmo de Euclides para polinômios {#sec-euclid-pols}
 
 A primeira afirmação no lema anterior diz que o maior divisor comum, quando existir, é único. Este fato nos permute escrever o maior divisor comum de dois polinômios $f(x),g(x)\in\F[x]$ como $\mdc{f(x)}{g(x)}$. Neste momento não sabemos que o mdc de fato existe, mas provaremos isso usando o mesmo argumento que foi aplicado no caso de números inteiros.
 
@@ -73,6 +77,8 @@ Segue do lema anterior
 :::
 
 O resultado anterior implica que o mdc de dois polinômios pode ser calculado similarmente ao mdc de dois números inteiros usando o algoritmo de Euclides. O algoritmo funciona na mesma maneira como funcionou para números inteiros. Repetimos a divisão de Euclides até o resto fica igual a zero. O processo termina depois de um número finito de passos, pois a grau do resto se diminui em cada passo executado. Se $r(x)$ é o último resto não nulo, então $\alpha^{-1}r(x)$ é o mdc de $f(x)$ e $g(x)$ onde $\alpha$ é o coeficiente líder de $r(x)$. A multiplicação por $\alpha^{-1}$ é necessário, pois o mdc é um polinômio mônico.
+
+## Implementação do Algoritmo de Euclides em Python
 
 O código do procedimento em Python é o seguinte.
 ```python
@@ -116,7 +122,7 @@ def XMDC(a,b):
 ```
 
 
-:::{#def-}
+:::{#def-coprime-pol}
 Dois polinômios $f(x),g(x)\in\F[x]$ são **primos entre si** ou **coprimos** se $\mdc{f(x)}{g(x)}=1$
 :::
 

@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#def-}
+:::{#def-irred}
 Seja $R$ um domínio e seja $a\in R$ tal que $a\neq 0$ e $a$ não é invertível (em $R$). O elemento $a$ é dito **redutível** se existem $b,c\in R$ tal que $a=bc$ e nem $b$ nem $c$ é invertível.  Caso contrário, o elemento $a$ é dito **irredutível**. O elemento $0\in R$ e os elementos invertíveis de $R$ não são nem redutíveis nem irredutíveis
 :::
 
@@ -69,8 +69,7 @@ Seja $f(x)=\alpha_n x^n+\alpha_{n-1}x^{n-1}+\cdots+\alpha_1x+\alpha_0\in\Z[x]$ e
 :::
 
 
-:::{#thm-}
-
+:::{#thm-irred-R-C}
 
 -  Um polinômio $f(x)\in\C[x]$ é irredutível se e somente se $\grau{f(x)}=1$.
 -  Um polinômio $f(x)\in\R[x]$ é irredutível se e somente se $\grau{f(x)}=1$ ou $\grau{f(x)}=2$ e $f(x)$ tem discriminante negativo.

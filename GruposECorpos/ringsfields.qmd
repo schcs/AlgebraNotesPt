@@ -5,6 +5,7 @@ lang: pt-BR
 title: "Anéis e corpos"
 ---
 
+## Definições
 
 :::{#def-ring}
 Seja $R$ um conjunto não vazio equipado com duas operações $+$ (adição) e $\cdot$ (multiplicação) que satisfazem as seguintes propriedades para todo $a,b,c\in R$:
@@ -36,6 +37,8 @@ Mostre em um anel $R$ que os elementos $0$ e $1$ são únicos. Mostre, para $a\i
 Os principais exemplos de anéis são $\mathbb Z$, $\mathbb Z_n$ e $\F[x]$ (com $\F$ sendo um corpo). Os principais exemplos de corpos são $\mathbb Z_p$ (com $p$ primo), $\mathbb Q$, $\mathbb R$, e $\mathbb C$.
 :::
 
+
+## Ideais
 
 :::{#def-ideal}
 Um conjunto não vazio $I$ de um anel é dito ideal se
@@ -72,19 +75,21 @@ $$
 Caso $R=\mathbb Z$ e $n\in \mathbb Z$, o ideal principal $(n)$ é o conjunto $\{bn\mid b\in\mathbb Z\}$ dos múltiplos de $n$. Se $n\geq 2$, então o quociente $\mathbb Z/(n)$ é o anel $\mathbb Z_n$ das classes residuais.
 :::
 
+## Anéis de polinômios
+
 Nós vamos trabalhar principalmente com anéis de polinômios e com seus ideais. Eu assumo que vocês têm familiaridade com alguns conceitos relacionados com polinômios que estudamos na disciplina Fundamentos de Álgebra:
 
 
-- conceito de polinômio sobre um corpo;
-- grau de um polinômio;
-- polinômio mônico;
-- divisibilidade entre polinômios;
-- o MDC de dois polinômios;
-- polinômios coprimos (primos entre si);
-- o Algoritmo de Euclides para polinômios;
-- Polinômios irredutíveis;
-- a caraterização de polinômios irredutíveis sobre $\mathbb C$ e $\mathbb R$;
-- O critério de Eisenstein para irredutibilidade de um polinômio sobre $\mathbb Q$.
+- conceito de polinômio sobre um corpo (@def-pol);
+- grau de um polinômio (@def-pol);
+- polinômio mônico (@def-pol);
+- divisibilidade entre polinômios (@def-div-pols);
+- o MDC de dois polinômios (@def-mdc-pol);
+- polinômios coprimos (primos entre si) (@def-coprime-pol);
+- o Algoritmo de Euclides para polinômios (@sec-euclid-pols);
+- Polinômios irredutíveis (@def-irred);
+- a caraterização de polinômios irredutíveis sobre $\mathbb C$ e $\mathbb R$ (@thm-irred-R-C);
+- O critério de Eisenstein para irredutibilidade de um polinômio sobre $\mathbb Q$ (@thm-eisenstein).
 
 Seja $\F$ um corpo e considere o anel $R=\F[x]$ de polinômios sobre $\F$. Seja $f(x)$ um polinômio de $\F[x]$ com grau maior ou igual a $1$. Pelo exemplo acima,  o conjunto
 $$
