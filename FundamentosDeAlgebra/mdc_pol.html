@@ -1167,7 +1167,15 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#a-definição-do-mdc-para-polinômios" id="toc-a-definição-do-mdc-para-polinômios" class="nav-link active" data-scroll-target="#a-definição-do-mdc-para-polinômios"><span class="header-section-number">44.1</span> A definição do MDC para polinômios</a></li>
+  <li><a href="#sec-euclid-pols" id="toc-sec-euclid-pols" class="nav-link" data-scroll-target="#sec-euclid-pols"><span class="header-section-number">44.2</span> O Algoritmo de Euclides para polinômios</a></li>
+  <li><a href="#implementação-do-algoritmo-de-euclides-em-python" id="toc-implementação-do-algoritmo-de-euclides-em-python" class="nav-link" data-scroll-target="#implementação-do-algoritmo-de-euclides-em-python"><span class="header-section-number">44.3</span> Implementação do Algoritmo de Euclides em Python</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1192,7 +1200,9 @@ window.Quarto = {
 
 
 <p>Nesta página <span class="math inline">\(\F\)</span> é um corpo. Por exemplo, pode tomar <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\R\)</span>, <span class="math inline">\(\C\)</span>, ou <span class="math inline">\(\Z_p\)</span> (<span class="math inline">\(p\)</span> sendo primo) como <span class="math inline">\(\F\)</span>.</p>
-<div id="def-" class="theorem definition">
+<section id="a-definição-do-mdc-para-polinômios" class="level2" data-number="44.1">
+<h2 data-number="44.1" data-anchor-id="a-definição-do-mdc-para-polinômios"><span class="header-section-number">44.1</span> A definição do MDC para polinômios</h2>
+<div id="def-mdc-pol" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(f(x),g(x)\in\F[x]\)</span>. Dizemos que <span class="math inline">\(d(x)\in\F[x]\)</span> é <strong>maior divisor comum</strong> de <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(g(x)\)</span> se</p>
 <ul>
 <li><span class="math inline">\(d(x)\)</span> é mônico;</li>
@@ -1215,6 +1225,9 @@ window.Quarto = {
 </ol>
 <p>(2)-(3) Exercício.</p>
 </div>
+</section>
+<section id="sec-euclid-pols" class="level2" data-number="44.2">
+<h2 data-number="44.2" data-anchor-id="sec-euclid-pols"><span class="header-section-number">44.2</span> O Algoritmo de Euclides para polinômios</h2>
 <p>A primeira afirmação no lema anterior diz que o maior divisor comum, quando existir, é único. Este fato nos permute escrever o maior divisor comum de dois polinômios <span class="math inline">\(f(x),g(x)\in\F[x]\)</span> como <span class="math inline">\(\mdc{f(x)}{g(x)}\)</span>. Neste momento não sabemos que o mdc de fato existe, mas provaremos isso usando o mesmo argumento que foi aplicado no caso de números inteiros.</p>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 44.2</strong></span> Sejam <span class="math inline">\(f(x),g(x),h(x)\in\F[x]\)</span>. Temos que existe o mdc de <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(g(x)\)</span> se e somente se existe o mdc de <span class="math inline">\(g(x)\)</span> e <span class="math inline">\(f(x)+h(x)g(x)\)</span>. Além disso, <span class="math display">\[
@@ -1237,6 +1250,9 @@ c(x)\mid (f(x)+h(x)g(x))-h(x)g(x)=f(x);
 <p><span class="proof-title"><em>Comprovação</em>. </span>Segue do lema anterior</p>
 </div>
 <p>O resultado anterior implica que o mdc de dois polinômios pode ser calculado similarmente ao mdc de dois números inteiros usando o algoritmo de Euclides. O algoritmo funciona na mesma maneira como funcionou para números inteiros. Repetimos a divisão de Euclides até o resto fica igual a zero. O processo termina depois de um número finito de passos, pois a grau do resto se diminui em cada passo executado. Se <span class="math inline">\(r(x)\)</span> é o último resto não nulo, então <span class="math inline">\(\alpha^{-1}r(x)\)</span> é o mdc de <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(g(x)\)</span> onde <span class="math inline">\(\alpha\)</span> é o coeficiente líder de <span class="math inline">\(r(x)\)</span>. A multiplicação por <span class="math inline">\(\alpha^{-1}\)</span> é necessário, pois o mdc é um polinômio mônico.</p>
+</section>
+<section id="implementação-do-algoritmo-de-euclides-em-python" class="level2" data-number="44.3">
+<h2 data-number="44.3" data-anchor-id="implementação-do-algoritmo-de-euclides-em-python"><span class="header-section-number">44.3</span> Implementação do Algoritmo de Euclides em Python</h2>
 <p>O código do procedimento em Python é o seguinte.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy.polys.polytools <span class="im">import</span> LC</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MDC(a,b):</span>
@@ -1267,7 +1283,7 @@ u(x)f(x)+v(x)g(x)=\mdc{f(x)}{g(x)}.
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>   </span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> LC(a)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a<span class="op">//</span>c, prevu<span class="op">//</span>c, prevv<span class="op">//</span>c</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="def-" class="theorem definition">
+<div id="def-coprime-pol" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 44.2</strong></span> Dois polinômios <span class="math inline">\(f(x),g(x)\in\F[x]\)</span> são <strong>primos entre si</strong> ou <strong>coprimos</strong> se <span class="math inline">\(\mdc{f(x)}{g(x)}=1\)</span></p>
 </div>
 <div id="cor-" class="theorem corollary">
@@ -1299,6 +1315,7 @@ r_2(x)=q_4(x)r_3(x)+r_4(x)=(1/3x+1/3)r_3(x)+0.
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

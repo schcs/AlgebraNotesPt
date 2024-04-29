@@ -1133,7 +1133,15 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#definições" id="toc-definições" class="nav-link active" data-scroll-target="#definições"><span class="header-section-number">69.1</span> Definições</a></li>
+  <li><a href="#ideais" id="toc-ideais" class="nav-link" data-scroll-target="#ideais"><span class="header-section-number">69.2</span> Ideais</a></li>
+  <li><a href="#anéis-de-polinômios" id="toc-anéis-de-polinômios" class="nav-link" data-scroll-target="#anéis-de-polinômios"><span class="header-section-number">69.3</span> Anéis de polinômios</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1157,6 +1165,8 @@ window.Quarto = {
 </header>
 
 
+<section id="definições" class="level2" data-number="69.1">
+<h2 data-number="69.1" data-anchor-id="definições"><span class="header-section-number">69.1</span> Definições</h2>
 <div id="def-ring" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 69.1</strong></span> Seja <span class="math inline">\(R\)</span> um conjunto não vazio equipado com duas operações <span class="math inline">\(+\)</span> (adição) e <span class="math inline">\(\cdot\)</span> (multiplicação) que satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in R\)</span>:</p>
 <ul>
@@ -1181,6 +1191,9 @@ window.Quarto = {
 <div id="exm-ring" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 69.1</strong></span> Os principais exemplos de anéis são <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Z_n\)</span> e <span class="math inline">\(\F[x]\)</span> (com <span class="math inline">\(\F\)</span> sendo um corpo). Os principais exemplos de corpos são <span class="math inline">\(\mathbb Z_p\)</span> (com <span class="math inline">\(p\)</span> primo), <span class="math inline">\(\mathbb Q\)</span>, <span class="math inline">\(\mathbb R\)</span>, e <span class="math inline">\(\mathbb C\)</span>.</p>
 </div>
+</section>
+<section id="ideais" class="level2" data-number="69.2">
+<h2 data-number="69.2" data-anchor-id="ideais"><span class="header-section-number">69.2</span> Ideais</h2>
 <div id="def-ideal" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 69.3</strong></span> Um conjunto não vazio <span class="math inline">\(I\)</span> de um anel é dito ideal se</p>
 <ul>
@@ -1206,18 +1219,21 @@ R/I=\{I+r\mid r\in R\}
 <div id="exm-ideal" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 69.3</strong></span> Caso <span class="math inline">\(R=\mathbb Z\)</span> e <span class="math inline">\(n\in \mathbb Z\)</span>, o ideal principal <span class="math inline">\((n)\)</span> é o conjunto <span class="math inline">\(\{bn\mid b\in\mathbb Z\}\)</span> dos múltiplos de <span class="math inline">\(n\)</span>. Se <span class="math inline">\(n\geq 2\)</span>, então o quociente <span class="math inline">\(\mathbb Z/(n)\)</span> é o anel <span class="math inline">\(\mathbb Z_n\)</span> das classes residuais.</p>
 </div>
+</section>
+<section id="anéis-de-polinômios" class="level2" data-number="69.3">
+<h2 data-number="69.3" data-anchor-id="anéis-de-polinômios"><span class="header-section-number">69.3</span> Anéis de polinômios</h2>
 <p>Nós vamos trabalhar principalmente com anéis de polinômios e com seus ideais. Eu assumo que vocês têm familiaridade com alguns conceitos relacionados com polinômios que estudamos na disciplina Fundamentos de Álgebra:</p>
 <ul>
-<li>conceito de polinômio sobre um corpo;</li>
-<li>grau de um polinômio;</li>
-<li>polinômio mônico;</li>
-<li>divisibilidade entre polinômios;</li>
-<li>o MDC de dois polinômios;</li>
-<li>polinômios coprimos (primos entre si);</li>
-<li>o Algoritmo de Euclides para polinômios;</li>
-<li>Polinômios irredutíveis;</li>
-<li>a caraterização de polinômios irredutíveis sobre <span class="math inline">\(\mathbb C\)</span> e <span class="math inline">\(\mathbb R\)</span>;</li>
-<li>O critério de Eisenstein para irredutibilidade de um polinômio sobre <span class="math inline">\(\mathbb Q\)</span>.</li>
+<li>conceito de polinômio sobre um corpo (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>40.1</span></a>);</li>
+<li>grau de um polinômio (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>40.1</span></a>);</li>
+<li>polinômio mônico (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>40.1</span></a>);</li>
+<li>divisibilidade entre polinômios (<a href="../FundamentosDeAlgebra/div_pol.html#def-div-pols" class="quarto-xref">Definição&nbsp;<span>42.1</span></a>);</li>
+<li>o MDC de dois polinômios (<a href="../FundamentosDeAlgebra/mdc_pol.html#def-mdc-pol" class="quarto-xref">Definição&nbsp;<span>44.1</span></a>);</li>
+<li>polinômios coprimos (primos entre si) (<a href="../FundamentosDeAlgebra/mdc_pol.html#def-coprime-pol" class="quarto-xref">Definição&nbsp;<span>44.2</span></a>);</li>
+<li>o Algoritmo de Euclides para polinômios (<a href="../FundamentosDeAlgebra/mdc_pol.html#sec-euclid-pols" class="quarto-xref"><span>Seção 44.2</span></a>);</li>
+<li>Polinômios irredutíveis (<a href="../FundamentosDeAlgebra/irred.html#def-irred" class="quarto-xref">Definição&nbsp;<span>47.1</span></a>);</li>
+<li>a caraterização de polinômios irredutíveis sobre <span class="math inline">\(\mathbb C\)</span> e <span class="math inline">\(\mathbb R\)</span> (<a href="../FundamentosDeAlgebra/irred.html#thm-irred-R-C" class="quarto-xref">Teorema&nbsp;<span>47.1</span></a>);</li>
+<li>O critério de Eisenstein para irredutibilidade de um polinômio sobre <span class="math inline">\(\mathbb Q\)</span> (<a href="../FundamentosDeAlgebra/eisenstein.html#thm-eisenstein" class="quarto-xref">Teorema&nbsp;<span>51.1</span></a>).</li>
 </ul>
 <p>Seja <span class="math inline">\(\F\)</span> um corpo e considere o anel <span class="math inline">\(R=\F[x]\)</span> de polinômios sobre <span class="math inline">\(\F\)</span>. Seja <span class="math inline">\(f(x)\)</span> um polinômio de <span class="math inline">\(\F[x]\)</span> com grau maior ou igual a <span class="math inline">\(1\)</span>. Pelo exemplo acima,&nbsp; o conjunto <span class="math display">\[
 (f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}
@@ -1266,6 +1282,7 @@ u(x)f(x)+v(x)g(x)=1.
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
