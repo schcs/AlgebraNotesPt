@@ -136,3 +136,10 @@ Resolve o exercício @exr-engel sem usar os Teoremas de Sylow. [Dica: Considere 
 Não existe um grupo simples de ordem 100. De fato, se $G$ é um grupo de ordem 100, então  o número de $5$-subgrupos de Sylow de $G$ é congruente com 1 módulo 5 mas também é um divisor de $100/25=4$. Portanto, $G$ possui único $5$-subgrupo de Sylow que precisa ser normal e assim $G$ não pode ser um grupo simples.
 :::
 
+
+
+:::{#exr-simple66-144}
+Demonstre que não há grupo simples de ordem $66$ ou de ordem $144$. O caso da ordem $66$ é fácil é pode usar o argumento do @exm-simple100. O caso da ordem $144$ é mais difícil, mas pode assistir ao vídeo do Michael Penn.
+
+{{< video https://youtu.be/n8AzVj_hocQ?si=TCOL3C9o0GhGcrQ_ width="560" height="315" >}} 
+:::
