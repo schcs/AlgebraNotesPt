@@ -4,11 +4,13 @@ number-sections: true
 lang: pt-BR
 ---
 
+## A definição do grupo livre
+
 Sejam $X,X^{-1}$ dois conjuntos distintos e assuma que existe uma bijeção $x\mapsto x^{-1}$ entre $X$ e $X^{-1}$.  Se $x^{-1}\in X^{-1}$, então escrevemos $(x^{-1})^{-1}=x$. Uma palavra em $X$ é uma expressão na forma
 $$
 w=x_1x_2\cdots x_k
 $$
-onde $k\geq 0$ e $x_i\in X\cup X^{-1}$.  Se $k=0$, então $w$ é denotado por $e$ e é dita a palavra vazia. O comprimento da palavra $w$ acima é $k$. Uma palavra $w=x_1x_2\cdots x_k$ é dita reduzida se $w=e$ ou o comprimento de $w$ é maior que $0$ e $w$ não contém nenhuma ocorrência da subpalavra $xx^{-1}$ ou $x^{-1}x$ com $x\in X$. Se $w$ é uma palavra, então cancelando as ocorrências de subpalavras na forma $xx^{-1}$ ou $x^{-1}x$, obtemos uma palavra $\bar w$ reduzida.
+onde $k\geq 0$ e $x_i\in X\cup X^{-1}$.  Se $k=0$, então $w$ é denotado por $e$ e é dita a palavra vazia. O comprimento da palavra $w$ acima é $k$. Uma palavra $w=x_1x_2\cdots x_k$ é dita reduzida se $w=e$ ou o comprimento de $w$ é maior que $0$ e $w$ não contém nenhuma ocorrência da subpalavra $xx^{-1}$ ou $x^{-1}x$ com $x\in X$. Se $w$ é uma palavra, então cancelando as ocorrências de subpalavras na forma $xx^{-1}$ ou $x^{-1}x$, obtemos uma palavra $\overline w$ reduzida.
 
 Denotaremos por $F_X$ o conjunto de palavras reduzidas. Introduzimos uma operação binária no conjunto $F_X$. Sejam $w_1,w_2\in F_X$. Definimos $w_1\cdot w_2=\overline{w_1w_2}$ onde $w_1w_2$ significa a concatenação de palavras.
 
@@ -45,6 +47,8 @@ $\psi_{x_1}\cdots \psi_{x_k}=\psi_{y_1}\cdots \psi_{y_m}$. Por outro lado,
 $x_1\cdots x_k=e(\psi_{x_1}\cdots \psi_{x_k})=e(\psi_{y_1}\cdots \psi_{y_m})=y_1\cdots y_m$. Portanto $\psi$ é injetiva, e então $\psi$ é bijetiva. Como $\psi$ também satisfaz a igualdade $\psi(w_1w_2)=\psi(w_1)\psi(w_2)$, obtemos que $\psi$ é um isomorfismo entre as estruturas $F_X$ e $\mathcal F_X$ com as suas respetivas multiplicações. Como $\mathcal F_X$ é associativa, obtemos que $F_X$ também é. Portanto $F_X$ é um grupo.
 :::
 
+## A propriedade universal
+
 :::{#thm-free-univ}
 (Propriedade Universal). Seja $G$ um grupo e $F_X$ um grupo livre gerado por $X$. Seja $\varphi:X\rightarrow G$ um mapa arbitrário. Então existe um homomorfismo $\psi:F_X\rightarrow G$ tal que $\psi|_X=\varphi$. (Todo mapa $X\rightarrow G$ pode ser estendido a um homomorfismo $F_X\rightarrow G$.)
 :::
@@ -59,10 +63,10 @@ Seja $G$ um grupo gerado por um conjunto $X$. Então existe um homomorfismo $\ps
 
 :::{#def-pres}
 Seja $X$ um conjunto, $F_X$ o grupo livre gerado por $X$ e $Y\subseteq F_X$. Seja $\left<Y\right>^{F_X}$ o subgrupo normal gerado por $Y$. O grupo quociente $G=F_X/\left<Y\right>^{F_X}$ é denotado por
-\begin{equation}\label{eq:pres}
+$$ 
 \left<X \mid Y\right>.
-\end{equation}
-A expressão~\eqref{eq:pres} é dita uma apresentação para o grupo $G$.
+$${#eq-pres}
+A expressão na @eq-pres é dita uma apresentação para o grupo $G$.
 :::
 
 :::{#exm-pres}

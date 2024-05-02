@@ -84,8 +84,8 @@ book:
         - GruposECorpos/alternado.qmd
         - GruposECorpos/sylow.qmd
         - GruposECorpos/abelian.qmd
-        - GruposECorpos/livres.qmd
         - GruposECorpos/soluble.qmd
+        - GruposECorpos/livres.qmd
         - GruposECorpos/psl.qmd
         - GruposECorpos/nilpotent.qmd 
         - GruposECorpos/ringsfields.qmd
