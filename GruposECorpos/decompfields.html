@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 71&nbsp; Corpos de decomposição</title>
+<title>Álgebra - 71&nbsp; Corpos de decomposição e corpos finitos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -614,7 +614,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/decompfields.html"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/decompfields.html"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1110,7 +1110,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span></a>
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1133,14 +1133,21 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#corpos-de-decomposição" id="toc-corpos-de-decomposição" class="nav-link active" data-scroll-target="#corpos-de-decomposição"><span class="header-section-number">71.1</span> Corpos de decomposição</a></li>
+  <li><a href="#corpos-finitos" id="toc-corpos-finitos" class="nav-link" data-scroll-target="#corpos-finitos"><span class="header-section-number">71.2</span> Corpos finitos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/decompfields.html"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/decompfields.html"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></h1>
+<h1 class="title"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></h1>
 </div>
 
 
@@ -1157,6 +1164,8 @@ window.Quarto = {
 </header>
 
 
+<section id="corpos-de-decomposição" class="level2" data-number="71.1">
+<h2 data-number="71.1" data-anchor-id="corpos-de-decomposição"><span class="header-section-number">71.1</span> Corpos de decomposição</h2>
 <div id="lem-root" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 71.1</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo e <span class="math inline">\(f(x)\in\F[x]\)</span> com grau maior ou igual a <span class="math inline">\(1\)</span>.</p>
 <ol type="1">
@@ -1194,12 +1203,17 @@ f(x)=\alpha_0(x-\alpha_1)\cdots(x-\alpha_k)
 <div id="thm-decompfield-unique" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 71.1</strong></span> Sejam <span class="math inline">\(\F_1\)</span> e <span class="math inline">\(\F_2\)</span> corpos e seja <span class="math inline">\(\varphi:\F_1\to\F_2\)</span> um isomorfismo. Seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> não constante e assuma que <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> são corpos de decomposição dos polinômios <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\varphi(f(x))\)</span>, respetivamente. Então existe um isomorfismo <span class="math inline">\(\psi: \K_1\to \K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1}=\varphi\)</span>.</p>
 </div>
-<p>:::{.proof}&nbsp; Por indução no grau de <span class="math inline">\(f(x)\)</span>. Se <span class="math inline">\(\mbox{grau}\,f(x)=1\)</span>, então <span class="math inline">\(\K_1=\F_1\)</span> e <span class="math inline">\(\K_2=\F_2\)</span> e podemos tomar <span class="math inline">\(\psi=\varphi\)</span>. Assuma que o lema é válido para polinômios de grau menor que <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> um polinômio de grau <span class="math inline">\(k\)</span>. Seja <span class="math inline">\(p(x)\in\F_1[x]\)</span> um&nbsp; fator&nbsp; irredutível de <span class="math inline">\(f(x)\)</span>. Então <span class="math inline">\(\varphi(p(x))\in\F_2[x]\)</span> é um fator irredutível de <span class="math inline">\(\varphi(f(x))\)</span> e defina os corpos <span class="math inline">\(\E_1=\F_1[x]/(p(x))\)</span> e <span class="math inline">\(\E_2=\F_2[x]/(\varphi(p(x))\)</span>. Existem <span class="math inline">\(\alpha\in\E_1\)</span> e <span class="math inline">\(\beta\in\E_2\)</span> tais que <span class="math inline">\(m_\alpha(x)=p(x)\)</span> e <span class="math inline">\(m_{\beta}(x)=\varphi(p(x))\)</span> e o lema anterior implica que existe um isomorfismo <span class="math inline">\(\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)\)</span> tal que&nbsp; <span class="math inline">\(\vartheta|_{\F_2}=\varphi\)</span> e <span class="math inline">\(\vartheta(\alpha)=\beta\)</span>. Escreva <span class="math inline">\(f(x)=(x-\alpha)f_1(x)\)</span> e <span class="math display">\[
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Por indução no grau de <span class="math inline">\(f(x)\)</span>. Se <span class="math inline">\(\mbox{grau}\,f(x)=1\)</span>, então <span class="math inline">\(\K_1=\F_1\)</span> e <span class="math inline">\(\K_2=\F_2\)</span> e podemos tomar <span class="math inline">\(\psi=\varphi\)</span>. Assuma que o lema é válido para polinômios de grau menor que <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> um polinômio de grau <span class="math inline">\(k\)</span>. Seja <span class="math inline">\(p(x)\in\F_1[x]\)</span> um&nbsp; fator&nbsp; irredutível de <span class="math inline">\(f(x)\)</span>. Então <span class="math inline">\(\varphi(p(x))\in\F_2[x]\)</span> é um fator irredutível de <span class="math inline">\(\varphi(f(x))\)</span> e defina os corpos <span class="math inline">\(\E_1=\F_1[x]/(p(x))\)</span> e <span class="math inline">\(\E_2=\F_2[x]/(\varphi(p(x))\)</span>. Existem <span class="math inline">\(\alpha\in\E_1\)</span> e <span class="math inline">\(\beta\in\E_2\)</span> tais que <span class="math inline">\(m_\alpha(x)=p(x)\)</span> e <span class="math inline">\(m_{\beta}(x)=\varphi(p(x))\)</span> e o lema anterior implica que existe um isomorfismo <span class="math inline">\(\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)\)</span> tal que&nbsp; <span class="math inline">\(\vartheta|_{\F_2}=\varphi\)</span> e <span class="math inline">\(\vartheta(\alpha)=\beta\)</span>. Escreva <span class="math inline">\(f(x)=(x-\alpha)f_1(x)\)</span> e <span class="math display">\[
 \varphi(f(x))=\vartheta(f(x))=\vartheta((x-\alpha)f_1(x))=(x-\beta)\vartheta(f_1(x)).
-\]</span> Escolha corpos de decomposição <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> para os polinômios <span class="math inline">\(f_1(x)\)</span> e <span class="math inline">\(\vartheta(f_1(x))\)</span> sobre <span class="math inline">\(\F_1(\alpha)\)</span> e <span class="math inline">\(\F_2(\beta)\)</span>, respetivamente. Isso implica que <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> são corpos de decomposição para os polinômios <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\vartheta(f(x))\)</span> sobre <span class="math inline">\(\F_1\)</span> e <span class="math inline">\(\F_2\)</span>, respetivamente. Pela hipótese de indução, existe um isomorfismo <span class="math inline">\(\psi:\K_1\to\K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1(\alpha)}=\vartheta\)</span>, e portanto <span class="math inline">\(\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi\)</span>. :::</p>
+\]</span> Escolha corpos de decomposição <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> para os polinômios <span class="math inline">\(f_1(x)\)</span> e <span class="math inline">\(\vartheta(f_1(x))\)</span> sobre <span class="math inline">\(\F_1(\alpha)\)</span> e <span class="math inline">\(\F_2(\beta)\)</span>, respetivamente. Isso implica que <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> são corpos de decomposição para os polinômios <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\vartheta(f(x))\)</span> sobre <span class="math inline">\(\F_1\)</span> e <span class="math inline">\(\F_2\)</span>, respetivamente. Pela hipótese de indução, existe um isomorfismo <span class="math inline">\(\psi:\K_1\to\K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1(\alpha)}=\vartheta\)</span>, e portanto <span class="math inline">\(\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi\)</span>.</p>
+</div>
 <div id="cor-decomp-field-unique" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corolário 71.1</strong></span> Sejam <span class="math inline">\(\F\)</span> um corpo, <span class="math inline">\(f(x)\in\F[x]\)</span> um polinômio não constante, e sejam <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> corpos de decomposição de <span class="math inline">\(f(x)\)</span>. Então existe <span class="math inline">\(\varphi:\K_1\to \K_2\)</span> isomorfismo tal que <span class="math inline">\(\varphi(\alpha)=\alpha\)</span> para todo <span class="math inline">\(\alpha\in\F\)</span>.</p>
 </div>
+</section>
+<section id="corpos-finitos" class="level2" data-number="71.2">
+<h2 data-number="71.2" data-anchor-id="corpos-finitos"><span class="header-section-number">71.2</span> Corpos finitos</h2>
 <div id="exr-Fp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 71.1</strong></span> Seja <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(d\geq 1\)</span>. Mostre que <span class="math inline">\(x^{p^d}-x\in\F_p[x]\)</span> não tem raízes múltiplas em nenhuma extensão de <span class="math inline">\(\F_p\)</span>.</p>
 </div>
@@ -1242,6 +1256,7 @@ x^q-x=\prod_{\alpha\in\E}(x-\alpha)
 <p>Uma consequência particular do corolário anterior é que para todo <span class="math inline">\(p\)</span> primo e para todo <span class="math inline">\(d\)</span> natural, existe um polinômio irredutível <span class="math inline">\(f(x)\in\F_p[x]\)</span> de grau <span class="math inline">\(d\)</span>. O corpo <span class="math inline">\(\F_{p^d}\)</span> pode ser construído como <span class="math inline">\(\F_p[x]/(f(x))\)</span>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

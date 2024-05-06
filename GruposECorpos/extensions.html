@@ -1110,7 +1110,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span></a>
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1133,7 +1133,15 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#extensões-finitas-algébricas" id="toc-extensões-finitas-algébricas" class="nav-link active" data-scroll-target="#extensões-finitas-algébricas"><span class="header-section-number">70.1</span> Extensões finitas, algébricas</a></li>
+  <li><a href="#o-polinômio-mínimo" id="toc-o-polinômio-mínimo" class="nav-link" data-scroll-target="#o-polinômio-mínimo"><span class="header-section-number">70.2</span> O polinômio mínimo</a></li>
+  <li><a href="#extensões-simples" id="toc-extensões-simples" class="nav-link" data-scroll-target="#extensões-simples"><span class="header-section-number">70.3</span> Extensões simples</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1157,17 +1165,19 @@ window.Quarto = {
 </header>
 
 
+<section id="extensões-finitas-algébricas" class="level2" data-number="70.1">
+<h2 data-number="70.1" data-anchor-id="extensões-finitas-algébricas"><span class="header-section-number">70.1</span> Extensões finitas, algébricas</h2>
 <div id="def-extension" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 70.1</strong></span> Sejam <span class="math inline">\(\F\)</span> e <span class="math inline">\(\E\)</span> corpos tais que <span class="math inline">\(\F\subseteq\E\)</span>. Dizemos que <span class="math inline">\(\E\)</span> é uma <em>extensão</em> de <span class="math inline">\(\F\)</span>. Escrevemos que <span class="math inline">\(\E:\F\)</span> é uma extensão.</p>
 </div>
-<div class="{exm-extension}">
-<p><span class="math inline">\(\R\)</span> é uma extensão de <span class="math inline">\(\Q\)</span> e <span class="math inline">\(\C\)</span> é uma extensão de <span class="math inline">\(\R\)</span>.&nbsp;&nbsp;Se <span class="math inline">\(f(x)\)</span> é um polinômio irredutível sobre um corpo <span class="math inline">\(\F\)</span>, então <span class="math inline">\(\F[x]/(f(x))\)</span> é uma extensão <span class="math inline">\(\F\)</span>.</p>
+<div id="exm-extension" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 70.1</strong></span> <span class="math inline">\(\R\)</span> é uma extensão de <span class="math inline">\(\Q\)</span> e <span class="math inline">\(\C\)</span> é uma extensão de <span class="math inline">\(\R\)</span>.&nbsp;&nbsp;Se <span class="math inline">\(f(x)\)</span> é um polinômio irredutível sobre um corpo <span class="math inline">\(\F\)</span>, então <span class="math inline">\(\F[x]/(f(x))\)</span> é uma extensão <span class="math inline">\(\F\)</span>.</p>
 </div>
 <div id="def-degree-ext" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 70.2</strong></span> Assuma que <span class="math inline">\(\E\)</span> é uma extensão de <span class="math inline">\(\F\)</span>. Neste caso <span class="math inline">\(\E\)</span> é um espaço vetorial sobre <span class="math inline">\(\F\)</span> e podemos considerar a dimensão <span class="math inline">\(\dim_\F\E\)</span>. Esta quantidade será referida como o <em>grau da extensão</em> de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>.</p>
 </div>
 <div id="exm-degree-ext" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 70.1</strong></span> <span class="math inline">\(\R:\Q\)</span> é uma extensão de grau infinita, o grau da extensão <span class="math inline">\(\C:\R\)</span> é igual a dois e se <span class="math inline">\(f(x)\in\F[x]\)</span> for irredutível, então <span class="math inline">\(\F[x]/(f(x)):\F\)</span> é uma extensão com grau igual ao grau do polinômio <span class="math inline">\(f(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 70.2</strong></span> <span class="math inline">\(\R:\Q\)</span> é uma extensão de grau infinita, o grau da extensão <span class="math inline">\(\C:\R\)</span> é igual a dois e se <span class="math inline">\(f(x)\in\F[x]\)</span> for irredutível, então <span class="math inline">\(\F[x]/(f(x)):\F\)</span> é uma extensão com grau igual ao grau do polinômio <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="def-ext2" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 70.3</strong></span> Uma extensão <span class="math inline">\(\E:\F\)</span> é dita <em>finita</em> se <span class="math inline">\(\dim_\F\E\)</span> é finita. Se <span class="math inline">\(\E:\F\)</span> é uma extensão e <span class="math inline">\(\alpha\in\E\)</span>, então <span class="math inline">\(\alpha\)</span> é dito <em>algébrico</em> (sobre <span class="math inline">\(\F\)</span>) se existe um polinômio <span class="math inline">\(f(x)\in\F[x]\)</span> não nulo tal que <span class="math inline">\(f(\alpha)=0\)</span>. Caso contrário, <span class="math inline">\(\alpha\)</span> é dito <em>transcendental </em>(sobre <span class="math inline">\(\F\)</span>). Uma extensão <span class="math inline">\(\E:\F\)</span> é dita <em>algébrica&nbsp;</em>se todos os elementos de <span class="math inline">\(\E\)</span> são algébricos sobre <span class="math inline">\(\F\)</span>. Caso contrário <span class="math inline">\(\E\)</span> é dito <em>transcendental</em> sobre <span class="math inline">\(\F\)</span>.</p>
@@ -1180,6 +1190,9 @@ window.Quarto = {
 \beta_0\alpha^0+\beta_1\alpha+\beta_2\alpha^2+\cdots+\beta_k\alpha^k=0.
 \]</span> Isso implica que <span class="math inline">\(\alpha\)</span> é raiz do polinômio <span class="math inline">\(f(x)=\beta_0+\beta_1x+\cdots+\beta_kx^k\)</span> e portanto <span class="math inline">\(\alpha\)</span> é algébrico. Como <span class="math inline">\(\alpha\)</span> foi escolhido arbitrariamente, <span class="math inline">\(\E:\F\)</span> é uma extensão algébrica.</p>
 </div>
+</section>
+<section id="o-polinômio-mínimo" class="level2" data-number="70.2">
+<h2 data-number="70.2" data-anchor-id="o-polinômio-mínimo"><span class="header-section-number">70.2</span> O polinômio mínimo</h2>
 <div id="def-pol-min" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 70.4</strong></span> Se <span class="math inline">\(\E:\F\)</span> é uma extensão e <span class="math inline">\(\alpha\in\E\setminus\{0\}\)</span> é algébrico, então o conjunto <span class="math display">\[
 I_\alpha=\{f(x)\in\F[x]\mid f(\alpha)=0\}
@@ -1192,19 +1205,24 @@ I_\alpha=\{f(x)\in\F[x]\mid f(\alpha)=0\}
 <li>se <span class="math inline">\(f(x)\in\F[x]\)</span> é irredutível e mônico tal que <span class="math inline">\(f(\alpha)=0\)</span>, então <span class="math inline">\(f(x)=m_\alpha(x)\)</span>.</li>
 </ol>
 </div>
-<p>:::{.proof} 1.&nbsp;Assuma que <span class="math inline">\(m_\alpha(x)=a(x)b(x)\)</span>. Tem-se que <span class="math display">\[
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>1.&nbsp;Assuma que <span class="math inline">\(m_\alpha(x)=a(x)b(x)\)</span>. Tem-se que <span class="math display">\[
 0=m_\alpha(\alpha)=a(\alpha)b(\alpha),
 \]</span> que implica que <span class="math inline">\(a(\alpha)=0\)</span> ou <span class="math inline">\(b(\alpha)=0\)</span>. No primeiro caso <span class="math inline">\(a(x)\in I_\alpha\)</span> e então <span class="math inline">\(a(x)\)</span> é um múltiplo de <span class="math inline">\(m_\alpha(x)\)</span>. Mas no mesmo tempo <span class="math inline">\(a(x)\)</span> é um divisor de <span class="math inline">\(m_\alpha(x)\)</span> que implica que <span class="math inline">\(a(x)\)</span> tem de ser um associado (múltiplo escalar) de <span class="math inline">\(m_\alpha(x)\)</span>. Se <span class="math inline">\(b(x)=0\)</span>, obtemos similarmente que <span class="math inline">\(b(x)\)</span> é um associado de <span class="math inline">\(m_\alpha(x)\)</span>. Isso significa que <span class="math inline">\(m_\alpha(x)\)</span> é irredutível.</p>
 <ol start="2" type="1">
 <li>Assuma que <span class="math inline">\(f(x)\in\F[x]\)</span> irredutível e mônico tal que <span class="math inline">\(f(\alpha)=0\)</span>. Neste caso <span class="math inline">\(f(x)\in I_\alpha\)</span> e <span class="math inline">\((f(x))\subseteq I_\alpha\)</span>. Por outro lado, <span class="math inline">\(f(x)\)</span> sendo irredutível, <span class="math inline">\((f(x))\)</span> é um ideal maximal. Como <span class="math inline">\(I_\alpha\neq \F[x]\)</span>, temos que <span class="math inline">\((m_\alpha(x))=I_\alpha=(f(x))\)</span>. Isso implica que <span class="math inline">\(m_\alpha(x)\)</span> é um associado de <span class="math inline">\(f(x)\)</span>. Como os dois são mônicos, obtemos que <span class="math inline">\(m_\alpha(x)=f(x)\)</span>.</li>
 </ol>
-<p>Seja <span class="math inline">\(\E:\F\)</span> uma extensão&nbsp; assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span>. O menor subcorpo de <span class="math inline">\(\E\)</span> que contém <span class="math inline">\(\F\)</span> e <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> é chamado do <em>corpo gerado por <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> </em>(sobre <span class="math inline">\(\F\)</span>) e é denotado por <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span>.</p>
-<div id="def-ext-finite" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 70.5</strong></span> O corpo <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span> coincide com o conjunto de todas as expressões racionais em <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> com coeficientes em <span class="math inline">\(\F\)</span>: <span class="math display">\[\begin{eqnarray*}
+</div>
+<div id="def-subfield" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 70.5</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão&nbsp; assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span>. O menor subcorpo de <span class="math inline">\(\E\)</span> que contém <span class="math inline">\(\F\)</span> e <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> é chamado do <em>corpo gerado por <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> </em>(sobre <span class="math inline">\(\F\)</span>) e é denotado por <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span>.</p>
+<p>O corpo <span class="math inline">\(\F(\alpha_1,\ldots,\alpha_k)\)</span> coincide com o conjunto de todas as expressões racionais em <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> com coeficientes em <span class="math inline">\(\F\)</span>: <span class="math display">\[\begin{eqnarray*}
 \F(\alpha_1,\ldots,\alpha_k)&amp;=&amp;\left\{f(\alpha_1,\ldots,\alpha_k)/g(\alpha_1,\ldots,\alpha_k)\mid\right.\\&amp;&amp; \left.f(x_1,\ldots,x_k),g(x_1,\ldots,x_k)\in\F[x_1,\ldots,x_k]
 \mbox{ e }g(\alpha_1,\ldots,\alpha_k)\neq 0\right\}.
 \end{eqnarray*}\]</span></p>
 </div>
+</section>
+<section id="extensões-simples" class="level2" data-number="70.3">
+<h2 data-number="70.3" data-anchor-id="extensões-simples"><span class="header-section-number">70.3</span> Extensões simples</h2>
 <p>No seguinte lema descrevemos extensões da forma <span class="math inline">\(\F(\alpha)\)</span> quando <span class="math inline">\(\alpha\)</span> é um elemento algébrico em uma extensão.</p>
 <div id="lem-Fa" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 70.3</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão e <span class="math inline">\(\alpha\in\E\setminus\{0\}\)</span> algébrico. Assuma que <span class="math inline">\(m_\alpha(x)\)</span> tem grau <span class="math inline">\(k\)</span>. Então&nbsp;<span class="math inline">\(\F(\alpha)\cong \F[x]/(m_\alpha(x))\)</span> e <span class="math display">\[
@@ -1236,6 +1254,7 @@ f(\alpha)=q(\alpha)m_\alpha(\alpha)+r(\alpha)=r(\alpha).
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1654,8 +1673,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/decompfields.html" class="pagination-link" aria-label="Corpos de decomposição">
-        <span class="nav-page-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/decompfields.html" class="pagination-link" aria-label="Corpos de decomposição e corpos finitos">
+        <span class="nav-page-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
