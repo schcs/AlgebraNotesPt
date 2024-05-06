@@ -5,11 +5,13 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Extensões finitas, algébricas
+
 :::{#def-extension}
 Sejam $\F$ e $\E$ corpos tais que $\F\subseteq\E$. Dizemos que $\E$ é uma <em>extensão</em> de $\F$. Escrevemos que $\E:\F$ é uma extensão.
 :::
 
-:::{exm-extension}
+:::{#exm-extension}
 $\R$ é uma extensão de $\Q$ e $\C$ é uma extensão de $\R$.  Se $f(x)$ é um polinômio irredutível sobre um corpo $\F$, então $\F[x]/(f(x))$ é uma extensão $\F$.
 :::
 
@@ -37,6 +39,8 @@ $$
 Isso implica que $\alpha$ é raiz do polinômio $f(x)=\beta_0+\beta_1x+\cdots+\beta_kx^k$ e portanto $\alpha$ é algébrico. Como $\alpha$ foi escolhido arbitrariamente, $\E:\F$ é uma extensão algébrica.
 :::
 
+## O polinômio mínimo
+
 :::{#def-pol-min}
 Se $\E:\F$ é uma extensão e $\alpha\in\E\setminus\{0\}$ é algébrico, então o conjunto
 $$
@@ -53,6 +57,7 @@ Com as suposições do parágrafo anterior, as seguintes são verdadeiras.
 :::
 
 :::{.proof}
+
 1. Assuma que $m_\alpha(x)=a(x)b(x)$. Tem-se que
 $$
 0=m_\alpha(\alpha)=a(\alpha)b(\alpha),
@@ -60,17 +65,19 @@ $$
 que implica que $a(\alpha)=0$ ou $b(\alpha)=0$. No primeiro caso $a(x)\in I_\alpha$ e então $a(x)$ é um múltiplo de $m_\alpha(x)$. Mas no mesmo tempo $a(x)$ é um divisor de $m_\alpha(x)$ que implica que $a(x)$ tem de ser um associado (múltiplo escalar) de $m_\alpha(x)$. Se $b(x)=0$, obtemos similarmente que $b(x)$ é um associado de $m_\alpha(x)$. Isso significa que $m_\alpha(x)$ é irredutível.
 
 2. Assuma que $f(x)\in\F[x]$ irredutível e mônico tal que $f(\alpha)=0$. Neste caso $f(x)\in I_\alpha$ e $(f(x))\subseteq I_\alpha$. Por outro lado, $f(x)$ sendo irredutível, $(f(x))$ é um ideal maximal. Como $I_\alpha\neq \F[x]$, temos que $(m_\alpha(x))=I_\alpha=(f(x))$. Isso implica que $m_\alpha(x)$ é um associado de $f(x)$. Como os dois são mônicos, obtemos que $m_\alpha(x)=f(x)$.
+:::
 
+:::{#def-subfield}
 Seja $\E:\F$ uma extensão  assuma que $\alpha_1,\ldots,\alpha_k\in\E$. O menor subcorpo de $\E$ que contém $\F$ e $\alpha_1,\ldots,\alpha_k$ é chamado do <em>corpo gerado por $\alpha_1,\ldots,\alpha_k$ </em>(sobre $\F$) e é denotado por $\F(\alpha_1,\ldots,\alpha_k)$.
 
-
-:::{#def-ext-finite}
 O corpo $\F(\alpha_1,\ldots,\alpha_k)$ coincide com o conjunto de todas as expressões racionais em $\alpha_1,\ldots,\alpha_k$ com coeficientes em $\F$:
 \begin{eqnarray*}
 \F(\alpha_1,\ldots,\alpha_k)&=&\left\{f(\alpha_1,\ldots,\alpha_k)/g(\alpha_1,\ldots,\alpha_k)\mid\right.\\&& \left.f(x_1,\ldots,x_k),g(x_1,\ldots,x_k)\in\F[x_1,\ldots,x_k]
 \mbox{ e }g(\alpha_1,\ldots,\alpha_k)\neq 0\right\}.
 \end{eqnarray*}
 :::
+
+## Extensões simples
 
 No seguinte lema descrevemos extensões da forma $\F(\alpha)$ quando $\alpha$ é um elemento algébrico em uma extensão.
 

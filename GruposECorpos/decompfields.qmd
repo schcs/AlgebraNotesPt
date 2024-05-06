@@ -1,9 +1,11 @@
 
 ---
 number-sections: true
-title: "Corpos de decomposição"
+title: "Corpos de decomposição e corpos finitos"
 lang: pt-BR
 ---
+
+## Corpos de decomposição
 
 :::{#lem-root}
 Seja $\F$ um corpo e $f(x)\in\F[x]$ com grau maior ou igual a $1$.
@@ -58,18 +60,21 @@ Adaptar a demonstração do lema similar na aula anterior.
 Sejam $\F_1$ e $\F_2$ corpos e seja $\varphi:\F_1\to\F_2$ um isomorfismo. Seja $f(x)\in\F_1[x]$ não constante e assuma que $\K_1$ e $\K_2$ são corpos de decomposição dos polinômios $f(x)$ e $\varphi(f(x))$, respetivamente. Então existe um isomorfismo $\psi: \K_1\to \K_2$ tal que $\psi|_{\F_1}=\varphi$.
 :::
 
-:::{.proof} 
-Por indução no grau de $f(x)$. Se $\mbox{grau}\,f(x)=1$, então $\K_1=\F_1$ e $\K_2=\F_2$ e podemos tomar $\psi=\varphi$. Assuma que o lema é válido para polinômios de grau menor que $k\geq 2$ e seja $f(x)\in\F_1[x]$ um polinômio de grau $k$. Seja $p(x)\in\F_1[x]$ um  fator  irredutível de $f(x)$. Então $\varphi(p(x))\in\F_2[x]$ é um fator irredutível de $\varphi(f(x))$ e defina os corpos $\E_1=\F_1[x]/(p(x))$ e $\E_2=\F_2[x]/(\varphi(p(x))$. Existem $\alpha\in\E_1$ e $\beta\in\E_2$ tais que $m_\alpha(x)=p(x)$ e $m_{\beta}(x)=\varphi(p(x))$ e o lema anterior implica que existe um isomorfismo $\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)$ tal que  $\vartheta|_{\F_2}=\varphi$ e $\vartheta(\alpha)=\beta$. Escreva $f(x)=(x-\alpha)f_1(x)$ e
+
+:::{.proof}
+Por indução no grau de $f(x)$. Se $\mbox{grau}\,f(x)=1$, então $\K_1=\F_1$ e $\K_2=\F_2$ e podemos tomar $\psi=\varphi$. Assuma que o lema é válido para polinômios de grau menor que $k\geq 2$ e seja $f(x)\in\F_1[x]$ um polinômio de grau $k$. Seja $p(x)\in\F_1[x]$ um  fator  irredutível de $f(x)$. Então $\varphi(p(x))\in\F_2[x]$ é um fator irredutível de $\varphi(f(x))$ e defina os corpos $\E_1=\F_1[x]/(p(x))$ e 
+$\E_2=\F_2[x]/(\varphi(p(x))$. Existem $\alpha\in\E_1$ e $\beta\in\E_2$ tais que $m_\alpha(x)=p(x)$ e $m_{\beta}(x)=\varphi(p(x))$ e o lema anterior implica que existe um isomorfismo $\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)$ tal que  $\vartheta|_{\F_2}=\varphi$ e $\vartheta(\alpha)=\beta$. Escreva $f(x)=(x-\alpha)f_1(x)$ e
 $$
 \varphi(f(x))=\vartheta(f(x))=\vartheta((x-\alpha)f_1(x))=(x-\beta)\vartheta(f_1(x)).
 $$
 Escolha corpos de decomposição $\K_1$ e $\K_2$ para os polinômios $f_1(x)$ e $\vartheta(f_1(x))$ sobre $\F_1(\alpha)$ e $\F_2(\beta)$, respetivamente. Isso implica que $\K_1$ e $\K_2$ são corpos de decomposição para os polinômios $f(x)$ e $\vartheta(f(x))$ sobre $\F_1$ e $\F_2$, respetivamente. Pela hipótese de indução, existe um isomorfismo $\psi:\K_1\to\K_2$ tal que $\psi|_{\F_1(\alpha)}=\vartheta$, e portanto $\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi$.
 :::
 
-
 :::{#cor-decomp-field-unique}
 Sejam $\F$ um corpo, $f(x)\in\F[x]$ um polinômio não constante, e sejam $\K_1$ e $\K_2$ corpos de decomposição de $f(x)$. Então existe $\varphi:\K_1\to \K_2$ isomorfismo tal que $\varphi(\alpha)=\alpha$ para todo $\alpha\in\F$.
 :::
+
+## Corpos finitos
 
 :::{#exr-Fp}
 Seja $p$ um primo e $d\geq 1$. Mostre que $x^{p^d}-x\in\F_p[x]$ não tem raízes múltiplas em nenhuma extensão de $\F_p$.
