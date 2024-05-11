@@ -27,6 +27,26 @@ $\R:\Q$ é uma extensão de grau infinita, o grau da extensão $\C:\R$ é igual 
 Uma extensão $\E:\F$ é dita <em>finita</em> se $\dim_\F\E$ é finita. Se $\E:\F$ é uma extensão e $\alpha\in\E$, então $\alpha$ é dito <em>algébrico</em> (sobre $\F$) se existe um polinômio $f(x)\in\F[x]$ não nulo tal que $f(\alpha)=0$. Caso contrário, $\alpha$ é dito <em>transcendental </em>(sobre $\F$). Uma extensão $\E:\F$ é dita <em>algébrica </em>se todos os elementos de $\E$ são algébricos sobre $\F$. Caso contrário $\E$ é dito <em>transcendental</em> sobre $\F$.
 :::
 
+:::{#exm-ext-alg}
+Se $\alpha\in\F$, então $\alpha$ é álgebrico sobre $\F$, pois ele é raiz do polinômio $x-\alpha\in\F[x]$. Os números $\sqrt 2,i\in\C$ são algébricos sobre $\Q$. Os números $\pi,e\in\R$ são transendetais sobre $\Q$, mas este fato não é fácil de mostrar e as demonstrações tipicamente usam técnicas analíticas.  Coloco aqui alguns vídeos que fazem a demonstração.
+
+{{< video https://youtu.be/WyoH_vgiqXM?si=RTka8FzvOxJ92aD3 width="560" height="315" >}}
+
+{{< video https://youtu.be/dFKbVTHK4tU?si=aPXtOJaHvbAUyCfP width="560" height="315" >}}
+
+{{< video https://youtu.be/dbQHJdXsQu4?si=VpTpIVZRZGk6VBYo width="560" height="315" >}}
+
+{{< video https://youtu.be/xOXsDfMMTjs?si=Y7t9-_6bNPP8cJ71 width="560" height="315" >}}
+
+Um outro número famoso transcendetal é o [constante de Liouville](https://pt.wikipedia.org/wiki/N%C3%BAmeros_de_Liouville).
+
+{{< video https://youtu.be/1sqywCt9tEs?si=SC8J7A3PNmQKUgmp width="560" height="315" >}}
+
+Um outro vídeo interessante sobre números transcendetais:
+
+{{< video https://youtu.be/seUU2bZtfgM?si=iBWXY2xAFGe3F5P5 width="560" height="315" >}}
+:::
+
 :::{#lem-ext-alg}
 Se $\E:\F$ é uma extensão finita, então ela é algébrica.
 :::
