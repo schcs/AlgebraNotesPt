@@ -24,7 +24,7 @@ Pode-se dizer que o quociente de $f(x)$ por $g(x)$ é $x-2$ e o resto de $f(x)$ 
 
 A conta que fizemos no exemplo anterior nos lembra da Teorema de Divisão de Euclides que enunciamos na primeira parte da disciplina para números inteiros. De fato, existe um teorema análogo para polinômios que vamos enunciar e provar nesta página.
 
-:::{#thm-}
+:::{#thm-euclid-pol}
 (Teorema de Divisão de Euclides para Polinômios)
 Seja $\F$ um corpo (por exemplo $\Q$, $\R$, $\C$, ou $\Z_p$ com $p$ primo) e assuma que $f(x),g(x)\in \F[x]$ com $g(x)\neq 0$. Então existem unicamente polinômios $q(x),r(x)\in \F[x]$ tais que
 $$

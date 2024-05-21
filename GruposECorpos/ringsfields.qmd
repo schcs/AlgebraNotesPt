@@ -120,6 +120,7 @@ Se $I\neq\{0\}$ é um ideal de $\F[x]$ então existe um único polinômio mônic
 $$
 I=(f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}.
 $$
+Consequentemente, $I$ é principal.
 Além disso as seguintes são equivalentes:
 
 - $I$ é um ideal maximal;

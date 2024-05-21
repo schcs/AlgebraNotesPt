@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#thm-}
+:::{#thm-tfa-pol}
 Seja $\F$ um corpo e seja $f(x)\in\F[x]$ de grau maior ou igual a $1$. Então $f(x)$ pode ser escrito na forma
 $$
 f(x)=\alpha q_1(x)\cdots q_k(x)

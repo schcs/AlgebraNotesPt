@@ -61,12 +61,19 @@ Isso implica que $\alpha$ é raiz do polinômio $f(x)=\beta_0+\beta_1x+\cdots+\b
 
 ## O polinômio mínimo
 
+É recomendado que o leitor revise o conceito do polinômio irredutível @def-irred, @thm-irred-R-C, @thm-eisenstein.
+
 :::{#def-pol-min}
 Se $\E:\F$ é uma extensão e $\alpha\in\E\setminus\{0\}$ é algébrico, então o conjunto
 $$
 I_\alpha=\{f(x)\in\F[x]\mid f(\alpha)=0\}
 $$
-é um ideal não trivial. Como os ideais de $\F[x]$ são principais, existe um único polinômio mônico $m_\alpha(x)$ tal que $I_\alpha=(m_\alpha(x))$. O polinômio $m_\alpha(x)$ é chamado de polinômio minimal de $\alpha$ (sobre $\F$).
+é um ideal não trivial. Como os ideais de $\F[x]$ são principais (@thm-quot), existe um único polinômio mônico $m_\alpha(x)$ tal que $I_\alpha=(m_\alpha(x))$. O polinômio $m_\alpha(x)$ é chamado de polinômio minimal de $\alpha$ (sobre $\F$).
+:::
+
+:::{#def-associado}
+Se $a,b$ são elementos de um anel $R$, então $a$ e $b$ são *associados* se existir $r\in R$ invertível tal que $b=ra$. Consequentemente, 
+se $f(x),g(x)\in\F[x]$ são polinômios, $f(x)$ e $g(x)$ são associados se e somente se existir $\alpha\in\F^*$ tal que $g(x)=\alpha f(x)$. 
 :::
 
 :::{#lem-pol-min}
@@ -113,12 +120,12 @@ Defina $\varphi:\F[x]\rightarrow \F(\alpha)$ por $f(x)\mapsto f(\alpha)$. Note q
 $$
 \mbox{Im}\,\varphi\cong \F[x]/\ker\varphi=\F[x]/I_\alpha=\F[x]/(m_\alpha(x)).
 $$
-Como $m_\alpha(x)$ é irredutível, temos que $\F[x]/(m_\alpha(x))$ é um corpo e portanto (por isomorfismo) $\mbox{Im}\,\varphi$ é também um corpo. Além disso, o corpo $\mbox{Im}\,\varphi$ contém $\F$ e $\alpha$, e então $\mbox{Im}\,\varphi=\F(\alpha)$. Isso implica que
+Como $m_\alpha(x)$ é irredutível (@lem-pol-min), temos que $\F[x]/(m_\alpha(x))$ é um corpo (@thm-quot) e portanto (por isomorfismo) $\mbox{Im}\,\varphi$ é também um corpo. Além disso, o corpo $\mbox{Im}\,\varphi$ contém $\F$ e $\alpha$, e então $\mbox{Im}\,\varphi=\F(\alpha)$. Isso implica que
 $$
 \F(\alpha)\cong\F[x]/(m_\alpha(x)).
 $$
 
-A segunda afirmação segue da primeira. De fato, como $\varphi$ é um isomorfismo, ele precisa ser sobrejetivo, e portanto todo elemento de $\F(\alpha)$ pode ser escrito como $f(\alpha)$ onde $f(x)\in\F[x]$. Escreva $f(x)=q(x)m_\alpha(x)+r(x)$  onde $r(x)=0$ ou ele é um polinômio de grau menor que $m_\alpha(x)$. Ora
+A segunda afirmação segue da primeira. De fato, como $\varphi$ é um isomorfismo, ele precisa ser sobrejetivo, e portanto todo elemento de $\F(\alpha)$ pode ser escrito como $f(\alpha)$ onde $f(x)\in\F[x]$. Escreva $f(x)=q(x)m_\alpha(x)+r(x)$  onde $r(x)=0$ ou ele é um polinômio de grau menor que o grau de $m_\alpha(x)$ (@thm-euclid-pol). Ora
 $$
 f(\alpha)=q(\alpha)m_\alpha(\alpha)+r(\alpha)=r(\alpha).
 $$
@@ -137,7 +144,7 @@ Sejam $\E_1$ e $\E_2$ duas extensões de um corpo $\F$ e sejam $\alpha_1\in\E_1$
 :::
 
 :::{.proof}
-Seja $g(x)= m_{\alpha_1}(x)=m_{\alpha_2}(x)$ e sejam $\varphi_1:\F[x]/(g(x))\to\F(\alpha_1)$ e $\varphi:\F[x]/(g(x))\to\F(\alpha_2)$ os isomorfismos dados pelo lema anterior. Então a composição
+Seja $g(x)= m_{\alpha_1}(x)=m_{\alpha_2}(x)$ e sejam $\varphi_1:\F[x]/(g(x))\to\F(\alpha_1)$ e $\varphi:\F[x]/(g(x))\to\F(\alpha_2)$ os isomorfismos dados pelo @lem-Fa. Então a composição
 $$
 \varphi_2\varphi_1^{-1}:\F(\alpha_1)\to \F(\alpha_2)
 $$
