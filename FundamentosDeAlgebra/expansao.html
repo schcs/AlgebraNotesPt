@@ -207,6 +207,14 @@ window.Quarto = {
 \newcommand{\aut}[1]{\textrm{Aut}(#1)}
 \newcommand{\fix}[1]{\textrm{Fix}(#1)}
 \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\ols}[1]{\mskip.5\thinmuskip\overline{\mskip-.5\thinmuskip {#1} \mskip-.5\thinmuskip}\mskip.5\thinmuskip} % overline short
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}} % overline short italic
+\newcommand{\closure}[1]{
+  \tctestifnum{\count@stringtoks{#1}&gt;1} %checks if number of chars in arg &gt; 1 (including '\')
+  {\ols{#1}} %if arg is longer than just one char, e.g. \mathbb{Q}, \mathbb{F},...
+  {\olsi{#1}} %if arg is just one char, e.g. K, L,...
+}
 \]</span></p>
 </div>
 
@@ -1150,7 +1158,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">

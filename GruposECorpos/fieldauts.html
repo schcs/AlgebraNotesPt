@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Álgebra - 72&nbsp; Automorfismos de corpos</title>
+<title>Álgebra - 72&nbsp; Automorfismos de corpos e o grupo de Galois</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -173,6 +173,14 @@ window.Quarto = {
 \newcommand{\aut}[1]{\textrm{Aut}(#1)}
 \newcommand{\fix}[1]{\textrm{Fix}(#1)}
 \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\ols}[1]{\mskip.5\thinmuskip\overline{\mskip-.5\thinmuskip {#1} \mskip-.5\thinmuskip}\mskip.5\thinmuskip} % overline short
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}} % overline short italic
+\newcommand{\closure}[1]{
+  \tctestifnum{\count@stringtoks{#1}&gt;1} %checks if number of chars in arg &gt; 1 (including '\')
+  {\ols{#1}} %if arg is longer than just one char, e.g. \mathbb{Q}, \mathbb{F},...
+  {\olsi{#1}} %if arg is just one char, e.g. K, L,...
+}
 \]</span></p>
 </div>
 
@@ -614,7 +622,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1116,7 +1124,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1133,14 +1141,22 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#automorfismos-de-corpos" id="toc-automorfismos-de-corpos" class="nav-link active" data-scroll-target="#automorfismos-de-corpos"><span class="header-section-number">72.1</span> Automorfismos de corpos</a></li>
+  <li><a href="#o-grupo-de-galois" id="toc-o-grupo-de-galois" class="nav-link" data-scroll-target="#o-grupo-de-galois"><span class="header-section-number">72.2</span> O grupo de Galois</a></li>
+  <li><a href="#o-grupo-de-galois-como-grupo-de-permutação" id="toc-o-grupo-de-galois-como-grupo-de-permutação" class="nav-link" data-scroll-target="#o-grupo-de-galois-como-grupo-de-permutação"><span class="header-section-number">72.3</span> O grupo de Galois como grupo de permutação</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/fieldauts.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></h1>
+<h1 class="title"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></h1>
 </div>
 
 
@@ -1157,6 +1173,8 @@ window.Quarto = {
 </header>
 
 
+<section id="automorfismos-de-corpos" class="level2" data-number="72.1">
+<h2 data-number="72.1" data-anchor-id="automorfismos-de-corpos"><span class="header-section-number">72.1</span> Automorfismos de corpos</h2>
 <div id="def-field-aut" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 72.1</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo. Lembre que um mapa <span class="math inline">\(\varphi:\E\to\E\)</span> bijetivo é dito automorfismo de <span class="math inline">\(\E\)</span> se&nbsp;<span class="math inline">\(\varphi(x+y)=\varphi(x)+\varphi(y)\)</span> e <span class="math inline">\(\varphi(xy)=\varphi(x)\varphi(y)\)</span> vale para todo <span class="math inline">\(x,y\in\E\)</span>. O conjunto de automorfismos de <span class="math inline">\(\E\)</span> é um grupo com a operação de composição e este grupo é denotado por <span class="math inline">\(\aut \E\)</span>. Se <span class="math inline">\(\varphi\in\aut\E\)</span>, então definimos <span class="math display">\[
 \fix\varphi=\{x\in \E\mid \varphi(x)=x\}.
@@ -1173,6 +1191,9 @@ window.Quarto = {
 0=\alpha^p-\beta^p=(\alpha-\beta)^p
 \]</span> que implica que <span class="math inline">\(\alpha-\beta=0\)</span>; ou seja <span class="math inline">\(\alpha=\beta\)</span>. Temos então que <span class="math inline">\(\varphi\in\aut\E\)</span>. Além disso, <span class="math inline">\(\fix\varphi\)</span> é o conjunto de soluções da equação <span class="math inline">\(x^p=x\)</span> e esta equação tem precisamente <span class="math inline">\(p\)</span> soluções, nomeadamente, os elementos de <span class="math inline">\(\F_p\)</span>. Logo&nbsp;<span class="math inline">\(\fix\varphi=\F_p\)</span>. O automorfismo <span class="math inline">\(\varphi\)</span> é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.</p>
 </div>
+</section>
+<section id="o-grupo-de-galois" class="level2" data-number="72.2">
+<h2 data-number="72.2" data-anchor-id="o-grupo-de-galois"><span class="header-section-number">72.2</span> O grupo de Galois</h2>
 <div id="def-galois-group" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 72.2</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão de corpos. Defina <span class="math display">\[
 \gal \E\F=\{\alpha\in\aut\E\mid \F\subseteq\fix\alpha\}.
@@ -1185,24 +1206,27 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Lema 72.1</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão, <span class="math inline">\(f(x)\in\F[x]\)</span>, <span class="math inline">\(\alpha\in\E\)</span> tal que <span class="math inline">\(f(\alpha)=0\)</span>, e <span class="math inline">\(\varphi\in\gal\E\F\)</span>. Então <span class="math inline">\(f(\varphi(\alpha))=0\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio (<a href="../FundamentosDeAlgebra/roots.html#lem-comp-conj-root" class="quarto-xref">Lema&nbsp;<span>45.2</span></a>).</p>
 </div>
 <div id="exm-gal" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 72.2</strong></span> Determinemos <span class="math inline">\(\gal\C\R\)</span>. Seja <span class="math inline">\(\varphi\in\gal\C\R\)</span>. Como <span class="math inline">\(\varphi\)</span> é uma transformação <span class="math inline">\(\R\)</span>-linear, as imagens <span class="math inline">\(\varphi(1)\)</span> e <span class="math inline">\(\varphi(i)\)</span> determinam <span class="math inline">\(\varphi\)</span>. Como <span class="math inline">\(1\in\R\)</span>, temos que <span class="math inline">\(\varphi(1)=1\)</span>. Note que <span class="math inline">\(\varphi(i)\)</span> é raiz do polinômio <span class="math inline">\(x^2+1\)</span>, então <span class="math inline">\(\varphi(i)\)</span> será raiz do mesmo polinômio que implica que <span class="math inline">\(\varphi(i)=\pm i\)</span>. Escolhendo <span class="math inline">\(\varphi(i)=i\)</span>, obtemos que <span class="math inline">\(\varphi=\mbox{id}_\C\)</span>, enquanto escolhendo <span class="math inline">\(\varphi(i)=-i\)</span>, obtemos a conjugação complexa. Obtivemos então que <span class="math inline">\(\gal\C\R\)</span> é um grupo de ordem 2.</p>
+<p><span class="theorem-title"><strong>Exemplo 72.2</strong></span> Determinemos <span class="math inline">\(\gal\C\R\)</span>. Seja <span class="math inline">\(\varphi\in\gal\C\R\)</span>. Como <span class="math inline">\(\varphi\)</span> é uma transformação <span class="math inline">\(\R\)</span>-linear, as imagens <span class="math inline">\(\varphi(1)\)</span> e <span class="math inline">\(\varphi(i)\)</span> determinam <span class="math inline">\(\varphi\)</span>. Como <span class="math inline">\(1\in\R\)</span>, temos que <span class="math inline">\(\varphi(1)=1\)</span>. Note que <span class="math inline">\(i\)</span> é raiz do polinômio <span class="math inline">\(x^2+1\)</span>, então <span class="math inline">\(\varphi(i)\)</span> será raiz do mesmo polinômio que implica que <span class="math inline">\(\varphi(i)=\pm i\)</span>. Escolhendo <span class="math inline">\(\varphi(i)=i\)</span>, obtemos que <span class="math inline">\(\varphi=\mbox{id}_\C\)</span>, enquanto escolhendo <span class="math inline">\(\varphi(i)=-i\)</span>, obtemos a conjugação complexa. Obtivemos então que <span class="math inline">\(\gal\C\R\)</span> é um grupo de ordem 2.</p>
 </div>
-<div class="{exm-gal2}">
-<p>Seja <span class="math inline">\(\xi=\exp(2\pi i/3)\)</span> (terceira raiz da unidade) e considere a extensão <span class="math inline">\(\E=\Q(\xi)\)</span> de <span class="math inline">\(\Q\)</span>. Note que <span class="math inline">\(\xi\)</span> é raiz do polinômio <span class="math inline">\(x^3-1=(x-1)(x^2+x+1)\)</span> e que o polinômio <span class="math inline">\(x^2+x+1\)</span> é irredutível sobre <span class="math inline">\(\Q\)</span>. Em particular, <span class="math inline">\(m_\xi(x)=x^2+x+1\)</span> e <span class="math inline">\(\E\)</span> é um espaço vetorial de dimensão <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\Q\)</span>. Além disso, <span class="math display">\[
+<div id="exm-gal2" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 72.3</strong></span> Seja <span class="math inline">\(\xi=\exp(2\pi i/3)\)</span> (terceira raiz da unidade) e considere a extensão <span class="math inline">\(\E=\Q(\xi)\)</span> de <span class="math inline">\(\Q\)</span>. Note que <span class="math inline">\(\xi\)</span> é raiz do polinômio <span class="math inline">\(x^3-1=(x-1)(x^2+x+1)\)</span> e que o polinômio <span class="math inline">\(x^2+x+1\)</span> é irredutível sobre <span class="math inline">\(\Q\)</span>. Em particular, <span class="math inline">\(m_\xi(x)=x^2+x+1\)</span> e <span class="math inline">\(\E\)</span> é um espaço vetorial de dimensão <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\Q\)</span>. Além disso, <span class="math display">\[
 \E=\left&lt;1,\xi\right&gt;_\Q=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
 \]</span> e para determinar os automorfismos <span class="math inline">\(\varphi\in\gal\E\Q\)</span>, é suficiente saber <span class="math inline">\(\varphi(1)\)</span> e <span class="math inline">\(\varphi(\xi)\)</span>. Como no exemplo, anterior, <span class="math inline">\(\varphi(1)=1\)</span> e <span class="math inline">\(\varphi(\xi)\)</span> é raiz de <span class="math inline">\(x^2+x+1\)</span>; consequentemente <span class="math inline">\(\varphi(\xi)=\xi\)</span> ou <span class="math inline">\(\varphi(\xi)=\xi^2=\bar\xi\)</span> (conjugado complexo). O primeiro caso dá o automorfismo identidade, enquanto o segundo dá o automorfismo <span class="math display">\[
 \alpha+\beta\xi\mapsto \alpha+\beta\bar\xi \quad\mbox{onde}\quad\alpha,\beta\in\Q.
 \]</span> (Na verdade, precisa verificar que isso é um automorfismo, mas isso é uma conta simples que o leitor pode fazer.) Então <span class="math inline">\(|\gal\E\Q|=2\)</span>.</p>
 </div>
+</section>
+<section id="o-grupo-de-galois-como-grupo-de-permutação" class="level2" data-number="72.3">
+<h2 data-number="72.3" data-anchor-id="o-grupo-de-galois-como-grupo-de-permutação"><span class="header-section-number">72.3</span> O grupo de Galois como grupo de permutação</h2>
 <div id="thm-transitive" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 72.1</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística zero ou um corpo finito. Assuma que <span class="math inline">\(\E\)</span> é um corpo de decomposição de um polinômio irredutível <span class="math inline">\(f(x)\in\F[x]\)</span> com <span class="math inline">\(\mbox{grau}\,f(x)=k\)</span>. Então <span class="math inline">\(G=\gal\E\F\)</span> permuta as raízes de <span class="math inline">\(f(x)\)</span> transitivamente e <span class="math inline">\(G\)</span> pode ser visto como um subgrupo transitivo de <span class="math inline">\(S_k\)</span>. Em particular <span class="math inline">\(k\)</span> divide <span class="math inline">\(|G|\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(\alpha,\beta\in\E\)</span> duas raízes de <span class="math inline">\(f(x)\)</span>. Note que <span class="math inline">\(m_\alpha(x)=m_\beta(x)=f(x)\)</span>, e&nbsp; <span class="math inline">\(\F(\alpha)\cong\F(\beta)\)</span>. De fato, nós provamos em um resultado anterior que existe um isomorfismo <span class="math inline">\(\psi:\F(\alpha)\to\F(\beta)\)</span> tal que <span class="math inline">\(\psi|_\F=\mbox{id}_\F\)</span> e <span class="math inline">\(\psi(\alpha)=\beta\)</span>. Agora observe que <span class="math inline">\(f(x)\)</span> pode ser visto como um polinômio sobre <span class="math inline">\(\F(\alpha)\)</span> e também sobre <span class="math inline">\(\F(\beta)\)</span> e <span class="math inline">\(\E\)</span> é corpo de decomposição de <span class="math inline">\(f(x)\)</span> sobre estes corpos. Por um outro teorema anterior, existe isomorfismo (na verdade um automorfismo) <span class="math inline">\(\varphi:\E\to\E\)</span> tal que <span class="math inline">\(\varphi|_{\F(\alpha)}=\psi\)</span>. Ora, observe que <span class="math inline">\(\varphi\in\gal\E\F\)</span> tal que <span class="math inline">\(\varphi(\alpha)=\beta\)</span>. Isso implica que <span class="math inline">\(\gal\E\F\)</span> permuta transitivamente as raízes de <span class="math inline">\(f(x)\)</span>.</p>
-<p>Para mostrar que <span class="math inline">\(\gal\E\F\)</span> pode ser considerado como um subgrupo de <span class="math inline">\(S_k\)</span>, observe que <span class="math inline">\(f(x)\)</span> não possui raízes múltiplas em <span class="math inline">\(\E\)</span> (pois <span class="math inline">\(\mbox{mdc}(f(x),f'(x))=1)\)</span> e isso significa que <span class="math inline">\(f(x)\)</span> tem precisamente <span class="math inline">\(k\)</span> raízes, nomeadamente <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> mutualmente distintas. Se um elemento <span class="math inline">\(\sigma\)</span> de <span class="math inline">\(\gal\E\F\)</span> está no núcleo da ação em <span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span>, então <span class="math inline">\(\sigma\)</span> fixa todas as raízes. Mas como <span class="math inline">\(\E\)</span> é gerado por estas raízes (sendo corpo de decomposição), <span class="math inline">\(\sigma=\mbox{id}_\E\)</span>. Então <span class="math inline">\(\gal\E\F\)</span> pode ser visto como um subgrupo do grupo simétrico do conjunto&nbsp;&nbsp;<span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span> e este grupo simétrico é claramente isomorfo a <span class="math inline">\(S_k\)</span>. Finalmente, o fato que <span class="math inline">\(k\mid |\gal\E\F|\)</span> segue do Teorema Orbita-Estabilizador.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(\alpha,\beta\in\E\)</span> duas raízes de <span class="math inline">\(f(x)\)</span>. Note que <span class="math inline">\(m_\alpha(x)=m_\beta(x)=f(x)\)</span>, e&nbsp; <span class="math inline">\(\F(\alpha)\cong\F(\beta)\)</span>. O <a href="extensions.html#cor-simple" class="quarto-xref">Corolário&nbsp;<span>70.1</span></a> implica que existe um isomorfismo <span class="math inline">\(\psi:\F(\alpha)\to\F(\beta)\)</span> tal que <span class="math inline">\(\psi|_\F=\mbox{id}_\F\)</span> e <span class="math inline">\(\psi(\alpha)=\beta\)</span>. Agora observe que <span class="math inline">\(f(x)\)</span> pode ser visto como um polinômio sobre <span class="math inline">\(\F(\alpha)\)</span> e também sobre <span class="math inline">\(\F(\beta)\)</span> e <span class="math inline">\(\E\)</span> é corpo de decomposição de <span class="math inline">\(f(x)\)</span> sobre estes corpos. Pelo <a href="decompfields.html#thm-decompfield-unique" class="quarto-xref">Teorema&nbsp;<span>71.1</span></a>, existe isomorfismo (na verdade um automorfismo) <span class="math inline">\(\varphi:\E\to\E\)</span> tal que <span class="math inline">\(\varphi|_{\F(\alpha)}=\psi\)</span>. Ora, observe que <span class="math inline">\(\varphi\in\gal\E\F\)</span> tal que <span class="math inline">\(\varphi(\alpha)=\beta\)</span>. Isso implica que <span class="math inline">\(\gal\E\F\)</span> permuta transitivamente as raízes de <span class="math inline">\(f(x)\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\gal\E\F\)</span> pode ser considerado como um subgrupo de <span class="math inline">\(S_k\)</span>, observe que <span class="math inline">\(f(x)\)</span> não possui raízes múltiplas em <span class="math inline">\(\E\)</span> (pois <span class="math inline">\(\mbox{mdc}(f(x),f'(x))=1)\)</span> e isso significa que <span class="math inline">\(f(x)\)</span> tem precisamente <span class="math inline">\(k\)</span> raízes, nomeadamente <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> mutualmente distintas. Se um elemento <span class="math inline">\(\sigma\)</span> de <span class="math inline">\(\gal\E\F\)</span> está no núcleo da ação em <span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span>, então <span class="math inline">\(\sigma\)</span> fixa todas as raízes. Mas como <span class="math inline">\(\E\)</span> é gerado por estas raízes (sendo corpo de decomposição), <span class="math inline">\(\sigma=\mbox{id}_\E\)</span>. Então <span class="math inline">\(\gal\E\F\)</span> pode ser visto como um subgrupo do grupo simétrico do conjunto&nbsp;&nbsp;<span class="math inline">\(\{&nbsp;\alpha_1,\ldots,\alpha_k\}\)</span> e este grupo simétrico é claramente isomorfo a <span class="math inline">\(S_k\)</span>. Finalmente, o fato que <span class="math inline">\(k\mid |\gal\E\F|\)</span> segue do <span class="quarto-unresolved-ref">?cor-cor-orbit-stab</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.4</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo e sejam <span class="math inline">\(\varphi_1,\ldots,\varphi_k\in\aut\E\)</span>. Assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span> tais que <span class="math inline">\(\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0\)</span>. Mostre que <span class="math inline">\(\alpha_1=\cdots=\alpha_k=0\)</span>.</p>
@@ -1235,6 +1259,7 @@ g(x)=(x-\sigma_1(\alpha))\cdots(x-\sigma_h(\alpha))=x^h+\beta_{h-1}x^{h-1}+\cdot
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

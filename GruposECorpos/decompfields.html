@@ -173,6 +173,14 @@ window.Quarto = {
 \newcommand{\aut}[1]{\textrm{Aut}(#1)}
 \newcommand{\fix}[1]{\textrm{Fix}(#1)}
 \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\ols}[1]{\mskip.5\thinmuskip\overline{\mskip-.5\thinmuskip {#1} \mskip-.5\thinmuskip}\mskip.5\thinmuskip} % overline short
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}} % overline short italic
+\newcommand{\closure}[1]{
+  \tctestifnum{\count@stringtoks{#1}&gt;1} %checks if number of chars in arg &gt; 1 (including '\')
+  {\ols{#1}} %if arg is longer than just one char, e.g. \mathbb{Q}, \mathbb{F},...
+  {\olsi{#1}} %if arg is just one char, e.g. K, L,...
+}
 \]</span></p>
 </div>
 
@@ -1116,7 +1124,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1204,9 +1212,9 @@ f(x)=\alpha_0(x-\alpha_1)\cdots(x-\alpha_k)
 <p><span class="theorem-title"><strong>Teorema 71.1</strong></span> Sejam <span class="math inline">\(\F_1\)</span> e <span class="math inline">\(\F_2\)</span> corpos e seja <span class="math inline">\(\varphi:\F_1\to\F_2\)</span> um isomorfismo. Seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> não constante e assuma que <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> são corpos de decomposição dos polinômios <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\varphi(f(x))\)</span>, respetivamente. Então existe um isomorfismo <span class="math inline">\(\psi: \K_1\to \K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1}=\varphi\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Por indução no grau de <span class="math inline">\(f(x)\)</span>. Se <span class="math inline">\(\mbox{grau}\,f(x)=1\)</span>, então <span class="math inline">\(\K_1=\F_1\)</span> e <span class="math inline">\(\K_2=\F_2\)</span> e podemos tomar <span class="math inline">\(\psi=\varphi\)</span>. Assuma que o lema é válido para polinômios de grau menor que <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> um polinômio de grau <span class="math inline">\(k\)</span>. Seja <span class="math inline">\(p(x)\in\F_1[x]\)</span> um&nbsp; fator&nbsp; irredutível de <span class="math inline">\(f(x)\)</span>. Então <span class="math inline">\(\varphi(p(x))\in\F_2[x]\)</span> é um fator irredutível de <span class="math inline">\(\varphi(f(x))\)</span> e defina os corpos <span class="math inline">\(\E_1=\F_1[x]/(p(x))\)</span> e <span class="math inline">\(\E_2=\F_2[x]/(\varphi(p(x))\)</span>. Existem <span class="math inline">\(\alpha\in\E_1\)</span> e <span class="math inline">\(\beta\in\E_2\)</span> tais que <span class="math inline">\(m_\alpha(x)=p(x)\)</span> e <span class="math inline">\(m_{\beta}(x)=\varphi(p(x))\)</span> e o lema anterior implica que existe um isomorfismo <span class="math inline">\(\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)\)</span> tal que&nbsp; <span class="math inline">\(\vartheta|_{\F_2}=\varphi\)</span> e <span class="math inline">\(\vartheta(\alpha)=\beta\)</span>. Escreva <span class="math inline">\(f(x)=(x-\alpha)f_1(x)\)</span> e <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Por indução no grau de <span class="math inline">\(f(x)\)</span>. Se <span class="math inline">\(\mbox{grau}\,f(x)=1\)</span>, então <span class="math inline">\(\K_1=\F_1\)</span> e <span class="math inline">\(\K_2=\F_2\)</span> e podemos tomar <span class="math inline">\(\psi=\varphi\)</span>. Assuma que o lema é válido para polinômios de grau menor que <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(f(x)\in\F_1[x]\)</span> um polinômio de grau <span class="math inline">\(k\)</span>. Sejam <span class="math inline">\(\alpha\in\K_1\)</span> e <span class="math inline">\(\beta\in\K_2\)</span> raízes de <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\varphi(f(x))\)</span>, respetivamente, e defina os corpos <span class="math inline">\(\E_1=\F_1(\alpha)\)</span> e <span class="math inline">\(\E_2=\F_2(\beta)\)</span>. O lema anterior implica que existe um isomorfismo <span class="math inline">\(\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)\)</span> tal que&nbsp; <span class="math inline">\(\vartheta|_{\F_2}=\varphi\)</span> e <span class="math inline">\(\vartheta(\alpha)=\beta\)</span>. Escreva <span class="math inline">\(f(x)=(x-\alpha)f_1(x)\)</span> e <span class="math display">\[
 \varphi(f(x))=\vartheta(f(x))=\vartheta((x-\alpha)f_1(x))=(x-\beta)\vartheta(f_1(x)).
-\]</span> Escolha corpos de decomposição <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> para os polinômios <span class="math inline">\(f_1(x)\)</span> e <span class="math inline">\(\vartheta(f_1(x))\)</span> sobre <span class="math inline">\(\F_1(\alpha)\)</span> e <span class="math inline">\(\F_2(\beta)\)</span>, respetivamente. Isso implica que <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> são corpos de decomposição para os polinômios <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(\vartheta(f(x))\)</span> sobre <span class="math inline">\(\F_1\)</span> e <span class="math inline">\(\F_2\)</span>, respetivamente. Pela hipótese de indução, existe um isomorfismo <span class="math inline">\(\psi:\K_1\to\K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1(\alpha)}=\vartheta\)</span>, e portanto <span class="math inline">\(\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi\)</span>.</p>
+\]</span> Note que <span class="math inline">\(\K_1\)</span> é corpo de decomposição de <span class="math inline">\(f_1(x)\)</span> sobre <span class="math inline">\(\E_1=\F_1(\alpha)\)</span> e <span class="math inline">\(\K_2\)</span> é corpo de decomposição de <span class="math inline">\(\varphi(f_1(x))\)</span> sobre <span class="math inline">\(\E_2=\F_2(\beta)\)</span>. Pela hipótese de indução, existe um isomorfismo <span class="math inline">\(\psi:\K_1\to\K_2\)</span> tal que <span class="math inline">\(\psi|_{\F_1(\alpha)}=\vartheta\)</span>, e portanto <span class="math inline">\(\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi\)</span>.</p>
 </div>
 <div id="cor-decomp-field-unique" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corolário 71.1</strong></span> Sejam <span class="math inline">\(\F\)</span> um corpo, <span class="math inline">\(f(x)\in\F[x]\)</span> um polinômio não constante, e sejam <span class="math inline">\(\K_1\)</span> e <span class="math inline">\(\K_2\)</span> corpos de decomposição de <span class="math inline">\(f(x)\)</span>. Então existe <span class="math inline">\(\varphi:\K_1\to \K_2\)</span> isomorfismo tal que <span class="math inline">\(\varphi(\alpha)=\alpha\)</span> para todo <span class="math inline">\(\alpha\in\F\)</span>.</p>
@@ -1235,12 +1243,12 @@ f(x)=\alpha_0(x-\alpha_1)\cdots(x-\alpha_k)
 <ol type="1">
 <li><p>Como <span class="math inline">\(\F\)</span> é finito, a sua caraterística é um primo <span class="math inline">\(p\)</span> e tem-se que <span class="math inline">\(\F\)</span> é uma extensão de <span class="math inline">\(\F_p\)</span>. Tomando <span class="math inline">\(d=\dim_{\F_p}\F\)</span>, temos que <span class="math inline">\(|\F|=p^d\)</span>.</p></li>
 <li><p>Ponha <span class="math inline">\(q=p^d\)</span>, seja <span class="math inline">\(\K\)</span> o corpo de decomposição do polinômio <span class="math inline">\(g(x)=x^{q}-x\)</span> e seja <span class="math inline">\(\F\)</span> o conjunto de raízes de&nbsp; <span class="math inline">\(g(x)\)</span> em <span class="math inline">\(\K\)</span>. Note que se <span class="math inline">\(\alpha,\beta\in\F\)</span>, então <span class="math inline">\(\alpha^q=\alpha\)</span> e <span class="math inline">\(\beta^q=\beta\)</span> e temos que <span class="math display">\[
-(\alpha\pm\beta)^q=(\alpha^q\pm\beta)^{p^d}=\alpha\pm\beta \quad\mbox{e}\quad(\alpha/\beta)^q=\alpha/\beta^q=\alpha/\beta.
+(\alpha\pm\beta)^q=(\alpha^q\pm\beta)^{p^d}=\alpha\pm\beta \quad\mbox{e}\quad(\alpha/\beta)^q=\alpha^q/\beta^q=\alpha/\beta.
 \]</span> Claramente, <span class="math inline">\(0\in\F\)</span> e <span class="math inline">\(1\in\F\)</span>. Portanto <span class="math inline">\(\F\)</span> é um corpo e como <span class="math inline">\(\K\)</span> foi corpo de decomposição, segue que&nbsp; <span class="math inline">\(\F=\K\)</span>. Além disso, como, pelo exercício anterior, <span class="math inline">\(g(x)\)</span> não possui raízes múltiplas em <span class="math inline">\(\K\)</span>, temos que <span class="math inline">\(|\F|=q=p^d\)</span> e <span class="math inline">\(\F\)</span> é um corpo de ordem desejada.</p></li>
-</ol>
-<p>Se <span class="math inline">\(\E\)</span> é um corpo arbitrário de <span class="math inline">\(q=p^d\)</span> elementos, então <span class="math inline">\(\E^{*}=\E\setminus\{0\}\)</span> é um grupo de <span class="math inline">\(q-1\)</span> elementos, e o Teorema de Lagrange implica que <span class="math inline">\(x^q=x\)</span> para todo <span class="math inline">\(x\in\E^*\)</span>. Mas esta equação vale para <span class="math inline">\(0\in\E\)</span> também. Segue que <span class="math display">\[
+<li><p>Se <span class="math inline">\(\E\)</span> é um corpo arbitrário de <span class="math inline">\(q=p^d\)</span> elementos, então <span class="math inline">\(\E^{*}=\E\setminus\{0\}\)</span> é um grupo de <span class="math inline">\(q-1\)</span> elementos, e o Teorema de Lagrange implica que <span class="math inline">\(x^q=x\)</span> para todo <span class="math inline">\(x\in\E^*\)</span>. Mas esta equação vale para <span class="math inline">\(0\in\E\)</span> também. Segue que <span class="math display">\[
 x^q-x=\prod_{\alpha\in\E}(x-\alpha)
-\]</span> e portanto <span class="math inline">\(\E\)</span> é um corpo de decomposição de <span class="math inline">\(x^q-x\)</span>. Em particular <span class="math inline">\(\E\)</span> é isomorfo ao corpo <span class="math inline">\(\F\)</span> no parágrafo anterior e assim verificamos também a afirmação 3.</p>
+\]</span> e portanto <span class="math inline">\(\E\)</span> é um corpo de decomposição de <span class="math inline">\(x^q-x\)</span>. Em particular <span class="math inline">\(\E\)</span> é isomorfo ao corpo <span class="math inline">\(\F\)</span> no parágrafo anterior e assim verificamos também a afirmação 3.</p></li>
+</ol>
 </div>
 <p>Se <span class="math inline">\(q=p^d\)</span> com algum primo <span class="math inline">\(p\)</span>, então existe (a menos de isomorfismo) um único corpo de cardinalidade <span class="math inline">\(q\)</span> e este corpo é denotado por <span class="math inline">\(\F_q\)</span>.</p>
 <p>O seguinte teorema segue diretamente de um resultado que provamos quando estudamos grupos cíclicos.</p>
@@ -1675,8 +1683,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/fieldauts.html" class="pagination-link" aria-label="Automorfismos de corpos">
-        <span class="nav-page-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../GruposECorpos/fieldauts.html" class="pagination-link" aria-label="Automorfismos de corpos e o grupo de Galois">
+        <span class="nav-page-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

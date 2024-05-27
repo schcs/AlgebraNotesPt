@@ -173,6 +173,14 @@ window.Quarto = {
 \newcommand{\aut}[1]{\textrm{Aut}(#1)}
 \newcommand{\fix}[1]{\textrm{Fix}(#1)}
 \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\ols}[1]{\mskip.5\thinmuskip\overline{\mskip-.5\thinmuskip {#1} \mskip-.5\thinmuskip}\mskip.5\thinmuskip} % overline short
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}} % overline short italic
+\newcommand{\closure}[1]{
+  \tctestifnum{\count@stringtoks{#1}&gt;1} %checks if number of chars in arg &gt; 1 (including '\')
+  {\ols{#1}} %if arg is longer than just one char, e.g. \mathbb{Q}, \mathbb{F},...
+  {\olsi{#1}} %if arg is just one char, e.g. K, L,...
+}
 \]</span></p>
 </div>
 
@@ -1116,7 +1124,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1214,13 +1222,13 @@ f(x)&amp;=x^{n-1}+x^{n-2}+\cdots+x+1\\
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 45.1</strong></span> Demonstre para <span class="math inline">\(z_1,z_2\in\C\)</span> que</p>
 <ul>
-<li><span class="math inline">\(\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}\)</span>;</li>
+<li><span class="math inline">\(\overbar{z_1+z_2}=\overline{z_1}+\overline{z_2}\)</span>;</li>
 <li><span class="math inline">\(\overline{z_1z_2}=\overline{z_1}\cdot\overline{z_2}\)</span>;</li>
 <li><span class="math inline">\(\overline{z_1}=z_1\)</span> se e somente se <span class="math inline">\(z_1\in\R\)</span>.</li>
 </ul>
 </div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 45.2</strong></span> Seja <span class="math inline">\(f(x)\in\R[x]\)</span> e seja <span class="math inline">\(\alpha\in\C\)</span>. Se <span class="math inline">\(\alpha\)</span> raiz de <span class="math inline">\(f(x)\)</span>, então <span class="math inline">\(\overline\alpha\)</span> também é</p>
+<div id="lem-comp-conj-root" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 45.2</strong></span> Seja <span class="math inline">\(f(x)\in\R[x]\)</span> e seja <span class="math inline">\(\alpha\in\C\)</span>. Se <span class="math inline">\(\alpha\)</span> raiz de <span class="math inline">\(f(x)\)</span>, então <span class="math inline">\(\bar\alpha\)</span> também é</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math display">\[
