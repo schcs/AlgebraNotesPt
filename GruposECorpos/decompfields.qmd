@@ -62,12 +62,15 @@ Sejam $\F_1$ e $\F_2$ corpos e seja $\varphi:\F_1\to\F_2$ um isomorfismo. Seja $
 
 
 :::{.proof}
-Por indução no grau de $f(x)$. Se $\mbox{grau}\,f(x)=1$, então $\K_1=\F_1$ e $\K_2=\F_2$ e podemos tomar $\psi=\varphi$. Assuma que o lema é válido para polinômios de grau menor que $k\geq 2$ e seja $f(x)\in\F_1[x]$ um polinômio de grau $k$. Seja $p(x)\in\F_1[x]$ um  fator  irredutível de $f(x)$. Então $\varphi(p(x))\in\F_2[x]$ é um fator irredutível de $\varphi(f(x))$ e defina os corpos $\E_1=\F_1[x]/(p(x))$ e 
-$\E_2=\F_2[x]/(\varphi(p(x))$. Existem $\alpha\in\E_1$ e $\beta\in\E_2$ tais que $m_\alpha(x)=p(x)$ e $m_{\beta}(x)=\varphi(p(x))$ e o lema anterior implica que existe um isomorfismo $\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)$ tal que  $\vartheta|_{\F_2}=\varphi$ e $\vartheta(\alpha)=\beta$. Escreva $f(x)=(x-\alpha)f_1(x)$ e
+Por indução no grau de $f(x)$. Se $\mbox{grau}\,f(x)=1$, então $\K_1=\F_1$ e $\K_2=\F_2$ e podemos tomar $\psi=\varphi$. Assuma que o lema é válido para polinômios de grau menor que $k\geq 2$ e seja $f(x)\in\F_1[x]$ um polinômio de grau $k$. 
+Sejam $\alpha\in\K_1$ e $\beta\in\K_2$ raízes de $f(x)$ e $\varphi(f(x))$, respetivamente, e defina os corpos $\E_1=\F_1(\alpha)$ e 
+$\E_2=\F_2(\beta)$. O lema anterior implica que existe um isomorfismo $\vartheta:\F_1(\alpha_1)\to\F_2(\alpha_2)$ tal que  $\vartheta|_{\F_2}=\varphi$ e $\vartheta(\alpha)=\beta$. Escreva $f(x)=(x-\alpha)f_1(x)$ e
 $$
 \varphi(f(x))=\vartheta(f(x))=\vartheta((x-\alpha)f_1(x))=(x-\beta)\vartheta(f_1(x)).
 $$
-Escolha corpos de decomposição $\K_1$ e $\K_2$ para os polinômios $f_1(x)$ e $\vartheta(f_1(x))$ sobre $\F_1(\alpha)$ e $\F_2(\beta)$, respetivamente. Isso implica que $\K_1$ e $\K_2$ são corpos de decomposição para os polinômios $f(x)$ e $\vartheta(f(x))$ sobre $\F_1$ e $\F_2$, respetivamente. Pela hipótese de indução, existe um isomorfismo $\psi:\K_1\to\K_2$ tal que $\psi|_{\F_1(\alpha)}=\vartheta$, e portanto $\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi$.
+Note que $\K_1$ é corpo de decomposição de $f_1(x)$ sobre $\E_1=\F_1(\alpha)$ e $\K_2$ é corpo de decomposição de $\varphi(f_1(x))$ sobre 
+$\E_2=\F_2(\beta)$. 
+Pela hipótese de indução, existe um isomorfismo $\psi:\K_1\to\K_2$ tal que $\psi|_{\F_1(\alpha)}=\vartheta$, e portanto $\psi|_{\F_1}=\vartheta|_{\F_1}=\varphi$.
 :::
 
 :::{#cor-decomp-field-unique}
@@ -102,11 +105,11 @@ As seguintes afirmações são verdadeiras.
 
 2. Ponha $q=p^d$, seja $\K$ o corpo de decomposição do polinômio $g(x)=x^{q}-x$ e seja $\F$ o conjunto de raízes de  $g(x)$ em $\K$. Note que se $\alpha,\beta\in\F$, então $\alpha^q=\alpha$ e $\beta^q=\beta$ e temos que
 $$
-(\alpha\pm\beta)^q=(\alpha^q\pm\beta)^{p^d}=\alpha\pm\beta \quad\mbox{e}\quad(\alpha/\beta)^q=\alpha/\beta^q=\alpha/\beta.
+(\alpha\pm\beta)^q=(\alpha^q\pm\beta)^{p^d}=\alpha\pm\beta \quad\mbox{e}\quad(\alpha/\beta)^q=\alpha^q/\beta^q=\alpha/\beta.
 $$
 Claramente, $0\in\F$ e $1\in\F$. Portanto $\F$ é um corpo e como $\K$ foi corpo de decomposição, segue que  $\F=\K$. Além disso, como, pelo exercício anterior, $g(x)$ não possui raízes múltiplas em $\K$, temos que $|\F|=q=p^d$ e $\F$ é um corpo de ordem desejada.
 
-Se $\E$ é um corpo arbitrário de $q=p^d$ elementos, então $\E^{*}=\E\setminus\{0\}$ é um grupo de $q-1$ elementos, e o Teorema de Lagrange implica que $x^q=x$ para todo $x\in\E^*$. Mas esta equação vale para $0\in\E$ também. Segue que
+3. Se $\E$ é um corpo arbitrário de $q=p^d$ elementos, então $\E^{*}=\E\setminus\{0\}$ é um grupo de $q-1$ elementos, e o Teorema de Lagrange implica que $x^q=x$ para todo $x\in\E^*$. Mas esta equação vale para $0\in\E$ também. Segue que
 $$
 x^q-x=\prod_{\alpha\in\E}(x-\alpha)
 $$

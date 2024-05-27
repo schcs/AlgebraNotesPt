@@ -1,9 +1,11 @@
 
 ---
-title: "Automorfismos de corpos"
+title: "Automorfismos de corpos e o grupo de Galois"
 number-sections: true
 lang: pt-BR
 ---
+
+## Automorfismos de corpos
 
 :::{#def-field-aut}
 Seja $\E$ um corpo. Lembre que um mapa $\varphi:\E\to\E$ bijetivo é dito automorfismo de $\E$ se $\varphi(x+y)=\varphi(x)+\varphi(y)$ e $\varphi(xy)=\varphi(x)\varphi(y)$ vale para todo $x,y\in\E$. O conjunto de automorfismos de $\E$ é um grupo com a operação de composição e este grupo é denotado por $\aut \E$. Se $\varphi\in\aut\E$, então definimos
@@ -28,6 +30,8 @@ $$
 que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\varphi\in\aut\E$. Além disso, $\fix\varphi$ é o conjunto de soluções da equação $x^p=x$ e esta equação tem precisamente $p$ soluções, nomeadamente, os elementos de $\F_p$. Logo $\fix\varphi=\F_p$. O automorfismo $\varphi$ é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.
 :::
 
+## O grupo de Galois
+
 :::{#def-galois-group}
 Seja $\E:\F$ uma extensão de corpos. Defina
 $$
@@ -45,14 +49,14 @@ Seja $\E:\F$ uma extensão, $f(x)\in\F[x]$, $\alpha\in\E$ tal que $f(\alpha)=0$,
 :::
 
 :::{.proof}
-Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio.
+Exercício. Revise a demonstração do fato bem conhecido que se um número complexo é raiz de um polinômio com coeficientes reais, então o conjugado complexo deste número será também raiz do mesmo polinômio (@lem-comp-conj-root).
 :::
 
 :::{#exm-gal}
-Determinemos $\gal\C\R$. Seja $\varphi\in\gal\C\R$. Como $\varphi$ é uma transformação $\R$-linear, as imagens $\varphi(1)$ e $\varphi(i)$ determinam $\varphi$. Como $1\in\R$, temos que $\varphi(1)=1$. Note que $\varphi(i)$ é raiz do polinômio $x^2+1$, então $\varphi(i)$ será raiz do mesmo polinômio que implica que $\varphi(i)=\pm i$. Escolhendo $\varphi(i)=i$, obtemos que $\varphi=\mbox{id}_\C$, enquanto escolhendo $\varphi(i)=-i$, obtemos a conjugação complexa. Obtivemos então que $\gal\C\R$ é um grupo de ordem 2.
+Determinemos $\gal\C\R$. Seja $\varphi\in\gal\C\R$. Como $\varphi$ é uma transformação $\R$-linear, as imagens $\varphi(1)$ e $\varphi(i)$ determinam $\varphi$. Como $1\in\R$, temos que $\varphi(1)=1$. Note que $i$ é raiz do polinômio $x^2+1$, então $\varphi(i)$ será raiz do mesmo polinômio que implica que $\varphi(i)=\pm i$. Escolhendo $\varphi(i)=i$, obtemos que $\varphi=\mbox{id}_\C$, enquanto escolhendo $\varphi(i)=-i$, obtemos a conjugação complexa. Obtivemos então que $\gal\C\R$ é um grupo de ordem 2.
 :::
 
-:::{exm-gal2}
+:::{#exm-gal2}
 Seja $\xi=\exp(2\pi i/3)$ (terceira raiz da unidade) e considere a extensão $\E=\Q(\xi)$ de $\Q$. Note que $\xi$ é raiz do polinômio $x^3-1=(x-1)(x^2+x+1)$ e que o polinômio $x^2+x+1$ é irredutível sobre $\Q$. Em particular, $m_\xi(x)=x^2+x+1$ e $\E$ é um espaço vetorial de dimensão $2$ sobre $\Q$. Além disso,
 $$
 \E=\left<1,\xi\right>_\Q=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
@@ -64,14 +68,16 @@ $$
 (Na verdade, precisa verificar que isso é um automorfismo, mas isso é uma conta simples que o leitor pode fazer.) Então $|\gal\E\Q|=2$.
 :::
 
+## O grupo de Galois como grupo de permutação
+
 :::{#thm-transitive}
 Seja $\F$ um corpo de caraterística zero ou um corpo finito. Assuma que $\E$ é um corpo de decomposição de um polinômio irredutível $f(x)\in\F[x]$ com $\mbox{grau}\,f(x)=k$. Então $G=\gal\E\F$ permuta as raízes de $f(x)$ transitivamente e $G$ pode ser visto como um subgrupo transitivo de $S_k$. Em particular $k$ divide $|G|$.
 :::
 
 :::{.proof}
-Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. De fato, nós provamos em um resultado anterior que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Por um outro teorema anterior, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
+Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Pelo @thm-decompfield-unique, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
 
-Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do Teorema Orbita-Estabilizador.
+Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do @cor-cor-orbit-stab.
 :::
 
 :::{#exr-}

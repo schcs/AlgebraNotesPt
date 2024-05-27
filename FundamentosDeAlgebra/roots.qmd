@@ -102,15 +102,15 @@ $$
 Demonstre para $z_1,z_2\in\C$ que
 
 
--  $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$;
+-  $\overbar{z_1+z_2}=\overline{z_1}+\overline{z_2}$;
 -  $\overline{z_1z_2}=\overline{z_1}\cdot\overline{z_2}$;
 -  $\overline{z_1}=z_1$ se e somente se $z_1\in\R$.
 
 :::
 
 
-:::{#lem-}
-Seja $f(x)\in\R[x]$ e seja $\alpha\in\C$. Se $\alpha$ raiz de $f(x)$, então $\overline\alpha$ também é
+:::{#lem-comp-conj-root}
+Seja $f(x)\in\R[x]$ e seja $\alpha\in\C$. Se $\alpha$ raiz de $f(x)$, então $\bar\alpha$ também é
 :::
 
 
