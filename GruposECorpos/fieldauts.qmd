@@ -188,7 +188,6 @@ Seja $\E:\F$ uma extensão algébrica. Mostre que ela é separável se
 2. $\E$ é finito.
 :::
 
-## O grupo de Galois como grupo de permutação
 
 :::{#thm-transitive}
 Seja $\F$ um corpo. Assuma que $\E$ é um corpo de decomposição de um polinômio irredutível e separável $f(x)\in\F[x]$ com $\mbox{grau}\,f(x)=k$. Então $G=\gal\E\F$ permuta as raízes de $f(x)$ transitivamente e $G$ pode ser visto como um subgrupo transitivo de $S_k$. Em particular $k$ divide $|G|$.
