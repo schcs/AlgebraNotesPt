@@ -85,11 +85,16 @@ Seja $p$ um primo e $d\geq 1$. Mostre que $x^{p^d}-x\in\F_p[x]$ não tem raízes
 :::
 
 :::{#exr-charp}
-Seja $\F$ um corpo de caraterística $p$. Mostre que
+Seja $\F$ um corpo de caraterística $p$. 
+
+1. Mostre que 
 $$
 (x+y)^{p^d}=x^{p^d}+y^{p^d}
 $$
-vale para todo $x,y\in\F$ e $d\geq 0$.
+vale para todo $x,y\in\F$ e $d\geq 0$. 
+2. Deduza que $\varphi:\F\to \F$ é um homomorfismo de $\F$. 
+3. Mostre que $\varphi$ é injetivo e se $\F$ é finito, então $\varphi$ é sobrejetivo. 
+4. Exiba um exemplo para mostrar que $\varphi$ pode não ser sobrejetivo no caso quando $\F$ é um corpo infinito de caraterística $p$. 
 :::
 
 :::{#thm-finite-field}

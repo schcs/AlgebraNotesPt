@@ -29,7 +29,7 @@ são as terceiras raízes não triviais da unidade. Por definição, o corpo de 
 $$
 \E=\Q\left(\sqrt[3]2,\sqrt[3]2\xi_1,\sqrt[3]2\xi_2\right)=\Q\left(\sqrt[3]2,\sqrt[3]2\xi_1,\sqrt[3]2\xi_1^2\right).
 $$
-Notando que $x_1=\alpha_1/\alpha\in\E$, obtemos que 
+Notando que $\xi_1=\alpha_1/\alpha\in\E$, obtemos que 
 $$
 \E=\Q\left(\sqrt[3]2,\xi_1\right)=\Q\left(\sqrt[3]2\right)(\xi_1).
 $$
@@ -56,11 +56,15 @@ A conjugação complexa $\varphi: x+iy\mapsto x-iy$ é um automorfismo de  $\C
 :::
 
 :::{#exm-field-aut}
-Seja $p$ um primo e seja $f(x)\in\F_p[x]$ um polinômio irredutível de grau $d$. Defina $\E=\F_p[x]/(f(x))$ e note que $\E$ é um corpo de $q=p^d$ elementos. Afirmamos que o mapa $\varphi:\E\to\E$ definido como $\alpha\mapsto \alpha^p$ é um automorfismo. É bem conhecido que $(\alpha+\beta)^p=\alpha^p+\beta^p$ e $(\alpha\beta)^p=\alpha^p\beta^p$, então precisamos verificar apenas que $\varphi$ é uma bijeção. Como $\E$ é um corpo finito, é suficiente verificar que $\varphi$ é injetivo. Isso é verdade, pois se $\alpha,\beta\in\E$ tais que $\varphi(\alpha)=\varphi(\beta)$, então
+Seja $p$ um primo e seja $f(x)\in\F_p[x]$ um polinômio irredutível de grau $d$. Defina $\E=\F_p[x]/(f(x))$ e note que $\E$ é um corpo de $q=p^d$ elementos. 
+Pelo @exr-charp, o mapa $\varphi:\E\to\E$ definido como $\alpha\mapsto \alpha^p$ é um automorfismo. 
+<!--É bem conhecido que $(\alpha+\beta)^p=\alpha^p+\beta^p$ e $(\alpha\beta)^p=\alpha^p\beta^p$, então precisamos verificar apenas que $\varphi$ é uma bijeção. Como $\E$ é um corpo finito, é suficiente verificar que $\varphi$ é injetivo. Isso é verdade, pois se $\alpha,\beta\in\E$ tais que $\varphi(\alpha)=\varphi(\beta)$, então
 $$
 0=\alpha^p-\beta^p=(\alpha-\beta)^p
 $$
-que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\varphi\in\aut\E$. Além disso, $\fix\varphi$ é o conjunto de soluções da equação $x^p=x$ e esta equação tem precisamente $p$ soluções, nomeadamente, os elementos de $\F_p$. Logo $\fix\varphi=\F_p$. O automorfismo $\varphi$ é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.
+que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\varphi\in\aut\E$. 
+-->
+Além disso, $\fix\varphi$ é o conjunto de soluções da equação $x^p=x$ e esta equação tem precisamente $p$ soluções, nomeadamente, os elementos de $\F_p$. Logo $\fix\varphi=\F_p$. O automorfismo $\varphi$ é conhecido como o automorfismo de <a href="https://pt.wikipedia.org/wiki/Ferdinand_Georg_Frobenius">Frobenius</a>.
 :::
 
 ## O grupo de Galois
@@ -105,18 +109,6 @@ $$
 Afirmamos que $\gal{\Q(\sqrt[3]2)}\Q$ é trivial. De fato, se $g\in\gal{\Q(\sqrt[3]2)}\Q$, então $g$ está determinado por $g(\sqrt[3]2)$. 
 Por outro lado, $m_{\sqrt[3]2}(x)=x^3-2$ (@exm-sqroot-3), e @lem-aut-pol implica que $g(\sqrt[3]2)$ é raiz do polinômio $x^3-2$. Determinamos no @exm-sqroot-3 que as demais raízes deste polinômio não são reais, mas $\Q(\sqrt[3]2)\subseteq\R$. Portanto, $g(\sqrt[3]2)=\sqrt[3]2$ e $g=\mbox{id}_{\Q(\sqrt[3]2)}$. 
 Logo $\gal{\Q(\sqrt[3]2)}\Q=1$. 
-:::
-
-## O grupo de Galois como grupo de permutação
-
-:::{#thm-transitive}
-Seja $\F$ um corpo de caraterística zero ou um corpo finito. Assuma que $\E$ é um corpo de decomposição de um polinômio irredutível $f(x)\in\F[x]$ com $\mbox{grau}\,f(x)=k$. Então $G=\gal\E\F$ permuta as raízes de $f(x)$ transitivamente e $G$ pode ser visto como um subgrupo transitivo de $S_k$. Em particular $k$ divide $|G|$.
-:::
-
-:::{.proof}
-Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Pelo @thm-decompfield-unique, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
-
-Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do @cor-orbit-stab.
 :::
 
 :::{#exr-}
@@ -183,7 +175,10 @@ que (considerando que as dimensões são finitas) implica que $\E(\beta)=\E$; ou
 ## Extensões separáveis
 
 :::{#def-sep-ext}
-Seja $\E:\F$ uma extensão algébrica. Um elemento $\alpha\in\E$ é dita *separável*, se $m_\alpha(x)$ não possui raízes múltiplas em nenhuma extensão de $\F$. A extensão $\E:\F$ é *separável* se todo elemento $\alpha\in\E$ é separável.
+Seja $\F$ um corpo. Um polinômio $f(x)\in\F[x]$ chama-se *separável* se $f(x)$ não possui raízes múltiplas em nenhuma extensão de $\F$. 
+Seja $\E:\F$ uma extensão algébrica. 
+ Um elemento $\alpha\in\E$ é dita *separável*, se $m_\alpha(x)$ é um polinômio separável. 
+ A extensão $\E:\F$ é *separável* se todo elemento $\alpha\in\E$ é separável.
 :::
 
 :::{#exr-sep-ext}
@@ -192,6 +187,20 @@ Seja $\E:\F$ uma extensão algébrica. Mostre que ela é separável se
 1. a caraterística de $\F$ (e de $\E$) é zero;
 2. $\E$ é finito.
 :::
+
+## O grupo de Galois como grupo de permutação
+
+:::{#thm-transitive}
+Seja $\F$ um corpo. Assuma que $\E$ é um corpo de decomposição de um polinômio irredutível e separável $f(x)\in\F[x]$ com $\mbox{grau}\,f(x)=k$. Então $G=\gal\E\F$ permuta as raízes de $f(x)$ transitivamente e $G$ pode ser visto como um subgrupo transitivo de $S_k$. Em particular $k$ divide $|G|$.
+:::
+
+:::{.proof}
+Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Pelo @thm-decompfield-unique, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
+
+Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $f(x)$ é separável)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do @cor-orbit-stab.
+:::
+
+
 
 :::{#lem-simple-ext}
 Seja $\E:\F$ uma extensão finita e separável. Então existe um elemento $\gamma\in\E$ tal que $\E=\F(\gamma)$. Ou seja, $\E:\F$ é uma extensão simples.
