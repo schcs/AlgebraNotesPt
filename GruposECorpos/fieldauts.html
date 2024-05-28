@@ -1244,8 +1244,8 @@ que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\var
 <p><span class="theorem-title"><strong>Exemplo 72.5</strong></span> Afirmamos que <span class="math inline">\(\gal{\Q(\sqrt[3]2)}\Q\)</span> é trivial. De fato, se <span class="math inline">\(g\in\gal{\Q(\sqrt[3]2)}\Q\)</span>, então <span class="math inline">\(g\)</span> está determinado por <span class="math inline">\(g(\sqrt[3]2)\)</span>. Por outro lado, <span class="math inline">\(m_{\sqrt[3]2}(x)=x^3-2\)</span> (<a href="#exm-sqroot-3" class="quarto-xref">Exemplo&nbsp;<span>72.1</span></a>), e <a href="#lem-aut-pol" class="quarto-xref">Lema&nbsp;<span>72.1</span></a> implica que <span class="math inline">\(g(\sqrt[3]2)\)</span> é raiz do polinômio <span class="math inline">\(x^3-2\)</span>. Determinamos no <a href="#exm-sqroot-3" class="quarto-xref">Exemplo&nbsp;<span>72.1</span></a> que as demais raízes deste polinômio não são reais, mas <span class="math inline">\(\Q(\sqrt[3]2)\subseteq\R\)</span>. Portanto, <span class="math inline">\(g(\sqrt[3]2)=\sqrt[3]2\)</span> e <span class="math inline">\(g=\mbox{id}_{\Q(\sqrt[3]2)}\)</span>. Logo <span class="math inline">\(\gal{\Q(\sqrt[3]2)}\Q=1\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 72.4</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo e sejam <span class="math inline">\(\varphi_1,\ldots,\varphi_k\in\aut\E\)</span>. Assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span> tais que <span class="math inline">\(\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0\)</span>. Mostre que <span class="math inline">\(\alpha_1=\cdots=\alpha_k=0\)</span>. Em outras palavras, <span class="math inline">\(\varphi_1,\ldots,\varphi_k\)</span> são linearmente independentes em <span class="math display">\[
-\mbox{Func}(\E,\E)=\{f:\E\to\E \mbox{é uma função}\}.
+<p><span class="theorem-title"><strong>Exercício 72.4</strong></span> Seja <span class="math inline">\(\E\)</span> um corpo e sejam <span class="math inline">\(\varphi_1,\ldots,\varphi_k\in\aut\E\)</span>. Assuma que <span class="math inline">\(\alpha_1,\ldots,\alpha_k\in\E\)</span> tais que <span class="math inline">\(\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0\)</span>. Mostre que <span class="math inline">\(\alpha_1=\cdots=\alpha_k=0\)</span>. Em outras palavras, <span class="math inline">\(\varphi_1,\ldots,\varphi_k\)</span> são linearmente independentes no <span class="math inline">\(\E\)</span>-espaço <span class="math display">\[
+\mbox{Func}(\E,\E)=\{f:\E\to\E \mbox{ é uma função}\}.
 \]</span></p>
 </div>
 <div id="lem-gal-ff" class="theorem lemma">
@@ -1254,13 +1254,18 @@ que implica que $\alpha-\beta=0$; ou seja $\alpha=\beta$. Temos então que $\var
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Os elementos de <span class="math inline">\(\gal\E\F\)</span> são elementos do <span class="math inline">\(\E\)</span>-espaço <span class="math inline">\(\mbox{Hom}_\F(\E,\E)\)</span>. Dada uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>, <span class="math inline">\(\mbox{Hom}_\F(\E,\E)\)</span> é isomorfo como <span class="math inline">\(\F\)</span>-espaço com <span class="math display">\[
 \mbox{Func}(B,\E)=\{f:B\to E\mid f\mbox{ é função}\}.
-\]</span> Note que <span class="math inline">\(\dim_\F\mbox{Func}(B,\E)=|X|=\dim_\F\E\)</span>. Portanto, <span class="math inline">\(n+1\)</span> elementos distintos <span class="math inline">\(\varphi_1,\ldots,\varphi_{n+1}\in\gal\E\F\)</span> são linearmente dependentes em <span class="math inline">\(\mbox{Func}(B,\E)\)</span> e eles são também linearmente dependentes em <span class="math inline">\(\mbox{Hom}_\F(\E,\E)\)</span>. são elementos distintos de <span class="math inline">\(\gal\E\F\)</span>. Vamos obter uma contradição. Seja <span class="math inline">\(e_1,\ldots,e_n\)</span> uma base de <span class="math inline">\(\E\)</span> sobre <span class="math inline">\(\F\)</span>. Considere o sistema de equações lineares sobre <span class="math inline">\(\E\)</span>: <span class="math display">\[\begin{eqnarray*}
-\varphi_1(e_1)x_1+\cdots+\varphi_{n+1}(e_1)x_{n+1}&amp;=&amp;0\\
-&amp;\vdots&amp;\\
-\varphi_1(e_n)x_1+\cdots+\varphi_{n+1}(e_n)x_{n+1}&amp;=&amp;0.
-\end{eqnarray*}\]</span> Como temos <span class="math inline">\(n\)</span> equações para <span class="math inline">\(n+1\)</span> incógnitas, existe uma solução não trivial <span class="math inline">\((\alpha_1,\ldots,\alpha_{n+1})\in\E^{n+1}\)</span> e obtemos usando esta solução que <span class="math display">\[
+\]</span> Note que <span class="math inline">\(\dim_\F\mbox{Func}(B,\E)=|X|=\dim_\F\E\)</span>. Portanto, <span class="math inline">\(n+1\)</span> elementos distintos <span class="math inline">\(\varphi_1,\ldots,\varphi_{n+1}\in\gal\E\F\)</span> são linearmente dependentes em <span class="math inline">\(\mbox{Func}(B,\E)\)</span> e eles são também linearmente dependentes em <span class="math inline">\(\mbox{Hom}_\F(\E,\E)\)</span>. <!--são elementos distintos de $\gal\E\F$. Vamos obter uma contradição. Seja $e_1,\ldots,e_n$ uma base de $\E$ sobre $\F$. Considere o sistema de equações lineares sobre $\E$:
+\begin{eqnarray*}
+\varphi_1(e_1)x_1+\cdots+\varphi_{n+1}(e_1)x_{n+1}&=&0\\
+&\vdots&\\
+\varphi_1(e_n)x_1+\cdots+\varphi_{n+1}(e_n)x_{n+1}&=&0.
+\end{eqnarray*}
+Como temos $n$ equações para $n+1$ incógnitas, existe uma solução não trivial $(\alpha_1,\ldots,\alpha_{n+1})\in\E^{n+1}$ e obtemos usando esta solução que
+$$
 0=\alpha_1\varphi_1(e_i)+\cdots+\alpha_{n+1}\varphi_{n+1}(e_i)=(\alpha_1\varphi_1+\cdots+\alpha_{n+1}\varphi_{n+1})(e_i)
-\]</span> para todo <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>. Isso implica que <span class="math inline">\(\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0\)</span>, mas isso é impossível pelo exercício anterior.</p>
+$$
+para todo $i\in\{1,\ldots,n\}$.
+Isso implica que $\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0$, mas isso é impossível pelo exercício anterior.--></p>
 </div>
 </section>
 <section id="extensões-normais" class="level2" data-number="72.3">
