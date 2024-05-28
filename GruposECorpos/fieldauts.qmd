@@ -112,7 +112,10 @@ Logo $\gal{\Q(\sqrt[3]2)}\Q=1$.
 :::
 
 :::{#exr-}
-Seja $\E$ um corpo e sejam $\varphi_1,\ldots,\varphi_k\in\aut\E$. Assuma que $\alpha_1,\ldots,\alpha_k\in\E$ tais que $\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0$. Mostre que $\alpha_1=\cdots=\alpha_k=0$.
+Seja $\E$ um corpo e sejam $\varphi_1,\ldots,\varphi_k\in\aut\E$. Assuma que $\alpha_1,\ldots,\alpha_k\in\E$ tais que $\alpha_1\varphi_1+\cdots+\alpha_k\varphi_k=0$. Mostre que $\alpha_1=\cdots=\alpha_k=0$. Em outras palavras, $\varphi_1,\ldots,\varphi_k$ são linearmente independentes em 
+$$
+\mbox{Func}(\E,\E)=\{f:\E\to\E \mbox{é uma função}\}.
+$$
 :::
 
 :::{#lem-gal-ff}
@@ -120,7 +123,13 @@ Seja $\E:\F$ uma extensão finita. Então $|\gal\E\F|\leq \dim_\F\E$.
 :::
 
 :::{.proof}
-Seja $n=\dim_\F\E$ e assuma que $\varphi_1,\ldots,\varphi_{n+1}$ são elementos distintos de $\gal\E\F$. Vamos obter uma contradição. Seja $e_1,\ldots,e_n$ uma base de $\E$ sobre $\F$. Considere o sistema de equações lineares sobre $\E$:
+Os elementos de $\gal\E\F$ são elementos do $\E$-espaço $\mbox{Hom}_\F(\E,\E)$. Dada uma base $B$ de $\E$ sobre $\F$, $\mbox{Hom}_\F(\E,\E)$ é isomorfo como 
+$\F$-espaço com 
+$$
+\mbox{Func}(B,\E)=\{f:B\to E\mid f\mbox{ é função}\}.
+$$
+Note que $\dim_\F\mbox{Func}(B,\E)=|X|=\dim_\F\E$. Portanto, $n+1$ elementos distintos $\varphi_1,\ldots,\varphi_{n+1}\in\gal\E\F$ 
+são linearmente dependentes em $\mbox{Func}(B,\E)$ e eles são também linearmente dependentes em $\mbox{Hom}_\F(\E,\E)$. são elementos distintos de $\gal\E\F$. Vamos obter uma contradição. Seja $e_1,\ldots,e_n$ uma base de $\E$ sobre $\F$. Considere o sistema de equações lineares sobre $\E$:
 \begin{eqnarray*}
 \varphi_1(e_1)x_1+\cdots+\varphi_{n+1}(e_1)x_{n+1}&=&0\\
 &\vdots&\\
