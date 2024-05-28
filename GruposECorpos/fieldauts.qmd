@@ -7,6 +7,39 @@ lang: pt-BR
 
 ## Automorfismos de corpos
 
+
+Começamos por um exemplo motivador.
+
+:::{#exm-sqroot-3}
+Seja $\alpha=\sqrt[3]2$ e considere o corpo $\Q(\alpha)$. Pelo Critério de Einsenstein (@thm-eisenstein), o polinômio $x^3-2\in\Q[x]$ é irredutível, $\alpha$ é  raiz deste polinômio, e assim @lem-pol-min implica que $m_\alpha(x)=x^3-2$. Obtemos por @lem-Fa que 
+$$
+\Q(\alpha)\cong\Q[x]/(x^3-2).
+$$
+Em particular, $\Q(\alpha):\Q$ é uma extensão de grau $3$. 
+
+Observe que o corpo $\Q(\alpha)$ não é corpo de decomposição de $m_\alpha(x)=x^3-2$! De fato, as raízes complexas de $x^3-2$ são 
+$$
+\alpha=\sqrt[3]2,\quad \alpha_1=\sqrt[3]2\xi_1,\quad \alpha_2=\sqrt[3]2\xi_2
+$$
+onde 
+$$
+\xi_1=\exp(2\pi i/3)\quad\mbox{e}\quad \xi_2=\exp(4\pi i/3)=\xi_1^2
+$$
+são as terceiras raízes não triviais da unidade. Por definição, o corpo de decomposição de $x^3-2$ é 
+$$
+\E=\Q\left(\sqrt[3]2,\sqrt[3]2\xi_1,\sqrt[3]2\xi_2\right)=\Q\left(\sqrt[3]2,\sqrt[3]2\xi_1,\sqrt[3]2\xi_1^2\right).
+$$
+Notando que $x_1=\alpha_1/\alpha\in\E$, obtemos que 
+$$
+\E=\Q\left(\sqrt[3]2,\xi_1\right)=\Q\left(\sqrt[3]2\right)(\xi_1).
+$$
+O polinômio minimal de $\xi_1$ sobre $\Q\left(\sqrt[3]2\right)$ é $x^2+x+1$, e assim 
+$$
+\E=\Q(\sqrt[3]2)[x]/(x^2+x+1).
+$$
+Temos que a extensão $\E:\Q$ é de grau $6$.
+:::
+
 :::{#def-field-aut}
 Seja $\E$ um corpo. Lembre que um mapa $\varphi:\E\to\E$ bijetivo é dito automorfismo de $\E$ se $\varphi(x+y)=\varphi(x)+\varphi(y)$ e $\varphi(xy)=\varphi(x)\varphi(y)$ vale para todo $x,y\in\E$. O conjunto de automorfismos de $\E$ é um grupo com a operação de composição e este grupo é denotado por $\aut \E$. Se $\varphi\in\aut\E$, então definimos
 $$
@@ -68,6 +101,12 @@ $$
 (Na verdade, precisa verificar que isso é um automorfismo, mas isso é uma conta simples que o leitor pode fazer.) Então $|\gal\E\Q|=2$.
 :::
 
+:::{#exm-gal3}
+Afirmamos que $\gal{\Q(\sqrt[3]2)}\Q$ é trivial. De fato, se $g\in\gal{\Q(\sqrt[3]2)}\Q$, então $g$ está determinado por $g(\sqrt[3]2)$. 
+Por outro lado, $m_{\sqrt[3]2}(x)=x^3-2$ (@exm-sqroot-3), e @lem-aut-pol implica que $g(\sqrt[3]2)$ é raiz do polinômio $x^3-2$. Determinamos no @exm-sqroot-3 que as demais raízes deste polinômio não são reais, mas $\Q(\sqrt[3]2)\subseteq\R$. Portanto, $g(\sqrt[3]2)=\sqrt[3]2$ e $g=\mbox{id}_{\Q(\sqrt[3]2)}$. 
+Logo $\gal{\Q(\sqrt[3]2)}\Q=1$. 
+:::
+
 ## O grupo de Galois como grupo de permutação
 
 :::{#thm-transitive}
@@ -77,7 +116,7 @@ Seja $\F$ um corpo de caraterística zero ou um corpo finito. Assuma que $\E$ é
 :::{.proof}
 Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$, e  $\F(\alpha)\cong\F(\beta)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Agora observe que $f(x)$ pode ser visto como um polinômio sobre $\F(\alpha)$ e também sobre $\F(\beta)$ e $\E$ é corpo de decomposição de $f(x)$ sobre estes corpos. Pelo @thm-decompfield-unique, existe isomorfismo (na verdade um automorfismo) $\varphi:\E\to\E$ tal que $\varphi|_{\F(\alpha)}=\psi$. Ora, observe que $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
 
-Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do @cor-cor-orbit-stab.
+Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $\mbox{mdc}(f(x),f'(x))=1)$ e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do @cor-orbit-stab.
 :::
 
 :::{#exr-}
@@ -103,22 +142,103 @@ para todo $i\in\{1,\ldots,n\}$.
 Isso implica que $\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0$, mas isso é impossível pelo exercício anterior.
 :::
 
+## Extensões normais
+
+:::{#def-normal-extension}
+Uma extensão $\E:\F$ algébrica é dita *normal* se para todo polinômio $f(x)\in\F[x]$, se $f(x)$ possui raiz em $\E$, então $f(x)$ decompõe-se em produto de polinômios do primeiro grau (ou seja, $\E$ contem um corpo de decomposição para $f(x)$).
+:::
+
+:::{#exm-normal-cuberoot-3}
+Por exemplo, @exm-sqroot-3, a extensão $\Q(\sqrt[3]2):\Q$ não é normal.
+:::
+
+:::{#lem-normal-splitting}
+Assuma que $\E:\F$ é uma extensão finita. Então ela é normal se e somente se $\E$ é o corpo de decomposição de algum polinômio $f(x)\in\F[x]$. 
+:::
+:::{.proof}
+Assuma primeiro que $\E:\F$ é finita e é normal. Então $\E=\F(\alpha_1,\ldots,\alpha_k)$ com $\alpha_i\in\E$. Note que $m_{\alpha_i}(x)$ possui raiz em $\E$ (nomeadamente, $\alpha_i$) e ele decompõe-se em produto de polinômios do primeiro grau. Portanto, 
+$$
+f(x)=m_{\alpha_1}(x)\cdots m_{\alpha_k}(x)
+$$
+também decompõe-se em produto de polinômios do primeiro grau em $\E$. Por outro lado, $\E$ é gerado pelas raízes de $f(x)$, então $\E$ é corpo de decomposição de $f(x)$ sobre $\F$. 
+
+Assuma agora que $\E$ é corpo de decomposição de algum polinômio $f(x)$. Seja $m(x)\in\F[x]$ um polinômio irredutível tal que 
+$m(x)$ possui raiz $\alpha$ em $\E$. Seja $\K$ o corpo de decomposição de $m(x)$ sobre $\E$ e assuma que $\beta\in\K$ é uma outra raiz de $m(x)$. Basta provar que $\beta\in\E$. Considere as cadeias
+$$
+\E(\alpha):\F(\alpha):\F\quad\mbox{e}\quad \E(\beta):\F(\beta):\F.
+$$
+As extensões $\F(\alpha):\F$ e $\F(\beta):\F$ são isomorfas, pois $m_\alpha(x)=m_\beta(x)=m(x)\in\F[x]$. Além disso, 
+$\E(\alpha)$ é corpo de decomposição de $f(x)$ sobre $\F(\alpha)$ e $\E(\beta)$ é corpo de decomposição de $f(x)$ sobre $\F(\beta)$. Portanto, 
+as extensões $\E(\alpha):\F(\alpha)$ e $\E(\beta):\F(\beta)$ são também isomorfas. Em particular, 
+$$
+\dim_{\F}\E(\alpha)=\dim_\F \E(\beta).
+$$
+Por outro lado, $\alpha\in\E$ e $\E(\alpha)=\E$ e obtemos que 
+$$
+\dim_{\F}\E=\dim_\F \E(\beta).
+$$
+que (considerando que as dimensões são finitas) implica que $\E(\beta)=\E$; ou seja, $\beta\in\E$ com foi o objetivo deste argumento.
+:::
+
+## Extensões separáveis
+
+:::{#def-sep-ext}
+Seja $\E:\F$ uma extensão algébrica. Um elemento $\alpha\in\E$ é dita *separável*, se $m_\alpha(x)$ não possui raízes múltiplas em nenhuma extensão de $\F$. A extensão $\E:\F$ é *separável* se todo elemento $\alpha\in\E$ é separável.
+:::
+
+:::{#exr-sep-ext}
+Seja $\E:\F$ uma extensão algébrica. Mostre que ela é separável se 
+
+1. a caraterística de $\F$ (e de $\E$) é zero;
+2. $\E$ é finito.
+:::
+
 :::{#lem-simple-ext}
-Seja $\F$ um corpo infinito (por exemplo um corpo de caraterística zero), $\E$ uma extensão de $\F$ e sejam $\alpha,\beta\in\E$ elementos algébricos sobre $\F$. Então existe um elemento $\gamma\in\E$ tal que $\F(\alpha,\beta)=\F(\gamma)$.
+Seja $\E:\F$ uma extensão finita e separável. Então existe um elemento $\gamma\in\E$ tal que $\E=\F(\gamma)$. Ou seja, $\E:\F$ é uma extensão simples.
 :::
 
 :::{.proof}
-Exercício.
+Primeiro, se $\F$ é um corpo finito, então $\E$ (extensão finita de $\F$) é também finito e $\E=\F(\alpha)$ onde $\alpha\in\E$ é um gerador de $\E^*=\E\setminus\{0\}$ (@thm-field-cyclic). Ou seja, $\E$ é extensão simples e podemos assumir no resto do argumento que $\F$ é corpo infinito. 
+
+É suficiente provar que para todo $\alpha,\beta\in\E$, existe $\gamma\in\E$ tal que $\F(\alpha,\beta)=\F(\gamma)$. Afirmamos que existe algum $c\in\F$ tal que $\F(\alpha,\beta)=\F(\alpha+c\beta)$. Seja $c\in\F$ tal que $\F(\alpha,\beta)\neq\F(\alpha+c\beta)$ e ponha $\K=\F(\alpha+c\beta)$. Por suposição, $\K\subset \F(\alpha,\beta)$ e $\alpha,\beta\not\in\K$. Seja $\E$ um corpo de decomposição de 
+$m_\beta(x)$ sobre $\K$. Como $\E:\F$ é separável e o grau de $m_\beta(x)$ é maior que dois, existe $\beta'\in\E\setminus\{\beta\}$ tais que $m_\beta(\beta')=0$. Pelo @thm-transitive, existe $\sigma$ um automorfismo em $\gal{\E}{\K}$ tal que $\sigma(\beta)=\beta'$ e $\sigma(\alpha+c\beta)=\alpha+c\beta$. Portanto 
+$$
+\alpha+c\beta=\sigma(\alpha+c\beta)=\sigma(\alpha)+c\sigma(\beta)=\sigma(\alpha)+c\beta'.
+$$ 
+e
+$$
+c = \frac{\alpha-\sigma(\alpha)}{\beta'-\beta}.
+$$
+Como $\sigma\in \gal{\E}{\K}$, temos por @lem-gal-ff, temos um número finito de possibilidades para a expressão no lado direito da equação anterior. Isso quer dizer que temos apenas um número finito de possibilidades para $c\in\F$ tal que $\F(\alpha+c\beta)\neq \F(\alpha,\beta)$. Como $\F$ é infinito, existe $c\in\F$ tal que $\F(\alpha+c\beta)\neq \F(\alpha,\beta)$.
+:::
+
+## Extensões de Galois
+
+:::{#def-ext-gal}
+Uma extensão $\E:\F$ é dita *extensão de Galois* se ela é algébrica, normal e separável.
+:::
+
+:::{#thm-gg-fix-normal}
+Seja $\E:\F$ uma extensão de Galois finita. Temos que 
+$$
+\fix{\gal\E\F}=\{\alpha\in\E\mid g(\alpha)=\alpha\mbox{ para todo }g\in\gal\E\F\}=\F.
+$$
+:::
+:::{.proof}
+Claramente $\F\subseteq \fix{\gal\E\F}$ então precisa provar a outra inclusão. Assuma que $\K=\fix{\gal\E\F}$ e seja $\alpha\in \E\setminus\F$. 
+Vamos provar que $\alpha\not\in\K$. Seja $m_\alpha(x)$ o polinômio mínimo de $\alpha$ sobre $\F$ e note que o grau de $m_\alpha(x)$ é maior ou igual a $2$. Como a extensão 
+$\E:\F$ é  normal e separável, $m_\alpha(x)$ é produto de fatores do primeiro grau em $\E$ e existe $\beta\in\E$ diferente de $\alpha$ tal que 
+$m_\alpha(\beta)=0$. Ora, existe um isomorfismo $\psi:\F(\alpha)\to \F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$. O corpo $\E$, sendo uma extensão normal, é corpo de decomposição de algum polinômio $f(x)\in\F[x]$. Logo $\E$ é corpo de decomposição de $f(x)$ sobre os corpos isomorfos $\F(\alpha)$ e $\F(\beta)$. Por @thm-decompfield-unique, existe um isomorphismo $\varphi:\E\to \E$ tal que $\varphi|_{\F(\alpha)}=\psi$ e em particular $\varphi|_{\F}=\mbox{id}_\F$. Portanto $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta\neq \alpha$. Isso implica que $\alpha\not\in\fix{\gal\E\F}$. 
 :::
 
 :::{#thm-gg-order}
-Seja $\F$ um corpo de caraterística zero, $f(x)\in\F[x]$ um polinômio irredutível, e seja $\E$ o corpo de decomposição de $f(x)$. Então $|\gal \E\F|=\dim_\F\E$.
+Seja $\E:\F$ uma extensão de Galois finita. Então $|\gal\E\F|=\dim_\F\E$. 
 :::
-
 :::{.proof}
-Seja $h=|\gal\E\F|$.. Pelo  resultado anterior, $h\leq\dim_\F\E$, então basta provar a outra desigualdade. Pelo lema anterior, temos que $\E=\F(\alpha)$ com algum $\alpha\in\E$. Afirmamos que $\mbox{grau}\,m_\alpha(x)\leq h$ e isso vai implicar que $\dim_\F\E\leq h$. Note que é suficiente achar um polinômio $g(x)\in\F[x]$ de grau $h$ tal que $\alpha$ é raiz de $g(x)$. Assuma que $\{\sigma_1,\ldots,\sigma_h\}=\gal\E\F$ com $\sigma_1=1$ e considere o polinômio
+Seja $h=|\gal\E\F|$. Pelo  resultado anterior, $h\leq\dim_\F\E$, então basta provar a outra desigualdade. Pelo @lem-simple-ext, temos que $\E=\F(\alpha)$ com algum $\alpha\in\E$. Afirmamos que $\mbox{grau}\,m_\alpha(x)\leq h$ e isso vai implicar que $\dim_\F\E\leq h$. Note que é suficiente achar um polinômio $g(x)\in\F[x]$ de grau $h$ tal que $\alpha$ é raiz de $g(x)$. Assuma que $\{\sigma_1,\ldots,\sigma_h\}=\gal\E\F$ com $\sigma_1=1$ e considere o polinômio
 $$
 g(x)=(x-\sigma_1(\alpha))\cdots(x-\sigma_h(\alpha))=x^h+\beta_{h-1}x^{h-1}+\cdots+\beta_1h+\beta_0.
 $$
-Como $g(x)$ é invariante por todo elemento $\sigma_i$ de $\gal\E\F$, temos que $g(x)\in\F[x]$. Além disso, $g(\alpha)=g(\sigma_1(\alpha))=0$ e a demonstração está pronta.
+Note que os coeficientes $\beta_i$ deste polinômio são elementos de $\fix{\gal\E\F}$. Portanto, @thm-gg-fix-normal implica que $\beta_i\in\F$, 
+ou seja $g(x)\in\F[x]$. Além disso, $g(\alpha)=g(\sigma_1(\alpha))=0$ e a demonstração está pronta.
 :::

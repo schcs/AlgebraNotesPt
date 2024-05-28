@@ -19,6 +19,7 @@ $$
 :::
 
 :::{.proof}
+
 1. Escreva $f(x)=g_1(x)\cdots g_m(x)$ onde os $g_i(x)\in\F[x]$ são polinômios irredutíveis (@thm-tfa-pol). Defina $\E=\F[x]/(g_1(x))$  e observe que $\E$ é um corpo (@thm-quot) e que $\alpha=x+(g_1(x))\in\E$ é uma raiz de $g_1(x)$ e portanto $\alpha$ é raiz de $f(x)$.
 
 2. Provamos por indução no grau de $f(x)$. Se $f(x)$ tem grau 1, então podemos tomar $\K=\F$  e a afirmação é verdadeira. Assuma que a afirmação é verdadeira para polinômios de grau menor que $k$ e seja $f(x)\in\F[x]$ um polinômio de grau $k$. Pela afirmação 1., existe uma extensão finita $\E$ tal que $f(x)$ possui raiz em $\E$ e assim $f(x)=(x-\alpha_1)g(x)$ onde $\alpha\in\E$ e $g(x)\in\E[x]$ é um polinômio de grau $k-1$. Pela hipótese de indução, existe uma extensão finita $\K$ de $\E$ tal que
