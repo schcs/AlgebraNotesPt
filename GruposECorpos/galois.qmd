@@ -50,7 +50,7 @@ Temos que $g(x)\in\fix H[x]$ e $g(\alpha)=0$. Portanto $\dim_{\fix H}\E\leq \mbo
 $$
 |\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
 $$ 
-Isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 4. agora segue destas considerações.
+Isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 3. agora segue destas considerações.
 :::
 
 ## Exemplos
