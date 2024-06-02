@@ -44,9 +44,9 @@ $$
 $$
 Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). Considere o  polinômio 
 $$
-h(x)=\prod_{h\in H}(x-h(\alpha)).
+g(x)=\prod_{h\in H}(x-h(\alpha)).
 $$
-Temos que $h(x)\in\fix H[x]$ e $h(\alpha)=0$. Portanto $\dim_{\fix H}\E\leq \mbox{grau}(h(x))=|H|$. Logo 
+Temos que $g(x)\in\fix H[x]$ e $g(\alpha)=0$. Portanto $\dim_{\fix H}\E\leq \mbox{grau}(g(x))=|H|$. Logo 
 $$
 |\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
 $$ 
