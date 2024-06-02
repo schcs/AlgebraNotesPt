@@ -5,31 +5,58 @@ number-sections: true
 lang: pt-BR
 ---
 
-Nós enunciaremos o teorema para corpos de caraterística zero, mas ressaltamos que o teorema é válido com condições mais gerais.
-
-:::{#def-normal}
-Seja $\E:\F$ uma extensão de corpos de caraterística zero. Dizemos que a extensão é <em>normal </em>se $\E$ é corpo de decomposição de um polinômio sobre $\F$.
-:::
-
-O seguinte teorema será enunciado sem demonstração, embora a demonstração não seja difícil.
-
-:::{#thm-}
-Seja $\E:\F$ uma extensão normal e seja $f(x)\in\F[x]$ um polinômio irredutível. Se $f(x)$ possui uma raiz em $\E$, então $f(x)$ se decompõe como produto de polinômios lineares de $\E[x]$.
-:::
+## O Teorema Fundamental
 
 :::{#thm-fundamental-galois}
 (Teorema Fundamental da Teoria de Galois) 
-Seja $\E:\F$ uma extensão normal de corpos de caraterística zero. Seja $\K$ um subcorpo de $\E$ tal que $\F\subseteq\K$.
+Seja $\E:\F$ uma extensão de Galois finita. Seja $\K$ um subcorpo de $\E$ tal que $\F\subseteq\K$.
 
-- $\E:\K$ é uma extensão normal e $\gal\E\K$ é um subgrupo de $\gal\E\F$.
-- $\mbox{Fix}\, \gal\E\K=\K$.
-- A extensão $\K:\F$ é normal se e somente se $\gal\E\K$ é um subgrupo normal de $\gal\E\F$. Neste caso $\gal\K\F\cong \gal\E\F/\gal\E\K$.
-- O mapa $\mbox{Gal}$ é uma bijeção do conjunto de corpos $\K$ tais que $\F\subseteq\K\subseteq\E$ para o conjunto de subgrupos de $\gal\E\F$. Esta bijeção preserva normalidade (de subgrupos e extensões) e reverte inclusão no sentido que $\K_1\subseteq \K_2$ se e somente se $\gal\E{\K_1}\supseteq\gal\E{\K_2}$.
+1. $\E:\K$ é uma extensão de Galois finita e $\gal\E\K$ é um subgrupo de $\gal\E\F$.
+2. A extensão $\K:\F$ é normal se e somente se $\gal\E\K$ é um subgrupo normal de $\gal\E\F$. Neste caso $\gal\K\F\cong \gal\E\F/\gal\E\K$.
+3. O mapa $\gal{\E}-$ é uma bijeção do conjunto de corpos $\K$ tais que $\F\subseteq\K\subseteq\E$ para o conjunto de subgrupos de $\gal\E\F$. Esta bijeção preserva normalidade (de subgrupos e extensões) e reverte inclusão no sentido que $\K_1\subseteq \K_2$ se e somente se $\gal\E{\K_1}\supseteq\gal\E{\K_2}$.
 :::
 
-Infelizmente, a demonstração do Teorema não cabe no calendário do semestre, mas vamos fazer dois exemplos para ilustrar a correspondência.
+:::{.proof}
+1. A primeira afirmação foi provada no @lem-normal-invariant. Observe que 
+$$
+\gal\E\K=\{\varphi\in\aut \E\mid \K\subseteq\fix\varphi\}\leq \gal\E\F.
+$$
+
+2. Sejam $G=\gal\E\F$ e $H=\gal\E\K$. Seja 
+$$
+\fix H=\{\alpha\in\E\mid \sigma(\alpha)=\alpha\mbox{ para todo }\sigma\in H\}.
+$$
+Afirmamos que para $g\in G$, $\fix {gHg^{-1}}=g(\fix H)$. De fato, se $g(\alpha)\in g(\fix H)$ com algum $\alpha\in \fix H$, e $h\in H$, então 
+$$
+ghg^{-1}g(\alpha)=gh(\alpha)=g(\alpha).
+$$
+Logo $g(\fix H)\subseteq \fix{gHg^{-1}}$. A outra inclusão pode ser verificada por argumento similar. Ora temos pelo @lem-normal-invariant que $\K:\F$ 
+é normal se e somente se $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$ que vale se e somente se $\sigma(\fix H)=\fix H$ que vale pela afirmação anterior é equivalente a $\fix{\sigma H\sigma^{-1}}=\fix{H}$ (@thm-gg-fix-normal); essa última afirmação é equivalente a $\sigma H\sigma^{-1}=H$ para todo $\sigma\in G$ que ocorre se e somente se $H\unlhd G$ (@exr-normal-conj). Assuma que $\K:\F$ é normal e seja $r:\gal\E\F\to\gal\K\F$ a restrição para $\K$ (usamos que $\K:\F$ é normal e assim $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$). Em outras palavras, $r(\sigma)=\sigma|_\K$ para todo $\sigma\in\gal\E\F$. A aplicação $r$ é um homomorfismo com núcleo $\gal\E\K$. Afirmamos que $r$ é sobrejetivo. Seja $\sigma\in\gal\K\F$. Então $\sigma\in\aut \K$. Lembre que $\E$ é corpo de de decomposição de algum polinômio sobre $\F$, mas também sobre $\K$. Portanto @cor-decomp-field-unique implica que existe $\bar\sigma\in \gal\E\K$ tal que $\bar\sigma|_\E=\sigma$; ou seja $\sigma=r(\bar\sigma)$.   
+Portanto, usando o Teorema de Isomorfismo (@thm-ker-im), obtemos que
+$$ 
+\gal\K\F\cong \gal\E\F/\gal\E\K.
+$$
+
+3. Seja $G=\gal\E\F$ e ponha
+$$
+\mathcal K=\{\K\subseteq \E\mid \F\subseteq \K\}\quad \mbox{e}\quad 
+\mathcal G=\{H\leq G\}.
+$$
+Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). Considere o  polinômio 
+$$
+h(x)=\prod_{h\in H}(x-h(\alpha)).
+$$
+Temos que $h(x)\in\fix H[x]$ e $h(\alpha)=0$. Portanto $\dim_{\fix H}\E\leq \mbox{grau}(h(x))=|H|$. Logo 
+$$
+|\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
+$$ 
+Isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 4. agora segue destas considerações.
+:::
+
+## Exemplos
 
 :::{#exm-tfg1}
+Revisitamos o @exm-sqroot-3.
 Seja $\E$ o corpo de decomposição do polinômio $x^3-2\in\Q[x]$ e considere a extensão $\E:\Q$. Esta extensão é normal. As raízes do polinômio são $\sqrt[3]2$, $\xi\sqrt[3]2$ e $\xi^2\sqrt[3]2$ onde $\xi=\exp(2\pi i/3)$ é uma terceira raíz da unidade. Como $\E$ é gerado por estas raízes sobre $\Q$, temos que
 $$
 \E=\Q(\sqrt[3]2, \xi\sqrt[3]2,\xi^2\sqrt[3]2)=\Q(\sqrt[3]2, \xi).
@@ -38,7 +65,7 @@ Além disso, $m_{\sqrt[3]2}(x)=x^3-2$ e $m_{\xi}(x)=x^2+x+1$ e temos que
 $$
 \dim_\Q\E=\dim_\Q\Q(\sqrt[3]2)\cdot\dim_{\Q(\sqrt[3]2)}\E=3\cdot 2=6.
 $$
-Por um teorema que provamos na aula anterior, segue que $|\gal\E\F|=6$.
+Pelo @thm-gg-order, $|\gal\E\F|=6$.
 Se $\varphi\in\gal\E\Q$, então $\varphi$ está determinado pelas imagens $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$. Note que $\sqrt[3]2$ e $\xi$ são raízes dos polinômios irredutíveis $x^3-2$ e $x^2+x+1$ (respetivamente), então $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$ precisam ser raízes do  mesmo polinômio. Temos então que
 $$
 \varphi(\sqrt[3]2)\in\{\sqrt[3]2,\xi\sqrt[3]2,\xi^2\sqrt[3]2\}\quad\mbox{e}\quad \varphi(\xi)\in\{\xi,\xi^2\}.
@@ -47,7 +74,17 @@ Isso dá seis possibilidades para o automorfismo $\varphi$ e como já deduzimos 
 
 Na seguinte tabela, nós apresentamos explicitamente a correspondência entre os subgrupos de $\mbox{Sym}\,R$ e os subcorpos de $\E$.
 
-[table id=5 /]
+| Subgrupo                                                   | Subcorpo                 | Normal? | 
+| ---------------------------------------------------------- | ------------------------ | -----   | 
+| $1$                                                        | $\E=\Q(\xi,\sqrt[3]2)$   | Sim     |
+| $\left<(\sqrt[3]2,\xi\sqrt[3]2)\right>$                    | $\Q(\xi^2\sqrt[3]2)$     | Não     |  
+| $\left<(\sqrt[3]2,\xi^2\sqrt[3]2)\right>$                  | $\Q(\xi\sqrt[3]2)$       | Não     |          
+| $\left<(\xi\sqrt[3]2,\xi^2\sqrt[3]2)\right>$               | $\Q(\sqrt[3]2)$          | Não     |            
+| $\left<(\sqrt[3]2,\xi\sqrt[3]2,\xi^2\sqrt[3]2)\right>$     | $\Q(\xi)$                | Sim     | 
+| $S_3$                                                      | $\Q$                     | Sim     |
+
+Nós podemos ilustrar a posição destes corpos e grupo no seguinte desenho.
+![O reticulado dos subcorpos de $\Q(\sqrt[3]2,\xi)](lattice_s3.png)
 :::
 
 :::{#exm-tfg2}
@@ -76,5 +113,20 @@ e estas duas permutações geram um subgrupo de $S_4$ isomorfo a $D_4$.
 
 Na seguinte tabela, nós apresentamos explicitamente a correspondência entre os subgrupos de $\mbox{Sym}\,R$ e os subcorpos de $\E$.
 
-[table id=6 /]
+| Subgrupo              | Subcorpo               | Normal? | 
+| --------------------- | ---------------------- | -----   | 
+| $1$                   | $\E=\Q(\sqrt[4]2,i)$   | Sim     |
+| $\left<b\right>$      | $\Q(\sqrt[4]2)$        | Não     |  
+| $\left<a^2b\right>$   | $\Q(i\sqrt[4]2)$       | Não     |          
+| $\left<a^2\right>$    | $\Q(\sqrt 2,i)$        | Sim     |            
+| $\left<ab\right>$     | $\Q((1+i)\sqrt[4]2)$   | Não     | 
+| $\left<a^3b\right>$   | $\Q((1-i)\sqrt[4]2)$   | Não     |  
+| $\left<a^2,b\right>$  | $\Q(\sqrt 2)$          | Sim     |          
+| $\left<a\right>$      | $\Q(i)$                | Sim     |            
+| $\left<a^2,ab\right>$ | $\Q(i\sqrt 2)$         | Sim     | 
+| $D_4$                 | $\Q$                   | Sim     |
+
+O reticulado destes corpos está ilustrado no seguinte desenho.
+![O reticulado dos subcorpos de $\Q(\sqrt[4]2,i)](lattice_d4.png)
+
 :::

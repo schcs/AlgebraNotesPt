@@ -10,6 +10,7 @@ $$
 \newcommand{\C}{\mathbb C}
 \newcommand{\F}{\mathbb F}
 \newcommand{\K}{\mathbb K}
+\newcommand{\L}{\mathbb L}
 \newcommand{\N}{\mathbb N}
 \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
 \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
