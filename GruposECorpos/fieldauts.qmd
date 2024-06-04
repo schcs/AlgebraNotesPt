@@ -240,8 +240,9 @@ Seja $\E:\F$ uma extensão finita e separável. Então existe um elemento $\gamm
 :::{.proof}
 Primeiro, se $\F$ é um corpo finito, então $\E$ (extensão finita de $\F$) é também finito e $\E=\F(\alpha)$ onde $\alpha\in\E$ é um gerador de $\E^*=\E\setminus\{0\}$ (@thm-field-cyclic). Ou seja, $\E$ é extensão simples e podemos assumir no resto do argumento que $\F$ é corpo infinito. 
 
-É suficiente provar que para todo $\alpha,\beta\in\E$, existe $\gamma\in\E$ tal que $\F(\alpha,\beta)=\F(\gamma)$. Afirmamos que existe algum $c\in\F$ tal que $\F(\alpha,\beta)=\F(\alpha+c\beta)$. Seja $c\in\F$ tal que $\F(\alpha,\beta)\neq\F(\alpha+c\beta)$ e ponha $\K=\F(\alpha+c\beta)$. Por suposição, $\K\subset \F(\alpha,\beta)$ e $\alpha,\beta\not\in\K$. Seja $\L$ um corpo de decomposição de 
-$m_\beta(x)\in\F[x]$ sobre $\K$. Como $\E:\F$ é separável e o grau de $m_\beta(x)$ é maior que dois, existe $\beta'\in\L\setminus\{\beta\}$ tais que $m_\beta(\beta')=0$. Pelo @thm-transitive, existe $\sigma$ um automorfismo em $\gal{\L}{\K}$ tal que $\sigma(\beta)=\beta'$ e $\sigma(\alpha+c\beta)=\alpha+c\beta$. Portanto 
+É suficiente provar que quando $\E=\F(\alpha,\beta)$, existe $\gamma\in\E$ tal que $\E=\F(\gamma)$. Afirmamos que existe algum $c\in\F$ tal que $\E=\F(\alpha,\beta)=\F(\alpha+c\beta)$. Seja $c\in\F$ tal que $\F(\alpha,\beta)\neq\F(\alpha+c\beta)$ e ponha $\K=\F(\alpha+c\beta)$. Por suposição, $\K\subset \F(\alpha,\beta)$ e $\alpha,\beta\not\in\K$. Seja $\L$ um corpo de decomposição de 
+$m_\beta(x)\in\K[x]$ sobre $\K$. Note que $m_\beta(x)$ é divisor do polinômio minimal $m_\beta^\F(x)$ de $\beta$ sobre $\F$. Por suposição $m_\beta^\F(x)$ é um polinômio separável, então $m_\alpha(x)$ também é separável. Além disso, $\alpha=(\alpha+c\beta)-c\beta\in\L$ e portanto $\E\subseteq \L$. 
+Como $\mbox{grau}\,m_\beta(x)$ é maior que dois e $m_\beta(x)$ é separável, existe $\beta'\in\L\setminus\{\beta\}$ tais que $m_\beta(\beta')=0$. Pelo @thm-transitive, existe $\sigma$ um automorfismo em $\gal{\L}{\K}$ tal que $\sigma(\beta)=\beta'$ e $\sigma(\alpha+c\beta)=\alpha+c\beta$. Portanto 
 $$
 \alpha+c\beta=\sigma(\alpha+c\beta)=\sigma(\alpha)+c\sigma(\beta)=\sigma(\alpha)+c\beta'.
 $$ 
