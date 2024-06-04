@@ -31,7 +31,7 @@ $$
 ghg^{-1}g(\alpha)=gh(\alpha)=g(\alpha).
 $$
 Logo $g(\fix H)\subseteq \fix{gHg^{-1}}$. A outra inclusão pode ser verificada por argumento similar. Ora temos pelo @lem-normal-invariant que $\K:\F$ 
-é normal se e somente se $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$ que vale se e somente se $\sigma(\fix H)=\fix H$ que vale pela afirmação anterior é equivalente a $\fix{\sigma H\sigma^{-1}}=\fix{H}$ (@thm-gg-fix-normal); essa última afirmação é equivalente a $\sigma H\sigma^{-1}=H$ para todo $\sigma\in G$ que ocorre se e somente se $H\unlhd G$ (@exr-normal-conj). Assuma que $\K:\F$ é normal e seja $r:\gal\E\F\to\gal\K\F$ a restrição para $\K$ (usamos que $\K:\F$ é normal e assim $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$). Em outras palavras, $r(\sigma)=\sigma|_\K$ para todo $\sigma\in\gal\E\F$. A aplicação $r$ é um homomorfismo com núcleo $\gal\E\K$. Afirmamos que $r$ é sobrejetivo. Seja $\sigma\in\gal\K\F$. Então $\sigma\in\aut \K$. Lembre que $\E$ é corpo de de decomposição de algum polinômio sobre $\F$, mas também sobre $\K$. Portanto @cor-decomp-field-unique implica que existe $\bar\sigma\in \gal\E\K$ tal que $\bar\sigma|_\E=\sigma$; ou seja $\sigma=r(\bar\sigma)$.   
+é normal se e somente se $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$ que vale se e somente se $\sigma(\fix H)=\fix H$ que vale pela afirmação anterior é equivalente a $\fix{\sigma H\sigma^{-1}}=\fix{H}$ (@thm-gg-fix-normal); essa última afirmação é equivalente a $\sigma H\sigma^{-1}=H$ para todo $\sigma\in G$ que ocorre se e somente se $H\unlhd G$ (@exr-normal-conj). Assuma que $\K:\F$ é normal e seja $r:\gal\E\F\to\gal\K\F$ a restrição para $\K$ (usamos que $\K:\F$ é normal e assim $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$). Em outras palavras, $r(\sigma)=\sigma|_\K$ para todo $\sigma\in\gal\E\F$. A aplicação $r$ é um homomorfismo com núcleo $\gal\E\K$. A sobrejetividade de $r$ segue do @lem-lifting-isom. 
 Portanto, usando o Teorema de Isomorfismo (@thm-ker-im), obtemos que
 $$ 
 \gal\K\F\cong \gal\E\F/\gal\E\K.
@@ -42,15 +42,11 @@ $$
 \mathcal K=\{\K\subseteq \E\mid \F\subseteq \K\}\quad \mbox{e}\quad 
 \mathcal G=\{H\leq G\}.
 $$
-Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). Considere o  polinômio 
-$$
-g(x)=\prod_{h\in H}(x-h(\alpha)).
-$$
-Temos que $g(x)\in\fix H[x]$ e $g(\alpha)=0$. Portanto $\dim_{\fix H}\E\leq \mbox{grau}(g(x))=|H|$. Logo 
+Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). O @lem-H-pol implica que $\dim_{\fix H}\E\leq |H|$, portanto
 $$
 |\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
 $$ 
-Isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 3. agora segue destas considerações.
+Todo isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 3. agora segue destas considerações.
 :::
 
 ## Exemplos
