@@ -12,8 +12,8 @@ lang: pt-BR
 Seja $\E:\F$ uma extensão de Galois finita. Seja $\K$ um subcorpo de $\E$ tal que $\F\subseteq\K$.
 
 1. $\E:\K$ é uma extensão de Galois finita e $\gal\E\K$ é um subgrupo de $\gal\E\F$.
-2. A extensão $\K:\F$ é normal se e somente se $\gal\E\K$ é um subgrupo normal de $\gal\E\F$. Neste caso $\gal\K\F\cong \gal\E\F/\gal\E\K$.
-3. O mapa $\gal{\E}-$ é uma bijeção do conjunto de corpos $\K$ tais que $\F\subseteq\K\subseteq\E$ para o conjunto de subgrupos de $\gal\E\F$. Esta bijeção preserva normalidade (de subgrupos e extensões) e reverte inclusão no sentido que $\K_1\subseteq \K_2$ se e somente se $\gal\E{\K_1}\supseteq\gal\E{\K_2}$.
+2. O mapa $\gal{\E}-$ é uma bijeção do conjunto de corpos $\K$ tais que $\F\subseteq\K\subseteq\E$ para o conjunto de subgrupos de $\gal\E\F$. Esta bijeção preserva normalidade (de subgrupos e extensões) e reverte inclusão no sentido que $\K_1\subseteq \K_2$ se e somente se $\gal\E{\K_1}\supseteq\gal\E{\K_2}$.
+3. A extensão $\K:\F$ é normal se e somente se $\gal\E\K$ é um subgrupo normal de $\gal\E\F$. Neste caso $\gal\K\F\cong \gal\E\F/\gal\E\K$.
 :::
 
 :::{.proof}
@@ -22,7 +22,18 @@ $$
 \gal\E\K=\{\varphi\in\aut \E\mid \K\subseteq\fix\varphi\}\leq \gal\E\F.
 $$
 
-2. Sejam $G=\gal\E\F$ e $H=\gal\E\K$. Seja 
+
+2. Seja $G=\gal\E\F$ e ponha
+$$
+\mathcal K=\{\K\subseteq \E\mid \F\subseteq \K\}\quad \mbox{e}\quad 
+\mathcal G=\{H\leq G\}.
+$$
+Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). O @lem-H-pol implica que $\dim_{\fix H}\E\leq |H|$, portanto
+$$
+|\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
+$$ 
+Todo isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 3. agora segue destas considerações.
+3. Sejam $G=\gal\E\F$ e $H=\gal\E\K$. Seja 
 $$
 \fix H=\{\alpha\in\E\mid \sigma(\alpha)=\alpha\mbox{ para todo }\sigma\in H\}.
 $$
@@ -36,17 +47,6 @@ Portanto, usando o Teorema de Isomorfismo (@thm-ker-im), obtemos que
 $$ 
 \gal\K\F\cong \gal\E\F/\gal\E\K.
 $$
-
-3. Seja $G=\gal\E\F$ e ponha
-$$
-\mathcal K=\{\K\subseteq \E\mid \F\subseteq \K\}\quad \mbox{e}\quad 
-\mathcal G=\{H\leq G\}.
-$$
-Note que $\gal\E-$ é uma aplicação $\mathcal K\to \mathcal G$. Considere a aplicação $\fix -:\mathcal G\to \mathcal K$. Mostremos que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$ e $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$.  O fato que $\fix -\circ \gal\E-=\mbox{id}_{\mathcal K}$ segue to @thm-gg-fix-normal. Precisa-se provar que $\gal\E-\circ \fix- = \mbox{id}_{\mathbb G}$; ou seja, se $H\leq G$, então $\gal \E{\fix H}=H$. Claramente, $H\leq \gal \E{\fix H}$. Por outro lado, assuma que $\E=\fix H(\alpha)$ com algum $\alpha\in\E$ (@lem-simple-ext). O @lem-H-pol implica que $\dim_{\fix H}\E\leq |H|$, portanto
-$$
-|\gal \E{\fix H}|\leq \dim_{\fix H}\E\leq |H|.
-$$ 
-Todo isso implica que $\gal \E{\fix H}=H$. O resto da afirmação 3. agora segue destas considerações.
 :::
 
 ## Exemplos
