@@ -38,7 +38,7 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 * [Corpos de decomposição e corpos finitos](decompfields.qmd)
 * [Automorfismos de corpos](fieldauts.qmd)
 * [O Teorema Fundamental da Teoria de Galois](galois.qmd)
-* [Resolubilidade por radicais]
+* [As aplicações da Teoria de Galois](appl_galois.qmd)
 
 TODO: Grupos abelianos, Resolubilidade por radicais
 

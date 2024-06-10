@@ -93,6 +93,7 @@ book:
         - GruposECorpos/decompfields.qmd
         - GruposECorpos/fieldauts.qmd
         - GruposECorpos/galois.qmd
+        - GruposECorpos/appl_galois.qmd
 format:
   html:
     theme: cosmo
