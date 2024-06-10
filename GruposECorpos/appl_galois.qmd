@@ -9,7 +9,7 @@ lang: pt-BR
 :::{#def-ext-rad}
 Seja $\E:\F$ uma extensão de corpos. Dizemos que $\E$ é uma *extensão radical* de $\F$ se $\E=\F(\alpha)$ com $\alpha\in\E$ tal que $\alpha^k\in \F$. Assumindo que $k\in\N$ é menor tal que $\beta=\alpha^k\in\F$, escrevemos também que $\E=\F(\sqrt[k]\beta)$. Assuma que 
 $$
-K_0\subseteq K_1\subseteq K_2\subseteq \cdots\subseteq K_s
+\K_0\subseteq \K_1\subseteq \K_2\subseteq \cdots\subseteq \K_s
 $$ 
 é uma torre de extensões. Dizemos que ela é uma *torre radical* se cada extensão $K_{i+1}:K_{i}$ é extensão radical.
 :::
