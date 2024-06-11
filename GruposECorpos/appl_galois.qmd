@@ -4,8 +4,7 @@ number-sections: true
 lang: pt-BR
 ---
 
-## Resolubilidade por radicais 
-
+## Extensões e torres radicais
 :::{#def-ext-rad}
 Seja $\E:\F$ uma extensão de corpos. Dizemos que $\E$ é uma *extensão radical* de $\F$ se $\E=\F(\alpha)$ com $\alpha\in\E$ tal que $\alpha^k\in \F$. Assumindo que $k\in\N$ é menor tal que $\beta=\alpha^k\in\F$, escrevemos também que $\E=\F(\sqrt[k]\beta)$. Assuma que 
 $$
@@ -45,6 +44,8 @@ $$
 é uma torre radical e o último termo é corpo de decomposição de $f(x)$. 
 :::
 
+## Extensões ciclotômicas 
+
 :::{#exr-cyclic-aut}
 Demonstre que $\aut{\Z_n}\cong\Z_n^*$. Deduza que se  $G$ é um grupo cíclico de ordem $k$, então $\aut G$ é abeliano de ordem $\varphi(k)$. 
 :::
@@ -79,6 +80,8 @@ temos que $\K:\E$ é uma extensão finita de Galois com grupo de Galois cíclico
 Temos que $\K=\E(\beta)$ tal que $\beta^k=\alpha$. Temos que $\beta$ é raiz de $f(x)=x^k-\alpha$ e as raízes de $f(x)$ são 
 $\beta, \xi_k\beta,\ldots,\xi_k^{k-1}\beta$ onde $\xi_k\in\E$ é uma $k$-ésima raiz primitiva da unidade. Como $\xi_k\in\E$, temos que $\K$ é um corpo de decomposição de $f(x)$ sobre $\E$. Em particular $\K:\E$ é de Galois. Seja $\sigma\in\gal\K\E$. Então $\sigma(\beta)$ é raiz de $f(x)$ e assim $\sigma(\beta)=\xi_k^i\beta$ com algum $i\in\{0,\ldots,k-1\}$.  Defina, $\psi:\gal\K\E\to R_k$ onde $R_k=\{\xi_k^i\mid i\in\{0,\ldots,k-1\}\}$ com $\psi(\sigma)=\xi_k^i$. Note que $\psi$ é um homomorfismo injetivo e $\gal\E\K$ pode ser visto como um subgrupo de $R_k$. Como $R_k$ é cíclico $\gal\E\K$ é cíclico (@lem-subgroup-cyclic).
 :::
+
+## Resolubulidade de polinômios por radicais 
 
 :::{#thm-galois}
 Assuma que $\F$ é um corpo de caraterística zero e que $f(x)\in\F[x]$ é resolúvel por radicais e seja $\K$ um corpo de decomposição de $f(x)$. Então temos que $\gal\F\K$ é um grupo solúvel
@@ -145,3 +148,24 @@ $$
 $$
 e obtemos que $\gal{\K}\F$ é um grupo solúvel.
 :::
+
+## O Teorema de Abel-Ruffini
+
+:::{#thm-abel-ruffini}
+Se $n\geq 5$, então existe $f(x)\in\Q[x]$ de grau $n$ tal que $f(x)$ não é resolúvel por radicais. 
+:::
+:::{.proof}
+É suficiente provar que existe um polinômio de grau $n$ (para todo $n\geq 5$) tal que $\gal\E\Q$ não é solúvel onde $\E$ é o corpo de decomposição de $f(x)$. 
+
+Seja $f(x)\in\Q[x]$ um polinômio irredutível de grau $5$ com precisamente três raízes reais e seja $G$ o grupo de Galois do seu corpo de decomposição sobre $\Q$. Temos por @thm-transitive que $G$ age transitivamente nos seus $5$ raízes distintas, então $5\mid |G|$ (@cor-orbit-stab). Portanto, $G$ possui um elemento $a$ de ordem $5$ (@cor-cauchy). Além disso, as duas raízes não reais são conjugadas complexas e assim a conjugação complexa é um elemento $b$ de $G$ e $b$ induz uma transposição destas duas raízes. Ora, $G$ contem um elemento de ordem $5$, que deve ser um ciclo de comprimento $5$, e uma transposição. Mas estes elementos geram $S_5$, e $G=S_5$. Como $S_5$ não é solúvel, temos que $f(x)$ não é resolúvel por radicais. 
+
+Para o caso geral de $n\geq 5$, toma um polinômio divisível por $f(x)$. 
+:::
+
+:::{#exm-abel-ruffini}
+O polinômio $x^5-20x+5$ satisfaz as propriedades exigidas na demonstração do @thm-abel-ruffini.
+:::
+
+## Demais aplicações da Teoria de galois
+
+{{< video https://youtu.be/O1sPvUr0YC0?si=muIGR-8t5_fmp95d width="560" height="315" >}} 
