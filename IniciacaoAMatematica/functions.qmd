@@ -9,7 +9,7 @@ lang: pt-BR
 :::{#def-function}
 Sejam $A$ e $B$ conjuntos. Uma *função* de $A$ em $B$ é uma relação $R\subseteq A\times B$ tal que
 
-1. $\forall a\in A:(\exists b\in B: aRB)$;
+1. $\forall a\in A:(\exists b\in B: aRb)$;
 2. Se $aRb_1$ e $aRb_2$ com algum $a\in A$ e $b_1,b_2\in B$, então $b_1=b_2$. 
 
 Em outras palavras,
@@ -129,7 +129,7 @@ $$
 :::{#def-comp-func}
 Sejam $f:A\to B$ e $g:B\to C$ funções. Definimos $g\circ f:A\to C$ como a função 
 $$
-g\circ f:A\to C,\quad g\circ f(a)=g(f(a))\quad\mbox{para todo }a\in A.
+g\circ f:A\to C,\quad (g\circ f)(a)=g(f(a))\quad\mbox{para todo }a\in A.
 $$
 :::
 
@@ -212,11 +212,11 @@ Sabendo que $g\circ f$ é injetiva, isso implica que $a_1=a_2$ e que $f$ é inje
 ## Funções inversas
 
 :::{#def-inverse-func}
-Sejam $f:A\to B$ e $g:B\to A$ funções. 
+Seja $f:A\to B$ uma função. 
 
 1. Uma função $g:B\to A$ é dita *inversa de $f$ à esquerda* se $g\circ f=\mbox{id}_A$. 
 2. Uma função $g:B\to A$ é dita *inversa de $f$ à direita* se $f\circ g=\mbox{id}_B$.
-3. Uma função $g:B\to A$ é dita *inversa* de $f$ se $g\circ f=\mbox{id}_A$ e $f\circ g=\mbox{id}_B$. Neste caso, temos que $f$ é *invertível*.
+3. Uma função $g:B\to A$ é dita *inversa* de $f$ se $g\circ f=\mbox{id}_A$ e $f\circ g=\mbox{id}_B$. Neste caso, dizemos que $f$ é *invertível*.
 :::
 
 :::{#exm-inverse-func}
@@ -244,7 +244,7 @@ $$
 $$
 f_1:A\to B,\ 1\mapsto 4, 2\mapsto 5,\ 3\mapsto 5
 $$
-é também inversa à esquerda de $g$. O leitor pode verificar que nem $f$, nem $g$ pussiem inversas.
+é também inversa à esquerda de $g$. O leitor pode verificar que nem $f$, nem $g$ possuem inversas.
 :::
 
 Note que no @exm-inverse-func, as inversas existem pois $f$ é sobrejetiva e $g$ é injetiva. Por outro lado, estas funções não são bijetivas, e não têm inversas. 
@@ -265,7 +265,7 @@ $$
 Ou seja, $f\circ g=\mbox{id}_B$ e $g$ é inversa à direita de $f$. 
 
 2. Assuma que $f$ tem inversa $g$ à esquerda. Então $g\circ f=\mbox{id}_A$. Como $\mbox{id}_A$ é injetiva, temos que $f$ é injetiva por @lem-comp-inj-surj. Vice versa, assuma que $f$ é injetiva. Defina a função $g:B\to A$ na seguinte forma. Se $a\in A$, então existe único $b\in B$ tal que $f(a)=b$. Além disso, para este $b\in B$, $a\in A$ é o único elemento tal que $f(a)=b$ (pois $f$ é injetiva). Portanto, pode-se definir $g(b)=a$ para $b\in\mbox{Im}(f)$. Se $b\not\in\mbox{Im}(f)$, escolhe algum elemento arbitrário
-$a\in A$ e defina $g(b)=a$. Note que todo elemento de $a$ é Neste caso, 
+$a\in A$ e defina $g(b)=a$. Neste caso, 
 $$
 (g\circ f)(a)=g(f(a))=g(b)=a. 
 $$
@@ -336,14 +336,14 @@ Considere a função $\sen:\R\to [-1,1]$. A função $\sen$ é sobrejetiva, mas 
 
 Por outro lado, pode-se considerar a restrição 
 $$
-\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to [-1,1].
+\sen|_{[-\pi/2,\pi/2]}:[-\pi/2,\pi/2]\to [-1,1].
 $$
 
 ![A restrição da função $\sen$](sen_rest.png)
 
-A função $\sen|_{[-\pi,\pi]}:[-\pi/2,\pi/2]\to[-1,1]$ é injetiva e sobrejetiva, em particular, ela é invertível. A sua inversa é a função 
+A função $\sen|_{[-\pi/2,\pi/2]}:[-\pi/2,\pi/2]\to[-1,1]$ é injetiva e sobrejetiva, em particular, ela é invertível. A sua inversa é a função 
 $$
-\mbox{arcssen}:[-1,1]\to [-\pi,\pi].
+\mbox{arcssen}:[-1,1]\to [-\pi/2,\pi/2].
 $$ 
 
 ![A função $\mbox{arcsen}$](arcsen.png)
