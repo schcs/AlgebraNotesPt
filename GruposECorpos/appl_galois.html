@@ -1144,7 +1144,11 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#resolubilidade-por-radicais" id="toc-resolubilidade-por-radicais" class="nav-link active" data-scroll-target="#resolubilidade-por-radicais"><span class="header-section-number">74.1</span> Resolubilidade por radicais</a></li>
+  <li><a href="#extensões-e-torres-radicais" id="toc-extensões-e-torres-radicais" class="nav-link active" data-scroll-target="#extensões-e-torres-radicais"><span class="header-section-number">74.1</span> Extensões e torres radicais</a></li>
+  <li><a href="#extensões-ciclotômicas" id="toc-extensões-ciclotômicas" class="nav-link" data-scroll-target="#extensões-ciclotômicas"><span class="header-section-number">74.2</span> Extensões ciclotômicas</a></li>
+  <li><a href="#resolubulidade-de-polinômios-por-radicais" id="toc-resolubulidade-de-polinômios-por-radicais" class="nav-link" data-scroll-target="#resolubulidade-de-polinômios-por-radicais"><span class="header-section-number">74.3</span> Resolubulidade de polinômios por radicais</a></li>
+  <li><a href="#o-teorema-de-abel-ruffini" id="toc-o-teorema-de-abel-ruffini" class="nav-link" data-scroll-target="#o-teorema-de-abel-ruffini"><span class="header-section-number">74.4</span> O Teorema de Abel-Ruffini</a></li>
+  <li><a href="#demais-aplicações-da-teoria-de-galois" id="toc-demais-aplicações-da-teoria-de-galois" class="nav-link" data-scroll-target="#demais-aplicações-da-teoria-de-galois"><span class="header-section-number">74.5</span> Demais aplicações da Teoria de galois</a></li>
   </ul>
 </nav>
     </div>
@@ -1170,8 +1174,8 @@ window.Quarto = {
 </header>
 
 
-<section id="resolubilidade-por-radicais" class="level2" data-number="74.1">
-<h2 data-number="74.1" data-anchor-id="resolubilidade-por-radicais"><span class="header-section-number">74.1</span> Resolubilidade por radicais</h2>
+<section id="extensões-e-torres-radicais" class="level2" data-number="74.1">
+<h2 data-number="74.1" data-anchor-id="extensões-e-torres-radicais"><span class="header-section-number">74.1</span> Extensões e torres radicais</h2>
 <div id="def-ext-rad" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 74.1</strong></span> Seja <span class="math inline">\(\E:\F\)</span> uma extensão de corpos. Dizemos que <span class="math inline">\(\E\)</span> é uma <em>extensão radical</em> de <span class="math inline">\(\F\)</span> se <span class="math inline">\(\E=\F(\alpha)\)</span> com <span class="math inline">\(\alpha\in\E\)</span> tal que <span class="math inline">\(\alpha^k\in \F\)</span>. Assumindo que <span class="math inline">\(k\in\N\)</span> é menor tal que <span class="math inline">\(\beta=\alpha^k\in\F\)</span>, escrevemos também que <span class="math inline">\(\E=\F(\sqrt[k]\beta)\)</span>. Assuma que <span class="math display">\[
 \K_0\subseteq \K_1\subseteq \K_2\subseteq \cdots\subseteq \K_s
@@ -1197,6 +1201,9 @@ f(x)=\alpha(x-\alpha_1)\cdots(x-\alpha_m)\quad\mbox{com}\quad \alpha,\alpha_i\in
 \Q\subseteq \Q(\xi_n)\subseteq \Q(\xi_n,\sqrt[n]a)
 \]</span> é uma torre radical e o último termo é corpo de decomposição de <span class="math inline">\(f(x)\)</span>.</p>
 </div>
+</section>
+<section id="extensões-ciclotômicas" class="level2" data-number="74.2">
+<h2 data-number="74.2" data-anchor-id="extensões-ciclotômicas"><span class="header-section-number">74.2</span> Extensões ciclotômicas</h2>
 <div id="exr-cyclic-aut" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 74.1</strong></span> Demonstre que <span class="math inline">\(\aut{\Z_n}\cong\Z_n^*\)</span>. Deduza que se <span class="math inline">\(G\)</span> é um grupo cíclico de ordem <span class="math inline">\(k\)</span>, então <span class="math inline">\(\aut G\)</span> é abeliano de ordem <span class="math inline">\(\varphi(k)\)</span>.</p>
 </div>
@@ -1218,6 +1225,9 @@ R_k=\{\xi^0,\xi^1,\ldots,\xi^{k-1}\}
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Temos que <span class="math inline">\(\K=\E(\beta)\)</span> tal que <span class="math inline">\(\beta^k=\alpha\)</span>. Temos que <span class="math inline">\(\beta\)</span> é raiz de <span class="math inline">\(f(x)=x^k-\alpha\)</span> e as raízes de <span class="math inline">\(f(x)\)</span> são <span class="math inline">\(\beta, \xi_k\beta,\ldots,\xi_k^{k-1}\beta\)</span> onde <span class="math inline">\(\xi_k\in\E\)</span> é uma <span class="math inline">\(k\)</span>-ésima raiz primitiva da unidade. Como <span class="math inline">\(\xi_k\in\E\)</span>, temos que <span class="math inline">\(\K\)</span> é um corpo de decomposição de <span class="math inline">\(f(x)\)</span> sobre <span class="math inline">\(\E\)</span>. Em particular <span class="math inline">\(\K:\E\)</span> é de Galois. Seja <span class="math inline">\(\sigma\in\gal\K\E\)</span>. Então <span class="math inline">\(\sigma(\beta)\)</span> é raiz de <span class="math inline">\(f(x)\)</span> e assim <span class="math inline">\(\sigma(\beta)=\xi_k^i\beta\)</span> com algum <span class="math inline">\(i\in\{0,\ldots,k-1\}\)</span>. Defina, <span class="math inline">\(\psi:\gal\K\E\to R_k\)</span> onde <span class="math inline">\(R_k=\{\xi_k^i\mid i\in\{0,\ldots,k-1\}\}\)</span> com <span class="math inline">\(\psi(\sigma)=\xi_k^i\)</span>. Note que <span class="math inline">\(\psi\)</span> é um homomorfismo injetivo e <span class="math inline">\(\gal\E\K\)</span> pode ser visto como um subgrupo de <span class="math inline">\(R_k\)</span>. Como <span class="math inline">\(R_k\)</span> é cíclico <span class="math inline">\(\gal\E\K\)</span> é cíclico (<a href="geradores.html#lem-subgroup-cyclic" class="quarto-xref">Lema&nbsp;<span>57.1</span></a>).</p>
 </div>
+</section>
+<section id="resolubulidade-de-polinômios-por-radicais" class="level2" data-number="74.3">
+<h2 data-number="74.3" data-anchor-id="resolubulidade-de-polinômios-por-radicais"><span class="header-section-number">74.3</span> Resolubulidade de polinômios por radicais</h2>
 <div id="thm-galois" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 74.1</strong></span> Assuma que <span class="math inline">\(\F\)</span> é um corpo de caraterística zero e que <span class="math inline">\(f(x)\in\F[x]\)</span> é resolúvel por radicais e seja <span class="math inline">\(\K\)</span> um corpo de decomposição de <span class="math inline">\(f(x)\)</span>. Então temos que <span class="math inline">\(\gal\F\K\)</span> é um grupo solúvel</p>
 </div>
@@ -1261,6 +1271,24 @@ G_i/G_{i+1}=\gal\E{\E_{i}}/\gal\E{\E_{i+1}}\cong\gal{\E_{i+1}}{\E_i}.
 \gal\K\F\cong\gal\E\F/\gal\E\K
 \]</span> e obtemos que <span class="math inline">\(\gal{\K}\F\)</span> é um grupo solúvel.</p>
 </div>
+</section>
+<section id="o-teorema-de-abel-ruffini" class="level2" data-number="74.4">
+<h2 data-number="74.4" data-anchor-id="o-teorema-de-abel-ruffini"><span class="header-section-number">74.4</span> O Teorema de Abel-Ruffini</h2>
+<div id="thm-abel-ruffini" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 74.2</strong></span> Se <span class="math inline">\(n\geq 5\)</span>, então existe <span class="math inline">\(f(x)\in\Q[x]\)</span> de grau <span class="math inline">\(n\)</span> tal que <span class="math inline">\(f(x)\)</span> não é resolúvel por radicais.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>É suficiente provar que existe um polinômio de grau <span class="math inline">\(n\)</span> (para todo <span class="math inline">\(n\geq 5\)</span>) tal que <span class="math inline">\(\gal\E\Q\)</span> não é solúvel onde <span class="math inline">\(\E\)</span> é o corpo de decomposição de <span class="math inline">\(f(x)\)</span>.</p>
+<p>Seja <span class="math inline">\(f(x)\in\Q[x]\)</span> um polinômio irredutível de grau <span class="math inline">\(5\)</span> com precisamente três raízes reais e seja <span class="math inline">\(G\)</span> o grupo de Galois do seu corpo de decomposição sobre <span class="math inline">\(\Q\)</span>. Temos por <a href="fieldauts.html#thm-transitive" class="quarto-xref">Teorema&nbsp;<span>72.1</span></a> que <span class="math inline">\(G\)</span> age transitivamente nos seus <span class="math inline">\(5\)</span> raízes distintas, então <span class="math inline">\(5\mid |G|\)</span> (<a href="actions.html#cor-orbit-stab" class="quarto-xref">Corolário&nbsp;<span>60.1</span></a>). Portanto, <span class="math inline">\(G\)</span> possui um elemento <span class="math inline">\(a\)</span> de ordem <span class="math inline">\(5\)</span> (<a href="sylow.html#cor-cauchy" class="quarto-xref">Corolário&nbsp;<span>63.2</span></a>). Além disso, as duas raízes não reais são conjugadas complexas e assim a conjugação complexa é um elemento <span class="math inline">\(b\)</span> de <span class="math inline">\(G\)</span> e <span class="math inline">\(b\)</span> induz uma transposição destas duas raízes. Ora, <span class="math inline">\(G\)</span> contem um elemento de ordem <span class="math inline">\(5\)</span>, que deve ser um ciclo de comprimento <span class="math inline">\(5\)</span>, e uma transposição. Mas estes elementos geram <span class="math inline">\(S_5\)</span>, e <span class="math inline">\(G=S_5\)</span>. Como <span class="math inline">\(S_5\)</span> não é solúvel, temos que <span class="math inline">\(f(x)\)</span> não é resolúvel por radicais.</p>
+<p>Para o caso geral de <span class="math inline">\(n\geq 5\)</span>, toma um polinômio divisível por <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div id="exm-abel-ruffini" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 74.4</strong></span> O polinômio <span class="math inline">\(x^5-20x+5\)</span> satisfaz as propriedades exigidas na demonstração do <a href="#thm-abel-ruffini" class="quarto-xref">Teorema&nbsp;<span>74.2</span></a>.</p>
+</div>
+</section>
+<section id="demais-aplicações-da-teoria-de-galois" class="level2" data-number="74.5">
+<h2 data-number="74.5" data-anchor-id="demais-aplicações-da-teoria-de-galois"><span class="header-section-number">74.5</span> Demais aplicações da Teoria de galois</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/O1sPvUr0YC0?si=muIGR-8t5_fmp95d" width="560" height="315" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>
