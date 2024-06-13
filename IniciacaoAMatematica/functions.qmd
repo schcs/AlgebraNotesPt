@@ -374,7 +374,7 @@ Então temos as seguintes imagens e pré-imagens:
 
 1. $f(\{1,2\})=\{2\}$;
 2. $f(\{3\})=\{6\}$;
-3. $f(\{1,2,3\})=\{2,\6\}$;
+3. $f(\{1,2,3\})=\{2,6\}$;
 4. $f(\emptyset)=\emptyset$
 5. $f(A)=\mbox{Im}(f)=B$;
 6. $f^{-1}(\{2\})=\{1,2\}$;
