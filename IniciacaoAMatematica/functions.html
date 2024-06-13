@@ -1150,6 +1150,7 @@ window.Quarto = {
   <li><a href="#funções-inversas" id="toc-funções-inversas" class="nav-link" data-scroll-target="#funções-inversas"><span class="header-section-number">8.3</span> Funções inversas</a></li>
   <li><a href="#um-exemplo-de-gaal" id="toc-um-exemplo-de-gaal" class="nav-link" data-scroll-target="#um-exemplo-de-gaal"><span class="header-section-number">8.4</span> Um exemplo de GAAL</a></li>
   <li><a href="#restrição-de-f" id="toc-restrição-de-f" class="nav-link" data-scroll-target="#restrição-de-f"><span class="header-section-number">8.5</span> Restrição de <span class="math inline">\(f\)</span></a></li>
+  <li><a href="#imagens-e-pré-imagens" id="toc-imagens-e-pré-imagens" class="nav-link" data-scroll-target="#imagens-e-pré-imagens"><span class="header-section-number">8.6</span> Imagens e pré-imagens</a></li>
   </ul>
 </nav>
     </div>
@@ -1428,6 +1429,47 @@ f|_C:C\to B,\quad c\mapsto f(c)\quad\mbox{para todo }c\in C.
 <figcaption>A função <span class="math inline">\(\mbox{arcsen}\)</span></figcaption>
 </figure>
 </div>
+</div>
+</section>
+<section id="imagens-e-pré-imagens" class="level2" data-number="8.6">
+<h2 data-number="8.6" data-anchor-id="imagens-e-pré-imagens"><span class="header-section-number">8.6</span> Imagens e pré-imagens</h2>
+<div id="def-im-preim" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 8.8</strong></span> Seja <span class="math inline">\(f:A\to B\)</span> uma função.</p>
+<ol type="1">
+<li>Se <span class="math inline">\(X\subseteq A\)</span>, então a imagem de <span class="math inline">\(X\)</span> por <span class="math inline">\(f\)</span> está definida por <span class="math display">\[
+f(X)=\{f(x)\mid x\in X\}
+\]</span></li>
+<li>Se <span class="math inline">\(Y\subseteq B\)</span>, então a pré-imagem de <span class="math inline">\(Y\)</span> por <span class="math inline">\(f\)</span> está definida por <span class="math display">\[
+f^{-1}(Y)=\{a\in A\mid f(a)\in Y\}.
+\]</span> Note que <span class="math inline">\(f(X)\subseteq B\)</span> e <span class="math inline">\(f^{-1}(Y)\subseteq A\)</span>. Note também a escrever <span class="math inline">\(f^{-1}\)</span> não indica que <span class="math inline">\(f\)</span> é invertível. A pré-imagem está definida para funções que não são invertíveis.</li>
+</ol>
+</div>
+<div id="exm-im-preim1" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.11</strong></span> Seja <span class="math inline">\(A=\{1,2,3,4\}\)</span>, <span class="math inline">\(B=\{2,4,6,8\}\)</span> e <span class="math display">\[
+f:A\to B,\quad 1\mapsto 2,\ 2\mapsto 2,\ 3\mapsto 6,\ 4\mapsto 8.
+\]</span> Então temos as seguintes imagens e pré-imagens:</p>
+<ol type="1">
+<li><span class="math inline">\(f(\{1,2\})=\{2\}\)</span>;</li>
+<li><span class="math inline">\(f(\{3\})=\{6\}\)</span>;</li>
+<li><span class="math inline">\(f(\{1,2,3\})=\{2,6\}\)</span>;</li>
+<li><span class="math inline">\(f(\emptyset)=\emptyset\)</span></li>
+<li><span class="math inline">\(f(A)=\mbox{Im}(f)=B\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{2\})=\{1,2\}\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{4\})=\emptyset\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{2,6\})=\{1,2,3\}\)</span>. Note que <span class="math inline">\(f^{-1}(\{y\})\)</span> pode ser também escrito como <span class="math inline">\(f^{-1}(y)\)</span>. Por exemplo, <span class="math inline">\(f^{-1}(2)=\{1,2\}\)</span>.</li>
+</ol>
+</div>
+<div id="exm-im-preim1" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.12</strong></span> Considere a função <span class="math inline">\(\sen:\R\to[-1,1]\)</span>. Temos as seguintes imagens e pré-imagens:</p>
+<ol type="1">
+<li><span class="math inline">\(f([0,\pi])=f([0,\pi/2])=[0,1]\)</span>;</li>
+<li><span class="math inline">\(f([-\pi/2,\pi/2])=[-1,1]\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(0)=\{k\pi\mid k\in\Z\}\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(1)=\{2k\pi/2\mid k\in\Z\}\)</span>;</li>
+<li>$ <span class="math display">\[
+f^{-1}([0,1])=\cdots \cup[-2\pi,-\pi]\cup[0,\pi]\cup[2\pi,3\pi]\cup\cdots =\bigcup_{k\in\Z}[2k\pi,(2k+1)\pi].
+\]</span></li>
+</ol>
 </div>
 
 
