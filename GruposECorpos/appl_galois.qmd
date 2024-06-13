@@ -10,7 +10,7 @@ Seja $\E:\F$ uma extensão de corpos. Dizemos que $\E$ é uma *extensão radical
 $$
 \K_0\subseteq \K_1\subseteq \K_2\subseteq \cdots\subseteq \K_s
 $$ 
-é uma torre de extensões. Dizemos que ela é uma *torre radical* se cada extensão $K_{i+1}:K_{i}$ é extensão radical.
+é uma torre de extensões. Dizemos que ela é uma *torre radical* se cada extensão $\K_{i+1}:\K_{i}$ é extensão radical.
 :::
 
 :::{#exm-ext-rad}
@@ -22,13 +22,13 @@ $$
 :::
 
 :::{#def-res-rad}
-Seja $f(x)\in\Q\F[x]$. Dizemos que $f(x)$ é resolúvel por radicais se existe uma torre radical 
+Seja $f(x)\in\F[x]$. Dizemos que $f(x)$ é resolúvel por radicais se existe uma torre radical 
 $$
-\F=K_0\subseteq K_1\subseteq K_2\subseteq \cdots\subseteq K_s
+\F=\K_0\subseteq \K_1\subseteq \K_2\subseteq \cdots\subseteq \K_s
 $$
-tal que $K_s$ contém um corpo de decomposição de $f(x)$. Ou seja 
+tal que $\K_s$ contém um corpo de decomposição de $f(x)$. Ou seja 
 $$
-f(x)=\alpha(x-\alpha_1)\cdots(x-\alpha_m)\quad\mbox{com}\quad \alpha,\alpha_i\in K_s.
+f(x)=\alpha(x-\alpha_1)\cdots(x-\alpha_m)\quad\mbox{com}\quad \alpha,\alpha_i\in \K_s.
 $$
 :::
 
@@ -57,7 +57,7 @@ $\K:\E$ é uma extensão finita de Galois e $\gal{\K}{\E}$ é abeliano cuja orde
 :::{.proof}
 Seja 
 $$
-R_k=\{\xi\in\K\mid \xi^k=1\}
+R_k=\{\xi\in\K\mid \xi^k=1\}\subseteq \K
 $$
 o conjunto de todas as raízes de $f(x)$. Note que $R_k$ é fechado para multiplicação, então ele é um grupo. Por @thm-field-cyclic, $R_k$ é um grupo cíclico. Seja $\xi$ um gerador de $R_k$ tal que 
 $$
@@ -77,8 +77,17 @@ Assuma que $\E$ é um corpo de caraterística zero que contem um corpo de decomp
 temos que $\K:\E$ é uma extensão finita de Galois com grupo de Galois cíclico.
 :::
 :::{.proof}
-Temos que $\K=\E(\beta)$ tal que $\beta^k=\alpha$. Temos que $\beta$ é raiz de $f(x)=x^k-\alpha$ e as raízes de $f(x)$ são 
-$\beta, \xi_k\beta,\ldots,\xi_k^{k-1}\beta$ onde $\xi_k\in\E$ é uma $k$-ésima raiz primitiva da unidade. Como $\xi_k\in\E$, temos que $\K$ é um corpo de decomposição de $f(x)$ sobre $\E$. Em particular $\K:\E$ é de Galois. Seja $\sigma\in\gal\K\E$. Então $\sigma(\beta)$ é raiz de $f(x)$ e assim $\sigma(\beta)=\xi_k^i\beta$ com algum $i\in\{0,\ldots,k-1\}$.  Defina, $\psi:\gal\K\E\to R_k$ onde $R_k=\{\xi_k^i\mid i\in\{0,\ldots,k-1\}\}$ com $\psi(\sigma)=\xi_k^i$. Note que $\psi$ é um homomorfismo injetivo e $\gal\E\K$ pode ser visto como um subgrupo de $R_k$. Como $R_k$ é cíclico $\gal\E\K$ é cíclico (@lem-subgroup-cyclic).
+Temos que $\K=\E(\beta)$ tal que $\beta^k=\alpha\in\E$. Temos que $\beta$ é raiz de $f(x)=x^k-\alpha$ e as raízes de $f(x)$ são 
+$\beta, \xi_k\beta,\ldots,\xi_k^{k-1}\beta$ onde $\xi_k\in\E$ é uma $k$-ésima raiz primitiva da unidade. Como $\xi_k\in\E$, temos que $\K$ é um corpo de decomposição de $f(x)$ sobre $\E$. Em particular $\K:\E$ é de Galois. Seja $\sigma\in\gal\K\E$. Então $\sigma(\beta)$ é raiz de $f(x)$ e assim $\sigma(\beta)=\xi_k^i\beta$ com algum $i\in\{0,\ldots,k-1\}$.  Considere o grupo 
+$$
+R_k=\{\xi_k^0,\ldots,\xi_k^{k-1}\}\subseteq \E
+$$
+como na demonstração do @lem-root-cyclic e 
+Defina, 
+$$
+\psi:\gal\K\E\to R_k,\quad \psi(\sigma)=\xi_k^i.
+$$ 
+Note que $\psi$ é um homomorfismo injetivo e $\gal\E\K$ pode ser visto como um subgrupo de $R_k$. Como $R_k$ é cíclico $\gal\E\K$ é cíclico (@lem-subgroup-cyclic).
 :::
 
 ## Resolubulidade de polinômios por radicais 
@@ -115,11 +124,12 @@ Seja
 $$
 \E_0=\F\subseteq \E_1\subseteq \E_2\subseteq \cdots\subseteq \E_r
 $$
-a torre obtida por estender $\E_i$ pelo seguinte elemento na sequência. Em particular, $\E_1=\F(\xi)$. Afirmamos que esta torre satisfaz as afirmações 1.-4. 
+a torre obtida por estender cada $\E_i$ pelo seguinte elemento na sequência. Em particular, $\E_1=\F(\xi)$. Afirmamos que esta torre satisfaz as afirmações 1.-4. 
 
 1. Note que $\K_s=\F(b_1,\ldots,b_s)\subseteq \E_r$, então esta afirmação está certa. 
 2. Afirmamos que $\E=\E_r$. Note que $\E$ é gerado (sobre $\F$) pelas raízes de $h(x)$ que são as raízes dos fatores individuais de $h(x)$.
-As raízes de $(x^k-1)$ são as potências de $\xi$. Note que $b_i$  é uma raíz de $m^\F_{b_i}(x)$. Se $g\in G$, então $g(b_i)$ também é raiz de $m^\F_{b_i}(x)$. Além disso, o @lem-lifting-isom implica que se $\gamma\in\E$ é raiz de $m_{\beta_i}^\F(x)$, então existe $g\in\gal\E\F$ tal que $g(\beta_i)=\gamma$. Ou seja, as raízes de $m^\F_{b_i}(x)$ são precisamente os elementos $b_i,g_2(b_i),\ldots,g_m(b_i)$. Em outras palavras, os elementos na sequência são precisamente as raízes de $h(x)$ e $\E_r$ está gerado por extes elementos. Em particular $\E_r=\E$. 
+As raízes de $(x^k-1)$ são as potências de $\xi$. Note que $b_i$  é uma raíz de $m^\F_{b_i}(x)$. Se $g\in G$, então $g(b_i)$ também é raiz de $m^\F_{b_i}(x)$. 
+Isso mostra que $\E_r\subseteq \E$. Além disso, o @lem-lifting-isom implica que se $\gamma\in\E$ é raiz de $m_{\beta_i}^\F(x)$, então existe $g\in\gal\E\F$ tal que $g(\beta_i)=\gamma$. Ou seja, as raízes de $m^\F_{b_i}(x)$ são precisamente os elementos $b_i,g_2(b_i),\ldots,g_m(b_i)$. Em outras palavras, os elementos na sequência são precisamente as raízes de $h(x)$ e $\E_r$ está gerado por extes elementos. Em particular $\E\subseteq \E_r$ e $\E_r=\E$. 
 3. Note que $\E_1=\E_0(\xi)$ e $\E_{i+1}=\E_i(g(b_j))$ com algum $g\in G$ e $b_j\in \E$.  Como 
 $$
 b_j^{k_j}\in \K_{j-1}=\F(b_1,\ldots,b_{j-1}),
