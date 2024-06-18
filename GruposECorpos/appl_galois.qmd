@@ -100,7 +100,7 @@ Assuma que $f(x)$ é resolúvel por radicais. Seja
 $$
 \K_0=\F\subset \K_1\subset \K_2\subset\cdots\subset \K_s
 $$
-uma torre radical tal que $\K_s$ contém um corpo de decomposição $\K$ de $f(x)$. Assuma que $\K_{i}=\K_{i-1}(\sqrt[k_i]{a_i})$ para todo $i\in\{1,\ldots,s\}. Vamos refazer a torre radical para uma nova torre 
+uma torre radical tal que $\K_s$ contém um corpo de decomposição $\K$ de $f(x)$. Assuma que $\K_{i}=\K_{i-1}(\sqrt[k_i]{a_i})$ para todo $i\in\{1,\ldots,s\}$. Vamos refazer a torre radical para uma nova torre 
 $$
 \E_0=\F\subset \E_1\subset \E_2\subset\cdots\subset \E_r  
 $$
