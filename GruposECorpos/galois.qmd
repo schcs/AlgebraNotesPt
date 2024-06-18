@@ -5,6 +5,11 @@ number-sections: true
 lang: pt-BR
 ---
 
+## Evariste Galois
+
+{{< video https://youtu.be/DEaErK8RzQY?si=gTlmuCZSxNDfrQUE width="560" height="315" >}} 
+
+
 ## O Teorema Fundamental
 
 :::{#thm-fundamental-galois}
