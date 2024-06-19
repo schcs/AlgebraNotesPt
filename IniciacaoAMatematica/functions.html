@@ -1151,6 +1151,7 @@ window.Quarto = {
   <li><a href="#um-exemplo-de-gaal" id="toc-um-exemplo-de-gaal" class="nav-link" data-scroll-target="#um-exemplo-de-gaal"><span class="header-section-number">8.4</span> Um exemplo de GAAL</a></li>
   <li><a href="#restrição-de-f" id="toc-restrição-de-f" class="nav-link" data-scroll-target="#restrição-de-f"><span class="header-section-number">8.5</span> Restrição de <span class="math inline">\(f\)</span></a></li>
   <li><a href="#imagens-e-pré-imagens" id="toc-imagens-e-pré-imagens" class="nav-link" data-scroll-target="#imagens-e-pré-imagens"><span class="header-section-number">8.6</span> Imagens e pré-imagens</a></li>
+  <li><a href="#pré-imagens-na-natureza" id="toc-pré-imagens-na-natureza" class="nav-link" data-scroll-target="#pré-imagens-na-natureza"><span class="header-section-number">8.7</span> Pré-imagens na natureza</a></li>
   </ul>
 </nav>
     </div>
@@ -1441,7 +1442,7 @@ f(X)=\{f(x)\mid x\in X\}
 \]</span></li>
 <li>Se <span class="math inline">\(Y\subseteq B\)</span>, então a pré-imagem de <span class="math inline">\(Y\)</span> por <span class="math inline">\(f\)</span> está definida por <span class="math display">\[
 f^{-1}(Y)=\{a\in A\mid f(a)\in Y\}.
-\]</span> Note que <span class="math inline">\(f(X)\subseteq B\)</span> e <span class="math inline">\(f^{-1}(Y)\subseteq A\)</span>. Note também a escrever <span class="math inline">\(f^{-1}\)</span> não indica que <span class="math inline">\(f\)</span> é invertível. A pré-imagem está definida para funções que não são invertíveis.</li>
+\]</span> Note que <span class="math inline">\(f(X)\subseteq B\)</span> e <span class="math inline">\(f^{-1}(Y)\subseteq A\)</span>. Note também a escrever <span class="math inline">\(f^{-1}\)</span> não indica que <span class="math inline">\(f\)</span> é invertível! A pré-imagem está definida para funções que não necessariamente são invertíveis.</li>
 </ol>
 </div>
 <div id="exm-im-preim1" class="theorem example">
@@ -1453,24 +1454,58 @@ f:A\to B,\quad 1\mapsto 2,\ 2\mapsto 2,\ 3\mapsto 6,\ 4\mapsto 8.
 <li><span class="math inline">\(f(\{3\})=\{6\}\)</span>;</li>
 <li><span class="math inline">\(f(\{1,2,3\})=\{2,6\}\)</span>;</li>
 <li><span class="math inline">\(f(\emptyset)=\emptyset\)</span></li>
-<li><span class="math inline">\(f(A)=\mbox{Im}(f)=B\)</span>;</li>
+<li><span class="math inline">\(f(A)=\mbox{Im}(f)=\{2,6,8\}\)</span>;</li>
 <li><span class="math inline">\(f^{-1}(\{2\})=\{1,2\}\)</span>;</li>
 <li><span class="math inline">\(f^{-1}(\{4\})=\emptyset\)</span>;</li>
 <li><span class="math inline">\(f^{-1}(\{2,6\})=\{1,2,3\}\)</span>.</li>
 </ol>
-<p>Note que <span class="math inline">\(f^{-1}(\{y\})\)</span> pode ser também escrito como <span class="math inline">\(f^{-1}(y)\)</span>. Por exemplo, <span class="math inline">\(f^{-1}(2)=\{1,2\}\)</span>.</p>
+<p>Note que <span class="math inline">\(f^{-1}(\{y\})\)</span> pode ser também escrito como <span class="math inline">\(f^{-1}(y)\)</span>. Por exemplo, <span class="math inline">\(f^{-1}(2)=\{1,2\}\)</span>. Mas é importante observar que <span class="math inline">\(f^{-1}(2)\)</span> neste contexto não é um elemento, mas um subconjunto do domínio. Nós nesta disciplina vamos escrever <span class="math inline">\(f^{-1}(\{y\})\)</span> para evitar confusão.</p>
 </div>
 <div id="exm-im-preim1" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 8.12</strong></span> Considere a função <span class="math inline">\(\sen:\R\to[-1,1]\)</span>. Temos as seguintes imagens e pré-imagens:</p>
 <ol type="1">
 <li><span class="math inline">\(f([0,\pi])=f([0,\pi/2])=[0,1]\)</span>;</li>
 <li><span class="math inline">\(f([-\pi/2,\pi/2])=[-1,1]\)</span>;</li>
-<li><span class="math inline">\(f^{-1}(0)=\{k\pi\mid k\in\Z\}\)</span>;</li>
-<li><span class="math inline">\(f^{-1}(1)=\{2k\pi/2\mid k\in\Z\}\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{0\})=\{k\pi\mid k\in\Z\}\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{1\})=\{\pi/2+2k\pi\mid k\in\Z\}\)</span>;</li>
 <li><span class="math display">\[
 f^{-1}([0,1])=\cdots \cup[-2\pi,-\pi]\cup[0,\pi]\cup[2\pi,3\pi]\cup\cdots =\bigcup_{k\in\Z}[2k\pi,(2k+1)\pi].
 \]</span></li>
 </ol>
+</div>
+</section>
+<section id="pré-imagens-na-natureza" class="level2" data-number="8.7">
+<h2 data-number="8.7" data-anchor-id="pré-imagens-na-natureza"><span class="header-section-number">8.7</span> Pré-imagens na natureza</h2>
+<p>Vamos considerar dois exemplos de pré-imagens que aparecem nas disciplinas GAAL e Cálculo I.</p>
+<div id="exm-preim-gaal" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.13</strong></span> Considere a função <span class="math inline">\(f:\R^2\to \R\)</span> definida por <span class="math inline">\(f(x,y)=x+y\)</span>. É fácil verificar que <span class="math inline">\(f\)</span> é sobrejetiva, mas não é injetiva. Vamos determinar <span class="math inline">\(f^{-1}(\{0\})\)</span>. Note que <span class="math display">\[
+f(x,y)=0\quad\mbox{se e somente se}\quad x+y=0.
+\]</span> Então <span class="math inline">\(f^{-1}(\{0\})\)</span> é composta dos pontos <span class="math inline">\((x,y)\in\R^2\)</span> no plano tal que <span class="math inline">\(x+y=0\)</span>. Note que estes pontos formam uma reta no plano <span class="math inline">\(\R^2\)</span> ilustrada como a reta azul no seguinte desenho.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="retaxy.png" class="img-fluid figure-img"></p>
+<figcaption>A reta x+y=0</figcaption>
+</figure>
+</div>
+<p>O que é a pré-imagem <span class="math inline">\(f^{-1}(\{a\})\)</span> com algum <span class="math inline">\(a\in\R\)</span> arbitrário? Neste caso temos que <span class="math inline">\((x,y)\in f^{-1}(\{a\})\)</span> se e somente se <span class="math inline">\(x+y=a\)</span>. Estes pontos também formam uma reta paralela com a reta azul no desenho anterior que passa pelo ponto <span class="math inline">\((0,a)\)</span>. Por exemplo, <span class="math inline">\(f^{-1}(\{-1\})\)</span> é ilustrado no seguintes desenho.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="retaxy_1.png" class="img-fluid figure-img"></p>
+<figcaption>A reta x+y=-1</figcaption>
+</figure>
+</div>
+<p>Obtevemos que a pré-imagem <span class="math inline">\(f^{-1}(a)\)</span> é a reta com a equação geral <span class="math inline">\(x+y=a\)</span> e as pré-imagens são as retas paralelas com a reta cuja equação geral é <span class="math inline">\(x+y=0\)</span></p>
+</div>
+<div id="exm-preim-calc" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8.14</strong></span> Seja <span class="math inline">\(P\)</span> o conjunto das funções polinomiais <span class="math inline">\(\R\to\R\)</span>; mais precisamente, <span class="math display">\[
+P=\{f:\R\to\R\mid f(x)=a_nx^n+\cdots+a_1x+a_0\mbox{ com $n\geq 0$ e $a_i\in\R$}\}.
+\]</span> Defina a função <span class="math display">\[
+d:P\to P,\quad d(f)=f'
+\]</span> onde <span class="math inline">\(f'\)</span> é o derivado de <span class="math inline">\(f\)</span>. Denotemos por <span class="math inline">\(0\)</span> a função constante nula e vamos determinar <span class="math inline">\(d^{-1}(\{0\})\)</span>. Temos que <span class="math inline">\(f\in d^{-1}(\{0\})\)</span> se e somente se <span class="math inline">\(f'=0\)</span>. Mas sabemos de cálculo que <span class="math inline">\(f'=0\)</span> vale se e somente se <span class="math inline">\(f\)</span> é uma função constante. Obtemos então <span class="math display">\[
+d^{-1}(\{0\})=\{f\in P\mid \mbox{$f$ é constante}\}.
+\]</span> Vamos determinar <span class="math inline">\(f^{-1}(\{x+1\})\)</span>. Temos que <span class="math inline">\(f\in f^{-1}(\{x+1\})\)</span> se e somente se <span class="math inline">\(f'=x+1\)</span>. Temos pelas regras do derivado que isso vale se e somente se <span class="math inline">\(f=(1/2)x^2+x+c\)</span> com algum <span class="math inline">\(c\in\R\)</span> constante. Obtemos então que <span class="math display">\[
+d^{-1}(\{x+1\})=\left\{\frac 12x^2+x+c\mid c\in\R\right\}.
+\]</span> Note que os elementos de <span class="math inline">\(d^{-1}(f)\)</span> são chamados de <em>primitivos</em> da função <span class="math inline">\(f\)</span>.</p>
 </div>
 
 
