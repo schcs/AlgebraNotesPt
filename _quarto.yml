@@ -21,6 +21,7 @@ book:
         - IniciacaoAMatematica/equivalence_examples.qmd
         - IniciacaoAMatematica/order.qmd
         - IniciacaoAMatematica/functions.qmd
+        - IniciacaoAMatematica/naturais.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd

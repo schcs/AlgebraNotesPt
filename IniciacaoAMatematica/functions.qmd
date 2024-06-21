@@ -438,3 +438,4 @@ d^{-1}(\{x+1\})=\left\{\frac 12x^2+x+c\mid c\in\R\right\}.
 $$
 Note que os elementos de $d^{-1}(f)$ são chamados de *primitivos*  da função $f$. 
 :::
+
