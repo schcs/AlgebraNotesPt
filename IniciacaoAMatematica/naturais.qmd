@@ -6,24 +6,63 @@ lang: pt-BR
 
 ## Os axiomas do Peano
 
-Os números naturais são definidas usando os axiomas de Peano. 
+:::{#def-naturais}
+Os números naturais são definidas usando os axiomas de [Peano](https://pt.wikipedia.org/wiki/Giuseppe_Peano). 
 
-1. O número $1$ é natural.
-2. Todo número natural $n$ tem um sucessor denotado por $S(n)$. 
-3. O número $1$ não é sucessor de nenhum natural.
-4. Se $n,m$ são naturais tais que $S(n)=S(m)$, então $n=m$. 
-5. Seja $X$ é um conjunto de números naturais tal que 
-    
+P1. O número $1$ é natural.
+P2. Todo número natural $n$ tem um sucessor denotado por $S(n)$. 
+P3. O número $1$ não é sucessor de nenhum natural.
+P4. Se $n,m$ são naturais tais que $S(n)=S(m)$, então $n=m$. 
+5. Seja $X$ é um conjunto de números naturais tal que     
     a. $1\in X$; e 
     b. se $n\in X$, então $S(n)\in X$.
+    
+    Então temos que $X$ contem todos os números naturais.
+:::  
 
-Então temos que $X$ contem todos os números naturais.  Note que $1$ é um número natural notável, pois ele é o "primeiro" número natural. Os outros naturais são 
+
+Note que $1$ é um número natural notável, pois ele é o "primeiro" número natural. Os outros naturais são 
 $$
 2=S(1),\quad 3=S(2)=S(S(1)),\quad 4=S(3)=S(S(2))=S(S(S(1))), \quad \mbox{etc}.
 $$
+O Axioma 5. diz que todo número natural pode ser obtido continuando este processo. O conjunto dos números naturais é denotado por $\N$. Note que o nosso conceito de naturais começa com o número $1$ e o número zero não é considerado (por nos) natural.
 
+## O Princípio da Indução
 
-O conjunto dos números naturais é denotado por $\N$. 
+O Axioma 5. é conhecido como o *Axioma da Indução* ou *Princípio da Indução*. Este axioma é útil se queremos provar alguma afirmação sobre números naturais. Assuma por exemplo que $P(n)$ é um predicato válido para o conjunto $\N$ dos naturais (veja a @def-predicato). Para provar que $P(n)$ é verdadeira para todo $n\in\N$, é suficiente provar que 
+
+1. $P(1)$ é verdadeira; e 
+2. se $P(n)$ é verdadeira para algum $n\in\N$, então $P(S(n))$ é também verdadeira. 
+
+Se denotamos 
+$$
+X=\{n\in\N\mid P(n)\mbox{ é verdadeira}\}
+$$
+então temos pelo item 1. que $1\in X$ e pelo item  2. que se $n\in X$, então $S(n)\in X$. Ora segue do Axioma da Indução que $X=\N$. Ou seja, $P(n)$ é verdadeiro para todo $n\in \N$.  
+
+Vamos ilustrar este princípio por provar uma afirmação simples.
+
+:::{#lem-nat-succ}
+Se $n\in\N$, então $n=1$ ou $n=S(n')$ com algum $n'\in \N$. 
+:::
+:::{.proof}
+O predicato que queremos provar é 
+$$
+P(n)\colon n=1\lor (\exists n'\in\N: n=S(n')).
+$$
+Primeiro vamos provar que a afirmação é verdadeira quando $n=1$. Este passo chama-se *base da indução*. Ou seja, precisamos provar 
+$$
+P(1)\colon 1=1\lor (\exists n'\in\N:1=S(n')). 
+$$
+Esta afirmação é claramente verdadeira, pois $1=1$.
+
+Para executar o item 2., nós assumimos que $P(n)$ é verdadeira; ou seja $n=1$ ou $n=S(n')$ com algum $n'\in\N$. Esta suposição chama-se *hipótese da indução*. Observe que nós não provamos que a $P(n)$ é verdadeira, mas simplesmente assumimos isso. Depois no *passo indutivo*, provamos, usando a hipótese da indução, que 
+$$
+P(S(n))\colon S(n)=1\lor (\exists n'\in\N:S(n)=S(n'))
+$$ 
+é verdadeira. Mas note que esta afirmação é verdadeira pois o segundo termo da disjunção é verdadeira tomando $n'=n$. 
+:::
+
 
 ## Aritmética
 
@@ -41,9 +80,9 @@ Defina a multiplicação com as seguintes duas regras para todo $n,m\in\N$:
 2. $n\cdot S(m)=n\cdot m+n$.
 :::
 
-Note que estas definições são recursivas. 
+Note que estas definições podemo ser vistas como definições recursivas. O seguinte exemplo simples ilustra o uso destas regras. 
 
-:::{exm-arit-nat}
+:::{#exm-arit-nat}
 Vamos calcular por exemplo que $2+2=2\cdot 2=4$ usando a @def-arit-nat. Primeiro, 
 $$
 2+2=2+S(1)=S(2+1)=S(S(2))=4.
@@ -54,24 +93,65 @@ $$
 $$
 :::
 
+Vamos provar primeiro alguma afirmações simples sobre as operações com os naturais. 
+
+:::{#lem-arit-nat0}
+As seguintes são verdadeiras para todo $a\in\N$. 
+
+1. $1+a=a+1=S(n)$;
+2. $1\cdot a=a\cdot 1=a$. 
+:::
+
+:::{.proof}
+:::{}
+1. Vamos usar indução. 
+
+   *Base da indução:* provar que $1+1=1+1=S(1)$. Isso segue da regra (A1).
+
+   *Hipótese da indução (HI):* assuma que $1+a=a+1$ com algum $a\in\N$. 
+
+   *Passo indutivo:* precisa provar que $1+S(a)=S(a)+1=S(S(a))$. Isso segue pois, usando regra (A1), temos que 
+   $$
+   S(a)+1=S(S(a)).
+   $$
+   Agora, usando regra (A1) e (HI), obtemos que 
+   $$
+   1+S(a)=S(1+a)=S(S(a)).
+   $$
+   Portanto item 1. é verdadeiro para todo $a\in\N$. 
+
+2. De novo, a prova segue indução.
+
+   *Base da indução:* provar que $1\cdot 1=1\cdot 1 =1$. Isso segue da regra (A1). 
+
+   *Hipótese da indução (HI):* assumimos que $1\cdot a=a\cdot 1 =a$ para algum $a\in\N$. 
+
+   *Passo indutivo:* Provar que $1\cdot S(a)=S(a)\cdot 1=S(a)$. De fato, 
+   $$
+   1\cdot S(a)=1\cdot a+1=a+1=S(a)=S(a)\cdot 1,
+   $$
+   usando (M2), (HI), (A1), (M1).
+:::
+:::
+
+
 :::{#lem-arit-nat}
 As operações $+$ e $\cdot$ entre os números naturais satisfazem as seguintes propriedades para todo $a,b,c\in\N$. 
 
 1. $(a+b)+c=a+(b+c)$;
 2. $a+b=b+a$;
 3. $(ab)c=a(bc)$; 
-4. $ab=ac$
-5. $1\cdot a=a$;
-6. $a(b+c)=ab+ac$;
-7. se $a+b=a+c$, então $b=c$;
-8. se $ab=ac$, então $a=c$.  
+4. $ab=ba$
+5. $(a+b)c=ac+bc$;
+6. se $a+c=b+c$, então $a=b$;
 :::
 
 :::{.proof}
 Vamos provar apenas algumas destas afirmações. O resto é exercício.
 
-1. Vamos usar indução por $c$. 
-    a. Base da indução: $c=1$. Neste caso precisa provar que $(a+b)+1=a+(b+1)$ para todo $a,b\in\N$. De fato, 
+1. Observe que a afirmação 1. contem $3$ variáveis e podemos escolher qualquer para ser a variável da indução.  Nós vamos fazer indução por $c$. 
+
+   *Base da indução*: $c=1$. Neste caso precisa provar que $(a+b)+1=a+(b+1)$ para todo $a,b\in\N$. De fato, 
     $$
     (a+b)+1=S(a+b)
     $$
@@ -88,5 +168,140 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
     (a+b)+S(c)=S((a+b)+c)=S(a+(b+c))=a+S(b+c)=a+(b+S(c)).
     $$
 
-4. 
+2. Indução por $b$. 
+   *Base da indução:* Provar para $b=1$. Ou seja, $a+1=1+a$. Mas isso segue do @lem-arit-nat.
+
+   *Hipótese da indução*: Assumir que $a+b=b+a$ vale para todo $a\in\N$ e algum $b\in N$. 
+
+   *Passo indutivo:* Provar que $a+S(b)=S(b)+a$ vale para todo $a\in \N$. De fato, temos que 
+   \begin{align*}
+   a+S(b)&=S(a+b)=S(b+a)=b+S(a)=b+(a+1)\\&=b+(1+a)=(b+1)+a=S(b)+a.
+   \end{align*}
+   Note que nesta conta usamos, (A2), (HI), (A2), (A1), a base da indução, associatividade, (A1). 
+
+3. Exercício.
+
+4. Exercício.
+
+5. Indução por $c$. 
+   
+   *Base da indução:* Provar para $c=1$. Ou seja, $(a+b)\cdot 1=a\cdot 1+b\cdot 1$. Mas isso segue da regra (M1) aplicando três vezes.
+
+   *Hipótese da indução*: Assumir que $(a+b)c=ac+bc$ vale para todo $a,b\in\N$ e algum $c\in N$. 
+
+   *Passo indutivo:* Provar que $(a+b)S(c)=aS(c)+bS(c)$. De fato, 
+   \begin{align*}
+   (a+b)S(c)&=(a+b)c+(a+b)=(ac+bc)+(a+b)\\&=((ac+bc)+a)+b=(ac+(bc+a))+b\\&=(ac+(a+bc))+b=((ac+a)+bc)+b\\&=(ac+a)+(bc+b)=aS(c)+bS(c).
+   \end{align*}
+   Deixamos para o leitor identificar as regras que foram usadas em dada um dos passos na conta anterior. 
+
+6. Indução por $c$. 
+
+   *Base da indução:* Provar para $c=1$. Ou seja, se $a+a=b+1$, então $b=c$. Assuma que $a+1=b+1$. Isso implica por (A1) que $S(b)=S(c)$. Ora, $a=b$ segue do Axioma (P4).
+
+   *Hipótese da indução*: Assumir que $a+c=b+c$ implica que $a=b$ para todo $a,b\in\N$. 
+
+   *Passo indutivo:* Assuma que $a+S(c)=b+S(c)$. Isso implica que 
+   $$
+   S(a+c)=a+S(c)=b+S(c)=S(b+c).
+   $$ 
+   Ora, Axioma (P4) implica que $a+c=b+c$ e a hipótese da indução implica que $a=b$. 
+:::
+
+Note que nós não definimos nem a subtração nem a divisão entre números naturais, pois o conjunto dos naturais não é fechado para estas operações. Portanto, elas não são consideradas operações destes números. 
+
+## Ordenação
+
+Tendo [minerado](https://www.minecraft.net/pt-pt) as operações $+$ e $\cdot$ para os naturais e algumas das suas propriedades, a seguinte tarefa é definir a ordenação entre os naturais. 
+
+:::{#def-order-nat}
+Sejam $a,b\in\N$. Dizemos que $a<b$ ($a$ é menor que $b$) se $b=a+c$ com algum $c\in\N$. Dizemos que $a\leq b$ ($a$ é menor ou igual a $b$) se $a=b$ ou $a<b$. Quando $a<b$ pode também escrever que $b>a$. Similarmente, quando $a\leq b$, pode também escrever que $b\geq a$. 
+:::
+
+:::{#lem-order-nat}
+Temos as seguintes propriedades para todo $a,b,c\in\N$. 
+
+1. $1\leq a$.
+2. a relação $\leq$ é reflexiva: $a\leq a$;
+3. a relação $\leq$ é antisimétrica: se $a\leq b$ e $b\leq a$, então $a=b$;
+4. a relação $\leq$ é transitiva: se $a\leq b$ e $b\leq c$, então $a\leq b$. 
+:::
+:::{.proof}
+:::{}
+1. Indução por $a$. Se $a=1$, então $1\leq 1$, pois $1=1$. Assuma que $1\leq a$ com algum $a$; ou seja $1=a$ ou $1<a$ e neste segundo caso $a=1+c$ com algum $c\in\N$. Se $1=a$, então $S(a)=S(1)=1+1$ e $1<S(a)$. Se $a=1+c$, então $S(a)=S(1+c)=1+c+1=(1+1)+c$ e $1<S(a)$. 
+
+2. Como $a=a$, temos que $a\leq a$ e a relação é reflexiva. 
+
+3. Assuma que $a\leq b$ e $b\leq a$, mas $a\neq b$. Nós procuramos uma contradição. Neste caso, $a<b$ e $b<a$. Portanto $b=a+c_1$ e $a=b+c_2$ com $c_1,c_2\in\N$ e 
+$$
+a=b+c_2=a+c_1+c_2.
+$$
+Logo, 
+$$
+1+a=a+1=S(a)=S(a+c_1+c_2)=a+c_1+c_2+1=c_1+c_2+1+a.
+$$
+Agora, a lei cancelativa implica que 
+$$
+1=c_1+c_2+1=S(c_1+c_2)
+$$
+e isso contradiz ao Axioma (P3).
+
+4. Assuma que $a\leq b$ e $b\leq c$ e provaremos que $a\leq c$. Se $a=b$ ou $b=c$, então $a\leq c$ vale trivialmente. Assuma que $a<b$ e $b<c$. Então $b=a+c_1$ e $c=b+c_2$ com $c_1,c_2\in\N$. Ora, 
+$$
+c=b+c_2+a+c_1+c_2.
+$$ 
+Logo $a<c$ e $a\leq c$ também vale.
+:::
+:::
+
+:::{#cor-order-nat}
+A relação $\leq$ é uma ordem parcial no conjunto $\N$ (veja @def-ordem).
+:::
+
+:::{#lem-ord-nat-total}
+A ordenação $\leq$ entre os números naturais é uma ordenação total. Ou seja, se $a,b\in\N$, então
+$$
+a<b\quad\mbox{ou}\quad a=b\quad\mbox{ou}\quad b<a
+$$ 
+(veja @def-ordem-total).
+:::
+:::{.proof}
+Vamos por indução em $a$. Se $a=1$, então a afirmação segue pelo item 1. do @lem-order-nat. Assuma que a afirmação é verdadeira para algum $a\in\N$; ou seja, $a=b$ ou $a<b$ ou $b<a$ vale para todo $b\in\N$. Provaremos que $S(a)=b$ ou $S(a)<b$ ou $b<S(a)$ também vale. Se $a=b$, então $S(a)=a+1=b+1$ e $S(a)>b$. Assuma que $a<b$; ou seja $b=a+c$ com algum $c\in\N$. Se $c=1$, então $b=a+1=S(a)$ e $S(a)=b$ vale. Se $c\neq 1$, então $c=S(c')$ pelo @lem-arit-nat0 e 
+$$
+b=a+c=a+S(c')=S(a+c')=S(c'+a)=c'+S(a).
+$$
+Logo, $S(a)<b$. Ora se $b<a$, então $a=b+c$ com algum $c\in \N$. Neste caso, 
+$$
+S(a)=S(b+c)=b+S(c)
+$$ 
+e $b<S(a)$ também vale.
+:::
+
+:::{#lem-ordem-nat-ops}
+Temos as seguintes propriedades para $a,b,c\in\N$. 
+
+1. Se $a<b$ então $a+c<b+c$. 
+2. Se $a<b$ então $ac<bc$. 
+:::
+:::{.proof}
+:::{}
+1. Assuma que $a<b$. Então $b=a+x$ com algum $x\in\N$. Logo 
+$$
+b+c=a+x+c=a+c+x
+$$ 
+e $a+c<b+c$. 
+
+2. Assuma que $a<b$ e $b=a+x$ com algum $x\in \N$. Logo, 
+$$
+bc=(a+x)c=ac+xc
+$$
+e $ac<bc$. 
+:::
+:::
+
+:::{#cor-cancel-prod}
+Vale a lei cancelativa para a multiplicação. Ou seja, se $ac=bc$, então $a=b$ para todo $a,b,c\in\N$. 
+:::
+:::{.proof}
+Assuma que $ac=bc$. A relação $a<b$ é impossível, pois neste caso vale $ac<bc$. Similarmente, $b<a$ é também impossível. Ora, segue do @lem-ord-nat-total que a única opção é $a=b$. 
 :::
