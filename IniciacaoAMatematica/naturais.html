@@ -1184,9 +1184,18 @@ window.Quarto = {
 <h2 data-number="9.1" data-anchor-id="os-axiomas-do-peano"><span class="header-section-number">9.1</span> Os axiomas do Peano</h2>
 <div id="def-naturais" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 9.1</strong></span> Os números naturais são definidas usando os axiomas de <a href="https://pt.wikipedia.org/wiki/Giuseppe_Peano">Peano</a>.</p>
-<p>P1. O número <span class="math inline">\(1\)</span> é natural. P2. Todo número natural <span class="math inline">\(n\)</span> tem um sucessor denotado por <span class="math inline">\(S(n)\)</span>. P3. O número <span class="math inline">\(1\)</span> não é sucessor de nenhum natural. P4. Se <span class="math inline">\(n,m\)</span> são naturais tais que <span class="math inline">\(S(n)=S(m)\)</span>, então <span class="math inline">\(n=m\)</span>. 5. Seja <span class="math inline">\(X\)</span> é um conjunto de números naturais tal que<br>
-a. <span class="math inline">\(1\in X\)</span>; e b. se <span class="math inline">\(n\in X\)</span>, então <span class="math inline">\(S(n)\in X\)</span>.</p>
-<pre><code>Então temos que $X$ contem todos os números naturais.</code></pre>
+<ul>
+<li><p><strong>(P1):</strong> O número <span class="math inline">\(1\)</span> é natural.</p></li>
+<li><p><strong>(P2):</strong> Todo número natural <span class="math inline">\(n\)</span> tem um sucessor denotado por <span class="math inline">\(S(n)\)</span>.</p></li>
+<li><p><strong>(P3):</strong> O número <span class="math inline">\(1\)</span> não é sucessor de nenhum natural.</p></li>
+<li><p><strong>(P4):</strong> Se <span class="math inline">\(n,m\)</span> são naturais tais que <span class="math inline">\(S(n)=S(m)\)</span>, então <span class="math inline">\(n=m\)</span>.</p></li>
+<li><p><strong>(P5):</strong> Seja <span class="math inline">\(X\)</span> é um conjunto de números naturais tal que</p>
+<ol type="a">
+<li><span class="math inline">\(1\in X\)</span>; e</li>
+<li>se <span class="math inline">\(n\in X\)</span>, então <span class="math inline">\(S(n)\in X\)</span>.</li>
+</ol>
+<p>Então temos que <span class="math inline">\(X\)</span> contem todos os números naturais.</p></li>
+</ul>
 </div>
 <p>Note que <span class="math inline">\(1\)</span> é um número natural notável, pois ele é o “primeiro” número natural. Os outros naturais são <span class="math display">\[
 2=S(1),\quad 3=S(2)=S(S(1)),\quad 4=S(3)=S(S(2))=S(S(S(1))), \quad \mbox{etc}.
@@ -1222,15 +1231,15 @@ P(S(n))\colon S(n)=1\lor (\exists n'\in\N:S(n)=S(n'))
 <div id="def-arit-nat" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 9.2</strong></span> Definimos duas operações entre números inteiros.</p>
 <p>Primeiro defina a adição com as seguintes duas regras para todo <span class="math inline">\(n,m\in\N\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(n+1=S(n)\)</span>;</li>
-<li><span class="math inline">\(n+S(m)=S(n+m)\)</span>.</li>
-</ol>
+<ul>
+<li><strong>(A1):</strong> <span class="math inline">\(n+1=S(n)\)</span>;</li>
+<li><strong>(A2):</strong> <span class="math inline">\(n+S(m)=S(n+m)\)</span>.</li>
+</ul>
 <p>Defina a multiplicação com as seguintes duas regras para todo <span class="math inline">\(n,m\in\N\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(n\cdot 1=n\)</span>;</li>
-<li><span class="math inline">\(n\cdot S(m)=n\cdot m+n\)</span>.</li>
-</ol>
+<ul>
+<li><strong>(M1):</strong> <span class="math inline">\(n\cdot 1=n\)</span>;</li>
+<li><strong>(M2)</strong> <span class="math inline">\(n\cdot S(m)=n\cdot m+n\)</span>.</li>
+</ul>
 </div>
 <p>Note que estas definições podemo ser vistas como definições recursivas. O seguinte exemplo simples ilustra o uso destas regras.</p>
 <div id="exm-arit-nat" class="theorem example">
@@ -1272,12 +1281,12 @@ S(a)+1=S(S(a)).
 <div id="lem-arit-nat" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 9.3</strong></span> As operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> entre os números naturais satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in\N\)</span>.</p>
 <ol type="1">
-<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
-<li><span class="math inline">\(a+b=b+a\)</span>;</li>
-<li><span class="math inline">\((ab)c=a(bc)\)</span>;</li>
-<li><span class="math inline">\(ab=ba\)</span></li>
-<li><span class="math inline">\((a+b)c=ac+bc\)</span>;</li>
-<li>se <span class="math inline">\(a+c=b+c\)</span>, então <span class="math inline">\(a=b\)</span>;</li>
+<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span> (associatividade da adição);</li>
+<li><span class="math inline">\(a+b=b+a\)</span> (comutatividade da adição);</li>
+<li><span class="math inline">\((ab)c=a(bc)\)</span> (associatividade da multiplicação);</li>
+<li><span class="math inline">\(ab=ba\)</span>; (comutatividade da multiplicação)</li>
+<li><span class="math inline">\((a+b)c=ac+bc\)</span> (lei distributiva);</li>
+<li>se <span class="math inline">\(a+c=b+c\)</span>, então <span class="math inline">\(a=b\)</span> (lei cancelativa para adição).</li>
 </ol>
 </div>
 <div class="proof">
@@ -1316,7 +1325,8 @@ S(a+c)=a+S(c)=b+S(c)=S(b+c).
 \]</span> Ora, Axioma (P4) implica que <span class="math inline">\(a+c=b+c\)</span> e a hipótese da indução implica que <span class="math inline">\(a=b\)</span>.</p></li>
 </ol>
 </div>
-<p>Note que nós não definimos nem a subtração nem a divisão entre números naturais, pois o conjunto dos naturais não é fechado para estas operações. Portanto, elas não são consideradas operações destes números.</p>
+<p>Observe que as afirmações do <a href="#lem-arit-nat" class="quarto-xref">Lema&nbsp;<span>9.3</span></a> implicam também a lei distributiva <span class="math inline">\(a(b+c)=ab+ac\)</span> e também a lei cancelativa que <span class="math inline">\(a+b=a+c\)</span> implica <span class="math inline">\(b=c\)</span>.</p>
+<p>Nós não definimos nem a subtração nem a divisão entre números naturais, pois o conjunto dos naturais não é fechado para estas operações. Portanto, elas não são consideradas operações destes números.</p>
 </section>
 <section id="ordenação" class="level2" data-number="9.4">
 <h2 data-number="9.4" data-anchor-id="ordenação"><span class="header-section-number">9.4</span> Ordenação</h2>
