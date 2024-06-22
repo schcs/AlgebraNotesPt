@@ -1283,9 +1283,9 @@ S(a)+1=S(S(a)).
 <ol type="1">
 <li><span class="math inline">\((a+b)+c=a+(b+c)\)</span> (associatividade da adição);</li>
 <li><span class="math inline">\(a+b=b+a\)</span> (comutatividade da adição);</li>
+<li><span class="math inline">\((a+b)c=ac+bc\)</span> (lei distributiva);</li>
 <li><span class="math inline">\((ab)c=a(bc)\)</span> (associatividade da multiplicação);</li>
 <li><span class="math inline">\(ab=ba\)</span>; (comutatividade da multiplicação)</li>
-<li><span class="math inline">\((a+b)c=ac+bc\)</span> (lei distributiva);</li>
 <li>se <span class="math inline">\(a+c=b+c\)</span>, então <span class="math inline">\(a=b\)</span> (lei cancelativa para adição).</li>
 </ol>
 </div>
@@ -1309,14 +1309,24 @@ a+(b+1)=a+S(b)=S(a+b).
 <p><em>Passo indutivo:</em> Provar que <span class="math inline">\(a+S(b)=S(b)+a\)</span> vale para todo <span class="math inline">\(a\in \N\)</span>. De fato, temos que <span class="math display">\[\begin{align*}
 a+S(b)&amp;=S(a+b)=S(b+a)=b+S(a)=b+(a+1)\\&amp;=b+(1+a)=(b+1)+a=S(b)+a.
 \end{align*}\]</span> Note que nesta conta usamos, (A2), (HI), (A2), (A1), a base da indução, associatividade, (A1).</p></li>
-<li><p>Exercício.</p></li>
-<li><p>Exercício.</p></li>
 <li><p>Indução por <span class="math inline">\(c\)</span>.</p>
 <p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, <span class="math inline">\((a+b)\cdot 1=a\cdot 1+b\cdot 1\)</span>. Mas isso segue da regra (M1) aplicando três vezes.</p>
 <p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((a+b)c=ac+bc\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>.</p>
 <p><em>Passo indutivo:</em> Provar que <span class="math inline">\((a+b)S(c)=aS(c)+bS(c)\)</span>. De fato, <span class="math display">\[\begin{align*}
 (a+b)S(c)&amp;=(a+b)c+(a+b)=(ac+bc)+(a+b)\\&amp;=((ac+bc)+a)+b=(ac+(bc+a))+b\\&amp;=(ac+(a+bc))+b=((ac+a)+bc)+b\\&amp;=(ac+a)+(bc+b)=aS(c)+bS(c).
 \end{align*}\]</span> Deixamos para o leitor identificar as regras que foram usadas em dada um dos passos na conta anterior.</p></li>
+<li><p>Indução por <span class="math inline">\(c\)</span>.</p>
+<p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, <span class="math inline">\((ab)\cdot 1=a(b\cdot 1)\)</span>. Mas isso segue da regra (M1).</p>
+<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((ab)c=a(bc)\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>.</p>
+<p><em>Passo indutivo:</em> Precisa provar que <span class="math inline">\((ab)S(c)=a(bS(c))\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>. De fato, <span class="math display">\[
+(ab)S(c)=(ab)c+ab=a(bc)+ab=a(bc+b)=a(bS(c)).
+\]</span></p></li>
+<li><p>Indução por <span class="math inline">\(b\)</span>.</p>
+<p><em>Base da indução:</em> Provar para <span class="math inline">\(b=1\)</span>. Ou seja, <span class="math inline">\(a\cdot 1=1\cdot a\)</span> para todo <span class="math inline">\(a\in\N\)</span>. Isso segue do <a href="#lem-arit-nat0" class="quarto-xref">Lema&nbsp;<span>9.2</span></a>.</p>
+<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\(ab=ba\)</span> algum <span class="math inline">\(b\in\N\)</span> e todo <span class="math inline">\(a\in\N\)</span>.</p>
+<p><em>Passo indutivo:</em> Precisa provar que <span class="math inline">\(aS(b)=S(b)a\)</span> para todo <span class="math inline">\(a\in\N\)</span>. De fato, <span class="math display">\[
+aS(b)=ab+a=ba+a=ba+1\cdot a=(b+1)a=S(b)a.
+\]</span></p></li>
 <li><p>Indução por <span class="math inline">\(c\)</span>.</p>
 <p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, se <span class="math inline">\(a+a=b+1\)</span>, então <span class="math inline">\(b=c\)</span>. Assuma que <span class="math inline">\(a+1=b+1\)</span>. Isso implica por (A1) que <span class="math inline">\(S(b)=S(c)\)</span>. Ora, <span class="math inline">\(a=b\)</span> segue do Axioma (P4).</p>
 <p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\(a+c=b+c\)</span> implica que <span class="math inline">\(a=b\)</span> para todo <span class="math inline">\(a,b\in\N\)</span>.</p>
