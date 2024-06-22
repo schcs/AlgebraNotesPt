@@ -9,11 +9,12 @@ lang: pt-BR
 :::{#def-naturais}
 Os números naturais são definidas usando os axiomas de [Peano](https://pt.wikipedia.org/wiki/Giuseppe_Peano). 
 
-P1. O número $1$ é natural.
-P2. Todo número natural $n$ tem um sucessor denotado por $S(n)$. 
-P3. O número $1$ não é sucessor de nenhum natural.
-P4. Se $n,m$ são naturais tais que $S(n)=S(m)$, então $n=m$. 
-5. Seja $X$ é um conjunto de números naturais tal que     
+- **(P1):** O número $1$ é natural.
+- **(P2):** Todo número natural $n$ tem um sucessor denotado por $S(n)$. 
+- **(P3):** O número $1$ não é sucessor de nenhum natural.
+- **(P4):** Se $n,m$ são naturais tais que $S(n)=S(m)$, então $n=m$. 
+- **(P5):** Seja $X$ é um conjunto de números naturais tal que     
+
     a. $1\in X$; e 
     b. se $n\in X$, então $S(n)\in X$.
     
@@ -71,13 +72,13 @@ Definimos duas operações entre números inteiros.
 
 Primeiro defina a adição com as seguintes duas regras para todo $n,m\in\N$:
 
-1. $n+1=S(n)$;
-2. $n+S(m)=S(n+m)$.
+- **(A1):** $n+1=S(n)$;
+- **(A2):** $n+S(m)=S(n+m)$.
 
 Defina a multiplicação com as seguintes duas regras para todo $n,m\in\N$:
 
-1. $n\cdot 1=n$;
-2. $n\cdot S(m)=n\cdot m+n$.
+- **(M1):** $n\cdot 1=n$;
+- **(M2)** $n\cdot S(m)=n\cdot m+n$.
 :::
 
 Note que estas definições podemo ser vistas como definições recursivas. O seguinte exemplo simples ilustra o uso destas regras. 
@@ -138,12 +139,12 @@ As seguintes são verdadeiras para todo $a\in\N$.
 :::{#lem-arit-nat}
 As operações $+$ e $\cdot$ entre os números naturais satisfazem as seguintes propriedades para todo $a,b,c\in\N$. 
 
-1. $(a+b)+c=a+(b+c)$;
-2. $a+b=b+a$;
-3. $(ab)c=a(bc)$; 
-4. $ab=ba$
-5. $(a+b)c=ac+bc$;
-6. se $a+c=b+c$, então $a=b$;
+1. $(a+b)+c=a+(b+c)$ (associatividade da adição);
+2. $a+b=b+a$ (comutatividade da adição);
+3. $(ab)c=a(bc)$ (associatividade da multiplicação); 
+4. $ab=ba$; (comutatividade da multiplicação)
+5. $(a+b)c=ac+bc$ (lei distributiva);
+6. se $a+c=b+c$, então $a=b$ (lei cancelativa para adição).
 :::
 
 :::{.proof}
@@ -208,7 +209,9 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
    Ora, Axioma (P4) implica que $a+c=b+c$ e a hipótese da indução implica que $a=b$. 
 :::
 
-Note que nós não definimos nem a subtração nem a divisão entre números naturais, pois o conjunto dos naturais não é fechado para estas operações. Portanto, elas não são consideradas operações destes números. 
+Observe que as afirmações do @lem-arit-nat implicam também a lei distributiva $a(b+c)=ab+ac$ e também a lei cancelativa que $a+b=a+c$ implica $b=c$.  
+
+Nós não definimos nem a subtração nem a divisão entre números naturais, pois o conjunto dos naturais não é fechado para estas operações. Portanto, elas não são consideradas operações destes números. 
 
 ## Ordenação
 
