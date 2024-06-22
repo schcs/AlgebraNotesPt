@@ -141,9 +141,9 @@ As operações $+$ e $\cdot$ entre os números naturais satisfazem as seguintes 
 
 1. $(a+b)+c=a+(b+c)$ (associatividade da adição);
 2. $a+b=b+a$ (comutatividade da adição);
-3. $(ab)c=a(bc)$ (associatividade da multiplicação); 
-4. $ab=ba$; (comutatividade da multiplicação)
-5. $(a+b)c=ac+bc$ (lei distributiva);
+3. $(a+b)c=ac+bc$ (lei distributiva);
+4. $(ab)c=a(bc)$ (associatividade da multiplicação); 
+5. $ab=ba$; (comutatividade da multiplicação)
 6. se $a+c=b+c$, então $a=b$ (lei cancelativa para adição).
 :::
 
@@ -180,11 +180,7 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
    \end{align*}
    Note que nesta conta usamos, (A2), (HI), (A2), (A1), a base da indução, associatividade, (A1). 
 
-3. Exercício.
-
-4. Exercício.
-
-5. Indução por $c$. 
+3. Indução por $c$. 
    
    *Base da indução:* Provar para $c=1$. Ou seja, $(a+b)\cdot 1=a\cdot 1+b\cdot 1$. Mas isso segue da regra (M1) aplicando três vezes.
 
@@ -195,6 +191,29 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
    (a+b)S(c)&=(a+b)c+(a+b)=(ac+bc)+(a+b)\\&=((ac+bc)+a)+b=(ac+(bc+a))+b\\&=(ac+(a+bc))+b=((ac+a)+bc)+b\\&=(ac+a)+(bc+b)=aS(c)+bS(c).
    \end{align*}
    Deixamos para o leitor identificar as regras que foram usadas em dada um dos passos na conta anterior. 
+
+3. Indução por $c$. 
+   
+   *Base da indução:* Provar para $c=1$. Ou seja, $(ab)\cdot 1=a(b\cdot 1)$. Mas isso segue da regra (M1).
+
+   *Hipótese da indução*: Assumir que $(ab)c=a(bc)$ vale para todo $a,b\in\N$ e algum $c\in N$. 
+
+   *Passo indutivo:* Precisa provar que $(ab)S(c)=a(bS(c))$ vale para todo $a,b\in\N$ e algum $c\in N$.
+   De fato, 
+   $$
+   (ab)S(c)=(ab)c+ab=a(bc)+ab=a(bc+b)=a(bS(c)).
+   $$
+
+5. Indução por $b$. 
+
+   *Base da indução:* Provar para $b=1$. Ou seja, $a\cdot 1=1\cdot a$ para todo $a\in\N$. Isso segue do @lem-arit-nat0.
+
+   *Hipótese da indução*: Assumir que $ab=ba$ algum $b\in\N$ e todo $a\in\N$. 
+
+   *Passo indutivo:* Precisa provar que $aS(b)=S(b)a$ para todo $a\in\N$. De fato, 
+   $$
+   aS(b)=ab+a=ba+a=ba+1\cdot a=(b+1)a=S(b)a.
+   $$ 
 
 6. Indução por $c$. 
 
