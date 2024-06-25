@@ -1181,12 +1181,12 @@
   {
     "objectID": "AlgebraLinearII/chapter1.html",
     "href": "AlgebraLinearII/chapter1.html",
-    "title": "55  Sample chapter",
+    "title": "55  Distâncias",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\L}{\\mathbb L}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\newcommand{\\overbar}[1]{\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu}\n\\]",
+    "text": "55.1 Distância entre duas retas.\nVamos calcular a distância entre duas retas. Sejam \\[\nr_1:\\begin{pmatrix} x\\\\y\\\\z\\end{pmatrix}=\\begin{pmatrix}2\\\\-1\\\\0\\end{pmatrix}+t\\begin{pmatrix}2\\\\3\\\\1\\end{pmatrix}\n\\quad\\mbox{e}\\quad\nr_2:\\begin{pmatrix} x\\\\y\\\\z\\end{pmatrix}=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}+t\\begin{pmatrix}0\\\\2\\\\1\\end{pmatrix}\n\\] duas retas no espaço. Pela fórmula estudada, obtemos que \\[\nd(r_1,r_2)=\\frac{\\|P_1P_2\\cdot (v_1\\times v_2)\\|}{\\|v_1\\times v_2\\|}=\\frac{\\sqrt{21}}{21}.\n\\]\nAs duas retas podem ser visualisadas na seguinte ilustração.",
     "crumbs": [
       "Álgebra Linear II",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sample chapter</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Distâncias</span>"
     ]
   },
   {
@@ -1204,7 +1204,7 @@
     "href": "GruposECorpos/index.html#apostilas",
     "title": "Grupos e Corpos",
     "section": "",
-    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\nOs Teoremas de Sylow\nGrupos abelianos\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\nAs aplicações da Teoria de Galois\n\nTODO: Grupos abelianos, Resolubilidade por radicais",
+    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\nOs Teoremas de Sylow\nGrupos abelianos\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\nAs aplicações da Teoria de Galois",
     "crumbs": [
       "Grupos e Corpos"
     ]
