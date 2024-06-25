@@ -1,3 +1,23 @@
-## Sample chapter 
+---
+title: "Distâncias"
+number-sections: true
+lang: pt-BR
+---
 
-Chapter text
+## Distância entre duas retas. 
+
+
+Vamos calcular a distância entre duas retas. Sejam 
+$$
+r_1:\begin{pmatrix} x\\y\\z\end{pmatrix}=\begin{pmatrix}2\\-1\\0\end{pmatrix}+t\begin{pmatrix}2\\3\\1\end{pmatrix}
+\quad\mbox{e}\quad 
+r_2:\begin{pmatrix} x\\y\\z\end{pmatrix}=\begin{pmatrix}1\\0\\1\end{pmatrix}+t\begin{pmatrix}0\\2\\1\end{pmatrix}
+$$
+duas retas no espaço. Pela fórmula estudada, obtemos que 
+$$
+d(r_1,r_2)=\frac{\|P_1P_2\cdot (v_1\times v_2)\|}{\|v_1\times v_2\|}=\frac{\sqrt{21}}{21}.
+$$
+
+As duas retas podem ser visualisadas na seguinte ilustração.
+
+<iframe src="https://www.geogebra.org/classic/vppupxkb?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>

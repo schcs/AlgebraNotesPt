@@ -40,7 +40,6 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 * [O Teorema Fundamental da Teoria de Galois](galois.qmd)
 * [As aplicações da Teoria de Galois](appl_galois.qmd)
 
-TODO: Grupos abelianos, Resolubilidade por radicais
 
 ## Bibliografia
 * Joseph Gallian. Contemporary abstract algebra. Cengage Learning, 2016.
