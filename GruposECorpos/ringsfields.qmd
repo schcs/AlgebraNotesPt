@@ -115,6 +115,11 @@ $$
 e $\F[x]/(f(x))$ é um espaço vetorial de dimensão $k$ sobre $\F$.
 :::
 
+
+:::{#def-ideal-max}
+Um ideal $I\unlhd$ R$ é dito *maximal* se não existe ideal $J$ de $R$ tal que tal $I\subset J\subset R$.  
+:::
+
 :::{#thm-quot}
 Se $I\neq\{0\}$ é um ideal de $\F[x]$ então existe um único polinômio mônico $f(x)\in I$ tal que
 $$

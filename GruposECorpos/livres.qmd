@@ -58,7 +58,7 @@ Seja $w=x_1\cdots x_k\in F_X$ e defina $\psi(w)=\varphi(x_1)\cdots\varphi(x_k)$.
 :::
 
 :::{#cor-free-quot}
-Seja $G$ um grupo gerado por um conjunto $X$. Então existe um homomorfismo $\psi:F_X\rightarrow G$ sobrejetivo tal que $\psi|_X=\mbox{id}_X$. Em particular $G\cong F/\ker\psi$. (Cada grupo é quociente de um grupo livre.)
+Seja $G$ um grupo gerado por um conjunto $X$. Então existe um homomorfismo $\psi:F_X\rightarrow G$ sobrejetivo tal que $\psi|_X=\mbox{id}_X$. Em particular $G\cong F_X/\ker\psi$. (Cada grupo é quociente de um grupo livre.)
 :::
 
 :::{#def-pres}
