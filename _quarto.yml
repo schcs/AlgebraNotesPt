@@ -22,6 +22,7 @@ book:
         - IniciacaoAMatematica/order.qmd
         - IniciacaoAMatematica/functions.qmd
         - IniciacaoAMatematica/naturais.qmd
+        - IniciacaoAMatematica/int_rat.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 
         - FundamentosDeAlgebra/divisao.qmd

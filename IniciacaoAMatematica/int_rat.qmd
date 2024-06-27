@@ -10,14 +10,14 @@ Nas aulas anteriores, nós construímos os números naturais. Agora, vamos const
 
 Considere o conjunto $\N\times\N$ e considere a relação $\sim$ sobre $\N\times\N$ definida como 
 $$
-(a,b)\tilde (c,d)\quad\mbox{quando}\mbox{a+d=b+c}
+(a,b)\sim (c,d)\quad\mbox{quando}\quad a+d=b+c.
 $$
 
 :::{#lem-rel-int}
 A relação $\sim$ é uma relação de equivalência. 
 :::
 :::{.proof}
-Consulte o @exr-exr-ntimesn
+Consulte o @exr-ntimesn
 :::
 
 Seja $(a,b)\in\N\times \N$. A classe de equivalência de $(a,b)$ será denotado por $[a,b]$. Por exemplo 
@@ -26,19 +26,19 @@ Seja $(a,b)\in\N\times \N$. A classe de equivalência de $(a,b)$ será denotado 
 [2,1]&=\{(2,1),(3,2),(4,3),\ldots\}\\
 [1,2]&=\{(1,2),(2,3),(3,4),\ldots\}
 \end{align*}
-Observe que a classe $[1,1]$ contém os pares na form $(a,a)$; ou seja, os pares com os dois componentes iguals. A classe, $[2,1]$ contém os pares na forma $[a+1,a]$; ou seja, os pares onde o primeiro componente é um maior que o segundo. A classe $[1,2]$ contém os pares na forma $(a,a+1)$ onde o segundo componente é um maior que o primeiro. Geralmente, temos uma classe na forma 
-\begin{equation}{#eq-pair-zero}
-\{(a,a)\mid a\in\N\}
-\end{equation}
+Observe que a classe $[1,1]$ contem os pares na form $(a,a)$; ou seja, os pares com os dois componentes iguals. A classe $[2,1]$ contem os pares na forma $[a+1,a]$; ou seja, os pares onde o primeiro componente é um maior que o segundo. A classe $[1,2]$ contém os pares na forma $(a,a+1)$ onde o segundo componente é um maior que o primeiro. Geralmente, temos uma classe na forma 
+$$
+[1,1]=\{(a,a)\mid a\in\N\}
+$${#eq-pair-zero}
 e as demais classes têm a forma 
-\begin{equation}{#eq-pair-pos}
-\{(a+k,a)\mid a\in \N\} 
-\end{equation}
+$$
+[1+k,1]=\{(a+k,a)\mid a\in \N\} 
+$${#eq-pair-pos}
 ou 
-\begin{equation}{#eq-pair-neg}
-\{(a+k,a)\mid a\in \N\}.
-\end{equation}
-A ideia de construir os número inteiros é que a classe @eq-pair-pos pode ser identificado com o número $k\in\N$, enquanto a class a classe @eq-pair-zero pode ser identificado com um novo número que representa a ideia do zero, e a classe @eq-pair-neg com um número que representa a ideia do negativo de $k$.
+$$
+[1,1+k]\{(a,a+k)\mid a\in \N\}.
+$${#eq-pair-neg}
+A ideia de construir os número inteiros é que a classe na @eq-pair-pos pode ser identificada com o número $k\in\N$, enquanto a classe na @eq-pair-zero pode ser identificada com um novo número que representa a ideia do zero, e a classe na @eq-pair-neg com um número que representa a ideia do negativo de $k$.
 
 :::{#def-int}
 Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O número dos inteiros é denotado por $\mathbb Z$. 
@@ -63,8 +63,108 @@ As operações $+$ e $\cdot$ são bem definidas; ou seja, o resultado não depen
 5. $(xy)z=x(yz)$;
 6. $xy=yx$;
 7. Existe elemento neutro para o produto. Nomeadamente, denotando $1_\Z=[2,1]$, temos que $1_\Z x=x1_\Z=x$;
-8. $x(y+z)=(xy+xz)$;
+8. $x(y+z)=xy+xz$;
+9. se $x+z=y+z$, então $x=y$;
+10. se $xz=yz$ e $z\neq 0$, então $x=y$.
 :::
 
 :::{.proof}
+Primeiro provaremos que as operações são bem definidas. Demonstramos isso para o produto, pois a soma é mais simples 
+e o leitor poderá fazer. Assuma que $[a,b]=[a',b'],[c,d]\in\Z$. Precisa provar que o produto $[a,b][c,d]$ pode 
+ser calculada também como $[a',b'][c,d]$ e o resultado vai ser o mesmo. De fato,
+$$
+[a,b][c,d]=[ac+bd,ad+bc]
+$$
+e
+$$
+[a',b'][c,d]=[a'c+b'd,a'd+b'c].
+$$
+Para provar que estes dois números são os mesmos, precisa verificar que 
+$$
+ac+bd+a'd+b'c=ad+bc+a'c+b'd.
+$${#eq-prod-ver}
+Como $[a,b]=[a',b']$, temos que $a+b'=a'+b$. Logo, 
+$$
+ac+bd+a'd+b'c=(a+b')c+(b+a')d=(a'+b)c+(a+b')d=ad+bc+a'c+b'd
+$$
+e a @eq-prod-ver está verificada. Pode provar com argumento similar, que se 
+$[a,b],[c,d]=[c',d']\in\Z$, então $[a,b][c,d]=[a,b][c',d']$. 
+
+Note que no ponto 4., o inverso de $x=[x_1,x_2]$ é $[x_2,x_1]$. De fato, 
+$$
+[x_1,x_2]+[x_2,x_1]=[x_1+x_2,x_2+x_1]=0.
+$$
+
+As demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. 
+Para ilustrar a técnica, vamos provar o  item 8 e o item 9. O resto é exercício para o leitor. 
+
+Assuma que $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$ e vamos computar que 
+\begin{align*}
+x(y+z)&=[x_1,x_2]([y_1,y_2]+[z_1,z_2])=[x_1,x_2]([y_1+z_1,y_2+z_2])\\&=
+[x_1(y_1+z_1)+x_2(y_2+z_2),x_1(y_2+z_2)+x_2(y_1+z_1)]\\&=
+[x_1y_1+x_1z_1+x_2y_2+x_2z_2,x_1y_2+x_1z_2+x_2y_1+x_2z_1].
+\end{align*}
+Por outro lado, 
+\begin{align*}
+xy+xz&=[x_1,x_2][y_1,y_2]+[x_1,x_2][z_1,z_2]\\&=[x_1y_1+x_2y_2,x_1y_2+x_2y_1]+[x_1z_1+x_2z_2,x_1z_2+x_2z_1]\\&=
+[x_1y_1+x_2y_2+x_1z_1+x_2z_2,x_1y_2+x_2y_1+x_1z_2+x_2z_1]
+\end{align*}
+
+Assuma que $x+z=y+z$. Sejam $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$ e assuma que 
+$x+z=y+z$; ou seja, 
+$$
+[x_1+z_1,x_2+z_2]=[y_1+z_1,y_2+z_2].
+$$
+Logo, 
+$$
+x_1+z_1+y_2+z_2=x_2+z_2+y_1+z_1.
+$$
+Ora, usamos a lei cancelativa para números naturais e obtemos que 
+$$
+x_1+y_2=x_2+y_1;
+$$
+ou seja, $x=[x_1,x_2]=[y_1,y_2]=y$. 
 :::
+
+:::{#def-int-pos}
+Seja $x=[x_1,x_2]$. 
+
+1. Se $x_2<x_1$, então $x$ chama-se *positivo*.
+2. Se $x_1<x_2$, então $x$ chama-se *negativo*.
+
+Segue da definição da igualdade entre números inteiros que a positividade do número está bem definida; 
+ou seja, ela não depende da escolha do representante. 
+
+Se $x,y\in\Z$, dizemos que $x<y$ se $y-x=y+(-x)$ é positivo. Dizemos que $x\leq y$ se $x=y$ ou $x<y$. 
+:::
+
+:::{#lem-int-pos}
+Sejam $x,y,z\in\Z$ As seguinte propriedades estão válidas. 
+
+1. $x\leq x$;
+2. se $x\leq y$ e $y\leq x$, então $x=y$;
+3. se $x\leq y$ e $y\leq z$, então $x\leq z$; 
+4. se $x\leq y$, então $x+z\leq y+z$; 
+5. se $x\leq y$ e $z$ é positivo, então $xz\leq yz$;
+6. se $x\leq y$ e $z$ é negativo, então $yz\leq xz$;
+7. temos que exatamente uma das alternativas $x<y$ ou $x=y$ ou $y<x$ está válida.
+:::
+:::{.proof}
+Provaremos por exemplo o item 5. Assuma que $x\leq y$ e $z$ é positivo. Se $x=y$, então não tem nada para provar e assuma que 
+$x<y$. Logo, $y-x$ é positivo. Colocando, $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$, temos que 
+$$
+y-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].
+$$
+Pela positividade, obtemos que $y_1+x_2>y_2+x_1$. 
+Como $z$ é positivo, temos que $z=[1+a,1]$ e assim 
+\begin{align*}
+(y-x)z&=[(y_1+x_2)(1+a)+y_2+x_1,y_1+x_2+(y_2+x_1)(1+a)]\\&=
+[y_1+x_2+ay_1+ax_2+y_2+x_1,y_1+x_2+y_2+x_1+y_2a+x_1a]\\&=
+[ay_1+ax_2,y_2a+x_1a]=[a(y_1+x_2),a(y_2+x_1)].
+\end{align*}
+Ora, a compatibilidade das operações com a ordenação dos naturais implica que $a(y_1+x_2)>a(y_2+x_1)$. 
+Ou seja, $yz-xz=(y-x)z$ é positivo e $xz<yz$. 
+:::
+
+O @lem-int-pos diz que a relação $\leq$ é uma relação de ordem total no conjunto $\Z$ que é compatível com 
+as operações.
