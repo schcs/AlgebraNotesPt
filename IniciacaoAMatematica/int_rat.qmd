@@ -1,0 +1,70 @@
+---
+title: "Os números inteiros e racionais"
+number-sections: true
+lang: pt-BR
+---
+
+## Os números inteiros. 
+
+Nas aulas anteriores, nós construímos os números naturais. Agora, vamos construir os números inteiros. 
+
+Considere o conjunto $\N\times\N$ e considere a relação $\sim$ sobre $\N\times\N$ definida como 
+$$
+(a,b)\tilde (c,d)\quad\mbox{quando}\mbox{a+d=b+c}
+$$
+
+:::{#lem-rel-int}
+A relação $\sim$ é uma relação de equivalência. 
+:::
+:::{.proof}
+Consulte o @exr-exr-ntimesn
+:::
+
+Seja $(a,b)\in\N\times \N$. A classe de equivalência de $(a,b)$ será denotado por $[a,b]$. Por exemplo 
+\begin{align*}
+[1,1]&=\{(1,1),(2,2),(3,3),\ldots\}\\
+[2,1]&=\{(2,1),(3,2),(4,3),\ldots\}\\
+[1,2]&=\{(1,2),(2,3),(3,4),\ldots\}
+\end{align*}
+Observe que a classe $[1,1]$ contém os pares na form $(a,a)$; ou seja, os pares com os dois componentes iguals. A classe, $[2,1]$ contém os pares na forma $[a+1,a]$; ou seja, os pares onde o primeiro componente é um maior que o segundo. A classe $[1,2]$ contém os pares na forma $(a,a+1)$ onde o segundo componente é um maior que o primeiro. Geralmente, temos uma classe na forma 
+\begin{equation}{#eq-pair-zero}
+\{(a,a)\mid a\in\N\}
+\end{equation}
+e as demais classes têm a forma 
+\begin{equation}{#eq-pair-pos}
+\{(a+k,a)\mid a\in \N\} 
+\end{equation}
+ou 
+\begin{equation}{#eq-pair-neg}
+\{(a+k,a)\mid a\in \N\}.
+\end{equation}
+A ideia de construir os número inteiros é que a classe @eq-pair-pos pode ser identificado com o número $k\in\N$, enquanto a class a classe @eq-pair-zero pode ser identificado com um novo número que representa a ideia do zero, e a classe @eq-pair-neg com um número que representa a ideia do negativo de $k$.
+
+:::{#def-int}
+Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O número dos inteiros é denotado por $\mathbb Z$. 
+:::
+
+
+:::{#def-int-ops}
+Definimos as operações de $+$ e $\cdot$ entre elementos de $\Z$:
+
+1. $[a,b]+[c,d]=[a+c,b+d]$;
+2. $[a,b][c,d]=[ac+bd,ad+bc]$.
+:::
+
+
+:::{#lem-int-ops}
+As operações $+$ e $\cdot$ são bem definidas; ou seja, o resultado não depende da escolha do representate da classe. Além disso, temos as seguintes propriedades para todo $x,y,z\in\Z$:
+
+1. $(x+y)+z=x+(y+z)$;
+2. $x+y=y+x$;
+3. Existe elemento neutro para a soma. Nomeadamente, denotando $0=[1,1]$, temos que $x+0=0+x=x$;
+4. $x$ possui negativo $-x$ que satisfaz $x+(-x)=0$;
+5. $(xy)z=x(yz)$;
+6. $xy=yx$;
+7. Existe elemento neutro para o produto. Nomeadamente, denotando $1_\Z=[2,1]$, temos que $1_\Z x=x1_\Z=x$;
+8. $x(y+z)=(xy+xz)$;
+:::
+
+:::{.proof}
+:::

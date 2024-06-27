@@ -327,3 +327,26 @@ Vale a lei cancelativa para a multiplicação. Ou seja, se $ac=bc$, então $a=b$
 :::{.proof}
 Assuma que $ac=bc$. A relação $a<b$ é impossível, pois neste caso vale $ac<bc$. Similarmente, $b<a$ é também impossível. Ora, segue do @lem-ord-nat-total que a única opção é $a=b$. 
 :::
+
+<!--
+## Coeficientes binomiais
+
+:::{#def-binom}
+Seja $n,k\in\N$ tal que $n\leq k$. Definimos $\binom nk$ com as seguintes regras:
+
+1. $\binom n0=\binom nn=1$;
+2. $\binom nk=\binom {n-1}{k}+\binom {n-1}{k-1}$ se $n\geq 1$ e $1\leq k\leq n$.  
+
+:::{#lem-binom}
+Temos que 
+$$
+\binom nk \mbox{ é o número total de maneiras de escolher $k$ elementos distintos num conjunto de $n$ elementos}
+$$
+:::
+:::{.proof}
+Provamos por indução em $n$. Se $n=0$, então 
+:::
+
+{#lem-binom}
+
+-->
