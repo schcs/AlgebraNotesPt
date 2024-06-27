@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.556">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -1413,6 +1413,28 @@ bc=(a+x)c=ac+xc
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(ac=bc\)</span>. A relação <span class="math inline">\(a&lt;b\)</span> é impossível, pois neste caso vale <span class="math inline">\(ac&lt;bc\)</span>. Similarmente, <span class="math inline">\(b&lt;a\)</span> é também impossível. Ora, segue do <a href="#lem-ord-nat-total" class="quarto-xref">Lema&nbsp;<span>9.5</span></a> que a única opção é <span class="math inline">\(a=b\)</span>.</p>
 </div>
+<!--
+## Coeficientes binomiais
+
+:::{#def-binom}
+Seja $n,k\in\N$ tal que $n\leq k$. Definimos $\binom nk$ com as seguintes regras:
+
+1. $\binom n0=\binom nn=1$;
+2. $\binom nk=\binom {n-1}{k}+\binom {n-1}{k-1}$ se $n\geq 1$ e $1\leq k\leq n$.  
+
+:::{#lem-binom}
+Temos que 
+$$
+\binom nk \mbox{ é o número total de maneiras de escolher $k$ elementos distintos num conjunto de $n$ elementos}
+$$
+:::
+:::{.proof}
+Provamos por indução em $n$. Se $n=0$, então 
+:::
+
+{#lem-binom}
+
+-->
 
 
 </section>
