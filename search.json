@@ -20,26 +20,6 @@
     ]
   },
   {
-    "objectID": "IniciacaoAMatematica/index.html",
-    "href": "IniciacaoAMatematica/index.html",
-    "title": "Iniciação à Matemática",
-    "section": "",
-    "text": "Apostilas",
-    "crumbs": [
-      "Iniciação à Matemática"
-    ]
-  },
-  {
-    "objectID": "IniciacaoAMatematica/index.html#apostilas",
-    "href": "IniciacaoAMatematica/index.html#apostilas",
-    "title": "Iniciação à Matemática",
-    "section": "",
-    "text": "Proposições e sentenças\nConjuntos\nQuantificadores\nPares ordenados e relações\nRelações de equivalência\nExemplos importantes de relações de equivalência\nRelações de ordem\nFunções\nNúmeros naturais",
-    "crumbs": [
-      "Iniciação à Matemática"
-    ]
-  },
-  {
     "objectID": "IniciacaoAMatematica/prop.html",
     "href": "IniciacaoAMatematica/prop.html",
     "title": "1  Proposições ou sentenças",
@@ -561,50 +541,10 @@
     "href": "IniciacaoAMatematica/int_rat.html#os-números-inteiros.",
     "title": "10  Os números inteiros e racionais",
     "section": "",
-    "text": "Lema 10.1 A relação \\(\\sim\\) é uma relação de equivalência.\n\n\nComprovação. Consulte o Exercício 6.2\n\n\n\nDefinição 10.1 Um número inteiro é uma classe de equivalência \\([a,b]\\) para a relação \\(\\sim\\). O número dos inteiros é denotado por \\(\\mathbb Z\\).\n\n\nDefinição 10.2 Definimos as operações de \\(+\\) e \\(\\cdot\\) entre elementos de \\(\\Z\\):\n\n\\([a,b]+[c,d]=[a+c,b+d]\\);\n\\([a,b][c,d]=[ac+bd,ad+bc]\\).\n\n\n\nLema 10.2 As operações \\(+\\) e \\(\\cdot\\) são bem definidas; ou seja, o resultado não depende da escolha do representate da classe. Além disso, temos as seguintes propriedades para todo \\(x,y,z\\in\\Z\\):\n\n\\((x+y)+z=x+(y+z)\\);\n\\(x+y=y+x\\);\nExiste elemento neutro para a soma. Nomeadamente, denotando \\(0=[1,1]\\), temos que \\(x+0=0+x=x\\);\n\\(x\\) possui negativo \\(-x\\) que satisfaz \\(x+(-x)=0\\);\n\\((xy)z=x(yz)\\);\n\\(xy=yx\\);\nExiste elemento neutro para o produto. Nomeadamente, denotando \\(1_\\Z=[2,1]\\), temos que \\(1_\\Z x=x1_\\Z=x\\);\n\\(x(y+z)=xy+xz\\);\nse \\(x+z=y+z\\), então \\(x=y\\);\nse \\(xz=yz\\) e \\(z\\neq 0\\), então \\(x=y\\).\n\n\n\nComprovação. Primeiro provaremos que as operações são bem definidas. Demonstramos isso para o produto, pois a soma é mais simples e o leitor poderá fazer. Assuma que \\([a,b]=[a',b'],[c,d]\\in\\Z\\). Precisa provar que o produto \\([a,b][c,d]\\) pode ser calculada também como \\([a',b'][c,d]\\) e o resultado vai ser o mesmo. De fato, \\[\n[a,b][c,d]=[ac+bd,ad+bc]\n\\] e \\[\n[a',b'][c,d]=[a'c+b'd,a'd+b'c].\n\\] Para provar que estes dois números são os mesmos, precisa verificar que \\[\nac+bd+a'd+b'c=ad+bc+a'c+b'd.\n\\tag{10.4}\\] Como \\([a,b]=[a',b']\\), temos que \\(a+b'=a'+b\\). Logo, \\[\nac+bd+a'd+b'c=(a+b')c+(b+a')d=(a'+b)c+(a+b')d=ad+bc+a'c+b'd\n\\] e a Equação 10.4 está verificada. Pode provar com argumento similar, que se \\([a,b],[c,d]=[c',d']\\in\\Z\\), então \\([a,b][c,d]=[a,b][c',d']\\).\nNote que no ponto 4., o inverso de \\(x=[x_1,x_2]\\) é \\([x_2,x_1]\\). De fato, \\[\n[x_1,x_2]+[x_2,x_1]=[x_1+x_2,x_2+x_1]=0.\n\\]\nAs demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. Para ilustrar a técnica, vamos provar o item 8 e o item 9. O resto é exercício para o leitor.\nAssuma que \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\) e vamos computar que \\[\\begin{align*}\nx(y+z)&=[x_1,x_2]([y_1,y_2]+[z_1,z_2])=[x_1,x_2]([y_1+z_1,y_2+z_2])\\\\&=\n[x_1(y_1+z_1)+x_2(y_2+z_2),x_1(y_2+z_2)+x_2(y_1+z_1)]\\\\&=\n[x_1y_1+x_1z_1+x_2y_2+x_2z_2,x_1y_2+x_1z_2+x_2y_1+x_2z_1].\n\\end{align*}\\] Por outro lado, \\[\\begin{align*}\nxy+xz&=[x_1,x_2][y_1,y_2]+[x_1,x_2][z_1,z_2]\\\\&=[x_1y_1+x_2y_2,x_1y_2+x_2y_1]+[x_1z_1+x_2z_2,x_1z_2+x_2z_1]\\\\&=\n[x_1y_1+x_2y_2+x_1z_1+x_2z_2,x_1y_2+x_2y_1+x_1z_2+x_2z_1]\n\\end{align*}\\]\nAssuma que \\(x+z=y+z\\). Sejam \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\) e assuma que \\(x+z=y+z\\); ou seja, \\[\n[x_1+z_1,x_2+z_2]=[y_1+z_1,y_2+z_2].\n\\] Logo, \\[\nx_1+z_1+y_2+z_2=x_2+z_2+y_1+z_1.\n\\] Ora, usamos a lei cancelativa para números naturais e obtemos que \\[\nx_1+y_2=x_2+y_1;\n\\] ou seja, \\(x=[x_1,x_2]=[y_1,y_2]=y\\).\n\n\nDefinição 10.3 Seja \\(x=[x_1,x_2]\\).\n\nSe \\(x_2&lt;x_1\\), então \\(x\\) chama-se positivo.\nSe \\(x_1&lt;x_2\\), então \\(x\\) chama-se negativo.\n\nSegue da definição da igualdade entre números inteiros que a positividade do número está bem definida; ou seja, ela não depende da escolha do representante.\nSe \\(x,y\\in\\Z\\), dizemos que \\(x&lt;y\\) se \\(y-x=y+(-x)\\) é positivo. Dizemos que \\(x\\leq y\\) se \\(x=y\\) ou \\(x&lt;y\\).\n\n\nLema 10.3 Sejam \\(x,y,z\\in\\Z\\) As seguinte propriedades estão válidas.\n\n\\(x\\leq x\\);\nse \\(x\\leq y\\) e \\(y\\leq x\\), então \\(x=y\\);\nse \\(x\\leq y\\) e \\(y\\leq z\\), então \\(x\\leq z\\);\nse \\(x\\leq y\\), então \\(x+z\\leq y+z\\);\nse \\(x\\leq y\\) e \\(z\\) é positivo, então \\(xz\\leq yz\\);\nse \\(x\\leq y\\) e \\(z\\) é negativo, então \\(yz\\leq xz\\);\ntemos que exatamente uma das alternativas \\(x&lt;y\\) ou \\(x=y\\) ou \\(y&lt;x\\) está válida.\n\n\n\nComprovação. Provaremos por exemplo o item 5. Assuma que \\(x\\leq y\\) e \\(z\\) é positivo. Se \\(x=y\\), então não tem nada para provar e assuma que \\(x&lt;y\\). Logo, \\(y-x\\) é positivo. Colocando, \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\), temos que \\[\ny-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].\n\\] Pela positividade, obtemos que \\(y_1+x_2&gt;y_2+x_1\\). Como \\(z\\) é positivo, temos que \\(z=[1+a,1]\\) e assim \\[\\begin{align*}\n(y-x)z&=[(y_1+x_2)(1+a)+y_2+x_1,y_1+x_2+(y_2+x_1)(1+a)]\\\\&=\n[y_1+x_2+ay_1+ax_2+y_2+x_1,y_1+x_2+y_2+x_1+y_2a+x_1a]\\\\&=\n[ay_1+ax_2,y_2a+x_1a]=[a(y_1+x_2),a(y_2+x_1)].\n\\end{align*}\\] Ora, a compatibilidade das operações com a ordenação dos naturais implica que \\(a(y_1+x_2)&gt;a(y_2+x_1)\\). Ou seja, \\(yz-xz=(y-x)z\\) é positivo e \\(xz&lt;yz\\).",
+    "text": "Lema 10.1 A relação \\(\\sim\\) é uma relação de equivalência.\n\n\nComprovação. Consulte o Exercício 6.2\n\n\n\nDefinição 10.1 Um número inteiro é uma classe de equivalência \\([a,b]\\) para a relação \\(\\sim\\). O conjunto dos inteiros é denotado por \\(\\mathbb Z\\).\n\n\nDefinição 10.2 Definimos as operações de \\(+\\) e \\(\\cdot\\) entre elementos de \\(\\Z\\):\n\n\\([a,b]+[c,d]=[a+c,b+d]\\);\n\\([a,b][c,d]=[ac+bd,ad+bc]\\).\n\n\n\nLema 10.2 As operações \\(+\\) e \\(\\cdot\\) são bem definidas; ou seja, o resultado não depende da escolha do representate da classe. Além disso, temos as seguintes propriedades para todo \\(x,y,z\\in\\Z\\):\n\n\\((x+y)+z=x+(y+z)\\);\n\\(x+y=y+x\\);\nExiste elemento neutro para a soma. Nomeadamente, denotando \\(0=[1,1]\\), temos que \\(x+0=0+x=x\\);\n\\(x\\) possui negativo \\(-x\\) que satisfaz \\(x+(-x)=0\\);\n\\((xy)z=x(yz)\\);\n\\(xy=yx\\);\nExiste elemento neutro para o produto. Nomeadamente, denotando \\(1_\\Z=[2,1]\\), temos que \\(1_\\Z x=x1_\\Z=x\\);\n\\(x(y+z)=xy+xz\\);\nse \\(x+z=y+z\\), então \\(x=y\\);\nse \\(xz=yz\\) e \\(z\\neq 0\\), então \\(x=y\\).\n\n\n\nComprovação. Primeiro provaremos que as operações são bem definidas. Demonstramos isso para o produto, pois a soma é mais simples e o leitor poderá fazer. Assuma que \\([a,b]=[a',b'],[c,d]\\in\\Z\\). Precisa provar que o produto \\([a,b][c,d]\\) pode ser calculada também como \\([a',b'][c,d]\\) e o resultado vai ser o mesmo. De fato, \\[\n[a,b][c,d]=[ac+bd,ad+bc]\n\\] e \\[\n[a',b'][c,d]=[a'c+b'd,a'd+b'c].\n\\] Para provar que estes dois números são os mesmos, precisa verificar que \\[\nac+bd+a'd+b'c=ad+bc+a'c+b'd.\n\\tag{10.4}\\] Como \\([a,b]=[a',b']\\), temos que \\(a+b'=a'+b\\). Logo, \\[\nac+bd+a'd+b'c=(a+b')c+(b+a')d=(a'+b)c+(a+b')d=ad+bc+a'c+b'd\n\\] e a Equação 10.4 está verificada. Pode provar com argumento similar, que se \\([a,b],[c,d]=[c',d']\\in\\Z\\), então \\([a,b][c,d]=[a,b][c',d']\\).\nNote que no ponto 4., o inverso de \\(x=[x_1,x_2]\\) é \\([x_2,x_1]\\). De fato, \\[\n[x_1,x_2]+[x_2,x_1]=[x_1+x_2,x_2+x_1]=0.\n\\]\nAs demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. Para ilustrar a técnica, vamos provar o item 8 e o item 9. O resto é exercício para o leitor.\nAssuma que \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\) e vamos computar que \\[\\begin{align*}\nx(y+z)&=[x_1,x_2]([y_1,y_2]+[z_1,z_2])=[x_1,x_2]([y_1+z_1,y_2+z_2])\\\\&=\n[x_1(y_1+z_1)+x_2(y_2+z_2),x_1(y_2+z_2)+x_2(y_1+z_1)]\\\\&=\n[x_1y_1+x_1z_1+x_2y_2+x_2z_2,x_1y_2+x_1z_2+x_2y_1+x_2z_1].\n\\end{align*}\\] Por outro lado, \\[\\begin{align*}\nxy+xz&=[x_1,x_2][y_1,y_2]+[x_1,x_2][z_1,z_2]\\\\&=[x_1y_1+x_2y_2,x_1y_2+x_2y_1]+[x_1z_1+x_2z_2,x_1z_2+x_2z_1]\\\\&=\n[x_1y_1+x_2y_2+x_1z_1+x_2z_2,x_1y_2+x_2y_1+x_1z_2+x_2z_1]\n\\end{align*}\\]\nAssuma que \\(x+z=y+z\\). Sejam \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\) e assuma que \\(x+z=y+z\\); ou seja, \\[\n[x_1+z_1,x_2+z_2]=[y_1+z_1,y_2+z_2].\n\\] Logo, \\[\nx_1+z_1+y_2+z_2=x_2+z_2+y_1+z_1.\n\\] Ora, usamos a lei cancelativa para números naturais e obtemos que \\[\nx_1+y_2=x_2+y_1;\n\\] ou seja, \\(x=[x_1,x_2]=[y_1,y_2]=y\\).\n\n\nDefinição 10.3 Seja \\(x=[x_1,x_2]\\).\n\nSe \\(x_2&lt;x_1\\), então \\(x\\) chama-se positivo.\nSe \\(x_1&lt;x_2\\), então \\(x\\) chama-se negativo.\n\nSegue da definição da igualdade entre números inteiros que a positividade do número está bem definida; ou seja, ela não depende da escolha do representante.\nSe \\(x,y\\in\\Z\\), dizemos que \\(x&lt;y\\) se \\(y-x=y+(-x)\\) é positivo. Dizemos que \\(x\\leq y\\) se \\(x=y\\) ou \\(x&lt;y\\).\n\n\nLema 10.3 Sejam \\(x,y,z\\in\\Z\\) As seguinte propriedades estão válidas.\n\n\\(x\\leq x\\);\nse \\(x\\leq y\\) e \\(y\\leq x\\), então \\(x=y\\);\nse \\(x\\leq y\\) e \\(y\\leq z\\), então \\(x\\leq z\\);\nse \\(x\\leq y\\), então \\(x+z\\leq y+z\\);\nse \\(x\\leq y\\) e \\(z\\) é positivo, então \\(xz\\leq yz\\);\nse \\(x\\leq y\\) e \\(z\\) é negativo, então \\(yz\\leq xz\\);\ntemos que exatamente uma das alternativas \\(x&lt;y\\) ou \\(x=y\\) ou \\(y&lt;x\\) está válida.\n\n\n\nComprovação. Provaremos por exemplo o item 5. Assuma que \\(x\\leq y\\) e \\(z\\) é positivo. Se \\(x=y\\), então não tem nada para provar e assuma que \\(x&lt;y\\). Logo, \\(y-x\\) é positivo. Colocando, \\(x=[x_1,x_2]\\), \\(y=[y_1,y_2]\\), \\(z=[z_1,z_2]\\), temos que \\[\ny-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].\n\\] Pela positividade, obtemos que \\(y_1+x_2&gt;y_2+x_1\\). Como \\(z\\) é positivo, temos que \\(z=[1+a,1]\\) e assim \\[\\begin{align*}\n(y-x)z&=[(y_1+x_2)(1+a)+y_2+x_1,y_1+x_2+(y_2+x_1)(1+a)]\\\\&=\n[y_1+x_2+ay_1+ax_2+y_2+x_1,y_1+x_2+y_2+x_1+y_2a+x_1a]\\\\&=\n[ay_1+ax_2,y_2a+x_1a]=[a(y_1+x_2),a(y_2+x_1)].\n\\end{align*}\\] Ora, a compatibilidade das operações com a ordenação dos naturais implica que \\(a(y_1+x_2)&gt;a(y_2+x_1)\\). Ou seja, \\(yz-xz=(y-x)z\\) é positivo e \\(xz&lt;yz\\).",
     "crumbs": [
       "Iniciação à Matemática",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Os números inteiros e racionais</span>"
-    ]
-  },
-  {
-    "objectID": "FundamentosDeAlgebra/index.html",
-    "href": "FundamentosDeAlgebra/index.html",
-    "title": "Fundamentos de Álgebra",
-    "section": "",
-    "text": "Conteúdo\nBloco 1. Números inteiros: os princípios de boa ordenação e indução; o Lema  de Divisão de Euclides; critérios de divisibilidade; representação de inteiros e racionais em bases; máximo divisor comum e mínimo múltiplo comum; o MDC como combinação linear; equações diofantinas lineares; números primos; fatoração; o Teorema Fundamental da Aritmética.\nBloco 2. Congruências: definição e propriedades elementares; congruências lineares; a função de Euler; os teoremas de Fermat Euler, Wilson e do resto chinês; testes de primalidade; a criptografia RSA.\nBloco 3. Polinômios sobre um corpo; divisibilidade; o Lema de Divisão; máximo divisor comum e mínimo múltiplo comum; raízes, fórmulas para raízes para polinômios de 2o e 3o grau; irredutibilidade e fatoração sobre Q, R e C; o Teorema Fundamental da Álgebra;  o Lema de Gauss e o Critério de Eisenstein; anéis; definição e exemplos; ideais; domínios de integridade; divisores de zero; anéis euclidianos.",
-    "crumbs": [
-      "Fundamentos de Álgebra"
-    ]
-  },
-  {
-    "objectID": "FundamentosDeAlgebra/index.html#literatura-recomendada",
-    "href": "FundamentosDeAlgebra/index.html#literatura-recomendada",
-    "title": "Fundamentos de Álgebra",
-    "section": "Literatura recomendada",
-    "text": "Literatura recomendada\n\nA. Vidigal, D. Avritzer, E. Farias e Soares, H. P. Bueno, M. C. C. Ferreira, e E. M. C. de Faria.  Fundamentos de Álgebra. Editora UFMG. 2005.\nS. C. Coutinho. Teoria de números e criptografia RSA. IMPA-SBM ,segunda edição,  2014.\nA. Hefez. Curso de Álgebra (vol 1). Coleção Matemática Universitária, IMPA - SBM, quinta edição, 2016.\nAdilson Gonçalves. Introdução à álgebra, IMPA, sexta edição, 2017.\nArnaldo Garcia e Yves Lequain. Elementos de álgebra, IMPA, sexta edição, 2018.\nF. C. P. Milies e S. P Coelho. Números: uma introdução à Matemática. Ed. USP, terceira edição, 2013.\nL. S. Childs. A concrete introduction to higher algebra, UTM, Springer-Verlag, 2009.",
-    "crumbs": [
-      "Fundamentos de Álgebra"
-    ]
-  },
-  {
-    "objectID": "FundamentosDeAlgebra/index.html#canais-de-youtube",
-    "href": "FundamentosDeAlgebra/index.html#canais-de-youtube",
-    "title": "Fundamentos de Álgebra",
-    "section": "Canais de YouTube",
-    "text": "Canais de YouTube\n\nTeoria dos números por Michael Penn (inglês)\nTeoria dos números por Richard Borcherds (inglês)\nIntrudução à teoria dos números por Richard Borcherds, Universidade de Berkeley, 2022 (inglês)",
-    "crumbs": [
-      "Fundamentos de Álgebra"
-    ]
-  },
-  {
-    "objectID": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
-    "href": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
-    "title": "Fundamentos de Álgebra",
-    "section": "Notas e apostilas",
-    "text": "Notas e apostilas\n\nBloco 1: Inteiros\n\nDivisão, quociente, e resto entre números inteiros; O Teorema de Divisão de Euclides\nExpansão de números inteiros em uma base \\(b\\)\nCritérios de divisibilidade\nExpansão decimal de números racionais\nO maior divisor comum\nO Algoritmo de Euclides\nPropriedades do MDC\nNúmeros primos\nO Teorema Fundamental da Aritmética\nO número dos primos\nEquações diofantinas lineares em duas variáveis\nO Teorema Chinês dos Restos (Versão 1.0)\nA função \\(\\varphi\\) de Euler\n\n\n\nBloco 2: Congruências\n\nCongruências\nClasses residuais\n\\(\\Z_n\\)\nCongruências com incógnitas\nO Teorema Chinês dos Restos (Versão 2.0)\nO Pequeno Teorema de Fermat e o Teorema de Euler\nO Teorema de Wilson\nA ordem de um elemento de \\(\\Z_n\\)\nElementos primitivos: O enunciado\nQuadrados em \\(\\Z_p\\) e resíduos quadráticos\nO Algoritmo de Exponenciação Rápida\nO Teste de Primalidade de Fermat\nOs números de Carmichael\nO Teste de Primalidade de Miller\nCriptografia RSA: A Teoria\nCriptografia RSA: Um Exemplo Computacional\n\n\n\nBloco 3: Polinômios\n\nAnéis, domínios e corpos\nNúmeros complexos\nPolinômios sobre anéis\nO anel dos polinômios\nDivisibilidade entre polinômios\nO Teorema de Divisão para Polinômios\nO MDC de dois polinômios e o Algoritmo de Euclides\nRaízes e divisibilidade\nElementos Primitivos: A demonstração\nPolinômios irredutíveis\nO Teorema da Fatoração para Polinômios\nDomínios de Fatoração Única (DFU)\nPolinômios em \\(\\Q[x]\\). Parte I: O Lema de Gauss\nPolinômios em \\(\\Q[x]\\). Parte II: O Critério de Eisenstein\nEquações polinomiais do segundo grau\nEquações polinomiais do terceiro grau",
-    "crumbs": [
-      "Fundamentos de Álgebra"
     ]
   },
   {
@@ -1191,16 +1131,6 @@
     ]
   },
   {
-    "objectID": "AlgebraLinearII/index.html",
-    "href": "AlgebraLinearII/index.html",
-    "title": "Álgebra Linear II",
-    "section": "",
-    "text": "Apostilas",
-    "crumbs": [
-      "Álgebra Linear II"
-    ]
-  },
-  {
     "objectID": "AlgebraLinearII/chapter1.html",
     "href": "AlgebraLinearII/chapter1.html",
     "title": "56  Distâncias",
@@ -1209,46 +1139,6 @@
     "crumbs": [
       "Álgebra Linear II",
       "<span class='chapter-number'>56</span>  <span class='chapter-title'>Distâncias</span>"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/index.html",
-    "href": "GruposECorpos/index.html",
-    "title": "Grupos e Corpos",
-    "section": "",
-    "text": "Apostilas",
-    "crumbs": [
-      "Grupos e Corpos"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/index.html#apostilas",
-    "href": "GruposECorpos/index.html#apostilas",
-    "title": "Grupos e Corpos",
-    "section": "",
-    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\nOs Teoremas de Sylow\nGrupos abelianos\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\nAs aplicações da Teoria de Galois",
-    "crumbs": [
-      "Grupos e Corpos"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/index.html#bibliografia",
-    "href": "GruposECorpos/index.html#bibliografia",
-    "title": "Grupos e Corpos",
-    "section": "Bibliografia",
-    "text": "Bibliografia\n\nJoseph Gallian. Contemporary abstract algebra. Cengage Learning, 2016.\nSérgio Tadao Martins e Eduardo Tengan. Álgebra exemplar. IMPA, 2020.\nHygino Domingues e Gelson Iezzi. Álgebra moderna. Saraivauni, 2018.\nArnaldo Garcia e Yves Lequain. Elementos de álgebra. IMPA, 2018.\nAdilson Gonçalves. Introdução à Álgebra. IMPA, 2017.",
-    "crumbs": [
-      "Grupos e Corpos"
-    ]
-  },
-  {
-    "objectID": "GruposECorpos/index.html#vídeos-interesantes-e-relavantes-no-youtube",
-    "href": "GruposECorpos/index.html#vídeos-interesantes-e-relavantes-no-youtube",
-    "title": "Grupos e Corpos",
-    "section": "Vídeos interesantes e relavantes no YouTube",
-    "text": "Vídeos interesantes e relavantes no YouTube\n\nLife, Death and the Monster (John Conway) - Numberphile\nMonster Group (John Conway) - Numberphile\nMonster Group (a little extra bit) - Numberphile\nEuler’s formula with introductory group theory - 3Blue1Brown\nGroup theory and why I love 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000 - 3Blue1Brown\nEssence of group theory - Mathemaniac\n2000 years unsolved: Why is doubling cubes and squaring circles impossible? - Mathologger\nSymmetry - The Biggest Ideas in the Universe part, Sean Carrol",
-    "crumbs": [
-      "Grupos e Corpos"
     ]
   },
   {
@@ -2195,6 +2085,116 @@
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>76</span>  <span class='chapter-title'>As aplicações da Teoria de Galois</span>"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/index.html",
+    "href": "IniciacaoAMatematica/index.html",
+    "title": "Iniciação à Matemática",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Iniciação à Matemática"
+    ]
+  },
+  {
+    "objectID": "IniciacaoAMatematica/index.html#apostilas",
+    "href": "IniciacaoAMatematica/index.html#apostilas",
+    "title": "Iniciação à Matemática",
+    "section": "",
+    "text": "Proposições e sentenças\nConjuntos\nQuantificadores\nPares ordenados e relações\nRelações de equivalência\nExemplos importantes de relações de equivalência\nRelações de ordem\nFunções\nNúmeros naturais",
+    "crumbs": [
+      "Iniciação à Matemática"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html",
+    "href": "FundamentosDeAlgebra/index.html",
+    "title": "Fundamentos de Álgebra",
+    "section": "",
+    "text": "Conteúdo\nBloco 1. Números inteiros: os princípios de boa ordenação e indução; o Lema  de Divisão de Euclides; critérios de divisibilidade; representação de inteiros e racionais em bases; máximo divisor comum e mínimo múltiplo comum; o MDC como combinação linear; equações diofantinas lineares; números primos; fatoração; o Teorema Fundamental da Aritmética.\nBloco 2. Congruências: definição e propriedades elementares; congruências lineares; a função de Euler; os teoremas de Fermat Euler, Wilson e do resto chinês; testes de primalidade; a criptografia RSA.\nBloco 3. Polinômios sobre um corpo; divisibilidade; o Lema de Divisão; máximo divisor comum e mínimo múltiplo comum; raízes, fórmulas para raízes para polinômios de 2o e 3o grau; irredutibilidade e fatoração sobre Q, R e C; o Teorema Fundamental da Álgebra;  o Lema de Gauss e o Critério de Eisenstein; anéis; definição e exemplos; ideais; domínios de integridade; divisores de zero; anéis euclidianos.",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#literatura-recomendada",
+    "href": "FundamentosDeAlgebra/index.html#literatura-recomendada",
+    "title": "Fundamentos de Álgebra",
+    "section": "Literatura recomendada",
+    "text": "Literatura recomendada\n\nA. Vidigal, D. Avritzer, E. Farias e Soares, H. P. Bueno, M. C. C. Ferreira, e E. M. C. de Faria.  Fundamentos de Álgebra. Editora UFMG. 2005.\nS. C. Coutinho. Teoria de números e criptografia RSA. IMPA-SBM ,segunda edição,  2014.\nA. Hefez. Curso de Álgebra (vol 1). Coleção Matemática Universitária, IMPA - SBM, quinta edição, 2016.\nAdilson Gonçalves. Introdução à álgebra, IMPA, sexta edição, 2017.\nArnaldo Garcia e Yves Lequain. Elementos de álgebra, IMPA, sexta edição, 2018.\nF. C. P. Milies e S. P Coelho. Números: uma introdução à Matemática. Ed. USP, terceira edição, 2013.\nL. S. Childs. A concrete introduction to higher algebra, UTM, Springer-Verlag, 2009.",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#canais-de-youtube",
+    "href": "FundamentosDeAlgebra/index.html#canais-de-youtube",
+    "title": "Fundamentos de Álgebra",
+    "section": "Canais de YouTube",
+    "text": "Canais de YouTube\n\nTeoria dos números por Michael Penn (inglês)\nTeoria dos números por Richard Borcherds (inglês)\nIntrudução à teoria dos números por Richard Borcherds, Universidade de Berkeley, 2022 (inglês)",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
+    "href": "FundamentosDeAlgebra/index.html#notas-e-apostilas",
+    "title": "Fundamentos de Álgebra",
+    "section": "Notas e apostilas",
+    "text": "Notas e apostilas\n\nBloco 1: Inteiros\n\nDivisão, quociente, e resto entre números inteiros; O Teorema de Divisão de Euclides\nExpansão de números inteiros em uma base \\(b\\)\nCritérios de divisibilidade\nExpansão decimal de números racionais\nO maior divisor comum\nO Algoritmo de Euclides\nPropriedades do MDC\nNúmeros primos\nO Teorema Fundamental da Aritmética\nO número dos primos\nEquações diofantinas lineares em duas variáveis\nO Teorema Chinês dos Restos (Versão 1.0)\nA função \\(\\varphi\\) de Euler\n\n\n\nBloco 2: Congruências\n\nCongruências\nClasses residuais\n\\(\\Z_n\\)\nCongruências com incógnitas\nO Teorema Chinês dos Restos (Versão 2.0)\nO Pequeno Teorema de Fermat e o Teorema de Euler\nO Teorema de Wilson\nA ordem de um elemento de \\(\\Z_n\\)\nElementos primitivos: O enunciado\nQuadrados em \\(\\Z_p\\) e resíduos quadráticos\nO Algoritmo de Exponenciação Rápida\nO Teste de Primalidade de Fermat\nOs números de Carmichael\nO Teste de Primalidade de Miller\nCriptografia RSA: A Teoria\nCriptografia RSA: Um Exemplo Computacional\n\n\n\nBloco 3: Polinômios\n\nAnéis, domínios e corpos\nNúmeros complexos\nPolinômios sobre anéis\nO anel dos polinômios\nDivisibilidade entre polinômios\nO Teorema de Divisão para Polinômios\nO MDC de dois polinômios e o Algoritmo de Euclides\nRaízes e divisibilidade\nElementos Primitivos: A demonstração\nPolinômios irredutíveis\nO Teorema da Fatoração para Polinômios\nDomínios de Fatoração Única (DFU)\nPolinômios em \\(\\Q[x]\\). Parte I: O Lema de Gauss\nPolinômios em \\(\\Q[x]\\). Parte II: O Critério de Eisenstein\nEquações polinomiais do segundo grau\nEquações polinomiais do terceiro grau",
+    "crumbs": [
+      "Fundamentos de Álgebra"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/index.html",
+    "href": "AlgebraLinearII/index.html",
+    "title": "Álgebra Linear II",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Álgebra Linear II"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html",
+    "href": "GruposECorpos/index.html",
+    "title": "Grupos e Corpos",
+    "section": "",
+    "text": "Apostilas",
+    "crumbs": [
+      "Grupos e Corpos"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html#apostilas",
+    "href": "GruposECorpos/index.html#apostilas",
+    "title": "Grupos e Corpos",
+    "section": "",
+    "text": "Bloco 1: Grupos\n\nAs primeiras definições\nClasses laterais e o Teorema de Lagrange\nConjuntos geradores e grupos cíclicos\nSubgrupos normais e homomorfismos\nProdutos diretos e semidiretos\nAções de grupos e O Teorema Órbita-Estabilizador\nClasses de conjugação\nO grupo alternado\nOs Teoremas de Sylow\nGrupos abelianos\nGrupos solúveis\nGrupos livres\nO Lema de Iwasawa e a simplicidade de PSL(𝑛,𝔽)\nGrupos nilpotentes\n\n\n\nBloco 2: Corpos\n\nAnéis e corpos\nExtensões de corpos\nCorpos de decomposição e corpos finitos\nAutomorfismos de corpos\nO Teorema Fundamental da Teoria de Galois\nAs aplicações da Teoria de Galois",
+    "crumbs": [
+      "Grupos e Corpos"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html#bibliografia",
+    "href": "GruposECorpos/index.html#bibliografia",
+    "title": "Grupos e Corpos",
+    "section": "Bibliografia",
+    "text": "Bibliografia\n\nJoseph Gallian. Contemporary abstract algebra. Cengage Learning, 2016.\nSérgio Tadao Martins e Eduardo Tengan. Álgebra exemplar. IMPA, 2020.\nHygino Domingues e Gelson Iezzi. Álgebra moderna. Saraivauni, 2018.\nArnaldo Garcia e Yves Lequain. Elementos de álgebra. IMPA, 2018.\nAdilson Gonçalves. Introdução à Álgebra. IMPA, 2017.",
+    "crumbs": [
+      "Grupos e Corpos"
+    ]
+  },
+  {
+    "objectID": "GruposECorpos/index.html#vídeos-interesantes-e-relavantes-no-youtube",
+    "href": "GruposECorpos/index.html#vídeos-interesantes-e-relavantes-no-youtube",
+    "title": "Grupos e Corpos",
+    "section": "Vídeos interesantes e relavantes no YouTube",
+    "text": "Vídeos interesantes e relavantes no YouTube\n\nLife, Death and the Monster (John Conway) - Numberphile\nMonster Group (John Conway) - Numberphile\nMonster Group (a little extra bit) - Numberphile\nEuler’s formula with introductory group theory - 3Blue1Brown\nGroup theory and why I love 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000 - 3Blue1Brown\nEssence of group theory - Mathemaniac\n2000 years unsolved: Why is doubling cubes and squaring circles impossible? - Mathologger\nSymmetry - The Biggest Ideas in the Universe part, Sean Carrol",
+    "crumbs": [
+      "Grupos e Corpos"
     ]
   }
 ]
