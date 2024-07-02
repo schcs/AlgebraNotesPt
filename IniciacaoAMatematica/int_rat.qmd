@@ -41,7 +41,7 @@ $${#eq-pair-neg}
 A ideia de construir os número inteiros é que a classe na @eq-pair-pos pode ser identificada com o número $k\in\N$, enquanto a classe na @eq-pair-zero pode ser identificada com um novo número que representa a ideia do zero, e a classe na @eq-pair-neg com um número que representa a ideia do negativo de $k$.
 
 :::{#def-int}
-Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O número dos inteiros é denotado por $\mathbb Z$. 
+Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O conjunto dos inteiros é denotado por $\mathbb Z$. 
 :::
 
 
