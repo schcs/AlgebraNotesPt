@@ -8,6 +8,8 @@ lang: pt-BR
 
 ## Subgrupos de Sylow
 
+modificação
+
 Lembremos, para um primo $p$, que um grupo finito chama-se *$p$-grupo finito* se $|G|$ é uma potência de $p$ (@sec-centro). Lembremos também o Teorema de Lagrange (@thm-lagrange) que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo $A_4$ não possui subgrupo de ordem $6$ (verifique).
 
 :::{#def-sylow}
