@@ -1630,7 +1630,7 @@
     "href": "GruposECorpos/sylow.html",
     "title": "65  Os Teoremas de Sylow",
     "section": "",
-    "text": "65.1 Subgrupos de Sylow\nmodificação\nLembremos, para um primo \\(p\\), que um grupo finito chama-se \\(p\\)-grupo finito se \\(|G|\\) é uma potência de \\(p\\) (Seção 63.3). Lembremos também o Teorema de Lagrange (Teorema 58.1) que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo \\(A_4\\) não possui subgrupo de ordem \\(6\\) (verifique).",
+    "text": "65.1 Subgrupos de Sylow\nLembremos, para um primo \\(p\\), que um grupo finito chama-se \\(p\\)-grupo finito se \\(|G|\\) é uma potência de \\(p\\) (Seção 63.3). Lembremos também o Teorema de Lagrange (Teorema 58.1) que afirma que a ordem de um subgrupo de um grupo finito divide a ordem do grupo. A recíproca do teorema não é válida: por exemplo, o grupo \\(A_4\\) não possui subgrupo de ordem \\(6\\) (verifique).",
     "crumbs": [
       "Grupos e Corpos",
       "<span class='chapter-number'>65</span>  <span class='chapter-title'>Os Teoremas de Sylow</span>"
