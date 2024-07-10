@@ -1158,6 +1158,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#os-números-inteiros." id="toc-os-números-inteiros." class="nav-link active" data-scroll-target="#os-números-inteiros."><span class="header-section-number">10.1</span> Os números inteiros.</a></li>
+  <li><a href="#os-números-racionais" id="toc-os-números-racionais" class="nav-link" data-scroll-target="#os-números-racionais"><span class="header-section-number">10.2</span> Os números racionais</a></li>
   </ul>
 </nav>
     </div>
@@ -1292,6 +1293,73 @@ y-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].
 \end{align*}\]</span> Ora, a compatibilidade das operações com a ordenação dos naturais implica que <span class="math inline">\(a(y_1+x_2)&gt;a(y_2+x_1)\)</span>. Ou seja, <span class="math inline">\(yz-xz=(y-x)z\)</span> é positivo e <span class="math inline">\(xz&lt;yz\)</span>.</p>
 </div>
 <p>O <a href="#lem-int-pos" class="quarto-xref">Lema&nbsp;<span>10.3</span></a> diz que a relação <span class="math inline">\(\leq\)</span> é uma relação de ordem total no conjunto <span class="math inline">\(\Z\)</span> que é compatível com as operações.</p>
+</section>
+<section id="os-números-racionais" class="level2" data-number="10.2">
+<h2 data-number="10.2" data-anchor-id="os-números-racionais"><span class="header-section-number">10.2</span> Os números racionais</h2>
+<p>Vamos agora ver como definir os números racionais. Aqui vamos dar as definições e resultados principais; as demonstrações serão feitas pelo leitor.</p>
+<div id="def-rat-rel" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 10.4</strong></span> Considere o conjunto <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span> e seja <span class="math inline">\(\sim\)</span> a relação em <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span> definida pela regra que <span class="math display">\[
+(a,b)\sim (c,d)\quad\mbox{quando}\quad ad=bc.
+\]</span></p>
+</div>
+<div id="lem-rat-equiv" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 10.4</strong></span> A relação <span class="math inline">\(\sim\)</span> é uma relação de equivalência no conjunto <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span>. Se <span class="math inline">\((a,b)\in\Z\times\Z\setminus\{0\}\)</span>, então a sua classe de equivalência será denotada por <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<div id="def-rat" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 10.5</strong></span> Um número racional é uma classe de equivalência <span class="math inline">\([a,b]\)</span>. O conjunto dos números racionais é denotado por <span class="math inline">\(\Q\)</span>.</p>
+</div>
+<div id="def-rat-ops" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 10.6</strong></span> As operações <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> serão definidas entre números racionais <span class="math inline">\([a,b],[c,d]\in\Q\)</span> com as seguintes regras: <span class="math display">\[\begin{align*}
+[a,b]+[c,d]&amp;=[ad+cb,bd];\\
+[a,b][c,d]&amp;=[ac,bd].
+\end{align*}\]</span></p>
+</div>
+<div id="lem-rat-ops" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 10.5</strong></span> As operações na <a href="#def-rat-ops" class="quarto-xref">Definição&nbsp;<span>10.6</span></a> são bem definidas; ou seja, o resultado não depende da escolha dos representantes das classes de equivalência. Além disso, elas satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in\Q\)</span>.</p>
+<ul>
+<li><strong>(A1):</strong> <span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
+<li><strong>(A2):</strong> <span class="math inline">\(a+b=b+a\)</span>;</li>
+<li><strong>(A3):</strong> existe <span class="math inline">\(0_\Q\in\Q\)</span> tal que <span class="math inline">\(a+0_\Q=0_\Q+a=a\)</span>;</li>
+<li><strong>(A4):</strong> para todo <span class="math inline">\(a\in\Q\)</span> existe <span class="math inline">\(-a\in\Q\)</span> tal que <span class="math inline">\(a+(-a)=0_\Q\)</span>;</li>
+<li><strong>(M1):</strong> <span class="math inline">\((ab)c=a(bc)\)</span>;</li>
+<li><strong>(M2):</strong> <span class="math inline">\(ab=ba\)</span>;</li>
+<li><strong>(M3):</strong> existe <span class="math inline">\(1_\Q\in\Q\)</span> tal que <span class="math inline">\(a1_\Q=1_\Q a=a\)</span>;</li>
+<li><strong>(M4):</strong> para todo <span class="math inline">\(a\in\Q\setminus\{0_\Q\}\)</span> existe <span class="math inline">\(a^{-1}\in\Q\)</span> tal que <span class="math inline">\(aa^{-1}=1_\Q\)</span>;</li>
+<li><strong>(D):</strong> <span class="math inline">\((a+b)c=ac+bc\)</span>.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>É tarefa do leitor. Só vamos comentar que <span class="math inline">\(0_\Q=[0,1]\)</span>, <span class="math inline">\(1_\Q=[1,1]\)</span>, se <span class="math inline">\(a=[x,y]\)</span>, então <span class="math inline">\(-a=[-x,y]\)</span> e se <span class="math inline">\(a\neq [0,1]\)</span>, então <span class="math inline">\(a^{-1}=[y,x]\)</span>.</p>
+</div>
+<p>Nós escrevemos o número racional <span class="math inline">\([x,y]\)</span> como <span class="math inline">\(x/y\)</span>. Os números <span class="math inline">\(0_\Q\)</span> e <span class="math inline">\(1_\Q\)</span> serão escritos simplesmente como <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>. Note, para <span class="math inline">\(k\in \Z\)</span> que o número <span class="math inline">\([k,1]=k/1\)</span> pode ser identificado com o inteiro <span class="math inline">\(k\)</span>. Assim, podemos pensar os inteiros como números racionais e escrever que <span class="math inline">\(\Z\subseteq\Q\)</span>. Se <span class="math inline">\(a,b\in\Q\)</span>, então <span class="math inline">\(a+(-b)\)</span> será escrito como <span class="math inline">\(a-b\)</span> e <span class="math inline">\(ab^{-1}\)</span> será escrito como <span class="math inline">\(a/b\)</span>.</p>
+<p>Entre os números racionais, podemos definir os números não negativos como <span class="math display">\[
+\Q^+=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+\]</span></p>
+<div id="lem-qplus" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 10.6</strong></span> Temos que <span class="math inline">\(\Q^+\)</span> satisfaz as seguintes propriedades.</p>
+<ul>
+<li><strong>(O1):</strong> Se <span class="math inline">\(a,b\in\Q^+\)</span>, então <span class="math inline">\(a+b,ab\in\Q^+\)</span>;</li>
+<li><strong>(O2):</strong> Se <span class="math inline">\(a\in\Q\)</span>, então <span class="math inline">\(a\in\Q^+\)</span> ou <span class="math inline">\(-a\in\Q^+\)</span>;</li>
+<li><strong>(O3):</strong> <span class="math inline">\(\Q^+\cap\{x\in\Q\mid -x\in\Q^+\}=\{0\}\)</span>.</li>
+</ul>
+</div>
+<div id="def-order-q" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 10.7</strong></span> Defina para <span class="math inline">\(a,b\in\Q\)</span> a relação <span class="math inline">\(a\leq b\)</span> para significar que <span class="math inline">\(b-a\in\Q^+\)</span>.</p>
+</div>
+<div id="lem-order-q" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 10.7</strong></span> Temos que <span class="math inline">\(\leq\)</span> é uma ordem total no conjunto <span class="math inline">\(\Q\)</span>. Ou seja, temos para todo <span class="math inline">\(a,b,c\in\Q\)</span>, que</p>
+<ol type="1">
+<li><span class="math inline">\(a\leq a\)</span>;</li>
+<li>se <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(b\leq a\)</span>, então <span class="math inline">\(a=b\)</span>;</li>
+<li>se <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(b\leq c\)</span>, então <span class="math inline">\(a\leq c\)</span>;</li>
+<li>temos que ou <span class="math inline">\(a\leq b\)</span> ou <span class="math inline">\(b\leq a\)</span> vale.</li>
+</ol>
+<p>Além disso, a relação <span class="math inline">\(\leq\)</span> é compatível com as operações. Ou seja,</p>
+<ol type="1">
+<li>se <span class="math inline">\(a\leq b\)</span>, então <span class="math inline">\(a+c\leq b+c\)</span>;</li>
+<li>se <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(c\in\Q^+\)</span>, então <span class="math inline">\(ac\leq bc\)</span>.</li>
+</ol>
+</div>
 
 
 </section>
