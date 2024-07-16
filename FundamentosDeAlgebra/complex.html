@@ -1177,18 +1177,22 @@ window.Quarto = {
 </header>
 
 
-<p>Um <strong>número complexo</strong> é uma expressão na forma <span class="math inline">\(a+bi\)</span> onde <span class="math inline">\(a,b\in \R\)</span> e <span class="math inline">\(i\)</span> é uma quantidade com a propriedade que <span class="math display">\[
+<div id="def-complex-number" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 41.1</strong></span> Um <strong>número complexo</strong> é uma expressão na forma <span class="math inline">\(a+bi\)</span> onde <span class="math inline">\(a,b\in \R\)</span> e <span class="math inline">\(i\)</span> é uma quantidade com a propriedade que <span class="math display">\[
 i^2=-1.
-\]</span> As operações da soma e multiplicação entre números complexos são definidos na seguinte maneira: <span class="math display">\[\begin{align*}
+\]</span> As operações da soma e multiplicação entre números complexos são definidas na seguinte maneira: <span class="math display">\[\begin{align*}
 (a_1+a_2i)+(b_1+b_2i)&amp;=(a_1+b_1)+(a_2+b_2)i;\\
 (a_1+a_2i)(b_1+b_2i)&amp;=a_1b_1-a_2b_2+(a_1b_2+a_2b_1)i.\\
 \end{align*}\]</span> Ou seja, a soma está calculada por coordenadas, enquanto a multiplicação está feita usando a lei distributiva e a regra que <span class="math inline">\(i^2=-1\)</span>.</p>
+</div>
 <p>O conjunto de todos os números complexos é denotado por <span class="math inline">\(\C\)</span>. Em outras palavras, <span class="math display">\[
 \C=\{a+bi\mid a,b\in \R\}=\R+\R i.
 \]</span> Os números complexos podem ser visualizados em um plano chamado de <strong>plano complexo</strong>. Cada número complexo pode ser visto como um vetor neste plano e a soma entre números complexos corresponde à soma de vetores.</p>
-<p>Se <span class="math inline">\(z=a+bi\in\C\)</span>, então <span class="math inline">\(a\in\R\)</span> é dita <strong>parte real</strong> e <span class="math inline">\(b\in\R\)</span> é chamado de <strong>parte imaginária</strong> de <span class="math inline">\(z\)</span>. Escrevemos que <span class="math display">\[
+<div id="def-complex-re-im" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 41.2</strong></span> Se <span class="math inline">\(z=a+bi\in\C\)</span>, então <span class="math inline">\(a\in\R\)</span> é dita <strong>parte real</strong> e <span class="math inline">\(b\in\R\)</span> é chamado de <strong>parte imaginária</strong> de <span class="math inline">\(z\)</span>. Escrevemos que <span class="math display">\[
 a=\real z \qquad\mbox{e}\qquad b=\imag z.
 \]</span> Assim, temos que <span class="math inline">\(z=\real z+\imag z i\)</span>.</p>
+</div>
 <p>Note que <span class="math inline">\(\R\)</span> pode ser identificado com o subconjunto <span class="math display">\[
 \{a+0i\mid a\in\R\}
 \]</span> dentro de <span class="math inline">\(\C\)</span> e assim nós podemos considerar <span class="math inline">\(\R\)</span> como um subconjunto de <span class="math inline">\(\C\)</span>. Se <span class="math inline">\(a+0i,b+0i\in \R\)</span>, então a sua soma e produto são os mesmos que nós já conhecemos em <span class="math inline">\(\R\)</span>: <span class="math display">\[\begin{align*}
@@ -1200,7 +1204,7 @@ az=(a+0i)(b_1+b_2i)=ab_1+ab_2i.
 \]</span> Ou seja, multiplicação por <span class="math inline">\(a\)</span> corresponde ao múltiplo escalar de vetores em <span class="math inline">\(\R^2\)</span>.</p>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 41.1</strong></span> As seguintes propriedades são válidas para todo número complexo <span class="math inline">\(z_1\)</span>, <span class="math inline">\(z_2\)</span>, <span class="math inline">\(z_3\)</span>:</p>
-<ul>
+<ol type="1">
 <li>A soma é associativa: <span class="math inline">\((z_1+z_2)+z_3=z_1+(z_2+z_3)\)</span>.</li>
 <li>A soma é comutativa: <span class="math inline">\(z_1+z_2=z_2+z_1\)</span>.</li>
 <li><span class="math inline">\(0=0+0i\)</span> é elemento neutro da soma: <span class="math inline">\(z_1+0=0+z_1=z_1\)</span>.</li>
@@ -1209,7 +1213,7 @@ az=(a+0i)(b_1+b_2i)=ab_1+ab_2i.
 <li>O produto é comutativo: <span class="math inline">\(z_1z_2=z_2z_1\)</span>.</li>
 <li><span class="math inline">\(1=1+0i\)</span> é elemento neutro do produto: <span class="math inline">\(1z_1=z_11=z_1\)</span>.</li>
 <li>a lei distributiva: <span class="math inline">\(z_1(z_2+z_3)=z_1z_2+z_1z_3\)</span> e <span class="math inline">\((z_1+z_2)z_3=z_1z_3+z_2z_3\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício</p>
@@ -1218,25 +1222,24 @@ az=(a+0i)(b_1+b_2i)=ab_1+ab_2i.
 |z|=\sqrt{a^2+b^2}.
 \]</span> Note que a norma de <span class="math inline">\(z\)</span> está definida usando o Teorema de Pitágoras e a norma dos números complexos satisfaz as propriedades já conhecidas do comprimento de vetores em <span class="math inline">\(\R^2\)</span>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 41.2</strong></span> &nbsp;</p>
-<pre><code>As seguintes propriedades estão válidas para a norma $|z|$ de um número complexo $z\in\C$.</code></pre>
-<ul>
+<p><span class="theorem-title"><strong>Lema 41.2</strong></span> As seguintes propriedades estão válidas para a norma <span class="math inline">\(|z|\)</span> de um número complexo <span class="math inline">\(z\in\C\)</span>.</p>
+<ol type="1">
 <li><span class="math inline">\(|z|\)</span> é um número real não negativo.</li>
 <li><span class="math inline">\(|z|=0\)</span> se e somente se <span class="math inline">\(z=0\)</span>;</li>
 <li><span class="math inline">\(|z_1+z_2|\leq |z_1|+|z_2|\)</span>;</li>
 <li><span class="math inline">\(|z_1z_2|= |z_1||z_2|\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 41.3</strong></span> Temos que</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(z=\bar z\)</span> se e somente se <span class="math inline">\(z\in\R\)</span>;</li>
 <li><span class="math inline">\(z+\bar z=2\cdot \real z\)</span>;</li>
 <li><span class="math inline">\(z-\bar z=2i\cdot \imag z\)</span>;</li>
 <li><span class="math inline">\(z\bar z=|z|^2\)</span>;</li>
 <li><span class="math inline">\(\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}\)</span>;</li>
 <li><span class="math inline">\(\overline{z_1z_2}=\overline{z_1}\overline{z_2}\)</span>.</li>
-</ul>
+</ol>
 </div>
 <p>Se <span class="math inline">\(z=a+bi\in\C\setminus\{0\}\)</span>, então temos que <span class="math inline">\(z\bar z=|z|^2=a^2+b^2\neq 0\)</span>. Logo <span class="math display">\[
 1=z\left(\frac{\bar z}{|z|^2}\right)=z\left(\frac{a-bi}{a^2+b^2}\right).
