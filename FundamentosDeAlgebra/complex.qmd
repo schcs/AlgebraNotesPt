@@ -6,16 +6,18 @@ number-sections: true
 lang: pt-BR
 ---
 
+:::{#def-complex-number}
 Um **número complexo** é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
 $$
 i^2=-1.
 $$
-As operações da soma e multiplicação entre números complexos são definidos na seguinte maneira:
+As operações da soma e multiplicação entre números complexos são definidas na seguinte maneira:
 \begin{align*}
 (a_1+a_2i)+(b_1+b_2i)&=(a_1+b_1)+(a_2+b_2)i;\\
 (a_1+a_2i)(b_1+b_2i)&=a_1b_1-a_2b_2+(a_1b_2+a_2b_1)i.\\
 \end{align*}
 Ou seja, a soma está calculada por coordenadas, enquanto a multiplicação está feita usando a  lei distributiva e a regra que $i^2=-1$.
+:::
 
 O conjunto de todos os números complexos é denotado por $\C$. Em outras palavras,
 $$
@@ -23,11 +25,13 @@ $$
 $$
 Os números complexos podem ser visualizados em um plano chamado de **plano complexo**. Cada número complexo pode ser visto como um vetor neste plano e a soma entre números complexos corresponde à soma de vetores.
 
+:::{#def-complex-re-im}
 Se $z=a+bi\in\C$, então $a\in\R$ é dita **parte real** e $b\in\R$ é chamado de **parte imaginária** de $z$. Escrevemos que
 $$
 a=\real z \qquad\mbox{e}\qquad b=\imag z.
 $$
 Assim, temos que $z=\real z+\imag z i$.
+:::
 
 Note que $\R$ pode ser identificado com o subconjunto
 $$
@@ -46,19 +50,17 @@ $$
 Ou seja, multiplicação por $a$ corresponde ao múltiplo escalar de vetores em $\R^2$.
 
 :::{#lem-}
-
 As seguintes propriedades são válidas para todo número complexo $z_1$, $z_2$, $z_3$:
 
 
--  A soma é associativa: $(z_1+z_2)+z_3=z_1+(z_2+z_3)$.
--  A soma é comutativa: $z_1+z_2=z_2+z_1$.
--  $0=0+0i$ é elemento neutro da soma: $z_1+0=0+z_1=z_1$.
--  $-z=-a-bi$ é negativo de $z=a+bi$; ou seja, $z+(-z)=0$.
--  O produto é associativo: $(z_1z_2)z_3=z_1(z_2z_3)$.
--  O produto é comutativo: $z_1z_2=z_2z_1$.
--  $1=1+0i$ é elemento neutro do produto: $1z_1=z_11=z_1$.
--  a lei distributiva: $z_1(z_2+z_3)=z_1z_2+z_1z_3$ e $(z_1+z_2)z_3=z_1z_3+z_2z_3$.
-
+1.  A soma é associativa: $(z_1+z_2)+z_3=z_1+(z_2+z_3)$.
+2.  A soma é comutativa: $z_1+z_2=z_2+z_1$.
+3.  $0=0+0i$ é elemento neutro da soma: $z_1+0=0+z_1=z_1$.
+4.  $-z=-a-bi$ é negativo de $z=a+bi$; ou seja, $z+(-z)=0$.
+5.  O produto é associativo: $(z_1z_2)z_3=z_1(z_2z_3)$.
+6.  O produto é comutativo: $z_1z_2=z_2z_1$.
+7.  $1=1+0i$ é elemento neutro do produto: $1z_1=z_11=z_1$.
+8.  a lei distributiva: $z_1(z_2+z_3)=z_1z_2+z_1z_3$ e $(z_1+z_2)z_3=z_1z_3+z_2z_3$.
 :::
 
 
@@ -73,28 +75,24 @@ $$
 Note que a norma de $z$ está definida usando o Teorema de Pitágoras e a norma dos números complexos satisfaz as propriedades já conhecidas do comprimento de vetores em $\R^2$.
 
 :::{#lem-}
-    As seguintes propriedades estão válidas para a norma $|z|$ de um número complexo $z\in\C$.
+As seguintes propriedades estão válidas para a norma $|z|$ de um número complexo $z\in\C$.
 
-
--  $|z|$ é um número real não negativo.
--  $|z|=0$ se e somente se $z=0$;
--  $|z_1+z_2|\leq |z_1|+|z_2|$;
--  $|z_1z_2|= |z_1||z_2|$.
-
+1.  $|z|$ é um número real não negativo.
+2.  $|z|=0$ se e somente se $z=0$;
+3.  $|z_1+z_2|\leq |z_1|+|z_2|$;
+4.  $|z_1z_2|= |z_1||z_2|$.
 :::
 
 
 :::{#lem-}
 Temos que
 
-
--  $z=\bar z$ se e somente se $z\in\R$;
--  $z+\bar z=2\cdot \real z$;
--  $z-\bar z=2i\cdot \imag z$;
--  $z\bar z=|z|^2$;
--  $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$;
--  $\overline{z_1z_2}=\overline{z_1}\overline{z_2}$.
-
+1.  $z=\bar z$ se e somente se $z\in\R$;
+2.  $z+\bar z=2\cdot \real z$;
+3.  $z-\bar z=2i\cdot \imag z$;
+4.  $z\bar z=|z|^2$;
+5.  $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$;
+6.  $\overline{z_1z_2}=\overline{z_1}\overline{z_2}$.
 :::
 
 Se $z=a+bi\in\C\setminus\{0\}$, então temos que $z\bar z=|z|^2=a^2+b^2\neq 0$. Logo
