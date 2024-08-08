@@ -23,3 +23,5 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 - [Relações de ordem](order.qmd)
 - [Funções](functions.qmd)
 - [Números naturais](naturais.qmd)
+- Os números inteiros e racionais(int_rat.qmd)
+
