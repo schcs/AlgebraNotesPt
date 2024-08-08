@@ -41,7 +41,7 @@ $${#eq-pair-neg}
 A ideia de construir os número inteiros é que a classe na @eq-pair-pos pode ser identificada com o número $k\in\N$, enquanto a classe na @eq-pair-zero pode ser identificada com um novo número que representa a ideia do zero, e a classe na @eq-pair-neg com um número que representa a ideia do negativo de $k$.
 
 :::{#def-int}
-Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O número dos inteiros é denotado por $\mathbb Z$. 
+Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O conjunto dos inteiros é denotado por $\mathbb Z$. 
 :::
 
 
@@ -168,3 +168,80 @@ Ou seja, $yz-xz=(y-x)z$ é positivo e $xz<yz$.
 
 O @lem-int-pos diz que a relação $\leq$ é uma relação de ordem total no conjunto $\Z$ que é compatível com 
 as operações.
+
+## Os números racionais
+
+Vamos agora ver como definir os números racionais. Aqui vamos dar as definições e resultados principais; as demonstrações serão feitas pelo leitor. 
+
+:::{#def-rat-rel}
+Considere o conjunto $\Z\times\Z\setminus\{0\}$ e seja $\sim$ a relação em $\Z\times\Z\setminus\{0\}$ definida pela regra que 
+$$
+(a,b)\sim (c,d)\quad\mbox{quando}\quad ad=bc.
+$$ 
+:::
+
+:::{#lem-rat-equiv}
+A relação $\sim$ é uma relação de equivalência no conjunto $\Z\times\Z\setminus\{0\}$. Se $(a,b)\in\Z\times\Z\setminus\{0\}$, então a sua classe de equivalência será denotada por $[a,b]$. 
+:::
+
+:::{#def-rat}
+Um número racional é uma classe de equivalência $[a,b]$. O conjunto dos números racionais é denotado por $\Q$. 
+:::
+
+:::{#def-rat-ops}
+As operações $+$ e $\cdot$ serão definidas entre números racionais $[a,b],[c,d]\in\Q$ com as seguintes regras:
+\begin{align*}
+[a,b]+[c,d]&=[ad+cb,bd];\\
+[a,b][c,d]&=[ac,bd].
+\end{align*}
+:::
+
+:::{#lem-rat-ops}
+As operações na @def-rat-ops são bem definidas; ou seja, o resultado não depende da escolha dos representantes das classes de equivalência. Além disso, elas satisfazem as seguintes propriedades para todo $a,b,c\in\Q$.
+
+- **(A1):** $(a+b)+c=a+(b+c)$;
+- **(A2):** $a+b=b+a$;
+- **(A3):** existe $0_\Q\in\Q$ tal que $a+0_\Q=0_\Q+a=a$; 
+- **(A4):** para todo $a\in\Q$ existe $-a\in\Q$ tal que $a+(-a)=0_\Q$;
+- **(M1):** $(ab)c=a(bc)$;
+- **(M2):** $ab=ba$;
+- **(M3):** existe $1_\Q\in\Q$ tal que $a1_\Q=1_\Q a=a$; 
+- **(M4):** para todo $a\in\Q\setminus\{0_\Q\}$ existe $a^{-1}\in\Q$ tal que $aa^{-1}=1_\Q$;
+- **(D):** $(a+b)c=ac+bc$.
+:::
+:::{.proof}
+É tarefa do leitor. Só vamos comentar que $0_\Q=[0,1]$, $1_\Q=[1,1]$, se $a=[x,y]$, então $-a=[-x,y]$ e se $a\neq [0,1]$, então $a^{-1}=[y,x]$.
+:::
+
+Nós escrevemos o número racional $[x,y]$ como $x/y$. Os números $0_\Q$ e $1_\Q$ serão escritos simplesmente como $0$ e $1$. Note, para $k\in \Z$ que o número $[k,1]=k/1$ pode ser identificado com o inteiro $k$. Assim, podemos pensar os inteiros como números racionais e escrever que $\Z\subseteq\Q$. Se $a,b\in\Q$, então $a+(-b)$ será escrito como $a-b$ e $ab^{-1}$ será escrito como $a/b$.  
+
+Entre os números racionais, podemos definir os números não negativos como 
+$$
+\Q^+=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+$$
+
+:::{#lem-qplus}
+Temos que $\Q^+$ satisfaz as seguintes propriedades.
+
+- **(O1):** Se $a,b\in\Q^+$, então $a+b,ab\in\Q^+$;
+- **(O2):** Se $a\in\Q$, então $a\in\Q^+$ ou $-a\in\Q^+$;
+- **(O3):** $\Q^+\cap\{x\in\Q\mid -x\in\Q^+\}=\{0\}$.
+:::
+
+:::{#def-order-q}
+Defina para $a,b\in\Q$ a relação $a\leq b$ para significar que $b-a\in\Q^+$. 
+:::
+
+:::{#lem-order-q}
+Temos que $\leq$ é uma ordem total no conjunto $\Q$. Ou seja, temos para todo $a,b,c\in\Q$, que 
+
+1. $a\leq a$;
+2. se $a\leq b$ e $b\leq a$, então $a=b$;
+3. se $a\leq b$ e $b\leq c$, então $a\leq c$;
+4. temos que ou $a\leq b$ ou $b\leq a$ vale.
+   
+Além disso, a relação $\leq$ é compatível com as operações. Ou seja, 
+
+1. se $a\leq b$, então $a+c\leq b+c$;
+2. se $a\leq b$ e $c\in\Q^+$, então $ac\leq bc$. 
+:::

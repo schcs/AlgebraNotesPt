@@ -30,6 +30,7 @@ As relações $\subseteq$ e $\supseteq$ são relações de ordem sobre $A$.
 :::
 
 
+
 ## Ordem total ou linear
 
 :::{#def-ordem-total}
