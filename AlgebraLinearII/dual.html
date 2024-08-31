@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>19&nbsp; O Teorema Fundamental da Aritmética – Álgebra</title>
+<title>43&nbsp; O espaço dual – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/numprimes.html" rel="next">
-<link href="../FundamentosDeAlgebra/primos.html" rel="prev">
+<link href="../AlgebraLinearII/formas.html" rel="next">
+<link href="../AlgebraLinearII/matrizes.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -616,7 +616,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/tfa.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/dual.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -736,265 +736,157 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/expansao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span></span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/criterios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Critérios de divisibildade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/racionais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/mdc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O MDC</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/euclid.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/prop_mdc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">As propriedades do MDC</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/primos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Os números primos</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/tfa.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/numprimes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">O número dos primos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/diof.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/chinese_v1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V1.0)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares e o Teorema Chinês dos restos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/phi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/cong.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Congruências</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Congruências</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/res_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Classes residuais</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/z_n.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">ℤ<sub>n</sub></span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Classes residuais e ℤ<sub>n</sub></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/cong_incog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Congruências com incôgnitas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/chines_v2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V2.0)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Congruências com incôgnitas e o Teorema Chinês dos restos V2.0</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/fermat_euler.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">O Pequeno Teorema de Fermat e o Teorema de Euler</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/wilson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">O Teorema de Wilson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">O Pequeno Teorema de Fermat, o Teorema de Euler e o Teorema de Wilson</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/ordr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">A ordem de uma classe residual</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/primitive_p1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (enunciado)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">A ordem de uma classe residual o Teorema do Elemento Primitivo</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/quadrados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Os quadrados de ℤ<sub>n</sub></span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Os quadrados de ℤ<sub>n</sub></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/exp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">O algoritmo de exponenciação rápida</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/test_fermat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Fermat</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/carmichael.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Números de Carmichael</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Teste de primalidade de Fermat (e o algoritmo de exponenciação rápida)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/miller.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Miller</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Miller</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/rsa_p1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Criptografia RSA: A teoria</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/rsa_p2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Criptografia RSA: Um exemplo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Criptografia RSA</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/aneis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Anéis, domínios e corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Anéis, domínios e corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/complex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Números complexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Números complexos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/pols.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Polinômios</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/pol_anel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O anel dos polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">O anel dos polinômios</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/div_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Divisibilidade de polinômios</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/euclid_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O Teorema de Divisão para polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Divisibilidade de polinômios e o Teorema de Divisão</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/mdc_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">O MDC de polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">O MDC de polinômios</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/roots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Raízes e irredutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Raízes e fatoração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/primitive_p2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (demonstração)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (demonstração)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/irred.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Polinômios irredutíveis</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/tfa_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">O Teorema da Fatoração para polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Polinômios irredutíveis e o Teorema da Fatoração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/dfu.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/gauss_pt1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">O Lema de Gauss</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/eisenstein.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">O Critério de Eisenstein</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/quadratic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Equações quadráticas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/cubic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Equações do terceiro grau</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Equações quadráticas e cubicas</span></span></a>
   </div>
 </li>
       </ul>
@@ -1010,8 +902,134 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Distâncias</span></span></a>
+  <a href="../AlgebraLinearII/bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Bases de espaços vetoriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/subespacos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Subespaços</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/quociente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/trans_lin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/matrizes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/dual.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/formas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/autovals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Autovalores e autovetores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/pol_min.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">O polinômio minimal de um operador</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/cayley_hamilton.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">O Teorema de Cayley-Hamilton</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/projecoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Projeções</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/primaria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/unicidade_jordan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/cyclic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/sesqui.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/isometrias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/adjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/autoadjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/normais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Operadores normais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/so_2_so_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span></a>
   </div>
 </li>
       </ul>
@@ -1028,121 +1046,121 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/lagrange.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/geradores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/normais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/actions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/alternado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/sylow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/abelian.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/soluble.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/nilpotent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/appl_galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
   </div>
 </li>
       </ul>
@@ -1158,9 +1176,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/tfa.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/dual.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></h1>
+<h1 class="title"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></h1>
 </div>
 
 
@@ -1177,33 +1195,83 @@ window.Quarto = {
 </header>
 
 
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 19.1</strong></span> Todo número natural <span class="math inline">\(n\geq 2\)</span>, pode ser decomposto em um produto de primos positivos. Além disso, esta decomposição de <span class="math inline">\(n\)</span> é única a menos da ordem dos fatores</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 43.1</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial, então <span class="math inline">\(V^*=\mbox{Hom}(V,\F)\)</span> é dito <b>espaço dual</b> de <span class="math inline">\(V\)</span>. Os elementos de <span class="math inline">\(V^*\)</span> são chamados de <b>formas lineares</b> ou <b>funcionais lineares</b> de <span class="math inline">\(V\)</span>.</p>
+</div>
+<p>Se <span class="math inline">\(\dim V=k\)</span> é finita, então <span class="math inline">\(\dim V^*=\dim V=k\)</span>.</p>
+<p>Seja <span class="math inline">\(B=\{b_i\mid i\in I\}\)</span> uma base de <span class="math inline">\(V\)</span>. Para <span class="math inline">\(i\in I\)</span>, defina <span class="math display">\[
+b_i^*\in V^*,\quad b_i^*(b_j)=\delta_{i,j}=\left\{\begin{array}{cc} 1 &amp; \mbox{se $i=j$}\\
+0 &amp; \mbox{se $i\neq j$}\end{array}\right.
+\]</span></p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 43.1</strong></span> O conjunto <span class="math inline">\(B^*=\{b_i^*\mid i\in I\}\)</span> é L.I. em <span class="math inline">\(V^*\)</span>. Além disso, se <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(B^*\)</span> é base de <span class="math inline">\(V^*\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span><strong>Existência.</strong> Nós provaremos por indução em <span class="math inline">\(n\)</span>. Na base da indução, seja <span class="math inline">\(n\)</span> um primo. Neste caso, <span class="math inline">\(n\)</span> pode ser considerado como o produto de um único fator que é primo.</p>
-<p>Assuma agora que <span class="math inline">\(n\)</span> é composto (em particular, <span class="math inline">\(n\geq 4\)</span>) e que a afirmação da existência do teorema é verdadeira para números menores que <span class="math inline">\(n\)</span>. Como <span class="math inline">\(n\)</span> é composto, podemos escrever <span class="math inline">\(n=n_1n_2\)</span> onde <span class="math inline">\(2\leq n_1,n_2 &lt; n\)</span> e pela hipótese da indução, os números <span class="math inline">\(n_1\)</span> e <span class="math inline">\(n_2\)</span> podem ser escritos como <span class="math display">\[
-n_1=p_1\cdots p_r\quad\mbox{e}\quad n_2=q_1\cdots q_s
-\]</span> onde <span class="math inline">\(p_1,\ldots,p_r,q_1,\ldots,q_s\)</span> são primos positivos. Ora <span class="math display">\[
-n=n_1n_2=p_1\cdots p_rq_1\cdots q_s;
-\]</span> ou seja, <span class="math inline">\(n\)</span> é produto de primos positivos.</p>
-<p><strong>Unicidade.</strong> Assuma que <span class="math inline">\(n\geq 2\)</span> e <span class="math display">\[
-n=p_1p_2\cdots p_r=q_1q_2\cdots q_s
-\]</span> onde os <span class="math inline">\(p_i\)</span> e os <span class="math inline">\(q_j\)</span> são primos positivos. Assuma ainda sem perder generalidade que <span class="math inline">\(r\leq s\)</span>. Nós precisamos provar que <span class="math inline">\(r=s\)</span> e que os primos que aparecem na primeira fatoração são os mesmos que aparecem na segunda. Provaremos isso por indução em <span class="math inline">\(r\)</span>.</p>
-<p>Na base da indução, assuma que <span class="math inline">\(r=1\)</span>. Neste caso, <span class="math inline">\(n=p_1\)</span> é primo, e segue pela definição de números primos que <span class="math inline">\(s=1\)</span> e que <span class="math inline">\(p_1=q_1\)</span>. Logo, a unicidade está verificada.</p>
-<p>Assuma agora que <span class="math inline">\(r\geq 2\)</span> e a unicidade é válida para números com menos que <span class="math inline">\(r\)</span> fatores. Temos pela primeira fatoração que <span class="math inline">\(p_1\mid n\)</span>, e como <span class="math inline">\(p_1\)</span> é primo isso implica que <span class="math inline">\(p_1\mid q_i\)</span> com algum <span class="math inline">\(i\)</span>. Mas como <span class="math inline">\(p_1\)</span> e <span class="math inline">\(q_i\)</span> são primos positivos segue que <span class="math inline">\(p_1=q_i\)</span>. Depois de possivelmente reordenar os fatores <span class="math inline">\(q_1,\ldots,q_s\)</span>, podemos assumir sem perder generalidade que <span class="math inline">\(p_1=q_1\)</span>. Neste caso <span class="math display">\[
-n=p_1p_2\cdots p_r=p_1q_2\cdots q_s
-\]</span> e obtemos pela lei cancelativa que <span class="math display">\[
-p_2\cdots p_r=q_2\cdots q_s.
-\]</span> Ora, o número na última equação possui uma fatoração com <span class="math inline">\(r-1\)</span> fatores. Portanto, pela hipótese da indução, <span class="math inline">\(r-1=s-1\)</span> e os fatores <span class="math inline">\(p_2,\ldots,p_r\)</span> e <span class="math inline">\(q_2,\ldots,q_s\)</span> são os mesmos a menos da sua ordem. Isso implica que <span class="math inline">\(r=s\)</span> e que os fatores <span class="math inline">\(p_1,\ldots,p_r\)</span> e <span class="math inline">\(q_1,\ldots,q_s\)</span> são os mesmos a menos da sua ordem.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que uma combinação linear <span class="math display">\[
+\alpha_1 b_{i_1}^*+\cdots+\alpha_m b_{i_m}^*=0_{V^*}.
+\]</span> Denote o lado esquerdo da equação anterior por <span class="math inline">\(\varphi\)</span>. Seja <span class="math inline">\(j\in\{1,\ldots,m\}\)</span> e calculemos que <span class="math display">\[\begin{align*}
+0&amp;=\varphi(b_{i_j})=(\alpha_1 b_{i_1}^*+\cdots+\alpha_m b_{i_m}^*)(b_{i_j})\\&amp;=
+\alpha_1 b_{i_1}^*(b_{i_j})+\cdots+\alpha_jb_{i_j}^*(b_{i_j})+\cdots+\alpha_m b_{i_m}^*(b_{i_j})\\&amp;=\alpha_{i_j}.
+\end{align*}\]</span> Então <span class="math inline">\(\alpha_{i_j}=0\)</span> para todo <span class="math inline">\(j\)</span>. Ou seja, <span class="math inline">\(B^*\)</span> é L.I.</p>
+<p>Se <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim V=\dim V^*\)</span> e assim <span class="math inline">\(B^*\)</span> (sendo um conjunto L.I. com cardinalidade <span class="math inline">\(\dim V^*\)</span>) é base de <span class="math inline">\(B^*\)</span>.</p>
 </div>
-<p>Por exemplo, se <span class="math inline">\(n=15\)</span>, então obtemos duas decomposições que satisfazem a afirmação do Teorema: <span class="math display">\[
-15=3\cdot 5=5\cdot 3.
-\]</span> Mas estas duas decomposições são consideradas idênticas, pois elas diferem-se apenas na ordem dos fatores. Note que permitindo primos positivos e negativos, obtemos quatro fatorações, nomeadamente, <span class="math display">\[
-15=3\cdot 5=5\cdot 3=(-3)\cdot(-5)=(-5)\cdot(-3).
-\]</span> O Teorema Fundamental da Aritmética pode ser estendido para números negativos por afirmar que se <span class="math inline">\(n\in\Z\)</span> com <span class="math inline">\(n\leq -2\)</span>, então <span class="math display">\[
-n=-p_1\cdots p_r
-\]</span> onde os <span class="math inline">\(p_i\)</span> são primos positivos e eles são únicos a menos da ordem dos fatores.</p>
+<p>Quando <span class="math inline">\(\dim V\)</span> for finita, a base <span class="math inline">\(B^*\)</span> é chamada de <b>base dual</b> de <span class="math inline">\(B\)</span>. Note que se <span class="math inline">\(\dim V\)</span> é infinita, então <span class="math inline">\(B^*\)</span> não é conjunto gerador, pois a funcional <span class="math inline">\(\varphi\in V^*\)</span> que leva <span class="math inline">\(\varphi(b_i)=1\)</span> para todo <span class="math inline">\(i\)</span> não pertence ao subespaço <span class="math inline">\(\langle B^*\rangle\)</span>.</p>
+<p>Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, e seja <span class="math inline">\(f\in\mbox{Hom}(V,W)\)</span>. Definimos o dual <span class="math inline">\(f^*\in \mbox{Hom}(W^*,V^*)\)</span> com a regra <span class="math display">\[
+f^*(\varphi)=\varphi\circ f.
+\]</span> Usando diagramas <span class="math display">\[
+\begin{array}{cc}
+W &amp; \stackrel{\varphi}{\longrightarrow} &amp; \F\\
+f\uparrow &amp; \nearrow \\
+V &amp;&amp;
+\end{array}
+\]</span> o mapa <span class="math inline">\(f^*(\varphi)\)</span> é representado pela flecha diaginal. Note que o morfismo original está de <span class="math inline">\(V\)</span> para <span class="math inline">\(W\)</span>, enquanto o morfismo dual está de <span class="math inline">\(W^*\)</span> para <span class="math inline">\(V^*\)</span>.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 43.1</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear entre <span class="math inline">\(\F\)</span>-espaços de dimensão finita. Sejam <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Mostre que <span class="math display">\[
+[f^*]^{C^*}_{B^*}=([f]^B_C)^t
+\]</span> onde <span class="math inline">\((-)^t\)</span> significa a matriz transposta.</p>
+</div>
+<p>Se <span class="math inline">\(\F\)</span> é um corpo, a <a href="https://pt.wikipedia.org/wiki/Teoria_das_categorias">categoria</a> dos <span class="math inline">\(\F\)</span>-espaços vetoriais consiste</p>
+<ul>
+<li>nos <span class="math inline">\(\F\)</span>-espaços vetoriais; e</li>
+<li>nos transformações lineares entre <span class="math inline">\(\F\)</span>-espaços.</li>
+</ul>
+<p>Neste contesto, as transformações lineares também são chamadas de morfismos ou flechas.</p>
+<p>O conceito “dual” associa um espaço vetorial <span class="math inline">\(V\)</span> com seu dual <span class="math inline">\(V^*\)</span> e cada morfismo <span class="math inline">\(f:V\to W\)</span> com o seu dual <span class="math inline">\(f^*:W^*\to V^*\)</span>. Além disso, é fácil verificar que <span class="math display">\[
+\mbox{id}_V^*=\mbox{id}_{V^*}
+\]</span> e que se <span class="math inline">\(f:V\to U\)</span> e <span class="math inline">\(g:U\to W\)</span> são transformações lineares, então <span class="math display">\[
+(g\circ f)^*=f^*\circ g^*.
+\]</span> Devido a estas propriedades, dizemos que o dual é um <b>functor contravariante</b> da categoria de espaços vetoriais.</p>
+<p>Note que a correspondência entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^*\)</span> não é natural (ou canônica), pois precisa-se fixar uma base para definí-la. No entanto, existe uma correspondência natural entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^{**}=(V^*)^*\)</span>. Os elementos de <span class="math inline">\(V^{**}\)</span> são transformações lineares em <span class="math inline">\(\mbox{Hom}(V^*,\F)=\mbox{Hom}(\mbox{Hom}(V,\F),\F)\)</span>. Ou seja, se <span class="math inline">\(\psi\in V^{**}\)</span>, então <span class="math inline">\(\psi:V^*\to \F\)</span> é linear.</p>
+<p>Seja <span class="math inline">\(v\in V\)</span> e defina <span class="math display">\[
+\psi_v:V^*\to \F,\quad \psi_v(\varphi)=\varphi(v)\quad \mbox{para todo}\quad \varphi\in V^*.
+\]</span> O leitor deve verificar que <span class="math inline">\(\psi_v:V^*\to \F\)</span> é linear e assim <span class="math inline">\(\psi_v\in V^{**}\)</span>. Defina <span class="math display">\[
+\Psi:V\to V^{**},\quad \Psi(v)=\psi_v.
+\]</span></p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 43.2</strong></span> A aplicação <span class="math inline">\(\Psi:V\to V^{**}\)</span> é linear e injetiva. Se <span class="math inline">\(\dim V=k\)</span> finita, então <span class="math inline">\(\Psi\)</span> é um isomorfismo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^{**}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>O leitor pode verificar que <span class="math inline">\(\Psi\)</span> é linear. Seja <span class="math inline">\(v\in\ker \Psi\)</span>. Então <span class="math inline">\(\psi_v=0\)</span>. Assuma que <span class="math inline">\(v\neq 0\)</span> e seja <span class="math inline">\(B\)</span> uma base de <span class="math inline">\(V\)</span> que contém <span class="math inline">\(v\)</span> e considere o elemento <span class="math inline">\(v^*\)</span> na base dual. Então <span class="math display">\[
+0=\psi_v(v^*)=v^*(v)=1.
+\]</span> Isso é uma contradição, então <span class="math inline">\(v=0\)</span> deve valer. Assim <span class="math inline">\(\ker\Psi=0\)</span> e <span class="math inline">\(\Psi\)</span> é injetiva.</p>
+<p>Se <span class="math inline">\(\dim V=k\)</span> finita, então <span class="math inline">\(\dim V^{**}=\dim V^*=\dim V\)</span> e uma aplicação injetiva <span class="math inline">\(V\to V^{**}\)</span> é um isomorfismo.</p>
+</div>
+<p>Note que se <span class="math inline">\(f\in\mbox{Hom}(V,W)\)</span>, então já definimos <span class="math inline">\(f^*:W^*\to V^*\)</span> e podemos definir <span class="math inline">\(f^{**}:V^{**}\to W^{**}\)</span> como <span class="math display">\[
+f^{**}(\gamma)=\gamma \circ f^*\quad\mbox{para todo}\quad \gamma\in V^{**}.
+\]</span> Usando diagramas <span class="math display">\[
+\begin{array}{cc}
+V^* &amp; \stackrel{\gamma}{\longrightarrow} &amp; \F\\
+f^*\uparrow &amp; \nearrow \\
+W^* &amp;&amp;
+\end{array}
+\]</span> o mapa <span class="math inline">\(f^{**}(\gamma)\)</span> está representado pela flecha diagonal. Mais detalhadamente, temos para <span class="math inline">\(\gamma\in V^{**}\)</span>, <span class="math inline">\(\varphi\in W^*\)</span> que <span class="math display">\[
+f^{**}(\gamma)(\varphi)=(\gamma\circ f^*)(\varphi)=\gamma(f^*(\varphi))=\gamma(\varphi\circ f).
+\]</span></p>
+<p>É fácil verificar que <span class="math display">\[
+\mbox{id}_V^{**}=\mbox{id}_{V^{**}}
+\]</span> e que se <span class="math inline">\(f:V\to U\)</span> e <span class="math inline">\(g:U\to W\)</span> são transformações lineares, então <span class="math display">\[
+(g\circ f)^{**}=g^{**}\circ f^{**}.
+\]</span> Ou seja, o duplo dual é um <b>functor covariante</b> da categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 
 
 
@@ -1630,13 +1698,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../FundamentosDeAlgebra/primos.html" class="pagination-link" aria-label="Os números primos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Os números primos</span></span>
+      <a href="../AlgebraLinearII/matrizes.html" class="pagination-link" aria-label="Transformações lineares e matrizes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/numprimes.html" class="pagination-link" aria-label="O número dos primos">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">O número dos primos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/formas.html" class="pagination-link" aria-label="Formas $k$-lineares">
+        <span class="nav-page-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

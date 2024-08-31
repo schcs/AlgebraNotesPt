@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; O MDC – Álgebra</title>
+<title>14&nbsp; O MDC e o Algoritmo de Euclides – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/euclid.html" rel="next">
+<link href="../FundamentosDeAlgebra/primos.html" rel="next">
 <link href="../FundamentosDeAlgebra/racionais.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -616,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/mdc.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O MDC</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/mdc.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -736,265 +770,157 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/expansao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span></span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/criterios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Critérios de divisibildade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/racionais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/mdc.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O MDC</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/euclid.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/prop_mdc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">As propriedades do MDC</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/primos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Os números primos</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/tfa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Aritmética</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/numprimes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">O número dos primos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/diof.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/chinese_v1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V1.0)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares e o Teorema Chinês dos restos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/phi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">A função 𝜑 de Euler</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/cong.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Congruências</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Congruências</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/res_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Classes residuais</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/z_n.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">ℤ<sub>n</sub></span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Classes residuais e ℤ<sub>n</sub></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/cong_incog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Congruências com incôgnitas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/chines_v2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">O Teorema Chinês dos Restos (V2.0)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Congruências com incôgnitas e o Teorema Chinês dos restos V2.0</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/fermat_euler.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">O Pequeno Teorema de Fermat e o Teorema de Euler</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/wilson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">O Teorema de Wilson</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">O Pequeno Teorema de Fermat, o Teorema de Euler e o Teorema de Wilson</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/ordr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">A ordem de uma classe residual</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/primitive_p1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (enunciado)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">A ordem de uma classe residual o Teorema do Elemento Primitivo</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/quadrados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Os quadrados de ℤ<sub>n</sub></span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Os quadrados de ℤ<sub>n</sub></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/exp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">O algoritmo de exponenciação rápida</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/test_fermat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Fermat</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/carmichael.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Números de Carmichael</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Teste de primalidade de Fermat (e o algoritmo de exponenciação rápida)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/miller.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Miller</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">O Teste de Primalidade de Miller</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/rsa_p1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Criptografia RSA: A teoria</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/rsa_p2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Criptografia RSA: Um exemplo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Criptografia RSA</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/aneis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Anéis, domínios e corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Anéis, domínios e corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/complex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Números complexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Números complexos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/pols.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Polinômios</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/pol_anel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O anel dos polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">O anel dos polinômios</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/div_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Divisibilidade de polinômios</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/euclid_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O Teorema de Divisão para polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Divisibilidade de polinômios e o Teorema de Divisão</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/mdc_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">O MDC de polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">O MDC de polinômios</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/roots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Raízes e irredutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Raízes e fatoração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/primitive_p2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (demonstração)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">O Teorema do Elemento Primitivo (demonstração)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/irred.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Polinômios irredutíveis</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/tfa_pol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">O Teorema da Fatoração para polinômios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Polinômios irredutíveis e o Teorema da Fatoração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/dfu.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/gauss_pt1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">O Lema de Gauss</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/eisenstein.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">O Critério de Eisenstein</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FundamentosDeAlgebra/quadratic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Equações quadráticas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/cubic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Equações do terceiro grau</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Equações quadráticas e cubicas</span></span></a>
   </div>
 </li>
       </ul>
@@ -1010,8 +936,134 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Distâncias</span></span></a>
+  <a href="../AlgebraLinearII/bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Bases de espaços vetoriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/subespacos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Subespaços</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/quociente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/trans_lin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/matrizes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/dual.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/formas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/autovals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Autovalores e autovetores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/pol_min.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">O polinômio minimal de um operador</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/cayley_hamilton.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">O Teorema de Cayley-Hamilton</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/projecoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Projeções</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/primaria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/unicidade_jordan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/cyclic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/sesqui.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/isometrias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/adjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/autoadjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/normais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Operadores normais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearII/so_2_so_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span></a>
   </div>
 </li>
       </ul>
@@ -1028,121 +1080,121 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/lagrange.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/geradores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/normais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/actions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/alternado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/sylow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/abelian.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/soluble.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/nilpotent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/appl_galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
   </div>
 </li>
       </ul>
@@ -1152,15 +1204,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#o-maior-divisor-comum-mdc" id="toc-o-maior-divisor-comum-mdc" class="nav-link active" data-scroll-target="#o-maior-divisor-comum-mdc"><span class="header-section-number">14.1</span> O maior divisor comum (MDC)</a></li>
+  <li><a href="#o-algoritmo-de-euclides" id="toc-o-algoritmo-de-euclides" class="nav-link" data-scroll-target="#o-algoritmo-de-euclides"><span class="header-section-number">14.2</span> O algoritmo de Euclides</a></li>
+  <li><a href="#as-propriedades-do-mdc" id="toc-as-propriedades-do-mdc" class="nav-link" data-scroll-target="#as-propriedades-do-mdc"><span class="header-section-number">14.3</span> As propriedades do MDC</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/mdc.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O MDC</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/mdc.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">O MDC</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></h1>
 </div>
 
 
@@ -1177,8 +1237,10 @@ window.Quarto = {
 </header>
 
 
+<section id="o-maior-divisor-comum-mdc" class="level2" data-number="14.1">
+<h2 data-number="14.1" data-anchor-id="o-maior-divisor-comum-mdc"><span class="header-section-number">14.1</span> O maior divisor comum (MDC)</h2>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 15.1</strong></span> Sejam <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> números inteiros não simultaneamente iguais a zero. Definimos o <em>maior divisor comum de <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span></em> como sendo o inteiro <span class="math inline">\(d\)</span> que satisfaz as seguintes propriedades:</p>
+<p><span class="theorem-title"><strong>Definição 14.1</strong></span> Sejam <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> números inteiros não simultaneamente iguais a zero. Definimos o <em>maior divisor comum de <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span></em> como sendo o inteiro <span class="math inline">\(d\)</span> que satisfaz as seguintes propriedades:</p>
 <ul>
 <li><span class="math inline">\(d\geq 0\)</span>;</li>
 <li><span class="math inline">\(d|a\)</span> e <span class="math inline">\(d|b\)</span>;</li>
@@ -1187,14 +1249,14 @@ window.Quarto = {
 </div>
 <p>Não é imediatamente claro da definição que o maior divisor comum existe (isso será verificado depois). No entanto, o seguinte lema é válido</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 15.1</strong></span> Se o maior divisor comum de dois números <span class="math inline">\(a,b\in\Z\)</span> existir, então ele é único</p>
+<p><span class="theorem-title"><strong>Lema 14.1</strong></span> Se o maior divisor comum de dois números <span class="math inline">\(a,b\in\Z\)</span> existir, então ele é único</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Se <span class="math inline">\(d_1\)</span> e <span class="math inline">\(d_2\)</span> são ambos maiores divisores comuns de <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>, então a definição implica que <span class="math inline">\(d_1|d_2\)</span> e <span class="math inline">\(d_2|d_1\)</span>. Ora temos por um lema anterior que <span class="math inline">\(d_1=\pm d_2\)</span>, mas como <span class="math inline">\(d_1\)</span> e <span class="math inline">\(d_2\)</span> são não negativos, isso é possível apenas quando <span class="math inline">\(d_1=d_2\)</span></p>
 </div>
 <p>O maior divisor comum de <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> (quando existir) será denotado por <span class="math inline">\(\mdc ab\)</span>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 15.2</strong></span> As seguintes afirmações são verdadeiras para <span class="math inline">\(a,b\in\Z\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 14.2</strong></span> As seguintes afirmações são verdadeiras para <span class="math inline">\(a,b\in\Z\)</span>.</p>
 <ul>
 <li>Se existe <span class="math inline">\(\mdc ab\)</span>, então existe <span class="math inline">\(\mdc ba\)</span> e os dois são iguais.</li>
 <li>Se existe <span class="math inline">\(\mdc ab\)</span>, então existe <span class="math inline">\(\mdc{\pm a}{\pm b}\)</span> e todos são iguais.</li>
@@ -1208,7 +1270,7 @@ window.Quarto = {
 <p>O <span class="math inline">\(\mdc 00\)</span> não tá definido.</p>
 <p>Se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são inteiros tais que <span class="math inline">\(\mdc ab=1\)</span>, então dizemos que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são <em>primos entre si</em> ou que eles são <em>coprimos</em>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 15.3</strong></span> Sejam <span class="math inline">\(a,b,q\)</span> números inteiros. Então existe <span class="math inline">\(\mdc ab\)</span> se e somente se existe <span class="math inline">\(\mdc b{a+qb}\)</span>. Quando os dois MDCs existirem, então <span class="math display">\[
+<p><span class="theorem-title"><strong>Lema 14.3</strong></span> Sejam <span class="math inline">\(a,b,q\)</span> números inteiros. Então existe <span class="math inline">\(\mdc ab\)</span> se e somente se existe <span class="math inline">\(\mdc b{a+qb}\)</span>. Quando os dois MDCs existirem, então <span class="math display">\[
 \mdc ab=\mdc b{a+qb}.
 \]</span></p>
 </div>
@@ -1222,13 +1284,13 @@ window.Quarto = {
 <p>Assim podemos concluir que <span class="math inline">\(d=\mdc b{a+qb}\)</span>. A outra direção quando a suposição é que existe <span class="math inline">\(\mdc b{a+qb}\)</span> é análoga.</p>
 </div>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 15.1</strong></span> Sejam <span class="math inline">\(a,b\in\Z\)</span> com <span class="math inline">\(b\neq 0\)</span> e escreve <span class="math inline">\(a=qb+r\)</span> com <span class="math inline">\(0\leq r&lt;|b|\)</span> como no Teorema de Divisão de Euclides. Então existe <span class="math inline">\(\mdc ab\)</span> se e somente se existe <span class="math inline">\(\mdc br\)</span>. Quando os dois MDCs existirem, eles são iguais</p>
+<p><span class="theorem-title"><strong>Corolário 14.1</strong></span> Sejam <span class="math inline">\(a,b\in\Z\)</span> com <span class="math inline">\(b\neq 0\)</span> e escreve <span class="math inline">\(a=qb+r\)</span> com <span class="math inline">\(0\leq r&lt;|b|\)</span> como no Teorema de Divisão de Euclides. Então existe <span class="math inline">\(\mdc ab\)</span> se e somente se existe <span class="math inline">\(\mdc br\)</span>. Quando os dois MDCs existirem, eles são iguais</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Segue do lema anterior</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 15.1</strong></span> O lema anterior pode ser usado para determinar o MDC de dois números naturais do modo seguinte. Sejam, por exemplo, <span class="math inline">\(a=115\)</span> e <span class="math inline">\(b=25\)</span>. Escreva <span class="math display">\[
+<p><span class="theorem-title"><strong>Exemplo 14.1</strong></span> O lema anterior pode ser usado para determinar o MDC de dois números naturais do modo seguinte. Sejam, por exemplo, <span class="math inline">\(a=115\)</span> e <span class="math inline">\(b=25\)</span>. Escreva <span class="math display">\[
 115=4\cdot 25+15
 \]</span> Logo <span class="math inline">\(\mdc {115}{25}\)</span> e <span class="math inline">\(\mdc{25}{10}\)</span> existem (ou não) simultaneamente e, se existirem, são iguais. Depois escreva <span class="math display">\[
 25=1\cdot 15+10.
@@ -1240,8 +1302,146 @@ window.Quarto = {
 \mdc {115}{25}&amp;=\mdc{25}{15}=\mdc{15}{10}=\mdc{10}{5}\\&amp;=\mdc 50=5.
 \end{align*}\]</span> Esta conta segue essencialmente o Algoritmo de Euclides que será o conteúdo da matéria seguinte</p>
 </div>
+</section>
+<section id="o-algoritmo-de-euclides" class="level2" data-number="14.2">
+<h2 data-number="14.2" data-anchor-id="o-algoritmo-de-euclides"><span class="header-section-number">14.2</span> O algoritmo de Euclides</h2>
+<p>Sejam <span class="math inline">\(a,b\in\N_0\)</span> com <span class="math inline">\(b&lt;a\)</span>. O resultado provado no final da página anterior sugere o seguinte processo recursivo para calcular o <span class="math inline">\(\mbox{mdc}(a,b)\)</span>:</p>
+<ul>
+<li><strong>Passo 1:</strong> Se <span class="math inline">\(b=0\)</span>, então <span class="math inline">\(\mdc ab=a\)</span>.</li>
+<li><strong>Passo 2:</strong> Se <span class="math inline">\(b \neq 0\)</span> então use o Teorema de Divisão de Euclides para escrever <span class="math inline">\(a=qb+r\)</span> com <span class="math inline">\(r\in\{0,\ldots,b-1\}\)</span>.</li>
+<li><strong>Passo 3:</strong> <span class="math inline">\(\mdc ab=\mdc br\)</span>.</li>
+</ul>
+<p>O processo funciona, pois no Passo 3., os números <span class="math inline">\(b\)</span> e <span class="math inline">\(r\)</span> são menores que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>. Logo, mais cedo ou mais tarde, o processo vai chegar até uma situação quando <span class="math inline">\(b=0\)</span> e neste caso o valor do <span class="math inline">\(\mdc ab\)</span> será igual a <span class="math inline">\(a\)</span> pelo Passo 1. Veja o exemplo na página anterior para uma computação detalhada seguindo este processo.</p>
+<p>Este algoritmo pode ser implementado em Python com a seguinte função recursiva.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MDC_recursivo( a, b ):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> b <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> MDC_recursivo( b, a <span class="op">%</span> b ) </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para melhor analisarmos o algoritmo, nós escrevemos o processo em uma maneira linear (não recursiva). O processo descrito abaixo é chamado Algoritmo de Euclides. Sejam <span class="math inline">\(a,b\)</span> como acima. <span class="math display">\[
+\begin{align*}
+r_{-1}&amp;=a\\
+r_0&amp;=b\\
+a=r_{-1}&amp;=q_1b+r_1\quad 0&lt;r_1&lt;b\\
+b=r_0&amp;=q_2r_1+r_2\quad 0&lt;r_2&lt;r_1\\
+r_1&amp;=q_3r_2+r_3\quad 0&lt;r_3&lt;r_2\\
+&amp;\vdots\\
+r_{i-1}&amp;=q_{i+1}r_{i}+r_{i+1}\quad 0&lt;r_{i+1}&lt;r_{i}\\
+r_{i}&amp;=q_{i+2}r_{i+1}+r_{i+2}\quad 0&lt;r_{i+2}&lt;r_{i+1}\\
+&amp;\vdots\\
+r_{d-2}&amp;=q_{d}r_{d-1}+r_{d}\quad 0&lt;r_{d}&lt;r_{d-1}\\
+r_{d-1}&amp;=q_{d+1}r_d+0
+\end{align*}
+\]</span></p>
+<p>A sequência dos restos calculados satisfaz as desigualdades <span class="math display">\[
+a&gt;b&gt;r_1&gt;r_2&gt;\cdots&gt;r_i&gt;\cdots&gt;r_d&gt;r_{d+1}=0.
+\]</span> Em outras palavras, a sequência dos restos é uma sequência decrescente de números positivos. Note que tal sequência sempre atinge o número zero em um número finitos de passos; ou seja, existe algum <span class="math inline">\(d\)</span> tal que <span class="math inline">\(r_{d+1}=0\)</span>. Pelo raciocínio acima, obtemos que <span class="math display">\[\begin{align*}
+\mdc ab&amp;=\mdc b{r_1}=\mdc{r_1}{r_2}=\cdots=\mdc{r_i}{r_{i+1}}=\cdots\\&amp;=\mdc{r_{d-1}}{r_d}=\mdc{r_d}0=r_d.
+\end{align*}\]</span></p>
+<p>Isso justifica o seguinte resultado.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 14.4</strong></span> Se <span class="math inline">\(a,b\in \N_0\)</span> tais que <span class="math inline">\(b\neq 0\)</span>, então o último resto não nulo <span class="math inline">\(r_d\)</span> calculado pelo Algoritmo de Euclides é igual a <span class="math inline">\(\mdc ab\)</span>. O algoritmo termina depois de um número finito de passos.</p>
+</div>
+<p>Note que nos resultados acima, nós assumimos que <span class="math inline">\(a,b\)</span> são números não negativos. No entanto, o procedimento pode ser usado mesmo quando <span class="math inline">\(a\)</span> ou <span class="math inline">\(b\)</span> (ou os dois) são negativos, pois neste caso, simplesmente podemos trocar o número negativo pelo seu simétrico (que vai ser positivo) pelo fato que <span class="math inline">\(\mdc ab=\mdc{\pm a}{\pm b}\)</span>.</p>
+<p>Em particular nós finalmente conseguimos concluir o seguinte resultado sobre a existência do <span class="math inline">\(\mdc ab\)</span>.</p>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 14.2</strong></span> Se <span class="math inline">\(a,b\in\Z\)</span> tais que <span class="math inline">\((a,b)\neq (0,0)\)</span>, então existe <span class="math inline">\(\mdc ab\)</span>.</p>
+</div>
+<p>O procedimento acima pode também ser implementado em Python com a seguinte função.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MDC(a,b):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> b <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">%</span> b  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Uma outra consequência do Algoritmo de Euclides é o seguinte resultado extremamente útil e bem conhecido.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 14.1</strong></span> Sejam <span class="math inline">\(a,b\in\Z\)</span> com <span class="math inline">\((a,b)\neq 0\)</span>. Então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+\mdc ab=ua+vb.
+\]</span> Em particular, se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são primos entre si, então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+1=ua+vb.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Nós podemos assumir sem perda de generalidade que <span class="math inline">\(0&lt;b&lt;a\)</span>. Com esta suposição, podemos executar o algoritmo de Euclides para <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>.</p>
+<p>Afirmamos que, para todo <span class="math inline">\(i\geq 1\)</span>, o resto <span class="math inline">\(r_i\)</span> pode ser escrito como <span class="math inline">\(u_ia+v_ib\)</span> com coeficientes <span class="math inline">\(u_i,v_i\in\Z\)</span>. Verificaremos a afirmação por indução em <span class="math inline">\(i\)</span>. A afirmação está verdadeira para <span class="math inline">\(i=1\)</span>, pois <span class="math display">\[
+r_1=a-q_1b\quad\text{e assim}\quad u_1=1,\ v_1=-q_1.
+\]</span> Assuma que <span class="math inline">\(i\geq 1\)</span> e, para <span class="math inline">\(j\leq i\)</span> existem <span class="math inline">\(u_j,v_j\in \Z\)</span> tais que <span class="math display">\[
+r_j=u_ja+v_jb.
+\]</span> Ora, segue da equação para <span class="math inline">\(r_{i-1}\)</span> que <span class="math display">\[\begin{align*}
+r_{i+1}&amp;=r_{i-1}-q_{i+1}r_{i}=u_{i-1}a+v_{i-1}b-q_{i+1}(u_{i}a+v_{i}b)\\&amp;=
+(u_{i-1}-q_{i+1}u_i)a+(v_{i-1}-q_{i+1}v_i)b.
+\end{align*}\]</span> Ou seja, podemos tomar <span class="math display">\[
+u_{i+1}=u_{i-1}-q_{i+1}u_i\quad\mbox{e}\quad v_{i+1}=v_{i-1}-q_{i+1}v_i.
+\]</span></p>
+<p>Agora, temos que <span class="math display">\[
+\mdc ab=r_d=u_da+v_db
+\]</span> e o teorema está válido com <span class="math inline">\(u=u_d\)</span> e <span class="math inline">\(v=v_d\)</span>.</p>
+</div>
+<p>Note que a demonstração acima dá um algoritmo para calcular os coeficientes <span class="math inline">\(u,v\)</span> e este algoritmo pode ser executado em paralelo com a computação do <span class="math inline">\(\mdc ab\)</span>. O algoritmo que calcula o <span class="math inline">\(\mdc ab\)</span> junto com os coeficientes <span class="math inline">\(u,v\)</span> tais que <span class="math display">\[
+\mdc ab=ua+vb
+\]</span> é geralmente chamado Algoritmo Estendido de Euclides. A seguinte é uma implementação simples do Algoritmo Estendido em Python.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    prevu, u <span class="op">=</span> <span class="dv">1</span>, <span class="dv">0</span><span class="op">;</span> prevv, v <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> b <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        q <span class="op">=</span> a<span class="op">//</span>b</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        u, prevu <span class="op">=</span> prevu <span class="op">-</span> q<span class="op">*</span>u, u</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        v, prevv <span class="op">=</span> prevv <span class="op">-</span> q<span class="op">*</span>v, v</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">%</span> b</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, prevu, prevv</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="as-propriedades-do-mdc" class="level2" data-number="14.3">
+<h2 data-number="14.3" data-anchor-id="as-propriedades-do-mdc"><span class="header-section-number">14.3</span> As propriedades do MDC</h2>
+<p>O último resultado na página do Algoritmo de Euclides implica várias propriedades importantes do MDC.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 14.5</strong></span> Sejam <span class="math inline">\(a,b,c\in\Z\setminus\{0\}\)</span>. As seguintes afirmações são verdadeiras.</p>
+<ul>
+<li>Se <span class="math inline">\(c\mid ab\)</span> e <span class="math inline">\(\mdc bc=1\)</span>, então <span class="math inline">\(c\mid a\)</span>.</li>
+<li>Se <span class="math inline">\(\mdc ac=\mdc bc=1\)</span>, então <span class="math inline">\(\mdc {ab}c=1\)</span>.</li>
+<li>Se <span class="math inline">\(\mdc ab=d\)</span>, então <span class="math inline">\(\mdc{a/d}{b/d}=1\)</span>.</li>
+<li>Se <span class="math inline">\(a\mid c\)</span> e <span class="math inline">\(b\mid c\)</span>, então <span class="math inline">\((ab/\mdc ab)\mid c\)</span>.</li>
+<li>Se <span class="math inline">\(a\mid c\)</span>, <span class="math inline">\(b\mid c\)</span> e <span class="math inline">\(\mdc ab=1\)</span>, então <span class="math inline">\(ab\mid c\)</span>.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li><p>Como <span class="math inline">\(\mdc bc=1\)</span>, existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math inline">\(ub+vc=1\)</span>. Multiplique esta igualdade por <span class="math inline">\(a\)</span> para obter <span class="math display">\[
+a=uab+vac.
+\]</span> Como <span class="math inline">\(c\mid ab\)</span>, o lado direito da última equação é divisível por <span class="math inline">\(c\)</span>, e assim <span class="math inline">\(c\mid a\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\(d=\mdc{ab}c\)</span>. Como <span class="math inline">\(\mdc ac=1\)</span>, existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+1=ua+vc.
+\]</span> Multiplique os dois lados desta igualdade por <span class="math inline">\(b\)</span> e obtenha <span class="math display">\[
+b=uab+vbc.
+\]</span> Pela definição de <span class="math inline">\(d\)</span>, tem-se que <span class="math inline">\(d\mid c\)</span> e <span class="math inline">\(d\mid ab\)</span>. Logo, pela última igualdade, obtemos que <span class="math inline">\(d\mid b\)</span>. Logo <span class="math inline">\(d\mid \mdc bc=1\)</span>; ou seja <span class="math inline">\(d=\mdc{ab}c=1\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\(d=\mdc ab\)</span>. Existem inteiros <span class="math inline">\(q_1,q_2\in\Z\)</span> tais que <span class="math display">\[
+a=q_1d\quad\mbox{e}\quad b=q_2d.
+\]</span> Além disso existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+d=ua+vb=uq_1d+vq_2d.
+\]</span> Dividindo os dois lados por <span class="math inline">\(d\)</span>, obtemos que <span class="math display">\[
+1=uq_1+vq_2.
+\]</span> Note que se <span class="math inline">\(d_1=\mdc{q_1}{q_2}\)</span>, então <span class="math inline">\(d_1\mid 1\)</span>, logo <span class="math inline">\(d_1=1\)</span>. Portanto <span class="math display">\[
+\mdc{a/d}{b/d}=\mdc{q_1}{q_2}=1.
+\]</span></p></li>
+<li><p>Seja <span class="math inline">\(d=\mdc ab\)</span>. Existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
+d=ua+vb.
+\]</span> Multiplicando por <span class="math inline">\(c\)</span>, <span class="math display">\[
+cd=uac+vbc.
+\]</span> Pelas condições, existem inteiros <span class="math inline">\(q_1\)</span>, <span class="math inline">\(q_2\)</span> tais que <span class="math inline">\(c=aq_1=bq_2\)</span> e assim <span class="math display">\[
+dc=uabq_2+vbaq_1=ab(uq_2+vq_1);
+\]</span> ou seja <span class="math display">\[
+c=\frac{ab}d(uq_2+vq_1).
+\]</span> Isso implica que <span class="math inline">\(ab/d\mid c\)</span>.</p></li>
+<li><p>Segue da afirmação 4.</p></li>
+</ol>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1667,12 +1867,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../FundamentosDeAlgebra/racionais.html" class="pagination-link" aria-label="A expansão dos racionais na base $b$">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/euclid.html" class="pagination-link" aria-label="O algoritmo de Euclides">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">O algoritmo de Euclides</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../FundamentosDeAlgebra/primos.html" class="pagination-link" aria-label="Os números primos e o Teorema Fundamental da Aritmética">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
