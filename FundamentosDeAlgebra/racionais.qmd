@@ -6,6 +6,9 @@ number-sections: true
 lang: pt-BR
 ---
 
+
+## Expansão de racionais
+
 Comecemos por um resultado conhecido de cálculo.
 
 :::{#lem-}
@@ -161,7 +164,7 @@ Pelo lema anterior, $a$ é um número real, mas a sua expansão decimal não é 
 
 Exatamente como a expansão dos números naturais pode ser calculada em qualquer base $d\geq 2$, a expansão dos números racionais também pode ser calculada em bases $d$ tal que $d\geq 2$. Os resultados em uma base arbitrária são muito similares aos resultados na base $d=10$ (caso decimal) e estes detalhes são omitidos. No entanto recomendamos que o leitor traduza os resultados acima para uma base $d\neq 10$.
 
-### Computação com Python
+## Computação com Python
 
 Vamos implementar o algoritmo obtido na demonstração do Teorema na linguagem Python. De fato, nós implementamos o algoritmo em qualquer base (não apenas na base decimal), pois a diferença é muito pequena. Pretendemos escrever uma função que toma números naturais $a$, $b$, $d$ tais que $0<a<b$ e $d\geq 2$ e devolve o pré-período e o período da expansão de $a/b$ na base $d$.
 ```python

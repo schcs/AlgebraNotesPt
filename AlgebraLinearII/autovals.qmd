@@ -1,0 +1,137 @@
+--- 
+title: "Autovalores e autovetores"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#exm-}
+Considere a transformação $R:\R^2\to \R^2$ onde $R(v)$ é a reflexão de $v$ no eixo que tem $30$ graus com o eixo-$x$. A matriz da transformação na base canônica é
+$$
+\begin{pmatrix} 1/2 & \sqrt{3}/2\\ \sqrt{3}/2 & -1/2 \end{pmatrix}.
+$$
+Ou seja, esta é uma matriz complicada. Por outro lado, se usarmos a base que contém o eixo da reflexão e uma outro vetor perpendicular ao eixo, temos que a matriz da transformação fica na forma
+$$
+\begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix}.
+$$
+:::
+
+Escolhendo os vetores na maneira "certa", a matriz da transformação fica bem mais simples. Nesta parte da disciplina nós vamos estudar
+
+
+ -  como escolher a base de um espaço vetorial para que a matriz de um endomorfismo seja a mais simples possível;
+ -  até qual ponto pode a matriz de uma endomorfismo ser simplificada.
+
+
+:::{#def-}
+Seja $f:V\to V$ um endomorfismo de um $\F$-espaço vetorial $V$. Seja $\lambda\in\F$. Se $v\in V$ tal que $f(v)=\lambda v$, então $v$ chama-se <b>autovetor</b> de $f$. Se $v\neq 0$, então $\lambda$ chama-se <b>autovalor</b> de $\F$. Denotamos por
+$$
+V_\lambda=\{v\in V\mid f(v)=\lambda v\}.
+$$
+:::
+
+
+:::{#exr-}
+Mostre que $V_\lambda\leq V$. Sejam $\lambda_1,\ldots,\lambda_k\in\F$ distintos. Mostre que
+$$
+V_{\lambda_1}+\cdots+V_{\lambda_k}=V_{\lambda_1}\oplus\cdots\oplus V_{\lambda_k}.
+$$
+:::
+
+O espaço $V_\lambda$ é chamado de <b>autoespaço</b> do endomorfismo $f$ associado com $\lambda$. Temos que $\lambda$ é autovalor de $f$ se e somente se $V_\lambda\neq 0$.
+
+:::{#exm-}
+
+
+ -  No primeiro exemplo desta página, o eixo da reflexão é um autovetor com autovalor $1$ enquanto um vetor perpendicular ao eixo é autovetor com autovalor $-1$.
+ -  Se $f:C^\infty(\R)$ é a derivação, então a função $x\mapsto \exp(\lambda x)$ é autovetor com autovalor $\lambda$.
+ -  Se $f:V\to V$ é um endomorfismo, então $V_0=\ker f$.
+
+:::
+
+
+:::{#def-}
+Um endomorfismo $f:V\to V$ de um espaço vetorial $V$ de dimensão finita é chamada <b>diagonalizável</b> se $V$ possui uma base formada por autovetores de $f$.
+:::
+
+O endomorfismo no primeiro exemplo é diagonalizável.
+
+:::{#def-}
+Se $V$ é um espaço de dimensão finita e $f:V\to V$ é um endomorfismo, então definimos $\det f$ como $\det [f]^B_B$ onde $B$ é uma base arbitrária de $V$. Pelas regras da mudança de base, $\det f$ é independente da escolha de $B$.
+:::
+
+
+:::{#lem-}
+Seja $f:V\to V$ um endomorfismo e $\lambda\in\F$.
+
+
+ -  Então $V_\lambda=\ker(\lambda\cdot \mbox{id}_V-f)$.
+ -  Assumindo que $\dim V$ é finita, $\lambda$ é autovalor de $f$ se e somente se $\det(\lambda\cdot \mbox{id}_V-f)=0$.
+
+:::
+
+
+:::{.proof}
+1. Seja $v\in V$. Então $f(v)=\lambda v$ se e somente se $f(v)-\lambda v=0$ que é e mesma coisa que $\lambda\mbox{id}_V(v)-f(v)=0$. A última equação pode ser escrita na forma $(\lambda\mbox{id}_V-f)(v)=0$; ou seja, $v\in \ker (\lambda\cdot \mbox{id}_V-f)$.
+
+2. $\lambda$ é autovalor de $f$ se e somente se $V_\lambda\neq 0$ que equivale à afirmação $\ker(\lambda\mbox{id}_V-f)\neq 0$; ou seja $\lambda\mbox{id}_V-f$ não é invertível. Neste caso $\det(\lambda\mbox{id}_V-f)=0$.
+
+:::
+
+
+:::{#exm-}
+Seja $f:\F^2\to \F^2$ definida por $f(x,y)=(x+y,y)$. A matriz de $f$ na base canônica é
+$$
+\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}
+$$
+Se $\lambda\in\F$, então $\lambda$ é autovalor de $f$ se e somente se
+$$
+0=\det\begin{pmatrix} \lambda-1 & -1 \\ 0 & \lambda-1 \end{pmatrix}=(\lambda-1)^2.
+$$
+Obtemos que $\det(\lambda\mbox{id}_V-f)=0$ apenas para $\lambda=1$. Então o único autovalor de $f$ é $\lambda=1$. Neste caso, o autoespaço $V_1$ coincide com o núcleo da matriz
+$$
+\begin{pmatrix} 0 & -1 \\ 0 & 0 \end{pmatrix}
+$$
+que é $\langle(1,0)\rangle$. Obtemos que os autovetores de $f$ são os múltiplos de $(1,0)$, então não existe base de $V$ tal que a matriz desta transformação seja diagonalizável. Ou seja, $f$ não é diagonalizável.
+:::
+
+
+:::{#def-}
+Seja $V$ um $\F$-espaço de dimensão finita e seja $f:V\to V$ um endomorfismo. Seja $t$ uma incôgnita sobre o corpo $\F$. Então o determinante $\det(t\cdot \mbox{id}_V-f)$ pode ser visto como um polinômio em $\F[t]$. Este polinômio chama-se o<b> polinômio caraterístico</b> de $f$ e está escrito como $\mbox{pcar}_f(t)$.
+:::
+
+Note que precisamos escolher uma base para calcular o polinômio caraterístico, mas o resultado será independente da escolha da base.
+
+:::{#exm-}
+No exemplo anterior $\mbox{pcar}_f(t)=(t-1)^2$.
+:::
+
+O polinômio caraterístico é um polinômio mônico de grau $n=\dim V$:
+$$
+\mbox{pcar}_f(t)=t^n+\alpha_{n-1}t^{n-1}+\cdots+\alpha_1t+\alpha_0\in\F[t].
+$$
+
+:::{#cor-}
+Seja $V$ um espaço vetorial de dimensão $n$ (finita) sobre um corpo $\F$ e seja $f:V\to V$ um endomorfismo.
+
+
+ -  O conjunto dos autovalores de $f:V\to V$ é igual ao conjunto das raízes do seu polinômio caraterístico.
+ -   $f$ possui no máximo $n$ autovalores distintos.
+ -  Se $\F=\C$, então $f$ possui pelo menos um autovalor.
+
+:::
+
+
+:::{#def-}
+O conjunto dos autovalores de $f$ chama-se o <b>espectro</b> de $f$. A <b>multiplicidade algébrica</b> de um autovalor $\lambda$ é a multiplicidade como raiz de $\mbox{pcar}_f(t)$. A <b>multiplicidade geométrica</b> é $\dim V_\lambda$.
+:::
+
+
+:::{#lem-}
+A multiplicidade geométrica de um autovalor de um endomorfismo é menor ou igual a sua multiplicidade algébrica.
+:::
+
+
+:::{.proof}
+Exercício: Use uma base que contém uma base para $V_\lambda$ para calcular o polinômio caraterístico.
+:::
+

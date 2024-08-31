@@ -1,7 +1,7 @@
----
-number-sections: false
-lang: pt
----
+--- 
+number-sections: true
+lang: pt-BR
+--- 
 
 # Álgebra Linear II {.unnumbered}
 
@@ -14,4 +14,38 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 
 ## Apostilas
 
+### Bloco I: Espaços vetoriais, transformações lineares e o determinante
+
+- Corpos
+- Espaços vetoriais sobre corpos
+- [Bases e dimensão](bases.qmd)
+- [Subespaços e a soma direta](subespacos.qmd)
+- [Espaço quociente](quociente.qmd)
+- [Transformações lineares](trans_lin.qmd)
+- [Transformações lineares e matrizes](matrizes.qmd)
+- [O espaço dual](dual.qmd) 
+- [Formas $k$-lineares e o determinante](formas.qmd)
+
+
+### Bloco II: Endomorfismos de espaços vetoriais de dimensão finita
+
+- [Autovalores e autovetores](autovals.qmd)
+- [O polinômio mínimo de um operador](pol_min.qmd)
+- [O Teorema de Cayley-Hamilton](cayley_hamilton.qmd)
+- [Projeções](projecoes.qmd)
+- [O Teorema da Decomposição Primária e o Teorema Espectral](primaria.qmd)
+- [Endomorfismos nilpotentes e a existência da forma normal de Jordan](nilpotentes.qmd)
+- [A unicidade da forma normal de Jordan](unicidade_jordan.qmd)
+- [O Teorema da Decomposição Cíclica](cyclic.qmd)
+
+### Bloco III: Formas sesquilineares e espaços com produto interno
+
+- [Formas sequilineares](sesqui.qmd)
+- [Isometrias de formas sesquilineares](isometrias.qmd)
+- [Operadores adjuntos](isometrias.qmd)
+- [Operadores autoadjuntos](autoadjuntos.qmd)
+- [Operadores normais](normais.qmd)
+- [Transformações ortogonais de ℝ<sup>n</sup>](ortogonais.qmd)
+- [SO<sub>2</sub> e SO<sub>3</sub>](so_2_so_3.qmd)
+- O produto tensorial
 

@@ -1,10 +1,12 @@
 
 
 ---
-title: "Criptografia RSA: A teoria"
+title: "Criptografia RSA"
 number-sections: true
 lang: pt-BR
 ---
+
+## A teoria da criptografia RSA
 
 Na área da criptografia, a suposição geral é que dois parceiros (que podem ser duas pessoas, ou dois computadores) querem trocar informação sigilosa usando um canal de comunicação que está disponível para terceiros. Os dois parceiros geralmente chamam-se A(lice) e B(ob) e um possível terceiro chama-se E(va). Assume-se que as mensagens enviadas por Alice e Bob são números. A Eva consegue interceptar as mensagens enviadas. O objetivo é desenvolver métodos seguros de codificação para as mensagens que podem garantir que Eva não vai conseguir descodificar as mensagens interceptadas.
 
@@ -104,3 +106,179 @@ Isto implica, que conseguimos determinar o valor de $p-q$. Sabendo $p+q$ e $p-q$
 :::
 
 Vale mencionar que existe um algoritmo quântico eficiente para determinar a fatoração de um número. Este algoritmo é conhecido como o <a href="https://pt.wikipedia.org/wiki/Algoritmo_de_Shor">Algoritmo de Shor</a> e foi publicado em 1994. Este algoritmo neste momento não implica nenhum perigo para a segurança de mensagens criptografadas, mas no futuro os computadores quânticos podem se desenvolver o suficiente para poder quebrar o algoritmo RSA. Neste momento muitos matemáticos trabalham no desenvolvimento e algoritmos que são seguros contra ataques de computadores quânticos (<a href="https://pt.wikipedia.org/wiki/Criptografia_p%C3%B3s-qu%C3%A2ntica">criptografia pós-quântica</a>).
+
+
+## Um exemplo detalhado em Python
+
+Nesta página, vamos realizar uma computação em Python para ilustrar o processo de gerar as chaves, criptografar e descriptografar, usando criptografia RSA. Note que a computação feita aqui é só para ilustrar como combinar os algoritmos estudados neste bloco para criptografia; na pratica, algumas tarefas (tal como a escolha de primos aleatórios) devem ser resolvidas com muito mais cuidado.
+
+Primeiro, precisamos carregar algumas bibliotecas.
+```python
+from sympy import factorint
+import random
+from math import floor, log
+```
+
+Vamos precisar das funções ExpModN (exponenciação rápida) e XMDC (Algoritmo Estendido de Euclides) que foram definidas em aulas anteriores:
+```python
+def ExpModN( a, e, n ):
+    A, P, E = a, 1, e
+        
+    while E != 0:        
+        D = E % 2 # the last binary digit of E         
+        if D == 1:
+            P = (A*P) % n
+            E = (E-1)//2
+        else:
+            E = E//2
+        A = (A*A) % n
+    return P
+```
+```python
+def XMDC(a,b):
+    x0, x = 1, 0; y0, y = 0, 1
+    
+    # nós trabalhamos com números positivos, mas aceitamos argumentos negativos
+    sign_a, sign_b = 1, 1
+    if a < 0:
+        a = -a
+        sign_a = -1
+    
+    if b < 0:
+        b = -b
+        sign_b = -1
+    
+    #x0*a + y0*b = a
+    #x*a + y*b = b
+    
+    while b>0: 
+        q, r = a // b, a%b
+        a, b = b, r
+        
+        #atualizar x, x0, y, y0
+        x, x0 = x0 - q*x, x
+        y, y0 = y0 - q*y, y 
+    
+    return a, sign_a*x0, sign_b*y0
+```
+
+O algoritmos de gerar as chaves públicas e privadas necessita a computação de inverso modular. Isso pode ser feito facilmente usando o algoritmo estendido de Euclides, mas nós colocamos aqui uma função que vai resolver esta tarefa:
+```python
+def inverso_modular( a, n ):
+    d, u, v = XMDC( a, n )
+    if d != 1:
+        return False
+        
+    u %= n
+    if u < 0:
+        u += n
+    
+    return u
+```
+Para escolher os primos $p$ e $q$, precisaremos de um teste de primalidade. Usaremos o Teste de Primalidade de Miller. Este teste não é deterministico, terá uma probabilidade pequena de erro, mas esta probabilidade pode ser reduzida para um nível tão baixa que na prática um número que passa por este teste pode ser tratado como primo.
+```python
+def IsStrongPseudoPrimeInBase( n, b ):
+    
+    q = n-1
+    k = 0
+    while q % 2 == 0:
+        q = q//2
+        k = k+1
+    
+    r = ExpModN( b, q, n )
+    if r == 1:
+        return True
+    
+    
+    for i in range( 0, k ):
+        if r == n-1:
+            return True
+        r = r*r % n
+        
+    return False
+```
+```python
+def TesteMillerRabin( n, k = 0):
+        
+    if k == 0:
+        k = floor(log( n )) + 1
+        
+    for i in range( k ):
+        b = random.randint( 2, n-2 )
+        if not IsStrongPseudoPrimeInBase( n, b ):
+            return "COMPOSTO"
+        
+    return "PROVAVELMENTE PRIMO"
+```
+A seguinte função será usada para escolher um primo aleatório de certo comprimento na base binária. A ideia, e tomar um número aleatório do comprimento desejado, verificar se ele e primo, e se não, aumentar o número até obtermos um número que é (pseudo)primo.
+```python
+def primo_aleatório( nr_bits ):
+    
+    p, is_pr = 0, False
+
+   p = random.randint( 2**(nr_bits-1), 2**nr_bits-1 )
+    if p % 2 == 0:
+		p += 1
+	
+    while True:
+        if TesteMillerRabin( p, 20 ) == "PROVAVELMENTE PRIMO":
+            break
+        p += 2
+        
+    return p
+```
+Para gerar as chaves públicas e privadas, vamos escolher dois primos aleatórios $p$ e $q$ tais que o comprimento do produto $n=pq$ é 2048. Seguimos a recomendação que o comprimento de um dos primos seja 40% do comprimento do produto, enquanto o outro contribua com 60% ao comprimento total. Com essa condição, a chave será mais resistente aos ataques para fatorar o produto.
+```python
+p_comp = floor( .4*2048 )
+q_comp = 2048-p_comp
+
+p = primo_aleatório( p_comp )
+q = primo_aleatório( q_comp )
+n = p*q
+```
+Vamos agora computar as chaves $e$ e $d$ usadas para criptografar e descriptografar. A seguinte função vai devolver um número aleatório entre $2$ e $n$, invertível módulo $\varphi(n)=(p-1)(q-1)$ junto com seu inverso.
+```python
+def key_pair( p, q ):
+    
+	n, phin = p*q, (p-1)*(q-1)
+    d, e = False, 0
+    while type( d  ) == bool:
+        e = random.randint( 1, n )
+        d = inverso_modular( e, phin )
+    
+    return e, d
+```
+Rodamos a função que acabamos de definir para gerar as chaves:
+```python
+e, d = key_pair( p, q )
+```
+Verifiquemos que $ed\equiv 1\pmod{\varphi(n)}$.
+```python
+e*d %((p-1)*(q-1))
+1
+```
+Agora definamos as funções de criptografar e descriptografar. Definimos estas funções com expressões-lambda.
+```python
+C = lambda a: ExpModN( a, e, n )
+D = lambda b: ExpModN( b, d, n )
+```
+Assuma que a mensagem da Alice é um número aleatório $a$ entre $1$ e $n$. Alice vai criptografar esta mensagem como $b=C(a)$ e vai enviar ao Bob. Ao receber a mensagem $b$, o Bob vai descriptografar a mensagem da Alice como $c=C(b)$. Pelo que provamos na aula, $c$ coincide com a mensagem original $a$; ou seja $c=a$.
+```python
+a = random.randint( 1, n )
+b = C(a)
+c = D(b)
+a == c
+```
+Para ilustrar a dificuldade de quebrar a criptografia RSA, usaremos a chave usada pelo site ufmg.com em novembro de 2022. O número $n$ usada por esta página pode ser acesso pelas funcionalidades da segurança do browser. A chave aparece como um número hexadecimal com o carater ":" separando pares de dígitos. O seguinte código transforma este número para um número inteiro de Python.
+```python
+n = "C1:D9:49:08:FF:1B:2B:F7:F9:81:E7:EA:CB:21:6B:FC:DA:39:6B:0B:21:8D:A8:19:5F:D5:B3:84:8C:5B:D7:3A:E6:8F:9A:0C:63:AD:F3:FB:BE:27:A7:36:36:3F:24:57:0F:17:68:32:1E:8E:87:92:9E:B7:09:1B:44:81:78:3E:50:1E:A8:BC:D4:E1:83:BB:99:4B:30:66:3F:EB:6D:6A:1F:02:71:02:86:4C:00:D6:F3:6C:3A:61:61:18:21:6F:A8:39:A2:33:B8:31:86:8B:91:FE:F8:69:15:AA:AF:CC:DA:39:8A:E6:13:75:F7:D9:E7:F4:39:C1:35:AF:D5:E7:E1:4C:3E:A6:F2:11:B1:E2:A8:89:29:AE:89:31:1C:E7:F7:89:BF:04:DD:61:02:A1:2D:28:4C:DE:54:62:1E:D5:3C:4A:75:1A:49:24:1E:69:0F:F2:7A:4A:21:4A:57:39:DC:97:68:90:D9:3C:95:55:59:A1:49:3F:E1:D9:07:CE:B6:CE:32:84:0F:F0:F1:7C:A8:78:93:48:69:32:4D:37:7E:4D:96:2E:84:52:90:67:03:AE:F5:31:1C:B0:26:8A:89:BC:01:0B:EA:80:D7:A4:5B:4A:F0:78:0C:AB:E3:A6:A7:88:F1:CD:B9:96:EB:5B:B9:BF:6E:E3:EC:28:A2:CD"
+n = n.replace( ':', '' )
+n = int( n, base = 16 )
+```
+Agora para quebrar a criptografia, é necessário fatorar este número. Verificar que o número não é pseudoprimo para a base $2$ (e então não é primo) é fácil, mas fatorar é difícil e de fato não pode ser feito usando as funcionalidades de Python.
+```python
+IsStrongPseudoPrimeInBase( n, 2 )
+False
+factorint( n )
+...não há resposta...
+```

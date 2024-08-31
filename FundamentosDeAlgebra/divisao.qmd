@@ -133,7 +133,7 @@ Vamos ver alguns exemplos do quiciente $q$ e do resto $r$ no Teorema da Divisão
 Explique porque $r\neq -3$ nos itens 2 e 4.
 :::
 
-### Computações com Python
+## Computações com Python
 Vamos ver agora como calcular o quociente e o resto na linguagem Python. O quociente de dois números naturais pode ser calculado por "//" e o resto por "%". Considere o seguinte exemplo:
 ```python
 >>> 11//5

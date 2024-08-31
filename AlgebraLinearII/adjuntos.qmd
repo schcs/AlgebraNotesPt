@@ -1,0 +1,167 @@
+--- 
+title: "O adjunto de um operador"
+number-sections: true
+lang: pt-BR
+--- 
+
+Nesta página, $V$ é um $\F$-espaço vetorial com $\mbox{car}(\F)\neq 2$ e $B$ é uma forma $\sigma$-hermitiana ou alternada não degenerada sobre $V$. Note que no caso de $\sigma$-hermitiana, $\sigma^2=\mbox{id}_\F$. Quando $\sigma=\mbox{id}_\F$, então $B$ é uma forma simétrica. Quando $B$ é alternada, então $\sigma=\mbox{id}_\F$.
+
+Lembre que $V^*$ é o espaço dual de $V$; ou seja,
+$$
+V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
+$$
+Para $v\in V$, definimos $\varphi_v\in V^*$ com
+$$
+\varphi_v(w)=B(w,v).
+$$
+O fato que $\varphi_v\in V^*$ segue do fato que $B$ é linear na primeira variável.
+Defina
+$$
+\Phi:V\to V^*,\quad \Phi(v)=\varphi_v.
+$$
+
+:::{#lem-}
+Temos para todo $\alpha_1,\alpha_2\in\F$ e $v_1,v_2\in V$ que
+$$
+\Phi(\alpha_1v_1+\alpha_2v_2)=\alpha_1^\sigma \Phi(v_1)+\alpha_2^\sigma\Phi(v_2).
+$$
+Ou seja, a transformação $\Phi$ é $\sigma$-semilinear. Além disso, $\Phi$ é injetiva, e quando $\dim V$ é finita, então $\Phi$ é sobrejetiva. Portanto, quando $\dim V$ for finita, $\Phi:V\to V^*$ é uma bijeção semilinear.
+:::
+
+
+:::{.proof}
+O fato que $\Phi$ é $\sigma$-semilinear segue do fato que $B$ é $\sigma$-semilinear na segunda variável. Vamos mostrar que $\Phi$ é injetiva. Note que se $\Phi(v_1)=\Phi(v_2)$ com $v_1,v_2\in V$, então $B(w,v_1)=B(w,v_2)$ vale para todo $w\in V$ e assim $v_1-v_2\in\mbox{Rad}(B)=0$. Logo $v_1=v_2$ e segue que $\Phi$ é injetiva.
+
+Assuma agora que $\dim V$ é finita e mostremos que $\Phi$ é sobrejetiva. Aqui nós tratamos apenas formas $\sigma$-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal $B=\{b_1,\ldots,b_n\}$ em $V$. Note que $Q(b_i)=B(b_i,b_i)\neq 0$. Por exercício  anterior, temos, para $v\in V$ que
+$$
+v=\sum_{i=1}^n \frac{B(v,b_i)}{Q(b_i)}b_i.
+$$
+Seja $\varphi\in V^*$ e defina
+$$
+v=\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n.
+$$
+Afirmamos que $\varphi=\Phi(v)=\varphi_v$. Para isso, precisa-se provar que $\varphi(w)=\varphi_v(w)=B(w,v)$ para todo $w\in V$, mas é suficiente verificar esta igualdade nos elementos na base; ou seja precisamos provar que $\varphi(b_i)=B(b_i,v)$ para todo $i$. Vamos calcular que
+$$
+\varphi_v(b_i)=B(b_i,v)=B\left(b_i,\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n\right)=\varphi(b_i).
+$$
+
+:::
+
+
+:::{#def-}
+Sejam $V$ e $W$ espaços vetoriais sobre $\F$ e assuma que $B_V$ e $B_W$ são formas $\sigma$-hermitianas não degeneradas sobre $V$ e $W$, respetivamente. Assuma que $f:V\to W$ é uma transformação linear. Uma aplicação $g:W\to F$ é chamada <b>adjunta</b> de $f$ se
+$$
+B_W(f(v),w)=B_V(v,g(w))\quad\mbox{para todo}\quad v\in V,\ w\in W.
+$$
+:::
+
+
+:::{#lem-}
+Se existir a adjunta $g$ de $f$ na definição anterior, então ele é linear e é única.
+:::
+
+
+:::{.proof}
+Para provar que $g$ é linear, calculemos para todo $v,w_1,w_2\in V$ e $\alpha_1,\alpha_2\in \F$ que
+\begin{align*}
+B_V(v,\alpha_1g(w_1)+\alpha_2g(w_2))&=
+\alpha_1^\sigma B_V(v,g(w_1))+\alpha_2^\sigma B_V(v,g(w_2))\\&=\alpha_1^\sigma B_W(f(v),w_1)+\alpha_2^\sigma B_W(f(v),w_2)\\&=B_W(f(v),\alpha_1 w_1+\alpha_2 w_2)
+\\&=B_V(v,g(\alpha_1 w_1+\alpha_2 w_2)).
+\end{align*}
+Isso mostra que $\alpha_1g(w_1)+\alpha_2g(w_2)-g(\alpha_1 w_1+\alpha_2 w_2)$ está contido no radical de $B_V$, ou seja $\alpha_1g(w_1)+\alpha_2g(w_2)-g(\alpha_1 w_1+\alpha_2 w_2)=0$. Portanto
+$$
+\alpha_1g(w_1)+\alpha_2g(w_2)=g(\alpha_1 w_1+\alpha_2 w_2)
+$$
+vale para todo $w_1,w_2\in V$ e $\alpha_1,\alpha_2\in \F$ que implica que $g$ é linear.
+
+Assuma que $g_1$ e $g_2$ são adjuntos de $f:V\to W$. Então temos para todo $v\in V$ e $w\in W$ que
+$$
+B_V(v,g_1(w))=B_W(f(v),g)=B_V(v,g_2(w)).
+$$
+Ou seja $g_1(w)-g_2(w)\in\mbox{Rad}(B_V)$ e $g_1=g_2$.
+
+:::
+
+
+:::{#thm-}
+Sejam $V$, $W$, $B_V$ e $B_W$ como no lema anterior e $f:V\to W$ uma aplicação linear. Se $\dim V$ e $\dim W$ são finitas, existe a adjunta $f^*:W\to V$ e ela é única.
+:::
+
+
+:::{.proof}
+Seja $w\in W$ e defina a funcional $\psi_w\in V^*$ com a regra
+$$
+\psi_w(v)=B_W(f(v),w).
+$$
+É fácil verificar que $\psi_w\in V^*$. Pelo lema acima, existe único $w^*\in V$ tal que $\psi_w=\varphi_{w^*}$. Defina $f^*(w)=w^*=B_V(-,w^*)$. Assim temos que
+$$
+B_W(f(v),w)=\psi_w(v)=\varphi_{w^*}(v)=B_V(v,w^*)=B_V(v,f^*(w)).
+$$
+A unicidade segue do lema anterior.
+:::
+
+
+:::{#lem-}
+Usando a notação do teorema anterior, assuma que $X_V$ e $X_W$ são bases de $V$ e $W$, respetivamente. Sejam $A$ e $A^*$ as matrizes de $f$ e $f^*$ nas bases $X_V$ e $X_W$, respetivamente e sejam $G_V$ e $G_W$ as matrizes de Gram das formas $B_V$ e $B_W$. Temos que
+$$
+A^*=G_V^{-1\sigma}A^{t\sigma}G_W^\sigma.
+$$
+Em particular, se $X_V$ e $X_W$ são bases ortonormais, então
+$$
+A^*=A^{t\sigma}.
+$$
+:::
+
+
+:::{.proof}
+Temos pela definição do operador adjunto que
+$$
+B_W(f(v),w)=B_V(v,f^*(w))\quad\mbox{para todo}\quad v\in V\mbox{ e }w\in W.
+$$
+Escrevendo a igualdade acima com matrizes, temos que
+$$
+(A[v]_{X_V})^tG_W [w]_{X_W}^\sigma=[v]_{X_V}^tG_V (A^*[w]_{X_W})^\sigma.
+$$
+Daí
+$$
+[v]_{X_V}^t A^t G_W [w]_{X_W}^\sigma=[v]_{X_V}^tG_V A^{*\sigma}[w]_{X_W}^\sigma.
+$$
+Como a igualdade vale para todo $[v]_{X_V}\in\F^m$ e $[w]_{X_W}\in\F^n$, temos que
+$$
+A^t G_W=G_V A^{*\sigma}.
+$$
+Usando que $G_V$ é invertível, temos que
+$$
+A^*=A^{t\sigma}.
+$$
+:::
+
+
+:::{#lem-}
+Assuma que $f,g: V\to W$ e $\alpha_1,\alpha_2\in \F$. Assuma que existem $f^*$ e $g^*$. Então temos que
+
+
+ -  $(\alpha_1f+\alpha_2g)^*=\alpha_1^\sigma f^*+\alpha_2^\sigma g^*$;
+ -  $f^{**}=f$;
+ -  Se $f$ é invertível e existe $(f^{-1})^*$, então $(f^{-1})^*=(f^*)^{-1}$
+ -  se $f,g:V\to V$, então $(f\circ g)^*=g^*\circ f^*$
+
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#lem-}
+Sejam $V$ e $B_V$ como nos resultados anteriores e seja $f:V\to V$ um operador que possui adjunto $f^*$. Assuma que $W\leq V$ é $f$-invariante. Então $W^\perp$ é $f^*$-invariante.
+:::
+
+
+:::{.proof}
+Assuma que $w\in W^\perp$. Precisamos provar que $f^*(w)\perp z$ para todo $z \in W$; ou seja $B_V(z,f^*(w))=0$ para todo $z\in W$.  Usando que $f(z)\in W$, temos que $f(z)\perp w$ e calculemos que
+$$
+B_V(z,f^*(w))=B_V(f(z),w)=0.
+$$
+:::

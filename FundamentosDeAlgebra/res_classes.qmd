@@ -1,7 +1,7 @@
 
 
 ---
-title: "Classes residuais"
+title: "Classes residuais e ℤ<sub>n</sub>"
 number-sections: true
 lang: pt-BR
 ---
@@ -53,3 +53,143 @@ Há $n$ classes residuais módulo $n$; nomeadamenta, $\bar 0,\bar 1,\ldots,\over
 SSe $a\in\Z$, então escreva $a=qn+r$ como no enunciado do corolário. O Lema anterior implica que $\bar a=\bar r$. Por outro lado, as classes $\bar 0,\bar 1,\ldots,\overline{n-1}$ são distintas, pois se $0\leq a < b\leq n-1$, então $a\not\equiv b\pmod n$, e $\bar a \neq \bar b$ pelo lema anterior. As classes $\bar 0,\bar 1,\ldots,\overline{n-1}$ são ainda disjuntas dois a dois e assim todo número $a\in\Z$ pertence a exatamente uma destas classes
 :::
 
+## ℤ<sub>n</sub>
+
+Seja $n\in\N$ um número natural e seja $a\in\Z$. Nós definimos em uma aula anterior a classe residual (ou a classe de congruência de $a$) módulo $n$ como
+$$
+\overline a=\{a+kn\mid k\in\Z\}=\{b\in\Z\mid b\equiv a\pmod n\}.
+$$
+Provamos ainda que $\overline a=\overline b$ se e somente se $a\equiv b\pmod n$. Assim há exatamente $n$ classes residuais módulo $n$, nomeadamente,
+$$
+\overline 0, \overline 1,\ldots,\overline{n-1}.
+$$
+Denotamos por $\Z_n$ o conjunto das classes residuais módolo $n$:
+$$
+\Z_n=\{\overline 0,\overline 1,\ldots,\overline{n-1}\}.
+$$
+Portanto $\Z_n$ é um conjunto finito com $n$ elementos; ou seja $|\Z_n|=n$. Por exemplo,
+$$
+\Z_5=\{\overline 0, \overline 1,\overline 2,\overline 3,\overline 4\}.
+$$
+Nós podemos definir duas operações, uma soma e uma multiplicação, no conjunto das classes residuais pondo
+\begin{align*}
+\overline a+\overline b&=\overline{a+b};\\
+\overline a\cdot\overline b&=\overline{a\cdot b}
+\end{align*}
+para todo $\overline a,\overline b\in\Z_n$.
+
+:::{#exm-}
+Por exemplo, se $\bar 2,\bar 4\in \Z_6$, então\begin{align*}\bar 2+\bar 4&=\overline{2+4}=\bar 6=\bar 0;\\\bar 2\cdot \bar 4&=\overline{2\cdot 4}=\bar 8=\bar 2.\end{align*}
+:::
+
+
+:::{#lem-}
+As operações $+$ e $\cdot$ são bem definidas no conjunto $\Z_n$. Além disso estas operações satisfazem as seguintes propriedades para todo $\overline a,\overline b,\overline c\in\Z_n$:
+
+
+- $(\overline a+\overline b)+\overline c=\overline a+(\overline b+\overline c)$ (associatividade da adição);
+- $\overline a+\overline b=\overline b+\overline a$ (comutatividade da adição);
+- $\overline a+\overline 0=\overline a$ (elemento neutro para a adição);
+- $\overline a+(\overline{-a})=\overline 0$ (elemento simétrico para a adição);
+- $(\overline a\overline b)\overline c=\overline a(\overline b\overline c)$ (associatividade da multiplicação);
+- $\overline a\overline b=\overline b\overline a$ (comutatividade da multipliação);
+- $\overline a\overline 1=\overline a$ (elemento neutro da multiplicação);
+- $\overline a(\overline b+\overline c)=\overline a\overline b+\overline a\overline c$ (distributividade).
+
+:::
+
+
+:::{.proof}
+O fato que a operações $+$ e $\cdot$ são bem definidas é equivalente ao seginte fato. Se $a_1,a_2,b_1,b_2\in\Z$ tais que $\overline{a_1}=\overline{a_2}$ e
+$\overline{b_1}=\overline{b_2}$, então
+\begin{align*}
+\overline{a_1}+\overline{b_1}&=\overline{a_2}+\overline{b_2}\\
+\overline{a_1}\overline{b_1}&=\overline{a_2}\overline{b_2}\\
+\end{align*}
+As equações acima são equivalentes às congruências
+\begin{align*}
+a_1+b_1&\equiv a_2+b_2\pmod n\\
+a_1b_1&=a_2b_2\pmod n\\
+\end{align*}
+Mas estas congruências são verdadeiras por um resultado que provamos na aula sobre congruẽncias.
+As propriedades listadas são mais ou menos óbvias. Vamos provar a distributividade. Obtemos usando a definição das operações que
+$$
+\overline a(\overline b+\overline c)=\overline a\overline{b+c}=\overline{a(b+c)}=\overline{ab+ac}=\overline{ab}+\overline{ac}=\overline a\overline b+\overline a\overline c.
+$$
+:::
+
+As seguintes tabelas contém as tabelas da adição e multiplicação em $\Z_5$.
+
+:::{#tbl-}
+
+| $+$      | $\bar 0$ | $\bar 1$ | $\bar 2$ | $\bar 3$ | $\bar 4$ |
+|----------|----------|----------|----------|----------|----------|
+| $\bar 0$ | $\bar 0$ | $\bar 1$ | $\bar 2$ | $\bar 3$ | $\bar 4$ |
+| $\bar 1$ | $\bar 1$ | $\bar 2$ | $\bar 3$ | $\bar 4$ | $\bar 0$ |
+| $\bar 2$ | $\bar 2$ | $\bar 3$ | $\bar 4$ | $\bar 0$ | $\bar 1$ |
+| $\bar 3$ | $\bar 3$ | $\bar 4$ | $\bar 0$ | $\bar 1$ | $\bar 2$ |
+| $\bar 4$ | $\bar 4$ | $\bar 0$ | $\bar 1$ | $\bar 2$ | $\bar 3$ |
+
+: Tabela da adição em $\Z_5$.
+:::
+
+:::{#tbl-}
+
+| $\cdot$  | $\bar 0$ | $\bar 1$ | $\bar 2$ | $\bar 3$ | $\bar 4$ | 
+|----------|----------|----------|----------|----------|----------|
+| $\bar 0$ | $\bar 0$ | $\bar 0$ | $\bar 0$ | $\bar 0$ | $\bar 0$ | 
+| $\bar 1$ | $\bar 0$ | $\bar 1$ | $\bar 2$ | $\bar 3$ | $\bar 4$ | 
+| $\bar 2$ | $\bar 0$ | $\bar 2$ | $\bar 4$ | $\bar 1$ | $\bar 3$ | 
+| $\bar 3$ | $\bar 0$ | $\bar 3$ | $\bar 1$ | $\bar 4$ | $\bar 2$ | 
+| $\bar 4$ | $\bar 0$ | $\bar 4$ | $\bar 3$ | $\bar 2$ | $\bar 1$ |
+
+: Tabela da multiplicação em $\Z_5$
+:::
+
+:::{#def-}
+Dizemos que um elemento $\overline a\in\Z_n$ é invertível se existe $\overline b\in\Z_n$ tal que $\overline a\overline b=\overline 1$. Neste caso $\overline b$ é dito inverso de $\overline a$ e escrevemos $\overline b=\overline a^{-1}$
+:::
+
+
+:::{#exm-}
+Por exemplo $\bar 3\in\Z_{10}$ é invertível, pois $\bar 3\cdot \bar 7=\bar 1$. Logo $\bar 3^{-1}=\bar 7$. Por outro lado, $\bar 2\in\Z_{10}$ não é invertível
+:::
+
+Pode-se observar para $n\geq 2$ que os elementos $\bar 1,\overline{-1}=\overline{n-1}$ 
+são sempre invertíveis, enquanto $\bar 0$ nunca é invertível. Denotamos por $\Z_n^*$ o conjunto de classes invertíveis em $\Z_n$. Por exemplo, $\Z_6^*=\{\bar 1,\bar 5\}$.
+
+:::{#lem-unique-inverse-zn}
+Um elemento $\overline a\in\Z_n$ é invertível se e somente se $\mdc an=1$. Neste caso, o inverso de $\overline a$ é único e ele pode ser encontrado usando o Algoritmo Estendido de Euclides
+:::
+
+
+:::{.proof}
+Um elemento $\overline a$ é invertível se e somente se existir $\overline b\in\Z_n$ tal que $\overline a\overline b=\overline 1$; ou seja, $ab\equiv 1\pmod n$. Isso acontece se e somente se $ab-1=kn$ com algum $k\in\Z$; ou seja, a equação diofantina 
+$$
+ab-kn=1
+$$
+possui solução $(b,k)$ em $\Z$. Mas nós já vimos que esta equação tem soluções inteiras se e somente se $\mdc an=1$ e que neste caso uma solução pode ser encontrada usando o Algoritmo Estendido de Euclides. Se $(b,k)$ é uma solução, então 
+$$
+ab=1+kn\equiv 1\pmod n
+$$
+e assim $\bar a\cdot\bar b=\bar 1$ e $\bar b=\bar a^{-1}$.
+A unicidade do inverso também segue de um resultado anterior que afirmou que o conjunto dos inverso de $a$ módulo $n$ formam uma classe residual módulo $n$. Aqui nós vamos fazer uma outra demonstração que usa apenas as propriedades que foram listadas no lema anterior. Assuma que $\overline b,\overline c\in\Z_n$ são inversos de $\overline a$; ou seja, $\overline a\overline b=\overline a\overline c=\overline 1$. Portanto
+$$
+\overline b=\overline b\overline 1=\overline b(\overline a\overline c)=(\overline b\overline a)\overline c=\overline 1\overline c=\overline c.
+$$
+Daqui obtemos que $\overline b=\overline c$ como desejado.
+:::
+
+O conjunto das classes invertíveis de $\Z_n$ é denotado por $\Z_n^*$. 
+
+:::{#cor-}
+Tem-se que $|\Z_n^*|=\varphi(n)$ (onde $\varphi$ é a função de Euler). Além disso, todo elemento diferente de $\overline 0$ é invertível em $\Z_n$ se e somente se $n$ é primo
+:::
+
+O corolário anterior implica que, se $p$ for primo, a estrutura $\Z_p$ comporta-se na mesma maneira como $\Q$, $\R$, ou $\C$ no sentido que pode fazer as operações $+$ e $\cdot$ e pode também dividir por qualquer elemento não nulo. Nós dizemos que a estrutura $\Z_p$ é um corpo finito. Corpos finitos têm muitas aplicações na matemática, mas também fora da matemática tal como na engenharia, física, química, etc.
+
+:::{#def-}
+Um inteiro $a\in\Z$ é dito invertível módulo $n$ (com $n\in\N$) se existir $b\in\Z$ tal que $ab\equiv 1\pmod n$. Neste caso, $b$ é dito *inverso modular* de $a$ módulo $n$. 
+:::
+
+Note que $a\in\Z$ é invertível módulo $n$ se e somente se $\bar a\in\Z_n$ é invertível que ocorre se e somente se $\mdc an=1$. Além disso, $\bar b\in\Z_n$ é inverso de $\bar a$ se e somente se $b\in\Z$ é inverso modular de $a$ módulo $n$. Um inverso modular de $a$ (caso existir) pode ser encontrado usando o Algoritmo Estendido de Euclides. O inverso modular não é único, mas os inversos modulares de $a$ (caso existirem) formam uma classe residual módulo $n$.

@@ -1,0 +1,313 @@
+--- 
+title: "Formas sesquilineares"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#def-}
+Se $\F$ é um corpo, uma aplicação bijetiva $\sigma:\F\to \F$, $a\mapsto a^\sigma$, chama-se <b>automorfismo</b>, se
+
+
+ -  $(a+b)^\sigma=a^\sigma+b^\sigma$;
+ -  $(ab)^\sigma=a^\sigma b^\sigma$.
+
+:::
+
+
+:::{#exm-}
+1. A bijeção $\mbox{id}_\F$ é automorfismo para todo corpo $\F$. Este automorfismo chama-se <b>automorfismo trivial</b>. Os corpos $\Q$, $\Z_p$ não têm automorfismos não triviais (consegue demonstrar?).
+
+2. Se $\F=\C$, então $\sigma:\C\to \C$, $z^\sigma=\bar z$ (conjugado complexo) é um automorfismo de $\C$.
+
+3. Se $\F$ é um corpo de caraterística $p$ (primo), então a aplicação $\varphi:a\mapsto a^p$ é injetiva e satisfaz as duas propriedades na definição de automorfismo. Para um corpo arbitrário, $\varphi$ não precisa ser sobrejetiva, mas se $\F$ é finito, então $\varphi$, sendo injetiva, será obrigatoriamente sobrejetiva e é um automorfismo. O automorfismo $\varphi$ de um corpo finito $\F$ é chamado de <b>automorfismo de Frobenius</b>.
+
+4. É fácil provar que a composição de automorfismos é automorfismo. Em particular, se $\F$ é um corpo finito de caraterística $p$, então
+$$
+\varphi^k:\F\to \F, \quad a\mapsto a^{p^k}
+$$
+é um automorfismo de $\F$. Vocês vão aprender na disciplina Grupos e Corpos que todos os automorfismos de corpos finitos têm esta forma.
+
+5. Se
+$$
+\F=\{a+b\sqrt 2\mid a,b \in \Q\},
+$$
+então $a+b\sqrt 2\mapsto a-b\sqrt 2$ é um automorfismo.
+
+:::
+
+
+:::{#def-}
+Seja $V$ um $\F$-espaço vetorial e $\sigma:\F\to\F$ um automorfismo. Uma aplicação $B:V\times V\to \F$ chama-se <b>forma $\sigma$-sesquilinear</b> se
+
+
+ -  $B(\alpha u+\beta v,w)=\alpha B(u,w)+\beta B(v,w)$.
+ -  $B(u,\alpha v+\beta w)=\alpha^\sigma B(u,v)+ \beta^\sigma B(u,w)$.
+
+Ou seja, uma forma sesquilinear, é uma forma de duas variáveis que é linear na primeira variável e $\sigma$-semilinear na segunda.
+
+:::
+
+
+:::{#def-}
+Dada uma forma $B:V\times V\to \F$ sesquilinear, definimos os radicais da forma
+$$
+\mbox{Rad}_L(B)=\{v\in V\mid B(v,w)=0\mbox{ para todo }w\in V\}
+$$
+e
+$$
+\mbox{Rad}_R(B)=\{w\in V\mid B(v,w)=0\mbox{ para todo }v\in V\}.
+$$
+O $\mbox{Rad}_L(B)$ chama-se <b>radical à esquerda</b>, enquanto $\mbox{Rad}_R(B)$ chama-se <b>radical à direita</b>.
+:::
+
+
+:::{#def-}
+Assuma que $B:V\times V\to \F$ é uma forma sesquilinear sobre um espaço $V$ de dimensão $n$, finita. Seja $X=\{b_1,\ldots,b_n\}$ uma base de $V$. Definimos a <b>matriz de Gram</b> de $B$ como a matriz $G_X(B)=(B(b_i,b_j))_{i,j}$.
+:::
+
+
+:::{#lem-}
+Sejam $V$ e $B$ como na definição anterior, assuma que $u,v\in V$ e denote por $[u]_X$ e $[v]_X$ os vetores colunas das coordenadas de $u$ e $v$ na base $X$, respetivamente. Se $(\alpha_1,\ldots,\alpha_n)\in\F^n$, então denote
+$$
+(\alpha_1,\ldots,\alpha_n)^\sigma=(\alpha_1^\sigma,\ldots,\alpha_n^\sigma).
+$$
+Temos que
+$$
+B(u,v)=([u]_X)^t G_X(B) ([v]_X)^\sigma.
+$$
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#exr-}
+Demonstre que se $\dim V$ é finita, então $\dim \mbox{Rad}_L=\dim \mbox{Rad}_R$. (Dica: Use o Lema anterior para obter sistemas de equações lineares para caraterizar $\mbox{Rad}_L$ e $\mbox{Rad}_R$ e mostre que os espaços de soluções têm a mesma dimensão.)
+:::
+
+
+:::{#exr-}
+Seja $A=(a_{i,j})\in M_{n\times n}(\F)$ e denote por $A^\sigma$ a matriz $(a_{i,j}^\sigma)$. Demonstre que
+$$
+(A+B)^\sigma =A^\sigma+B^\sigma\quad\mbox{e}\quad (AB)^\sigma=A^\sigma B^\sigma.
+$$
+:::
+
+
+:::{#lem-}
+Assuma que $V$ tem dimensão finita e sejam $X$ e $Y$ bases de $V$. Então
+$$
+G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
+$$
+onde $[\mbox{id}^Y_X]^\sigma$ denota a matriz que obtemos de $[\mbox{id}^Y_X]$ aplicando $\sigma$ em todas as suas entradas.
+:::
+
+
+:::{.proof}
+Sejam $v,w\in V$. Vamos calcular que
+\begin{align*}
+&([v]_Y)^t([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma ([w]_Y)^\sigma\\
+&=([\mbox{id}]^Y_X [v]_Y)^tG_X(B)([\mbox{id}^Y_X][w]_Y)^\sigma\\
+&=([v]_X)^tG_X(B)([w]_X)^\sigma =B(v,w).
+\end{align*}
+Isso implica que $G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma$.
+:::
+
+
+:::{#def-}
+Uma forma $\sigma$-sesquilinear $B$ chama-se <b>reflexiva</b>, se $B(u,v)=0$ implica que $B(v,u)=0$.  Se $B$ é uma forma refexiva, então $\mbox{Rad}_L(B)=\mbox{Rad}_R(B)$ e este espaço é chamado de <b>radical</b> de $B$ e será denotado por $\mbox{Rad}(B)$. A forma $B$ é dita <b>não degenerada</b> se $\mbox{Rad}(B)=0$.
+:::
+
+
+:::{#def-}
+Seja $B$ uma forma $\sigma$-sesquilinear.
+
+
+ -  $B$ é chamada <b>$\sigma$-Hermitiana</b> se $B(u,v)=B(v,u)^\sigma$ para todo $u,v\in V$.
+ -  $B$ é chamada <b>alternada</b> se $B(u,u)=0$ para todo $u\in U$.
+
+:::
+
+
+:::{#lem-}
+As seguintes são verdadeiras para uma forma $\sigma$-sesquilinear não trivial:
+
+
+ -  Se $B$ é $\sigma$-Hermitiana, então $\sigma^2=\mbox{id}_\F$.
+ -  Se $B$ é alternada, então $B(u,v)=-B(v,u)$ para todo $u,v\in V$.
+ -  Se $B$ é alternada, então $\sigma=\mbox{id}_\F$.
+ -  Se $\mbox{car}(\F)\neq 2$, e $B(u,v)=-B(v,u)$ para todo $u,v\in V$, então $B$ é alternada.
+
+:::
+
+
+:::{.proof}
+1. Seja $\alpha\in \F$ tal que $\alpha=B(u,v)$ (tais $u,v$ existem pois $B$ é não trivial). Então
+$$
+\alpha=B(u,v)=B(v,u)^\sigma=B(u,v)^{\sigma^2}=\alpha^{\sigma^2}.
+$$
+Logo $\alpha^{\sigma^2}=\alpha$ e $\sigma^2=\mbox{id}_\F$.
+
+2. Com $u,v\in V$, calculemos que
+\begin{align*}
+0&=B(u+v,u+v)=B(u,u)+B(u,v)+B(v,u)+B(v,v)\\&=B(u,v)+B(v,u).
+\end{align*}
+Logo $B(u,v)=-B(v,u)$.
+
+3. Escolhe $u,v\in V$ tal que $B(u,v)=-B(v,u)=1$ (é possível trocando $u$ por um múltiplo escalar) e seja $\alpha\in \F$. Agora
+$$
+\alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
+$$
+Ou seja $\alpha^\sigma=\alpha$ para todo $\alpha\in\F$ e $\sigma=\mbox{id}_\F$.
+
+4. Assuma que $B(u,v)=-B(v,u)$ para todo $u,v$. Então $B(u,u)=-B(u,u)$ ou seja $2B(u,u)=0$ para todo $u\in V$. Se a caraterística do corpo é diferente de $2$, isso implica que $B(u,u)=0$ para todo $u\in V$.
+
+:::
+
+
+:::{#def-}
+Uma forma $\sigma$-Hermitiana é chamada <b>simétrica</b> se $\sigma=\mbox{id}_\F$. Se $B$ é simétrica, então $B(u,v)=B(v,u)$ para todo $u,v\in V$.
+:::
+
+
+:::{#exr-}
+Seja $B$ uma forma $\sigma$-Hermitiana (incluindo simétrica) ou alternada sobre $V$ de dimensão finita. Seja $G=G_X(B)$ a matriz de Gram de $B$ em uma base $X$ de $V$. Mostre que
+
+
+ -  $B$ é simétrica se e somente se $G^t=G$;
+ -  $B$ é alternada se e somente se $G^t=-G$;
+ -  $B$ é $\sigma$-Hermitiana se e somente se $G^t=G^\sigma$.
+
+:::
+
+
+:::{#thm-}
+Seja $B$ uma forma $\sigma$-sesquilinear reflexiva com $\dim (V/\mbox{Rad}(B))\geq 3$. Então
+
+
+ -  $B$ é alternada; ou
+ -  $B$ é simétrica; ou
+ -  $B$ é múltiplo escalar de uma forma $\sigma$-Hermitiana com $\sigma\neq \sigma^2=\mbox{id}_\F$
+
+:::
+
+
+:::{.proof}
+Nós não demonstramos este teorema. A leitora interessada na demonstração pode consultar <a href="https://nickpgill.github.io/files/2014/06/Lecture13.pdf">as notas de Nick Gill</a>.
+:::
+
+
+:::{#def-}
+Se $V$ é um espaço com forma sesquilinear reflexiva $B$, então $u,v\in V$ são ditos <b>ortogonais</b> se $B(u,v)=0$. Escrevemos neste caso que $u\perp v$.
+:::
+
+
+:::{#exm-}
+Se $B$ é alternada e $v\in V$, então $v\perp v$.
+:::
+
+
+:::{#exr-}
+Seja $\sigma:\F\to\F$ um automorfismo. Denote por $\mbox{Fix}(\F)=\{a\in\F\mid a^\sigma=a\}$. Mostre que $\mbox{Fix}(\sigma)$ é um corpo.
+:::
+
+
+:::{#def-}
+Seja $B:V\times V\to \F$ uma forma $\sigma$-Hermitiana (incluindo formas simétricas). Defina $Q:V\to \F$ como $Q(v)=B(v,v)$. Então $Q$ é chamada de <b>forma quadrática</b> associada com $B$.
+:::
+
+
+:::{#lem-}
+Usando a notação da definição anterior, as seguintes afirmações são válidas para todo $u,v\in V$ e $\alpha\in\F$:
+
+
+ -   $Q(v)\in\mbox{Fix}(\sigma)$;
+ -   $Q(\alpha v)=\alpha\alpha^\sigma Q(v)=\alpha^{\sigma+1}Q(v)$;
+ -   se $B$ é simétrica, então $Q(\alpha v)=\alpha^2 Q(v)$;
+ -   $Q(u+v)-Q(u)-Q(v)=B(u,v)+B(v,u)=B(u,v)+B(u,v)^\sigma$;
+ -   se $u\perp v$, então $Q(u+v)=Q(u)+Q(v)$ (Teorema de Pitágoras);
+ -   $Q(u+v)+Q(u-v)=2Q(u)+2Q(v)$ (Regra do Paralelogramo);
+ -   se $B$ for simétrica, então $Q(u+v)-Q(u)-Q(v)=2B(u,v)$.
+
+Em particular, se $B$ for simétrica e $\mbox{car}(\F)\neq 2$, então
+$$
+B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
+$$
+e $B$ está determinada por $Q$.
+
+:::
+
+
+:::{.proof}
+Simples, só aplicar a definição de $Q$.
+:::
+
+
+:::{#def-}
+Seja $V$ com forma $\sigma$-hermitiana $B$. Um vetor $v\in V$ é dito <b>isotrópico</b> se $Q(v)=B(v,v)=0$.
+:::
+
+
+:::{#exm-}
+Se $V=\R^n$ ou $\C^n$ e $B$ é o produto interno usual, então $0$ é o único vetor isotrôpico.
+:::
+
+
+:::{#exr-}
+Seja $V$ um espaço de dimensão maior ou igual a $2$ sobre $\C$ e seja $B$ uma forma simétrica em $V$. Mostre que $V$ possui um vetor não nulo isotrópico. Este exercício mostra que é mesmo necessário usar o conjugado complexo na segunda variável na definição do produto interno para $\C$-espaços. Usando formas simétricas, não é possível obter um produto interno que resulta em uma métrica.
+:::
+
+
+:::{#exr-}
+Seja $B$ uma forma sesquilinear reflexiva sobre um espaço $V$ de dimensão finita. Assuma que $G$ é a matriz da forma em uma base de $V$. Mostre que $\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)$. Em particular, $B$ é não degenerada se e somente se $G$ é invertível.
+:::
+
+
+:::{#def-}
+Seja $V$ um espaço com forma sesquilinear reflexiva $B$ e $U\leq V$. Definimos o <b>espaço ortogonal</b> $U^\perp$ de $U$ como
+$$
+U^\perp=\{v\in V\mid B(v,u)=0\mbox{ para todo }u\in U\}.
+$$
+:::
+
+
+:::{#lem-}
+As seguintes afirmações são válidas para o espaço ortogonal em relação a uma forma $\sigma$-sesquilinear reflexiva:
+
+
+ -  $U^\perp\leq V$;
+ -  Se $U\leq W$, então $W^\perp\leq U^\perp$;
+ -  $\mbox{Rad}(V)=V^\perp$ e $V^\perp\leq U^\perp$ para todo $U\leq V$;
+ -  Se $B$ é não degenerada e $\dim V$ é finita, então $\dim U^\perp+\dim U=\dim V$.
+
+:::
+
+
+:::{.proof}
+As afirmações 1., 2., 3. são simples. Vamos provar apenas 4. Assuma que $\dim V=n$, que $X=\{b_1,\ldots,b_n\}$ é uma base de $V$ tal que $\{b_1,\ldots,b_k\}$ é base de $U$, e seja $G=G_X(B)$ a matriz de $B$ na base $X$. Temos por resultado anterior que um vetor $v$ com $[v]_X=(\alpha_1,\ldots,\alpha_n)^t$ pertençe a $U^\perp$ se e somente se
+$$
+(\alpha_1,\ldots,\alpha_n)G [w]_B^\sigma =0\quad \mbox{para todo}\quad w\in U
+$$
+que vale se e somente se
+$$
+(\alpha_1,\ldots,\alpha_n)G [b_i]_B^\sigma =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}.
+$$
+A equação anterior é equivalente ao sistema de equações
+$$
+(\alpha_1,\ldots,\alpha_n)G e_i =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}
+$$
+onde $e_1,\ldots,e_n$ é a base canônica de $\F^n$. Mas o sistema anterior é um sistema linear homogêneo com incôgnitas $\alpha_1,\ldots,\alpha_n$ e a matriz desta sistema está formada pelas primeiras $k$ linhas de $G^t$. Como $B$ é não degenerada, $G^t$ tem posto $k$ e o espaço de soluções tem dimensão $n-k$.
+:::
+
+Na situação do item 4. do resultado anterior, se $U\cap U^\perp=0$, então $V=U\oplus U^\perp$ e $U^\perp$ é chamado de <b>complemento ortogonal</b> de $U$. Neste caso, escrevemos que $V=U\perp U^\perp$ para indicar que os dois espaços na decomposição são ortogonais.
+
+:::{#exm-}
+Considere $V=\C^2$ com a forma bilinear simétrica $B(v,w)=v_1w_1+v_2w_2$ para $v=(v_1,v_2)$ e $w=(w_1,w_2)$ pertencentes a $\C^2$. Observe que não aplicamos o conjugado complexo na segunda variável! Note que esta forma está não degenerada, pois na base canônica a sua matriz é a matriz identidade. Considere a base $\{(1,i),(1,-i)\}$ de $\C^2$. Nesta base, a matriz da forma é
+$$
+\begin{pmatrix} 0 & 2 \\ 2 & 0\end{pmatrix}
+$$
+Se $U=\langle (1,i)\rangle$, então $U^\perp =U$ e $\C^2\neq U\oplus U^\perp$. Ou seja, o espaço ortogonal $U^\perp$ não é complemento ortogonal de $U$.
+:::
+

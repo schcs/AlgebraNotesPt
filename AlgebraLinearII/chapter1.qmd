@@ -1,9 +1,11 @@
----
-title: "Distâncias"
+
+--- number-sections: true
+lang: pt-BR
+--- 
+--- title: "Distâncias"
 number-sections: true
 lang: pt-BR
----
-
+--- 
 PÁGINA EXPERIMENTAL!!!
 
 ## Distância entre duas retas. 

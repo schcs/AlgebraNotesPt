@@ -1,10 +1,12 @@
 
 
 ---
-title: "Equações diofantinas lineares"
+title: "Equações diofantinas lineares e o Teorema Chinês dos restos"
 number-sections: true
 lang: pt-BR
 ---
+
+## Equações diofantinas lineares
 
 Uma equação linear diofantina em duas variáveis tem a seguinte forma geral:
 $$
@@ -239,3 +241,33 @@ Podemos também gerar as soluções da equação para os valores $k\in\{-5,\ldot
 ```
 
 Cada par da lista em cima é uma solução de equação diofantina $13x + 9y = 1$.
+
+
+## O Teorema Chinês dos Restos (Versão 1.0)
+
+:::{#thm-}
+Sejam $m,n\in\N$ primos entre si e sejam $r_m\in\{0,\ldots,m-1\}$ e $r_n\in\{0,\ldots,n-1\}$. Existe um único inteiro $a$ entre $0$ e $mn-1$ tal que o resto de $a$ quando dividido por $m$ é $r_m$ e o resto de $a$ quando dividido por $n$ é $r_n$, respetivamente
+:::
+
+
+:::{.proof}
+Seja $a\in\{0,\ldots,mn-1\}$ e escreva $a=q_mm+r_m=q_nn+r_n$ onde $r_m\in\{0,\ldots,m-1\}$ e $r_n=\{0,\ldots,n-1\}$. Defina a aplicação $\psi$ na seguinte forma:
+\begin{align*}
+\psi&:\{0,\ldots,mn-1\}\to \{0,\ldots,m-1\}\times\{0,\ldots,n-1\}\\
+a&\mapsto(r_m,r_n).
+\end{align*}
+A afirmação do teorema é equivalente à afirmação que $\psi$ é bijetiva e é isso que nos vamos provar. Como o domínio e o codomínio de $\psi$ têm a mesma cardinalidade, precisamos provar apenas que $\psi$ é injetiva. Assuma que $a_1,a_2\in\{0,\ldots,mn-1\}$ tais que $a_1\leq a_2$ e
+$$
+\psi(a_1)=\psi(a_2)=(r_m,r_n).
+$$
+Isso implica que
+$$
+a_1=q_1m+r_m=q_2n+r_n\quad \mbox{e}\quad a_2=q_3m+r_m=q_4n+r_n
+$$
+com alguns $q_1,q_2,q_3,q_4\in\Z$. Daqui obtemos que
+$$
+a_2-a_1=(q_3-q_1)m=(q_4-q_2)n
+$$
+e $n\mid a_2-a_1$ e $m\mid a_2-a_1$. Lembrando que $\mdc mn=1$, isso implica que $mn\mid a_2-a_1$. Mas $0\leq a_2-a_1 < mn$, e assim $a_2-a_1=0$; ou seja $a_2=a_1$. Assim obtemos que nossa função $\psi:a\mapsto (r_m,r_n)$ é injetiva e precisa ser bijetiva
+:::
+

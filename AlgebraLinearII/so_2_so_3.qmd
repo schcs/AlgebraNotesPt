@@ -1,0 +1,162 @@
+--- 
+title: "SO<sub>2</sub> e SO<sub>3</sub>"
+number-sections: true
+lang: pt-BR
+--- 
+$\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\newcommand{\sen}{\textrm{sen}\,}$
+Vamos estudar com mais detalhes os grupos $SO_2$ e $SO_3$. Seja $f:\R^2\to \R^2$ uma transformação ortogonal e seja $A$ a sua matriz na base canônica. Assuma que
+$$
+A=\begin{pmatrix} a & b \\ c & d\end{pmatrix}
+$$
+Note que $a^2+c^2=1$ e assim, podemos assumir sem perder generalidade que $a=\cos\alpha$ e $b=\mbox{sen}\,\alpha$ com algum ângulo $\alpha$. Além disso, $(a,c)\perp (b,d)$ e temos que $(b,d)=(-\mbox{sen}\,\alpha,\cos\alpha)$ ou $(b,d)=(\mbox{sen}\,\alpha,-\cos\alpha)$. Obtivemos o seguinte resultado
+
+:::{#thm-}
+Seja $A\in O_2$ uma matriz ortogonal. Então, existe um ângulo $\alpha\in [0,2\pi)$ tal que
+$$
+A=\begin{pmatrix} \cos \alpha & -\mbox{sen}\,\alpha\\ \mbox{sen}\,\alpha & \cos \alpha\end{pmatrix}
+$$
+ou
+$$
+A=\begin{pmatrix} \cos \alpha & \mbox{sen}\,\alpha\\ \mbox{sen}\,\alpha & -\cos \alpha\end{pmatrix}.
+$$
+Além disso, $A\in SO_2$ se e somente se $A$ é como no primeiro caso.
+:::
+
+Note que a primeira matriz da teorema anterior é a matriz de uma rotação por $\alpha$ ao redor da origem no sentido antihorário. A segunda matriz é a matriz da reflexão em relação a um eixo que tem ângulo $\alpha/2$ com o eixo $x$.
+
+:::{#thm-}
+Uma transformação de $O_2$ ou é uma rotação ao redor da origem ou uma reflexão em relação a um eixo que passa pela origem. As transformações de $SO_2$ são precisamente as rotações ao redor da origem e as transformações com determinante $-1$ são as reflexões.
+:::
+
+
+:::{#exr-}
+Seja $R_\alpha:\R^2\to \R^2$ o elemento de $SO_2$ realizada pela rotação por ângulo $\alpha$. Seja
+$$
+z_\alpha=\cos\alpha+i\mbox{sen}=\exp(i\alpha),\alpha\in\R
+$$
+Denote por $S^1$ o círculo $S^1=\{z\in \C\mid |z|=1\}$ e defina $f:SO_2\to S^1$ pela regra $R_\alpha\mapsto z_\alpha$. Demonstre que
+
+
+ -  $f$ é uma bijeção;
+ -  $f(R_\alpha R_\beta)=f(R_\alpha)f(R_\beta)$ para todo $R_\alpha,R_\beta\in SO_2$.
+
+Na linguávem algébrica, podemos dizer que $SO_2$ e $S^1$ são grupos isomorfos.
+:::
+
+
+:::{#exr-}
+Sejam $\varphi$ e $\psi$ ângulos. Seja $\rot{\varphi}$ a rotação em $SO_2$ por $\alpha$ graus e $\refl{\psi}$ a reflexão pelo eixo que passa pela origem e tem ângulo $\psi$ com o eixo $x$. Demonstre que
+
+
+ -  $\rot\varphi\rot\psi=\rot{\varphi+\psi}$
+ -  $\refl\psi\refl\varphi=\rot{2(\psi-\varphi)}$
+ -  $\refl\psi \rot\varphi=\refl{\psi-\varphi/2}$;
+ -  $\rot\psi\refl\varphi=\refl{\varphi+\psi/2}$.
+
+Deduza que toda rotação de $SO_2$ pode ser escrita como uma composição de duas reflexões.
+:::
+
+Para estudar as rotações em $\R^3$, seja $k=(k_x,k_y,k_z)\in\R^3$ um vetor não nulo e defina a matiz
+$$
+K=\begin{pmatrix}0 & -k_z & k_y\\ k_z & 0 & -k_x \\ -k_y & k_x & 0\end{pmatrix}.
+$$
+
+:::{#lem-}
+Temos para um vetor coluna $v\in\R^3$ que $k\times v=Kv$ onde $k\times v$ denota o produto vetorial. Em particular, $Kk=0$
+:::
+
+
+:::{.proof}
+Temos que
+\begin{align*}
+k\times v&=\det\begin{pmatrix} i & j & k \\ k_x & k_y & k_z \\ v_x & v_y & v_z \end{pmatrix}
+=(k_yv_z-k_zv_y,-k_xv_z+k_zv_x,k_xv_y-k_yv_x)\\
+&=\begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0\end{pmatrix}\begin{pmatrix} v_x \\ v_y \\ v_z\end{pmatrix}.
+\end{align*}
+Ora, $Kk=k\times k=0$.
+:::
+
+
+:::{#thm-}
+(A fórmiula de Rodriguez)
+Seja $R:\R^3\to \R^3$ a rotação ao redor de um eixo $k=(k_x,k_y,k_z)$ unitário por ângulo $\vartheta$. A matriz de $R$ na base canônica é
+$$
+[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
+$$
+:::
+
+
+:::{.proof}
+Escolha uma base ortonormal de $\R^3$ na forma $k,u,v$ em tal forma que
+$k\times u = v$, $u\times v=k$ e $v\times k=u$ e seja $X=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2$. Como $Kk=K^2k=0$, temos que
+$$
+Xk=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)k=Ik=k.
+$$
+Agora
+\begin{align*}
+Xu&=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)u=u+(\sen\vartheta) v-(1-\cos\vartheta)u\\&=
+(\cos\vartheta) u +(\sen\vartheta) v
+\end{align*}
+e
+\begin{align*}
+Xv&=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)v=v-(\sen\vartheta)u-(1-\cos\vartheta)v\\&=
+-(\sen\vartheta)u +(\cos\vartheta)v
+\end{align*}
+Logo a matriz de $R$ na base $k,u,v$ é
+$$
+\begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\vartheta & -\sen\vartheta \\ 0 & \sen\vartheta & \cos\vartheta
+\end{pmatrix}.
+$$
+Portanto $[R]=X$.
+Para provar a segunda igualdade do lema, note que
+$\|k\|=k_x^2+k_y^2+k_z^2=1$ e assim
+\begin{align*}
+K^2&=\begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0\end{pmatrix}\cdot \begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0\end{pmatrix}\\
+&=\begin{pmatrix} -k_z^2-k_y^2 & k_yk_x & k_zk_x \\
+k_xk_y & -k_z^2-k_x^2 & k_zk_y\\
+k_xk_z & k_yk_z & -k_y^2-k_x^2
+\end{pmatrix}
+=k^t\cdot k-I
+\end{align*}
+Logo a matriz de $R$ é
+\begin{align*}
+X&=I+(\sen\vartheta) K+(1-\cos)K^2=I+(\sen\vartheta) K+(1-\cos\vartheta)(k^t\cdot k-I)
+\\&=
+(\cos\vartheta) I+(\sen\vartheta) K+(1-\cos\vartheta)k^t\cdot k\\
+\end{align*}
+:::
+
+
+:::{#exr-}
+Mostre para um vetor unitário $k=(k_x,k_y,k_z)$ que a matriz $K$ em cima satisfaz $K^3=-K$. Deduza que para $n\geq 1$ que
+\begin{align*}
+K^{2n-1}&=(-1)^{n-1} K\\
+K^{2n}&=(-1)^{n-1}K^2.
+\end{align*}
+:::
+
+
+:::{#thm-}
+A matriz $[R]$ no resultado anterior pode ser escrito como
+$$
+\exp(\vartheta K)=\sum_{n\geq 0}\frac{(\vartheta K)^n}{n!}.
+$$
+:::
+
+
+:::{.proof}
+Usando o exercício anterior, obtemos que
+\begin{align*}
+\exp(\vartheta K)&=
+\sum_{n\geq 0}\frac{(\vartheta K)^n}{n!}\\&=
+I+\sum_{n\geq 1}\frac{\vartheta^{2n-1}K^{2n-1}}{(2n-1)!}+\sum_{n\geq 1}\frac{\vartheta^{2n}K^{2n}}{(2n)!}\\
+&=
+I+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}K}{(2n-1)!}+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}K^2}{(2n)!}\\
+&=I+K\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}}{(2n-1)!}+K^2\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}}{(2n)!}
+\\
+&=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}
+\\
+&=I+K\sen\vartheta+K^2(1-\cos\vartheta).
+\end{align*}
+Ora o resultado segue do Teorema de Rodriguez.
+:::

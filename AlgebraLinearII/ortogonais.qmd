@@ -1,0 +1,129 @@
+--- 
+title: "Operadores ortogonais"
+number-sections: true
+lang: pt-BR
+--- 
+
+$\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}$
+Nesta página consideramos $\R^n$ com o produto interno usual $\langle-,-\rangle$.
+
+:::{#def-}
+A <b>distáncia</b> de $v,w\in \R^n$ está definida como
+$$
+d(v,w)=\|v-w\|=\langle v-w,v-w\rangle^{1/2}.
+$$
+Uma aplicação (não necessariamente linear) $f:\R^n\to \R^n$ é chamada de <b>isometria</b> se ela preserva distáncia. Ou seja,
+$$
+d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in \R^n.
+$$
+:::
+
+
+:::{#exm-}
+Se $v_0\in \R^n$, então $T_{v_0}:v\mapsto v+v_0$ é uma isometria. Este exemplo mostra que uma isometria não precisa ser linear. Em $\R^2$, a rotação $R_{\alpha}$ no redor da origem por $\alpha$ graus é também uma isometria. Note que $R_\alpha$ é linear.
+:::
+
+É imediato observar que uma isometria $f:\R^n\to \R^n$ é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas nós não provaremos esta afirmação por falta de tempo.
+
+:::{#thm-}
+As seguintes são equivalentes para uma transformação linear $f:\R^n\to \R^n$.
+
+
+ -  $f$ preserva o produto interno em $\R^n$.
+ -  $f$ preserva a norma em $\R^n$.
+ -  $f$ preserva a distância em $\R^n$
+
+:::
+
+
+:::{.proof}
+Assuma que $f$ preserva produto interno. Então, para todo $v\in V$,
+$$
+\|f(v)\|^2=\langle f(v),f(v)\rangle =\langle v,v\rangle=\|v\|.
+$$
+Ou seja, $f$ preserva a norma.
+
+Agora, assuma que $f$ preserva a norma. Então temos para todo $v,w\in V$ que
+$$
+d(f(v),f(w))=\|f(v)-f(w)\|=\|f(v-w)\|=\|v-w\|=d(v,w).
+$$
+Logo $f$ preserva distância. Note que no meio da equação anterior, usamos que $f$ é linear.
+
+Assuma agora que $f$ preserva distância. Note para $v\in V$ que
+$$
+\|f(v)\|=d(0,f(v))=d(0,v)=\|v\|
+$$
+e assim $f$ preserva a norma. Note que no meio da linha anterior, usamos que $f(0)=0$. Ora, temos pela identidade de polarização para $v,w\in V$, que
+\begin{align*}
+\langle f(v),f(w)\rangle&=\frac 12(\|f(v)+f(w)\|-\|f(v)\|-\|f(w)\|)\\
+&=\frac 12(\|f(v+w)\|-\|f(v)\|-\|f(w)\|)\\&=\frac 12(\|v+w\|-\|v\|-\|w\|)\\
+&=\langle v,w\rangle.
+\end{align*}
+Logo, $f$ preserva produto interno.
+
+:::
+
+
+:::{#def-}
+Uma <b>transformação ortogonal</b> de $\R^n$ é uma isometria linear de $\R^n$.
+:::
+
+
+:::{#thm-}
+Seja $f:\R^n\to \R^n$ uma transformação ortogonal e seja $A$ a sua matriz na base canônica. Então $A^tA=I$; ou seja, as colunas de $A$ são ortonormais e $A$ é uma matriz ortogonal. Em particular, uma transformação ortogonal de $\R^n$ é invertível.
+:::
+
+
+:::{.proof}
+Note que a base canônica $e_1,\ldots,e_n$ é ortonormal. As colunas de $A$ são $f(e_1),\ldots,f(e_n)$. Como $f$ preserva produto interno, estes vetores formam uma base  ortonormal.
+:::
+
+
+:::{#lem-}
+Seja $f:\R^n \to \R^n$ uma transformação ortogonal.
+
+
+ -  O determinante de $f$ é $\pm 1$.
+ -  Se $\lambda\in\C$ é um autovalor de $f$, então $\overline \lambda$ também é um autovalor de $f$.
+ -  Se $\lambda\in \C$ é um autovalor de $f$, então $|\lambda|=1$.
+ -  Se $\lambda\in \R$ é uma autovalor de $f$, então $\lambda=\pm 1$.
+
+:::
+
+
+:::{.proof}
+Seja $A$ a matriz de $f$ na base canônica e note que
+$$
+1=\det I=\det AA^{-1}=\det AA^t=(\det A)^2.
+$$
+Logo $\det A=\pm 1$. Se $\lambda\in\C$ é um autovalor de $f$, então $\overline \lambda$ também é, pois $\mbox{pcar}_f(t)\in\R[t]$. Para provar afirmação 3., considere o operador $f_\C:\C^n\to\C^n$, $f_\C(v)=Av$ para todo $v\in \C^n$ considerado como vetor coluna. Note que $f_\C^*$ é a transformação $v\mapsto A^tv$. Seja $v\in \C^n$ um autovetor com autovalor $\lambda\in \C$. Agora
+$$
+\lambda\overline \lambda\|v\|=\langle\lambda v,\lambda v\rangle = \langle Av,Av\rangle=\langle v,A^tAv\rangle=\langle v,v\rangle.
+$$
+Como $v\neq 0$, temos que $\langle v,v\rangle\neq 0$ e $\lambda\overline\lambda=\|\lambda\|^2=1$.
+Finalmente, afirmação 4. segue trivialmente da afirmação 3.
+:::
+
+
+:::{#def-}
+O conjunto das transformações ortogonais de $\R^n$ é denotado por $O_n$. O conjunto das transformações ortogonais com determinante igual a $1$ é denotado por $SO_n$. O nome de $O_n$ é <b>grupo ortogonal</b> enquanto $SO_n$ é chamado de <b>grupo ortogonal especial</b>. Os grupos $O_n$ e $SO_n$ podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante $1$.
+:::
+
+
+:::{#lem-}
+Sejam $f,g\in O_n$. Então
+
+
+ -  $f\circ g\in O_n$
+ -  Se $f,g\in SO_n$, então $f\circ g\in SO_n$.
+ -  $f^{-1}\in O_n$
+ -  Se $f\in SO_n$, então $f^{-1}\in SO_n$.
+
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+O lema anterior diz essentialmente que $O_n$ e $SO_n$ são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos $O_n$ e $SO_n$ têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.

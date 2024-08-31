@@ -1,10 +1,12 @@
 
 
 ---
-title: "O algoritmo de exponenciação rápida"
+title: "Teste de primalidade de Fermat (e o algoritmo de exponenciação rápida)"
 number-sections: true
 lang: pt-BR
 ---
+
+## O algoritmo da exponenciação rápida
 
 Nas várias computações relacionadas com congruências nós precisamos calcular $a^k$ módulo $n$ para números $a$, $k$, $n$ que são grandes com centenas ou milhares de dígitos. Nestes casos multiplicar $k$ vezes o número $a$ e  tomar o resto do resultado módulo $n$ não pode ser feito.
 
@@ -57,3 +59,172 @@ def ExpModN( a, k, n ):
     return P
 ```
 
+## O Teste de Primalidade de Fermat
+
+Para um primo $p$, o Pequeno Teorema de Fermat afirma que
+\begin{align*}
+a^p&\equiv a\pmod p\quad\mbox{para todo}\quad a\in \Z;\\
+a^{p-1}&\equiv 1\pmod p\quad\mbox{para todo}\quad a\in \Z\mbox{ tal que }p\nmid a.
+\end{align*}
+
+O Pequeno Teorema de Fermat pode ser usado para dar um critério suficiente para decidir se um número é composto.
+
+:::{#lem-}
+Assuma que $n\geq 2$ é um número natural. Se $b^{n-1}\not\equiv 1\pmod n$ para algum $b\in\{2,\ldots,n-2\}$, então $n$ é um número composto
+:::
+
+Observe que a congruência $b^{n-1}\equiv 1\pmod n$ pode ser checada para $n$ muito grande usando o Algoritmo da Exponenciação Rápida.
+
+:::{#exm-}
+Seja
+$$
+n=100000000000000000039000000005700000000000000002223.
+$$
+Queremos saber se $n$ é um número primo ou ele é composto. Usando nossa implementação do algoritmo para calcular $2^{n-1}\pmod n$, obtemos que
+$$
+2^{n-1}\equiv 496813\ldots 506416 \neq 1\pmod n.
+$$
+Portanto $n$ é um número composto. É muito mais difícil verificar que de fato
+$$
+n=100000000000000000039\cdot 10000000400000000000000000000057.
+$$
+:::
+
+
+:::{#def-}
+Se $n\geq 2$ e $b^{n-1}\equiv 1\pmod n$ com algum $b\in\{2,\ldots,n-1\}$, então o número $n$ chama-se <em>pseudoprimo</em> para a base $b$
+:::
+
+
+:::{#exr-}
+Mostre para $2\leq b<n$ que se $n$ é pseudoprimo na base $b$, então $\mbox{mdc}(n,b)=1$
+:::
+
+Com a seguinte função em Python dá para verificar se um número é pseudoprimo para a base $b$.
+```python
+def PseudoPrimo( n, b ):
+    return ExpModN( b, n-1, n ) == 1
+```
+
+Dado um número $n\in\N$. Para testar se $n$ é primo ou composto, podemos testar se $n$ é pseudopromo para algumas bases $b\in\{2,\ldots,n-1\}$. Se $n$ não for pseudoprimo para uma destas bases, dá para concluir que $n$ é composto. Caso contrário, o teste é inconclusivo.
+
+Na primeira versão do teste, testamos se $n$ for pseudoprimo para as bases entre $2$ e $2\log n$. O número $2\log n$ é arbitrário e pode ser mudado, mas para um teste eficiente, o número de bases testadas precisa ser proporcional com o número de algarismos de $n$; ou seja, proporcional com $\log n$.
+```python
+def TesteFermat( n ):
+    
+    d = 2*int(log( n ))+1
+    for b in range( 2, d ):
+        if not PseudoPrimo( n, b ):
+            return "COMPOSTO"
+    return "PROVAVELMENTE PRIMO"
+```
+
+Vamos testar quais são os números compostos entre 2 e um milhão que não são identificados como compostos usando este teste.
+```python
+for n in range( 2, 1000000 ):
+    if TesteFermat( n ) == "PROVAVELMENTE PRIMO" and not isprime( n ):
+        print( n )
+252601
+294409
+399001
+410041
+488881
+512461
+```
+
+Em uma outra variante do teste de Fermat, podemos escolher as bases aleatoriamente entre $2$ e $2\log n$.
+```python
+def TesteFermatRandom( n ):
+    
+    d = 2*int(log( n ))+1
+    for i in range( 1, d ):
+        b = random.randint( 2, n-2 )
+        if not PseudoPrimo( n, b ):
+            return "COMPOSTO"
+    return "PROVAVELMENTE PRIMO"
+```
+
+Vamos identificar agora os números compostos entre 2 e 1000000 que não são identificados como compostos. Note que como o procedimento é aleatório, estes números serão diferentes cada vez que rodarmos a computação.
+```python
+for n in range( 5, 1000000 ):
+    if TesteFermatRandom( n ) == "PROVAVELMENTE PRIMO" and not isprime( n ):
+        print( n )
+294409
+334153
+488881
+```
+
+## Os números de Carmichael
+
+Seja $n$ um número natural com $n\geq 5$ e seja $a\in\{2,\ldots,n-1\}$. Lembre que $n$ é dito pseudoprimo na base $a$ se $a^{n-1}\equiv 1\pmod n$. Observe que se $n$ for pseudoprimo na base $a$, então $a^n\equiv a\pmod n$.
+
+:::{#def-}
+Um número composto $n$ é dito número de Carmichael se $a^n\equiv a\pmod n$ para todo $a\in\{1,\ldots,n-1\}$
+:::
+
+
+:::{#exr-}
+Mostre que um número de Carmichael é ímpar
+:::
+
+Números de Carmichael são os mais prováveis de passarem no teste de primalidade de Fermat, pois se $n$ é de Carmichael, então $b^{n-1}\equiv 1\pmod n$ vale para qualquer base $b$ coprimo com $n$. Ou seja, $n$ será pseudoprimo para muitas bases.
+
+O menor número de Carmichael é 561. Usando a definição de números de Carmichael, este fato não é fácil de verificar sem usar um computador. No entanto, a verificação pode ser feita sabendo que
+$$
+561=3\cdot 11\cdot 17.
+$$
+Seja $b\in\{1,\ldots,560\}$ arbitrário. Nós vamos mostrar que $b^{561}\equiv b\pmod{561}$. Esta congruência é equivalente ao fato que $561\mid (b^{561}-b)$. Para provar esta divisibilidade, basta verificar que $3$, $11$, e $17$ são divisores de $b^{561}-b$ para todo $b\in\{1,\ldots,560\}$.
+
+Primeiro tratamos a afirmação que $17\mid (b^{561}-b)$; ou seja
+$$
+b^{561}\equiv b\pmod {17}.
+$$
+Se $17\mid b$, então os dois lados da congruência são congruentes com zero, então não há nada para fazer. Assuma que $17\nmid b$. Neste caso, o Pequeno Teorema de Fermat dá que $b^{16}\equiv 1\pmod{17}$ e isso implica que
+$$
+b^{560}=(b^{16})^{35}\equiv 1\pmod{17}.
+$$
+Obtemos assim que $b^{561}\equiv b\pmod{17}$ ou seja $17\mid( b^{561}-b)$.
+
+Notando que $560=561-1$ é divisível por $3-1=2$ e por $11-1=10$, as divisibilidades $3\mid (b^{561}-b)$ e $11\mid (p^{561}-b)$ podem ser verificadas similarmente.
+
+Observe que na conta acima os fatos cruciais sobre o número 561 foram os seguintes:
+
+
+-  o número 561 é livre de quadrado; ou seja, ele não é divisível por $p^2$ para nenhum primo $p$;
+-  se $p$ divide 561, então $p-1$ divide 560.
+
+Acontece que estes dois fatos de fato são necessários e suficientes para um número ser de Carmichael.
+
+:::{#thm-}
+(<a href="https://en.wikipedia.org/wiki/Alwin_Korselt">Korselt</a>)
+Seja $n\geq 2$ um número natural  composto. Então $n$ é um número de Carmichael (ou seja, $b^n\equiv b\pmod n$ para todo $b\in\{1,\ldots,n-1\}$) se e somente se as seguintes propriedades são válidas:
+
+
+-  $n$ é livre de quadrado ($n$ não é divisível por $p^2$ para nenhum primo $p$);
+-  se $p$ é um primo que divide $n$, então $p-1$ divide $n-1$.
+
+:::
+
+
+:::{.proof}
+Vamos começar com a demonstração da volta. Assuma que $n\in\N$ satisfaz as duas propriedades no teorema. Escreva $n=p_1\cdots p_k$ onde os $p_i$ são primos distintos e seja $a\in\Z$. Precisamos provar que $a^n\equiv a\pmod n$; ou seja $n\mid a^n-a$, mas esta última divisibilidade é equivalente às divisibilidades que $p_i\mid a^n-a$ para todo $i$.
+
+Se $p_i\mid a$, então $p_i\mid a^n-a$. Se $p_i\nmid a$, então o Pequeno Teorema de Fermat implica que $a^{p_i-1}\equiv 1\pmod{p_i}$. Pela condição 1., temos que $p-1\mid n-1$; ou seja $n=q(p_i-1)+1$ com algum $q\in\Z$. Logo
+$$
+a^n=a^{q(p_i-1)+1}=(a^{p_i-1})^qa\equiv a\pmod{p_i}.
+$$
+Mas isso implica que $p_i\mid a^n-a$. Como isso é verdadeiro para todo $i\in\{1,\ldots,k\}$, obtemos que $n\mid a^n-a$; ou seja $a^n\equiv a\pmod n$.
+
+Agora consideremos a ida. Assuma que $n\in\N$ é um número de Carmichael. Promeiro provaremos afirmação 1. Assuma por contradição que $p^2\mid n$ com algum primo $p$. Como $n$ é Carmichael, $p^n\equiv p\pmod n$, ou seja $n\mid p^n-p$. Mas isso implica que
+$$
+p^2\mid p^n-p=p(p^{n-1}-1)
+$$
+o que é impossível, pois o primeiro fator no lado direito é divisível por $p$, mas não por $p^2$, enquanto o segundo fator não é divisível por $p$.
+
+Agora assuma que $p$ é um primo tal que $p\mid n$. Precisamos provar que $p-1\mid n-1$. O Teorema da Raiz Primitiva implica que existe $a\in\Z$ tal que $|a|_p=p-1$ (ou seja, $a^{p-1}\equiv 1\pmod p$, mas $a^k\not\equiv 1\pmod p$ para todo $k\in\{1,\ldots,p-2\}$). Como $n$ é Carmichael, temos que $a^n\equiv a\pmod n$, e assim $a^n\equiv a\pmod p$ (como $p\mid n$). Mas $a$ é invertível módulo $p$ e assim $a^{n-1}\equiv 1\pmod p$ também segue. Isso implica que
+$$
+p-1=|a|_p\mid n-1
+$$
+e é isso que nós queremos provar.
+
+:::

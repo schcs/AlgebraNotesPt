@@ -1,0 +1,182 @@
+--- 
+title: "Operadores nilpotentes"
+number-sections: true
+lang: pt-BR
+--- 
+Nesta página, $V$ é um espaço vetorial de dimensão finita sobre um corpo $\F$.
+
+:::{#def-}
+Um endomorfismo $f:V\to V$ é dito <b>nilpotente</b> se $f^n=0$ para algum $n\geq 1$.
+:::
+
+
+:::{#exm-}
+O endomorfismo de $\F^3$ representado na báse canônica pela matriz
+$$
+\begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}
+$$
+é nilpotente. É fácil verificar que $f^3=0$.
+:::
+
+
+:::{#exm-}
+Assuma que $f:V\to V$ é um endomorfismo tal que $m_f(t)=(t-\lambda)^k$. Ou seja, $m_f(t)$ é um fator que aparece na Teorema Espectral. De fato, a nossa motivação de estudar enfomorfismos nilpotentes é obter uma compreensão mais profunda da situação descrita pelo Teorema Espectral. Neste caso $(f-\lambda\mbox{id}_V)^k=0$; ou seja, $f-\lambda\mbox{id}_V$ é nilpotente.
+:::
+
+
+:::{#lem-}
+Seja $f:V\to V$ é nilpotente.
+
+
+ -  O único autovalor de $f$ é $0$.
+ -  $f$ não é invertível; ou seja $\ker f\neq 0$ e $\mbox{Im}(f) < V$.
+ -  $m_f(t)=t^k$ onde $k$ é o menor inteiro positivo tal que $f^k=0$.
+
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+Seja $f$ nilpotente com $f^k=0$ e suponha que $k$ é o menor tal inteiro positivo. Então
+$$
+V > \mbox{Im}(f) > \mbox{Im}(f^2) >  \cdots > \mbox{Im}(f^{k-1}) > \mbox{Im}(f^k)=0
+$$
+Ou seja, pondo $V_i=\mbox{Im}(f^{k-i})$, obtemos uma cadeia
+$$
+0 = V_0 < V_1 < V_2 < \cdots < V_{k-1} < V_k = V
+$$
+tal que $f(V_i)=V_{i-1}$ para todo $i\geq 1$. Escolha uma base $\{b_1,\ldots,b_{i_1}\}$ para $V_1$. Estenda esta basa para uma base
+$$
+\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2}\}
+$$
+de $V_2$. Continuando assim, obtemos uma base
+$$
+\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2},\ldots,b_{i_{k-1}+1},\ldots,b_{i_k}\}
+$$
+de $V$ tal que, para todo $j\in\{1,\ldots,k\}$,
+$$
+\{b_1,\ldots,b_{i_j}\}
+$$
+é uma base de $V_j$. Observamos que nesta base, a matriz de $f$ é triangular superior  com zeros no diagonal. Isso nos levou ao seguinte teorema.
+
+:::{#lem-}
+Se $f:V\to V$ é nilpotente, então existe uma base $B$ tal que $[f]_B^B$ é triangular superior com zeros no diagonal. Em particular, $\mbox{pcar}_f(t)=t^{\dim V}$.
+:::
+
+Seja $f:V\to V$ um endomorfismo e seja $v\in V$. Definimos nos exercícios o polinômio $m_{f,v}(t)$ como o polinômio mônico (não nulo) de menor grau tal que $m_{f,v}(f)(v)=0$. Como no caso do polinômio minimal $m_f(t)$, temos que $m_{f,v}(t)$ é gerador do ideal
+$$
+I_{f,v}=\{p(t)\in \F[t]\mid p(f)(v)=0\}.
+$$
+Ou seja, se $p(t)$ é um polinômio qualquer com $p(f)(v)=0$, então $m_{f,v}(t)\mid p(t)$.
+
+:::{#lem-}
+Seja $f:V\to V$ um endomorfismo e $v\in V$. Assuma que $v\in V$ e que $f^m(v)=0$ com algum $m\geq 1$ e seja $m$ o menor tal número. Então $f^0(v)=v,f(v),f^2(v),\ldots,f^{m-1}(v)$ são linearmente independentes.
+:::
+
+
+:::{.proof}
+Como $f^m(v)=0$, temos que $m_{f,v}(t)$ é um divisor de $t^m$. Por outro lado, a minimalidade de $m$ implica que $m_{f,v}(t)=t^m$.
+Ora assuma que
+$$
+\alpha_0 v+\alpha_1 f(v)+\cdots+\alpha_{m-1}f^{m-1}(v)=0.
+$$
+Então $p(t)=\alpha_0+\alpha_1 t+\cdots+\alpha_{m-1}t^{m-1}\in I_{f,v}$; ou seja, $p^m\mid p(t)$. Como $\mbox{deg}(p(t))\leq m-1$, temos que $p(t)=0$; ou seja, $\alpha_0=\alpha_1=\cdots=\alpha_{m-1}=0$.
+:::
+
+Se $V$, $f$ e $v$ são como no lema anterior, então o espaço $U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle$ é $f$-invariante. O vetor $v$ é chamado de <b>vetor $f$-cíclico</b> e o espaço $U$ é dito <b>$f$-cíclico</b> gerado por $v$. Note que se $U$ é um espaço $f$-cíclico, então a matriz da restrição $f|_U$ na base $B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}$ tem a forma
+$$
+\begin{pmatrix} 0 & 1 &  0 & \cdots & 0  \\ 0 & 0 & 1 & \cdots & 0\\
+0 & 0 & 0 & \ddots & 1\\ 0 & 0 & 0 & \cdots & 0 \end{pmatrix}
+$$
+
+:::{#lem-}
+Seja $V$ um $f$-espaço cíclico com base $B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}$. Então
+$$
+m_f(t)=\mbox{pcar}_f(t)=t^m.
+$$
+:::
+
+
+:::{.proof}
+Podemos observar que a matriz $[f]_B^B$ é a matriz companheira do polinômio $t^n$. Por um exercício em uma lista anterior, $m_f(t)=\mbox{pcar}_f(t)=t^m$.
+
+Alternativamente, podemos também observar que $f^m(b)=0$ para todo $b\in B$. Portanto $f^m=0$ e obtemos que $m_f(t)\mid t^m$. Por outro lado, $f^{m-1}(f)(v)\neq 0$ e assim $t^{m-1}$ não é múltiplo de $m_f(t)$. Portanto $m_f(t)=t^m$.
+
+:::
+
+
+:::{#lem-}
+Suponha que $f:V\to V$ é um endomorfismo tal que $m_f(t)=(t-\lambda)^k$. Já vimos em cima que $f_0=f-\lambda\mbox{id}_V$ é nilpotente e agora assuma que $V$ é $f_0$-cíclico. Ou seja, existe $v\in V$ tal que $B=\{f_0^{n-1}(v),\ldots,f_0(v),v\}$ é base de $V$. Tem-se que
+$$
+[f]_B^B=\begin{pmatrix} \lambda & 1 &  0 & \cdots & 0  \\ 0 & \lambda & 1 & \cdots & 0\\
+0 & 0 & 0 & \ddots & 1\\ 0 & 0 & 0 & \cdots & \lambda \end{pmatrix}
+$$
+Além disso, $m_f(t)=(t-\lambda)^n$.
+:::
+
+
+:::{.proof}
+Só notar que $f=f_0+\lambda\mbox{id}_V$ e então
+$$
+[f]_B^B=[f_0]_B^B+[\lambda\mbox{id}_V]_B^B=[f_0]_B^B+I_n
+$$
+Observe também que $f_0=f-\lambda\mbox{id}_V$ tem polinômio minimal $t^n$ pelo resultado anterior. Logo $m_f(t)=(t-\lambda) ^n$.
+:::
+
+
+:::{#def-}
+A matriz no lema anterior chama-se <b>bloco de Jordan</b> com autovalor $\lambda$.
+:::
+
+
+:::{#thm-}
+(O Teorema da Decomposição em Espaços Cíclicos)
+Seja $f:V\to V$ um endomorfismo nilpotente. Então $V$ pode ser decomposto em uma soma direta $V=W_1\oplus W_2\oplus \cdots \oplus W_k$ onde os $W_i$ são $f$-espaços cíclicos.
+:::
+
+
+:::{.proof}
+Este teorema vai ser provado nas aulas seguintes. Neste momento, é mais interessante estudar as suas conseqências.
+:::
+
+
+:::{#exr-}
+Seja $f:V\to V$ um endomorfismo e assuma que $V=W_1\oplus W_2$ onde $W_i$ são $f$-invariantes. Sejam $B_1=\{b_1,\ldots,b_m\}$ e $B_2=\{b_{m+1},\ldots,b_n\}$ bases de $W_1$ e $W_2$, respetivamente. Então $B=B_1\cup B_2$ é uma base de $V$. Mostre que $[f]_B^B$ é diagonal em blocos com os blocos sendo $[f|_{W_1}]_{B_1}^{B_1}$ e $[f|_{W_2}]_{B_2}^{B_2}$.
+:::
+
+
+:::{#cor-}
+Seja $f:V\to V$ um endomorfismo com $m_f(t)=(t-\lambda)^\alpha$. Então existe uma base de $V$ na qual a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor $\lambda$.
+:::
+
+
+:::{.proof}
+Como foi observado em cima, $f_0=f-\lambda\mbox{id}_V$ é nilpotente. Pelo Teorema da Decomposição, $V=W_1\oplus\cdots\oplus W_k$ onde cada $W_i$ é $f_0$-cíclico e assim $f_0$-invariante. Como todo subespaço $U\leq V$ é invariante por $\lambda\mbox{id}_V$, temos que os $W_i$ são $f$-invariantes.  Ora, escolhendo a base $B_i$ certa para $W_i$, a matriz da restrição $[f|_{W_i}]_{B_i}^{B_i}$ é um bloco de Jordan com autovalor $\lambda$. Tomando $B$ para a união dos $B_i$, temos que a matriz $[f]_B^B$ é diagonal em bloco com cada bloco sendo um bloco de Jordan com autovalor $\lambda$.
+:::
+
+
+:::{#cor-}
+Seja $f:V\to V$ um endomorfismo com $m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}$. Então existe uma base de $V$ na qual a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor $\lambda_i$.
+:::
+
+
+:::{.proof}
+Pelo Teorema Espectral, $V=W_1\oplus\cdots\oplus W_k$ onde $W_i=\ker(f-\lambda\mbox{id})^{\alpha_i}$. Além disso, $W_i$ é $f$-invariante e, pondo $f_i=f|_{W_i}$, $m_{f_i}(t)=(t-\lambda_i)^{\alpha_i}$. Escolha uma base $B_i$ para cada $W_i$ tal que $[f_i]_{B_i}^{B_i}$ é diagonal em blocos onde cada bloco é um bloco de Jordan com autovalor $\lambda_i$. Juntando as bases $B_i$, obtemos que $B=B_1\cup\cdots\cup B_k$ é uma base que satisfaz a afirmação do Corolário.
+:::
+
+
+:::{#cor-}
+Seja $f:V\to V$ um endomorfismo de em $\C$-espaço $V$ (de dimensão finita) Então existe uma base de $V$ na qual a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan.
+:::
+
+
+:::{#def-}
+Dizemos que uma matriz está na forma normal de Jordan, se ela é diagonal em blocos e cada bloco é um bloco de Jordan.
+:::
+
+
+:::{#cor-}
+Seja $A$ uma matriz $n\times n$ em $M_{n\times n}(\C)$. Então existe uma matriz $X\in M_{n\times n}(\C)$ invertível tal que $XAX^{-1}$ está na forma normal de Jordan. Ou seja, cada matriz $A\in M_{n\times n}(\C)$ é conjugada (semelhante) a uma matriz na forma normal de Jordan.
+:::

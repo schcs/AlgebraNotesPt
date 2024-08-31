@@ -1,0 +1,94 @@
+--- 
+title: "Transformações lineares e matrizes"
+number-sections: true
+lang: pt-BR
+--- 
+
+Nesta página todo espaço é de dimensão finita.
+
+Sejam $V$ e $W$ espaços de dimensão finita sobre um corpo $\F$ e seja $f:V\to W$ linear. Escolhamos bases $B$ e $C$ em $V$ e $W$, respetivamente, e escreva
+\begin{align*}
+B&=\{b_1,\ldots,b_k\}\\
+C&=\{c_1,\ldots,c_m\}.
+\end{align*}
+Em particular, $\dim V=k$ e $\dim W =m$. Considere para $b_i\in B$ os vetores das coordenadas $[b_i]_B$ e $[f(b_i)]_C$ nas bases $B$ e $C$, respetivamente. Temos que $[b_i]_B\in\F^k$, enquanto $[f(b_i)]_C\in\F^m$ e consideramos os mesmos como vetores colunas. Usando estes vetores podemos montar uma matriz
+$$
+[f]_C^B=\left([f(b_1)]_C\, |\, [f(b_2)]_C\, |\, \cdots\, | \,[f(b_k)]_C\right).
+$$
+Ou seja, a $i$-ésima coluna de $[f]_C^B$ é a coluna $[f(b_i)]_C$. A matriz $[f]_C^B$ chama-se a <b>matriz de $f$ relativa às bases $B$ e $C$</b>.
+
+:::{#lem-}
+Se $v\in V$, então
+$$
+[f(v)]_C=[f]_C^B[v]_B.
+$$
+:::
+
+
+:::{.proof}
+Nos dois lados da equação temos que calcular a imagem de $v\in V$ por uma transformação linear $V\to \F^m$. No lado esquerdo temos que aplicar a composição
+$$
+v\mapsto f(v)\mapsto [f(v)]_C
+$$
+e no lado direito temos
+$$
+v\mapsto [v]_B\mapsto [f]^B_C[v]_B.
+$$
+Precisa-se provar que estas duas transformações são iguais.
+Para provar que as duas transformações são iguais, é suficente verificar que eles são iguais em uma base de $V$. Usando a base $B$, temos que
+$$
+[f(b_i)]_C=\mbox{$i$-ésima coluna de $[f]_C^B$}.
+$$
+Mas $[b_i]_B$ é o vetor $e_i$ na base canônica de $\F^k$, então $[f]_C^B[b_i]_B$ também é apenas a $i$-ésima coluna de $[f]_C^B$. Logo as duas expressões na equação do lema são iguais para todo $v\in V$.
+:::
+
+
+:::{#exr-}
+Sejam $V$, $U$, e $W$ espaços vetoriais com bases $B$, $C$ e $D$ e sejam $f:V\to U$ e $g:U\to W$ transformações lineares. Mostre que
+$$
+[g\circ f]_D^B=[g]_D^C[f]_C^B.
+$$
+Deduza que se $f:V\to U$ é isomorfismo, então
+$$
+[f^{-1}]_B^C=\left([f]_C^B\right)^{-1}.
+$$
+:::
+
+
+:::{#exr-}
+Lembre que para dois espaços vetoriais $V,W$ sobre $\F$, denotamos por $\mbox{Hom}(V,W)$ o conjunto de transforações lineares de $V$ para $W$. Note que $\mbox{Hom}(V,W)$ é um espaço vetorial com as operações
+$$
+(f+g)(v)=f(v)+g(v)\quad\mbox{e}\quad (\alpha f)(v)=\alpha f(v)
+$$
+para todo $f,g\in\mbox{Hom}(V,W)$, $v\in V$ e $\alpha\in \F$.
+
+Assuma que $\dim V=k$ e $\dim W=m$ (finitas) e assuma que $B$ e $C$ são bases fixadas em $V$ e $W$, respetivamente. Então a aplicação  $f\mapsto [f]_C^B$ pode ser vista como uma aplicação
+$$
+\mbox{Hom}(V,W)\to M_{m\times k}(\F).
+$$
+Mostre que esta aplicação é um isomorfismo de espaços vetoriais.
+
+:::
+
+Assuma que $V$ é um espaço com bases $B=\{b_1,\ldots,b_k\}$ e $C=\{c_1,\ldots,c_k\}$. A aplicação identidade $\mbox{id}_V:V\to V$ é linear e assim, podemos consider a sua matriz $[\mbox{id}_V]_C^B$. Pela definição de $[\mbox{id}_V]_C^B$, a $i$-ésima coluna de $[\mbox{id}_V]_C^B$ é o vetor $[b_i]_C$ e para $v\in V$, temos que
+$$
+[v]_C=[\mbox{id}_V]_C^B[v]_B.
+$$
+Ou seja, a matriz $[\mbox{id}_V]_C^B$ é a matriz de mudança de base de $B$ para $C$.
+
+Uma transformação linear $f:V\to V$ chama-se <b>endomorfismo</b> de $V$. Se temos um endomorfismo $f$ de $V$, então normalmente consideramos a sua matriz $[f]_B^B$ tomando a mesma base de $V$ para o domínio e para a codimínio. Quando temos duas bases $B$ e $C$ de $V$, precisaremos a relação entre $[f]_B^B$ e $[f]_C^C$.
+
+:::{#lem-}
+Seja $f:V\to V$ linear e sejam $B$ e $C$ bases de $V$. Então
+$$
+[f]_C^C=[\mbox{id}_V]_C^B[f]_B^B[\mbox{id}_V]^C_B=[\mbox{id}_V]_C^B[f]_B^B\left([\mbox{id}_V]_C^B\right)^{-1}.
+$$
+Ou seja, denotando por $X$ e $Y$ as matrizes de $f$ nas bases $B$ e $C$, respetivamente, e por $Q$ a matriz mudança de base de $B$ para $C$, temos que
+$$
+Y=QXQ^{-1}.
+$$
+:::
+
+Se $P$ e $Q$ são matrizes quadradas $n\times n$ com coeficientes em um corpo $\F$ e $Q$ é ainda invertível, então a matriz $QPQ^{-1}$ é chamada de <b>conjugada</b> de $P$ por $Q$. O resultado anterior diz que as matrizes do mesmo endomorfismo $f:V\to V$ em bases diferentes são conjugadas. A conjugada $QPQ^{-1}$ está frequentamente denotada por $P^Q$.
+
+Na álgebra linear, nós frequentamente enfrentamos o seguinte problema: dado um endomorfismo $f:V\to V$, ache uma base de $V$ tal que a matriz $[f]_B^B$ está em uma forma simples (diagonal, triangular, etc). Denotando a matriz de $f$ em uma base $B$ qualquer por $X$, este problema é equivalente a achar uma matriz $Q$ tal que a conjugada $X^Q$ está na forma desejada (diagonal, triangular, etc). Este problema é importante nas aplicações computacionais, pois se $Y=X^Q$ é diagonal ou triangular, calcular imagens por multiplicação matricial por $Y$ precisa de menos operações que fazer o mesmo usando uma matriz $X$ genérico.

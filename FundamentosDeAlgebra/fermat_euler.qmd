@@ -1,11 +1,12 @@
 
 
 ---
-title: "O Pequeno Teorema de Fermat e o Teorema de Euler"
+title: "O Pequeno Teorema de Fermat, o Teorema de Euler e o Teorema de Wilson"
 number-sections: true
 lang: pt-BR
 ---
 
+## O Pequeno Teorema de Fermat
 
 :::{#exr-}
 Sejam $a,b\in\Z$ e seja $p\in\N$ um primo. Mostre que
@@ -68,6 +69,8 @@ $$
 Ora a definição do inverso modular implica que $a^{p-2}$ é um inverso de $a$ módulo $p$. A segunda afirmação segue imediatamente da primeira
 :::
 
+
+## O Teorema de Euler
 
 :::{#exr-}
 Seja $n\in\N$ e seja
@@ -133,3 +136,53 @@ $$
 :::
 
 Note que o Teorema de Euler implica o Pequeno Teorema de Fermat (tomando $n=p$ primo e observando que $\varphi(p)=p-1$), mas nós decidimos deduzir o PTF de fatos mais elementares.
+
+
+## O Teorema de Wilson
+
+:::{#lem-}
+ Seja $p$ um primo e seja $\overline a\in\Z_p$.
+
+
+-  Se $\overline a^2=\overline 1$ então $\overline a\in\{\overline 1,\overline{-1}\}$.
+-  Se $\overline a\neq\overline 0$ e $\overline a^{-1}=\overline a$ então $\overline a\in\{\overline 1,\overline{-1}\}$.
+
+:::
+
+
+:::{.proof}
+Vamos provar a primeira afirmação. Assuma que $\overline a^2=\overline 1$. Então $a^2\equiv 1\pmod p$ e $p\mid a^2-1=(a-1)(a+1)$. Como $p$ é primo, isso implica que $p\mid (a-1)$ ou $p\mid (a+1)$; ou seja $a\equiv 1\pmod p$ ou $a\equiv -1\pmod p$. No primeiro caso $\overline a=\overline 1$, enquanto no segundo $\overline a=\overline{-1}$.
+
+Na segunda afirmação, assuma que $\overline a^{-1}=\overline a$ e multiplique os dois lados com $\overline a$ para obter que $\overline 1=\overline a^2$. Agora a primeira afirmação implica que $\overline a\in\{\overline 1,\overline{-1}\}$.
+
+:::
+
+Podemos expressar estes resultados na linguagem das congruências na forma seguinte.
+
+:::{#lem-}
+Seja $p$ um primo e seja $a\in\Z$.
+
+
+-  Se $a^2\equiv 1\pmod p$ então $a\equiv \pm 1\pmod p$.
+-  Assuma que $p\nmid a$ e seja $b$ um inverso de $a$ módulo $p$. Se $b\equiv a\pmod p$, então $a\equiv \pm 1\pmod p$.
+
+:::
+
+
+:::{#thm-}
+(O Teorema de Wilson). Um número $n\in\N$ é primo se e somente se $(n-1)!\equiv -1\pmod n$
+:::
+
+
+:::{.proof}
+Vamos começar com a volta, pois esta direção é mais fácil. Assuma que $(n-1)!\equiv -1\pmod n$ e seja $a\in\{1,\ldots,n-1\}$ tal que $a\mid n$. Em particular, $a\mid (n-1)!$. A congruência $(n-1)!\equiv -1\pmod n$ implica que $n\mid (n-1)!+1$ e obtemos destas duas divisibilidades que $a\mid 1$ que implica que $a=1$. Obtivemos então que o único divisor de $n$ entre $1$ e $n-1$ é o $1$ e assim $n$ é primo.
+
+Agora demonstremos a ida. Assuma que $p$ é primo e escreva
+$$
+(n-1)!=1\cdot 2\cdot 3\cdots (n-2)\cdot (n-1).
+$$
+Note que todo fator neste produto possui inverso módulo $p$ pois $p$ é primo. Além disso, se $a\in\{1,\ldots,n-1\}$ então existe único elemento $b\in\{1,\ldots,n-1\}$ tal que $b$ é inverso de $a$ módulo $p$; ou seja, $ab\equiv 1\pmod p$. Pelo lema anterior $b=a$ se e somente se $a=1$ ou $a=n-1$, Isso quer dizer que no produto na última linha destacada módulo $p$, cada fator aparece com seu inverso exceto o primeiro ($1$) e o último ($n-1$). Assim
+$$
+(n-1)!=1\cdot 2\cdot 3\cdots (n-2)\cdot (n-1)\equiv n-1\equiv -1\pmod p.
+$$
+:::

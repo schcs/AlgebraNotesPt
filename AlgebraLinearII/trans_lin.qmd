@@ -1,0 +1,178 @@
+--- 
+title: "Transformações lineares"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#def-}
+Sejam $U$ e $V$ espaços vetoriais sobre o mesmo corpo $\F$. Uma aplicação $f:U\to V$ é dito <b>linear</b> se
+$$
+f(u+v)=f(u)+f(v)\quad \mbox{e}\quad f(\alpha u)=\alpha f(u)
+$$
+valem para todo $u,v\in U$ e $\alpha\in \F$.
+:::
+
+Uma condição equivalente à condição na definição anterior é que
+$$
+f(\alpha u+\beta v)=\alpha f(u)+\beta f(v)
+$$
+vale para todo $u,v\in V$ e $\alpha,\beta\in\F$.
+Também segue diretamente da definição que se $u_1,\ldots,u_k\in U$ e $\alpha_1,\ldots,\alpha_k\in\F$, então
+$$
+f(\alpha_1u_1+\cdots+\alpha_ku_k)=\alpha_1f(u_1)+\cdots+\alpha_kf(u_k);
+$$
+ou seja, uma transformação linear preserva combinações lineares.
+
+:::{#exr-}
+Mostre que $f(0_U)=0_V$ para qualquer transformação linear $f:U\to V$.
+:::
+
+
+:::{#exm-}
+Exemplos são dados na aula, e nas notas do John e Rodney.
+:::
+
+
+:::{#lem-}
+Seja $U$ um $\F$-espaço vetorial com base $X=\{x_i\mid i \in I\}$. Seja $V$ um outro $\F$-espaço e seja $f_0:X\to V$ uma aplicação qualquer. Então existe uma única transformação linear $f:U\to V$ tal que $f|_X=f_0$.
+:::
+
+
+:::{.proof}
+Se $u\in U$, então $u$ pode ser escrito unicamente na forma
+$$
+u=\alpha_1x_1+\cdots+\alpha_k x_k
+$$
+com $\alpha_i\in \F$ e $x_i\in X$. Defina
+$$
+f(u)=\alpha_1f_0(x_1)+\cdots+\alpha_k f_0(x_k).
+$$
+O fato que $f$ está bem definida, ela é linear e que ela é única é exercício para o leitor.
+:::
+
+A relação entre as aplicações no lema anterior pode ser expressa na forma de um diagrama comutativo:
+\begin{array}{ccc}
+U & \stackrel{f}{\longrightarrow} & V\\
+i\uparrow &\nearrow f_0&\\
+X &  &
+\end{array}
+A aplicação $i:X\to U$ é a inclusão $i(x)=x$ para todo $x\in X$. O resultado diz que para todo $f_0:X\to V$ existe unicamente $f:U\to V$. Denotando por $\mbox{Hom}(U,V)$ o conjunto de aplicações lineares de $U$ para $V$, temos que a corresponência $f_0\mapsto f$  determina uma bijeção
+$$
+\mbox{Func}(X,V)\to \mbox{Hom}(U,V).
+$$
+
+:::{#def-}
+Seja $f:U\to V$ uma transformação linear. Então
+$$
+\mbox{Im}\,f=\{f(u)\mid u \in U\}\quad\mbox{e}\quad \ker f=\{u\in U\mid f(u)=0\}.
+$$
+O conjunto $\mbox{Im}\,f$ chama-se a <b>imagem</b>, enquanto $\ker f$ chama-se o <b>núcleo</b> de $f$.
+:::
+
+
+:::{#lem-}
+Se $f:U\to V$ é uma transformação linear, então $\mbox{Im}\,f\leq V$ e $\ker f\leq U$.
+:::
+
+Lembre que uma função $\varphi:X\to Y$ é dita <b>injetiva</b> se $\varphi(x_1)=\varphi(x_2)$ implica que $x_1=x_2$ para todo $x_1,x_2\in X$.
+
+:::{#lem-}
+Uma transformação linear $f:U\to V$ é injetiva se e somente se $\ker f=\{0\}$.
+:::
+
+
+:::{.proof}
+Assuma que $f$ é injetiva e seja $u\in \ker f$. Então $f(u)=f(0)=0$. Mas a definição da injetividade implica neste caso que $u=0$. Logo $\ker f=\{0\}$.
+
+Assuma agora que $\ker f=\{0\}$ e sejam $u_1,u_2\in U$ tal que $f(u_1)=f(u_2)$. Neste caso,
+$$
+0=f(u_1)-f(u_2)=f(u_1+u_2);
+$$
+ou seja, $u_1-u_2\in\ker f$. Como $\ker f$ contém apenas a vetor nulo, tem~se que $u_1-u_2=0$; ou seja $u_1=u_2$. Portanto, $f$ é injetiva.
+
+:::
+
+
+:::{#exr-}
+Sejam $f:U\to V$ e $g:V\to W$ transformações lineares. Mostre que $g\circ f:U\to W$ é  linear.
+:::
+
+
+Uma transformação linear $f:U\to V$ é dito <b>isomorfismo</b> se $f$ é injetiva e sobrejetiva. Neste caso, podemos definir o inverso
+$$
+f^{-1}:V\to U,\quad f^{-1}(v)=u\mbox{ se e somente se }f(u)=v.
+$$
+
+:::{#exr-}
+Seja $f:U\to V$ um isomorfismo. Mostre que $f^{-1}:V\to U$ é linear.
+:::
+
+Dizemos que $U$ e $V$ são isomorfos se existir um isomorfismo $f:U\to V$. Neste caso escrevemos que $U\cong V$. Note que espaços isomorfos são definidos sobre o mesmo corpo.
+
+É fácil verificar que a aplicação identidade $\mbox{id}_V:V\to V$ é um isomorfismo para qualquer espaço $V$ e que a composição de isomorfismos é isomorfismo. Portanto, temos, para quaisquer espaços vetoriais $U$, $V$, $W$,  que
+
+
+ -  $V\cong V$;
+ -  se $V\cong U$ então $U\cong V$;
+ -  se $U\cong V$ e $V\cong W$, então $U\cong W$.
+
+Espaços isomorfos compartilhas as propriedades importantes. Por exemplo, se $f:V\to W$ é um isomorfismo e $X$ é uma base de $V$, então $f(X)=\{f(x)\mid x\in X\}$ é base de $W$. Em particular, $\dim V=\dim W$.
+
+:::{#exm-}
+Seja $V$ um espaço de dimensão finita sobre um corpo $\F$. Assuma que $\dim V=n$. Seja $B=\{b_1,\ldots,b_n\}$ uma base de $V$. Se $v\in V$, então $v$ pode ser escrito unicamente na forma
+$$
+v=\alpha_1 b_1+\cdots+\alpha_n b_n.
+$$
+O vetor $(\alpha_1,\ldots,\alpha_n)$ é chamado de <b>vetor das coordenadas de $v$ na base $B$</b> e é denotado por $[v]_B$ ou mais simplesmente $v_B$. É fácil verificar que a transformação $f:V\to \F^n$ definido como
+$$
+f(v)=[v]_B\quad\mbox{para}\quad v\in V
+$$
+é um isomorfismo entre $V$ e $\F^n$.
+:::
+
+
+:::{#cor-}
+Se $V$ é um $\F$-espaço vetorial de dimensão $n$, então $V\cong \F^n$. Mais geralmente, se $U$ e $V$ são $\F$-espaços vetoriais de dimensão finita tais que $\dim U=\dim V$, então $U\cong V$.
+:::
+
+
+:::{#thm-}
+(O Teorema de Núcleo e Imagem)
+Seja $f:U\to V$ uma transformação linear. Defina $\bar f:U/\ker f\to \mbox{Im}\,f$ com a regra
+$$
+\bar f(u+\ker f)=f(u)\quad\mbox{para todo}\quad u\in U.
+$$
+Então $f$ é um isomorfismo bem definido e $U/\ker f\cong \mbox{Im}\,f$.
+:::
+
+
+:::{.proof}
+Primeiro verificamos que $\bar f$ está bem definido. Sejam $u_1,u_2\in U$ tais que $u_1+\ker f=u_2+\ker f$; ou seja, $u_1-u_2\in \ker f$. Logo
+$$
+f(u_1)-f(u_2)=f(u_1-u_2)=0
+$$
+e assim $f(u_1)=f(u_2)$. Então $\bar f(u+\ker f)$ não depende da representante da classe lateral $u+\ker f$. Note também que $\bar f(u+\ker f)=f(u)\in \mbox{Im}\,f$ para todo $u\in U$. Portanto a aplicação $\bar f:U/\ker f\to \mbox{Im}\,f$ está bem definida.
+
+É fácil verificar que $\bar f$ é linear. Verifiquemos que $\bar f$ é injetiva. Precisa provar que $\ker \bar f=0$. Seja $u+\ker f\in \ker\bar f$. Neste caso
+$$
+0=\bar f(u+\ker f)=f(u);
+$$
+ou seja $u\in \ker f$ e $u+\ker f=\ker f=0_{U/\ker f}$.  Segeu que $\bar f$ é injetiva.
+
+Ora se $v\in \mbox{Im}\,f$, então $f(u)=v$ com algum $u\in U$ e segeu que $\bar f(u+\ker f)=v$. Logo $\bar f$ é sobrejetiva.
+
+Obtivemos que $\bar f:U/\ker f\to \mbox{Im}\,f$ é um isomorfismo e assim  $U/\ker f\cong \mbox{Im}\,f$.
+
+:::
+
+
+:::{#cor-}
+Se $f:U\to V$ é uma transformação linear entre espaços vetoriais, então
+$$
+\dim U=\dim \ker f+\dim \mbox{Im}\,f.
+$$
+Se $U$ e $V$ têm dimensão finita, então
+$$
+\dim \mbox{Im}\,f=\dim U-\dim\ker f.
+$$
+:::

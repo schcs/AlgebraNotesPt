@@ -1,0 +1,88 @@
+--- 
+title: "Unicidade da forma normal de Jordan"
+number-sections: true
+lang: pt-BR
+--- 
+Vamos denotar por $J_k(\lambda)$ a matriz que é um bloco de Jordan $k\times k$ com autovalor $\lambda$.
+
+:::{#lem-}
+Seja $f:V\to V$ um endomorfismo com matriz $J_{k}(\lambda)$. Então $m_f(t)=(t-\lambda)^k$.
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#exr-}
+Seja $f:V\to V$ um endomorfismo e assuma que $V=V_1\oplus \cdots \oplus V_k$ é uma decomposição $f$-invariante. Ponha $f_i=f|_{V_i}$ para $i\in\{1,\ldots,k\}$. Demonstre que
+$$
+m_f(t)=\mbox{mmc}(m_{f_1}(t),\ldots,m_{f_k}(t)).
+$$
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#cor-}
+Assuma que $f:V\to V$ é um endomorfismo cuja matriz está na forma normal de Jordan com blocos
+$$
+J_{i_{1,1}}(\lambda_1),\ldots,J_{i_{1,m_1}}(\lambda_1), J_{i_{2,1}}(\lambda_2),\ldots, J_{i_{2,m_2}}(\lambda_2),
+\ldots,J_{i_{k,1}}(\lambda_k),\ldots, J_{i_{k,m_k}}(\lambda_k)
+$$
+com $i_{j,1}\geq i_{j,2}\geq\cdots \geq i_{j,m_j}$ para todo $j$. Então
+$$
+m_f(t)=(t-\lambda_1)^{i_{1,1}}\cdots (t-\lambda_k)^{i_{k,1}}.
+$$
+Em particular, os autovalores de $f$ são $\lambda_1,\ldots,\lambda_k$.
+:::
+
+
+:::{#thm-}
+Seja $f:V\to V$ um endomorfismo tal que a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan. Assuma que estes blocos são
+$$
+J_{i_{1,1}}(\lambda_1),\ldots,J_{i_{1,m_1}}(\lambda_1), J_{i_{2,1}}(\lambda_2),\ldots, J_{i_{2,m_2}}(\lambda_2),
+\ldots,J_{i_{k,1}}(\lambda_k),\ldots, J_{i_{k,m_k}}(\lambda_k)
+$$
+com $i_{j,1}\geq i_{j,2}\geq\cdots \geq i_{j,m_j}$ para todo $j$. Então os $\lambda_1,\ldots,\lambda_k$ são os autovalores de $f$ e em particular estes são determinados unicamente. Além disso, as dimensões $i_{j,l}$ também são determinados unicamente.
+:::
+
+
+:::{.proof}
+Usamos indução pela dimensão de $V$. Se $\dim V=1$, então o teorema estã trivialmente válido.
+
+Assuma que $\dim V\geq 2$. Note que os autovalores de $f$ são $\lambda_1,\ldots,\lambda_k$ e estes são determinados unicamente por $f$. Seja $\lambda$ um autovalor de $f$ e assuma sem perder generalidade que $\lambda=\lambda_1$.  Temos que $(t-\lambda_1)$ divide $m_f(t)$. Pelas considerações anteriores, $(t-\lambda_1)^{i_{1,1}}$ é a maior potência de $t-\lambda_1$ que divide $m_f(t)$. Em particular, $i_{1,1}$ estã determinado por $f$. Seja $W$ o subespaço que corresponde ao bloco $J_{i_{1,1}}(\lambda_1)$. Então $W$ é $f$-invariante. Se $W=V$, então obtemos que a decomposição de $f$ está unicamente determinada. No caso contrário,  considere o endomorfismo
+$$
+\bar f:V/W\to V/W
+$$
+induzido por $f$. A matriz de $\bar f$ é diagonal em blocos com os blocos sendo os blocos de $f$ exceto $J_{i_{1,1}}(\lambda_1)$. Pela hipótese da indução, os blocos de $\bar f$ estão unicamente determinados e assim os blocos de $f$ estão também unicamente determinados.
+
+:::
+
+Uma maneira alternativa para provar a unicidade é consequência do exercício seguinte.
+
+:::{#exr-}
+Assuma que $V$ é um $\C$-espaço e $f:V\to V$ com polinômio minimal
+$$
+m_f(t) = (t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}.
+$$
+Seja $\lambda=\lambda_i$ e $\alpha=\alpha_i$ com algum $i$. Assuma que a matriz de $f$ está na forma normal de Jordan. Pelo que vimos nesta página, o maior bloco com autovalor $\lambda$ é $J_\alpha(\lambda)$. Assuma que $[f]$ tem $\mu_i$ blocos de tamanho $i\times i$ para $i=1,\ldots,\alpha$ e seja $\delta_i=\dim\ker(f-\lambda\mbox{id})^i$ para $i=1,\ldots,\alpha$.
+
+
+ -  Mostre que
+\begin{align*}
+\mu_1+\mu_2+\mu_3+\cdots +\mu_{\alpha-1}+\mu_\alpha&=\delta_1\\
+\mu_1+2\mu_2+2\mu_3+\cdots +2\mu_{\alpha-1}+2\mu_\alpha&=\delta_2\\
+\mu_1+2\mu_2+3\mu_3+\cdots +3\mu_{\alpha-1}+3\mu_\alpha&=\delta_3\\
+&\vdots\\
+\mu_1+2\mu_2+3\mu_3+\cdots +(\alpha-1)\mu_{\alpha-1}+(\alpha-1)\mu_\alpha&=\delta_1\\
+\mu_1+2\mu_2+3\mu_3+\cdots +(\alpha-1)\mu_{\alpha-1}+r\mu_\alpha&=\delta_1.
+\end{align*}
+ -  Mostre que o sistema no item anterior tem única solução.
+ -  Deduza que a forma normal de $f$ é única.
+
+:::

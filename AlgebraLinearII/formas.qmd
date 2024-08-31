@@ -1,0 +1,169 @@
+--- 
+title: "Formas $k$-lineares"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#def-}
+Sejam $V$ e $W$ espaços vetoriais sobre $\F$, $k\geq 1$, e considere o produto cartesiano $V^k=V\times \cdots\times V$ de $k$ cópias de $V$. Dizemos que uma aplicação $f:V^k\to W$ é $k$-linear se ela é linear em todas as variáveis. Em outras palávras,
+$$
+f(v_1,\ldots,\alpha v_i+\beta w,\ldots v_k)=\alpha f(v_1,\ldots,v_i,\ldots v_k)+\beta f(v_1,\ldots,w,\ldots v_k)
+$$
+vale para todo $i\in\{1,\ldots,k\}$, $v_i\in V$ e $w\in V$. Uma aplicação $V^k\to \F$ $k$-linear é chamada de <b>forma (ou funcional) $k$-linear.</b>
+:::
+
+
+:::{#exm-}
+Uma forma $1$-linear é simplesmente uma forma linear $V\to \F$. Uma aplicação ou forma $2$-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma $3$-linear e chamada de <b>trilinear</b>.
+
+Se $V=\R^n$, então o produto interno $\langle\cdot ,\cdot\rangle$ é bilinear. Por outro lado, se $V=\C^n$, então o produto interno  $\langle\cdot ,\cdot\rangle$ não é bilinear (porque?). Se $V=\F^n$, então a aplicação
+$$
+d:V^n\to \F,\quad d(a_1,\ldots,a_n)=\det A,
+$$
+onde $A$ é a matriz formada pelas linhas $a_1,\ldots,a_n$, é $n$-linear.
+
+:::
+
+Para $V, W$ espaços sobre $\F$ e $k\geq 1$, o conjunto das aplicações $k$-lineares é um espaço vetorial sobre $\F$. Este espaço é denotado por $L^k(V,W)$. O espaço $L^k(V,\F)$ é escrito como $L^k(V)$. Note que $V^*=L^1(V)$.
+
+:::{#lem-}
+Sejam $V$ e $W$ espaços vetoriais sobre $\F$  e $B$ uma base de $V$. Seja $f_0$ um mapa arbitrário $f_0:B^k\to W$. Existe uma única aplicação $k$-linear $f:V^k\to W$ tal que $f|_{B^k}=f_0$.
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#exm-}
+Seja $V=\R^n$ com a base canônica $e_1,\ldots,e_n$. Está bem conhecido que o produto interno $\langle \cdot,\cdot\rangle$ está determinado pelos valores de $\langle e_i,e_j\rangle$ com $i,j\in\{1,\ldots,n\}$. De fato, se $v,w\in\R^n$ (vetores linhas) e $v=(\alpha_1,\ldots,\alpha_n)$, $w=(\beta_1,\ldots,\beta_n)$, então
+$$
+\langle v,w\rangle=\left\langle \sum_{i=1}^n\alpha_je_i,\sum_{j=1}^n\beta_j e_j\right\rangle=\sum_{i,j=1}^n\alpha_i\beta_j\langle e_i,e_j\rangle=\sum_{i=1}^n\alpha_i\beta_i.
+$$
+Ou seja, as igualdades $\langle e_i,e_j\rangle=\delta_{i,j}$ ($\delta$ de Kronecker) determinam o produto interno $\langle\cdot,\cdot\rangle$ completamente.
+:::
+
+
+:::{#exr-}
+Assumindo que $\dim V=m$ e $\dim W=n$, determine $\dim L^k(V,W)$.
+:::
+
+
+:::{#def-}
+Seja $f:V^k\to W$ uma aplicação $k$-linear. A aplicação $f$ é dita simétrica se
+\begin{align*}
+&f(v_1,\ldots,v_{i-1},v_i,v_{i+1},\ldots,v_{j-1},v_j,v_{j+1},\ldots,v_n)\\&=f(v_1,\ldots,v_{i-1},v_j,v_{i+1},\ldots,v_{j-1},v_i,v_{j+1},\ldots,v_n)
+\end{align*}
+para todo $i,j\in\{1,\ldots,k\}$ e $v_i\in V$.
+A aplicação $f$ é dita alternada se
+$$
+f(v_1,\ldots,v_n)=0
+$$
+sempre que $v_i\in V$ e $v_i=v_j$ com algum $i\neq j$. Os espaços de aplicações $k$-lineares simétricas e alternadas $V^k\to W$ estão denotados por  $S^k(V,W)$ e $A^k(V,W)$, respetivamente. Escrevemos também $S^k(V)=S^k(V,\F)$ e $A^k(V,\F)=A^k(V)$.
+:::
+
+
+:::{#exm-}
+O produto interno $\langle\cdot,\cdot\rangle$ em $\R^n$ é uma forma simétrica bilinear. O determinante $d:(\F^n)^n\to\F$ é alternada.
+:::
+
+
+:::{#lem-}
+Seja $f:V^k\times W$ uma aplicação $k$-linear alternada. As seguintes afirmações são válidas:
+
+
+ - $f(\ldots,v_i,\ldots,v_j,\ldots)=-f(\ldots,v_j,\ldots,v_i,\ldots)$
+ -  Se $v_1,\ldots,v_k$ são linearmente dependentes, então $f(v_1,\ldots,v_k)=0$.
+:::
+
+
+:::{.proof}
+1. Calculamos que
+\begin{align*}
+0&=f(\ldots,v_i+v_j,\ldots,v_i+v_j,\ldots)\\&=f(\ldots,v_i,\ldots,v_i,\ldots)+f(\ldots,v_i,\ldots,v_j,\ldots)\\&+f(\ldots,v_j,\ldots,v_i,\ldots)+f(\ldots,v_j,\ldots,v_j,\ldots)\\&=f(\ldots,v_i,\ldots,v_j,\ldots)+f(\ldots,v_j,\ldots,v_i,\ldots).
+\end{align*}
+
+2. Se os $v_i$ são L.D., então algum $v_i$ é combinação linear dos demais vetores no sistema. Assuma que $v_1$ é combinação linear de $v_2,\ldots,v_k$. Ou seja,
+$$
+v_1=\alpha_2 v_2+\cdots+\alpha_k v_k.
+$$
+Então
+\begin{align*}
+&f(v_1,v_2,\ldots,v_k)\\&=
+f(\alpha_2 v_2+\cdots+\alpha_k v_k,v_2,\ldots,v_k)\\&=
+\alpha_2 f(v_2,v_2,\ldots,v_k)+\cdots+\alpha_k f(v_k,v_2,\ldots,v_k)=0.
+\end{align*}
+
+:::
+
+Se $X$ é um conjunto, uma aplicação $\sigma:X\to X$ invertível (ou seja, sobrejetiva e injetiva) é chamada de <b>permutação</b> de $X$. A composição de permutações de $X$ é uma permutação de $X$. Uma transposição de $X$ é uma permutação que troca $i,j\in X$ distintos e deixa os demais elementos de $X$ fixados. Quando $X$ é finito, qualquer permutação de $X$ pode ser obtida como uma composição de transposições (qualquer configuração de um baralho pode ser atingida  trocando duas cartas e repetindo tais trocas). É um fato na teoria das permutações que se $\sigma:X\to X$ é uma permutação e
+$$
+\sigma=\sigma_1\circ\cdots\circ \sigma_m
+$$
+onde os $\sigma_i$ são transposições, então a paridade do número $m$ depende apenas da permuação $\sigma$. Se a paridade de $m$ é par, então a permutação $\sigma$ é <b>par</b>, caso contrário $\sigma$ é <b>ímpar</b>. Além disso, escrevemos
+$$
+(-1)^\sigma=\left\{\begin{array}{cc}
+1 & \mbox{se $\sigma$ for par;}\\ -1 & \mbox{se $\sigma$ for ímpar.}\end{array}\right.
+$$
+
+:::{#exm-}
+Considere a seguinte permutação $\sigma$ do conjunto $\{1,2,3,4\}$:
+$$\left [
+\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+2 & 3 & 4 & 1 \end{array}\right].
+$$
+Se $i,j\in\{1,2,3,4\}$, então denotamos por $(i,j)$ a transposição que troca $i$ e $j$ e deixa os demais elementos fixados. Então pode verificar com conta simples que
+$$
+\sigma=(1,4)\circ (1,3)\circ(1,2)=(2,4)\circ(1,2)\circ (1,3)\circ(1,4)\circ(2,4).
+$$
+Ou seja, a mesma permutação $\sigma$ pode ser escrita como uma composição de $3$ transposições, mas também como uma composição de $5$ transposições. Portanto que $(-1)^\sigma=-1$.
+:::
+
+
+:::{#cor-}
+Seja $V$ um espaço vetorial de dimensão $n$ com base $B=\{b_1,\ldots,b_n\}$ e $f:V^k\to W$ uma aplicação $k$-linear alternada.
+
+
+ -  Se $v_1,\ldots,v_k\in V$ e $\sigma$ é uma permutação do conjunto $\{1,\ldots,k\}$, então
+$$
+f(v_{\sigma(1)},\ldots,v_{\sigma(k)})=(-1)^\sigma f(v_1,\ldots,v_k).
+$$
+ -  $f$ está determinada pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_1<\cdots<i_k$.
+
+:::
+
+
+:::{.proof}
+1. Se $\sigma$ é a composição de $m$ transposições, então a permutação $v_{\sigma(1)},\ldots,v_{\sigma(k)}$ de vetores pode ser  obtida da configuração original $v_1,\ldots,v_k$ aplicando as $k$ transposições, cada  uma depois a outra. Cada transposição multiplica o valor de $f$ por $-1$, logo depois de aplicar $m$ transposições, o valor original $f(v_1,\ldots,v_k)$ será multiplicado por $(-1)^m=(-1)^\sigma$.
+
+2. Já demonstramos que $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_j\in\{1,\ldots,n\}$. Note que se $i_j=i_l$ com $j\neq l$, então $f(b_{i_1},\ldots,b_{i_k})=0$. Logo pode-se dizer que $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ onde os $i_j$ são distintos. Existe uma única permutação $\sigma$ de $\{1,\ldots,k\}$ tal que $i_{\sigma(1)}< i_{\sigma(2)}< \cdots <i_{\sigma(k)}$. Pelo item 1., temos que
+$$
+(-1)^\sigma f(b_{i_1},\ldots,b_{i_k})=f(b_{i_{\sigma(1)}},\ldots,b_{i_{\sigma(k)}})
+$$
+
+:::
+
+
+:::{#exr-}
+Determine a dimensão de $S^k(V,W)$ e $A^k(V,W)$ onde $\dim V=m$ e $\dim W=n$.
+:::
+
+
+:::{#cor-}
+Seja $V$ um espaço vetorial sobre $\F$ de dimensão $n$ com base $\{b_1,\ldots,b_n\}$. Assuma que $\alpha\in\F$. Então existe uma única forma $n$-linear $f:V^n\to \F$ tal que $f(b_1,\ldots,b_n)=\alpha$. Consequentemente $\dim A^n(V)=1$.
+:::
+
+
+:::{#cor-}
+Existe uma única forma $n$-linear $f:(\F^n)^n\to \F$ tal que $f(e_1,\ldots,e_n)=1$. Se $a_i=\sum_j a_{i,j} b_j\in V$, então
+$$
+f(a_1,\ldots,a_n)=\sum_{\sigma} (-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}
+$$
+onde a soma está tomada sobre o conjunto das permutações do conjunto $\{1,\ldots,n\}$. Em outras palávras,
+$$
+f(a_1,\ldots,a_n)=\det A
+$$
+onde $A$ é a matriz com linhas $a_1,\ldots,a_n$.
+:::

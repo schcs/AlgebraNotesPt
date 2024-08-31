@@ -1,0 +1,106 @@
+--- 
+title: "Espaços quocientes"
+number-sections: true
+lang: pt-BR
+--- 
+
+Seja $V$ um espaço vetorial e $U\leq V$. Para $v\in V$ definimos
+$$
+v+U=\{v+u\mid u \in U\}.
+$$
+Claramente $v+U\subseteq V$ e o conjunto $v+U$ chama-se uma <b>classe lateral</b> em $V$.
+
+:::{#lem-}
+As seguintes são equivalentes para $v_1,v_2\in V$:
+
+
+- $v_1+U=v_2+U$
+- $v_1-v_2\in U$
+
+Em particular, $v+U=0+U$ se e somente se $v\in U$.
+
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+
+:::{#def-}
+Seja $V$ um espaço vetorial sobre um corpo $\F$ e $U\leq V$. Definimos os espaço quociente $V/U$ como o conjunto
+$$
+V/U=\{v+U\mid v\in V\}
+$$
+com as operações
+$$
+(v+U)+(w+U)=(v+w)+U\quad\mbox{e}\quad\alpha(v+U)=(\alpha v)+U
+$$
+para todo $v,w\in V$ e $\alpha\in \F$.
+:::
+
+
+:::{#thm-}
+As operações em $V/U$ estão bem definidas e o conjunto $V/U$ com estas operações é um $\F$-espaço vetorial.
+:::
+
+
+:::{.proof}
+O leitor pode verificar a maioria destas afirmações. Aqui só comentamos que $0_{V/U}=0_V+U$ e $-(v+U)=(-v)+U$.
+:::
+
+
+:::{#thm-}
+Seja $V$ um espaço vetorial, $U\leq V$, e seja $X$ uma base de $U$. Assuma que $X\cup Y$ é uma base de $V$ com $X\cap Y=\emptyset$. Então
+$$
+\bar Y=\{y+U\mid y\in Y\}
+$$
+é uma base de $V/U$. Em particular, se $\dim V/U=\dim V-\dim U$.
+:::
+
+
+:::{.proof}
+Seja $v\in V$ arbitrário. Então
+$$
+v=\sum_{i=1}^k \alpha_ix_i+\sum_{i=1}^m\beta_i y_i
+$$
+com $\alpha_i,\beta_i\in \F$, $x_i\in X$, $y_i\in Y$. Ora, como $x_i\in U$, segue que
+\begin{align*}
+v+U&=\left(\sum_{i=1}^k \alpha_ix_i+\sum_{i=1}^m\beta_i y_i\right)+U\\
+&=\left(\sum_{i=1}^k \alpha_ix_i+U\right)+\left(\sum_{i=1}^m\beta_i y_i +U\right)\\
+&=\sum_{i=1}^m\beta_i y_i+U=\sum_{i=1}^m\beta_i(y_i+U)
+\end{align*}
+Portanto $\bar Y$ é um conjunto gerador de $V/U$.
+
+Assuma que
+$$
+0=\sum_{i=1}^m \alpha_i (y_i+U)=\left(\sum_{i=1}^m \alpha_i y_i\right)+U.
+$$
+é uma combinação linear do vetor nulo de $V/U$ com $\alpha_i\in\F$ e $y_i\in Y$ (distintos). Segue que
+$$
+\sum_{i=1}^m \alpha_i y_i\in U
+$$
+e assim
+$$
+\sum_{i=1}^m \alpha_i y_i=\sum_{i=1}^k\beta_i x_i
+$$
+com $\beta_i\in \F$ e $x_i\in X$ (distintos).
+Ou seja
+$$
+\sum_{i=1}^m \alpha_i y_i-\sum_{i=1}^k\beta_i x_i=0.
+$$
+Mas como os $x_i$ e os $y_j$ são L.I., temos que a combinação linear na linha anterior é trivial. Logo $\alpha_i=0$ e $\beta_i=0$ para todo $i$. Isso implica que $\bar Y$ é L.I. e também que $\bar Y$ é base de $V/U$.
+
+:::
+
+
+:::{#cor-}
+Seja $V$ um espaço vetorial e $U\leq V$. Então
+$$
+\dim U+\dim V/U=\dim V.
+$$
+Em particular, se $V$ tem dimensão finita,
+$$
+\dim V/U=\dim V-\dim U.
+$$
+:::

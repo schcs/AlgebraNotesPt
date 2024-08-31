@@ -1,10 +1,12 @@
 
 
 ---
-title: "Os números primos"
+title: "Os números primos e o Teorema Fundamental da Aritmética"
 number-sections: true
 lang: pt-BR
 ---
+
+## Números primos
 
 :::{#def-}
 Um número inteiro $n$ diferente de $\pm 1$ e de $0$ é dito <em>primo</em> se os únicos divisores de $n$ são $\pm 1$ e $\pm n$. No caso contrário, o número é dito <em>composto</em>. Os números $1$, $-1$, e $0$ não são considerados nem primos nem compostos
@@ -52,3 +54,122 @@ Ora $N$ é positivo e é maior que dois. Além disso, $N$ deve ser divisível po
 
 
 
+## O Teorema Fundamental da Aritmética
+
+
+:::{#thm-}
+Todo número natural $n\geq 2$, pode ser decomposto em um produto de primos positivos. Além disso, esta decomposição de $n$ é única a menos da ordem dos fatores
+:::
+
+
+:::{.proof}
+**Existência.** Nós provaremos por indução em $n$. Na base da indução, seja $n$ um primo. Neste caso, $n$ pode ser considerado como o produto de um único fator que é primo.
+
+Assuma agora que $n$ é composto (em particular, $n\geq 4$) e que a afirmação da existência do teorema é verdadeira para números menores que $n$. Como $n$ é composto, podemos escrever $n=n_1n_2$ onde $2\leq n_1,n_2 < n$ e pela hipótese da indução, os números $n_1$ e $n_2$ podem ser escritos como
+$$
+n_1=p_1\cdots p_r\quad\mbox{e}\quad n_2=q_1\cdots q_s
+$$
+onde $p_1,\ldots,p_r,q_1,\ldots,q_s$ são primos positivos. Ora
+$$
+n=n_1n_2=p_1\cdots p_rq_1\cdots q_s;
+$$
+ou seja, $n$ é produto de primos positivos.
+
+**Unicidade.** Assuma que $n\geq 2$ e
+$$
+n=p_1p_2\cdots p_r=q_1q_2\cdots q_s
+$$
+onde os $p_i$ e os $q_j$ são primos positivos. Assuma ainda sem perder generalidade que $r\leq s$. Nós precisamos provar que $r=s$ e que os primos que aparecem na primeira fatoração são os mesmos que aparecem na segunda. Provaremos isso por indução em $r$.
+
+Na base da indução, assuma que $r=1$. Neste caso, $n=p_1$ é primo, e segue pela definição de números primos que $s=1$ e que $p_1=q_1$. Logo, a unicidade está verificada.
+
+Assuma agora que $r\geq 2$ e a unicidade é válida para números com menos que $r$ fatores. Temos pela primeira fatoração que $p_1\mid n$, e como $p_1$ é primo isso implica que $p_1\mid q_i$ com algum $i$. Mas como $p_1$ e $q_i$ são primos positivos segue que $p_1=q_i$. Depois de possivelmente reordenar os fatores $q_1,\ldots,q_s$, podemos assumir sem perder generalidade que $p_1=q_1$. Neste caso
+$$
+n=p_1p_2\cdots p_r=p_1q_2\cdots q_s
+$$
+e obtemos pela lei cancelativa que
+$$
+p_2\cdots p_r=q_2\cdots q_s.
+$$
+Ora, o número na última equação possui uma fatoração com $r-1$ fatores. Portanto, pela hipótese da indução, $r-1=s-1$ e os fatores $p_2,\ldots,p_r$ e $q_2,\ldots,q_s$ são os mesmos a menos da sua ordem. Isso implica que $r=s$ e que os fatores $p_1,\ldots,p_r$ e $q_1,\ldots,q_s$ são os mesmos a menos da sua ordem.
+
+:::
+
+Por exemplo, se $n=15$, então obtemos duas decomposições que satisfazem a afirmação do Teorema:
+$$
+15=3\cdot 5=5\cdot 3.
+$$
+Mas estas duas decomposições são consideradas idênticas, pois elas diferem-se apenas na ordem dos fatores. Note que permitindo primos positivos e negativos, obtemos quatro fatorações, nomeadamente,
+$$
+15=3\cdot 5=5\cdot 3=(-3)\cdot(-5)=(-5)\cdot(-3).
+$$
+O Teorema Fundamental da Aritmética pode ser estendido para números negativos por afirmar que se $n\in\Z$ com $n\leq -2$, então
+$$
+n=-p_1\cdots p_r
+$$
+onde os $p_i$ são primos positivos e eles são únicos a menos da ordem dos fatores.
+
+
+## O número dos primos 
+
+Para $n\in\N$, defina
+$$
+\pi(n)=|\{k\in\{2,\ldots,n\}\mid k\mbox{ é primo}\}|.
+$$
+Ou seja, $\pi(n)$ é o número dos primos entre $2$ e $n$. É fácil computar o valor de $\pi(n)$ para $n$ pequeno:
+$$
+\pi(1)=0,\quad \pi(2)=1,\quad \pi(3)=\pi(4)=2,\quad \pi(5)=\pi(6)=3,\ldots
+$$
+No entanto, se $n$ for grande, determinar o valor de $\pi(n)$ pode ser difícil.
+
+O Crivo de <a href="https://pt.wikipedia.org/wiki/Erat%C3%B3stenes">Eratóstenes</a>, é um algoritmo que pode ser usado para obter os primos que são menores ou iguais a um número fixo $n$. A ideia do crivo é a seguinte. Assuma que você quer determinar todos os primos entre $1$ e algum outro número $n$.
+
+
+-  Escreva os números de $1$ até $n$ em uma lista na ordem crescente.
+-  Comece por eliminar o número $1$ da sua lista, pois ele não é primo.
+-  O menor número não eliminado na lista é $2$ que é primo. Elimine os múltiplos de $2$ a partir de $4$ da lista, pois eles não são primos.
+-  Menor número não eliminado depois de $2$ é  o $3$. Elimine os múltiplos de $3$ a partir de $3^2=9$ da lista, pois eles não são primos.
+-  O menor número não eliminado depois de $3$ é o $5$. Ele é primo. Elimine os múltiplos de $5$ da lista a partir de $5^2=25$, pois eles não são primos.
+-  No passo geral, ache o menor número $p$ depois do último primo encontrado. Este número $p$ será primo. Elimine os múltiplos de $p$ a partir de $p^2$ da lista, pois eles não são primos. Note que os demais múltiplos compostos de $p$ (que são menores de $p^2$) já foram eliminados.
+-  Repita o passo geral até $p > \sqrt n$.
+-  Os números que não foram eliminados da lista são os primos entre $1$ e $n$.
+
+Uma implementação simples em Python deste algoritmo é o seguinte.
+```python
+def eratosthenes( n ):
+    prims = [ True for i in range(n+1) ]
+    prims[0] = False; prims[1] = False
+    
+    sqrn = int(n**(1/2))
+    
+    for i in range(2,sqrn+1):
+        if prims[i]: 
+            st = i**2
+            while st <= n:
+                prims[st] = False
+                st = st + i
+                
+    return prims
+```
+
+O Crivo de Eratóstenes não é um algoritmo eficiente, pois o passo geral precisa ser executada $\sqrt n$ vezes. Na prática (por exemplo, na criptografia), nós precisamos lidar com números com $500$ ou mais algarismos. Se por exemplo, $n\approx 10^{500}$, então $\sqrt n\approx 10^{250}$ e na prática fica impossível realizar a computação até com um supercomputador.
+
+Está bem conhecido que a função $\pi(n)$ pode ser aproximada pelas funções
+$$
+\lambda(n)=\frac n{\log n}
+$$
+e
+$$
+\sigma(n)=\int_2^n \frac{dt}{\log t}.
+$$
+Por exemplo, o número dos primos entre $1$ e $10.000.000$ é $664579$. Ou seja
+$$
+\pi(10.000.000)=664579,
+$$
+enquanto
+$$
+\lambda(10.000.000)\approx 620420\quad\mbox{e}\quad \sigma(10.000.000)\approx 664917.
+$$
+Geralmente, a aproximação dada por $\sigma(n)$ é melhor, mas é mais difícil de calcular.
+
+Atualmente (novembro de 2021), o <a href="https://pt.wikipedia.org/wiki/Maior_n%C3%BAmero_primo_conhecido">maior primo conhecido</a> é $2^{82.589.933} − 1$. Este número tem $24.862.048$ algarismos na base decimal e foi encontrado em 2018. Este número é um exemplo dos <a href="https://pt.wikipedia.org/wiki/Primo_de_Mersenne">primos de Mersenne</a>, ou seja primos na forma $2^p-1$ onde $p$ é um primo.

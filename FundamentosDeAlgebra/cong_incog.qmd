@@ -1,11 +1,12 @@
 
 
 ---
-title: "Congruências com incôgnitas"
+title: "Congruências com incôgnitas e o Teorema Chinês dos restos V2.0"
 number-sections: true
 lang: pt-BR
 ---
 
+## Congruências com incôgnitas
 
 :::{#exm-}
 Seja $x$ uma incógnita e considere a congruência
@@ -97,3 +98,62 @@ Agora $\mdc{a_1}{n_1}=1$ e $a_1$ é invertível módulo $n_1$. A afirmção fina
 :::
 
 
+## O Teorema Chinês dos Restos V2.0
+
+Sejam $m,n\in\N$ primos entre si, sejam $a,b\in\Z$ e considere o sistema
+\begin{align*}
+x &\equiv a\pmod m\\
+x &\equiv b\pmod n
+\end{align*}
+de congruências.
+
+Uma solução $x\in\Z$ deste sistema é um número inteiro tal que o resto de $x$ é o mesmo que o resto de $a$ quando divididos por $m$ e o resto de $x$ é o mesmo que o resto de $b$ quando divididos por $n$. Já vimos em uma aula anterior que tal $x$ sempre existe. Seja $x_0$ uma solução deste sistema (ou seja, uma solução particular do sistema). É fácil verificar que $x_0+kmn$ com $k\in\Z$ também é uma solução; de fato,
+\begin{align*}
+x_0+kmn&\equiv x_0\equiv a\pmod m\\
+x_0+kmn&\equiv x_0\equiv b\pmod n.
+\end{align*}
+Além disso, se $x\in\Z$ é uma outra solução, então
+\begin{align*}
+x&\equiv x_0\pmod m\\
+x&\equiv x_0\pmod n.
+\end{align*}
+Aplicando a definição de ser congruente, obtemos que $m\mid x-x_0$ e $n\mid x-x_0$. Como $\mdc mn=1$, tem-se que $mn\mid x-x_0$; ou seja, $x-x_0=kmn$ com algum $k\in\Z$. Portanto $x=x_0+kmn$.
+
+Com este argumento verificamos o seguinte resultado, que pode ser visto como uma versão do Teorema Chinês dos Restos.
+
+:::{#thm-}
+Sejam $m,n\in\N$ primos entre si, sejam $a,b\in\Z$. Então o
+\begin{align*}
+x &\equiv a\pmod m\\
+x &\equiv b\pmod n
+\end{align*}
+de congruências sempre possui uma solução. Além disso, se $x_0$ é uma solução do sistema, então o conjunto das soluções (a solução geral) pode ser obtido como
+$$
+\{x_0+kmn\mid k\in\Z\}.
+$$
+:::
+
+
+:::{.proof}
+Veja o argumento antes do teorema.
+:::
+
+Note que uma solução particular para o sistema pode ser encontrada usando o Algoritmo Estendido de Euclides como fizemos no caso da primeira versão do Teorema Chinês. Note ainda que o teorema diz que o conjunto de soluções é uma classe residual módulo $mn$ e este conjunto é o mesmo que o conjunto das soluções da congruência
+$$
+x\equiv x_0\pmod{mn}.
+$$
+
+:::{#cor-}
+Com as condições no teorema anterior, o sistema
+\begin{align*}
+x &\equiv a\pmod m\\
+x &\equiv b\pmod n
+\end{align*}
+de congruências é equivalente à congruência
+$$
+x\equiv c\pmod{mn}
+$$
+com algum $c\in\Z$.
+:::
+
+O número $c$ no corolário pode ser determinado usando o Algoritmo Estendido de Euclides.

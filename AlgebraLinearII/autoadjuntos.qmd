@@ -1,0 +1,154 @@
+--- 
+title: "Operadores autoadjuntos"
+number-sections: true
+lang: pt-BR
+--- 
+
+Nesta página $V$ é um $\F$-espaço vetorial, $\sigma\in\mbox{Aut}(\F)$ com $\sigma^2=\mbox{id}_\F$ e $B$ é uma forma $\sigma$-hermitiana não degenerada sobre $V$.
+
+:::{#def-}
+Um operador $f:V\to V$ é <b>autoadjunto</b> se existe $f^*$ e $f^*=f$. Em outras palavras,
+$$
+B(f(v),w)=B(v,f(w))
+$$
+para todo $v,w\in V$.
+
+:::
+
+
+:::{#lem-}
+Seja $f:V\to V$ autoadjunto.
+
+
+ -  Se $\lambda\in\F$ é um autovalor de $f$ tal que $V_\lambda$ contém um vetor não isotrópico, então $\lambda\in\mbox{Fix}(\sigma)$.
+ -  Sejam $v_1$ e $v_2$  autovetores de $f$ associados com autovalores $\lambda_1$ e $\lambda_2$, respetivamente, tais que $\lambda_1^\sigma\neq \lambda_2$. Então $v_1\perp v_2$ (ou seja, $B(v_1,v_2)=0$).
+
+:::
+
+
+:::{.proof}
+1. Seja $v\in V\setminus\{0\}$ tal que $f(v)=\lambda v$ e assuma que $v$ não é isotrópico; ou seja $Q(v)=B(v,v)\neq 0$. Ora,
+$$
+\lambda B(v,v)=B(\lambda v,v)=B(f(v),w)=B(v,f(v))=B(v,\lambda v)=\lambda^\sigma B(v,v).
+$$
+Portanto, $(\lambda-\lambda^\sigma)B(v,v)=0$ e $\lambda-\lambda^\sigma=0$. Logo $\lambda=\mbox{Fix}(\sigma)$.
+2. Assuma que $v_1$ e $v_2$ são autovetores associados com autovalores $\lambda_1$ e $\lambda_2$ com $\lambda_1\neq \lambda_2^\sigma$. Temos que
+\begin{align*}
+\lambda_1 B(v_1,v_2)&=B(f(v_1),w_2)=B(v_1,f(v_2))=B(v_1,\lambda_2 v_2)\\&=\lambda_2^\sigma B(v_1,v_2).
+\end{align*}
+Isso implica que $(\lambda_1-\lambda_2^\sigma)B(v_1,v_2)=0$. Ou seja, $\lambda_1=\lambda_2^\sigma$ ou $B(v_1,v_2)=0$.
+Como $\lambda_1\neq \lambda_2^\sigma$, nos resta que $B(v_1,v_2)=0$.
+:::
+
+
+:::{#def-}
+Seja $V$ um espaço vetorial sobre $\F$ onde $\F=\R$ ou $\F=\C$ e seja $\sigma=\mbox{id}_\R$ se $\F=\R$ e $\sigma$ o conjugado complexo se $\F=\C$. Um <b>produto interno</b> sobre $V$ é uma forma $\sigma$-hermitiana que satisfaz a propriedade de positividade; ou seja,
+$$
+Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
+$$
+e $Q(v)=0$ se e somente se $v=0$. Neste caso dizemos que $V$ é um <b>espaço com produto interno</b>. A forma $B(-,-)$ é frquentamente escrita como $\langle -,-\rangle$. Se $V$ é espaço com produto interno e $v\in V$, então $Q(v)\geq 0$ e definimos
+$$
+\|v\|=\sqrt{Q(v)}=\sqrt{\langle v,v\rangle}\in \R.
+$$
+O número $\|v\|$ é chamado <b>norma</b> de $v$. Temos que $\|v\|\geq 0$ e $\|v\|=0$ se e somente se $v=0$.
+:::
+
+
+:::{#lem-}
+Uma forma $B$ que define produto interno é não degenerada. Além disso, se $\dim V=n$ for finita, então $(V,B)$ é isométrico ao espaço $\R^{0+n}$ ou $\C^{0+n}$.
+:::
+
+
+:::{.proof}
+Se $v\in\mbox{Rad}(B)$, então $v\perp v$ e $Q(v,v)=B(v,v)=0$. Logo, $v=0$ e $B$ é não degenerada.
+
+Sabe-se do resultado anterior que quando $\dim V=n$ finita, então $(V,B)$ é isométrica ao espaço $\R^{p+q}$ ou $\C^{p+q}$ com $p+q=n$. Se $p\geq 1$, então $B(b_1,b_1)=-1$, que não é possível pela positividade da forma.
+
+:::
+
+Note que a notação $\langle u,v\rangle$ foi usada anteriormente para o espaço gerado por $u$ e $v$. A partir deste ponto, este espaço será denotado por $\mbox{span}\langle u,v\rangle$.
+
+:::{#cor-}
+Assuma que $V$ é espaço com produto interno e $f:V\to V$ é autoadjunto.
+
+
+ -  Os autovalores de $v$ são números reais.
+ -  Se $v_1$ e $v_2$ são autovetores de $f$ com autovalores distintos, então $v_1\perp v_2$.
+
+:::
+
+
+:::{.proof}
+1. Se $v$ é uma autovetor não nulo de $f$ com autovalor $\lambda$, então $v$ não é isotrópico (pela positividade do produto interno) e temos pelo lema anterior que $\lambda\in\mbox{Fix}(\sigma)=\R$.
+
+2. Sejam $v_1$ e $v_2$ autovetores de $f$ com autovalores distintos $\lambda_1$ e $\lambda_2$, respetivamente. Temos pelo item 1. que $\lambda_1,\lambda_2\in\R$ e $\lambda_1\neq \lambda_2^\sigma=\lambda_2$. O lema acima implica que $v_1\perp v_2$.
+
+:::
+
+
+:::{#cor-}
+Seja $A\in M_{n\times n}(\C)$ tal que $A^t=\overline A$ (a transposta é igual à conjugada complexa). Então os autovalores de $A$ são números reais. Em particular, se $A\in M_{n\times n}(\R)$ tal que $A^t = A$ e $\lambda\in\C$ é autovalor de $A$, então $\lambda\in \C$.
+:::
+
+
+:::{.proof}
+Considere $A$ como a matriz de uma transformação linear $f_A:\C^n\to \C^n$ em uma base ortonormal em relação ao produto interno usual de $\C^n$. A matriz de $f_A^*$ é $\overline A^t=A$ e assim $f_A^*=f_A$; ou seja $f_A$ é autoadjunta. Pelo resultado anterior os autovalores de $f_A$ (que são os mesmos que os autovalores de $A$) são números reais. A segunda afirmação segue da primeira, observando que se $A\in M_{n\times n}(\R)$, então $\overline A=A$.
+:::
+
+
+:::{#thm-}
+(O Teorema de Diagonalização para Operadores Autoadjuntos)
+Seja $V$ um espaço com produto interno e assuma que $\dim V=n$ é finita e seja $f:V\to V$ um operador autoadjunto. Então os autovalores de $f$ são números reais e $V$ possui uma base $B$ ortonormal formada por autovetores de $f$. Em particular, $f$ é diagonalizável e $[f]_B^B=D$ é diagonal.
+:::
+
+
+:::{.proof}
+Usamos indução por $\dim V$. Seja $\F=\R$ ou $\F=\C$ o corpo para o espaço $V$. Quando $\dim V=1$, então $(V,\langle-,-\rangle)$ é isométrico ao espaço $\F^{0+1}$ e existe uma base $\{b_1\}$ tal que $\langle b_1,b_1\rangle=1$. Como $\dim V=1$, $b_1$ é autovetor de $f$ e a base $\{b_1\}$ é ortonormal formada por autovetores de $f$.
+
+Assuma que o teorema está verdadeiro para espaços de dimensão menor que $n$ e assuma que $\dim V=n$. Seja inicialmente $X$ uma base ortonormal de $V$ qualquer (existe por resultado anterior). A matriz $A$ de $f$ nesta base $X$ satisfaz $X^t=\overline X$ (ou $X^t=X$ quando $\F=\R$). Por resultado anterior $A$ e $f$ possuem autovalor $\lambda\in \R$. Seja $b_1'$ um autovetor para autovalor $\lambda$. Ponha $\alpha_1=\langle b_1',b_1'\rangle$ e note que a positividade do produto interno implica que $\alpha_1\in \R$ e $\alpha_1 > 0$. Pondo $b_1=(\alpha_1)^{-1/2}b_1'$ obtemos que $\langle b_1,b_1\rangle =1$.
+
+Considere $U=\mbox{span}\{b_1\}$. Então $\dim U^\perp=n-1$, $U^{\perp}\cap U=0$ e $V=U\perp U^\perp$. Além disso, $U$ sendo $f$-invariante, $U^\perp$ é invariante por $f^*=f$. Por hipótese de indução, $U^\perp$ possui uma base ortonormal $\{b_2,\ldots,b_n\}$ que composta de autovetores de $f$. Ora, $\{b_1,\ldots,b_n\}$ é base ortonormal de $V$ composta de autovetores de $f$.
+
+:::
+
+
+:::{#def-}
+Para uma matriz $A\in M_{n\times n}(\C)$, denotamos $A^*=\overline A^t$ (conjugada transposta). Uma matrix $A\in M_{n\times n}(\C)$ é chamada <b>hermitiana</b> se $A=A^*$. Uma matriz $A\in M_{n\times n}(\R)$ é chamada <b>ortogonal</b> se as colunas de $A$ são ortonormais. Uma matriz $A\in M_{n\times n}(\C)$ é chamada de <b>unitária</b> as colunas de $A$ são ortonormais (no produto interno de $\C^n$).
+:::
+
+
+:::{#exr-}
+Mostre que
+
+
+ -  $A$ é ortogonal se e somente se $A^tA=I$ e $A^{-1}=A^t$;
+ -  $A$ é unitária se e somente se $A^*A=I$ e $A^{-1}=A^*$.
+
+:::
+
+
+:::{#cor-}
+
+
+ -  Seja $A\in M_{n\times n}(\R)$ uma matriz simétrica. Existe uma matriz ortogonal $P$ tal que $P^tAP$ é diagonal.
+ -  $A\in M_{n\times n}(\C)$ uma matriz hermitiana. Existe uma matriz unitária $P$ tal que $P^*AP$ é diagonal.
+
+:::
+
+
+:::{.proof}
+Nos dois casos, considere a transformação $f_A:\F^n\to \F^n$, $f_A(v)=A\cdot v$. A transformação $f_A$ é autoadjunta em relação ao produto interno em $\F^n$. Além disso, a matriz de $f_A$ na base canônica é a própria $A$. Pelo teorema anterior, $f_A$ é diaganalizável. Mais precisamente, existe uma base ortonormal $B$ tal que $[f_A]_B^B$ é diagonal $D$. Seja $P$ a matriz que tem os elementos de $B$ nas suas colunas. Temos que
+$$
+D=[f]_B^B=P^{-1}AP=P^*AP
+$$
+pois $P^{-1}=P^*$  pelo exercício anterior. Quando $P\in M_{n\times n}(\R)$, então $P^*=P^t$.
+:::
+
+
+:::{#exm-}
+O teorema anterior não é válido para matrizes simétricas sobre $\C$. Considere por exemplo
+$$
+A=\begin{pmatrix} 1 & i \\ i & -1\end{pmatrix}
+$$
+O polinômio caraterístico de $A$ é $t^2$ e $0$ é o único autovalor de $A$. Mas como $A$ não é a transformação nula, não existe base de $\C^2$ formada por autovetores de $A$.
+:::

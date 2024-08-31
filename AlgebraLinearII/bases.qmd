@@ -1,0 +1,103 @@
+---
+title: "Bases de espaços vetoriais"
+number-sections: true
+lang: pt-BR
+--- 
+
+
+Nesta página, não distinguimos entre cardinalidades infinitas.
+
+:::{#lem-}
+Assuma que $V$ é um espaço vetorial e sejam $X,Y\subseteq V$ tais que $X$ é L.I. e $Y$ é gerador. Então $|X|\leq |Y|$.
+:::
+
+
+:::{.proof}
+Não há nada para provar quando $Y$ é infinito, então assuma que $Y$ é finito. Seja $Y=\{y_1,\ldots,y_k\}$. Assuma com o objetivo de achar uma contradição que $|X|>|Y|=k$.
+
+Assuma que $x_1\in X$. Como $X$ é L.I., $x\neq 0$. Como $Y$ é conjunto gerador,
+$$
+x_1=\sum_{i=1}^k \alpha_iy_i\quad\mbox{com}\quad \alpha_i\in\F.
+$$
+Como $x_1\neq 0$, pelo menos um $\alpha_i$ é diferente de zero e podemos assumir sem perder generalidade que $\alpha_1\neq 0$. Neste caso,
+$$
+y_1=(1/\alpha_1)x_1-\sum_{i=2}^n(\alpha_i/\alpha_1) y_i.
+$$
+Portanto, $y_1$ é combinação linear de $x_1,y_2,\ldots,y_k$. Se $v\in V$ é arbitrário, então $v$ pode ser escrito como combinação linear dos $y_i$ e assim
+$$
+v=\sum_{i=1}^n\beta_iy_i
+=
+\beta_1\left((1/\alpha_1)x_1-\sum_{i=2}^n(\alpha_i/\alpha_1) y_i\right)+\sum_{i=2}^n\beta_i y_i
+$$
+Ou seja, $v$ também é combinação linear de $x_1,y_2,\ldots,y_k$ Como $v$ foi arbitrário, o conjunto $Y_1=\{x_1,y_2,\ldots,y_k\$ é um conjunto gerador.
+
+Escolha agora $x_2\in X\setminus\{x_1\}$. Como $Y_1$ é sistema gerador, podemos escrever
+$$
+x_2=\alpha_1 x_1+\sum_{i=2}^n\alpha_i y_i.
+$$
+(Aqui os coeficientes $\alpha_i$ são diferentes dos coeficientes na linha em cima.) Como $x_2\neq 0$, temos que algum coeficiente $\alpha_i$ é não nulo. Além disso, como $x_1,x_2$ são L.I., podemos escolher $i\geq 2$. Assuma sem perder generalidade que $\alpha_2\neq 0$. Neste caso, pode-se escrever que
+$$
+y_2=(1/\alpha_2)x_2-(\alpha_1/\alpha_2)x_1-\sum_{i=3}^n(\alpha_i/\alpha_2)y_i.
+$$
+Usando o argumento em cima, obtemos que $Y_2=\{x_1,x_2,y_3,\ldots,y_k\}$ é conjunto gerador.
+
+Continuando desse jeito, obtemos que $Y_k=\{x_1,\ldots,x_k\}$ é um conjunto gerador de $V$. Mas como $|X|>k$, temos que existe $x\in X\setminus\{x_1,\ldots,x_k\}$ e podemos escrever
+$$
+x=\gamma_1x_1+\cdots+\gamma_k x_k.
+$$
+Mas isso dá
+$$
+0=x-\gamma_1x_1-\cdots-\gamma_kx_k
+$$
+o que é impossível, pois $X$ é L.I. Obtivemos que a suposição $|X|>|Y|=k$ nos levou a um absurdo, logo a única alternativa sensata é que $|X|\leq |Y|$.
+
+:::
+
+
+:::{#cor-}
+Se $B_1$ e $B_2$ são bases do mesmo espaço vetorial, então $|B_1|=|B_2|$.
+:::
+
+
+:::{.proof}
+Como $B_1$ é L.I. e $B_2$ é gerador, temos que $|B_1|\leq |B_2|$. Trocando $B_1$ e $B_2$, temos que $|B_2|\leq |B_1|$. Logo, $|B_1|=|B_2|$.
+:::
+
+
+:::{#def-}
+Seja $V$ um espaço vetorial não nulo e seja $B$ uma base de $V$. A dimensão de $V$ está definida como a cardinalidade $|B|$ e está denotada $\dim V$. Quando $V=0$, $\dim V=0$.
+:::
+
+Pelo corolário em cima, a dimensão de $V$ não depende da base escolhida.
+
+:::{#exm-}
+Nos seguintes exemplos, $\F$ é um corpo arbitrário.
+
+
+ -  $\dim\F^n=n$,  pois a base canônica possui $n$ elementos.
+ -  $\dim M_{m\times n}(\F)=mn$, pois as matrizes elementares $e_{i,j}$ com $i\in\{1,\ldots,m\}$, $j\in\{1,\ldots,n\}$ formam uma base.
+ -  Se $k\geq 0$, então $\dim\F[x]_k=k+1$, pois $\{1,x,x^2,\ldots,x^k\}$ é uma base.
+ -  $\dim\F[x]=\infty$ pois $\{1,x,x^2,\ldots,\}$ é uma base.
+ -  $\dim\F[[x]]=\infty$, pois o conjunto no ponto anterior é L.I., e pode ser estendido a uma base de $\F[[x]]$.
+ -  Se $X$ é um conjunto finito, então $\dim\mbox{Func}(X,\F)=|X|$. Definindo as funções $f_x:X\to \F$ com $f_x(y)=1$ se $x=y$ e $f_x(y)=0$ caso contrário, temos que $\{f_x\mid x\in X\}$ é uma base.
+
+:::
+
+No caso de espaços de dimensão finita, é mais fácil verificar se um sistema é base ou não.
+
+:::{#thm-}
+Seja $V$ um espaço de dimensão $k$ e $X=\{v_1,\ldots,v_k\}$ um sistema de $k$ vetores. As seguintes são equivalentes:
+
+
+ -  $X$ é base;
+ -  $X$ é L.I.;
+ -  $X$ é gerador.
+
+:::
+
+
+:::{.proof}
+Exercício.
+:::
+
+

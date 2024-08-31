@@ -38,55 +38,37 @@ Site criado por [Csaba Schneider](https://schcs.github.io/WP/)
 ### Bloco 1: Inteiros{.unnumbered}
 
 - [Divisão, quociente, e resto entre números inteiros; O Teorema de Divisão de Euclides](divisao.qmd)
-- Expansão de números inteiros em uma base $b$
-- Critérios de divisibilidade
-- Expansão decimal de números racionais
-- O maior divisor comum
-- O Algoritmo de Euclides
-- Propriedades do MDC
-- Números primos
-- O Teorema Fundamental da Aritmética
-- O número dos primos
-- Equações diofantinas lineares em duas variáveis
-- O Teorema Chinês dos Restos (Versão 1.0)
-- A função $\varphi$ de Euler
+- [Expansão dos naturais na base $b$ e os critérios de divisibilidade](expansao.qmd)
+- [Expansão decimal de números racionais](racionais.qmd)
+- [O maior divisor comum e o Algoritmo de Euclides](mdc.qmd)
+- [Números primos e O Teorema Fundamental da Aritmética](primos.qmd)
+- [Equações diofantinas lineares em duas variáveis e o Teorema Chinês dos Restos (Versão 1.0)](diof.qmd)
+- [A função $\varphi$ de Euler](phi.qmd)
 
 ### Bloco 2: Congruências{.unnumbered}
 
-- Congruências
-- Classes residuais
-- $\Z_n$
-- Congruências com incógnitas
-- O Teorema Chinês dos Restos (Versão 2.0)
-- O Pequeno Teorema de Fermat e o Teorema de Euler
-- O Teorema de Wilson
-- A ordem de um elemento de $\Z_n$
-- Elementos primitivos: O enunciado
-- Quadrados em $\Z_p$ e resíduos quadráticos
-- O Algoritmo de Exponenciação Rápida
-- O Teste de Primalidade de Fermat
-- Os números de Carmichael 
-- O Teste de Primalidade de Miller
-- Criptografia RSA: A Teoria
-- Criptografia RSA: Um Exemplo Computacional
-
+- [Congruências](cong.qmd)
+- [Classes residuais e  ℤ<sub>n</sub>](res_classes.qmd)
+- [Congruências com incógnitas e O Teorema Chinês dos Restos (Versão 2.0)](cong_incog.qmd)
+- [O Pequeno Teorema de Fermat, o Teorema de Euler e o Teorema de Wilson](fermat_euler.qmd)
+- [A ordem de um elemento de $\Z_n$ e o Teorema do Elementos primitivos](ordr.qmd)
+- [Quadrados em $\Z_p$ e resíduos quadráticos](quadrados.qmd)
+- [O Algoritmo de Exponenciação Rápida e o Teste de Primalidade de Fermat](exp.qmd)
+- [O Teste de Primalidade de Miller](miller.qmd)
+- [Criptografia RSA](rsa_p1.qmd)
+- 
 ### Bloco 3: Polinômios{.unnumbered}
 
-- Anéis, domínios e corpos 
-- Números complexos
-- Polinômios sobre anéis
-- O anel dos polinômios
-- Divisibilidade entre polinômios
-- O Teorema de Divisão para Polinômios
-- O MDC de dois polinômios e o Algoritmo de Euclides
-- Raízes e divisibilidade
-- Elementos Primitivos: A demonstração
-- Polinômios irredutíveis
-- O Teorema da Fatoração para Polinômios
-- Domínios de Fatoração Única (DFU)
-- Polinômios em $\Q[x]$. Parte I: O Lema de Gauss
-- Polinômios em $\Q[x]$. Parte II: O Critério de Eisenstein
-- Equações polinomiais do segundo grau 
-- Equações polinomiais do terceiro grau
+- [Anéis, domínios e corpos](aneis.qmd) 
+- [Números complexos](complex.qmd)
+- [Polinômios sobre anéis](pols.qmd)
+- [Divisibilidade entre polinômios e o Teorema de Divisão para Polinômios](div_pol.qmd)
+- [O MDC de dois polinômios e o Algoritmo de Euclides](mdc_pol.qmd)
+- [Raízes e fatoração](roots.qmd)
+- [Elementos Primitivos: A demonstração](primitive_p2.qmd)
+- [Polinômios irredutíveis e o Teorema da Fatoração para Polinômios](irred.qmd)
+- [Domínios de Fatoração Única (DFU)](dfu.qmd)
+- [O Lema de Gauss e o Critério de Eisenstein](gauss_pt1.qmd)
+- [Equações polinomiais do segundo e terceiro grau](quadratic.qmd)
 
 

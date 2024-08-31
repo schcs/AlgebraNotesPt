@@ -1,0 +1,172 @@
+--- 
+title: "Decomposição primária e decomposição espectral"
+number-sections: true
+lang: pt-BR
+--- 
+
+Antes de estudar esta matéria revise o Teorema de Fatoração para polinômios (@thm-tfa-pol).
+Nesta página $V$ é um $\F$-espaço de dimensão finita a $f\in\mbox{End}(V)$.
+
+Começamos por três exemplos motivadores.
+
+:::{#exm-}
+Seja $f:\F^5\to \F^5$ um endomorfismo e $B$ é base de $\F^5$ tal que
+$$
+[f]_B^B=\begin{pmatrix}
+2 & 0 & 0 & 0 & 0\\ 0 & 2 & 0 & 0& 0\\ 0 & 0 & 2 & 0& 0\\ 0 & 0 & 0 & 3& 0\\ 0 & 0 & 0 & 0& 3\\
+\end{pmatrix}.
+$$
+Ou seja, $f$ é diagonalizável com autovalores $2$ e $3$. O polinômio minimal de $f$ é $m_f(t)=(t-2)(t-3)=t^2-5t+6$ enquanto o polinômio caraterístico é $\mbox{pcar}_f(t)=(t-2)^3(t-3)^2$. O espaço $\F^5$ decompõe-se
+$$
+\F^5=\langle b_1,b_2,b_3\rangle\oplus\langle b_4,b_5\rangle=V_2\oplus V_3=\ker(f-2\mbox{id})\oplus\ker(f-3\mbox{id}).
+$$
+Ou seja, a fatoração do polinômio minimal $m_f(t)$ em produto de irredutúveis está refletida em uma fatoração de $V$ em uma soma direta de autoespaços.
+:::
+
+
+:::{#exm-}
+A fatoração do domínio do endomorfismo como no exemplo anterior não é sempre possível. Considere por exemplo
+$f:\F^5\to \F^5$ um endomorfismo e $B$ é base de $\F^5$ tal que
+$$
+[f]_B^B=\begin{pmatrix}
+2 & 1 & 0 & 0 & 0 \\ 0 & 2 & 0 & 0& 0\\ 0 & 0 & 2 & 0& 0\\ 0 & 0 & 0 & 3& 1\\ 0 & 0 & 0 & 0& 3\\
+\end{pmatrix}.
+$$
+O polinômio caraterístico de $f$ é o mesmo que no exemplo anterior: $\mbox{pcar}_f(t)=(t-2)^3(t-3)^2$. Logo,  operador $f$ tem dois autovalores $2$ e $3$, mas os autoespaços são $V_2=\langle b_1,b_3\rangle$ e $V_3=\langle b_4\rangle$. Em particular $\F^5\neq V_2\oplus V_3$. Por outro lado, note que as matrizes de $f-2\mbox{id}$ e $f-3\mbox{id}$ são
+$$
+\begin{pmatrix}
+0 & 1 & 0 & 0  & 0 \\ 0 & 0 & 0 & 0& 0\\ 0 & 0 & 0 & 0& 0\\ 0 & 0 & 0 & 1& 1\\ 0 & 0 & 0 & 0& 1\\
+\end{pmatrix}\quad e\quad
+\begin{pmatrix}
+-1 & 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0& 0\\ 0 & 0 & -1 & 0& 0\\ 0 & 0 & 0 & 0& 1\\ 0 & 0 & 0 & 0& 0\\
+\end{pmatrix}.
+$$
+Logo o polinômio minimal de $f$ é $m_f(t)=(t-2)^2(t-3)^2$. Além disso,
+$$
+W_2=\langle b_1,b_2,b_3\rangle =\ker[(f-2\mbox{id})^2]\mbox{ e }W_3=\langle b_4,b_5\rangle =\ker[(f-3\mbox{id})^2]
+$$
+e
+$$
+\F^5=W_2\oplus W_3.
+$$
+Em outras palavras, $\F^5$ não se decompões como soma direta dos autoespaços, mas existe uma decomposição de $\F^5$ reletindo a decomposição de $m_f(t)$. Os espaços $W_2$ e $W_3$ são chamados de <b>autoespaços generalizados</b>.
+:::
+
+
+:::{#exm-}
+Seja $f:\R^4\to \R^4$ um endomorfismo com matriz
+$$
+X=[f]_B^B=\begin{pmatrix} 0 & 0 & 0 & -1\\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & -1 \\ 0 & 0 & 1 & 0\end{pmatrix}
+$$
+em uma base $B=\{b_1,b_2,b_3,b_4\}$.  Note que a matriz $X$ é a matriz companheira do polinômio $t^4+t^2+1$. Por um exercício nas listas,
+$$
+\mbox{pcar}_f(t)=m_f(t)=t^4+t^2+1=(t^2+t+1)(t^2-t+1).
+$$
+Temos ainda que os fatores no lado direito da linha anterior são irredutíveis e $\mbox{pcar}_f(t)$ não possui raiz em $\R$. Portanto, $f$ não tem autovalores e nem tem autoespaços generalizados não triviais.
+
+Por outro lando, observe que substituindo $f$ nos dois fatores de $\mbox{pcar}_f(t)$, obtemos os endomorfismos com as seguintes matrizes:
+$$
+\begin{pmatrix}1 & 0 & -1 & -1 \\ 1 & 1 & 0 & -1 \\ 1 & 1 & 0 & -1\\ 0 & 1 & 1 & 0\end{pmatrix}\quad\mbox{e}\quad
+\begin{pmatrix}1 & 0 & -1 & 1 \\ -1 & 1 & 0 & -1 \\ 1 & -1 & 0 & 1\\ 0 & 1 & -1 & 0\end{pmatrix}.
+$$
+Calculando as forma escalonadas destas matrizes, os núcleos destes endomorfismos são
+$$
+\ker (f^2+f+1)=\langle b_1+b_4,b_2-b_3+b_4\rangle
+$$
+e
+$$
+\ker (f^2-f+1)=\langle b_1-b_4,b_2+b_3+b_4\rangle.
+$$
+Obtemos neste caso a decomposição
+$$
+\R^4=\ker(f^2+f+1)\oplus \ker(f^2-f+1).
+$$
+
+:::
+
+
+:::{#exr-}
+Seja $p:V\to V$ uma projeção. Então $p$ comuta com $f$ (ou seja $pf=fp$) se e somente se $\ker p$ e $\mbox{Im}(p)$ são invariantes por $f$.
+:::
+
+
+:::{#thm-}
+(O Teorema da Decomposisão Primária)
+Assuma que
+$$
+m_f(t)=q_1(t)^{\alpha_1}\cdots q_k(t)^{\alpha_k}
+$$
+com $\alpha_i\geq 1$ e os $q_is$ são polinômios irredutúveis distintos em $\F[x]$. Ponha $W_i=\ker (q_i^{\alpha_i}(f))$. Então as seguintes são verdadeiras:
+
+
+ -  $V=W_1\oplus\cdots\oplus W_k$;
+ -  cada $W_i$ é $f$-invariante;
+ -  o polinômio mínimo de $f|_{W_i}$ é $q_i^{\alpha_i}(t)$.
+
+:::
+
+
+:::{.proof}
+Seja
+$$
+r_i=m_f(t)/q_i^{\alpha_i}(t)=q_1(t)^{\alpha_1}\cdots q_{i-1}(t)^{\alpha_{i-1}}q_{i+1}(t)^{\alpha_{i+1}}\cdots q_k(t)^{\alpha_k}.
+$$
+Os polinômios $r_1,\ldots,r_k$ são primos entre si, e existem $h_1(t),\ldots,h_k(t)\in\F[x]$ tais que
+$$
+h_1(t)r_1(t)+\cdots+h_k(t)r_k(t)=1;
+$$
+ou seja
+$$
+h_1(f)r_1(f)+\cdots+h_k(f)r_k(f)=\mbox{id}_V;
+$$
+Afirmamos que a composição de duas parcelas na soma anterior é o endomorfismo zero. De fato, note que se $i\neq j$, então $m_f(t)\mid r_i(t)r_j(t)$ e
+$$
+h_i(f)r_i(f)h_j(f)r_j(f)=h_i(f)h_j(f)r_i(f)r_j(f)=[(h_ih_j)(f)][(r_ir_j)(f)]=0.
+$$
+Aqui usamos que $r_i(f)$ $h_j(f)$ comutam pois eles são membros do anel comutativo $\F[f]$.
+
+Ora usamos o Teorema que provamos na página <a href="https://schcs.github.io/WP/index.php/ensino/algebra-linear-ii/projecoes/">Projeções</a> para concluir que cada $h_i(f)r_i(f)$ é uma projeção e
+$$
+V=\mbox{Im}(h_1(f)r_1(f))\oplus\cdots\oplus \mbox{Im}(h_k(f)r_k(f)).
+$$
+
+Próximo afirmamos que $\mbox{Im}(h_i(f)r_i(f))=\ker(q_i(f)^{\alpha_i})$ para todo $i$.
+Se $v\in \mbox{Im}(h_i(f)r_i(f))$, então $v=(h_i(f)r_i(f))(w)$ e
+$$
+q_i^{\alpha_i}(f)(v)=q_i^{\alpha_i}(f)h_i(f)r_i(f)(w)=h_i(f)q_i^{\alpha_i}(f)r_i(f)(w)=0.
+$$
+Logo, $\mbox{Im}(h_i(f)r_i(f))\leq \ker(q_i(f)^{\alpha_i})$. Agora, assuma que $v\in \ker(q_i(f)^{\alpha_i})$ e note que $q_i^{\alpha_i}(t)\mid r_j(t)$ para todo $j\neq i$ e portanto $h_j(f)r_j(f)(v)=0$. Ora,
+\begin{align*}
+v&=\mbox{id}_V(v)=(h_1(f)r_1(f)+\cdots+h_i(f)r_i(f)+\cdots+h_k(f)r_k(f))(v)\\&=h_i(f)r_i(f)(v)\in \mbox{Im}(h_i(f)r_i(f)).
+\end{align*}
+Isso monstra que a decomposição no item 1. está válida. O fato que $W=\ker(q_i^{\alpha_i}(f))=\mbox{Im}(h_i(f)r_i(f))$ é $f$-invariante, segue do fato que $f$ comuta com a projeção $h_i(f)r_i(f)$ e do exercício em cima.
+
+Finalmente, provamos a afirmação sobre o polinômio mínimo de $f|_{W_i}$. Seja $m_i(t)$ este polinômio mínimo. Como $W_i=\ker(q_i^{\alpha_i}(f))$, temos que $m_i(t)\mid q_i^{\alpha_i}(t)$. Ou seja, $m_i(t)=q_i^{\beta_i}(t)$ com algum $\beta_i\in\{1,\ldots,\alpha_i\}$ e isso vale para todo $i$. Se $v\in V$, escreva $v=v_1+\cdots+v_k$ com $v_i\in W_i$ e
+\begin{align*}
+q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v)&=q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1+\cdots+v_k)\\&=
+q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1)+\cdots+q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_k)\\&=0.
+\end{align*}
+Obtemos que $m_f(t)=q_1^{\alpha_1}\cdots q_k^{\alpha_k}$ divide $q_1^{\beta_1}\cdots q_k^{\beta_k}$. Pelo Teorema da Fatoração para Polinômios, obtemos que $\alpha_i\leq \beta_i$ para todo $i$ e $\alpha_i=\beta_i$ segue para todo $i$. Logo $m_i(t)=q_i^{\alpha_i}$.
+
+:::
+
+O Teorema espectral é o caso particilar $\F=\C$ do Teorema da Decomposição Primária. Neste caso
+$$
+m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
+$$
+com $\lambda_1,\ldots,\lambda_k\in \C$ distintos e $\alpha_i\geq 1$.
+
+:::{#thm-}
+(O Teorema Espectral)
+Assuma que $\F=\C$ e $f:V\to V$ é como acima. Neste caso,
+$$
+m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
+$$
+com $\lambda_i\in\C$ distintos e $\alpha_i\geq 1$. Ponha $W_i=\ker (f-\lambda_i\mbox{id}_V)^{\alpha_i}$. Então as seguintes são verdadeiras:
+
+
+ -  $V=W_1\oplus\cdots\oplus W_k$;
+ -  cada $W_i$ é $f$-invariante;
+ -  o polinômio mínimo de $f|_{W_i}$ é $(t-\lambda_i)^{\alpha_i}$.
+
+:::

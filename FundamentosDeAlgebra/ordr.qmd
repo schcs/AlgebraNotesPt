@@ -1,10 +1,13 @@
 
 
 ---
-title: "A ordem de uma classe residual"
+title: "A ordem de uma classe residual o Teorema do Elemento Primitivo"
 number-sections: true
 lang: pt-BR
 ---
+
+
+## Ordem de classes residuais 
 
 Seja $n\in\N$ e considere o conjunto $\Z_n$ das classes residuais. Comecemos com um exemplo motivador.
 
@@ -117,3 +120,34 @@ Seja $a\in\Z$ e $n\in\N$ tais que $\mdc an=1$. As seguintes afirmações são v�
 As partes deste resultado seguem das afirmações correspondentes sobre $\overline a\in\Z_n$
 :::
 
+## O Teorema do Elemento Primitivo
+
+Lembre que $\Z_n^*$ denota o conjunto de elementos invertíveis em $\Z_n$. A ordem $|\overline a|$ de um elemento $\overline a\in\Z_n^*$ é o menor $k\in\N$ tal que $\overline a^k=\overline 1$. Pelo Teorema de Euler, $|\overline a|$ é um divisor de $\varphi(n)$. Em particular, quando $n$ é primo $|\overline a|$ é um divisor de $p-1$.
+
+:::{#def-}
+Seja $n\in\N$. Um elemento de $\overline a\in\Z_n^*$ é dito primitivo se $|\overline a|=\varphi(n)$. No caso particular quando $n$ é primo, um elemento $\overline a\in\Z_n$ é dito primitivo se $|\overline a|=p-1$
+:::
+
+
+:::{#exm-}
+Considere os casos $n=2,3,4,5,6,7,8$. Em $\Z_2^*=\{\overline 1\}$, o elemento $\overline 1$ é primitivo. Em $\Z_3^*=\{\overline 1,\overline 2\}$, o elemento $\overline 2$ é primitivo, pois $|\overline 2|=2=3-1$. Em $\Z_4^*=\{\overline 1,\overline 3\}$, o elemento $\overline 3$ é primitivo. Em $\Z_5^*=\{\overline 1,\overline 2,\overline 3,\overline 4\}$, os elementos $\overline 2$ e $\overline 3$ são primitivos, pois $|\overline 2|=|\overline 3|=4$. O elemento $\overline 4\in\Z_5^*$ não é primitivo, pois sua ordem é $2$. Em $\Z_6^*=\{\overline 1,\overline 5\}$, o elemento $\overline 5$ é primitivo. É fácil verificar que em $\Z_7^*$, os elementos $\overline 3$ e $\overline 5$ são primitivos, mas os outros não são.  Em $\Z_8^*=\{\overline 1,\overline 3,\overline 5,\overline 7\}$ todo elemento possui ordem $2$ e nenhum é primitivo
+:::
+
+
+:::{#lem-}
+ Seja $\overline a\in\Z_n^*$ um elemento primitivo. Então
+$$
+\Z_n^*=\{\overline a^0,\overline a,\overline a^2,\ldots,\overline a^{\varphi(n)-1}\}.
+$$
+:::
+
+
+:::{.proof}
+Este lema segue do fato que $|\Z_n^*|=\varphi(n)$ e do resultado anterior que os elementos listados na linha destacada do enunciado do lema são mutuamente distintos
+:::
+
+Enunciaremos agora o Teorema do Elemento Primitivo. A demonstração deste teorema não é muito difícil, mas precisa de alguns fatos sobre polinômios e suas raízes que vamos aprender depois da segunda prova e a demonstração será adiada.
+
+:::{#thm-primitive1}
+Se $p\in\N$ é um primo, então $\Z_p^*$ possui elementos primitivos
+:::

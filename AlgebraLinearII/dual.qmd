@@ -1,0 +1,136 @@
+--- 
+title: "O espaço dual"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#def-}
+Se $V$ é um $\F$-espaço vetorial, então $V^*=\mbox{Hom}(V,\F)$ é dito <b>espaço dual</b> de $V$. Os elementos de $V^*$ são chamados de <b>formas lineares</b> ou <b>funcionais lineares</b> de $V$.
+:::
+
+Se $\dim V=k$ é finita, então $\dim V^*=\dim V=k$.
+
+Seja $B=\{b_i\mid i\in I\}$ uma base de $V$. Para $i\in I$, defina
+$$
+b_i^*\in V^*,\quad b_i^*(b_j)=\delta_{i,j}=\left\{\begin{array}{cc} 1 & \mbox{se $i=j$}\\
+0 & \mbox{se $i\neq j$}\end{array}\right.
+$$
+
+:::{#lem-}
+O conjunto $B^*=\{b_i^*\mid i\in I\}$ é L.I. em $V^*$. Além disso, se $\dim V$ é finita, então $B^*$ é base de $V^*$.
+:::
+
+
+:::{.proof}
+Assuma que uma combinação linear
+$$
+\alpha_1 b_{i_1}^*+\cdots+\alpha_m b_{i_m}^*=0_{V^*}.
+$$
+Denote o lado esquerdo da equação anterior por $\varphi$. Seja $j\in\{1,\ldots,m\}$ e calculemos que
+\begin{align*}
+0&=\varphi(b_{i_j})=(\alpha_1 b_{i_1}^*+\cdots+\alpha_m b_{i_m}^*)(b_{i_j})\\&=
+\alpha_1 b_{i_1}^*(b_{i_j})+\cdots+\alpha_jb_{i_j}^*(b_{i_j})+\cdots+\alpha_m b_{i_m}^*(b_{i_j})\\&=\alpha_{i_j}.
+\end{align*}
+Então $\alpha_{i_j}=0$ para todo $j$. Ou seja, $B^*$ é L.I.
+
+Se $\dim V$ é finita, então $\dim V=\dim V^*$ e assim $B^*$ (sendo um conjunto L.I. com cardinalidade $\dim V^*$) é base de $B^*$.
+
+:::
+
+Quando $\dim V$ for finita, a base $B^*$ é chamada de <b>base dual</b> de $B$.
+Note que se $\dim V$ é infinita, então $B^*$ não é conjunto gerador, pois a funcional $\varphi\in V^*$ que leva $\varphi(b_i)=1$ para todo $i$ não pertence ao subespaço $\langle B^*\rangle$.
+
+Sejam $V$ e $W$ $\F$-espaços vetoriais, e seja $f\in\mbox{Hom}(V,W)$. Definimos o dual $f^*\in \mbox{Hom}(W^*,V^*)$ com a regra
+$$
+f^*(\varphi)=\varphi\circ f.
+$$
+Usando diagramas
+$$
+\begin{array}{cc}
+W & \stackrel{\varphi}{\longrightarrow} & \F\\
+f\uparrow & \nearrow \\
+V &&
+\end{array}
+$$
+o mapa $f^*(\varphi)$ é representado pela flecha diaginal. Note que o morfismo original está de $V$ para $W$, enquanto o morfismo dual está de $W^*$ para $V^*$.
+
+:::{#exr-}
+Seja $f:V\to W$ uma transformação linear entre $\F$-espaços de dimensão finita. Sejam $B$ e $C$ bases de $V$ e $W$, respetivamente. Mostre que
+$$
+[f^*]^{C^*}_{B^*}=([f]^B_C)^t
+$$
+onde $(-)^t$ significa a matriz transposta.
+:::
+
+Se $\F$ é um corpo, a <a href="https://pt.wikipedia.org/wiki/Teoria_das_categorias">categoria</a> dos $\F$-espaços vetoriais consiste
+
+
+ -  nos $\F$-espaços vetoriais; e
+ -  nos transformações lineares entre $\F$-espaços.
+
+Neste contesto, as transformações lineares também são chamadas de morfismos ou flechas.
+
+O conceito "dual" associa um espaço vetorial $V$ com seu dual $V^*$ e cada morfismo $f:V\to W$ com o seu dual $f^*:W^*\to V^*$. Além disso, é fácil verificar que
+$$
+\mbox{id}_V^*=\mbox{id}_{V^*}
+$$
+e que se $f:V\to U$ e $g:U\to W$ são transformações lineares, então
+$$
+(g\circ f)^*=f^*\circ g^*.
+$$
+Devido a estas propriedades, dizemos que o dual é um <b>functor contravariante</b> da categoria de espaços vetoriais.
+
+Note que a correspondência entre $V$ e $V^*$ não é natural (ou canônica), pois precisa-se  fixar uma base para definí-la. No entanto, existe uma correspondência natural entre $V$ e $V^{**}=(V^*)^*$. Os elementos de $V^{**}$ são transformações lineares em $\mbox{Hom}(V^*,\F)=\mbox{Hom}(\mbox{Hom}(V,\F),\F)$. Ou seja, se $\psi\in V^{**}$, então $\psi:V^*\to \F$ é linear.
+
+Seja $v\in V$ e defina
+$$
+\psi_v:V^*\to \F,\quad \psi_v(\varphi)=\varphi(v)\quad \mbox{para todo}\quad \varphi\in V^*.
+$$
+O leitor deve verificar que $\psi_v:V^*\to \F$ é linear e assim $\psi_v\in V^{**}$.
+Defina
+$$
+\Psi:V\to V^{**},\quad \Psi(v)=\psi_v.
+$$
+
+:::{#lem-}
+A aplicação $\Psi:V\to V^{**}$ é linear e injetiva. Se $\dim V=k$ finita, então $\Psi$ é um isomorfismo entre $V$ e $V^{**}$.
+:::
+
+
+:::{.proof}
+O leitor pode verificar que $\Psi$ é linear. Seja $v\in\ker \Psi$. Então $\psi_v=0$. Assuma que $v\neq 0$ e seja $B$ uma base de $V$ que contém $v$ e considere o elemento $v^*$ na base dual. Então
+$$
+0=\psi_v(v^*)=v^*(v)=1.
+$$
+Isso é uma contradição, então $v=0$ deve valer. Assim $\ker\Psi=0$ e $\Psi$ é injetiva.
+
+Se $\dim V=k$ finita, então $\dim V^{**}=\dim V^*=\dim V$ e uma aplicação injetiva $V\to V^{**}$ é um isomorfismo.
+
+:::
+
+Note que se $f\in\mbox{Hom}(V,W)$, então já definimos $f^*:W^*\to V^*$ e podemos definir $f^{**}:V^{**}\to W^{**}$ como
+$$
+f^{**}(\gamma)=\gamma \circ f^*\quad\mbox{para todo}\quad \gamma\in V^{**}.
+$$
+Usando diagramas
+$$
+\begin{array}{cc}
+V^* & \stackrel{\gamma}{\longrightarrow} & \F\\
+f^*\uparrow & \nearrow \\
+W^* &&
+\end{array}
+$$
+o mapa $f^{**}(\gamma)$ está representado pela flecha diagonal. Mais detalhadamente, temos para $\gamma\in V^{**}$, $\varphi\in W^*$ que
+$$
+f^{**}(\gamma)(\varphi)=(\gamma\circ f^*)(\varphi)=\gamma(f^*(\varphi))=\gamma(\varphi\circ f).
+$$
+
+É fácil verificar que
+$$
+\mbox{id}_V^{**}=\mbox{id}_{V^{**}}
+$$
+e que se $f:V\to U$ e $g:U\to W$ são transformações lineares, então
+$$
+(g\circ f)^{**}=g^{**}\circ f^{**}.
+$$
+Ou seja, o duplo dual é um <b>functor covariante</b> da categoria dos $\F$-espaços vetoriais.

@@ -1,8 +1,10 @@
 ---
-title: "Equações quadráticas"
+title: "Equações quadráticas e cubicas"
 number-sections: true
 lang: pt-BR
 ---
+
+## Equações quadráticas
 
 Considere um polinômio
 $$
@@ -48,5 +50,125 @@ sobre $\Z_{11}$. As soluções nesta equação são
 x_{1,2}&=\frac{-\overline 3\pm\sqrt{\overline 3^2-4\cdot \overline 2\cdot \overline 4}}{\overline 4}\\&=\frac{-\overline 3\pm\sqrt{-\overline {23}}}{\overline 4}\\&=\frac{-\overline 3\pm\sqrt{-\overline 1}}{\overline 4}.
 \end{align*}
 Como $11\equiv 3\pmod 4$, $-\overline 1$ não é quadrado em $\Z_{11}$; ou seja, $\sqrt{-\overline 1}$ não existe em $\Z_{11}$ e a equação não possui soluções. Portanto não existe $x\in\Z$ tal que $2x^2+3x-7\equiv 0\pmod{11}$
+:::
+
+## Equações cúbicas
+
+Nesta página vamos estudar equações do terceiro grau. Para um tratamento mais detalhado, divertido, histórico, assista os vídeos nos canais <a href="https://youtu.be/N-KXStupwsc">Mathologer</a> e <a href="https://youtu.be/cUzklzVXJwo">Veritasium</a>.
+
+Considere uma equação na forma
+\begin{equation}
+ax^3+bx^2+cx+d=0
+\end{equation}
+onde $a,b,c,d\in\C$ com $a\neq 0$. Nós vamos determinar as raízes complexas desta equação. O procedimento será apresentado em vários passos.
+
+**Passo 1.** A equação original tem as mesmas raízes que a equação
+$$
+x^3+(b/a)x^2+(c/a)x+d/a=0.
+$$
+Assim nós consideremos apenas equações na forma
+\begin{equation}\label{eq:orig}
+x^3+ax^2+bx+c=0\tag{1}.
+\end{equation}
+
+**Passo 2.** Introduza uma nova variável $y=x+a/3$. Substituindo,
+$$
+0=x^3+ax^2+bx+c=(y-a/3)^3+a(y-a/3)^2+b(y-a/3)+c.
+$$
+Abrindo as parênteses, obtemos que o coeficiente de $y^2$ na equação anterior é $-3a/3+a=0$ e a equação fica na forma
+\begin{equation}\label{eq:pq}
+y^3+py+q=0\tag{2}
+\end{equation}
+onde
+$$
+p=b-\frac{a^2}3\quad\mbox{e}\quad q=c-\frac{ab}3+\frac{2a^3}{27}.
+$$
+Se $\alpha\in\C$ é raiz da equação \eqref{eq:pq}, então $\beta=\alpha-a/3$ é raiz da equação (\ref{eq:orig}).
+
+**Passo 3.** Assuma que $\alpha\in\C$ é raiz da equação \eqref{eq:pq}. Escreva $\alpha=u+v$ com $u,v\in\C$ onde $u$ e $v$ serão determinados mais tarde. Obtem-se que
+\begin{align*}
+0&=(u+v)^3+p(u+v)+q\\&=u^3+3u^2v+3uv^2+v^3+pu+pv+q\\&=(u^3+v^3+q)+(3uv+p)(u+v).
+\end{align*}
+Vamos escolher $u,v\in\C$ tais que
+\begin{align*}
+u^3+v^3&=-q\\
+uv&=-p/3
+\end{align*}
+pois esta escolha garante a igualdade na equação anterior.
+O sistema das duas equações para $u$ e $v$  implica que
+\begin{align*}
+u^3+v^3&=-q\\
+u^3v^3&=-p^3/27.
+\end{align*}
+Assim $u^3$ e $v^3$ são soluções da equação
+$$
+t^2+qt-p^3/27=0
+$$
+e obtemos da fórmula quadrática que
+\begin{equation}\label{eq:u3}
+u^3=\frac{-q\pm \sqrt{q^2+4p^3/27}}2\tag{3}
+\end{equation}
+Logo
+$$
+u = \sqrt[3]{\frac{-q\pm \sqrt{q^2+4p^3/27}}2}
+$$
+e
+$$
+v = \frac{-p}{3u}.
+$$
+Agora $\alpha=u+v$ é solução da equação \eqref{eq:pq} e
+$$
+\beta=\alpha-a/3=u+v-a/3
+$$
+é solução da equação \eqref{eq:orig}.  Observe que na equação \eqref{eq:u3}, temos três escolhas para $u$ que resulta em três soluções para a equação \eqref{eq:orig}.
+
+:::{#exm-}
+Considere a equação
+$$
+f(x)=x^3-6x^2+9x-3=0.
+$$
+Substituímos $y=x-2$, e obtemos que
+$$
+g(y)=f(y+2)=y^3-3y-1=0.
+$$
+Assuma que $\alpha=u+v$ é uma raiz da equação $g(y)=0$. Então $u^3$ e $v^3$ são raízes de
+$$
+t^2-t+1
+$$
+e assim
+$$
+u^3=\frac{1+\sqrt{-3}}2=\frac 12+\frac{\sqrt 3}2i=\cos(\pi/3)+i\mbox{sen}(\pi/3).
+$$
+As três raízes cúbicas de $u^3$ são
+\begin{align*}
+u_1&=\cos(\pi/9)+i\mbox{sen}(\pi/9)\\
+u_2&=\cos(7\pi/9)+i\mbox{sen}(7\pi/9)\\
+u_3&=\cos(13\pi/9)+i\mbox{sen}(13\pi/9)\\
+\end{align*}
+e os valores de $v$ correspondentes são
+\begin{align*}
+v_1&=u_1^{-1}=\cos(\pi/9)-i\mbox{sen}(\pi/9)\\
+v_2&=u_2^{-1}=\cos(7\pi/9)-i\mbox{sen}(7\pi/9)\\
+v_3&=u_3^{-1}=\cos(13\pi/9)+i\mbox{sen}(13\pi/9).
+\end{align*}
+As soluções da equação $g(y)=0$ são obtidos como
+\begin{align*}
+\alpha_1&=u_1+v_1=2\cos(\pi/9)\\
+\alpha_2&=u_2+v_2=2\cos(7\pi/9)\\
+\alpha_3&=u_3+v_3=2\cos(13\pi/9).
+\end{align*}
+As soluções da equação original $f(x)=0$ são
+\begin{align*}
+\beta_1&=\alpha_1+2=2\cos(\pi/9)+2\\
+\beta_2&=\alpha_2+2=2\cos(7\pi/9)+2\\
+\beta_3&=\alpha_3+2=2\cos(13\pi/9)+2.
+\end{align*}
+:::
+
+O procedimento acima poderia ser escrito na forma de uma fórmula cúbica, mas esta fórmula, devido a sua complexidade, não seria útil na prática. Existe um procedimento similar, mas bem mais complicado, para resolver equações do quarto grau e este procedimento também poderia ser escrito como uma fórmula quártica.  O vídeo do canal Mathologer inserido no início da página mostra a fórmula geral cúbica. A partir de grau cinco, não existe mais tais fórmulas e este resultado é conhecido como o Teorema de <a href="https://pt.wikipedia.org/wiki/Niels_Henrik_Abel">Abel</a>-<a href="https://pt.wikipedia.org/wiki/Paolo_Ruffini">Ruffini</a>.
+
+:::{#thm-}
+(O Teorema de Abel-Ruffini)
+Se $k\geq 5$, então não existe fórmula para obter as raízes complexas de um polinômio arbitrário de grau $k$ usando apenas os coeficientes do polinômio, constantes, as operações da adição, subtração, multiplicação, divisão, e tomando $n$-esimas raízes para $n\geq 2$
 :::
 

@@ -1,0 +1,87 @@
+---
+title: "O polinômio minimal de um operador"
+number-sections: true
+lang: pt-BR
+--- 
+
+Nesta página, $V$ é um espaço vetorial sobre um corpo $\F$ de dimensão $n$ (finita) e $t$ é uma incôgnita sobre $\F$.
+
+Note que $\mbox{End}(V)=\mbox{Hom}(V,V)\cong M_{n\times n}(\F)$ é um espaço de dimensão $n^2$ (finita). Além disso, no espaço $\mbox{End}(V)$ temos que os elementos (endomorfismos) podem ser somados, multiplicados por escalar e também compostos. Se $f,g\in \mbox{End}(V)$, então $fg=f\circ g$ e $f^k=f\circ\cdots\circ f$ ($k$ vezes). Dizemos que $\mbox{End}(V)$ é uma <b>álgebra</b>.
+
+Se $f\in\mbox{End}(V)$, então a sequência infinita, $f^0=\mbox{id}_V,f,f^2,f^3,\ldots$ é L.D. Assuma que $m\geq 0$ é tal que a seqência $f^0,f,f^2,\ldots,f^m$ é linearmente dependente. Então existem coeficientes $\alpha_0,\alpha_1,\ldots,\alpha_m\in\F$ tais que eles não são todos iguais a zero e
+$$
+\alpha_0 f^0+\alpha_1 f+\cdots+\alpha_m f^m=0
+$$
+onde $0$ denota o operador $0\in\mbox{End}(V)$.
+Defina
+$$
+p(t)=\alpha_0+\alpha_1t+\cdots+\alpha_{m-1}t^{m-1}+\alpha_mt^m\in\F[t].
+$$
+Então temos que $p(t)\in\F[t]$ é um polinômio não nulo e $p(f)=0$; ou seja $f$ é raíz de $p(t)$.
+
+:::{#lem-}
+Seja
+$$
+I_f=\{p(t)\in\F[t]\mid p(f)=0\}\subseteq \F[t].
+$$
+Então $I_f$ é fechado para soma e múltiplo escalar. Além disso, se $p(t)\in I_f$ e $q(t)\in \F[t]$, então $p(t)q(t)\in I_f$. (Em outras palávras, $I_f$ é um ideal em $\F[t]$). Ademais, $I_f$ contém polinômios não nulos, existe único polinômio mônico $m_f(t)\in I_f$ de menor grau e
+$$
+I_f=m_f(t)\F[t]=\{m_f(t)q(t)\mid q(t)\in\F[t]\}.
+$$
+(Ou seja, $I_f$ é o conjunto de múltiplos de $m_f(t)$).
+:::
+
+
+:::{.proof}
+É fácil verificar que $I_f$ é fechado para a soma, múltiplo escalar e para o produto no sentido do enunciado do lema. O argumento antes do lema mostra que existe polinômio não nulo em $I_f$. Seja $m_f(t)$ um polinômio de menor grau e assuma (por dividir pelo coeficiente líder de $m_f(t)$) que $m_f(t)$ é mônico. Pela propriedade de ser fechado para o produto, temos que $m_f(t)\F[t]\subseteq I_f$. Para provar a outra inclusão, seja $p(t)\in I_f$ arbitrário. Pelo Teorema de Divisão de Euclides, temos que
+$$
+p(t)=q(t)m_f(t)+r(t)
+$$
+onde $r(t)=0$ ou o grau de $r(t)$ é menor que o grau de $m_f(t)$. Por outro lado
+$$
+r(f)=p(f)-q(f)m_f(f)=0
+$$
+e $r(t)\in I_f$. Pela minimalidade do grau de $m_f(t)$, temos que $r(t)=0$; ou seja, $p(t)=q(t)m_f(t)$. Portanto $I_f\subseteq m_f(t)\F[t]$ e $I_f=m_f(t)\F[t]$. Finalmente, se $p(t)\in I_f$ mônico com o mesmo grau que $m_f(t)$, então $p(t)=1\cdot m_f(t)=m_f(t)$ e assim verificamos a unicidade de $m_f(t)$.
+:::
+
+
+:::{#def-}
+O polinômio $m_f(t)\in\F[t]$ no lema anterior e chamado <b>polinômio mínimo</b> do endomorfismo $f$.
+:::
+
+
+:::{#exm-}
+Seja $f:\F^3\to\F^3$ definido como $f(x,y,z)=(0,x,y+z)$. A matriz de $f$ na base canônica é
+$$
+\begin{pmatrix} 0 & 0 & 0\\ 1 & 0 & 0 \\ 0 & 1 & 1\end{pmatrix},
+$$
+enquanto as matrizes de $f^2$ e $f^3$ são
+$$
+\begin{pmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \\ 1 & 1 & 1\end{pmatrix}\quad\mbox{e}\quad
+\begin{pmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \\ 1 & 1 & 1\end{pmatrix}.
+$$
+Logo $f^2=f^3$ ou seja $f^3-f^2=0$. Como (as matrizes de ) $f^0$, $f$, $f^2$ são L.I., temos que $m_f(t)=t^3-t^2$.
+:::
+
+
+:::{#lem-}
+Se $\lambda$ for um autovalor de $f:V\to V$, então $m_f(\lambda)=0$, ou equivalentemente, $t-\lambda\mid m_f(t)$. Em particular, se $\mbox{Spec}(f)=\{\lambda_1,\ldots,\lambda_k\}$, então
+$$
+(t-\lambda_1)\cdots (t-\lambda_k)\mid m_f(t)
+$$
+e $\deg m_f(t)\geq k$.
+:::
+
+
+:::{.proof}
+Primeiro, escreva, usando o Teorema de Divisão de Euclides, que
+$$
+m_f(t)=q(t)(t-\lambda)+\alpha
+$$
+onde $\alpha\in\F$.
+Assuma que $v\in V_\lambda$ não nulo. Ora
+$$
+0=m_f(f)(v)=(q(f)(f-\lambda\mbox{id}_V)+\alpha\mbox{id}_V)v=\alpha v.
+$$
+Como, $v\neq 0$, temos que $\alpha=0$, ou seja, $m_f(t)=q(t)(t-\lambda)$. A segunda afirmação segue do fato que os polinômios $t-\lambda_i$ são primos entre si dois a dois.
+:::
