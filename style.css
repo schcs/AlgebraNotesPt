@@ -62,6 +62,9 @@ font-style: normal;
 
 .theorem.theorem[text]:before {
 content: "Teorema (" attr(text) ") ";
+font-weight: bold;
+font-style: normal;
+font-size: 1.5rem;
 }
 
 .theorem.definition {
