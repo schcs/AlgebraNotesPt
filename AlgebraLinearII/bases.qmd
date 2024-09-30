@@ -29,7 +29,7 @@ v=\sum_{i=1}^n\beta_iy_i
 =
 \beta_1\left((1/\alpha_1)x_1-\sum_{i=2}^n(\alpha_i/\alpha_1) y_i\right)+\sum_{i=2}^n\beta_i y_i
 $$
-Ou seja, $v$ também é combinação linear de $x_1,y_2,\ldots,y_k$ Como $v$ foi arbitrário, o conjunto $Y_1=\{x_1,y_2,\ldots,y_k\$ é um conjunto gerador.
+Ou seja, $v$ também é combinação linear de $x_1,y_2,\ldots,y_k$ Como $v$ foi arbitrário, o conjunto $Y_1=\{x_1,y_2,\ldots,y_k\}$ é um conjunto gerador.
 
 Escolha agora $x_2\in X\setminus\{x_1\}$. Como $Y_1$ é sistema gerador, podemos escrever
 $$

@@ -52,7 +52,6 @@ book:
         - FundamentosDeAlgebra/dfu.qmd
         - FundamentosDeAlgebra/gauss_pt1.qmd
         - FundamentosDeAlgebra/quadratic.qmd
-
     - part: AlgebraLinearII/index.qmd
       chapters: 
         - AlgebraLinearII/bases.qmd

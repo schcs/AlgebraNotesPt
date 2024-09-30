@@ -9,7 +9,7 @@ f^{-1}(A)=\{v\in V\mid f(v)\in A\}.
 $$
 Note que $f$ não precisa ser invertivel.
 
-:::{#exr-}
+:::{#exr-jjjj}
 Demonstre as seguintes aformações para um endomorfismo $f:V\to V$ e para $A,B\leq V$:
 
 
