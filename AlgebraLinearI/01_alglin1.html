@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Conjuntos – Álgebra</title>
+<title>38&nbsp; Espaços vetoriais – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../IniciacaoAMatematica/quant.html" rel="next">
-<link href="../IniciacaoAMatematica/prop.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../FundamentosDeAlgebra/quadratic.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -650,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/conjuntos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conjuntos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin1.html">AlgebraLinearI/index.qmd</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin1.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -698,7 +698,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/conjuntos.html" class="sidebar-item-text sidebar-link active">
+  <a href="../IniciacaoAMatematica/conjuntos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conjuntos</span></span></a>
   </div>
 </li>
@@ -936,7 +936,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/01_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/01_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></span></a>
   </div>
 </li>
@@ -1226,21 +1226,20 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#como-definir-conjuntos" id="toc-como-definir-conjuntos" class="nav-link active" data-scroll-target="#como-definir-conjuntos"><span class="header-section-number">2.1</span> Como definir conjuntos</a></li>
-  <li><a href="#subconjuntos" id="toc-subconjuntos" class="nav-link" data-scroll-target="#subconjuntos"><span class="header-section-number">2.2</span> Subconjuntos</a></li>
-  <li><a href="#as-operações-básicas-de-conjuntos" id="toc-as-operações-básicas-de-conjuntos" class="nav-link" data-scroll-target="#as-operações-básicas-de-conjuntos"><span class="header-section-number">2.3</span> As operações básicas de conjuntos</a></li>
-  <li><a href="#conjuntos-definidos-com-predicato" id="toc-conjuntos-definidos-com-predicato" class="nav-link" data-scroll-target="#conjuntos-definidos-com-predicato"><span class="header-section-number">2.4</span> Conjuntos definidos com predicato</a></li>
-  <li><a href="#propriedades-adicionais-das-operações-dos-conjuntos" id="toc-propriedades-adicionais-das-operações-dos-conjuntos" class="nav-link" data-scroll-target="#propriedades-adicionais-das-operações-dos-conjuntos"><span class="header-section-number">2.5</span> Propriedades adicionais das operações dos conjuntos</a></li>
-  <li><a href="#o-complemento" id="toc-o-complemento" class="nav-link" data-scroll-target="#o-complemento"><span class="header-section-number">2.6</span> O complemento</a></li>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">38.1</span> Introdução</a></li>
+  <li><a href="#introdução-aos-números-complexos" id="toc-introdução-aos-números-complexos" class="nav-link" data-scroll-target="#introdução-aos-números-complexos"><span class="header-section-number">38.2</span> Introdução aos números Complexos</a></li>
+  <li><a href="#espaços-vetoriais" id="toc-espaços-vetoriais" class="nav-link" data-scroll-target="#espaços-vetoriais"><span class="header-section-number">38.3</span> Espaços Vetoriais</a></li>
+  <li><a href="#subespaços" id="toc-subespaços" class="nav-link" data-scroll-target="#subespaços"><span class="header-section-number">38.4</span> Subespaços</a></li>
+  <li><a href="#subespaços-e-sistemas-lineares" id="toc-subespaços-e-sistemas-lineares" class="nav-link" data-scroll-target="#subespaços-e-sistemas-lineares"><span class="header-section-number">38.5</span> Subespaços e sistemas lineares</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/conjuntos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conjuntos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin1.html">AlgebraLinearI/index.qmd</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin1.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conjuntos</span></h1>
+<h1 class="title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></h1>
 </div>
 
 
@@ -1257,150 +1256,224 @@ window.Quarto = {
 </header>
 
 
-<section id="como-definir-conjuntos" class="level2" data-number="2.1">
-<h2 data-number="2.1" data-anchor-id="como-definir-conjuntos"><span class="header-section-number">2.1</span> Como definir conjuntos</h2>
-<p>Conjuntos são objetos básicos na matemática. A teoria dos conjuntos é um ramo relativamente novo que foi desenvolvido a partir do final do século XIX por matemáticos tais como <a href="https://pt.wikipedia.org/wiki/Georg_Cantor">Cantor</a>, <a href="https://pt.wikipedia.org/wiki/David_Hilbert">Hilbert</a>, <a href="https://pt.wikipedia.org/wiki/Max_August_Zorn">Zorn</a>, <a href="https://pt.wikipedia.org/wiki/Ernst_Zermelo">Zermelo</a> e <a href="https://pt.wikipedia.org/wiki/Adolf_Abraham_Halevi_Fraenkel">Fraenkel</a>. A <a href="https://pt.wikipedia.org/wiki/Axiomas_de_Zermelo-Fraenkel">teoria rigorosa dos conjuntos</a> é um assunto avançado que nós não vamos abordar nesta disciplina. O que nós vamos estudar neste semestre é chamado “<a href="https://pt.wikipedia.org/wiki/Teoria_ing%C3%AAnua_dos_conjuntos">Teoria Ingênua dos Conjuntos</a>”. Para estudar matemática moderna e avançada, esta teoria não é suficiente, mas ela serve para introduzir os conceitos básicos e fundamentar os estudos nas disciplinas da graduação.</p>
-<p>Um <em>conjunto</em> <span class="math inline">\(A\)</span> é uma coleção de objetos. Se <span class="math inline">\(x\)</span> é um objeto, então a proposição “<span class="math inline">\(x\in A\)</span>” tem valor lógico verdadeiro ou falso. No caso de verdadeiro, dizemos que <em><span class="math inline">\(x\)</span> pertence ao conjunto <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(x\)</span> é elemento de <span class="math inline">\(A\)</span></em>. Caso contrário, dizemos que <em><span class="math inline">\(x\)</span> não pertence a <span class="math inline">\(A\)</span></em> ou que <em><span class="math inline">\(x\)</span> não é elemento de <span class="math inline">\(A\)</span></em> e escrevemos <span class="math inline">\(x\not\in A\)</span>. Para um conjunto ser bem definido, é necessário que para qualquer objeto <span class="math inline">\(x\)</span> seja possível decidir se <span class="math inline">\(x\in A\)</span> ou <span class="math inline">\(x\not\in A\)</span>. Nós vamos considerar apenas conjuntos de objetos de matemática (tais como números, funções, etc). Muitos textos gostam de citar exemplos de conjuntos de objetos cotadianos, mas estes conjuntos normalmente não satisfazem o critério de ser bem definido. Por exemplo, se queremos considerar o conjunto <span class="math inline">\(X\)</span> de alunos da UFMG, não é claro se o mesmo inclui os alunos que estão em trancamento, os pesquisadores de pós-doutorado, os alunos que não frequentam disciplinas, etc. Para evitar estas ambiguidades, vamos considerar apenas conjuntos que contêm objetos matemáticos.</p>
-<p><strong>Notação</strong>: Conjuntos são delimitados por “<span class="math inline">\(\{\)</span>” e “<span class="math inline">\(\}\)</span>”. Com os conjuntos mais simples, nós listamos os elementos do conjunto entre “<span class="math inline">\(\{\)</span>” e “<span class="math inline">\(\}\)</span>”. Por exemplo, para denotar o conjunto que contém os números <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(5\)</span>, escrevemos <span class="math inline">\(A=\{-1,2,5\}\)</span>. Temos que <span class="math display">\[
--1\in A,\quad 2\in A,\quad 5\in A,
-\]</span> mas <span class="math display">\[
-x\not\in A\quad\mbox{se}\quad x\neq -1, 2, 5.
-\]</span> Para denotar conjuntos usaremos principalmente letras maiúsculas. Por exemplo <span class="math inline">\(A=\{-1,2,5\}\)</span>. No caso de conjuntos infinitos, pode-se usar “<span class="math inline">\(\ldots\)</span>” se não há ambuguidade. Por exemplo, para denotar o conjunto dos números positivos pares, podemos escrever <span class="math inline">\(B=\{2,4,6,\ldots\}\)</span>. Por outro lado, se escrevemos <span class="math inline">\(\{1,2,3,5,\ldots\}\)</span>, não se sabe qual conjunto queremos definir.</p>
-<p>Os conjuntos não são ordenados e contém seus elementos apenas uma vez. Por exemplo, os conjuntos <span class="math inline">\(\{-1,2,5\}\)</span>, <span class="math inline">\(\{5,2,-1,2\}\)</span>, <span class="math inline">\(\{2,2,-1,-1,5\}\)</span> são todos iguais ao conjunto <span class="math inline">\(\{-1,2,5\}\)</span>. Pode acontecer que precisamos “conjuntos” ordenados ou “conjuntos” que contém seus elementos com multiplicidade, mas nestes casos seu professor vai criar um objeto adequado.</p>
-<div id="exm-conjuntos" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 2.1</strong></span> &nbsp;</p>
+<section id="introdução" class="level2" data-number="38.1">
+<h2 data-number="38.1" data-anchor-id="introdução"><span class="header-section-number">38.1</span> Introdução</h2>
+<p>Álgebra Linear 1 é uma continuação de GAAL. Em GAAL, estudamos propriedades de:</p>
 <ul>
-<li>Podemos considerar por exemplo o conjunto <span class="math inline">\(X=\{1,2,3,4,5\}\)</span>. Neste caso <span class="math inline">\(1\in X\)</span>, mas <span class="math inline">\(-1\not\in X\)</span>.</li>
-<li>Pode-se também considerar o conjunto <span class="math inline">\(\N\)</span> dos números naturais. Temos que <span class="math inline">\(\N=\{1,2,3,\ldots\}\)</span>. Em particular, <span class="math inline">\(2\in\N\)</span>, mas <span class="math inline">\(-1\not\in\N\)</span>. Nós também não vamos considerar zero como natural, então <span class="math inline">\(0\not\in \N\)</span>.</li>
+<li><p>Matrizes com entradas em <span class="math inline">\(\R\)</span></p></li>
+<li><p>Vetores (geralmente em <span class="math inline">\(\R^2\)</span> ou <span class="math inline">\(\R^3\)</span>)</p></li>
+</ul>
+<p>Em Álgebra Linear 1 vamos re-estudar os conceitos de vetor e matriz. Umas ideias principais:</p>
+<ul>
+<li><p>Um <strong>espaço vetorial</strong> <span class="math inline">\(V\)</span> será uma coleção de todos os vetores de um dado tipo (por exemplo, <span class="math inline">\(\R^2, \R^3\)</span> são espaços vetoriais). Vamos considerar espaços do tipo <span class="math inline">\(\R^n\)</span> com <span class="math inline">\(n\)</span> maior, e até espaços com “<span class="math inline">\(n=\infty\)</span>”.</p></li>
+<li><p>Uma matriz será considerada como um tipo de <strong>aplicação</strong> especial entre espaços vetoriais. Tais aplicações se chamam <strong>transformações lineares</strong>. Por exemplo, uma matriz <span class="math inline">\(3\times 2\)</span> vai ser uma transformação linear de <span class="math inline">\(\R^2\)</span> a <span class="math inline">\(\R^3\)</span>.</p></li>
+</ul>
+<p>Com essas ideias em mão, várias definições peculiares de GAAL se tornam mais naturais. Por exemplo, suponha que temos transformações lineares assim: <span class="math display">\[\R^4 \xleftarrow{g} \R^3 \xleftarrow{f} \R^2.\]</span></p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> corresponde a uma matriz <span class="math inline">\(3\times 2\)</span> <span class="math inline">\(A\)</span>,</p></li>
+<li><p><span class="math inline">\(g\)</span> corresponde a uma matriz <span class="math inline">\(4\times 3\)</span> <span class="math inline">\(B\)</span>.</p></li>
+</ul>
+<p>A composição <span class="math inline">\(gf\)</span> é uma transformação linear de <span class="math inline">\(\R^2\)</span> a <span class="math inline">\(\R^4\)</span> , logo corresponde a uma matriz <span class="math inline">\(4\times 2\)</span>. Qual?</p>
+<p><strong>Resposta</strong>: a matriz da composição será o <strong>PRODUTO</strong> <span class="math inline">\(BA\)</span> das matrizes <span class="math inline">\(B\)</span> e <span class="math inline">\(A\)</span>. Por isso o produto de matrizes é definido assim.</p>
+</section>
+<section id="introdução-aos-números-complexos" class="level2" data-number="38.2">
+<h2 data-number="38.2" data-anchor-id="introdução-aos-números-complexos"><span class="header-section-number">38.2</span> Introdução aos números Complexos</h2>
+<p>Neste curso, nossa tarefa principal será para estudar os espaços vetoriais com coeficientes em <span class="math inline">\(\R\)</span> (os espaços <span class="math inline">\(\R^2, \R^3, \ldots\)</span> que já conhecemos de GAAL). Mas essencialmente tudo que a gente faz funcionará igualmente bem (ou até melhor) com coeficientes no corpo <span class="math inline">\(\C\)</span> dos números complexos, e vamos ter utilidade explícita de <span class="math inline">\(\C\)</span> bem pelo fim do curso. Então segue uma pequena introdução aos números complexos.</p>
+<p>O ponto de partida é:</p>
+<p>Seja <span class="math inline">\(i\)</span> o número tal que <span class="math inline">\(i^2 = -1\)</span>.</p>
+<p>Observe que <span class="math inline">\(i\not\in \R\)</span>, pois <span class="math inline">\(a^2\geqslant 0\)</span> para todo <span class="math inline">\(a\in \R\)</span>.</p>
+<p>O conjunto <span class="math inline">\(\C\)</span> dos <strong>números complexos</strong> é <span class="math display">\[\C = \{ a + bi\,|\,a,b\in \R\}.\]</span> Somamos os números complexos assim: <span class="math display">\[(a+bi) + (c+di) = (a+c) + (b+d)i,\]</span> e multiplicamos eles assim: <span class="math display">\[(a+bi)(c+di) = (ac - bd) + (ad+bc)i.\]</span></p>
+<p>Esta multiplicação faz sentido, lembrando que <span class="math inline">\(i^2 = -1\)</span>, pois: <span class="math display">\[(a+bi)(c+di) = ac + adi + bci + bdi^2 = ac + (ad + bc)i + bd(-1) = (ac-bd) + (ad + bc)i.\]</span> Observe que todo número complexo <span class="math inline">\(a+bi\)</span> diferente de <span class="math inline">\(0\)</span> possui inverso multiplicativo, nomeadamente <span class="math display">\[
+\frac{a}{a^2+b^2} - \frac{b}{a^2+b^2}i
+\]</span> (confirme isso!). Assim <span class="math inline">\(\C\)</span> é similar ao conjunto <span class="math inline">\(\R\)</span> de números reais ou ao conjunto <span class="math inline">\(\Q\)</span> de números racionais. Note que o conjunto <span class="math inline">\(\Z\)</span> de números inteiros não possui esta propriedade, pois, por exemplo, <span class="math inline">\(2\in\Z\)</span> não possui inverso em <span class="math inline">\(\Z\)</span>. Isso é porque <span class="math inline">\(1/2\not\in\Z\)</span>. Os conjuntos de onde existem inversos dos seus elementos não nulos chamam-se <strong>corpos</strong>. Assim <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\R\)</span> e <span class="math inline">\(\C\)</span> são corpos, mas <span class="math inline">\(\Z\)</span> não é corpo. Para fazer álgebra linear, nós precisamos trabalhar com corpos.</p>
+<p>Às vezes é útil pensar nos elementos de <span class="math inline">\(\C\)</span> no plano:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/complex1.png" class="img-fluid figure-img"></p>
+<figcaption>Plano complexo</figcaption>
+</figure>
+</div>
+<p>O eixo horizontal chama-se o <strong>eixo real</strong> (pois os números deste eixo têm a forma <span class="math inline">\(a+0i = a\in \R\)</span>), enquanto o eixo vertical chama-se o <strong>eixo imaginário</strong>.</p>
+<p>A norma <span class="math inline">\(\|z\|\)</span> de um número complexo <span class="math inline">\(z\)</span> é o comprimento do segmento no plano representando <span class="math inline">\(z\)</span>. Logo pelo Teorema de Pitágoras, <span class="math display">\[\|a+bi\| = \sqrt{a^2 + b^2}.\]</span></p>
+<div id="def-cc" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 38.1</strong></span> O <strong>conjugado complexo</strong> de um número complexo <span class="math inline">\(z = a+bi\)</span> é o número complexo <span class="math inline">\(\overline{z} = a-bi\)</span>.</p>
+</div>
+<p>Logo, o conjugado complexo <span class="math inline">\(\overline{z}\)</span> de <span class="math inline">\(z\)</span> é a reflexão de <span class="math inline">\(z\)</span> no eixo real:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/complex2.png" class="img-fluid figure-img"></p>
+<figcaption>O conjugado complexo</figcaption>
+</figure>
+</div>
+<div id="exr-gaal-cc" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 38.1</strong></span> Dados números complexos <span class="math inline">\(y,z\)</span>, mostre que <span class="math inline">\(\overline{y+z}=\overline y+\overline z\)</span> e que <span class="math inline">\(\overline{y}\cdot \overline{z} = \overline{yz}\)</span>.</p>
+</div>
+<p>Uma fórmula importante pra gente: <span class="math display">\[\boxed{z\cdot \overline{z} = \overline{z}\cdot z = \|z\|^2}\]</span> Assumindo que <span class="math inline">\(z=a+bi\)</span>, ela segue por uma conta fácil: <span class="math display">\[z\cdot \overline{z} = (a+bi)(a-bi) = a^2 + \cancel{abi} - \cancel{abi} - b^2i^2 = a^2+b^2 = \|z\|^2\quad\checkmark\]</span> Observe também que quando <span class="math inline">\(z\neq 0\)</span>, esta fórmula implica que <span class="math display">\[1=\frac{z\cdot \overline z}{\|z\|^2}=\frac{z\cdot \overline z}{a^2+b^2}\]</span> e segue que <span class="math inline">\(z^{-1}=\overline z/\|z\|=(a-bi)/(a^2+b^2)\)</span> como foi afirmado anteriormente.</p>
+<p>Os números complexos têm todas as propriedades legais dos números reais: podemos somar, multiplicar e dividir eles entre si. Mas os números complexos têm uma vantagem enorme sobre os números reais, e por isso são tão importantes na matemática:</p>
+<div id="thm-tfa-gaal" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 38.1</strong></span> [O Teorema Fundamental da Álgebra] Seja <span class="math inline">\(f(x)\)</span> um polinômio não constante com coeficientes em <span class="math inline">\(\C\)</span>. Existe uma raiz de <span class="math inline">\(f\)</span> em <span class="math inline">\(\C\)</span>. Isto é, existe <span class="math inline">\(z\in \C\)</span> tal que <span class="math inline">\(f(z) = 0\)</span>.</p>
+</div>
+<p>A prova deste resultado usa análise complexa e vocês vão estudá-la na disciplina Variável Complexa. Por enquanto, somente vamos olhar um exemplo simples:</p>
+<div id="exm-tfa-ex1" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 38.1</strong></span> Seja <span class="math inline">\(f(x) = x^2- 2x + 5\)</span>. Pela fórmula quadrática, as raizes de <span class="math inline">\(f\)</span> são <span class="math display">\[\lambda = \frac{2 \pm \sqrt{4 - 20}}{2} = \frac{2 \pm \sqrt{(-1)\cdot 16}}{2} =
+\frac{2 \pm 4i}{2} = 1\pm 2i.\]</span></p>
+</div>
+</section>
+<section id="espaços-vetoriais" class="level2" data-number="38.3">
+<h2 data-number="38.3" data-anchor-id="espaços-vetoriais"><span class="header-section-number">38.3</span> Espaços Vetoriais</h2>
+<div id="exm-ev" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 38.2</strong></span> Os espaços vetoriais que conhecemos de GAAL são:</p>
+<ul>
+<li><p><span class="math inline">\(\R^1 = \R\)</span></p></li>
+<li><p><span class="math inline">\(\R^2 = \{(x,y)\,|\,x,y\in \R\}\quad\)</span> (o “plano”)</p></li>
+<li><p><span class="math inline">\(\R^3 = \{(x,y,z)\,|\,x,y,z\in \R\}\quad\)</span>(o “espaço”)</p></li>
+<li><p><span class="math inline">\(\R^n = \{(x_1,\ldots,x_n)\,|\,x_1,\ldots,x_n\in \R\}\quad\)</span>(“espaço <span class="math inline">\(n\)</span>-dimensional”).</p></li>
 </ul>
 </div>
-<p>Note que o símbolo “<span class="math inline">\(\ldots\)</span>”” está usado no segundo exemplo.</p>
-<p>Existe um conjunto que não possui elementos. Este conjunto é chamado de <em>conjunto vazio</em> e é denotado por <span class="math inline">\(\emptyset\)</span>. Por definição <span class="math inline">\(x\not\in \emptyset\)</span> para todo objeto <span class="math inline">\(x\)</span>. O conjunto vazio pode ser escrito também como <span class="math inline">\(\{\}\)</span>.</p>
-</section>
-<section id="subconjuntos" class="level2" data-number="2.2">
-<h2 data-number="2.2" data-anchor-id="subconjuntos"><span class="header-section-number">2.2</span> Subconjuntos</h2>
-<div id="def-subconjunto" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 2.1</strong></span> Assuma que <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são conjuntos. Dizemos que <span class="math inline">\(A\)</span> é <em>subconjunto</em> de <span class="math inline">\(B\)</span>, se todo elemento de <span class="math inline">\(A\)</span> é elemento de <span class="math inline">\(B\)</span>.</p>
-</div>
-<p>Se <span class="math inline">\(A\)</span> é subconjunto de <span class="math inline">\(B\)</span>, então escrevemos que <span class="math inline">\(A\subseteq B\)</span>. Se <span class="math inline">\(A\)</span> não é subconjunto de <span class="math inline">\(B\)</span>, então escrevemos que <span class="math inline">\(A\not\subseteq B\)</span>.</p>
-<div id="exm-subconjunto" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 2.2</strong></span> <span class="math inline">\(\{1,2,3\}\subseteq \{1,2,3,4,5\}\)</span> e <span class="math inline">\(\{1,2,3,4,5\}\subseteq \N\)</span>, mas <span class="math inline">\(\{0,1,2\}\not\subseteq \N\)</span>.</p>
-<p>Para todo conjunto <span class="math inline">\(X\)</span>, temos que <span class="math inline">\(X\subseteq X\)</span> e <span class="math inline">\(\emptyset\subseteq X\)</span>.</p>
-</div>
-<div id="exm-subconjunto1" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 2.3</strong></span> É importante entender a diferença entre os símbolos <span class="math inline">\(\in\)</span> e <span class="math inline">\(\subseteq\)</span>. Por exemplo, se <span class="math inline">\(A=\{1,2,3\}\)</span>, então <span class="math inline">\(1\in A\)</span>, <span class="math inline">\(\{1\}\subseteq A\)</span>. Mas é errado afirmar que <span class="math inline">\(1\subseteq A\)</span> ou <span class="math inline">\(\{1\}\in A\)</span>!</p>
-</div>
-<div id="def-conjunto-equal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 2.2</strong></span> Se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são conjuntos, então dizemos que <span class="math inline">\(A\)</span> é <em>igual</em> a <span class="math inline">\(B\)</span> quando <span class="math inline">\(A\subseteq B\)</span> e <span class="math inline">\(B\subseteq A\)</span>.</p>
-</div>
-<p>Se <span class="math inline">\(A\)</span> é igual a <span class="math inline">\(B\)</span>, então escrevemos que <span class="math inline">\(A=B\)</span>. Se <span class="math inline">\(A\)</span> não é igual a <span class="math inline">\(B\)</span>, então escreve-se que <span class="math inline">\(A\neq B\)</span>.</p>
-<p>Quando <span class="math inline">\(A\subseteq B\)</span> mas <span class="math inline">\(A\neq B\)</span>, então escrevemos que <span class="math inline">\(A\subset B\)</span> e dizemos que <span class="math inline">\(A\)</span> é <em>subconjunto próprio</em> de <span class="math inline">\(B\)</span>.</p>
-<div id="exm-subsets" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 2.4</strong></span> Seja <span class="math inline">\(A=\{1,2,3\}\)</span>. Os subconjuntos de <span class="math inline">\(A\)</span> são <span class="math display">\[
-\emptyset,\ \{1\},\ \{2\},\ \{3\},\ \{1,2\},\ \{1,3\},\ \{2,3\},\ \{1,2,3\}.
-\]</span> Ou seja, <span class="math inline">\(A\)</span> possui <span class="math inline">\(2^3=8\)</span> subconjuntos.</p>
-</div>
-</section>
-<section id="as-operações-básicas-de-conjuntos" class="level2" data-number="2.3">
-<h2 data-number="2.3" data-anchor-id="as-operações-básicas-de-conjuntos"><span class="header-section-number">2.3</span> As operações básicas de conjuntos</h2>
-<div id="def-set-operations" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 2.3</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos.</p>
+<p>Com os elementos destes conjuntos, a gente pode fazer duas coisas principais:</p>
+<ul>
+<li><p><strong>Somar</strong> dois elementos. Por exemplo, em <span class="math inline">\(\R^2\)</span> a gente tem: <span class="math display">\[(w,x) + (y,z) = (w + y, x + z).\]</span></p></li>
+<li><p><strong>Multiplicar</strong> um elemento por um escalar <span class="math inline">\(\lambda\in \R\)</span>. Por exemplo, em <span class="math inline">\(\R^2\)</span> a gente tem <span class="math display">\[\lambda\cdot (x,y) = (\lambda x, \lambda y).\]</span></p></li>
+</ul>
+<p>Tais operações têm várias propriedades que ajudam com as contas. Por exemplo dados <span class="math inline">\(\ul{u}, \ul{v}\in \R^2\)</span> e <span class="math inline">\(\lambda \in \R\)</span>, temos <span class="math display">\[\lambda(\ul{u} + \ul{v}) = \lambda\ul{u} + \lambda\ul{v}.\]</span></p>
+<p>Vamos definir agora um espaço vetorial em geral, <strong>usando</strong> propriedades assim para definí-lo:</p>
+<div id="def-ev" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 38.2</strong></span> Um <strong>espaço vetorial</strong> sobre <span class="math inline">\(\R\)</span> é um conjunto <span class="math inline">\(V\)</span> de elementos (chamados “vetores”) junto com as operações da soma (<span class="math inline">\(\ul{u}, \ul{v}\in V \implies \ul{u}+\ul{v}\in V\)</span>) e do produto por escalar (<span class="math inline">\(\ul{u}\in V, \lambda\in \R \implies \lambda\ul{u}\in V\)</span>). As operações têm que satisfazer as seguintes condições</p>
 <ol type="1">
-<li>A <em>união</em> <span class="math inline">\(A\cup B\)</span> de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto dos objetos que pertencem ao conjunto <span class="math inline">\(A\)</span> ou ao conjunto <span class="math inline">\(B\)</span> (incluindo a possibilidade que perntencem aos dois).</li>
-<li>A <em>interseção</em> <span class="math inline">\(A\cap B\)</span> de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto dos objetos que pertencem a ambos dos conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</li>
-<li>A <em>diferença</em> <span class="math inline">\(A\setminus B\)</span> (ou <span class="math inline">\(A-B\)</span>) é o conjunto dos objetos que pertencem ao conjunto <span class="math inline">\(A\)</span> mas não ao conjunto <span class="math inline">\(B\)</span>.<br>
-</li>
+<li><p><span class="math inline">\((\ul{u}+\ul{v})+\ul{w} = \ul{u} + (\ul{v} + \ul{w})\quad \forall \ul{u}, \ul{v}, \ul{w}\in V\)</span> (“associatividade"),</p></li>
+<li><p><span class="math inline">\(\ul{u} + \ul{v} = \ul{v} + \ul{u}\quad \forall\ul{u}, \ul{v}\in V\)</span> (“commutatividade”),</p></li>
+<li><p>Existe um elemento <span class="math inline">\(\ul{0}\in V\)</span> tal que <span class="math display">\[\ul{u} + \ul{0} = \ul{u}\quad\forall \ul{u}\in V.\]</span></p></li>
+<li><p>Para cada <span class="math inline">\(\ul{u}\in V\)</span>, existe um elemento <span class="math inline">\(-\ul{u}\in V\)</span> tal que <span class="math display">\[\ul{u} + (-\ul{u}) = \ul{0},\]</span></p></li>
+<li><p><span class="math inline">\(\lambda(\ul{u} + \ul{v}) = \lambda\ul{u} + \lambda\ul{v}\quad\forall \lambda\in \R, \forall \ul{u}, \ul{v}\in V\)</span>,</p></li>
+<li><p><span class="math inline">\((\lambda + \mu)\ul{u} = \lambda\ul{u} + \mu\ul{u}\quad\forall \lambda, \mu\in \R, \forall\ul{u}\in V\)</span>,</p></li>
+<li><p><span class="math inline">\((\lambda\mu)\ul{u} = \lambda(\mu \ul{u})\quad\forall \lambda, \mu\in \R, \forall\ul{u}\in V\)</span>,</p></li>
+<li><p><span class="math inline">\(1\cdot \ul{u} = \ul{u}\quad \forall \ul{u}\in V\)</span>.</p></li>
 </ol>
 </div>
-<div id="exm-set-operations" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 2.5</strong></span> Sejam <span class="math display">\[
-A=\{1,2,3,5,6,7\}\quad \mbox{e}\quad B=\{2,3,4,6,8,9\}.
-\]</span> Então temos que <span class="math display">\[\begin{align*}
-A\cup B &amp;=\{1,2,3,4,5,6,7,8,9\};\\
-A\cap B &amp;=\{2,3,6\};\\
-A\setminus B&amp;=\{1,5,7\};\\
-B\setminus A&amp;=\{4,8,9\}.
-\end{align*}\]</span></p>
-</div>
-<div id="lem-set-operations" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 2.1</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> conjuntos. As seguintes afirmações são verdadeiras.</p>
-<ol type="1">
-<li><span class="math inline">\(A\cup B=B\cup A\)</span>;</li>
-<li><span class="math inline">\((A\cup B)\cup C=A\cup (B\cup C)\)</span>;</li>
-<li><span class="math inline">\(A\cup\emptyset =A\)</span>;</li>
-<li><span class="math inline">\(A\cap B=B\cap A\)</span>;</li>
-<li><span class="math inline">\((A\cap B)\cap C=A\cap (B\cap C)\)</span>;</li>
-<li><span class="math inline">\(A\cap\emptyset =\emptyset\)</span>;</li>
-<li><span class="math inline">\(A\cup A=A\cap A=A\)</span>;</li>
-<li><span class="math inline">\(A\subseteq A\cup B\)</span> e <span class="math inline">\(B\subseteq A\cup B\)</span>;</li>
-<li><span class="math inline">\(A\cap B\subseteq A\)</span> e <span class="math inline">\(A\cap B\subseteq A\)</span>;</li>
-<li><span class="math inline">\(A\setminus B\subseteq A\)</span>.</li>
-</ol>
-</div>
-</section>
-<section id="conjuntos-definidos-com-predicato" class="level2" data-number="2.4">
-<h2 data-number="2.4" data-anchor-id="conjuntos-definidos-com-predicato"><span class="header-section-number">2.4</span> Conjuntos definidos com predicato</h2>
-<p>Conjuntos podem ser definidos também como uma coleção de elementos em um conjunto maior. Por exemplo, seja <span class="math display">\[
-    X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}.
-\]</span> Em outras palávras, <span class="math inline">\(X\)</span> é o conjunto dos números <span class="math inline">\(n\)</span> que pertencem ao conjunto <span class="math inline">\(\N\)</span> e são pares. Note que a definição de <span class="math inline">\(X\)</span> tem duas partes. Na primeira parte ``<span class="math inline">\(n\in\N\)</span>’’, nós indicamos que os elementos de <span class="math inline">\(X\)</span> serão elementos de <span class="math inline">\(\N\)</span>, enquanto na segunda parte, especificamos quais elementos de <span class="math inline">\(\N\)</span> serão elementos de <span class="math inline">\(X\)</span>. Neste caso, os elementos de <span class="math inline">\(X\)</span> são os elementos de <span class="math inline">\(\N\)</span> que são múltiplos de <span class="math inline">\(2\)</span>.</p>
-<p>A sentença “<span class="math inline">\(n\)</span> é múltiplo de <span class="math inline">\(2\)</span>” não é uma proposição, pois contém a variável <span class="math inline">\(n\)</span>. Por outro lado, ao substituir elementos de <span class="math inline">\(\N\)</span> no lugar de <span class="math inline">\(n\)</span>, obtemos uma proposição que tem valor lógico Falso ou Verdadeiro. Por exemplo “<span class="math inline">\(4\)</span> é múltiplo de <span class="math inline">\(2\)</span>” é uma proposição verdadeira, enquanto “<span class="math inline">\(5\)</span> é um múltiplo de <span class="math inline">\(2\)</span>” é falsa. Dizemos que “<span class="math inline">\(n\)</span> é múltiplo de <span class="math inline">\(2\)</span>” é um <em>predicato</em>.</p>
-<p>Em nosso exemplo, podemos escrever que <span class="math display">\[
-    X=\{n\in\N\mid \mbox{$n$ é múltipo de $2$}\}=\{2,4,6,8,\ldots\}.
-\]</span></p>
-</section>
-<section id="propriedades-adicionais-das-operações-dos-conjuntos" class="level2" data-number="2.5">
-<h2 data-number="2.5" data-anchor-id="propriedades-adicionais-das-operações-dos-conjuntos"><span class="header-section-number">2.5</span> Propriedades adicionais das operações dos conjuntos</h2>
-<p>Temos as seguintes regras de distributividade para as operações com conjuntos (compare com <a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>).</p>
-<div id="lem-props-sets" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 2.2</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> conjuntos. As seguintes afirmações são verdadeiras.</p>
-<ol type="1">
-<li><span class="math inline">\(A\cap (B\cup C)=(A\cap B)\cup (A\cap C)\)</span>;</li>
-<li><span class="math inline">\(A\cup (B\cap C)=(A\cup B)\cap (A\cup C)\)</span>.</li>
-</ol>
+<p>O conceito do “espaço vetorial sobre <span class="math inline">\(\C\)</span>” pode ser definido na mesma maneira trocando as ocorrências de “<span class="math inline">\(\R\)</span>” com “<span class="math inline">\(\C\)</span>” na definição acima. Na primeira lista dos exercícios, haverá um exercício que pede que você enuncie a definição sobre <span class="math inline">\(\C\)</span>. Nesta disciplina nós vamos trabalhar principalmente com espaços vetoriais sobre <span class="math inline">\(\R\)</span>, mas você deve saber que o mesmo estudo pode ser feito com espaços vetoriais sobre <span class="math inline">\(\C\)</span>. Espaços vetoriais sobre <span class="math inline">\(\C\)</span> vão aparecer mais na disciplina Álgebra Linear II.</p>
+<p>Dados <span class="math inline">\(\ul{u}, \ul{v}\in V\)</span>, vamos denotar por <span class="math inline">\(\ul{u} - \ul{v}\)</span> o elemento <span class="math inline">\(\ul{u} + (-\ul{v})\)</span>. A partir dessas propriedades, podemos deduzir outras. Por exemplo:</p>
+<div id="lem-ev-zero" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 38.1</strong></span> <span class="math inline">\(0\cdot\ul{u} = \ul{0}\,\,\,\forall\ul{u}\in V\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Vamor provar 1. Provaremos primeiro que <span class="math inline">\(A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)\)</span>. <span class="math display">\[\begin{align*}
-x\in A\cap (B\cup C)&amp;\implies\\
-x\in A \mbox{ e }x\in B\cup C &amp;\implies\\
-x\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)&amp;\implies \\
-(x\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)&amp;\implies \\
-x\in A\cap B\mbox{ ou } x\in A\cap C&amp;\implies \\
-x\in (A\cap B)\cup (A\cap C)&amp;.
-\end{align*}\]</span> Isso implica que <span class="math inline">\(A\cap (B\cup C)\subseteq(A\cup B)\cap (A\cup C)\)</span>. Note que a terceira implicação do argumento usa item 3. do <a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>.</p>
-<p>Agora, precisamos verificar que <span class="math inline">\((A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)\)</span>. Observe que temos que reverter o argumento em cima: <span class="math display">\[\begin{align*}
-x\in (A\cap B)\cup (A\cap C)&amp;\implies \\
-x\in A\cap B\mbox{ ou } x\in A\cap C&amp;\implies \\
-(x\in A \mbox{ e } x\in B) \mbox{ ou } (x\in A \mbox{ e } x\in C)&amp;\implies \\
-x\in A \mbox{ e } (x\in B \mbox{ ou } x\in C)&amp;\implies \\
-x\in A \mbox{ e }x\in B\cup C &amp;\implies\\
-x\in A\cap (B\cup C)&amp;.
-\end{align*}\]</span> Ou seja, <span class="math inline">\((A\cup B)\cap (A\cup C)\subseteq A\cap (B\cup C)\)</span>. Portanto <span class="math inline">\(A\cap (B\cup C)=(A\cup B)\cap (A\cup C)\)</span>.</p>
-<p>A prova da afirmação 2. é similar e será exercício do leitor.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Temos <span class="math display">\[0\ul{u} + \ul{u} \overset{P8}{=} 0\ul{u} + 1\ul{u} \overset{6}{=} (0+1)\ul{u} = 1\ul{u} \overset{8}{=} \ul{u}.\qquad (*)\]</span> Logo: <span class="math display">\[0\ul{u} \overset{3}{=} 0 \ul{u} + \ul{0} \overset{4}{=} 0\ul{u} + \ul{u} -\ul{u} \overset{(*)}{=}
+\ul{u} -\ul{u} \overset{4}{=} \ul{0}.\]</span></p>
+</div>
+<div id="exm-ev" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 38.3</strong></span> &nbsp;</p>
+<ul>
+<li><p><span class="math inline">\(\R^n\)</span> é um espaço vetorial <span class="math inline">\(\forall n\)</span>. <u>Exercício:</u> confirme que <span class="math inline">\(\R^n\)</span> satisfaz as propriedades 1–8.</p></li>
+<li><p>Quando <span class="math inline">\(n=1\)</span> acima, obtemos que <span class="math inline">\(\R = \R^1\)</span> é um espaço vetorial sobre <span class="math inline">\(\R\)</span>. As operações da soma e da multiplicação por escalar são simplemente a soma e o produto de números reais: <span class="math display">\[(a) + (b) = (a+b)\]</span> <span class="math display">\[\lambda(a) = (\lambda a).\]</span></p></li>
+<li><p>O menor espaço vetorial de todos: <span class="math inline">\(\{\ul{0}\}\)</span> é um espaço vetorial. Temos somente um jeito de definir a soma e produto por escalar: <span class="math display">\[\ul{0} + \ul{0} = \ul{0}\]</span> <span class="math display">\[\lambda\cdot \ul{0} = \ul{0}.\]</span> Este espaço parece meio idiota, mas ele é muito importante.</p></li>
+<li><p>Denote por <span class="math inline">\(M_{m,n}(\R)\)</span> o conjunto das matrizes <span class="math inline">\(m\times n\)</span> com entradas em <span class="math inline">\(\R\)</span>. Se lembre que podemos somar duas matrizes em <span class="math inline">\(M_{m,n}(\R)\)</span>: <span class="math display">\[\hbox{Se }A = (a_{ij}), B = (b_{ij})\in M_{m,n}(\R)\hbox{ então } A+B = (a_{ij} + b_{ij}) \in M_{m,n}(\R).\]</span> Também podemos multiplicar uma matriz por um escalar: <span class="math display">\[\hbox{Se }A = (a_{ij})\in M_{m,n}(\R)\,,\,\lambda\in \R\hbox{ então } \lambda A = (\lambda a_{ij}) \in M_{m,n}(\R).\]</span> De fato, com essas operações, <span class="math inline">\(M_{m,n}(\R)\)</span> é um espaço vetorial. Confirmo, por exemplo, que satisfaz Propriedade 3. A matriz <span class="math inline">\(\ul{0}\)</span> será a matriz cujas entradas são todas <span class="math inline">\(0\)</span>: <span class="math display">\[\ul{0} = \begin{pmatrix}
+0 &amp; \cdots &amp; 0 \\
+\vdots &amp; \ddots &amp; \vdots\\
+0 &amp; \cdots &amp; 0
+\end{pmatrix}.\]</span> Para qualquer matriz <span class="math inline">\(A = (a_{ij})\)</span> a gente tem <span class="math display">\[A + \ul{0} = (a_{ij}) + (0) = (a_{ij} + 0) = (a_{ij}) = A.\quad\checkmark\]</span> <u>Exercício</u>: confirme que mais algumas das propriedades valem.</p>
+<p>Os espaços <span class="math inline">\(M_{1,n}(\R)\)</span> e <span class="math inline">\(M_{n,1}(\R)\)</span> são os espaços de vetores linhas e de vetores colunas, respetivamente, de comprimento <span class="math inline">\(n\)</span> sobre <span class="math inline">\(\R\)</span>. Estes espaços serão identificados com <span class="math inline">\(\R^n\)</span>.</p></li>
+<li><p>Um exemplo menos óbvio. Seja <span class="math inline">\(X\)</span> um conjunto qualquer e considere o conjunto das funções (= aplicações) de <span class="math inline">\(X\)</span> a <span class="math inline">\(\R\)</span>: <span class="math display">\[\mathcal{F}(X, \R) = \{ f : X\to \R\hbox{ uma função}\}.\]</span> Podemos definir a <strong>soma</strong> de duas funções: Dadas funções <span class="math inline">\(f,g : X\to \R\)</span>, definimos uma função nova <span class="math inline">\((f+g) : X\to \R\)</span> como <span class="math display">\[(f+g)(x) := f(x) + g(x).\]</span> Também podemos definir o produto por escalar de uma função <span class="math inline">\(f\)</span> pelo escalar <span class="math inline">\(\lambda\)</span> assim: <span class="math display">\[(\lambda f)(x) := \lambda\cdot f(x).\]</span> Com essas operações, <span class="math inline">\(\mathcal{F}(X, \R)\)</span> é um espaço vetorial. Vamos confirmar umas propriedades:</p>
+<ul>
+<li><p>Dadas funções <span class="math inline">\(f,g:X\to \R\)</span>, queremos confirmar que as funções <span class="math inline">\(f+g\)</span> e <span class="math inline">\(g+f\)</span> são iguais. Para fazer isso, temos que confirmar que <span class="math inline">\((f+g)(x) = (g+f)(x)\)</span> para todo <span class="math inline">\(x\in X\)</span>. Mas isso é fácil: <span class="math display">\[(f+g)(x) = f(x) + g(x) = g(x) + f(x) = (g+f)(x).\]</span></p></li>
+<li><p>A função <span class="math inline">\(\ul{0}\in \mathcal{F}(X,\R)\)</span> será a função que leva todo <span class="math inline">\(x\in X\)</span> pro elemento <span class="math inline">\(0\in \R\)</span>. Ou seja, <span class="math inline">\(\ul{0}(x) := 0\,\forall x\in X\)</span>. Temos que confirmar que <span class="math inline">\(f+\ul{0} = f\)</span>, logo temos que confirmar que <span class="math inline">\((f+\ul{0})(x) = f(x)\,\forall x\in X\)</span>. Mas <span class="math display">\[(f+\ul{0})(x) = f(x) + \ul{0}(x) = f(x) + 0 = f(x).\]</span></p></li>
+</ul>
+<p><u>Exercício:</u> Defina a função “<span class="math inline">\(-f\)</span>” e confirme que as outras propriedades valem.</p></li>
+</ul>
 </div>
 </section>
-<section id="o-complemento" class="level2" data-number="2.6">
-<h2 data-number="2.6" data-anchor-id="o-complemento"><span class="header-section-number">2.6</span> O complemento</h2>
-<div id="def-complement" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 2.4</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos tais que <span class="math inline">\(A\subseteq B\)</span>. O <em>complemento</em> de <span class="math inline">\(A\)</span> em <span class="math inline">\(B\)</span> é o conjunto <span class="math inline">\(A\setminus B\)</span>. O complemento é denotado por <span class="math inline">\(A^c\)</span>. Note que o complemento depende de <span class="math inline">\(B\)</span>, mesmo que isso não está indicado na notação.</p>
+<section id="subespaços" class="level2" data-number="38.4">
+<h2 data-number="38.4" data-anchor-id="subespaços"><span class="header-section-number">38.4</span> Subespaços</h2>
+<p>Um subespaço <span class="math inline">\(W\)</span> de um espaço vetorial <span class="math inline">\(V\)</span> será um espaço vetorial “menor” contido dentro de <span class="math inline">\(V\)</span>. Observe que um espaço vetorial possui vários subespaços diferentes:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/subespacos.png" class="img-fluid figure-img"></p>
+<figcaption>Subespaços</figcaption>
+</figure>
 </div>
-<p>O seguinte resultado é uma versão das Leis de De Morgan (<a href="prop.html#exr-true-table2" class="quarto-xref">Exercício&nbsp;<span>1.2</span></a>) para conjuntos.</p>
-<div id="lem-de-morgan" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 2.3</strong></span> Sejam <span class="math inline">\(A,B\subseteq C\)</span>. Temos que</p>
+<p>Vamos passar tempo estudando como os subespaços de um espaço vetorial podem interagir entre si. Definição formal:</p>
+<div id="def-subesp" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 38.3</strong></span> Um <strong>subespaço</strong> do espaço vetorial <span class="math inline">\(V\)</span> é um subconjunto não vazio <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span> tal que</p>
 <ol type="1">
-<li><span class="math inline">\((A\cup B)^c=A^c\cap B^c\)</span>;</li>
-<li><span class="math inline">\((A\cap B)^c=A^c\cup B^c\)</span>.</li>
+<li><p><span class="math inline">\(\ul{u}, \ul{v}\in W \implies \ul{u} +\ul{v} \in W\)</span>,</p></li>
+<li><p><span class="math inline">\(\ul{u}\in W\)</span> e <span class="math inline">\(\lambda\in \R \implies \lambda\ul{u}\in W\)</span>.</p></li>
 </ol>
+<p>Quando <span class="math inline">\(W\)</span> é um subespaço de <span class="math inline">\(V\)</span>, vamos às vezes escrever <span class="math inline">\(W\leqslant V\)</span>.</p>
+</div>
+<p>Outras propriedades seguem da definição:</p>
+<p><u>FATO:</u> Para todo subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span>, <span class="math inline">\(\ul{0}\in W\)</span>.</p>
+<p><span class="math inline">\(W\neq \varnothing\)</span>, então existe algum <span class="math inline">\(\ul{w}\in W\)</span>. Mas agora <span class="math display">\[0\cdot \ul{w} = \ul{0} \in W\]</span> pela segunda condição de subespaço.</p>
+<p>Confirme que um subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span> é de fato um espaço vetorial. A definição de subespaço é mais curta pois certas propriedades seguem automaticamente. Por exemplo, <span class="math inline">\(\forall \ul{u}, \ul{v}, \ul{w}\in W\)</span> temos que <span class="math display">\[(\ul{u} + \ul{v}) + \ul{w} = \ul{u} + (\ul{v} + \ul{w})\]</span> pois essa propriedade <strong>já vale</strong> em <span class="math inline">\(V\)</span>.</p>
+<div id="exm-subesp" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 38.4</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial. Uns subespaços de <span class="math inline">\(V\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(\{\ul{0}\}\leqslant V\)</span>, pois <span class="math inline">\(\ul{0}+\ul{0} = \ul{0}\in \{\ul{0}\}\)</span> e <span class="math inline">\(\lambda\ul{0} = \ul{0}\in \{\ul{0}\}\)</span> para qualquer <span class="math inline">\(\lambda\in \R\)</span>.</p></li>
+<li><p><span class="math inline">\(V\leqslant V\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\(\ul{w}\)</span> um vetor qualquer de <span class="math inline">\(V\)</span> e seja <span class="math inline">\(W = \{\lambda\ul{w}\,|\,\lambda\in \R\}\)</span> o conjunto de todos os múltiplos escalares de <span class="math inline">\(\ul{w}\)</span>. Então <span class="math inline">\(W\leqslant V\)</span>: <span class="math display">\[\lambda\ul{w}, \mu\ul{w}\in W \implies \lambda\ul{w} + \mu\ul{w} = (\lambda + \mu)\ul{w} \in W\quad\checkmark\]</span> <span class="math display">\[\lambda\ul{w}\in W, \mu\in \R \implies \mu(\lambda\ul{w}) = (\mu\lambda)\ul{w}\in W.\quad\checkmark\]</span> Subespaços dessa forma em <span class="math inline">\(\R^n\)</span> são retas que passam pela origem, como os subespaços <span class="math inline">\(W_1,W_2,W_3\)</span> no diagrama acima.</p></li>
+</ul>
+</div>
+</section>
+<section id="subespaços-e-sistemas-lineares" class="level2" data-number="38.5">
+<h2 data-number="38.5" data-anchor-id="subespaços-e-sistemas-lineares"><span class="header-section-number">38.5</span> Subespaços e sistemas lineares</h2>
+<p>Se lembre que um <strong>sistema linear</strong> é uma equação da forma <span class="math display">\[AX = B\]</span> em que <span class="math inline">\(A,X,B\)</span> são as matrizes <span class="math display">\[A =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp; \ddots &amp;    &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}\,,\,
+X = \begin{pmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{pmatrix}\,,\,
+B = \begin{pmatrix}
+b_1 \\
+b_2 \\
+\vdots \\
+b_m
+\end{pmatrix}.\]</span> As entradas de <span class="math inline">\(A,B\)</span> são números, enquanto as entradas de <span class="math inline">\(X\)</span> são variáveis. Uma <strong>solução</strong> do sistema acima é uma matriz <span class="math inline">\(n\times 1\)</span>, <span class="math inline">\(S\)</span> (de números) tal que a equação <span class="math display">\[AS = B\]</span> vale.</p>
+<div id="exm-sistema" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 38.5</strong></span> Por exemplo, o sistema linear <span class="math display">\[\begin{pmatrix}
+1 &amp; 1 \\ 0 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} =
+\begin{pmatrix}
+3 \\ 0
+\end{pmatrix}\]</span> tem solução <span class="math inline">\(S = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}\)</span>, pois <span class="math display">\[\begin{pmatrix}
+1 &amp; 1 \\ 0 &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ 2
+\end{pmatrix} =
+\begin{pmatrix}
+1+2 \\ 0+0
+\end{pmatrix} =
+\begin{pmatrix}
+3 \\ 0
+\end{pmatrix}.\qquad\checkmark\]</span> O conjunto das soluções deste sistema é <span class="math display">\[\mathcal{S} = \left\{\left. \begin{pmatrix}
+3-\alpha \\ \alpha
+\end{pmatrix} \,\right|\, \alpha\in \R\right\}.\]</span> Observe que <span class="math inline">\(\mathcal{S}\)</span> <strong>não é</strong> um subespaço de <span class="math inline">\(\R^2\)</span>: por exemplo, <span class="math display">\[\begin{pmatrix}
+1 \\ 2
+\end{pmatrix}\,,\,
+\begin{pmatrix}
+2 \\ 1
+\end{pmatrix} \in \mathcal{S}\quad\hbox{mas}\quad \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}+\begin{pmatrix}
+2 \\ 1
+\end{pmatrix} = \begin{pmatrix}
+3 \\ 3
+\end{pmatrix}\not\in \mathcal{S}.\]</span></p>
+</div>
+<p>MAS: Um <strong>sistema homogêneo</strong> é um sistema linear da forma <span class="math display">\[AX = \ul{0}.\]</span> Temos</p>
+<div id="lem-se-lin" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 38.2</strong></span> O conjunto solução de um sistema homogêneo <span class="math inline">\(AX = \ul{0}\)</span> com <span class="math inline">\(n\)</span> variáveis é um subespaço de <span class="math inline">\(\R^n\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Provaremos afirmação 1. Primeiro verificamos que <span class="math inline">\((A\cup B)^c\subseteq A^c\cap B^c\)</span>. <span class="math display">\[\begin{align*}
-x\in (A\cup B)^c&amp;\implies \\
-x \in C\mbox{ e }x\not \in A\cup B&amp;\implies \\
-x \in C\mbox{ e } (x\not \in A\mbox{ e } x\not\in B)&amp;\implies \\
-(x \in C\mbox{ e } x\not \in A) \mbox{ e } (x\in C\mbox{ e }x\not\in B)&amp;\implies \\
-x  \in A^c \mbox{ e } x \in B^c&amp;\implies \\
-x  \in A^c\cap B^c.
-\end{align*}\]</span> Logo, <span class="math inline">\((A\cup B)^c\subseteq A^c\cap B^c\)</span>. Revertendo o argumento, obtemos que <span class="math inline">\(A^c\cap B^c\subseteq (A\cup B)^c\)</span>.</p>
-<p>A verificação da afirmação 2. é exercício.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Observe primeiro que o conjunto solução não é vazio, pois <span class="math inline">\(\ul{0}\)</span> é sempre uma solução de um sistema homogêneo. Vamos confirmar as outras propriedades de subespaço. Sejam <span class="math inline">\(S,T\)</span> soluções do sistema. Então <span class="math display">\[A(S+T) = AS + AT = \ul{0} + \ul{0} = \ul{0},\]</span> logo <span class="math inline">\(S+T\)</span> também é solução. Sejam <span class="math inline">\(\lambda\in \R\)</span> e <span class="math inline">\(S\)</span> uma solução. Então <span class="math display">\[A(\lambda S) = \lambda AS = \lambda\ul{0} = \ul{0},\]</span> logo <span class="math inline">\(\lambda S\)</span> também é uma solução. Então o conjunto solução do sistema homogêneo <span class="math inline">\(AX=B\)</span> é um subespaço de <span class="math inline">\(\R^n\)</span>.</p>
 </div>
 
 
@@ -1829,13 +1902,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../IniciacaoAMatematica/prop.html" class="pagination-link" aria-label="Proposições ou sentenças">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Proposições ou sentenças</span></span>
+      <a href="../FundamentosDeAlgebra/quadratic.html" class="pagination-link" aria-label="Equações quadráticas e cubicas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Equações quadráticas e cubicas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../IniciacaoAMatematica/quant.html" class="pagination-link" aria-label="Quantificadores">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quantificadores</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

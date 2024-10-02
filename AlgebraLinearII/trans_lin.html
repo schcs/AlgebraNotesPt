@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>41&nbsp; Transformações lineares – Álgebra</title>
+<title>42&nbsp; Transformações lineares – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="macros_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="macros_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -175,6 +175,7 @@ window.Quarto = {
 \newcommand{\fix}[1]{\textrm{Fix}(#1)}
 \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\ul}[1]{\underline{#1}}
 \]</span></p>
 </div>
 
@@ -215,18 +216,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -258,7 +248,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -293,7 +323,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -616,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/trans_lin.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/trans_lin.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -893,8 +927,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../AlgebraLinearII/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Álgebra Linear II</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">AlgebraLinearI/index.qmd</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -902,134 +936,151 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../AlgebraLinearI/01_alglin1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../AlgebraLinearII/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Álgebra Linear II</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/bases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Bases de espaços vetoriais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Bases de espaços vetoriais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/subespacos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Subespaços</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Subespaços</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/quociente.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/trans_lin.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/dual.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O espaço dual</span></span></a>
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">O espaço dual</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/formas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/autovals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Autovalores e autovetores</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Autovalores e autovetores</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/pol_min.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">O polinômio minimal de um operador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">O polinômio minimal de um operador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/cayley_hamilton.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">O Teorema de Cayley-Hamilton</span></span></a>
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">O Teorema de Cayley-Hamilton</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/projecoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Projeções</span></span></a>
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Projeções</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/primaria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/unicidade_jordan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span></a>
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/cyclic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span></a>
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/sesqui.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/isometrias.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/adjuntos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/autoadjuntos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/normais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Operadores normais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Operadores normais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/so_2_so_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span></a>
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span></a>
   </div>
 </li>
       </ul>
@@ -1038,129 +1089,129 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../GruposECorpos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grupos e Corpos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/lagrange.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/geradores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Conjuntos geradores e grupos cíclicos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/normais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Subgrupos normais e homomorfismos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Produtos de grupos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/actions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Ações de grupos e o Teorema de Órbita-Estabilizador</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Classes de conjugação</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/alternado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">O grupo alternado</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/sylow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Os Teoremas de Sylow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/abelian.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos abelianos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/soluble.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Grupos solúveis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/livres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Grupos livres</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/psl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">O Lema de Iwasawa e a simplicadade de PSL(𝑛,𝔽)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/nilpotent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/decompfields.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Corpos de decomposição e corpos finitos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/fieldauts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Automorfismos de corpos e o grupo de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">O Teorema Fundamental da Teoria de Galois</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../GruposECorpos/appl_galois.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
+ <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">As aplicações da Teoria de Galois</span></span></a>
   </div>
 </li>
       </ul>
@@ -1176,9 +1227,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/trans_lin.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/trans_lin.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Transformações lineares</span></h1>
+<h1 class="title"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></h1>
 </div>
 
 
@@ -1196,7 +1247,7 @@ window.Quarto = {
 
 
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 41.1</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre o mesmo corpo <span class="math inline">\(\F\)</span>. Uma aplicação <span class="math inline">\(f:U\to V\)</span> é dito <b>linear</b> se <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 42.1</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre o mesmo corpo <span class="math inline">\(\F\)</span>. Uma aplicação <span class="math inline">\(f:U\to V\)</span> é dito <b>linear</b> se <span class="math display">\[
 f(u+v)=f(u)+f(v)\quad \mbox{e}\quad f(\alpha u)=\alpha f(u)
 \]</span> valem para todo <span class="math inline">\(u,v\in U\)</span> e <span class="math inline">\(\alpha\in \F\)</span>.</p>
 </div>
@@ -1206,13 +1257,13 @@ f(\alpha u+\beta v)=\alpha f(u)+\beta f(v)
 f(\alpha_1u_1+\cdots+\alpha_ku_k)=\alpha_1f(u_1)+\cdots+\alpha_kf(u_k);
 \]</span> ou seja, uma transformação linear preserva combinações lineares.</p>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 41.1</strong></span> Mostre que <span class="math inline">\(f(0_U)=0_V\)</span> para qualquer transformação linear <span class="math inline">\(f:U\to V\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 42.1</strong></span> Mostre que <span class="math inline">\(f(0_U)=0_V\)</span> para qualquer transformação linear <span class="math inline">\(f:U\to V\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 41.1</strong></span> Exemplos são dados na aula, e nas notas do John e Rodney.</p>
+<p><span class="theorem-title"><strong>Exemplo 42.1</strong></span> Exemplos são dados na aula, e nas notas do John e Rodney.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 41.1</strong></span> Seja <span class="math inline">\(U\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial com base <span class="math inline">\(X=\{x_i\mid i \in I\}\)</span>. Seja <span class="math inline">\(V\)</span> um outro <span class="math inline">\(\F\)</span>-espaço e seja <span class="math inline">\(f_0:X\to V\)</span> uma aplicação qualquer. Então existe uma única transformação linear <span class="math inline">\(f:U\to V\)</span> tal que <span class="math inline">\(f|_X=f_0\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 42.1</strong></span> Seja <span class="math inline">\(U\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial com base <span class="math inline">\(X=\{x_i\mid i \in I\}\)</span>. Seja <span class="math inline">\(V\)</span> um outro <span class="math inline">\(\F\)</span>-espaço e seja <span class="math inline">\(f_0:X\to V\)</span> uma aplicação qualquer. Então existe uma única transformação linear <span class="math inline">\(f:U\to V\)</span> tal que <span class="math inline">\(f|_X=f_0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Se <span class="math inline">\(u\in U\)</span>, então <span class="math inline">\(u\)</span> pode ser escrito unicamente na forma <span class="math display">\[
@@ -1231,16 +1282,16 @@ X &amp;  &amp;
 \mbox{Func}(X,V)\to \mbox{Hom}(U,V).
 \]</span></p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 41.2</strong></span> Seja <span class="math inline">\(f:U\to V\)</span> uma transformação linear. Então <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 42.2</strong></span> Seja <span class="math inline">\(f:U\to V\)</span> uma transformação linear. Então <span class="math display">\[
 \mbox{Im}\,f=\{f(u)\mid u \in U\}\quad\mbox{e}\quad \ker f=\{u\in U\mid f(u)=0\}.
 \]</span> O conjunto <span class="math inline">\(\mbox{Im}\,f\)</span> chama-se a <b>imagem</b>, enquanto <span class="math inline">\(\ker f\)</span> chama-se o <b>núcleo</b> de <span class="math inline">\(f\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 41.2</strong></span> Se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear, então <span class="math inline">\(\mbox{Im}\,f\leq V\)</span> e <span class="math inline">\(\ker f\leq U\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 42.2</strong></span> Se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear, então <span class="math inline">\(\mbox{Im}\,f\leq V\)</span> e <span class="math inline">\(\ker f\leq U\)</span>.</p>
 </div>
 <p>Lembre que uma função <span class="math inline">\(\varphi:X\to Y\)</span> é dita <b>injetiva</b> se <span class="math inline">\(\varphi(x_1)=\varphi(x_2)\)</span> implica que <span class="math inline">\(x_1=x_2\)</span> para todo <span class="math inline">\(x_1,x_2\in X\)</span>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 41.3</strong></span> Uma transformação linear <span class="math inline">\(f:U\to V\)</span> é injetiva se e somente se <span class="math inline">\(\ker f=\{0\}\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 42.3</strong></span> Uma transformação linear <span class="math inline">\(f:U\to V\)</span> é injetiva se e somente se <span class="math inline">\(\ker f=\{0\}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(f\)</span> é injetiva e seja <span class="math inline">\(u\in \ker f\)</span>. Então <span class="math inline">\(f(u)=f(0)=0\)</span>. Mas a definição da injetividade implica neste caso que <span class="math inline">\(u=0\)</span>. Logo <span class="math inline">\(\ker f=\{0\}\)</span>.</p>
@@ -1249,13 +1300,13 @@ X &amp;  &amp;
 \]</span> ou seja, <span class="math inline">\(u_1-u_2\in\ker f\)</span>. Como <span class="math inline">\(\ker f\)</span> contém apenas a vetor nulo, tem~se que <span class="math inline">\(u_1-u_2=0\)</span>; ou seja <span class="math inline">\(u_1=u_2\)</span>. Portanto, <span class="math inline">\(f\)</span> é injetiva.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 41.2</strong></span> Sejam <span class="math inline">\(f:U\to V\)</span> e <span class="math inline">\(g:V\to W\)</span> transformações lineares. Mostre que <span class="math inline">\(g\circ f:U\to W\)</span> é linear.</p>
+<p><span class="theorem-title"><strong>Exercício 42.2</strong></span> Sejam <span class="math inline">\(f:U\to V\)</span> e <span class="math inline">\(g:V\to W\)</span> transformações lineares. Mostre que <span class="math inline">\(g\circ f:U\to W\)</span> é linear.</p>
 </div>
 <p>Uma transformação linear <span class="math inline">\(f:U\to V\)</span> é dito <b>isomorfismo</b> se <span class="math inline">\(f\)</span> é injetiva e sobrejetiva. Neste caso, podemos definir o inverso <span class="math display">\[
 f^{-1}:V\to U,\quad f^{-1}(v)=u\mbox{ se e somente se }f(u)=v.
 \]</span></p>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 41.3</strong></span> Seja <span class="math inline">\(f:U\to V\)</span> um isomorfismo. Mostre que <span class="math inline">\(f^{-1}:V\to U\)</span> é linear.</p>
+<p><span class="theorem-title"><strong>Exercício 42.3</strong></span> Seja <span class="math inline">\(f:U\to V\)</span> um isomorfismo. Mostre que <span class="math inline">\(f^{-1}:V\to U\)</span> é linear.</p>
 </div>
 <p>Dizemos que <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> são isomorfos se existir um isomorfismo <span class="math inline">\(f:U\to V\)</span>. Neste caso escrevemos que <span class="math inline">\(U\cong V\)</span>. Note que espaços isomorfos são definidos sobre o mesmo corpo.</p>
 <p>É fácil verificar que a aplicação identidade <span class="math inline">\(\mbox{id}_V:V\to V\)</span> é um isomorfismo para qualquer espaço <span class="math inline">\(V\)</span> e que a composição de isomorfismos é isomorfismo. Portanto, temos, para quaisquer espaços vetoriais <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span>, que</p>
@@ -1266,17 +1317,17 @@ f^{-1}:V\to U,\quad f^{-1}(v)=u\mbox{ se e somente se }f(u)=v.
 </ul>
 <p>Espaços isomorfos compartilhas as propriedades importantes. Por exemplo, se <span class="math inline">\(f:V\to W\)</span> é um isomorfismo e <span class="math inline">\(X\)</span> é uma base de <span class="math inline">\(V\)</span>, então <span class="math inline">\(f(X)=\{f(x)\mid x\in X\}\)</span> é base de <span class="math inline">\(W\)</span>. Em particular, <span class="math inline">\(\dim V=\dim W\)</span>.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 41.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita sobre um corpo <span class="math inline">\(\F\)</span>. Assuma que <span class="math inline">\(\dim V=n\)</span>. Seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(v\)</span> pode ser escrito unicamente na forma <span class="math display">\[
+<p><span class="theorem-title"><strong>Exemplo 42.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita sobre um corpo <span class="math inline">\(\F\)</span>. Assuma que <span class="math inline">\(\dim V=n\)</span>. Seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(v\)</span> pode ser escrito unicamente na forma <span class="math display">\[
 v=\alpha_1 b_1+\cdots+\alpha_n b_n.
 \]</span> O vetor <span class="math inline">\((\alpha_1,\ldots,\alpha_n)\)</span> é chamado de <b>vetor das coordenadas de <span class="math inline">\(v\)</span> na base <span class="math inline">\(B\)</span></b> e é denotado por <span class="math inline">\([v]_B\)</span> ou mais simplesmente <span class="math inline">\(v_B\)</span>. É fácil verificar que a transformação <span class="math inline">\(f:V\to \F^n\)</span> definido como <span class="math display">\[
 f(v)=[v]_B\quad\mbox{para}\quad v\in V
 \]</span> é um isomorfismo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(\F^n\)</span>.</p>
 </div>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 41.1</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial de dimensão <span class="math inline">\(n\)</span>, então <span class="math inline">\(V\cong \F^n\)</span>. Mais geralmente, se <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> são <span class="math inline">\(\F\)</span>-espaços vetoriais de dimensão finita tais que <span class="math inline">\(\dim U=\dim V\)</span>, então <span class="math inline">\(U\cong V\)</span>.</p>
+<p><span class="theorem-title"><strong>Corolário 42.1</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial de dimensão <span class="math inline">\(n\)</span>, então <span class="math inline">\(V\cong \F^n\)</span>. Mais geralmente, se <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> são <span class="math inline">\(\F\)</span>-espaços vetoriais de dimensão finita tais que <span class="math inline">\(\dim U=\dim V\)</span>, então <span class="math inline">\(U\cong V\)</span>.</p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 41.1</strong></span> (O Teorema de Núcleo e Imagem) Seja <span class="math inline">\(f:U\to V\)</span> uma transformação linear. Defina <span class="math inline">\(\bar f:U/\ker f\to \mbox{Im}\,f\)</span> com a regra <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 42.1</strong></span> (O Teorema de Núcleo e Imagem) Seja <span class="math inline">\(f:U\to V\)</span> uma transformação linear. Defina <span class="math inline">\(\bar f:U/\ker f\to \mbox{Im}\,f\)</span> com a regra <span class="math display">\[
 \bar f(u+\ker f)=f(u)\quad\mbox{para todo}\quad u\in U.
 \]</span> Então <span class="math inline">\(f\)</span> é um isomorfismo bem definido e <span class="math inline">\(U/\ker f\cong \mbox{Im}\,f\)</span>.</p>
 </div>
@@ -1291,7 +1342,7 @@ f(u_1)-f(u_2)=f(u_1-u_2)=0
 <p>Obtivemos que <span class="math inline">\(\bar f:U/\ker f\to \mbox{Im}\,f\)</span> é um isomorfismo e assim <span class="math inline">\(U/\ker f\cong \mbox{Im}\,f\)</span>.</p>
 </div>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 41.2</strong></span> Se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear entre espaços vetoriais, então <span class="math display">\[
+<p><span class="theorem-title"><strong>Corolário 42.2</strong></span> Se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear entre espaços vetoriais, então <span class="math display">\[
 \dim U=\dim \ker f+\dim \mbox{Im}\,f.
 \]</span> Se <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> têm dimensão finita, então <span class="math display">\[
 \dim \mbox{Im}\,f=\dim U-\dim\ker f.
@@ -1724,12 +1775,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../AlgebraLinearII/quociente.html" class="pagination-link" aria-label="Espaços quocientes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Espaços quocientes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../AlgebraLinearII/matrizes.html" class="pagination-link" aria-label="Transformações lineares e matrizes">
-        <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Transformações lineares e matrizes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
