@@ -90,7 +90,7 @@ Conhecendo o valor de $\varphi(n)$ (além do valor de $n$), pode-se determinar o
 
 
 :::{.proof}
-AAssuma que conhecemos o valor de $n$ e $\varphi(n)$. Primeiro,
+Assuma que conhecemos o valor de $n$ e $\varphi(n)$. Primeiro,
 $$
 \varphi(n)=(p-1)(q-1)=pq-(p+q)+1=n-(p+q)+1
 $$
