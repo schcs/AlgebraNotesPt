@@ -1,0 +1,13 @@
+---
+title: "Álgebra Linear I"
+number-sections: true
+lang: pt-BR
+---
+
+##
+
+Estas notas foram escritas por [John MacQuarrie](https://johnmacquarrie.github.io/) para serem utilizadas na disciplina Álgebra Linear I da UFMG. A versão HTML foi preparada por Csaba Schneider.
+
+
+
+- [Espaços vetoriais e subespaços](01_alglin1.qmd)
