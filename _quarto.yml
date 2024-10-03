@@ -7,7 +7,9 @@ execute:
 book:
   title: "Álgebra"
   subtitle: Apostilas para disciplinas, UFMG, 2024
-  author: "Csaba Schneider"
+  author: 
+    - name: "Csaba Schneider"
+    - affiliation: Universidade Federal de Minas Gerais
   date: "Criado e atualizado 2024/I"
   chapters:
     - index.qmd
@@ -55,6 +57,7 @@ book:
     - part: AlgebraLinearI/index.qmd
       chapters: 
         - AlgebraLinearI/01_alglin1.qmd
+        - AlgebraLinearI/02_alglin1.qmd
     - part: AlgebraLinearII/index.qmd
       chapters: 
         - AlgebraLinearII/bases.qmd
@@ -101,6 +104,10 @@ book:
         - GruposECorpos/fieldauts.qmd
         - GruposECorpos/galois.qmd
         - GruposECorpos/appl_galois.qmd
+license: "CC BY"
+copyright: 
+  holder: Csaba Schneider
+  year: 2025
 format:
   html:
     theme: cosmo

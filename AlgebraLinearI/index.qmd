@@ -11,3 +11,4 @@ Estas notas foram escritas por [John MacQuarrie](https://johnmacquarrie.github.i
 
 
 - [Espaços vetoriais e subespaços](01_alglin1.qmd)
+- [Combinações lineares e geradores](02_alglin1.qmd)
