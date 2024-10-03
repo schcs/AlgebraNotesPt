@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>36&nbsp; O Lema de Gauss e o Critério de Eisenstein – Álgebra</title>
+<title>39&nbsp; Combinações lineares e geradores – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/quadratic.html" rel="next">
-<link href="../FundamentosDeAlgebra/dfu.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/01_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -650,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/gauss_pt1.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/02_alglin1.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Combinações lineares e geradores</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -913,7 +913,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/gauss_pt1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../FundamentosDeAlgebra/gauss_pt1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></span></a>
   </div>
 </li>
@@ -942,7 +942,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/02_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/02_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Combinações lineares e geradores</span></span></a>
   </div>
 </li>
@@ -1232,17 +1232,18 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#o-lema-de-gauss" id="toc-o-lema-de-gauss" class="nav-link active" data-scroll-target="#o-lema-de-gauss"><span class="header-section-number">36.1</span> O Lema de Gauss</a></li>
-  <li><a href="#o-critério-de-eisenstein" id="toc-o-critério-de-eisenstein" class="nav-link" data-scroll-target="#o-critério-de-eisenstein"><span class="header-section-number">36.2</span> O critério de Eisenstein</a></li>
+  <li><a href="#combinações-lineares" id="toc-combinações-lineares" class="nav-link active" data-scroll-target="#combinações-lineares"><span class="header-section-number">39.1</span> Combinações lineares</a></li>
+  <li><a href="#interseções-e-somas-de-subespaços" id="toc-interseções-e-somas-de-subespaços" class="nav-link" data-scroll-target="#interseções-e-somas-de-subespaços">Interseções e somas de subespaços</a></li>
+  <li><a href="#dependência-linear" id="toc-dependência-linear" class="nav-link" data-scroll-target="#dependência-linear">Dependência Linear</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/gauss_pt1.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/02_alglin1.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Combinações lineares e geradores</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">O Lema de Gauss e o Critério de Eisenstein</span></h1>
+<h1 class="title"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Combinações lineares e geradores</span></h1>
 </div>
 
 
@@ -1259,113 +1260,167 @@ window.Quarto = {
 </header>
 
 
-<section id="o-lema-de-gauss" class="level2" data-number="36.1">
-<h2 data-number="36.1" data-anchor-id="o-lema-de-gauss"><span class="header-section-number">36.1</span> O Lema de Gauss</h2>
-<p>Polinômios irredutíveis têm descrição muito simples em <span class="math inline">\(\C[x]\)</span> e em <span class="math inline">\(\R[x]\)</span>. A situação é bem mais complicada em <span class="math inline">\(\Q[x]\)</span>. Assuma que <span class="math inline">\(f(x)\in\Q[x]\)</span>. Então <span class="math inline">\(f(x)\)</span> pode ser escrito como <span class="math display">\[
-f(x)=\frac{a_n}{b_n} x^n+\cdots +\frac{a_1}{b_1}x+\frac{a_0}{b_0}
-\]</span> onde <span class="math inline">\(a_i,b_j\in\Z\)</span>. Multiplicando <span class="math inline">\(f(x)\)</span> por um múltiplo comum dos denominadores, obtemos um polinômio <span class="math display">\[
-f_1(x)=c_nx^n+\cdots+c_1x+c_0\in\Z[x].
-\]</span> Além disso, como <span class="math inline">\(f_1(x)\)</span> foi obtido como um múltiplo de <span class="math inline">\(f(x)\)</span> por um constante não nulo, temos que <span class="math inline">\(f(x)\)</span> é irredutível em <span class="math inline">\(\Q[x]\)</span> se e somente se <span class="math inline">\(f_1(x)\)</span> é irredutível em <span class="math inline">\(\Q[x]\)</span>. Portanto, quando consideramos a questão da irredutibilidade de um polinômio <span class="math inline">\(f(x)\in\Q[x]\)</span>, podemos assumir sem perder a generalidade que <span class="math inline">\(f(x)\in\Z[x]\)</span>.</p>
-<p>Dados <span class="math inline">\(a_1,\ldots,a_k\in\Z\)</span> não simultaneamente zero com <span class="math inline">\(k\geq 2\)</span>, então o MDC dos números <span class="math inline">\(a_i\)</span> é definido como o número <span class="math inline">\(d\)</span> que satisfaz as propriedades que</p>
-<ul>
-<li><span class="math inline">\(d\geq 0\)</span>;</li>
-<li><span class="math inline">\(d\mid a_i\)</span> para todo <span class="math inline">\(i\in\{1,\ldots,k\}\)</span>;</li>
-<li>Se <span class="math inline">\(c\in\Z\)</span> tal que <span class="math inline">\(c\mid a_i\)</span> para todo <span class="math inline">\(i\)</span>, então <span class="math inline">\(c\mid d\)</span>.</li>
-</ul>
-<p>Pode-se monstrar como no caso do <span class="math inline">\(\mdc ab\)</span> que o MDC de <span class="math inline">\(a_1,\ldots,a_k\)</span> existe unicamente e assim pode ser escrito como <span class="math inline">\(\mbox{mdc}(a_1,\ldots,a_k)\)</span>. Além disso, para <span class="math inline">\(k\geq 3\)</span>, vale que <span class="math display">\[
-\mbox{mdc}(a_1,\ldots,a_k)=\mbox{mdc}(\mbox{mdc}(a_1,\ldots,a_{k-1}),a_k).
-\]</span></p>
-<p>O <span class="math inline">\(\mbox{mmc}(a_1,\ldots,a_k)\)</span> pode ser definido de modo análogo.</p>
+<section id="combinações-lineares" class="level2" data-number="39.1">
+<h2 data-number="39.1" data-anchor-id="combinações-lineares"><span class="header-section-number">39.1</span> Combinações lineares</h2>
+<p>Se lembre que nossos espaços vetoriais são sobre <span class="math inline">\(\R\)</span>.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 36.1</strong></span> Seja <span class="math inline">\(f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]\setminus\{0\}\)</span>. O <strong>conteúdo</strong> de <span class="math inline">\(f(x)\)</span> é definido como <span class="math inline">\(\mbox{mdc}(a_n,\ldots,a_1,a_0)\)</span>. O polinômio <span class="math inline">\(f(x)\)</span> é dito <strong>primitivo</strong> se seu conteúdo é igual a <span class="math inline">\(1\)</span></p>
+<p><span class="theorem-title"><strong>Definição 39.1</strong></span> Sejam <span class="math inline">\(\ul{v_1},\ldots,\ul{v_n}\)</span> elementos do espaço vetorial <span class="math inline">\(V\)</span>. Uma <em>combinação linear</em> de <span class="math inline">\(\ul{v_1}, \ldots, \ul{v_n}\)</span> é um elemento de <span class="math inline">\(V\)</span> da forma <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_n\ul{v_n},\]</span> com <span class="math inline">\(\lambda_1,\ldots,\lambda_n\)</span> elementos de <span class="math inline">\(\R\)</span>.</p>
 </div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 36.1</strong></span> O conteúdo do polinômio <span class="math inline">\(2x^2+4x-2\in\Z[x]\)</span> é <span class="math inline">\(2\)</span>, então ele não é primitivo. O conteúdo do polinômio <span class="math inline">\(2x^3-4x^2-1\in\Z[x]\)</span> é <span class="math inline">\(1\)</span>, então ele é primitivo</p>
-</div>
-<p>Se <span class="math inline">\(f(x)\in\Z[x]\)</span> e <span class="math inline">\(\alpha\in\Z\)</span> é seu conteúdo, então <span class="math inline">\(f(x)=\alpha f_0(x)\)</span> onde <span class="math inline">\(f_0(x)\in\Z[x]\)</span> é um polinômio primitivo. Por exemplo, <span class="math inline">\(2x^2+4x-2=2(x^2+2x-1)\)</span> onde <span class="math inline">\(x^2+2x-1\)</span> é primitivo.</p>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 36.2</strong></span> Seja <span class="math display">\[
-f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]
-\]</span> e <span class="math inline">\(p\in\N\)</span> um primo. Definimos a redução <span class="math inline">\(\overline{f(x)}\)</span> de <span class="math inline">\(f(x)\)</span> módulo <span class="math inline">\(p\)</span> como o polinômio <span class="math display">\[
-\overline{f(x)}=\overline{a_n}x^n+\cdots+\overline{a_1}x+\overline{a_0}\in\Z_p[x]
-\]</span> onde <span class="math inline">\(\overline{a_i}\in\Z_p\)</span> é a classe residual que contém <span class="math inline">\(a_i\)</span></p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 36.2</strong></span> A redução do polinômio <span class="math inline">\(10x^2+7x-3\)</span> módulo <span class="math inline">\(5\)</span> é <span class="math inline">\(\overline 2x+\overline 2\in\Z_5[x]\)</span>. Note que a redução de um polinômio <span class="math inline">\(a_nx^n+\cdots+a_1x+a_0\)</span> módulo <span class="math inline">\(p\)</span> é <span class="math inline">\(0\)</span> se e somente se <span class="math inline">\(p\mid a_i\)</span> para todo <span class="math inline">\(i\)</span></p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 36.1</strong></span> Sejam <span class="math inline">\(f(x),g(x)\in\Z[x]\)</span> e <span class="math inline">\(p\)</span> um primo. Mostre para os polinômios reduzidos módulo <span class="math inline">\(p\)</span> que <span class="math display">\[\begin{align*}
-\overline{f(x)+g(x)}&amp;=\overline{f(x)}+\overline{g(x)}\\
-\overline{f(x)g(x)}&amp;=\overline{f(x)}\cdot\overline{g(x)}\\
-\end{align*}\]</span></p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 36.2</strong></span> Seja <span class="math inline">\(f(x)\in\Z[x]\)</span> um polinômio primitivo e redutível (em <span class="math inline">\(\Z[x]\)</span>) e seja <span class="math inline">\(p\)</span> um primo. Assuma que a redução <span class="math inline">\(\overline{f(x)}\)</span> módulo <span class="math inline">\(p\)</span> tem o mesmo grau que <span class="math inline">\(f(x)\)</span>. Mostre que <span class="math inline">\(\overline{f(x)}\)</span> é redutível em <span class="math inline">\(\Z_p[x]\)</span></p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 36.1</strong></span> Sejam <span class="math inline">\(f(x),g(x)\in\Z[x]\)</span> polinômios primitivos. Então <span class="math inline">\(f(x)g(x)\)</span> é primitivo</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(h(x)=f(x)g(x)\)</span> e assuma que <span class="math inline">\(h(x)\)</span> não é primitivo. Então existe um primo <span class="math inline">\(p\)</span> tal que <span class="math inline">\(p\)</span> divide todos os coeficientes de <span class="math inline">\(h(x)\)</span>. Sejam <span class="math inline">\(\overline{f(x)}\)</span>, <span class="math inline">\(\overline{g(x)}\)</span>, <span class="math inline">\(\overline{h(x)}\)</span> as reduções de <span class="math inline">\(f(x)\)</span>, <span class="math inline">\(g(x)\)</span> e <span class="math inline">\(h(x)\)</span>, respetivamente, módulo <span class="math inline">\(p\)</span>. A frase anterior implica que <span class="math inline">\(\overline{h(x)}=0\)</span> e segue do exercício anterior que <span class="math display">\[
-0=\overline{h(x)}=\overline{f(x)}\cdot \overline{g(x)}\in\Z_p[x].
-\]</span> Como <span class="math inline">\(\Z_p[x]\)</span> é um domínio, temos que <span class="math inline">\(\overline{f(x)}=0\)</span> ou <span class="math inline">\(\overline{g(x)}=0\)</span>; ou seja <span class="math inline">\(p\)</span> divide os coeficientes de <span class="math inline">\(f(x)\)</span> ou <span class="math inline">\(p\)</span> divide os coeficientes de <span class="math inline">\(g(x)\)</span>. Mas isso implica que <span class="math inline">\(f(x)\)</span> não é primitivo ou <span class="math inline">\(g(x)\)</span> não é primitivo que contradiz às suposições do lema</p>
-</div>
-<p>Dado um polinômio primitivo <span class="math inline">\(f(x)\in\Z[x]\)</span>, nos perguntamos se <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Q[x]\)</span> ou em <span class="math inline">\(\Z[x]\)</span>. Se <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Z[x]\)</span>, então ele é claramente redutível em <span class="math inline">\(\Q[x]\)</span>. O caso contrário não é tão óbvio, mas segue do seguinte resultado conhecido como o Lema de <a href="https://pt.wikipedia.org/wiki/Carl_Friedrich_Gauss">Gauss</a>.</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 36.1</strong></span> (Lema de Gauss) Seja <span class="math inline">\(f(x)\in\Z[x]\)</span> um polinômio redutível em <span class="math inline">\(\Q[x]\)</span>. Então <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Z[x]\)</span></p>
+<p><span class="theorem-title"><strong>Teorema 39.1</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto de elementos do espaço vetorial <span class="math inline">\(V\)</span>. Então o conjunto <span class="math display">\[W = \left\{\lambda_1\ul{v_1} + \cdots + \lambda_n\ul{v_n}\,|\,n\in \N\,,\,\lambda_1,\ldots,\lambda_n\in \R\,,\, \ul{v_1},\ldots,\ul{v_n}\in X\right\}\]</span> de todas as combinações lineares (finitas!) de elementos de <span class="math inline">\(X\)</span> é um subespaço de <span class="math inline">\(V\)</span>. Diremos que <span class="math inline">\(W\)</span> é <em>gerado</em> por <span class="math inline">\(X\)</span> e que os elementos de <span class="math inline">\(X\)</span> são <em>geradores</em> de <span class="math inline">\(W\)</span>.</p>
+<p>Vamos às vezes usar a notação <span class="math inline">\([X]\)</span> para denotar o subespaço de <span class="math inline">\(V\)</span> gerado por <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Dividir <span class="math inline">\(f(x)\)</span> com seu conteúdo não altera a redutibilidade do polinômio em <span class="math inline">\(\Q[x]\)</span> e assim nós podemos assumir sem perder generalidade que <span class="math inline">\(f(x)\)</span> é primitivo. Assuma que <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Q[x]\)</span> e pode ser fatorado como <span class="math display">\[
-f(x)=g(x)h(x)
-\]</span> onde <span class="math inline">\(g(x),h(x)\in\Q[x]\)</span> e <span class="math inline">\(1\leq \grau{g(x)},\grau{h(x)}\leq \grau{f(x)}-1\)</span>. Precisamos provar que <span class="math inline">\(f(x)\)</span> pode ser fatorado como produto de polinômios em <span class="math inline">\(\Z[x]\)</span>. Seja <span class="math display">\[\begin{align*}
-g(x)&amp;=\frac{u_n}{v_n}x^n+\cdots+\frac{u_1}{v_1}x+\frac{u_0}{v_0}\\
-h(x)&amp;=\frac{a_m}{b_m}x^m+\cdots+\frac{a_1}{b_1}x+\frac{a_0}{b_0}
-\end{align*}\]</span> onde os <span class="math inline">\(u_i\)</span>, <span class="math inline">\(v_i\)</span>, <span class="math inline">\(a_i\)</span>, <span class="math inline">\(b_i\)</span> são inteiros. Ponha <span class="math inline">\(v=\mbox{mmc}(v_n,\ldots,v_0)\)</span> e <span class="math inline">\(b=\mbox{mmc}(b_m,\ldots,b_0)\)</span> e multiplique a equação <span class="math inline">\(f(x)=g(x)h(x)\)</span> com <span class="math inline">\(vb\)</span> para obter que <span class="math display">\[
-vbf(x)=(vg(x))(bh(x)).
-\]</span> Observe que <span class="math inline">\(vbf(x), vg(x), bh(x)\in\Z[x]\)</span>. Sejam <span class="math inline">\(c_1\)</span> e <span class="math inline">\(c_2\)</span> os conteúdos de <span class="math inline">\(vg(x)\)</span> e <span class="math inline">\(bh(x)\)</span>, respetivamente. Então <span class="math display">\[\begin{align*}
-vg(x)&amp;=c_1g_0(x)\\
-bh(x)&amp;=c_2h_0(x)
-\end{align*}\]</span> onde <span class="math inline">\(g_0(x),h_0(x)\)</span> são polinômios primitivos. Assim, <span class="math display">\[
-vbf(x)=(vg(x))(bh(x))=(c_1g_0(x))(c_2h_0(x))=c_1c_2g_0(x)h_0(x).
-\]</span> Como <span class="math inline">\(f(x)\)</span> é primitivo, o conteúdo de <span class="math inline">\(vbf(x)\)</span> é <span class="math inline">\(vb\)</span>. Por outro lado, o lema anterior implica que <span class="math inline">\(g_0(x)h_0(x)\)</span> é primitivo, então o conteúdo do lado direito é <span class="math inline">\(c_1c_2\)</span>. Como os dois lados da equação são (obviamente) iguais, temos que <span class="math inline">\(vb=c_1c_2\)</span> e este termo pode ser cancelado. Assim <span class="math display">\[
-f(x)=g_0(x)h_0(x)
-\]</span> é uma fatoração de <span class="math inline">\(f(x)\)</span> com <span class="math inline">\(g_0(x),h_0(x)\in\Z[x]\)</span> e <span class="math inline">\(\grau{g_0(x)}=\grau{g(x)}\)</span> e <span class="math inline">\(\grau{h_0(x)}=\grau{h(x)}\)</span>. Assim <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Z[x]\)</span></p>
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Exercício! É fácil mas muito importante.&nbsp;◻</p>
 </div>
-<p>O significado do lema do Gauss é o seguinte: Se <span class="math inline">\(f(x)\in\Z[x]\)</span> pode ser fatorado como produto de polinômios <span class="math inline">\(g(x),h(x)\in\Q[x]\)</span> com grau maior ou igual que <span class="math inline">\(1\)</span>, então o mesmo pode ser fatorado como produto de polinômios <span class="math inline">\(g_0(x),h_0(x)\in\Z[x]\)</span> onde <span class="math inline">\(\grau{g_0(x)}=\grau{g(x)}\)</span> e <span class="math inline">\(\grau{h_0(x)}=\grau{h(x)}\)</span>.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 36.3</strong></span> Seja <span class="math inline">\(f(x)=x^4+x^2+x+1\in\Z[x]\)</span> e vamos mostrar que <span class="math inline">\(f(x)\)</span> é irredutível em <span class="math inline">\(\Q[x]\)</span>. Pelo Teorema das Raízes Racionais, <span class="math inline">\(f(x)\)</span> não tem raízes em <span class="math inline">\(\Q\)</span>. Logo, se <span class="math inline">\(f(x)\)</span> fosse redutível, <span class="math inline">\(f(x)=g(x)h(x)\)</span> onde <span class="math inline">\(g(x),h(x)\in\Q[x]\)</span> ambos de grau <span class="math inline">\(2\)</span>. Ora, o Lema de Gauss diz que nós podemos assumir sem perder generalidade que <span class="math inline">\(g(x),h(x)\in\Z[x]\)</span>. Assim <span class="math inline">\(f(x)\)</span> pode ser fatorado como <span class="math display">\[\begin{align*}
-f(x)&amp;=(x^2+ax+b)(x^2+cx+d)\\&amp;=x^4+(a+c)x^3+(d+b+ac)x^2+(ad+bc)x+bd
-\end{align*}\]</span> onde <span class="math inline">\(a,b,c,d\in\Z\)</span>. Comparando os coeficientes de <span class="math inline">\(f(x)\)</span> com os coeficientes do polinômio na última equação, obtemos que <span class="math inline">\(a+c=0\)</span> e <span class="math inline">\(bd=1\)</span>. Assim, <span class="math inline">\(b=d=1\)</span> ou <span class="math inline">\(b=d=-1\)</span> e <span class="math inline">\(1=ad+bc=\pm(a+c)\)</span> que contradiz à equação que <span class="math inline">\(a+c=0\)</span>. Portanto, tal fatoração não existe e <span class="math inline">\(f(x)\)</span> é irredutível</p>
+<p><span class="theorem-title"><strong>Exemplo 39.1</strong></span> &nbsp;</p>
+<ul>
+<li><p>Considere o seguinte subconjunto de <span class="math inline">\(M_{2,3}(\R)\)</span>: <span class="math display">\[X = \left\{
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{pmatrix}\,,\,
+\begin{pmatrix}
+0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0
+\end{pmatrix}\,,\,
+\begin{pmatrix}
+0 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0
+\end{pmatrix}
+\right\}.\]</span> Uma combinação linear geral de elementos de <span class="math inline">\(X\)</span> tem a forma <span class="math display">\[a\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1
+\end{pmatrix} +
+b\begin{pmatrix}
+0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0
+\end{pmatrix}+
+c\begin{pmatrix}
+0 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0
+\end{pmatrix} =
+\begin{pmatrix}
+a &amp; b &amp; 2c \\ 0 &amp; c &amp; a
+\end{pmatrix},\]</span> então o subespaço de <span class="math inline">\(M_{2,3}(\R)\)</span> gerado por <span class="math inline">\(X\)</span> é <span class="math display">\[\left\{\left.
+\begin{pmatrix}
+a &amp; b &amp; 2c \\ 0 &amp; c &amp; a
+\end{pmatrix}\,\right|\, a,b,c\in \R
+\right\}.\]</span></p></li>
+<li><p>Seja <span class="math inline">\(\R[x]\)</span> o conjunto <span class="math display">\[\{ a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\,|\,n\in \N, a_0,\ldots,a_n\in \R\}\]</span> dos polinômios com coeficientes em <span class="math inline">\(\R\)</span>. Afirmamos que <span class="math inline">\(\R[x]\)</span> é um espaço vetorial (sobre <span class="math inline">\(\R\)</span>). Para verificar esta afirmação, vamos definir a soma e o produto por escalar para polinômios.</p>
+<p><u>SOMA:</u> Pegue dois polinômios <span class="math inline">\(f(x), g(x)\)</span>. Já que uns coeficientes poderiam ser <span class="math inline">\(0\)</span>, podemos escrevê-las como: <span class="math display">\[f(x) = a_nx^n + \cdots + a_1x + a_0\]</span> <span class="math display">\[g(x) = b_nx^n + \cdots + b_1x + b_0.\]</span> onde o graus de <span class="math inline">\(f,g\)</span> são no máximo <span class="math inline">\(n\)</span>. A soma de <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> é <span class="math display">\[\begin{aligned}
+f(x) + g(x) &amp; = (a_nx^n + \cdots + a_1x + a_0) + (b_nx^n + \cdots + b_1x + b_0) \\
+    &amp; = (a_n+b_n)x^n + \cdots + (a_1+b_1)x + (a_0+b_0) \in \R[x]
+\end{aligned}\]</span></p>
+<p><u>MÚLTIPLO ESCALAR:</u> Dado <span class="math inline">\(f(x) = a_nx^n + \cdots + a_1x + a_0 \in \R[x]\)</span> e <span class="math inline">\(\lambda\in \R\)</span>, temos <span class="math display">\[\begin{aligned}
+\lambda\cdot f(x) &amp; = \lambda(a_nx^n + \cdots + a_1x + a_0) \\
+        &amp; = \lambda a_nx^n + \cdots + \lambda a_1x + \lambda a_0 \in \R[x].
+\end{aligned}\]</span> É fácil verificar que esta soma e produto escalar satisfazem as propriedades exigidas na definição de espaços vetoriais e portanto o conjunto <span class="math inline">\(\R[x]\)</span> é um espaço vetorial.</p>
+<p>Note que todo polinômio <span class="math inline">\(f(x)\in\R[x]\)</span> determina uma <u>função polinomial</u>, nomeadamente, a função <span class="math display">\[f\colon \R\to \R,\quad \alpha\mapsto f(\alpha),\]</span> e polinômios distintos definem funções distintas (esta afirmação não é totalmente óbvia e você deve pensar em uma justificativa). Além disso a soma e o produto por escalar de polinômios correspondem à soma e ao produto escalar de funções. Considerando <span class="math inline">\(\R[x]\)</span> como o conjunto de funções polinomiais, <span class="math inline">\(\R[x]\)</span> pode ser visto como um subespaço do espaço de funções <span class="math inline">\(\mathcal F(\R,\R)\)</span>.</p>
+<p>Considere o seguinte conjunto dos polinomios mais fáceis: <span class="math display">\[X = \{1, x, x^2, x^3, \ldots\}.\]</span> Observe que qualquer elemento <span class="math display">\[f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\cdot 1\]</span> de <span class="math inline">\(\R[x]\)</span> é uma combinação linear dos elementos de <span class="math inline">\(X\)</span>, e que toda combinação linear de elementos de <span class="math inline">\(X\)</span> é um elemento de <span class="math inline">\(\R[x]\)</span>. Então, <span class="math inline">\(\R[x]\)</span> é gerado pelo conjunto <span class="math inline">\(X\)</span>.</p></li>
+</ul>
 </div>
 </section>
-<section id="o-critério-de-eisenstein" class="level2" data-number="36.2">
-<h2 data-number="36.2" data-anchor-id="o-critério-de-eisenstein"><span class="header-section-number">36.2</span> O critério de Eisenstein</h2>
-<div id="thm-eisenstein" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 36.2</strong></span> (O Critério de <a href="https://pt.wikipedia.org/wiki/Gotthold_Eisenstein">Eisenstein</a>) Seja <span class="math display">\[
-f(x)=a_nx^n+\cdots+a_1x+a_0\in\Z[x]
-\]</span> com <span class="math inline">\(a_n\neq 0\)</span> tal que existe um primo <span class="math inline">\(p\)</span> tal que <span class="math inline">\(p\nmid a_n\)</span>, <span class="math inline">\(p\mid a_i\)</span> para todo <span class="math inline">\(i\in\{0,\ldots,n-1\}\)</span> e <span class="math inline">\(p^2\nmid a_0\)</span>. Então <span class="math inline">\(f(x)\)</span> é irredutível em <span class="math inline">\(\Q[x]\)</span></p>
+<section id="interseções-e-somas-de-subespaços" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="interseções-e-somas-de-subespaços">Interseções e somas de subespaços</h2>
+<p>Sejam <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(W,Y\)</span> dois subespaços de <span class="math inline">\(V\)</span>.</p>
+<div id="prop-">
+<p>A interseção <span class="math inline">\(W\cap Y\)</span> de <span class="math inline">\(W\)</span> e <span class="math inline">\(Y\)</span> é mais um subespaço de <span class="math inline">\(V\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma por procurar uma contradição que <span class="math inline">\(f(x)\)</span> é redutível em <span class="math inline">\(\Q[x]\)</span>. Pelo Lema de Gauss, existem <span class="math inline">\(g(x),h(x)\in\Z[x]\)</span> tal que <span class="math inline">\(f(x)=g(x)h(x)\)</span> tais que <span class="math inline">\(1\leq \grau{g(x)},\grau{h(x)}\leq\grau{f(x)}-1\)</span>. Assuma que <span class="math display">\[\begin{align*}
-g(x)&amp;=b_rx^r+\cdots +b_1x+b_0\\
-h(x)&amp;=c_sx^s+\cdots +c_1x+c_0
-\end{align*}\]</span> com <span class="math inline">\(b_r,c_s\neq 0\)</span>, <span class="math inline">\(r,s\geq 1\)</span> e <span class="math inline">\(r+s=n\)</span>. Temos que <span class="math inline">\(a_n=b_rc_s\)</span> e <span class="math inline">\(a_0=b_0c_0\)</span>. Como <span class="math inline">\(p\nmid a_n\)</span>, temos que <span class="math inline">\(p\nmid b_r\)</span> e <span class="math inline">\(p\nmid c_s\)</span>. Similarmente, como <span class="math inline">\(p\mid a_0\)</span> e <span class="math inline">\(p^2\nmid a_0\)</span>, segue que <span class="math inline">\(p\mid b_0\)</span> ou <span class="math inline">\(p\mid c_0\)</span> mas <span class="math inline">\(p\)</span> não divide ambos <span class="math inline">\(b_0\)</span> e <span class="math inline">\(c_0\)</span>. Assuma sem perder generalidade que <span class="math inline">\(b\mid b_0\)</span> e <span class="math inline">\(p\nmid c_0\)</span>. Seja <span class="math inline">\(t\)</span> o menor índice tal que <span class="math inline">\(p\nmid b_t\)</span>. Então <span class="math inline">\(t\leq r &lt; n\)</span>. O coeficiente <span class="math inline">\(a_t\)</span> é obtido como <span class="math display">\[
-a_t=b_tc_0+b_{t-1}c_1+\cdots+b_1c_{t-1}+b_0c_t
-\]</span> (se <span class="math inline">\(\grau{h(x)} &lt; t\)</span>, então tomamos <span class="math inline">\(c_{s+1}=\cdots=c_t=0\)</span>). Pelas condições do lema, <span class="math inline">\(p\mid a_t\)</span> e isso implica que <span class="math inline">\(p\mid b_tc_0\)</span> mas isso é impossível como <span class="math inline">\(p\nmid  b_t\)</span> e <span class="math inline">\(p\nmid c_0\)</span>. Logo a fatoração <span class="math inline">\(f(x)=g(x)h(x)\)</span> não existe e assim <span class="math inline">\(f(x)\)</span> é irredutível</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Temos que confirmar que as propriedades de subespaço estão satisfeitas. Primeiro, <span class="math inline">\(\ul{0}\in W\)</span> e <span class="math inline">\(\ul{0}\in Y\)</span>, logo <span class="math inline">\(\ul{0}\in W\cap Y\)</span>, mostrando que <span class="math inline">\(W\cap Y\neq\varnothing\)</span>.</p>
+<ol type="1">
+<li><p>Sejam <span class="math inline">\(\ul{u}, \ul{v}\in W\cap Y\)</span>. Então</p>
+<ul>
+<li><p><span class="math inline">\(\ul{u}, \ul{v}\in W\)</span> e <span class="math inline">\(W\)</span> é subespaço, logo <span class="math inline">\(\ul{u}+\ul{v}\in W\)</span>,</p></li>
+<li><p><span class="math inline">\(\ul{u}, \ul{v}\in Y\)</span> e <span class="math inline">\(Y\)</span> é subespaço, logo <span class="math inline">\(\ul{u}+\ul{v}\in Y\)</span>.</p></li>
+</ul>
+<p>Segue que <span class="math inline">\(\ul{u} + \ul{v} \in W\cap Y\)</span>.</p></li>
+<li><p>Exercício! A ideia é similar à primeira parte.</p></li>
+</ol>
+<p>&nbsp;◻</p>
+</div>
+<p>Noutro lado, a união de dois subespaços de <span class="math inline">\(V\)</span> geralmente <em>não é</em> um subespaço. Por exemplo, considere os seguintes subespaços de <span class="math inline">\(\R^2\)</span>: <span class="math display">\[X = \{(x,0)\,|\, x\in \R\}\,,\quad Y = \{(0,y)\,|\,y\in \R\}\]</span> (informalmente, <span class="math inline">\(X\)</span> é o “eixo <span class="math inline">\(x\)</span>” e <span class="math inline">\(Y\)</span> é o “eixo <span class="math inline">\(y\)</span>”). Os elementos <span class="math display">\[(1,0)\,,\, (0,1)\in X\cup Y,\]</span> mas <span class="math inline">\((1,0) + (0,1) = (1,1)\)</span> não pertence nem a <span class="math inline">\(X\)</span> nem a <span class="math inline">\(Y\)</span>, logo <span class="math inline">\((1,1)\not\in X\cup Y\)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/union.png" class="img-fluid figure-img"></p>
+<figcaption>União de subespaços</figcaption>
+</figure>
+</div>
+<p>O jeito correto para “juntar” dois subespaços é o seguinte:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 39.2</strong></span> Sejam <span class="math inline">\(W,Y\)</span> dois subespaços do espaço vetorial <span class="math inline">\(V\)</span>. A <em>soma</em> de <span class="math inline">\(W\)</span> e <span class="math inline">\(Y\)</span> é <span class="math display">\[W + Y := \{\ul{w} + \ul{y}\,|\,\ul{w}\in W\,,\, \ul{y}\in Y\}.\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 39.1</strong></span> Confirme que <span class="math inline">\(W+Y\)</span> é sempre um subespaço de <span class="math inline">\(V\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 36.4</strong></span> Seja <span class="math inline">\(f(x)=x^n-p\in\Z[x]\)</span> onde <span class="math inline">\(p\)</span> é um primo e <span class="math inline">\(n\geq 1\)</span>. O critério de Eisenstein vale para <span class="math inline">\(f(x)\)</span> e assim <span class="math inline">\(f(x)\)</span> é irredutível. Em particular <span class="math inline">\(\Q[x]\)</span> possui polinômios irredutíveis de grau arbitrário</p>
+<p><span class="theorem-title"><strong>Exemplo 39.2</strong></span> Seja <span class="math inline">\(V = \R^3\)</span> e considere os subespaços <span class="math display">\[W = \{(x,y,0)\,|\,x, y\in \R\}\,,\quad Y = \{(0,y,z)\,|\,y,z\in \R\}.\]</span> O subespaço <span class="math inline">\(W + Y\)</span> é o próprio <span class="math inline">\(V\)</span>: dado <span class="math inline">\(\ul{v} = (x,y,z)\in V\)</span>, podemos escrever <span class="math display">\[(x,y,z) = (x,y,0) + (0,0,z) \in W + Y.\]</span></p>
+</div>
+<p>Observe que esta soma não foi muito “eficiente”, no sentido que para obter <span class="math inline">\(V\)</span> como soma, a gente podia ter usada subespaços menores. Por exemplo, pega <span class="math display">\[Y' = \{(0,0,z)\,|\,z\in \R\} \subsetneq Y.\]</span> Ainda temos <span class="math display">\[W + Y' = \{(x,y,0) + (0,0,z)\,|\,x,y,z\in \R\} = \{(x,y,z)\,|\,x,y,z\in \R\} = \R^3.\]</span> Temos <span class="math display">\[W\cap Y = \{(0,y,0)\,|\,y\in \R\},\]</span> enquanto <span class="math display">\[W\cap Y' = \{\ul{0}\}.\]</span> A não eficiencia de <span class="math inline">\(W+Y\)</span> surge do fato que <span class="math inline">\(W\cap Y\neq \{\ul{0}\}\)</span>. Damos nome especial para somas eficientes:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 39.3</strong></span> Sejam <span class="math inline">\(W,Y\)</span> subespaços de <span class="math inline">\(V\)</span>. Diremos que <span class="math inline">\(V\)</span> é a <em>soma direta</em> de <span class="math inline">\(W\)</span> e <span class="math inline">\(Y\)</span> se</p>
+<ol type="1">
+<li><p><span class="math inline">\(W+Y = V,\)</span></p></li>
+<li><p><span class="math inline">\(W\cap Y = \{\ul{0}\}\)</span>.</p></li>
+</ol>
+<p>Neste caso, escrevemos <span class="math inline">\(V = W\oplus Y\)</span>.</p>
+</div>
+<p>Uma propriedade útil das somas diretas:</p>
+<div id="prop-">
+<p>Sejam <span class="math inline">\(W,Y\)</span> subespaços de algum espaço vetorial e <span class="math inline">\(V = W+Y\)</span>. Então <span class="math inline">\(V = W\oplus Y\)</span> se, e somente se, cada elemento de <span class="math inline">\(V\)</span> pode ser escrito <em>unicamente</em> como <span class="math inline">\(\ul{w}+\ul{y}\)</span>, com <span class="math inline">\(\ul{w}\in W, \ul{y}\in Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Temos duas coisas para mostrar:</p>
+<ul>
+<li><p><span class="math inline">\(W\cap Y = \{\ul{0}\}\implies\)</span>todo elemento pode ser escrito únicamente:</p>
+<p>Suponha que algum <span class="math inline">\(\ul{v}\in V\)</span> pode ser escrito como <span class="math inline">\(\ul{w} + \ul{y}\)</span> E como <span class="math inline">\(\ul{w}' + \ul{y}'\)</span> (com <span class="math inline">\(\ul{w}, \ul{w}'\in W, \ul{y}, \ul{y}'\in Y\)</span>). Para mostrar unicidade da expressão, temos que confirmar que <span class="math inline">\(\ul{w}=\ul{w}'\)</span> e <span class="math inline">\(\ul{y}=\ul{y}'\)</span>. Temos <span class="math display">\[\ul{w}+\ul{y} = \ul{v} = \ul{w}' + \ul{y}' \implies \ul{w}-\ul{w}' = \ul{y}'-\ul{y} \in W\cap Y.\]</span> Mas <span class="math inline">\(W\cap Y = \{\ul{0}\}\)</span>, então <span class="math inline">\(\ul{w} - \ul{w}' = \ul{0}\)</span>, logo <span class="math inline">\(\ul{w}=\ul{w}'\)</span>, e similarmente <span class="math inline">\(\ul{y}=\ul{y}'\)</span>.</p></li>
+<li><p>todo elemento pode ser escrito únicamente<span class="math inline">\(\implies W\cap Y = \{\ul{0}\}\)</span>:</p>
+<p>Pegue <span class="math inline">\(\ul{v}\in W\cap Y\)</span>, logo <span class="math inline">\(-\ul{v}\in W\cap Y\)</span> já que <span class="math inline">\(W\cap Y\)</span> é subespaço. Em particular, <span class="math inline">\(\ul{v}\in W\)</span> e <span class="math inline">\(-\ul{v}\in Y\)</span>, e assim <span class="math display">\[\ul{0} = \ul{0} + \ul{0} = \ul{v} - \ul{v}\]</span> são duas expressões de <span class="math inline">\(\ul{0}\)</span> como soma de alguém em <span class="math inline">\(W\)</span> mais alguém em <span class="math inline">\(Y\)</span>. Já que todo elemento pode ser escrito unicamente assim, segue que <span class="math inline">\(\ul{v} = \ul{0}\)</span>. Mas <span class="math inline">\(\ul{v}\in W\cap Y\)</span> foi arbitrário, então <span class="math inline">\(W\cap Y = \{\ul{0}\}\)</span>.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 36.5</strong></span> Seja <span class="math inline">\(p\in\N\)</span> um primo e considere <span class="math display">\[
-f(x)=x^{p-1}+x^{p-2}+\cdots+x+1\in\Z[x].
-\]</span> O polinômio <span class="math inline">\(f(x)\)</span> é chamado polinômio ciclotómico de grau <span class="math inline">\(p\)</span>. Note que <span class="math display">\[
-f(x)=\frac{x^p-1}{x-1}.
-\]</span> Afirmamos que <span class="math inline">\(f(x)\)</span> é irredutível em <span class="math inline">\(\Q[x]\)</span>. O Critério de Eisenstein não é diretamente aplicável e nós vamos fazer uma substituição de variável <span class="math inline">\(y=x+1\)</span>. Assim <span class="math display">\[\begin{align*}
-f(y)&amp;=\frac{y^p-1}{y-1}=\frac{(x+1)^p-1}{(x+1)-1}\\
-&amp;=\frac{x^p+p x^{p-1}+\binom p2x^{p-2}+\cdots+\binom p{p-2}x^2+px+1-1}{x}\\&amp;=
-x^{p-1}+p x^{p-2}+\binom p2x^{p-3}+\cdots+\binom p{p-2}x+p.
-\end{align*}\]</span> O coeficiente binomial <span class="math inline">\(\binom pk\)</span> é divisível por <span class="math inline">\(p\)</span> para todo <span class="math inline">\(k\in\{1,\ldots,p-1\}\)</span>. Pelo Critério de Eisentein, <span class="math inline">\(f(y)\)</span> é irredutível. Como <span class="math inline">\(x=y-1\)</span>, temos que <span class="math inline">\(f(x)=f(y-1)\)</span> é também irredutível</p>
+<p><span class="theorem-title"><strong>Exemplo 39.3</strong></span> Seja <span class="math inline">\(\mathcal{P}_2\)</span> o subespaço de <span class="math inline">\(\R[x]\)</span> gerado pelo conjunto <span class="math inline">\(\{1,x,x^2\}\)</span>. Então, <span class="math inline">\(\mathcal{P}_2\)</span> é o conjunto dos polinômios da forma <span class="math inline">\(ax^2 + bx + c\)</span> (<span class="math inline">\(a,b,c\in \R\)</span>). Considere os subespaços <span class="math display">\[D = \{ax^2 + ax + a\,|\,a\in \R\}\,,\quad E = \{bx + c\,|\, b,c\in \R\}.\]</span> Vamos mostrar que <span class="math inline">\(\mathcal{P}_2 = D\oplus E\)</span>. Seja <span class="math inline">\(\alpha x^2 + \beta x + \gamma\)</span> um elemento qualquer de <span class="math inline">\(\mathcal{P}_2\)</span>. Vamos tentar expressar este elemento como um elemento de <span class="math inline">\(D+E\)</span>: <span class="math display">\[\alpha x^2 + \beta x + \gamma = (ax^2 + ax + a) + (bx + c) = ax^2 + (a+b)x + (a+c).\]</span> Obtemos que <span class="math display">\[\begin{aligned}
+\alpha &amp; = a. \\
+\beta &amp; = a+b = \alpha + b \implies b = \beta - \alpha. \\
+\gamma &amp; = a+c = \alpha + c \implies c = \gamma - \alpha.
+\end{aligned}\]</span> Seguem duas coisas:</p>
+<ol type="1">
+<li><p>todo elemento de <span class="math inline">\(\mathcal{P}_2\)</span> pode ser escrito como soma de um elemento de <span class="math inline">\(D\)</span> e um elemento de <span class="math inline">\(E\)</span>, logo <span class="math inline">\(\mathcal{P}_2 = D + E\)</span>.</p></li>
+<li><p>essa expressão é <em>única</em> (<span class="math inline">\(a=\alpha\,,\, b = \beta - \alpha\,,\, c = \gamma - \alpha\)</span>, não temos escolha).</p></li>
+</ol>
+<p>Segue pela proposição então que <span class="math inline">\(\mathcal{P}_2 = D \oplus E\)</span>.</p>
+</div>
+</section>
+<section id="dependência-linear" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="dependência-linear">Dependência Linear</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 39.4</strong></span> O conjunto <span class="math inline">\(X\)</span> de vetores no espaço vetorial <span class="math inline">\(V\)</span> é <em>linearmente dependente</em> (LD) se existem <span class="math inline">\(\ul{v_1},\ldots,\ul{v_n}\in X\)</span> e <span class="math inline">\(\lambda_1,\ldots,\lambda_n\in \R\)</span>, nem todos <span class="math inline">\(0\)</span>, tais que <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_n\ul{v_n} = \ul{0}.\]</span> Se <span class="math inline">\(X\)</span> não é linearmente dependente, então <span class="math inline">\(X\)</span> é <em>linearmente independente</em> (LI). Logo <span class="math inline">\(X\)</span> é LI se dados <span class="math inline">\(\ul{v_1}, \ldots,\ul{v_n}\in X\)</span>, <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_n\ul{v_n} = \ul{0}\,\,\implies\,\, \lambda_i = 0\,\,\forall i\in \{1,\ldots,n\}.\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 39.4</strong></span> &nbsp;</p>
+<ul>
+<li><p>Seja <span class="math inline">\(\ul{v}\neq \ul{0}\)</span> um vetor. Então <span class="math inline">\(X = \{\ul{v}\}\)</span> é LI, pois a equação <span class="math display">\[\lambda\ul{v} = \ul{0}\]</span> está satisfeita somente quando <span class="math inline">\(\lambda = 0\)</span>.</p></li>
+<li><p>Qualquer conjunto <span class="math inline">\(X\)</span> que contém o vetor <span class="math inline">\(\ul{0}\)</span> é LD, pois <span class="math display">\[1\cdot \ul{0} = \ul{0}\quad\hbox{mas}\quad 1\neq 0.\]</span></p></li>
+<li><p>O subconjunto <span class="math inline">\(\{(1,1), (1,-1)\}\subseteq \R^2\)</span> é LI: suponha que <span class="math display">\[\lambda (1,1) + \mu(1,-1) = \ul{0}.\]</span> Temos que confirmar que <span class="math inline">\(\lambda = \mu = 0\)</span>. Mas <span class="math display">\[\lambda (1,1) + \mu(1,-1) = (\lambda + \mu, \lambda - \mu) = (0,0).\]</span> O segundo componente diz que <span class="math inline">\(\lambda - \mu = 0\)</span>, então <span class="math inline">\(\lambda = \mu\)</span>. O primeiro componente diz que <span class="math inline">\(0 = \lambda + \mu = \lambda + \lambda = 2\lambda\)</span>, então <span class="math inline">\(\lambda = \mu = 0\)</span>, logo <span class="math inline">\(\{(1,1),(1,-1)\}\)</span> é LI.</p></li>
+<li><p><em>Exercício</em>: Sejam <span class="math inline">\(\ul{u}, \ul{v}\)</span> vetores não nulos. Mostre que <span class="math inline">\(\{\ul{u}, \ul{v}\}\)</span> é LD se, e somente se, <span class="math inline">\(\ul{u}\)</span> é múltiplo escalar de <span class="math inline">\(\ul{v}\)</span>.</p></li>
+<li><p>Sejam <span class="math inline">\(V = \R^3\)</span> e <span class="math display">\[X = \left\{ (1,2,5)\,,\, (7,-1,5)\,,\,(1,-1,-1)\right\}.\]</span> Para ver se <span class="math inline">\(X\)</span> é LD ou LI, temos que decidir se a equação <span class="math display">\[x_1 (1,2,5) + x_2 (7,-1,5) + x_3 (1,-1,-1) = (0,0,0)\]</span> possui solução não trivial ou não. A matriz do sistema linear correspondente é <span class="math display">\[\begin{pmatrix}%[ccc|c]
+1 &amp; 7 &amp; 1 &amp; 0 \\
+2 &amp; -1 &amp; -1 &amp; 0 \\
+5 &amp; 5 &amp; -1 &amp; 0
+\end{pmatrix}\]</span> cuja forma escalonada reduzida é <span class="math display">\[\begin{pmatrix}%[ccc|c]
+1 &amp; 0 &amp; -2/5 &amp; 0 \\
+0 &amp; 1 &amp; 1/5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span> A terceira coluna não possui pivô, então <span class="math inline">\(x_3\)</span> é livre. Em particular, o sistema possui soluções não triviais. Segue da definição que <span class="math inline">\(X\)</span> é linearmente dependente.</p></li>
+</ul>
+</div>
+<p>Um subconjunto <span class="math inline">\(X\)</span> é LD se existir uma <em>dependência linear</em> entre os elementos de <span class="math inline">\(X\)</span>. Mais precisamente:</p>
+<div id="prop-">
+<p>Seja <span class="math inline">\(X\)</span> um subconjunto de <span class="math inline">\(V\)</span> com pelo menos dois elementos. Então <span class="math inline">\(X\)</span> é LD se, e somente se, pelo menos um dos vetores <span class="math inline">\(\ul{v}\)</span> de <span class="math inline">\(X\)</span> pode ser escrito como combinação linear dos outros.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Exercício. Dicas:</p>
+<ul>
+<li><p>Suponha que <span class="math inline">\(X\)</span> é LD. Então existem <span class="math inline">\(\ul{v_1}, \ldots,\ul{v_n}\in X\)</span> tais que <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_n\ul{v_n} = \ul{0}\]</span> com nem todo <span class="math inline">\(\lambda_i = 0\)</span>. Pegue um <span class="math inline">\(\ul{v_i}\)</span> com <span class="math inline">\(\lambda_i\neq 0\)</span>. Isole ele de um lado para expressar ele como combinação linear dos outros.</p></li>
+<li><p>Expresse algum <span class="math inline">\(\ul{v}\in X\)</span> como combinação linear de outros vetores em <span class="math inline">\(X\)</span>. Rearrange.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
 
 
@@ -1794,13 +1849,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../FundamentosDeAlgebra/dfu.html" class="pagination-link" aria-label="Domínios de Fatoração Única">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Domínios de Fatoração Única</span></span>
+      <a href="../AlgebraLinearI/01_alglin1.html" class="pagination-link" aria-label="Espaços vetoriais">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Espaços vetoriais</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/quadratic.html" class="pagination-link" aria-label="Equações quadráticas e cubicas">
-        <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Equações quadráticas e cubicas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
