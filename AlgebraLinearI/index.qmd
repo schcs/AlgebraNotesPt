@@ -4,11 +4,23 @@ number-sections: true
 lang: pt-BR
 ---
 
-##
+## Introdução
 
 Estas notas foram escritas por [John MacQuarrie](https://johnmacquarrie.github.io/) para serem utilizadas na disciplina Álgebra Linear I da UFMG. A versão HTML foi preparada por Csaba Schneider.
 
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
+Material disponibilizado sob a licença
+[CC BY-SA 4.0][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+## Conteúdo
 
 - [Espaços vetoriais e subespaços](01_alglin1.qmd)
 - [Combinações lineares e geradores](02_alglin1.qmd)
+- [Bases e dimensão](03_alglin1.qmd)

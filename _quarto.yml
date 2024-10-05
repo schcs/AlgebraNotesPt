@@ -58,6 +58,7 @@ book:
       chapters: 
         - AlgebraLinearI/01_alglin1.qmd
         - AlgebraLinearI/02_alglin1.qmd
+        - AlgebraLinearI/03_alglin1.qmd
     - part: AlgebraLinearII/index.qmd
       chapters: 
         - AlgebraLinearII/bases.qmd
