@@ -25,7 +25,7 @@ $V$ se
 -   $X$ é linearmente independente.
 :::
 
-:::{#exm-}s
+:::{#exm-}
 -   A *base canônica* de $\R^n$ é o conjunto dos $n$ vetores
     $$B = \left\{(1,0,0,\ldots,0)\,,\, (0,1,0,\ldots,0)\,,\, \ldots\,,\, (0,\ldots,0,1)\right\}.$$
     Afirmo que é óbvio que $B$ gera $\R^n$ e que $B$ é LI. Recomendo que
@@ -79,7 +79,7 @@ $B$.
 :::
 
 :::{.proof}
-*Proof.* A definição da base implica que todo elemento de $V$ pode ser
+ A definição da base implica que todo elemento de $V$ pode ser
 escrito como combinação linear de elementos de $B$. Assuma que um vetor
 $\ul v$ pode ser escrito de duas maneiras:
 $$\ul v=\alpha_1 \ul{b_1}+\cdots+\alpha_k \ul{b_k}=\beta_1\ul{b_1}+\cdots+\beta_k\ul{b_k}$$
@@ -133,7 +133,7 @@ de geradores de $V$. Algum subconjunto de $X$ é uma base de $V$.
 :::
 
 :::{.proof}
-*Proof.* O espaço vetorial $\{\ul{0}\}$ possui a base $\varnothing$,
+ O espaço vetorial $\{\ul{0}\}$ possui a base $\varnothing$,
 então vamos supor que $V\neq \{\ul{0}\}$. Seja
 $B = \{\ul{b_1}, \ldots ,\ul{b_n}\}$ um subconjunto maximal LI de $X$:
 isto é, $B\subseteq X$ é LI, mas quando colocar qualquer outro elemento
@@ -161,7 +161,7 @@ Qualquer espaço vetorial finitamente gerado possui uma base finita.
 :::
 
 :::{.proof}
-*Proof.* Seja $X$ um conjunto finito de geradores de $V$. Pelo teorema,
+ Seja $X$ um conjunto finito de geradores de $V$. Pelo teorema,
 algum subconjunto de $X$ é uma base finita de $V$. ◻
 :::
 
@@ -179,7 +179,7 @@ LD.
 :::
 
 :::{.proof}
-*Proof.* Seja $Y = \{\ul{v_1}, \ldots,\ul{v_{n+1}}\}$ um subconjunto de
+ Seja $Y = \{\ul{v_1}, \ldots,\ul{v_{n+1}}\}$ um subconjunto de
 $X$ com $n+1$ elementos. Vamos mostrar que $Y$ é LD (logo $X$ também a
 é). Temos que mostrar que a equação
 $$\lambda_1\ul{v_1} + \cdots + \lambda_{n+1}\ul{v_{n+1}} = \ul{0}\qquad (*)$$
@@ -209,12 +209,12 @@ $V$. Então $|C| = |B|$.
 :::
 
 :::{.proof}
-*Proof.* Já que $B$ é uma base de $V$ e $C$ é LI, segue da proposição
+ Já que $B$ é uma base de $V$ e $C$ é LI, segue da proposição
 que $|C|\leqslant |B|$. Mas agora $C$ é uma base finita e $B$ é LI,
 então $|B|\leqslant|C|$ pela proposição de novo. Logo $|B| = |C|$. ◻
 :::
 
-:::{#exm-}s
+:::{#exm-}
 -   O subconjunto de $M_{2,2}(\R)$ $$X = \left\{\begin{pmatrix}
     1 & 1 \\ 3 & 6
     \end{pmatrix}\,,\, \begin{pmatrix}
@@ -260,7 +260,7 @@ Caso $V$ não possuir uma base finita, diremos que $V$ tem *dimensão
 infinita*.
 :::
 
-:::{#exm-}s
+:::{#exm-}
 -   O único espaço vetorial com dimensão $0$ é $\{\ul{0}\}$ (já que a
     base $\varnothing$ tem tamanho $0$).
 
@@ -298,7 +298,7 @@ infinita*.
 Existe um espaço vetorial de dimensão $5$ tendo subespaço de dimensão
 $6$? Não!
 
-:::{#prop-}
+:::{#prp-}
 Sejam $V$ um espaço vetorial de dimensão finita e $W$ um subespaço de
 $V$.
 
@@ -308,7 +308,6 @@ $V$.
 :::
 
 :::{.proof}
-*Proof.*
 
 1.  Suponha (procurando contradição) que $$\dim(W) = m > \dim(V).$$
     Então $W$ possui uma base
@@ -354,7 +353,7 @@ $V$. Se $B$ tem qualquer duas das propriedades $1,2,3$ acima, então $B$
 :::
 
 :::{.proof}
-*Proof.* Suponha que $B$ satisfaz:
+ Suponha que $B$ satisfaz:
 
 -   Então $B$ é uma base pela definição de base.
 
@@ -369,11 +368,13 @@ $V$. Se $B$ tem qualquer duas das propriedades $1,2,3$ acima, então $B$
  ◻
 :::
 
-*Exercício*: Seja $V$ um espaço vetorial de dimensão finita. Já
+:::{#exr-}
+Seja $V$ um espaço vetorial de dimensão finita. Já
 mostramos que qualquer subconjunto finito de geradores de $V$ pode ser
 "diminuido" para uma base de $V$. Mostre a outra direção: que qualquer
 subconjunto LI de $V$ pode ser estendido para uma base de $V$. Isto é,
 se $X$ é LI, então existe uma base $B$ de $V$ com $X\subseteq B$.
+:::
 
 ## A dimensão da soma {#a-dimensão-da-soma .unnumbered}
 
@@ -383,7 +384,7 @@ $$\dim(W+Y) = \dim(W) + \dim(Y) - \dim(W\cap Y).$$
 :::
 
 :::{.proof}
-*Proof.* Seja $I = \{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\}$ uma base de
+ Seja $I = \{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\}$ uma base de
 $W\cap Y$. Já que $I\subseteq W$ é LI, pelo exercício podemos estender
 $I$ para uma base
 $B=\{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\,,\,\ul{w_1}\,,\,\ldots\,,\,\ul{w_b}\}$
@@ -419,7 +420,7 @@ $$V = W\oplus Y.$$ Então $$\dim(V) = \dim(W) + \dim(Y).$$
 :::
 
 :::{.proof}
-*Proof.* Imediato do teorema, pois
+ Imediato do teorema, pois
 $\dim(W\cap Y) = \dim(\{\ul{0}\}) = 0$. ◻
 :::
 
@@ -434,7 +435,7 @@ $V$. Existe um complemento de $W$ em $V$.
 :::
 
 :::{.proof}
-*Proof.* Seja $\{\ul{w_1}\,,\,\ldots,\ul{w_a}\}$ uma base de $W$ e
+ Seja $\{\ul{w_1}\,,\,\ldots,\ul{w_a}\}$ uma base de $W$ e
 estenda ela para uma base
 $$\{\ul{w_1}\,,\,\ldots\,,\,\ul{w_a}\,,\,\ul{y_1}\,,\,\ldots\,,,\,\ul{y_b}\}$$
 de $V$. Seja $Y$ o subespaço gerado por
@@ -455,7 +456,11 @@ Então os subespaços $$Y_{b}\quad\hbox{tendo base}\quad \{(b,1)\}$$ são
 distintos para todo $b\in \R$, e qualquer $Y_b$ é complemento de $W$ em
 $\R^2$.
 
-$$\begin{tikzpicture}[scale = 1]
+![Complementos em $\R^2$](img/complements.png)
+
+<!--::::{.cell}
+```{=latex}
+\begin{tikzpicture}[scale = 1]
 
 \draw (-3,0) -- (3,0) node[below right]{$W$};
 
@@ -467,5 +472,8 @@ $$\begin{tikzpicture}[scale = 1]
 
 
 \draw (4.3,-1) node[right, align=left] {Os subespaços $Y_1,Y_0,Y_{-2}$ \\ são complementos de $W$ \\ em $\R^2$} ;
-\end{tikzpicture}$$
+\end{tikzpicture}
+```
+::::
+-->
 :::
