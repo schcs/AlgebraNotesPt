@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Os números primos e o Teorema Fundamental da Aritmética – Álgebra</title>
+<title>40&nbsp; Bases e dimensão – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/diof.html" rel="next">
-<link href="../FundamentosDeAlgebra/mdc.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/02_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -684,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/primos.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/03_alglin1.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Bases e dimensão</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -821,7 +787,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/primos.html" class="sidebar-item-text sidebar-link active">
+  <a href="../FundamentosDeAlgebra/primos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></span></a>
   </div>
 </li>
@@ -982,7 +948,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/03_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/03_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Bases e dimensão</span></span></a>
   </div>
 </li>
@@ -1272,18 +1238,20 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#números-primos" id="toc-números-primos" class="nav-link active" data-scroll-target="#números-primos"><span class="header-section-number">15.1</span> Números primos</a></li>
-  <li><a href="#o-teorema-fundamental-da-aritmética" id="toc-o-teorema-fundamental-da-aritmética" class="nav-link" data-scroll-target="#o-teorema-fundamental-da-aritmética"><span class="header-section-number">15.2</span> O Teorema Fundamental da Aritmética</a></li>
-  <li><a href="#o-número-dos-primos" id="toc-o-número-dos-primos" class="nav-link" data-scroll-target="#o-número-dos-primos"><span class="header-section-number">15.3</span> O número dos primos</a></li>
+  <li><a href="#bases" id="toc-bases" class="nav-link active" data-scroll-target="#bases">Bases</a></li>
+  <li><a href="#coordenadas" id="toc-coordenadas" class="nav-link" data-scroll-target="#coordenadas">Coordenadas</a></li>
+  <li><a href="#existência-de-bases" id="toc-existência-de-bases" class="nav-link" data-scroll-target="#existência-de-bases">Existência de bases</a></li>
+  <li><a href="#dimensão" id="toc-dimensão" class="nav-link" data-scroll-target="#dimensão">Dimensão</a></li>
+  <li><a href="#a-dimensão-da-soma" id="toc-a-dimensão-da-soma" class="nav-link" data-scroll-target="#a-dimensão-da-soma">A dimensão da soma</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/primos.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/03_alglin1.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Bases e dimensão</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Os números primos e o Teorema Fundamental da Aritmética</span></h1>
+<h1 class="title"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Bases e dimensão</span></h1>
 </div>
 
 
@@ -1300,110 +1268,225 @@ window.Quarto = {
 </header>
 
 
-<section id="números-primos" class="level2" data-number="15.1">
-<h2 data-number="15.1" data-anchor-id="números-primos"><span class="header-section-number">15.1</span> Números primos</h2>
+<section id="bases" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="bases">Bases</h2>
+<p>A última proposição da semana anterior (<span class="math inline">\(X\)</span> é LD <span class="math inline">\(\Longleftrightarrow\)</span> pelo menos um dos vetores de <span class="math inline">\(X\)</span> é combinação linear dos outros) diz que um conjunto LD é “ineficiente”, no sentido que um vetor em <span class="math inline">\(X\)</span> já pertence ao subespaço gerado pelos outros, então ele é desnecessário. Um conjunto LI é um conjunto de vetores eficiente, no sentido que TODO vetor de <span class="math inline">\(X\)</span> é necessário para gerar o subespaço gerado por <span class="math inline">\(X\)</span>. Conjuntos de geradores LI são extremamente importantes e merecem um nome:</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 15.1</strong></span> Um número inteiro <span class="math inline">\(n\)</span> diferente de <span class="math inline">\(\pm 1\)</span> e de <span class="math inline">\(0\)</span> é dito <em>primo</em> se os únicos divisores de <span class="math inline">\(n\)</span> são <span class="math inline">\(\pm 1\)</span> e <span class="math inline">\(\pm n\)</span>. No caso contrário, o número é dito <em>composto</em>. Os números <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, e <span class="math inline">\(0\)</span> não são considerados nem primos nem compostos</p>
-</div>
-<p>Por exemplo, o número <span class="math inline">\(-5\)</span> é primo, pois ele é divisível por apenas <span class="math inline">\(\pm 1\)</span> e <span class="math inline">\(\pm 5\)</span>. O número <span class="math inline">\(6\)</span> é composto, pois ele é divisível, por exemplo, por <span class="math inline">\(2\)</span>. É fácil verificar que um número <span class="math inline">\(n\)</span> é primo (composto) se e somente se <span class="math inline">\(-n\)</span> é primo (composto).</p>
-<p>A demonstração do seguinte resultado é imediato da definição dos números primos.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 15.1</strong></span> Todo número diferente de <span class="math inline">\(1\)</span> ou <span class="math inline">\(-1\)</span> é divisível por um primo</p>
-</div>
-<p>A seguinte é uma propriedade importante dos números primos.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 15.2</strong></span> Sejam <span class="math inline">\(p\)</span> um primo e <span class="math inline">\(a,b\in\Z\)</span> tais que <span class="math inline">\(p\mid ab\)</span>. Então <span class="math inline">\(p\mid a\)</span> ou <span class="math inline">\(p\mid b\)</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que as condições do Teorema estão válidas e que <span class="math inline">\(p\nmid a\)</span>. Então <span class="math inline">\(\mdc pa=1\)</span> e obtemos do Algoritmo de Euclides que existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math inline">\(up+va=1\)</span>. Multiplicando por <span class="math inline">\(b\)</span>, obtemos que <span class="math display">\[
-upb+vab=b.
-\]</span> Como <span class="math inline">\(p\)</span> divide <span class="math inline">\(ab\)</span>, o número <span class="math inline">\(p\)</span> divide <span class="math inline">\(vab\)</span>, então <span class="math inline">\(p\)</span> divide as duas parcelas no lado esquerdo da última equação. Mas isso implica que <span class="math inline">\(p\mid b\)</span></p>
-</div>
-<p>Se <span class="math inline">\(n\)</span> é um número grande (centenas ou milhares de dígitos), então pode ser difícil verificar se <span class="math inline">\(n\)</span> é primo. O <a href="https://pt.wikipedia.org/wiki/Teste_de_primalidade_AKS">primeiro algoritmo teoricamente eficaz</a> para testar primalidade de um número grande foi apresentado por <a title="Manindra Agrawal" href="https://pt.wikipedia.org/wiki/Manindra_Agrawal">Manindra Agrawal</a>, <a title="Neeraj Kayal" href="https://pt.wikipedia.org/wiki/Neeraj_Kayal">Neeraj Kayal</a> e <a href="https://en.wikipedia.org/wiki/Nitin_Saxena">Nitin Saxena</a> em 2002. Este algoritmo é conhecido como o Algoritmo AKS.</p>
-<p>O seguinte teorema foi conhecido já na antiguidade por <a href="https://pt.wikipedia.org/wiki/Euclides">Euclides</a>.</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 15.1</strong></span> Existem infinitos primos</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Suponha com o objetivo de obter uma contradição que existem apenas finitos primos. Vamos então fazer uma lista dos primos positivos: <span class="math inline">\(p_1=2\)</span>, <span class="math inline">\(p_2=3\)</span>, <span class="math inline">\(p_3=5,\ldots,p_m\)</span>. Considere o número <span class="math display">\[
-N=p_1p_2p_3\cdots p_m+1.
-\]</span> Ora <span class="math inline">\(N\)</span> é positivo e é maior que dois. Além disso, <span class="math inline">\(N\)</span> deve ser divisível por algum primo <span class="math inline">\(p\)</span>. Por outro lado, os primos <span class="math inline">\(p_1,\ldots,p_m\)</span> não dividem <span class="math inline">\(N\)</span>, pois o resto de <span class="math inline">\(N\)</span> quando for dividido por estes primos é igual a <span class="math inline">\(1\)</span>. Isto implica que <span class="math inline">\(p\)</span> precisa ser um novo primo que não está na suposta lista de todos os primos. Isto é uma contradição que significa que a nossa suposição foi errada; ou seja, o número dos primos precisa ser infinito</p>
-</div>
-</section>
-<section id="o-teorema-fundamental-da-aritmética" class="level2" data-number="15.2">
-<h2 data-number="15.2" data-anchor-id="o-teorema-fundamental-da-aritmética"><span class="header-section-number">15.2</span> O Teorema Fundamental da Aritmética</h2>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 15.2</strong></span> Todo número natural <span class="math inline">\(n\geq 2\)</span>, pode ser decomposto em um produto de primos positivos. Além disso, esta decomposição de <span class="math inline">\(n\)</span> é única a menos da ordem dos fatores</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span><strong>Existência.</strong> Nós provaremos por indução em <span class="math inline">\(n\)</span>. Na base da indução, seja <span class="math inline">\(n\)</span> um primo. Neste caso, <span class="math inline">\(n\)</span> pode ser considerado como o produto de um único fator que é primo.</p>
-<p>Assuma agora que <span class="math inline">\(n\)</span> é composto (em particular, <span class="math inline">\(n\geq 4\)</span>) e que a afirmação da existência do teorema é verdadeira para números menores que <span class="math inline">\(n\)</span>. Como <span class="math inline">\(n\)</span> é composto, podemos escrever <span class="math inline">\(n=n_1n_2\)</span> onde <span class="math inline">\(2\leq n_1,n_2 &lt; n\)</span> e pela hipótese da indução, os números <span class="math inline">\(n_1\)</span> e <span class="math inline">\(n_2\)</span> podem ser escritos como <span class="math display">\[
-n_1=p_1\cdots p_r\quad\mbox{e}\quad n_2=q_1\cdots q_s
-\]</span> onde <span class="math inline">\(p_1,\ldots,p_r,q_1,\ldots,q_s\)</span> são primos positivos. Ora <span class="math display">\[
-n=n_1n_2=p_1\cdots p_rq_1\cdots q_s;
-\]</span> ou seja, <span class="math inline">\(n\)</span> é produto de primos positivos.</p>
-<p><strong>Unicidade.</strong> Assuma que <span class="math inline">\(n\geq 2\)</span> e <span class="math display">\[
-n=p_1p_2\cdots p_r=q_1q_2\cdots q_s
-\]</span> onde os <span class="math inline">\(p_i\)</span> e os <span class="math inline">\(q_j\)</span> são primos positivos. Assuma ainda sem perder generalidade que <span class="math inline">\(r\leq s\)</span>. Nós precisamos provar que <span class="math inline">\(r=s\)</span> e que os primos que aparecem na primeira fatoração são os mesmos que aparecem na segunda. Provaremos isso por indução em <span class="math inline">\(r\)</span>.</p>
-<p>Na base da indução, assuma que <span class="math inline">\(r=1\)</span>. Neste caso, <span class="math inline">\(n=p_1\)</span> é primo, e segue pela definição de números primos que <span class="math inline">\(s=1\)</span> e que <span class="math inline">\(p_1=q_1\)</span>. Logo, a unicidade está verificada.</p>
-<p>Assuma agora que <span class="math inline">\(r\geq 2\)</span> e a unicidade é válida para números com menos que <span class="math inline">\(r\)</span> fatores. Temos pela primeira fatoração que <span class="math inline">\(p_1\mid n\)</span>, e como <span class="math inline">\(p_1\)</span> é primo isso implica que <span class="math inline">\(p_1\mid q_i\)</span> com algum <span class="math inline">\(i\)</span>. Mas como <span class="math inline">\(p_1\)</span> e <span class="math inline">\(q_i\)</span> são primos positivos segue que <span class="math inline">\(p_1=q_i\)</span>. Depois de possivelmente reordenar os fatores <span class="math inline">\(q_1,\ldots,q_s\)</span>, podemos assumir sem perder generalidade que <span class="math inline">\(p_1=q_1\)</span>. Neste caso <span class="math display">\[
-n=p_1p_2\cdots p_r=p_1q_2\cdots q_s
-\]</span> e obtemos pela lei cancelativa que <span class="math display">\[
-p_2\cdots p_r=q_2\cdots q_s.
-\]</span> Ora, o número na última equação possui uma fatoração com <span class="math inline">\(r-1\)</span> fatores. Portanto, pela hipótese da indução, <span class="math inline">\(r-1=s-1\)</span> e os fatores <span class="math inline">\(p_2,\ldots,p_r\)</span> e <span class="math inline">\(q_2,\ldots,q_s\)</span> são os mesmos a menos da sua ordem. Isso implica que <span class="math inline">\(r=s\)</span> e que os fatores <span class="math inline">\(p_1,\ldots,p_r\)</span> e <span class="math inline">\(q_1,\ldots,q_s\)</span> são os mesmos a menos da sua ordem.</p>
-</div>
-<p>Por exemplo, se <span class="math inline">\(n=15\)</span>, então obtemos duas decomposições que satisfazem a afirmação do Teorema: <span class="math display">\[
-15=3\cdot 5=5\cdot 3.
-\]</span> Mas estas duas decomposições são consideradas idênticas, pois elas diferem-se apenas na ordem dos fatores. Note que permitindo primos positivos e negativos, obtemos quatro fatorações, nomeadamente, <span class="math display">\[
-15=3\cdot 5=5\cdot 3=(-3)\cdot(-5)=(-5)\cdot(-3).
-\]</span> O Teorema Fundamental da Aritmética pode ser estendido para números negativos por afirmar que se <span class="math inline">\(n\in\Z\)</span> com <span class="math inline">\(n\leq -2\)</span>, então <span class="math display">\[
-n=-p_1\cdots p_r
-\]</span> onde os <span class="math inline">\(p_i\)</span> são primos positivos e eles são únicos a menos da ordem dos fatores.</p>
-</section>
-<section id="o-número-dos-primos" class="level2" data-number="15.3">
-<h2 data-number="15.3" data-anchor-id="o-número-dos-primos"><span class="header-section-number">15.3</span> O número dos primos</h2>
-<p>Para <span class="math inline">\(n\in\N\)</span>, defina <span class="math display">\[
-\pi(n)=|\{k\in\{2,\ldots,n\}\mid k\mbox{ é primo}\}|.
-\]</span> Ou seja, <span class="math inline">\(\pi(n)\)</span> é o número dos primos entre <span class="math inline">\(2\)</span> e <span class="math inline">\(n\)</span>. É fácil computar o valor de <span class="math inline">\(\pi(n)\)</span> para <span class="math inline">\(n\)</span> pequeno: <span class="math display">\[
-\pi(1)=0,\quad \pi(2)=1,\quad \pi(3)=\pi(4)=2,\quad \pi(5)=\pi(6)=3,\ldots
-\]</span> No entanto, se <span class="math inline">\(n\)</span> for grande, determinar o valor de <span class="math inline">\(\pi(n)\)</span> pode ser difícil.</p>
-<p>O Crivo de <a href="https://pt.wikipedia.org/wiki/Erat%C3%B3stenes">Eratóstenes</a>, é um algoritmo que pode ser usado para obter os primos que são menores ou iguais a um número fixo <span class="math inline">\(n\)</span>. A ideia do crivo é a seguinte. Assuma que você quer determinar todos os primos entre <span class="math inline">\(1\)</span> e algum outro número <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 40.1</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial. Um subconjunto <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> é uma <em>base</em> de <span class="math inline">\(V\)</span> se</p>
 <ul>
-<li>Escreva os números de <span class="math inline">\(1\)</span> até <span class="math inline">\(n\)</span> em uma lista na ordem crescente.</li>
-<li>Comece por eliminar o número <span class="math inline">\(1\)</span> da sua lista, pois ele não é primo.</li>
-<li>O menor número não eliminado na lista é <span class="math inline">\(2\)</span> que é primo. Elimine os múltiplos de <span class="math inline">\(2\)</span> a partir de <span class="math inline">\(4\)</span> da lista, pois eles não são primos.</li>
-<li>Menor número não eliminado depois de <span class="math inline">\(2\)</span> é o <span class="math inline">\(3\)</span>. Elimine os múltiplos de <span class="math inline">\(3\)</span> a partir de <span class="math inline">\(3^2=9\)</span> da lista, pois eles não são primos.</li>
-<li>O menor número não eliminado depois de <span class="math inline">\(3\)</span> é o <span class="math inline">\(5\)</span>. Ele é primo. Elimine os múltiplos de <span class="math inline">\(5\)</span> da lista a partir de <span class="math inline">\(5^2=25\)</span>, pois eles não são primos.</li>
-<li>No passo geral, ache o menor número <span class="math inline">\(p\)</span> depois do último primo encontrado. Este número <span class="math inline">\(p\)</span> será primo. Elimine os múltiplos de <span class="math inline">\(p\)</span> a partir de <span class="math inline">\(p^2\)</span> da lista, pois eles não são primos. Note que os demais múltiplos compostos de <span class="math inline">\(p\)</span> (que são menores de <span class="math inline">\(p^2\)</span>) já foram eliminados.</li>
-<li>Repita o passo geral até <span class="math inline">\(p &gt; \sqrt n\)</span>.</li>
-<li>Os números que não foram eliminados da lista são os primos entre <span class="math inline">\(1\)</span> e <span class="math inline">\(n\)</span>.</li>
+<li><p><span class="math inline">\(V\)</span> é gerado por <span class="math inline">\(X\)</span>,</p></li>
+<li><p><span class="math inline">\(X\)</span> é linearmente independente.</p></li>
 </ul>
-<p>Uma implementação simples em Python deste algoritmo é o seguinte.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> eratosthenes( n ):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    prims <span class="op">=</span> [ <span class="va">True</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">+</span><span class="dv">1</span>) ]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    prims[<span class="dv">0</span>] <span class="op">=</span> <span class="va">False</span><span class="op">;</span> prims[<span class="dv">1</span>] <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    sqrn <span class="op">=</span> <span class="bu">int</span>(n<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,sqrn<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> prims[i]: </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            st <span class="op">=</span> i<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> st <span class="op">&lt;=</span> n:</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                prims[st] <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                st <span class="op">=</span> st <span class="op">+</span> i</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prims</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>O Crivo de Eratóstenes não é um algoritmo eficiente, pois o passo geral precisa ser executada <span class="math inline">\(\sqrt n\)</span> vezes. Na prática (por exemplo, na criptografia), nós precisamos lidar com números com <span class="math inline">\(500\)</span> ou mais algarismos. Se por exemplo, <span class="math inline">\(n\approx 10^{500}\)</span>, então <span class="math inline">\(\sqrt n\approx 10^{250}\)</span> e na prática fica impossível realizar a computação até com um supercomputador.</p>
-<p>Está bem conhecido que a função <span class="math inline">\(\pi(n)\)</span> pode ser aproximada pelas funções <span class="math display">\[
-\lambda(n)=\frac n{\log n}
-\]</span> e <span class="math display">\[
-\sigma(n)=\int_2^n \frac{dt}{\log t}.
-\]</span> Por exemplo, o número dos primos entre <span class="math inline">\(1\)</span> e <span class="math inline">\(10.000.000\)</span> é <span class="math inline">\(664579\)</span>. Ou seja <span class="math display">\[
-\pi(10.000.000)=664579,
-\]</span> enquanto <span class="math display">\[
-\lambda(10.000.000)\approx 620420\quad\mbox{e}\quad \sigma(10.000.000)\approx 664917.
-\]</span> Geralmente, a aproximação dada por <span class="math inline">\(\sigma(n)\)</span> é melhor, mas é mais difícil de calcular.</p>
-<p>Atualmente (novembro de 2021), o <a href="https://pt.wikipedia.org/wiki/Maior_n%C3%BAmero_primo_conhecido">maior primo conhecido</a> é <span class="math inline">\(2^{82.589.933} − 1\)</span>. Este número tem <span class="math inline">\(24.862.048\)</span> algarismos na base decimal e foi encontrado em 2018. Este número é um exemplo dos <a href="https://pt.wikipedia.org/wiki/Primo_de_Mersenne">primos de Mersenne</a>, ou seja primos na forma <span class="math inline">\(2^p-1\)</span> onde <span class="math inline">\(p\)</span> é um primo.</p>
+</div>
+<p>:::{#exm-}s - A <em>base canônica</em> de <span class="math inline">\(\R^n\)</span> é o conjunto dos <span class="math inline">\(n\)</span> vetores <span class="math display">\[B = \left\{(1,0,0,\ldots,0)\,,\, (0,1,0,\ldots,0)\,,\, \ldots\,,\, (0,\ldots,0,1)\right\}.\]</span> Afirmo que é óbvio que <span class="math inline">\(B\)</span> gera <span class="math inline">\(\R^n\)</span> e que <span class="math inline">\(B\)</span> é LI. Recomendo que confirmar estes fatos. Então, <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(\R^n\)</span>.</p>
+<ul>
+<li><p>Mas <span class="math inline">\(\R^n\)</span> (de fato, qualquer espaço vetorial) tem MUITOS bases diferentes. De um exemplo anterior: <span class="math display">\[X = \{(1,1)\,,\,(1,-1)\}\]</span> é uma base de <span class="math inline">\(\R^2\)</span>: Já confirmamos que <span class="math inline">\(X\)</span> é LI. <span class="math inline">\(X\)</span> gera <span class="math inline">\(\R^2\)</span>, pois a equação <span class="math display">\[\lambda(1,1) + \mu(1,-1) = (a,b)\]</span> tem solução <span class="math display">\[\lambda = \frac{a+b}{2}\,,\quad \mu = \frac{a-b}{2}.\]</span></p></li>
+<li><p><span class="math inline">\(M_{m,n}(\R)\)</span> também tem uma base canônica. Dados <span class="math inline">\(a\in \{1,\ldots,m\}, b\in \{1,\ldots,n\}\)</span>, seja <span class="math inline">\(E_{ab}\)</span> a matrix <span class="math inline">\((e_{ij})\)</span> com <span class="math inline">\(e_{ab} = 1\)</span> e <span class="math inline">\(e_{ij} = 0\)</span> quando <span class="math inline">\(i\neq a\)</span> ou <span class="math inline">\(j\neq b\)</span>. O conjunto <span class="math inline">\(X\)</span> das <span class="math inline">\(mn\)</span> matrizes <span class="math display">\[X = \left\{E_{ab}\,|\,a\in \{1,\ldots,m\}, b\in \{1,\ldots,n\}\right\}\]</span> é uma base de <span class="math inline">\(M_{m,n}(\R)\)</span>. Por exemplo, quando <span class="math inline">\(m=n=2\)</span>, <span class="math display">\[X = \left\{\begin{pmatrix}
+1 &amp; 0 \\ 0 &amp; 0
+\end{pmatrix}\,,\, \begin{pmatrix}
+0 &amp; 1 \\ 0 &amp; 0
+\end{pmatrix}\,,\,\begin{pmatrix}
+0 &amp; 0 \\ 1 &amp; 0
+\end{pmatrix}\,,\,\begin{pmatrix}
+0 &amp; 0 \\ 0 &amp; 1
+\end{pmatrix} \right\}.\]</span> Afirmo de novo que <span class="math inline">\(X\)</span> obviamente gera <span class="math inline">\(M_{m,n}(\R)\)</span> e é LI, logo <span class="math inline">\(X\)</span> é uma base de <span class="math inline">\(M_{m,n}(\R)\)</span>.</p></li>
+<li><p>Já observamos que o espaço vetorial <span class="math inline">\(\R[x]\)</span> dos polinômios com coeficientes em <span class="math inline">\(\R\)</span> é gerado pelo conjunto <span class="math display">\[X = \{1,\,x,\,x^2,\,x^3,\,\ldots\}.\]</span> Mas <span class="math inline">\(X\)</span> é LI: uma combinação linear de elementos de <span class="math inline">\(X\)</span> é <span class="math display">\[a_nx^n + \cdots + a_1x + a_0\]</span> com <span class="math inline">\(a_0,\ldots,a_n\in \R\)</span>. Este polinômio é <span class="math inline">\(\ul{0}\)</span> se, e somente se, todos os <span class="math inline">\(a_i\)</span> são <span class="math inline">\(0\)</span>. Entaõ <span class="math inline">\(X\)</span> é LI.</p>
+<p>Segue que <span class="math inline">\(X\)</span> é uma base de <span class="math inline">\(\R[x]\)</span>. Diferente dos exemplos anteriores, observe que <span class="math inline">\(X\)</span> não é um conjunto finito.</p></li>
+<li><p>O espaço vetorial <span class="math inline">\(\{\ul{0}\}\)</span> tem base <span class="math inline">\(\varnothing\)</span>. :::</p></li>
+</ul>
+</section>
+<section id="coordenadas" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="coordenadas">Coordenadas</h2>
+<p>O seguinte resultado explica porque bases são tão importantes na teoria dos espaços vetoriais.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 40.1</strong></span> Se <span class="math inline">\(B\)</span> é uma base de um espaço vetorial <span class="math inline">\(V\)</span>, então todo elemento de <span class="math inline">\(V\)</span> pode ser escrito <em>unicamente</em> como combinação linear de elementos em <span class="math inline">\(B\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> A definição da base implica que todo elemento de <span class="math inline">\(V\)</span> pode ser escrito como combinação linear de elementos de <span class="math inline">\(B\)</span>. Assuma que um vetor <span class="math inline">\(\ul v\)</span> pode ser escrito de duas maneiras: <span class="math display">\[\ul v=\alpha_1 \ul{b_1}+\cdots+\alpha_k \ul{b_k}=\beta_1\ul{b_1}+\cdots+\beta_k\ul{b_k}\]</span> com <span class="math inline">\(\ul{b_1},\ldots,\ul{b_k}\in B\)</span> e <span class="math inline">\(\alpha_1,\ldots,\alpha_k,\beta_1,\ldots,\beta_k\in\R\)</span>. Subtraindo o lado direito do lado esquerdo, obtemos que <span class="math display">\[\ul 0=(\alpha_1-\beta_1) \ul{b_1}+\cdots+(\alpha_k-\beta_k) \ul{b_k}.\]</span> Mas, como <span class="math inline">\(B\)</span> é uma base, os vetores <span class="math inline">\(\ul{b_1},\ldots,\ul{b_k}\)</span> são LI e isto significa (pela definição de ser LI) que <span class="math display">\[(\alpha_1-\beta_1)=\cdots=(\alpha_k-\beta_k)=0;\]</span> ou seja, <span class="math inline">\(\alpha_i=\beta_i\)</span> vale para todo <span class="math inline">\(i\)</span>. Obbtivemos assim que a expressão de <span class="math inline">\(\ul v\)</span> como combinação linear de elementos de <span class="math inline">\(B\)</span> é única.&nbsp;◻</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 40.2</strong></span> Seja <span class="math inline">\(B\)</span> uma base de um espaço vetorial <span class="math inline">\(V\)</span> e seja <span class="math inline">\(\ul v\in V\)</span>. Escreva o vetor <span class="math inline">\(\ul v\)</span> como uma combinação linear <span class="math inline">\(\ul v=\alpha_1\ul{b_1}+\cdots+\alpha_k\ul{b_k}\)</span> de elementos de <span class="math inline">\(B\)</span>. Os escalares <span class="math inline">\(\alpha_1,\ldots,\alpha_k\)</span> são chamadas de <em>coordenadas</em> do vetor <span class="math inline">\(\ul v\)</span> relativas à base <span class="math inline">\(B\)</span>.</p>
+</div>
+<p>Como está enfatizado na definição acima, as coordenadas de um vetor <span class="math inline">\(v\)</span> dependem da base escolhida.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 40.1</strong></span> Considere <span class="math inline">\(V=\R^3\)</span>. Considere a base canônica <span class="math inline">\(B_1=\{(1,0,0),(0,1,0),(0,0,1)\}\)</span> de <span class="math inline">\(V\)</span> e considere também a base <span class="math inline">\(B_2=\{(1,1,0),(1,0,1),(0,1,1)\}\)</span> de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(\ul v=(1,-1,1)\)</span>. O vetor <span class="math inline">\(\ul v\)</span> pode ser escrito como combinação linear nestas bases na maneira seguinte: <span class="math display">\[\ul v=1\cdot(1,0,0)-1\cdot(0,1,0)+1\cdot(0,0,1)=(-1/2)(1,1,0)+(3/2)(1,0,1)-(1/2)(0,1,1).\]</span> Então as coordenadas de <span class="math inline">\(\ul v\)</span> são <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> relativas à base <span class="math inline">\(B_1\)</span>, enquanto as coordenadas relativas à base <span class="math inline">\(B_2\)</span> são <span class="math inline">\(-1/2\)</span>, <span class="math inline">\(3/2\)</span>, <span class="math inline">\(-1/2\)</span>.</p>
+</div>
+</section>
+<section id="existência-de-bases" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="existência-de-bases">Existência de bases</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 40.3</strong></span> O espaço vetorial <span class="math inline">\(V\)</span> é <em>finitamente gerado</em> se existir um subconjunto finito <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> que gera <span class="math inline">\(V\)</span>.</p>
+</div>
+<p>O seguinte resultado vale para espaços vetoriais quaisquer, mas a prova usa técnicas da teoria dos conjuntos que a gente não possui.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 40.2</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial finitamente gerado e <span class="math inline">\(X\)</span> um conjunto finito de geradores de <span class="math inline">\(V\)</span>. Algum subconjunto de <span class="math inline">\(X\)</span> é uma base de <span class="math inline">\(V\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> O espaço vetorial <span class="math inline">\(\{\ul{0}\}\)</span> possui a base <span class="math inline">\(\varnothing\)</span>, então vamos supor que <span class="math inline">\(V\neq \{\ul{0}\}\)</span>. Seja <span class="math inline">\(B = \{\ul{b_1}, \ldots ,\ul{b_n}\}\)</span> um subconjunto maximal LI de <span class="math inline">\(X\)</span>: isto é, <span class="math inline">\(B\subseteq X\)</span> é LI, mas quando colocar qualquer outro elemento de <span class="math inline">\(X\)</span>, então o conjunto obtido será LD.</p>
+<p>Afirmamos que qualquer <span class="math inline">\(\ul{v}\in X\)</span> é combinação linear de elementos de <span class="math inline">\(B\)</span>: os elementos de <span class="math inline">\(B\)</span> obviamente são, então seja <span class="math inline">\(\ul{v} \in X\backslash B\)</span>. O conjunto <span class="math inline">\(B\cup\{\ul{v}\}\)</span> é LD (pois <span class="math inline">\(B\)</span> é maximal LI), então existem números <span class="math inline">\(\lambda, a_1,\ldots,a_n\)</span> nem todos <span class="math inline">\(0\)</span>, tais que <span class="math display">\[\lambda\ul{v} + a_1\ul{b_1} + \cdots + a_n\ul{b_n} = \ul{0}.\]</span> Se <span class="math inline">\(\lambda\)</span> fosse <span class="math inline">\(0\)</span>, teríamos que <span class="math display">\[a_1\ul{b_1} + \cdots + a_n\ul{b_n} = \ul{0}\]</span> com nem todo <span class="math inline">\(a_i = 0\)</span> – impossível, pois <span class="math inline">\(B\)</span> é LI. Então, <span class="math inline">\(\lambda\neq 0\)</span> e podemos rearranjar para obter <span class="math display">\[\ul{v} = -\frac{a_1}{\lambda}\ul{b_1} - \cdots - \frac{a_n}{\lambda}\ul{b_n}.\]</span> Já que todo elemento de <span class="math inline">\(X\)</span> é combinação linear dos elementos de <span class="math inline">\(B\)</span>, o subespaço gerado por <span class="math inline">\(B\)</span> contém o subespaço gerado por <span class="math inline">\(X\)</span>, mas esse é <span class="math inline">\(V\)</span>. Logo <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>. Então, <span class="math inline">\(B\)</span> é um conjunto LI de geradores de <span class="math inline">\(V\)</span>, ou seja, uma base de <span class="math inline">\(V\)</span>.&nbsp;◻</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 40.1</strong></span> Qualquer espaço vetorial finitamente gerado possui uma base finita.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Seja <span class="math inline">\(X\)</span> um conjunto finito de geradores de <span class="math inline">\(V\)</span>. Pelo teorema, algum subconjunto de <span class="math inline">\(X\)</span> é uma base finita de <span class="math inline">\(V\)</span>.&nbsp;◻</p>
+</div>
+</section>
+<section id="dimensão" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="dimensão">Dimensão</h2>
+<p>Em princípio, pode acontecer que um espaço vetorial possui uma base com 3 elementos, e outra base com 4 elementos. Vamos mostrar que isso <em>não acontece</em>. Quaisquer duas bases de um espaço vetorial finitamente gerado têm o mesmo tamanho.</p>
+<div id="prop-">
+<p>Seja <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_n}\}\)</span> uma base de <span class="math inline">\(V\)</span> com <span class="math inline">\(n\)</span> elementos. Qualquer subconjunto <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> com mais que <span class="math inline">\(n\)</span> elementos é LD.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Seja <span class="math inline">\(Y = \{\ul{v_1}, \ldots,\ul{v_{n+1}}\}\)</span> um subconjunto de <span class="math inline">\(X\)</span> com <span class="math inline">\(n+1\)</span> elementos. Vamos mostrar que <span class="math inline">\(Y\)</span> é LD (logo <span class="math inline">\(X\)</span> também a é). Temos que mostrar que a equação <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_{n+1}\ul{v_{n+1}} = \ul{0}\qquad (*)\]</span> possui solução não trivial. Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>, cada <span class="math inline">\(\ul{v_i}\)</span> é combinação linear dos elementos de <span class="math inline">\(B\)</span>: <span class="math display">\[\begin{aligned}
+\ul{v_1} &amp; = a_{1,1}\ul{b_1} + \cdots + a_{n,1}\ul{b_n} \\
+\ul{v_2} &amp; = a_{1,2}\ul{b_1} + \cdots + a_{n,2}\ul{b_n} \\
+    &amp; \quad\qquad\vdots \\
+\ul{v_{n+1}} &amp; = a_{1,{n+1}}\ul{b_1} + \cdots + a_{n,{n+1}}\ul{b_n} \\
+\end{aligned}\]</span> Substituindo estas expressões em <span class="math inline">\((*)\)</span> e colocando os <span class="math inline">\(\ul{b_i}\)</span> em evidência, obtemos a equação <span class="math display">\[(a_{1,1}\lambda_1 + \cdots + a_{1,{n+1}}\lambda_{n+1})\ul{b_1} + \cdots +
+(a_{n,1}\lambda_1 + \cdots + a_{n,{n+1}}\lambda_{n+1})\ul{b_n} = \ul{0}.\]</span></p>
+<p>Mas <span class="math inline">\(B\)</span> é LI, logo obtemos as equações <span class="math display">\[\begin{aligned}
+a_{1,1}\lambda_1 + \cdots + a_{1,{n+1}}\lambda_{n+1} &amp; = 0 \\
+\vdots\quad\qquad &amp; \\
+a_{n,1}\lambda_1 + \cdots + a_{n,{n+1}}\lambda_{n+1} &amp; = 0
+\end{aligned}\]</span> Mas este é um sistema homogêneo com <span class="math inline">\(n\)</span> equações e <span class="math inline">\(n+1\)</span> variáveis. Então ele possui uma solução não trivial, como a gente queria.&nbsp;◻</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 40.3</strong></span> Seja <span class="math inline">\(B\)</span> uma base finita do espaço vetorial <span class="math inline">\(V\)</span> é seja <span class="math inline">\(C\)</span> outra base de <span class="math inline">\(V\)</span>. Então <span class="math inline">\(|C| = |B|\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Já que <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span> e <span class="math inline">\(C\)</span> é LI, segue da proposição que <span class="math inline">\(|C|\leqslant |B|\)</span>. Mas agora <span class="math inline">\(C\)</span> é uma base finita e <span class="math inline">\(B\)</span> é LI, então <span class="math inline">\(|B|\leqslant|C|\)</span> pela proposição de novo. Logo <span class="math inline">\(|B| = |C|\)</span>.&nbsp;◻</p>
+</div>
+<p>:::{#exm-}s - O subconjunto de <span class="math inline">\(M_{2,2}(\R)\)</span> <span class="math display">\[X = \left\{\begin{pmatrix}
+    1 &amp; 1 \\ 3 &amp; 6
+    \end{pmatrix}\,,\, \begin{pmatrix}
+    2 &amp; 0 \\ 8 &amp; 5
+    \end{pmatrix}\,,\,\begin{pmatrix}
+    6 &amp; -2 \\ 3 &amp; 0
+    \end{pmatrix}\,,\,\begin{pmatrix}
+    1 &amp; 1 \\ 1 &amp; 1
+    \end{pmatrix}\,,\,\begin{pmatrix}
+    -2 &amp; 3 \\ 2 &amp; 5
+    \end{pmatrix} \right\}\]</span> é LI ou LD?</p>
+<pre><code>R: Poderia resolver essa questão usando sistemas lineares, mas seria
+chato. Em vez disso: já observamos que $M_{2,2}(\R)$ possui uma base
+com quatro elementos $$\left\{\begin{pmatrix}
+1 &amp; 0 \\ 0 &amp; 0
+\end{pmatrix}\,,\, \begin{pmatrix}
+0 &amp; 1 \\ 0 &amp; 0
+\end{pmatrix}\,,\,\begin{pmatrix}
+0 &amp; 0 \\ 1 &amp; 0
+\end{pmatrix}\,,\,\begin{pmatrix}
+0 &amp; 0 \\ 0 &amp; 1
+\end{pmatrix} \right\},$$ logo qualquer conjunto com mais que 4
+elementos é LD. Já que $|X| = 5$, acabou -- $X$ é LD.</code></pre>
+<ul>
+<li><p>Mostre que o espaço vetorial <span class="math inline">\(\R[x]\)</span> <em>não</em> possui uma base finita.</p>
+<p>R: Até agora, sabemos que <span class="math inline">\(\R[x]\)</span> possui pelo menos uma base infinita, nomeadamente <span class="math display">\[X = \{1,x,x^2,x^3,\ldots\}.\]</span> Suponha que <span class="math inline">\(\R[x]\)</span> também possuísse uma base finita <span class="math inline">\(B\)</span>. Mas o teorema diz então que <span class="math inline">\(|X| = |B| &lt; \infty\)</span>, uma contradição. :::</p></li>
+</ul>
+<p>Já que o tamanho de uma base finita de um espaço vetorial <span class="math inline">\(V\)</span> é independente da base, este número é um <em>invariante</em> do espaço vetorial.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 40.4</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial com base finita <span class="math inline">\(B\)</span>. A <em>dimensão</em> de <span class="math inline">\(V\)</span> é a cardinalidade de <span class="math inline">\(B\)</span>. Se <span class="math inline">\(B\)</span> possui <span class="math inline">\(n\)</span> elementos, escrevemos <span class="math display">\[\dim(V) = n.\]</span></p>
+<p>Caso <span class="math inline">\(V\)</span> não possuir uma base finita, diremos que <span class="math inline">\(V\)</span> tem <em>dimensão infinita</em>.</p>
+</div>
+<p>:::{#exm-}s - O único espaço vetorial com dimensão <span class="math inline">\(0\)</span> é <span class="math inline">\(\{\ul{0}\}\)</span> (já que a base <span class="math inline">\(\varnothing\)</span> tem tamanho <span class="math inline">\(0\)</span>).</p>
+<ul>
+<li><p>A base canônica de <span class="math inline">\(\R^n\)</span> possui <span class="math inline">\(n\)</span> elementos, então <span class="math inline">\(\dim(\R^n) = n\)</span>.</p></li>
+<li><p>A base canônica de <span class="math inline">\(M_{m,n}(\R)\)</span> consiste das <span class="math inline">\(mn\)</span> matrizes <span class="math inline">\(E_{ij}\)</span> (tendo <span class="math inline">\(1\)</span> na posição <span class="math inline">\(i,j\)</span> e <span class="math inline">\(0\)</span> fora disso). Logo <span class="math inline">\(\dim(M_{m,n}(\R)) = mn\)</span>. Em particular, o espaço das matrizes quadradas <span class="math inline">\(M_{n,n}(\R)\)</span> tem dimensão <span class="math inline">\(n^2\)</span>.</p></li>
+<li><p>Os espaços <span class="math inline">\(\R[x]\)</span> e <span class="math inline">\(\mathcal{F}(\R,\R)\)</span> têm dimensão infinita.</p></li>
+<li><p>O subconjunto de <span class="math inline">\(M_{2,3}(\R)\)</span>: <span class="math display">\[X = \left\{
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{pmatrix}\,,\,
+\begin{pmatrix}
+0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0
+\end{pmatrix}\,,\,
+\begin{pmatrix}
+0 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0
+\end{pmatrix}
+\right\}\]</span> é LI. Segue que o subespaço gerado por <span class="math inline">\(X\)</span> <span class="math display">\[W = \left\{\left.
+\begin{pmatrix}
+a &amp; b &amp; 2c \\ 0 &amp; c &amp; a
+\end{pmatrix}\,\right|\, a,b,c\in \R
+\right\}\]</span> tem base <span class="math inline">\(X\)</span>. Já que <span class="math inline">\(|X| = 3\)</span>, temos <span class="math inline">\(\dim(W) = 3\)</span>.</p></li>
+<li><p><em>Exercício</em>: Seja <span class="math inline">\(AX=\ul{0}\)</span> um sistema homogêneo. Mostre que a dimensão do conjunto solução do sistema é o número de variáveis livres do sistema. :::</p></li>
+</ul>
+<p>Existe um espaço vetorial de dimensão <span class="math inline">\(5\)</span> tendo subespaço de dimensão <span class="math inline">\(6\)</span>? Não!</p>
+<div id="prop-">
+<p>Sejam <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>.</p>
+<ol type="1">
+<li><p><span class="math inline">\(\dim(W)\leqslant \dim(V)\)</span>,</p></li>
+<li><p>Se <span class="math inline">\(\dim(W) = \dim(V)\)</span>, então <span class="math inline">\(W=V\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em></p>
+<ol type="1">
+<li><p>Suponha (procurando contradição) que <span class="math display">\[\dim(W) = m &gt; \dim(V).\]</span> Então <span class="math inline">\(W\)</span> possui uma base <span class="math inline">\(B = \{\ul{w_1}\,,\,\ul{w_2}\,,\,\ldots\,,\,\ul{w_m}\}\)</span> de <span class="math inline">\(m\)</span> elementos. Em particular, <span class="math inline">\(B\)</span> é um subconjunto LI de <span class="math inline">\(V\)</span> com mais que <span class="math inline">\(\dim(V)\)</span> elementos. Mas já mostramos que qualquer subconjunto de <span class="math inline">\(V\)</span> com mais que <span class="math inline">\(\dim(V)\)</span> elementos é LD, então isso não é possível.</p></li>
+<li><p>Suponha que <span class="math inline">\(W\leqslant V\)</span> tem dimensão <span class="math inline">\(n = \dim(V)\)</span>. Queremos mostrar que <span class="math inline">\(W=V\)</span>. Vamos pegar <span class="math inline">\(\ul{v}\in V\)</span> qualquer e mostrar que <span class="math inline">\(\ul{v}\in W\)</span>. Seja <span class="math inline">\(B = \{\ul{w_1}\,,\,\ul{w_2}\,,\,\ldots\,,\,\ul{w_n}\}\)</span> uma base de <span class="math inline">\(W\)</span>. Já que <span class="math inline">\(\dim(V) = n\)</span>, o conjunto <span class="math display">\[\{\ul{w_1}\,,\,\ul{w_2}\,,\,\ldots\,,\,\ul{w_n}, \ul{v}\}\]</span> é LD, então existem <span class="math inline">\(a_1,\ldots,a_n,b\in \R\)</span> nem todos <span class="math inline">\(0\)</span> tais que <span class="math display">\[a_1\ul{w_1} + a_2\ul{w_2} + \cdots + a_n\ul{w_n} + b\ul{v} = \ul{0}.\]</span> Mas <span class="math inline">\(b\neq 0\)</span>, pois se fosse <span class="math inline">\(0\)</span>, teríamos uma solução não trivial que envolve somente os <span class="math inline">\(\ul{w_i}\)</span> – impossível, pois <span class="math inline">\(B\)</span> é LI. Então, rearranjando, <span class="math display">\[\ul{v} = -\left( \frac{a_1}{b}\ul{w_1} + \frac{a_2}{b}\ul{w_2} + \cdots + \frac{a_n}{b}\ul{w_n} \right),\]</span> mostrando que <span class="math inline">\(\ul{v}\)</span> é combinação linear de elementos de <span class="math inline">\(W\)</span>, logo <span class="math inline">\(\ul{v}\in W\)</span>.</p></li>
+</ol>
+<p>&nbsp;◻</p>
+</div>
+<p>Suponha que temos um espaço <span class="math inline">\(V\)</span> com dimensão <span class="math inline">\(n\)</span>. Queremos saber se algum subconjunto <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span>:</p>
+<ol type="1">
+<li><p>Vai ter que ter <span class="math inline">\(n\)</span> elementos, pois qualquer base tem.</p></li>
+<li><p>Vai ter que gerar <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Vai ter que ser LI.</p></li>
+</ol>
+<p>De fato, basta confirmar quaisquer duas dessas coisas:</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 40.4</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span> e <span class="math inline">\(B\)</span> um subconjunto de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(B\)</span> tem qualquer duas das propriedades <span class="math inline">\(1,2,3\)</span> acima, então <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Suponha que <span class="math inline">\(B\)</span> satisfaz:</p>
+<ul>
+<li><p>Então <span class="math inline">\(B\)</span> é uma base pela definição de base.</p></li>
+<li><p>Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>, sabemos que algum subconjunto <span class="math inline">\(B'\)</span> de <span class="math inline">\(B\)</span> é base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(B\)</span> não for LI, <span class="math inline">\(B'\neq B\)</span>, então <span class="math inline">\(V\)</span> tem base de <span class="math inline">\(&lt;n\)</span> elementos – contradição.</p></li>
+<li><p>Já que <span class="math inline">\(B\)</span> é LI, ele é uma base do subespaço gerado por <span class="math inline">\(B\)</span>, e este subespaço tem dimensão <span class="math inline">\(n\)</span>. Mas o único subespaço de <span class="math inline">\(V\)</span> com dimensão <span class="math inline">\(n\)</span> é <span class="math inline">\(V\)</span>, então <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>.</p></li>
+</ul>
+<p>&nbsp;◻</p>
+</div>
+<p><em>Exercício</em>: Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita. Já mostramos que qualquer subconjunto finito de geradores de <span class="math inline">\(V\)</span> pode ser “diminuido” para uma base de <span class="math inline">\(V\)</span>. Mostre a outra direção: que qualquer subconjunto LI de <span class="math inline">\(V\)</span> pode ser estendido para uma base de <span class="math inline">\(V\)</span>. Isto é, se <span class="math inline">\(X\)</span> é LI, então existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> com <span class="math inline">\(X\subseteq B\)</span>.</p>
+</section>
+<section id="a-dimensão-da-soma" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="a-dimensão-da-soma">A dimensão da soma</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 40.5</strong></span> Sejam <span class="math inline">\(W,Y\)</span> subespaços do espaço vetorial de dimensão finita <span class="math inline">\(V\)</span>. Então <span class="math display">\[\dim(W+Y) = \dim(W) + \dim(Y) - \dim(W\cap Y).\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Seja <span class="math inline">\(I = \{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\}\)</span> uma base de <span class="math inline">\(W\cap Y\)</span>. Já que <span class="math inline">\(I\subseteq W\)</span> é LI, pelo exercício podemos estender <span class="math inline">\(I\)</span> para uma base <span class="math inline">\(B=\{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\,,\,\ul{w_1}\,,\,\ldots\,,\,\ul{w_b}\}\)</span> de <span class="math inline">\(W\)</span>, e similarmente estender <span class="math inline">\(I\)</span> para uma base <span class="math inline">\(C=\{\ul{v_1}\,,\,\ldots\,,\,\ul{v_a}\,,\,\ul{y_1}\,,\,\ldots\,,\,\ul{y_c}\}\)</span> de <span class="math inline">\(Y\)</span>. Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(W\)</span> e <span class="math inline">\(C\)</span> gera <span class="math inline">\(Y\)</span>, <span class="math inline">\(B\cup C\)</span> gera <span class="math inline">\(W+Y\)</span>. Vamos confirmar que <span class="math inline">\(B\cup C\)</span> é LI: suponha que <span class="math display">\[\alpha_1\ul{v_1} + \cdots + \alpha_a\ul{v_a} + \beta_1\ul{w_1} + \cdots + \beta_b\ul{w_b} + \gamma_1\ul{y_1} + \cdots + \gamma_c\ul{y_c} = \ul{0}.\quad(*)\]</span> Rearranjando, <span class="math display">\[\gamma_1\ul{y_1} + \cdots + \gamma_c\ul{y_c} = -\left(\alpha_1\ul{v_1} + \cdots + \alpha_a\ul{v_a} + \beta_1\ul{w_1} + \cdots + \beta_b\ul{w_b}\right)\]</span> pertence a <span class="math inline">\(W\cap Y\)</span>, logo existem <span class="math inline">\(\delta_1,\ldots,\delta_a\)</span> tais que <span class="math display">\[\gamma_1\ul{y_1} + \cdots + \gamma_c\ul{y_c} = \delta_1\ul{v_1} + \cdots + \delta_a\ul{v_a}.\]</span> Mas rearranjando de novo, <span class="math display">\[\gamma_1\ul{y_1} + \cdots + \gamma_c\ul{y_c} - \delta_1\ul{v_1} - \cdots - \delta_a\ul{v_a} = \ul{0},\]</span> então cada <span class="math inline">\(\gamma_i = 0\)</span>, pois <span class="math inline">\(C\)</span> é uma base, logo LI (cada <span class="math inline">\(\delta_i=0\)</span> também, mas não precisamos disso). Jogando <span class="math inline">\(\gamma_i=0\,\forall i\)</span> na equação <span class="math inline">\((*)\)</span>, obtemos <span class="math display">\[\alpha_1\ul{v_1} + \cdots + \alpha_a\ul{v_a} + \beta_1\ul{w_1} + \cdots + \beta_b\ul{w_b} = \ul{0},\]</span> mostrando que <span class="math inline">\(\alpha_i = 0\,\forall i\)</span> e <span class="math inline">\(\beta_i = 0\,\forall i\)</span>, pois <span class="math inline">\(B\)</span> é LI. Então <span class="math inline">\((*)\)</span> possui somente a solução trivial, logo <span class="math inline">\(B\cup C\)</span> é uma base de <span class="math inline">\(W+Y\)</span>. Finalmente, <span class="math display">\[\begin{aligned}
+\dim(W+Y) &amp; = |B\cup C| \\
+     &amp; = a + b + c \\
+     &amp; = (a + b) + (c + a) - a \\
+     &amp; = |B| + |C| - |I| \\
+     &amp; = \dim(W) + \dim(Y) - \dim(W\cap Y).
+\end{aligned}\]</span>&nbsp;◻</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 40.2</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(W,Y\)</span> dois subespaços tais que <span class="math display">\[V = W\oplus Y.\]</span> Então <span class="math display">\[\dim(V) = \dim(W) + \dim(Y).\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Imediato do teorema, pois <span class="math inline">\(\dim(W\cap Y) = \dim(\{\ul{0}\}) = 0\)</span>.&nbsp;◻</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 40.5</strong></span> Seja <span class="math inline">\(W\)</span> um subespaço do espaço vetorial <span class="math inline">\(V\)</span>. Um <em>complemento</em> de <span class="math inline">\(W\)</span> em <span class="math inline">\(V\)</span> é um subespaço <span class="math inline">\(Y\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(V = W\oplus Y\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 40.3</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>. Existe um complemento de <span class="math inline">\(W\)</span> em <span class="math inline">\(V\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><em>Proof.</em> Seja <span class="math inline">\(\{\ul{w_1}\,,\,\ldots,\ul{w_a}\}\)</span> uma base de <span class="math inline">\(W\)</span> e estenda ela para uma base <span class="math display">\[\{\ul{w_1}\,,\,\ldots\,,\,\ul{w_a}\,,\,\ul{y_1}\,,\,\ldots\,,,\,\ul{y_b}\}\]</span> de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(Y\)</span> o subespaço gerado por <span class="math inline">\(\{\ul{y_1}\,,\,\ldots\,,\,\ul{y_b}\}\)</span>. Então <span class="math inline">\(V = W + Y\)</span>. Mas <span class="math inline">\(\dim(V)=a+b\)</span> então pelo teorema <span class="math display">\[\begin{aligned}
+\dim(W\cap Y) &amp; = \dim(W) + \dim(Y) - \dim(W+Y) \\
+        &amp; = a + b - (a+b) \\
+        &amp; = 0,
+\end{aligned}\]</span> logo <span class="math inline">\(W\cap Y = \{\ul{0}\}\)</span> e <span class="math inline">\(V = W\oplus Y\)</span>.&nbsp;◻</p>
+</div>
+<p><em>Cuidado:</em> Um subespaço <span class="math inline">\(W\)</span> geralmente possui MUITOS complementos distintos:</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 40.2</strong></span> (Exercício) Seja <span class="math inline">\(V = \R^2\)</span> e <span class="math inline">\(W\)</span> o subespaço com base <span class="math inline">\(\{(1,0)\}\)</span>. Então os subespaços <span class="math display">\[Y_{b}\quad\hbox{tendo base}\quad \{(b,1)\}\]</span> são distintos para todo <span class="math inline">\(b\in \R\)</span>, e qualquer <span class="math inline">\(Y_b\)</span> é complemento de <span class="math inline">\(W\)</span> em <span class="math inline">\(\R^2\)</span>.</p>
+$$
+<p>$$</p>
+</div>
 
 
 </section>
@@ -1831,13 +1914,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../FundamentosDeAlgebra/mdc.html" class="pagination-link" aria-label="O MDC e o Algoritmo de Euclides">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">O MDC e o Algoritmo de Euclides</span></span>
+      <a href="../AlgebraLinearI/02_alglin1.html" class="pagination-link" aria-label="Combinações lineares e geradores">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Combinações lineares e geradores</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/diof.html" class="pagination-link" aria-label="Equações diofantinas lineares e o Teorema Chinês dos restos">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Equações diofantinas lineares e o Teorema Chinês dos restos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
