@@ -355,13 +355,13 @@ $V$. Se $B$ tem qualquer duas das propriedades $1,2,3$ acima, então $B$
 :::{.proof}
  Suponha que $B$ satisfaz:
 
-2. e 3.:   Então $B$ é uma base pela definição de base.
+- Propriedades 2. e 3.:   Então $B$ é uma base pela definição de base.
 
-1. e 2.:   Já que $B$ gera $V$, sabemos que algum subconjunto $B'$ de $B$ é
+- Propriedades 1. e 2.:   Já que $B$ gera $V$, sabemos que algum subconjunto $B'$ de $B$ é
     base de $V$. Se $B$ não for LI, $B'\neq B$, então $V$ tem base de
     $<n$ elementos -- contradição.
 
-1. e 3.:   Já que $B$ é LI, ele é uma base do subespaço gerado por $B$, e este
+- Propriedades 1. e 3.:   Já que $B$ é LI, ele é uma base do subespaço gerado por $B$, e este
     subespaço tem dimensão $n$. Mas o único subespaço de $V$ com
     dimensão $n$ é $V$, então $B$ gera $V$.
 
