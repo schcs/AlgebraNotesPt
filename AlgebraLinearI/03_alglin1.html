@@ -1338,8 +1338,8 @@ window.Quarto = {
 <section id="dimensão" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="dimensão">Dimensão</h2>
 <p>Em princípio, pode acontecer que um espaço vetorial possui uma base com 3 elementos, e outra base com 4 elementos. Vamos mostrar que isso <em>não acontece</em>. Quaisquer duas bases de um espaço vetorial finitamente gerado têm o mesmo tamanho.</p>
-<div id="prop-">
-<p>Seja <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_n}\}\)</span> uma base de <span class="math inline">\(V\)</span> com <span class="math inline">\(n\)</span> elementos. Qualquer subconjunto <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> com mais que <span class="math inline">\(n\)</span> elementos é LD.</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 40.1</strong></span> Seja <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_n}\}\)</span> uma base de <span class="math inline">\(V\)</span> com <span class="math inline">\(n\)</span> elementos. Qualquer subconjunto <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> com mais que <span class="math inline">\(n\)</span> elementos é LD.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(Y = \{\ul{v_1}, \ldots,\ul{v_{n+1}}\}\)</span> um subconjunto de <span class="math inline">\(X\)</span> com <span class="math inline">\(n+1\)</span> elementos. Vamos mostrar que <span class="math inline">\(Y\)</span> é LD (logo <span class="math inline">\(X\)</span> também a é). Temos que mostrar que a equação <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_{n+1}\ul{v_{n+1}} = \ul{0}\qquad (*)\]</span> possui solução não trivial. Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>, cada <span class="math inline">\(\ul{v_i}\)</span> é combinação linear dos elementos de <span class="math inline">\(B\)</span>: <span class="math display">\[\begin{aligned}
@@ -1419,7 +1419,7 @@ a &amp; b &amp; 2c \\ 0 &amp; c &amp; a
 </div>
 <p>Existe um espaço vetorial de dimensão <span class="math inline">\(5\)</span> tendo subespaço de dimensão <span class="math inline">\(6\)</span>? Não!</p>
 <div id="prp-" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposição 40.1</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>.</p>
+<p><span class="theorem-title"><strong>Proposição 40.2</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>.</p>
 <ol type="1">
 <li><p><span class="math inline">\(\dim(W)\leqslant \dim(V)\)</span>,</p></li>
 <li><p>Se <span class="math inline">\(\dim(W) = \dim(V)\)</span>, então <span class="math inline">\(W=V\)</span>.</p></li>
@@ -1445,11 +1445,11 @@ a &amp; b &amp; 2c \\ 0 &amp; c &amp; a
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Suponha que <span class="math inline">\(B\)</span> satisfaz:</p>
-<ul>
-<li><p>Então <span class="math inline">\(B\)</span> é uma base pela definição de base.</p></li>
-<li><p>Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>, sabemos que algum subconjunto <span class="math inline">\(B'\)</span> de <span class="math inline">\(B\)</span> é base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(B\)</span> não for LI, <span class="math inline">\(B'\neq B\)</span>, então <span class="math inline">\(V\)</span> tem base de <span class="math inline">\(&lt;n\)</span> elementos – contradição.</p></li>
-<li><p>Já que <span class="math inline">\(B\)</span> é LI, ele é uma base do subespaço gerado por <span class="math inline">\(B\)</span>, e este subespaço tem dimensão <span class="math inline">\(n\)</span>. Mas o único subespaço de <span class="math inline">\(V\)</span> com dimensão <span class="math inline">\(n\)</span> é <span class="math inline">\(V\)</span>, então <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>.</p></li>
-</ul>
+<ol start="2" type="1">
+<li><p>e 3.: Então <span class="math inline">\(B\)</span> é uma base pela definição de base.</p></li>
+<li><p>e 2.: Já que <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>, sabemos que algum subconjunto <span class="math inline">\(B'\)</span> de <span class="math inline">\(B\)</span> é base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(B\)</span> não for LI, <span class="math inline">\(B'\neq B\)</span>, então <span class="math inline">\(V\)</span> tem base de <span class="math inline">\(&lt;n\)</span> elementos – contradição.</p></li>
+<li><p>e 3.: Já que <span class="math inline">\(B\)</span> é LI, ele é uma base do subespaço gerado por <span class="math inline">\(B\)</span>, e este subespaço tem dimensão <span class="math inline">\(n\)</span>. Mas o único subespaço de <span class="math inline">\(V\)</span> com dimensão <span class="math inline">\(n\)</span> é <span class="math inline">\(V\)</span>, então <span class="math inline">\(B\)</span> gera <span class="math inline">\(V\)</span>.</p></li>
+</ol>
 <p>&nbsp;◻</p>
 </div>
 <div id="exr-" class="theorem exercise">
