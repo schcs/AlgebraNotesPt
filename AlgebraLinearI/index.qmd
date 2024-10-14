@@ -24,3 +24,5 @@ Material disponibilizado sob a licença
 - [Espaços vetoriais e subespaços](01_alglin1.qmd)
 - [Combinações lineares e geradores](02_alglin1.qmd)
 - [Bases e dimensão](03_alglin1.qmd)
+- [Computação com Python](01_alglin_comput.qmd)
+- [Transformações lineares](04_alglin1.qmd)

@@ -1,0 +1,332 @@
+---
+title: "Computações com Python"
+number-sections: true
+lang: pt-BR
+--- 
+
+Vamos resolver alguns problemas numéricos usando a biblioteca [SymPy](https://www.sympy.org/en/index.html) da linguagem de programação [Python](https://www.python.org/).
+
+Primeiro vamos carregar as funções que vamos utilizar da biblioteca.
+
+```python
+from sympy import Matrix, zeros, linsolve, S
+```
+  
+## Problema 1: Escolher base de sistemas geradores
+
+:::{#exm-}
+Provamos na aula que todo sistema gerador de um espaço vetorial $V$ contem um subsistema que seja uma base de $V$. Considere o seguinte problema numérico. Seja $W_1$ o subespaço de $\mathbb R^{12}$ gerado pelas linhas do seguinte matriz. 
+
+$$
+M_1 = \left[\begin{array}{cccccccccccc}-1 & 0 & -2 & -2 & 0 & 1 & -2 & -2 & 2 & 0 & -1 & -2\\0 & 2 & 2 & 1 & -2 & 3 & 1 & 2 & -4 & 3 & 0 & 3\\1 & -1 & 2 & -1 & 1 & 2 & -1 & -1 & 2 & 2 & 2 & 0\\-3 & 2 & -6 & 0 & -2 & -3 & 0 & 0 & -2 & -4 & -5 & -2\\8 & -4 & 4 & 0 & 2 & 0 & 4 & 2 & 4 & 0 & 2 & 0\\2 & 1 & 0 & 0 & -2 & 2 & 2 & 2 & -2 & 1 & -2 & 1\end{array}\right]
+$$
+
+Vamos resolver as seguintes tarefas:
+
+- escolher uma coleção de linhas de $M_1$ que geram $W_1$;
+- achar uma base na forma escalonada reduzida para $W_1$;
+- calcular $\dim W_1$. 
+
+Primeiro,  definimos a matriz $M_1$ usando `Matrix` de `SymPy`; veja [a documentação](https://docs.sympy.org/latest/tutorials/intro-tutorial/matrices.html).
+
+
+```python
+M1 = Matrix([[-1, 0, -2, -2, 0, 1, -2, -2, 2, 0, -1, -2], 
+             [0, 2, 2, 1, -2, 3, 1, 2, -4, 3, 0, 3], 
+             [1, -1, 2, -1, 1, 2, -1, -1, 2, 2, 2, 0], 
+             [-3, 2, -6, 0, -2, -3, 0, 0, -2, -4, -5, -2], 
+             [8, -4, 4, 0, 2, 0, 4, 2, 4, 0, 2, 0], 
+             [2, 1, 0, 0, -2, 2, 2, 2, -2, 1, -2, 1]])
+```
+
+A estratégia que vamos usar é a seguinte. 
+
+1. Iniciamos `bas_esc = []` e `ind_bas = []`
+2. Para toda linha `L` da matriz `M1` fazemos a seguinte computação. 
+
+    i) Juntar a linha `L` à matriz `bas_esc`.
+    ii) Computar a forma escalonada reduzida da matriz obtida no ponto i) e chame esta matriz `bas_esc`. 
+    iii) Se a matriz `bas_esc` tem uma linha nula, então a linha `L` é linearmente dependente das linhas já processadas e ela não é necessária na base de $W_1$. Neste caso, deletamos a última linha nula da `bas_esc`.
+    iv) Se a matriz `bas_esc` não tem linha nula, então a linha `L` é L.I. das linhas já processadas e ela precisa ser inserida na base de $W_1$. Neste caso, inserimos o índice de `L` na lista `ind_bas`.
+    
+Este procedimento está implementado na função seguinte.
+
+
+```python
+def ache_base( M ):
+    
+    # achar número de linhas e colunas em M
+    rows, cols = M.shape
+    
+    # a lista vai conter a base
+    # e a matriz que vai conter a forma esc reduzida
+    ind_bas, bas_esc = [], Matrix( [] )
+        
+    for i in range( rows ):
+        
+        # adicione a linha i de M a forma escalonada
+        bas_esc = bas_esc.row_insert( bas_esc.rows, M[i,:] )
+        
+        # faça escalonamento 
+        bas_esc, _ = bas_esc.rref()
+        
+        # se a última linha é nula, pode deletar e 
+        # neste case esta linha não está na base 
+        if bas_esc.row(-1) == zeros( 1, cols ):
+            bas_esc.row_del( bas_esc.rows-1 )
+        else: 
+            # se a última linha é não nula, adiciona índice i à base
+            ind_bas.append( i )
+    # devolva a forma escalonada e a base        
+    return bas_esc, ind_bas
+```
+
+
+```python
+ache_base( M1 )
+```
+
+
+
+
+    (Matrix([
+     [1, 0, 0, 0,  -7/17,   5/17, 14/17, 11/17,  -4/17,  0, -10/17,  2/17],
+     [0, 1, 0, 0, -20/17,  24/17,  6/17, 12/17, -26/17,  1, -14/17, 13/17],
+     [0, 0, 1, 0,   5/34,  14/17, -5/17, -3/34,  -1/17,  1,  29/34,  9/17],
+     [0, 0, 0, 1,   1/17, -25/17, 15/17, 13/17, -14/17, -1,  -1/17,  7/17]]),
+     [0, 1, 2, 4])
+
+
+
+Obtemos que as linhas da matriz devolvida pela função no campo anterior formam uma base na forma escalonada reduzida para o espaço $W_1$. Além disso, as linhas indexadas por $0$, $1$, $2$, $4$ também formam uma base de $W_1$. Portanto $\dim W_1=4$. 
+:::
+
+## Comparar dois subespaços de $\mathbb R^n$
+
+:::{#exm-}
+Assuma agora que $W_2$ é o subespaço de $\mathbb R^{12}$ gerado pelas linhas da seguinte matriz:
+$$ 
+M_2=\left[\begin{array}{cccccccccccc}3 & -5 & -24 & -19 & 0 & 2 & -9 & -14 & 24 & -10 & -17 & -24\\-2 & 1 & 2 & 1 & 0 & 1 & -1 & 0 & -2 & 2 & 2 & 2\\0 & 1 & 6 & 5 & 0 & -1 & 3 & 4 & -6 & 2 & 4 & 6\\-3 & 2 & 6 & 4 & 0 & 1 & 0 & 2 & -6 & 4 & 5 & 6\\-4 & 5 & 22 & 17 & 0 & -1 & 7 & 12 & -22 & 10 & 16 & 22\\-1 & -2 & 1 & 1 & -2 & 2 & 1 & 2 & -1 & -1 & -1 & 0\end{array}\right]
+$$
+
+Primeiro queremos saber se $W_1=W_2$. É fácil verificar que todo subespaço de $\mathbb R^n$ possui base na forma escalonada reduzida e esta base é única. Portanto $W_1=W_2$ se e somente se as suas bases na forma escalonada reduzida são as mesmas. 
+
+Vamos calcular a base escalondada reduzida usando o método `rref()` já disponível em SymPy.
+
+
+
+```python
+M2 = Matrix([[3, -5, -24, -19, 0, 2, -9, -14, 24, -10, -17, -24], 
+             [-2, 1, 2, 1, 0, 1, -1, 0, -2, 2, 2, 2], 
+             [0, 1, 6, 5, 0, -1, 3, 4, -6, 2, 4, 6], 
+             [-3, 2, 6, 4, 0, 1, 0, 2, -6, 4, 5, 6], 
+             [-4, 5, 22, 17, 0, -1, 7, 12, -22, 10, 16, 22], 
+             [-1, -2, 1, 1, -2, 2, 1, 2, -1, -1, -1, 0]])
+```
+
+
+```python
+M1.rref()[0]
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 0 & 0 & - \frac{7}{17} & \frac{5}{17} & \frac{14}{17} & \frac{11}{17} & - \frac{4}{17} & 0 & - \frac{10}{17} & \frac{2}{17}\\0 & 1 & 0 & 0 & - \frac{20}{17} & \frac{24}{17} & \frac{6}{17} & \frac{12}{17} & - \frac{26}{17} & 1 & - \frac{14}{17} & \frac{13}{17}\\0 & 0 & 1 & 0 & \frac{5}{34} & \frac{14}{17} & - \frac{5}{17} & - \frac{3}{34} & - \frac{1}{17} & 1 & \frac{29}{34} & \frac{9}{17}\\0 & 0 & 0 & 1 & \frac{1}{17} & - \frac{25}{17} & \frac{15}{17} & \frac{13}{17} & - \frac{14}{17} & -1 & - \frac{1}{17} & \frac{7}{17}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{array}\right]$
+
+
+
+
+```python
+M2.rref()[0]
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 0 & \frac{4}{15} & \frac{4}{15} & - \frac{13}{15} & \frac{4}{5} & \frac{2}{5} & 0 & - \frac{2}{5} & - \frac{1}{15} & \frac{2}{15}\\0 & 1 & 0 & - \frac{1}{5} & \frac{4}{5} & - \frac{3}{5} & - \frac{3}{5} & - \frac{4}{5} & 0 & \frac{4}{5} & \frac{4}{5} & \frac{2}{5}\\0 & 0 & 1 & \frac{13}{15} & - \frac{2}{15} & - \frac{1}{15} & \frac{3}{5} & \frac{4}{5} & -1 & \frac{1}{5} & \frac{8}{15} & \frac{14}{15}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{array}\right]$
+
+
+
+Como as formas escalonadas reduzidas das duas matrizes são diferentes, temos que $W_1\neq W_2$. Além disso, a computação anterior mostra também que $\dim W_2=3$ enquanto $\dim W_1=4$ (como já foi verificado).
+
+## Computar a soma 
+
+Vamos calcular a soma dos espaços $W=W_1+W_2$. Como $W_i$ é gerado pelas linhas de $M_i$, temos que a soma vai ser gerado pela matriz $M$ que obtemos por colar $M_2$ abaixo de $M_1$. Para calcular a base de $W$, calculamos a forma escalonada reduzida de $M$.
+
+
+```python
+M = M1.col_join( M2 )
+M
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}-1 & 0 & -2 & -2 & 0 & 1 & -2 & -2 & 2 & 0 & -1 & -2\\0 & 2 & 2 & 1 & -2 & 3 & 1 & 2 & -4 & 3 & 0 & 3\\1 & -1 & 2 & -1 & 1 & 2 & -1 & -1 & 2 & 2 & 2 & 0\\-3 & 2 & -6 & 0 & -2 & -3 & 0 & 0 & -2 & -4 & -5 & -2\\8 & -4 & 4 & 0 & 2 & 0 & 4 & 2 & 4 & 0 & 2 & 0\\2 & 1 & 0 & 0 & -2 & 2 & 2 & 2 & -2 & 1 & -2 & 1\\3 & -5 & -24 & -19 & 0 & 2 & -9 & -14 & 24 & -10 & -17 & -24\\-2 & 1 & 2 & 1 & 0 & 1 & -1 & 0 & -2 & 2 & 2 & 2\\0 & 1 & 6 & 5 & 0 & -1 & 3 & 4 & -6 & 2 & 4 & 6\\-3 & 2 & 6 & 4 & 0 & 1 & 0 & 2 & -6 & 4 & 5 & 6\\-4 & 5 & 22 & 17 & 0 & -1 & 7 & 12 & -22 & 10 & 16 & 22\\-1 & -2 & 1 & 1 & -2 & 2 & 1 & 2 & -1 & -1 & -1 & 0\end{array}\right]$
+
+
+
+
+```python
+M.rref()[0]
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 0 & 0 & 0 & - \frac{31}{169} & \frac{112}{169} & \frac{62}{169} & \frac{8}{169} & - \frac{14}{169} & - \frac{43}{169} & \frac{10}{169}\\0 & 1 & 0 & 0 & 0 & \frac{8}{169} & - \frac{18}{169} & - \frac{16}{169} & - \frac{122}{169} & \frac{129}{169} & \frac{22}{169} & \frac{101}{169}\\0 & 0 & 1 & 0 & 0 & \frac{168}{169} & - \frac{40}{169} & \frac{2}{169} & - \frac{27}{169} & \frac{174}{169} & \frac{124}{169} & \frac{93}{169}\\0 & 0 & 0 & 1 & 0 & - \frac{237}{169} & \frac{153}{169} & \frac{136}{169} & - \frac{146}{169} & - \frac{167}{169} & - \frac{18}{169} & \frac{71}{169}\\0 & 0 & 0 & 0 & 1 & - \frac{196}{169} & - \frac{66}{169} & - \frac{115}{169} & \frac{116}{169} & - \frac{34}{169} & \frac{137}{169} & - \frac{24}{169}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{array}\right]$
+
+
+
+Obtemos que a forma escalonda reduzida de $M$ contém $5$ linhas não nulas. Portanto 
+$$
+\dim W=\dim (W_1+W_2)=5.
+$$
+Isso implica também que 
+$$
+\dim (W_1\cap W_2) = \dim W_1+\dim W_2-\dim (W_1+W_2)=4+3-5=2.
+$$
+:::
+
+## Determinar a base da interseção
+
+:::{#exm-}
+Vamos usar o [Algoritmo de Zassenhaus](https://en.wikipedia.org/wiki/Zassenhaus_algorithm). Vamos montar a matriz em blocos da forma seguinte:
+$$
+X=\begin{bmatrix} M_1& M_1\\ M_2 & 0 \end{bmatrix}
+$$
+onde $0$ significa uma matriz nula do tamanho certo. Ao calcular, a forma escalonada reduzida de $X$, obtemos uma matriz em blocos 
+$$
+\begin{bmatrix} C_1 & C_2\\ 0 & C_3 \\ 0 & 0 \end{bmatrix}.
+$$
+A parte $C_1$ contém uma base para $W_1+W_2$ enquanto a parte $C_3$ contém uma base de $W_1\cap W_2$.
+
+
+
+```python
+X1 = M1.row_join( M1 )
+X2 = M2.row_join( zeros( M2.rows, M1.cols ))
+X = X1.col_join( X2 )
+X
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccccccccccccccc}-1 & 0 & -2 & -2 & 0 & 1 & -2 & -2 & 2 & 0 & -1 & -2 & -1 & 0 & -2 & -2 & 0 & 1 & -2 & -2 & 2 & 0 & -1 & -2\\0 & 2 & 2 & 1 & -2 & 3 & 1 & 2 & -4 & 3 & 0 & 3 & 0 & 2 & 2 & 1 & -2 & 3 & 1 & 2 & -4 & 3 & 0 & 3\\1 & -1 & 2 & -1 & 1 & 2 & -1 & -1 & 2 & 2 & 2 & 0 & 1 & -1 & 2 & -1 & 1 & 2 & -1 & -1 & 2 & 2 & 2 & 0\\-3 & 2 & -6 & 0 & -2 & -3 & 0 & 0 & -2 & -4 & -5 & -2 & -3 & 2 & -6 & 0 & -2 & -3 & 0 & 0 & -2 & -4 & -5 & -2\\8 & -4 & 4 & 0 & 2 & 0 & 4 & 2 & 4 & 0 & 2 & 0 & 8 & -4 & 4 & 0 & 2 & 0 & 4 & 2 & 4 & 0 & 2 & 0\\2 & 1 & 0 & 0 & -2 & 2 & 2 & 2 & -2 & 1 & -2 & 1 & 2 & 1 & 0 & 0 & -2 & 2 & 2 & 2 & -2 & 1 & -2 & 1\\3 & -5 & -24 & -19 & 0 & 2 & -9 & -14 & 24 & -10 & -17 & -24 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\-2 & 1 & 2 & 1 & 0 & 1 & -1 & 0 & -2 & 2 & 2 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 6 & 5 & 0 & -1 & 3 & 4 & -6 & 2 & 4 & 6 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\-3 & 2 & 6 & 4 & 0 & 1 & 0 & 2 & -6 & 4 & 5 & 6 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\-4 & 5 & 22 & 17 & 0 & -1 & 7 & 12 & -22 & 10 & 16 & 22 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\-1 & -2 & 1 & 1 & -2 & 2 & 1 & 2 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{array}\right]$
+
+
+
+
+```python
+X0, _ = X.rref()
+X0
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccccccccccccccc}1 & 0 & 0 & 0 & 0 & - \frac{31}{169} & \frac{112}{169} & \frac{62}{169} & \frac{8}{169} & - \frac{14}{169} & - \frac{43}{169} & \frac{10}{169} & 0 & 0 & - \frac{128}{169} & - \frac{12}{13} & - \frac{28}{169} & \frac{124}{169} & - \frac{100}{169} & - \frac{108}{169} & \frac{136}{169} & \frac{28}{169} & - \frac{100}{169} & - \frac{132}{169}\\0 & 1 & 0 & 0 & 0 & \frac{8}{169} & - \frac{18}{169} & - \frac{16}{169} & - \frac{122}{169} & \frac{129}{169} & \frac{22}{169} & \frac{101}{169} & 0 & 0 & - \frac{414}{169} & - \frac{25}{13} & - \frac{80}{169} & \frac{137}{169} & - \frac{165}{169} & - \frac{212}{169} & \frac{292}{169} & - \frac{89}{169} & - \frac{334}{169} & - \frac{353}{169}\\0 & 0 & 1 & 0 & 0 & \frac{168}{169} & - \frac{40}{169} & \frac{2}{169} & - \frac{27}{169} & \frac{174}{169} & \frac{124}{169} & \frac{93}{169} & 0 & 0 & \frac{94}{169} & - \frac{5}{13} & \frac{10}{169} & \frac{173}{169} & - \frac{85}{169} & - \frac{58}{169} & \frac{48}{169} & \frac{159}{169} & \frac{84}{169} & \frac{23}{169}\\0 & 0 & 0 & 1 & 0 & - \frac{237}{169} & \frac{153}{169} & \frac{136}{169} & - \frac{146}{169} & - \frac{167}{169} & - \frac{18}{169} & \frac{71}{169} & 0 & 0 & - \frac{30}{169} & \frac{11}{13} & \frac{4}{169} & - \frac{235}{169} & \frac{135}{169} & \frac{112}{169} & - \frac{116}{169} & - \frac{173}{169} & - \frac{34}{169} & \frac{43}{169}\\0 & 0 & 0 & 0 & 1 & - \frac{196}{169} & - \frac{66}{169} & - \frac{115}{169} & \frac{116}{169} & - \frac{34}{169} & \frac{137}{169} & - \frac{24}{169} & 0 & 0 & \frac{510}{169} & \frac{34}{13} & \frac{101}{169} & - \frac{230}{169} & \frac{240}{169} & \frac{293}{169} & - \frac{394}{169} & \frac{68}{169} & \frac{409}{169} & \frac{452}{169}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 2 & 2 & 0 & -1 & 2 & 2 & -2 & 0 & 1 & 2\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 6 & 5 & 0 & -1 & 3 & 4 & -6 & 2 & 4 & 6\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{array}\right]$
+
+
+
+
+```python
+X0[range(5),range(12)]
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 0 & 0 & 0 & - \frac{31}{169} & \frac{112}{169} & \frac{62}{169} & \frac{8}{169} & - \frac{14}{169} & - \frac{43}{169} & \frac{10}{169}\\0 & 1 & 0 & 0 & 0 & \frac{8}{169} & - \frac{18}{169} & - \frac{16}{169} & - \frac{122}{169} & \frac{129}{169} & \frac{22}{169} & \frac{101}{169}\\0 & 0 & 1 & 0 & 0 & \frac{168}{169} & - \frac{40}{169} & \frac{2}{169} & - \frac{27}{169} & \frac{174}{169} & \frac{124}{169} & \frac{93}{169}\\0 & 0 & 0 & 1 & 0 & - \frac{237}{169} & \frac{153}{169} & \frac{136}{169} & - \frac{146}{169} & - \frac{167}{169} & - \frac{18}{169} & \frac{71}{169}\\0 & 0 & 0 & 0 & 1 & - \frac{196}{169} & - \frac{66}{169} & - \frac{115}{169} & \frac{116}{169} & - \frac{34}{169} & \frac{137}{169} & - \frac{24}{169}\end{array}\right]$
+
+
+
+
+```python
+B_int = X0[range(5,7),range(12,24)]
+B_int
+```
+
+
+
+
+$\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 2 & 2 & 0 & -1 & 2 & 2 & -2 & 0 & 1 & 2\\0 & 1 & 6 & 5 & 0 & -1 & 3 & 4 & -6 & 2 & 4 & 6\end{array}\right]$
+
+
+
+Vamos verificar que os vetores estão nos espaços $W_1$ e $W_2$. Precisa escrever as duas linhas como combinação linear das linhas de $M_1$ e $M_2$. Para isso, podemos usar a função `linsolve` disponível em SymPy. Note que quando trabalhamos com equações lineares, nós vamos trabalhar com as colunas da matriz e precisa-se trabalhar com as transpostas. 
+
+
+```python
+M1_tr = M1.transpose()
+M1_tr = M1_tr.row_join( B_int[0,:].transpose())
+M1_tr
+```
+
+
+
+
+$\displaystyle \left[\begin{matrix}-1 & 0 & 1 & -3 & 8 & 2 & 1\\0 & 2 & -1 & 2 & -4 & 1 & 0\\-2 & 2 & 2 & -6 & 4 & 0 & 2\\-2 & 1 & -1 & 0 & 0 & 0 & 2\\0 & -2 & 1 & -2 & 2 & -2 & 0\\1 & 3 & 2 & -3 & 0 & 2 & -1\\-2 & 1 & -1 & 0 & 4 & 2 & 2\\-2 & 2 & -1 & 0 & 2 & 2 & 2\\2 & -4 & 2 & -2 & 4 & -2 & -2\\0 & 3 & 2 & -4 & 0 & 1 & 0\\-1 & 0 & 2 & -5 & 2 & -2 & 1\\-2 & 3 & 0 & -2 & 0 & 1 & 2\end{matrix}\right]$
+
+
+
+
+```python
+sol = linsolve( M1_tr )
+(t1, t2) = sol.free_symbols
+coeffs = list(sol.subs( {t1:0,t2:1} ))[0]
+coeffs
+```
+
+
+
+
+$\displaystyle \left( -2, \  0, \  2, \  1, \  0, \  0\right)$
+
+
+
+
+```python
+-2*M1[0,:]+2*M1[2,:]+M1[3,:] == B_int[0,:]
+```
+
+
+
+
+    True
+
+
+
+
+```python
+M1_tr = M1.transpose()
+M1_tr = M1_tr.row_join( B_int[1,:].transpose())
+sol = linsolve( M1_tr )
+(t1, t2) = sol.free_symbols
+coeffs = list(sol.subs( {t1:0,t2:1} ))[0]
+coeffs
+```
+
+
+
+
+$\displaystyle \left( -4, \  0, \  3, \  1, \  - \frac{1}{2}, \  0\right)$
+
+
+
+
+```python
+-4*M1[0,:]+3*M1[2,:]+M1[3,:]-S(1)/2*M1[4,:] == B_int[1,:]
+```
+
+
+
+
+    True
+
+
+
+Esta computação mostra que as duas linhas da matriz `B_int` pertencem ao espaço $W_1$. O leitor pode verificar que elas pertencem também ao espaço $W_2$. 
+:::
