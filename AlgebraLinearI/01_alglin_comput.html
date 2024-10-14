@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>55&nbsp; Operadores nilpotentes – Álgebra</title>
+<title>41&nbsp; Computações com Python – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/unicidade_jordan.html" rel="next">
-<link href="../AlgebraLinearII/primaria.html" rel="prev">
+<link href="../AlgebraLinearI/04_alglin1.html" rel="next">
+<link href="../AlgebraLinearI/03_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -650,7 +684,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/nilpotentes.html"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin_comput.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Computações com Python</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -954,7 +988,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/01_alglin_comput.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/01_alglin_comput.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Computações com Python</span></span></a>
   </div>
 </li>
@@ -1049,7 +1083,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
   </div>
 </li>
@@ -1245,15 +1279,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#problema-1-escolher-base-de-sistemas-geradores" id="toc-problema-1-escolher-base-de-sistemas-geradores" class="nav-link active" data-scroll-target="#problema-1-escolher-base-de-sistemas-geradores"><span class="header-section-number">41.1</span> Problema 1: Escolher base de sistemas geradores</a></li>
+  <li><a href="#comparar-dois-subespaços-de-mathbb-rn" id="toc-comparar-dois-subespaços-de-mathbb-rn" class="nav-link" data-scroll-target="#comparar-dois-subespaços-de-mathbb-rn"><span class="header-section-number">41.2</span> Comparar dois subespaços de <span class="math inline">\(\mathbb R^n\)</span></a></li>
+  <li><a href="#determinar-a-base-da-interseção" id="toc-determinar-a-base-da-interseção" class="nav-link" data-scroll-target="#determinar-a-base-da-interseção"><span class="header-section-number">41.4</span> Determinar a base da interseção</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/nilpotentes.html"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/01_alglin_comput.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Computações com Python</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></h1>
+<h1 class="title"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Computações com Python</span></h1>
 </div>
 
 
@@ -1270,113 +1312,159 @@ window.Quarto = {
 </header>
 
 
-<p>Nesta página, <span class="math inline">\(V\)</span> é um espaço vetorial de dimensão finita sobre um corpo <span class="math inline">\(\F\)</span>.</p>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.1</strong></span> Um endomorfismo <span class="math inline">\(f:V\to V\)</span> é dito <b>nilpotente</b> se <span class="math inline">\(f^n=0\)</span> para algum <span class="math inline">\(n\geq 1\)</span>.</p>
-</div>
+<p>Vamos resolver alguns problemas numéricos usando a biblioteca <a href="https://www.sympy.org/en/index.html">SymPy</a> da linguagem de programação <a href="https://www.python.org/">Python</a>.</p>
+<p>Primeiro vamos carregar as funções que vamos utilizar da biblioteca.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Matrix, zeros, linsolve, S</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="problema-1-escolher-base-de-sistemas-geradores" class="level2" data-number="41.1">
+<h2 data-number="41.1" data-anchor-id="problema-1-escolher-base-de-sistemas-geradores"><span class="header-section-number">41.1</span> Problema 1: Escolher base de sistemas geradores</h2>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 55.1</strong></span> O endomorfismo de <span class="math inline">\(\F^3\)</span> representado na báse canônica pela matriz <span class="math display">\[
-\begin{pmatrix} 0 &amp; 1 &amp; -1 \\ 0 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}
-\]</span> é nilpotente. É fácil verificar que <span class="math inline">\(f^3=0\)</span>.</p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 55.2</strong></span> Assuma que <span class="math inline">\(f:V\to V\)</span> é um endomorfismo tal que <span class="math inline">\(m_f(t)=(t-\lambda)^k\)</span>. Ou seja, <span class="math inline">\(m_f(t)\)</span> é um fator que aparece na Teorema Espectral. De fato, a nossa motivação de estudar enfomorfismos nilpotentes é obter uma compreensão mais profunda da situação descrita pelo Teorema Espectral. Neste caso <span class="math inline">\((f-\lambda\mbox{id}_V)^k=0\)</span>; ou seja, <span class="math inline">\(f-\lambda\mbox{id}_V\)</span> é nilpotente.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> é nilpotente.</p>
+<p><span class="theorem-title"><strong>Exemplo 41.1</strong></span> Provamos na aula que todo sistema gerador de um espaço vetorial <span class="math inline">\(V\)</span> contem um subsistema que seja uma base de <span class="math inline">\(V\)</span>. Considere o seguinte problema numérico. Seja <span class="math inline">\(W_1\)</span> o subespaço de <span class="math inline">\(\mathbb R^{12}\)</span> gerado pelas linhas do seguinte matriz.</p>
+<p><span class="math display">\[
+M_1 = \left[\begin{array}{cccccccccccc}-1 &amp; 0 &amp; -2 &amp; -2 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 2 &amp; 0 &amp; -1 &amp; -2\\0 &amp; 2 &amp; 2 &amp; 1 &amp; -2 &amp; 3 &amp; 1 &amp; 2 &amp; -4 &amp; 3 &amp; 0 &amp; 3\\1 &amp; -1 &amp; 2 &amp; -1 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; 2 &amp; 2 &amp; 2 &amp; 0\\-3 &amp; 2 &amp; -6 &amp; 0 &amp; -2 &amp; -3 &amp; 0 &amp; 0 &amp; -2 &amp; -4 &amp; -5 &amp; -2\\8 &amp; -4 &amp; 4 &amp; 0 &amp; 2 &amp; 0 &amp; 4 &amp; 2 &amp; 4 &amp; 0 &amp; 2 &amp; 0\\2 &amp; 1 &amp; 0 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2 &amp; -2 &amp; 1 &amp; -2 &amp; 1\end{array}\right]
+\]</span></p>
+<p>Vamos resolver as seguintes tarefas:</p>
 <ul>
-<li>O único autovalor de <span class="math inline">\(f\)</span> é <span class="math inline">\(0\)</span>.</li>
-<li><span class="math inline">\(f\)</span> não é invertível; ou seja <span class="math inline">\(\ker f\neq 0\)</span> e <span class="math inline">\(\mbox{Im}(f) &lt; V\)</span>.</li>
-<li><span class="math inline">\(m_f(t)=t^k\)</span> onde <span class="math inline">\(k\)</span> é o menor inteiro positivo tal que <span class="math inline">\(f^k=0\)</span>.</li>
+<li>escolher uma coleção de linhas de <span class="math inline">\(M_1\)</span> que geram <span class="math inline">\(W_1\)</span>;</li>
+<li>achar uma base na forma escalonada reduzida para <span class="math inline">\(W_1\)</span>;</li>
+<li>calcular <span class="math inline">\(\dim W_1\)</span>.</li>
 </ul>
+<p>Primeiro, definimos a matriz <span class="math inline">\(M_1\)</span> usando <code>Matrix</code> de <code>SymPy</code>; veja <a href="https://docs.sympy.org/latest/tutorials/intro-tutorial/matrices.html">a documentação</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>M1 <span class="op">=</span> Matrix([[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>], </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">3</span>], </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">0</span>], </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>             [<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">6</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>], </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">8</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>], </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>]])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A estratégia que vamos usar é a seguinte.</p>
+<ol type="1">
+<li><p>Iniciamos <code>bas_esc = []</code> e <code>ind_bas = []</code></p></li>
+<li><p>Para toda linha <code>L</code> da matriz <code>M1</code> fazemos a seguinte computação.</p>
+<ol type="i">
+<li>Juntar a linha <code>L</code> à matriz <code>bas_esc</code>.</li>
+<li>Computar a forma escalonada reduzida da matriz obtida no ponto i) e chame esta matriz <code>bas_esc</code>.</li>
+<li>Se a matriz <code>bas_esc</code> tem uma linha nula, então a linha <code>L</code> é linearmente dependente das linhas já processadas e ela não é necessária na base de <span class="math inline">\(W_1\)</span>. Neste caso, deletamos a última linha nula da <code>bas_esc</code>.</li>
+<li>Se a matriz <code>bas_esc</code> não tem linha nula, então a linha <code>L</code> é L.I. das linhas já processadas e ela precisa ser inserida na base de <span class="math inline">\(W_1\)</span>. Neste caso, inserimos o índice de <code>L</code> na lista <code>ind_bas</code>.</li>
+</ol></li>
+</ol>
+<p>Este procedimento está implementado na função seguinte.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ache_base( M ):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># achar número de linhas e colunas em M</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    rows, cols <span class="op">=</span> M.shape</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># a lista vai conter a base</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># e a matriz que vai conter a forma esc reduzida</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ind_bas, bas_esc <span class="op">=</span> [], Matrix( [] )</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>( rows ):</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adicione a linha i de M a forma escalonada</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        bas_esc <span class="op">=</span> bas_esc.row_insert( bas_esc.rows, M[i,:] )</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># faça escalonamento </span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        bas_esc, _ <span class="op">=</span> bas_esc.rref()</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="co"># se a última linha é nula, pode deletar e </span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># neste case esta linha não está na base </span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> bas_esc.row(<span class="op">-</span><span class="dv">1</span>) <span class="op">==</span> zeros( <span class="dv">1</span>, cols ):</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            bas_esc.row_del( bas_esc.rows<span class="op">-</span><span class="dv">1</span> )</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>: </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            <span class="co"># se a última linha é não nula, adiciona índice i à base</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            ind_bas.append( i )</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># devolva a forma escalonada e a base        </span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> bas_esc, ind_bas</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ache_base( M1 )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>(Matrix([
+ [1, 0, 0, 0,  -7/17,   5/17, 14/17, 11/17,  -4/17,  0, -10/17,  2/17],
+ [0, 1, 0, 0, -20/17,  24/17,  6/17, 12/17, -26/17,  1, -14/17, 13/17],
+ [0, 0, 1, 0,   5/34,  14/17, -5/17, -3/34,  -1/17,  1,  29/34,  9/17],
+ [0, 0, 0, 1,   1/17, -25/17, 15/17, 13/17, -14/17, -1,  -1/17,  7/17]]),
+ [0, 1, 2, 4])</code></pre>
+<p>Obtemos que as linhas da matriz devolvida pela função no campo anterior formam uma base na forma escalonada reduzida para o espaço <span class="math inline">\(W_1\)</span>. Além disso, as linhas indexadas por <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span> também formam uma base de <span class="math inline">\(W_1\)</span>. Portanto <span class="math inline">\(\dim W_1=4\)</span>.</p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
-</div>
-<p>Seja <span class="math inline">\(f\)</span> nilpotente com <span class="math inline">\(f^k=0\)</span> e suponha que <span class="math inline">\(k\)</span> é o menor tal inteiro positivo. Então <span class="math display">\[
-V &gt; \mbox{Im}(f) &gt; \mbox{Im}(f^2) &gt;  \cdots &gt; \mbox{Im}(f^{k-1}) &gt; \mbox{Im}(f^k)=0
-\]</span> Ou seja, pondo <span class="math inline">\(V_i=\mbox{Im}(f^{k-i})\)</span>, obtemos uma cadeia <span class="math display">\[
-0 = V_0 &lt; V_1 &lt; V_2 &lt; \cdots &lt; V_{k-1} &lt; V_k = V
-\]</span> tal que <span class="math inline">\(f(V_i)=V_{i-1}\)</span> para todo <span class="math inline">\(i\geq 1\)</span>. Escolha uma base <span class="math inline">\(\{b_1,\ldots,b_{i_1}\}\)</span> para <span class="math inline">\(V_1\)</span>. Estenda esta basa para uma base <span class="math display">\[
-\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2}\}
-\]</span> de <span class="math inline">\(V_2\)</span>. Continuando assim, obtemos uma base <span class="math display">\[
-\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2},\ldots,b_{i_{k-1}+1},\ldots,b_{i_k}\}
-\]</span> de <span class="math inline">\(V\)</span> tal que, para todo <span class="math inline">\(j\in\{1,\ldots,k\}\)</span>, <span class="math display">\[
-\{b_1,\ldots,b_{i_j}\}
-\]</span> é uma base de <span class="math inline">\(V_j\)</span>. Observamos que nesta base, a matriz de <span class="math inline">\(f\)</span> é triangular superior com zeros no diagonal. Isso nos levou ao seguinte teorema.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.2</strong></span> Se <span class="math inline">\(f:V\to V\)</span> é nilpotente, então existe uma base <span class="math inline">\(B\)</span> tal que <span class="math inline">\([f]_B^B\)</span> é triangular superior com zeros no diagonal. Em particular, <span class="math inline">\(\mbox{pcar}_f(t)=t^{\dim V}\)</span>.</p>
-</div>
-<p>Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e seja <span class="math inline">\(v\in V\)</span>. Definimos nos exercícios o polinômio <span class="math inline">\(m_{f,v}(t)\)</span> como o polinômio mônico (não nulo) de menor grau tal que <span class="math inline">\(m_{f,v}(f)(v)=0\)</span>. Como no caso do polinômio minimal <span class="math inline">\(m_f(t)\)</span>, temos que <span class="math inline">\(m_{f,v}(t)\)</span> é gerador do ideal <span class="math display">\[
-I_{f,v}=\{p(t)\in \F[t]\mid p(f)(v)=0\}.
-\]</span> Ou seja, se <span class="math inline">\(p(t)\)</span> é um polinômio qualquer com <span class="math inline">\(p(f)(v)=0\)</span>, então <span class="math inline">\(m_{f,v}(t)\mid p(t)\)</span>.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.3</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e <span class="math inline">\(v\in V\)</span>. Assuma que <span class="math inline">\(v\in V\)</span> e que <span class="math inline">\(f^m(v)=0\)</span> com algum <span class="math inline">\(m\geq 1\)</span> e seja <span class="math inline">\(m\)</span> o menor tal número. Então <span class="math inline">\(f^0(v)=v,f(v),f^2(v),\ldots,f^{m-1}(v)\)</span> são linearmente independentes.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Como <span class="math inline">\(f^m(v)=0\)</span>, temos que <span class="math inline">\(m_{f,v}(t)\)</span> é um divisor de <span class="math inline">\(t^m\)</span>. Por outro lado, a minimalidade de <span class="math inline">\(m\)</span> implica que <span class="math inline">\(m_{f,v}(t)=t^m\)</span>. Ora assuma que <span class="math display">\[
-\alpha_0 v+\alpha_1 f(v)+\cdots+\alpha_{m-1}f^{m-1}(v)=0.
-\]</span> Então <span class="math inline">\(p(t)=\alpha_0+\alpha_1 t+\cdots+\alpha_{m-1}t^{m-1}\in I_{f,v}\)</span>; ou seja, <span class="math inline">\(p^m\mid p(t)\)</span>. Como <span class="math inline">\(\mbox{deg}(p(t))\leq m-1\)</span>, temos que <span class="math inline">\(p(t)=0\)</span>; ou seja, <span class="math inline">\(\alpha_0=\alpha_1=\cdots=\alpha_{m-1}=0\)</span>.</p>
-</div>
-<p>Se <span class="math inline">\(V\)</span>, <span class="math inline">\(f\)</span> e <span class="math inline">\(v\)</span> são como no lema anterior, então o espaço <span class="math inline">\(U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle\)</span> é <span class="math inline">\(f\)</span>-invariante. O vetor <span class="math inline">\(v\)</span> é chamado de <b>vetor <span class="math inline">\(f\)</span>-cíclico</b> e o espaço <span class="math inline">\(U\)</span> é dito <b><span class="math inline">\(f\)</span>-cíclico</b> gerado por <span class="math inline">\(v\)</span>. Note que se <span class="math inline">\(U\)</span> é um espaço <span class="math inline">\(f\)</span>-cíclico, então a matriz da restrição <span class="math inline">\(f|_U\)</span> na base <span class="math inline">\(B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}\)</span> tem a forma <span class="math display">\[
-\begin{pmatrix} 0 &amp; 1 &amp;  0 &amp; \cdots &amp; 0  \\ 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; \ddots &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \end{pmatrix}
+</section>
+<section id="comparar-dois-subespaços-de-mathbb-rn" class="level2" data-number="41.2">
+<h2 data-number="41.2" data-anchor-id="comparar-dois-subespaços-de-mathbb-rn"><span class="header-section-number">41.2</span> Comparar dois subespaços de <span class="math inline">\(\mathbb R^n\)</span></h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 41.2</strong></span> Assuma agora que <span class="math inline">\(W_2\)</span> é o subespaço de <span class="math inline">\(\mathbb R^{12}\)</span> gerado pelas linhas da seguinte matriz: <span class="math display">\[
+M_2=\left[\begin{array}{cccccccccccc}3 &amp; -5 &amp; -24 &amp; -19 &amp; 0 &amp; 2 &amp; -9 &amp; -14 &amp; 24 &amp; -10 &amp; -17 &amp; -24\\-2 &amp; 1 &amp; 2 &amp; 1 &amp; 0 &amp; 1 &amp; -1 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2\\0 &amp; 1 &amp; 6 &amp; 5 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; -6 &amp; 2 &amp; 4 &amp; 6\\-3 &amp; 2 &amp; 6 &amp; 4 &amp; 0 &amp; 1 &amp; 0 &amp; 2 &amp; -6 &amp; 4 &amp; 5 &amp; 6\\-4 &amp; 5 &amp; 22 &amp; 17 &amp; 0 &amp; -1 &amp; 7 &amp; 12 &amp; -22 &amp; 10 &amp; 16 &amp; 22\\-1 &amp; -2 &amp; 1 &amp; 1 &amp; -2 &amp; 2 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; -1 &amp; 0\end{array}\right]
 \]</span></p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.4</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(f\)</span>-espaço cíclico com base <span class="math inline">\(B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}\)</span>. Então <span class="math display">\[
-m_f(t)=\mbox{pcar}_f(t)=t^m.
+<p>Primeiro queremos saber se <span class="math inline">\(W_1=W_2\)</span>. É fácil verificar que todo subespaço de <span class="math inline">\(\mathbb R^n\)</span> possui base na forma escalonada reduzida e esta base é única. Portanto <span class="math inline">\(W_1=W_2\)</span> se e somente se as suas bases na forma escalonada reduzida são as mesmas.</p>
+<p>Vamos calcular a base escalondada reduzida usando o método <code>rref()</code> já disponível em SymPy.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>M2 <span class="op">=</span> Matrix([[<span class="dv">3</span>, <span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="dv">24</span>, <span class="op">-</span><span class="dv">19</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">9</span>, <span class="op">-</span><span class="dv">14</span>, <span class="dv">24</span>, <span class="op">-</span><span class="dv">10</span>, <span class="op">-</span><span class="dv">17</span>, <span class="op">-</span><span class="dv">24</span>], </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>             [<span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>], </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>], </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>             [<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>             [<span class="op">-</span><span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">22</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="op">-</span><span class="dv">22</span>, <span class="dv">10</span>, <span class="dv">16</span>, <span class="dv">22</span>], </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>             [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>]])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>M1.rref()[<span class="dv">0</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}1 &amp; 0 &amp; 0 &amp; 0 &amp; - \frac{7}{17} &amp; \frac{5}{17} &amp; \frac{14}{17} &amp; \frac{11}{17} &amp; - \frac{4}{17} &amp; 0 &amp; - \frac{10}{17} &amp; \frac{2}{17}\\0 &amp; 1 &amp; 0 &amp; 0 &amp; - \frac{20}{17} &amp; \frac{24}{17} &amp; \frac{6}{17} &amp; \frac{12}{17} &amp; - \frac{26}{17} &amp; 1 &amp; - \frac{14}{17} &amp; \frac{13}{17}\\0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{5}{34} &amp; \frac{14}{17} &amp; - \frac{5}{17} &amp; - \frac{3}{34} &amp; - \frac{1}{17} &amp; 1 &amp; \frac{29}{34} &amp; \frac{9}{17}\\0 &amp; 0 &amp; 0 &amp; 1 &amp; \frac{1}{17} &amp; - \frac{25}{17} &amp; \frac{15}{17} &amp; \frac{13}{17} &amp; - \frac{14}{17} &amp; -1 &amp; - \frac{1}{17} &amp; \frac{7}{17}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>M2.rref()[<span class="dv">0</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}1 &amp; 0 &amp; 0 &amp; \frac{4}{15} &amp; \frac{4}{15} &amp; - \frac{13}{15} &amp; \frac{4}{5} &amp; \frac{2}{5} &amp; 0 &amp; - \frac{2}{5} &amp; - \frac{1}{15} &amp; \frac{2}{15}\\0 &amp; 1 &amp; 0 &amp; - \frac{1}{5} &amp; \frac{4}{5} &amp; - \frac{3}{5} &amp; - \frac{3}{5} &amp; - \frac{4}{5} &amp; 0 &amp; \frac{4}{5} &amp; \frac{4}{5} &amp; \frac{2}{5}\\0 &amp; 0 &amp; 1 &amp; \frac{13}{15} &amp; - \frac{2}{15} &amp; - \frac{1}{15} &amp; \frac{3}{5} &amp; \frac{4}{5} &amp; -1 &amp; \frac{1}{5} &amp; \frac{8}{15} &amp; \frac{14}{15}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
+<p>Como as formas escalonadas reduzidas das duas matrizes são diferentes, temos que <span class="math inline">\(W_1\neq W_2\)</span>. Além disso, a computação anterior mostra também que <span class="math inline">\(\dim W_2=3\)</span> enquanto <span class="math inline">\(\dim W_1=4\)</span> (como já foi verificado).</p>
+<section id="computar-a-soma" class="level2" data-number="41.3">
+<h2 data-number="41.3" data-anchor-id="computar-a-soma"><span class="header-section-number">41.3</span> Computar a soma</h2>
+<p>Vamos calcular a soma dos espaços <span class="math inline">\(W=W_1+W_2\)</span>. Como <span class="math inline">\(W_i\)</span> é gerado pelas linhas de <span class="math inline">\(M_i\)</span>, temos que a soma vai ser gerado pela matriz <span class="math inline">\(M\)</span> que obtemos por colar <span class="math inline">\(M_2\)</span> abaixo de <span class="math inline">\(M_1\)</span>. Para calcular a base de <span class="math inline">\(W\)</span>, calculamos a forma escalonada reduzida de <span class="math inline">\(M\)</span>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> M1.col_join( M2 )</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>M</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}-1 &amp; 0 &amp; -2 &amp; -2 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 2 &amp; 0 &amp; -1 &amp; -2\\0 &amp; 2 &amp; 2 &amp; 1 &amp; -2 &amp; 3 &amp; 1 &amp; 2 &amp; -4 &amp; 3 &amp; 0 &amp; 3\\1 &amp; -1 &amp; 2 &amp; -1 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; 2 &amp; 2 &amp; 2 &amp; 0\\-3 &amp; 2 &amp; -6 &amp; 0 &amp; -2 &amp; -3 &amp; 0 &amp; 0 &amp; -2 &amp; -4 &amp; -5 &amp; -2\\8 &amp; -4 &amp; 4 &amp; 0 &amp; 2 &amp; 0 &amp; 4 &amp; 2 &amp; 4 &amp; 0 &amp; 2 &amp; 0\\2 &amp; 1 &amp; 0 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2 &amp; -2 &amp; 1 &amp; -2 &amp; 1\\3 &amp; -5 &amp; -24 &amp; -19 &amp; 0 &amp; 2 &amp; -9 &amp; -14 &amp; 24 &amp; -10 &amp; -17 &amp; -24\\-2 &amp; 1 &amp; 2 &amp; 1 &amp; 0 &amp; 1 &amp; -1 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2\\0 &amp; 1 &amp; 6 &amp; 5 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; -6 &amp; 2 &amp; 4 &amp; 6\\-3 &amp; 2 &amp; 6 &amp; 4 &amp; 0 &amp; 1 &amp; 0 &amp; 2 &amp; -6 &amp; 4 &amp; 5 &amp; 6\\-4 &amp; 5 &amp; 22 &amp; 17 &amp; 0 &amp; -1 &amp; 7 &amp; 12 &amp; -22 &amp; 10 &amp; 16 &amp; 22\\-1 &amp; -2 &amp; 1 &amp; 1 &amp; -2 &amp; 2 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; -1 &amp; 0\end{array}\right]\)</span></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>M.rref()[<span class="dv">0</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \frac{31}{169} &amp; \frac{112}{169} &amp; \frac{62}{169} &amp; \frac{8}{169} &amp; - \frac{14}{169} &amp; - \frac{43}{169} &amp; \frac{10}{169}\\0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{8}{169} &amp; - \frac{18}{169} &amp; - \frac{16}{169} &amp; - \frac{122}{169} &amp; \frac{129}{169} &amp; \frac{22}{169} &amp; \frac{101}{169}\\0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \frac{168}{169} &amp; - \frac{40}{169} &amp; \frac{2}{169} &amp; - \frac{27}{169} &amp; \frac{174}{169} &amp; \frac{124}{169} &amp; \frac{93}{169}\\0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; - \frac{237}{169} &amp; \frac{153}{169} &amp; \frac{136}{169} &amp; - \frac{146}{169} &amp; - \frac{167}{169} &amp; - \frac{18}{169} &amp; \frac{71}{169}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - \frac{196}{169} &amp; - \frac{66}{169} &amp; - \frac{115}{169} &amp; \frac{116}{169} &amp; - \frac{34}{169} &amp; \frac{137}{169} &amp; - \frac{24}{169}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
+<p>Obtemos que a forma escalonda reduzida de <span class="math inline">\(M\)</span> contém <span class="math inline">\(5\)</span> linhas não nulas. Portanto <span class="math display">\[
+\dim W=\dim (W_1+W_2)=5.
+\]</span> Isso implica também que <span class="math display">\[
+\dim (W_1\cap W_2) = \dim W_1+\dim W_2-\dim (W_1+W_2)=4+3-5=2.
 \]</span></p>
+</section>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Podemos observar que a matriz <span class="math inline">\([f]_B^B\)</span> é a matriz companheira do polinômio <span class="math inline">\(t^n\)</span>. Por um exercício em uma lista anterior, <span class="math inline">\(m_f(t)=\mbox{pcar}_f(t)=t^m\)</span>.</p>
-<p>Alternativamente, podemos também observar que <span class="math inline">\(f^m(b)=0\)</span> para todo <span class="math inline">\(b\in B\)</span>. Portanto <span class="math inline">\(f^m=0\)</span> e obtemos que <span class="math inline">\(m_f(t)\mid t^m\)</span>. Por outro lado, <span class="math inline">\(f^{m-1}(f)(v)\neq 0\)</span> e assim <span class="math inline">\(t^{m-1}\)</span> não é múltiplo de <span class="math inline">\(m_f(t)\)</span>. Portanto <span class="math inline">\(m_f(t)=t^m\)</span>.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.5</strong></span> Suponha que <span class="math inline">\(f:V\to V\)</span> é um endomorfismo tal que <span class="math inline">\(m_f(t)=(t-\lambda)^k\)</span>. Já vimos em cima que <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> é nilpotente e agora assuma que <span class="math inline">\(V\)</span> é <span class="math inline">\(f_0\)</span>-cíclico. Ou seja, existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(B=\{f_0^{n-1}(v),\ldots,f_0(v),v\}\)</span> é base de <span class="math inline">\(V\)</span>. Tem-se que <span class="math display">\[
-[f]_B^B=\begin{pmatrix} \lambda &amp; 1 &amp;  0 &amp; \cdots &amp; 0  \\ 0 &amp; \lambda &amp; 1 &amp; \cdots &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; \ddots &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; \lambda \end{pmatrix}
-\]</span> Além disso, <span class="math inline">\(m_f(t)=(t-\lambda)^n\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Só notar que <span class="math inline">\(f=f_0+\lambda\mbox{id}_V\)</span> e então <span class="math display">\[
-[f]_B^B=[f_0]_B^B+[\lambda\mbox{id}_V]_B^B=[f_0]_B^B+I_n
-\]</span> Observe também que <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> tem polinômio minimal <span class="math inline">\(t^n\)</span> pelo resultado anterior. Logo <span class="math inline">\(m_f(t)=(t-\lambda) ^n\)</span>.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.2</strong></span> A matriz no lema anterior chama-se <b>bloco de Jordan</b> com autovalor <span class="math inline">\(\lambda\)</span>.</p>
-</div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 55.1</strong></span> (O Teorema da Decomposição em Espaços Cíclicos) Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo nilpotente. Então <span class="math inline">\(V\)</span> pode ser decomposto em uma soma direta <span class="math inline">\(V=W_1\oplus W_2\oplus \cdots \oplus W_k\)</span> onde os <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-espaços cíclicos.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Este teorema vai ser provado nas aulas seguintes. Neste momento, é mais interessante estudar as suas conseqências.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e assuma que <span class="math inline">\(V=W_1\oplus W_2\)</span> onde <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-invariantes. Sejam <span class="math inline">\(B_1=\{b_1,\ldots,b_m\}\)</span> e <span class="math inline">\(B_2=\{b_{m+1},\ldots,b_n\}\)</span> bases de <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span>, respetivamente. Então <span class="math inline">\(B=B_1\cup B_2\)</span> é uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\([f]_B^B\)</span> é diagonal em blocos com os blocos sendo <span class="math inline">\([f|_{W_1}]_{B_1}^{B_1}\)</span> e <span class="math inline">\([f|_{W_2}]_{B_2}^{B_2}\)</span>.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo com <span class="math inline">\(m_f(t)=(t-\lambda)^\alpha\)</span>. Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Como foi observado em cima, <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> é nilpotente. Pelo Teorema da Decomposição, <span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span> onde cada <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f_0\)</span>-cíclico e assim <span class="math inline">\(f_0\)</span>-invariante. Como todo subespaço <span class="math inline">\(U\leq V\)</span> é invariante por <span class="math inline">\(\lambda\mbox{id}_V\)</span>, temos que os <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-invariantes. Ora, escolhendo a base <span class="math inline">\(B_i\)</span> certa para <span class="math inline">\(W_i\)</span>, a matriz da restrição <span class="math inline">\([f|_{W_i}]_{B_i}^{B_i}\)</span> é um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>. Tomando <span class="math inline">\(B\)</span> para a união dos <span class="math inline">\(B_i\)</span>, temos que a matriz <span class="math inline">\([f]_B^B\)</span> é diagonal em bloco com cada bloco sendo um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.2</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo com <span class="math inline">\(m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}\)</span>. Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Pelo Teorema Espectral, <span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span> onde <span class="math inline">\(W_i=\ker(f-\lambda\mbox{id})^{\alpha_i}\)</span>. Além disso, <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f\)</span>-invariante e, pondo <span class="math inline">\(f_i=f|_{W_i}\)</span>, <span class="math inline">\(m_{f_i}(t)=(t-\lambda_i)^{\alpha_i}\)</span>. Escolha uma base <span class="math inline">\(B_i\)</span> para cada <span class="math inline">\(W_i\)</span> tal que <span class="math inline">\([f_i]_{B_i}^{B_i}\)</span> é diagonal em blocos onde cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda_i\)</span>. Juntando as bases <span class="math inline">\(B_i\)</span>, obtemos que <span class="math inline">\(B=B_1\cup\cdots\cup B_k\)</span> é uma base que satisfaz a afirmação do Corolário.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.3</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo de em <span class="math inline">\(\C\)</span>-espaço <span class="math inline">\(V\)</span> (de dimensão finita) Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.3</strong></span> Dizemos que uma matriz está na forma normal de Jordan, se ela é diagonal em blocos e cada bloco é um bloco de Jordan.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.4</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span> em <span class="math inline">\(M_{n\times n}(\C)\)</span>. Então existe uma matriz <span class="math inline">\(X\in M_{n\times n}(\C)\)</span> invertível tal que <span class="math inline">\(XAX^{-1}\)</span> está na forma normal de Jordan. Ou seja, cada matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é conjugada (semelhante) a uma matriz na forma normal de Jordan.</p>
+</section>
+<section id="determinar-a-base-da-interseção" class="level2" data-number="41.4">
+<h2 data-number="41.4" data-anchor-id="determinar-a-base-da-interseção"><span class="header-section-number">41.4</span> Determinar a base da interseção</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 41.3</strong></span> Vamos usar o <a href="https://en.wikipedia.org/wiki/Zassenhaus_algorithm">Algoritmo de Zassenhaus</a>. Vamos montar a matriz em blocos da forma seguinte: <span class="math display">\[
+X=\begin{bmatrix} M_1&amp; M_1\\ M_2 &amp; 0 \end{bmatrix}
+\]</span> onde <span class="math inline">\(0\)</span> significa uma matriz nula do tamanho certo. Ao calcular, a forma escalonada reduzida de <span class="math inline">\(X\)</span>, obtemos uma matriz em blocos <span class="math display">\[
+\begin{bmatrix} C_1 &amp; C_2\\ 0 &amp; C_3 \\ 0 &amp; 0 \end{bmatrix}.
+\]</span> A parte <span class="math inline">\(C_1\)</span> contém uma base para <span class="math inline">\(W_1+W_2\)</span> enquanto a parte <span class="math inline">\(C_3\)</span> contém uma base de <span class="math inline">\(W_1\cap W_2\)</span>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> M1.row_join( M1 )</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> M2.row_join( zeros( M2.rows, M1.cols ))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X1.col_join( X2 )</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>X</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccccccccccccccc}-1 &amp; 0 &amp; -2 &amp; -2 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 2 &amp; 0 &amp; -1 &amp; -2 &amp; -1 &amp; 0 &amp; -2 &amp; -2 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 2 &amp; 0 &amp; -1 &amp; -2\\0 &amp; 2 &amp; 2 &amp; 1 &amp; -2 &amp; 3 &amp; 1 &amp; 2 &amp; -4 &amp; 3 &amp; 0 &amp; 3 &amp; 0 &amp; 2 &amp; 2 &amp; 1 &amp; -2 &amp; 3 &amp; 1 &amp; 2 &amp; -4 &amp; 3 &amp; 0 &amp; 3\\1 &amp; -1 &amp; 2 &amp; -1 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; 2 &amp; 2 &amp; 2 &amp; 0 &amp; 1 &amp; -1 &amp; 2 &amp; -1 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; 2 &amp; 2 &amp; 2 &amp; 0\\-3 &amp; 2 &amp; -6 &amp; 0 &amp; -2 &amp; -3 &amp; 0 &amp; 0 &amp; -2 &amp; -4 &amp; -5 &amp; -2 &amp; -3 &amp; 2 &amp; -6 &amp; 0 &amp; -2 &amp; -3 &amp; 0 &amp; 0 &amp; -2 &amp; -4 &amp; -5 &amp; -2\\8 &amp; -4 &amp; 4 &amp; 0 &amp; 2 &amp; 0 &amp; 4 &amp; 2 &amp; 4 &amp; 0 &amp; 2 &amp; 0 &amp; 8 &amp; -4 &amp; 4 &amp; 0 &amp; 2 &amp; 0 &amp; 4 &amp; 2 &amp; 4 &amp; 0 &amp; 2 &amp; 0\\2 &amp; 1 &amp; 0 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2 &amp; -2 &amp; 1 &amp; -2 &amp; 1 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2 &amp; -2 &amp; 1 &amp; -2 &amp; 1\\3 &amp; -5 &amp; -24 &amp; -19 &amp; 0 &amp; 2 &amp; -9 &amp; -14 &amp; 24 &amp; -10 &amp; -17 &amp; -24 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\-2 &amp; 1 &amp; 2 &amp; 1 &amp; 0 &amp; 1 &amp; -1 &amp; 0 &amp; -2 &amp; 2 &amp; 2 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 6 &amp; 5 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; -6 &amp; 2 &amp; 4 &amp; 6 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\-3 &amp; 2 &amp; 6 &amp; 4 &amp; 0 &amp; 1 &amp; 0 &amp; 2 &amp; -6 &amp; 4 &amp; 5 &amp; 6 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\-4 &amp; 5 &amp; 22 &amp; 17 &amp; 0 &amp; -1 &amp; 7 &amp; 12 &amp; -22 &amp; 10 &amp; 16 &amp; 22 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\-1 &amp; -2 &amp; 1 &amp; 1 &amp; -2 &amp; 2 &amp; 1 &amp; 2 &amp; -1 &amp; -1 &amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X0, _ <span class="op">=</span> X.rref()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>X0</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccccccccccccccc}1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \frac{31}{169} &amp; \frac{112}{169} &amp; \frac{62}{169} &amp; \frac{8}{169} &amp; - \frac{14}{169} &amp; - \frac{43}{169} &amp; \frac{10}{169} &amp; 0 &amp; 0 &amp; - \frac{128}{169} &amp; - \frac{12}{13} &amp; - \frac{28}{169} &amp; \frac{124}{169} &amp; - \frac{100}{169} &amp; - \frac{108}{169} &amp; \frac{136}{169} &amp; \frac{28}{169} &amp; - \frac{100}{169} &amp; - \frac{132}{169}\\0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{8}{169} &amp; - \frac{18}{169} &amp; - \frac{16}{169} &amp; - \frac{122}{169} &amp; \frac{129}{169} &amp; \frac{22}{169} &amp; \frac{101}{169} &amp; 0 &amp; 0 &amp; - \frac{414}{169} &amp; - \frac{25}{13} &amp; - \frac{80}{169} &amp; \frac{137}{169} &amp; - \frac{165}{169} &amp; - \frac{212}{169} &amp; \frac{292}{169} &amp; - \frac{89}{169} &amp; - \frac{334}{169} &amp; - \frac{353}{169}\\0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \frac{168}{169} &amp; - \frac{40}{169} &amp; \frac{2}{169} &amp; - \frac{27}{169} &amp; \frac{174}{169} &amp; \frac{124}{169} &amp; \frac{93}{169} &amp; 0 &amp; 0 &amp; \frac{94}{169} &amp; - \frac{5}{13} &amp; \frac{10}{169} &amp; \frac{173}{169} &amp; - \frac{85}{169} &amp; - \frac{58}{169} &amp; \frac{48}{169} &amp; \frac{159}{169} &amp; \frac{84}{169} &amp; \frac{23}{169}\\0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; - \frac{237}{169} &amp; \frac{153}{169} &amp; \frac{136}{169} &amp; - \frac{146}{169} &amp; - \frac{167}{169} &amp; - \frac{18}{169} &amp; \frac{71}{169} &amp; 0 &amp; 0 &amp; - \frac{30}{169} &amp; \frac{11}{13} &amp; \frac{4}{169} &amp; - \frac{235}{169} &amp; \frac{135}{169} &amp; \frac{112}{169} &amp; - \frac{116}{169} &amp; - \frac{173}{169} &amp; - \frac{34}{169} &amp; \frac{43}{169}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - \frac{196}{169} &amp; - \frac{66}{169} &amp; - \frac{115}{169} &amp; \frac{116}{169} &amp; - \frac{34}{169} &amp; \frac{137}{169} &amp; - \frac{24}{169} &amp; 0 &amp; 0 &amp; \frac{510}{169} &amp; \frac{34}{13} &amp; \frac{101}{169} &amp; - \frac{230}{169} &amp; \frac{240}{169} &amp; \frac{293}{169} &amp; - \frac{394}{169} &amp; \frac{68}{169} &amp; \frac{409}{169} &amp; \frac{452}{169}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 2 &amp; 2 &amp; 0 &amp; -1 &amp; 2 &amp; 2 &amp; -2 &amp; 0 &amp; 1 &amp; 2\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 6 &amp; 5 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; -6 &amp; 2 &amp; 4 &amp; 6\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X0[<span class="bu">range</span>(<span class="dv">5</span>),<span class="bu">range</span>(<span class="dv">12</span>)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \frac{31}{169} &amp; \frac{112}{169} &amp; \frac{62}{169} &amp; \frac{8}{169} &amp; - \frac{14}{169} &amp; - \frac{43}{169} &amp; \frac{10}{169}\\0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{8}{169} &amp; - \frac{18}{169} &amp; - \frac{16}{169} &amp; - \frac{122}{169} &amp; \frac{129}{169} &amp; \frac{22}{169} &amp; \frac{101}{169}\\0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \frac{168}{169} &amp; - \frac{40}{169} &amp; \frac{2}{169} &amp; - \frac{27}{169} &amp; \frac{174}{169} &amp; \frac{124}{169} &amp; \frac{93}{169}\\0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; - \frac{237}{169} &amp; \frac{153}{169} &amp; \frac{136}{169} &amp; - \frac{146}{169} &amp; - \frac{167}{169} &amp; - \frac{18}{169} &amp; \frac{71}{169}\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - \frac{196}{169} &amp; - \frac{66}{169} &amp; - \frac{115}{169} &amp; \frac{116}{169} &amp; - \frac{34}{169} &amp; \frac{137}{169} &amp; - \frac{24}{169}\end{array}\right]\)</span></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>B_int <span class="op">=</span> X0[<span class="bu">range</span>(<span class="dv">5</span>,<span class="dv">7</span>),<span class="bu">range</span>(<span class="dv">12</span>,<span class="dv">24</span>)]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>B_int</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{array}{cccccccccccc}1 &amp; 0 &amp; 2 &amp; 2 &amp; 0 &amp; -1 &amp; 2 &amp; 2 &amp; -2 &amp; 0 &amp; 1 &amp; 2\\0 &amp; 1 &amp; 6 &amp; 5 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; -6 &amp; 2 &amp; 4 &amp; 6\end{array}\right]\)</span></p>
+<p>Vamos verificar que os vetores estão nos espaços <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span>. Precisa escrever as duas linhas como combinação linear das linhas de <span class="math inline">\(M_1\)</span> e <span class="math inline">\(M_2\)</span>. Para isso, podemos usar a função <code>linsolve</code> disponível em SymPy. Note que quando trabalhamos com equações lineares, nós vamos trabalhar com as colunas da matriz e precisa-se trabalhar com as transpostas.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>M1_tr <span class="op">=</span> M1.transpose()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>M1_tr <span class="op">=</span> M1_tr.row_join( B_int[<span class="dv">0</span>,:].transpose())</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>M1_tr</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left[\begin{matrix}-1 &amp; 0 &amp; 1 &amp; -3 &amp; 8 &amp; 2 &amp; 1\\0 &amp; 2 &amp; -1 &amp; 2 &amp; -4 &amp; 1 &amp; 0\\-2 &amp; 2 &amp; 2 &amp; -6 &amp; 4 &amp; 0 &amp; 2\\-2 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; 2\\0 &amp; -2 &amp; 1 &amp; -2 &amp; 2 &amp; -2 &amp; 0\\1 &amp; 3 &amp; 2 &amp; -3 &amp; 0 &amp; 2 &amp; -1\\-2 &amp; 1 &amp; -1 &amp; 0 &amp; 4 &amp; 2 &amp; 2\\-2 &amp; 2 &amp; -1 &amp; 0 &amp; 2 &amp; 2 &amp; 2\\2 &amp; -4 &amp; 2 &amp; -2 &amp; 4 &amp; -2 &amp; -2\\0 &amp; 3 &amp; 2 &amp; -4 &amp; 0 &amp; 1 &amp; 0\\-1 &amp; 0 &amp; 2 &amp; -5 &amp; 2 &amp; -2 &amp; 1\\-2 &amp; 3 &amp; 0 &amp; -2 &amp; 0 &amp; 1 &amp; 2\end{matrix}\right]\)</span></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> linsolve( M1_tr )</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>(t1, t2) <span class="op">=</span> sol.free_symbols</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> <span class="bu">list</span>(sol.subs( {t1:<span class="dv">0</span>,t2:<span class="dv">1</span>} ))[<span class="dv">0</span>]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>coeffs</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left( -2, \  0, \  2, \  1, \  0, \  0\right)\)</span></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">2</span><span class="op">*</span>M1[<span class="dv">0</span>,:]<span class="op">+</span><span class="dv">2</span><span class="op">*</span>M1[<span class="dv">2</span>,:]<span class="op">+</span>M1[<span class="dv">3</span>,:] <span class="op">==</span> B_int[<span class="dv">0</span>,:]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>M1_tr <span class="op">=</span> M1.transpose()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>M1_tr <span class="op">=</span> M1_tr.row_join( B_int[<span class="dv">1</span>,:].transpose())</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> linsolve( M1_tr )</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>(t1, t2) <span class="op">=</span> sol.free_symbols</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> <span class="bu">list</span>(sol.subs( {t1:<span class="dv">0</span>,t2:<span class="dv">1</span>} ))[<span class="dv">0</span>]</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>coeffs</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\displaystyle \left( -4, \  0, \  3, \  1, \  - \frac{1}{2}, \  0\right)\)</span></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">4</span><span class="op">*</span>M1[<span class="dv">0</span>,:]<span class="op">+</span><span class="dv">3</span><span class="op">*</span>M1[<span class="dv">2</span>,:]<span class="op">+</span>M1[<span class="dv">3</span>,:]<span class="op">-</span>S(<span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span><span class="op">*</span>M1[<span class="dv">4</span>,:] <span class="op">==</span> B_int[<span class="dv">1</span>,:]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>True</code></pre>
+<p>Esta computação mostra que as duas linhas da matriz <code>B_int</code> pertencem ao espaço <span class="math inline">\(W_1\)</span>. O leitor pode verificar que elas pertencem também ao espaço <span class="math inline">\(W_2\)</span>.</p>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1801,13 +1889,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/primaria.html" class="pagination-link" aria-label="Decomposição primária e decomposição espectral">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span>
+      <a href="../AlgebraLinearI/03_alglin1.html" class="pagination-link" aria-label="Bases e dimensão">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Bases e dimensão</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/unicidade_jordan.html" class="pagination-link" aria-label="Unicidade da forma normal de Jordan">
-        <span class="nav-page-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearI/04_alglin1.html" class="pagination-link" aria-label="Transformações lineares">
+        <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

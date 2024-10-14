@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>55&nbsp; Operadores nilpotentes – Álgebra</title>
+<title>42&nbsp; Transformações lineares – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/unicidade_jordan.html" rel="next">
-<link href="../AlgebraLinearII/primaria.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/01_alglin_comput.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -650,7 +650,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/nilpotentes.html"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/04_alglin1.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -960,7 +960,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/04_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/04_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span></a>
   </div>
 </li>
@@ -1049,7 +1049,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/nilpotentes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></span></a>
   </div>
 </li>
@@ -1245,15 +1245,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#transformações-lineares" id="toc-transformações-lineares" class="nav-link active" data-scroll-target="#transformações-lineares">A definição de transformações lineares</a></li>
+  <li><a href="#transformações-lineares-e-matrizes" id="toc-transformações-lineares-e-matrizes" class="nav-link" data-scroll-target="#transformações-lineares-e-matrizes">Transformações lineares e matrizes</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/nilpotentes.html"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/04_alglin1.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Operadores nilpotentes</span></h1>
+<h1 class="title"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></h1>
 </div>
 
 
@@ -1270,113 +1277,306 @@ window.Quarto = {
 </header>
 
 
-<p>Nesta página, <span class="math inline">\(V\)</span> é um espaço vetorial de dimensão finita sobre um corpo <span class="math inline">\(\F\)</span>.</p>
+<section id="transformações-lineares" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="transformações-lineares">A definição de transformações lineares</h2>
+<p>Sejam <span class="math inline">\(V,W\)</span> dois espaços vetoriais. Já que <span class="math inline">\(V,W\)</span> são conjuntos, faz sentido considerar uma função <span class="math inline">\(f:V\to W\)</span> (logo <span class="math inline">\(f\)</span> leva cada vetor de <span class="math inline">\(V\)</span> em um vetor de <span class="math inline">\(W\)</span>). Mas uma função qualquer vai geralmente fazer uma bagunça total. As funções melhores <span class="math inline">\(V\to W\)</span> são aquelas que “respeitam as estruturas de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> como espaços vetoriais”. Tais funções são as seguintes:</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.1</strong></span> Um endomorfismo <span class="math inline">\(f:V\to V\)</span> é dito <b>nilpotente</b> se <span class="math inline">\(f^n=0\)</span> para algum <span class="math inline">\(n\geq 1\)</span>.</p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 55.1</strong></span> O endomorfismo de <span class="math inline">\(\F^3\)</span> representado na báse canônica pela matriz <span class="math display">\[
-\begin{pmatrix} 0 &amp; 1 &amp; -1 \\ 0 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}
-\]</span> é nilpotente. É fácil verificar que <span class="math inline">\(f^3=0\)</span>.</p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 55.2</strong></span> Assuma que <span class="math inline">\(f:V\to V\)</span> é um endomorfismo tal que <span class="math inline">\(m_f(t)=(t-\lambda)^k\)</span>. Ou seja, <span class="math inline">\(m_f(t)\)</span> é um fator que aparece na Teorema Espectral. De fato, a nossa motivação de estudar enfomorfismos nilpotentes é obter uma compreensão mais profunda da situação descrita pelo Teorema Espectral. Neste caso <span class="math inline">\((f-\lambda\mbox{id}_V)^k=0\)</span>; ou seja, <span class="math inline">\(f-\lambda\mbox{id}_V\)</span> é nilpotente.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> é nilpotente.</p>
+<p><span class="theorem-title"><strong>Definição 42.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> dois espaços vetoriais sobre <span class="math inline">\(\R\)</span>. Uma função <span class="math inline">\(T:V\to W\)</span> é uma <em>transformação linear</em> (TL) se</p>
 <ul>
-<li>O único autovalor de <span class="math inline">\(f\)</span> é <span class="math inline">\(0\)</span>.</li>
-<li><span class="math inline">\(f\)</span> não é invertível; ou seja <span class="math inline">\(\ker f\neq 0\)</span> e <span class="math inline">\(\mbox{Im}(f) &lt; V\)</span>.</li>
-<li><span class="math inline">\(m_f(t)=t^k\)</span> onde <span class="math inline">\(k\)</span> é o menor inteiro positivo tal que <span class="math inline">\(f^k=0\)</span>.</li>
+<li><p><span class="math inline">\(T(\ul{u} + \ul{v}) = T(\ul{u}) + T(\ul{v})\quad\forall \ul{u}, \ul{v}\in V\)</span>,</p></li>
+<li><p><span class="math inline">\(T(\lambda \ul{v}) = \lambda T(\ul{v})\quad\forall \lambda\in \R,\,\forall \ul{v}\in V\)</span>.</p></li>
 </ul>
 </div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 42.1</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais e <span class="math inline">\(Z:V\to W\)</span> a <em>transformação nula</em>, que leva cada <span class="math inline">\(\ul{v}\in V\)</span> no vetor <span class="math inline">\(\ul{0}\)</span>. Vamos confirmar que <span class="math inline">\(Z\)</span> é uma transformação linear: <span class="math display">\[Z(\ul{u} + \ul{v}) = \ul{0} = \ul{0} + \ul{0} = Z(\ul{u}) + Z(\ul{v})\quad\forall \ul{u}, \ul{v}\in V\quad\checkmark\]</span> <span class="math display">\[Z(\lambda\ul{v}) = \ul{0} = \lambda\cdot \ul{0} = \lambda Z(\ul{v})\quad\forall\lambda\in \R, \forall \ul{v}\in V\quad\checkmark\]</span></p></li>
+<li><p>A função identidade <span class="math inline">\(I:V\to V\)</span> é uma transformação linear: <span class="math display">\[I(\ul{u} + \ul{v}) = \ul{u} + \ul{v} = I(\ul{u}) + I(\ul{v})\quad\forall \ul{u}, \ul{v}\in V\quad\checkmark\]</span> <span class="math display">\[I(\lambda\ul{v}) = \lambda\ul{v} = \lambda I(\ul{v})\quad\forall\lambda\in \R, \ul{v}\in V\quad\checkmark\]</span></p></li>
+<li><p>A função <span class="math inline">\(T: \R^2\to \R\)</span> definida como <span class="math inline">\(T(x,y) = 2x-y\)</span> é uma TL: <span class="math display">\[\begin{aligned}
+T\left((x,y) + (x',y')\right) &amp; = T\left((x+x',y+y')\right) \\
+         &amp; = 2(x+x')-(y+y)' \\
+         &amp; = 2x-y+2x'-y' \\
+         &amp; = T\left((x,y)\right) + T\left((x',y')\right)\quad\checkmark
+\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+T(\lambda(x,y)) &amp; = T\left((\lambda x, \lambda y)\right) \\
+        &amp; = 2\lambda x - \lambda y \\
+        &amp; = \lambda(2x-y) \\
+        &amp; = \lambda T\left((x,y)\right).\quad\checkmark
+\end{aligned}\]</span></p></li>
+<li><p>A função <span class="math inline">\(T:\R[x]\to \R[x]\)</span> que manda <span class="math inline">\(f(x)\in\R[x]\)</span> para <span class="math inline">\(xf(x)\)</span> é uma transformação linear – exercício.</p></li>
+<li><p>A função <span class="math inline">\(T : \R \to \R\)</span> que manda <span class="math inline">\(x\)</span> para <span class="math inline">\(x+1\)</span> <em>não é</em> uma transformação linear: <span class="math display">\[T(1+1) = T(2) = 2+1 = 3\]</span> <span class="math display">\[T(1)+T(1) = (1+1) + (1+1) = 4 \neq 3.\]</span></p></li>
+<li><p>(Super importante!) Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times m\)</span>. Dado um vetor <span class="math inline">\(\ul{v}\)</span> de <span class="math inline">\(\R^m\)</span>, tratado com vetor coluna <span class="math inline">\(m\times 1\)</span>, o produto <span class="math display">\[A\ul{v}\]</span> é um vetor coluna <span class="math inline">\(n\times 1\)</span>, logo <span class="math inline">\(A\ul{v}\)</span> é um vetor de <span class="math inline">\(\R^n\)</span>. Assim, obtemos uma função <span class="math display">\[\begin{aligned}
+T_A\,:\, \R^m  &amp; \to \,\R^n \\
+\ul{v}\,\,\, &amp; \mapsto A\ul{v}.
+\end{aligned}\]</span> Afirmo que <span class="math inline">\(T_A\)</span> é uma TL. Já que estamos somente multiplicando matrizes, temos <span class="math display">\[T_A(\ul{u} + \ul{v}) = A(\ul{u} + \ul{v}) = A\ul{u} + A\ul{v} = T_A(\ul{u}) + T_A(\ul{v})\quad\forall \ul{u},\ul{v}\in \R^m,\]</span> <span class="math display">\[T_A(\lambda\ul{v}) = A\cdot\lambda\ul{v} = \lambda A\ul{v} = \lambda T_A(\ul{v})\quad\forall\lambda\in \R, \forall \ul{v}\in \R^m.\]</span> Vamos fazer uns exemplos disso:</p>
+<ul>
+<li><p>Seja <span class="math inline">\(A = \begin{pmatrix}
+1 &amp; 0 &amp; -3 \\ 2 &amp; 1 &amp; 5
+\end{pmatrix}\)</span>. Então <span class="math inline">\(T_A: \R^3\to \R^2\)</span> é a transformação linear dada por <span class="math display">\[T_A\begin{pmatrix}
+x \\ y \\ z
+\end{pmatrix} = \begin{pmatrix}
+1 &amp; 0 &amp; -3 \\ 2 &amp; 1 &amp; 5
+\end{pmatrix}\cdot \begin{pmatrix}
+x \\ y \\ z
+\end{pmatrix} = \begin{pmatrix}
+x - 3z \\ 2x + y + 5z
+\end{pmatrix}\in \R^2.\]</span></p></li>
+<li><p>Exemplos 1-3 acima podem ser interpretados dessa forma:</p>
+<ul>
+<li><p>A transformação nula <span class="math inline">\(\R^m\to \R^n\)</span> é a transformação <span class="math inline">\(T_{\ul{0}}\)</span> correspondente à matriz nula <span class="math inline">\(n\times m\)</span> <span class="math display">\[\ul{0} = \begin{pmatrix}
+0 &amp; \cdots &amp; 0 \\
+\vdots &amp; \ddots &amp; \vdots \\
+0 &amp; \cdots &amp; 0
+\end{pmatrix},\]</span> pois <span class="math inline">\(T_{\ul{0}}(\ul{v}) = \ul{0}\cdot\ul{v} = \ul{0}\,,\forall \ul{v}\in \R^m\)</span>.</p></li>
+<li><p>A transformação identidade <span class="math inline">\(\R^n\to \R^n\)</span> é <span class="math inline">\(T_I\)</span>, onde <span class="math inline">\(I\)</span> é a matriz identidade <span class="math inline">\(n\times n\)</span> <span class="math display">\[I = \begin{pmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp;    &amp; 0 \\
+\vdots &amp; &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{pmatrix},\]</span> pois <span class="math inline">\(T_{I}(\ul{v}) = I\ul{v} = \ul{v}\,\,\forall \ul{v}\in \R^n\)</span>.</p></li>
+<li><p>A transformação <span class="math inline">\(T:\R^2\to \R\)</span> de Exemplo 3 corresponde a <span class="math inline">\(T_A\)</span>, em que <span class="math inline">\(A\)</span> é a matriz <span class="math inline">\(1\times 2\)</span> <span class="math display">\[A = \begin{pmatrix}
+2 &amp; -1
+\end{pmatrix},\]</span> pois <span class="math display">\[T_A\begin{pmatrix}
+x \\ y
+\end{pmatrix} = \begin{pmatrix}
+2 &amp; -1
+\end{pmatrix}\begin{pmatrix}
+x \\ y
+\end{pmatrix} = \begin{pmatrix}
+2x - y
+\end{pmatrix} = T((x,y)).\]</span></p></li>
+</ul></li>
+<li><p>A transformação linear correspondente à matriz quadrada <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 0 \\ 0 &amp; 0
+\end{pmatrix}\]</span> é a “projeção no eixo <span class="math inline">\(x\)</span>”: <span class="math display">\[T_A\begin{pmatrix}
+x \\ y
+\end{pmatrix} = \begin{pmatrix}
+1 &amp; 0 \\ 0 &amp; 0
+\end{pmatrix}\begin{pmatrix}
+x \\ y
+\end{pmatrix} = \begin{pmatrix}
+x \\ 0
+\end{pmatrix}:\]</span> <img src="img/transf1.png" class="img-fluid" alt="A projeção para o eixo x"></p>
+<!--$$\begin{tikzpicture}[scale = 1.4]
+
+\draw[-latex] (-2,0) -- (2,0) node[below right]{$x$} ;
+\draw[-latex] (0,-2) -- (0,2) node[left]{$y$};
+
+
+\draw[dashed, -latex] (0.8,1) node {$\bullet$} node[above right] {$(x,y)$} -- (0.8,0) node {$\times$} node[below] {$(x,0)$};
+
+\draw[dashed, -latex] (-1,-0.6) node {$\bullet$} node[below] {$(x',y')$} -- (-1,0) node {$\times$} node[above] {$(x',0)$};
+\end{tikzpicture}$$ -->
+<p>Similarmente, a matriz <span class="math inline">\(n\times n\)</span> <span class="math inline">\(E_{ii}\)</span> corresponde à transformaçaõ linear <span class="math inline">\(\R^n\to \R^n\)</span> “projeção na coordenada <span class="math inline">\(i\)</span>”: <span class="math display">\[T_{E_{ii}}\begin{pmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_i \\ \vdots \\ x_n
+\end{pmatrix} = \begin{pmatrix}
+0 \\ 0 \\ \vdots \\ x_i \\ \vdots \\ 0
+\end{pmatrix}.\]</span></p></li>
+</ul></li>
+</ol>
+</div>
+<div id="exs-">
+<p>Seja <span class="math inline">\(T\colon V\to W\)</span> uma transformação linear, sejam <span class="math inline">\(\ul{v_1},\ldots,\ul{v_k}\in V\)</span> e <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in\R\)</span>. Mostre que <span class="math display">\[T(\lambda_1\ul{v_1}+\cdots+\lambda_k\ul{v_k})=\lambda_1T(\ul{v_1})+\cdots+\lambda_kT(\ul{v_k}).\]</span> Este exercício diz que uma transformação linear leva uma combinação linear de vetorores para a combinação linear das suas imagens com os mesmos coeficientes.</p>
+</div>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 42.1</strong></span> Qualquer transformação linear <span class="math inline">\(T : V\to W\)</span> leva <span class="math inline">\(\ul{0}\)</span> em <span class="math inline">\(\ul{0}\)</span>.</p>
+</div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>O vetor <span class="math inline">\(\ul{0} = 0\cdot \ul{0}\)</span>. Logo <span class="math display">\[T(\ul{0}) = T(0\cdot\ul{0}) = 0\cdot T(\ul{0}) = \ul{0}.\]</span>&nbsp;◻</p>
 </div>
-<p>Seja <span class="math inline">\(f\)</span> nilpotente com <span class="math inline">\(f^k=0\)</span> e suponha que <span class="math inline">\(k\)</span> é o menor tal inteiro positivo. Então <span class="math display">\[
-V &gt; \mbox{Im}(f) &gt; \mbox{Im}(f^2) &gt;  \cdots &gt; \mbox{Im}(f^{k-1}) &gt; \mbox{Im}(f^k)=0
-\]</span> Ou seja, pondo <span class="math inline">\(V_i=\mbox{Im}(f^{k-i})\)</span>, obtemos uma cadeia <span class="math display">\[
-0 = V_0 &lt; V_1 &lt; V_2 &lt; \cdots &lt; V_{k-1} &lt; V_k = V
-\]</span> tal que <span class="math inline">\(f(V_i)=V_{i-1}\)</span> para todo <span class="math inline">\(i\geq 1\)</span>. Escolha uma base <span class="math inline">\(\{b_1,\ldots,b_{i_1}\}\)</span> para <span class="math inline">\(V_1\)</span>. Estenda esta basa para uma base <span class="math display">\[
-\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2}\}
-\]</span> de <span class="math inline">\(V_2\)</span>. Continuando assim, obtemos uma base <span class="math display">\[
-\{b_1,\ldots,b_{i_1},b_{i_1+1},\ldots,b_{i_2},\ldots,b_{i_{k-1}+1},\ldots,b_{i_k}\}
-\]</span> de <span class="math inline">\(V\)</span> tal que, para todo <span class="math inline">\(j\in\{1,\ldots,k\}\)</span>, <span class="math display">\[
-\{b_1,\ldots,b_{i_j}\}
-\]</span> é uma base de <span class="math inline">\(V_j\)</span>. Observamos que nesta base, a matriz de <span class="math inline">\(f\)</span> é triangular superior com zeros no diagonal. Isso nos levou ao seguinte teorema.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.2</strong></span> Se <span class="math inline">\(f:V\to V\)</span> é nilpotente, então existe uma base <span class="math inline">\(B\)</span> tal que <span class="math inline">\([f]_B^B\)</span> é triangular superior com zeros no diagonal. Em particular, <span class="math inline">\(\mbox{pcar}_f(t)=t^{\dim V}\)</span>.</p>
-</div>
-<p>Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e seja <span class="math inline">\(v\in V\)</span>. Definimos nos exercícios o polinômio <span class="math inline">\(m_{f,v}(t)\)</span> como o polinômio mônico (não nulo) de menor grau tal que <span class="math inline">\(m_{f,v}(f)(v)=0\)</span>. Como no caso do polinômio minimal <span class="math inline">\(m_f(t)\)</span>, temos que <span class="math inline">\(m_{f,v}(t)\)</span> é gerador do ideal <span class="math display">\[
-I_{f,v}=\{p(t)\in \F[t]\mid p(f)(v)=0\}.
-\]</span> Ou seja, se <span class="math inline">\(p(t)\)</span> é um polinômio qualquer com <span class="math inline">\(p(f)(v)=0\)</span>, então <span class="math inline">\(m_{f,v}(t)\mid p(t)\)</span>.</p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.3</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e <span class="math inline">\(v\in V\)</span>. Assuma que <span class="math inline">\(v\in V\)</span> e que <span class="math inline">\(f^m(v)=0\)</span> com algum <span class="math inline">\(m\geq 1\)</span> e seja <span class="math inline">\(m\)</span> o menor tal número. Então <span class="math inline">\(f^0(v)=v,f(v),f^2(v),\ldots,f^{m-1}(v)\)</span> são linearmente independentes.</p>
+<p>Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais. Podemos considerar o conjunto de todas as transformações lineares de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span>: <span class="math display">\[\mathcal{L}(V,W) := \{T: V\to W\,|\,T\hbox{ uma transformação linear}\}.\]</span></p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 42.1</strong></span> <span class="math inline">\(\mathcal{L}(V,W)\)</span> é um espaço vetorial.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Como <span class="math inline">\(f^m(v)=0\)</span>, temos que <span class="math inline">\(m_{f,v}(t)\)</span> é um divisor de <span class="math inline">\(t^m\)</span>. Por outro lado, a minimalidade de <span class="math inline">\(m\)</span> implica que <span class="math inline">\(m_{f,v}(t)=t^m\)</span>. Ora assuma que <span class="math display">\[
-\alpha_0 v+\alpha_1 f(v)+\cdots+\alpha_{m-1}f^{m-1}(v)=0.
-\]</span> Então <span class="math inline">\(p(t)=\alpha_0+\alpha_1 t+\cdots+\alpha_{m-1}t^{m-1}\in I_{f,v}\)</span>; ou seja, <span class="math inline">\(p^m\mid p(t)\)</span>. Como <span class="math inline">\(\mbox{deg}(p(t))\leq m-1\)</span>, temos que <span class="math inline">\(p(t)=0\)</span>; ou seja, <span class="math inline">\(\alpha_0=\alpha_1=\cdots=\alpha_{m-1}=0\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Já que elementos de <span class="math inline">\(\mathcal{L}(V,W)\)</span> são funções <span class="math inline">\(V\to W\)</span>, <span class="math display">\[\mathcal{L}(V,W)\subseteq \mathcal{F}(V,W).\]</span> Então só precisamos confirmar que <span class="math inline">\(\mathcal{L}(V,W)\)</span> é subespaço de <span class="math inline">\(\mathcal{F}(V,W)\)</span>. Ou seja, que a soma de duas TLs é uma TL, e que o produto por escalar de uma TL é uma TL. Então sejam <span class="math inline">\(S,T\in \mathcal{L}(V,W)\)</span> e <span class="math inline">\(\ul{u}, \ul{v}\in V, \lambda\in \R\)</span>. <span class="math display">\[\begin{aligned}
+(S+T)(\ul{u}+\ul{v}) &amp; = S(\ul{u}+\ul{v}) + T(\ul{u}+\ul{v})\qquad\qquad(\hbox{def de soma em }\mathcal{F}(V,W)) \\
+&amp; = S(\ul{u}) + S(\ul{v}) + T(\ul{u}) + T(\ul{v}) \quad (S,T\hbox{ são TLs}) \\
+&amp; = S(\ul{u}) + T(\ul{u}) + S(\ul{v}) + T(\ul{v}) \\
+&amp; = (S+T)(\ul{u}) + (S+T)(\ul{v})\qquad\qquad\checkmark
+\end{aligned}\]</span> Similarmente <span class="math display">\[\begin{aligned}
+(S+T)(\lambda\ul{u})&amp; = S(\lambda\ul{u}) + T(\lambda\ul{u}) \\
+&amp; = \lambda S(\ul{u}) + \lambda T(\ul{u}) \\
+&amp; = \lambda (S(\ul{u}) + T(\ul{u})) \\
+&amp; = \lambda (S+T)(\ul{u}).\qquad\qquad\checkmark
+\end{aligned}\]</span> Logo <span class="math inline">\(S+T\)</span> é transformação linear.</p>
+<p><u>Exercício</u>: Sejam <span class="math inline">\(T\in \mathcal{L}(V,W)\)</span> e <span class="math inline">\(\lambda\in \R\)</span>. Mostre que a função <span class="math inline">\(\lambda T\)</span> é uma transformação linear.</p>
+<p>Então <span class="math inline">\(\mathcal{L}(V,W)\)</span> é fechado por somas e produtos por escalar. Ou seja, <span class="math inline">\(\mathcal{L}(V,W)\)</span> é subespaço de <span class="math inline">\(\mathcal{F}(V,W)\)</span>.&nbsp;◻</p>
 </div>
-<p>Se <span class="math inline">\(V\)</span>, <span class="math inline">\(f\)</span> e <span class="math inline">\(v\)</span> são como no lema anterior, então o espaço <span class="math inline">\(U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle\)</span> é <span class="math inline">\(f\)</span>-invariante. O vetor <span class="math inline">\(v\)</span> é chamado de <b>vetor <span class="math inline">\(f\)</span>-cíclico</b> e o espaço <span class="math inline">\(U\)</span> é dito <b><span class="math inline">\(f\)</span>-cíclico</b> gerado por <span class="math inline">\(v\)</span>. Note que se <span class="math inline">\(U\)</span> é um espaço <span class="math inline">\(f\)</span>-cíclico, então a matriz da restrição <span class="math inline">\(f|_U\)</span> na base <span class="math inline">\(B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}\)</span> tem a forma <span class="math display">\[
-\begin{pmatrix} 0 &amp; 1 &amp;  0 &amp; \cdots &amp; 0  \\ 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; \ddots &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \end{pmatrix}
-\]</span></p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.4</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(f\)</span>-espaço cíclico com base <span class="math inline">\(B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}\)</span>. Então <span class="math display">\[
-m_f(t)=\mbox{pcar}_f(t)=t^m.
-\]</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 42.2</strong></span> No caso especial em que <span class="math inline">\(W = \R\)</span>, o espaço vetorial <span class="math inline">\(\mathcal{L}(V,\R)\)</span> se chama o <em>espaço dual</em> de <span class="math inline">\(V\)</span> e está denotado por <span class="math inline">\(V^*\)</span>. Os elementos de <span class="math inline">\(V^*\)</span> são transformações lineares <span class="math inline">\(V\to \R\)</span> e são chamados de <em>funcionais</em> ou <em>formas lineares</em> de <span class="math inline">\(V\)</span>.</p>
 </div>
+</section>
+<section id="transformações-lineares-e-matrizes" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="transformações-lineares-e-matrizes">Transformações lineares e matrizes</h2>
+<p>Quando temos dois conjuntos <span class="math inline">\(B,C\)</span>, é muito fácil definir uma função <span class="math inline">\(f:B\to C\)</span>, pois pode mandar os elementos de <span class="math inline">\(B\)</span> para <span class="math inline">\(C\)</span> como quiser, sem condições nenhumas. Com uma transformação linear <span class="math inline">\(T:V\to W\)</span>, não temos tanta liberdade: temos que mandar <span class="math inline">\(\ul{0}\)</span> para <span class="math inline">\(\ul{0}\)</span>, por exemplo, e <span class="math inline">\(T\)</span> tem que preservar soma e múltiplo escalar. Mas vamos ver que, de fato, transformações lineares são “igualmente fáceis” como funções, de alguma forma.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 42.2</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial com base <span class="math inline">\(B\)</span> e <span class="math inline">\(W\)</span> outro espaço vetorial. Seja <span class="math inline">\(f:B\to W\)</span> uma função qualquer. Então existe uma única transformação linear <span class="math inline">\(T_f:V\to W\)</span> com a propriedade que <span class="math display">\[T_f(\ul{b}) = f(\ul{b})\quad\hbox{para todo }\ul{b}\in B.\]</span></p>
+</div>
+<p>Este teorema diz que “transformações lineares de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span> são a”mesma coisa” como funções de uma base de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span>“. Vamos prová-lo:</p>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Podemos observar que a matriz <span class="math inline">\([f]_B^B\)</span> é a matriz companheira do polinômio <span class="math inline">\(t^n\)</span>. Por um exercício em uma lista anterior, <span class="math inline">\(m_f(t)=\mbox{pcar}_f(t)=t^m\)</span>.</p>
-<p>Alternativamente, podemos também observar que <span class="math inline">\(f^m(b)=0\)</span> para todo <span class="math inline">\(b\in B\)</span>. Portanto <span class="math inline">\(f^m=0\)</span> e obtemos que <span class="math inline">\(m_f(t)\mid t^m\)</span>. Por outro lado, <span class="math inline">\(f^{m-1}(f)(v)\neq 0\)</span> e assim <span class="math inline">\(t^{m-1}\)</span> não é múltiplo de <span class="math inline">\(m_f(t)\)</span>. Portanto <span class="math inline">\(m_f(t)=t^m\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Dada uma função <span class="math inline">\(f:B\to W\)</span>, como vamos definir a transformação linear <span class="math inline">\(T_f\)</span>? Já que <span class="math inline">\(B\)</span> é uma base, todo vetor <span class="math inline">\(\ul{v}\in V\)</span> pode ser escrito como uma combinação linear <span class="math display">\[\ul{v} = \lambda_1\ul{b_1} + \cdots + \lambda_n\ul{b_n}\]</span> de elementos de <span class="math inline">\(B\)</span>. Já que <span class="math inline">\(T_f\)</span> é TL e <span class="math inline">\(T_f(\ul{b}) = f(\ul{b})\,\forall b\in B\)</span>, estamos obrigados a definir <span class="math display">\[\begin{aligned}
+T_f(\ul{v}) &amp; = T_f(\lambda_1\ul{b_1} + \cdots + \lambda_n\ul{b_n}) \\
+&amp; = \lambda_1T_f(\ul{b_1}) + \cdots + \lambda_nT_f(\ul{b_n}) \quad(T_f\hbox{ TL})\\
+&amp; = \lambda_1f(\ul{b_1}) + \cdots + \lambda_nf(\ul{b_n})\quad\,\,(T_f(\ul{b_i}) = f(\ul{b_i})).
+\end{aligned}\]</span> Temos que confirmar umas coisas, todas sendo fáceis:</p>
+<ul>
+<li><p><span class="math inline">\(T_f\)</span> é bem definida. Isto é, que não mandamos o mesmo elemento de <span class="math inline">\(V\)</span> para dois lugares diferentes sem querer. Mas isso segue pois todo elemento de <span class="math inline">\(V\)</span> tem uma <em>única</em> expressão como combinação linear dos elementos da base.</p></li>
+<li><p><span class="math inline">\(T_f\)</span> é TL. Dados <span class="math inline">\(\ul{u}, \ul{v}\in V\)</span>, escreva <span class="math display">\[\ul{u} = \lambda_1 \ul{b_1} + \cdots + \lambda_n\ul{b_n}\]</span> <span class="math display">\[\ul{v} = \mu_1 \ul{b_1} + \cdots + \mu_n\ul{b_n},\]</span> (já que alguns dos <span class="math inline">\(\lambda_i, \mu_i\)</span> podem ser <span class="math inline">\(0\)</span>, não tem problema de escrever assim). Então, <span class="math display">\[\begin{aligned}
+T_f(\ul{u} + \ul{v}) &amp; = T_f\left((\lambda_1 + \mu_1) \ul{b_1} + \cdots + (\lambda_n + \mu_n)\ul{b_n}\right) \\
+&amp; = (\lambda_1 + \mu_1) f(\ul{b_1}) + \cdots + (\lambda_n + \mu_n)f(\ul{b_n}) \\
+&amp; = \left(\lambda_1f(\ul{b_1}) + \cdots + \lambda_nf(\ul{b_n})\right) + \left(\mu_1 f(\ul{b_1}) + \cdots + \mu_nf(\ul{b_n})\right) \\
+  &amp; = T_f(\ul{u}) + T_f(\ul{v}).
+\end{aligned}\]</span> <u>Exercício</u>: Prove que <span class="math inline">\(T_f(\lambda\ul{u}) = \lambda T_f(\ul{u})\,\forall \lambda\in \R, \forall \ul{v}\in V\)</span>.</p></li>
+</ul>
+<p>Agora temos uma função <span class="math display">\[\varphi:\{f\colon B\to W\mid \mbox{$f$ é uma função}\}\longrightarrow \{T\colon V\to W\mid \mbox{$T$ é TL}\}\]</span> dada por <span class="math inline">\(f\mapsto T_f\)</span>. Afirmo que <span class="math inline">\(\varphi\)</span> é bijetiva:</p>
+<ul>
+<li><p>Dada uma TL <span class="math inline">\(T:V\to W\)</span>, podemos restringir o domínio para <span class="math inline">\(B\)</span> para obter uma função <span class="math inline">\(T|_{B} : B\to W\)</span>. Mas <span class="math inline">\(T = \varphi(T|_{B})\)</span>.</p></li>
+<li><p>Suponha que <span class="math inline">\(f,g:B\to W\)</span> são funções tais que <span class="math inline">\(T_f = T_g\)</span>. Para todo <span class="math inline">\(\ul{b}\in B\)</span> temos <span class="math display">\[f(\ul{b}) = T_f(\ul{b}) = T_g(\ul{b}) = g(\ul{b})\]</span> então <span class="math inline">\(f=g\)</span> e <span class="math inline">\(\varphi\)</span> é injetiva.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 55.5</strong></span> Suponha que <span class="math inline">\(f:V\to V\)</span> é um endomorfismo tal que <span class="math inline">\(m_f(t)=(t-\lambda)^k\)</span>. Já vimos em cima que <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> é nilpotente e agora assuma que <span class="math inline">\(V\)</span> é <span class="math inline">\(f_0\)</span>-cíclico. Ou seja, existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(B=\{f_0^{n-1}(v),\ldots,f_0(v),v\}\)</span> é base de <span class="math inline">\(V\)</span>. Tem-se que <span class="math display">\[
-[f]_B^B=\begin{pmatrix} \lambda &amp; 1 &amp;  0 &amp; \cdots &amp; 0  \\ 0 &amp; \lambda &amp; 1 &amp; \cdots &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; \ddots &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; \lambda \end{pmatrix}
-\]</span> Além disso, <span class="math inline">\(m_f(t)=(t-\lambda)^n\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Só notar que <span class="math inline">\(f=f_0+\lambda\mbox{id}_V\)</span> e então <span class="math display">\[
-[f]_B^B=[f_0]_B^B+[\lambda\mbox{id}_V]_B^B=[f_0]_B^B+I_n
-\]</span> Observe também que <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> tem polinômio minimal <span class="math inline">\(t^n\)</span> pelo resultado anterior. Logo <span class="math inline">\(m_f(t)=(t-\lambda) ^n\)</span>.</p>
-</div>
+<p>Agora sejam <span class="math inline">\(V = \R^m\,,\,W = \R^n\)</span> com elementos escritos como vetores colunas, e <span class="math display">\[B = \{E_1\,,\,E_2\,,\,\ldots\,,\,E_m\} = \left\{\begin{pmatrix}
+1 \\ 0 \\ 0 \\ \vdots \\ 0
+\end{pmatrix}\,,\,\begin{pmatrix}
+0 \\ 1 \\ 0 \\ \vdots \\ 0
+\end{pmatrix}\,,\,\ldots\,,\,\begin{pmatrix}
+0 \\ 0 \\ 0 \\ \vdots \\ 1
+\end{pmatrix}\right\}\]</span> a base canônica de <span class="math inline">\(V\)</span>. Do teorema, uma transformação linear <span class="math inline">\(T:V\to W\)</span> está determinada completamente pelas imagens dos elementos de <span class="math inline">\(B\)</span>. Escreva <span class="math display">\[T(E_j) = \begin{pmatrix}
+a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
+\end{pmatrix}\in W = \R^n.\]</span> Seja <span class="math inline">\(A\)</span> a matriz <span class="math inline">\(n\times m\)</span> cuja <span class="math inline">\(j\)</span>-ésima coluna é <span class="math inline">\(T(E_j)\)</span>: <span class="math display">\[A = \begin{pmatrix}
+T(E_1) &amp; T(E_2) &amp; \cdots &amp; T(E_m)
+\end{pmatrix} = \begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1m} \\ a_{21} &amp; \cdots &amp; a_{2j} &amp; \cdots &amp; a_{2m} \\
+\vdots &amp; &amp; \vdots &amp; &amp; \vdots \\
+a_{n1} &amp; \cdots &amp; a_{nj} &amp; \cdots &amp; a_{nm}
+\end{pmatrix}.\]</span> Afirmo que <span class="math inline">\(T = T_A\)</span>. Para ver isso, basta confirmar que <span class="math inline">\(T_A(E_j) = T(E_j)\)</span> para cada elemento da base de <span class="math inline">\(V\)</span>. Mas <span class="math display">\[\begin{aligned}
+T_A(E_j) &amp; = \begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1m} \\ a_{21} &amp; \cdots &amp; a_{2j} &amp; \cdots &amp; a_{2m} \\
+\vdots &amp; &amp; \vdots &amp; &amp; \vdots \\
+a_{n1} &amp; \cdots &amp; a_{nj} &amp; \cdots &amp; a_{nm}
+\end{pmatrix}\cdot \begin{pmatrix}
+0 \\ \vdots \\ 1 \\ \vdots \\ 0
+\end{pmatrix}\quad(j\hbox{-ésima linha}) \\
+&amp; = \begin{pmatrix}
+a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
+\end{pmatrix} \\
+&amp; = T(E_j).\qquad\qquad \checkmark
+\end{aligned}\]</span></p>
+<p>Já que toda matriz <span class="math inline">\(n\times m\)</span> <span class="math inline">\(A\)</span> dá uma TL <span class="math inline">\(T_A:\R^m\to \R^n\)</span> e toda TL <span class="math inline">\(\R^m\to \R^n\)</span> tem a forma <span class="math inline">\(T_A\)</span> para alguma matriz <span class="math inline">\(n\times m\)</span>, mostramos de alguma forma que matrizes <span class="math inline">\(n\times m\)</span> e TLs <span class="math inline">\(\R^m\to \R^n\)</span> são “a mesma coisa”. Vamos fazer essa frase cada vez mais precisa.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.2</strong></span> A matriz no lema anterior chama-se <b>bloco de Jordan</b> com autovalor <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 42.2</strong></span> Um <em>isomorfismo</em> <span class="math inline">\(\rho:V\to W\)</span> de espaços vetoriais é uma transformação linear <span class="math inline">\(\rho:V\to W\)</span> bijetiva. Quando existir um isomorfismo de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span>, diremos que <span class="math inline">\(V,W\)</span> são espaços vetoriais <em>isomorfos</em>.</p>
+</div>
+<p>Pensamos em espaços vetoriais isomorfos como sendo essencialmente iguais (como espaços vetoriais) – o isomorfismo está simplesmente “renomeando” os elementos. Vamos falar mais sobre espaços vetoriais isomorfos depois.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 42.3</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>O espaço vetorial <span class="math inline">\(P_3\)</span> de polinômios de grau menor ou igual a três é isomorfo ao espaço <span class="math inline">\(\R^4\)</span>. O isomorfismo é a TL <span class="math display">\[T:P_3\to \R^4,\qquad \alpha_0+\alpha_1x+\alpha_2x^2+\alpha_3x^3\mapsto (\alpha_0,\alpha_1,\alpha_2,\alpha_3).\]</span></p></li>
+<li><p>O espaço vetorial <span class="math inline">\(M_{2,3}(\R)\)</span> de matrizes <span class="math inline">\(2\times 3\)</span> é isomorfo a <span class="math inline">\(\R^6\)</span>; o isomorfismo é <span class="math display">\[T:M_{2,3}(\R)\to \R^6,\qquad \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23} \end{pmatrix} \mapsto
+    (a_{11},a_{12},a_{13},a_{21},a_{22},a_{23}).\]</span></p></li>
+</ol>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 55.1</strong></span> (O Teorema da Decomposição em Espaços Cíclicos) Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo nilpotente. Então <span class="math inline">\(V\)</span> pode ser decomposto em uma soma direta <span class="math inline">\(V=W_1\oplus W_2\oplus \cdots \oplus W_k\)</span> onde os <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-espaços cíclicos.</p>
+<p><span class="theorem-title"><strong>Teorema 42.3</strong></span> Sejam <span class="math inline">\(V = \R^m\)</span> e <span class="math inline">\(W = \R^n\)</span>. A função <span class="math display">\[\rho : M_{n,m}(\R) \to \mathcal{L}(V,W)\]</span> dada por <span class="math inline">\(A\mapsto T_A\)</span> é um isomorfismo de espaços vetoriais.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Este teorema vai ser provado nas aulas seguintes. Neste momento, é mais interessante estudar as suas conseqências.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>A função <span class="math inline">\(\rho\)</span> é</p>
+<ul>
+<li><p>Pois <span class="math inline">\(A,B\in M_{n,m}(\R)\)</span> com <span class="math inline">\(T_A= T_B\)</span> implica que <span class="math inline">\(T_A(E_j) = T_B(E_j)\,\forall j\)</span>. Ou seja, as <span class="math inline">\(j\)</span>-ésima colunas de <span class="math inline">\(A,B\)</span> são iguais para cada <span class="math inline">\(j\)</span>, logo <span class="math inline">\(A=B\)</span>.</p></li>
+<li><p>Mostramos acima que qualquer TL de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span> tem a forma <span class="math inline">\(T_A\)</span> para alguma matriz <span class="math inline">\(n\times m\)</span> <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Dadas matrizes <span class="math inline">\(A,B\)</span>, dizer que <span class="math inline">\(\rho(A+B) = \rho(A) + \rho(B)\)</span> é dizer que <span class="math inline">\(T_{A+B} = T_A + T_B\)</span> como funções <span class="math inline">\(V\to W\)</span>. Mas essas funções são iguais se, e somente se, <span class="math inline">\(T_{A+B}(\ul{v}) = (T_A+T_B)(\ul{v})\,\forall \ul{v}\in V\)</span>. Vamos lá: $$</p>
+<span class="math display">\[\begin{aligned}
+    T_{A+B}(\ul{v}) &amp; = (A+B)\cdot \ul{v} \\
+            &amp; = A\ul{v} + B\ul{v} \\
+            &amp; = T_A(\ul{v}) + T_B(\ul{v}) \\
+            &amp; = (T_A + T_B)(\ul{v}).\qquad\checkmark
+
+\end{aligned}\]</span>
+<p>$$ <u>Exercício</u>: Mostre que <span class="math inline">\(\rho(\lambda A) = \lambda\rho(A)\)</span>.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo e assuma que <span class="math inline">\(V=W_1\oplus W_2\)</span> onde <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-invariantes. Sejam <span class="math inline">\(B_1=\{b_1,\ldots,b_m\}\)</span> e <span class="math inline">\(B_2=\{b_{m+1},\ldots,b_n\}\)</span> bases de <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span>, respetivamente. Então <span class="math inline">\(B=B_1\cup B_2\)</span> é uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\([f]_B^B\)</span> é diagonal em blocos com os blocos sendo <span class="math inline">\([f|_{W_1}]_{B_1}^{B_1}\)</span> e <span class="math inline">\([f|_{W_2}]_{B_2}^{B_2}\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 42.4</strong></span> Encontre as matrizes</p>
+<ol type="1">
+<li><p><span class="math inline">\(A\)</span> da TL <span class="math inline">\(S:\R^3\to \R^3\)</span> que faz uma reflexão no plano <span class="math inline">\(xy\)</span>,</p></li>
+<li><p><span class="math inline">\(B\)</span> da TL <span class="math inline">\(T:\R^3\to \R^3\)</span> que faz uma rotação por <span class="math inline">\(90\)</span> graus em torno do eixo <span class="math inline">\(z\)</span>,</p></li>
+<li><p><span class="math inline">\(C\)</span> da TL que faz <span class="math inline">\(S\)</span> e depois faz <span class="math inline">\(T\)</span>.</p></li>
+</ol>
+<p>R:</p>
+<ol type="1">
+<li><p>As colunas da matriz <span class="math inline">\(A\)</span> são as imagens dos vetores da base canônica de <span class="math inline">\(\R^3\)</span>. Então vamos pegar um vetor da base canônica e refletir ele no plano <span class="math inline">\(xy\)</span>: <span class="math display">\[(1,0,0)\mapsto (1,0,0)\]</span> <span class="math display">\[(0,1,0)\mapsto (0,1,0)\]</span> <span class="math display">\[(0,0,1)\mapsto (0,0,-1).\]</span> A matriz é <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; -1
+\end{pmatrix}.\]</span></p></li>
+<li><p>Para calcular <span class="math inline">\(B\)</span>, faremos uma rotação por <span class="math inline">\(90\)</span> graus em torno do eixo <span class="math inline">\(z\)</span> dos vetores da base canônica:</p>
+<!--$$\begin{tikzpicture}[scale = 1.4]
+
+\draw[-latex] (-2,0) -- (2,0) node[below right]{$x$} ;
+\draw[-latex] (0,-2) -- (0,2) node[left]{$y$};
+
+\draw (0,0) node {$\bullet$} node[below left] {$z$};
+
+\draw[-latex, very thick] (0,0) -- (1.5,0) ;
+\draw[-latex] (0.8,0.2) arc (0:90:0.6);
+
+\draw[-latex, very thick] (0,0) -- (0,1.5) ;
+\draw[-latex] (-0.2,0.8) arc (90:180:0.6);
+\end{tikzpicture}$$-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/transf2.png" class="img-fluid figure-img"></p>
+<figcaption>A rotação por 90 graus</figcaption>
+</figure>
 </div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo com <span class="math inline">\(m_f(t)=(t-\lambda)^\alpha\)</span>. Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="math display">\[(1,0,0)\mapsto (0,1,0)\]</span> <span class="math display">\[(0,1,0)\mapsto (-1,0,0)\]</span> <span class="math display">\[(0,0,1)\mapsto (0,0,1).\]</span> A matriz é <span class="math display">\[B = \begin{pmatrix}
+0 &amp; -1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span></p></li>
+<li><p>Para calcular <span class="math inline">\(C\)</span>, reflete os vetores da base canônica no plano <span class="math inline">\(xy\)</span> e depois virar eles por <span class="math inline">\(90\)</span> graus em torno do eixo <span class="math inline">\(z\)</span>: <span class="math display">\[(1,0,0)\xrightarrow{\hbox{refletir}}(1,0,0)\xrightarrow{\hbox{virar}}(0,1,0)\]</span> <span class="math display">\[(0,1,0)\xrightarrow{\hbox{refletir}}(0,1,0)\xrightarrow{\hbox{virar}}(-1,0,0)\]</span> <span class="math display">\[(0,0,1)\xrightarrow{\hbox{refletir}}(0,0,-1)\xrightarrow{\hbox{virar}}(0,0,-1)\]</span> A matriz é <span class="math display">\[C = \begin{pmatrix}
+0 &amp; -1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1
+\end{pmatrix}.\]</span></p></li>
+</ol>
+<p>Observe que <span class="math display">\[\begin{aligned}
+  (\hbox{matriz de }T)\cdot(\hbox{matriz de }S) &amp; = B\cdot A \\
+  &amp; = \begin{pmatrix}
+0 &amp; -1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}\cdot \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; -1
+\end{pmatrix} \\
+&amp; = \begin{pmatrix}
+0 &amp; -1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1
+\end{pmatrix} \\
+&amp; = C \\
+&amp; = (\hbox{matriz de }T\circ S).
+\end{aligned}\]</span></p>
+</div>
+<p>De fato, a matriz da composição de TLs é sempre o produto das matrizes das TLs. Suponha que temos três espaços vetoriais <span class="math inline">\(\R^l, \R^m, \R^n\)</span> com bases canônicas <span class="math display">\[\begin{aligned}
+  E_k\quad &amp; ,\quad k\in \{1,\ldots,l\} \\
+  F_j\quad &amp; ,\quad j\in \{1,\ldots,m\} \\
+  G_i\quad &amp; ,\quad i\in \{1,\ldots,n\}
+\end{aligned}\]</span> respetivamente. Suponha que temos TLs <span class="math display">\[\R^l \xrightarrow{T_A} \R^m \xrightarrow{T_B} \R^n\]</span> onde <span class="math inline">\(A\)</span> é uma matriz <span class="math inline">\(m\times l\)</span>, <span class="math inline">\(B\)</span> é uma matriz <span class="math inline">\(n\times m\)</span>, e <span class="math inline">\(T_A, T_B\)</span> são as TLs correspondentes.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 42.4</strong></span> A matriz <span class="math inline">\(n\times l\)</span> da composição <span class="math inline">\(T_B\circ T_A\)</span> é a matriz produto <span class="math inline">\(BA\)</span>. Ou seja, <span class="math display">\[T_B\circ T_A = T_{BA}.\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Como foi observado em cima, <span class="math inline">\(f_0=f-\lambda\mbox{id}_V\)</span> é nilpotente. Pelo Teorema da Decomposição, <span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span> onde cada <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f_0\)</span>-cíclico e assim <span class="math inline">\(f_0\)</span>-invariante. Como todo subespaço <span class="math inline">\(U\leq V\)</span> é invariante por <span class="math inline">\(\lambda\mbox{id}_V\)</span>, temos que os <span class="math inline">\(W_i\)</span> são <span class="math inline">\(f\)</span>-invariantes. Ora, escolhendo a base <span class="math inline">\(B_i\)</span> certa para <span class="math inline">\(W_i\)</span>, a matriz da restrição <span class="math inline">\([f|_{W_i}]_{B_i}^{B_i}\)</span> é um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>. Tomando <span class="math inline">\(B\)</span> para a união dos <span class="math inline">\(B_i\)</span>, temos que a matriz <span class="math inline">\([f]_B^B\)</span> é diagonal em bloco com cada bloco sendo um bloco de Jordan com autovalor <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>’Observe primeiro que <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são matrizes <span class="math inline">\(m\times l\)</span> e <span class="math inline">\(n\times m\)</span>, respetivamente, portanto o produto <span class="math inline">\(BA\)</span> pode ser calculado e este produto vai ser uma matriz <span class="math inline">\(n\times l\)</span>. Seja <span class="math inline">\(\ul v\in \R^l\)</span> considerando como vetor coluna <span class="math inline">\(l\times 1\)</span> e verifiquemos que <span class="math display">\[(T_B\circ T_A)(\ul v)= T_B(T_A(v))=T_B(A\ul v)=B(A\ul v)=(BA)\ul v=T_{BA}(\ul v).\]</span>&nbsp;◻</p>
 </div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.2</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo com <span class="math inline">\(m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}\)</span>. Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Pelo Teorema Espectral, <span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span> onde <span class="math inline">\(W_i=\ker(f-\lambda\mbox{id})^{\alpha_i}\)</span>. Além disso, <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f\)</span>-invariante e, pondo <span class="math inline">\(f_i=f|_{W_i}\)</span>, <span class="math inline">\(m_{f_i}(t)=(t-\lambda_i)^{\alpha_i}\)</span>. Escolha uma base <span class="math inline">\(B_i\)</span> para cada <span class="math inline">\(W_i\)</span> tal que <span class="math inline">\([f_i]_{B_i}^{B_i}\)</span> é diagonal em blocos onde cada bloco é um bloco de Jordan com autovalor <span class="math inline">\(\lambda_i\)</span>. Juntando as bases <span class="math inline">\(B_i\)</span>, obtemos que <span class="math inline">\(B=B_1\cup\cdots\cup B_k\)</span> é uma base que satisfaz a afirmação do Corolário.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.3</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo de em <span class="math inline">\(\C\)</span>-espaço <span class="math inline">\(V\)</span> (de dimensão finita) Então existe uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 55.3</strong></span> Dizemos que uma matriz está na forma normal de Jordan, se ela é diagonal em blocos e cada bloco é um bloco de Jordan.</p>
-</div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 55.4</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span> em <span class="math inline">\(M_{n\times n}(\C)\)</span>. Então existe uma matriz <span class="math inline">\(X\in M_{n\times n}(\C)\)</span> invertível tal que <span class="math inline">\(XAX^{-1}\)</span> está na forma normal de Jordan. Ou seja, cada matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é conjugada (semelhante) a uma matriz na forma normal de Jordan.</p>
-</div>
+<p>Então, a conclusão é: “matrizes são transformações lineares entre espaços vetoriais da forma <span class="math inline">\(\R^n\)</span> com respeito às bases canônicas. A composição de tais TLs é dada pela multiplicação das matrizes correspondentes.”</p>
+<p>Uma de nossas tarefas principais agora é para generalizar essa frase para quaisquer espaços vetoriais de dimensão finita, e quaisquer bases deles.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1801,13 +2001,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/primaria.html" class="pagination-link" aria-label="Decomposição primária e decomposição espectral">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Decomposição primária e decomposição espectral</span></span>
+      <a href="../AlgebraLinearI/01_alglin_comput.html" class="pagination-link" aria-label="Computações com Python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Computações com Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/unicidade_jordan.html" class="pagination-link" aria-label="Unicidade da forma normal de Jordan">
-        <span class="nav-page-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Unicidade da forma normal de Jordan</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
