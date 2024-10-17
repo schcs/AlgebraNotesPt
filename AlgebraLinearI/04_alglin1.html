@@ -1375,8 +1375,8 @@ x_1 \\ x_2 \\ \vdots \\ x_i \\ \vdots \\ x_n
 </ul></li>
 </ol>
 </div>
-<div id="exs-">
-<p>Seja <span class="math inline">\(T\colon V\to W\)</span> uma transformação linear, sejam <span class="math inline">\(\ul{v_1},\ldots,\ul{v_k}\in V\)</span> e <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in\R\)</span>. Mostre que <span class="math display">\[T(\lambda_1\ul{v_1}+\cdots+\lambda_k\ul{v_k})=\lambda_1T(\ul{v_1})+\cdots+\lambda_kT(\ul{v_k}).\]</span> Este exercício diz que uma transformação linear leva uma combinação linear de vetorores para a combinação linear das suas imagens com os mesmos coeficientes.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 42.1</strong></span> Seja <span class="math inline">\(T\colon V\to W\)</span> uma transformação linear, sejam <span class="math inline">\(\ul{v_1},\ldots,\ul{v_k}\in V\)</span> e <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in\R\)</span>. Mostre que <span class="math display">\[T(\lambda_1\ul{v_1}+\cdots+\lambda_k\ul{v_k})=\lambda_1T(\ul{v_1})+\cdots+\lambda_kT(\ul{v_k}).\]</span> Este exercício diz que uma transformação linear leva uma combinação linear de vetorores para a combinação linear das suas imagens com os mesmos coeficientes.</p>
 </div>
 <div id="prp-" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposição 42.1</strong></span> Qualquer transformação linear <span class="math inline">\(T : V\to W\)</span> leva <span class="math inline">\(\ul{0}\)</span> em <span class="math inline">\(\ul{0}\)</span>.</p>
@@ -1484,15 +1484,13 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 <ul>
 <li><p>Pois <span class="math inline">\(A,B\in M_{n,m}(\R)\)</span> com <span class="math inline">\(T_A= T_B\)</span> implica que <span class="math inline">\(T_A(E_j) = T_B(E_j)\,\forall j\)</span>. Ou seja, as <span class="math inline">\(j\)</span>-ésima colunas de <span class="math inline">\(A,B\)</span> são iguais para cada <span class="math inline">\(j\)</span>, logo <span class="math inline">\(A=B\)</span>.</p></li>
 <li><p>Mostramos acima que qualquer TL de <span class="math inline">\(V\)</span> a <span class="math inline">\(W\)</span> tem a forma <span class="math inline">\(T_A\)</span> para alguma matriz <span class="math inline">\(n\times m\)</span> <span class="math inline">\(A\)</span>.</p></li>
-<li><p>Dadas matrizes <span class="math inline">\(A,B\)</span>, dizer que <span class="math inline">\(\rho(A+B) = \rho(A) + \rho(B)\)</span> é dizer que <span class="math inline">\(T_{A+B} = T_A + T_B\)</span> como funções <span class="math inline">\(V\to W\)</span>. Mas essas funções são iguais se, e somente se, <span class="math inline">\(T_{A+B}(\ul{v}) = (T_A+T_B)(\ul{v})\,\forall \ul{v}\in V\)</span>. Vamos lá: $$</p>
-<span class="math display">\[\begin{aligned}
+<li><p>Dadas matrizes <span class="math inline">\(A,B\)</span>, dizer que <span class="math inline">\(\rho(A+B) = \rho(A) + \rho(B)\)</span> é dizer que <span class="math inline">\(T_{A+B} = T_A + T_B\)</span> como funções <span class="math inline">\(V\to W\)</span>. Mas essas funções são iguais se, e somente se, <span class="math inline">\(T_{A+B}(\ul{v}) = (T_A+T_B)(\ul{v})\,\forall \ul{v}\in V\)</span>. Vamos lá: <span class="math display">\[\begin{align*}
     T_{A+B}(\ul{v}) &amp; = (A+B)\cdot \ul{v} \\
             &amp; = A\ul{v} + B\ul{v} \\
             &amp; = T_A(\ul{v}) + T_B(\ul{v}) \\
             &amp; = (T_A + T_B)(\ul{v}).\qquad\checkmark
 
-\end{aligned}\]</span>
-<p>$$ <u>Exercício</u>: Mostre que <span class="math inline">\(\rho(\lambda A) = \lambda\rho(A)\)</span>.</p></li>
+\end{align*}\]</span> <u>Exercício</u>: Mostre que <span class="math inline">\(\rho(\lambda A) = \lambda\rho(A)\)</span>.</p></li>
 </ul>
 <p>&nbsp;◻</p>
 </div>
