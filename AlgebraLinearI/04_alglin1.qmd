@@ -145,7 +145,7 @@ uma *transformação linear* (TL) se
         \end{pmatrix}.$$
 :::
 
-:::{#exs-}
+:::{#exr-}
 Seja $T\colon V\to W$ uma transformação linear, sejam
 $\ul{v_1},\ldots,\ul{v_k}\in V$ e $\lambda_1,\ldots,\lambda_k\in\R$.
 Mostre que
@@ -350,13 +350,15 @@ A função $\rho$ é
     dizer que $T_{A+B} = T_A + T_B$ como funções $V\to W$. Mas essas
     funções são iguais se, e somente se,
     $T_{A+B}(\ul{v}) = (T_A+T_B)(\ul{v})\,\forall \ul{v}\in V$. Vamos
-    lá: $$\begin{aligned}
+    lá: 
+\begin{align*}
         T_{A+B}(\ul{v}) & = (A+B)\cdot \ul{v} \\
                 & = A\ul{v} + B\ul{v} \\
                 & = T_A(\ul{v}) + T_B(\ul{v}) \\
                 & = (T_A + T_B)(\ul{v}).\qquad\checkmark
       
-    \end{aligned}$$ [Exercício]{.underline}: Mostre que
+    \end{align*}
+ [Exercício]{.underline}: Mostre que
     $\rho(\lambda A) = \lambda\rho(A)$.
 
  ◻

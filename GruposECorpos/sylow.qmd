@@ -4,7 +4,7 @@ number-sections: true
 lang: pt-BR
 ---
 
-![[Peter Ludvig Meidell Sylow](https://en.wikipedia.org/wiki/Ludvig_Sylow) (1832–1918](https://upload.wikimedia.org/wikipedia/commons/9/9b/Ludwig_Sylow.jpg)
+![[Peter Ludvig Meidell Sylow](https://en.wikipedia.org/wiki/Ludvig_Sylow) (1832–1918)](https://upload.wikimedia.org/wikipedia/commons/9/9b/Ludwig_Sylow.jpg)
 
 ## Subgrupos de Sylow
 
