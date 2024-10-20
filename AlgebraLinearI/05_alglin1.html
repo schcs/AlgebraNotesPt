@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>65&nbsp; SO2 e SO3 – Álgebra</title>
+<title>43&nbsp; O núcleo e a imagem – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/index.html" rel="next">
-<link href="../AlgebraLinearII/ortogonais.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/04_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/so_2_so_3.html"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/05_alglin1.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O núcleo e a imagem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -967,7 +967,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/05_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/05_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O núcleo e a imagem</span></span></a>
   </div>
 </li>
@@ -1110,7 +1110,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/so_2_so_3.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/so_2_so_3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span></a>
   </div>
 </li>
@@ -1258,9 +1258,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/so_2_so_3.html"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/05_alglin1.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O núcleo e a imagem</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></h1>
+<h1 class="title"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">O núcleo e a imagem</span></h1>
 </div>
 
 
@@ -1277,107 +1277,126 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math inline">\(\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\newcommand{\sen}{\textrm{sen}\,}\)</span> Vamos estudar com mais detalhes os grupos <span class="math inline">\(SO_2\)</span> e <span class="math inline">\(SO_3\)</span>. Seja <span class="math inline">\(f:\R^2\to \R^2\)</span> uma transformação ortogonal e seja <span class="math inline">\(A\)</span> a sua matriz na base canônica. Assuma que <span class="math display">\[
-A=\begin{pmatrix} a &amp; b \\ c &amp; d\end{pmatrix}
-\]</span> Note que <span class="math inline">\(a^2+c^2=1\)</span> e assim, podemos assumir sem perder generalidade que <span class="math inline">\(a=\cos\alpha\)</span> e <span class="math inline">\(b=\mbox{sen}\,\alpha\)</span> com algum ângulo <span class="math inline">\(\alpha\)</span>. Além disso, <span class="math inline">\((a,c)\perp (b,d)\)</span> e temos que <span class="math inline">\((b,d)=(-\mbox{sen}\,\alpha,\cos\alpha)\)</span> ou <span class="math inline">\((b,d)=(\mbox{sen}\,\alpha,-\cos\alpha)\)</span>. Obtivemos o seguinte resultado</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 65.1</strong></span> Seja <span class="math inline">\(A\in O_2\)</span> uma matriz ortogonal. Então, existe um ângulo <span class="math inline">\(\alpha\in [0,2\pi)\)</span> tal que <span class="math display">\[
-A=\begin{pmatrix} \cos \alpha &amp; -\mbox{sen}\,\alpha\\ \mbox{sen}\,\alpha &amp; \cos \alpha\end{pmatrix}
-\]</span> ou <span class="math display">\[
-A=\begin{pmatrix} \cos \alpha &amp; \mbox{sen}\,\alpha\\ \mbox{sen}\,\alpha &amp; -\cos \alpha\end{pmatrix}.
-\]</span> Além disso, <span class="math inline">\(A\in SO_2\)</span> se e somente se <span class="math inline">\(A\)</span> é como no primeiro caso.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 43.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais e <span class="math inline">\(T:V\to W\)</span> uma transformação linear.</p>
+<p>O <em>núcleo</em> (ou <em>kernel</em>) de <span class="math inline">\(T\)</span> é <span class="math display">\[\tn{Ker}(T) := \{\ul{v}\in V\,|\, T(\ul{v}) = \ul{0}\}\subseteq V.\]</span></p>
+<p>A <em>imagem</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[\tn{Im}(T) := \{T(\ul{v})\,|\, \ul{v}\in V\} \subseteq W.\]</span></p>
 </div>
-<p>Note que a primeira matriz da teorema anterior é a matriz de uma rotação por <span class="math inline">\(\alpha\)</span> ao redor da origem no sentido antihorário. A segunda matriz é a matriz da reflexão em relação a um eixo que tem ângulo <span class="math inline">\(\alpha/2\)</span> com o eixo <span class="math inline">\(x\)</span>.</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 65.2</strong></span> Uma transformação de <span class="math inline">\(O_2\)</span> ou é uma rotação ao redor da origem ou uma reflexão em relação a um eixo que passa pela origem. As transformações de <span class="math inline">\(SO_2\)</span> são precisamente as rotações ao redor da origem e as transformações com determinante <span class="math inline">\(-1\)</span> são as reflexões.</p>
+<div id="prop-">
+<p>O núcleo de <span class="math inline">\(T\)</span> é subespaço de <span class="math inline">\(V\)</span> e a imagem de <span class="math inline">\(T\)</span> é subespaço de <span class="math inline">\(W\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 65.1</strong></span> Seja <span class="math inline">\(R_\alpha:\R^2\to \R^2\)</span> o elemento de <span class="math inline">\(SO_2\)</span> realizada pela rotação por ângulo <span class="math inline">\(\alpha\)</span>. Seja <span class="math display">\[
-z_\alpha=\cos\alpha+i\mbox{sen}=\exp(i\alpha),\alpha\in\R
-\]</span> Denote por <span class="math inline">\(S^1\)</span> o círculo <span class="math inline">\(S^1=\{z\in \C\mid |z|=1\}\)</span> e defina <span class="math inline">\(f:SO_2\to S^1\)</span> pela regra <span class="math inline">\(R_\alpha\mapsto z_\alpha\)</span>. Demonstre que</p>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiramente <span class="math inline">\(\tn{Ker}(T)\neq \varnothing\)</span>, pois <span class="math inline">\(T(\ul{0}) = \ul{0}\)</span>. Os vetores <span class="math inline">\(\ul{u}, \ul{v}\in \tn{Ker}(T)\)</span> implica que <span class="math inline">\(T(\ul{u}) = T(\ul{v}) = \ul{0}\)</span>. Agora <span class="math display">\[T(\ul{u}+\ul{v}) = T(\ul{u}) + T(\ul{v}) = \ul{0} + \ul{0} = \ul{0},\]</span> logo <span class="math inline">\(\ul{u}+\ul{v}\in \tn{Ker}(T)\)</span> também. Se <span class="math inline">\(\ul{v}\in \tn{Ker}(T), \,\lambda\in \R\)</span>, então <span class="math display">\[T(\lambda\ul{v}) = \lambda T(\ul{v}) = \lambda\cdot\ul{0} = \ul{0}\]</span> então <span class="math inline">\(\lambda\ul{v}\in \tn{Ker}(T)\)</span> também. Segue que <span class="math inline">\(\tn{Ker}(T)\)</span> é subespaço de <span class="math inline">\(V\)</span>.</p>
+<p><span class="math inline">\(\tn{Im}(T)\neq\varnothing\)</span>, pois <span class="math inline">\(\ul{0} = T(\ul{0}) \in \tn{Im(T)}\)</span>. Elementos de <span class="math inline">\(\tn{Im}(T)\)</span> têm a forma <span class="math inline">\(T(\ul{v})\)</span> com <span class="math inline">\(\ul{v}\in V\)</span>. Dados <span class="math inline">\(T(\ul{u}), T(\ul{v})\in \tn{Im}(T)\)</span>, temos <span class="math display">\[T(\ul{u}) + T(\ul{v}) = T(\ul{u} + \ul{v}) \in \tn{Im}(T).\]</span> Dados <span class="math inline">\(T(\ul{v})\in \tn{Im}(T)\)</span> e <span class="math inline">\(\lambda\in \R\)</span>, <span class="math display">\[\lambda T(\ul{v}) = T(\lambda\ul{v}) \in \tn{Im}(T),\]</span> então <span class="math inline">\(\tn{Im(T)}\)</span> é subespaço de <span class="math inline">\(W\)</span>.&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 43.1</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>Considere <span class="math inline">\(T:V\to W\)</span>.</p>
 <ul>
-<li><span class="math inline">\(f\)</span> é uma bijeção;</li>
-<li><span class="math inline">\(f(R_\alpha R_\beta)=f(R_\alpha)f(R_\beta)\)</span> para todo <span class="math inline">\(R_\alpha,R_\beta\in SO_2\)</span>.</li>
-</ul>
-<p>Na linguávem algébrica, podemos dizer que <span class="math inline">\(SO_2\)</span> e <span class="math inline">\(S^1\)</span> são grupos isomorfos.</p>
+<li><p><span class="math inline">\(\tn{Im}(T) = W\)</span> se, e somente se, <span class="math inline">\(T\)</span> é sobrejetiva.</p></li>
+<li><p><span class="math inline">\(\tn{Ker}(T) = V\)</span> se, e somente se, <span class="math inline">\(T\)</span> é a transformação nula.</p></li>
+</ul></li>
+<li><p>Seja <span class="math inline">\(f:V\to \R\)</span> um funcional. Se <span class="math inline">\(f\)</span> não é nulo, então <span class="math inline">\(f\)</span> é sobrejetivo, pois a imagem de <span class="math inline">\(f\)</span> é um subespaço de <span class="math inline">\(\R\)</span> diferente de <span class="math inline">\(\{\ul{0}\}\)</span> e os únicos subespaços de <span class="math inline">\(\R\)</span> são <span class="math inline">\(\{\ul{0}\}\)</span> e <span class="math inline">\(\R\)</span>, logo <span class="math inline">\(\tn{Im}(f) = \R\)</span>.</p></li>
+<li><p>Considere a TL <span class="math inline">\(T_A:\R^4\to \R^3\)</span>, onde <span class="math display">\[A = \begin{pmatrix}
+  1 &amp; 2 &amp; 0 &amp; 3 \\
+  0 &amp; 0 &amp; 1 &amp; 2 \\
+  0 &amp; 0 &amp; 0 &amp; 0
+  \end{pmatrix}.\]</span> Vamos calcular <span class="math inline">\(\tn{Im}(T_A)\)</span> e <span class="math inline">\(\tn{Ker}(T_A)\)</span>. Temos <span class="math display">\[T_A\begin{pmatrix}
+  w \\ x \\ y \\ z
+  \end{pmatrix} = \begin{pmatrix}
+  1 &amp; 2 &amp; 0 &amp; 3 \\
+  0 &amp; 0 &amp; 1 &amp; 2 \\
+  0 &amp; 0 &amp; 0 &amp; 0
+  \end{pmatrix}\begin{pmatrix}
+  w \\ x \\ y \\ z
+  \end{pmatrix} = \begin{pmatrix}
+  w + 2x + 3z \\ y+2z \\ 0
+  \end{pmatrix}.\]</span> Todo vetor da imagem de <span class="math inline">\(T_A\)</span> tem a forma <span class="math inline">\(\begin{pmatrix}a \\ b \\ 0\end{pmatrix}\)</span>, então <span class="math display">\[\tn{Im}(T_A) \subseteq X = \left\{\left.\begin{pmatrix}a \\ b \\ 0\end{pmatrix}\right| a,b\in \R \right\}.\]</span> Mas <span class="math display">\[T_A\begin{pmatrix}
+  1 \\ 0 \\ 0 \\ 0
+  \end{pmatrix} = \begin{pmatrix}
+  1 \\ 0 \\ 0
+  \end{pmatrix}\quad,\quad T_A\begin{pmatrix}
+  0 \\ 0 \\ 1 \\ 0
+  \end{pmatrix} = \begin{pmatrix}
+  0 \\ 1 \\ 0
+  \end{pmatrix}\]</span> então <span class="math inline">\(\tn{Im}(T_A)\)</span> é um subespaço de <span class="math inline">\(X\)</span> que contém uma base de <span class="math inline">\(X\)</span>. Ou seja, <span class="math inline">\(\tn{Im}(T_A) = X\)</span>.</p>
+<p>Um vetor <span class="math inline">\(\begin{pmatrix}
+  w \\ x \\ y \\ z
+  \end{pmatrix}\)</span> pertence ao núcleo de <span class="math inline">\(T_A\)</span> se, e somente se, <span class="math inline">\(w+2x+3z = 0\)</span> e <span class="math inline">\(y+2z=0\)</span> (e <span class="math inline">\(0=0\)</span>). Isto é, <span class="math inline">\(\tn{Ker}(T_A)\)</span> é o conjunto solução do sistema homogêneo <span class="math display">\[\begin{pmatrix}
+  1 &amp; 2 &amp; 0 &amp; 3 \\
+  0 &amp; 0 &amp; 1 &amp; 2 \\
+  0 &amp; 0 &amp; 0 &amp; 0
+  \end{pmatrix}\begin{pmatrix}
+  w \\ x \\ y \\ z
+  \end{pmatrix} = \ul{0}.\]</span> As variáveis <span class="math inline">\(\boxed{x = \alpha}\)</span> e <span class="math inline">\(\boxed{z = \beta}\)</span> são livres (pois correspondem às colunas sem pivôs). Temos <span class="math display">\[y + 2z = 0 \implies \boxed{y = -2\beta}.\]</span> <span class="math display">\[w + 2x + 3z = 0 \implies \boxed{w = -2\alpha - 3\beta}.\]</span> Logo <span class="math display">\[\tn{Ker}(T_A) = \left\{\left. \begin{pmatrix}-2\alpha-3\beta \\ \alpha \\ -2\beta \\ \beta \end{pmatrix}\right|\,\alpha, \beta\in \R\right\}.\]</span></p></li>
+</ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 65.2</strong></span> Sejam <span class="math inline">\(\varphi\)</span> e <span class="math inline">\(\psi\)</span> ângulos. Seja <span class="math inline">\(\rot{\varphi}\)</span> a rotação em <span class="math inline">\(SO_2\)</span> por <span class="math inline">\(\alpha\)</span> graus e <span class="math inline">\(\refl{\psi}\)</span> a reflexão pelo eixo que passa pela origem e tem ângulo <span class="math inline">\(\psi\)</span> com o eixo <span class="math inline">\(x\)</span>. Demonstre que</p>
+<p><span class="theorem-title"><strong>Exercício 43.1</strong></span> Dada uma matriz <span class="math inline">\(A\)</span>, mostre que o núcleo de <span class="math inline">\(T_A\)</span> é sempre o conjunto solução do sistema homogêneo <span class="math display">\[AX = \ul{0}.\]</span></p>
+</div>
+<p>Observe que no exemplo acima, <span class="math display">\[\dim(\tn{Ker}(T_A)) + \dim(\tn{Im}(T_A)) = 2 + 2 = 4 = \dim(\R^4).\]</span> De fato, esta igualdade <em>sempre</em> vale:</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 43.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais com <span class="math inline">\(V\)</span> de dimensão finita e seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Então <span class="math display">\[\dim(\tn{Ker}(T))+ \dim(\tn{Im}(T)) = \dim(V).\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Já que <span class="math inline">\(\tn{Ker}(T)\)</span> é subespaço de <span class="math inline">\(V\)</span>, seja <span class="math inline">\(\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\}\)</span> uma base de <span class="math inline">\(\tn{Ker}(T)\)</span>, e estende ela para uma base <span class="math inline">\(\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}\)</span> de <span class="math inline">\(V\)</span>. Afirmo que <span class="math inline">\(B=\{T(\ul{v_1})\,,\,\ldots\,,\,T(\ul{v_b})\}\)</span> é uma base de <span class="math inline">\(\tn{Im}(T)\)</span>. <!--Este conjunto:
+
+-   Pois se $T(\ul{v_i}) = T(\ul{v_j})$ com $i\neq j$, então
+    $T(\ul{v_i} -\ul{v_j})\in \tn{Ker}(T)$, logo
+    $$\ul{v_i} - \ul{v_j} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a}.$$
+    Rearranjando, $\ul{v_i}$ é combinação linear dos outros elementos da
+    base
+    $$\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}$$
+    -- impossível.--></p>
 <ul>
-<li><span class="math inline">\(\rot\varphi\rot\psi=\rot{\varphi+\psi}\)</span></li>
-<li><span class="math inline">\(\refl\psi\refl\varphi=\rot{2(\psi-\varphi)}\)</span></li>
-<li><span class="math inline">\(\refl\psi \rot\varphi=\refl{\psi-\varphi/2}\)</span>;</li>
-<li><span class="math inline">\(\rot\psi\refl\varphi=\refl{\varphi+\psi/2}\)</span>.</li>
+<li><p><em><span class="math inline">\(B\)</span> é sistema gerador:</em> Dado <span class="math inline">\(T(\ul{v})\in \tn{Im}(T)\)</span>, escreva <span class="math display">\[\ul{v} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}.\]</span> Temos</p>
+<span class="math display">\[\begin{aligned}
+    T(\ul{v}) &amp; = T( \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) \\
+    &amp; = \mu_1T(\ul{n_1}) + \cdots + \mu_aT(\ul{n_a}) + \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) \\
+    &amp; = \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b})\qquad\qquad (\hbox{pois }T(\ul{n_i}) = 0\,\forall i).
+
+\end{aligned}\]</span>
+<p>Logo <span class="math inline">\(T(\ul{v})\)</span> é uma combinação linear de elementos de <span class="math inline">\(B.\quad\checkmark\)</span></p></li>
+<li><p><em><span class="math inline">\(B\)</span> é sistema l.i.</em> Se <span class="math inline">\(\lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) = \ul{0}\)</span>, então <span class="math display">\[T(\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) = \ul{0},\]</span> logo <span class="math inline">\(\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b} \in \tn{Ker}(T)\)</span>. Já que <span class="math inline">\(\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\}\)</span> gera <span class="math inline">\(\tn{Ker}(T)\)</span>, temos que <span class="math display">\[\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a}\]</span> para alguns <span class="math inline">\(\mu_i\in \R\)</span>. Mas o conjunto <span class="math inline">\(\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}\)</span> é LI, logo <span class="math inline">\(\lambda_i = 0\,\forall i\)</span>. Mostramos que <span class="math inline">\(B\)</span> é LI.</p></li>
 </ul>
-<p>Deduza que toda rotação de <span class="math inline">\(SO_2\)</span> pode ser escrita como uma composição de duas reflexões.</p>
+<p>Então, <span class="math display">\[\dim(\tn{Ker}(T)) + \dim(\tn{Im}(T)) = a + b = \dim(V).\]</span>&nbsp;◻</p>
 </div>
-<p>Para estudar as rotações em <span class="math inline">\(\R^3\)</span>, seja <span class="math inline">\(k=(k_x,k_y,k_z)\in\R^3\)</span> um vetor não nulo e defina a matiz <span class="math display">\[
-K=\begin{pmatrix}0 &amp; -k_z &amp; k_y\\ k_z &amp; 0 &amp; -k_x \\ -k_y &amp; k_x &amp; 0\end{pmatrix}.
-\]</span></p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 65.1</strong></span> Temos para um vetor coluna <span class="math inline">\(v\in\R^3\)</span> que <span class="math inline">\(k\times v=Kv\)</span> onde <span class="math inline">\(k\times v\)</span> denota o produto vetorial. Em particular, <span class="math inline">\(Kk=0\)</span></p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 43.1</strong></span> A transformação linear <span class="math inline">\(T:V\to W\)</span> é injetiva se, e somente se, <span class="math inline">\(\tn{Ker}(T) = \{\ul{0}\}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Temos que <span class="math display">\[\begin{align*}
-k\times v&amp;=\det\begin{pmatrix} i &amp; j &amp; k \\ k_x &amp; k_y &amp; k_z \\ v_x &amp; v_y &amp; v_z \end{pmatrix}
-=(k_yv_z-k_zv_y,-k_xv_z+k_zv_x,k_xv_y-k_yv_x)\\
-&amp;=\begin{pmatrix} 0 &amp; -k_z &amp; k_y \\ k_z &amp; 0 &amp; -k_x \\ -k_y &amp; k_x &amp; 0\end{pmatrix}\begin{pmatrix} v_x \\ v_y \\ v_z\end{pmatrix}.
-\end{align*}\]</span> Ora, <span class="math inline">\(Kk=k\times k=0\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Temos que mostrar duas implicações:</p>
+<ul>
+<li><p><span class="math inline">\(T(\ul{0}) = \ul{0}\)</span> e <span class="math inline">\(T\)</span> é injetiva, então mais ninguém pode ir para <span class="math inline">\(\ul{0}\)</span>. Ou seja, <span class="math inline">\(\tn{Ker}(T) = \{\ul{0}\}\)</span>.</p></li>
+<li><p>Suponha que <span class="math inline">\(T(\ul{u}) = T(\ul{v})\)</span>. Então <span class="math display">\[T(\ul{u} - \ul{v}) = T(\ul{u}) - T(\ul{v}) = T(\ul{u}) - T(\ul{u}) = \ul{0},\]</span> logo <span class="math inline">\(\ul{u} - \ul{v}\in \tn{Ker}(T)\)</span>. Mas <span class="math inline">\(\tn{Ker}(T) = \{\ul{0}\}\)</span>, então <span class="math display">\[\ul{u} - \ul{v} = \ul{0},\]</span> ou seja <span class="math inline">\(\ul{u} = \ul{v}\)</span>, mostrando que <span class="math inline">\(T\)</span> é injetiva.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
+<p>Se lembre que tratamos dois espaços vetoriais <span class="math inline">\(V,W\)</span> como sendo basicamente “iguais” quando existe um isomorfismo entre eles. Vamos usar vários fatos obtidos até agora para concluir que, pensando assim, existem “poucos espaços vetoriais” diferentes.</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 65.3</strong></span> (A fórmiula de Rodriguez) Seja <span class="math inline">\(R:\R^3\to \R^3\)</span> a rotação ao redor de um eixo <span class="math inline">\(k=(k_x,k_y,k_z)\)</span> unitário por ângulo <span class="math inline">\(\vartheta\)</span>. A matriz de <span class="math inline">\(R\)</span> na base canônica é <span class="math display">\[
-[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
-\]</span></p>
+<p><span class="theorem-title"><strong>Teorema 43.2</strong></span> Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais com dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Uma bijeção <span class="math inline">\(f:B\to C\)</span> estende unicamente para um isomorfismo de espaços vetoriais <span class="math inline">\(T_f:V\to W\)</span>. Em particular, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são isomorfos.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Escolha uma base ortonormal de <span class="math inline">\(\R^3\)</span> na forma <span class="math inline">\(k,u,v\)</span> em tal forma que <span class="math inline">\(k\times u = v\)</span>, <span class="math inline">\(u\times v=k\)</span> e <span class="math inline">\(v\times k=u\)</span> e seja <span class="math inline">\(X=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2\)</span>. Como <span class="math inline">\(Kk=K^2k=0\)</span>, temos que <span class="math display">\[
-Xk=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)k=Ik=k.
-\]</span> Agora <span class="math display">\[\begin{align*}
-Xu&amp;=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)u=u+(\sen\vartheta) v-(1-\cos\vartheta)u\\&amp;=
-(\cos\vartheta) u +(\sen\vartheta) v
-\end{align*}\]</span> e <span class="math display">\[\begin{align*}
-Xv&amp;=(I+(\sen\vartheta) K+(1-\cos\vartheta)K^2)v=v-(\sen\vartheta)u-(1-\cos\vartheta)v\\&amp;=
--(\sen\vartheta)u +(\cos\vartheta)v
-\end{align*}\]</span> Logo a matriz de <span class="math inline">\(R\)</span> na base <span class="math inline">\(k,u,v\)</span> é <span class="math display">\[
-\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; \cos\vartheta &amp; -\sen\vartheta \\ 0 &amp; \sen\vartheta &amp; \cos\vartheta
-\end{pmatrix}.
-\]</span> Portanto <span class="math inline">\([R]=X\)</span>. Para provar a segunda igualdade do lema, note que <span class="math inline">\(\|k\|=k_x^2+k_y^2+k_z^2=1\)</span> e assim <span class="math display">\[\begin{align*}
-K^2&amp;=\begin{pmatrix} 0 &amp; -k_z &amp; k_y \\ k_z &amp; 0 &amp; -k_x \\ -k_y &amp; k_x &amp; 0\end{pmatrix}\cdot \begin{pmatrix} 0 &amp; -k_z &amp; k_y \\ k_z &amp; 0 &amp; -k_x \\ -k_y &amp; k_x &amp; 0\end{pmatrix}\\
-&amp;=\begin{pmatrix} -k_z^2-k_y^2 &amp; k_yk_x &amp; k_zk_x \\
-k_xk_y &amp; -k_z^2-k_x^2 &amp; k_zk_y\\
-k_xk_z &amp; k_yk_z &amp; -k_y^2-k_x^2
-\end{pmatrix}
-=k^t\cdot k-I
-\end{align*}\]</span> Logo a matriz de <span class="math inline">\(R\)</span> é <span class="math display">\[\begin{align*}
-X&amp;=I+(\sen\vartheta) K+(1-\cos)K^2=I+(\sen\vartheta) K+(1-\cos\vartheta)(k^t\cdot k-I)
-\\&amp;=
-(\cos\vartheta) I+(\sen\vartheta) K+(1-\cos\vartheta)k^t\cdot k\\
-\end{align*}\]</span></p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Fazendo a composição da bijeção dada com a inclusão de <span class="math inline">\(C\)</span> em <span class="math inline">\(W\)</span> (isto é, a função <span class="math inline">\(C\to W\)</span> que manda <span class="math inline">\(\ul{c}\)</span> em <span class="math inline">\(\ul{c}\)</span>), podemos pensar em <span class="math inline">\(f\)</span> como função <span class="math display">\[f: B \to C \to W.\]</span> Já mostramos que existe uma única transformação linear <span class="math inline">\(T_f:V\to W\)</span> tal que <span class="math inline">\(T_f(\ul{b}) = f(\ul{b})\)</span> para cada <span class="math inline">\(\ul{b}\in B\)</span>. Afirmo que <span class="math inline">\(T_f\)</span> é bijetiva. Ela é</p>
+<ul>
+<li><p>pois <span class="math inline">\(\tn{Im}(T_f)\)</span> é um subespaço de <span class="math inline">\(W\)</span> que contém a base <span class="math inline">\(C\)</span> de <span class="math inline">\(W\)</span>, então <span class="math inline">\(\tn{Im}(T_f) = W\)</span>.</p></li>
+<li><p>Pelo Teorema Núcleo-Imagem, <span class="math inline">\(n=\dim W=\dim\,\mbox{Im}(T_f)=\dim V-\dim \ker T_f=n-\dim\ker T_f\)</span>. Logo, <span class="math inline">\(\dim\ker T_f=0\)</span>; ou seja, <span class="math inline">\(\ker T_f=\{\ul 0\}\)</span> e a Proposição anterior implica que <span class="math inline">\(T_f\)</span> é injetiva.</p></li>
+</ul>
+<p>&nbsp;◻</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 65.3</strong></span> Mostre para um vetor unitário <span class="math inline">\(k=(k_x,k_y,k_z)\)</span> que a matriz <span class="math inline">\(K\)</span> em cima satisfaz <span class="math inline">\(K^3=-K\)</span>. Deduza que para <span class="math inline">\(n\geq 1\)</span> que <span class="math display">\[\begin{align*}
-K^{2n-1}&amp;=(-1)^{n-1} K\\
-K^{2n}&amp;=(-1)^{n-1}K^2.
-\end{align*}\]</span></p>
-</div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 65.4</strong></span> A matriz <span class="math inline">\([R]\)</span> no resultado anterior pode ser escrito como <span class="math display">\[
-\exp(\vartheta K)=\sum_{n\geq 0}\frac{(\vartheta K)^n}{n!}.
-\]</span></p>
+<p>O Teorema anterior é verdadeiro para espaçõs de dimensão infinita, mas neste caso precisa-se considerar os diferentes tipos de infinitos (enumerável, não enumerável, etc). No caso dos espaços de dimensão infinita, o argumento na demonstração que <span class="math inline">\(\ker T_f=\{\ul 0\}\)</span> não é válido (você tá vendo porque?), mas não é difícil substituí-lo com um argumento direto.</p>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 43.1</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span>. Então <span class="math inline">\(V\)</span> é isomorfo a <span class="math inline">\(\R^n\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Usando o exercício anterior, obtemos que <span class="math display">\[\begin{align*}
-\exp(\vartheta K)&amp;=
-\sum_{n\geq 0}\frac{(\vartheta K)^n}{n!}\\&amp;=
-I+\sum_{n\geq 1}\frac{\vartheta^{2n-1}K^{2n-1}}{(2n-1)!}+\sum_{n\geq 1}\frac{\vartheta^{2n}K^{2n}}{(2n)!}\\
-&amp;=
-I+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}K}{(2n-1)!}+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}K^2}{(2n)!}\\
-&amp;=I+K\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}}{(2n-1)!}+K^2\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}}{(2n)!}
-\\
-&amp;=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}
-\\
-&amp;=I+K\sen\vartheta+K^2(1-\cos\vartheta).
-\end{align*}\]</span> Ora o resultado segue do Teorema de Rodriguez.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Os dois têm dimensão <span class="math inline">\(n\)</span>.&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 43.2</strong></span> &nbsp;</p>
+<ol type="1">
+<li>O espaço vetorial <span class="math inline">\(M_{2,3}(\R)\)</span> é isomorfo a <span class="math inline">\(\R^6\)</span>, pois os dois têm dimensão 6. Um isomorfismo <span class="math inline">\(M_{2,3}(\R)\to \R^6\)</span> é dado por <span class="math display">\[\begin{pmatrix}a &amp; b &amp; c \\ d &amp; e &amp; f \end{pmatrix}\mapsto (a,b,c,d,e,f).\]</span> Qualquer bijeção entre bases daria um isomorfismo. Por exemplo, uma outra bijeção entre as bases canônicas daria o isomorfismo <span class="math display">\[\begin{pmatrix}a &amp; b &amp; c \\ d &amp; e &amp; f \end{pmatrix}\mapsto (c , e , f , b , d , a).\]</span> Nem precisamos usar as bases canônicas. Por exemplo, uma outra base de <span class="math inline">\(\R^6\)</span> é <span class="math display">\[\{(1,1,0,0,0,0)\,,\,(0,1,1,0,0,0)\,,\,(0,0,1,1,0,0)\,,\qquad\]</span> <span class="math display">\[\qquad(0,0,0,1,1,0)\,,\,(0,0,0,0,1,1)\,,\,(0,0,0,0,0,1)\}\]</span> (confirme!). Um isomorfismo correspondente pode ser <span class="math display">\[\begin{pmatrix}a &amp; b &amp; c \\ d &amp; e &amp; f \end{pmatrix}\mapsto (a\,,\,a + b\,,\,b+c\,,\,c+d\,,\,d+e\,,\,e+f).\]</span></li>
+</ol>
 </div>
 
 
@@ -1805,13 +1824,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/ortogonais.html" class="pagination-link" aria-label="Operadores ortogonais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span>
+      <a href="../AlgebraLinearI/04_alglin1.html" class="pagination-link" aria-label="Transformações lineares">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Transformações lineares</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/index.html" class="pagination-link" aria-label="Grupos e Corpos">
-        <span class="nav-page-text">Grupos e Corpos</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
