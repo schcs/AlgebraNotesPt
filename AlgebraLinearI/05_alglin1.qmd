@@ -1,0 +1,238 @@
+---
+title: "O núcleo e a imagem"
+number-sections: true
+lang: pt-BR
+--- 
+
+
+:::{#def-}
+Sejam $V,W$ espaços vetoriais e $T:V\to W$ uma transformação linear.
+
+O *núcleo* (ou *kernel*) de $T$ é
+$$\tn{Ker}(T) := \{\ul{v}\in V\,|\, T(\ul{v}) = \ul{0}\}\subseteq V.$$
+
+A *imagem* de $T$ é
+$$\tn{Im}(T) := \{T(\ul{v})\,|\, \ul{v}\in V\} \subseteq W.$$
+:::
+
+:::{#prop-}
+O núcleo de $T$ é subespaço de $V$ e a imagem de $T$ é subespaço de $W$.
+:::
+
+:::{.proof}
+Primeiramente $\tn{Ker}(T)\neq \varnothing$, pois
+$T(\ul{0}) = \ul{0}$. Os vetores $\ul{u}, \ul{v}\in \tn{Ker}(T)$ implica
+que $T(\ul{u}) = T(\ul{v}) = \ul{0}$. Agora
+$$T(\ul{u}+\ul{v}) = T(\ul{u}) + T(\ul{v}) = \ul{0} + \ul{0} = \ul{0},$$
+logo $\ul{u}+\ul{v}\in \tn{Ker}(T)$ também. Se
+$\ul{v}\in \tn{Ker}(T), \,\lambda\in \R$, então
+$$T(\lambda\ul{v}) = \lambda T(\ul{v}) = \lambda\cdot\ul{0} = \ul{0}$$
+então $\lambda\ul{v}\in \tn{Ker}(T)$ também. Segue que $\tn{Ker}(T)$ é
+subespaço de $V$.
+
+$\tn{Im}(T)\neq\varnothing$, pois $\ul{0} = T(\ul{0}) \in \tn{Im(T)}$.
+Elementos de $\tn{Im}(T)$ têm a forma $T(\ul{v})$ com $\ul{v}\in V$.
+Dados $T(\ul{u}), T(\ul{v})\in \tn{Im}(T)$, temos
+$$T(\ul{u}) + T(\ul{v}) = T(\ul{u} + \ul{v}) \in \tn{Im}(T).$$ Dados
+$T(\ul{v})\in \tn{Im}(T)$ e $\lambda\in \R$,
+$$\lambda T(\ul{v}) = T(\lambda\ul{v}) \in \tn{Im}(T),$$ então
+$\tn{Im(T)}$ é subespaço de $W$. ◻
+:::
+
+:::{#exm-}
+1.  Considere $T:V\to W$.
+
+    -   $\tn{Im}(T) = W$ se, e somente se, $T$ é sobrejetiva.
+
+    -   $\tn{Ker}(T) = V$ se, e somente se, $T$ é a transformação nula.
+
+2.  Seja $f:V\to \R$ um funcional. Se $f$ não é nulo, então $f$ é
+    sobrejetivo, pois a imagem de $f$ é um subespaço de $\R$ diferente
+    de $\{\ul{0}\}$ e os únicos subespaços de $\R$ são $\{\ul{0}\}$ e
+    $\R$, logo $\tn{Im}(f) = \R$.
+
+3.  Considere a TL $T_A:\R^4\to \R^3$, onde $$A = \begin{pmatrix}
+      1 & 2 & 0 & 3 \\
+      0 & 0 & 1 & 2 \\
+      0 & 0 & 0 & 0
+      \end{pmatrix}.$$ Vamos calcular $\tn{Im}(T_A)$ e $\tn{Ker}(T_A)$.
+    Temos $$T_A\begin{pmatrix}
+      w \\ x \\ y \\ z
+      \end{pmatrix} = \begin{pmatrix}
+      1 & 2 & 0 & 3 \\
+      0 & 0 & 1 & 2 \\
+      0 & 0 & 0 & 0
+      \end{pmatrix}\begin{pmatrix}
+      w \\ x \\ y \\ z
+      \end{pmatrix} = \begin{pmatrix}
+      w + 2x + 3z \\ y+2z \\ 0
+      \end{pmatrix}.$$ Todo vetor da imagem de $T_A$ tem a forma
+    $\begin{pmatrix}a \\ b \\ 0\end{pmatrix}$, então
+    $$\tn{Im}(T_A) \subseteq X = \left\{\left.\begin{pmatrix}a \\ b \\ 0\end{pmatrix}\right| a,b\in \R \right\}.$$
+    Mas $$T_A\begin{pmatrix}
+      1 \\ 0 \\ 0 \\ 0
+      \end{pmatrix} = \begin{pmatrix}
+      1 \\ 0 \\ 0
+      \end{pmatrix}\quad,\quad T_A\begin{pmatrix}
+      0 \\ 0 \\ 1 \\ 0
+      \end{pmatrix} = \begin{pmatrix}
+      0 \\ 1 \\ 0
+      \end{pmatrix}$$ então $\tn{Im}(T_A)$ é um subespaço de $X$ que
+    contém uma base de $X$. Ou seja, $\tn{Im}(T_A) = X$.
+
+    Um vetor $\begin{pmatrix}
+      w \\ x \\ y \\ z
+      \end{pmatrix}$ pertence ao núcleo de $T_A$ se, e somente se,
+    $w+2x+3z = 0$ e $y+2z=0$ (e $0=0$). Isto é, $\tn{Ker}(T_A)$ é o
+    conjunto solução do sistema homogêneo $$\begin{pmatrix}
+      1 & 2 & 0 & 3 \\
+      0 & 0 & 1 & 2 \\
+      0 & 0 & 0 & 0
+      \end{pmatrix}\begin{pmatrix}
+      w \\ x \\ y \\ z
+      \end{pmatrix} = \ul{0}.$$ As variáveis $\boxed{x = \alpha}$ e
+    $\boxed{z = \beta}$ são livres (pois correspondem às colunas sem
+    pivôs). Temos $$y + 2z = 0 \implies \boxed{y = -2\beta}.$$
+    $$w + 2x + 3z = 0 \implies \boxed{w = -2\alpha - 3\beta}.$$ Logo
+    $$\tn{Ker}(T_A) = \left\{\left. \begin{pmatrix}-2\alpha-3\beta \\ \alpha \\ -2\beta \\ \beta \end{pmatrix}\right|\,\alpha, \beta\in \R\right\}.$$
+:::
+
+:::{#exr-}
+Dada uma matriz $A$, mostre que o núcleo de
+$T_A$ é sempre o conjunto solução do sistema homogêneo $$AX = \ul{0}.$$
+:::
+
+Observe que no exemplo acima,
+$$\dim(\tn{Ker}(T_A)) + \dim(\tn{Im}(T_A)) = 2 + 2 = 4 = \dim(\R^4).$$
+De fato, esta igualdade *sempre* vale:
+
+:::{#thm-}
+Sejam $V,W$ espaços vetoriais com $V$ de dimensão finita e seja
+$T:V\to W$ uma transformação linear. Então
+$$\dim(\tn{Ker}(T))+ \dim(\tn{Im}(T)) = \dim(V).$$
+:::
+
+:::{.proof}
+Já que $\tn{Ker}(T)$ é subespaço de $V$, seja
+$\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\}$ uma base de $\tn{Ker}(T)$, e
+estende ela para uma base
+$\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}$
+de $V$. Afirmo que $B=\{T(\ul{v_1})\,,\,\ldots\,,\,T(\ul{v_b})\}$ é uma
+base de $\tn{Im}(T)$. 
+<!--Este conjunto:
+
+-   Pois se $T(\ul{v_i}) = T(\ul{v_j})$ com $i\neq j$, então
+    $T(\ul{v_i} -\ul{v_j})\in \tn{Ker}(T)$, logo
+    $$\ul{v_i} - \ul{v_j} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a}.$$
+    Rearranjando, $\ul{v_i}$ é combinação linear dos outros elementos da
+    base
+    $$\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}$$
+    -- impossível.-->
+
+-   *$B$ é sistema gerador:* Dado $T(\ul{v})\in \tn{Im}(T)$, escreva
+    $$\ul{v} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}.$$
+    Temos 
+    \begin{aligned}
+        T(\ul{v}) & = T( \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) \\
+        & = \mu_1T(\ul{n_1}) + \cdots + \mu_aT(\ul{n_a}) + \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) \\
+        & = \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b})\qquad\qquad (\hbox{pois }T(\ul{n_i}) = 0\,\forall i).
+      
+    \end{aligned}
+    Logo $T(\ul{v})$ é uma combinação linear de
+    elementos de $B.\quad\checkmark$
+
+-   *$B$ é sistema l.i.* Se $\lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) = \ul{0}$,
+    então
+    $$T(\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) = \ul{0},$$ logo
+    $\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b} \in \tn{Ker}(T)$. Já
+    que $\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\}$ gera $\tn{Ker}(T)$, temos
+    que
+    $$\lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a}$$
+    para alguns $\mu_i\in \R$. Mas o conjunto
+    $\{\ul{n_1}\,,\,\ldots\,,\,\ul{n_a}\,,\,\ul{v_1}\,,\,\ldots\,,\,\ul{v_b}\}$
+    é LI, logo $\lambda_i = 0\,\forall i$. Mostramos que $B$ é LI.
+
+Então, $$\dim(\tn{Ker}(T)) + \dim(\tn{Im}(T)) = a + b = \dim(V).$$ ◻
+:::
+
+:::{#prp-}
+A transformação linear $T:V\to W$ é injetiva se, e somente se,
+$\tn{Ker}(T) = \{\ul{0}\}$.
+:::
+
+:::{.proof}
+Temos que mostrar duas implicações:
+
+-   $T(\ul{0}) = \ul{0}$ e $T$ é injetiva, então mais ninguém pode ir
+    para $\ul{0}$. Ou seja, $\tn{Ker}(T) = \{\ul{0}\}$.
+
+-   Suponha que $T(\ul{u}) = T(\ul{v})$. Então
+    $$T(\ul{u} - \ul{v}) = T(\ul{u}) - T(\ul{v}) = T(\ul{u}) - T(\ul{u}) = \ul{0},$$
+    logo $\ul{u} - \ul{v}\in \tn{Ker}(T)$. Mas
+    $\tn{Ker}(T) = \{\ul{0}\}$, então $$\ul{u} - \ul{v} = \ul{0},$$ ou
+    seja $\ul{u} = \ul{v}$, mostrando que $T$ é injetiva.
+
+ ◻
+:::
+
+Se lembre que tratamos dois espaços vetoriais $V,W$ como sendo
+basicamente "iguais" quando existe um isomorfismo entre eles. Vamos usar
+vários fatos obtidos até agora para concluir que, pensando assim,
+existem "poucos espaços vetoriais" diferentes.
+
+:::{#thm-}
+Sejam $V, W$ espaços vetoriais com dimensão $n$ e sejam $B,C$ bases de
+$V,W$ respetivamente. Uma bijeção $f:B\to C$ estende unicamente para um
+isomorfismo de espaços vetoriais $T_f:V\to W$. Em particular, $V$ e $W$
+são isomorfos.
+:::
+
+:::{.proof}
+Fazendo a composição da bijeção dada com a inclusão de $C$ em
+$W$ (isto é, a função $C\to W$ que manda $\ul{c}$ em $\ul{c}$), podemos
+pensar em $f$ como função $$f: B \to C \to W.$$ Já mostramos que existe
+uma única transformação linear $T_f:V\to W$ tal que
+$T_f(\ul{b}) = f(\ul{b})$ para cada $\ul{b}\in B$. Afirmo que $T_f$ é
+bijetiva. Ela é
+
+-   pois $\tn{Im}(T_f)$ é um subespaço de $W$ que contém a base $C$ de
+    $W$, então $\tn{Im}(T_f) = W$.
+
+-   Pelo Teorema Núcleo-Imagem,
+    $n=\dim W=\dim\,\mbox{Im}(T_f)=\dim V-\dim \ker T_f=n-\dim\ker T_f$.
+    Logo, $\dim\ker T_f=0$; ou seja, $\ker T_f=\{\ul 0\}$ e a Proposição
+    anterior implica que $T_f$ é injetiva.
+
+ ◻
+:::
+
+O Teorema anterior é verdadeiro para espaçõs de dimensão infinita, mas
+neste caso precisa-se considerar os diferentes tipos de infinitos
+(enumerável, não enumerável, etc). No caso dos espaços de dimensão
+infinita, o argumento na demonstração que $\ker T_f=\{\ul 0\}$ não é
+válido (você tá vendo porque?), mas não é difícil substituí-lo com um
+argumento direto.
+
+:::{#cor-}
+Seja $V$ um espaço vetorial de dimensão $n$. Então $V$ é isomorfo a
+$\R^n$.
+:::
+
+:::{.proof}
+Os dois têm dimensão $n$. ◻
+:::
+
+:::{#exm-}
+1.  O espaço vetorial $M_{2,3}(\R)$ é isomorfo a $\R^6$, pois os dois
+    têm dimensão 6. Um isomorfismo $M_{2,3}(\R)\to \R^6$ é dado por
+    $$\begin{pmatrix}a & b & c \\ d & e & f \end{pmatrix}\mapsto (a,b,c,d,e,f).$$
+    Qualquer bijeção entre bases daria um isomorfismo. Por exemplo, uma
+    outra bijeção entre as bases canônicas daria o isomorfismo
+    $$\begin{pmatrix}a & b & c \\ d & e & f \end{pmatrix}\mapsto (c , e , f , b , d , a).$$
+    Nem precisamos usar as bases canônicas. Por exemplo, uma outra base
+    de $\R^6$ é
+    $$\{(1,1,0,0,0,0)\,,\,(0,1,1,0,0,0)\,,\,(0,0,1,1,0,0)\,,\qquad$$
+    $$\qquad(0,0,0,1,1,0)\,,\,(0,0,0,0,1,1)\,,\,(0,0,0,0,0,1)\}$$
+    (confirme!). Um isomorfismo correspondente pode ser
+    $$\begin{pmatrix}a & b & c \\ d & e & f \end{pmatrix}\mapsto (a\,,\,a + b\,,\,b+c\,,\,c+d\,,\,d+e\,,\,e+f).$$
+:::
