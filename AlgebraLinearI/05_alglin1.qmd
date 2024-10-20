@@ -42,7 +42,7 @@ $\tn{Im(T)}$ é subespaço de $W$. ◻
 :::{#exm-}
 1.  Considere $T:V\to W$.
 
-    -   $\tn{Im}(T) = W$ se, e somente se, $T$ é sobrejetiva (@def-function-dom).
+    -   $\tn{Im}(T) = W$ se, e somente se, $T$ é sobrejetiva (@def-function-inj-sob).
 
     -   $\tn{Ker}(T) = V$ se, e somente se, $T$ é a transformação nula.
 
@@ -156,7 +156,7 @@ Então, $$\dim(\tn{Ker}(T)) + \dim(\tn{Im}(T)) = a + b = \dim(V).$$ ◻
 :::
 
 :::{#prp-}
-A transformação linear $T:V\to W$ é injetiva (@def-function-dom) se, e somente se,
+A transformação linear $T:V\to W$ é injetiva (@def-function-inj-sob) se, e somente se,
 $\tn{Ker}(T) = \{\ul{0}\}$.
 :::
 
@@ -193,7 +193,7 @@ $W$ (isto é, a função $C\to W$ que manda $\ul{c}$ em $\ul{c}$), podemos
 pensar em $f$ como função $$f: B \to C \to W.$$ Já mostramos que existe
 uma única transformação linear $T_f:V\to W$ tal que
 $T_f(\ul{b}) = f(\ul{b})$ para cada $\ul{b}\in B$. Afirmo que $T_f$ é
-bijetiva (@def-function-dom). Ela é
+bijetiva (@def-function-inj-sob). Ela é
 
 -   pois $\tn{Im}(T_f)$ é um subespaço de $W$ que contém a base $C$ de
     $W$, então $\tn{Im}(T_f) = W$.

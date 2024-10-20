@@ -311,7 +311,7 @@ são "a mesma coisa". Vamos fazer essa frase cada vez mais precisa.
 
 :::{#def-}
 Um *isomorfismo* $\rho:V\to W$ de espaços vetoriais é uma transformação
-linear $\rho:V\to W$ bijetiva (@def-function-dom). Quando existir um isomorfismo de $V$ a
+linear $\rho:V\to W$ bijetiva (@def-function-inj-sob). Quando existir um isomorfismo de $V$ a
 $W$, diremos que $V,W$ são espaços vetoriais *isomorfos*.
 :::
 
@@ -443,7 +443,7 @@ Observe que $$\begin{aligned}
 \end{aligned}$$
 :::
 
-De fato, a matriz da composição de TLs é sempre o produto das matrizes
+De fato, a matriz da composição de TLs (@def-comp-func) é sempre o produto das matrizes
 das TLs. Suponha que temos três espaços vetoriais $\R^l, \R^m, \R^n$ com
 bases canônicas $$\begin{aligned}
   E_k\quad & ,\quad k\in \{1,\ldots,l\} \\
@@ -455,7 +455,7 @@ matriz $m\times l$, $B$ é uma matriz $n\times m$, e $T_A, T_B$ são as
 TLs correspondentes.
 
 :::{#thm-}
-A matriz $n\times l$ da composição $T_B\circ T_A$ é a matriz produto
+A matriz $n\times l$ da composição $T_B\circ T_A$ (@def-comp-func) é a matriz produto
 $BA$. Ou seja, $$T_B\circ T_A = T_{BA}.$$
 :::
 

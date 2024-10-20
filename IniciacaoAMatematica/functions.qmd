@@ -81,7 +81,7 @@ O domínio de $R_1$ é o conjunto $A=\{1,2,3\}$, o contradomínio é $A=\{1,3,5,
 :::
 
 
-:::{#def-function-dom}
+:::{#def-function-inj-sob}
 Seja $f:A\to B$ uma função.
 
 1. A função $f$ é *sobrejetiva* (ou *sobrejetora*) se $\mbox{Im}(f)=B$. Formalmente, 
