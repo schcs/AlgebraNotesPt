@@ -311,7 +311,7 @@ são "a mesma coisa". Vamos fazer essa frase cada vez mais precisa.
 
 :::{#def-}
 Um *isomorfismo* $\rho:V\to W$ de espaços vetoriais é uma transformação
-linear $\rho:V\to W$ bijetiva. Quando existir um isomorfismo de $V$ a
+linear $\rho:V\to W$ bijetiva (@def-function-dom). Quando existir um isomorfismo de $V$ a
 $W$, diremos que $V,W$ são espaços vetoriais *isomorfos*.
 :::
 
