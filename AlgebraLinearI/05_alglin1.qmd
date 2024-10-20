@@ -42,7 +42,7 @@ $\tn{Im(T)}$ é subespaço de $W$. ◻
 :::{#exm-}
 1.  Considere $T:V\to W$.
 
-    -   $\tn{Im}(T) = W$ se, e somente se, $T$ é sobrejetiva (@def-def-function-dom).
+    -   $\tn{Im}(T) = W$ se, e somente se, $T$ é sobrejetiva (@def-function-dom).
 
     -   $\tn{Ker}(T) = V$ se, e somente se, $T$ é a transformação nula.
 
