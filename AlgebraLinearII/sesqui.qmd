@@ -185,7 +185,7 @@ Seja $B$ uma forma $\sigma$-Hermitiana (incluindo simétrica) ou alternada sobre
 
 :::{#thm-}
 (O Teorema de Birkhoff-von Neumann)
-Seja $B$ uma forma $\sigma$-sesquilinear reflexiva com $\dim (V/\mbox{Rad}(B))\geq 3$. Então
+Seja $B$ uma forma $\sigma$-sesquilinear reflexiva com $\dim (V/\mbox{Rad}(B))\geq 2$. Então
 
 
  -  $B$ é alternada; ou
