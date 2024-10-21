@@ -1055,7 +1055,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/formas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares e o determinante de operadores</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1340,14 +1340,54 @@ ax+by=c
 \]</span> Neste caso, <span class="math inline">\(\mdc {21}{-15}=3\)</span> divide 12. De fato vamos ver que esta equação possui soluções e nós vamos determinar o conjunto de todas as soluções.</p>
 <p>Primeiro vamos achar uma solução particular da equação <span class="math display">\[
 21x-15y=\mdc {21}{-15}=3.
-\]</span> Sabe-se do Algoritmo de Euclides que esta equação possui solução inteira. De fato, usando o Algoritmo de Euclides, fazemos a seguinte sequência de divisões: <span class="math display">\[\begin{eqnarray*}
-21&amp;=&amp;1\cdot 15+6;\\
-15&amp;=&amp;2\cdot 6+3;\\
-6&amp;=&amp;2\cdot 3+0.
-\end{eqnarray*}\]</span> Obtemos então que <span class="math inline">\(\mdc {21}{-15}=3\)</span>. Além disso, considerando as equações acima, <span class="math display">\[\begin{eqnarray*}
-6&amp;=&amp;21-15;\\
-3&amp;=&amp;15-2\cdot 6=15-2\cdot(21-15)=-2\cdot 21+3\cdot 15.
-\end{eqnarray*}\]</span> Obtivemos então que <span class="math display">\[
+\]</span> Sabe-se do Algoritmo de Euclides que esta equação possui solução inteira. De fato, usando o Algoritmo Estendido de Euclides, fazemos a seguinte computação (veja a explicação depois do <a href="mdc.html#thm-extended-euclid" class="quarto-xref">Teorema&nbsp;<span>14.1</span></a>).</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>r</strong></td>
+<td>21</td>
+<td>15</td>
+<td>6</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><strong>q</strong></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><strong>u</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>-2</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><strong>v</strong></td>
+<td>0</td>
+<td>1</td>
+<td>-1</td>
+<td>3</td>
+<td>-7</td>
+</tr>
+</tbody>
+</table>
+<!--\begin{eqnarray*}
+21&=&1\cdot 15+6;\\
+15&=&2\cdot 6+3;\\
+6&=&2\cdot 3+0.
+\end{eqnarray*}
+Obtemos então que $\mdc {21}{-15}=3$. Além disso, considerando as equações acima,
+\begin{eqnarray*}
+6&=&21-15;\\
+3&=&15-2\cdot 6=15-2\cdot(21-15)=-2\cdot 21+3\cdot 15.
+\end{eqnarray*}-->
+<p>Ajudtando os sinais, obtivemos então que <span class="math display">\[
 21\cdot(-2)-15\cdot(-3)=3.
 \]</span> Agora multiplicamos a equação acima por <span class="math inline">\(4\)</span> e obtemos que <span class="math display">\[
 21\cdot(-8)-15\cdot(-12)=12.

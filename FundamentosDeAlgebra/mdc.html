@@ -1055,7 +1055,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/formas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares e o determinante de operadores</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1371,7 +1371,7 @@ window.Quarto = {
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Segue do lema anterior</p>
 </div>
-<div id="exm-" class="theorem example">
+<div id="exm-mdc-115-25" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 14.1</strong></span> O lema anterior pode ser usado para determinar o MDC de dois números naturais do modo seguinte. Sejam, por exemplo, <span class="math inline">\(a=115\)</span> e <span class="math inline">\(b=25\)</span>. Escreva <span class="math display">\[
 115=4\cdot 25+15
 \]</span> Logo <span class="math inline">\(\mdc {115}{25}\)</span> e <span class="math inline">\(\mdc{25}{10}\)</span> existem (ou não) simultaneamente e, se existirem, são iguais. Depois escreva <span class="math display">\[
@@ -1438,7 +1438,7 @@ a&gt;b&gt;r_1&gt;r_2&gt;\cdots&gt;r_i&gt;\cdots&gt;r_d&gt;r_{d+1}=0.
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Uma outra consequência do Algoritmo de Euclides é o seguinte resultado extremamente útil e bem conhecido.</p>
-<div id="thm-" class="theorem">
+<div id="thm-extended-euclid" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 14.1</strong></span> Sejam <span class="math inline">\(a,b\in\Z\)</span> com <span class="math inline">\((a,b)\neq 0\)</span>. Então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
 \mdc ab=ua+vb.
 \]</span> Em particular, se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são primos entre si, então existem <span class="math inline">\(u,v\in\Z\)</span> tais que <span class="math display">\[
@@ -1454,17 +1454,86 @@ r_j=u_ja+v_jb.
 \]</span> Ora, segue da equação para <span class="math inline">\(r_{i-1}\)</span> que <span class="math display">\[\begin{align*}
 r_{i+1}&amp;=r_{i-1}-q_{i+1}r_{i}=u_{i-1}a+v_{i-1}b-q_{i+1}(u_{i}a+v_{i}b)\\&amp;=
 (u_{i-1}-q_{i+1}u_i)a+(v_{i-1}-q_{i+1}v_i)b.
-\end{align*}\]</span> Ou seja, podemos tomar <span class="math display">\[
+\end{align*}\]</span> Ou seja, podemos tomar <span id="eq-next-uv"><span class="math display">\[
 u_{i+1}=u_{i-1}-q_{i+1}u_i\quad\mbox{e}\quad v_{i+1}=v_{i-1}-q_{i+1}v_i.
-\]</span></p>
+\tag{14.1}\]</span></span></p>
 <p>Agora, temos que <span class="math display">\[
 \mdc ab=r_d=u_da+v_db
 \]</span> e o teorema está válido com <span class="math inline">\(u=u_d\)</span> e <span class="math inline">\(v=v_d\)</span>.</p>
 </div>
 <p>Note que a demonstração acima dá um algoritmo para calcular os coeficientes <span class="math inline">\(u,v\)</span> e este algoritmo pode ser executado em paralelo com a computação do <span class="math inline">\(\mdc ab\)</span>. O algoritmo que calcula o <span class="math inline">\(\mdc ab\)</span> junto com os coeficientes <span class="math inline">\(u,v\)</span> tais que <span class="math display">\[
 \mdc ab=ua+vb
-\]</span> é geralmente chamado Algoritmo Estendido de Euclides. A seguinte é uma implementação simples do Algoritmo Estendido em Python.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b):</span>
+\]</span> é geralmente chamado <strong>Algoritmo Estendido de Euclides</strong>. Analizando a demonstração do <a href="#thm-extended-euclid" class="quarto-xref">Teorema&nbsp;<span>14.1</span></a>, a computação do <span class="math inline">\(\mdc ab\)</span> e dos coeficientes <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> pode ser organizada em uma tabela. As linhas da tabela serão rotuladas por <span class="math inline">\(r\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span>.</p>
+<ol type="1">
+<li>Coloque na primeira coluna da tabela o valor de <span class="math inline">\(a\)</span> na linha <span class="math inline">\(r\)</span>, e os valores <span class="math inline">\(1\)</span> e <span class="math inline">\(0\)</span> nas linhas <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span>, respetivamente. Deixe a cela na linha <span class="math inline">\(q\)</span> branca.</li>
+<li>Coloque na segunda coluna da tabela o valor de <span class="math inline">\(b\)</span> na linha <span class="math inline">\(r\)</span>, e os valores <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span> nas linhas <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span>, respetivamente. Deixe a cela na linha <span class="math inline">\(q\)</span> branca.</li>
+<li>Assumindo que a tabela tem pelo menos 2 colunas preenchidas, faça as seguintes computações até obter <span class="math inline">\(0\)</span> na linha <span class="math inline">\(r\)</span>. Denote por <span class="math inline">\(r_{-2}\)</span> e <span class="math inline">\(r_{-1}\)</span> os valores na linha <span class="math inline">\(r\)</span> e na penúltima coluna e na última coluna já preenchida e defina <span class="math inline">\(u_{-2}\)</span>, <span class="math inline">\(u_{-1}\)</span>, <span class="math inline">\(v_{-2}\)</span>, <span class="math inline">\(v_{-1}\)</span> de maneira análoga.
+<ol type="1">
+<li>Usando o Teorema de Divisão de Euclides (<a href="divisao.html#thm-euclides" class="quarto-xref">Teorema&nbsp;<span>11.1</span></a>), calcule o resto <span class="math inline">\(r\)</span> e o quociente <span class="math inline">\(q\)</span> de <span class="math inline">\(r_{-2}\)</span> por <span class="math inline">\(r_{-1}\)</span> e coloque o <span class="math inline">\(r\)</span> e <span class="math inline">\(q\)</span> nas linhas <span class="math inline">\(r\)</span> e <span class="math inline">\(q\)</span> da próxima coluna da tabela.</li>
+<li>Calcule <span class="math inline">\(u=u_{-2}-qu_{-1}\)</span> (<em>o penúltimo valor de <span class="math inline">\(u\)</span> menos <span class="math inline">\(q\)</span> vezes o último</em>) e <span class="math inline">\(v=v_{-2}-qv_{-1}\)</span> (<em>o penúltimo valor de <span class="math inline">\(v\)</span> menos <span class="math inline">\(q\)</span> vezes o último</em>) e coloque estes valores nas linhas <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> na próxima coluna da tabela. Note que este passo está baseado na <a href="#eq-next-uv" class="quarto-xref">Equação&nbsp;<span>14.1</span></a></li>
+</ol></li>
+<li>Quando o valor da linha <span class="math inline">\(r\)</span> é igual a zero, o valor <span class="math inline">\(r\)</span> da penúltima coluna é o <span class="math inline">\(\mdc ab\)</span> o os valores na linhas <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> são tais que<br>
+<span class="math display">\[
+\mdc ab = ua+vb.
+\]</span></li>
+</ol>
+<div id="exm-mdc-115-15-v2" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 14.2</strong></span> Vamos executar este procedimento simples com <span class="math inline">\(a=115\)</span> e <span class="math inline">\(b=25\)</span> repetindo o exemplo <a href="#exm-mdc-115-25" class="quarto-xref">Exemplo&nbsp;<span>14.1</span></a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>r</strong></td>
+<td>115</td>
+<td>25</td>
+<td>15</td>
+<td>10</td>
+<td><span style="color:red">5</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><strong>q</strong></td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>1</td>
+<td><span style="color:red">1</span></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><strong>u</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>-1</td>
+<td><span style="color:red">2</span></td>
+<td>-5</td>
+</tr>
+<tr class="even">
+<td><strong>v</strong></td>
+<td>0</td>
+<td>1</td>
+<td>-4</td>
+<td>5</td>
+<td><span style="color:red">-9</span></td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<p>Da tabela, obtemos que <span class="math display">\[
+\mdc {115}{25}=5=2\cdot 115-9\cdot 25.
+\]</span></p>
+</div>
+<p>A seguinte é uma implementação simples do Algoritmo Estendido em Python.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b): </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    prevu, u <span class="op">=</span> <span class="dv">1</span>, <span class="dv">0</span><span class="op">;</span> prevv, v <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> </span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
