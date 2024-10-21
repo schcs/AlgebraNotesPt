@@ -209,7 +209,7 @@ $A^n(V)$ é um espaço de dimensão $1$ e ele pode ser identificado com o corpo 
 $$
 f^*_A:A^n(V)\to A^n(V)
 $$
-pode ser visto como  uma aplicação linear $\F\to \F$. As aplicações lineares de $\F\to \F$ são dadas por multiplicação escalar com algum elemento de $\F$. Portanto $f^*$ também pode ser visto como multiplicação por um escalar $\delta\in\F$ que depende apenas de $f$. 
+pode ser visto como  uma aplicação linear $\F\to \F$. As aplicações lineares $\F\to \F$ são dadas por multiplicação escalar com algum elemento de $\F$. Portanto $f^*$ também pode ser visto como multiplicação por um escalar $\delta\in\F$ que depende apenas de $f$. 
 
 :::{#def-determinant-f}
 O número $\delta$ no parágrafo anterior depende apenas da transformação $f:V\to V$ e chama-se o **determinante** de $f$ e será 
