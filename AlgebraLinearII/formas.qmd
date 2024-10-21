@@ -1,8 +1,10 @@
 --- 
-title: "Formas $k$-lineares"
+title: "Formas $k$-lineares e o determinante de operadores"
 number-sections: true
 lang: pt-BR
 --- 
+
+## Formas $k$-lineares
 
 :::{#def-}
 Sejam $V$ e $W$ espaços vetoriais sobre $\F$, $k\geq 1$, e considere o produto cartesiano $V^k=V\times \cdots\times V$ de $k$ cópias de $V$. Dizemos que uma aplicação $f:V^k\to W$ é $k$-linear se ela é linear em todas as variáveis. Em outras palávras,
@@ -14,9 +16,9 @@ vale para todo $i\in\{1,\ldots,k\}$, $v_i\in V$ e $w\in V$. Uma aplicação $V^k
 
 
 :::{#exm-}
-Uma forma $1$-linear é simplesmente uma forma linear $V\to \F$. Uma aplicação ou forma $2$-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma $3$-linear e chamada de <b>trilinear</b>.
+Uma forma $1$-linear é simplesmente uma forma linear $V\to \F$. Uma aplicação ou forma $2$-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma $3$-linear é chamada de <b>trilinear</b>.
 
-Se $V=\R^n$, então o produto interno $\langle\cdot ,\cdot\rangle$ é bilinear. Por outro lado, se $V=\C^n$, então o produto interno  $\langle\cdot ,\cdot\rangle$ não é bilinear (porque?). Se $V=\F^n$, então a aplicação
+Se $V=\R^n$, então o produto interno $\langle\cdot ,\cdot\rangle$ é bilinear. Por outro lado, se $V=\C^n$, então o produto interno  $\langle\cdot ,\cdot\rangle$ não é bilinear (porque?, consulte a @def-sesquilinear). Se $V=\F^n$, então a aplicação
 $$
 d:V^n\to \F,\quad d(a_1,\ldots,a_n)=\det A,
 $$
@@ -65,7 +67,8 @@ sempre que $v_i\in V$ e $v_i=v_j$ com algum $i\neq j$. Os espaços de aplicaçõ
 
 
 :::{#exm-}
-O produto interno $\langle\cdot,\cdot\rangle$ em $\R^n$ é uma forma simétrica bilinear. O determinante $d:(\F^n)^n\to\F$ é alternada.
+O produto interno $\langle\cdot,\cdot\rangle$ em $\R^n$ é uma forma simétrica bilinear. 
+O determinante de uma matriz pode ser visto como uma aplicação $n$-linear $d:(\F^n)^n\to\F$ é alternada.
 :::
 
 
@@ -146,12 +149,15 @@ $$
 :::
 
 
-:::{#exr-}
-Determine a dimensão de $S^k(V,W)$ e $A^k(V,W)$ onde $\dim V=m$ e $\dim W=n$.
+:::{#exr-dims-Ak}
+Determine a dimensão de $S^k(V,W)$ e $A^k(V,W)$ onde $\dim V=m$ e $\dim W=n$. Demonstre em particular que 
+$$
+\dim A^k(V)=\binom mk.
+$$
 :::
 
 
-:::{#cor-}
+:::{#cor-AkV-dim1}
 Seja $V$ um espaço vetorial sobre $\F$ de dimensão $n$ com base $\{b_1,\ldots,b_n\}$. Assuma que $\alpha\in\F$. Então existe uma única forma $n$-linear $f:V^n\to \F$ tal que $f(b_1,\ldots,b_n)=\alpha$. Consequentemente $\dim A^n(V)=1$.
 :::
 
@@ -167,3 +173,55 @@ f(a_1,\ldots,a_n)=\det A
 $$
 onde $A$ é a matriz com linhas $a_1,\ldots,a_n$.
 :::
+
+
+## O pullback e o determinante de operadores
+
+Vamos definir o conceito de determinante para operadores $V\to V$ de espaços de dimensão finita independentemente das suas matrizes.
+
+:::{#def-pullback}
+Sejam $U$ e $V$ espaços vetoriai, seja $f:U\to V$ uma aplicação linear, e assuma que $k\geq 1$ fixado. Seja $T\in L^k(V)$. Defina
+$f^*T\in L^k(U)$ como 
+$$
+f^*T\in L^k(U): (u_1,\ldots,u_k)\mapsto T(f(u_1),\ldots,f(u_k)).
+$$
+É fácil verificar que quando $T$ é uma forma $k$-linear, então $f^*T$ também é uma forma $k$-linear. Assim, obtemos uma aplicação 
+$$
+f^*:L^k(V)\to L^k(U).
+$${#eq-def-fstar}
+Esta aplicação chama-se o **pullback** de $f$. 
+:::
+
+:::{#lem-pullback}
+Se $T$ é uma forma $k$-linear alternada, então $f^*T$ é também uma forma $k$-linear alternada. Portanto a restrição de $f^*$ definida na equação @eq-def-fstar resulta em uma aplicação linear
+$$
+f^*_A:A^k(V)\to A^k(U)
+$$
+para todo $k$.
+:::
+
+:::{.proof}
+Exercício.
+:::
+
+Assuma agora que $f:V\to V$ onde $V$ é espaço de dimensão $n$ (finita). Pelo @cor-AkV-dim1, 
+$A^n(V)$ é um espaço de dimensão $1$ e ele pode ser identificado com o corpo $\F$. Além disso, se $f:V\to V$, então o pull-back 
+$$
+f^*_A:A^n(V)\to A^n(V)
+$$
+pode ser visto como  uma aplicação linear $\F\to \F$. As aplicações lineares de $\F\to \F$ são dadas por multiplicação escalar com algum elemento de $\F$. Portanto $f^*$ também pode ser visto como multiplicação por um escalar $\delta\in\F$ que depende apenas de $f$. 
+
+:::{#def-determinant-f}
+O número $\delta$ no parágrafo anterior depende apenas da transformação $f:V\to V$ e chama-se o **determinante** de $f$ e será 
+denotado por $\det f$. 
+:::
+
+:::{#exr-determinant-f}
+Usando a @def-determinant-f, demonstre as propriedades comuns do determinante. 
+
+1. Se $f,g: V\to V$, então $\det (f\circ g)=\det f\cdot \det g$.
+2. $\det f$ coincide com o determinante da matriz de $f$ em uma base de $V$. 
+3. $\det f=0$ se e somente se $f$ não é invertível.
+:::
+
+

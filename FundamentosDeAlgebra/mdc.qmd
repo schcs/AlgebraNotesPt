@@ -69,7 +69,6 @@ Assuma primeiro que existe $d=\mdc ab$. Vamos provar que $\mdc b{a+qb}=d$ verifi
 3. Assuma que $c\mid b$ e $c\mid a+qb$. Então $c\mid a+qb-qb=a$ e assim $c\mid a$. Como $d=\mdc ab$, obtemos que $c\mid d$ e a propriedade 3. também está certa para $d$.
 
 Assim podemos concluir que $d=\mdc b{a+qb}$. A outra direção quando a suposição é que existe $\mdc b{a+qb}$ é análoga.
-
 :::
 
 
@@ -83,7 +82,7 @@ Segue do lema anterior
 :::
 
 
-:::{#exm-}
+:::{#exm-mdc-115-25}
 O lema anterior pode ser usado para determinar o MDC de dois números naturais do modo seguinte. Sejam, por exemplo, $a=115$ e $b=25$. Escreva
 $$
 115=4\cdot 25+15
@@ -180,7 +179,7 @@ def MDC(a,b):
 
 Uma outra consequência do Algoritmo de Euclides é o seguinte resultado extremamente útil e bem conhecido.
 
-:::{#thm-}
+:::{#thm-extended-euclid}
 Sejam $a,b\in\Z$ com $(a,b)\neq 0$. Então existem $u,v\in\Z$ tais que
 $$
 \mdc ab=ua+vb.
@@ -211,7 +210,7 @@ r_{i+1}&=r_{i-1}-q_{i+1}r_{i}=u_{i-1}a+v_{i-1}b-q_{i+1}(u_{i}a+v_{i}b)\\&=
 Ou seja, podemos tomar
 $$
 u_{i+1}=u_{i-1}-q_{i+1}u_i\quad\mbox{e}\quad v_{i+1}=v_{i-1}-q_{i+1}v_i.
-$$
+$${#eq-next-uv}
 
 Agora, temos que
 $$
@@ -224,9 +223,40 @@ Note que a demonstração acima dá um algoritmo para calcular os coeficientes $
 $$
 \mdc ab=ua+vb
 $$
-é geralmente chamado Algoritmo Estendido de Euclides. A seguinte é uma implementação simples do Algoritmo Estendido em Python.
+é geralmente chamado **Algoritmo Estendido de Euclides**. Analizando a demonstração do @thm-extended-euclid, a computação do 
+$\mdc ab$ e dos coeficientes $u$ e $v$ pode ser organizada em uma tabela. As linhas da tabela serão rotuladas por $r$, $q$, $u$ e $v$. 
+
+1. Coloque na primeira coluna da tabela o valor de $a$ na linha $r$, e os valores $1$ e $0$ nas linhas $u$ e $v$, respetivamente. Deixe a cela na linha $q$ branca. 
+2.  Coloque na segunda coluna da tabela o valor de $b$ na linha $r$, e os valores $0$ e $1$ nas linhas $u$ e $v$, respetivamente. Deixe a cela na linha $q$ branca. 
+3.  Assumindo que a tabela tem pelo menos 2 colunas preenchidas, faça as seguintes computações até obter $0$ na linha $r$. 
+    Denote por $r_{-2}$ e $r_{-1}$ os valores na linha $r$ e na penúltima coluna e na última coluna já preenchida e defina 
+    $u_{-2}$, $u_{-1}$, $v_{-2}$, $v_{-1}$ de maneira análoga.
+    1.  Usando o Teorema de Divisão de Euclides (@thm-euclides), calcule o resto $r$ e o quociente $q$ de $r_{-2}$ por $r_{-1}$ e coloque o $r$ e $q$ nas linhas $r$ e $q$ da próxima coluna da tabela. 
+    2.  Calcule $u=u_{-2}-qu_{-1}$ (*o penúltimo valor de $u$ menos $q$ vezes o último*) e $v=v_{-2}-qv_{-1}$ (*o penúltimo valor de $v$ menos $q$ vezes o último*) e coloque estes valores nas linhas $u$ e $v$ na próxima coluna da tabela. Note que este passo está baseado na @eq-next-uv 
+4. Quando o valor da linha $r$ é igual a zero, o valor $r$ da penúltima coluna é o $\mdc ab$ o os valores na linhas $u$ e $v$ são tais que  
+   $$
+   \mdc ab = ua+vb.
+   $$
+
+:::{#exm-mdc-115-15-v2}
+Vamos executar este procedimento simples com $a=115$ e $b=25$ repetindo o exemplo @exm-mdc-115-25. 
+
+|        |     |    |    |    |    |     |
+|--------|-----|----|----|----|----|-----|
+| **r**  | 115 | 25 | 15 | 10 | <span style="color:red">5</span>  | 0   |
+| **q**  |     |    | 4  | 1  | <span style="color:red">1</span>  | 2   |
+| **u**  | 1   | 0  | 1  | -1 | <span style="color:red">2</span>  | -5  |
+| **v**  | 0   | 1  | -4 | 5  | <span style="color:red">-9</span> | 23 |
+
+Da tabela, obtemos que 
+$$
+\mdc {115}{25}=5=2\cdot 115-9\cdot 25.
+$$
+:::
+
+A seguinte é uma implementação simples do Algoritmo Estendido em Python.
 ```python
-def XMDC(a,b):
+def XMDC(a,b): 
         
     prevu, u = 1, 0; prevv, v = 0, 1 
     

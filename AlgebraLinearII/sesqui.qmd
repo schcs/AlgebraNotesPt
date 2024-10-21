@@ -36,7 +36,7 @@ então $a+b\sqrt 2\mapsto a-b\sqrt 2$ é um automorfismo.
 :::
 
 
-:::{#def-}
+:::{#def-sesquilinear}
 Seja $V$ um $\F$-espaço vetorial e $\sigma:\F\to\F$ um automorfismo. Uma aplicação $B:V\times V\to \F$ chama-se <b>forma $\sigma$-sesquilinear</b> se
 
 
@@ -184,6 +184,7 @@ Seja $B$ uma forma $\sigma$-Hermitiana (incluindo simétrica) ou alternada sobre
 
 
 :::{#thm-}
+(O Teorema de Birkhoff-von Neumann)
 Seja $B$ uma forma $\sigma$-sesquilinear reflexiva com $\dim (V/\mbox{Rad}(B))\geq 3$. Então
 
 
