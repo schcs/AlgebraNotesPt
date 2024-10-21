@@ -172,4 +172,4 @@ $$
 $$
 Geralmente, a aproximação dada por $\sigma(n)$ é melhor, mas é mais difícil de calcular.
 
-Atualmente (novembro de 2021), o <a href="https://pt.wikipedia.org/wiki/Maior_n%C3%BAmero_primo_conhecido">maior primo conhecido</a> é $2^{82.589.933} − 1$. Este número tem $24.862.048$ algarismos na base decimal e foi encontrado em 2018. Este número é um exemplo dos <a href="https://pt.wikipedia.org/wiki/Primo_de_Mersenne">primos de Mersenne</a>, ou seja primos na forma $2^p-1$ onde $p$ é um primo.
+Atualmente (outubro de 2024), o <a href="https://pt.wikipedia.org/wiki/Maior_n%C3%BAmero_primo_conhecido">maior primo conhecido</a> é $ 2^{136.279.841} − 1$. Este número tem $41.024.320$ algarismos na base decimal e foi encontrado em outubro de 2024. Este número é um exemplo dos <a href="https://pt.wikipedia.org/wiki/Primo_de_Mersenne">primos de Mersenne</a>, ou seja primos na forma $2^p-1$ onde $p$ é um primo.
