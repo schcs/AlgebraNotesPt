@@ -205,7 +205,7 @@ Exercício.
 :::
 
 Assuma agora que $f:V\to V$ onde $V$ é espaço de dimensão $n$ (finita). Pelo @cor-AkV-dim1, 
-$A^n(V)$ é um espaço de dimensão $1$ e ele pode ser identificado com o corpo $\F$. Além disso, se $f:V\to V$, então o pull-back 
+$A^n(V)$ é um espaço de dimensão $1$ e ele pode ser identificado com o corpo $\F$. Além disso, se $f:V\to V$, então o pullback 
 $$
 f^*_A:A^n(V)\to A^n(V)
 $$
