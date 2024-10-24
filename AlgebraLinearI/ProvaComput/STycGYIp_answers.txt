@@ -1,0 +1,8 @@
+dim W1 = 5
+dim W2 = 4
+basis of W1 = [0, 1, 2, 3, 4]
+(3,20)-entry = -34/41
+dim W  = 8
+dim W1 meet W2 = 1
+(5,20)-entry = 127/678
+first line of intersection = Matrix([[1, 0, 0, -1, 1/2, 1/2, -1, 1/2, -1/2, 1/2, 0, 0, -1, 0, -1, -1, -1/2, 0, -1, 1]])

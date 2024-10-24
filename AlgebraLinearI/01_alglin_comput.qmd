@@ -12,7 +12,7 @@ Primeiro vamos carregar as funções que vamos utilizar da biblioteca.
 from sympy import Matrix, zeros, linsolve, S
 ```
   
-## Problema 1: Escolher base de sistemas geradores
+## Escolher base de sistemas geradores
 
 :::{#exm-}
 Provamos na aula que todo sistema gerador de um espaço vetorial $V$ contem um subsistema que seja uma base de $V$. Considere o seguinte problema numérico. Seja $W_1$ o subespaço de $\mathbb R^{12}$ gerado pelas linhas do seguinte matriz. 
@@ -149,9 +149,11 @@ $\displaystyle \left[\begin{array}{cccccccccccc}1 & 0 & 0 & \frac{4}{15} & \frac
 
 
 Como as formas escalonadas reduzidas das duas matrizes são diferentes, temos que $W_1\neq W_2$. Além disso, a computação anterior mostra também que $\dim W_2=3$ enquanto $\dim W_1=4$ (como já foi verificado).
+:::
 
 ## Computar a soma 
 
+:::{#exm-}
 Vamos calcular a soma dos espaços $W=W_1+W_2$. Como $W_i$ é gerado pelas linhas de $M_i$, temos que a soma vai ser gerado pela matriz $M$ que obtemos por colar $M_2$ abaixo de $M_1$. Para calcular a base de $W$, calculamos a forma escalonada reduzida de $M$.
 
 
