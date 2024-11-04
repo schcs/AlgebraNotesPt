@@ -100,7 +100,9 @@ $$\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A)).$$
 :::
 
 :::{.proof}
-
+Seja 
+$$
+A=\begin{pmatrix} 
 A_1 & \cdots & A_n
 \end{pmatrix},$$ com os $A_i$ sendo as colunas de $A$.
 
