@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>61&nbsp; Formas sesquilineares – Álgebra</title>
+<title>45&nbsp; O posto de uma matriz – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/isometrias.html" rel="next">
-<link href="../AlgebraLinearII/cyclic.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/06_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/sesqui.html"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/07_alglin1.html"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O posto de uma matriz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -979,7 +979,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/07_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/07_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O posto de uma matriz</span></span></a>
   </div>
 </li>
@@ -1086,7 +1086,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/sesqui.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/sesqui.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></span></a>
   </div>
 </li>
@@ -1270,9 +1270,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/sesqui.html"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/07_alglin1.html"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O posto de uma matriz</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Formas sesquilineares</span></h1>
+<h1 class="title"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O posto de uma matriz</span></h1>
 </div>
 
 
@@ -1289,201 +1289,158 @@ window.Quarto = {
 </header>
 
 
+<p>Vamos considerar mais um invariante, essa vez para qualquer matriz retangular <span class="math inline">\(A\)</span>: o seu posto <span class="math inline">\(\tn{Rk}(A)\)</span>. Como acima, no caso especial em que <span class="math inline">\(A,B\)</span> são quadradas e semelhantes, vamos ter <span class="math inline">\(\tn{Rk}(A) = \tn{Rk}(B)\)</span>.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.1</strong></span> Se <span class="math inline">\(\F\)</span> é um corpo, uma aplicação bijetiva <span class="math inline">\(\sigma:\F\to \F\)</span>, <span class="math inline">\(a\mapsto a^\sigma\)</span>, chama-se <b>automorfismo</b>, se</p>
+<p><span class="theorem-title"><strong>Definição 45.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(m\times n\)</span>.</p>
 <ul>
-<li><span class="math inline">\((a+b)^\sigma=a^\sigma+b^\sigma\)</span>;</li>
-<li><span class="math inline">\((ab)^\sigma=a^\sigma b^\sigma\)</span>.</li>
+<li><p>O <em>espaço coluna</em> <span class="math inline">\(\tn{Col}(A)\)</span> de <span class="math inline">\(A\)</span> é o subespaço de <span class="math inline">\(\R^m\)</span> gerado pelas colunas de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>O <em>espaço linha</em> <span class="math inline">\(\tn{Lin}(A)\)</span> de <span class="math inline">\(A\)</span> é o subespaço de <span class="math inline">\(\R^n\)</span> gerado pelas linhas de <span class="math inline">\(A\)</span>.</p></li>
 </ul>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 61.1</strong></span> &nbsp;</p>
-<ol type="1">
-<li><p>A bijeção <span class="math inline">\(\mbox{id}_\F\)</span> é automorfismo para todo corpo <span class="math inline">\(\F\)</span>. Este automorfismo chama-se <b>automorfismo trivial</b>. Os corpos <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\Z_p\)</span> não têm automorfismos não triviais (consegue demonstrar?).</p></li>
-<li><p>Se <span class="math inline">\(\F=\C\)</span>, então <span class="math inline">\(\sigma:\C\to \C\)</span>, <span class="math inline">\(z^\sigma=\bar z\)</span> (conjugado complexo) é um automorfismo de <span class="math inline">\(\C\)</span>.</p></li>
-<li><p>Se <span class="math inline">\(\F\)</span> é um corpo de caraterística <span class="math inline">\(p\)</span> (primo), então a aplicação <span class="math inline">\(\varphi:a\mapsto a^p\)</span> é injetiva e satisfaz as duas propriedades na definição de automorfismo. Para um corpo arbitrário, <span class="math inline">\(\varphi\)</span> não precisa ser sobrejetiva, mas se <span class="math inline">\(\F\)</span> é finito, então <span class="math inline">\(\varphi\)</span>, sendo injetiva, será obrigatoriamente sobrejetiva e é um automorfismo. O automorfismo <span class="math inline">\(\varphi\)</span> de um corpo finito <span class="math inline">\(\F\)</span> é chamado de <b>automorfismo de Frobenius</b>.</p></li>
-<li><p>É fácil provar que a composição de automorfismos é automorfismo. Em particular, se <span class="math inline">\(\F\)</span> é um corpo finito de caraterística <span class="math inline">\(p\)</span>, então <span class="math display">\[
-\varphi^k:\F\to \F, \quad a\mapsto a^{p^k}
-\]</span> é um automorfismo de <span class="math inline">\(\F\)</span>. Vocês vão aprender na disciplina Grupos e Corpos que todos os automorfismos de corpos finitos têm esta forma.</p></li>
-<li><p>Se <span class="math display">\[
-\F=\{a+b\sqrt 2\mid a,b \in \Q\},
-\]</span> então <span class="math inline">\(a+b\sqrt 2\mapsto a-b\sqrt 2\)</span> é um automorfismo.</p></li>
-</ol>
-</div>
-<div id="def-sesquilinear" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.2</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Uma aplicação <span class="math inline">\(B:V\times V\to \F\)</span> chama-se <b>forma <span class="math inline">\(\sigma\)</span>-sesquilinear</b> se</p>
+<p><span class="theorem-title"><strong>Exemplo 45.1</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 1 &amp; 2 \\
+2 &amp; 1 &amp; 3 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span></p>
 <ul>
-<li><span class="math inline">\(B(\alpha u+\beta v,w)=\alpha B(u,w)+\beta B(v,w)\)</span>.</li>
-<li><span class="math inline">\(B(u,\alpha v+\beta w)=\alpha^\sigma B(u,v)+ \beta^\sigma B(u,w)\)</span>.</li>
-</ul>
-<p>Ou seja, uma forma sesquilinear, é uma forma de duas variáveis que é linear na primeira variável e <span class="math inline">\(\sigma\)</span>-semilinear na segunda.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.3</strong></span> Dada uma forma <span class="math inline">\(B:V\times V\to \F\)</span> sesquilinear, definimos os radicais da forma <span class="math display">\[
-\mbox{Rad}_L(B)=\{v\in V\mid B(v,w)=0\mbox{ para todo }w\in V\}
-\]</span> e <span class="math display">\[
-\mbox{Rad}_R(B)=\{w\in V\mid B(v,w)=0\mbox{ para todo }v\in V\}.
-\]</span> O <span class="math inline">\(\mbox{Rad}_L(B)\)</span> chama-se <b>radical à esquerda</b>, enquanto <span class="math inline">\(\mbox{Rad}_R(B)\)</span> chama-se <b>radical à direita</b>.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.4</strong></span> Assuma que <span class="math inline">\(B:V\times V\to \F\)</span> é uma forma sesquilinear sobre um espaço <span class="math inline">\(V\)</span> de dimensão <span class="math inline">\(n\)</span>, finita. Seja <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Definimos a <b>matriz de Gram</b> de <span class="math inline">\(B\)</span> como a matriz <span class="math inline">\(G_X(B)=(B(b_i,b_j))_{i,j}\)</span>.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 61.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(B\)</span> como na definição anterior, assuma que <span class="math inline">\(u,v\in V\)</span> e denote por <span class="math inline">\([u]_X\)</span> e <span class="math inline">\([v]_X\)</span> os vetores colunas das coordenadas de <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> na base <span class="math inline">\(X\)</span>, respetivamente. Se <span class="math inline">\((\alpha_1,\ldots,\alpha_n)\in\F^n\)</span>, então denote <span class="math display">\[
-(\alpha_1,\ldots,\alpha_n)^\sigma=(\alpha_1^\sigma,\ldots,\alpha_n^\sigma).
-\]</span> Temos que <span class="math display">\[
-B(u,v)=([u]_X)^t G_X(B) ([v]_X)^\sigma.
-\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.1</strong></span> Demonstre que se <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim \mbox{Rad}_L=\dim \mbox{Rad}_R\)</span>. (Dica: Use o Lema anterior para obter sistemas de equações lineares para caraterizar <span class="math inline">\(\mbox{Rad}_L\)</span> e <span class="math inline">\(\mbox{Rad}_R\)</span> e mostre que os espaços de soluções têm a mesma dimensão.)</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.2</strong></span> Seja <span class="math inline">\(A=(a_{i,j})\in M_{n\times n}(\F)\)</span> e denote por <span class="math inline">\(A^\sigma\)</span> a matriz <span class="math inline">\((a_{i,j}^\sigma)\)</span>. Demonstre que <span class="math display">\[
-(A+B)^\sigma =A^\sigma+B^\sigma\quad\mbox{e}\quad (AB)^\sigma=A^\sigma B^\sigma.
-\]</span></p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 61.2</strong></span> Assuma que <span class="math inline">\(V\)</span> tem dimensão finita e sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> bases de <span class="math inline">\(V\)</span>. Então <span class="math display">\[
-G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
-\]</span> onde <span class="math inline">\([\mbox{id}^Y_X]^\sigma\)</span> denota a matriz que obtemos de <span class="math inline">\([\mbox{id}^Y_X]\)</span> aplicando <span class="math inline">\(\sigma\)</span> em todas as suas entradas.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(v,w\in V\)</span>. Vamos calcular que <span class="math display">\[\begin{align*}
-&amp;([v]_Y)^t([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma ([w]_Y)^\sigma\\
-&amp;=([\mbox{id}]^Y_X [v]_Y)^tG_X(B)([\mbox{id}^Y_X][w]_Y)^\sigma\\
-&amp;=([v]_X)^tG_X(B)([w]_X)^\sigma =B(v,w).
-\end{align*}\]</span> Isso implica que <span class="math inline">\(G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma\)</span>.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.5</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear <span class="math inline">\(B\)</span> chama-se <b>reflexiva</b>, se <span class="math inline">\(B(u,v)=0\)</span> implica que <span class="math inline">\(B(v,u)=0\)</span>. Se <span class="math inline">\(B\)</span> é uma forma refexiva, então <span class="math inline">\(\mbox{Rad}_L(B)=\mbox{Rad}_R(B)\)</span> e este espaço é chamado de <b>radical</b> de <span class="math inline">\(B\)</span> e será denotado por <span class="math inline">\(\mbox{Rad}(B)\)</span>. A forma <span class="math inline">\(B\)</span> é dita <b>não degenerada</b> se <span class="math inline">\(\mbox{Rad}(B)=0\)</span>.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.6</strong></span> Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear.</p>
-<ul>
-<li><span class="math inline">\(B\)</span> é chamada <b><span class="math inline">\(\sigma\)</span>-Hermitiana</b> se <span class="math inline">\(B(u,v)=B(v,u)^\sigma\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</li>
-<li><span class="math inline">\(B\)</span> é chamada <b>alternada</b> se <span class="math inline">\(B(u,u)=0\)</span> para todo <span class="math inline">\(u\in U\)</span>.</li>
+<li><p><span class="math inline">\(\tn{Col}(A)\)</span> é o subespaço de <span class="math inline">\(\R^4\)</span> gerado pelo conjunto <span class="math display">\[X = \left\{\begin{pmatrix}
+  1 \\ 2 \\ 0 \\ 1
+  \end{pmatrix}\,,\, \begin{pmatrix}
+  1 \\ 1 \\ 1 \\ 0
+  \end{pmatrix}\,,\,\begin{pmatrix}
+  2 \\ 3 \\ 1 \\ 1
+  \end{pmatrix} \right\}.\]</span> <span class="math inline">\(\tn{Col}(A)\)</span> claramente tem dimensão pelo menos duas. Escalonando a matriz <span class="math display">\[\begin{pmatrix}[ccc|c]
+1 &amp; 1 &amp; 2 &amp; 0\\
+2 &amp; 1 &amp; 3 &amp; 0\\
+0 &amp; 1 &amp; 1 &amp; 0\\
+1 &amp; 0 &amp; 1 &amp; 0
+\end{pmatrix}\equiv \begin{pmatrix}[ccc|c]
+1 &amp; 1 &amp; 2 &amp; 0\\
+0 &amp; -1 &amp; -1 &amp; 0\\
+0 &amp; 1 &amp; 1 &amp; 0\\
+0 &amp; -1 &amp; -1 &amp; 0
+\end{pmatrix}\equiv \begin{pmatrix}[ccc|c]
+1 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 1 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix},\]</span> vimos que a terceira coluna não possui pivô, então existem soluções não triviais da equação <span class="math display">\[\lambda_1\begin{pmatrix}
+  1 \\ 2 \\ 0 \\ 1
+  \end{pmatrix} + \lambda_2\begin{pmatrix}
+  1 \\ 1 \\ 1 \\ 0
+  \end{pmatrix} + \lambda_3\begin{pmatrix}
+  2 \\ 3 \\ 1 \\ 1
+  \end{pmatrix} = \ul{0}.\]</span> Já que <span class="math inline">\(X\)</span> é LD, <span class="math inline">\(\tn{Col}(A)\)</span> tem dimensão 2.</p></li>
+<li><p><span class="math inline">\(\tn{Lin}(A)\)</span> é o subespaço de <span class="math inline">\(\R^3\)</span> gerado pelo conjunto <span class="math display">\[Y = \left\{\begin{pmatrix}
+  1 \\ 1 \\ 2
+  \end{pmatrix}\,,\, \begin{pmatrix}
+  2 \\ 1 \\ 3
+  \end{pmatrix}\,,\,\begin{pmatrix}
+  0 \\ 1 \\ 1
+  \end{pmatrix}\,,\,\begin{pmatrix}
+  1 \\ 0 \\ 1
+  \end{pmatrix} \right\}.\]</span> Escalonando: <span class="math display">\[\begin{pmatrix}[cccc|c]
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0\\
+1 &amp; 1 &amp; 1 &amp; 0 &amp; 0\\
+2 &amp; 3 &amp; 1 &amp; 1 &amp; 0
+\end{pmatrix}\equiv \begin{pmatrix}[cccc|c]
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; -1 &amp; 1 &amp; -1 &amp; 0\\
+0 &amp; -1 &amp; 1 &amp; -1 &amp; 0
+\end{pmatrix}\equiv \begin{pmatrix}[cccc|c]
+1 &amp; 0 &amp; 2 &amp; -1 &amp; 0\\
+0 &amp; 1 &amp; -1 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}\]</span> vimos que <span class="math inline">\(\begin{pmatrix}
+  1 \\ 1 \\ 2
+  \end{pmatrix}\,,\, \begin{pmatrix}
+  2 \\ 1 \\ 3
+  \end{pmatrix}\)</span> são combinações lineares de <span class="math inline">\(\begin{pmatrix}
+  0 \\ 1 \\ 1
+  \end{pmatrix}\,,\,\begin{pmatrix}
+  1 \\ 0 \\ 1
+  \end{pmatrix}\)</span>. Logo <span class="math inline">\(\tn{dim}(\tn{Lin}(A)) = 2\)</span> também.</p></li>
 </ul>
 </div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 61.3</strong></span> As seguintes são verdadeiras para uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear não trivial:</p>
-<ul>
-<li>Se <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-Hermitiana, então <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>.</li>
-<li>Se <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</li>
-<li>Se <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</li>
-<li>Se <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, e <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>, então <span class="math inline">\(B\)</span> é alternada.</li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span></p>
-<ol type="1">
-<li><p>Seja <span class="math inline">\(\alpha\in \F\)</span> tal que <span class="math inline">\(\alpha=B(u,v)\)</span> (tais <span class="math inline">\(u,v\)</span> existem pois <span class="math inline">\(B\)</span> é não trivial). Então <span class="math display">\[
-\alpha=B(u,v)=B(v,u)^\sigma=B(u,v)^{\sigma^2}=\alpha^{\sigma^2}.
-\]</span> Logo <span class="math inline">\(\alpha^{\sigma^2}=\alpha\)</span> e <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>.</p></li>
-<li><p>Com <span class="math inline">\(u,v\in V\)</span>, calculemos que <span class="math display">\[\begin{align*}
-0&amp;=B(u+v,u+v)=B(u,u)+B(u,v)+B(v,u)+B(v,v)\\&amp;=B(u,v)+B(v,u).
-\end{align*}\]</span> Logo <span class="math inline">\(B(u,v)=-B(v,u)\)</span>.</p></li>
-<li><p>Escolhe <span class="math inline">\(u,v\in V\)</span> tal que <span class="math inline">\(B(u,v)=-B(v,u)=1\)</span> (é possível trocando <span class="math inline">\(u\)</span> por um múltiplo escalar) e seja <span class="math inline">\(\alpha\in \F\)</span>. Agora <span class="math display">\[
-\alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
-\]</span> Ou seja <span class="math inline">\(\alpha^\sigma=\alpha\)</span> para todo <span class="math inline">\(\alpha\in\F\)</span> e <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</p></li>
-<li><p>Assuma que <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\)</span>. Então <span class="math inline">\(B(u,u)=-B(u,u)\)</span> ou seja <span class="math inline">\(2B(u,u)=0\)</span> para todo <span class="math inline">\(u\in V\)</span>. Se a caraterística do corpo é diferente de <span class="math inline">\(2\)</span>, isso implica que <span class="math inline">\(B(u,u)=0\)</span> para todo <span class="math inline">\(u\in V\)</span>.</p></li>
-</ol>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.7</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana é chamada <b>simétrica</b> se <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>. Se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(B(u,v)=B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.3</strong></span> Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo simétrica) ou alternada sobre <span class="math inline">\(V\)</span> de dimensão finita. Seja <span class="math inline">\(G=G_X(B)\)</span> a matriz de Gram de <span class="math inline">\(B\)</span> em uma base <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span>. Mostre que</p>
-<ul>
-<li><span class="math inline">\(B\)</span> é simétrica se e somente se <span class="math inline">\(G^t=G\)</span>;</li>
-<li><span class="math inline">\(B\)</span> é alternada se e somente se <span class="math inline">\(G^t=-G\)</span>;</li>
-<li><span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-Hermitiana se e somente se <span class="math inline">\(G^t=G^\sigma\)</span>.</li>
-</ul>
-</div>
+<p>De fato:</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 61.1</strong></span> (O Teorema de Birkhoff-von Neumann) Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva com <span class="math inline">\(\dim (V/\mbox{Rad}(B))\geq 2\)</span>. Então</p>
-<ul>
-<li><span class="math inline">\(B\)</span> é alternada; ou</li>
-<li><span class="math inline">\(B\)</span> é simétrica; ou</li>
-<li><span class="math inline">\(B\)</span> é múltiplo escalar de uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana com <span class="math inline">\(\sigma\neq \sigma^2=\mbox{id}_\F\)</span></li>
-</ul>
+<p><span class="theorem-title"><strong>Teorema 45.1</strong></span> Para qualquer matriz <span class="math inline">\(m\times n\)</span> <span class="math inline">\(A\)</span>, <span class="math display">\[\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A)).\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Nós não demonstramos este teorema. A leitora interessada na demonstração pode consultar <a href="https://nickpgill.github.io/files/2014/06/Lecture13.pdf">as notas de Nick Gill</a>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>A_1 &amp; &amp; A_n \end{pmatrix},$$ com os <span class="math inline">\(A_i\)</span> sendo as colunas de <span class="math inline">\(A\)</span>.</p>
+<p>Suponha que <span class="math inline">\(\tn{dim}(\tn{Col}(A)) = r\)</span> e seja <span class="math inline">\(X = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_r}\}\)</span> uma base de <span class="math inline">\(\tn{Col}(A)\)</span>. Vamos mostrar que <span class="math inline">\(\dim(\tn{Lin}(A))\leqslant r\)</span>. Considere a matriz <span class="math inline">\(m\times r\)</span> <span class="math display">\[C = \begin{pmatrix}
+\ul{c_1} &amp; \cdots &amp; \ul{c_r}
+\end{pmatrix},\]</span> com colunas os vetores da base <span class="math inline">\(X\)</span> de <span class="math inline">\(\tn{Col}(A)\)</span>. Já que <span class="math inline">\(X\)</span> é uma base de <span class="math inline">\(\tn{Col}(A)\)</span>, toda coluna <span class="math inline">\(A_i\)</span> pode ser escrita como combinação linear dos <span class="math inline">\(\ul{c_1},\ldots,\ul{c_r}\)</span>: <span class="math display">\[A_i = s_{1i}\ul{c_1} + \cdots + s_{ri}\ul{c_r}.\]</span> Sendo <span class="math inline">\(S\)</span> a matriz <span class="math inline">\(r\times n\)</span> <span class="math display">\[S = \begin{pmatrix}
+s_{11} &amp; \cdots &amp;s_{1n} \\
+\vdots &amp; &amp; \vdots \\
+s_{r1} &amp; \cdots &amp; s_{rn}
+\end{pmatrix},\]</span> temos que <span class="math inline">\(A = CS\)</span> (confirme!). Vamos reinterpretar essa equação. Escrevendo <span class="math display">\[A = \begin{pmatrix}
+B_1 \\ \vdots \\ B_m
+\end{pmatrix}\]</span> com os <span class="math inline">\(B_i\)</span> as linhas de <span class="math inline">\(A\)</span> e <span class="math display">\[S = \begin{pmatrix}
+S_1 \\ \vdots \\ S_r
+\end{pmatrix}\]</span> com os <span class="math inline">\(S_i\)</span> as linhas de <span class="math inline">\(S\)</span>, a equação <span class="math inline">\(A = CS\)</span> se torna <span class="math display">\[\begin{pmatrix}
+B_1 \\ \vdots \\ B_m
+\end{pmatrix} = C\begin{pmatrix}
+S_1 \\ \vdots \\ S_r
+\end{pmatrix},\]</span> mostrando que cada linha de <span class="math inline">\(A\)</span> é combinação linear das linhas de <span class="math inline">\(S\)</span>. Ou seja, <span class="math inline">\(\tn{Lin}(A)\)</span> é gerado pelas <span class="math inline">\(r\)</span> linhas de <span class="math inline">\(S\)</span>. Ou seja, <span class="math inline">\(\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))\)</span>.</p>
+<p>Mas agora, aplicando o mesmo argumento pra matriz transposta <span class="math inline">\(A^t\)</span>, obtemos que <span class="math display">\[\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A^t)) \leqslant \dim(\tn{Col}(A^t)) = \dim(\tn{Lin}(A)),\]</span> logo <span class="math inline">\(\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A))\)</span>.&nbsp;◻</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.8</strong></span> Se <span class="math inline">\(V\)</span> é um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span>, então <span class="math inline">\(u,v\in V\)</span> são ditos <b>ortogonais</b> se <span class="math inline">\(B(u,v)=0\)</span>. Escrevemos neste caso que <span class="math inline">\(u\perp v\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 45.2</strong></span> O <em>posto</em> <span class="math inline">\(\tn{Rk}(A)\)</span> de uma matriz <span class="math inline">\(A\)</span> é a dimensão do espaço coluna (ou do espaço linha) de <span class="math inline">\(A\)</span>.</p>
+<p>(as letras <span class="math inline">\(\tn{Rk}\)</span> vem do nome inglés <em>rank</em>).</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 61.2</strong></span> Se <span class="math inline">\(B\)</span> é alternada e <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(v\perp v\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 45.2</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
+1 &amp; 1 &amp; 2 \\
+2 &amp; 1 &amp; 3 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1
+\end{pmatrix}.\]</span> Já vimos que <span class="math inline">\({\rm dim}({\rm Col}(A) ) = {\rm dim}({\rm Lin}(A)) = 2\)</span>, portanto <span class="math inline">\({\rm Rk}(A) = 2\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.4</strong></span> Seja <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Denote por <span class="math inline">\(\mbox{Fix}(\F)=\{a\in\F\mid a^\sigma=a\}\)</span>. Mostre que <span class="math inline">\(\mbox{Fix}(\sigma)\)</span> é um corpo.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 45.3</strong></span> Sejam <span class="math inline">\(B = \{(1,1)\,,\,(0,2) \}\)</span> e <span class="math inline">\(B' = \{(1,0,1)\,,\,(0,1,0)\,,\,(1,2,0) \}\)</span> bases de <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>, respetivamente e <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^3\)</span> a transformação linear definida por <span class="math inline">\((x,y) \mapsto (2x,x-y,2y)\)</span>.</p>
+<p>Sabemos que <span class="math display">\[[T]^{B'}_{B} =  \begin{pmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22} \\
+a_{31} &amp; a_{32}
+\end{pmatrix},\]</span> em que <span class="math inline">\(T(1,1)_{B'} = \begin{pmatrix}
+a_{11}  \\
+a_{21}  \\
+a_{31}
+\end{pmatrix}\)</span> e <span class="math inline">\(T(0,2)_{B'} = \begin{pmatrix}
+a_{12} \\
+a_{22} \\
+a_{32}
+\end{pmatrix}\)</span>. Temos <span class="math display">\[T(1,1) = (2,0,2) = a_{11}(1,0,1)+ a_{21}(0,1,0)+ a_{31}(1,2,0);\]</span> <span class="math display">\[T(0,2) = (0,-2,4) = a_{12}(1,0,1)+ a_{22}(0,1,0)+ a_{32}(1,2,0);\]</span> resolvendo os sistemas, obtemos <span class="math display">\[[T]^{B'}_{B} =
+    \begin{pmatrix}
+    2 &amp; 4 \\
+    0&amp; 6 \\
+    0 &amp; -4
+\end{pmatrix}.\]</span> Note que <span class="math inline">\({\rm dim}({\rm Col}([T]^{B'}_{B})) = 2\)</span>, logo <span class="math inline">\({\rm Rk}([T]^{B'}_{B}) = 2\)</span>.</p>
+<p>Como <span class="math display">\[\begin{array}{ccc}
+(2x,x-y,2y) &amp;= &amp; (2x,x,0) + (0,-y,2y) \\
+&amp;=&amp; x(2,1,0) + y(0,-1,2)
+\end{array},\]</span> segue que <span class="math inline">\(\{ (2,1,0), (0,-1,2)\}\)</span> é uma base para <span class="math inline">\({\rm Im}(T)\)</span>, logo <span class="math inline">\({\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B'}_{B})\)</span>.</p>
 </div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.9</strong></span> Seja <span class="math inline">\(B:V\times V\to \F\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo formas simétricas). Defina <span class="math inline">\(Q:V\to \F\)</span> como <span class="math inline">\(Q(v)=B(v,v)\)</span>. Então <span class="math inline">\(Q\)</span> é chamada de <b>forma quadrática</b> associada com <span class="math inline">\(B\)</span>.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 61.4</strong></span> Usando a notação da definição anterior, as seguintes afirmações são válidas para todo <span class="math inline">\(u,v\in V\)</span> e <span class="math inline">\(\alpha\in\F\)</span>:</p>
-<ul>
-<li><span class="math inline">\(Q(v)\in\mbox{Fix}(\sigma)\)</span>;</li>
-<li><span class="math inline">\(Q(\alpha v)=\alpha\alpha^\sigma Q(v)=\alpha^{\sigma+1}Q(v)\)</span>;</li>
-<li>se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(Q(\alpha v)=\alpha^2 Q(v)\)</span>;</li>
-<li><span class="math inline">\(Q(u+v)-Q(u)-Q(v)=B(u,v)+B(v,u)=B(u,v)+B(u,v)^\sigma\)</span>;</li>
-<li>se <span class="math inline">\(u\perp v\)</span>, então <span class="math inline">\(Q(u+v)=Q(u)+Q(v)\)</span> (Teorema de Pitágoras);</li>
-<li><span class="math inline">\(Q(u+v)+Q(u-v)=2Q(u)+2Q(v)\)</span> (Regra do Paralelogramo);</li>
-<li>se <span class="math inline">\(B\)</span> for simétrica, então <span class="math inline">\(Q(u+v)-Q(u)-Q(v)=2B(u,v)\)</span>.</li>
-</ul>
-<p>Em particular, se <span class="math inline">\(B\)</span> for simétrica e <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, então <span class="math display">\[
-B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
-\]</span> e <span class="math inline">\(B\)</span> está determinada por <span class="math inline">\(Q\)</span>.</p>
+<p>De fato, esta igualdade sempre vale:</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 45.2</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita, <span class="math inline">\(T: V \rightarrow W\)</span> uma transformação linear e <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_m}\}\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Então <span class="math display">\[{\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{C}_{B}).\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Simples, só aplicar a definição de <span class="math inline">\(Q\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Se lembre que as colunas de <span class="math inline">\([T]_B^C\)</span> são os vetores <span class="math display">\[\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.\]</span> Logo <span class="math display">\[\dim(\tn{Col}([T]_B^C)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).\]</span> Mas na outra direção, um vetor <span class="math inline">\(\ul{w}\)</span> da imagem de <span class="math inline">\(T\)</span> tem a forma <span class="math inline">\(T(\ul{v})\)</span>. Escrevendo <span class="math inline">\(\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}\)</span>, o vetor de coordenadas de <span class="math inline">\(\ul{v}\)</span> na base <span class="math inline">\(B\)</span> é <span class="math inline">\(\ul{v}_B = \begin{pmatrix}
+\lambda_1 \\
+\vdots \\
+\lambda_m
+\end{pmatrix}\)</span> e <span class="math display">\[\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.\]</span> Segue que <span class="math inline">\(\ul{w}_C\in \tn{Col}([T]_B^C)\)</span>, logo <span class="math display">\[\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T_B^C)).\]</span> Resumindo, <span class="math display">\[\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_B^C).\]</span>&nbsp;◻</p>
 </div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.10</strong></span> Seja <span class="math inline">\(V\)</span> com forma <span class="math inline">\(\sigma\)</span>-hermitiana <span class="math inline">\(B\)</span>. Um vetor <span class="math inline">\(v\in V\)</span> é dito <b>isotrópico</b> se <span class="math inline">\(Q(v)=B(v,v)=0\)</span>.</p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 61.3</strong></span> Se <span class="math inline">\(V=\R^n\)</span> ou <span class="math inline">\(\C^n\)</span> e <span class="math inline">\(B\)</span> é o produto interno usual, então <span class="math inline">\(0\)</span> é o único vetor isotrôpico.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.5</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão maior ou igual a <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\C\)</span> e seja <span class="math inline">\(B\)</span> uma forma simétrica em <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(V\)</span> possui um vetor não nulo isotrópico. Este exercício mostra que é mesmo necessário usar o conjugado complexo na segunda variável na definição do produto interno para <span class="math inline">\(\C\)</span>-espaços. Usando formas simétricas, não é possível obter um produto interno que resulta em uma métrica.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 61.6</strong></span> Seja <span class="math inline">\(B\)</span> uma forma sesquilinear reflexiva sobre um espaço <span class="math inline">\(V\)</span> de dimensão finita. Assuma que <span class="math inline">\(G\)</span> é a matriz da forma em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)\)</span>. Em particular, <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.11</strong></span> Seja <span class="math inline">\(V\)</span> um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span> e <span class="math inline">\(U\leq V\)</span>. Definimos o <b>espaço ortogonal</b> <span class="math inline">\(U^\perp\)</span> de <span class="math inline">\(U\)</span> como <span class="math display">\[
-U^\perp=\{v\in V\mid B(v,u)=0\mbox{ para todo }u\in U\}.
-\]</span></p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 61.5</strong></span> As seguintes afirmações são válidas para o espaço ortogonal em relação a uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva:</p>
-<ul>
-<li><span class="math inline">\(U^\perp\leq V\)</span>;</li>
-<li>Se <span class="math inline">\(U\leq W\)</span>, então <span class="math inline">\(W^\perp\leq U^\perp\)</span>;</li>
-<li><span class="math inline">\(\mbox{Rad}(V)=V^\perp\)</span> e <span class="math inline">\(V^\perp\leq U^\perp\)</span> para todo <span class="math inline">\(U\leq V\)</span>;</li>
-<li>Se <span class="math inline">\(B\)</span> é não degenerada e <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim U^\perp+\dim U=\dim V\)</span>.</li>
-</ul>
+<p>Se lembre que mostramos na última lista que as matrizes <span class="math inline">\(n\times n\)</span> <span class="math inline">\(A,B\)</span> são semelhantes se, e somente se, existem um espaço vetorial <span class="math inline">\(V\)</span> de dimensão <span class="math inline">\(n\)</span> e um endomorfismo <span class="math inline">\(T:V\to V\)</span> tais que <span class="math display">\[[T]_X^X = A\,,\, [T]_Y^Y = B\]</span> em que <span class="math inline">\(X,Y\)</span> são duas bases de <span class="math inline">\(V\)</span>.</p>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 45.1</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> matrizes semelhantes. Então <span class="math display">\[{\rm Rk}(A) = {\rm Rk}(B).\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>As afirmações 1., 2., 3. são simples. Vamos provar apenas 4. Assuma que <span class="math inline">\(\dim V=n\)</span>, que <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> é uma base de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(\{b_1,\ldots,b_k\}\)</span> é base de <span class="math inline">\(U\)</span>, e seja <span class="math inline">\(G=G_X(B)\)</span> a matriz de <span class="math inline">\(B\)</span> na base <span class="math inline">\(X\)</span>. Temos por resultado anterior que um vetor <span class="math inline">\(v\)</span> com <span class="math inline">\([v]_X=(\alpha_1,\ldots,\alpha_n)^t\)</span> pertençe a <span class="math inline">\(U^\perp\)</span> se e somente se <span class="math display">\[
-(\alpha_1,\ldots,\alpha_n)G [w]_B^\sigma =0\quad \mbox{para todo}\quad w\in U
-\]</span> que vale se e somente se <span class="math display">\[
-(\alpha_1,\ldots,\alpha_n)G [b_i]_B^\sigma =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}.
-\]</span> A equação anterior é equivalente ao sistema de equações <span class="math display">\[
-(\alpha_1,\ldots,\alpha_n)G e_i =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}
-\]</span> onde <span class="math inline">\(e_1,\ldots,e_n\)</span> é a base canônica de <span class="math inline">\(\F^n\)</span>. Mas o sistema anterior é um sistema linear homogêneo com incôgnitas <span class="math inline">\(\alpha_1,\ldots,\alpha_n\)</span> e a matriz desta sistema está formada pelas primeiras <span class="math inline">\(k\)</span> linhas de <span class="math inline">\(G^t\)</span>. Como <span class="math inline">\(B\)</span> é não degenerada, <span class="math inline">\(G^t\)</span> tem posto <span class="math inline">\(k\)</span> e o espaço de soluções tem dimensão <span class="math inline">\(n-k\)</span>.</p>
-</div>
-<p>Na situação do item 4. do resultado anterior, se <span class="math inline">\(U\cap U^\perp=0\)</span>, então <span class="math inline">\(V=U\oplus U^\perp\)</span> e <span class="math inline">\(U^\perp\)</span> é chamado de <b>complemento ortogonal</b> de <span class="math inline">\(U\)</span>. Neste caso, escrevemos que <span class="math inline">\(V=U\perp U^\perp\)</span> para indicar que os dois espaços na decomposição são ortogonais.</p>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 61.4</strong></span> Considere <span class="math inline">\(V=\C^2\)</span> com a forma bilinear simétrica <span class="math inline">\(B(v,w)=v_1w_1+v_2w_2\)</span> para <span class="math inline">\(v=(v_1,v_2)\)</span> e <span class="math inline">\(w=(w_1,w_2)\)</span> pertencentes a <span class="math inline">\(\C^2\)</span>. Observe que não aplicamos o conjugado complexo na segunda variável! Note que esta forma está não degenerada, pois na base canônica a sua matriz é a matriz identidade. Considere a base <span class="math inline">\(\{(1,i),(1,-i)\}\)</span> de <span class="math inline">\(\C^2\)</span>. Nesta base, a matriz da forma é <span class="math display">\[
-\begin{pmatrix} 0 &amp; 2 \\ 2 &amp; 0\end{pmatrix}
-\]</span> Se <span class="math inline">\(U=\langle (1,i)\rangle\)</span>, então <span class="math inline">\(U^\perp =U\)</span> e <span class="math inline">\(\C^2\neq U\oplus U^\perp\)</span>. Ou seja, o espaço ortogonal <span class="math inline">\(U^\perp\)</span> não é complemento ortogonal de <span class="math inline">\(U\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>as matrizes de <span class="math inline">\(T\)</span> com respeito a duas bases de <span class="math inline">\(V\)</span>. Então pelo teorema, <span class="math display">\[\tn{Rk}(A) = \dim(\tn{Im}(T)) = \tn{Rk}(B).\]</span>&nbsp;◻</p>
 </div>
 
 
@@ -1911,13 +1868,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/cyclic.html" class="pagination-link" aria-label="A decomposição cíclica">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span>
+      <a href="../AlgebraLinearI/06_alglin1.html" class="pagination-link" aria-label="A matriz de uma transformação linear e mudança de base">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">A matriz de uma transformação linear e mudança de base</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/isometrias.html" class="pagination-link" aria-label="Isometrias de espaços com formas">
-        <span class="nav-page-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
