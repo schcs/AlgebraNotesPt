@@ -35,17 +35,17 @@ Seja $$A = \begin{pmatrix}
       \end{pmatrix}\,,\,\begin{pmatrix}
       2 \\ 3 \\ 1 \\ 1
       \end{pmatrix} \right\}.$$ $\tn{Col}(A)$ claramente tem dimensão
-    pelo menos duas. Escalonando a matriz $$\begin{pmatrix}[cccc]
+    pelo menos duas. Escalonando a matriz $$\begin{pmatrix}
     1 & 1 & 2 & 0\\
     2 & 1 & 3 & 0\\
     0 & 1 & 1 & 0\\
     1 & 0 & 1 & 0
-    \end{pmatrix}\equiv \begin{pmatrix}[cccc]
+    \end{pmatrix}\equiv \begin{pmatrix}
     1 & 1 & 2 & 0\\
     0 & -1 & -1 & 0\\
     0 & 1 & 1 & 0\\
     0 & -1 & -1 & 0
-    \end{pmatrix}\equiv \begin{pmatrix}[cccc]
+    \end{pmatrix}\equiv \begin{pmatrix}
     1 & 0 & 1 & 0\\
     0 & 1 & 1 & 0\\
     0 & 0 & 0 & 0\\
@@ -69,15 +69,15 @@ Seja $$A = \begin{pmatrix}
       0 \\ 1 \\ 1
       \end{pmatrix}\,,\,\begin{pmatrix}
       1 \\ 0 \\ 1
-      \end{pmatrix} \right\}.$$ Escalonando: $$\begin{pmatrix}[ccccc]
+      \end{pmatrix} \right\}.$$ Escalonando: $$\begin{pmatrix}
     1 & 2 & 0 & 1 & 0\\
     1 & 1 & 1 & 0 & 0\\
     2 & 3 & 1 & 1 & 0
-    \end{pmatrix}\equiv \begin{pmatrix}[ccccc]
+    \end{pmatrix}\equiv \begin{pmatrix}
     1 & 2 & 0 & 1 & 0\\
     0 & -1 & 1 & -1 & 0\\
     0 & -1 & 1 & -1 & 0
-    \end{pmatrix}\equiv \begin{pmatrix}[ccccc]
+    \end{pmatrix}\equiv \begin{pmatrix}
     1 & 0 & 2 & -1 & 0\\
     0 & 1 & -1 & 1 & 0\\
     0 & 0 & 0 & 0 & 0
