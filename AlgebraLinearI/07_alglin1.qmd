@@ -1,0 +1,239 @@
+--- 
+title: "O posto de uma matriz"
+number-sections: true
+lang: pt-BR
+--- 
+
+Vamos considerar mais um invariante, essa vez para qualquer matriz
+retangular $A$: o seu posto $\tn{Rk}(A)$. Como acima, no caso especial
+em que $A,B$ são quadradas e semelhantes, vamos ter
+$\tn{Rk}(A) = \tn{Rk}(B)$.
+
+:::{#def-}
+Seja $A$ uma matriz $m\times n$.
+
+-   O *espaço coluna* $\tn{Col}(A)$ de $A$ é o subespaço de $\R^m$
+    gerado pelas colunas de $A$.
+
+-   O *espaço linha* $\tn{Lin}(A)$ de $A$ é o subespaço de $\R^n$ gerado
+    pelas linhas de $A$.
+:::
+
+:::{#exm-}
+Seja $$A = \begin{pmatrix}
+1 & 1 & 2 \\
+2 & 1 & 3 \\
+0 & 1 & 1 \\
+1 & 0 & 1
+\end{pmatrix}.$$
+
+-   $\tn{Col}(A)$ é o subespaço de $\R^4$ gerado pelo conjunto
+    $$X = \left\{\begin{pmatrix}
+      1 \\ 2 \\ 0 \\ 1
+      \end{pmatrix}\,,\, \begin{pmatrix}
+      1 \\ 1 \\ 1 \\ 0
+      \end{pmatrix}\,,\,\begin{pmatrix}
+      2 \\ 3 \\ 1 \\ 1
+      \end{pmatrix} \right\}.$$ $\tn{Col}(A)$ claramente tem dimensão
+    pelo menos duas. Escalonando a matriz $$\begin{pmatrix}[ccc|c]
+    1 & 1 & 2 & 0\\
+    2 & 1 & 3 & 0\\
+    0 & 1 & 1 & 0\\
+    1 & 0 & 1 & 0
+    \end{pmatrix}\equiv \begin{pmatrix}[ccc|c]
+    1 & 1 & 2 & 0\\
+    0 & -1 & -1 & 0\\
+    0 & 1 & 1 & 0\\
+    0 & -1 & -1 & 0
+    \end{pmatrix}\equiv \begin{pmatrix}[ccc|c]
+    1 & 0 & 1 & 0\\
+    0 & 1 & 1 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0
+    \end{pmatrix},$$ vimos que a terceira coluna não possui pivô, então
+    existem soluções não triviais da equação $$\lambda_1\begin{pmatrix}
+      1 \\ 2 \\ 0 \\ 1
+      \end{pmatrix} + \lambda_2\begin{pmatrix}
+      1 \\ 1 \\ 1 \\ 0
+      \end{pmatrix} + \lambda_3\begin{pmatrix}
+      2 \\ 3 \\ 1 \\ 1
+      \end{pmatrix} = \ul{0}.$$ Já que $X$ é LD, $\tn{Col}(A)$ tem
+    dimensão 2.
+
+-   $\tn{Lin}(A)$ é o subespaço de $\R^3$ gerado pelo conjunto
+    $$Y = \left\{\begin{pmatrix}
+      1 \\ 1 \\ 2
+      \end{pmatrix}\,,\, \begin{pmatrix}
+      2 \\ 1 \\ 3
+      \end{pmatrix}\,,\,\begin{pmatrix}
+      0 \\ 1 \\ 1
+      \end{pmatrix}\,,\,\begin{pmatrix}
+      1 \\ 0 \\ 1
+      \end{pmatrix} \right\}.$$ Escalonando: $$\begin{pmatrix}[cccc|c]
+    1 & 2 & 0 & 1 & 0\\
+    1 & 1 & 1 & 0 & 0\\
+    2 & 3 & 1 & 1 & 0
+    \end{pmatrix}\equiv \begin{pmatrix}[cccc|c]
+    1 & 2 & 0 & 1 & 0\\
+    0 & -1 & 1 & -1 & 0\\
+    0 & -1 & 1 & -1 & 0
+    \end{pmatrix}\equiv \begin{pmatrix}[cccc|c]
+    1 & 0 & 2 & -1 & 0\\
+    0 & 1 & -1 & 1 & 0\\
+    0 & 0 & 0 & 0 & 0
+    \end{pmatrix}$$ vimos que $\begin{pmatrix}
+      1 \\ 1 \\ 2
+      \end{pmatrix}\,,\, \begin{pmatrix}
+      2 \\ 1 \\ 3
+      \end{pmatrix}$ são combinações lineares de $\begin{pmatrix}
+      0 \\ 1 \\ 1
+      \end{pmatrix}\,,\,\begin{pmatrix}
+      1 \\ 0 \\ 1
+      \end{pmatrix}$. Logo $\tn{dim}(\tn{Lin}(A)) = 2$ também.
+:::
+
+De fato:
+
+:::{#thm-}
+Para qualquer matriz $m\times n$ $A$,
+$$\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A)).$$
+:::
+
+:::{.proof}
+
+A_1 & \cdots & A_n
+\end{pmatrix},$$ com os $A_i$ sendo as colunas de $A$.
+
+Suponha que $\tn{dim}(\tn{Col}(A)) = r$ e seja
+$X = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_r}\}$ uma base de $\tn{Col}(A)$.
+Vamos mostrar que $\dim(\tn{Lin}(A))\leqslant r$. Considere a matriz
+$m\times r$ $$C = \begin{pmatrix}
+\ul{c_1} & \cdots & \ul{c_r}
+\end{pmatrix},$$ com colunas os vetores da base $X$ de $\tn{Col}(A)$. Já
+que $X$ é uma base de $\tn{Col}(A)$, toda coluna $A_i$ pode ser escrita
+como combinação linear dos $\ul{c_1},\ldots,\ul{c_r}$:
+$$A_i = s_{1i}\ul{c_1} + \cdots + s_{ri}\ul{c_r}.$$ Sendo $S$ a matriz
+$r\times n$ $$S = \begin{pmatrix}
+s_{11} & \cdots &s_{1n} \\
+\vdots & & \vdots \\
+s_{r1} & \cdots & s_{rn}
+\end{pmatrix},$$ temos que $A = CS$ (confirme!). Vamos reinterpretar
+essa equação. Escrevendo $$A = \begin{pmatrix}
+B_1 \\ \vdots \\ B_m
+\end{pmatrix}$$ com os $B_i$ as linhas de $A$ e $$S = \begin{pmatrix}
+S_1 \\ \vdots \\ S_r
+\end{pmatrix}$$ com os $S_i$ as linhas de $S$, a equação $A = CS$ se
+torna $$\begin{pmatrix}
+B_1 \\ \vdots \\ B_m
+\end{pmatrix} = C\begin{pmatrix}
+S_1 \\ \vdots \\ S_r
+\end{pmatrix},$$ mostrando que cada linha de $A$ é combinação linear das
+linhas de $S$. Ou seja, $\tn{Lin}(A)$ é gerado pelas $r$ linhas de $S$.
+Ou seja, $\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))$.
+
+Mas agora, aplicando o mesmo argumento pra matriz transposta $A^t$,
+obtemos que
+$$\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A^t)) \leqslant \dim(\tn{Col}(A^t)) = \dim(\tn{Lin}(A)),$$
+logo $\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A))$. ◻
+:::
+
+:::{#def-}
+O *posto* $\tn{Rk}(A)$ de uma matriz $A$ é a dimensão do espaço coluna
+(ou do espaço linha) de $A$.
+
+(as letras $\tn{Rk}$ vem do nome inglés *rank*).
+:::
+
+:::{#exm-}
+Seja $$A = \begin{pmatrix}
+1 & 1 & 2 \\
+2 & 1 & 3 \\
+0 & 1 & 1 \\
+1 & 0 & 1
+\end{pmatrix}.$$ Já vimos que
+${\rm dim}({\rm Col}(A) ) = {\rm dim}({\rm Lin}(A)) = 2$, portanto
+${\rm Rk}(A) = 2$.
+:::
+
+:::{#exm-}
+Sejam $B = \{(1,1)\,,\,(0,2) \}$ e
+$B' = \{(1,0,1)\,,\,(0,1,0)\,,\,(1,2,0) \}$ bases de $\mathbb{R}^2$ e
+$\mathbb{R}^3$, respetivamente e
+$T: \mathbb{R}^2 \rightarrow \mathbb{R}^3$ a transformação linear
+definida por $(x,y) \mapsto (2x,x-y,2y)$.
+
+Sabemos que $$[T]^{B'}_{B} =  \begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \\
+a_{31} & a_{32} 
+\end{pmatrix},$$ em que $T(1,1)_{B'} = \begin{pmatrix}
+a_{11}  \\
+a_{21}  \\
+a_{31} 
+\end{pmatrix}$ e $T(0,2)_{B'} = \begin{pmatrix}
+a_{12} \\
+a_{22} \\
+a_{32} 
+\end{pmatrix}$. Temos
+$$T(1,1) = (2,0,2) = a_{11}(1,0,1)+ a_{21}(0,1,0)+ a_{31}(1,2,0);$$
+$$T(0,2) = (0,-2,4) = a_{12}(1,0,1)+ a_{22}(0,1,0)+ a_{32}(1,2,0);$$
+resolvendo os sistemas, obtemos $$[T]^{B'}_{B} =
+    \begin{pmatrix}
+    2 & 4 \\ 
+    0& 6 \\
+    0 & -4
+\end{pmatrix}.$$ Note que ${\rm dim}({\rm Col}([T]^{B'}_{B})) = 2$, logo
+${\rm Rk}([T]^{B'}_{B}) = 2$.
+
+Como $$\begin{array}{ccc}
+(2x,x-y,2y) &= & (2x,x,0) + (0,-y,2y) \\
+&=& x(2,1,0) + y(0,-1,2)
+\end{array},$$ segue que $\{ (2,1,0), (0,-1,2)\}$ é uma base para
+${\rm Im}(T)$, logo
+${\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B'}_{B})$.
+:::
+
+De fato, esta igualdade sempre vale:
+
+:::{#thm-}
+Sejam $V$ e $W$ espaços vetoriais de dimensão finita,
+$T: V \rightarrow W$ uma transformação linear e
+$B = \{\ul{b_1},\ldots,\ul{b_m}\}$ e $C$ bases de $V$ e $W$,
+respetivamente. Então
+$${\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{C}_{B}).$$
+:::
+
+:::{.proof}
+
+Se lembre que as colunas de $[T]_B^C$ são os vetores
+$$\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.$$ Logo
+$$\dim(\tn{Col}([T]_B^C)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).$$
+Mas na outra direção, um vetor $\ul{w}$ da imagem de $T$ tem a forma
+$T(\ul{v})$. Escrevendo
+$\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}$, o vetor de
+coordenadas de $\ul{v}$ na base $B$ é $\ul{v}_B = \begin{pmatrix}
+\lambda_1 \\
+\vdots \\
+\lambda_m 
+\end{pmatrix}$ e
+$$\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.$$
+Segue que $\ul{w}_C\in \tn{Col}([T]_B^C)$, logo
+$$\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T_B^C)).$$ Resumindo,
+$$\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_B^C).$$ ◻
+:::
+
+Se lembre que mostramos na última lista que as matrizes $n\times n$
+$A,B$ são semelhantes se, e somente se, existem um espaço vetorial $V$
+de dimensão $n$ e um endomorfismo $T:V\to V$ tais que
+$$[T]_X^X = A\,,\, [T]_Y^Y = B$$ em que $X,Y$ são duas bases de $V$.
+
+:::{#cor-}
+Sejam $A$ e $B$ matrizes semelhantes. Então
+$${\rm Rk}(A) = {\rm Rk}(B).$$
+:::
+
+:::{.proof}
+
+as matrizes de $T$ com respeito a duas bases de $V$. Então pelo teorema,
+$$\tn{Rk}(A) = \dim(\tn{Im}(T)) = \tn{Rk}(B).$$ ◻
+:::

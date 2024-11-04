@@ -1,8 +1,0 @@
-dim W1 = 6
-dim W2 = 7
-basis of W1 = [0, 1, 2, 3, 4, 5]
-(3,20)-entry = -7/17
-dim W  = 10
-dim W1 meet W2 = 3
-(5,20)-entry = -97/3
-first line of intersection = Matrix([[1, 0, 0, 3, 1, -2, 5/2, 0, -5/2, 3/2, -1, 1/2, 1, 1, 3, -1, 1/2, 1, 1/2, -2]])

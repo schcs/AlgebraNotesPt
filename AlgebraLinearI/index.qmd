@@ -27,3 +27,5 @@ Material disponibilizado sob a licença
 - [Computação com Python](01_alglin_comput.qmd)
 - [Transformações lineares](04_alglin1.qmd)
 - [O núcleo e a imagem](05_alglin1.qmd)
+- [A matriz de uma transformação linear e mudança de base](06_alglin1.qmd)
+- [O posto de uma matriz](07_alglin1.qmd)
