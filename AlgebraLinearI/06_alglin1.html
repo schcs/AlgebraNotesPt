@@ -1340,30 +1340,30 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 \end{aligned}\]</span></p>
 <p>Uma notação pra matriz <span class="math inline">\(A\)</span> acima:</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Denote por <span class="math inline">\([T]_B^C\)</span> a matriz <span class="math inline">\(n\times m\)</span> de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Isto é, <span class="math inline">\([T]_B^C\)</span> é a matriz cujas colunas são os vetores de coordenadas com respeito à base <span class="math inline">\(C\)</span> dos vetores <span class="math inline">\(T(\ul{b_j})\)</span> (<span class="math inline">\(j\in \{1,\ldots,m\}\)</span>): <span class="math display">\[[T]_B^C = \begin{pmatrix}
+<p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Denote por <span class="math inline">\([T]_C^B\)</span> a matriz <span class="math inline">\(n\times m\)</span> de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Isto é, <span class="math inline">\([T]_B^C\)</span> é a matriz cujas colunas são os vetores de coordenadas com respeito à base <span class="math inline">\(C\)</span> dos vetores <span class="math inline">\(T(\ul{b_j})\)</span> (<span class="math inline">\(j\in \{1,\ldots,m\}\)</span>): <span class="math display">\[[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C &amp; T(\ul{b_2})_C &amp; \cdots &amp; T(\ul{b_m})_C
 \end{pmatrix}.\]</span></p>
 </div>
-<p>Observe que a matriz <span class="math inline">\([T]_B^C\)</span> depende das escolhas das bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>. Com respeito a outras bases de <span class="math inline">\(V,W\)</span>, a <em>mesma</em> transformação linear <span class="math inline">\(T\)</span> teria uma matriz <em>diferente</em>.</p>
+<p>Observe que a matriz <span class="math inline">\([T]_C^B\)</span> depende das escolhas das bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>. Com respeito a outras bases de <span class="math inline">\(V,W\)</span>, a <em>mesma</em> transformação linear <span class="math inline">\(T\)</span> teria uma matriz <em>diferente</em>.</p>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 44.2</strong></span> Vamos considerar <span class="math inline">\(V = W = \R^2\)</span>, mas com duas bases diferentes. Sejam <span class="math inline">\(B\)</span> a base canônica <span class="math display">\[\{\ul{b_1}\,,\,\ul{b_2}\} = \{(1,0)\,,\,(0,1)\}\]</span> e <span class="math inline">\(C\)</span> a base <span class="math display">\[\{\ul{c_1}\,,\,\ul{c_2}\} = \{(1,1)\,,\,(2,1)\}.\]</span> A transformação identidade <span class="math inline">\(I\)</span> de <span class="math inline">\(\R^2\)</span> manda o vetor <span class="math inline">\(\ul{v}\)</span> para <span class="math inline">\(\ul{v}\)</span>. Mas o vetor de coordenadas de <span class="math inline">\(\ul{v}\)</span> depende da base. Temos que <span class="math display">\[(1,0) = -(1,1) + (2,1)\]</span> e <span class="math display">\[(0,1) = 2(1,1) - (2,1).\]</span> Logo, com respeito à base <span class="math inline">\(C\)</span>, os vetores <span class="math inline">\(\ul{b_1}, \ul{b_2}\)</span> têm vetores de coordenadas <span class="math display">\[(\ul{b_1})_C = \begin{pmatrix}
 -1 \\ 1
 \end{pmatrix}\quad,\quad(\ul{b_2})_C = \begin{pmatrix}
 2 \\ -1
-\end{pmatrix}.\]</span> Segue que a matriz <span class="math inline">\([I]_B^C\)</span> da transformação identidade com respeito às bases <span class="math inline">\(B,C\)</span> é <span class="math display">\[[I]_B^C = \begin{pmatrix}
+\end{pmatrix}.\]</span> Segue que a matriz <span class="math inline">\([I]_C^B\)</span> da transformação identidade com respeito às bases <span class="math inline">\(B,C\)</span> é <span class="math display">\[[I]_C^B = \begin{pmatrix}
 I(1,0)_C &amp; I(0,1)_C
 \end{pmatrix} = \begin{pmatrix}
 -1 &amp; 2 \\ 1 &amp; -1
 \end{pmatrix}.\]</span></p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 44.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}\,,\ldots,\ul{b_m}\},C = \{\ul{c_1}\,,\ldots,\ul{c_n}\}\)</span> respetivamente. A função <span class="math display">\[\rho : \mathcal{L}(V,W) \to M_{n,m}(\R)\]</span> dada por <span class="math inline">\(T\mapsto [T]_B^C\)</span> é um isomorfismo de espaços vetoriais.</p>
+<p><span class="theorem-title"><strong>Teorema 44.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}\,,\ldots,\ul{b_m}\},C = \{\ul{c_1}\,,\ldots,\ul{c_n}\}\)</span> respetivamente. A função <span class="math display">\[\rho : \mathcal{L}(V,W) \to M_{n,m}(\R)\]</span> dada por <span class="math inline">\(T\mapsto [T]_C^B\)</span> é um isomorfismo de espaços vetoriais.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>penúltimo teorema das notas de Semana 4), observando que o mesmo argumento funciona.&nbsp;◻</p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 44.2</strong></span> Sejam <span class="math inline">\(U,V,W\)</span> espaços vetoriais de dimensão finita com bases <span class="math inline">\(B,C,D\)</span> respetivamente e sejam <span class="math display">\[U\xrightarrow{S}V\xrightarrow{T}W\]</span> transformações lineares. Então <span class="math display">\[[T]_C^D\cdot [S]_B^C = [TS]_B^D.\]</span> Informalmente: a composição de duas transformações lineares está dada pela multiplicação das matrizes correspondentes.</p>
+<p><span class="theorem-title"><strong>Teorema 44.2</strong></span> Sejam <span class="math inline">\(U,V,W\)</span> espaços vetoriais de dimensão finita com bases <span class="math inline">\(B,C,D\)</span> respetivamente e sejam <span class="math display">\[U\xrightarrow{S}V\xrightarrow{T}W\]</span> transformações lineares. Então <span class="math display">\[[T]_D^C\cdot [S]_C^B = [TS]_D^B.\]</span> Informalmente: a composição de duas transformações lineares está dada pela multiplicação das matrizes correspondentes.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>do caso de <span class="math inline">\(\R^n\)</span> e as bases canônicas funciona (é o último teorema das notas de Semana 4).&nbsp;◻</p>
@@ -1372,13 +1372,13 @@ I(1,0)_C &amp; I(0,1)_C
 <section id="mudança-de-base" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="mudança-de-base">Mudança de base</h2>
 <p>Dependendo da situação, um espaço vetorial pode possuir uma base “mais conveniente” para fazer cálculos. A base mais conveniente não tem que ser uma base canônica. Então, seria útil entender como mudar de uma base a uma outra num espaço vetorial.</p>
-<p>Suponha que temos dois espaços vetoriais <span class="math inline">\(V,W\)</span> com dimensões <span class="math inline">\(m,n\)</span> respetivamente e <span class="math inline">\(T:V\to W\)</span> uma TL. Com respeito às bases <span class="math inline">\(B,C\)</span> de <span class="math inline">\(V,W\)</span> respetivamente, a matriz da transformação é <span class="math display">\[[T]_B^C.\]</span> Agora suponha que temos mais duas bases <span class="math inline">\(B', C'\)</span> de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases novas <span class="math inline">\(B',C'\)</span>? É o produto <span class="math display">\[\boxed{[T]_{B'}^{C'} = [I_W]_{C}^{C'}\cdot[T]_B^C\cdot[I_V]_{B'}^B}\]</span> (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>) pois <span class="math display">\[\begin{aligned}
-  [I_W]_{C}^{C'}[T]_B^C[I_V]_{B'}^B &amp; = [I_W]_{C}^{C'}[T\circ I_V]_{B'}^C \\
-                 &amp; = [I_W\circ T\circ I_V]_{B'}^{C'} \\
-                 &amp; = [T]_{B'}^{C'}.\qquad \checkmark
-\end{aligned}\]</span></p>
+<p>Suponha que temos dois espaços vetoriais <span class="math inline">\(V,W\)</span> com dimensões <span class="math inline">\(m,n\)</span> respetivamente e <span class="math inline">\(T:V\to W\)</span> uma TL. Com respeito às bases <span class="math inline">\(B,C\)</span> de <span class="math inline">\(V,W\)</span> respetivamente, a matriz da transformação é <span class="math display">\[[T]_C^B.\]</span> Agora suponha que temos mais duas bases <span class="math inline">\(B', C'\)</span> de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases novas <span class="math inline">\(B',C'\)</span>? É o produto <span class="math display">\[\boxed{{[T]}_{B'}^{C'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}\]</span> (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>) pois <span class="math display">\[\begin{align*}
+  [I_W]_{C'}^{C}[T]_C^B[I_V]_{B}^{B'} &amp; = [I_W]_{C'}^{C}[T\circ I_V]_{C}^{B'} \\
+                 &amp; = [I_W\circ T\circ I_V]_{C'}^{B'} \\
+                 &amp; = [T]_{C'}^{B'}.\qquad \checkmark
+\end{align*}\]</span></p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 44.2</strong></span> Quando <span class="math inline">\(B,C\)</span> são bases finitas do espaço vetorial <span class="math inline">\(V\)</span>, a matriz <span class="math inline">\([I_V]_B^C\)</span> se chama da <em>matriz de mudança de base de <span class="math inline">\(B\)</span> para <span class="math inline">\(C\)</span></em>.</p>
+<p><span class="theorem-title"><strong>Definição 44.2</strong></span> Quando <span class="math inline">\(B,C\)</span> são bases finitas do espaço vetorial <span class="math inline">\(V\)</span>, a matriz <span class="math inline">\([I_V]_C^B\)</span> se chama da <em>matriz de mudança de base de <span class="math inline">\(B\)</span> para <span class="math inline">\(C\)</span></em>.</p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 44.3</strong></span> Seja <span class="math inline">\(T:\R^2 \to \R^3\)</span> a transformação linear dada com respeito às bases canônicas pela matriz <span class="math display">\[A = \begin{pmatrix}
@@ -1386,13 +1386,13 @@ I(1,0)_C &amp; I(0,1)_C
 0 &amp; 4 \\
 3 &amp; 1
 \end{pmatrix}.\]</span> Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B = \{(1,1)\,,\,(2,1)\}\)</span> de <span class="math inline">\(\R^2\)</span> e <span class="math inline">\(C = \{(1,1,1)\,,\,(0,1,1)\,,\,(0,0,1)\}\)</span> de <span class="math inline">\(\R^3\)</span>?</p>
-<p>R: Denote as bases canônicas de <span class="math inline">\(\R^2, \R^3\)</span> por <span class="math inline">\(E,F\)</span> respetivamente. A questão nos deu a matriz <span class="math inline">\(A = [T]_E^F\)</span> e queremos calcular <span class="math inline">\([T]_B^C\)</span>. Pela conversa acima, temos <span class="math display">\[[T]_B^C = [I]_F^C[T]_E^F[I]_B^E,\]</span> então temos que calcular <span class="math inline">\([I]_B^E\)</span> e <span class="math inline">\([I]_F^C\)</span>.</p>
+<p>R: Denote as bases canônicas de <span class="math inline">\(\R^2, \R^3\)</span> por <span class="math inline">\(E,F\)</span> respetivamente. A questão nos deu a matriz <span class="math inline">\(A = [T]_F^E\)</span> e queremos calcular <span class="math inline">\([T]_C^B\)</span>. Pela conversa acima, temos <span class="math display">\[[T]_C^B = [I]_C^F[T]_F^E[I]_E^B,\]</span> então temos que calcular <span class="math inline">\([I]_B^E\)</span> e <span class="math inline">\([I]_F^C\)</span>.</p>
 <ul>
 <li><p>Os vetores de coordenadas de <span class="math inline">\((1,1), (2,1)\)</span> com respeito à base canônica <span class="math inline">\(E\)</span> são obviamente <span class="math display">\[(1,1)_E = \begin{pmatrix}
   1 \\ 1
   \end{pmatrix}\quad,\quad (2,1)_E = \begin{pmatrix}
   2 \\ 1
-  \end{pmatrix},\]</span> então <span class="math display">\[[I]_B^E = \begin{pmatrix}
+  \end{pmatrix},\]</span> então <span class="math display">\[[I]_E^B = \begin{pmatrix}
   (1,1)_E &amp; (2,1)_E
   \end{pmatrix} = \begin{pmatrix}
   1 &amp; 2 \\ 1 &amp; 1
@@ -1410,14 +1410,14 @@ I(1,0)_C &amp; I(0,1)_C
   0 \\ 1 \\ -1
   \end{pmatrix}\quad,\quad(0,0,1)_C = \begin{pmatrix}
   0 \\ 0 \\ 1
-  \end{pmatrix}\]</span> logo <span class="math display">\[[I]_F^C = \begin{pmatrix}
+  \end{pmatrix}\]</span> logo <span class="math display">\[[I]_C^F = \begin{pmatrix}
   (1,0,0)_C &amp; (0,1,0)_C &amp; (0,0,1)_C
   \end{pmatrix} = \begin{pmatrix}
   1 &amp; 0 &amp; 0 \\ -1 &amp; 1 &amp; 0 \\ 0 &amp; -1 &amp; 1
   \end{pmatrix}.\]</span></p></li>
 </ul>
 <p>Agora é só fazer o cálculo: <span class="math display">\[\begin{align*}
-  [T]_B^C &amp; = [I]_F^C\cdot[T]_E^F\cdot[I]_B^E \\
+  [T]_C^B &amp; = [I]_C^F\cdot[T]_F^E\cdot[I]_E^B \\
       &amp; = \begin{pmatrix}
   1 &amp; 0 &amp; 0 \\ -1 &amp; 1 &amp; 0 \\ 0 &amp; -1 &amp; 1
   \end{pmatrix}\cdot \begin{pmatrix}
@@ -1444,20 +1444,23 @@ I(1,0)_C &amp; I(0,1)_C
 </section>
 <section id="endomorfismos-e-semelhança" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="endomorfismos-e-semelhança">Endomorfismos e semelhança</h2>
-<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span>, e sejam <span class="math display">\[B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}\]</span> duas bases de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(P\)</span> a matriz <span class="math inline">\(n\times n\)</span> <span class="math display">\[P = [I]_B^C,\]</span> a matriz da transformação identidade de <span class="math inline">\(V\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Considere também a matriz <span class="math inline">\([I]_C^B\)</span>. Temos <span class="math display">\[[I]_C^B\cdot [I]_B^C = [I\circ I]_B^B = [I]_B^B = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0 \\
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span>, e sejam <span class="math display">\[B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}\]</span> duas bases de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(P\)</span> a matriz <span class="math inline">\(n\times n\)</span> <span class="math display">\[P = [I]_C^B,\]</span> a matriz da transformação identidade de <span class="math inline">\(V\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Considere também a matriz <span class="math inline">\([I]_B^C\)</span>. Temos <span class="math display">\[[I]_B^C\cdot [I]_C^B = [I\circ I]_C^C = [I]_B^B = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0 \\
 0 &amp; 1 &amp;    &amp; 0 \\
 \vdots &amp; &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; \cdots &amp; 1
-\end{pmatrix},\]</span> e similarmente <span class="math inline">\([I]_B^C\cdot [I]_C^B = I_n\)</span>. Ou seja, a matriz <span class="math inline">\([I]_C^B\)</span> é a matriz inversa de <span class="math inline">\([I]_B^C\)</span>: <span class="math display">\[P = [I]_B^C\quad,\quad P^{-1} = [I]_C^B.\]</span> <u>Exercício</u>: Prove uma versão mais geral deste resultado: Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais de dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma TL.</p>
+\end{pmatrix},\]</span> e similarmente <span class="math inline">\([I]_B^C\cdot [I]_B^C = I_n\)</span>. Ou seja, a matriz <span class="math inline">\([I]_B^C\)</span> é a matriz inversa de <span class="math inline">\([I]_C^B\)</span>: <span class="math display">\[P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.\]</span></p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 44.1</strong></span> Prove uma versão mais geral deste resultado: Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais de dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma TL.</p>
 <ol type="1">
 <li><p><span class="math inline">\(T\)</span> é um isomorfismo se, e somente se, a matriz <span class="math inline">\([T]_B^C\)</span> é invertível.</p></li>
 <li><p>Caso <span class="math inline">\(T\)</span> for isomorfismo, então <span class="math display">\[[T^{-1}]_C^B = ([T]_B^C)^{-1}.\]</span></p></li>
 </ol>
+</div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 44.3</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial. Um <em>endomorfismo</em> (ou <em>operador linear</em>) de <span class="math inline">\(V\)</span> é uma transformação linear de <span class="math inline">\(V\)</span> a <span class="math inline">\(V\)</span>.</p>
 </div>
 <p>Quando mexermos com endomorfismos, quase sempre devemos pegar a mesma base pro domínio e pro contradomínio, pois assim a gente pode compor os endomorfismos por multiplicar as matrizes. Sejam <span class="math inline">\(B,C\)</span> duas bases do espaço vetorial de dimensão finita <span class="math inline">\(V\)</span>. Dado um endomorfismo <span class="math inline">\(T:V\to V\)</span>, suponha que sabemos a matriz <span class="math inline">\([T]_C^C\)</span>. Então, qual é a matriz <span class="math inline">\([T]_B^B\)</span>?</p>
-<p>Já sabemos que <span class="math display">\[[T]_B^B = [I]_C^B\cdot [T]_C^C \cdot [I]_B^C.\]</span> Mas se <span class="math inline">\([I]_B^C = P\)</span>, então <span class="math inline">\([I]_C^B = P^{-1}\)</span>, então <span class="math display">\[\boxed{[T]_B^B = P^{-1}\cdot [T]_C^C \cdot P}\]</span></p>
+<p>Já sabemos que <span class="math display">\[[T]_B^B = [I]_B^C\cdot [T]_C^C \cdot [I]_C^B.\]</span> Mas se <span class="math inline">\([I]_C^P = P\)</span>, então <span class="math inline">\([I]_B^C = P^{-1}\)</span>, então <span class="math display">\[\boxed{[T]_B^B = P^{-1}\cdot [T]_C^C \cdot P}\]</span></p>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 44.4</strong></span> Sejam <span class="math inline">\(A,B\)</span> duas matrizes <span class="math inline">\(n\times n\)</span>. Diremos que <span class="math inline">\(A, B\)</span> são <em>semelhantes</em> se existir uma matriz invertível <span class="math inline">\(P\)</span> tal que <span class="math display">\[A = P^{-1}BP.\]</span></p>
 </div>
@@ -1466,20 +1469,20 @@ I(1,0)_C &amp; I(0,1)_C
 <p><span class="theorem-title"><strong>Exemplo 44.4</strong></span> O endomorfismo <span class="math inline">\(T:\R^3\to \R^3\)</span> tem matriz <span class="math display">\[[T]_E^E = \begin{pmatrix}
 4 &amp; 0 &amp; -2 \\ 2 &amp; 1 &amp; -1 \\ 4 &amp; 0 &amp; -2
 \end{pmatrix}\]</span> com respeito à base canônica <span class="math inline">\(E\)</span> de <span class="math inline">\(\R^3\)</span>. Calcule a matriz de <span class="math inline">\(T\)</span> com respeito à base <span class="math display">\[B = \{\ul{b_1}\,,\,\ul{b_2}\,,\,\ul{b_3}\} = \{(0,-1,0)\,,\,(1,1,1)\,,\,(1,0,2)\}.\]</span></p>
-<p>R: Vamos calcular <span class="math inline">\(P = [I]_B^E\)</span>. Os vetores de coordenadas dos vetores de <span class="math inline">\(B\)</span> com respeito à base canônica são: <span class="math display">\[(0,-1,0)_E = I(0,-1,0)_E = \begin{pmatrix}
+<p>R: Vamos calcular <span class="math inline">\(P = [I]_E^B\)</span>. Os vetores de coordenadas dos vetores de <span class="math inline">\(B\)</span> com respeito à base canônica são: <span class="math display">\[(0,-1,0)_E = I(0,-1,0)_E = \begin{pmatrix}
 0 \\ -1 \\ 0
 \end{pmatrix}\,,\quad(1,1,1)_E = \begin{pmatrix}
 1 \\ 1 \\ 1
 \end{pmatrix}\,,\quad(1,0,2)_E = \begin{pmatrix}
 1 \\ 0 \\ 2
-\end{pmatrix}.\]</span> Logo a matriz <span class="math inline">\(P\)</span> é <span class="math display">\[P = [I]_B^E = \begin{pmatrix}
+\end{pmatrix}.\]</span> Logo a matriz <span class="math inline">\(P\)</span> é <span class="math display">\[P = [I]_E^B = \begin{pmatrix}
 0 &amp; 1 &amp; 1 \\ -1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 2
-\end{pmatrix}.\]</span> Usando as técnicas de GAAL, podemos calcular também que <span class="math display">\[[I]_E^B = P^{-1} = \begin{pmatrix}
+\end{pmatrix}.\]</span> Usando as técnicas de GAAL, podemos calcular também que <span class="math display">\[[I]_B^E = P^{-1} = \begin{pmatrix}
 0 &amp; 1 &amp; 1 \\ -1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 2
 \end{pmatrix}^{-1} = \begin{pmatrix}
 2 &amp; -1 &amp; -1 \\ 2 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 1
 \end{pmatrix}.\]</span> Agora <span class="math display">\[\begin{align*}
-  [T]_B^B &amp; = [I]_E^B\cdot [T]_E^E \cdot [I]_B^E \\
+  [T]_B^B &amp; = [I]_E^B\cdot [T]_E^E \cdot [I]_E^B \\
       &amp; = P^{-1}\cdot [T]_E^E \cdot P \\
       &amp; = \begin{pmatrix}
 2 &amp; -1 &amp; -1 \\ 2 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 1
