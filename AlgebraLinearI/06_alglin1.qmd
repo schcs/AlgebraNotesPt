@@ -117,7 +117,7 @@ dada por $T\mapsto [T]_C^B$ é um isomorfismo de espaços vetoriais.
 :::
 
 :::{.proof}
-Siga a prova da versão com $\R^n$ (@thm-comp-trans-Rn), observando que o mesmo
+Exercício: siga a prova da versão com $\R^n$ (@thm-comp-trans-Rn), observando que o mesmo
 argumento funciona. ◻
 :::
 
