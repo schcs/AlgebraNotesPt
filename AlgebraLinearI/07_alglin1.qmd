@@ -207,9 +207,9 @@ $${\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{C}_{B}).$$
 
 :::{.proof}
 
-Se lembre que as colunas de $[T]_B^C$ são os vetores
+Se lembre que as colunas de $[T]_C^B$ são os vetores
 $$\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.$$ Logo
-$$\dim(\tn{Col}([T]_B^C)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).$$
+$$\dim(\tn{Col}([T]_C^B)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).$$
 Mas na outra direção, um vetor $\ul{w}$ da imagem de $T$ tem a forma
 $T(\ul{v})$. Escrevendo
 $\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}$, o vetor de
@@ -219,9 +219,9 @@ coordenadas de $\ul{v}$ na base $B$ é $\ul{v}_B = \begin{pmatrix}
 \lambda_m 
 \end{pmatrix}$ e
 $$\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.$$
-Segue que $\ul{w}_C\in \tn{Col}([T]_B^C)$, logo
+Segue que $\ul{w}_C\in \tn{Col}([T]_C^B)$, logo
 $$\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T_B^C)).$$ Resumindo,
-$$\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_B^C).$$ ◻
+$$\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_C^B).$$ ◻
 :::
 
 Se lembre que mostramos na última lista que as matrizes $n\times n$

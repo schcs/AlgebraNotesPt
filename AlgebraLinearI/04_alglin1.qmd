@@ -454,7 +454,7 @@ $$\R^l \xrightarrow{T_A} \R^m \xrightarrow{T_B} \R^n$$ onde $A$ é uma
 matriz $m\times l$, $B$ é uma matriz $n\times m$, e $T_A, T_B$ são as
 TLs correspondentes.
 
-:::{#thm-}
+:::{#thm-comp-trans-Rn}
 A matriz $n\times l$ da composição $T_B\circ T_A$ (@def-comp-func) é a matriz produto
 $BA$. Ou seja, $$T_B\circ T_A = T_{BA}.$$
 :::
