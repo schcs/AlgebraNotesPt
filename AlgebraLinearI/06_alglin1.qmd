@@ -77,15 +77,15 @@ Uma notação pra matriz $A$ acima:
 Sejam $V,W$ espaços vetoriais de dimensão finita com bases ordenadas
 $B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}$
 respetivamente. Seja $T:V\to W$ uma transformação linear. Denote por
-$[T]_B^C$ a matriz $n\times m$ de $T$ com respeito às bases $B,C$. Isto
+$[T]_C^B$ a matriz $n\times m$ de $T$ com respeito às bases $B,C$. Isto
 é, $[T]_B^C$ é a matriz cujas colunas são os vetores de coordenadas com
 respeito à base $C$ dos vetores $T(\ul{b_j})$ ($j\in \{1,\ldots,m\}$):
-$$[T]_B^C = \begin{pmatrix}
+$$[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C & T(\ul{b_2})_C & \cdots & T(\ul{b_m})_C
 \end{pmatrix}.$$
 :::
 
-Observe que a matriz $[T]_B^C$ depende das escolhas das bases $B$ e $C$.
+Observe que a matriz $[T]_C^B$ depende das escolhas das bases $B$ e $C$.
 Com respeito a outras bases de $V,W$, a *mesma* transformação linear $T$
 teria uma matriz *diferente*.
 
@@ -101,8 +101,8 @@ coordenadas $$(\ul{b_1})_C = \begin{pmatrix}
 -1 \\ 1
 \end{pmatrix}\quad,\quad(\ul{b_2})_C = \begin{pmatrix}
 2 \\ -1
-\end{pmatrix}.$$ Segue que a matriz $[I]_B^C$ da transformação
-identidade com respeito às bases $B,C$ é $$[I]_B^C = \begin{pmatrix}
+\end{pmatrix}.$$ Segue que a matriz $[I]_C^B$ da transformação
+identidade com respeito às bases $B,C$ é $$[I]_C^B = \begin{pmatrix}
 I(1,0)_C & I(0,1)_C
 \end{pmatrix} = \begin{pmatrix}
 -1 & 2 \\ 1 & -1
@@ -113,7 +113,7 @@ I(1,0)_C & I(0,1)_C
 Sejam $V$ e $W$ espaços vetoriais de dimensão finita com bases ordenadas
 $B = \{\ul{b_1}\,,\ldots,\ul{b_m}\},C = \{\ul{c_1}\,,\ldots,\ul{c_n}\}$
 respetivamente. A função $$\rho : \mathcal{L}(V,W) \to M_{n,m}(\R)$$
-dada por $T\mapsto [T]_B^C$ é um isomorfismo de espaços vetoriais.
+dada por $T\mapsto [T]_C^B$ é um isomorfismo de espaços vetoriais.
 :::
 
 :::{.proof}
@@ -125,7 +125,7 @@ argumento funciona. ◻
 :::{#thm-}
 Sejam $U,V,W$ espaços vetoriais de dimensão finita com bases $B,C,D$
 respetivamente e sejam $$U\xrightarrow{S}V\xrightarrow{T}W$$
-transformações lineares. Então $$[T]_C^D\cdot [S]_B^C = [TS]_B^D.$$
+transformações lineares. Então $$[T]_D^C\cdot [S]_C^B = [TS]_D^B.$$
 Informalmente: a composição de duas transformações lineares está dada
 pela multiplicação das matrizes correspondentes.
 :::
@@ -145,20 +145,21 @@ a uma outra num espaço vetorial.
 
 Suponha que temos dois espaços vetoriais $V,W$ com dimensões $m,n$
 respetivamente e $T:V\to W$ uma TL. Com respeito às bases $B,C$ de $V,W$
-respetivamente, a matriz da transformação é $$[T]_B^C.$$ Agora suponha
+respetivamente, a matriz da transformação é $$[T]_C^B.$$ Agora suponha
 que temos mais duas bases $B', C'$ de $V$ e $W$. Qual é a matriz de $T$
 com respeito às bases novas $B',C'$? É o produto
-$$\boxed{[T]_{B'}^{C'} = [I_W]_{C}^{C'}\cdot[T]_B^C\cdot[I_V]_{B'}^B}$$
+$$\boxed{{[T]}_{B'}^{C'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}$$
 (em que $I_V, I_W$ são as TLs identidades de $V,W$) pois
-$$\begin{aligned}
-  [I_W]_{C}^{C'}[T]_B^C[I_V]_{B'}^B & = [I_W]_{C}^{C'}[T\circ I_V]_{B'}^C \\
-                 & = [I_W\circ T\circ I_V]_{B'}^{C'} \\
-                 & = [T]_{B'}^{C'}.\qquad \checkmark
-\end{aligned}$$
+\begin{align*}
+  [I_W]_{C'}^{C}[T]_C^B[I_V]_{B}^{B'} & = [I_W]_{C'}^{C}[T\circ I_V]_{C}^{B'} \\
+                 & = [I_W\circ T\circ I_V]_{C'}^{B'} \\
+                 & = [T]_{C'}^{B'}.\qquad \checkmark
+\end{align*}
+
 
 :::{#def-}
 Quando $B,C$ são bases finitas do espaço vetorial $V$, a matriz
-$[I_V]_B^C$ se chama da *matriz de mudança de base de $B$ para $C$*.
+$[I_V]_C^B$ se chama da *matriz de mudança de base de $B$ para $C$*.
 :::
 
 :::{#exm-}
@@ -172,8 +173,8 @@ $B = \{(1,1)\,,\,(2,1)\}$ de $\R^2$ e
 $C = \{(1,1,1)\,,\,(0,1,1)\,,\,(0,0,1)\}$ de $\R^3$?
 
 R: Denote as bases canônicas de $\R^2, \R^3$ por $E,F$ respetivamente. A
-questão nos deu a matriz $A = [T]_E^F$ e queremos calcular $[T]_B^C$.
-Pela conversa acima, temos $$[T]_B^C = [I]_F^C[T]_E^F[I]_B^E,$$ então
+questão nos deu a matriz $A = [T]_F^E$ e queremos calcular $[T]_C^B$.
+Pela conversa acima, temos $$[T]_C^B = [I]_C^F[T]_F^E[I]_E^B,$$ então
 temos que calcular $[I]_B^E$ e $[I]_F^C$.
 
 -   Os vetores de coordenadas de $(1,1), (2,1)$ com respeito à base
@@ -181,7 +182,7 @@ temos que calcular $[I]_B^E$ e $[I]_F^C$.
       1 \\ 1
       \end{pmatrix}\quad,\quad (2,1)_E = \begin{pmatrix}
       2 \\ 1
-      \end{pmatrix},$$ então $$[I]_B^E = \begin{pmatrix}
+      \end{pmatrix},$$ então $$[I]_E^B = \begin{pmatrix}
       (1,1)_E & (2,1)_E
       \end{pmatrix} = \begin{pmatrix}
       1 & 2 \\ 1 & 1
@@ -198,7 +199,7 @@ temos que calcular $[I]_B^E$ e $[I]_F^C$.
       0 \\ 1 \\ -1 
       \end{pmatrix}\quad,\quad(0,0,1)_C = \begin{pmatrix}
       0 \\ 0 \\ 1 
-      \end{pmatrix}$$ logo $$[I]_F^C = \begin{pmatrix}
+      \end{pmatrix}$$ logo $$[I]_C^F = \begin{pmatrix}
       (1,0,0)_C & (0,1,0)_C & (0,0,1)_C
       \end{pmatrix} = \begin{pmatrix}
       1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1
@@ -206,7 +207,7 @@ temos que calcular $[I]_B^E$ e $[I]_F^C$.
 
 Agora é só fazer o cálculo: 
 \begin{align*}
-  [T]_B^C & = [I]_F^C\cdot[T]_E^F\cdot[I]_B^E \\
+  [T]_C^B & = [I]_C^F\cdot[T]_F^E\cdot[I]_E^B \\
       & = \begin{pmatrix}
   1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1
   \end{pmatrix}\cdot \begin{pmatrix}
@@ -235,16 +236,18 @@ Agora é só fazer o cálculo:
 
 Seja $V$ um espaço vetorial de dimensão $n$, e sejam
 $$B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}$$
-duas bases de $V$. Seja $P$ a matriz $n\times n$ $$P = [I]_B^C,$$ a
+duas bases de $V$. Seja $P$ a matriz $n\times n$ $$P = [I]_C^B,$$ a
 matriz da transformação identidade de $V$ com respeito às bases $B,C$.
-Considere também a matriz $[I]_C^B$. Temos
-$$[I]_C^B\cdot [I]_B^C = [I\circ I]_B^B = [I]_B^B = \begin{pmatrix}1 & 0 & \cdots & 0 \\
+Considere também a matriz $[I]_B^C$. Temos
+$$[I]_B^C\cdot [I]_C^B = [I\circ I]_C^C = [I]_B^B = \begin{pmatrix}1 & 0 & \cdots & 0 \\
 0 & 1 &    & 0 \\
 \vdots & & \ddots & \vdots \\
 0 & 0 & \cdots & 1 
-\end{pmatrix},$$ e similarmente $[I]_B^C\cdot [I]_C^B = I_n$. Ou seja, a
-matriz $[I]_C^B$ é a matriz inversa de $[I]_B^C$:
-$$P = [I]_B^C\quad,\quad P^{-1} = [I]_C^B.$$ [Exercício]{.underline}:
+\end{pmatrix},$$ e similarmente $[I]_B^C\cdot [I]_B^C = I_n$. Ou seja, a
+matriz $[I]_B^C$ é a matriz inversa de $[I]_C^B$:
+$$P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.$$ 
+
+:::{#exr-}
 Prove uma versão mais geral deste resultado: Sejam $V, W$ espaços
 vetoriais de dimensão $n$ e sejam $B,C$ bases de $V,W$ respetivamente.
 Seja $T:V\to W$ uma TL.
@@ -253,6 +256,7 @@ Seja $T:V\to W$ uma TL.
     invertível.
 
 2.  Caso $T$ for isomorfismo, então $$[T^{-1}]_C^B = ([T]_B^C)^{-1}.$$
+:::
 
 :::{#def-}
 Seja $V$ um espaço vetorial. Um *endomorfismo* (ou *operador linear*) de
@@ -266,8 +270,8 @@ espaço vetorial de dimensão finita $V$. Dado um endomorfismo $T:V\to V$,
 suponha que sabemos a matriz $[T]_C^C$. Então, qual é a matriz
 $[T]_B^B$?
 
-Já sabemos que $$[T]_B^B = [I]_C^B\cdot [T]_C^C \cdot [I]_B^C.$$ Mas se
-$[I]_B^C = P$, então $[I]_C^B = P^{-1}$, então
+Já sabemos que $$[T]_B^B = [I]_B^C\cdot [T]_C^C \cdot [I]_C^B.$$ Mas se
+$[I]_C^P = P$, então $[I]_B^C = P^{-1}$, então
 $$\boxed{[T]_B^B = P^{-1}\cdot [T]_C^C \cdot P}$$
 
 :::{#def-}
@@ -288,7 +292,7 @@ O endomorfismo $T:\R^3\to \R^3$ tem matriz $$[T]_E^E = \begin{pmatrix}
 matriz de $T$ com respeito à base
 $$B = \{\ul{b_1}\,,\,\ul{b_2}\,,\,\ul{b_3}\} = \{(0,-1,0)\,,\,(1,1,1)\,,\,(1,0,2)\}.$$
 
-R: Vamos calcular $P = [I]_B^E$. Os vetores de coordenadas dos vetores
+R: Vamos calcular $P = [I]_E^B$. Os vetores de coordenadas dos vetores
 de $B$ com respeito à base canônica são:
 $$(0,-1,0)_E = I(0,-1,0)_E = \begin{pmatrix}
 0 \\ -1 \\ 0
@@ -296,16 +300,16 @@ $$(0,-1,0)_E = I(0,-1,0)_E = \begin{pmatrix}
 1 \\ 1 \\ 1
 \end{pmatrix}\,,\quad(1,0,2)_E = \begin{pmatrix}
 1 \\ 0 \\ 2
-\end{pmatrix}.$$ Logo a matriz $P$ é $$P = [I]_B^E = \begin{pmatrix}
+\end{pmatrix}.$$ Logo a matriz $P$ é $$P = [I]_E^B = \begin{pmatrix}
 0 & 1 & 1 \\ -1 & 1 & 0 \\ 0 & 1 & 2
 \end{pmatrix}.$$ Usando as técnicas de GAAL, podemos calcular também que
-$$[I]_E^B = P^{-1} = \begin{pmatrix}
+$$[I]_B^E = P^{-1} = \begin{pmatrix}
 0 & 1 & 1 \\ -1 & 1 & 0 \\ 0 & 1 & 2
 \end{pmatrix}^{-1} = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1
 \end{pmatrix}.$$ Agora 
 \begin{align*}
-  [T]_B^B & = [I]_E^B\cdot [T]_E^E \cdot [I]_B^E \\
+  [T]_B^B & = [I]_E^B\cdot [T]_E^E \cdot [I]_E^B \\
       & = P^{-1}\cdot [T]_E^E \cdot P \\
       & = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1
