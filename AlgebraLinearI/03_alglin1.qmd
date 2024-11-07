@@ -99,7 +99,9 @@ Seja $B$ uma base de um espaço vetorial $V$ e seja $\ul v\in V$. Escreva
 o vetor $\ul v$ como uma combinação linear
 $\ul v=\alpha_1\ul{b_1}+\cdots+\alpha_k\ul{b_k}$ de elementos de $B$. Os
 escalares $\alpha_1,\ldots,\alpha_k$ são chamadas de *coordenadas* do
-vetor $\ul v$ relativas à base $B$.
+vetor $\ul v$ relativas à base $B$. O vetor $(\alpha_1,\ldots,\alpha_k)$ é 
+chamado de *vetor das coordenadas de $\ul{v}$ na base $B$* e será denotado por 
+$\ul v_B$.  
 :::
 
 Como está enfatizado na definição acima, as coordenadas de um vetor $v$
