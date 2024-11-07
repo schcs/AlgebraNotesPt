@@ -180,7 +180,7 @@ basicamente "iguais" quando existe um isomorfismo entre eles. Vamos usar
 vários fatos obtidos até agora para concluir que, pensando assim,
 existem "poucos espaços vetoriais" diferentes.
 
-:::{#thm-}
+:::{#thm-isom-dim-eq}
 Sejam $V, W$ espaços vetoriais com dimensão $n$ e sejam $B,C$ bases de
 $V,W$ respetivamente. Uma bijeção $f:B\to C$ estende unicamente para um
 isomorfismo de espaços vetoriais $T_f:V\to W$. Em particular, $V$ e $W$
@@ -213,13 +213,16 @@ infinita, o argumento na demonstração que $\ker T_f=\{\ul 0\}$ não é
 válido (você tá vendo porque?), mas não é difícil substituí-lo com um
 argumento direto.
 
-:::{#cor-}
+:::{#cor-isom-Rn}
 Seja $V$ um espaço vetorial de dimensão $n$. Então $V$ é isomorfo a
 $\R^n$.
 :::
 
 :::{.proof}
-Os dois têm dimensão $n$. ◻
+Segue do @thm-isom-dim-eq, desde que os dois têm dimensão $n$. 
+Alternativamente, pode observar também que escolhendo uma base $B$ para $V$, 
+o mapa $\ul{v}\mapsto v_B$ é um isomorfismo $V\to \R^n$
+◻
 :::
 
 :::{#exm-}

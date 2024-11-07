@@ -309,7 +309,7 @@ TL $\R^m\to \R^n$ tem a forma $T_A$ para alguma matriz $n\times m$,
 mostramos de alguma forma que matrizes $n\times m$ e TLs $\R^m\to \R^n$
 são "a mesma coisa". Vamos fazer essa frase cada vez mais precisa.
 
-:::{#def-}
+:::{#def-isom-vect}
 Um *isomorfismo* $\rho:V\to W$ de espaços vetoriais é uma transformação
 linear $\rho:V\to W$ bijetiva (@def-function-inj-sob). Quando existir um isomorfismo de $V$ a
 $W$, diremos que $V,W$ são espaços vetoriais *isomorfos*.

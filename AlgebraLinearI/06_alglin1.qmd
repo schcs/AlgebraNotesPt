@@ -26,6 +26,16 @@ Diremos que o vetor $$\ul{w}_C = \begin{pmatrix}
 base (ordenada) $C$*. Observe que o mesmo vetor $\ul{w}$ vai ter
 diferentes vetores de coordenadas com respeito a bases diferentes.
 
+Lembre da demonstração do @cor-isom-Rn que o mapa $\ul{v}\mapsto v_B$ é um isomorfismo $V\to \R^m$ (@def-isom-vect) de espaços vetoriais.  
+
+:::{#exr-mat-equal}
+Suponha que $A$ a $B$ são matrizes $m\times n$ tal que 
+$$
+Av=B\ul{v}
+$$
+para todo $\ul{v}\in \R^n$ (vetor coluna). Demonstre que $A=B$.
+:::
+
 :::{#exm-}
 O vetor $(2,3)$ de $\R^2$ tem vetor de coordenadas $\begin{pmatrix}
 2 \\ 3
@@ -73,7 +83,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 
 Uma notação pra matriz $A$ acima:
 
-:::{#def-}
+:::{#def-mat-tl}
 Sejam $V,W$ espaços vetoriais de dimensão finita com bases ordenadas
 $B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}$
 respetivamente. Seja $T:V\to W$ uma transformação linear. Denote por
@@ -84,6 +94,37 @@ $$[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C & T(\ul{b_2})_C & \cdots & T(\ul{b_m})_C
 \end{pmatrix}.$$
 :::
+
+
+:::{#lem-mat-tl}
+Usando a notação na @def-mat-tl, tem-se que 
+$$
+[T(\ul{v})]_C=[T]^B_C\cdot \ul{v}_B\quad \mbox{para todo $\ul{v}\in V$}.
+$$
+:::
+
+:::{.proof}
+Assuma que 
+$$
+\ul{v}=\sum_{i=1}^m \beta_i\ul{b_i}.
+$$
+Então 
+\begin{align*}
+[T(\ul{v})]_C&=\left[T\left(\sum_{i=1}^m \beta_i\ul{b_i}\right)\right]_C=
+\left[\sum_{i=1}^m \beta_iT(\ul{b_i})\right]_C\\&=
+\sum_{i=1}^m \beta_i[T(\ul{b_i})]_C=[T]_C^B\begin{pmatrix} \beta_1\\ \vdots \\\beta_n\end{pmatrix}=
+[T]^B_Cv_B.
+\end{align*}
+
+As justificativas para as igualdades na conta anterior (em ordem de aparência):
+
+- a expressão de $\ul{v}$ na primeira linha destacada;
+- $T$ é linear;
+- $\ul{v}\mapsto [\ul{v}]$ é linear;
+- a $i$-ésima linha de $[T]^B_C$ é $[T(\ul{b_i})]_C$;
+- a definição de $v_B$. 
+:::
+
 
 Observe que a matriz $[T]_C^B$ depende das escolhas das bases $B$ e $C$.
 Com respeito a outras bases de $V,W$, a *mesma* transformação linear $T$
@@ -117,11 +158,10 @@ dada por $T\mapsto [T]_C^B$ é um isomorfismo de espaços vetoriais.
 :::
 
 :::{.proof}
-Exercício: siga a prova da versão com $\R^n$ (@thm-comp-trans-Rn), observando que o mesmo
-argumento funciona. ◻
+Exercício. ◻
 :::
 
-:::{#thm-}
+:::{#thm-mat-comp}
 Sejam $U,V,W$ espaços vetoriais de dimensão finita com bases $B,C,D$
 respetivamente e sejam $$U\xrightarrow{S}V\xrightarrow{T}W$$
 transformações lineares. Então $$[T]_D^C\cdot [S]_C^B = [TS]_D^B.$$
@@ -130,9 +170,18 @@ pela multiplicação das matrizes correspondentes.
 :::
 
 :::{.proof}
-
-do caso de $\R^n$ e as bases canônicas funciona (é o último teorema das
-notas de Semana 4). ◻
+Temos pelo @lem-mat-tl que 
+$$
+[TS(\ul{u})]_D=[TS]^B_D\cdot \ul{u}_B\quad \mbox{para todo}\quad \ul{u}\in U.
+$$
+Por outro lado 
+$$
+[TS(\ul{u})]_D=[T(S(\ul{u}))]_D=[T]^C_D\cdot S(\ul{u})_C=[T]^C_D([S]^B_C\cdot \ul{u}_B)=([T]^C_D[S]^B_C)\cdot \ul{u}_B.
+$$
+Ora, usando o @exr-mat-equal, obtemos que 
+$$
+[TS]^B_D=[T]^C_D[S]^B_C.
+$$
 :::
 
 ## Mudança de base {#mudança-de-base .unnumbered}
@@ -146,9 +195,19 @@ Suponha que temos dois espaços vetoriais $V,W$ com dimensões $m,n$
 respetivamente e $T:V\to W$ uma TL. Com respeito às bases $B,C$ de $V,W$
 respetivamente, a matriz da transformação é $$[T]_C^B.$$ Agora suponha
 que temos mais duas bases $B', C'$ de $V$ e $W$. Qual é a matriz de $T$
-com respeito às bases novas $B',C'$? É o produto
-$$\boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}$$
-(em que $I_V, I_W$ são as TLs identidades de $V,W$) pois
+com respeito às bases novas $B',C'$? Para responder esta pergunta, usaremos 
+o @thm-mat-comp. Considere a seguinte cadeia de transformações lineares:
+$$
+\begin{array}{ccccccc}
+V & \overset{I_V}\longrightarrow & V & \overset{f}\longrightarrow & W & \overset{I_W}\longrightarrow & W\\ 
+B' && B && C && C'
+\end{array}
+$$
+Na primeira linha temos as transformações (em que $I_V, I_W$ são as TLs identidades de $V,W$), enquanto na segunda temos as bases dos espaços correspondentes. Note que $I_W\circ f\circ I_V=f$ e podemos usar o @thm-mat-comp duas vezes para obter que 
+$$
+\boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}
+$$
+pois
 \begin{align*}
   [I_W]_{C'}^{C}[T]_C^B[I_V]_{B}^{B'} & = [I_W]_{C'}^{C}[T\circ I_V]_{C}^{B'} \\
                  & = [I_W\circ T\circ I_V]_{C'}^{B'} \\
