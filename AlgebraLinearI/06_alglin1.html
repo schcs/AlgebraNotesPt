@@ -1306,6 +1306,12 @@ window.Quarto = {
 \end{pmatrix}\]</span> representa o vetor <span class="math inline">\(\ul{w}\)</span> com respeito à base <span class="math inline">\(C\)</span>. Diremos que o vetor <span class="math display">\[\ul{w}_C = \begin{pmatrix}
 \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
 \end{pmatrix}\]</span> é o <em>vetor de coordenadas de <span class="math inline">\(\ul{w}\)</span> com respeito à base (ordenada) <span class="math inline">\(C\)</span></em>. Observe que o mesmo vetor <span class="math inline">\(\ul{w}\)</span> vai ter diferentes vetores de coordenadas com respeito a bases diferentes.</p>
+<p>Lembre da demonstração do <a href="05_alglin1.html#cor-isom-Rn" class="quarto-xref">Corolário&nbsp;<span>43.1</span></a> que o mapa <span class="math inline">\(\ul{v}\mapsto v_B\)</span> é um isomorfismo <span class="math inline">\(V\to \R^m\)</span> (<a href="04_alglin1.html#def-isom-vect" class="quarto-xref">Definição&nbsp;<span>42.2</span></a>) de espaços vetoriais.</p>
+<div id="exr-mat-equal" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 44.1</strong></span> Suponha que <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> são matrizes <span class="math inline">\(m\times n\)</span> tal que <span class="math display">\[
+Av=B\ul{v}
+\]</span> para todo <span class="math inline">\(\ul{v}\in \R^n\)</span> (vetor coluna). Demonstre que <span class="math inline">\(A=B\)</span>.</p>
+</div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 44.1</strong></span> O vetor <span class="math inline">\((2,3)\)</span> de <span class="math inline">\(\R^2\)</span> tem vetor de coordenadas <span class="math inline">\(\begin{pmatrix}
 2 \\ 3
@@ -1339,10 +1345,33 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 &amp; = T(\ul{b_j}).\qquad\qquad \checkmark
 \end{aligned}\]</span></p>
 <p>Uma notação pra matriz <span class="math inline">\(A\)</span> acima:</p>
-<div id="def-" class="theorem definition">
+<div id="def-mat-tl" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Denote por <span class="math inline">\([T]_C^B\)</span> a matriz <span class="math inline">\(n\times m\)</span> de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Isto é, <span class="math inline">\([T]_B^C\)</span> é a matriz cujas colunas são os vetores de coordenadas com respeito à base <span class="math inline">\(C\)</span> dos vetores <span class="math inline">\(T(\ul{b_j})\)</span> (<span class="math inline">\(j\in \{1,\ldots,m\}\)</span>): <span class="math display">\[[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C &amp; T(\ul{b_2})_C &amp; \cdots &amp; T(\ul{b_m})_C
 \end{pmatrix}.\]</span></p>
+</div>
+<div id="lem-mat-tl" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 44.1</strong></span> Usando a notação na <a href="#def-mat-tl" class="quarto-xref">Definição&nbsp;<span>44.1</span></a>, tem-se que <span class="math display">\[
+[T(\ul{v})]_C=[T]^B_C\cdot \ul{v}_B\quad \mbox{para todo $\ul{v}\in V$}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math display">\[
+\ul{v}=\sum_{i=1}^m \beta_i\ul{b_i}.
+\]</span> Então <span class="math display">\[\begin{align*}
+[T(\ul{v})]_C&amp;=\left[T\left(\sum_{i=1}^m \beta_i\ul{b_i}\right)\right]_C=
+\left[\sum_{i=1}^m \beta_iT(\ul{b_i})\right]_C\\&amp;=
+\sum_{i=1}^m \beta_i[T(\ul{b_i})]_C=[T]_C^B\begin{pmatrix} \beta_1\\ \vdots \\\beta_n\end{pmatrix}=
+[T]^B_Cv_B.
+\end{align*}\]</span></p>
+<p>As justificativas para as igualdades na conta anterior (em ordem de aparência):</p>
+<ul>
+<li>a expressão de <span class="math inline">\(\ul{v}\)</span> na primeira linha destacada;</li>
+<li><span class="math inline">\(T\)</span> é linear;</li>
+<li><span class="math inline">\(\ul{v}\mapsto [\ul{v}]\)</span> é linear;</li>
+<li>a <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\([T]^B_C\)</span> é <span class="math inline">\([T(\ul{b_i})]_C\)</span>;</li>
+<li>a definição de <span class="math inline">\(v_B\)</span>.</li>
+</ul>
 </div>
 <p>Observe que a matriz <span class="math inline">\([T]_C^B\)</span> depende das escolhas das bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>. Com respeito a outras bases de <span class="math inline">\(V,W\)</span>, a <em>mesma</em> transformação linear <span class="math inline">\(T\)</span> teria uma matriz <em>diferente</em>.</p>
 <div id="exm-" class="theorem example">
@@ -1360,19 +1389,32 @@ I(1,0)_C &amp; I(0,1)_C
 <p><span class="theorem-title"><strong>Teorema 44.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}\,,\ldots,\ul{b_m}\},C = \{\ul{c_1}\,,\ldots,\ul{c_n}\}\)</span> respetivamente. A função <span class="math display">\[\rho : \mathcal{L}(V,W) \to M_{n,m}(\R)\]</span> dada por <span class="math inline">\(T\mapsto [T]_C^B\)</span> é um isomorfismo de espaços vetoriais.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício: siga a prova da versão com <span class="math inline">\(\R^n\)</span> (<a href="04_alglin1.html#thm-comp-trans-Rn" class="quarto-xref">Teorema&nbsp;<span>42.4</span></a>), observando que o mesmo argumento funciona.&nbsp;◻</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.&nbsp;◻</p>
 </div>
-<div id="thm-" class="theorem">
+<div id="thm-mat-comp" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 44.2</strong></span> Sejam <span class="math inline">\(U,V,W\)</span> espaços vetoriais de dimensão finita com bases <span class="math inline">\(B,C,D\)</span> respetivamente e sejam <span class="math display">\[U\xrightarrow{S}V\xrightarrow{T}W\]</span> transformações lineares. Então <span class="math display">\[[T]_D^C\cdot [S]_C^B = [TS]_D^B.\]</span> Informalmente: a composição de duas transformações lineares está dada pela multiplicação das matrizes correspondentes.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>do caso de <span class="math inline">\(\R^n\)</span> e as bases canônicas funciona (é o último teorema das notas de Semana 4).&nbsp;◻</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Temos pelo <a href="#lem-mat-tl" class="quarto-xref">Lema&nbsp;<span>44.1</span></a> que <span class="math display">\[
+[TS(\ul{u})]_D=[TS]^B_D\cdot \ul{u}_B\quad \mbox{para todo}\quad \ul{u}\in U.
+\]</span> Por outro lado <span class="math display">\[
+[TS(\ul{u})]_D=[T(S(\ul{u}))]_D=[T]^C_D\cdot S(\ul{u})_C=[T]^C_D([S]^B_C\cdot \ul{u}_B)=([T]^C_D[S]^B_C)\cdot \ul{u}_B.
+\]</span> Ora, usando o <a href="#exr-mat-equal" class="quarto-xref">Exercício&nbsp;<span>44.1</span></a>, obtemos que <span class="math display">\[
+[TS]^B_D=[T]^C_D[S]^B_C.
+\]</span></p>
 </div>
 </section>
 <section id="mudança-de-base" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="mudança-de-base">Mudança de base</h2>
 <p>Dependendo da situação, um espaço vetorial pode possuir uma base “mais conveniente” para fazer cálculos. A base mais conveniente não tem que ser uma base canônica. Então, seria útil entender como mudar de uma base a uma outra num espaço vetorial.</p>
-<p>Suponha que temos dois espaços vetoriais <span class="math inline">\(V,W\)</span> com dimensões <span class="math inline">\(m,n\)</span> respetivamente e <span class="math inline">\(T:V\to W\)</span> uma TL. Com respeito às bases <span class="math inline">\(B,C\)</span> de <span class="math inline">\(V,W\)</span> respetivamente, a matriz da transformação é <span class="math display">\[[T]_C^B.\]</span> Agora suponha que temos mais duas bases <span class="math inline">\(B', C'\)</span> de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases novas <span class="math inline">\(B',C'\)</span>? É o produto <span class="math display">\[\boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}\]</span> (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>) pois <span class="math display">\[\begin{align*}
+<p>Suponha que temos dois espaços vetoriais <span class="math inline">\(V,W\)</span> com dimensões <span class="math inline">\(m,n\)</span> respetivamente e <span class="math inline">\(T:V\to W\)</span> uma TL. Com respeito às bases <span class="math inline">\(B,C\)</span> de <span class="math inline">\(V,W\)</span> respetivamente, a matriz da transformação é <span class="math display">\[[T]_C^B.\]</span> Agora suponha que temos mais duas bases <span class="math inline">\(B', C'\)</span> de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases novas <span class="math inline">\(B',C'\)</span>? Para responder esta pergunta, usaremos o <a href="#thm-mat-comp" class="quarto-xref">Teorema&nbsp;<span>44.2</span></a>. Considere a seguinte cadeia de transformações lineares: <span class="math display">\[
+\begin{array}{ccccccc}
+V &amp; \overset{I_V}\longrightarrow &amp; V &amp; \overset{f}\longrightarrow &amp; W &amp; \overset{I_W}\longrightarrow &amp; W\\
+B' &amp;&amp; B &amp;&amp; C &amp;&amp; C'
+\end{array}
+\]</span> Na primeira linha temos as transformações (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>), enquanto na segunda temos as bases dos espaços correspondentes. Note que <span class="math inline">\(I_W\circ f\circ I_V=f\)</span> e podemos usar o <a href="#thm-mat-comp" class="quarto-xref">Teorema&nbsp;<span>44.2</span></a> duas vezes para obter que <span class="math display">\[
+\boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}
+\]</span> pois <span class="math display">\[\begin{align*}
   [I_W]_{C'}^{C}[T]_C^B[I_V]_{B}^{B'} &amp; = [I_W]_{C'}^{C}[T\circ I_V]_{C}^{B'} \\
                  &amp; = [I_W\circ T\circ I_V]_{C'}^{B'} \\
                  &amp; = [T]_{C'}^{B'}.\qquad \checkmark
@@ -1450,7 +1492,7 @@ I(1,0)_C &amp; I(0,1)_C
 0 &amp; 0 &amp; \cdots &amp; 1
 \end{pmatrix},\]</span> e similarmente <span class="math inline">\([I]_B^C\cdot [I]_B^C = I_n\)</span>. Ou seja, a matriz <span class="math inline">\([I]_B^C\)</span> é a matriz inversa de <span class="math inline">\([I]_C^B\)</span>: <span class="math display">\[P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.\]</span></p>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 44.1</strong></span> Prove uma versão mais geral deste resultado: Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais de dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma TL.</p>
+<p><span class="theorem-title"><strong>Exercício 44.2</strong></span> Prove uma versão mais geral deste resultado: Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais de dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma TL.</p>
 <ol type="1">
 <li><p><span class="math inline">\(T\)</span> é um isomorfismo se, e somente se, a matriz <span class="math inline">\([T]_C^B\)</span> é invertível.</p></li>
 <li><p>Caso <span class="math inline">\(T\)</span> for isomorfismo, então <span class="math display">\[[T^{-1}]_B^C = ([T]_C^B)^{-1}.\]</span></p></li>
