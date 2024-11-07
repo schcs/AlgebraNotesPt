@@ -7,17 +7,17 @@ lang: pt-BR
 ## A matriz de uma transformação linear (caso geral) {#a-matriz-de-uma-transformação-linear-caso-geral .unnumbered}
 
 A gente interpretou uma transformação linear $\R^m\to \R^n$ em termos de
-uma matriz $n\times m$, usando as bases canônicas de $\R^m, \R^n$. De
+uma matriz $n\times m$, usando as bases canônicas de $\R^m$ e $\R^n$. De
 fato, exatamente a mesma coisa funciona com quaisquer espaços de
 dimensão finita e quaisquer bases:
 
-Sejam $V, W$ espaços vetoriais com bases
-$$B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_m}\}$$
-$$C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}$$ respetivamente. Qualquer
+Sejam $V$ e $W$ espaços vetoriais com bases
+$$B = \{\ul{b_1}, \ldots, \ul{b_m}\}$$
+$$C = \{\ul{c_1}, \ldots, \ul{c_n}\}$$ respectivamente. Qualquer
 vetor $\ul{w}$ de $W$ pode ser escrito unicamente como uma combinação
 linear dos $\ul{c_i}$:
 $$\ul{w} = \lambda_1 \ul{c_1} + \cdots + \lambda_n\ul{c_n}$$ com
-$\lambda_i\in \R$. Logo o vetor $$\begin{pmatrix}
+$\lambda_i\in \R$. Logo, o vetor $$\begin{pmatrix}
 \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
 \end{pmatrix}$$ representa o vetor $\ul{w}$ com respeito à base $C$.
 Diremos que o vetor $$\ul{w}_C = \begin{pmatrix}
