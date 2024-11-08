@@ -367,7 +367,7 @@ $$[I]_B^E = P^{-1} = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1
 \end{pmatrix}.$$ Agora 
 \begin{align*}
-  [T]_B^B & = [I]_E^B\cdot [T]_E^E \cdot [I]_E^B \\
+  [T]_B^B & = [I]_B^E\cdot [T]_E^E \cdot [I]_E^B \\
       & = P^{-1}\cdot [T]_E^E \cdot P \\
       & = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1
