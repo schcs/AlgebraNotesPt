@@ -29,3 +29,4 @@ Material disponibilizado sob a licença
 - [O núcleo e a imagem](05_alglin1.qmd)
 - [A matriz de uma transformação linear e mudança de base](06_alglin1.qmd)
 - [O posto de uma matriz](07_alglin1.qmd)
+- [Diagonalização](08_alglin1.qmd)
