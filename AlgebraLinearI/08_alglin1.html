@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Expansão dos naturais na base b e os critérios de divisibilidade – Álgebra</title>
+<title>46&nbsp; Diagonalização – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../FundamentosDeAlgebra/racionais.html" rel="next">
-<link href="../FundamentosDeAlgebra/divisao.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/07_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -685,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/expansao.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/08_alglin1.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Diagonalização</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -804,7 +770,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../FundamentosDeAlgebra/expansao.html" class="sidebar-item-text sidebar-link active">
+  <a href="../FundamentosDeAlgebra/expansao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></span></a>
   </div>
 </li>
@@ -1019,7 +985,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/08_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/08_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Diagonalização</span></span></a>
   </div>
 </li>
@@ -1309,18 +1275,16 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#expansão-de-naturais-na-base-b" id="toc-expansão-de-naturais-na-base-b" class="nav-link active" data-scroll-target="#expansão-de-naturais-na-base-b"><span class="header-section-number">12.1</span> Expansão de naturais na base <span class="math inline">\(b\)</span></a></li>
-  <li><a href="#computação-com-python" id="toc-computação-com-python" class="nav-link" data-scroll-target="#computação-com-python"><span class="header-section-number">12.2</span> Computação com Python</a></li>
-  <li><a href="#critérios-de-divisibilidade" id="toc-critérios-de-divisibilidade" class="nav-link" data-scroll-target="#critérios-de-divisibilidade"><span class="header-section-number">12.3</span> Critérios de divisibilidade</a></li>
+  <li><a href="#diagonalização" id="toc-diagonalização" class="nav-link active" data-scroll-target="#diagonalização">Diagonalização</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/index.html">Fundamentos de Álgebra</a></li><li class="breadcrumb-item"><a href="../FundamentosDeAlgebra/expansao.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/08_alglin1.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Diagonalização</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Expansão dos naturais na base <span class="math inline">\(b\)</span> e os critérios de divisibilidade</span></h1>
+<h1 class="title"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Diagonalização</span></h1>
 </div>
 
 
@@ -1337,130 +1301,282 @@ window.Quarto = {
 </header>
 
 
-<section id="expansão-de-naturais-na-base-b" class="level2" data-number="12.1">
-<h2 data-number="12.1" data-anchor-id="expansão-de-naturais-na-base-b"><span class="header-section-number">12.1</span> Expansão de naturais na base <span class="math inline">\(b\)</span></h2>
-<p>Números naturais são escritos normalmente como sequências de algarismos na base decimal. Por exemplo, a sequência <span class="math inline">\(1056\)</span> significa o número <span class="math display">\[
-1\cdot 1000+0\cdot 100+5\cdot 10+6.
-\]</span> Mais geralmente, a sequência <span class="math inline">\([a_na_{n-1}\cdots a_1a_0]\)</span> denota o número <span class="math display">\[
-\sum_{k=0}^n a_k\cdot 10^k.
-\]</span></p>
-<p>É possível fazer a mesma coisa em uma outra base <span class="math inline">\(b\)</span> assumindo que <span class="math inline">\(b\geq 2\)</span>.</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.1</strong></span> Assuma que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são números naturais e <span class="math inline">\(b\geq 2\)</span>. Então <span class="math inline">\(a\)</span> pode ser escrito unicamente na forma <span class="math display">\[
-a=[a_na_{n-1}\cdots a_0]_b=\sum_{k=0}^n a_kb^k
-\]</span> onde <span class="math inline">\(n\geq 0\)</span> e <span class="math inline">\(a_k\in\{0,\ldots,b-1\}\)</span> para todo <span class="math inline">\(k\)</span></p>
+<section id="diagonalização" class="level1 unnumbered">
+<h1 class="unnumbered">Diagonalização</h1>
+<p>Diagonalização de uma TL <span class="math inline">\(T:V\to V\)</span> é o processo de achar uma base de <span class="math inline">\(V\)</span> com respeito a qual <span class="math inline">\(T\)</span> é muito fácil entender. As noções de autovalor, autovetor e autoespaço vão ser fundamentais. Antes de definir essas coisas, vamos colocar mais um item em nossa lista de invariantes de matrizes semelhantes. Esta vez, o invariante vai ser um polinômio:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span>. O polinômio <span class="math display">\[p_{A}(t) = {\rm Det}(A- tI)\]</span> é chamado de <em>polinômio característico</em> de <span class="math inline">\(A\)</span>.</p>
 </div>
-<p>Os números <span class="math inline">\(a_k\)</span> são chamados de algarismos de <span class="math inline">\(a\)</span> na base <span class="math inline">\(b\)</span>.</p>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span><strong>Existência.</strong> Usaremos indução por <span class="math inline">\(a\)</span>. Se <span class="math inline">\(a\in\{0,\ldots,b-1\}\)</span> então <span class="math inline">\(a\)</span> pode ser escrito como <span class="math inline">\([a]_b\)</span>. Assuma agora que <span class="math inline">\(a\geq b\)</span> e os números menores que <span class="math inline">\(a\)</span> podem ser escritos na base <span class="math inline">\(b\)</span>. Usando o Teorema de Divisão de Euclides, escreva <span class="math inline">\(a=qb+a_0\)</span> onde <span class="math inline">\(0\leq a_0\leq b-1\)</span>. Como <span class="math inline">\(b\geq 2\)</span>, temos que <span class="math inline">\(q&lt;a\)</span>, e a hipótese de indução é válida para <span class="math inline">\(q\)</span>. Portanto existem <span class="math inline">\(a_n,\ldots,a_1\in\{0,\ldots,b-1\}\)</span> tais que <span class="math display">\[
-q=[a_na_{n-1}\cdots a_1]_b=\sum_{k=1}^n a_kb^{k-1}
-\]</span> e <span class="math display">\[
-a=bq+a_0=b\left(\sum_{k=1}^n a_kb^{k-1}\right)+a_0=\sum_{k=0}^n a_kb^{k}=[a_na_{n-1}\cdots a_1a_0]_b
-\]</span> Então a expressão desejada para <span class="math inline">\(a\)</span> existe.</p>
-<p><strong>Unicidade.</strong> Provaremos esta parte também por indução em <span class="math inline">\(a\)</span>. Se <span class="math inline">\(a\in\{0,\ldots,b-1\}\)</span>, então <span class="math inline">\(a=[a]_b\)</span> é a única expansão de <span class="math inline">\(a\)</span> na base <span class="math inline">\(b\)</span>. Assuma que <span class="math inline">\(a\geq b\)</span> e assuma também que todo número menor que <span class="math inline">\(a\)</span> possui única expansão na base <span class="math inline">\(b\)</span>. Suponha que <span class="math inline">\(a\)</span> possui duas expansões <span class="math display">\[
-a=[a_n\cdots a_1a_0]_b=\sum_{k=0}^n a_kb^k
-\]</span> e <span class="math display">\[
-a=[c_m\cdots c_1c_0]_b=\sum_{k=0}^m c_kb^k.
-\]</span> Como acima, escreva <span class="math inline">\(a=qb+r\)</span> onde <span class="math inline">\(0\leq r\leq b-1\)</span> e note que os números <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span> são únicos. Pelas duas expressões para o número <span class="math inline">\(a\)</span> obtemos que <span class="math display">\[
-a=\sum_{k=0}^n a_kb^k=b\cdot\left(\sum_{k=1}^n a_kb^{k-1}\right)+a_0
-\]</span> e <span class="math display">\[
-a=\sum_{k=0}^m c_kb^k=b\cdot\left(\sum_{k=1}^m c_kb^{k-1}\right)+c_0.
-\]</span> Pela unicidade do resto no Teorema de Euclides, obtemos que <span class="math inline">\(r=a_0=c_0\)</span>; ou seja, os últimos algarismos são determinados unicamento.</p>
-<p>Agora, <span class="math display">\[
-q=(a-r)/b=\sum_{k=1}^n a_kb^{k-1}=\sum_{k=1}^m c_kb^{k-1};
-\]</span> ou seja <span class="math display">\[
-q=[a_n\cdots a_1]_b=[c_m\cdots c_1]_b.
-\]</span> A hipótese de indução aplica-se para o número <span class="math inline">\(q\)</span>, e assim as as sequências <span class="math inline">\([a_n\cdots a_1]_b\)</span> e <span class="math inline">\([c_m\cdots c_1]_b\)</span> são iguais. Portanto as duas expansões para o número <span class="math inline">\(a\)</span> são iguais como foi afirmado.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.2</strong></span> Seja <span class="math inline">\(f\)</span> um polinômio sobre <span class="math inline">\(\R\)</span>.</p>
+<ul>
+<li><p>Diremos que <span class="math inline">\(\alpha \in \R\)</span> é uma <em>raiz</em> de <span class="math inline">\(f\)</span> se <span class="math inline">\(f(\alpha) = 0;\)</span></p></li>
+<li><p>Se <span class="math inline">\(\alpha\)</span> é uma raiz de <span class="math inline">\(f\)</span>, a <em>multiplicidade</em> de <span class="math inline">\(\alpha\)</span> como raiz de <span class="math inline">\(f\)</span> é o maior inteiro positivo <span class="math inline">\(r\)</span> tal que <span class="math inline">\((x-\alpha)^r\)</span> divide <span class="math inline">\(f\)</span>.</p></li>
+</ul>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 12.1</strong></span> Seguindo a demonstração do teorema anterior, obtemos um algoritmo para determinar a sequência dos dígitos de um número natural em uma base <span class="math inline">\(b\)</span>. Tome o número <span class="math inline">\(a=168\)</span> e seja <span class="math inline">\(b=5\)</span>.</p>
-<p>Passo 1: <span class="math display">\[
-168=33\cdot 5+3,
-\]</span> portanto o último algarismo de <span class="math inline">\(168\)</span> é <span class="math inline">\(3\)</span> e os demais algarismos são os algarismos de <span class="math inline">\(33\)</span>.</p>
-<p>Passo 2: <span class="math display">\[
-33 = 6\cdot 5+3.
-\]</span> Logo o penúltimo algarismo é <span class="math inline">\(3\)</span> e os demais algarismos são os algarismos de <span class="math inline">\(6\)</span>.</p>
-<p>Passo 3: <span class="math display">\[
-6=1\cdot 5+1;
-\]</span> ou seja, o seguinte algarismo é <span class="math inline">\(1\)</span> e os demais algarismos são os algarismos de <span class="math inline">\(1\)</span>.</p>
-<p>Passo 4: <span class="math display">\[
-1=0\cdot 5+1
-\]</span> que diz que <span class="math inline">\(1=[1]_5\)</span>.</p>
-<p>Juntando as peças, obtemos que <span class="math inline">\(168=[1133]_5\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 46.1</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
+    4 &amp; 2 &amp; 0 \\
+    -1&amp; 1&amp; 0 \\
+    0 &amp; 1 &amp; 1
+    \end{pmatrix}.\]</span> Vamos calcular o polinômio caraterístico de <span class="math inline">\(A\)</span>:</p>
+<span class="math display">\[\begin{aligned}
+    p_A(t) &amp; = {\rm Det}(A-tI) \\
+    &amp; = \tn{Det}\begin{pmatrix}
+    4-t &amp; 2 &amp; 0 \\
+    -1&amp; 1-t &amp; 0 \\
+    0&amp; 1 &amp; 1-t
+    \end{pmatrix} \\
+    &amp; = (1-t) \tn{Det}\begin{pmatrix}
+    4-t &amp; 2  \\
+    -1&amp; 1-t
+    \end{pmatrix} \\
+    &amp; = (1-t)((4-t)(1-t)+2)\\
+    &amp;= (1-t)(t^2 - 5t+ 6) \\
+    &amp; = (1-t)(2-t)(3-t).
+\end{aligned}\]</span>
+<p>Temos que <span class="math inline">\(1, 2\)</span> e <span class="math inline">\(3\)</span> são as raízes do polinômio caraterístico de <span class="math inline">\(A\)</span>, todas com multiplicidade <span class="math inline">\(1\)</span>.</p>
 </div>
-</section>
-<section id="computação-com-python" class="level2" data-number="12.2">
-<h2 data-number="12.2" data-anchor-id="computação-com-python"><span class="header-section-number">12.2</span> Computação com Python</h2>
-<p>Escrevemos uma <a href="https://www.letscode.com.br/blog/funcoes-e-mais-funcoes-em-python">função em Python</a> que vai realizar a computação dos algarismos para um dado natural <span class="math inline">\(a\)</span> e base <span class="math inline">\(b\)</span>.</p>
-<p>A primeira função é uma função recursiva. A ideia é a seguinte:</p>
-<ul>
-<li>Se <span class="math inline">\(a\leq b-1\)</span>, então <span class="math inline">\(a\)</span> tem único algarismo e assim <span class="math inline">\(a=[a]_b\)</span>;</li>
-<li>Caso contrário, escreva <span class="math inline">\(a=qp+a_0\)</span> onde <span class="math inline">\(a_0\in\{0,\ldots,b-1\}\)</span>. O último algarismo de <span class="math inline">\(a\)</span> será <span class="math inline">\(a_0\)</span> e os demais algarismos serão os algarismos de <span class="math inline">\(q\)</span> que poderemos determinar, pois <span class="math inline">\(q&lt;a\)</span>.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NumeroEmBaseRecursivo( a, b ):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calcular quociente e resto de a por b</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    q, r <span class="op">=</span> my_divmod( a, b )</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> q <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># se q é zero, temos único dígito</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        digitos <span class="op">=</span> [r]</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># caso contrário calculamos os dígitos de q</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        digitos <span class="op">=</span> NumeroEmBaseRecursivo( q, b )</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adicionamos o último dígito</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        digitos.append( r )</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> digitos</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A função acima é muito elegante, mas na prática função recursiva deve ser evitada quando pode ser substituída por uma função não recursiva. A seguinte função faz a mesma computação evitando recursão.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NumeroEmBase( a, b ):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># inicializamos a lista de dígitos</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    digitos <span class="op">=</span> []</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># o dígito seguinte será o último dígito de a</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        q, r <span class="op">=</span> my_divmod( a, b )</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        digitos.insert( <span class="dv">0</span>, r )</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> q</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> digitos</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="critérios-de-divisibilidade" class="level2" data-number="12.3">
-<h2 data-number="12.3" data-anchor-id="critérios-de-divisibilidade"><span class="header-section-number">12.3</span> Critérios de divisibilidade</h2>
-<p>Seja <span class="math inline">\(a\)</span> um número natural escrito na base <span class="math inline">\(10\)</span> (decimal) como <span class="math display">\[
-a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
-\]</span> É bem conhecido que, para alguns valores de <span class="math inline">\(b\)</span>, a divisibilidade de <span class="math inline">\(a\)</span> por <span class="math inline">\(b\)</span> pode ser determinado olhando apenas os dígitos de <span class="math inline">\(a\)</span>.</p>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 12.1</strong></span> Demonstre que para todo <span class="math inline">\(i\geq 0\)</span>, existe <span class="math inline">\(q_i\in\N_0\)</span> tal que <span class="math inline">\(10^i=3q_i+1\)</span></p>
-</div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.2</strong></span> (Critérios de divisibilidade) As seguintes afirmações são verdadeiras para um número natural <span class="math inline">\(a=[a_na_{n-1}\cdots a_1a_0]\)</span> escrito na base decimal.</p>
-<ul>
-<li><span class="math inline">\(2\mid a\)</span> se e somente se <span class="math inline">\(2\mid a_0\)</span>;</li>
-<li><span class="math inline">\(3\mid a\)</span> se e somente se <span class="math inline">\(3\mid a_n+a_{n-1}+\cdots+a_0\)</span>;</li>
-<li><span class="math inline">\(4\mid a\)</span> se e somente se <span class="math inline">\(4\mid [a_1a_0]\)</span>;</li>
-<li><span class="math inline">\(5\mid a\)</span> se e somente se <span class="math inline">\(5\mid a_0\)</span>;</li>
-<li><span class="math inline">\(7\mid a\)</span> se e somente se <span class="math inline">\(7\mid [a_n\cdots a_1]-2a_0\)</span>;</li>
-<li><span class="math inline">\(8\mid a\)</span> se e somente se <span class="math inline">\(8\mid [a_2a_1a_0]\)</span>;</li>
-<li><span class="math inline">\(9\mid a\)</span> se e somente se <span class="math inline">\(9\mid a_n+a_{n-1}+\cdots+a_0\)</span>;</li>
-<li><span class="math inline">\(10\mid a\)</span> se e somente se <span class="math inline">\(10\mid a_0\)</span> (ou seja, <span class="math inline">\(a_0=0\)</span>);</li>
-<li><span class="math inline">\(11\mid a\)</span> se e somente se <span class="math inline">\(11\mid (-1)^na_n+(-1)^{n-1}a_{n-1}+\cdots-a_1+a_0\)</span>;</li>
-</ul>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.1</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> matrizes semelhantes. Os polinômios característicos de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são iguais.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Demonstraremos algumas destas afirmações, o resto será exercício.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span><span class="math inline">\(B = P^{-1}AP\)</span>. Portanto <span class="math display">\[\begin{array}{ccc}
+p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
+&amp;= &amp; {\rm Det}(P^{-1}AP - t I) \\
+&amp;= &amp; {\rm Det}(P^{-1}AP - t P^{-1}P)\\
+&amp;= &amp; {\rm Det}(P^{-1}(A-t I)P) \\
+&amp;= &amp; {\rm Det}(P^{-1}){\rm Det}(A-t I){\rm Det}(P) \\
+&amp; = &amp; {\rm Det}(A - t I) \\
+&amp; = &amp; p_A(t).
+\end{array}\]</span>&nbsp;◻</p>
+</div>
+<p>Já que matrizes semelhantes representam a mesma TL <span class="math inline">\(T:V\to V\)</span> com respeito a bases diferentes, esta proposição diz que podemos definir o polinômio caraterístico de uma TL:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.3</strong></span> Seja <span class="math inline">\(T:V \rightarrow V\)</span> um operador linear (isto é, endomorfismo) sobre um espaço de dimensão finita <span class="math inline">\(V\)</span> com base <span class="math inline">\(B\)</span>.</p>
+<ul>
+<li><p>O <em>determinante</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[{\rm Det}(T) := {\rm Det}([T]^{B}_{B}).\]</span></p></li>
+<li><p>O <em>polinômio característico</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[p_{T}(t) = {\rm Det}(T- tI) = \tn{Det}([T]_B^B - tI).\]</span></p></li>
+</ul>
+</div>
+<p>Observe que a definição <em>não depende</em> da escolha de base, pois determinantes e polinômios característicos são preservados por semelhança.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.2</strong></span> Seja <span class="math inline">\(T: \mathbb{R}^3 \rightarrow \mathbb{R}^3\)</span> o endomorfismo definido por <span class="math inline">\(T(x,y,z) = (4x+2y,y-x,y+z)\)</span>. A matriz de <span class="math inline">\(T\)</span> com respeito à base canônica <span class="math inline">\(B\)</span> de <span class="math inline">\(\R^3\)</span> é <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
+    4 &amp; 2 &amp; 0 \\
+    -1&amp; 1&amp; 0 \\
+    0 &amp; 1 &amp; 1
+    \end{pmatrix}.\]</span> Podemos calcular que <span class="math inline">\({\rm Det}(T) = \tn{Det}([T]_B^B) = 6\)</span>. A matriz <span class="math inline">\([T]_B^B\)</span> é a matriz <span class="math inline">\(A\)</span> do exemplo anterior, logo <span class="math display">\[p_T(t) = p_A(t) = (1-t)(2-t)(3-t).\]</span></p>
+</div>
+<p>Chegamos para umas definições importantes:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.4</strong></span> Seja <span class="math inline">\(T:V \rightarrow V\)</span> um endomorfismo do espaço vetorial de dimensão finita <span class="math inline">\(V\)</span>. Então:</p>
+<ul>
+<li><p>Diremos que <span class="math inline">\(\lambda \in \R\)</span> é um <em>autovalor</em> de <span class="math inline">\(T\)</span> se existir <span class="math inline">\(\ul{v} \in V\backslash\{\ul{0}\}\)</span> tal que <span class="math inline">\(T(\ul{v}) = \lambda \ul{v}\)</span>,</p></li>
+<li><p>Se <span class="math inline">\(\lambda\)</span> é um autovalor de <span class="math inline">\(T\)</span>, um vetor <span class="math inline">\(\ul{v}\neq \ul{0}\)</span> tal que <span class="math inline">\(T(\ul{v}) = \lambda \ul{v}\)</span> se chama de <em>autovetor</em> de <span class="math inline">\(T\)</span> associado a <span class="math inline">\(\lambda\)</span>.</p></li>
+</ul>
+</div>
+<p><u>Observação</u>: Se <span class="math inline">\(\lambda\)</span> é um autovalor de <span class="math inline">\(T\)</span>, então <span class="math inline">\(T(\ul{0}) = \ul{0} = \lambda\ul{0}\)</span>, mas <span class="math inline">\(\ul{0}\)</span> não é autovetor, pois autovetores são <em>não nulos</em>!</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.3</strong></span> Seja <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> a transformação linear tal que <span class="math inline">\(T(x,y) = (15x,3y)\)</span>. Temos que <span class="math inline">\(T(1,0) = 15(1,0)\)</span> e <span class="math inline">\(T(0,1)=3(0,1)\)</span>. Portanto <span class="math inline">\(15\)</span> e <span class="math inline">\(3\)</span> são autovalores de <span class="math inline">\(T\)</span> e <span class="math inline">\((1,0)\)</span> e <span class="math inline">\((0,1)\)</span> são autovetores associados a <span class="math inline">\(15\)</span> e <span class="math inline">\(3\)</span>, respectivamente.</p>
+</div>
+<p>O próximo resultado vai nos dar uma condição para encontrarmos autovalores de uma transformação linear <span class="math inline">\(T\)</span>.</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.2</strong></span> Seja <span class="math inline">\(T: V \rightarrow V\)</span> um endomorfismo linear sobre um espaço de dimensão finita. Um escalar <span class="math inline">\(\alpha \in \R\)</span> é autovalor de <span class="math inline">\(T\)</span> se, e somente se, <span class="math inline">\(\alpha\)</span> é raiz do polinômio característico de <span class="math inline">\(T\)</span>, ou seja, se <span class="math display">\[p_T(\alpha) = {\rm Det}(T-\alpha I) = 0.\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>nulo, <span class="math inline">\(\ul{v}\)</span>, tal que <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mas isso é a mesma coisa de dizer que o sistema <span class="math inline">\((T-\alpha I)X = \ul{0}\)</span> possui solução não trivial <span class="math inline">\(\ul{v}\)</span>, logo <span class="math inline">\({\rm Det}(T-\alpha I)= 0\)</span>.</p>
+<p>Supondo que <span class="math inline">\(\alpha\)</span> é raiz do polinômio caraterístico, então <span class="math inline">\({\rm Det(}T-\alpha I)= 0\)</span>, ou seja, existe <span class="math inline">\(\ul{v}\)</span> não-nulo tal que <span class="math inline">\((T-\alpha I)\ul{v} = \ul{0}\)</span>, então <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mostrando que <span class="math inline">\(\alpha\)</span> é um autovalor de <span class="math inline">\(T\)</span>.&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.4</strong></span> No exemplo de <span class="math inline">\(T:\R^3\to \R^3\)</span> anterior, os autovalores de <span class="math inline">\(T\)</span> são exatamente os números <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span>.</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.5</strong></span> Dado um autovalor <span class="math inline">\(\lambda\)</span> de <span class="math inline">\(T:V\to V\)</span>, o conjunto <span class="math display">\[S_{\lambda} = \{\ul{v} \in V : T(\ul{v}) = \lambda \ul{v}\}\]</span> é o <em>autoespaço de <span class="math inline">\(T\)</span> associado a <span class="math inline">\(\lambda\)</span></em>.</p>
+</div>
+<p>O nome faz sentido, pois <span class="math inline">\(S_\lambda\)</span> é de fato um subespaço de <span class="math inline">\(V\)</span>:</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.3</strong></span> Seja <span class="math inline">\(\lambda \in \R\)</span> um autovalor de <span class="math inline">\(T:V \rightarrow V\)</span>. Então <span class="math inline">\(S_{\lambda} = {\rm Ker}(T-\lambda I)\)</span>. Em particular, o autoespaço <span class="math inline">\(S_\lambda\)</span> é sempre um subespaço de <span class="math inline">\(V\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><span class="math display">\[\begin{array}{ccc}
+    \ul{x} \in S_{\lambda} &amp; \Longleftrightarrow &amp; T(\ul{x}) = \lambda \ul{x} \\
+     &amp;\Longleftrightarrow &amp; (T-\lambda I)\ul{x} = \ul{0} \\
+     &amp;\Longleftrightarrow &amp; \ul{x} \in {\rm Ker}(T-\lambda I).
+\end{array}\]</span> Segue que <span class="math inline">\(S_\lambda\)</span> é subespaço de <span class="math inline">\(V\)</span>, pois o núcleo de uma TL sempre o é.&nbsp;◻</p>
+</div>
+<p>Observe que os elementos de <span class="math inline">\(S_\lambda\)</span> são exatamente os autovetores associados a <span class="math inline">\(\lambda\)</span>, mais o vetor <span class="math inline">\(\ul{0}\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.5</strong></span> Voltando ao nosso exemplo <span class="math inline">\(T(x,y,z) = (4x+2y,-x+y,y+z)\)</span>. Temos que <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span> são os autovalores de <span class="math inline">\(T\)</span>. Vamos calcular os autoespaços <span class="math inline">\(S_1, S_2\)</span> e <span class="math inline">\(S_3\)</span>.</p>
+<ul>
+<li><span class="math display">\[\begin{aligned}
+            T(x,y,z) = 1(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (x,y,z) \\
+            &amp; \Longleftrightarrow (3x+2y,-x,y) = (0,0,0) \\
+            &amp; \Longleftrightarrow x=y=0,
+
+\end{aligned}\]</span>
+<p>portanto <span class="math inline">\(S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = [(0,0,1)].\)</span></p></li>
+<li><span class="math display">\[\begin{aligned}
+            T(x,y,z) = 2(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (2x,2y,2z) \\
+            &amp; \Longleftrightarrow (2x+2y,-x-y,y-z) = (0,0,0) \\
+            &amp; \Longleftrightarrow x=-y \ {\rm e } \ y=z,
+
+\end{aligned}\]</span>
+<p>portanto <span class="math inline">\(S_2 = \{ (-y,y,y) \,|\, y\in \R \} = [(-1,1,1)].\)</span></p></li>
+<li><p>Contas similares dão</p>
+<p><span class="math inline">\(S_3 = [(-2,1,1/2)]\)</span> [Exercício: confirme!]</p></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 46.1</strong></span> Seja <span class="math inline">\(\mathcal{P}_2\)</span> o subespaço com base <span class="math inline">\(\{1,x,x^2\}\)</span> de <span class="math inline">\(\R[x]\)</span>. Seja <span class="math inline">\(T: \mathcal{P}_2 \rightarrow \mathcal{P}_2\)</span> definida por <span class="math inline">\(T(f(x)) = f(x) + (3x + 2)f'(x)\)</span>. Confime que <span class="math inline">\(T\)</span> é TL. Encontre os autovalores de <span class="math inline">\(T\)</span> e os autoespaços associados.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 46.2</strong></span> Seja <span class="math inline">\(T:\R^3\to \R^3\)</span> a TL definida por <span class="math display">\[T(x,y,z) = (x-y-z\,,\,3y+2z\,,\, -y).\]</span> Encontre os autovalores de <span class="math inline">\(T\)</span> e os autoespaços associados. Observe que um autoespaço pode ter dimensão maior do que <span class="math inline">\(1\)</span>!</p>
+</div>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.4</strong></span> Seja <span class="math inline">\(T:V \rightarrow V\)</span> um operador linear.</p>
 <ol type="1">
-<li><p>Considere que <span class="math display">\[\begin{align*}
-a&amp;=[a_na_{n-1}\cdots a_1a_0]=\sum_{k=0}^n10^ka_k=10\left(\sum_{k=1}^n10^{k-1}a_k\right)+a_0\\&amp;=10q+a_0
-\end{align*}\]</span> com <span class="math display">\[
-q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
-\]</span> Como <span class="math inline">\(2\mid 10\)</span>, obtemos que o número <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(2\)</span> se e somente se o algarismo <span class="math inline">\(a_0\)</span> é divisível por <span class="math inline">\(2\)</span>.</p></li>
-<li><p>Temos, pelo exercício antes do teorema, para todo <span class="math inline">\(i\geq 0\)</span>, existe <span class="math inline">\(q_i\in\N_0\)</span> tal que <span class="math inline">\(10^i=3q_i+1\)</span>. Agora considere <span class="math display">\[\begin{align*}
-a&amp;=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&amp;=3\sum_{k=0}^nq_ka_k+
-\sum_{k=0}^na_k.
-\end{align*}\]</span> No última expressão, a primeira parcela é um múltiplo de <span class="math inline">\(3\)</span>. Logo <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(3\)</span> se e somente se a segunda parcela na última expressão é divisível por <span class="math inline">\(3\)</span>, mas esta segunda parcela é justamente a soma dos dígitos de <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Para cada autovalor <span class="math inline">\(\lambda\)</span>, o autoespaço associado a <span class="math inline">\(\lambda\)</span> é <span class="math inline">\(T\)</span>-invariante, isto é, <span class="math inline">\(T(S_{\lambda}) \subseteq S_{\lambda}\)</span>.</p></li>
+<li><p>Se <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> são dois autovalores distintos, então <span class="math inline">\(S_{\alpha}\cap S_{\beta} = \{\ul{0}\}\)</span>.</p></li>
 </ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li><p>Se <span class="math inline">\(\ul{v} \in S_{\lambda}\)</span>, então <span class="math inline">\(T(\ul{v}) = \lambda \ul{v} \in S_{\lambda}\)</span>, já que <span class="math inline">\(S_{\lambda}\)</span> é um subespaço.</p></li>
+<li><p>Se <span class="math inline">\(\ul{v} \in S_{\alpha} \cap S_{\beta}\)</span>, então <span class="math inline">\(\alpha \ul{v} = T(\ul{v}) = \beta \ul{v}\)</span>, portanto <span class="math inline">\((\beta - \alpha)\ul{v} = 0\)</span>. Como <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> são distintos, concluímos que <span class="math inline">\(\ul{v}=0\)</span>.</p></li>
+</ol>
+<p>&nbsp;◻</p>
+</div>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.5</strong></span> Sejam <span class="math inline">\(T:V \rightarrow V\)</span> um operador linear sobre um espaço de dimensão finita e <span class="math inline">\(\lambda_1,\ldots,\lambda_m\)</span> autovalores distintos de <span class="math inline">\(T\)</span>. Se <span class="math inline">\(\{ \ul{v^i_1},\ldots,\ul{v^i_{k_i}} \}\)</span> é um conjunto LI de autovetores associados a <span class="math inline">\(\lambda_i\)</span>, então <span class="math display">\[X = \{ \ul{v^1_1},\ldots\ul{v^1_{k_1}},\ul{v^2_{1}},\ldots,\ul{v^2_{k_2}}, \ldots ,  \ul{v^m_1},\ldots,\ul{v^m_{k_m}} \}\]</span> é um conjunto LI.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><span class="math display">\[X = \{ \ul{v^1_1},\ldots,\ul{v^1_{k_1}}\}\]</span> é LI por hipótese.</p>
+<p>Assuma que o resultado seja válido para <span class="math inline">\(m-1\)</span>, ou seja, que <span class="math display">\[\{ \underbrace{\ul{v^1_1},\ldots\ul{v^1_{k_1}},\ul{v^2_{1}},\ldots,\ul{v^2_{k_2}}, \ldots }_{\hbox{esta parte é LI}},  \ul{v^m_1},\ldots,\ul{v^m_{k_m}} \}\]</span></p>
+<p>Seja <span class="math display">\[a^1_1\ul{v^1_1} + ... + a^1_{k_1}\ul{v^1_{k_1}} + \cdots + a^m_1\ul{v^m_1}+\cdots + a^m_{k_m}\ul{v^m_{k_m}} = \ul{0}.\qquad\qquad\qquad (*)\]</span> Queremos mostrar que cada <span class="math inline">\(a_i^j\)</span> é <span class="math inline">\(0\)</span>. Aplicando <span class="math inline">\(T\)</span> pra expressão <span class="math inline">\((*)\)</span> acima e usando que <span class="math inline">\(T(\ul{v_i^j}) = \lambda_j \ul{v_i^j}\)</span>, obtemos: <span class="math display">\[\lambda_1a^1_1\ul{v^1_1} + ... + \lambda_1a^1_{k_1}\ul{v^1_{k_1}} + \cdots + \lambda_ma^m_1\ul{v^m_1}+\cdots + \lambda_ma^m_{k_m}\ul{v^m_{k_m}} = \ul{0}.\]</span> Mas também podemos simplesmente multiplicar a expressão <span class="math inline">\((*)\)</span> pelo número <span class="math inline">\(\lambda_m\)</span>, obtendo: <span class="math display">\[\lambda_ma^1_1\ul{v^1_1} + ... + \lambda_ma^1_{k_1}\ul{v^1_{k_1}} + \cdots + \lambda_ma^m_1\ul{v^m_1}+\cdots + \lambda_ma^m_{k_m}\ul{v^m_{k_m}} = \ul{0}.\]</span> Subtraindo a primeira da segunda, obtemos <span class="math display">\[(\lambda_m-\lambda_1)a^1_1\ul{v^1_1} + ... + (\lambda_m - \lambda_1)a^1_{k_1}\ul{v^1_{k_1}} + \cdots + 0a^m_1\ul{v^m_1}+\cdots + 0a^m_{k_m}\ul{v^m_{k_m}} = \ul{0}.\]</span> Já que esta expressão não envolve os vetores <span class="math inline">\(\ul{v^m_1},\ldots,\ul{v^m_{k_m}}\)</span>, temos por indução que cada <span class="math inline">\((\lambda_m-\lambda_j)a_i^j = 0\)</span>. Já que <span class="math inline">\((\lambda_m - \lambda_j)\neq 0\)</span>, obtemos que cada <span class="math inline">\(a_i^j = 0\)</span>. Então nossa expressão original <span class="math inline">\((*)\)</span> se torna <span class="math display">\[a^m_1\ul{v^m_1}+\cdots + a^m_{k_m}\ul{v^m_{k_m}} = \ul{0},\]</span> mostrando que cada <span class="math inline">\(a^m_j = 0\)</span> também, pois o conjunto <span class="math inline">\(\{ \ul{v^i_1},\ldots,\ul{v^i_{k_i}} \}\)</span> é LI por hipótese.&nbsp;◻</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 46.6</strong></span> &nbsp;</p>
+<ul>
+<li><p>Diremos que a matriz <span class="math inline">\(A\)</span> é <em>diagonalizável</em> se ela é semelhante a uma matriz diagonal. Isto é, se existirem matrizes <span class="math inline">\(D\)</span> e <span class="math inline">\(P\)</span> com <span class="math inline">\(D\)</span> diagonal e <span class="math inline">\(P\)</span> invertível, tais que <span class="math inline">\(A = P^{-1}DP\)</span>.</p></li>
+<li><p>Diremos que um endomorfismo <span class="math inline">\(T:V\rightarrow V\)</span> sobre um espaço de dimensão finita é diagonalizável, se existir uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([T]^{B}_{B}\)</span> é diagonal.</p></li>
+</ul>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.6</strong></span> Se <span class="math inline">\(A\)</span> é uma matriz diagonal, então <span class="math inline">\(A = I^{-1}AI\)</span>, logo <span class="math inline">\(A\)</span> é diagonalizável.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.7</strong></span> Seja <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> definidada por <span class="math inline">\(T(x,y) = (15x,3y)\)</span>. A matriz de <span class="math inline">\(T\)</span> com respeito à base canônica <span class="math inline">\(B = \{(1,0), (0,1)\}\)</span> é <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
+            15 &amp; 0 \\
+        0&amp; 3
+    \end{pmatrix}\]</span> logo <span class="math inline">\(T\)</span> é diagonalizável.</p>
+</div>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 46.6</strong></span> Sejam <span class="math inline">\(T:V \rightarrow V\)</span> um operador linear sobre um espaço de dimensão finita e <span class="math inline">\(B\)</span> uma base de <span class="math inline">\(V\)</span>. O operador <span class="math inline">\(T\)</span> é diagonalizável se, e somente se, <span class="math inline">\([T]^{B}_{B}\)</span> é uma matriz diagonalizável.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>respeito a qual a matriz <span class="math inline">\(D = [T]^{C}_{C}\)</span> é diagonal. Mas <span class="math display">\[[T]^{B}_{B} = [I]^{B}_{C}[T]^{C}_{C}[I]^{C}_{B} =
+([I]^{C}_{B})^{-1}D[I]^{C}_{B},\]</span> portanto a matriz <span class="math inline">\([T]^{B}_{B}\)</span> é diagonalizável.</p>
+<p>Agora, suponha que a matriz <span class="math inline">\([T]_B^B\)</span> é diagonalizável. Logo existem matrizes <span class="math inline">\(D,P\)</span> com <span class="math inline">\(D\)</span> diagonal e <span class="math inline">\(P\)</span> invertível, tais que <span class="math inline">\([T]_B^B = P^{-1}DP\)</span>. Por exercícios anteriores, para alguma base <span class="math inline">\(C\)</span> temos que <span class="math inline">\(P = [I]_C^B\)</span>. Mas já que <span class="math display">\[[T]_B^B = P^{-1}DP = ([I]_C^B)^{-1}D[I]_C^B = [I]_B^CD[I]_C^B,\]</span> segue que <span class="math inline">\(D = [T]_C^C\)</span>, logo a matriz de <span class="math inline">\(T\)</span> com respeito a <span class="math inline">\(C\)</span> é diagonal, e portanto <span class="math inline">\(T\)</span> é diagonalizável.&nbsp;◻</p>
+</div>
+<p>Seja <span class="math inline">\(T: V \rightarrow V\)</span> um endomorfismo diagonalizável e <span class="math inline">\(C = \{\ul{c_1},\ldots,\ul{c_n}\}\)</span> uma base de <span class="math inline">\(V\)</span> com respeito a qual a matriz <span class="math display">\[[T]_C^C = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; \cdots &amp; 0 \\
+\vdots &amp;&amp;&amp; \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}\]</span> é diagonal. Dado <span class="math inline">\(\ul{c_i}\in C\)</span>, temos <span class="math display">\[T(\ul{c_i})_C = [T]_C^C\begin{pmatrix}
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{pmatrix} =  \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; \cdots &amp; 0 \\
+\vdots &amp;&amp;&amp; \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}\begin{pmatrix}
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{pmatrix} = \begin{pmatrix}
+0 \\
+\vdots \\
+\lambda_i \\
+\vdots \\
+0
+\end{pmatrix} = \lambda_i\ul{c_i}_C.\]</span> Ou seja, quando a matriz de <span class="math inline">\(T\)</span> com respeito à base <span class="math inline">\(C\)</span> é diagonal, as entradas da diagonal principal são <em>autovalores</em> de <span class="math inline">\(T\)</span>. O <span class="math inline">\(i\)</span>-ésimo elemento <span class="math inline">\(\ul{c_i}\)</span> da base <span class="math inline">\(C\)</span> é um <em>autovetor</em> associado ao autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.8</strong></span> Voltando ao operador linear <span class="math inline">\(T: \mathbb{R}^3 \rightarrow \mathbb{R}^3\)</span> dada por <span class="math display">\[T(x,y,z) = (4x+2y,y-x,y+z).\]</span> Usando a base canônica <span class="math inline">\(B\)</span> de <span class="math inline">\(\mathbb{R}^3\)</span>, vimos que <span class="math inline">\([T]^{B}_{B} = \begin{pmatrix}
+4 &amp; 2 &amp; 0 \\
+-1&amp; 1&amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{pmatrix}\)</span>. Os autovalores de <span class="math inline">\(T\)</span> são <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span> e os autoespaços associados são <span class="math display">\[S_1 = [(0,0,1)], S_2 = [(-1,1,1)] \hbox{ e }S_3 = [(-2,1,1/2)].\]</span> Considere a base <span class="math inline">\(C\)</span> de <span class="math inline">\(\R^3\)</span> composta pelas bases dos autoespaços: <span class="math display">\[C = \{(0,0,1)\,,\,(-1,1,1)\,,\,(-2,1,1/2)\}\]</span> (<span class="math inline">\(C\)</span> é uma base, sendo LI por uma proposição anterior). A matriz <span class="math display">\[P = [I]_B^C = \begin{pmatrix}
+(0,0,1)_B &amp; (-1,1,1)_B &amp; (-2,1,1/2)_B
+\end{pmatrix} = \begin{pmatrix}
+0 &amp; -1 &amp; -2 \\
+0&amp; 1&amp; 1 \\
+1&amp; 1 &amp; 1/2
+\end{pmatrix}\]</span> tem inversa <span class="math display">\[P^{-1} = [I]_C^B = \begin{pmatrix}
+-1/2 &amp; -3/2 &amp; 1 \\
+1 &amp; 2 &amp; 0 \\
+-1 &amp; -1 &amp; 0
+\end{pmatrix}.\]</span> A matriz de <span class="math inline">\(T\)</span> com respeito à base dos autovetores <span class="math inline">\(C\)</span> (confirme!) é <span class="math display">\[[T]_C^C = [I]_B^C\cdot[T]_B^B\cdot[I]_B^C  = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{pmatrix}.\]</span></p>
+</div>
+<p>Sempre temos este relacionamento entre diagonalizar matrizes e encontrar bases de autovetores:</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 46.1</strong></span> Uma transformação linear <span class="math inline">\(T:V \rightarrow V\)</span> sobre um espaço de dimensão finita é diagonalizável se, e somente se, o espaço <span class="math inline">\(V\)</span> possui uma base formada por autovetores.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span><span class="math inline">\(B = \{\ul{v_1},\ldots,\ul{v_n} \}\)</span> tal que <span class="math display">\[[T]^{B}_{B} = D = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp;  &amp; 0 \\
+\vdots &amp;&amp;\ddots&amp; \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}.\]</span> Seja <span class="math inline">\(\ul{b_i}\)</span> um vetor da base <span class="math inline">\(B\)</span>. Como <span class="math display">\[T(\ul{b_i)}_B =
+\begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp;  &amp; 0 \\
+\vdots &amp;&amp;\ddots&amp; \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}\begin{pmatrix}
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{pmatrix} = \begin{pmatrix}
+0 \\
+\vdots \\
+\lambda_i \\
+\vdots \\
+0
+\end{pmatrix} = \lambda_i\ul{b_i}_B,\]</span> segue que <span class="math inline">\(T(\ul{b_i}) = \lambda_i\ul{b_i}\)</span>, ou seja, que <span class="math inline">\(\ul{b_i}\)</span> é um autovetor de <span class="math inline">\(T\)</span> com autovalor correspondente <span class="math inline">\(\lambda_i\)</span>. Logo <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span> composta de autovetores.</p>
+Agora supondo que exista uma base de autovetores <span class="math inline">\(B = \{ \ul{b_1},\ldots,\ul{b_n}\}\)</span> (com <span class="math inline">\(\ul{b_i}\)</span> associado ao autovalor <span class="math inline">\(\lambda_i\)</span>), temos
+<span class="math display">\[\begin{aligned}
+    T(\ul{b_1}) &amp; = \lambda_1\ul{b_1} + 0\ul{b_2} + \cdots + 0\ul{b_n},\\
+T(\ul{b_2}) &amp; = 0\ul{b_1} + \lambda_2\ul{b_2} + \cdots + 0\ul{b_n}, \\
+&amp; \vdots \\
+T(\ul{b_n}) &amp; =  0\ul{b_1} + 0\ul{b_2} + \cdots + \lambda_n\ul{b_n}
+\end{aligned}\]</span>
+<p>então a matriz de <span class="math inline">\(T\)</span> com respeito à base <span class="math inline">\(B\)</span> é <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp;  &amp; 0 \\
+\vdots &amp;&amp;\ddots&amp; \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}\]</span> logo <span class="math inline">\(T\)</span> é um operador diagonalizável.&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 46.9</strong></span> Seja <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> o operador linear dado por <span class="math inline">\(T(x,y) = (y,0)\)</span>. Com respeito à base canônica <span class="math inline">\(B\)</span> de <span class="math inline">\(\mathbb{R}^2\)</span>, <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
+0 &amp; 1 \\
+0 &amp; 0
+\end{pmatrix}.\]</span> O polinômio caraterístico <span class="math inline">\(p_T(t) = t^2\)</span>, logo <span class="math inline">\(0\)</span> é o único autovalor de <span class="math inline">\(T\)</span> (= raiz de <span class="math inline">\(p_T\)</span>) e ele tem multiplicade <span class="math inline">\(2\)</span>. O autoespaço <span class="math inline">\(S_0\)</span> associado a <span class="math inline">\(0\)</span> é <span class="math display">\[S_0 = \tn{Ker}(T - 0I) = \tn{Ker}(T) = \{(x,0)\,|\,x\in \R\},\]</span> cuja dimensão é <span class="math inline">\(1\)</span>. Segue que não existe uma base de <span class="math inline">\(\R^2\)</span> composta de autovetores de <span class="math inline">\(T\)</span>, então pelo teorema, <span class="math inline">\(T\)</span> <em>não é</em> diagonalizável.</p>
 </div>
 
 
@@ -1889,13 +2005,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../FundamentosDeAlgebra/divisao.html" class="pagination-link" aria-label="Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Divisão, quociente, e resto entre números inteiros e O Teorema de Divisão de Euclides</span></span>
+      <a href="../AlgebraLinearI/07_alglin1.html" class="pagination-link" aria-label="O posto de uma matriz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">O posto de uma matriz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../FundamentosDeAlgebra/racionais.html" class="pagination-link" aria-label="A expansão dos racionais na base $b$">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A expansão dos racionais na base <span class="math inline">\(b\)</span></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
