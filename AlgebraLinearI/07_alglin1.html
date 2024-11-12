@@ -1296,6 +1296,23 @@ window.Quarto = {
 
 
 <p>Vamos considerar mais um invariante, essa vez para qualquer matriz retangular <span class="math inline">\(A\)</span>: o seu posto <span class="math inline">\(\tn{Rk}(A)\)</span>. Como acima, no caso especial em que <span class="math inline">\(A,B\)</span> são quadradas e semelhantes, vamos ter <span class="math inline">\(\tn{Rk}(A) = \tn{Rk}(B)\)</span>.</p>
+<div id="exm-prod-mat" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 45.1</strong></span> Nesta seção, vamos precisar usar algumas observações sobre multiplicação matricial. Assuma que <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(Z\)</span> são matrizes <span class="math inline">\(m\times n\)</span>, <span class="math inline">\(m\times k\)</span>, <span class="math inline">\(k\times n\)</span>, respetivamente, tais que <span class="math display">\[
+  X=YZ.
+\]</span> Isso quer dizer que <span class="math display">\[
+X_{i,j}=\sum_{a=1}^k Y_{i,a}Z_{a,j}.
+\]</span> Fixando <span class="math inline">\(j\)</span> e deixando <span class="math inline">\(i\)</span> variar entre <span class="math inline">\(1\)</span> e <span class="math inline">\(m\)</span>, obtemos que <span class="math display">\[
+\begin{pmatrix}
+X_{1,j}\\ \vdots\\ X_{m,j}\end{pmatrix} =
+\sum_{a=1}^k Z_{a,j}\begin{pmatrix} Y_{1,a}\\ \vdots\\ Y_{m,a}\end{pmatrix}.
+\]</span><br>
+Em outras palavras, a <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(X\)</span> é uma combinação linear das colunas de <span class="math inline">\(Y\)</span> e os coeficientes são as entradas na <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(Z\)</span>. Então, denotando as colunas de <span class="math inline">\(X\)</span> por <span class="math inline">\(C_1,\ldots,C_n\)</span>, temos que <span class="math display">\[
+\begin{pmatrix} C_1 &amp; \cdots &amp; C_n\end{pmatrix}=\begin{pmatrix} Y_1 &amp; \cdots &amp; Y_k\end{pmatrix}Z
+\]</span> onde <span class="math inline">\(Y_1,\ldots,Y_k\)</span> são as colunas de <span class="math inline">\(Y\)</span>.</p>
+<p>Por argumento similar, se <span class="math inline">\(L_1,\ldots,L_m\)</span> são as linhas de <span class="math inline">\(X\)</span> e <span class="math inline">\(Z_1,\ldots,Z_k\)</span> são as linhas de <span class="math inline">\(Z\)</span>, obtemos que <span class="math display">\[
+\begin{pmatrix} L_1 \\ \vdots \\ L_m\end{pmatrix} = Y\begin{pmatrix} Z_1 \\ \vdots \\ Z_k\end{pmatrix}
+\]</span> e a <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(X\)</span> é combinação linear das linhas de <span class="math inline">\(Z\)</span> com coeficientes que são entradas na <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(Y\)</span>.</p>
+</div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 45.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(m\times n\)</span>.</p>
 <ul>
@@ -1304,7 +1321,7 @@ window.Quarto = {
 </ul>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 45.1</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
+<p><span class="theorem-title"><strong>Exemplo 45.2</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
 1 &amp; 1 &amp; 2 \\
 2 &amp; 1 &amp; 3 \\
 0 &amp; 1 &amp; 1 \\
@@ -1401,7 +1418,7 @@ S_1 \\ \vdots \\ S_r
 <p>(as letras <span class="math inline">\(\tn{Rk}\)</span> vem do nome inglés <em>rank</em>).</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 45.2</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
+<p><span class="theorem-title"><strong>Exemplo 45.3</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
 1 &amp; 1 &amp; 2 \\
 2 &amp; 1 &amp; 3 \\
 0 &amp; 1 &amp; 1 \\
@@ -1409,7 +1426,7 @@ S_1 \\ \vdots \\ S_r
 \end{pmatrix}.\]</span> Já vimos que <span class="math inline">\({\rm dim}({\rm Col}(A) ) = {\rm dim}({\rm Lin}(A)) = 2\)</span>, portanto <span class="math inline">\({\rm Rk}(A) = 2\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 45.3</strong></span> Sejam <span class="math inline">\(B = \{(1,1)\,,\,(0,2) \}\)</span> e <span class="math inline">\(B' = \{(1,0,1)\,,\,(0,1,0)\,,\,(1,2,0) \}\)</span> bases de <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>, respetivamente e <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^3\)</span> a transformação linear definida por <span class="math inline">\((x,y) \mapsto (2x,x-y,2y)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 45.4</strong></span> Sejam <span class="math inline">\(B = \{(1,1)\,,\,(0,2) \}\)</span> e <span class="math inline">\(B' = \{(1,0,1)\,,\,(0,1,0)\,,\,(1,2,0) \}\)</span> bases de <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>, respetivamente e <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^3\)</span> a transformação linear definida por <span class="math inline">\((x,y) \mapsto (2x,x-y,2y)\)</span>.</p>
 <p>Sabemos que <span class="math display">\[[T]^{B'}_{B} =  \begin{pmatrix}
 a_{11} &amp; a_{12} \\
 a_{21} &amp; a_{22} \\
