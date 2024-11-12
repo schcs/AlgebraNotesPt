@@ -9,6 +9,34 @@ retangular $A$: o seu posto $\tn{Rk}(A)$. Como acima, no caso especial
 em que $A,B$ são quadradas e semelhantes, vamos ter
 $\tn{Rk}(A) = \tn{Rk}(B)$.
 
+:::{#exm-prod-mat}
+Nesta seção, vamos precisar usar algumas observações sobre multiplicação matricial. Assuma que $X$, $Y$, $Z$ são matrizes $m\times n$, $m\times k$, $k\times n$, respetivamente, tais que 
+$$ 
+  X=YZ.
+$$ 
+Isso quer dizer que 
+$$ 
+X_{i,j}=\sum_{a=1}^k Y_{i,a}Z_{a,j}.
+$$
+Fixando $j$ e deixando $i$ variar entre $1$ e $m$, obtemos que 
+$$
+\begin{pmatrix}
+X_{1,j}\\ \vdots\\ X_{m,j}\end{pmatrix} = 
+\sum_{a=1}^k Z_{a,j}\begin{pmatrix} Y_{1,a}\\ \vdots\\ Y_{m,a}\end{pmatrix}. 
+$$  
+Em outras palavras, a $j$-ésima coluna de $X$ é uma combinação linear das colunas de $Y$ e os coeficientes são as entradas na $j$-ésima coluna de $Z$. Então, denotando as colunas de $X$ por $C_1,\ldots,C_n$, temos que 
+$$
+\begin{pmatrix} C_1 & \cdots & C_n\end{pmatrix}=\begin{pmatrix} Y_1 & \cdots & Y_k\end{pmatrix}Z 
+$$
+onde $Y_1,\ldots,Y_k$ são as colunas de $Y$. 
+
+Por argumento similar, se $L_1,\ldots,L_m$ são as linhas de $X$ e $Z_1,\ldots,Z_k$ são as linhas de $Z$, obtemos que 
+$$
+\begin{pmatrix} L_1 \\ \vdots \\ L_m\end{pmatrix} = Y\begin{pmatrix} Z_1 \\ \vdots \\ Z_k\end{pmatrix}
+$$
+e a $i$-ésima linha de $X$ é combinação linear das linhas de $Z$ com coeficientes que são entradas na $i$-ésima linha de $Y$.
+:::
+
 :::{#def-}
 Seja $A$ uma matriz $m\times n$.
 
