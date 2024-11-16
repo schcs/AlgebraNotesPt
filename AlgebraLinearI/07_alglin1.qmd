@@ -37,7 +37,7 @@ $$
 e a $i$-ésima linha de $X$ é combinação linear das linhas de $Z$ com coeficientes que são entradas na $i$-ésima linha de $Y$.
 :::
 
-:::{#def-}
+:::{#def-posto}
 Seja $A$ uma matriz $m\times n$.
 
 -   O *espaço coluna* $\tn{Col}(A)$ de $A$ é o subespaço de $\R^m$
@@ -45,6 +45,23 @@ Seja $A$ uma matriz $m\times n$.
 
 -   O *espaço linha* $\tn{Lin}(A)$ de $A$ é o subespaço de $\R^n$ gerado
     pelas linhas de $A$.
+:::
+
+Da @def-posto, e do @exm-prod-mat obtemos o seguinte resultado.
+
+:::{#lem-posto-prod}
+Assuma que $X$, $Y$, $Z$ são matrizes $m\times n$, $m\times k$, $k\times n$, respetivamente, tais que 
+$$ 
+  X=YZ.
+$$
+Então 
+$$
+\dim\tn{Col}(X)\leq \dim\tn{Col}(Y)\leq k
+$$
+e
+$$
+\dim\tn{Lin}(X)\leq \dim\tn{Lin}(Z)\leq k
+$$
 :::
 
 :::{#exm-}
@@ -147,7 +164,12 @@ $r\times n$ $$S = \begin{pmatrix}
 s_{11} & \cdots &s_{1n} \\
 \vdots & & \vdots \\
 s_{r1} & \cdots & s_{rn}
-\end{pmatrix},$$ temos que $A = CS$ (confirme!). Vamos reinterpretar
+\end{pmatrix},$$ temos que $A = CS$ (confirme!). 
+Usando @lem-posto-prod, obtemos que 
+$$
+\dim\tn{Lin}(A)\leq \dim\tn{Lin}(S)=r=\dim\tn{Col}(A).
+$$
+<!--Vamos reinterpretar
 essa equação. Escrevendo $$A = \begin{pmatrix}
 B_1 \\ \vdots \\ B_m
 \end{pmatrix}$$ com os $B_i$ as linhas de $A$ e $$S = \begin{pmatrix}
@@ -159,7 +181,7 @@ B_1 \\ \vdots \\ B_m
 S_1 \\ \vdots \\ S_r
 \end{pmatrix},$$ mostrando que cada linha de $A$ é combinação linear das
 linhas de $S$. Ou seja, $\tn{Lin}(A)$ é gerado pelas $r$ linhas de $S$.
-Ou seja, $\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))$.
+Ou seja, $\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))$. -->
 
 Mas agora, aplicando o mesmo argumento pra matriz transposta $A^t$,
 obtemos que
@@ -192,7 +214,7 @@ $\mathbb{R}^3$, respetivamente e
 $T: \mathbb{R}^2 \rightarrow \mathbb{R}^3$ a transformação linear
 definida por $(x,y) \mapsto (2x,x-y,2y)$.
 
-Sabemos que $$[T]^{B'}_{B} =  \begin{pmatrix}
+Sabemos que $$[T]^{B}_{B'} =  \begin{pmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22} \\
 a_{31} & a_{32} 
@@ -207,20 +229,20 @@ a_{32}
 \end{pmatrix}$. Temos
 $$T(1,1) = (2,0,2) = a_{11}(1,0,1)+ a_{21}(0,1,0)+ a_{31}(1,2,0);$$
 $$T(0,2) = (0,-2,4) = a_{12}(1,0,1)+ a_{22}(0,1,0)+ a_{32}(1,2,0);$$
-resolvendo os sistemas, obtemos $$[T]^{B'}_{B} =
+resolvendo os sistemas, obtemos $$[T]^{B}_{B'} =
     \begin{pmatrix}
     2 & 4 \\ 
     0& 6 \\
     0 & -4
-\end{pmatrix}.$$ Note que ${\rm dim}({\rm Col}([T]^{B'}_{B})) = 2$, logo
-${\rm Rk}([T]^{B'}_{B}) = 2$.
+\end{pmatrix}.$$ Note que ${\rm dim}({\rm Col}([T]^{B}_{B'})) = 2$, logo
+${\rm Rk}([T]^{B}_{B'}) = 2$.
 
 Como $$\begin{array}{ccc}
 (2x,x-y,2y) &= & (2x,x,0) + (0,-y,2y) \\
 &=& x(2,1,0) + y(0,-1,2)
 \end{array},$$ segue que $\{ (2,1,0), (0,-1,2)\}$ é uma base para
 ${\rm Im}(T)$, logo
-${\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B'}_{B})$.
+${\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B}_{B'})$.
 :::
 
 De fato, esta igualdade sempre vale:
@@ -230,14 +252,14 @@ Sejam $V$ e $W$ espaços vetoriais de dimensão finita,
 $T: V \rightarrow W$ uma transformação linear e
 $B = \{\ul{b_1},\ldots,\ul{b_m}\}$ e $C$ bases de $V$ e $W$,
 respetivamente. Então
-$${\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{C}_{B}).$$
+$${\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{B}_{C}).$$
 :::
 
 :::{.proof}
 
 Se lembre que as colunas de $[T]_C^B$ são os vetores
 $$\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.$$ Logo
-$$\dim(\tn{Col}([T]_C^B)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).$$
+$$\dim(\tn{Col}( [T]_C^B)) = \dim\left(\left<T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\right>\right)\leqslant \dim(\tn{Im}(T)).$$
 Mas na outra direção, um vetor $\ul{w}$ da imagem de $T$ tem a forma
 $T(\ul{v})$. Escrevendo
 $\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}$, o vetor de
@@ -248,8 +270,8 @@ coordenadas de $\ul{v}$ na base $B$ é $\ul{v}_B = \begin{pmatrix}
 \end{pmatrix}$ e
 $$\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.$$
 Segue que $\ul{w}_C\in \tn{Col}([T]_C^B)$, logo
-$$\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T_B^C)).$$ Resumindo,
-$$\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_C^B).$$ ◻
+$$\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T^B_C)).$$ Resumindo,
+$$\dim(\tn{Im}(T)) = \dim(\tn{Col}([T^B_C])) = \tn{Rk}([T]_C^B).$$ ◻
 :::
 
 Se lembre que mostramos na última lista que as matrizes $n\times n$

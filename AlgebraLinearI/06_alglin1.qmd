@@ -81,14 +81,14 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 & = T(\ul{b_j}).\qquad\qquad \checkmark
 \end{aligned}$$
 
-Uma notação pra matriz $A$ acima:
+Uma notação pra matriz $A$ acima: $A=[T]^B_C$.
 
 :::{#def-mat-tl}
 Sejam $V,W$ espaços vetoriais de dimensão finita com bases ordenadas
 $B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}$
 respetivamente. Seja $T:V\to W$ uma transformação linear. Denote por
 $[T]_C^B$ a matriz $n\times m$ de $T$ com respeito às bases $B,C$. Isto
-é, $[T]_B^C$ é a matriz cujas colunas são os vetores de coordenadas com
+é, $[T]_C^B$ é a matriz cujas colunas são os vetores de coordenadas com
 respeito à base $C$ dos vetores $T(\ul{b_j})$ ($j\in \{1,\ldots,m\}$):
 $$[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C & T(\ul{b_2})_C & \cdots & T(\ul{b_m})_C
@@ -199,11 +199,12 @@ com respeito às bases novas $B',C'$? Para responder esta pergunta, usaremos
 o @thm-mat-comp. Considere a seguinte cadeia de transformações lineares:
 $$
 \begin{array}{ccccccc}
-V & \overset{I_V}\longrightarrow & V & \overset{f}\longrightarrow & W & \overset{I_W}\longrightarrow & W\\ 
+V & \overset{I_V}\longrightarrow & V & \overset{T}\longrightarrow & W & \overset{I_W}\longrightarrow & W\\ 
 B' && B && C && C'
 \end{array}
 $$
-Na primeira linha temos as transformações (em que $I_V, I_W$ são as TLs identidades de $V,W$), enquanto na segunda temos as bases dos espaços correspondentes. Note que $I_W\circ f\circ I_V=f$ e podemos usar o @thm-mat-comp duas vezes para obter que 
+Na primeira linha temos as transformações (em que $I_V, I_W$ são as TLs identidades de $V,W$), 
+enquanto na segunda temos as bases dos espaços correspondentes. Note que $I_W\circ T\circ I_V=T$ e podemos usar o @thm-mat-comp duas vezes para obter que 
 $$
 \boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}
 $$
@@ -297,11 +298,11 @@ $$B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\
 duas bases de $V$. Seja $P$ a matriz $n\times n$ $$P = [I]_C^B,$$ a
 matriz da transformação identidade de $V$ com respeito às bases $B,C$.
 Considere também a matriz $[I]_B^C$. Temos
-$$[I]_B^C\cdot [I]_C^B = [I\circ I]_C^C = [I]_B^B = \begin{pmatrix}1 & 0 & \cdots & 0 \\
+$$[I]_B^C\cdot [I]_C^B = [I\circ I]_B^B = [I]_B^B = \begin{pmatrix}1 & 0 & \cdots & 0 \\
 0 & 1 &    & 0 \\
 \vdots & & \ddots & \vdots \\
 0 & 0 & \cdots & 1 
-\end{pmatrix},$$ e similarmente $[I]_B^C\cdot [I]_B^C = I_n$. Ou seja, a
+\end{pmatrix},$$ e similarmente $[I]_C^B\cdot [I]_B^C = I_n$. Ou seja, a
 matriz $[I]_B^C$ é a matriz inversa de $[I]_C^B$:
 $$P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.$$ 
 
@@ -367,7 +368,7 @@ $$[I]_B^E = P^{-1} = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1
 \end{pmatrix}.$$ Agora 
 \begin{align*}
-  [T]_B^B & = [I]_E^B\cdot [T]_E^E \cdot [I]_B^E \\
+  [T]_B^B & = [I]_B^E\cdot [T]_E^E \cdot [I]_E^B \\
       & = P^{-1}\cdot [T]_E^E \cdot P \\
       & = \begin{pmatrix}
 2 & -1 & -1 \\ 2 & 0 & -1 \\ -1 & 0 & 1

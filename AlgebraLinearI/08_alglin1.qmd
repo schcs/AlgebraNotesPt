@@ -29,7 +29,7 @@ Seja $f$ um polinômio sobre $\R$.
     divide $f$.
 :::
 
-:::{#exm-}
+:::{#exm-matA}
 Seja $$A = \begin{pmatrix}
     4 & 2 & 0 \\ 
     -1& 1& 0 \\
@@ -92,7 +92,7 @@ Observe que a definição *não depende* da escolha de base, pois
 determinantes e polinômios característicos são preservados por
 semelhança.
 
-:::{#exm-}
+:::{#exm-tl-r3-r3}
 Seja $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3$ o endomorfismo definido
 por $T(x,y,z) = (4x+2y,y-x,y+z)$. A matriz de $T$ com respeito à base
 canônica $B$ de $\R^3$ é $$[T]^{B}_{B} = \begin{pmatrix}
@@ -101,7 +101,7 @@ canônica $B$ de $\R^3$ é $$[T]^{B}_{B} = \begin{pmatrix}
     0 & 1 & 1 
     \end{pmatrix}.$$ Podemos calcular que
 ${\rm Det}(T) = \tn{Det}([T]_B^B) = 6$. A matriz $[T]_B^B$ é a matriz
-$A$ do exemplo anterior, logo $$p_T(t) = p_A(t) = (1-t)(2-t)(3-t).$$
+$A$ do @exm-matA, logo $$p_T(t) = p_A(t) = (1-t)(2-t)(3-t).$$
 :::
 
 Chegamos para umas definições importantes:
@@ -141,10 +141,8 @@ se $$p_T(\alpha) = {\rm Det}(T-\alpha I) = 0.$$
 :::
 
 :::{.proof}
-
-nulo, $\ul{v}$, tal que $T(\ul{v}) = \alpha \ul{v}$, mas isso é a mesma
-coisa de dizer que o sistema $(T-\alpha I)X = \ul{0}$ possui solução não
-trivial $\ul{v}$, logo ${\rm Det}(T-\alpha I)= 0$.
+Seja $\alpha\in\R$ um autovalor de $T$. Então existe um vetor não nulo, $\ul{v}$, tal que $T(\ul{v}) = \alpha \ul{v}$, mas isso é a mesma
+coisa de dizer que $(T-\alpha I)v = \ul{0}$; ou seja $v\in\ker(T-\alpha I)$, logo ${\rm Det}(T-\alpha I)= 0$.
 
 Supondo que $\alpha$ é raiz do polinômio caraterístico, então
 ${\rm Det(}T-\alpha I)= 0$, ou seja, existe $\ul{v}$ não-nulo tal que
@@ -153,7 +151,7 @@ mostrando que $\alpha$ é um autovalor de $T$. ◻
 :::
 
 :::{#exm-}
-No exemplo de $T:\R^3\to \R^3$ anterior, os autovalores de $T$ são
+Para a transformação linear $T:\R^3\to \R^3$ no @exm-tl-r3-r3, os autovalores de $T$ são
 exatamente os números $1,2$ e $3$.
 :::
 
@@ -195,7 +193,7 @@ $S_1, S_2$ e $S_3$.
                 & \Longleftrightarrow x=y=0,
             
     \end{aligned} portanto
-    $S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = [(0,0,1)].$
+    $S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = \langle(0,0,1)\rangle.$
 
 -   \begin{aligned}
                 T(x,y,z) = 2(x,y,z) & \Longleftrightarrow (4x+2y,-x+y,y+z) = (2x,2y,2z) \\
@@ -203,11 +201,11 @@ $S_1, S_2$ e $S_3$.
                 & \Longleftrightarrow x=-y \ {\rm e } \ y=z,
             
     \end{aligned} portanto
-    $S_2 = \{ (-y,y,y) \,|\, y\in \R \} = [(-1,1,1)].$
+    $S_2 = \{ (-y,y,y) \,|\, y\in \R \} = \langle(-1,1,1)\rangle.$
 
 -   Contas similares dão
 
-    $S_3 = [(-2,1,1/2)]$ \[Exercício: confirme!\]
+    $S_3 = \langle(-2,1,1/2)\rangle$ \[Exercício: confirme!\]
 :::
 
 :::{#exr-}
@@ -250,7 +248,7 @@ Seja $T:V \rightarrow V$ um operador linear.
  ◻
 :::
 
-:::{#prp-}
+:::{#prp-autovec-li}
 Sejam $T:V \rightarrow V$ um operador linear sobre um espaço de dimensão
 finita e $\lambda_1,\ldots,\lambda_m$ autovalores distintos de $T$. Se
 $\{ \ul{v^i_1},\ldots,\ul{v^i_{k_i}} \}$ é um conjunto LI de autovetores
@@ -290,7 +288,7 @@ $\{ \ul{v^i_1},\ldots,\ul{v^i_{k_i}} \}$ é LI por hipótese. ◻
 :::{#def-}
 -   Diremos que a matriz $A$ é *diagonalizável* se ela é semelhante a
     uma matriz diagonal. Isto é, se existirem matrizes $D$ e $P$ com $D$
-    diagonal e $P$ invertível, tais que $A = P^{-1}DP$.
+    diagonal e $P$ invertível, tais que $D = PAP^{-1}$.
 
 -   Diremos que um endomorfismo $T:V\rightarrow V$ sobre um espaço de
     dimensão finita é diagonalizável, se existir uma base $B$ de $V$ tal
@@ -318,17 +316,20 @@ somente se, $[T]^{B}_{B}$ é uma matriz diagonalizável.
 :::
 
 :::{.proof}
-
+Seja $C$ uma base de $V$ com 
 respeito a qual a matriz $D = [T]^{C}_{C}$ é diagonal. Mas
-$$[T]^{B}_{B} = [I]^{B}_{C}[T]^{C}_{C}[I]^{C}_{B} = 
-([I]^{C}_{B})^{-1}D[I]^{C}_{B},$$ portanto a matriz $[T]^{B}_{B}$ é
+$$
+D=[T]^{C}_{C} = [I]^{B}_{C}[T]^{B}_{B}[I]^{C}_{B}
+$$ 
+portanto a matriz $[T]^{B}_{B}$ é
 diagonalizável.
 
 Agora, suponha que a matriz $[T]_B^B$ é diagonalizável. Logo existem
 matrizes $D,P$ com $D$ diagonal e $P$ invertível, tais que
-$[T]_B^B = P^{-1}DP$. Por exercícios anteriores, para alguma base $C$
+$D=P[T]_B^BP^{-1}$ é diagonal. Por exercícios anteriores, para alguma base $C$
 temos que $P = [I]_C^B$. Mas já que
-$$[T]_B^B = P^{-1}DP = ([I]_C^B)^{-1}D[I]_C^B = [I]_B^CD[I]_C^B,$$ segue
+$$
+[T]_C^C = P[T]_B^BP^{-1} = [I]_C^B[T]_B^B([I]_C^B)^{-1} = [I]_C^B[T]_B^B[I]_B^C,$$ segue
 que $D = [T]_C^C$, logo a matriz de $T$ com respeito a $C$ é diagonal, e
 portanto $T$ é diagonalizável. ◻
 :::
@@ -378,10 +379,10 @@ $\mathbb{R}^3$, vimos que $[T]^{B}_{B} = \begin{pmatrix}
 0 & 1 & 1 
 \end{pmatrix}$. Os autovalores de $T$ são $1,2$ e $3$ e os autoespaços
 associados são
-$$S_1 = [(0,0,1)], S_2 = [(-1,1,1)] \hbox{ e }S_3 = [(-2,1,1/2)].$$
+$$S_1 = \langle(0,0,1)\rangle, S_2 = \langle(-1,1,1)\rangle \hbox{ e }S_3 = \langle(-2,1,1/2)\rangle.$$
 Considere a base $C$ de $\R^3$ composta pelas bases dos autoespaços:
 $$C = \{(0,0,1)\,,\,(-1,1,1)\,,\,(-2,1,1/2)\}$$ ($C$ é uma base, sendo
-LI por uma proposição anterior). A matriz
+LI pela @prp-autovec-li). A matriz
 $$P = [I]_B^C = \begin{pmatrix}
 (0,0,1)_B & (-1,1,1)_B & (-2,1,1/2)_B
 \end{pmatrix} = \begin{pmatrix}
@@ -394,7 +395,7 @@ $$P = [I]_B^C = \begin{pmatrix}
 -1 & -1 & 0 
 \end{pmatrix}.$$ A matriz de $T$ com respeito à base dos autovetores $C$
 (confirme!) é
-$$[T]_C^C = [I]_B^C\cdot[T]_B^B\cdot[I]_B^C  = \begin{pmatrix}
+$$[T]_C^C = [I]_C^B\cdot[T]_B^B\cdot[I]_B^C  = \begin{pmatrix}
 1 & 0 & 0 \\ 
 0 & 2 & 0 \\
 0 & 0 & 3 
