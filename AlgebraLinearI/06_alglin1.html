@@ -1350,9 +1350,9 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 \end{pmatrix} \\
 &amp; = T(\ul{b_j}).\qquad\qquad \checkmark
 \end{aligned}\]</span></p>
-<p>Uma notação pra matriz <span class="math inline">\(A\)</span> acima:</p>
+<p>Uma notação pra matriz <span class="math inline">\(A\)</span> acima: <span class="math inline">\(A=[T]^B_C\)</span>.</p>
 <div id="def-mat-tl" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Denote por <span class="math inline">\([T]_C^B\)</span> a matriz <span class="math inline">\(n\times m\)</span> de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Isto é, <span class="math inline">\([T]_B^C\)</span> é a matriz cujas colunas são os vetores de coordenadas com respeito à base <span class="math inline">\(C\)</span> dos vetores <span class="math inline">\(T(\ul{b_j})\)</span> (<span class="math inline">\(j\in \{1,\ldots,m\}\)</span>): <span class="math display">\[[T]_C^B = \begin{pmatrix}
+<p><span class="theorem-title"><strong>Definição 44.1</strong></span> Sejam <span class="math inline">\(V,W\)</span> espaços vetoriais de dimensão finita com bases ordenadas <span class="math inline">\(B = \{\ul{b_1}, \ldots, \ul{b_m}\},C = \{\ul{c_1}, \ldots, \ul{c_n}\}\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma transformação linear. Denote por <span class="math inline">\([T]_C^B\)</span> a matriz <span class="math inline">\(n\times m\)</span> de <span class="math inline">\(T\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Isto é, <span class="math inline">\([T]_C^B\)</span> é a matriz cujas colunas são os vetores de coordenadas com respeito à base <span class="math inline">\(C\)</span> dos vetores <span class="math inline">\(T(\ul{b_j})\)</span> (<span class="math inline">\(j\in \{1,\ldots,m\}\)</span>): <span class="math display">\[[T]_C^B = \begin{pmatrix}
 T(\ul{b_1})_C &amp; T(\ul{b_2})_C &amp; \cdots &amp; T(\ul{b_m})_C
 \end{pmatrix}.\]</span></p>
 </div>
@@ -1415,10 +1415,10 @@ I(1,0)_C &amp; I(0,1)_C
 <p>Dependendo da situação, um espaço vetorial pode possuir uma base “mais conveniente” para fazer cálculos. A base mais conveniente não tem que ser uma base canônica. Então, seria útil entender como mudar de uma base a uma outra num espaço vetorial.</p>
 <p>Suponha que temos dois espaços vetoriais <span class="math inline">\(V,W\)</span> com dimensões <span class="math inline">\(m,n\)</span> respetivamente e <span class="math inline">\(T:V\to W\)</span> uma TL. Com respeito às bases <span class="math inline">\(B,C\)</span> de <span class="math inline">\(V,W\)</span> respetivamente, a matriz da transformação é <span class="math display">\[[T]_C^B.\]</span> Agora suponha que temos mais duas bases <span class="math inline">\(B', C'\)</span> de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. Qual é a matriz de <span class="math inline">\(T\)</span> com respeito às bases novas <span class="math inline">\(B',C'\)</span>? Para responder esta pergunta, usaremos o <a href="#thm-mat-comp" class="quarto-xref">Teorema&nbsp;<span>44.2</span></a>. Considere a seguinte cadeia de transformações lineares: <span class="math display">\[
 \begin{array}{ccccccc}
-V &amp; \overset{I_V}\longrightarrow &amp; V &amp; \overset{f}\longrightarrow &amp; W &amp; \overset{I_W}\longrightarrow &amp; W\\
+V &amp; \overset{I_V}\longrightarrow &amp; V &amp; \overset{T}\longrightarrow &amp; W &amp; \overset{I_W}\longrightarrow &amp; W\\
 B' &amp;&amp; B &amp;&amp; C &amp;&amp; C'
 \end{array}
-\]</span> Na primeira linha temos as transformações (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>), enquanto na segunda temos as bases dos espaços correspondentes. Note que <span class="math inline">\(I_W\circ f\circ I_V=f\)</span> e podemos usar o <a href="#thm-mat-comp" class="quarto-xref">Teorema&nbsp;<span>44.2</span></a> duas vezes para obter que <span class="math display">\[
+\]</span> Na primeira linha temos as transformações (em que <span class="math inline">\(I_V, I_W\)</span> são as TLs identidades de <span class="math inline">\(V,W\)</span>), enquanto na segunda temos as bases dos espaços correspondentes. Note que <span class="math inline">\(I_W\circ T\circ I_V=T\)</span> e podemos usar o <a href="#thm-mat-comp" class="quarto-xref">Teorema&nbsp;<span>44.2</span></a> duas vezes para obter que <span class="math display">\[
 \boxed{{[T]}_{C'}^{B'} = [I_W]_{C'}^{C}\cdot[T]_C^B\cdot[I_V]_{B}^{B'}}
 \]</span> pois <span class="math display">\[\begin{align*}
   [I_W]_{C'}^{C}[T]_C^B[I_V]_{B}^{B'} &amp; = [I_W]_{C'}^{C}[T\circ I_V]_{C}^{B'} \\
@@ -1492,11 +1492,11 @@ B' &amp;&amp; B &amp;&amp; C &amp;&amp; C'
 </section>
 <section id="endomorfismos-e-semelhança" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="endomorfismos-e-semelhança">Endomorfismos e semelhança</h2>
-<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span>, e sejam <span class="math display">\[B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}\]</span> duas bases de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(P\)</span> a matriz <span class="math inline">\(n\times n\)</span> <span class="math display">\[P = [I]_C^B,\]</span> a matriz da transformação identidade de <span class="math inline">\(V\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Considere também a matriz <span class="math inline">\([I]_B^C\)</span>. Temos <span class="math display">\[[I]_B^C\cdot [I]_C^B = [I\circ I]_C^C = [I]_B^B = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0 \\
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão <span class="math inline">\(n\)</span>, e sejam <span class="math display">\[B = \{\ul{b_1}\,,\,\ldots\,,\,\ul{b_n}\}\quad,\quad C = \{\ul{c_1}\,,\,\ldots\,,\,\ul{c_n}\}\]</span> duas bases de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(P\)</span> a matriz <span class="math inline">\(n\times n\)</span> <span class="math display">\[P = [I]_C^B,\]</span> a matriz da transformação identidade de <span class="math inline">\(V\)</span> com respeito às bases <span class="math inline">\(B,C\)</span>. Considere também a matriz <span class="math inline">\([I]_B^C\)</span>. Temos <span class="math display">\[[I]_B^C\cdot [I]_C^B = [I\circ I]_B^B = [I]_B^B = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0 \\
 0 &amp; 1 &amp;    &amp; 0 \\
 \vdots &amp; &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; \cdots &amp; 1
-\end{pmatrix},\]</span> e similarmente <span class="math inline">\([I]_B^C\cdot [I]_B^C = I_n\)</span>. Ou seja, a matriz <span class="math inline">\([I]_B^C\)</span> é a matriz inversa de <span class="math inline">\([I]_C^B\)</span>: <span class="math display">\[P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.\]</span></p>
+\end{pmatrix},\]</span> e similarmente <span class="math inline">\([I]_C^B\cdot [I]_B^C = I_n\)</span>. Ou seja, a matriz <span class="math inline">\([I]_B^C\)</span> é a matriz inversa de <span class="math inline">\([I]_C^B\)</span>: <span class="math display">\[P = [I]_C^B\quad,\quad P^{-1} = [I]_B^C.\]</span></p>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 44.2</strong></span> Prove uma versão mais geral deste resultado: Sejam <span class="math inline">\(V, W\)</span> espaços vetoriais de dimensão <span class="math inline">\(n\)</span> e sejam <span class="math inline">\(B,C\)</span> bases de <span class="math inline">\(V,W\)</span> respetivamente. Seja <span class="math inline">\(T:V\to W\)</span> uma TL.</p>
 <ol type="1">
@@ -1530,7 +1530,7 @@ B' &amp;&amp; B &amp;&amp; C &amp;&amp; C'
 \end{pmatrix}^{-1} = \begin{pmatrix}
 2 &amp; -1 &amp; -1 \\ 2 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 1
 \end{pmatrix}.\]</span> Agora <span class="math display">\[\begin{align*}
-  [T]_B^B &amp; = [I]_E^B\cdot [T]_E^E \cdot [I]_B^E \\
+  [T]_B^B &amp; = [I]_B^E\cdot [T]_E^E \cdot [I]_E^B \\
       &amp; = P^{-1}\cdot [T]_E^E \cdot P \\
       &amp; = \begin{pmatrix}
 2 &amp; -1 &amp; -1 \\ 2 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 1

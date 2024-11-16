@@ -1313,12 +1313,22 @@ Em outras palavras, a <span class="math inline">\(j\)</span>-ésima coluna de <s
 \begin{pmatrix} L_1 \\ \vdots \\ L_m\end{pmatrix} = Y\begin{pmatrix} Z_1 \\ \vdots \\ Z_k\end{pmatrix}
 \]</span> e a <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(X\)</span> é combinação linear das linhas de <span class="math inline">\(Z\)</span> com coeficientes que são entradas na <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(Y\)</span>.</p>
 </div>
-<div id="def-" class="theorem definition">
+<div id="def-posto" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 45.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(m\times n\)</span>.</p>
 <ul>
 <li><p>O <em>espaço coluna</em> <span class="math inline">\(\tn{Col}(A)\)</span> de <span class="math inline">\(A\)</span> é o subespaço de <span class="math inline">\(\R^m\)</span> gerado pelas colunas de <span class="math inline">\(A\)</span>.</p></li>
 <li><p>O <em>espaço linha</em> <span class="math inline">\(\tn{Lin}(A)\)</span> de <span class="math inline">\(A\)</span> é o subespaço de <span class="math inline">\(\R^n\)</span> gerado pelas linhas de <span class="math inline">\(A\)</span>.</p></li>
 </ul>
+</div>
+<p>Da <a href="#def-posto" class="quarto-xref">Definição&nbsp;<span>45.1</span></a>, e do <a href="#exm-prod-mat" class="quarto-xref">Exemplo&nbsp;<span>45.1</span></a> obtemos o seguinte resultado.</p>
+<div id="lem-posto-prod" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 45.1</strong></span> Assuma que <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(Z\)</span> são matrizes <span class="math inline">\(m\times n\)</span>, <span class="math inline">\(m\times k\)</span>, <span class="math inline">\(k\times n\)</span>, respetivamente, tais que <span class="math display">\[
+  X=YZ.
+\]</span> Então <span class="math display">\[
+\dim\tn{Col}(X)\leq \dim\tn{Col}(Y)\leq k
+\]</span> e <span class="math display">\[
+\dim\tn{Lin}(X)\leq \dim\tn{Lin}(Z)\leq k
+\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 45.2</strong></span> Seja <span class="math display">\[A = \begin{pmatrix}
@@ -1402,15 +1412,21 @@ A_1 &amp; \cdots &amp; A_n
 s_{11} &amp; \cdots &amp;s_{1n} \\
 \vdots &amp; &amp; \vdots \\
 s_{r1} &amp; \cdots &amp; s_{rn}
-\end{pmatrix},\]</span> temos que <span class="math inline">\(A = CS\)</span> (confirme!). Vamos reinterpretar essa equação. Escrevendo <span class="math display">\[A = \begin{pmatrix}
+\end{pmatrix},\]</span> temos que <span class="math inline">\(A = CS\)</span> (confirme!). Usando <a href="#lem-posto-prod" class="quarto-xref">Lema&nbsp;<span>45.1</span></a>, obtemos que <span class="math display">\[
+\dim\tn{Lin}(A)\leq \dim\tn{Lin}(S)=r=\dim\tn{Col}(A).
+\]</span> <!--Vamos reinterpretar
+essa equação. Escrevendo $$A = \begin{pmatrix}
 B_1 \\ \vdots \\ B_m
-\end{pmatrix}\]</span> com os <span class="math inline">\(B_i\)</span> as linhas de <span class="math inline">\(A\)</span> e <span class="math display">\[S = \begin{pmatrix}
+\end{pmatrix}$$ com os $B_i$ as linhas de $A$ e $$S = \begin{pmatrix}
 S_1 \\ \vdots \\ S_r
-\end{pmatrix}\]</span> com os <span class="math inline">\(S_i\)</span> as linhas de <span class="math inline">\(S\)</span>, a equação <span class="math inline">\(A = CS\)</span> se torna <span class="math display">\[\begin{pmatrix}
+\end{pmatrix}$$ com os $S_i$ as linhas de $S$, a equação $A = CS$ se
+torna $$\begin{pmatrix}
 B_1 \\ \vdots \\ B_m
 \end{pmatrix} = C\begin{pmatrix}
 S_1 \\ \vdots \\ S_r
-\end{pmatrix},\]</span> mostrando que cada linha de <span class="math inline">\(A\)</span> é combinação linear das linhas de <span class="math inline">\(S\)</span>. Ou seja, <span class="math inline">\(\tn{Lin}(A)\)</span> é gerado pelas <span class="math inline">\(r\)</span> linhas de <span class="math inline">\(S\)</span>. Ou seja, <span class="math inline">\(\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))\)</span>.</p>
+\end{pmatrix},$$ mostrando que cada linha de $A$ é combinação linear das
+linhas de $S$. Ou seja, $\tn{Lin}(A)$ é gerado pelas $r$ linhas de $S$.
+Ou seja, $\dim(\tn{Lin}(A))\leqslant r = \dim(\tn{Col}(A))$. --></p>
 <p>Mas agora, aplicando o mesmo argumento pra matriz transposta <span class="math inline">\(A^t\)</span>, obtemos que <span class="math display">\[\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A^t)) \leqslant \dim(\tn{Col}(A^t)) = \dim(\tn{Lin}(A)),\]</span> logo <span class="math inline">\(\dim(\tn{Col}(A)) = \dim(\tn{Lin}(A))\)</span>.&nbsp;◻</p>
 </div>
 <div id="def-" class="theorem definition">
@@ -1427,7 +1443,7 @@ S_1 \\ \vdots \\ S_r
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 45.4</strong></span> Sejam <span class="math inline">\(B = \{(1,1)\,,\,(0,2) \}\)</span> e <span class="math inline">\(B' = \{(1,0,1)\,,\,(0,1,0)\,,\,(1,2,0) \}\)</span> bases de <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>, respetivamente e <span class="math inline">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^3\)</span> a transformação linear definida por <span class="math inline">\((x,y) \mapsto (2x,x-y,2y)\)</span>.</p>
-<p>Sabemos que <span class="math display">\[[T]^{B'}_{B} =  \begin{pmatrix}
+<p>Sabemos que <span class="math display">\[[T]^{B}_{B'} =  \begin{pmatrix}
 a_{11} &amp; a_{12} \\
 a_{21} &amp; a_{22} \\
 a_{31} &amp; a_{32}
@@ -1439,27 +1455,27 @@ a_{31}
 a_{12} \\
 a_{22} \\
 a_{32}
-\end{pmatrix}\)</span>. Temos <span class="math display">\[T(1,1) = (2,0,2) = a_{11}(1,0,1)+ a_{21}(0,1,0)+ a_{31}(1,2,0);\]</span> <span class="math display">\[T(0,2) = (0,-2,4) = a_{12}(1,0,1)+ a_{22}(0,1,0)+ a_{32}(1,2,0);\]</span> resolvendo os sistemas, obtemos <span class="math display">\[[T]^{B'}_{B} =
+\end{pmatrix}\)</span>. Temos <span class="math display">\[T(1,1) = (2,0,2) = a_{11}(1,0,1)+ a_{21}(0,1,0)+ a_{31}(1,2,0);\]</span> <span class="math display">\[T(0,2) = (0,-2,4) = a_{12}(1,0,1)+ a_{22}(0,1,0)+ a_{32}(1,2,0);\]</span> resolvendo os sistemas, obtemos <span class="math display">\[[T]^{B}_{B'} =
     \begin{pmatrix}
     2 &amp; 4 \\
     0&amp; 6 \\
     0 &amp; -4
-\end{pmatrix}.\]</span> Note que <span class="math inline">\({\rm dim}({\rm Col}([T]^{B'}_{B})) = 2\)</span>, logo <span class="math inline">\({\rm Rk}([T]^{B'}_{B}) = 2\)</span>.</p>
+\end{pmatrix}.\]</span> Note que <span class="math inline">\({\rm dim}({\rm Col}([T]^{B}_{B'})) = 2\)</span>, logo <span class="math inline">\({\rm Rk}([T]^{B}_{B'}) = 2\)</span>.</p>
 <p>Como <span class="math display">\[\begin{array}{ccc}
 (2x,x-y,2y) &amp;= &amp; (2x,x,0) + (0,-y,2y) \\
 &amp;=&amp; x(2,1,0) + y(0,-1,2)
-\end{array},\]</span> segue que <span class="math inline">\(\{ (2,1,0), (0,-1,2)\}\)</span> é uma base para <span class="math inline">\({\rm Im}(T)\)</span>, logo <span class="math inline">\({\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B'}_{B})\)</span>.</p>
+\end{array},\]</span> segue que <span class="math inline">\(\{ (2,1,0), (0,-1,2)\}\)</span> é uma base para <span class="math inline">\({\rm Im}(T)\)</span>, logo <span class="math inline">\({\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B}_{B'})\)</span>.</p>
 </div>
 <p>De fato, esta igualdade sempre vale:</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 45.2</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita, <span class="math inline">\(T: V \rightarrow W\)</span> uma transformação linear e <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_m}\}\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Então <span class="math display">\[{\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{C}_{B}).\]</span></p>
+<p><span class="theorem-title"><strong>Teorema 45.2</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita, <span class="math inline">\(T: V \rightarrow W\)</span> uma transformação linear e <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_m}\}\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Então <span class="math display">\[{\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{B}_{C}).\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Se lembre que as colunas de <span class="math inline">\([T]_C^B\)</span> são os vetores <span class="math display">\[\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.\]</span> Logo <span class="math display">\[\dim(\tn{Col}([T]_C^B)) = \dim\left([\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}]\right)\leqslant \dim(\tn{Im}(T)).\]</span> Mas na outra direção, um vetor <span class="math inline">\(\ul{w}\)</span> da imagem de <span class="math inline">\(T\)</span> tem a forma <span class="math inline">\(T(\ul{v})\)</span>. Escrevendo <span class="math inline">\(\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}\)</span>, o vetor de coordenadas de <span class="math inline">\(\ul{v}\)</span> na base <span class="math inline">\(B\)</span> é <span class="math inline">\(\ul{v}_B = \begin{pmatrix}
+<p><span class="proof-title"><em>Comprovação</em>. </span>Se lembre que as colunas de <span class="math inline">\([T]_C^B\)</span> são os vetores <span class="math display">\[\{T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\}.\]</span> Logo <span class="math display">\[\dim(\tn{Col}( [T]_C^B)) = \dim\left(\left&lt;T(\ul{b_1})_C,\ldots,T(\ul{b_m})_C\right&gt;\right)\leqslant \dim(\tn{Im}(T)).\]</span> Mas na outra direção, um vetor <span class="math inline">\(\ul{w}\)</span> da imagem de <span class="math inline">\(T\)</span> tem a forma <span class="math inline">\(T(\ul{v})\)</span>. Escrevendo <span class="math inline">\(\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_m\ul{b_m}\)</span>, o vetor de coordenadas de <span class="math inline">\(\ul{v}\)</span> na base <span class="math inline">\(B\)</span> é <span class="math inline">\(\ul{v}_B = \begin{pmatrix}
 \lambda_1 \\
 \vdots \\
 \lambda_m
-\end{pmatrix}\)</span> e <span class="math display">\[\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.\]</span> Segue que <span class="math inline">\(\ul{w}_C\in \tn{Col}([T]_C^B)\)</span>, logo <span class="math display">\[\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T_B^C)).\]</span> Resumindo, <span class="math display">\[\dim(\tn{Im}(T)) = \dim(\tn{Col}([T_B^C])) = \tn{Rk}([T]_C^B).\]</span>&nbsp;◻</p>
+\end{pmatrix}\)</span> e <span class="math display">\[\ul{w}_C = T(\ul{v})_C = \lambda_1 T(\ul{b_1})_C + \ldots + \lambda_m T(\ul{b_m})_C.\]</span> Segue que <span class="math inline">\(\ul{w}_C\in \tn{Col}([T]_C^B)\)</span>, logo <span class="math display">\[\dim(\tn{Im}(T))\leqslant \dim(\tn{Col}(T^B_C)).\]</span> Resumindo, <span class="math display">\[\dim(\tn{Im}(T)) = \dim(\tn{Col}([T^B_C])) = \tn{Rk}([T]_C^B).\]</span>&nbsp;◻</p>
 </div>
 <p>Se lembre que mostramos na última lista que as matrizes <span class="math inline">\(n\times n\)</span> <span class="math inline">\(A,B\)</span> são semelhantes se, e somente se, existem um espaço vetorial <span class="math inline">\(V\)</span> de dimensão <span class="math inline">\(n\)</span> e um endomorfismo <span class="math inline">\(T:V\to V\)</span> tais que <span class="math display">\[[T]_X^X = A\,,\, [T]_Y^Y = B\]</span> em que <span class="math inline">\(X,Y\)</span> são duas bases de <span class="math inline">\(V\)</span>.</p>
 <div id="cor-" class="theorem corollary">
