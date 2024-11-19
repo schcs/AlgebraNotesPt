@@ -30,3 +30,4 @@ Material disponibilizado sob a licença
 - [A matriz de uma transformação linear e mudança de base](06_alglin1.qmd)
 - [O posto de uma matriz](07_alglin1.qmd)
 - [Diagonalização](08_alglin1.qmd)
+- [O produto interno](09_alglin1.qmd)
