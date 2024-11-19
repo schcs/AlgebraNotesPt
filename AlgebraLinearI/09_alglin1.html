@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>47&nbsp; A matriz de uma transformação linear e mudança de base – Álgebra</title>
+<title>47&nbsp; Produtos internos e formas bilineares – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/09_alglin1.html"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">A matriz de uma transformação linear e mudança de base</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/09_alglin1.html"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Produtos internos e formas bilineares</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -992,7 +992,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearI/09_alglin1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">A matriz de uma transformação linear e mudança de base</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Produtos internos e formas bilineares</span></span></a>
   </div>
 </li>
       </ul>
@@ -1281,19 +1281,21 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#produtos-internos" id="toc-produtos-internos" class="nav-link active" data-scroll-target="#produtos-internos">Produtos internos</a>
-  <ul class="collapse">
+  <li><a href="#produtos-internos" id="toc-produtos-internos" class="nav-link active" data-scroll-target="#produtos-internos">Produtos internos</a></li>
+  <li><a href="#formas-bilineares" id="toc-formas-bilineares" class="nav-link" data-scroll-target="#formas-bilineares"><span class="header-section-number">47.1</span> Formas bilineares</a></li>
+  <li><a href="#positividade-de-formas" id="toc-positividade-de-formas" class="nav-link" data-scroll-target="#positividade-de-formas"><span class="header-section-number">47.3</span> Positividade de formas</a></li>
   <li><a href="#norma-e-distância" id="toc-norma-e-distância" class="nav-link" data-scroll-target="#norma-e-distância">Norma e distância</a></li>
-  </ul></li>
+  <li><a href="#a-desigualdade-de-cauchy-schwarz" id="toc-a-desigualdade-de-cauchy-schwarz" class="nav-link" data-scroll-target="#a-desigualdade-de-cauchy-schwarz"><span class="header-section-number">47.4</span> A desigualdade de Cauchy-Schwarz</a></li>
+  <li><a href="#a-desigualdade-triangular" id="toc-a-desigualdade-triangular" class="nav-link" data-scroll-target="#a-desigualdade-triangular"><span class="header-section-number">47.5</span> A desigualdade triangular</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/09_alglin1.html"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">A matriz de uma transformação linear e mudança de base</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/09_alglin1.html"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Produtos internos e formas bilineares</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">A matriz de uma transformação linear e mudança de base</span></h1>
+<h1 class="title"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Produtos internos e formas bilineares</span></h1>
 </div>
 
 
@@ -1310,8 +1312,8 @@ window.Quarto = {
 </header>
 
 
-<section id="produtos-internos" class="level1 unnumbered">
-<h1 class="unnumbered">Produtos internos</h1>
+<section id="produtos-internos" class="level2 unnumbered">
+<h2 class="unnumbered" data-anchor-id="produtos-internos">Produtos internos</h2>
 <p>Nossos espaços vetoriais têm mais estrutura do que a gente está usando. Em <span class="math inline">\(\R^2\)</span> por exemplo aqui são duas bases diferentes:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1402,6 +1404,9 @@ b_1 \\ \vdots \\ b_n
 </ul>
 <p>&nbsp;◻</p>
 </div>
+</section>
+<section id="formas-bilineares" class="level2" data-number="47.1">
+<h2 data-number="47.1" data-anchor-id="formas-bilineares"><span class="header-section-number">47.1</span> Formas bilineares</h2>
 <p>As condições <em>LIN1</em>, <em>LIN2</em>, <em>LIN1’</em>, <em>LIN2’</em> dizem que um produto interno é <em>bilinear</em>. Isto é:</p>
 <div id="prp-" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposição 47.2</strong></span> &nbsp;</p>
@@ -1457,6 +1462,8 @@ Sejam <span class="math inline">\(A\)</span> uma matriz <span class="math inline
   &amp; = \lambda\langle \ul{u},\ul{v}\rangle_A\qquad\checkmark
 \end{aligned}\]</span>
 <p><u>Exercício</u>: Confirme que a função é linear no primeiro componente também.</p>
+<section id="formas-bilineares-simétricas" class="level2" data-number="47.2">
+<h2 data-number="47.2" data-anchor-id="formas-bilineares-simétricas"><span class="header-section-number">47.2</span> Formas bilineares simétricas</h2>
 <p>Em geral, esta forma não vai ser simétrica. Por exemplo, pegue <span class="math inline">\(A = \begin{pmatrix}
 0 &amp; 1 \\ 0 &amp; 0
 \end{pmatrix}\)</span>, <span class="math inline">\(\ul{u} = \begin{pmatrix}
@@ -1488,6 +1495,7 @@ Sejam <span class="math inline">\(A\)</span> uma matriz <span class="math inline
 \end{pmatrix} = \begin{pmatrix}
 0
 \end{pmatrix} = \ul{\ul{0}}.\]</span> De fato, temos o seguinte lema.</p>
+</section>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 47.1</strong></span> A forma bilinear <span class="math inline">\(\langle-,-\rangle_A\)</span> é simétrica se, e somente se, a matriz <span class="math inline">\(A = (a_{ij})\)</span> é simétrica (isto é, se <span class="math inline">\(A = A^t\)</span>).</p>
@@ -1503,6 +1511,9 @@ a_{1i} \\ a_{2i} \\ \vdots \\ a_{ni}
 \end{pmatrix} = a_{ji}.\]</span> Já que a forma é simétrica, obtemos que <span class="math display">\[a_{ij} = \langle \ul{b_i},\ul{b_j}\rangle_A = \langle \ul{b_j},\ul{b_i}\rangle_A = a_{ji}\quad \forall\, i,j.\]</span> Isto é, <span class="math inline">\(A\)</span> é simétrica.&nbsp;◻</p>
 </div>
 <p>Então, no fim das contas, dada uma matriz <em>simétrica</em> <span class="math inline">\(A\)</span>, a função <span class="math inline">\(V\times V \to \R\)</span> dada por <span class="math inline">\(\langle \ul{u},\ul{v}\rangle_A = \ul{u}^tA\ul{v}\)</span> é uma forma bilinear simétrica (pois satisfaz propriedades SIM, LIN1, LIN2, LIN1’, LIN2’ da definição).</p>
+</section>
+<section id="positividade-de-formas" class="level2" data-number="47.3">
+<h2 data-number="47.3" data-anchor-id="positividade-de-formas"><span class="header-section-number">47.3</span> Positividade de formas</h2>
 <p>Ainda temos que decidir quando esta forma é positiva definida. Vamos voltar para esta questão mais para frente. Por enquanto, seguem dois exemplos de matrizes simétricas cujas formas bilineares correspondentes são positivas definidas:</p>
 <div id="exm-formas" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 47.3</strong></span> &nbsp;</p>
@@ -1530,6 +1541,7 @@ x \\ y
 </div>
 <p>Nesta disciplina, vamos ter interesse principalmente em produtos internos, mas nas diversas áreas da matemática, as formas bilineares também exercem um papel importante.</p>
 <p>Seguem várias utilidades e aplicações dos produtos internos.</p>
+</section>
 <section id="norma-e-distância" class="level2 unnumbered">
 <h2 class="unnumbered" data-anchor-id="norma-e-distância">Norma e distância</h2>
 <p>Um espaço vetorial <span class="math inline">\(V\)</span>, junto com um produto interno <span class="math display">\[V\times V\to \R\]</span> será chamado de <em>espaço vetorial com produto interno</em>.</p>
@@ -1584,6 +1596,9 @@ x \\ y
 <p>&nbsp;◻</p>
 </div>
 <p>Um vetor <span class="math inline">\(\ul{v}\)</span> num espaço vetorial com produto interno é <em>unitário</em> se <span class="math inline">\(\|\ul{v}\| = 1\)</span>. Para qualquer vetor não nulo <span class="math inline">\(\ul{v}\)</span>, <span class="math inline">\(\|\ul{v}\|\neq 0\)</span> e o vetor <span class="math inline">\(\frac{1}{\|\ul{v}\|}\ul{v}\)</span> é unitário: <span class="math display">\[\left\|\frac{1}{\|\ul{v}\|}\ul{v}\right\| = \frac{1}{\|\ul{v}\|}\|\ul{v}\| = 1\quad\checkmark\]</span> Diremos que o vetor unitário <span class="math inline">\(\ul{v}/\|\ul{v}\|\)</span> é a <em>normalização</em> do vetor <span class="math inline">\(\ul{v}\)</span>, ou o vetor <span class="math inline">\(\ul{v}\)</span> <em>normalizado</em>.</p>
+</section>
+<section id="a-desigualdade-de-cauchy-schwarz" class="level2" data-number="47.4">
+<h2 data-number="47.4" data-anchor-id="a-desigualdade-de-cauchy-schwarz"><span class="header-section-number">47.4</span> A desigualdade de Cauchy-Schwarz</h2>
 <p>Umas propriedades mais sutis:</p>
 <div id="prp-" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposição 47.4</strong></span> Sejam <span class="math inline">\(\ul{u}, \ul{v}\)</span> dois vetores num espaço vetorial com produto interno. Então <span class="math display">\[|\langle\ul{u},\ul{v}\rangle| \leqslant \|\ul{u}\|\cdot \|\ul{v}\|.\]</span></p>
@@ -1631,6 +1646,9 @@ Vamos pegar dois vetores <span class="math inline">\(\ul{u} = (1,-4), \ul{v} = (
 &amp; = \sqrt{42}\cdot \sqrt{14} = 14\sqrt{3}\approx 24 \geqslant 15.\quad\checkmark
 \end{aligned}\]</span>
 </div>
+</section>
+<section id="a-desigualdade-triangular" class="level2" data-number="47.5">
+<h2 data-number="47.5" data-anchor-id="a-desigualdade-triangular"><span class="header-section-number">47.5</span> A desigualdade triangular</h2>
 <p>Se lembre de GAAL que a soma de dois vetores <span class="math inline">\(\ul{u} + \ul{v}\)</span> em <span class="math inline">\(\R^n\)</span> pode ser visualizada por colocar um representante de <span class="math inline">\(\ul{v}\)</span> começando no ponto final de um representante de <span class="math inline">\(\ul{u}\)</span>. O vetor <span class="math inline">\(\ul{u}+\ul{v}\)</span> tem representante começando no ponto inicial de <span class="math inline">\(\ul{u}\)</span> e indo pro ponto final de <span class="math inline">\(\ul{v}\)</span>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1664,7 +1682,6 @@ Vamos pegar dois vetores <span class="math inline">\(\ul{u} = (1,-4), \ul{v} = (
 <p>Mais uma definição. A <em>distância</em> entre dois vetores <span class="math inline">\(\ul{u}, \ul{v}\)</span> do espaço vetorial com produto interno <span class="math inline">\(V\)</span> é o número <span class="math inline">\(\|\ul{u} - \ul{v}\|\)</span>. Por exemplo, a distância entre um vetor <span class="math inline">\(\ul{u}\)</span> e ele mesmo é <span class="math display">\[\|\ul{u} - \ul{u}\| = \|\ul{0}\| = 0.\]</span> A distância entre <span class="math inline">\(\ul{u}\)</span> e <span class="math inline">\(-\ul{u}\)</span> é <span class="math display">\[\|\ul{u} - (-\ul{u})\| = \|2\ul{u}\| = 2\|\ul{u}\|.\]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
