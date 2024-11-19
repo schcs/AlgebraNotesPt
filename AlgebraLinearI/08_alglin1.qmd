@@ -5,7 +5,7 @@ lang: pt-BR
 --- 
 
 
-# Diagonalização {#diagonalização .unnumbered}
+# O polinômio caraterístico {#pol_car}
 
 Diagonalização de uma TL $T:V\to V$ é o processo de achar uma base de
 $V$ com respeito a qual $T$ é muito fácil entender. As noções de
@@ -103,6 +103,8 @@ canônica $B$ de $\R^3$ é $$[T]^{B}_{B} = \begin{pmatrix}
 ${\rm Det}(T) = \tn{Det}([T]_B^B) = 6$. A matriz $[T]_B^B$ é a matriz
 $A$ do @exm-matA, logo $$p_T(t) = p_A(t) = (1-t)(2-t)(3-t).$$
 :::
+
+## Autovalores e autovetores
 
 Chegamos para umas definições importantes:
 
@@ -284,6 +286,8 @@ $$a^m_1\ul{v^m_1}+\cdots + a^m_{k_m}\ul{v^m_{k_m}} = \ul{0},$$ mostrando
 que cada $a^m_j = 0$ também, pois o conjunto
 $\{ \ul{v^i_1},\ldots,\ul{v^i_{k_i}} \}$ é LI por hipótese. ◻
 :::
+
+## Operadores diagonalizáveis
 
 :::{#def-}
 -   Diremos que a matriz $A$ é *diagonalizável* se ela é semelhante a
