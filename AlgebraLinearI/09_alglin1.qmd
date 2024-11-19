@@ -1,10 +1,10 @@
 --- 
-title: "A matriz de uma transformação linear e mudança de base"
+title: "Produtos internos e formas bilineares"
 number-sections: true
 lang: pt-BR
 --- 
 
-# Produtos internos {#produtos-internos .unnumbered}
+## Produtos internos {#produtos-internos .unnumbered}
 
 Nossos espaços vetoriais têm mais estrutura do que a gente está usando.
 Em $\R^2$ por exemplo aqui são duas bases diferentes:
@@ -126,6 +126,8 @@ Seja $\langle-,-\rangle:V\times V \to \R$ um produto interno. Então
  ◻
 :::
 
+## Formas bilineares
+
 As condições *LIN1*, *LIN2*, *LIN1'*, *LIN2'* dizem que um produto
 interno é *bilinear*. Isto é:
 
@@ -187,6 +189,8 @@ forma bilinear: \begin{aligned}
   & = \lambda\langle \ul{u},\ul{v}\rangle_A\qquad\checkmark
 \end{aligned} [Exercício]{.underline}: Confirme que a função é linear
 no primeiro componente também.
+
+## Formas bilineares simétricas
 
 Em geral, esta forma não vai ser simétrica. Por exemplo, pegue
 $A = \begin{pmatrix}
@@ -255,6 +259,8 @@ $V\times V \to \R$ dada por
 $\langle \ul{u},\ul{v}\rangle_A = \ul{u}^tA\ul{v}$ é uma forma bilinear
 simétrica (pois satisfaz propriedades SIM, LIN1, LIN2, LIN1', LIN2' da
 definição).
+
+## Positividade de formas
 
 Ainda temos que decidir quando esta forma é positiva definida. Vamos
 voltar para esta questão mais para frente. Por enquanto, seguem dois
@@ -382,6 +388,8 @@ $$\left\|\frac{1}{\|\ul{v}\|}\ul{v}\right\| = \frac{1}{\|\ul{v}\|}\|\ul{v}\| = 1
 Diremos que o vetor unitário $\ul{v}/\|\ul{v}\|$ é a *normalização* do
 vetor $\ul{v}$, ou o vetor $\ul{v}$ *normalizado*.
 
+## A desigualdade de Cauchy-Schwarz
+
 Umas propriedades mais sutis:
 
 :::{#prp-}
@@ -440,6 +448,8 @@ $$|\langle\ul{u},\ul{v}\rangle| = \left|\begin{pmatrix}
 & = \sqrt{42}\cdot \sqrt{14} = 14\sqrt{3}\approx 24 \geqslant 15.\quad\checkmark 
 \end{aligned}
 :::
+
+## A desigualdade triangular
 
 Se lembre de GAAL que a soma de dois vetores $\ul{u} + \ul{v}$ em $\R^n$
 pode ser visualizada por colocar um representante de $\ul{v}$ começando
