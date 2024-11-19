@@ -4,7 +4,7 @@ number-sections: true
 lang: pt-BR
 --- 
 
-## Produtos internos {#produtos-internos .unnumbered}
+## Produtos internos {#produtos-internos}
 
 Nossos espaços vetoriais têm mais estrutura do que a gente está usando.
 Em $\R^2$ por exemplo aqui são duas bases diferentes:
@@ -305,7 +305,7 @@ também exercem um papel importante.
 
 Seguem várias utilidades e aplicações dos produtos internos.
 
-## Norma e distância {#norma-e-distância .unnumbered}
+## Norma e distância {#norma-e-distância}
 
 Um espaço vetorial $V$, junto com um produto interno $$V\times V\to \R$$
 será chamado de *espaço vetorial com produto interno*.
