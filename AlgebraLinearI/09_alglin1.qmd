@@ -27,6 +27,7 @@ Em $\R^2$ por exemplo aqui são duas bases diferentes:
 \draw[-latex, thick] (7,0) -- (6,2);
 \end{tikzpicture}$$ -->
 
+
 Até agora, não temos como dizer que uma dessas bases é melhor que a
 outra. Mas, esteticamente pelo menos, a segunda base parece mais legal,
 pois:
