@@ -2,13 +2,14 @@
 title: "Computações com Python II"
 number-sections: true
 lang: pt-BR
+jupyter: python3
 --- 
 
 Vamos resolver alguns problemas numéricos usando a biblioteca [SymPy](https://www.sympy.org/en/index.html) da linguagem de programação [Python](https://www.python.org/).
 
 Primeiro vamos carregar as funções que vamos utilizar da biblioteca.
 
-```python
+```{python}
 from sympy import Matrix, zeros, linsolve, S
 ```
   
@@ -59,7 +60,7 @@ As funções podem aceitar um argumento adicional indicando o número de vértic
 
 A sua função deve funcinar na maneira seguinte. 
 ```{python}
-#| context: output
+#| echo: false 
 def adjacency_matrix( n, edge_list ):
     mat = Matrix.zeros( n, n )
     for e in edge_list:
@@ -67,20 +68,34 @@ def adjacency_matrix( n, edge_list ):
         
     return mat
 
-def laplacian( mat ):
+def laplacian( n, edge_list ):
+    mat = adjacency_matrix( n, edge_list )
     lap_mat = mat.copy()
     n = mat.rows
     for i in range( n ):
         lap_mat[i,i] = -sum( mat[i,:] )
     return -lap_mat
 
-def degree_matrix( mat ):
-
+def degree_matrix( n, edge_list ):
+    mat = adjacency_matrix( n, edge_list )
     n = mat.rows
     deg_mat = Matrix.zeros( n, n )
     for i in range( n ):
         deg_mat[i,i] = sum( mat[i,:] )
 
     return deg_mat
+```
+
+```{python}
+edge_list = [(0,1),(0,4),(1,2),(1,4),(2,3),(3,4),(3,5)]
+adjacency_matrix( 6, edge_list )
+```
+
+```{python}
+degree_matrix( 6, edge_list )
+```
+
+```{python}
+laplacian( 6, edge_list )
 ```
 :::
