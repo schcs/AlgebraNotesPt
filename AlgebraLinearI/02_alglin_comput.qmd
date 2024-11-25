@@ -5,7 +5,8 @@ lang: pt-BR
 jupyter: python3
 --- 
 
-Vamos resolver alguns problemas numéricos usando a biblioteca [SymPy](https://www.sympy.org/en/index.html) da linguagem de programação [Python](https://www.python.org/).
+Vamos resolver alguns problemas numéricos usando as bibliotecas [SymPy](https://www.sympy.org/) e 
+[NumPy](https://www.sympy.org/) da linguagem de programação [Python](https://www.python.org/).
 
 Primeiro vamos carregar as funções que vamos utilizar da biblioteca.
 
