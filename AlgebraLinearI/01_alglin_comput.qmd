@@ -1,8 +1,9 @@
 ---
-title: "Computações com Python"
 number-sections: true
 lang: pt-BR
 --- 
+
+# Computações com Python {#sec-comput-1}
 
 Vamos resolver alguns problemas numéricos usando a biblioteca [SymPy](https://www.sympy.org/en/index.html) da linguagem de programação [Python](https://www.python.org/).
 

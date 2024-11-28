@@ -49,12 +49,14 @@ A(\Gamma)=\begin{pmatrix} 2 & -1 & 0 & 0 & -1 & 0 \\
 $$
 
 :::{#exr-grafos}
-Escreva uma função em Python para calcular as matrizes de adjacência, a matriz de grau e laplaciana de um grafo. Assuma que o grafo está dado como uma 
+Escreva funções em Python para calcular as matrizes de adjacência, a matriz de grau e a laplaciana de um grafo. Assuma que o grafo está dado como uma 
 lista de arestas na forma `(i,j)` indicando que $v_i$ e $v_j$ são adjacentes. Por exemplo o grafo na imagem pode ser definido com a lista 
 ```python
 edge_list = [(0,1),(0,4),(1,2),(1,4),(2,3),(3,4),(3,5)]
 ```
 Note que os vértices estão indexados por `0,...,5` em vez de `1,...,6` seguindo as convenções da linguagem Python. 
+
+Para definir as matrizes do grafo, use o pacote `SymPy` como no @sec-comput-1.
 
 As funções podem aceitar um argumento adicional indicando o número de vértices do grafo; alternativamente, este número pode ser calculado também usando a lista de arestas, mas tenha cuidado, pois neste último caso o grafo não poderá ter vértices isolados.
 
@@ -119,7 +121,7 @@ correndo sobre os elementos da lista de arestas. Para construir a matriz de grau
 usar `sum( m[i,:])` para calcular a soma da $i$-ésima linha.
 :::
 
-:::{#exm-grafo}
+:::{#exr-grafo}
 Construe as matrizes de adjacência dos grafos dados com as seguintes listas de arestas. 
 ```python
 [(0, 4), (0, 10), (0, 17), (1, 7), (1, 8), (1, 10), (1, 11), (1, 13), (1, 14), (2, 8), (2, 16), (3, 10), (4, 7), (4, 14), (4, 19), (6, 18), (7, 9), (7, 15), (7, 18), (8, 19), (9, 13), (11, 16), (12, 15)]
@@ -137,13 +139,13 @@ Construe as matrizes de adjacência dos grafos dados com as seguintes listas de 
 
 ## Autovalores dos grafos
 
-Os autovalores das várias matrizes associados com um grafo tem relação com a estrutura de um grafo. 
+Os autovalores das várias matrizes associados com um grafo tem relação com a estrutura do grafo. 
 
 :::{#lem-autovals-gr}
 Seja $\Gamma$ um grafo e sejam $A(\Gamma)$ e  $L(\Gamma)$ a sua matriz de adjacência e laplaciana. Temos que 
 
 1. O número $0$ é autovalor de $L(\Gamma)$ e a sua multiplicidade (a dimensão do autoespaço) é igual ao número de componentes conexos do grafo.
-2. A entrada $(i,j)$ em $A(\Gamma)^k$ é o número de caminhos do vértice $v_i$ até $v_j$ de comprimento $k$. Em particular, 
+2. A entrada $(i,j)$ em $A(\Gamma)^k$ é o número dos caminhos de comprimento $k$ do vértice $v_i$ até o vértice $v_j$. Em particular, 
    a entrada $(i,i)$ na diagonal de $A(\Gamma)^k$ é o número de caminhnos fechados de comprimento $k$ que começam e terminam no vértice $v_i$.
 3. Consequentemente,   
     $$
@@ -159,12 +161,12 @@ Seja $\Gamma$ um grafo e sejam $A(\Gamma)$ e  $L(\Gamma)$ a sua matriz de adjac�
 Explique porque os dois números são iguais. 
 3. Escreva funções `nr_connected_components( nr_verts, edge_list )` e `nr_triangles( nr_verts, edge_list )` para calcular o número de componentes conexos  e o número de triângulos de um grafo dado por lista de arestas.
 
-**DICA:** Use `m.eigenvals()`. O output desta função é um dicionário na forma `{ v1: m1,...,vk: mk }` onde os `vi` são os autovalores e `mi` é a sua multiplicade. Quando calcular a soma no item 2(a), vai ter calcular $v_i^3$ $m_i$ vezes.
+**DICA:** Use `m.eigenvals()`. O output desta função é um dicionário na forma `{ v1: m1,...,vk: mk }` onde os `vi` são os autovalores e `mi` é a sua multiplicade. Quando calcular a soma no item 2(b), vai ter calcular $\lambda_i^3$ $m_i$ vezes.
 :::
 
 ## Calculando um autovetor
 
-Um método usando na prática para calcular autovetores de uma matriz quadrada $M$ $n\times n$ é o seguinte. 
+Um método usando na prática para calcular autovetores de uma matriz quadrada $M$ de tamanho $n\times n$ é o seguinte. 
 
 1. Escolha um vetor coluna $v$ não nula aleatoriamente. 
 2. Ponha 
@@ -174,9 +176,11 @@ Um método usando na prática para calcular autovetores de uma matriz quadrada $
 3. Repita passo (2) até a diferença entre dois vetores em duas iterações seguidas é suficientemente pequena.  
 
 :::{#exr-eigen-recurs}
-Escreva uma função que dados $M$ e $v$ executa o algoritmo descrito em cima. Escreva duas versões desta função. Na primeira, o usuário pode especificar o número de iterações feitas na computação, enquanto na segunda o usuário pode colocar um argumento `epsilon` e a computação para quando norma da diferença de dois vetores em duas iterações seguidas é menor ou igual a `epsilon`. 
+Escreva uma função `eigen_iter( m, v )` que, dados $M$ e $v$, executa o algoritmo descrito em cima. Escreva duas versões desta função. Na primeira, o usuário pode especificar o número de iterações feitas na computação, enquanto na segunda o usuário pode colocar um argumento `epsilon` e a computação para quando norma da diferença de dois vetores em duas iterações seguidas é menor ou igual a `epsilon`. 
 
-Você vai ter que transformar a sua matriz para `array` de NumPy. A sua função deve se comportar como no exemplo `eigen_rec` abaixo. Note que a função `eigen_rec` foi escrita para aceitar os argumentos `nr_iter` e `epsilon` opcionais que determinam o número de iterações ou o valor de `epsilon`. Você pode escrever duas funções separadas se assim for mais fácil. 
+Neste exercício, use `NumPy` em vez de `SymPy`. 
+
+Você vai ter que transformar a sua matriz para `array` de NumPy. A sua função deve se comportar como no exemplo `eigen_iter` abaixo. Note que a função `eigen_iter` foi escrita para aceitar os argumentos `nr_iter` e `epsilon` opcionais que determinam o número de iterações ou o valor de `epsilon`. Você pode escrever duas funções separadas se assim for mais fácil. 
 
 ```python
 import numpy as np 
@@ -184,25 +188,27 @@ edge_list = [(0,1),(0,4),(1,2),(1,4),(2,3),(3,4),(3,5)]
 m = adjacency_matrix( 6, edge_list )
 m = np.array( m, dtype = float )
 v = np.array( [1,0,0,0,0,0] )
-eigen_rec( m, v, nr_iter = 5 ) 
+eigen_iter( m, v, nr_iter = 5 ) 
 array([0.47723999, 0.47723999, 0.35792999, 0.41758499, 0.47723999,
        0.11931   ])
-eigen_rec( m, v, nr_iter = 20 ) 
+eigen_iter( m, v, nr_iter = 20 ) 
 array([0.40105562, 0.50149968, 0.35920242, 0.40649925, 0.51716627,
        0.16100772])
-eigen_rec( m, v, nr_iter = 100 ) 
+eigen_iter( m, v, nr_iter = 100 ) 
 array([0.40109752, 0.50232899, 0.35830714, 0.40758615, 0.51625165,
        0.16049961])
-eigen_rec( m, v, epsilon = 0.1 ) 
+eigen_iter( m, v, epsilon = 0.1 ) 
 array([0.37722842, 0.51868907, 0.35365164, 0.37722842, 0.54226585,
        0.16503743])
-eigen_rec( m, v, epsilon = 0.01 ) 
+eigen_iter( m, v, epsilon = 0.01 ) 
 array([0.40122823, 0.50426669, 0.35618752, 0.41016543, 0.51405838,
        0.15927888])
-eigen_rec( m, v, epsilon = 0.001 ) 
+eigen_iter( m, v, epsilon = 0.001 ) 
 array([0.40108736, 0.50212094, 0.35853196, 0.40731368, 0.5164812 ,
        0.1606271 ])
 ```
+
+**DICA:** Para calcular a norma de um vetor (`array`), use `np.linalg.norm`. Em `NumPy`, o produto de matrizes está escrito com `A@B`. 
 :::
 
 :::{#exr-eigen-recurs2}
@@ -210,7 +216,7 @@ Calcule um autovalor e um autovetor para as matrizes de adjacência e matrizes l
 :::
 
 <!--
-def eigen_rec( m, v, nr_iter = 0, epsilon = 0 ):
+def eigen_iter( m, v, nr_iter = 0, epsilon = 0 ):
     if nr_iter == 0 and epsilon == 0:
         nr_iter = 100
     while True:
