@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.37">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3ce7a2c55f065557bdde8428296360f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e6bd07b9d6a40855fd5914dc1e92631d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1386,9 +1386,10 @@ A(\Gamma)=\begin{pmatrix} 2 &amp; -1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\
 \end{pmatrix}.
 \]</span></p>
 <div id="exr-grafos" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 48.1</strong></span> Escreva uma função em Python para calcular as matrizes de adjacência, a matriz de grau e laplaciana de um grafo. Assuma que o grafo está dado como uma lista de arestas na forma <code>(i,j)</code> indicando que <span class="math inline">\(v_i\)</span> e <span class="math inline">\(v_j\)</span> são adjacentes. Por exemplo o grafo na imagem pode ser definido com a lista</p>
+<p><span class="theorem-title"><strong>Exercício 48.1</strong></span> Escreva funções em Python para calcular as matrizes de adjacência, a matriz de grau e a laplaciana de um grafo. Assuma que o grafo está dado como uma lista de arestas na forma <code>(i,j)</code> indicando que <span class="math inline">\(v_i\)</span> e <span class="math inline">\(v_j\)</span> são adjacentes. Por exemplo o grafo na imagem pode ser definido com a lista</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>edge_list <span class="op">=</span> [(<span class="dv">0</span>,<span class="dv">1</span>),(<span class="dv">0</span>,<span class="dv">4</span>),(<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">1</span>,<span class="dv">4</span>),(<span class="dv">2</span>,<span class="dv">3</span>),(<span class="dv">3</span>,<span class="dv">4</span>),(<span class="dv">3</span>,<span class="dv">5</span>)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note que os vértices estão indexados por <code>0,...,5</code> em vez de <code>1,...,6</code> seguindo as convenções da linguagem Python.</p>
+<p>Para definir as matrizes do grafo, use o pacote <code>SymPy</code> como no <a href="01_alglin_comput.html" class="quarto-xref"><span>Capítulo 41</span></a>.</p>
 <p>As funções podem aceitar um argumento adicional indicando o número de vértices do grafo; alternativamente, este número pode ser calculado também usando a lista de arestas, mas tenha cuidado, pois neste último caso o grafo não poderá ter vértices isolados.</p>
 <p>A sua função deve funcinar na maneira seguinte.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>edge_list <span class="op">=</span> [(<span class="dv">0</span>,<span class="dv">1</span>),(<span class="dv">0</span>,<span class="dv">4</span>),(<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">1</span>,<span class="dv">4</span>),(<span class="dv">2</span>,<span class="dv">3</span>),(<span class="dv">3</span>,<span class="dv">4</span>),(<span class="dv">3</span>,<span class="dv">5</span>)]</span>
@@ -1444,8 +1445,8 @@ In [1]: def adjacency_matrix( n, edge_list ):
 -->
 <p><strong>DICA:</strong> Para construir a matriz de adjacência, pode começar por construir uma matriz nula, usando a função <code>Matrix.zeros</code>. Depois use um laço <code>for</code> correndo sobre os elementos da lista de arestas. Para construir a matriz de grau, pode começar por construir a matriz de adjacência (chamando a função já escrita) e usar <code>sum( m[i,:])</code> para calcular a soma da <span class="math inline">\(i\)</span>-ésima linha.</p>
 </div>
-<div id="exm-grafo" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 48.1</strong></span> Construe as matrizes de adjacência dos grafos dados com as seguintes listas de arestas.</p>
+<div id="exr-grafo" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 48.2</strong></span> Construe as matrizes de adjacência dos grafos dados com as seguintes listas de arestas.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[(<span class="dv">0</span>, <span class="dv">4</span>), (<span class="dv">0</span>, <span class="dv">10</span>), (<span class="dv">0</span>, <span class="dv">17</span>), (<span class="dv">1</span>, <span class="dv">7</span>), (<span class="dv">1</span>, <span class="dv">8</span>), (<span class="dv">1</span>, <span class="dv">10</span>), (<span class="dv">1</span>, <span class="dv">11</span>), (<span class="dv">1</span>, <span class="dv">13</span>), (<span class="dv">1</span>, <span class="dv">14</span>), (<span class="dv">2</span>, <span class="dv">8</span>), (<span class="dv">2</span>, <span class="dv">16</span>), (<span class="dv">3</span>, <span class="dv">10</span>), (<span class="dv">4</span>, <span class="dv">7</span>), (<span class="dv">4</span>, <span class="dv">14</span>), (<span class="dv">4</span>, <span class="dv">19</span>), (<span class="dv">6</span>, <span class="dv">18</span>), (<span class="dv">7</span>, <span class="dv">9</span>), (<span class="dv">7</span>, <span class="dv">15</span>), (<span class="dv">7</span>, <span class="dv">18</span>), (<span class="dv">8</span>, <span class="dv">19</span>), (<span class="dv">9</span>, <span class="dv">13</span>), (<span class="dv">11</span>, <span class="dv">16</span>), (<span class="dv">12</span>, <span class="dv">15</span>)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[(<span class="dv">0</span>, <span class="dv">3</span>), (<span class="dv">0</span>, <span class="dv">5</span>), (<span class="dv">0</span>, <span class="dv">12</span>), (<span class="dv">0</span>, <span class="dv">14</span>), (<span class="dv">1</span>, <span class="dv">4</span>), (<span class="dv">1</span>, <span class="dv">17</span>), (<span class="dv">1</span>, <span class="dv">19</span>), (<span class="dv">2</span>, <span class="dv">6</span>), (<span class="dv">2</span>, <span class="dv">8</span>), (<span class="dv">2</span>, <span class="dv">15</span>), (<span class="dv">2</span>, <span class="dv">16</span>), (<span class="dv">3</span>, <span class="dv">11</span>), (<span class="dv">3</span>, <span class="dv">12</span>), (<span class="dv">3</span>, <span class="dv">14</span>), (<span class="dv">3</span>, <span class="dv">15</span>), (<span class="dv">4</span>, <span class="dv">8</span>), (<span class="dv">4</span>, <span class="dv">9</span>), (<span class="dv">4</span>, <span class="dv">10</span>), (<span class="dv">4</span>, <span class="dv">11</span>), (<span class="dv">4</span>, <span class="dv">18</span>), (<span class="dv">5</span>, <span class="dv">6</span>), (<span class="dv">5</span>, <span class="dv">7</span>), (<span class="dv">5</span>, <span class="dv">11</span>), (<span class="dv">5</span>, <span class="dv">13</span>), (<span class="dv">6</span>, <span class="dv">15</span>), (<span class="dv">6</span>, <span class="dv">17</span>), (<span class="dv">7</span>, <span class="dv">9</span>), (<span class="dv">7</span>, <span class="dv">14</span>), (<span class="dv">7</span>, <span class="dv">16</span>), (<span class="dv">8</span>, <span class="dv">9</span>), (<span class="dv">10</span>, <span class="dv">13</span>), (<span class="dv">10</span>, <span class="dv">16</span>), (<span class="dv">11</span>, <span class="dv">19</span>), (<span class="dv">12</span>, <span class="dv">14</span>), (<span class="dv">12</span>, <span class="dv">16</span>), (<span class="dv">12</span>, <span class="dv">19</span>), (<span class="dv">13</span>, <span class="dv">15</span>), (<span class="dv">14</span>, <span class="dv">15</span>), (<span class="dv">14</span>, <span class="dv">17</span>), (<span class="dv">15</span>, <span class="dv">18</span>)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[(<span class="dv">2</span>, <span class="dv">4</span>), (<span class="dv">4</span>, <span class="dv">16</span>), (<span class="dv">6</span>, <span class="dv">7</span>), (<span class="dv">7</span>, <span class="dv">10</span>), (<span class="dv">7</span>, <span class="dv">14</span>), (<span class="dv">7</span>, <span class="dv">15</span>), (<span class="dv">7</span>, <span class="dv">16</span>), (<span class="dv">8</span>, <span class="dv">10</span>), (<span class="dv">9</span>, <span class="dv">14</span>), (<span class="dv">9</span>, <span class="dv">18</span>), (<span class="dv">9</span>, <span class="dv">19</span>), (<span class="dv">12</span>, <span class="dv">18</span>), (<span class="dv">14</span>, <span class="dv">16</span>)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1453,12 +1454,12 @@ In [1]: def adjacency_matrix( n, edge_list ):
 </section>
 <section id="autovalores-dos-grafos" class="level2" data-number="48.2">
 <h2 data-number="48.2" data-anchor-id="autovalores-dos-grafos"><span class="header-section-number">48.2</span> Autovalores dos grafos</h2>
-<p>Os autovalores das várias matrizes associados com um grafo tem relação com a estrutura de um grafo.</p>
+<p>Os autovalores das várias matrizes associados com um grafo tem relação com a estrutura do grafo.</p>
 <div id="lem-autovals-gr" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 48.1</strong></span> Seja <span class="math inline">\(\Gamma\)</span> um grafo e sejam <span class="math inline">\(A(\Gamma)\)</span> e <span class="math inline">\(L(\Gamma)\)</span> a sua matriz de adjacência e laplaciana. Temos que</p>
 <ol type="1">
 <li>O número <span class="math inline">\(0\)</span> é autovalor de <span class="math inline">\(L(\Gamma)\)</span> e a sua multiplicidade (a dimensão do autoespaço) é igual ao número de componentes conexos do grafo.</li>
-<li>A entrada <span class="math inline">\((i,j)\)</span> em <span class="math inline">\(A(\Gamma)^k\)</span> é o número de caminhos do vértice <span class="math inline">\(v_i\)</span> até <span class="math inline">\(v_j\)</span> de comprimento <span class="math inline">\(k\)</span>. Em particular, a entrada <span class="math inline">\((i,i)\)</span> na diagonal de <span class="math inline">\(A(\Gamma)^k\)</span> é o número de caminhnos fechados de comprimento <span class="math inline">\(k\)</span> que começam e terminam no vértice <span class="math inline">\(v_i\)</span>.</li>
+<li>A entrada <span class="math inline">\((i,j)\)</span> em <span class="math inline">\(A(\Gamma)^k\)</span> é o número dos caminhos de comprimento <span class="math inline">\(k\)</span> do vértice <span class="math inline">\(v_i\)</span> até o vértice <span class="math inline">\(v_j\)</span>. Em particular, a entrada <span class="math inline">\((i,i)\)</span> na diagonal de <span class="math inline">\(A(\Gamma)^k\)</span> é o número de caminhnos fechados de comprimento <span class="math inline">\(k\)</span> que começam e terminam no vértice <span class="math inline">\(v_i\)</span>.</li>
 <li>Consequentemente,<br>
 <span class="math display">\[
 \frac 16\mbox{Tr}(A^3)=\mbox{o número de triângulos em $\Gamma$.}
@@ -1466,7 +1467,7 @@ In [1]: def adjacency_matrix( n, edge_list ):
 </ol>
 </div>
 <div id="exr-graph-eigen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 48.2</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercício 48.3</strong></span> &nbsp;</p>
 <ol type="1">
 <li>Calcule o número de componentes conexos dos grafos que apareceram no <a href="#exr-grafos" class="quarto-xref">Exercício&nbsp;<span>48.1</span></a> calculando a multiplicidade do autovalor <span class="math inline">\(0\)</span>. Use a função <code>m.eigenvals()</code>.</li>
 <li>Calcule o número dos triângulos dos grafos no <a href="#exr-grafos" class="quarto-xref">Exercício&nbsp;<span>48.1</span></a> calculando
@@ -1476,12 +1477,12 @@ In [1]: def adjacency_matrix( n, edge_list ):
 </ol></li>
 <li>Escreva funções <code>nr_connected_components( nr_verts, edge_list )</code> e <code>nr_triangles( nr_verts, edge_list )</code> para calcular o número de componentes conexos e o número de triângulos de um grafo dado por lista de arestas.</li>
 </ol>
-<p><strong>DICA:</strong> Use <code>m.eigenvals()</code>. O output desta função é um dicionário na forma <code>{ v1: m1,...,vk: mk }</code> onde os <code>vi</code> são os autovalores e <code>mi</code> é a sua multiplicade. Quando calcular a soma no item 2(a), vai ter calcular <span class="math inline">\(v_i^3\)</span> <span class="math inline">\(m_i\)</span> vezes.</p>
+<p><strong>DICA:</strong> Use <code>m.eigenvals()</code>. O output desta função é um dicionário na forma <code>{ v1: m1,...,vk: mk }</code> onde os <code>vi</code> são os autovalores e <code>mi</code> é a sua multiplicade. Quando calcular a soma no item 2(b), vai ter calcular <span class="math inline">\(\lambda_i^3\)</span> <span class="math inline">\(m_i\)</span> vezes.</p>
 </div>
 </section>
 <section id="calculando-um-autovetor" class="level2" data-number="48.3">
 <h2 data-number="48.3" data-anchor-id="calculando-um-autovetor"><span class="header-section-number">48.3</span> Calculando um autovetor</h2>
-<p>Um método usando na prática para calcular autovetores de uma matriz quadrada <span class="math inline">\(M\)</span> <span class="math inline">\(n\times n\)</span> é o seguinte.</p>
+<p>Um método usando na prática para calcular autovetores de uma matriz quadrada <span class="math inline">\(M\)</span> de tamanho <span class="math inline">\(n\times n\)</span> é o seguinte.</p>
 <ol type="1">
 <li>Escolha um vetor coluna <span class="math inline">\(v\)</span> não nula aleatoriamente.</li>
 <li>Ponha <span class="math display">\[
@@ -1490,37 +1491,39 @@ v := \frac{M\cdot v}{\|M\cdot v\|}.
 <li>Repita passo (2) até a diferença entre dois vetores em duas iterações seguidas é suficientemente pequena.</li>
 </ol>
 <div id="exr-eigen-recurs" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 48.3</strong></span> Escreva uma função que dados <span class="math inline">\(M\)</span> e <span class="math inline">\(v\)</span> executa o algoritmo descrito em cima. Escreva duas versões desta função. Na primeira, o usuário pode especificar o número de iterações feitas na computação, enquanto na segunda o usuário pode colocar um argumento <code>epsilon</code> e a computação para quando norma da diferença de dois vetores em duas iterações seguidas é menor ou igual a <code>epsilon</code>.</p>
-<p>Você vai ter que transformar a sua matriz para <code>array</code> de NumPy. A sua função deve se comportar como no exemplo <code>eigen_rec</code> abaixo. Note que a função <code>eigen_rec</code> foi escrita para aceitar os argumentos <code>nr_iter</code> e <code>epsilon</code> opcionais que determinam o número de iterações ou o valor de <code>epsilon</code>. Você pode escrever duas funções separadas se assim for mais fácil.</p>
+<p><span class="theorem-title"><strong>Exercício 48.4</strong></span> Escreva uma função <code>eigen_iter( m, v )</code> que, dados <span class="math inline">\(M\)</span> e <span class="math inline">\(v\)</span>, executa o algoritmo descrito em cima. Escreva duas versões desta função. Na primeira, o usuário pode especificar o número de iterações feitas na computação, enquanto na segunda o usuário pode colocar um argumento <code>epsilon</code> e a computação para quando norma da diferença de dois vetores em duas iterações seguidas é menor ou igual a <code>epsilon</code>.</p>
+<p>Neste exercício, use <code>NumPy</code> em vez de <code>SymPy</code>.</p>
+<p>Você vai ter que transformar a sua matriz para <code>array</code> de NumPy. A sua função deve se comportar como no exemplo <code>eigen_iter</code> abaixo. Note que a função <code>eigen_iter</code> foi escrita para aceitar os argumentos <code>nr_iter</code> e <code>epsilon</code> opcionais que determinam o número de iterações ou o valor de <code>epsilon</code>. Você pode escrever duas funções separadas se assim for mais fácil.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>edge_list <span class="op">=</span> [(<span class="dv">0</span>,<span class="dv">1</span>),(<span class="dv">0</span>,<span class="dv">4</span>),(<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">1</span>,<span class="dv">4</span>),(<span class="dv">2</span>,<span class="dv">3</span>),(<span class="dv">3</span>,<span class="dv">4</span>),(<span class="dv">3</span>,<span class="dv">5</span>)]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> adjacency_matrix( <span class="dv">6</span>, edge_list )</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> np.array( m, dtype <span class="op">=</span> <span class="bu">float</span> )</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.array( [<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>] )</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, nr_iter <span class="op">=</span> <span class="dv">5</span> ) </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, nr_iter <span class="op">=</span> <span class="dv">5</span> ) </span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.47723999</span>, <span class="fl">0.47723999</span>, <span class="fl">0.35792999</span>, <span class="fl">0.41758499</span>, <span class="fl">0.47723999</span>,</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.11931</span>   ])</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, nr_iter <span class="op">=</span> <span class="dv">20</span> ) </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, nr_iter <span class="op">=</span> <span class="dv">20</span> ) </span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.40105562</span>, <span class="fl">0.50149968</span>, <span class="fl">0.35920242</span>, <span class="fl">0.40649925</span>, <span class="fl">0.51716627</span>,</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.16100772</span>])</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, nr_iter <span class="op">=</span> <span class="dv">100</span> ) </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, nr_iter <span class="op">=</span> <span class="dv">100</span> ) </span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.40109752</span>, <span class="fl">0.50232899</span>, <span class="fl">0.35830714</span>, <span class="fl">0.40758615</span>, <span class="fl">0.51625165</span>,</span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.16049961</span>])</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, epsilon <span class="op">=</span> <span class="fl">0.1</span> ) </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, epsilon <span class="op">=</span> <span class="fl">0.1</span> ) </span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.37722842</span>, <span class="fl">0.51868907</span>, <span class="fl">0.35365164</span>, <span class="fl">0.37722842</span>, <span class="fl">0.54226585</span>,</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.16503743</span>])</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, epsilon <span class="op">=</span> <span class="fl">0.01</span> ) </span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, epsilon <span class="op">=</span> <span class="fl">0.01</span> ) </span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.40122823</span>, <span class="fl">0.50426669</span>, <span class="fl">0.35618752</span>, <span class="fl">0.41016543</span>, <span class="fl">0.51405838</span>,</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.15927888</span>])</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>eigen_rec( m, v, epsilon <span class="op">=</span> <span class="fl">0.001</span> ) </span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>eigen_iter( m, v, epsilon <span class="op">=</span> <span class="fl">0.001</span> ) </span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.40108736</span>, <span class="fl">0.50212094</span>, <span class="fl">0.35853196</span>, <span class="fl">0.40731368</span>, <span class="fl">0.5164812</span> ,</span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>       <span class="fl">0.1606271</span> ])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>DICA:</strong> Para calcular a norma de um vetor (<code>array</code>), use <code>np.linalg.norm</code>. Em <code>NumPy</code>, o produto de matrizes está escrito com <code>A@B</code>.</p>
 </div>
 <div id="exr-eigen-recurs2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 48.4</strong></span> Calcule um autovalor e um autovetor para as matrizes de adjacência e matrizes laplacianas calculadas no <a href="#exr-grafos" class="quarto-xref">Exercício&nbsp;<span>48.1</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercício 48.5</strong></span> Calcule um autovalor e um autovetor para as matrizes de adjacência e matrizes laplacianas calculadas no <a href="#exr-grafos" class="quarto-xref">Exercício&nbsp;<span>48.1</span></a>.</p>
 </div>
 <!--
-def eigen_rec( m, v, nr_iter = 0, epsilon = 0 ):
+def eigen_iter( m, v, nr_iter = 0, epsilon = 0 ):
     if nr_iter == 0 and epsilon == 0:
         nr_iter = 100
     while True:
