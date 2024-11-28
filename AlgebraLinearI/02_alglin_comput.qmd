@@ -168,10 +168,10 @@ Explique porque os dois números são iguais.
 
 Um método usando na prática para calcular autovetores de uma matriz quadrada $M$ de tamanho $n\times n$ é o seguinte. 
 
-1. Escolha um vetor coluna $v$ não nula aleatoriamente. 
+1. Escolha um vetor coluna $v$ de tamanho $n\times 1$ não nula aleatoriamente. 
 2. Ponha 
    $$ 
-   v := \frac{M\cdot v}{\|M\cdot v\|}. 
+   v := \frac{M v}{\|M v\|}. 
    $$ 
 3. Repita passo (2) até a diferença entre dois vetores em duas iterações seguidas é suficientemente pequena.  
 
