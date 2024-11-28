@@ -1484,9 +1484,9 @@ In [1]: def adjacency_matrix( n, edge_list ):
 <h2 data-number="48.3" data-anchor-id="calculando-um-autovetor"><span class="header-section-number">48.3</span> Calculando um autovetor</h2>
 <p>Um método usando na prática para calcular autovetores de uma matriz quadrada <span class="math inline">\(M\)</span> de tamanho <span class="math inline">\(n\times n\)</span> é o seguinte.</p>
 <ol type="1">
-<li>Escolha um vetor coluna <span class="math inline">\(v\)</span> não nula aleatoriamente.</li>
+<li>Escolha um vetor coluna <span class="math inline">\(v\)</span> de tamanho <span class="math inline">\(n\times 1\)</span> não nula aleatoriamente.</li>
 <li>Ponha <span class="math display">\[
-v := \frac{M\cdot v}{\|M\cdot v\|}.
+v := \frac{M v}{\|M v\|}.
 \]</span></li>
 <li>Repita passo (2) até a diferença entre dois vetores em duas iterações seguidas é suficientemente pequena.</li>
 </ol>
