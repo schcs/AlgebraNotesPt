@@ -167,7 +167,7 @@ s_{r1} & \cdots & s_{rn}
 \end{pmatrix},$$ temos que $A = CS$ (confirme!). 
 Usando @lem-posto-prod, obtemos que 
 $$
-\dim\tn{Lin}(A)\leq \dim\tn{Lin}(S)=r=\dim\tn{Col}(A).
+\dim\tn{Lin}(A)\leq \dim\tn{Lin}(S)\leq r=\dim\tn{Col}(A).
 $$
 <!--Vamos reinterpretar
 essa equação. Escrevendo $$A = \begin{pmatrix}
