@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Relações de equivalência – Álgebra</title>
+<title>49&nbsp; Ângulos e ortogonalidade – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../IniciacaoAMatematica/equivalence_examples.html" rel="next">
-<link href="../IniciacaoAMatematica/relations.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/02_alglin_comput.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/10_alglin1.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ângulos e ortogonalidade</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -717,7 +717,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/equivalence.html" class="sidebar-item-text sidebar-link active">
+  <a href="../IniciacaoAMatematica/equivalence.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></span></a>
   </div>
 </li>
@@ -1003,7 +1003,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/10_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/10_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ângulos e ortogonalidade</span></span></a>
   </div>
 </li>
@@ -1293,18 +1293,19 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#relações-de-equivalência" id="toc-relações-de-equivalência" class="nav-link active" data-scroll-target="#relações-de-equivalência"><span class="header-section-number">5.1</span> Relações de equivalência</a></li>
-  <li><a href="#classes-de-equivalência" id="toc-classes-de-equivalência" class="nav-link" data-scroll-target="#classes-de-equivalência"><span class="header-section-number">5.2</span> Classes de equivalência</a></li>
-  <li><a href="#partições" id="toc-partições" class="nav-link" data-scroll-target="#partições"><span class="header-section-number">5.3</span> Partições</a></li>
+  <li><a href="#ângulos-e-ortogonalidade" id="toc-ângulos-e-ortogonalidade" class="nav-link active" data-scroll-target="#ângulos-e-ortogonalidade"><span class="header-section-number">49.1</span> A definição do ângulo</a></li>
+  <li><a href="#projeção-ortogonal-bases-ortogonais-e-ortonormais" id="toc-projeção-ortogonal-bases-ortogonais-e-ortonormais" class="nav-link" data-scroll-target="#projeção-ortogonal-bases-ortogonais-e-ortonormais"><span class="header-section-number">49.2</span> Projeção ortogonal</a></li>
+  <li><a href="#bases-ortogonais-e-ortonormais" id="toc-bases-ortogonais-e-ortonormais" class="nav-link" data-scroll-target="#bases-ortogonais-e-ortonormais"><span class="header-section-number">49.3</span> Bases ortogonais e ortonormais</a></li>
+  <li><a href="#complemento-ortogonal" id="toc-complemento-ortogonal" class="nav-link" data-scroll-target="#complemento-ortogonal"><span class="header-section-number">49.4</span> Complemento ortogonal</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/10_alglin1.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ângulos e ortogonalidade</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></h1>
+<h1 class="title"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ângulos e ortogonalidade</span></h1>
 </div>
 
 
@@ -1321,97 +1322,171 @@ window.Quarto = {
 </header>
 
 
-<section id="relações-de-equivalência" class="level2" data-number="5.1">
-<h2 data-number="5.1" data-anchor-id="relações-de-equivalência"><span class="header-section-number">5.1</span> Relações de equivalência</h2>
-<div id="def-eq-rel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Uma relação <span class="math inline">\(R\subseteq A\times A\)</span> é dita <em>relação de equivalência</em> se</p>
-<ol type="1">
-<li><span class="math inline">\(R\)</span> é reflexiva (ou seja, <span class="math inline">\(aRa\)</span> para todo <span class="math inline">\(a\in A\)</span>);</li>
-<li><span class="math inline">\(R\)</span> é simétrica (ou seja <span class="math inline">\(aRb\)</span> implica <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>); e</li>
-<li><span class="math inline">\(R\)</span> é transitiva (ou seja <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implica <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>).</li>
-</ol>
-<p>As relações de equivalência são normalmente denotados com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong b\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
+<section id="ângulos-e-ortogonalidade" class="level2" data-number="49.1">
+<h2 data-number="49.1" data-anchor-id="ângulos-e-ortogonalidade"><span class="header-section-number">49.1</span> A definição do ângulo</h2>
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial com produto interno. Se lembre que o gráfico de <span class="math inline">\(\tn{cos}(\theta)\)</span> entre <span class="math inline">\(0\)</span> e <span class="math inline">\(\pi\)</span> é:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/cosine.png" class="img-fluid figure-img"></p>
+<figcaption>A função cosine</figcaption>
+</figure>
 </div>
-<div id="exm-eq-eg" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.1</strong></span> O protôtipo das relações de equivalência é a relação de igualdade. A relação de igualdade <span class="math display">\[
-\{(a,a)\mid a\in A\}
-\]</span> é uma relação de equivalência para todo conjunto <span class="math inline">\(A\)</span>.</p>
+<p>A desigualdade de Cauchy-Schwarz nos diz que para quaisquer vetores não nulos <span class="math inline">\(\ul{u},\ul{v}\)</span>, temos <span class="math display">\[-1\leqslant \frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{u}\|\cdot\|\ul{v}\|} \leqslant 1.\]</span> Segue que para qualquer par de vetores <span class="math inline">\(\ul{u}, \ul{v}\)</span> não nulos, existe um único número <span class="math inline">\(\theta\in [0,\pi]\)</span> tal que <span class="math display">\[\tn{cos}(\theta) = \frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{u}\|\cdot\|\ul{v}\|}.\]</span></p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 49.1</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial com produto interno e <span class="math inline">\(\ul{u}, \ul{v}\)</span> vetores não nulos de <span class="math inline">\(V\)</span>. O <em>ângulo</em> entre <span class="math inline">\(\ul{u}\)</span> e <span class="math inline">\(\ul{v}\)</span> é o número <span class="math inline">\(\theta\in [0,\pi]\)</span> tal que <span class="math display">\[\tn{cos}(\theta) = \frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{u}\|\cdot\|\ul{v}\|}.\]</span></p>
 </div>
-<div id="exm-eq" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.2</strong></span> Seja <span class="math inline">\(A=\{1,2,3,4,5\}\)</span> e seja <span class="math display">\[
-\equiv=\{(1,1),(2,2),(3,3),(4,4),(5,5),(1,2),(2,1),(3,4),(3,5),(4,3),(4,5),(5,3),(5,4)\}
-\]</span> Então <span class="math inline">\(\equiv\)</span> é uma relação de equivalência.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.1</strong></span> Considere o espaço <span class="math inline">\(\R^2\)</span> com produto interno normal. Vamos calcular o ângulo <span class="math inline">\(\theta\)</span> entre <span class="math inline">\((2,1)\)</span> e <span class="math inline">\((-1,2)\)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ort_vects.png" class="img-fluid figure-img"></p>
+<figcaption>Vetores ortogonais</figcaption>
+</figure>
 </div>
-<div id="exm-eq2" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.3</strong></span> Considere a relação <span class="math inline">\(R\)</span> em <span class="math inline">\(\Z\)</span> definido como <span class="math display">\[
-a\equiv b\quad\mbox{se e somente se $a-b$ é par}.
-\]</span> Note que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Também note que <span class="math inline">\(a\equiv b\)</span> se e somente se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> tem a mesma paridade. Ou seja, <span class="math inline">\(0\equiv 2\)</span>, <span class="math inline">\(0\equiv -2\)</span>, <span class="math inline">\(0\equiv 4\)</span>, <span class="math inline">\(0\equiv -4\)</span>, <span class="math inline">\(1\equiv -1\)</span>, <span class="math inline">\(1\equiv 3\)</span>, <span class="math inline">\(1\equiv -3\)</span>, etc, mas <span class="math inline">\(2\not\equiv -1\)</span>.</p>
+<p><span class="math display">\[\tn{cos}(\theta) = \frac{(2,1)\cdot(-1,2)}{\|(2,1)\|\cdot\|(-1,2)\|} = \frac{0}{\sqrt{5}\cdot\sqrt{5}} = 0.\]</span> Logo <span class="math inline">\(\theta = \cos^{-1}(0) = \ul{\ul{\pi/2}} \,(= 90^{\textnormal{o}})\)</span>.</p>
+<p>Mas o ângulo também depende do produto interno! Pegando os mesmos vetores em <span class="math inline">\(\R^2\)</span> mas agora com respeito ao produto interno dado pela matriz <span class="math display">\[A = \begin{pmatrix}
+2 &amp; -1 \\ -1 &amp; 2
+\end{pmatrix},\]</span> temos <span class="math display">\[\tn{cos}(\theta) = \frac{\langle(2,1),(-1,2)\rangle_A}{\|(2,1)\|\cdot\|(-1,2)\|} = \frac{-3}{\sqrt{6}\cdot\sqrt{14}} \approx -0,33.\]</span> Então <span class="math display">\[\theta \approx \cos^{-1}(-0,33) \approx 1,907\, &gt; \pi/2.\]</span></p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 49.2</strong></span> Sejam <span class="math inline">\(V\)</span> um espaço vetorial com produto interno e <span class="math inline">\(\ul{u}, \ul{v}\)</span> vetores não nulos de <span class="math inline">\(V\)</span>. Diremos que <span class="math inline">\(\ul{u}, \ul{v}\)</span> são <em>ortogonais</em> (ou <em>perpendiculares</em>) se <span class="math inline">\(\langle \ul{u},\ul{v}\rangle = 0\)</span>. Neste caso, escrevemos <span class="math inline">\(\ul{u}\perp \ul{v}\)</span>.</p>
+</div>
+<p>Seja <span class="math inline">\(\theta\)</span> o ângulo entre <span class="math inline">\(\ul{u},\ul{v}\neq \ul{0}\)</span>. Observe que <span class="math display">\[\ul{u}\perp \ul{v}\Longleftrightarrow
+\langle \ul{u},\ul{v}\rangle = 0 \Longleftrightarrow \frac{\langle \ul{u},\ul{v}\rangle}{\|\ul{u}\|\cdot\|\ul{v}\|} = 0 \Longleftrightarrow \cos(\theta) = 0 \Longleftrightarrow \theta = \pi/2.\]</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.2</strong></span> Já calculamos que <span class="math inline">\((2,1), (-1,2)\)</span> são ortogonais com respeito ao produto interno normal de <span class="math inline">\(\R^2\)</span>, pois <span class="math display">\[(2,1)\cdot (-1,2) = -2 + 2 = 0.\]</span> Mas eles não são ortogonais com respeito ao outro produto <span class="math inline">\(\langle-,-\rangle_A\)</span> que estamos usando, pois <span class="math inline">\(\langle (2,1),(-1,2)\rangle_A = -3\neq 0\)</span>.</p>
+<p>Vamos calcular os vetores <span class="math inline">\((x,y)\)</span> perpendiculares ao vetor <span class="math inline">\((2,1)\)</span> com respeito ao produto <span class="math inline">\(\langle-,-\rangle_A\)</span>: <span class="math display">\[\langle(2,1),(x,y)\rangle_A =
+  \begin{pmatrix}2 &amp; 1\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2\end{pmatrix}\begin{pmatrix}x \\ y\end{pmatrix} = \begin{pmatrix}3 &amp; 0\end{pmatrix}\begin{pmatrix}x \\ y\end{pmatrix} = 3x.\]</span> Logo <span class="math inline">\((x,y)\)</span> é ortogonal a <span class="math inline">\((2,1)\)</span> se, e somente se, <span class="math inline">\(x=0\)</span>. Por exemplo, os vetores <span class="math display">\[(2,1)\,,\,(0,1)\]</span> são ortogonais com respeito a esse produto interno.</p>
 </div>
 </section>
-<section id="classes-de-equivalência" class="level2" data-number="5.2">
-<h2 data-number="5.2" data-anchor-id="classes-de-equivalência"><span class="header-section-number">5.2</span> Classes de equivalência</h2>
-<div id="def-class-eq" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.2</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto e <span class="math inline">\(R\)</span> uma relação de equivalência. Seja <span class="math inline">\(a\in A\)</span>. O conjunto <span class="math display">\[
-[a]_\equiv=\{b\in A\mid a\equiv b\}
-\]</span> é chamado de <em>classe de equivalência</em> de <span class="math inline">\(a\)</span> pela relação <span class="math inline">\(\equiv\)</span>. Quando não tem perigo de ambiguidade, escrevemos <span class="math inline">\([a]\)</span> em vez de <span class="math inline">\([a]_\equiv\)</span>. Note que <span class="math inline">\([a]\subseteq A\)</span>.</p>
+<section id="projeção-ortogonal-bases-ortogonais-e-ortonormais" class="level2" data-number="49.2">
+<h2 data-number="49.2" data-anchor-id="projeção-ortogonal-bases-ortogonais-e-ortonormais"><span class="header-section-number">49.2</span> Projeção ortogonal</h2>
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita com produto interno <span class="math inline">\(\langle-,-\rangle\)</span>. Temos as ferramentas para nomear as melhores bases de <span class="math inline">\(V\)</span>:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 49.3</strong></span> Uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> é <em>ortogonal</em> se <span class="math inline">\(\langle\ul{b},\ul{c}\rangle = 0\)</span> para quaisquer <span class="math inline">\(\ul{b}\neq \ul{c}\)</span> em <span class="math inline">\(B\)</span>. A base é <em>ortonormal</em> se ela é ortogonal e se todo <span class="math inline">\(\ul{b}\in B\)</span> tem norma <span class="math inline">\(1\)</span>.</p>
 </div>
-<div id="exm-classes" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.4</strong></span> No <a href="#exm-eq-eg" class="quarto-xref">Exemplo&nbsp;<span>5.1</span></a>, a classe de equivalência de um elemento <span class="math inline">\(a\in A\)</span> é o conjunto <span class="math inline">\(\{a\}\)</span>. No <a href="#exm-eq" class="quarto-xref">Exemplo&nbsp;<span>5.2</span></a>, temos que <span class="math display">\[
-[1]=[2]=\{1,2\}\quad \mbox{e}\quad [3]=[4]=[5]=\{3,4,5\}.
-\]</span> No <a href="#exm-eq" class="quarto-xref">Exemplo&nbsp;<span>5.2</span></a>, temos que <span class="math display">\[
-[a]=\{0,\pm 2,\pm 4,\ldots\}=\{2k\mid k\in\Z\}\quad\mbox{se}\quad \mbox{$a$ é par},
-\]</span> e <span class="math display">\[
-[a]=\{\pm 1,\pm 3,\ldots\}=\{2k+1\mid k\in\Z\}\quad\mbox{se}\quad \mbox{$a$ é ímpar}.
-\]</span> Ou seja, temos apenas duas classes de equivalência, uma formada pelos números pares, e a outra formada pelos números ímpares.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.3</strong></span> &nbsp;</p>
+<ul>
+<li><p>A base canônica de <span class="math inline">\(\R^n\)</span> é ortonormal com respeito ao produto interno normal [Confirme isso!].</p></li>
+<li><p>Já vimos que os vetores <span class="math inline">\((2,1)\)</span> e <span class="math inline">\((0,1)\)</span> são ortogonais com respeito a nosso produto interno <span class="math inline">\(\langle-,-\rangle_A\)</span>. Eles são LI, então formam uma base ortogonal de <span class="math inline">\(\R^2\)</span> com este produto interno. As suas normas são: <span class="math display">\[\|(2,1)\| = \sqrt{\begin{pmatrix}2 &amp; 1 \end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}2 \\ 1 \end{pmatrix}} =
+  \sqrt{\begin{pmatrix}2 &amp; 1 \end{pmatrix}\begin{pmatrix}3 \\ 0 \end{pmatrix}} = \sqrt{6}\]</span> e <span class="math display">\[\|(0,1)\| = \sqrt{\begin{pmatrix}0 &amp; 1 \end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}0 \\ 1 \end{pmatrix}} =
+  \sqrt{\begin{pmatrix}0 &amp; 1 \end{pmatrix}\begin{pmatrix}-1 \\ 2 \end{pmatrix}} = \sqrt{2},\]</span> então os vetores <span class="math inline">\(\frac{1}{\sqrt{6}}(2,1)\)</span> e <span class="math inline">\(\frac{1}{\sqrt{2}}(0,1)\)</span> são unitários. Segue que <span class="math display">\[(2/\sqrt{6}\,,\,1/\sqrt{6})\quad,\quad (0\,,\, 1/\sqrt{2})\]</span> é uma base ortonormal de <span class="math inline">\(\R^2\)</span> com respeito a este produto interno.</p></li>
+</ul>
 </div>
-<div id="lem-classes" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto e assuma que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Temos as seguintes propriedades para todo <span class="math inline">\(a,b\in A\)</span>.</p>
+<p>Pelo resto dessa seção, seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita <span class="math inline">\(n\)</span> com produto interno. Vamos mostrar que <span class="math inline">\(V\)</span> possui uma base ortonormal.</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 49.1</strong></span> Sejam <span class="math inline">\(\ul{u}, \ul{v}\)</span> vetores LI de <span class="math inline">\(V\)</span>. Existe um único vetor <span class="math inline">\(\tn{proj}_{\ul{v}}(\ul{u})\)</span>, chamado <em>projeção ortogonal de <span class="math inline">\(\ul{u}\)</span> sobre <span class="math inline">\(\ul{v}\)</span></em> com as propriedades que</p>
+<ul>
+<li><p><span class="math inline">\(\tn{proj}_{\ul{v}}(u)\)</span> é múltiplo escalar de <span class="math inline">\(\ul{v}\)</span> (ou seja, <span class="math inline">\(\tn{proj}_{\ul{v}}(\ul{u})\)</span> e <span class="math inline">\(\ul{v}\)</span> são paralelos)</p></li>
+<li><p><span class="math inline">\(\ul{u} - \tn{proj}_{\ul{v}}(\ul{u})\)</span> e <span class="math inline">\(\ul{v}\)</span> são ortogonais.</p></li>
+</ul>
+<p>De fato, <span class="math display">\[\tn{proj}_{\ul{v}}(\ul{u}) = \left(\frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{v}\|^2}\right)\ul{v}.\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>de <span class="math inline">\(\ul{v}\)</span> por definição. Temos <span class="math display">\[\langle \ul{u} - \tn{proj}_{\ul{v}}(\ul{u})\,,\, \ul{v}\rangle = \langle \ul{u},\ul{v}\rangle - \frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{v}\|^2}\cdot \langle \ul{v},\ul{v}\rangle = 0.\quad\checkmark\]</span> <u>Exercício:</u> confirme que ele é único. Qualquer outro vetor com as propriedades tem a forma <span class="math inline">\(\alpha \ul{v}\)</span> para algum <span class="math inline">\(\alpha\in \R\)</span>. Mostre que <span class="math inline">\(\alpha = \frac{\langle\ul{u},\ul{v}\rangle}{\|\ul{v}\|^2}\)</span>.&nbsp;◻</p>
+</div>
+<p>Com respeito ao produto interno normal de <span class="math inline">\(\R^n\)</span>, podemos visualizar a projeção ortogonal assim:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ort_proj.png" class="img-fluid figure-img"></p>
+<figcaption>A projeção ortogonal</figcaption>
+</figure>
+</div>
+</section>
+<section id="bases-ortogonais-e-ortonormais" class="level2" data-number="49.3">
+<h2 data-number="49.3" data-anchor-id="bases-ortogonais-e-ortonormais"><span class="header-section-number">49.3</span> Bases ortogonais e ortonormais</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 49.1</strong></span> &nbsp;</p>
 <ol type="1">
-<li><span class="math inline">\(a\in [a]\)</span>;</li>
-<li>se <span class="math inline">\([a]\cap [b]\neq \emptyset\)</span> então <span class="math inline">\([a]=[b]\)</span>.</li>
+<li><p>Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span> e suponha que <span class="math inline">\(W\)</span> possui base ortogonal <span class="math inline">\(B = \{\ul{w_1},\ldots,\ul{w_s}\}\)</span>. Podemos estender <span class="math inline">\(B\)</span> para uma base ortogonal de <span class="math inline">\(V\)</span>.</p></li>
+<li><p><span class="math inline">\(V\)</span> possui uma base ortonormal.</p></li>
 </ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
-<li>Note que <span class="math inline">\(a\in[a]\)</span> é equivalente a dizer que <span class="math inline">\(a\equiv a\)</span> e isso vale pois a relação <span class="math inline">\(\equiv\)</span> é reflexiva.</li>
-<li>Assuma que <span class="math inline">\(c\in [a]\cap [b]\)</span>. Isso quer dizer que <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(b\equiv c\)</span>. Por simetria temos também que <span class="math inline">\(c\equiv a\)</span>. Afirmamos que <span class="math inline">\([a]=[b]\)</span>. Provaremos isso verificando que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Assuma primeiro que <span class="math inline">\(x\in[a]\)</span>; ou seja <span class="math inline">\(a\equiv x\)</span>. Então <span class="math display">\[
-b\equiv c\equiv a\equiv x.
-\]</span> Aplicando a transitividade, obtemos que <span class="math inline">\(b\equiv x\)</span> e <span class="math inline">\(x\in [b]\)</span>. Portanto obtemos que <span class="math inline">\([a]\subseteq [b]\)</span>. A inclusão que <span class="math inline">\([b]\subseteq [c]\)</span> pode ser verificado por argumento similar.</li>
+<li><p>Trabalhamos por indução sobre <span class="math inline">\(n-s\)</span>. Caso <span class="math inline">\(n-s = 0\)</span>, então <span class="math inline">\(W = V\)</span> e já temos uma base ortogonal (<span class="math inline">\(B\)</span>) de <span class="math inline">\(V\)</span>. Suponha que o resultado vale para qualquer <span class="math inline">\(k\)</span> com <span class="math inline">\(n-k\)</span> menor do que <span class="math inline">\(n-s\)</span>. Pegue um vetor <span class="math inline">\(\ul{u}\)</span> de <span class="math inline">\(V\)</span> que não pertence a <span class="math inline">\(W\)</span>. Queremos manipular <span class="math inline">\(\ul{u}\)</span> para um vetor perpendicular a cada <span class="math inline">\(\ul{w_i}\)</span>. Afirmo que <span class="math display">\[\ul{w_{s+1}} = \ul{u} - \tn{proj}_{\ul{w_1}}(\ul{u}) - \cdots - \tn{proj}_{\ul{w_s}}(\ul{u})\]</span> serve. Primeiro, observe que <span class="math inline">\(\tn{proj}_{\ul{w_i}}(\ul{u})\)</span> é um múltiplo escalar de <span class="math inline">\(\ul{w_i}\)</span>, logo <span class="math inline">\(\ul{w_{s+1}}\)</span> é uma combinação linear não nula do conjunto LI <span class="math inline">\(\{\ul{u},\ul{w_1},\ldots,\ul{w_s}\}\)</span>, logo <span class="math inline">\(\ul{w_{s+1}}\neq \ul{0}\)</span>.</p>
+<p>Para cada <span class="math inline">\(i\)</span>, temos $$</p>
+<span class="math display">\[\begin{aligned}
+  \langle \ul{w_{s+1}},\ul{w_i}\rangle &amp; = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_1}}(\ul{u}),\ul{w_i}\rangle - \cdots - \langle \tn{proj}_{\ul{w_s}}(\ul{u}),\ul{w_i}\rangle \\  
+  &amp; = \langle \ul{u},\ul{w_i}\rangle - 0 - \cdots - 0 - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle - 0 - \cdots - 0 \\
+  &amp; = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
+  &amp; = \langle \ul{u} - \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
+  &amp; = 0.\qquad\checkmark
+
+\end{aligned}\]</span>
+<p>$$ Agora, o subespaço com base ortogonal <span class="math inline">\(B\cup\{\ul{w_{s+1}}\}\)</span> satisfaz as condições do teorema e tem dimensão <span class="math inline">\(s+1\)</span>. Já que <span class="math inline">\(n-(s+1) &lt; n-s\)</span>, pela hipótese de indução, podemos estender a base <span class="math inline">\(B\cup \{\ul{w_{s+1}}\}\)</span> para uma base ortogonal de <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Começando com o subconjunto vazio <span class="math inline">\(\varnothing\)</span> de <span class="math inline">\(V\)</span>, aplique o processo da primeira parte <span class="math inline">\(n\)</span> vezes para obter uma base ortogonal de <span class="math inline">\(V\)</span>. Depois simplesmente multiplique cada vetor <span class="math inline">\(\ul{w}\)</span> em nossa base ortogonal pelo número <span class="math inline">\(\frac{1}{\|\ul{w}\|}\)</span> para obter uma base ortonormal de <span class="math inline">\(V\)</span>.</p></li>
 </ol>
+<p>&nbsp;◻</p>
 </div>
-</section>
-<section id="partições" class="level2" data-number="5.3">
-<h2 data-number="5.3" data-anchor-id="partições"><span class="header-section-number">5.3</span> Partições</h2>
-<div id="def-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.3</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Um conjunto <span class="math inline">\(\mathcal P\)</span> de subconjuntos de <span class="math inline">\(A\)</span> é dito <em>partição</em> de <span class="math inline">\(A\)</span> se</p>
-<ol type="1">
-<li>todo elemento <span class="math inline">\(a\in A\)</span> pertence a um subconjunto <span class="math inline">\(X\in \mathcal P\)</span>; e</li>
-<li>se <span class="math inline">\(X,Y\in \mathcal P\)</span> são distintos, então <span class="math inline">\(X\cap Y=\emptyset\)</span>.</li>
-</ol>
-<p>Os conjuntos <span class="math inline">\(X\in\mathcal  P\)</span> são chamados de <em>partes</em> ou <em>blocos</em> da partição <span class="math inline">\(\mathcal P\)</span>.</p>
+<p><u>Observação</u>: O processo de estender uma base ortogonal de um subespaço para uma base ortogonal maior como na prova deste teorema se chama <em>o processo de ortogonalizaçaõ de Gram-Schmidt</em>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.4</strong></span> Vamos usar Gram-Schmidt para achar mais uma base ortonormal de <span class="math inline">\(\R^2\)</span> com o produto interno <span class="math inline">\(\langle-,-\rangle_A\)</span> dado pela matriz <span class="math display">\[A = \begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2\end{pmatrix}.\]</span> Começa com o vetor <span class="math inline">\(\ul{w_1} = (1,0)\)</span>. Depois, pegamos um vetor <span class="math inline">\(\ul{u}\)</span> qualquer com <span class="math inline">\(\{\ul{u},\ul{w_1}\}\)</span> LI. Vamos pegar <span class="math inline">\((0,2)\)</span>. Seguindo o processo, <span class="math display">\[\begin{aligned}
+  \ul{w_2} &amp; = \ul{u} - \tn{proj}_{\ul{w_1}}(\ul{u}) \\
+      &amp; = (0,2) - \left(\frac{\langle(0,2),(1,0)\rangle_A}{\|(1,0)\|^2}\right)(1,0) \\
+      &amp; = (0,2) - \left(\frac{\begin{pmatrix}0 &amp; 2\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}1 \\ 0\end{pmatrix}}{\begin{pmatrix}1 &amp; 0\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}1 \\ 0\end{pmatrix}}\right)(1,0) \\
+      &amp; = (0,2) - \left(\frac{-2}{2}\right)(1,0) \\
+      &amp; = (0,2) + (1,0) \\
+      &amp; = (1,2).
+\end{aligned}\]</span> Vamos confirmar que <span class="math inline">\((1,0)\)</span> e <span class="math inline">\((1,2)\)</span> são ortogonais: <span class="math display">\[\langle(1,0),(1,2)\rangle_A = \begin{pmatrix}1 &amp; 0\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}1 \\ 2\end{pmatrix} = \begin{pmatrix}1 &amp; 0\end{pmatrix}\begin{pmatrix}0 \\ 3\end{pmatrix} = 0.\quad\checkmark\]</span> Pra base <span class="math inline">\(\{\ul{w_1}, \ul{w_2}\} = \{(1,0),(1,2)\}\)</span> ser ortonormal, temos que dividir pelas normas: <span class="math display">\[\|(1,0)\| = \sqrt{\begin{pmatrix}1 &amp; 0 \end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}1 \\ 0 \end{pmatrix}} = \sqrt{2}.\]</span> <span class="math display">\[\|(1,2)\| = \sqrt{\begin{pmatrix}1 &amp; 2 \end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2 \end{pmatrix}\begin{pmatrix}1 \\ 2 \end{pmatrix}} = \sqrt{6}.\]</span> Obtemos assim a base ortonormal <span class="math display">\[\{(1/\sqrt{2}\,,\,0)\,,\,(1/\sqrt{6}\,,\,2/\sqrt{6})\}.\]</span></p>
 </div>
-<div id="exm-partition" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.5</strong></span> Todo conjunto <span class="math inline">\(A\)</span> tem duas partições triviais: <span class="math display">\[
-\{A\}\quad\mbox{e}\quad \{\{a\}\mid a\in A\}.
-\]</span> O conjunto <span class="math inline">\(\{\{1,2\},\{3,4,5\}\}\)</span> é uma partição do conjunto <span class="math inline">\(\{1,2,3,4,5\}\)</span>. O conjunto dos números inteioros pode ser particionado como <span class="math display">\[
-\{\{2k\mid k\in \Z\},\{2k+1\mid k\in\Z\}\}.
-\]</span> Ou seja, o conjunto dos inteiros pode ser particionado para o conjunto de pares e o conjunto de ímpares.</p>
-</div>
-<div id="thm-eq-partition" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Se <span class="math inline">\(\equiv\)</span> é uma relação de equivalência sobre <span class="math inline">\(A\)</span>, então o conjunto das classes de equivalência é uma partição de <span class="math inline">\(A\)</span>.</p>
-<p>Reciprocamente, se <span class="math inline">\(\mathcal P\)</span> é uma partição de <span class="math inline">\(A\)</span>, então pode-se definir uma relação de equivalência <span class="math inline">\(\equiv_{\mathcal P}\)</span> pondo <span class="math display">\[
-a\equiv_{\mathcal P} b\quad \bicond\quad \mbox{$a$ e $b$ estão no mesma parte de $\mathcal P$}
-\]</span> As classes de equivalência de <span class="math inline">\(\equiv_{\mathcal P}\)</span> são as partes de <span class="math inline">\(\mathcal P\)</span>.</p>
+<p>Uma propaganda para bases ortogonais/ortonormais: dado um vetor <span class="math inline">\(\ul{v}\)</span>, é fácil escrever ele como combinação linear dos elementos de uma base ortogonal:</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 49.2</strong></span> Seja <span class="math inline">\(B\)</span> uma base ortogonal de <span class="math inline">\(V\)</span> e seja <span class="math inline">\(\ul{v}\)</span> um vetor de <span class="math inline">\(V\)</span>. Então <span class="math display">\[\ul{v} = \sum_{\ul{b}\in B}\frac{\langle\ul{v},\ul{b}\rangle}{\,\,\|\ul{b}\|^2}\,\ul{b}.\]</span> Caso a base <span class="math inline">\(B\)</span> for ortonormal, então <span class="math display">\[\ul{v} = \sum_{\ul{b}\in B}\langle\ul{v},\ul{b}\rangle\,\ul{b}.\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma primeiro que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Seja <span class="math inline">\(\mathcal C\)</span> o conjunto de classes de equivalência. Por item 1. do <a href="#lem-classes" class="quarto-xref">Lema&nbsp;<span>5.1</span></a>, obtemos que <span class="math inline">\(a\in [a]\in \mathcal C\)</span> para todo <span class="math inline">\(a\in A\)</span>. Então o item 1. da <a href="../GruposECorpos/classes.html#def-partition" class="quarto-xref">Definição&nbsp;<span>78.1</span></a> está verificada. O item 2. da <a href="../GruposECorpos/classes.html#def-partition" class="quarto-xref">Definição&nbsp;<span>78.1</span></a> está verdadeira para <span class="math inline">\(\mathcal C\)</span> por causa do item 2. do <a href="#lem-classes" class="quarto-xref">Lema&nbsp;<span>5.1</span></a>.</p>
-<p>Assuma agora que <span class="math inline">\(\mathcal P\)</span> é uma partição de <span class="math inline">\(A\)</span> e defina <span class="math inline">\(\equiv_{\mathcal P}\)</span> como no enunciado do teorema. Vamos verificar as três propriedades na definição <a href="#def-eq-rel" class="quarto-xref">Definição&nbsp;<span>5.1</span></a>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span><span class="math inline">\(\ul{v} = \lambda_1\ul{b_1}+\cdots+\lambda_n\ul{b_n}\)</span> para alguns <span class="math inline">\(\ul{b_i}\in B\)</span> e <span class="math inline">\(\lambda_i\in \R\)</span>. Vamos calcular <span class="math inline">\(\lambda_i\)</span>: <span class="math display">\[\begin{aligned}
+  \langle \ul{v}, \ul{b_i}\rangle = &amp; \langle \lambda_1\ul{b_1}+\cdots+\lambda_n\ul{b_n},\ul{b_i}\rangle \\
+  = &amp; \sum \lambda_j\langle \ul{b_j},\ul{b_i}\rangle \\
+  = &amp; \lambda_i \langle \ul{b_i},\ul{b_i}\rangle\qquad (\hbox{pois base ortogonal}).
+\end{aligned}\]</span> Logo <span class="math display">\[\lambda_i  = \frac{\langle\ul{v},\ul{b_i}\rangle}{\langle \ul{b_i},\ul{b_i}\rangle} = \frac{\langle\ul{v},\ul{b_i}\rangle}{\,\,\|\ul{b_i}\|^2}.\qquad \checkmark\]</span> A segunda afirmação segue pois <span class="math inline">\(B\)</span> ortonormal implica que <span class="math inline">\(\langle \ul{b_i},\ul{b_i}\rangle = 1\)</span> para cada <span class="math inline">\(i\)</span>.&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.5</strong></span> No espaço <span class="math inline">\(\R^2\)</span> com produto interno dado pela matriz <span class="math inline">\(\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2\end{pmatrix}\)</span>, já temos a base ortonormal <span class="math display">\[B = \{(1/\sqrt{2}, 0)\,,\,(1/\sqrt{6}, 2/\sqrt{6})\}.\]</span> Vamos calcular o vetor de coordenadas com respeito à base <span class="math inline">\(B\)</span> do vetor <span class="math inline">\((\sqrt{6}, \sqrt{6})\)</span>: Pela proposição, <span class="math display">\[(\sqrt{6},\sqrt{6}) = \lambda (1/\sqrt{2},0) + \mu (1/\sqrt{6},2/\sqrt{6}),\]</span> em que <span class="math display">\[\lambda = \langle(\sqrt{6},\sqrt{6}),(1/\sqrt{2},0)\rangle_A = \begin{pmatrix}\sqrt{6} &amp; \sqrt{6}\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2\end{pmatrix}\begin{pmatrix}1/\sqrt{2} \\ 0\end{pmatrix} = \sqrt{3},\]</span> <span class="math display">\[\mu = \langle(\sqrt{6},\sqrt{6}),(1/\sqrt{6},2/\sqrt{6})\rangle_A = \begin{pmatrix}\sqrt{6} &amp; \sqrt{6}\end{pmatrix}\begin{pmatrix}2 &amp; -1 \\ -1 &amp; 2\end{pmatrix}\begin{pmatrix}1/\sqrt{6} \\ 2/\sqrt{6}\end{pmatrix} = 3.\]</span> Logo, o vetor de coordenadas de <span class="math inline">\((\sqrt{6},\sqrt{6})\)</span> com respeito à base <span class="math inline">\(B\)</span> é <span class="math display">\[\begin{pmatrix}\sqrt{3} \\ 3\end{pmatrix}.\]</span> Vamos só confirmar: <span class="math display">\[\sqrt{3}\begin{pmatrix}1/\sqrt{2} \\ 0\end{pmatrix} + 3\begin{pmatrix}1/\sqrt{6} \\ 2/\sqrt{6}\end{pmatrix} = \begin{pmatrix}\sqrt{3}/\sqrt{2}+3/\sqrt{6} \\ 6/\sqrt{6}\end{pmatrix} = \begin{pmatrix}\sqrt{6} \\ \sqrt{6}\end{pmatrix}.\quad\checkmark\]</span></p>
+</div>
+<p>Fim da propaganda.</p>
+</section>
+<section id="complemento-ortogonal" class="level2" data-number="49.4">
+<h2 data-number="49.4" data-anchor-id="complemento-ortogonal"><span class="header-section-number">49.4</span> Complemento ortogonal</h2>
+<p>Dado um subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span>, sabemos que existem muitos <em>complementos</em> de <span class="math inline">\(W\)</span> em <span class="math inline">\(V\)</span>. Isto é, subespaços <span class="math inline">\(Y\)</span> de <span class="math inline">\(V\)</span> tais que <span class="math inline">\(V = W\oplus Y\)</span>. Mas existe um complemento especial:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 49.4</strong></span> Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>. O <em>complemento ortogonal</em> de <span class="math inline">\(W\)</span> em <span class="math inline">\(V\)</span> é <span class="math display">\[W^{\perp} = \{\ul{v}\in V\,|\, \langle \ul{v},\ul{w}\rangle = 0\,\,\forall \ul{w}\in W\}.\]</span></p>
+</div>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 49.3</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(V\)</span>.</p>
 <ol type="1">
-<li>Reflexividade: se <span class="math inline">\(a\in A\)</span>, então <span class="math inline">\(a\)</span> claramente pertence à mesma parte de <span class="math inline">\(\mathcal P\)</span> que <span class="math inline">\(a\)</span> e <span class="math inline">\(a\equiv_{\mathcal P} a\)</span>. Logo <span class="math inline">\(\equiv_{\mathcal P}\)</span> é reflexiva.</li>
-<li>Simetria: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span>, então <span class="math inline">\(a,b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Logo <span class="math inline">\(b,a\)</span> também pertencem à mesma parte e assim <span class="math inline">\(b\equiv_{\mathcal P}a\)</span>. Portanto <span class="math inline">\(\equiv_{\mathcal P}\)</span> é simétrica.</li>
-<li>Transitividade: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span> e <span class="math inline">\(b\equiv_{\mathcal P}c\)</span>, então <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span> e <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> também pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Isso implica que <span class="math inline">\(a\)</span> e <span class="math inline">\(c\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Portanto <span class="math inline">\(a\equiv_{\mathcal P}c\)</span> e a relação <span class="math inline">\(\equiv_{\mathcal P}\)</span> é transitiva.</li>
+<li><p><span class="math inline">\(W^{\perp}\)</span> é subespaço de <span class="math inline">\(V\)</span>,</p></li>
+<li><p><span class="math inline">\(V = W \oplus W^{\perp}\)</span>,</p></li>
+<li><p><span class="math inline">\((W^{\perp})^{\perp} = W\)</span>.</p></li>
+<li><p>Se <span class="math inline">\(B\)</span> é base ortogonal de <span class="math inline">\(W\)</span> e <span class="math inline">\(C\)</span> é base ortogonal de <span class="math inline">\(W^{\perp}\)</span>, então <span class="math inline">\(B\cup C\)</span> é base ortogonal de <span class="math inline">\(V\)</span>.</p></li>
 </ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li><p><span class="math inline">\(\langle \ul{0},\ul{w}\rangle = 0\)</span> para qualquer <span class="math inline">\(\ul{w}\)</span>, logo <span class="math inline">\(\ul{0}\in W^{\perp}\)</span>. Se <span class="math inline">\(\ul{u},\ul{v}\in W^{\perp}\)</span> então para qualquer <span class="math inline">\(\ul{w}\in W\)</span>, temos <span class="math display">\[\langle\ul{u}+\ul{v},\ul{w}\rangle = \langle \ul{u},\ul{w}\rangle + \langle \ul{v},\ul{w}\rangle = 0 + 0 = 0.\quad\checkmark\]</span> Similarmente, <span class="math inline">\(\ul{u}\in W^{\perp} \implies \lambda \ul{u}\in W^{\perp}\,\forall \lambda\in \R\)</span>.</p>
+<p>Prova alternativa disso: <span class="math inline">\(\langle -,-\rangle\)</span> é bilinear, logo <span class="math inline">\(\langle -,\ul{w}\rangle\)</span> é uma TL para cada <span class="math inline">\(\ul{w}\in W\)</span>. Já que <span class="math display">\[W^{\perp} = \bigcap_{\ul{w}\in W}\tn{Ker}\left(\langle-,\ul{w}\rangle\right)\]</span> é uma interseção de subespaços de <span class="math inline">\(V\)</span>, ele é um subespaço.</p></li>
+<li><p>Seja <span class="math inline">\(B = \{\ul{w_1},\ldots,\ul{w_s}\}\)</span> uma base ortogonal de <span class="math inline">\(W\)</span> e, pela proposição anterior, estenda <span class="math inline">\(B\)</span> para uma base ortogonal <span class="math display">\[\{\ul{w_1},\ldots,\ul{w_s},\ul{v_1},\ldots,\ul{v_t}\}\]</span> de <span class="math inline">\(V\)</span>. Considere <span class="math inline">\(C = \{\ul{v_1},\ldots,\ul{v_t}\}\)</span>. Já que cada <span class="math inline">\(\ul{v_i}\)</span> é ortogonal a cada <span class="math inline">\(\ul{w_j}\)</span>, segue que qualquer combinação linear dos <span class="math inline">\(\ul{v_i}\)</span> é ortogonal a qualquer combinação linear dos <span class="math inline">\(\ul{w_j}\)</span>. Logo, o subespaço gerado por <span class="math inline">\(C\)</span> está contido em <span class="math inline">\(W^{\perp}\)</span>, e assim <span class="math display">\[W + W^{\perp}\geqslant W + [C] = V.\]</span> Falta confirmar que <span class="math inline">\(W\cap W^{\perp} = \{\ul{0}\}\)</span>, mas pegue <span class="math inline">\(\ul{w}\in W\cap W^{\perp}\)</span>. Segue pela definição de <span class="math inline">\(W^{\perp}\)</span> que <span class="math inline">\(\langle \ul{w}, \ul{w}\rangle = 0\)</span>, e logo que <span class="math inline">\(\ul{w} = \ul{0}\)</span>, já que produtos internos são positivo definidos.</p></li>
+<li><p>Seja <span class="math inline">\(\ul{w}\in W\)</span>. Para qualquer <span class="math inline">\(\ul{v}\in W^{\perp}\)</span>, temos <span class="math display">\[0 = \langle\ul{v},\ul{w}\rangle = \langle \ul{w},\ul{v}\rangle,\]</span> mostrando que <span class="math inline">\(\ul{w}\in (W^{\perp})^{\perp}\)</span>.</p>
+<p>Na outra direção, pegue <span class="math inline">\(\ul{x}\in (W^{\perp})^{\perp}\)</span>. Já que <span class="math inline">\(V = W \oplus W^{\perp}\)</span>, escreva <span class="math inline">\(\ul{x} = \ul{w} + \ul{v}\)</span> com <span class="math inline">\(\ul{w}\in W, \ul{v}\in W^{\perp}\)</span>. Queremos mostrar que <span class="math inline">\(\ul{v} = \ul{0}\)</span>. Mas <span class="math display">\[0 =\langle \ul{v},\ul{x}\rangle = \langle \ul{v},\ul{w}\rangle + \langle \ul{v},\ul{v}\rangle = 0 + \langle \ul{v},\ul{v}\rangle.\]</span> Já que o produto é positivo definido, segue que <span class="math inline">\(\ul{v} = \ul{0}\)</span>. Logo <span class="math inline">\(\ul{x} = \ul{w}\in W\)</span>, como queríamos mostrar.</p></li>
+<li><p>Exercício.</p></li>
+</ol>
+<p>&nbsp;◻</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.6</strong></span> Considere <span class="math inline">\(\R^3\)</span> com o produto interno normal. Seja <span class="math inline">\(W\)</span> o subespaço gerado pelos vetores <span class="math inline">\((1,0,1)\)</span> e <span class="math inline">\((2,2,2)\)</span>. Vamos encontrar uma base ortogonal <span class="math inline">\(\{\ul{w_1},\ul{w_2}\}\)</span> de <span class="math inline">\(W\)</span> usando o processo de Gram-Schmidt: <span class="math display">\[\ul{w_1} = (1,0,1).\]</span> <span class="math display">\[\begin{aligned}
+  \ul{w_2} &amp; = (2,2,2) - \left(\frac{(2,2,2)\cdot (1,0,1)}{\|(1,0,1)\|^2}\right)(1,0,1) \\
+  &amp; = (2,2,2) - 2(1,0,1) \\
+  &amp; = (2,2,2) - (2,0,2) \\
+  &amp; = (0,2,0).
+\end{aligned}\]</span> O complemento ortogonal <span class="math inline">\(W^{\perp}\)</span> tem dimensão <span class="math inline">\(3-2 = 1\)</span> pela proposição, então é gerado por qualquer vetor ortogonal a <span class="math inline">\(\ul{w_1}\)</span> e <span class="math inline">\(\ul{w_2}\)</span>. O vetor <span class="math inline">\((1,0,0)\)</span> não pertence a <span class="math inline">\(W\)</span>. Usando Gram-Schmidt de novo, o vetor <span class="math display">\[\begin{aligned}
+  \ul{v} &amp; = (1,0,0) - \left(\frac{(1,0,0)\cdot (1,0,1)}{\|(1,0,1)\|^2}\right)(1,0,1) - \left(\frac{(1,0,0)\cdot (0,2,0)}{\|(0,2,0)\|^2}\right)(0,2,0) \\
+  &amp; = (1,0,0) - \frac{1}{2}(1,0,1) - \frac{0}{4}(0,2,0) \\
+  &amp; = (1,0,0) - (1/2,0,1/2) \\
+  &amp; = (1/2,0,-1/2)
+\end{aligned}\]</span> gera o complemento ortogonal de <span class="math inline">\(W\)</span>.</p>
 </div>
 
 
@@ -1837,13 +1912,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../IniciacaoAMatematica/relations.html" class="pagination-link" aria-label="Pares ordenados e produtos cartesianos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></span>
+      <a href="../AlgebraLinearI/02_alglin_comput.html" class="pagination-link" aria-label="Computações com Python II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Computações com Python II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../IniciacaoAMatematica/equivalence_examples.html" class="pagination-link" aria-label="Exemplos de relações de equivalência">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
