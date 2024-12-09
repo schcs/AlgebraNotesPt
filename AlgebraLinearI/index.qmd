@@ -32,3 +32,4 @@ Material disponibilizado sob a licença
 - [Diagonalização](08_alglin1.qmd)
 - [O produto interno](09_alglin1.qmd)
 - [Computação com Python II](02_alglin_comput.qmd)
+- [Ângulos e ortogonalidade](10_alglin1.qmd)
