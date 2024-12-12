@@ -1,0 +1,173 @@
+---
+title: "Aplicação: A teoria de Fourier"   
+number-sections: true
+lang: pt-BR
+--- 
+
+O espaço vetorial $C^0[-\pi, \pi]$ é o conjunto de todas as funções contínuas no intervalo $[- \pi, \pi]$. Este espaço é um espaço vetorial real com as operações de adição de funções e multiplicação por escalar definidas pontualmente.
+O produto interno neste espaço é definido por:
+$$
+\langle f, g \rangle = \int_{-\pi}^{\pi} f(x) g(x) \, dx
+$$
+onde $f$ e $g$ são funções em $C^0[-\pi, \pi]$.
+
+Considere as funções 
+$$
+1,\ \cos t,\ \sen t,\ \cos(2t),\ \sen(2t),\ldots 
+$${#eq-cos-sin}
+
+:::{#lem-cos-sin-ort}
+O sistema na @eq-cos-sin é um sistema ortogonal.
+:::
+
+:::{.proof}
+Para mostrar que a função $1$ é ortogonal a $\cos(nt)$ para $n \geq 1$, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral:
+$$
+\langle 1, \cos(nt) \rangle = \int_{-\pi}^{\pi} 1 \cdot \cos(nt) \, dt.
+$$
+Sabemos que a integral de $\cos(nt)$ sobre um período completo é zero para $n \geq 1$. Portanto:
+$$
+\int_{-\pi}^{\pi} \cos(nt) \, dt = 0.
+$$
+Portanto, a função $1$ é ortogonal a $\cos(nt)$ para $n \geq 1$. O mesmo argumento mostra que $1\perp \sen(nt)$ para $n\geq 1$.
+
+Para mostrar que $\cos(nt)$ é ortogonal a $\cos(mt)$ para $m \neq n$, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral:
+$$
+\langle \cos(nt), \cos(mt) \rangle = \int_{-\pi}^{\pi} \cos(nt) \cos(mt) \, dt.
+$$
+Utilizando a identidade trigonométrica para o produto de cossenos, temos:
+$$
+\cos(nt) \cos(mt) = \frac{1}{2} [\cos((n+m)t) + \cos((n-m)t)].
+$$
+Portanto, a integral se torna:
+$$
+\int_{-\pi}^{\pi} \cos(nt) \cos(mt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \cos((n+m)t) \, dt + \frac{1}{2} \int_{-\pi}^{\pi} \cos((n-m)t) \, dt.
+$$
+Sabemos que a integral de $\cos(kt)$ sobre um período completo é zero para qualquer $k \neq 0$. Portanto:
+$$
+\int_{-\pi}^{\pi} \cos((n+m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \cos((n-m)t) \, dt = 0
+$$
+Assim, concluímos que:
+$$
+\langle \cos(nt), \cos(mt) \rangle = 0
+$$
+Portanto, $\cos(nt)$ é ortogonal a $\cos(mt)$ para $m \neq n$.
+
+Para mostrar que $\sen(nt)$ é ortogonal a $\sen(mt)$ para $m \neq n$, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral:
+$$
+\langle \sen(nt), \sen(mt) \rangle = \int_{-\pi}^{\pi} \sen(nt) \sen(mt) \, dt
+$$
+Utilizando a identidade trigonométrica para o produto de senos, temos:
+$$
+\sen(nt) \sen(mt) = \frac{1}{2} [\cos((n-m)t) - \cos((n+m)t)]
+$$
+Portanto, a integral se torna:
+$$
+\int_{-\pi}^{\pi} \sen(nt) \sen(mt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \cos((n-m)t) \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \cos((n+m)t) \, dt
+$$
+Sabemos que a integral de $\cos(kt)$ sobre um período completo é zero para qualquer $k \neq 0$. Portanto:
+$$
+\int_{-\pi}^{\pi} \cos((n-m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \cos((n+m)t) \, dt = 0
+$$
+Assim, concluímos que:
+$$
+\langle \sen(nt), \sen(mt) \rangle = 0
+$$
+Portanto, $\sen(nt)$ é ortogonal a $\sen(mt)$ para $m \neq n$.
+
+Para mostrar que $\cos(mt)$ é ortogonal a $\sen(nt)$ para qualquer $m$ e $n$, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral:
+$$
+\langle \cos(mt), \sen(nt) \rangle = \int_{-\pi}^{\pi} \cos(mt) \sen(nt) \, dt
+$$
+Utilizando a identidade trigonométrica para o produto de cosseno e seno, temos:
+$$
+\cos(mt) \sen(nt) = \frac{1}{2} [\sen((n+m)t) - \sen((n-m)t)]
+$$
+Portanto, a integral se torna:
+$$
+\int_{-\pi}^{\pi} \cos(mt) \sen(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \sen((n+m)t) \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \sen((n-m)t) \, dt
+$$
+Sabemos que a integral de $\sen(kt)$ sobre um período completo é zero para qualquer $k$. Portanto:
+$$
+\int_{-\pi}^{\pi} \sen((n+m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \sen((n-m)t) \, dt = 0
+$$
+Assim, concluímos que:
+$$
+\langle \cos(mt), \sen(nt) \rangle = 0
+$$
+Portanto, $\cos(mt)$ é ortogonal a $\sen(nt)$ para qualquer $m$ e $n$.
+
+Para calcular a norma da função $1$, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular:
+$$
+\|1\| = \sqrt{\langle 1, 1 \rangle} = \sqrt{\int_{-\pi}^{\pi} 1 \cdot 1 \, dt}
+$$
+Calculando a integral, temos:
+$$
+\int_{-\pi}^{\pi} 1 \, dt = 2\pi
+$$
+Portanto:
+$$
+\|1\| = \sqrt{2\pi}
+$$
+
+Para calcular a norma de $\cos(nt)$, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular:
+$$
+\|\cos(nt)\| = \sqrt{\langle \cos(nt), \cos(nt) \rangle} = \sqrt{\int_{-\pi}^{\pi} \cos^2(nt) \, dt}
+$$
+Utilizando a identidade trigonométrica $\cos^2(nt) = \frac{1 + \cos(2nt)}{2}$, temos:
+$$
+\int_{-\pi}^{\pi} \cos^2(nt) \, dt = \int_{-\pi}^{\pi} \frac{1 + \cos(2nt)}{2} \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt + \frac{1}{2} \int_{-\pi}^{\pi} \cos(2nt) \, dt
+$$
+Sabemos que a integral de $\cos(2nt)$ sobre um período completo é zero. Portanto:
+$$
+\int_{-\pi}^{\pi} \cos^2(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt = \frac{1}{2} \cdot 2\pi = \pi
+$$
+Portanto:
+$$
+\|\cos(nt)\| = \sqrt{\pi}
+$$
+
+Para calcular a norma de $\sen(nt)$, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular:
+$$
+\|\sen(nt)\| = \sqrt{\langle \sen(nt), \sen(nt) \rangle} = \sqrt{\int_{-\pi}^{\pi} \sen^2(nt) \, dt}
+$$
+Utilizando a identidade trigonométrica $\sen^2(nt) = \frac{1 - \cos(2nt)}{2}$, temos:
+$$
+\int_{-\pi}^{\pi} \sen^2(nt) \, dt = \int_{-\pi}^{\pi} \frac{1 - \cos(2nt)}{2} \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \cos(2nt) \, dt
+$$
+Sabemos que a integral de $\cos(2nt)$ sobre um período completo é zero. Portanto:
+$$
+\int_{-\pi}^{\pi} \sen^2(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt = \frac{1}{2} \cdot 2\pi = \pi
+$$
+Portanto:
+$$
+\|\sen(nt)\| = \sqrt{\pi}
+$$
+:::
+
+Assuma que $V=\left<1,\cos t,\sen t, cos(2t), \sen(2t),\ldots\right>$ é o espaço gerado pelas funções no sistema na @eq-cos-sin. Se $f\in V$, então 
+$$
+f = a_0+\sum_{m=1}^k c_i\cos(mt)+\sum_{m=1}^k s_i\sen(mt).
+$$
+Considerando que o sistema é ortogonal, obtemos pela @prp-coeffs-ort-basis, que 
+\begin{align*}
+a_0 &= \frac{\langle f, 1 \rangle}{\|1\|^2} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \, dt;\\
+c_i &= \frac{\langle f, \cos(it) \rangle}{\|\cos(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(it) \, dt;\\
+s_i &= \frac{\langle f, \sen(it) \rangle}{\|\sen(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(it) \, dt
+\end{align*}
+Assim obtemos que 
+\begin{align*}
+f(t) &= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&+ \sum_{m=1}^k \frac{1}{\pi}\left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+\end{align*}
+
+Um teorema principal da Teoria de Fourier afirma que qualquer função $f\in C^0[-\pi,\pi]$ pode ser aproximada por combinações lineares como na linha anterior. 
+
+:::{#thm-fourier}
+Se $f\in C^0[-\pi,\pi]$, então 
+\begin{align*}
+f(t) &= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+\end{align*}
+no sentido que as sumas parciais finitas na expressão anterior convergem para $f$ na norma associada com o produto inteiro $\left<-,-\right>$. Ou seja, o subespaço $V$ é topologicamente denso em $C^0[-\pi,\pi]$. 
+:::
+
+A demonstração do @thm-fourier está além dos objetivos desta disciplina, mas ele mostra como as ideias de ortogonailidade, projeção ortogonal, etc podem ser usadas em áreas fora da álgebra linear.
