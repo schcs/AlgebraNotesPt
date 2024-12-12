@@ -163,14 +163,14 @@ projeção ortogonal assim:
     $\{\ul{u},\ul{w_1},\ldots,\ul{w_s}\}$, logo
     $\ul{w_{s+1}}\neq \ul{0}$.
 
-    Para cada $i$, temos $$\begin{aligned}
+    Para cada $i$, temos \begin{aligned}
       \langle \ul{w_{s+1}},\ul{w_i}\rangle & = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_1}}(\ul{u}),\ul{w_i}\rangle - \cdots - \langle \tn{proj}_{\ul{w_s}}(\ul{u}),\ul{w_i}\rangle \\  
       & = \langle \ul{u},\ul{w_i}\rangle - 0 - \cdots - 0 - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle - 0 - \cdots - 0 \\
       & = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
       & = \langle \ul{u} - \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
       & = 0.\qquad\checkmark
-      
-    \end{aligned}$$ Agora, o subespaço com base ortogonal
+    \end{aligned} 
+Agora, o subespaço com base ortogonal
     $B\cup\{\ul{w_{s+1}}\}$ satisfaz as condições do teorema e tem
     dimensão $s+1$. Já que $n-(s+1) < n-s$, pela hipótese de indução,
     podemos estender a base $B\cup \{\ul{w_{s+1}}\}$ para uma base
@@ -344,4 +344,31 @@ Gram-Schmidt de novo, o vetor $$\begin{aligned}
   & = (1,0,0) - (1/2,0,1/2) \\
   & = (1/2,0,-1/2)
 \end{aligned}$$ gera o complemento ortogonal de $W$.
+:::
+
+
+:::{#exm-}
+Vamos calcular uma base ortogonal para o espaço vetorial dos polinômios de grau no máximo 2, com o produto interno dado por
+$$\langle f, g \rangle = \int_0^1 f(x)g(x) \, dx.$$
+
+Começamos com a base padrão $\{1, x, x^2\}$ e aplicamos o processo de Gram-Schmidt.
+
+1. Primeiro vetor ortogonal:
+$$\ul{p_1}(x) = 1.$$
+
+2. Segundo vetor ortogonal:
+$$\ul{p_2}(x) = x - \frac{\langle x, 1 \rangle}{\langle 1, 1 \rangle} \cdot 1 = x - \int_0^1 x \, dx = x - \frac{1}{2}.$$
+
+3. Terceiro vetor ortogonal:
+$$\begin{aligned}
+\ul{p_3}(x) & = x^2 - \frac{\langle x^2, 1 \rangle}{\langle 1, 1 \rangle} \cdot 1 - \frac{\langle x^2, x - \frac{1}{2} \rangle}{\langle x - \frac{1}{2}, x - \frac{1}{2} \rangle} \cdot \left( x - \frac{1}{2} \right) \\
+& = x^2 - \int_0^1 x^2 \, dx - \frac{\int_0^1 x^2 \left( x - \frac{1}{2} \right) \, dx}{\int_0^1 \left( x - \frac{1}{2} \right)^2 \, dx} \cdot \left( x - \frac{1}{2} \right) \\
+& = x^2 - \frac{1}{3} - \frac{\int_0^1 x^3 - \frac{1}{2}x^2 \, dx}{\int_0^1 x^2 - x + \frac{1}{4} \, dx} \cdot \left( x - \frac{1}{2} \right) \\
+& = x^2 - \frac{1}{3} - \frac{\left( \frac{1}{4} - \frac{1}{6} \right)}{\left( \frac{1}{3} - \frac{1}{2} + \frac{1}{4} \right)} \cdot \left( x - \frac{1}{2} \right) \\
+& = x^2 - \frac{1}{3} - \frac{\frac{1}{12}}{\frac{1}{12}} \cdot \left( x - \frac{1}{2} \right) \\
+& = x^2 - \frac{1}{3} -  \left( x - \frac{1}{2} \right) \\
+& = x^2 - x + \frac{1}{6}.
+\end{aligned}$$
+
+Portanto, a base ortogonal é $\{1, x - \frac{1}{2}, x^2 - x + \frac{1}{6}\}$.
 :::
