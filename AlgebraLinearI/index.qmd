@@ -33,3 +33,4 @@ Material disponibilizado sob a licença
 - [O produto interno](09_alglin1.qmd)
 - [Computação com Python II](02_alglin_comput.qmd)
 - [Ângulos e ortogonalidade](10_alglin1.qmd)
+- [Aplicação: A Teoria de Fourier](11_alglin1.qmd)
