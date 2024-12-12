@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>68&nbsp; O adjunto de um operador – Álgebra</title>
+<title>50&nbsp; Aplicação: A teoria de Fourier – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/autoadjuntos.html" rel="next">
-<link href="../AlgebraLinearII/isometrias.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/10_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/adjuntos.html"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/11_alglin1.html"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Aplicação: A teoria de Fourier</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1009,7 +1009,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/11_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/11_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Aplicação: A teoria de Fourier</span></span></a>
   </div>
 </li>
@@ -1128,7 +1128,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/adjuntos.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/adjuntos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></span></a>
   </div>
 </li>
@@ -1300,9 +1300,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/adjuntos.html"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/11_alglin1.html"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Aplicação: A teoria de Fourier</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">O adjunto de um operador</span></h1>
+<h1 class="title"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Aplicação: A teoria de Fourier</span></h1>
 </div>
 
 
@@ -1319,99 +1319,96 @@ window.Quarto = {
 </header>
 
 
-<p>Nesta página, <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial com <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span> e <span class="math inline">\(B\)</span> é uma forma <span class="math inline">\(\sigma\)</span>-hermitiana ou alternada não degenerada sobre <span class="math inline">\(V\)</span>. Note que no caso de <span class="math inline">\(\sigma\)</span>-hermitiana, <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>. Quando <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>, então <span class="math inline">\(B\)</span> é uma forma simétrica. Quando <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</p>
-<p>Lembre que <span class="math inline">\(V^*\)</span> é o espaço dual de <span class="math inline">\(V\)</span>; ou seja, <span class="math display">\[
-V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
-\]</span> Para <span class="math inline">\(v\in V\)</span>, definimos <span class="math inline">\(\varphi_v\in V^*\)</span> com <span class="math display">\[
-\varphi_v(w)=B(w,v).
-\]</span> O fato que <span class="math inline">\(\varphi_v\in V^*\)</span> segue do fato que <span class="math inline">\(B\)</span> é linear na primeira variável. Defina <span class="math display">\[
-\Phi:V\to V^*,\quad \Phi(v)=\varphi_v.
-\]</span></p>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 68.1</strong></span> Temos para todo <span class="math inline">\(\alpha_1,\alpha_2\in\F\)</span> e <span class="math inline">\(v_1,v_2\in V\)</span> que <span class="math display">\[
-\Phi(\alpha_1v_1+\alpha_2v_2)=\alpha_1^\sigma \Phi(v_1)+\alpha_2^\sigma\Phi(v_2).
-\]</span> Ou seja, a transformação <span class="math inline">\(\Phi\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear. Além disso, <span class="math inline">\(\Phi\)</span> é injetiva, e quando <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\Phi\)</span> é sobrejetiva. Portanto, quando <span class="math inline">\(\dim V\)</span> for finita, <span class="math inline">\(\Phi:V\to V^*\)</span> é uma bijeção semilinear.</p>
+<p>O espaço vetorial <span class="math inline">\(C^0[-\pi, \pi]\)</span> é o conjunto de todas as funções contínuas no intervalo <span class="math inline">\([- \pi, \pi]\)</span>. Este espaço é um espaço vetorial real com as operações de adição de funções e multiplicação por escalar definidas pontualmente. O produto interno neste espaço é definido por: <span class="math display">\[
+\langle f, g \rangle = \int_{-\pi}^{\pi} f(x) g(x) \, dx
+\]</span> onde <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> são funções em <span class="math inline">\(C^0[-\pi, \pi]\)</span>.</p>
+<p>Considere as funções <span id="eq-cos-sin"><span class="math display">\[
+1,\ \cos t,\ \sen t,\ \cos(2t),\ \sen(2t),\ldots
+\tag{50.1}\]</span></span></p>
+<div id="lem-cos-sin-ort" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 50.1</strong></span> O sistema na <a href="#eq-cos-sin" class="quarto-xref">Equação&nbsp;<span>50.1</span></a> é um sistema ortogonal.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>O fato que <span class="math inline">\(\Phi\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear segue do fato que <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear na segunda variável. Vamos mostrar que <span class="math inline">\(\Phi\)</span> é injetiva. Note que se <span class="math inline">\(\Phi(v_1)=\Phi(v_2)\)</span> com <span class="math inline">\(v_1,v_2\in V\)</span>, então <span class="math inline">\(B(w,v_1)=B(w,v_2)\)</span> vale para todo <span class="math inline">\(w\in V\)</span> e assim <span class="math inline">\(v_1-v_2\in\mbox{Rad}(B)=0\)</span>. Logo <span class="math inline">\(v_1=v_2\)</span> e segue que <span class="math inline">\(\Phi\)</span> é injetiva.</p>
-<p>Assuma agora que <span class="math inline">\(\dim V\)</span> é finita e mostremos que <span class="math inline">\(\Phi\)</span> é sobrejetiva. Aqui nós tratamos apenas formas <span class="math inline">\(\sigma\)</span>-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> em <span class="math inline">\(V\)</span>. Note que <span class="math inline">\(Q(b_i)=B(b_i,b_i)\neq 0\)</span>. Por exercício anterior, temos, para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
-v=\sum_{i=1}^n \frac{B(v,b_i)}{Q(b_i)}b_i.
-\]</span> Seja <span class="math inline">\(\varphi\in V^*\)</span> e defina <span class="math display">\[
-v=\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n.
-\]</span> Afirmamos que <span class="math inline">\(\varphi=\Phi(v)=\varphi_v\)</span>. Para isso, precisa-se provar que <span class="math inline">\(\varphi(w)=\varphi_v(w)=B(w,v)\)</span> para todo <span class="math inline">\(w\in V\)</span>, mas é suficiente verificar esta igualdade nos elementos na base; ou seja precisamos provar que <span class="math inline">\(\varphi(b_i)=B(b_i,v)\)</span> para todo <span class="math inline">\(i\)</span>. Vamos calcular que <span class="math display">\[
-\varphi_v(b_i)=B(b_i,v)=B\left(b_i,\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n\right)=\varphi(b_i).
+<p><span class="proof-title"><em>Comprovação</em>. </span>Para mostrar que a função <span class="math inline">\(1\)</span> é ortogonal a <span class="math inline">\(\cos(nt)\)</span> para <span class="math inline">\(n \geq 1\)</span>, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral: <span class="math display">\[
+\langle 1, \cos(nt) \rangle = \int_{-\pi}^{\pi} 1 \cdot \cos(nt) \, dt.
+\]</span> Sabemos que a integral de <span class="math inline">\(\cos(nt)\)</span> sobre um período completo é zero para <span class="math inline">\(n \geq 1\)</span>. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos(nt) \, dt = 0.
+\]</span> Portanto, a função <span class="math inline">\(1\)</span> é ortogonal a <span class="math inline">\(\cos(nt)\)</span> para <span class="math inline">\(n \geq 1\)</span>. O mesmo argumento mostra que <span class="math inline">\(1\perp \sen(nt)\)</span> para <span class="math inline">\(n\geq 1\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\cos(nt)\)</span> é ortogonal a <span class="math inline">\(\cos(mt)\)</span> para <span class="math inline">\(m \neq n\)</span>, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral: <span class="math display">\[
+\langle \cos(nt), \cos(mt) \rangle = \int_{-\pi}^{\pi} \cos(nt) \cos(mt) \, dt.
+\]</span> Utilizando a identidade trigonométrica para o produto de cossenos, temos: <span class="math display">\[
+\cos(nt) \cos(mt) = \frac{1}{2} [\cos((n+m)t) + \cos((n-m)t)].
+\]</span> Portanto, a integral se torna: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos(nt) \cos(mt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \cos((n+m)t) \, dt + \frac{1}{2} \int_{-\pi}^{\pi} \cos((n-m)t) \, dt.
+\]</span> Sabemos que a integral de <span class="math inline">\(\cos(kt)\)</span> sobre um período completo é zero para qualquer <span class="math inline">\(k \neq 0\)</span>. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos((n+m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \cos((n-m)t) \, dt = 0
+\]</span> Assim, concluímos que: <span class="math display">\[
+\langle \cos(nt), \cos(mt) \rangle = 0
+\]</span> Portanto, <span class="math inline">\(\cos(nt)\)</span> é ortogonal a <span class="math inline">\(\cos(mt)\)</span> para <span class="math inline">\(m \neq n\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\sen(nt)\)</span> é ortogonal a <span class="math inline">\(\sen(mt)\)</span> para <span class="math inline">\(m \neq n\)</span>, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral: <span class="math display">\[
+\langle \sen(nt), \sen(mt) \rangle = \int_{-\pi}^{\pi} \sen(nt) \sen(mt) \, dt
+\]</span> Utilizando a identidade trigonométrica para o produto de senos, temos: <span class="math display">\[
+\sen(nt) \sen(mt) = \frac{1}{2} [\cos((n-m)t) - \cos((n+m)t)]
+\]</span> Portanto, a integral se torna: <span class="math display">\[
+\int_{-\pi}^{\pi} \sen(nt) \sen(mt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \cos((n-m)t) \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \cos((n+m)t) \, dt
+\]</span> Sabemos que a integral de <span class="math inline">\(\cos(kt)\)</span> sobre um período completo é zero para qualquer <span class="math inline">\(k \neq 0\)</span>. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos((n-m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \cos((n+m)t) \, dt = 0
+\]</span> Assim, concluímos que: <span class="math display">\[
+\langle \sen(nt), \sen(mt) \rangle = 0
+\]</span> Portanto, <span class="math inline">\(\sen(nt)\)</span> é ortogonal a <span class="math inline">\(\sen(mt)\)</span> para <span class="math inline">\(m \neq n\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\cos(mt)\)</span> é ortogonal a <span class="math inline">\(\sen(nt)\)</span> para qualquer <span class="math inline">\(m\)</span> e <span class="math inline">\(n\)</span>, precisamos verificar que o produto interno entre essas funções é zero. Ou seja, precisamos calcular a integral: <span class="math display">\[
+\langle \cos(mt), \sen(nt) \rangle = \int_{-\pi}^{\pi} \cos(mt) \sen(nt) \, dt
+\]</span> Utilizando a identidade trigonométrica para o produto de cosseno e seno, temos: <span class="math display">\[
+\cos(mt) \sen(nt) = \frac{1}{2} [\sen((n+m)t) - \sen((n-m)t)]
+\]</span> Portanto, a integral se torna: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos(mt) \sen(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} \sen((n+m)t) \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \sen((n-m)t) \, dt
+\]</span> Sabemos que a integral de <span class="math inline">\(\sen(kt)\)</span> sobre um período completo é zero para qualquer <span class="math inline">\(k\)</span>. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \sen((n+m)t) \, dt = 0 \quad \text{e} \quad \int_{-\pi}^{\pi} \sen((n-m)t) \, dt = 0
+\]</span> Assim, concluímos que: <span class="math display">\[
+\langle \cos(mt), \sen(nt) \rangle = 0
+\]</span> Portanto, <span class="math inline">\(\cos(mt)\)</span> é ortogonal a <span class="math inline">\(\sen(nt)\)</span> para qualquer <span class="math inline">\(m\)</span> e <span class="math inline">\(n\)</span>.</p>
+<p>Para calcular a norma da função <span class="math inline">\(1\)</span>, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular: <span class="math display">\[
+\|1\| = \sqrt{\langle 1, 1 \rangle} = \sqrt{\int_{-\pi}^{\pi} 1 \cdot 1 \, dt}
+\]</span> Calculando a integral, temos: <span class="math display">\[
+\int_{-\pi}^{\pi} 1 \, dt = 2\pi
+\]</span> Portanto: <span class="math display">\[
+\|1\| = \sqrt{2\pi}
+\]</span></p>
+<p>Para calcular a norma de <span class="math inline">\(\cos(nt)\)</span>, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular: <span class="math display">\[
+\|\cos(nt)\| = \sqrt{\langle \cos(nt), \cos(nt) \rangle} = \sqrt{\int_{-\pi}^{\pi} \cos^2(nt) \, dt}
+\]</span> Utilizando a identidade trigonométrica <span class="math inline">\(\cos^2(nt) = \frac{1 + \cos(2nt)}{2}\)</span>, temos: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos^2(nt) \, dt = \int_{-\pi}^{\pi} \frac{1 + \cos(2nt)}{2} \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt + \frac{1}{2} \int_{-\pi}^{\pi} \cos(2nt) \, dt
+\]</span> Sabemos que a integral de <span class="math inline">\(\cos(2nt)\)</span> sobre um período completo é zero. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \cos^2(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt = \frac{1}{2} \cdot 2\pi = \pi
+\]</span> Portanto: <span class="math display">\[
+\|\cos(nt)\| = \sqrt{\pi}
+\]</span></p>
+<p>Para calcular a norma de <span class="math inline">\(\sen(nt)\)</span>, precisamos calcular a raiz quadrada do produto interno da função consigo mesma. Ou seja, precisamos calcular: <span class="math display">\[
+\|\sen(nt)\| = \sqrt{\langle \sen(nt), \sen(nt) \rangle} = \sqrt{\int_{-\pi}^{\pi} \sen^2(nt) \, dt}
+\]</span> Utilizando a identidade trigonométrica <span class="math inline">\(\sen^2(nt) = \frac{1 - \cos(2nt)}{2}\)</span>, temos: <span class="math display">\[
+\int_{-\pi}^{\pi} \sen^2(nt) \, dt = \int_{-\pi}^{\pi} \frac{1 - \cos(2nt)}{2} \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt - \frac{1}{2} \int_{-\pi}^{\pi} \cos(2nt) \, dt
+\]</span> Sabemos que a integral de <span class="math inline">\(\cos(2nt)\)</span> sobre um período completo é zero. Portanto: <span class="math display">\[
+\int_{-\pi}^{\pi} \sen^2(nt) \, dt = \frac{1}{2} \int_{-\pi}^{\pi} 1 \, dt = \frac{1}{2} \cdot 2\pi = \pi
+\]</span> Portanto: <span class="math display">\[
+\|\sen(nt)\| = \sqrt{\pi}
 \]</span></p>
 </div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 68.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span> e assuma que <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span> são formas <span class="math inline">\(\sigma\)</span>-hermitianas não degeneradas sobre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Assuma que <span class="math inline">\(f:V\to W\)</span> é uma transformação linear. Uma aplicação <span class="math inline">\(g:W\to F\)</span> é chamada <b>adjunta</b> de <span class="math inline">\(f\)</span> se <span class="math display">\[
-B_W(f(v),w)=B_V(v,g(w))\quad\mbox{para todo}\quad v\in V,\ w\in W.
-\]</span></p>
+<p>Assuma que <span class="math inline">\(V=\left&lt;1,\cos t,\sen t, cos(2t), \sen(2t),\ldots\right&gt;\)</span> é o espaço gerado pelas funções no sistema na <a href="#eq-cos-sin" class="quarto-xref">Equação&nbsp;<span>50.1</span></a>. Se <span class="math inline">\(f\in V\)</span>, então <span class="math display">\[
+f = a_0+\sum_{m=1}^k c_i\cos(mt)+\sum_{m=1}^k s_i\sen(mt).
+\]</span> Considerando que o sistema é ortogonal, obtemos pela <a href="10_alglin1.html#prp-coeffs-ort-basis" class="quarto-xref">Proposição&nbsp;<span>49.2</span></a>, que <span class="math display">\[\begin{align*}
+a_0 &amp;= \frac{\langle f, 1 \rangle}{\|1\|^2} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \, dt;\\
+c_i &amp;= \frac{\langle f, \cos(it) \rangle}{\|\cos(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(it) \, dt;\\
+s_i &amp;= \frac{\langle f, \sen(it) \rangle}{\|\sen(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(it) \, dt
+\end{align*}\]</span> Assim obtemos que <span class="math display">\[\begin{align*}
+f(t) &amp;= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&amp;+ \sum_{m=1}^k \frac{1}{\pi}\left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+\end{align*}\]</span></p>
+<p>Um teorema principal da Teoria de Fourier afirma que qualquer função <span class="math inline">\(f\in C^0[-\pi,\pi]\)</span> pode ser aproximada por combinações lineares como na linha anterior.</p>
+<div id="thm-fourier" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 50.1</strong></span> Se <span class="math inline">\(f\in C^0[-\pi,\pi]\)</span>, então <span class="math display">\[\begin{align*}
+f(t) &amp;= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+\end{align*}\]</span> no sentido que as sumas parciais finitas na expressão anterior convergem para <span class="math inline">\(f\)</span> na norma associada com o produto inteiro <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Ou seja, o subespaço <span class="math inline">\(V\)</span> é topologicamente denso em <span class="math inline">\(C^0[-\pi,\pi]\)</span>.</p>
 </div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 68.2</strong></span> Se existir a adjunta <span class="math inline">\(g\)</span> de <span class="math inline">\(f\)</span> na definição anterior, então ele é linear e é única.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Para provar que <span class="math inline">\(g\)</span> é linear, calculemos para todo <span class="math inline">\(v,w_1,w_2\in V\)</span> e <span class="math inline">\(\alpha_1,\alpha_2\in \F\)</span> que <span class="math display">\[\begin{align*}
-B_V(v,\alpha_1g(w_1)+\alpha_2g(w_2))&amp;=
-\alpha_1^\sigma B_V(v,g(w_1))+\alpha_2^\sigma B_V(v,g(w_2))\\&amp;=\alpha_1^\sigma B_W(f(v),w_1)+\alpha_2^\sigma B_W(f(v),w_2)\\&amp;=B_W(f(v),\alpha_1 w_1+\alpha_2 w_2)
-\\&amp;=B_V(v,g(\alpha_1 w_1+\alpha_2 w_2)).
-\end{align*}\]</span> Isso mostra que <span class="math inline">\(\alpha_1g(w_1)+\alpha_2g(w_2)-g(\alpha_1 w_1+\alpha_2 w_2)\)</span> está contido no radical de <span class="math inline">\(B_V\)</span>, ou seja <span class="math inline">\(\alpha_1g(w_1)+\alpha_2g(w_2)-g(\alpha_1 w_1+\alpha_2 w_2)=0\)</span>. Portanto <span class="math display">\[
-\alpha_1g(w_1)+\alpha_2g(w_2)=g(\alpha_1 w_1+\alpha_2 w_2)
-\]</span> vale para todo <span class="math inline">\(w_1,w_2\in V\)</span> e <span class="math inline">\(\alpha_1,\alpha_2\in \F\)</span> que implica que <span class="math inline">\(g\)</span> é linear.</p>
-<p>Assuma que <span class="math inline">\(g_1\)</span> e <span class="math inline">\(g_2\)</span> são adjuntos de <span class="math inline">\(f:V\to W\)</span>. Então temos para todo <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(w\in W\)</span> que <span class="math display">\[
-B_V(v,g_1(w))=B_W(f(v),g)=B_V(v,g_2(w)).
-\]</span> Ou seja <span class="math inline">\(g_1(w)-g_2(w)\in\mbox{Rad}(B_V)\)</span> e <span class="math inline">\(g_1=g_2\)</span>.</p>
-</div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 68.1</strong></span> Sejam <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span>, <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span> como no lema anterior e <span class="math inline">\(f:V\to W\)</span> uma aplicação linear. Se <span class="math inline">\(\dim V\)</span> e <span class="math inline">\(\dim W\)</span> são finitas, existe a adjunta <span class="math inline">\(f^*:W\to V\)</span> e ela é única.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(w\in W\)</span> e defina a funcional <span class="math inline">\(\psi_w\in V^*\)</span> com a regra <span class="math display">\[
-\psi_w(v)=B_W(f(v),w).
-\]</span> É fácil verificar que <span class="math inline">\(\psi_w\in V^*\)</span>. Pelo lema acima, existe único <span class="math inline">\(w^*\in V\)</span> tal que <span class="math inline">\(\psi_w=\varphi_{w^*}\)</span>. Defina <span class="math inline">\(f^*(w)=w^*=B_V(-,w^*)\)</span>. Assim temos que <span class="math display">\[
-B_W(f(v),w)=\psi_w(v)=\varphi_{w^*}(v)=B_V(v,w^*)=B_V(v,f^*(w)).
-\]</span> A unicidade segue do lema anterior.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 68.3</strong></span> Usando a notação do teorema anterior, assuma que <span class="math inline">\(X_V\)</span> e <span class="math inline">\(X_W\)</span> são bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(A^*\)</span> as matrizes de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^*\)</span> nas bases <span class="math inline">\(X_V\)</span> e <span class="math inline">\(X_W\)</span>, respetivamente e sejam <span class="math inline">\(G_V\)</span> e <span class="math inline">\(G_W\)</span> as matrizes de Gram das formas <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span>. Temos que <span class="math display">\[
-A^*=G_V^{-1\sigma}A^{t\sigma}G_W^\sigma.
-\]</span> Em particular, se <span class="math inline">\(X_V\)</span> e <span class="math inline">\(X_W\)</span> são bases ortonormais, então <span class="math display">\[
-A^*=A^{t\sigma}.
-\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Temos pela definição do operador adjunto que <span class="math display">\[
-B_W(f(v),w)=B_V(v,f^*(w))\quad\mbox{para todo}\quad v\in V\mbox{ e }w\in W.
-\]</span> Escrevendo a igualdade acima com matrizes, temos que <span class="math display">\[
-(A[v]_{X_V})^tG_W [w]_{X_W}^\sigma=[v]_{X_V}^tG_V (A^*[w]_{X_W})^\sigma.
-\]</span> Daí <span class="math display">\[
-[v]_{X_V}^t A^t G_W [w]_{X_W}^\sigma=[v]_{X_V}^tG_V A^{*\sigma}[w]_{X_W}^\sigma.
-\]</span> Como a igualdade vale para todo <span class="math inline">\([v]_{X_V}\in\F^m\)</span> e <span class="math inline">\([w]_{X_W}\in\F^n\)</span>, temos que <span class="math display">\[
-A^t G_W=G_V A^{*\sigma}.
-\]</span> Usando que <span class="math inline">\(G_V\)</span> é invertível, temos que <span class="math display">\[
-A^*=A^{t\sigma}.
-\]</span></p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 68.4</strong></span> Assuma que <span class="math inline">\(f,g: V\to W\)</span> e <span class="math inline">\(\alpha_1,\alpha_2\in \F\)</span>. Assuma que existem <span class="math inline">\(f^*\)</span> e <span class="math inline">\(g^*\)</span>. Então temos que</p>
-<ul>
-<li><span class="math inline">\((\alpha_1f+\alpha_2g)^*=\alpha_1^\sigma f^*+\alpha_2^\sigma g^*\)</span>;</li>
-<li><span class="math inline">\(f^{**}=f\)</span>;</li>
-<li>Se <span class="math inline">\(f\)</span> é invertível e existe <span class="math inline">\((f^{-1})^*\)</span>, então <span class="math inline">\((f^{-1})^*=(f^*)^{-1}\)</span></li>
-<li>se <span class="math inline">\(f,g:V\to V\)</span>, então <span class="math inline">\((f\circ g)^*=g^*\circ f^*\)</span></li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 68.5</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(B_V\)</span> como nos resultados anteriores e seja <span class="math inline">\(f:V\to V\)</span> um operador que possui adjunto <span class="math inline">\(f^*\)</span>. Assuma que <span class="math inline">\(W\leq V\)</span> é <span class="math inline">\(f\)</span>-invariante. Então <span class="math inline">\(W^\perp\)</span> é <span class="math inline">\(f^*\)</span>-invariante.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(w\in W^\perp\)</span>. Precisamos provar que <span class="math inline">\(f^*(w)\perp z\)</span> para todo <span class="math inline">\(z \in W\)</span>; ou seja <span class="math inline">\(B_V(z,f^*(w))=0\)</span> para todo <span class="math inline">\(z\in W\)</span>. Usando que <span class="math inline">\(f(z)\in W\)</span>, temos que <span class="math inline">\(f(z)\perp w\)</span> e calculemos que <span class="math display">\[
-B_V(z,f^*(w))=B_V(f(z),w)=0.
-\]</span></p>
-</div>
+<p>A demonstração do <a href="#thm-fourier" class="quarto-xref">Teorema&nbsp;<span>50.1</span></a> está além dos objetivos desta disciplina, mas ele mostra como as ideias de ortogonailidade, projeção ortogonal, etc podem ser usadas em áreas fora da álgebra linear.</p>
 
 
 
@@ -1835,13 +1832,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/isometrias.html" class="pagination-link" aria-label="Isometrias de espaços com formas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Isometrias de espaços com formas</span></span>
+      <a href="../AlgebraLinearI/10_alglin1.html" class="pagination-link" aria-label="Ângulos e ortogonalidade">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ângulos e ortogonalidade</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/autoadjuntos.html" class="pagination-link" aria-label="Operadores autoadjuntos">
-        <span class="nav-page-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
