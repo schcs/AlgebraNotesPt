@@ -1413,16 +1413,15 @@ window.Quarto = {
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
 <li><p>Trabalhamos por indução sobre <span class="math inline">\(n-s\)</span>. Caso <span class="math inline">\(n-s = 0\)</span>, então <span class="math inline">\(W = V\)</span> e já temos uma base ortogonal (<span class="math inline">\(B\)</span>) de <span class="math inline">\(V\)</span>. Suponha que o resultado vale para qualquer <span class="math inline">\(k\)</span> com <span class="math inline">\(n-k\)</span> menor do que <span class="math inline">\(n-s\)</span>. Pegue um vetor <span class="math inline">\(\ul{u}\)</span> de <span class="math inline">\(V\)</span> que não pertence a <span class="math inline">\(W\)</span>. Queremos manipular <span class="math inline">\(\ul{u}\)</span> para um vetor perpendicular a cada <span class="math inline">\(\ul{w_i}\)</span>. Afirmo que <span class="math display">\[\ul{w_{s+1}} = \ul{u} - \tn{proj}_{\ul{w_1}}(\ul{u}) - \cdots - \tn{proj}_{\ul{w_s}}(\ul{u})\]</span> serve. Primeiro, observe que <span class="math inline">\(\tn{proj}_{\ul{w_i}}(\ul{u})\)</span> é um múltiplo escalar de <span class="math inline">\(\ul{w_i}\)</span>, logo <span class="math inline">\(\ul{w_{s+1}}\)</span> é uma combinação linear não nula do conjunto LI <span class="math inline">\(\{\ul{u},\ul{w_1},\ldots,\ul{w_s}\}\)</span>, logo <span class="math inline">\(\ul{w_{s+1}}\neq \ul{0}\)</span>.</p>
-<p>Para cada <span class="math inline">\(i\)</span>, temos $$</p>
+<p>Para cada <span class="math inline">\(i\)</span>, temos</p>
 <span class="math display">\[\begin{aligned}
   \langle \ul{w_{s+1}},\ul{w_i}\rangle &amp; = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_1}}(\ul{u}),\ul{w_i}\rangle - \cdots - \langle \tn{proj}_{\ul{w_s}}(\ul{u}),\ul{w_i}\rangle \\  
   &amp; = \langle \ul{u},\ul{w_i}\rangle - 0 - \cdots - 0 - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle - 0 - \cdots - 0 \\
   &amp; = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
   &amp; = \langle \ul{u} - \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
   &amp; = 0.\qquad\checkmark
-
 \end{aligned}\]</span>
-<p>$$ Agora, o subespaço com base ortogonal <span class="math inline">\(B\cup\{\ul{w_{s+1}}\}\)</span> satisfaz as condições do teorema e tem dimensão <span class="math inline">\(s+1\)</span>. Já que <span class="math inline">\(n-(s+1) &lt; n-s\)</span>, pela hipótese de indução, podemos estender a base <span class="math inline">\(B\cup \{\ul{w_{s+1}}\}\)</span> para uma base ortogonal de <span class="math inline">\(V\)</span>.</p></li>
+<p>Agora, o subespaço com base ortogonal <span class="math inline">\(B\cup\{\ul{w_{s+1}}\}\)</span> satisfaz as condições do teorema e tem dimensão <span class="math inline">\(s+1\)</span>. Já que <span class="math inline">\(n-(s+1) &lt; n-s\)</span>, pela hipótese de indução, podemos estender a base <span class="math inline">\(B\cup \{\ul{w_{s+1}}\}\)</span> para uma base ortogonal de <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Começando com o subconjunto vazio <span class="math inline">\(\varnothing\)</span> de <span class="math inline">\(V\)</span>, aplique o processo da primeira parte <span class="math inline">\(n\)</span> vezes para obter uma base ortogonal de <span class="math inline">\(V\)</span>. Depois simplesmente multiplique cada vetor <span class="math inline">\(\ul{w}\)</span> em nossa base ortogonal pelo número <span class="math inline">\(\frac{1}{\|\ul{w}\|}\)</span> para obter uma base ortonormal de <span class="math inline">\(V\)</span>.</p></li>
 </ol>
 <p>&nbsp;◻</p>
@@ -1493,6 +1492,24 @@ window.Quarto = {
   &amp; = (1,0,0) - (1/2,0,1/2) \\
   &amp; = (1/2,0,-1/2)
 \end{aligned}\]</span> gera o complemento ortogonal de <span class="math inline">\(W\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 49.7</strong></span> Vamos calcular uma base ortogonal para o espaço vetorial dos polinômios de grau no máximo 2, com o produto interno dado por <span class="math display">\[\langle f, g \rangle = \int_0^1 f(x)g(x) \, dx.\]</span></p>
+<p>Começamos com a base padrão <span class="math inline">\(\{1, x, x^2\}\)</span> e aplicamos o processo de Gram-Schmidt.</p>
+<ol type="1">
+<li><p>Primeiro vetor ortogonal: <span class="math display">\[\ul{p_1}(x) = 1.\]</span></p></li>
+<li><p>Segundo vetor ortogonal: <span class="math display">\[\ul{p_2}(x) = x - \frac{\langle x, 1 \rangle}{\langle 1, 1 \rangle} \cdot 1 = x - \int_0^1 x \, dx = x - \frac{1}{2}.\]</span></p></li>
+<li><p>Terceiro vetor ortogonal: <span class="math display">\[\begin{aligned}
+\ul{p_3}(x) &amp; = x^2 - \frac{\langle x^2, 1 \rangle}{\langle 1, 1 \rangle} \cdot 1 - \frac{\langle x^2, x - \frac{1}{2} \rangle}{\langle x - \frac{1}{2}, x - \frac{1}{2} \rangle} \cdot \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - \int_0^1 x^2 \, dx - \frac{\int_0^1 x^2 \left( x - \frac{1}{2} \right) \, dx}{\int_0^1 \left( x - \frac{1}{2} \right)^2 \, dx} \cdot \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - \frac{1}{3} - \frac{\int_0^1 x^3 - \frac{1}{2}x^2 \, dx}{\int_0^1 x^2 - x + \frac{1}{4} \, dx} \cdot \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - \frac{1}{3} - \frac{\left( \frac{1}{4} - \frac{1}{6} \right)}{\left( \frac{1}{3} - \frac{1}{2} + \frac{1}{4} \right)} \cdot \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - \frac{1}{3} - \frac{\frac{1}{12}}{\frac{1}{12}} \cdot \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - \frac{1}{3} -  \left( x - \frac{1}{2} \right) \\
+&amp; = x^2 - x + \frac{1}{6}.
+\end{aligned}\]</span></p></li>
+</ol>
+<p>Portanto, a base ortogonal é <span class="math inline">\(\{1, x - \frac{1}{2}, x^2 - x + \frac{1}{6}\}\)</span>.</p>
 </div>
 
 
