@@ -216,7 +216,7 @@ Uma propaganda para bases ortogonais/ortonormais: dado um vetor
 $\ul{v}$, é fácil escrever ele como combinação linear dos elementos de
 uma base ortogonal:
 
-:::{#prp-}
+:::{#prp-coeffs-ort-basis}
 Seja $B$ uma base ortogonal de $V$ e seja $\ul{v}$ um vetor de $V$.
 Então
 $$\ul{v} = \sum_{\ul{b}\in B}\frac{\langle\ul{v},\ul{b}\rangle}{\,\,\|\ul{b}\|^2}\,\ul{b}.$$
