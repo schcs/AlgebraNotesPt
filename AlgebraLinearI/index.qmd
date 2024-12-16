@@ -34,3 +34,4 @@ Material disponibilizado sob a licença
 - [Computação com Python II](02_alglin_comput.qmd)
 - [Ângulos e ortogonalidade](10_alglin1.qmd)
 - [Aplicação: A Teoria de Fourier](11_alglin1.qmd)
+- [O adjunto de uma transformação linear](12_alglin1.qmd)

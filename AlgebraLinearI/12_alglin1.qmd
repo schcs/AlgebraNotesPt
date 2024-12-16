@@ -1,0 +1,251 @@
+---
+title: "O adjunto de uma transformação linear"
+number-sections: true
+lang: pt-BR
+---
+
+
+Nestas próximas aulas, vamos conversando sobre relacionamentos entre
+conceitos que já temos. Se lembre que ainda deixamos aberta a questão de
+quais matrizes $A$ dão produtos internos $\langle-,-\rangle_A$. Vamos
+chegar lá ainda.
+
+## Produtos internos e o espaço dual {#produtos-internos-e-o-espaço-dual}
+
+Se lembre que o *espaço dual* $V^*$ do espaço vetorial $V$ é o espaço
+vetorial dos funcionais sobre $V$:
+$$V^* = \mathcal{L}(V,\R) = \{f:V\to \R\,|\,f\hbox{ uma TL}\}.$$
+
+Caso $V$ tem dimensão finita, escolha uma base $B$ de $V$. Escreva os
+vetores de $V$ como vetores de coordenadas com respeito a $B$, assim
+tratando $V$ como $\R^n$. Sabemos já (da seção "Transformações lineares
+e matrizes") que, escrevendo as TLs com respeito a essa base, obtemos um
+isomorfismo de espaços vetoriais $$\begin{aligned}
+M_{1,n}(\R) & \to V^* \\
+A & \mapsto f_A
+\end{aligned}$$ onde $f_A:V\to \R$ é a TL dada por
+$$f_A\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix} = \begin{pmatrix}a_1 & \cdots & a_n\end{pmatrix}\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix} = \sum_{i=1}^na_iv_i.$$
+
+Em particular, $\dim(V^*) = n$. Agora, suponha que $V$ é munido com um
+produto interno $\langle-,-\rangle$. Já que ele é bilinear, quando
+fixamos $\ul{u}$, a função $$\begin{aligned}
+  f_{\ul{u}}: V & \to\,\,\, \R \\
+  \ul{v}\, & \mapsto \langle \ul{u},\ul{v}\rangle
+\end{aligned}$$ é uma TL $V\to \R$. Ou seja, um elemento de $V^*$.
+
+:::{#thm-}
+A função $$\begin{aligned}
+  \rho :V & \to V^* \\
+  \ul{u} & \mapsto f_{\ul{u}}
+\end{aligned}$$ é um isomorfismo de espaços vetoriais.
+:::
+
+:::{.proof}
+Os espaços $V,V^*$ têm a mesma dimensão, então basta provar que $\rho$ é
+injetiva. Mas $\ul{u}\in \tn{Ker}(\rho)$ implica que $f_{\ul{u}}$ é a
+função nula. Ou seja, que $$\langle \ul{u},\ul{v}\rangle = 0$$ para todo
+$\ul{v}\in V$. Já que o produto é positivo definido, isso acontece se, e
+somente se, $\ul{u} = \ul{0}$. ◻
+:::
+
+:::{#exm-}
+O teorema diz que dada uma base $\{\ul{u_1},\ldots,\ul{u_n}\}$ de $V$,
+então
+$$\{f_{\ul{u_1}},\ldots,f_{\ul{u_n}}\} = \{\langle \ul{u_1},-\rangle,\ldots,\langle \ul{u_n},-\rangle\}$$
+é uma base de $V^*$.
+
+Pegue a base canônica $\{(1,0),(0,1)\}$ de $\R^2$. Vamos calcular as
+bases correspondentes de $(\R^2)^*$ com respeito a
+
+-   O produto interno normal: Neste caso,
+    $$f_{(1,0)}(x,y) = \langle(1,0),(x,y)\rangle = x$$ e
+    $$f_{(0,1)}(x,y) = \langle(0,1),(x,y)\rangle = y$$ são as projeções
+    sobre a primeira coordenada e a segunda coordenada, respetivamente.
+
+-   O produto interno vindo da matriz
+    $A = \begin{pmatrix}2 & -1 \\ -1 & 2\end{pmatrix}$: Neste caso,
+    $$f_{(1,0)}(x,y) = \langle (1,0),(x,y) \rangle_A = \begin{pmatrix} 1 & 0\end{pmatrix}\begin{pmatrix} 2 & -1 \\ -1 & 2\end{pmatrix}\begin{pmatrix} x \\ y\end{pmatrix} = 2x-y$$
+    e
+    $$f_{(0,1)}(x,y) = \langle (0,1),(x,y) \rangle_A = \begin{pmatrix} 0 & 1\end{pmatrix}\begin{pmatrix} 2 & -1 \\ -1 & 2\end{pmatrix}\begin{pmatrix} x \\ y\end{pmatrix} = -x+2y$$
+    dá uma base diferente.
+:::
+
+O teorema diz que qualquer funcional $f:V\to \R$ tem a forma
+$f = f_{\ul{u}}$ para um único vetor $\ul{u}$ de $V$. Diremos que
+$\ul{u}$ *representa* o funcional $f$.
+
+## A adjunta de uma transformação linear {#a-adjunta-de-uma-transformação-linear}
+
+Matrizes correspondem a transformações lineares, e propriedades das
+matrizes correspondem a certas propriedades das TLs correspondentes. Por
+exemplo, uma matriz quadrada $A$ é não singular (isto é,
+$\tn{Det}(A)\neq 0$) se, e somente se, a TL correspondente é um
+isomorfismo. A propriedade de uma matriz ser simétrica corresponde a o
+que com respeito à TL correspondente?
+
+:::{#thm-}
+Sejam $V,W$ espaços vetoriais de dimensão finita com produtos internos e
+$S$ de $V$ em $W$ uma transformação linear. Existe uma única TL
+$T:W\to V$ com a propriedade que
+$$\langle S(\ul{v}),\ul{w}\rangle = \langle \ul{v},T(\ul{w})\rangle$$
+para todo $\ul{v}\in V, \ul{w}\in W$. A transformação $T$ se chama a
+*adjunta* ou *transposta* da TL $S$.
+:::
+
+[Observação]{.underline}: Os dois produtos internos neste teorema são
+diferentes! O primeiro é o produto interno em $W$, enquanto o segundo é
+o produto interno em $V$.
+
+:::{.proof}
+
+$$\begin{aligned}
+ f_{\ul{w}}: V & \to \R \\
+  \ul{v}\, & \mapsto \langle S(\ul{v}),\ul{w}\rangle
+\end{aligned}$$ Essa função é, de fato, uma TL, sendo a composição de
+TLs $$V\xrightarrow{S}W\xrightarrow{\langle -,\ul{w}\rangle}\R.$$ Mas já
+decidimos, na última seção, que qualquer funcional $V\to \R$ pode ser
+representado por um único vetor de $V$, então seja $\ul{u}\in V$ o vetor
+que representa $f_{\ul{w}}$. Seja $T:W\to V$ a função que manda $\ul{w}$
+para $\ul{u}$. Temos que confirmar umas coisas:
+
+-   Que
+    $\langle S(\ul{v}),\ul{w}\rangle = \langle \ul{v},T(\ul{w})\rangle\,\forall \ul{v}\in V, \forall \ul{w}\in W$.
+    Mas essa igualdade está, de fato, dizendo exatamente que $T(\ul{w})$
+    representa o funcional $f_{\ul{w}}$ para todo $\ul{w}\in W$.
+
+-   $T$ é TL. Dados $\ul{w_1}, \ul{w_2}\in W$ e $\ul{v}\in V$,
+    \begin{aligned}
+      \langle \ul{v}, T(\ul{w_1})+T(\ul{w_2})\rangle & = \langle \ul{v}, T(\ul{w_1})\rangle + \langle \ul{v},T(\ul{w_2})\rangle \\ 
+      & = \langle S(\ul{v}), \ul{w_1}\rangle + \langle S(\ul{v}),\ul{w_2}\rangle \\ 
+      & = \langle S(\ul{v}), \ul{w_1}+\ul{w_2}\rangle  \\
+      & = \langle \ul{v}, T(\ul{w_1}+\ul{w_2})\rangle.
+      
+    \end{aligned} Segue que ambos $T(\ul{w_1})+T(\ul{w_2})$ e
+    $T(\ul{w_1}+\ul{w_2})$ representam o mesmo funcional, então pelo
+    teorema anterior de novo, eles são iguais.
+
+    [Exercício]{.underline}: confirme que
+    $T(\lambda \ul{w}) = \lambda T(\ul{w})$.
+
+ ◻
+:::
+
+O nome "transposta" dá uma dica sobre qual será a matriz de $T$. A
+seguinte proposição também mostra mais uma utilidade de bases
+ortonormais:
+
+:::{#prp-}
+Sejam $B,C$ bases ortonormais de $V,W$ respetivamente e suponha que
+$S:V\to W$ é dada pela matriz $$[S]_C^B = A.$$ Então a adjunta
+$T:W\to V$ de $S$ é dada pela matriz transposta $$[T]_B^C = A^{t}.$$
+:::
+
+:::{.proof}
+Seja $\ul{v}$ um elemento de $V$. Já que temos uma base
+ortonormal $C$ de $W$, segue da propaganda para tais bases que o
+elemento
+$$S(\ul{v}) = \sum_{\ul{c_i}\in C}\langle S(\ul{v}),\ul{c_i}\rangle \ul{c_i}.$$
+Em particular, para cada elemento $\ul{b_k}$ de $B$,
+$$S(\ul{b_k}) = \sum_{\ul{c_i}\in C}\langle S(\ul{b_k}),\ul{c_i}\rangle \ul{c_i}.$$
+Pela construção da matriz de uma TL (tendo colunas os vetores de
+coordenadas dos $S(\ul{b_j})$), a matriz $X$ de $S$ com respeito a essas
+bases é $$[S]_C^B = (\langle S(\ul{b_j}),\ul{c_i}\rangle)_{ij}.$$ Para
+ver isso diretamente:
+$$X\ul{b_k} = (\langle S(\ul{b_j}),\ul{c_i}\rangle)_{ij}\begin{pmatrix}0 \\ \vdots \\ 1 \\ \vdots \\ 0\end{pmatrix} = 
+\begin{pmatrix}\langle S(b_k),\ul{c_1}\rangle \\ \langle S(b_k),\ul{c_2}\rangle \\ \vdots \\ \langle S(b_k),\ul{c_n}\rangle\end{pmatrix} = 
+\sum_{i=1}^n \langle S(b_k),\ul{c_i}\rangle \ul{c_i} = S(\ul{b_k}). \quad\checkmark$$
+O mesmo argumento mostra que a $(j,i)$-ésima entrada da matriz de
+$T:W\to V$ com respeito a essas bases é $$\begin{aligned}
+([T]_B^C)_{ji} & = \langle T(\ul{c_i}),\ul{b_j}\rangle  \\
+    & = \langle\ul{b_j}, T(\ul{c_i})\rangle\qquad(\hbox{produto interno simétrico}) \\
+    & = \langle S(\ul{b_j}), \ul{c_i}\rangle\qquad(T\hbox{ adjunta a }S) \\
+    & = ([S]_C^B)_{ij}.
+\end{aligned}$$ Ou seja, $[T]_B^C = ([S]_C^B)^t$. ◻
+:::
+
+:::{#exm-}
+Considere $\R^2$ com a base canônica e produto interno
+$\langle-,-\rangle$ normal. Observe que com respeito ao produto dado,
+esta base é ortonormal. Seja $S:\R^2\to \R^2$ a TL dada por
+$$S(1,0) = (0,1)\,,\, S(0,1) = (1,1).$$ Então, $S$ é dada pela matriz
+$$X = \begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}.$$ A proposição diz
+que a matriz da adjunta $T : \R^2\to \R^2$ é
+$$X^t = \begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}^t = X.$$ Por
+exemplo, a proposição diz que dados $\ul{u} = (1,2), \ul{v} = (3,4)$,
+temos
+$$\left\langle \begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}\begin{pmatrix} 1 \\ 2\end{pmatrix}\,,\, \begin{pmatrix} 3 \\ 4\end{pmatrix}\right\rangle
+= \left\langle \begin{pmatrix} 1 \\ 2\end{pmatrix}\,,\, \begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}\begin{pmatrix} 3 \\ 4\end{pmatrix}\right\rangle.$$
+O lado esquerdo é
+$$\langle(2,3), (3,4)\rangle = (2,3)\cdot (3,4) = 6 + 12 = 18.$$ O lado
+direito é
+$$\langle(1,2), (4,7)\rangle = (1,2)\cdot (4,7) = 4 + 14 = 18.\quad\checkmark$$
+:::
+
+## Operadores autoadjuntos
+
+:::{#def-}
+Sejam $V$ um espaço vetorial de dimensão finita com produto interno e
+$S:V\to V$ um operador (isto é, endomorfismo) de $V$. Dizemos que $S$ é
+*auto-adjunto* ou *simétrico* se o seu operador adjunto $T = S$.
+:::
+
+Ou seja, $S$ é auto-adjunto se, e somente se,
+$$\langle S(\ul{u}),\ul{v}\rangle = \langle \ul{u},S(\ul{v})\rangle\quad\forall \ul{u},\ul{v}\in V.$$
+
+Conclusão fácil das contas até agora:
+
+:::{#prp-}
+Seja $S:V\to V$ um operador e seja $B$ uma base ortonormal de $V$. Então
+$S$ é auto-adjunto se, e somente se, a matriz $$[S]_B^B$$ é simétrica.
+:::
+
+:::{.proof}
+Seja $A$ a matriz de $S$ com respeito a $B$ (ou seja, $[S]_B^B = A$).
+Já que $B$ é ortonormal, a matriz do adjunto $T$ de $S$
+é $A^t$. Logo, o operador é autoadjunto se, e somente se,
+$$A^t = [T]_B^B = [S]_B^B = A.$$ ◻
+:::
+
+:::{#exm-}
+A TL do último exemplo com matriz
+$\begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}$ é auto-adjunto, já que a
+matriz com respeito à base canônica de $\R^2$ é simétrica.
+:::
+
+:::{#exm-}
+Considere $\R^2$ com produto escalar normal e considere a base
+$B = \{(1,1)\,,\,(0,1)\}$. A TL $S$ dada pela matriz
+$$[S]_B^B = \begin{pmatrix} 4 & 3 \\ 1 & -1\end{pmatrix}$$ é
+auto-adjunto? Para saber, o jeito mais fácil é encontrar a matriz de $S$
+com respeito a uma base ortonormal (qualquer!) de $\R^2$. Vamos escolher
+uma base ortonormal esquisita só para ver, então pegue
+$$C = \left\{(1/\sqrt{2}\,,\,1/\sqrt{2})\,,\, (-1/\sqrt{2}\,,\,1/\sqrt{2})\right\}.$$
+Temos $$[I]_B^C = \begin{pmatrix}
+1/\sqrt{2} & -1/\sqrt{2} \\
+0 & 2/\sqrt{2}
+\end{pmatrix}\,,\quad [I]_C^B = \begin{pmatrix}
+2/\sqrt{2} & 1/\sqrt{2} \\
+0 & 1/\sqrt{2}
+\end{pmatrix}.$$ 
+Logo com respeito à base ortonormal $C$, a matriz de
+$S$ é $$\begin{aligned}
+  {}[S]_C^C & = [I]_C^B\cdot[S]_B^B\cdot[I]_B^C \\
+  & = \begin{pmatrix}
+2/\sqrt{2} & 1/\sqrt{2} \\
+0 & 1/\sqrt{2}
+\end{pmatrix}\begin{pmatrix}
+4 & 3 \\
+1 & -1
+\end{pmatrix}\begin{pmatrix}
+1/\sqrt{2} & -1/\sqrt{2} \\
+0 & 2/\sqrt{2}
+\end{pmatrix} \\
+& = \begin{pmatrix}
+9/2 & 1/2 \\
+1/2 & -3/2
+\end{pmatrix}\qquad \longleftarrow\hbox{ Matriz simétrica!}
+\end{aligned}$$ Logo, o operador $S$ é auto-adjunto.
+
+[Exercício]{.underline}: Calcule a matriz de $S$ com respeito à base
+canônica.
+:::
