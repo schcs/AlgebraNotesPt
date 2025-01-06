@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>73&nbsp; Operadores ortogonais – Álgebra</title>
+<title>52&nbsp; Diagonalização de operadores autoadjuntos – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/so_2_so_3.html" rel="next">
-<link href="../AlgebraLinearII/normais.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/12_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/13_alglin1.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização de operadores autoadjuntos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1021,7 +1021,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/13_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/13_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização de operadores autoadjuntos</span></span></a>
   </div>
 </li>
@@ -1158,7 +1158,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
   </div>
 </li>
@@ -1306,15 +1306,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#autovalores-de-matrizes-simátricas" id="toc-autovalores-de-matrizes-simátricas" class="nav-link active" data-scroll-target="#autovalores-de-matrizes-simátricas"><span class="header-section-number">52.1</span> Autovalores de matrizes simátricas</a></li>
+  <li><a href="#diagonalização-de-operadores-auto-adjuntos" id="toc-diagonalização-de-operadores-auto-adjuntos" class="nav-link" data-scroll-target="#diagonalização-de-operadores-auto-adjuntos"><span class="header-section-number">52.2</span> Diagonalização de operadores auto-adjuntos</a></li>
+  <li><a href="#produtos-internos-positivos-definidos" id="toc-produtos-internos-positivos-definidos" class="nav-link" data-scroll-target="#produtos-internos-positivos-definidos"><span class="header-section-number">52.3</span> Produtos internos positivos definidos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/13_alglin1.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização de operadores autoadjuntos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></h1>
+<h1 class="title"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização de operadores autoadjuntos</span></h1>
 </div>
 
 
@@ -1331,84 +1339,115 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math inline">\(\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\)</span> Nesta página consideramos <span class="math inline">\(\R^n\)</span> com o produto interno usual <span class="math inline">\(\langle-,-\rangle\)</span>.</p>
+<section id="autovalores-de-matrizes-simátricas" class="level2" data-number="52.1">
+<h2 data-number="52.1" data-anchor-id="autovalores-de-matrizes-simátricas"><span class="header-section-number">52.1</span> Autovalores de matrizes simátricas</h2>
+<p>Nessa parte, entram brevamente os números complexos (por isso introduzimos eles bem no início do curso). Vamos usar os fatos mencionados nas anotações sobre <span class="math inline">\(\C\)</span>, então se não lembrar de alguma coisa, talvez vale a pena dar uma segunda olhada. Em particular, se lembre que dado um número complexo <span class="math inline">\(z = a+bi\)</span>, <span class="math inline">\(\overline{z}\)</span> denota o seu <em>conjugado complexo</em> <span class="math inline">\(a-bi\)</span>.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 52.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz simétrica com entradas em <span class="math inline">\(\R\)</span>. Os autovalores de <span class="math inline">\(A\)</span> são números reais.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Pelo Teorema fundamental de álgebra, existe uma raiz <span class="math inline">\(\lambda\in \C\)</span> do polinômio caraterístico de <span class="math inline">\(A\)</span>. Queremos mostrar que <span class="math inline">\(\lambda\in \R\)</span>. Sendo raiz do polinômio caraterístico de <span class="math inline">\(A\)</span> quer dizer que <span class="math inline">\(\det(A - \lambda I) = \ul{0}\)</span>. Logo, existe um vetor <span class="math inline">\(\ul{v} = \begin{pmatrix}
+v_1 \\ \vdots \\ v_n
+\end{pmatrix} \neq \ul{0}\)</span> com a propriedade que <span class="math display">\[A\ul{v} = \lambda \ul{v}.\]</span> Só que as entradas do vetor <span class="math inline">\(\ul{v}\)</span> poderiam ser números complexos. Mesmo assim, já que as entradas de <span class="math inline">\(A\)</span> são reais, obtemos <span class="math display">\[A\ul{v} = \lambda \ul{v} \implies \overline{A\ul{v}} = \overline{\lambda \ul{v}} \implies A\overline{\ul{v}} = \overline{\lambda} \overline{\ul{v}},\]</span> onde <span class="math inline">\(\overline{\ul{v}} = \begin{pmatrix}
+\overline{v_1} \\ \vdots \\ \overline{v_n}
+\end{pmatrix}\)</span>. Multiplicando por vetores espertos: <span class="math display">\[A\ul{v} = \lambda\ul{v} \implies \overline{\ul{v}}^tA\ul{v} = \overline{\ul{v}}^t\lambda \ul{v} = \lambda \overline{\ul{v}}^t \ul{v} = \lambda \sum_{i=1}^n\|v_i\|^2,\]</span> <span class="math display">\[A\overline{\ul{v}} = \overline{\lambda}\overline{\ul{v}} \implies \ul{v}^tA\overline{\ul{v}} = \ul{v}^t\overline{\lambda}\overline{\ul{v}} = \overline{\lambda} \ul{v}^t\overline{\ul{v}} = \overline{\lambda} \sum_{i=1}^n\|v_i\|^2.\]</span> Agora usamos que <span class="math inline">\(A\)</span> é simétrica: temos <span class="math display">\[\ul{v}^tA\overline{\ul{v}} = (\ul{v}^tA\overline{\ul{v}})^t = \overline{\ul{v}}^tA^t\ul{v} = \overline{\ul{v}}^tA\ul{v}.\]</span> Então subtraindo as duas equações acima uma da outra: <span class="math display">\[0 = \overline{\ul{v}}^tA\ul{v} - \ul{v}^tA\overline{\ul{v}}
+= \lambda \sum_{i=1}^n\|\ul{v_i}\|^2 - \overline{\lambda} \sum_{i=1}^n\|\ul{v_i}\|^2 = (\lambda - \overline{\lambda})\sum_{i=1}^n\|\ul{v_i}\|^2.\]</span> Mas <span class="math inline">\(\ul{v}\neq \ul{0}\)</span>, logo <span class="math inline">\(\sum_{i=1}^n\|\ul{v_i}\|^2\neq 0\)</span>. Segue que <span class="math inline">\(\lambda = \overline{\lambda}\)</span>, ou seja, que <span class="math inline">\(\lambda\in \R\)</span>.&nbsp;◻</p>
+</div>
+<p>Seja <span class="math inline">\(A\)</span> uma matriz simétrica com entradas em <span class="math inline">\(\R\)</span> e <span class="math inline">\(\lambda\)</span> um autovalor de <span class="math inline">\(A\)</span>, um número real pelo teorema. Segue que a matriz real <span class="math display">\[A - \lambda I\]</span> tem determinante <span class="math inline">\(0\)</span>, ou seja, que existe uma solução não trivial da equação <span class="math inline">\(A\ul{v} = \lambda\ul{v}\)</span> em <span class="math inline">\(\R^n\)</span>. Segue que associado a cada autovalor real de <span class="math inline">\(A\)</span> é um autovetor em <span class="math inline">\(\R^n\)</span> (em vez de <span class="math inline">\(\C^n\)</span>). Então, no fim das contas, com matrizes simétricas, os números complexos desparaceram de novo e podemos continuar trabalhando com espaços vetoriais reais.</p>
+</section>
+<section id="diagonalização-de-operadores-auto-adjuntos" class="level2" data-number="52.2">
+<h2 data-number="52.2" data-anchor-id="diagonalização-de-operadores-auto-adjuntos"><span class="header-section-number">52.2</span> Diagonalização de operadores auto-adjuntos</h2>
+<p>Nesta seção, seja <span class="math inline">\(V\)</span> um espaço de dimensão finita com produto interno. Se lembre que o operador <span class="math inline">\(T:V\to V\)</span> é auto-adjunto quando <span class="math display">\[\langle T(\ul{u}), \ul{v}\rangle = \langle \ul{u}, T(\ul{v})\rangle\]</span> para todo <span class="math inline">\(\ul{u},\ul{v}\in V\)</span>.</p>
+<p>Vamos mostrar que <span class="math inline">\(T\)</span> é diagonalizável. Se lembre que um subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span> é <em>invariante</em> sobre <span class="math inline">\(T\)</span> se <span class="math inline">\(T(W)\subseteq W\)</span>. O ponto dessa definição é: quando <span class="math inline">\(W\)</span> é invariante sobre <span class="math inline">\(T\)</span>, então podemos restringir, tratando <span class="math inline">\(T\)</span> como LT de <span class="math inline">\(W\)</span> a <span class="math inline">\(W\)</span> (que não faria sentido caso <span class="math inline">\(T(W)\not\subseteq W\)</span>).</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 52.1</strong></span> Suponha que o subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span> é invariante sobre o operador auto-adjunto <span class="math inline">\(T\)</span>. Então, o seu complemento ortogonal <span class="math inline">\(W^{\perp}\)</span> também será.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Temos que confirmar que <span class="math inline">\(\ul{v}\in W^{\perp} \implies T(\ul{v})\perp \ul{w}\)</span> para todo <span class="math inline">\(\ul{w}\in W\)</span>. Mas <span class="math display">\[\langle T(\ul{v}) , \ul{w}\rangle = \langle \ul{v},T(\ul{w})\rangle = 0,\]</span> pois <span class="math inline">\(T(\ul{w})\in W\)</span> e <span class="math inline">\(\ul{v}\in W^{\perp}\)</span>. Então <span class="math inline">\(T(\ul{v})\in W^{\perp}\)</span>.&nbsp;◻</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 52.2</strong></span> (“Teorema espectral”) Seja <span class="math inline">\(T\)</span> um operador auto-adjunto de <span class="math inline">\(V\)</span>. Existe uma base ortonormal <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> com cada <span class="math inline">\(\ul{b}\in B\)</span> um autovetor de <span class="math inline">\(T\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Vamos usar indução sobre a dimensão <span class="math inline">\(n\)</span> do espaço <span class="math inline">\(V\)</span>. Caso base: quando <span class="math inline">\(n=1\)</span>, então todo elemento <span class="math inline">\(\ul{b}\neq \ul{0}\)</span> de <span class="math inline">\(V\)</span> é autovetor de <span class="math inline">\(T\)</span>. A base <span class="math inline">\(\{\ul{b}/\|\ul{b}\|\}\)</span> de <span class="math inline">\(V\)</span> é uma base ortonormal de autovetores de <span class="math inline">\(T\)</span>.</p>
+<p>Agora suponha que o teorema vale para qualquer espaço vetorial de dimensão menor que <span class="math inline">\(n\)</span>. Já sabemos que a matriz <span class="math inline">\(A\)</span> de <span class="math inline">\(T\)</span> com respeito a qualquer base ortonormal de <span class="math inline">\(V\)</span> é simétrica, então pela seção anterior, <span class="math inline">\(A\)</span> (logo <span class="math inline">\(T\)</span>) possui um autovalor <span class="math inline">\(\lambda\in \R\)</span> com autovetor <span class="math inline">\(\ul{b_n}'\)</span>, logo um autovetor unitário <span class="math inline">\(\ul{b_n} = \ul{b_n}'/\|\ul{b_n}'\|\)</span>. O espaço <span class="math inline">\(W\)</span> gerado por <span class="math inline">\(\ul{b_n}\)</span> é <span class="math inline">\(T\)</span>-invariante, pois <span class="math display">\[T(\ul{b_n}) = \lambda\ul{b_n} \in W.\]</span> Segue pelo lema anterior que o espaço vetorial <span class="math inline">\(W^{\perp}\)</span> também é <span class="math inline">\(T\)</span>-invariante.</p>
+<p>Observe que <span class="math inline">\(T:W^{\perp}\to W^{\perp}\)</span> é auto-adjunto. Mas <span class="math inline">\(\dim(W^{\perp})&lt; \dim(V)\)</span>, então pela hipótese da indução, existe uma base ortonormal <span class="math inline">\(\{\ul{b_1}, \ldots, \ul{b_{n-1}}\}\)</span> de <span class="math inline">\(W^{\perp}\)</span> composta de autovetores de <span class="math inline">\(T\)</span>. Os vetores dessa base são ortogonais entre sí, e também <span class="math inline">\(\langle \ul{b_i}, \ul{b_n}\rangle = 0\,\forall i\in \{1,\ldots,n-1\}\)</span>, pois <span class="math inline">\(\ul{b_i}\in [\ul{b_n}]^{\perp}\)</span>. Concluímos então que <span class="math inline">\(\{\ul{b_1},\ldots,\ul{b_{n-1}},\ul{b_n}\}\)</span> é uma base ortonormal de <span class="math inline">\(V\)</span> composta de autovetores de <span class="math inline">\(T\)</span>.&nbsp;◻</p>
+</div>
+<p>Este teorema diz que dada uma TL auto-adjunto <span class="math inline">\(T:V\to V\)</span>, existe uma base ortonormal <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> com respeito a qual a matriz de <span class="math inline">\(T\)</span> é <span class="math display">\[[T]_B^B = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; &amp; 0 \\
+\vdots &amp; &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix}\]</span> onde os <span class="math inline">\(\lambda_i\)</span> são os autovalores de <span class="math inline">\(T\)</span>. Em termos de matrizes, o teorema espectral diz que cada matriz simétrica pode ser diagonalizada, e que a matriz <span class="math inline">\(P\)</span> tal que <span class="math inline">\(P^{-1}AP = D\)</span> tem uma forma especial.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 73.1</strong></span> A <b>distáncia</b> de <span class="math inline">\(v,w\in \R^n\)</span> está definida como <span class="math display">\[
-d(v,w)=\|v-w\|=\langle v-w,v-w\rangle^{1/2}.
-\]</span> Uma aplicação (não necessariamente linear) <span class="math inline">\(f:\R^n\to \R^n\)</span> é chamada de <b>isometria</b> se ela preserva distáncia. Ou seja, <span class="math display">\[
-d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in \R^n.
-\]</span></p>
+<p><span class="theorem-title"><strong>Definição 52.1</strong></span> Uma matriz <span class="math inline">\(n\times n\)</span> invertível <span class="math inline">\(P\)</span> é <em>ortogonal</em> se a sua inversa <span class="math inline">\(P^{-1} = P^t\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 52.1</strong></span> Mostre que a matriz <span class="math inline">\(P\)</span> é ortogonal se, e somente se, as suas colunas formam uma base <em>ortonormal</em> de <span class="math inline">\(\R^n\)</span> com respeito ao produto interno normal de <span class="math inline">\(\R^n\)</span>.</p>
+<p>DICA: Escreva <span class="math inline">\(P = \begin{pmatrix}
+P_1 &amp; \cdots &amp; P_n
+\end{pmatrix}\)</span> com <span class="math inline">\(P_i\)</span> as colunas de <span class="math inline">\(P\)</span>. Então <span class="math display">\[(P^tP)_{ij} = \langle P_i,P_j\rangle.\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 52.2</strong></span> Sejam <span class="math inline">\(B,C\)</span> duas bases ortonormais com respeito a algum produto interno. Mostre que a matriz <span class="math inline">\([I]_C^B\)</span> é ortogonal.</p>
+<p>DICA: Com respeito a uma base ortonormal <span class="math inline">\(C\)</span>, o produto interno “é” o produto interno normal. Isto é: <span class="math display">\[\left\langle \sum_{i=1}^n\lambda_i\ul{c_i}\,,\,\sum_{i=1}^n\mu_i\ul{c_i}\right\rangle = \sum_{i=1}^n \lambda_i\mu_i.\]</span></p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 52.3</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz simétrica <span class="math inline">\(n\times n\)</span>. Existe uma matriz ortogonal <span class="math inline">\(P\)</span> tal que <span class="math display">\[P^{t}AP\]</span> é uma matriz diagonal.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Podemos tratar <span class="math inline">\(A = [T]_C^C\)</span> como a matriz de uma TL auto-adjunta <span class="math inline">\(T:\R^n\to \R^n\)</span> com respeito à base canônica <span class="math inline">\(C\)</span> de <span class="math inline">\(\R^n\)</span> com produto interno normal. Pelo teorema espectral, existe uma base ortonormal <span class="math inline">\(B\)</span> de <span class="math inline">\(\R^n\)</span> com respeito a qual <span class="math display">\[[T]_B^B = [I]_C^B[T]_C^C[I]_B^C\]</span> é diagonal. A matriz <span class="math inline">\(P = [I]_B^C\)</span> tem colunas os vetores da base ortonormal <span class="math inline">\(B\)</span>, logo <span class="math inline">\(P\)</span> é uma matriz ortogonal. Segue de tudo isso que <span class="math display">\[P^{-1}AP = P^tAP\]</span> é uma matriz diagonal.&nbsp;◻</p>
+</div>
+</section>
+<section id="produtos-internos-positivos-definidos" class="level2" data-number="52.3">
+<h2 data-number="52.3" data-anchor-id="produtos-internos-positivos-definidos"><span class="header-section-number">52.3</span> Produtos internos positivos definidos</h2>
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita com base <span class="math inline">\(B = \{\ul{b_1},\ldots,\ul{b_n}\}\)</span>. Vamos entender produtos internos da forma <span class="math inline">\(\langle -,-\rangle_A\)</span>, mas observe que todo produto interno sobre <span class="math inline">\(V\)</span> tem essa forma:</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 52.3</strong></span> Escrevendo os vetores de <span class="math inline">\(V\)</span> em termos da base <span class="math inline">\(B\)</span>, mostre que toda forma bilinear <span class="math inline">\(\langle-,-\rangle : V\times V \to \R\)</span> tem a forma <span class="math inline">\(\langle -,-\rangle_A\)</span> com <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span>. Mais especificamente, a <span class="math inline">\((i,j)\)</span>-ésima entrada da matriz <span class="math inline">\(A\)</span> será <span class="math inline">\(\langle \ul{b_i}, \ul{b_j}\rangle\)</span>.</p>
+</div>
+Defina a forma bilinear simétrica <span class="math inline">\(\langle -,-\rangle_A\)</span> sobre <span class="math inline">\(V\)</span>, logo <span class="math inline">\(A\)</span> é uma matriz simétrica e o produto dos vetores <span class="math inline">\(\ul{u}, \ul{v}\)</span>, representados pelos seus vetores de coordenadas com respeito à base <span class="math inline">\(B\)</span>, é <span class="math display">\[\langle \ul{u},\ul{v}\rangle_A = \ul{u}^tA\ul{v}.\]</span> Já que <span class="math inline">\(A\)</span> é uma matriz simétrica, existe uma matriz invertível ortogonal <span class="math inline">\(P\)</span> tal que <span class="math display">\[P^tAP = D = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; &amp; 0 \\
+\vdots &amp; &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix},\]</span> onde <span class="math inline">\(\lambda_1,\cdots,\lambda_n\)</span> são os autovalores de <span class="math inline">\(A\)</span>. Queremos saber quando <span class="math inline">\(\langle-,-\rangle_A\)</span> é positivo definido, então vamos calcular o produto interno do vetor <span class="math inline">\(\ul{v}\)</span> com ele mesmo. Já que <span class="math inline">\(P\)</span> age como isomorfismo do espaço <span class="math inline">\(V\)</span>, escreva <span class="math inline">\(\ul{v} = P\ul{w}\)</span> para algum vetor <span class="math inline">\(\ul{w} = \begin{pmatrix}
+w_1 \\ \vdots \\ w_n
+\end{pmatrix}\in V\)</span>. Temos
+<span class="math display">\[\begin{aligned}
+   \langle \ul{v},\ul{v}\rangle_A
+   &amp; = \ul{v}^tA\ul{v} \\
+   &amp; = (P\ul{w})^t(PDP^t)(P\ul{w}) \\
+   &amp; = \ul{w}^t\cancel{P^tP}D\cancel{P^tP}\ul{w} \\
+   &amp; = \ul{w}^tD\ul{w} \\
+   &amp; = \begin{pmatrix}
+w_1 &amp; \cdots &amp; w_n
+\end{pmatrix} \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; &amp; 0 \\
+\vdots &amp; &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{pmatrix} \begin{pmatrix}
+w_1 \\ \vdots \\ w_n
+\end{pmatrix} \\
+&amp; = \lambda_1 {w_1}^2 + \cdots + \lambda_n {w_n}^2.
+\end{aligned}\]</span>
+<p>Resumindo:</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 52.4</strong></span> A forma bilinear simétrica <span class="math inline">\(\langle-,-\rangle_A\)</span> é um produto interno (isto é, positivo definido) se, e somente se, os autovalores da matriz simétrica <span class="math inline">\(A\)</span> são estritamente positivos.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Suponha que <span class="math inline">\(\lambda_1,\ldots, \lambda_n\)</span> são estritamente positivos. Todo vetor não nulo <span class="math inline">\(\ul{v}\)</span> de <span class="math inline">\(V\)</span> pode ser escrito como <span class="math inline">\(P\ul{w}\)</span> com <span class="math inline">\(\ul{w}\)</span> não nulo, logo <span class="math inline">\(w_i\neq 0\)</span> para algum <span class="math inline">\(i\)</span>. Então <span class="math display">\[\langle \ul{v},\ul{v}\rangle_A = \lambda_1 {w_1}^2 + \cdots + \lambda_n {w_n}^2 \geqslant \lambda_i {w_i}^2 &gt; 0.\quad\checkmark\]</span> Na outra direção, suponha que o autovalor <span class="math inline">\(\lambda_i\leqslant 0\)</span> e considere o vetor não nulo <span class="math inline">\(\ul{v} = P\ul{b_i}\)</span>. Então, <span class="math display">\[\langle \ul{v},\ul{v}\rangle_A = \lambda_i\cdot 1^2 \leqslant 0.\]</span> Então, <span class="math inline">\(\langle-,-\rangle_A\)</span> não é positivo definido.&nbsp;◻</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 73.1</strong></span> Se <span class="math inline">\(v_0\in \R^n\)</span>, então <span class="math inline">\(T_{v_0}:v\mapsto v+v_0\)</span> é uma isometria. Este exemplo mostra que uma isometria não precisa ser linear. Em <span class="math inline">\(\R^2\)</span>, a rotação <span class="math inline">\(R_{\alpha}\)</span> no redor da origem por <span class="math inline">\(\alpha\)</span> graus é também uma isometria. Note que <span class="math inline">\(R_\alpha\)</span> é linear.</p>
+<p><span class="theorem-title"><strong>Exemplo 52.1</strong></span> Vamos olhar a minha forma bilinear preferida <span class="math inline">\(\langle -,-\rangle_A\)</span> sobre <span class="math inline">\(\R^2\)</span>, dada pela matriz <span class="math display">\[A = \begin{pmatrix}
+2 &amp; -1 \\ -1 &amp; 2
+\end{pmatrix}.\]</span> Já sabemos que ela é um produto interno, então os autovalores de <span class="math inline">\(A\)</span> devem ser positivos. O polinômio caraterístico de <span class="math inline">\(A\)</span> é <span class="math display">\[\tn{Det}\begin{pmatrix}
+2 - \lambda &amp; -1 \\ -1 &amp; 2 - \lambda
+\end{pmatrix} = (2-\lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = (\lambda-1)(\lambda-3).\]</span> Então, os autovalores são os números (positivos!) <span class="math inline">\(\lambda = 1,\, \lambda = 3.\quad \checkmark\)</span></p>
 </div>
-<p>É imediato observar que uma isometria <span class="math inline">\(f:\R^n\to \R^n\)</span> é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas nós não provaremos esta afirmação por falta de tempo.</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 73.1</strong></span> As seguintes são equivalentes para uma transformação linear <span class="math inline">\(f:\R^n\to \R^n\)</span>.</p>
-<ul>
-<li><span class="math inline">\(f\)</span> preserva o produto interno em <span class="math inline">\(\R^n\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a norma em <span class="math inline">\(\R^n\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a distância em <span class="math inline">\(\R^n\)</span></li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(f\)</span> preserva produto interno. Então, para todo <span class="math inline">\(v\in V\)</span>, <span class="math display">\[
-\|f(v)\|^2=\langle f(v),f(v)\rangle =\langle v,v\rangle=\|v\|.
-\]</span> Ou seja, <span class="math inline">\(f\)</span> preserva a norma.</p>
-<p>Agora, assuma que <span class="math inline">\(f\)</span> preserva a norma. Então temos para todo <span class="math inline">\(v,w\in V\)</span> que <span class="math display">\[
-d(f(v),f(w))=\|f(v)-f(w)\|=\|f(v-w)\|=\|v-w\|=d(v,w).
-\]</span> Logo <span class="math inline">\(f\)</span> preserva distância. Note que no meio da equação anterior, usamos que <span class="math inline">\(f\)</span> é linear.</p>
-<p>Assuma agora que <span class="math inline">\(f\)</span> preserva distância. Note para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
-\|f(v)\|=d(0,f(v))=d(0,v)=\|v\|
-\]</span> e assim <span class="math inline">\(f\)</span> preserva a norma. Note que no meio da linha anterior, usamos que <span class="math inline">\(f(0)=0\)</span>. Ora, temos pela identidade de polarização para <span class="math inline">\(v,w\in V\)</span>, que <span class="math display">\[\begin{align*}
-\langle f(v),f(w)\rangle&amp;=\frac 12(\|f(v)+f(w)\|-\|f(v)\|-\|f(w)\|)\\
-&amp;=\frac 12(\|f(v+w)\|-\|f(v)\|-\|f(w)\|)\\&amp;=\frac 12(\|v+w\|-\|v\|-\|w\|)\\
-&amp;=\langle v,w\rangle.
-\end{align*}\]</span> Logo, <span class="math inline">\(f\)</span> preserva produto interno.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 73.2</strong></span> Uma <b>transformação ortogonal</b> de <span class="math inline">\(\R^n\)</span> é uma isometria linear de <span class="math inline">\(\R^n\)</span>.</p>
-</div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 73.2</strong></span> Seja <span class="math inline">\(f:\R^n\to \R^n\)</span> uma transformação ortogonal e seja <span class="math inline">\(A\)</span> a sua matriz na base canônica. Então <span class="math inline">\(A^tA=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz ortogonal. Em particular, uma transformação ortogonal de <span class="math inline">\(\R^n\)</span> é invertível.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Note que a base canônica <span class="math inline">\(e_1,\ldots,e_n\)</span> é ortonormal. As colunas de <span class="math inline">\(A\)</span> são <span class="math inline">\(f(e_1),\ldots,f(e_n)\)</span>. Como <span class="math inline">\(f\)</span> preserva produto interno, estes vetores formam uma base ortonormal.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 73.1</strong></span> Seja <span class="math inline">\(f:\R^n \to \R^n\)</span> uma transformação ortogonal.</p>
-<ul>
-<li>O determinante de <span class="math inline">\(f\)</span> é <span class="math inline">\(\pm 1\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in\C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\overline \lambda\)</span> também é um autovalor de <span class="math inline">\(f\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in \C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(|\lambda|=1\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in \R\)</span> é uma autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\lambda=\pm 1\)</span>.</li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(A\)</span> a matriz de <span class="math inline">\(f\)</span> na base canônica e note que <span class="math display">\[
-1=\det I=\det AA^{-1}=\det AA^t=(\det A)^2.
-\]</span> Logo <span class="math inline">\(\det A=\pm 1\)</span>. Se <span class="math inline">\(\lambda\in\C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\overline \lambda\)</span> também é, pois <span class="math inline">\(\mbox{pcar}_f(t)\in\R[t]\)</span>. Para provar afirmação 3., considere o operador <span class="math inline">\(f_\C:\C^n\to\C^n\)</span>, <span class="math inline">\(f_\C(v)=Av\)</span> para todo <span class="math inline">\(v\in \C^n\)</span> considerado como vetor coluna. Note que <span class="math inline">\(f_\C^*\)</span> é a transformação <span class="math inline">\(v\mapsto A^tv\)</span>. Seja <span class="math inline">\(v\in \C^n\)</span> um autovetor com autovalor <span class="math inline">\(\lambda\in \C\)</span>. Agora <span class="math display">\[
-\lambda\overline \lambda\|v\|=\langle\lambda v,\lambda v\rangle = \langle Av,Av\rangle=\langle v,A^tAv\rangle=\langle v,v\rangle.
-\]</span> Como <span class="math inline">\(v\neq 0\)</span>, temos que <span class="math inline">\(\langle v,v\rangle\neq 0\)</span> e <span class="math inline">\(\lambda\overline\lambda=\|\lambda\|^2=1\)</span>. Finalmente, afirmação 4. segue trivialmente da afirmação 3.</p>
-</div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 73.3</strong></span> O conjunto das transformações ortogonais de <span class="math inline">\(\R^n\)</span> é denotado por <span class="math inline">\(O_n\)</span>. O conjunto das transformações ortogonais com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(SO_n\)</span>. O nome de <span class="math inline">\(O_n\)</span> é <b>grupo ortogonal</b> enquanto <span class="math inline">\(SO_n\)</span> é chamado de <b>grupo ortogonal especial</b>. Os grupos <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante <span class="math inline">\(1\)</span>.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 73.2</strong></span> Sejam <span class="math inline">\(f,g\in O_n\)</span>. Então</p>
-<ul>
-<li><span class="math inline">\(f\circ g\in O_n\)</span></li>
-<li>Se <span class="math inline">\(f,g\in SO_n\)</span>, então <span class="math inline">\(f\circ g\in SO_n\)</span>.</li>
-<li><span class="math inline">\(f^{-1}\in O_n\)</span></li>
-<li>Se <span class="math inline">\(f\in SO_n\)</span>, então <span class="math inline">\(f^{-1}\in SO_n\)</span>.</li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
-</div>
-<p>O lema anterior diz essentialmente que <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1830,13 +1869,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/normais.html" class="pagination-link" aria-label="Operadores normais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Operadores normais</span></span>
+      <a href="../AlgebraLinearI/12_alglin1.html" class="pagination-link" aria-label="O adjunto de uma transformação linear">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">O adjunto de uma transformação linear</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/so_2_so_3.html" class="pagination-link" aria-label="SO<sub>2</sub> e SO<sub>3</sub>">
-        <span class="nav-page-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
