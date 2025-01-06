@@ -1,0 +1,253 @@
+--- 
+title: "Diagonalização de operadores autoadjuntos"
+number-sections: true
+lang: pt-BR
+--- 
+
+## Autovalores de matrizes simátricas 
+
+Nessa parte, entram brevamente os números complexos (por isso
+introduzimos eles bem no início do curso). Vamos usar os fatos
+mencionados nas anotações sobre $\C$, então se não lembrar de alguma
+coisa, talvez vale a pena dar uma segunda olhada. Em particular, se
+lembre que dado um número complexo $z = a+bi$, $\overline{z}$ denota o
+seu *conjugado complexo* $a-bi$.
+
+:::{#thm-}
+Seja $A$ uma matriz simétrica com entradas em $\R$. Os autovalores de
+$A$ são números reais.
+:::
+
+:::{.proof}
+Pelo Teorema fundamental de álgebra, existe uma raiz
+$\lambda\in \C$ do polinômio caraterístico de $A$. Queremos mostrar que
+$\lambda\in \R$. Sendo raiz do polinômio caraterístico de $A$ quer dizer
+que $\det(A - \lambda I) = \ul{0}$. Logo, existe um vetor
+$\ul{v} = \begin{pmatrix}
+v_1 \\ \vdots \\ v_n
+\end{pmatrix} \neq \ul{0}$ com a propriedade que
+$$A\ul{v} = \lambda \ul{v}.$$ Só que as entradas do vetor $\ul{v}$
+poderiam ser números complexos. Mesmo assim, já que as entradas de $A$
+são reais, obtemos
+$$A\ul{v} = \lambda \ul{v} \implies \overline{A\ul{v}} = \overline{\lambda \ul{v}} \implies A\overline{\ul{v}} = \overline{\lambda} \overline{\ul{v}},$$
+onde $\overline{\ul{v}} = \begin{pmatrix}
+\overline{v_1} \\ \vdots \\ \overline{v_n}
+\end{pmatrix}$. Multiplicando por vetores espertos:
+$$A\ul{v} = \lambda\ul{v} \implies \overline{\ul{v}}^tA\ul{v} = \overline{\ul{v}}^t\lambda \ul{v} = \lambda \overline{\ul{v}}^t \ul{v} = \lambda \sum_{i=1}^n\|v_i\|^2,$$
+$$A\overline{\ul{v}} = \overline{\lambda}\overline{\ul{v}} \implies \ul{v}^tA\overline{\ul{v}} = \ul{v}^t\overline{\lambda}\overline{\ul{v}} = \overline{\lambda} \ul{v}^t\overline{\ul{v}} = \overline{\lambda} \sum_{i=1}^n\|v_i\|^2.$$
+Agora usamos que $A$ é simétrica: temos
+$$\ul{v}^tA\overline{\ul{v}} = (\ul{v}^tA\overline{\ul{v}})^t = \overline{\ul{v}}^tA^t\ul{v} = \overline{\ul{v}}^tA\ul{v}.$$
+Então subtraindo as duas equações acima uma da outra:
+$$0 = \overline{\ul{v}}^tA\ul{v} - \ul{v}^tA\overline{\ul{v}}
+= \lambda \sum_{i=1}^n\|\ul{v_i}\|^2 - \overline{\lambda} \sum_{i=1}^n\|\ul{v_i}\|^2 = (\lambda - \overline{\lambda})\sum_{i=1}^n\|\ul{v_i}\|^2.$$
+Mas $\ul{v}\neq \ul{0}$, logo $\sum_{i=1}^n\|\ul{v_i}\|^2\neq 0$. Segue
+que $\lambda = \overline{\lambda}$, ou seja, que $\lambda\in \R$. ◻
+:::
+
+Seja $A$ uma matriz simétrica com entradas em $\R$ e $\lambda$ um
+autovalor de $A$, um número real pelo teorema. Segue que a matriz real
+$$A - \lambda I$$ tem determinante $0$, ou seja, que existe uma solução
+não trivial da equação $A\ul{v} = \lambda\ul{v}$ em $\R^n$. Segue que
+associado a cada autovalor real de $A$ é um autovetor em $\R^n$ (em vez
+de $\C^n$). Então, no fim das contas, com matrizes simétricas, os
+números complexos desparaceram de novo e podemos continuar trabalhando
+com espaços vetoriais reais.
+
+## Diagonalização de operadores auto-adjuntos 
+
+Nesta seção, seja $V$ um espaço de dimensão finita com produto interno.
+Se lembre que o operador $T:V\to V$ é auto-adjunto quando
+$$\langle T(\ul{u}), \ul{v}\rangle = \langle \ul{u}, T(\ul{v})\rangle$$
+para todo $\ul{u},\ul{v}\in V$.
+
+Vamos mostrar que $T$ é diagonalizável. Se lembre que um subespaço $W$
+de $V$ é *invariante* sobre $T$ se $T(W)\subseteq W$. O ponto dessa
+definição é: quando $W$ é invariante sobre $T$, então podemos
+restringir, tratando $T$ como LT de $W$ a $W$ (que não faria sentido
+caso $T(W)\not\subseteq W$).
+
+:::{#lem-}
+Suponha que o subespaço $W$ de $V$ é invariante sobre o operador
+auto-adjunto $T$. Então, o seu complemento ortogonal $W^{\perp}$ também
+será.
+:::
+
+:::{.proof}
+Temos que confirmar que
+$\ul{v}\in W^{\perp} \implies T(\ul{v})\perp \ul{w}$ para todo
+$\ul{w}\in W$. Mas
+$$\langle T(\ul{v}) , \ul{w}\rangle = \langle \ul{v},T(\ul{w})\rangle = 0,$$
+pois $T(\ul{w})\in W$ e $\ul{v}\in W^{\perp}$. Então
+$T(\ul{v})\in W^{\perp}$. ◻
+:::
+
+:::{#thm-}
+("Teorema espectral") Seja $T$ um operador auto-adjunto de $V$. Existe
+uma base ortonormal $B$ de $V$ com cada $\ul{b}\in B$ um autovetor de
+$T$.
+:::
+
+:::{.proof}
+Vamos usar indução sobre a dimensão $n$ do espaço $V$. Caso
+base: quando $n=1$, então todo elemento $\ul{b}\neq \ul{0}$ de $V$ é
+autovetor de $T$. A base $\{\ul{b}/\|\ul{b}\|\}$ de $V$ é uma base
+ortonormal de autovetores de $T$.
+
+Agora suponha que o teorema vale para qualquer espaço vetorial de
+dimensão menor que $n$. Já sabemos que a matriz $A$ de $T$ com respeito
+a qualquer base ortonormal de $V$ é simétrica, então pela seção
+anterior, $A$ (logo $T$) possui um autovalor $\lambda\in \R$ com
+autovetor $\ul{b_n}'$, logo um autovetor unitário
+$\ul{b_n} = \ul{b_n}'/\|\ul{b_n}'\|$. O espaço $W$ gerado por $\ul{b_n}$
+é $T$-invariante, pois $$T(\ul{b_n}) = \lambda\ul{b_n} \in W.$$ Segue
+pelo lema anterior que o espaço vetorial $W^{\perp}$ também é
+$T$-invariante.
+
+Observe que $T:W^{\perp}\to W^{\perp}$ é auto-adjunto. Mas
+$\dim(W^{\perp})< \dim(V)$, então pela hipótese da indução, existe uma
+base ortonormal $\{\ul{b_1}, \ldots, \ul{b_{n-1}}\}$ de $W^{\perp}$
+composta de autovetores de $T$. Os vetores dessa base são ortogonais
+entre sí, e também
+$\langle \ul{b_i}, \ul{b_n}\rangle = 0\,\forall i\in \{1,\ldots,n-1\}$,
+pois $\ul{b_i}\in [\ul{b_n}]^{\perp}$. Concluímos então que
+$\{\ul{b_1},\ldots,\ul{b_{n-1}},\ul{b_n}\}$ é uma base ortonormal de $V$
+composta de autovetores de $T$. ◻
+:::
+
+Este teorema diz que dada uma TL auto-adjunto $T:V\to V$, existe uma
+base ortonormal $B$ de $V$ com respeito a qual a matriz de $T$ é
+$$[T]_B^B = \begin{pmatrix}
+ \lambda_1 & 0 & \cdots & 0 \\
+ 0 & \lambda_2 & & 0 \\
+ \vdots & & \ddots & \vdots \\
+ 0 & 0 & \cdots & \lambda_n
+ \end{pmatrix}$$ onde os $\lambda_i$ são os autovalores de $T$. Em
+termos de matrizes, o teorema espectral diz que cada matriz simétrica
+pode ser diagonalizada, e que a matriz $P$ tal que $P^{-1}AP = D$ tem
+uma forma especial.
+
+:::{#def-}
+Uma matriz $n\times n$ invertível $P$ é *ortogonal* se a sua inversa
+$P^{-1} = P^t$.
+:::
+
+:::{#exr-} 
+Mostre que a matriz $P$ é ortogonal se, e
+somente se, as suas colunas formam uma base *ortonormal* de $\R^n$ com
+respeito ao produto interno normal de $\R^n$.
+
+DICA: Escreva $P = \begin{pmatrix}
+ P_1 & \cdots & P_n
+ \end{pmatrix}$ com $P_i$ as colunas de $P$. Então
+$$(P^tP)_{ij} = \langle P_i,P_j\rangle.$$
+:::
+
+:::{#exr-}
+Sejam $B,C$ duas bases ortonormais com respeito
+a algum produto interno. Mostre que a matriz $[I]_C^B$ é ortogonal.
+
+DICA: Com respeito a uma base ortonormal $C$, o produto interno "é" o
+produto interno normal. Isto é:
+$$\left\langle \sum_{i=1}^n\lambda_i\ul{c_i}\,,\,\sum_{i=1}^n\mu_i\ul{c_i}\right\rangle = \sum_{i=1}^n \lambda_i\mu_i.$$
+:::
+
+:::{#thm-}
+Seja $A$ uma matriz simétrica $n\times n$. Existe uma matriz ortogonal
+$P$ tal que $$P^{t}AP$$ é uma matriz diagonal.
+:::
+
+:::{.proof}
+Podemos tratar $A = [T]_C^C$ como a matriz de uma TL
+auto-adjunta $T:\R^n\to \R^n$ com respeito à base canônica $C$ de $\R^n$
+com produto interno normal. Pelo teorema espectral, existe uma base
+ortonormal $B$ de $\R^n$ com respeito a qual
+$$[T]_B^B = [I]_C^B[T]_C^C[I]_B^C$$ é diagonal. A matriz $P = [I]_B^C$
+tem colunas os vetores da base ortonormal $B$, logo $P$ é uma matriz
+ortogonal. Segue de tudo isso que $$P^{-1}AP = P^tAP$$ é uma matriz
+diagonal. ◻
+:::
+
+## Produtos internos positivos definidos {#produtos-internos-positivos-definidos}
+
+Seja $V$ um espaço vetorial de dimensão finita com base
+$B = \{\ul{b_1},\ldots,\ul{b_n}\}$. Vamos entender produtos internos da
+forma $\langle -,-\rangle_A$, mas observe que todo produto interno sobre
+$V$ tem essa forma:
+
+:::{#exr-}
+Escrevendo os vetores de $V$ em termos da base
+$B$, mostre que toda forma bilinear
+$\langle-,-\rangle : V\times V \to \R$ tem a forma
+$\langle -,-\rangle_A$ com $A$ uma matriz $n\times n$. Mais
+especificamente, a $(i,j)$-ésima entrada da matriz $A$ será
+$\langle \ul{b_i}, \ul{b_j}\rangle$.
+:::
+
+Defina a forma bilinear simétrica $\langle -,-\rangle_A$ sobre $V$, logo
+$A$ é uma matriz simétrica e o produto dos vetores $\ul{u}, \ul{v}$,
+representados pelos seus vetores de coordenadas com respeito à base $B$,
+é $$\langle \ul{u},\ul{v}\rangle_A = \ul{u}^tA\ul{v}.$$ Já que $A$ é uma
+matriz simétrica, existe uma matriz invertível ortogonal $P$ tal que
+$$P^tAP = D = \begin{pmatrix}
+ \lambda_1 & 0 & \cdots & 0 \\
+ 0 & \lambda_2 & & 0 \\
+ \vdots & & \ddots & \vdots \\
+ 0 & 0 & \cdots & \lambda_n
+ \end{pmatrix},$$ onde $\lambda_1,\cdots,\lambda_n$ são os autovalores
+de $A$. Queremos saber quando $\langle-,-\rangle_A$ é positivo definido,
+então vamos calcular o produto interno do vetor $\ul{v}$ com ele mesmo.
+Já que $P$ age como isomorfismo do espaço $V$, escreva
+$\ul{v} = P\ul{w}$ para algum vetor $\ul{w} = \begin{pmatrix}
+ w_1 \\ \vdots \\ w_n
+ \end{pmatrix}\in V$. Temos 
+ \begin{aligned}
+   \langle \ul{v},\ul{v}\rangle_A 
+   & = \ul{v}^tA\ul{v} \\
+   & = (P\ul{w})^t(PDP^t)(P\ul{w}) \\
+   & = \ul{w}^t\cancel{P^tP}D\cancel{P^tP}\ul{w} \\
+   & = \ul{w}^tD\ul{w} \\
+   & = \begin{pmatrix}
+ w_1 & \cdots & w_n
+ \end{pmatrix} \begin{pmatrix}
+ \lambda_1 & 0 & \cdots & 0 \\
+ 0 & \lambda_2 & & 0 \\
+ \vdots & & \ddots & \vdots \\
+ 0 & 0 & \cdots & \lambda_n
+ \end{pmatrix} \begin{pmatrix}
+ w_1 \\ \vdots \\ w_n
+ \end{pmatrix} \\
+ & = \lambda_1 {w_1}^2 + \cdots + \lambda_n {w_n}^2.
+ 
+\end{aligned} 
+
+Resumindo:
+
+:::{#thm-}
+A forma bilinear simétrica $\langle-,-\rangle_A$ é um produto interno
+(isto é, positivo definido) se, e somente se, os autovalores da matriz
+simétrica $A$ são estritamente positivos.
+:::
+
+:::{.proof}
+Suponha que $\lambda_1,\ldots, \lambda_n$ são estritamente
+positivos. Todo vetor não nulo $\ul{v}$ de $V$ pode ser escrito como
+$P\ul{w}$ com $\ul{w}$ não nulo, logo $w_i\neq 0$ para algum $i$. Então
+$$\langle \ul{v},\ul{v}\rangle_A = \lambda_1 {w_1}^2 + \cdots + \lambda_n {w_n}^2 \geqslant \lambda_i {w_i}^2 > 0.\quad\checkmark$$
+Na outra direção, suponha que o autovalor $\lambda_i\leqslant 0$ e
+considere o vetor não nulo $\ul{v} = P\ul{b_i}$. Então,
+$$\langle \ul{v},\ul{v}\rangle_A = \lambda_i\cdot 1^2 \leqslant 0.$$
+Então, $\langle-,-\rangle_A$ não é positivo definido. ◻
+:::
+
+:::{#exm-}
+Vamos olhar a minha forma bilinear preferida $\langle -,-\rangle_A$
+sobre $\R^2$, dada pela matriz $$A = \begin{pmatrix}
+ 2 & -1 \\ -1 & 2
+ \end{pmatrix}.$$ Já sabemos que ela é um produto interno, então os
+autovalores de $A$ devem ser positivos. O polinômio caraterístico de $A$
+é $$\tn{Det}\begin{pmatrix}
+ 2 - \lambda & -1 \\ -1 & 2 - \lambda
+ \end{pmatrix} = (2-\lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = (\lambda-1)(\lambda-3).$$
+Então, os autovalores são os números (positivos!)
+$\lambda = 1,\, \lambda = 3.\quad \checkmark$
+:::
