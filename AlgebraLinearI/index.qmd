@@ -35,3 +35,4 @@ Material disponibilizado sob a licença
 - [Ângulos e ortogonalidade](10_alglin1.qmd)
 - [Aplicação: A Teoria de Fourier](11_alglin1.qmd)
 - [O adjunto de uma transformação linear](12_alglin1.qmd)
+- [Diagonalização de operadores autoadjuntos](13_alglin1.qmd)

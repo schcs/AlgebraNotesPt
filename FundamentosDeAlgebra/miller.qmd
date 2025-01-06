@@ -92,7 +92,8 @@ def TesteMiller( n ):
 ```
 
 É interessante notar que se a <a href="https://pt.wikipedia.org/wiki/Hip%C3%B3tese_generalizada_de_Riemann">Hipótese Generalizada de Riemann</a> (HGR) for verdadeira, o Teste de Miller pode ser usado para obter um teste de primalidade que precisa de tempo polinomial.
-<div class="conjecture">
+
+:::{#cnj-}
 Suponha que $n$ é um número composto ímpar. Então existe uma base $b\in\{2,\ldots,\lfloor 2(\log n)^2\rfloor\}$ tal que o número $n$ não é pseudoprimo forte para a base $b$
 :::
 
