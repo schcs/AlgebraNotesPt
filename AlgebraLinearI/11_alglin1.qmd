@@ -152,12 +152,12 @@ $$
 Considerando que o sistema é ortogonal, obtemos pela @prp-coeffs-ort-basis, que 
 \begin{align*}
 a_0 &= \frac{\langle f, 1 \rangle}{\|1\|^2} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \, dt;\\
-c_i &= \frac{\langle f, \cos(it) \rangle}{\|\cos(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(it) \, dt;\\
-s_i &= \frac{\langle f, \sen(it) \rangle}{\|\sen(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(it) \, dt
+c_m &= \frac{\langle f, \cos(mt) \rangle}{\|\cos(mt)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(mt) \, dt;\\
+s_m &= \frac{\langle f, \sen(mt) \rangle}{\|\sen(mt)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(mt) \, dt
 \end{align*}
 Assim obtemos que 
 \begin{align*}
-f(t) &= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&+ \sum_{m=1}^k \frac{1}{\pi}\left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+f(t) &= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
 \end{align*}
 
 Um teorema principal da Teoria de Fourier afirma que qualquer função $f\in C^0[-\pi,\pi]$ pode ser aproximada por combinações lineares como na linha anterior. 
@@ -167,7 +167,7 @@ Se $f\in C^0[-\pi,\pi]$, então
 \begin{align*}
 f(t) &= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
 \end{align*}
-no sentido que as sumas parciais finitas na expressão anterior convergem para $f$ na norma associada com o produto inteiro $\left<-,-\right>$. Ou seja, o subespaço $V$ é topologicamente denso em $C^0[-\pi,\pi]$. 
+no sentido que as somas parciais finitas na expressão anterior convergem para $f$ na norma associada com o produto inteiro $\left<-,-\right>$. Ou seja, o subespaço $V$ é topologicamente denso em $C^0[-\pi,\pi]$. 
 :::
 
 A demonstração do @thm-fourier está além dos objetivos desta disciplina, mas ele mostra como as ideias de ortogonailidade, projeção ortogonal, etc podem ser usadas em áreas fora da álgebra linear.
