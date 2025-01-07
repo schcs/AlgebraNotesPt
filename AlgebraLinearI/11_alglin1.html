@@ -1409,16 +1409,16 @@ window.Quarto = {
 f = a_0+\sum_{m=1}^k c_i\cos(mt)+\sum_{m=1}^k s_i\sen(mt).
 \]</span> Considerando que o sistema é ortogonal, obtemos pela <a href="10_alglin1.html#prp-coeffs-ort-basis" class="quarto-xref">Proposição&nbsp;<span>49.2</span></a>, que <span class="math display">\[\begin{align*}
 a_0 &amp;= \frac{\langle f, 1 \rangle}{\|1\|^2} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \, dt;\\
-c_i &amp;= \frac{\langle f, \cos(it) \rangle}{\|\cos(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(it) \, dt;\\
-s_i &amp;= \frac{\langle f, \sen(it) \rangle}{\|\sen(it)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(it) \, dt
+c_m &amp;= \frac{\langle f, \cos(mt) \rangle}{\|\cos(mt)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(mt) \, dt;\\
+s_m &amp;= \frac{\langle f, \sen(mt) \rangle}{\|\sen(mt)\|^2} = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sen(mt) \, dt
 \end{align*}\]</span> Assim obtemos que <span class="math display">\[\begin{align*}
-f(t) &amp;= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&amp;+ \sum_{m=1}^k \frac{1}{\pi}\left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
+f(t) &amp;= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^k \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
 \end{align*}\]</span></p>
 <p>Um teorema principal da Teoria de Fourier afirma que qualquer função <span class="math inline">\(f\in C^0[-\pi,\pi]\)</span> pode ser aproximada por combinações lineares como na linha anterior.</p>
 <div id="thm-fourier" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 50.1</strong></span> Se <span class="math inline">\(f\in C^0[-\pi,\pi]\)</span>, então <span class="math display">\[\begin{align*}
 f(t) &amp;= \frac{1}{2\pi} \left( \int_{-\pi}^{\pi} f(x) \, dx \right) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \cos(mx) \, dx \right) \cos(mt) \\&amp;+ \frac{1}{\pi}\sum_{m=1}^\infty \left(  \int_{-\pi}^{\pi} f(x) \sen(mx) \, dx \right) \sen(mt)
-\end{align*}\]</span> no sentido que as sumas parciais finitas na expressão anterior convergem para <span class="math inline">\(f\)</span> na norma associada com o produto inteiro <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Ou seja, o subespaço <span class="math inline">\(V\)</span> é topologicamente denso em <span class="math inline">\(C^0[-\pi,\pi]\)</span>.</p>
+\end{align*}\]</span> no sentido que as somas parciais finitas na expressão anterior convergem para <span class="math inline">\(f\)</span> na norma associada com o produto inteiro <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Ou seja, o subespaço <span class="math inline">\(V\)</span> é topologicamente denso em <span class="math inline">\(C^0[-\pi,\pi]\)</span>.</p>
 </div>
 <p>A demonstração do <a href="#thm-fourier" class="quarto-xref">Teorema&nbsp;<span>50.1</span></a> está além dos objetivos desta disciplina, mas ele mostra como as ideias de ortogonailidade, projeção ortogonal, etc podem ser usadas em áreas fora da álgebra linear.</p>
 
