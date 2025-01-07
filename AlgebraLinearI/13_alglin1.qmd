@@ -164,7 +164,7 @@ ortonormal $B$ de $\R^n$ com respeito a qual
 $$
 [T]_B^B = [I]_B^C[T]_C^C[I]_C^B
 $$ 
-é diagonal. A matriz $P = [I]_B^C$
+é diagonal. A matriz $P = [I]_C^B$
 tem colunas os vetores da base ortonormal $B$, logo $P$ é uma matriz
 ortogonal. Segue de tudo isso que $$P^{-1}AP = P^tAP$$ é uma matriz
 diagonal. ◻
