@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Relações de equivalência – Álgebra</title>
+<title>53&nbsp; A Lei da Inêrcia de Sylvester – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../IniciacaoAMatematica/equivalence_examples.html" rel="next">
-<link href="../IniciacaoAMatematica/relations.html" rel="prev">
+<link href="../AlgebraLinearII/index.html" rel="next">
+<link href="../AlgebraLinearI/13_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/14_alglin1.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A Lei da Inêrcia de Sylvester</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -717,7 +717,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/equivalence.html" class="sidebar-item-text sidebar-link active">
+  <a href="../IniciacaoAMatematica/equivalence.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></span></a>
   </div>
 </li>
@@ -1027,7 +1027,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/14_alglin1.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearI/14_alglin1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A Lei da Inêrcia de Sylvester</span></span></a>
   </div>
 </li>
@@ -1312,23 +1312,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
-   
-  <ul>
-  <li><a href="#relações-de-equivalência" id="toc-relações-de-equivalência" class="nav-link active" data-scroll-target="#relações-de-equivalência"><span class="header-section-number">5.1</span> Relações de equivalência</a></li>
-  <li><a href="#classes-de-equivalência" id="toc-classes-de-equivalência" class="nav-link" data-scroll-target="#classes-de-equivalência"><span class="header-section-number">5.2</span> Classes de equivalência</a></li>
-  <li><a href="#partições" id="toc-partições" class="nav-link" data-scroll-target="#partições"><span class="header-section-number">5.3</span> Partições</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/equivalence.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/14_alglin1.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A Lei da Inêrcia de Sylvester</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relações de equivalência</span></h1>
+<h1 class="title"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A Lei da Inêrcia de Sylvester</span></h1>
 </div>
 
 
@@ -1345,101 +1337,88 @@ window.Quarto = {
 </header>
 
 
-<section id="relações-de-equivalência" class="level2" data-number="5.1">
-<h2 data-number="5.1" data-anchor-id="relações-de-equivalência"><span class="header-section-number">5.1</span> Relações de equivalência</h2>
-<div id="def-eq-rel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Uma relação <span class="math inline">\(R\subseteq A\times A\)</span> é dita <em>relação de equivalência</em> se</p>
+<p>Nesta última seção da disciplina, vamos generalizar os conceitos de produto interno e norma. Primeiro, revise a definição de uma forma bilinear (<a href="09_alglin1.html#def-bilin" class="quarto-xref">Definição&nbsp;<span>47.2</span></a>).</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 53.1</strong></span> Uma <strong>forma quadrática</strong> em <span class="math inline">\(V\)</span> é uma aplicação <span class="math inline">\(Q:V\to \R\)</span> tal que</p>
 <ol type="1">
-<li><span class="math inline">\(R\)</span> é reflexiva (ou seja, <span class="math inline">\(aRa\)</span> para todo <span class="math inline">\(a\in A\)</span>);</li>
-<li><span class="math inline">\(R\)</span> é simétrica (ou seja <span class="math inline">\(aRb\)</span> implica <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>); e</li>
-<li><span class="math inline">\(R\)</span> é transitiva (ou seja <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implica <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>).</li>
+<li><span class="math inline">\(Q(\alpha v)=\alpha^2 Q(v)\)</span> para todo <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(\alpha\in\R\)</span> e</li>
+<li>a aplicação <span class="math inline">\((u,v)\mapsto 1/2\cdot (Q(u+v)-Q(u)-Q(v))\)</span> é uma forma bilinear simétrica.</li>
 </ol>
-<p>As relações de equivalência são normalmente denotados com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong b\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
 </div>
-<div id="exm-eq-eg" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.1</strong></span> O protôtipo das relações de equivalência é a relação de igualdade. A relação de igualdade <span class="math display">\[
-\{(a,a)\mid a\in A\}
-\]</span> é uma relação de equivalência para todo conjunto <span class="math inline">\(A\)</span>.</p>
-</div>
-<div id="exm-eq" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.2</strong></span> Seja <span class="math inline">\(A=\{1,2,3,4,5\}\)</span> e seja <span class="math display">\[
-\equiv=\{(1,1),(2,2),(3,3),(4,4),(5,5),(1,2),(2,1),(3,4),(3,5),(4,3),(4,5),(5,3),(5,4)\}
-\]</span> Então <span class="math inline">\(\equiv\)</span> é uma relação de equivalência.</p>
-</div>
-<div id="exm-eq2" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.3</strong></span> Considere a relação <span class="math inline">\(R\)</span> em <span class="math inline">\(\Z\)</span> definido como <span class="math display">\[
-a\equiv b\quad\mbox{se e somente se $a-b$ é par}.
-\]</span> Note que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Também note que <span class="math inline">\(a\equiv b\)</span> se e somente se <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> tem a mesma paridade. Ou seja, <span class="math inline">\(0\equiv 2\)</span>, <span class="math inline">\(0\equiv -2\)</span>, <span class="math inline">\(0\equiv 4\)</span>, <span class="math inline">\(0\equiv -4\)</span>, <span class="math inline">\(1\equiv -1\)</span>, <span class="math inline">\(1\equiv 3\)</span>, <span class="math inline">\(1\equiv -3\)</span>, etc, mas <span class="math inline">\(2\not\equiv -1\)</span>.</p>
-</div>
-</section>
-<section id="classes-de-equivalência" class="level2" data-number="5.2">
-<h2 data-number="5.2" data-anchor-id="classes-de-equivalência"><span class="header-section-number">5.2</span> Classes de equivalência</h2>
-<div id="def-class-eq" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.2</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto e <span class="math inline">\(R\)</span> uma relação de equivalência. Seja <span class="math inline">\(a\in A\)</span>. O conjunto <span class="math display">\[
-[a]_\equiv=\{b\in A\mid a\equiv b\}
-\]</span> é chamado de <em>classe de equivalência</em> de <span class="math inline">\(a\)</span> pela relação <span class="math inline">\(\equiv\)</span>. Quando não tem perigo de ambiguidade, escrevemos <span class="math inline">\([a]\)</span> em vez de <span class="math inline">\([a]_\equiv\)</span>. Note que <span class="math inline">\([a]\subseteq A\)</span>.</p>
-</div>
-<div id="exm-classes" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.4</strong></span> No <a href="#exm-eq-eg" class="quarto-xref">Exemplo&nbsp;<span>5.1</span></a>, a classe de equivalência de um elemento <span class="math inline">\(a\in A\)</span> é o conjunto <span class="math inline">\(\{a\}\)</span>. No <a href="#exm-eq" class="quarto-xref">Exemplo&nbsp;<span>5.2</span></a>, temos que <span class="math display">\[
-[1]=[2]=\{1,2\}\quad \mbox{e}\quad [3]=[4]=[5]=\{3,4,5\}.
-\]</span> No <a href="#exm-eq" class="quarto-xref">Exemplo&nbsp;<span>5.2</span></a>, temos que <span class="math display">\[
-[a]=\{0,\pm 2,\pm 4,\ldots\}=\{2k\mid k\in\Z\}\quad\mbox{se}\quad \mbox{$a$ é par},
-\]</span> e <span class="math display">\[
-[a]=\{\pm 1,\pm 3,\ldots\}=\{2k+1\mid k\in\Z\}\quad\mbox{se}\quad \mbox{$a$ é ímpar}.
-\]</span> Ou seja, temos apenas duas classes de equivalência, uma formada pelos números pares, e a outra formada pelos números ímpares.</p>
-</div>
-<div id="lem-classes" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto e assuma que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Temos as seguintes propriedades para todo <span class="math inline">\(a,b\in A\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 53.1</strong></span> &nbsp;</p>
 <ol type="1">
-<li><span class="math inline">\(a\in [a]\)</span>;</li>
-<li>se <span class="math inline">\([a]\cap [b]\neq \emptyset\)</span> então <span class="math inline">\([a]=[b]\)</span>.</li>
+<li>Um produto interno em <span class="math inline">\(V\)</span> é exemplo de forma bilinear em <span class="math inline">\(V\)</span>.</li>
+<li>Seja <span class="math inline">\(V\)</span> espaço com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Então a aplicação <span class="math inline">\(Q(v)=\|v\|^2\)</span> é uma forma quadrática. De fato, <span class="math display">\[
+Q(\alpha v)=\|\alpha v\|^2=\alpha^2\|v\|^2=\alpha^2 Q(v)\quad \mbox{para todo}v\in V,\ \alpha\in \R.
+\]</span> e <span class="math display">\[\begin{align*}
+\frac 12(Q(u+v)-Q(u)-Q(v))&amp;=\frac 12(\|u+v\|-\|u\|-\|v\|)\\&amp;=\frac 12(\left&lt;u+v,u+v\right&gt;-\left&lt;u,u\right&gt;-\left&lt;v,v\right&gt;)\\&amp;=
+\left&lt;u,v\right&gt;.
+\end{align*}\]</span> Como o produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span> é uma forma bilinear, temos que a norma quadrada é uma forma quadrática.</li>
+<li>Assuma que <span class="math inline">\(x_1,\ldots,x_n\)</span> são variáveis e seja <span class="math inline">\(Q(x_1,\ldots,x_n)\)</span> um polinômio homogêneo de grau 2: <span class="math display">\[
+Q(x_1,\ldots,x_n)=\sum_{i,j=1}^n \alpha_{i,j}x_ix_j.
+\]</span> Ou seja, <span class="math inline">\(Q(x_1,\ldots,x_n)\)</span> contém apenas termos do segundo grau. O polinômio <span class="math inline">\(Q\)</span> pode ser considerado como uma função <span class="math inline">\(Q:\R^n\to \R\)</span>. Afirmamos que <span class="math inline">\(Q\)</span> é uma forma quadrática. Seja <span class="math inline">\(A=(a_{i,j})\)</span> é a matriz <span class="math inline">\(n\times n\)</span> tal que<br>
+<span class="math display">\[
+a_{i,j}=\left\{\begin{array}{ll} \alpha_{i,i} &amp;\mbox{se i=j}\\ \frac 12\alpha_{i,j} &amp; \mbox{caso contrário}\end{array}\right.
+\]</span> É fácil verificar para <span class="math inline">\(v=(\alpha_1,\ldots,\alpha_n)\in \R^n\)</span> que<br>
+<span class="math display">\[
+Q(v)=vAv^t.
+\]</span> Em particular, se <span class="math inline">\(\alpha\in\R\)</span>, então <span class="math display">\[
+Q(\alpha v)=(\alpha v)A(\alpha v)^t=\alpha^2 vAv^t=\alpha^2 Q(v).
+\]</span> Além disso, assuma que <span class="math inline">\(u,v\in \R^n\)</span>. Como <span class="math inline">\(A\)</span> é simátrica, temos que <span class="math display">\[
+uAv^t=(uAv^t)^t=vA^tu^t=vAu^t.
+\]</span> Logo, <span class="math display">\[\begin{align*}
+B_Q(u,v)&amp;=\frac 12(Q(u+v)-Q(u)-Q(v))=\frac 12 ((u+v)A(u+v)^t-uAu^t-vAv^t)\\&amp;=\frac 12(uAv^t+vAu^t)\\&amp;=uAv^t.
+\end{align*}\]</span> Como a multiplicação matricial satisfaz a lei distributiva e <span class="math inline">\(A\)</span> é matriz simétrica, temos que <span class="math inline">\(B_Q(u,v)\)</span> é uma forma bilinear simétrica. (Compare com o <a href="09_alglin1.html#exm-bilin-mat" class="quarto-xref">Exemplo&nbsp;<span>47.2</span></a>.)</li>
 </ol>
+</div>
+<div id="def-quad-mat" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 53.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita com base <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span>. A matriz de Gram de uma forma quadrática <span class="math inline">\(Q\)</span> em <span class="math inline">\(V\)</span> na base <span class="math inline">\(X\)</span> é a matriz <span class="math inline">\([Q]_X\)</span> tal que a entrada de <span class="math inline">\([Q]_X\)</span> na posição <span class="math inline">\((i,j)\)</span> é <span class="math inline">\(B_Q(b_i,b_j)\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 53.1</strong></span> Seja <span class="math inline">\(V\)</span>, <span class="math inline">\(Q\)</span> e <span class="math inline">\(X\)</span> como na <a href="#def-quad-mat" class="quarto-xref">Definição&nbsp;<span>53.2</span></a> e sejam <span class="math inline">\(u,v\in V\)</span>. Demonstre que <span class="math display">\[
+B_Q(u,v)=[u]_X[Q]_X([v]_Q)^t \quad \mbox{e}\quad
+Q(u)=[u]_X[Q]_X([u]_Q)^t
+\]</span> Dica: Veja o <a href="09_alglin1.html#exm-bilin-mat" class="quarto-xref">Exemplo&nbsp;<span>47.2</span></a>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 53.1</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita com bases <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> e seja <span class="math inline">\(Q\)</span> uma forma quadrática em <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(P=[\mbox{id}_V]^X_Y\)</span>. Então <span class="math display">\[
+[Q]_Y=P^t[Q]_XP.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(u,v\in V\)</span>. Note que <span class="math display">\[
+[u]_Y=[\mbox{id}(u)]_Y=[\mbox{id}]^X_Y[u]_Y=P[u]_Y.
+\]</span> Se <span class="math inline">\(A\)</span> é a matriz de <span class="math inline">\(Q\)</span> na base <span class="math inline">\(Y\)</span>, então temos que <span class="math display">\[
+B_Q(u,v)=[u]_YA([v]_Y)^t=(P[u]_Y)^tA(P[u]_Y)=[u]_YP^tAP[u]_Y.
+\]</span> Ora, segue que <span class="math inline">\(A=P^t[Q]_XP\)</span>.</p>
+</div>
+<div id="thm-sylvester" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 53.1</strong></span> (A Lei da Inêrcia de Sylvester) Seja <span class="math inline">\(Q\)</span> uma forma quuadrática em um espaço vetorial <span class="math inline">\(V\)</span> de dimensão finita. Então existe uma base <span class="math inline">\(Y\)</span> de <span class="math inline">\(V\)</span> na qual a matriz da forma quadrática <span class="math inline">\(Q\)</span> é diagonal na forma <span class="math display">\[
+\begin{pmatrix}
+I_p &amp; 0_{p\times q} &amp; 0_{p\times r} \\ 0_{q\times p} &amp; -I_q &amp; 0_{q\times r} \\ 0_{r\times p} &amp; 0_{r\times q} &amp; 0_{r\times r}  
+\end{pmatrix}
+\]</span> Onde <span class="math inline">\(I_p\)</span> e <span class="math inline">\(I_q\)</span> denotam matrizes de identidade, e <span class="math inline">\(0_{a\times b}\)</span> denota matriz nula <span class="math inline">\(a\times b\)</span>. Além disso, os números <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, e <span class="math inline">\(r\)</span> são unicamente determinados pela forma quadrática <span class="math inline">\(Q\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
+</div>
+<div id="def-quadratic-sig" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 53.3</strong></span> Se <span class="math inline">\(V\)</span> e <span class="math inline">\(Q\)</span> estão como no <a href="#thm-sylvester" class="quarto-xref">Teorema&nbsp;<span>53.1</span></a>, então a tripla <span class="math inline">\((p,q,r)\)</span> é chamada de <strong>assinatura</strong> da forma quadrática <span class="math inline">\(Q\)</span>. Pelo <a href="#thm-sylvester" class="quarto-xref">Teorema&nbsp;<span>53.1</span></a>, a assinatura está bem definida.</p>
+</div>
+<div id="exm-sylvester-example" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 53.2</strong></span> &nbsp;</p>
 <ol type="1">
-<li>Note que <span class="math inline">\(a\in[a]\)</span> é equivalente a dizer que <span class="math inline">\(a\equiv a\)</span> e isso vale pois a relação <span class="math inline">\(\equiv\)</span> é reflexiva.</li>
-<li>Assuma que <span class="math inline">\(c\in [a]\cap [b]\)</span>. Isso quer dizer que <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(b\equiv c\)</span>. Por simetria temos também que <span class="math inline">\(c\equiv a\)</span>. Afirmamos que <span class="math inline">\([a]=[b]\)</span>. Provaremos isso verificando que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Assuma primeiro que <span class="math inline">\(x\in[a]\)</span>; ou seja <span class="math inline">\(a\equiv x\)</span>. Então <span class="math display">\[
-b\equiv c\equiv a\equiv x.
-\]</span> Aplicando a transitividade, obtemos que <span class="math inline">\(b\equiv x\)</span> e <span class="math inline">\(x\in [b]\)</span>. Portanto obtemos que <span class="math inline">\([a]\subseteq [b]\)</span>. A inclusão que <span class="math inline">\([b]\subseteq [c]\)</span> pode ser verificado por argumento similar.</li>
-</ol>
-</div>
-</section>
-<section id="partições" class="level2" data-number="5.3">
-<h2 data-number="5.3" data-anchor-id="partições"><span class="header-section-number">5.3</span> Partições</h2>
-<div id="def-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 5.3</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Um conjunto <span class="math inline">\(\mathcal P\)</span> de subconjuntos de <span class="math inline">\(A\)</span> é dito <em>partição</em> de <span class="math inline">\(A\)</span> se</p>
-<ol type="1">
-<li>todo elemento <span class="math inline">\(a\in A\)</span> pertence a um subconjunto <span class="math inline">\(X\in \mathcal P\)</span>; e</li>
-<li>se <span class="math inline">\(X,Y\in \mathcal P\)</span> são distintos, então <span class="math inline">\(X\cap Y=\emptyset\)</span>.</li>
-</ol>
-<p>Os conjuntos <span class="math inline">\(X\in\mathcal  P\)</span> são chamados de <em>partes</em> ou <em>blocos</em> da partição <span class="math inline">\(\mathcal P\)</span>.</p>
-</div>
-<div id="exm-partition" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 5.5</strong></span> Todo conjunto <span class="math inline">\(A\)</span> tem duas partições triviais: <span class="math display">\[
-\{A\}\quad\mbox{e}\quad \{\{a\}\mid a\in A\}.
-\]</span> O conjunto <span class="math inline">\(\{\{1,2\},\{3,4,5\}\}\)</span> é uma partição do conjunto <span class="math inline">\(\{1,2,3,4,5\}\)</span>. O conjunto dos números inteioros pode ser particionado como <span class="math display">\[
-\{\{2k\mid k\in \Z\},\{2k+1\mid k\in\Z\}\}.
-\]</span> Ou seja, o conjunto dos inteiros pode ser particionado para o conjunto de pares e o conjunto de ímpares.</p>
-</div>
-<div id="thm-eq-partition" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.1</strong></span> Seja <span class="math inline">\(A\)</span> um conjunto. Se <span class="math inline">\(\equiv\)</span> é uma relação de equivalência sobre <span class="math inline">\(A\)</span>, então o conjunto das classes de equivalência é uma partição de <span class="math inline">\(A\)</span>.</p>
-<p>Reciprocamente, se <span class="math inline">\(\mathcal P\)</span> é uma partição de <span class="math inline">\(A\)</span>, então pode-se definir uma relação de equivalência <span class="math inline">\(\equiv_{\mathcal P}\)</span> pondo <span class="math display">\[
-a\equiv_{\mathcal P} b\quad \bicond\quad \mbox{$a$ e $b$ estão no mesma parte de $\mathcal P$}
-\]</span> As classes de equivalência de <span class="math inline">\(\equiv_{\mathcal P}\)</span> são as partes de <span class="math inline">\(\mathcal P\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma primeiro que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência. Seja <span class="math inline">\(\mathcal C\)</span> o conjunto de classes de equivalência. Por item 1. do <a href="#lem-classes" class="quarto-xref">Lema&nbsp;<span>5.1</span></a>, obtemos que <span class="math inline">\(a\in [a]\in \mathcal C\)</span> para todo <span class="math inline">\(a\in A\)</span>. Então o item 1. da <a href="../GruposECorpos/classes.html#def-partition" class="quarto-xref">Definição&nbsp;<span>82.1</span></a> está verificada. O item 2. da <a href="../GruposECorpos/classes.html#def-partition" class="quarto-xref">Definição&nbsp;<span>82.1</span></a> está verdadeira para <span class="math inline">\(\mathcal C\)</span> por causa do item 2. do <a href="#lem-classes" class="quarto-xref">Lema&nbsp;<span>5.1</span></a>.</p>
-<p>Assuma agora que <span class="math inline">\(\mathcal P\)</span> é uma partição de <span class="math inline">\(A\)</span> e defina <span class="math inline">\(\equiv_{\mathcal P}\)</span> como no enunciado do teorema. Vamos verificar as três propriedades na definição <a href="#def-eq-rel" class="quarto-xref">Definição&nbsp;<span>5.1</span></a>.</p>
-<ol type="1">
-<li>Reflexividade: se <span class="math inline">\(a\in A\)</span>, então <span class="math inline">\(a\)</span> claramente pertence à mesma parte de <span class="math inline">\(\mathcal P\)</span> que <span class="math inline">\(a\)</span> e <span class="math inline">\(a\equiv_{\mathcal P} a\)</span>. Logo <span class="math inline">\(\equiv_{\mathcal P}\)</span> é reflexiva.</li>
-<li>Simetria: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span>, então <span class="math inline">\(a,b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Logo <span class="math inline">\(b,a\)</span> também pertencem à mesma parte e assim <span class="math inline">\(b\equiv_{\mathcal P}a\)</span>. Portanto <span class="math inline">\(\equiv_{\mathcal P}\)</span> é simétrica.</li>
-<li>Transitividade: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span> e <span class="math inline">\(b\equiv_{\mathcal P}c\)</span>, então <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span> e <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> também pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Isso implica que <span class="math inline">\(a\)</span> e <span class="math inline">\(c\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Portanto <span class="math inline">\(a\equiv_{\mathcal P}c\)</span> e a relação <span class="math inline">\(\equiv_{\mathcal P}\)</span> é transitiva.</li>
+<li>Se <span class="math inline">\(Q\)</span> é uma forma quadrática em <span class="math inline">\(\R^n\)</span> com assinatura <span class="math inline">\((p,q,r)\)</span>, então o espaço <span class="math inline">\(\R^n\)</span> com esta forma é frequentemente denota por <span class="math inline">\(\R^{p+q+r}\)</span>.</li>
+<li>Um espaço com forma quadrática com assinatura <span class="math inline">\((p,0,0)\)</span> é um espaço com produto interno. Neste caso, dizemos que a forma <span class="math inline">\(Q\)</span> é positiva.</li>
+<li>Se a forma <span class="math inline">\(Q\)</span> tem assinatura <span class="math inline">\((p,0,r)\)</span>, então dizemos que a forma <span class="math inline">\(Q\)</span> é não-negativa.</li>
+<li>Se a forma <span class="math inline">\(Q\)</span> tem assinatura <span class="math inline">\((0,q,0)\)</span>, então dizemos que a forma <span class="math inline">\(Q\)</span> é negativa.</li>
+<li>Se a forma <span class="math inline">\(Q\)</span> tem assinatura <span class="math inline">\((0,q,r)\)</span>, então dizemos que a forma <span class="math inline">\(Q\)</span> é não-positiva.</li>
+<li>O espaço <span class="math inline">\(\R^{1+3+0}\)</span> é conhecido como o <a href="https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski">Espaço de Minkowski</a> e a sua geometria é a geometria de espaço-tempo descrita na teoria da relatividade.</li>
 </ol>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1861,13 +1840,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../IniciacaoAMatematica/relations.html" class="pagination-link" aria-label="Pares ordenados e produtos cartesianos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pares ordenados e produtos cartesianos</span></span>
+      <a href="../AlgebraLinearI/13_alglin1.html" class="pagination-link" aria-label="Diagonalização de operadores autoadjuntos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização de operadores autoadjuntos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../IniciacaoAMatematica/equivalence_examples.html" class="pagination-link" aria-label="Exemplos de relações de equivalência">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exemplos de relações de equivalência</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
+        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
