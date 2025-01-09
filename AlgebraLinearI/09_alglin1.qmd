@@ -44,7 +44,7 @@ Sejam $V,W$ dois espaços vetoriais. Se lembre que o produto cartesiano
 $V\times W$ é o conjunto dos pares
 $$V\times W = \{(\ul{v},\ul{w})\,|\,\ul{v}\in V,\,\ul{w}\in W\}.$$
 
-:::{#def-}
+:::{#def-inner-prod}
 Seja $V$ um espaço vetorial. Um *produto interno sobre $V$* é uma função
 \begin{aligned}
   \langle-,-\rangle : V\times V & \to \,\,\,\,\R \\
@@ -311,7 +311,7 @@ Seguem várias utilidades e aplicações dos produtos internos.
 Um espaço vetorial $V$, junto com um produto interno $$V\times V\to \R$$
 será chamado de *espaço vetorial com produto interno*.
 
-:::{#def-}
+:::{#def-norm}
 Seja $V$ um espaço vetorial com produto interno $\langle-,-\rangle$. A
 *norma* do vetor $\ul{v}\in V$ é o número
 $$\|\ul{v}\| = \sqrt{\langle\ul{v},\ul{v}\rangle}.$$

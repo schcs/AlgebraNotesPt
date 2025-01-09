@@ -4,93 +4,107 @@ number-sections: true
 lang: pt-BR
 --- 
 
+## Formas quadráticas
 
-Nesta última seção da disciplina, vamos generalizar os conceitos de produto interno e norma. Primeiro, revise a definição de 
-uma forma bilinear (@def-bilin).
+Nesta última seção da disciplina, vamos generalizar os conceitos de produto interno (@def-inner-prod) e norma  (@def-norm).
 
 :::{#def-}
-Uma **forma quadrática** em $V$ é uma aplicação $Q:V\to \R$ tal que 
+Seja $V$ um espaço vetorial. Uma **forma quadrática** em $V$ é uma aplicação $Q:V\to \R$ tal que 
 
 1. $Q(\alpha v)=\alpha^2 Q(v)$ para todo $v\in V$ e $\alpha\in\R$ e 
-2. a aplicação $(u,v)\mapsto 1/2\cdot (Q(u+v)-Q(u)-Q(v))$ é uma forma bilinear simétrica. 
+2. a aplicação 
+$$
+B_Q:V\times V\to \R,\quad (u,v)\mapsto 1/2\cdot (Q(u+v)-Q(u)-Q(v))
+$$ 
+é uma forma bilinear simétrica (como na @def-bilin). 
 :::
 
 
-:::{#exm-}
+:::{#exm-quadform}
 1. Um produto interno em $V$ é exemplo de forma bilinear em $V$. 
 2. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\|v\|^2$ é uma forma quadrática. De fato, 
    $$
-   Q(\alpha v)=\|\alpha v\|^2=\alpha^2\|v\|^2=\alpha^2 Q(v)\quad \mbox{para todo}v\in V,\ \alpha\in \R. 
+   Q(\alpha v)=\|\alpha v\|^2=\alpha^2\|v\|^2=\alpha^2 Q(v)\quad \mbox{para todo}\quad v\in V,\ \alpha\in \R. 
    $$
    e 
    \begin{align*}
-   \frac 12(Q(u+v)-Q(u)-Q(v))&=\frac 12(\|u+v\|-\|u\|-\|v\|)\\&=\frac 12(\left<u+v,u+v\right>-\left<u,u\right>-\left<v,v\right>)\\&=
+   \frac 12(Q(u+v)-Q(u)-Q(v))&=\frac 12(\|u+v\|^2-\|u\|^2-\|v\|^2)\\&=\frac 12(\left<u+v,u+v\right>-\left<u,u\right>-\left<v,v\right>)\\&=
    \left<u,v\right>.
    \end{align*}
-Como o produto interno $\left<-,-\right>$ é uma forma bilinear, temos que a norma quadrada é uma forma quadrática. 
-3. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)$ um polinômio homogêneo de grau 2: 
+Como o produto interno $\left<-,-\right>$ é uma forma bilinear, temos que a norma quadrada é uma forma quadrática.  Note que, a conta neste exemplo implica que o produto interno é determinado pela norma. De fato, a última linha destacada verifica que 
 $$
-Q(x_1,\ldots,x_n)=\sum_{i,j=1}^n \alpha_{i,j}x_ix_j.
+\left<u,v\right>=\frac 12(\|u+v\|^2-\|u\|^2-\|v|^2)\quad\mbox{para todo}\quad u,v\in V.
+$${#eq-polarização}
+A @eq-polarização é chamada da **identidade de polarização** e vale em qualquer espaço com produto interno.
+3. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)\in\R[x_1,\ldots,x_n]$ um polinômio homogêneo de grau 2: 
+$$
+Q(x_1,\ldots,x_n)=\sum_{1\leq i\leq j\leq n} \alpha_{i,j}x_ix_j.
 $$
 Ou seja, $Q(x_1,\ldots,x_n)$ contém apenas termos do segundo grau. O polinômio $Q$ pode ser considerado como uma função 
-$Q:\R^n\to \R$. Afirmamos que $Q$ é uma forma quadrática. Seja $A=(a_{i,j})$ é a matriz $n\times n$ tal que  
+$Q:\R^n\to \R$. Afirmamos que $Q$ é uma forma quadrática. Seja $A_Q=(a_{i,j})$ é a matriz $n\times n$ tal que  
 $$
-a_{i,j}=\left\{\begin{array}{ll} \alpha_{i,i} &\mbox{se i=j}\\ \frac 12\alpha_{i,j} & \mbox{caso contrário}\end{array}\right.
+a_{i,j}=\left\{\begin{array}{ll} \alpha_{i,i} &\mbox{se $i=j$}\\ \frac 12\alpha_{i,j} & \mbox{se $i<j$}\\ \frac 12\alpha_{j,i} & \mbox{se $j<i$.}\end{array}\right.
 $$
-É fácil verificar para $v=(\alpha_1,\ldots,\alpha_n)\in \R^n$ que  
+É fácil verificar que $A_Q$ é uma matriz simétrica e, para $v=(\alpha_1,\ldots,\alpha_n)\in \R^n$, que  
 $$
-Q(v)=vAv^t.
+Q(v)=vA_Qv^t.
 $$
 Em particular, se $\alpha\in\R$, então 
 $$
-Q(\alpha v)=(\alpha v)A(\alpha v)^t=\alpha^2 vAv^t=\alpha^2 Q(v). 
+Q(\alpha v)=(\alpha v)A_Q(\alpha v)^t=\alpha^2 vA_Qv^t=\alpha^2 Q(v). 
 $$
-Além disso, assuma que $u,v\in \R^n$. Como $A$ é simátrica, temos que 
+Além disso, assuma que $u,v\in \R^n$. Como $A_Q$ é simátrica, temos que 
 $$
-uAv^t=(uAv^t)^t=vA^tu^t=vAu^t. 
+uA_Qv^t=(uA_Qv^t)^t=vA_Q^tu^t=vA_Qu^t. 
 $$
 Logo,
 \begin{align*}
-B_Q(u,v)&=\frac 12(Q(u+v)-Q(u)-Q(v))=\frac 12 ((u+v)A(u+v)^t-uAu^t-vAv^t)\\&=\frac 12(uAv^t+vAu^t)\\&=uAv^t.
+B_Q(u,v)&=\frac 12(Q(u+v)-Q(u)-Q(v))=\frac 12 ((u+v)A_Q(u+v)^t-uA_Qu^t-vA_Qv^t)\\&=\frac 12(uA_Qv^t+vA_Qu^t)\\&=uA_Qv^t.
 \end{align*}
-Como a multiplicação matricial satisfaz a lei distributiva e $A$ é matriz simétrica, 
+Como a multiplicação matricial satisfaz a lei distributiva e $A_Q$ é matriz simétrica, 
 temos que $B_Q(u,v)$ é uma forma bilinear simétrica. (Compare com o @exm-bilin-mat.)
 :::
 
+## Mudança de base para formas quadráticas
+
 :::{#def-quad-mat}
 Seja $V$ um espaço vetorial de dimensão finita com base $X=\{b_1,\ldots,b_n\}$. 
-A matriz de Gram de uma forma quadrática $Q$ em $V$ na base $X$ é a matriz  $[Q]_X$ 
+A **matriz de Gram** de uma forma quadrática $Q$ em $V$ na base $X$ é a matriz  $[Q]_X$ 
 tal que a entrada de $[Q]_X$ na posição $(i,j)$ é $B_Q(b_i,b_j)$. 
 :::
 
 :::{#exr-}
 Seja $V$, $Q$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Demonstre que 
 $$
-B_Q(u,v)=[u]_X[Q]_X([v]_Q)^t \quad \mbox{e}\quad 
-Q(u)=[u]_X[Q]_X([u]_Q)^t
+B_Q(u,v)=u_X[Q]_X(v_Q)^t \quad \mbox{e}\quad 
+Q(u)=u_X[Q]_X(u_Q)^t
 $$ 
 Dica: Veja o @exm-bilin-mat.
 :::
 
 :::{#lem-}
 Seja $V$ um espaço vetorial de dimensão finita com bases $X$ e $Y$ e seja $Q$ uma forma quadrática 
-em $V$. Seja $P=[\mbox{id}_V]^X_Y$. Então 
+em $V$. Seja $P=[\mbox{id}_V]^Y_X$. Então 
 $$
 [Q]_Y=P^t[Q]_XP.
 $$
 :::
 :::{.proof}
-Sejam $u,v\in V$. Note que 
+Sejam $u,v\in V$. Seja $u_X$ e $u_Y$ os vetores colunas das coordenadas de $u$ nas bases $X$ e $Y$, 
+respetivamente. Usamos @lem-mat-tl para obter 
 $$
-[u]_Y=[\mbox{id}(u)]_Y=[\mbox{id}]^X_Y[u]_Y=P[u]_Y.
+u_X=(\mbox{id}_V(u))_X=[\mbox{id}_V]^Y_X\cdot u_Y=P\cdot u_Y.
 $$
 Se $A$ é a matriz de $Q$ na base $Y$, então temos que 
 $$
-B_Q(u,v)=[u]_YA([v]_Y)^t=(P[u]_Y)^tA(P[u]_Y)=[u]_YP^tAP[u]_Y.
+u_Y^t\cdot A\cdot v_Y=B_Q(u,v)=u_X^t\cdot [Q]_X\cdot v_X =(P\cdot u_Y)^t\cdot [Q]_X\cdot (P\cdot u_Y)=
+u_Y\cdot P^t\cdot [Q]_X\cdot P\cdot u_Y.
 $$
-Ora, segue que $A=P^t[Q]_XP$.
+Como isso vale, para todo $u,v\in V$, temos que  $A=P^t[Q]_XP$.
 :::
 
+
+## A Lei da Inêrcia de Sylvester
 
 :::{#thm-sylvester}
 (A Lei da Inêrcia de Sylvester)
@@ -112,11 +126,31 @@ Se $V$ e $Q$ estão como no @thm-sylvester, então a tripla $(p,q,r)$ é chamada
 :::
 
 :::{#exm-sylvester-example}
-1. Se $Q$ é uma forma quadrática em $\R^n$ com assinatura $(p,q,r)$, então o espaço $\R^n$ com esta forma é frequentemente denota por 
-$\R^{p+q+r}$. 
-2. Um espaço com forma quadrática com assinatura $(p,0,0)$ é um espaço com produto interno. Neste caso, dizemos que a forma $Q$ é positiva. 
+1. Se $Q$ é uma forma quadrática em $\R^n$ com assinatura $(p,q,r)$, então o espaço $\R^n$ com esta forma é frequentemente denotado por 
+$\R^{p+q+r}$. O espaço $\R^n$ com forma quadrática com assinatura $(p,q,0)$ é escrito como $\R^{p+q}$.  
+2. Se $V$ é um espaço como produto interno, então vimos no @exm-quadform que $v\to \|v\|^2$ é 
+forma quadrática. A assinatura desta forma quadrática é $(n,0,0)$. De fato, se $V$ é espaço com forma 
+quadrática $Q$ com assinatura $(n,0,0)$, então a forma bilinear simétrica $B_Q$ é um produto interno. Neste caso, dizemos que $Q$ é uma forma quadrática posititiva.
 3. Se a forma $Q$ tem assinatura $(p,0,r)$, então dizemos que a forma $Q$ é não-negativa.
 4. Se a forma $Q$ tem assinatura $(0,q,0)$, então dizemos que a forma $Q$ é negativa.
 5. Se a forma $Q$ tem assinatura $(0,q,r)$, então dizemos que a forma $Q$ é não-positiva.
-6. O espaço $\R^{1+3+0}$ é conhecido como o [Espaço de Minkowski](https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski) e a sua geometria é a geometria de espaço-tempo descrita na teoria da relatividade. 
+6. O espaço $\R^{3+1}=\R^{1+3+0}$ é conhecido como o [Espaço de Minkowski](https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski) e a sua geometria é a geometria do espaço-tempo que aparece na teoria da relatividade. 
 :::
+
+## Aplicação: Identificação das cônicas
+
+Vamos brevemente revisar o processo da identificação das cônicas que foi estudada na disciplina GAAL. Aqui, nós omitimos alguns detalhes que podem ser encontrados nas suas notas de GAAL ou [no livro do Reginaldo](https://www.dropbox.com/scl/fi/rxrn2j77flubwvml9kqn1/gaalt2.pdf?rlkey=bubw5ajja75rdxd9289an8dfo&e=2&dl=0).  
+Seja 
+$$
+f(x,y)=ax^2+by^2+cxy+dx+ey+f =0
+$$
+uma equação no plano $\R^2$ nas incôgnitas $x$ e $y$. O conjunto das soluções desta equação é uma cônica no plano. Desconsiderando os casos degenerados, esta curva é uma elipse, uma parábola, ou uma hipérbole. 
+
+A parte quadrática desta equação é 
+$$
+Q(x,y)=ax^2+by^2+cxy
+$$
+e isso defina uma forma quadrática em $\R^2$. De acordo com a Lei da Inêrcia de Sylvester, a assinatura desta forma é $(2,0,0)$, $(0,2,0)$, $(0,0,2)$, (1,1,0)$, $(1,0,1)$, ou $(0,1,1)$. Assumindo que $f(x,y)$ é uma equação quadrática, temos que $a\neq 0$ ou $b\neq 0$ ou $c\neq 0$ e a assinatura $(0,0,2)$ não ocorre. A curva pode ser caraterizada de acordo com as assinaturas: Temos elipse com assinatura $(2,0,0)$ 
+ou $(0,2,0)$, hipérbole com assinatura $(1,1,0)$, e parábola com assinatura $(1,0,1)$ ou $(0,1,1)$.  
+
+Os detalhes deixamos para o leitor. Recomendamos revisar as notas de GAAL e comparar as contas com as contas nesta página. 
