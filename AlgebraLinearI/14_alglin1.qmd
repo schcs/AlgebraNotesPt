@@ -1,0 +1,122 @@
+---
+title: "A Lei da Inêrcia de Sylvester"   
+number-sections: true
+lang: pt-BR
+--- 
+
+
+Nesta última seção da disciplina, vamos generalizar os conceitos de produto interno e norma. Primeiro, revise a definição de 
+uma forma bilinear (@def-bilin).
+
+:::{#def-}
+Uma **forma quadrática** em $V$ é uma aplicação $Q:V\to \R$ tal que 
+
+1. $Q(\alpha v)=\alpha^2 Q(v)$ para todo $v\in V$ e $\alpha\in\R$ e 
+2. a aplicação $(u,v)\mapsto 1/2\cdot (Q(u+v)-Q(u)-Q(v))$ é uma forma bilinear simétrica. 
+:::
+
+
+:::{#exm-}
+1. Um produto interno em $V$ é exemplo de forma bilinear em $V$. 
+2. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\|v\|^2$ é uma forma quadrática. De fato, 
+   $$
+   Q(\alpha v)=\|\alpha v\|^2=\alpha^2\|v\|^2=\alpha^2 Q(v)\quad \mbox{para todo}v\in V,\ \alpha\in \R. 
+   $$
+   e 
+   \begin{align*}
+   \frac 12(Q(u+v)-Q(u)-Q(v))&=\frac 12(\|u+v\|-\|u\|-\|v\|)\\&=\frac 12(\left<u+v,u+v\right>-\left<u,u\right>-\left<v,v\right>)\\&=
+   \left<u,v\right>.
+   \end{align*}
+Como o produto interno $\left<-,-\right>$ é uma forma bilinear, temos que a norma quadrada é uma forma quadrática. 
+3. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)$ um polinômio homogêneo de grau 2: 
+$$
+Q(x_1,\ldots,x_n)=\sum_{i,j=1}^n \alpha_{i,j}x_ix_j.
+$$
+Ou seja, $Q(x_1,\ldots,x_n)$ contém apenas termos do segundo grau. O polinômio $Q$ pode ser considerado como uma função 
+$Q:\R^n\to \R$. Afirmamos que $Q$ é uma forma quadrática. Seja $A=(a_{i,j})$ é a matriz $n\times n$ tal que  
+$$
+a_{i,j}=\left\{\begin{array}{ll} \alpha_{i,i} &\mbox{se i=j}\\ \frac 12\alpha_{i,j} & \mbox{caso contrário}\end{array}\right.
+$$
+É fácil verificar para $v=(\alpha_1,\ldots,\alpha_n)\in \R^n$ que  
+$$
+Q(v)=vAv^t.
+$$
+Em particular, se $\alpha\in\R$, então 
+$$
+Q(\alpha v)=(\alpha v)A(\alpha v)^t=\alpha^2 vAv^t=\alpha^2 Q(v). 
+$$
+Além disso, assuma que $u,v\in \R^n$. Como $A$ é simátrica, temos que 
+$$
+uAv^t=(uAv^t)^t=vA^tu^t=vAu^t. 
+$$
+Logo,
+\begin{align*}
+B_Q(u,v)&=\frac 12(Q(u+v)-Q(u)-Q(v))=\frac 12 ((u+v)A(u+v)^t-uAu^t-vAv^t)\\&=\frac 12(uAv^t+vAu^t)\\&=uAv^t.
+\end{align*}
+Como a multiplicação matricial satisfaz a lei distributiva e $A$ é matriz simétrica, 
+temos que $B_Q(u,v)$ é uma forma bilinear simétrica. (Compare com o @exm-bilin-mat.)
+:::
+
+:::{#def-quad-mat}
+Seja $V$ um espaço vetorial de dimensão finita com base $X=\{b_1,\ldots,b_n\}$. 
+A matriz de Gram de uma forma quadrática $Q$ em $V$ na base $X$ é a matriz  $[Q]_X$ 
+tal que a entrada de $[Q]_X$ na posição $(i,j)$ é $B_Q(b_i,b_j)$. 
+:::
+
+:::{#exr-}
+Seja $V$, $Q$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Demonstre que 
+$$
+B_Q(u,v)=[u]_X[Q]_X([v]_Q)^t \quad \mbox{e}\quad 
+Q(u)=[u]_X[Q]_X([u]_Q)^t
+$$ 
+Dica: Veja o @exm-bilin-mat.
+:::
+
+:::{#lem-}
+Seja $V$ um espaço vetorial de dimensão finita com bases $X$ e $Y$ e seja $Q$ uma forma quadrática 
+em $V$. Seja $P=[\mbox{id}_V]^X_Y$. Então 
+$$
+[Q]_Y=P^t[Q]_XP.
+$$
+:::
+:::{.proof}
+Sejam $u,v\in V$. Note que 
+$$
+[u]_Y=[\mbox{id}(u)]_Y=[\mbox{id}]^X_Y[u]_Y=P[u]_Y.
+$$
+Se $A$ é a matriz de $Q$ na base $Y$, então temos que 
+$$
+B_Q(u,v)=[u]_YA([v]_Y)^t=(P[u]_Y)^tA(P[u]_Y)=[u]_YP^tAP[u]_Y.
+$$
+Ora, segue que $A=P^t[Q]_XP$.
+:::
+
+
+:::{#thm-sylvester}
+(A Lei da Inêrcia de Sylvester)
+Seja $Q$ uma forma quuadrática em um espaço vetorial $V$ de dimensão finita. Então existe uma base $Y$ de $V$ na qual a matriz 
+da forma quadrática $Q$ é diagonal na forma 
+$$
+\begin{pmatrix}
+I_p & 0_{p\times q} & 0_{p\times r} \\ 0_{q\times p} & -I_q & 0_{q\times r} \\ 0_{r\times p} & 0_{r\times q} & 0_{r\times r}  
+\end{pmatrix}
+$$
+Onde $I_p$ e $I_q$ denotam matrizes de identidade, e $0_{a\times b}$ denota matriz nula $a\times b$. 
+Além disso, os números $p$, $q$, e $r$ são unicamente determinados pela forma quadrática $Q$. 
+:::
+:::{.proof}
+:::
+
+:::{#def-quadratic-sig}
+Se $V$ e $Q$ estão como no @thm-sylvester, então a tripla $(p,q,r)$ é chamada de **assinatura** da forma quadrática $Q$. Pelo @thm-sylvester, a assinatura está bem definida.  
+:::
+
+:::{#exm-sylvester-example}
+1. Se $Q$ é uma forma quadrática em $\R^n$ com assinatura $(p,q,r)$, então o espaço $\R^n$ com esta forma é frequentemente denota por 
+$\R^{p+q+r}$. 
+2. Um espaço com forma quadrática com assinatura $(p,0,0)$ é um espaço com produto interno. Neste caso, dizemos que a forma $Q$ é positiva. 
+3. Se a forma $Q$ tem assinatura $(p,0,r)$, então dizemos que a forma $Q$ é não-negativa.
+4. Se a forma $Q$ tem assinatura $(0,q,0)$, então dizemos que a forma $Q$ é negativa.
+5. Se a forma $Q$ tem assinatura $(0,q,r)$, então dizemos que a forma $Q$ é não-positiva.
+6. O espaço $\R^{1+3+0}$ é conhecido como o [Espaço de Minkowski](https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski) e a sua geometria é a geometria de espaço-tempo descrita na teoria da relatividade. 
+:::
