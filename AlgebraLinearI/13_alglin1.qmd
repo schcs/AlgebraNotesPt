@@ -151,7 +151,7 @@ produto interno normal. Isto é:
 $$\left\langle \sum_{i=1}^n\lambda_i\ul{c_i}\,,\,\sum_{i=1}^n\mu_i\ul{c_i}\right\rangle = \sum_{i=1}^n \lambda_i\mu_i.$$
 :::
 
-:::{#thm-}
+:::{#thm-sym-diag}
 Seja $A$ uma matriz simétrica $n\times n$. Existe uma matriz ortogonal
 $P$ tal que $$P^{t}AP$$ é uma matriz diagonal.
 :::

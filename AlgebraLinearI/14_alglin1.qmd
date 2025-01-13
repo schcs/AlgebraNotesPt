@@ -4,12 +4,17 @@ number-sections: true
 lang: pt-BR
 --- 
 
-## Formas quadráticas
+## Formas bilineares e formas quadráticas
 
 Nesta última seção da disciplina, vamos generalizar os conceitos de produto interno (@def-inner-prod) e norma  (@def-norm).
 
-:::{#def-}
-Seja $V$ um espaço vetorial. Uma **forma quadrática** em $V$ é uma aplicação $Q:V\to \R$ tal que 
+:::{#def-quad-form}
+Dada uma forma bilinear simétrica (@def-bilin) $B:V\times V\to \R$ em um espaço vetorial $V$, a **forma quadrática** $Q_B$ associada com 
+$B$ é definida como 
+$$
+Q_B:V\to \R,\quad Q_B(v)=B(v,v)\quad\mbox{para todo}\quad v\in V.
+$$
+<!--Seja $V$ um espaço vetorial. Uma **forma quadrática** em $V$ é uma aplicação $Q:V\to \R$ tal que 
 
 1. $Q(\alpha v)=\alpha^2 Q(v)$ para todo $v\in V$ e $\alpha\in\R$ e 
 2. a aplicação 
@@ -17,26 +22,24 @@ $$
 B_Q:V\times V\to \R,\quad (u,v)\mapsto 1/2\cdot (Q(u+v)-Q(u)-Q(v))
 $$ 
 é uma forma bilinear simétrica (como na @def-bilin). 
+-->
 :::
 
 
-:::{#exm-quadform}
-1. Um produto interno em $V$ é exemplo de forma bilinear em $V$. 
-2. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\|v\|^2$ é uma forma quadrática. De fato, 
-   $$
-   Q(\alpha v)=\|\alpha v\|^2=\alpha^2\|v\|^2=\alpha^2 Q(v)\quad \mbox{para todo}\quad v\in V,\ \alpha\in \R. 
-   $$
-   e 
-   \begin{align*}
-   \frac 12(Q(u+v)-Q(u)-Q(v))&=\frac 12(\|u+v\|^2-\|u\|^2-\|v\|^2)\\&=\frac 12(\left<u+v,u+v\right>-\left<u,u\right>-\left<v,v\right>)\\&=
-   \left<u,v\right>.
-   \end{align*}
-Como o produto interno $\left<-,-\right>$ é uma forma bilinear, temos que a norma quadrada é uma forma quadrática.  Note que, a conta neste exemplo implica que o produto interno é determinado pela norma. De fato, a última linha destacada verifica que 
+:::{#exr-}
+Sejam $V$, $B$ e $Q_B$ como na @def-quad-form. Demonstre que 
 $$
-\left<u,v\right>=\frac 12(\|u+v\|^2-\|u\|^2-\|v|^2)\quad\mbox{para todo}\quad u,v\in V.
-$${#eq-polarização}
-A @eq-polarização é chamada da **identidade de polarização** e vale em qualquer espaço com produto interno.
-3. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)\in\R[x_1,\ldots,x_n]$ um polinômio homogêneo de grau 2: 
+B(u,v)=\frac 12 (Q(u+v)-Q(u)-Q(v)).
+$$
+Em particular, se $\left<-,-\right>$ é um produto interno no espaço vetorial $V$, deduza que 
+$$
+\left<u,v\right>=\frac 12(\|u+v\|-\|u\|-\|v\|).
+$$
+:::
+
+:::{#exm-quadform}
+1. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\|v\|^2$ é uma forma quadrática. 
+2. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)\in\R[x_1,\ldots,x_n]$ um polinômio homogêneo de grau 2: 
 $$
 Q(x_1,\ldots,x_n)=\sum_{1\leq i\leq j\leq n} \alpha_{i,j}x_ix_j.
 $$
@@ -49,44 +52,40 @@ $$
 $$
 Q(v)=vA_Qv^t.
 $$
-Em particular, se $\alpha\in\R$, então 
+Defina $B:\R^n\times \R^n\to \R$ como a aplicação 
 $$
-Q(\alpha v)=(\alpha v)A_Q(\alpha v)^t=\alpha^2 vA_Qv^t=\alpha^2 Q(v). 
+B(u,v)=uA_Qv^t
 $$
-Além disso, assuma que $u,v\in \R^n$. Como $A_Q$ é simátrica, temos que 
+(considerando $u$ e $v$ como vetores linhas). Como $A_Q$ é uma matriz simétrica e a multiplicação matrcial satisfaz a lei distributiva, 
+temos que $B$ é uma forma bilinear em $\R^n$. Ora, observe que 
 $$
-uA_Qv^t=(uA_Qv^t)^t=vA_Q^tu^t=vA_Qu^t. 
+Q(v)=v A_Qv^t=B(v,v)
 $$
-Logo,
-\begin{align*}
-B_Q(u,v)&=\frac 12(Q(u+v)-Q(u)-Q(v))=\frac 12 ((u+v)A_Q(u+v)^t-uA_Qu^t-vA_Qv^t)\\&=\frac 12(uA_Qv^t+vA_Qu^t)\\&=uA_Qv^t.
-\end{align*}
-Como a multiplicação matricial satisfaz a lei distributiva e $A_Q$ é matriz simétrica, 
-temos que $B_Q(u,v)$ é uma forma bilinear simétrica. (Compare com o @exm-bilin-mat.)
+vale para todo $v\in \R^n$. 
 :::
 
-## Mudança de base para formas quadráticas
+## Mudança de base para formas bilineares 
 
 :::{#def-quad-mat}
 Seja $V$ um espaço vetorial de dimensão finita com base $X=\{b_1,\ldots,b_n\}$. 
-A **matriz de Gram** de uma forma quadrática $Q$ em $V$ na base $X$ é a matriz  $[Q]_X$ 
-tal que a entrada de $[Q]_X$ na posição $(i,j)$ é $B_Q(b_i,b_j)$. 
+A **matriz de Gram** de uma forma bilinear simétrica $B$ em $V$ na base $X$ é a matriz  $[B]_X$ 
+tal que a entrada de $[B]_X$ na posição $(i,j)$ é $B(b_i,b_j)$. 
 :::
 
 :::{#exr-}
-Seja $V$, $Q$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Demonstre que 
+Seja $V$, $B$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Demonstre que 
 $$
-B_Q(u,v)=u_X[Q]_X(v_Q)^t \quad \mbox{e}\quad 
-Q(u)=u_X[Q]_X(u_Q)^t
+B(u,v)=u_X\cdot[B]_X\cdot v_X^t \quad \mbox{e}\quad 
+Q(u)=u_X\cdot [Q]_X\cdot u_X^t
 $$ 
 Dica: Veja o @exm-bilin-mat.
 :::
 
-:::{#lem-}
-Seja $V$ um espaço vetorial de dimensão finita com bases $X$ e $Y$ e seja $Q$ uma forma quadrática 
+:::{#lem-base-change-bilin}
+Seja $V$ um espaço vetorial de dimensão finita com bases $X$ e $Y$ e seja $B$ uma forma bilinear simétrica
 em $V$. Seja $P=[\mbox{id}_V]^Y_X$. Então 
 $$
-[Q]_Y=P^t[Q]_XP.
+[B]_Y=P^t\cdot [B]_X\cdot P.
 $$
 :::
 :::{.proof}
@@ -95,46 +94,122 @@ respetivamente. Usamos @lem-mat-tl para obter
 $$
 u_X=(\mbox{id}_V(u))_X=[\mbox{id}_V]^Y_X\cdot u_Y=P\cdot u_Y.
 $$
-Se $A$ é a matriz de $Q$ na base $Y$, então temos que 
+Se $A$ é a matriz de $B$ na base $Y$, então temos que 
 $$
-u_Y^t\cdot A\cdot v_Y=B_Q(u,v)=u_X^t\cdot [Q]_X\cdot v_X =(P\cdot u_Y)^t\cdot [Q]_X\cdot (P\cdot u_Y)=
-u_Y\cdot P^t\cdot [Q]_X\cdot P\cdot u_Y.
+u_Y^t\cdot A\cdot v_Y=B_Q(u,v)=u_X^t\cdot [B]_X\cdot v_X =(P\cdot u_Y)^t\cdot [B]_X\cdot (P\cdot u_Y)=
+u_Y\cdot P^t\cdot [B]_X\cdot P\cdot u_Y.
 $$
-Como isso vale, para todo $u,v\in V$, temos que  $A=P^t[Q]_XP$.
+Como isso vale, para todo $u,v\in V$, temos que  $A=[B]_Y=P^t\cdot [B]_X\cdot P$.
 :::
 
 
 ## A Lei da Inêrcia de Sylvester
 
 :::{#thm-sylvester}
-(A Lei da Inêrcia de Sylvester)
-Seja $Q$ uma forma quuadrática em um espaço vetorial $V$ de dimensão finita. Então existe uma base $Y$ de $V$ na qual a matriz 
-da forma quadrática $Q$ é diagonal na forma 
+(A Lei da Inêrcia de [Sylvester](https://pt.wikipedia.org/wiki/James_Joseph_Sylvester))
+Seja $B$ uma forma bilinear simétrica em um espaço vetorial $V$ de dimensão finita. Então existe uma base $Y$ de $V$ na qual a matriz 
+de $B$ é diagonal na forma 
 $$
 \begin{pmatrix}
 I_p & 0_{p\times q} & 0_{p\times r} \\ 0_{q\times p} & -I_q & 0_{q\times r} \\ 0_{r\times p} & 0_{r\times q} & 0_{r\times r}  
 \end{pmatrix}
 $$
-Onde $I_p$ e $I_q$ denotam matrizes de identidade, e $0_{a\times b}$ denota matriz nula $a\times b$. 
-Além disso, os números $p$, $q$, e $r$ são unicamente determinados pela forma quadrática $Q$. 
+onde $I_p$ e $I_q$ denotam matrizes de identidade $p\times p$ e $q\times q$, respetivamente, e $0_{a\times b}$ denota matriz nula $a\times b$. 
+Além disso, os números $p$, $q$, e $r$ são unicamente determinados pela forma $B$. 
 :::
 :::{.proof}
+*Existência:* Seja $X$ uma base de $V$ e seja $A=[B]_X$ a matriz de $B$ na base $X$. Então $A$ é matriz simétrica. Pelo @thm-sym-diag, existe uma 
+matriz $P$ ortogonal tal que $P^tAP=D$ é diagonal. Seja $Y$ a base de $V$ tal que $P=[\mbox{id}_V]^Y_X$. O @lem-base-change-bilin, 
+implica que 
+$$
+D=P^t\cdot [B]_X\cdot P=[B]_Y
+$$
+é diagonal. Assuma que $Y=\{\tilde y_1,\ldots,\tilde y_n\}$. A diagonalidade de $D=[B]_Y$ implica que 
+$$
+B(\tilde y_i,\tilde y_j)=\left\{\begin{array}{ll} 0&\mbox{se } i\neq j\\ D_{i,i} & \mbox{se }i=j.\end{array}\right.
+$$
+Agora, defina, para $i\in\{1,\ldots,n\}$,
+$$
+y_i=\left\{\begin{array}{ll} \tilde y_i&\mbox{se } D_{i,i}=0\\ \frac 1{\sqrt{D_{i,i}}}\tilde y_i & \mbox{se }D_{i,i}>0\\
+\frac 1{\sqrt{-D_{i,i}}}\tilde y_i & \mbox{se }D_{i,i}<0.\end{array}\right.
+$$
+Neste caso, temos que $B(y_i,y_i)\in\{0,1,-1\}$ e $B(y_i,y_j)=0$ para todo $i,j$ tal que $i\neq j$. 
+Agora, permute os elementos de $Y$ tal que tenhamos 
+\begin{align*}
+B(y_1,y_1)&=\cdots=B(y_p,y_p)=1;\\ 
+B(y_{p+1},y_{p+1})&=\cdots=B(y_{p+q},y_{p+q})=-1; \\
+B(y_{p+q+1},y_{p+q+1})&=\cdots=B(y_{p+q+r},y_{p+q+r})=0.
+\end{align*}  
+Ora, nesta base, a matriz de $B$ é como afirmado no teorema. 
+
+*Unicidade:* Assuma que existe uma base $Z=\{z_1,\ldots,z_n\}$ tal que $[B]_Z$ é diagonal 
+com blocos diagonais $I_{p'}$, $-I_{q'}$ e $0_{r'\times r'}$. Primeiro, afirmamos que 
+$$
+V^\perp=\{v\in V\mid B(v,w)=0\mbox{ para todo }w\in V\}=\left<y_{p+q+1},\ldots,y_{p+q+r}\right>. 
+$$
+(Note que o espaço $V^\perp$ é chamado de **radical** da forma $B$. Quando $B$ for um produto interno, seu radical é $0$, mas 
+isso não precisa ser assim para uma forma qualquer.) Primeiro, se $w\in V$, então, temos para todo $k\in\{1,\ldots,r\}$ 
+que
+$$
+B(y_{p+q+k},w)=(y_{p+q+k})_Y D w_Y^t=(D_{p+q+k,p+q+k}(y_{p+q+k})_Y) w_Y^t=0.
+$$
+e $\left<y_{p+q+1},\ldots,y_{p+q+r}\right>\leq V^\perp$. Por outro lado, se $v\in V^\perp$, escreva 
+$$
+v=\alpha_1 y_1+\cdots+\alpha_{p}y_p+\alpha_{p+1} y_{p+1}+\cdots+\alpha_{p+q}y_{p+q}+\alpha_{p+q+1} y_{p+q+1}+\cdots+\alpha_{p+q+r}y_{p+q+r}
+$$
+e considere 
+$$
+0=B(v,y_k)=v_YD(y_k)_Y^t=D_{k,k}\alpha_k.
+$$
+Se $k\in\{1,\ldots,p+q\}$, então $D_{k,k}\neq 0$ e segue que $\alpha_k=0$. Portanto 
+$$
+v=\alpha_{p+q+1} y_{p+q+1}+\cdots+\alpha_{p+q+r}y_{p+q+r}\in\left<y_{p+q+1},\ldots,y_{p+q+r}\right>.
+$$
+Logo $V^\perp\leq \left<y_{p+q+1},\ldots,y_{p+q+r}\right>$ e, de fato, vale a igualdade 
+$V^\perp= \left<y_{p+q+1},\ldots,y_{p+q+r}\right>$. Em particular, temos que $\dim V^\perp=r$. Como o mesmo argumento vale para a base $Z$, obtemos que $r'=\dim V^\perp=r$.  Como $n=p+q+r=p'+q'+r'$, temos também que $p+q=p'+q'$. 
+
+Seja $W=\left<y_1,\ldots,y_p,z_{p'+1},\ldots,z_{p'+q'}\right>$. Primeiro, note que $W\cap V^\perp=0$.
+Isso segue do fato do que se $\alpha_1y_1+\cdots+\alpha_py_p+\beta_1 z_{p'+1}+\cdots+\beta_{q'}z_{p'+q'}\in V^\perp$, então 
+$$
+0=B(v,y_k)=\alpha_k\quad \mbox{and}\quad 0=B(v,z_{p'+l})=-\beta_l
+$$
+vale para todo $k\in\{1,\ldots,p\}$ e $l\in\{1,\ldots,q'\}$. Em particular, 
+$\dim W\leq n-\dim V^\perp=n-r$. 
+
+Afirmamos que $y_1,\ldots,y_p,z_{p'+1},\ldots,z_{p'+q'}$ são LI. De fato assuma que 
+$$
+0=\alpha_1y_1+\cdots+\alpha_py_p+\beta_1 z_{p'+1}+\cdots+\beta_{q'}z_{p'+q'}.
+$$
+Então 
+$$
+\alpha_1y_1+\cdots+\alpha_py_p=-\beta_1 z_{p'+1}-\cdots-\beta_{q'}z_{p'+q'}.
+$$
+Aplicando $Q_B$ nos dois lados, temos que 
+$$
+Q_B(\alpha_1y_1+\cdots+\alpha_py_p)=\alpha_1^2+\cdots+\alpha_p^2
+$$
+e 
+$$
+Q_B(-\beta_1 z_{p'+1}-\cdots-\beta_{q'}z_{p'+q'})=-\beta_1^2-\cdots-\beta_{q'}^2.
+$$
+Como o primeiro valor é não negativo, o segundo valor é não positivo, igualdade só pode ocorrer se os dois valores são iguais a zero. Mas neste caso $\alpha_1=\cdots=\alpha_p=0$ e $\beta_1=\ldots=\beta_{q'}=0$; ou  seja, os vetores são LI como foi afirmado. 
+
+Mas isso implica que $\dim W=p+q'\leq n-r=p+q$; ou seja $q'\leq q$. O mesmo argumento implica que $q\leq q'$ e assim $p=p'$. Ora, segue também que $p=p'$. Portanto $(p,q,r)=(p',q',r')$ como foi afirmado.
 :::
 
 :::{#def-quadratic-sig}
-Se $V$ e $Q$ estão como no @thm-sylvester, então a tripla $(p,q,r)$ é chamada de **assinatura** da forma quadrática $Q$. Pelo @thm-sylvester, a assinatura está bem definida.  
+Se $V$ e $B$ estão como no @thm-sylvester, então a tripla $(p,q,r)$ é chamada de **assinatura** da forma  $B$. Pelo @thm-sylvester, a assinatura está bem definida.  
 :::
 
 :::{#exm-sylvester-example}
-1. Se $Q$ é uma forma quadrática em $\R^n$ com assinatura $(p,q,r)$, então o espaço $\R^n$ com esta forma é frequentemente denotado por 
-$\R^{p+q+r}$. O espaço $\R^n$ com forma quadrática com assinatura $(p,q,0)$ é escrito como $\R^{p+q}$.  
-2. Se $V$ é um espaço como produto interno, então vimos no @exm-quadform que $v\to \|v\|^2$ é 
-forma quadrática. A assinatura desta forma quadrática é $(n,0,0)$. De fato, se $V$ é espaço com forma 
-quadrática $Q$ com assinatura $(n,0,0)$, então a forma bilinear simétrica $B_Q$ é um produto interno. Neste caso, dizemos que $Q$ é uma forma quadrática posititiva.
-3. Se a forma $Q$ tem assinatura $(p,0,r)$, então dizemos que a forma $Q$ é não-negativa.
-4. Se a forma $Q$ tem assinatura $(0,q,0)$, então dizemos que a forma $Q$ é negativa.
-5. Se a forma $Q$ tem assinatura $(0,q,r)$, então dizemos que a forma $Q$ é não-positiva.
-6. O espaço $\R^{3+1}=\R^{1+3+0}$ é conhecido como o [Espaço de Minkowski](https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski) e a sua geometria é a geometria do espaço-tempo que aparece na teoria da relatividade. 
+1. Se $B$ é uma forma bilinear simétrica em $\R^n$ com assinatura $(p,q,r)$, então o espaço $\R^n$ com esta forma é frequentemente denotado por 
+$\R^{p+q+r}$. O espaço $\R^n$ com forma bilinear com assinatura $(p,q,0)$ é escrito como $\R^{p+q}$.  
+1. Se $V$ é um espaço como produto interno, então a assinatura desta forma é $(n,0,0)$. De fato, se $V$ é espaço com forma 
+bilinear simétrica $B$ com assinatura $(n,0,0)$, então a forma $B$ é um produto interno. Neste caso, dizemos que $B$ é uma forma bilinear simétrica **posititiva**.
+1. Se a forma $B$ tem assinatura $(p,0,r)$, então dizemos que a forma $B$ é **não-negativa**.
+2. Se a forma $B$ tem assinatura $(0,q,0)$, então dizemos que a forma $B$ é **negativa**.
+3. Se a forma $B$ tem assinatura $(0,q,r)$, então dizemos que a forma $B$ é **não-positiva**.
+4. O espaço $\R^{1+3}=\R^{1+3+0}$ é conhecido como o [**Espaço de Minkowski**](https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_Minkowski) e a sua geometria é a geometria do espaço-tempo que aparece na teoria da relatividade especial. 
 :::
 
 ## Aplicação: Identificação das cônicas
@@ -150,7 +225,8 @@ A parte quadrática desta equação é
 $$
 Q(x,y)=ax^2+by^2+cxy
 $$
-e isso defina uma forma quadrática em $\R^2$. De acordo com a Lei da Inêrcia de Sylvester, a assinatura desta forma é $(2,0,0)$, $(0,2,0)$, $(0,0,2)$, (1,1,0)$, $(1,0,1)$, ou $(0,1,1)$. Assumindo que $f(x,y)$ é uma equação quadrática, temos que $a\neq 0$ ou $b\neq 0$ ou $c\neq 0$ e a assinatura $(0,0,2)$ não ocorre. A curva pode ser caraterizada de acordo com as assinaturas: Temos elipse com assinatura $(2,0,0)$ 
+e isso defina uma forma quadrática em $\R^2$ (como no @exm-quadform). De acordo com a Lei da Inêrcia de Sylvester, a assinatura 
+da forma bilinear simétrica associada com $Q$  é $(2,0,0)$, $(0,2,0)$, $(0,0,2)$, (1,1,0)$, $(1,0,1)$, ou $(0,1,1)$. Assumindo que $f(x,y)$ é uma equação quadrática, temos que $a\neq 0$ ou $b\neq 0$ ou $c\neq 0$ e a assinatura $(0,0,2)$ não ocorre. A curva pode ser caraterizada de acordo com as assinaturas: Temos elipse com assinatura $(2,0,0)$ 
 ou $(0,2,0)$, hipérbole com assinatura $(1,1,0)$, e parábola com assinatura $(1,0,1)$ ou $(0,1,1)$.  
 
 Os detalhes deixamos para o leitor. Recomendamos revisar as notas de GAAL e comparar as contas com as contas nesta página. 
