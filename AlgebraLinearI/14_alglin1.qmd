@@ -29,6 +29,10 @@ $$
 :::{#exr-}
 Sejam $V$, $B$ e $Q_B$ como na @def-quad-form. Demonstre que 
 $$
+Q_B(\alpha v)=\alpha^2 Q(v)\quad \mbox{para todo}\quad \alpha\in \R,\ v\in V
+$$
+e
+$$
 B(u,v)=\frac 12 (Q(u+v)-Q(u)-Q(v)).
 $$
 Em particular, se $\left<-,-\right>$ é um produto interno no espaço vetorial $V$, deduza que 
