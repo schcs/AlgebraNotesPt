@@ -231,7 +231,7 @@ $$
 Q(x,y)=ax^2+by^2+cxy
 $$
 e isso defina uma forma quadrática em $\R^2$ (como no @exm-quadform). De acordo com a Lei da Inêrcia de Sylvester, a assinatura 
-da forma bilinear simétrica associada com $Q$  é $(2,0,0)$, $(0,2,0)$, $(0,0,2)$, (1,1,0)$, $(1,0,1)$, ou $(0,1,1)$. Assumindo que $f(x,y)$ é uma equação quadrática, temos que $a\neq 0$ ou $b\neq 0$ ou $c\neq 0$ e a assinatura $(0,0,2)$ não ocorre. A curva pode ser caraterizada de acordo com as assinaturas: Temos elipse com assinatura $(2,0,0)$ 
+da forma bilinear simétrica associada com $Q$  é $(2,0,0)$, $(0,2,0)$, $(0,0,2)$, $(1,1,0)$, $(1,0,1)$, ou $(0,1,1)$. Assumindo que $f(x,y)$ é uma equação quadrática, temos que $a\neq 0$ ou $b\neq 0$ ou $c\neq 0$ e a assinatura $(0,0,2)$ não ocorre. A curva pode ser caraterizada de acordo com as assinaturas: Temos elipse com assinatura $(2,0,0)$ 
 ou $(0,2,0)$, hipérbole com assinatura $(1,1,0)$, e parábola com assinatura $(1,0,1)$ ou $(0,1,1)$.  
 
 Os detalhes deixamos para o leitor. Recomendamos revisar as notas de GAAL e comparar as contas com as contas nesta página. 
