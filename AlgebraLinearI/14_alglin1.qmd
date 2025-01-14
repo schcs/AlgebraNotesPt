@@ -37,12 +37,12 @@ B(u,v)=\frac 12 (Q(u+v)-Q(u)-Q(v)).
 $$
 Em particular, se $\left<-,-\right>$ é um produto interno no espaço vetorial $V$, deduza que 
 $$
-\left<u,v\right>=\frac 12(\|u+v\|-\|u\|-\|v\|).
+\left<u,v\right>=\frac 12(\|u+v\|^2-\|u\|^2-\|v\|^2).
 $$
 :::
 
 :::{#exm-quadform}
-1. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\|v\|^2$ é uma forma quadrática. 
+1. Seja $V$ espaço com produto interno $\left<-,-\right>$. Então a aplicação $Q(v)=\left<v,v\right>=\|v\|^2$ é uma forma quadrática. 
 2. Assuma que $x_1,\ldots,x_n$ são variáveis e seja $Q(x_1,\ldots,x_n)\in\R[x_1,\ldots,x_n]$ um polinômio homogêneo de grau 2: 
 $$
 Q(x_1,\ldots,x_n)=\sum_{1\leq i\leq j\leq n} \alpha_{i,j}x_ix_j.
@@ -61,7 +61,7 @@ $$
 B(u,v)=uA_Qv^t
 $$
 (considerando $u$ e $v$ como vetores linhas). Como $A_Q$ é uma matriz simétrica e a multiplicação matrcial satisfaz a lei distributiva, 
-temos que $B$ é uma forma bilinear em $\R^n$. Ora, observe que 
+temos que $B$ é uma forma bilinear simétrica em $\R^n$. Ora, observe que 
 $$
 Q(v)=v A_Qv^t=B(v,v)
 $$
@@ -77,10 +77,11 @@ tal que a entrada de $[B]_X$ na posição $(i,j)$ é $B(b_i,b_j)$.
 :::
 
 :::{#exr-}
-Seja $V$, $B$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Demonstre que 
+Seja $V$, $B$ e $X$ como na @def-quad-mat e sejam $u,v\in V$. Sejam $u_X$ e $v_x$ os vetores colunas 
+das coordenadas de $u$ e $v$ na base $X$. Demonstre que 
 $$
-B(u,v)=u_X\cdot[B]_X\cdot v_X^t \quad \mbox{e}\quad 
-Q(u)=u_X\cdot [Q]_X\cdot u_X^t
+B(u,v)=u_X^t\cdot[B]_X\cdot v_X \quad \mbox{e}\quad 
+Q(u)=u_X^t\cdot [Q]_X\cdot u_X
 $$ 
 Dica: Veja o @exm-bilin-mat.
 :::
@@ -100,7 +101,7 @@ u_X=(\mbox{id}_V(u))_X=[\mbox{id}_V]^Y_X\cdot u_Y=P\cdot u_Y.
 $$
 Se $A$ é a matriz de $B$ na base $Y$, então temos que 
 $$
-u_Y^t\cdot A\cdot v_Y=B_Q(u,v)=u_X^t\cdot [B]_X\cdot v_X =(P\cdot u_Y)^t\cdot [B]_X\cdot (P\cdot u_Y)=
+u_Y^t\cdot A\cdot v_Y=B(u,v)=u_X^t\cdot [B]_X\cdot v_X =(P\cdot u_Y)^t\cdot [B]_X\cdot (P\cdot u_Y)=
 u_Y\cdot P^t\cdot [B]_X\cdot P\cdot u_Y.
 $$
 Como isso vale, para todo $u,v\in V$, temos que  $A=[B]_Y=P^t\cdot [B]_X\cdot P$.
@@ -155,7 +156,7 @@ $$
 isso não precisa ser assim para uma forma qualquer.) Primeiro, se $w\in V$, então, temos para todo $k\in\{1,\ldots,r\}$ 
 que
 $$
-B(y_{p+q+k},w)=(y_{p+q+k})_Y D w_Y^t=(D_{p+q+k,p+q+k}(y_{p+q+k})_Y) w_Y^t=0.
+B(y_{p+q+k},w)=(y_{p+q+k})_Y^t D w_Y=(D_{p+q+k,p+q+k}(y_{p+q+k})_Y^t) w_Y=0.
 $$
 e $\left<y_{p+q+1},\ldots,y_{p+q+r}\right>\leq V^\perp$. Por outro lado, se $v\in V^\perp$, escreva 
 $$
@@ -163,7 +164,7 @@ v=\alpha_1 y_1+\cdots+\alpha_{p}y_p+\alpha_{p+1} y_{p+1}+\cdots+\alpha_{p+q}y_{p
 $$
 e considere 
 $$
-0=B(v,y_k)=v_YD(y_k)_Y^t=D_{k,k}\alpha_k.
+0=B(v,y_k)=v_Y^tD(y_k)_Y=D_{k,k}\alpha_k.
 $$
 Se $k\in\{1,\ldots,p+q\}$, então $D_{k,k}\neq 0$ e segue que $\alpha_k=0$. Portanto 
 $$
