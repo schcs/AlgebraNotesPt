@@ -1368,13 +1368,13 @@ Q_B(\alpha v)=\alpha^2 Q(v)\quad \mbox{para todo}\quad \alpha\in \R,\ v\in V
 \]</span> e <span class="math display">\[
 B(u,v)=\frac 12 (Q(u+v)-Q(u)-Q(v)).
 \]</span> Em particular, se <span class="math inline">\(\left&lt;-,-\right&gt;\)</span> é um produto interno no espaço vetorial <span class="math inline">\(V\)</span>, deduza que <span class="math display">\[
-\left&lt;u,v\right&gt;=\frac 12(\|u+v\|-\|u\|-\|v\|).
+\left&lt;u,v\right&gt;=\frac 12(\|u+v\|^2-\|u\|^2-\|v\|^2).
 \]</span></p>
 </div>
 <div id="exm-quadform" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 53.1</strong></span> &nbsp;</p>
 <ol type="1">
-<li>Seja <span class="math inline">\(V\)</span> espaço com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Então a aplicação <span class="math inline">\(Q(v)=\|v\|^2\)</span> é uma forma quadrática.</li>
+<li>Seja <span class="math inline">\(V\)</span> espaço com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>. Então a aplicação <span class="math inline">\(Q(v)=\left&lt;v,v\right&gt;=\|v\|^2\)</span> é uma forma quadrática.</li>
 <li>Assuma que <span class="math inline">\(x_1,\ldots,x_n\)</span> são variáveis e seja <span class="math inline">\(Q(x_1,\ldots,x_n)\in\R[x_1,\ldots,x_n]\)</span> um polinômio homogêneo de grau 2: <span class="math display">\[
 Q(x_1,\ldots,x_n)=\sum_{1\leq i\leq j\leq n} \alpha_{i,j}x_ix_j.
 \]</span> Ou seja, <span class="math inline">\(Q(x_1,\ldots,x_n)\)</span> contém apenas termos do segundo grau. O polinômio <span class="math inline">\(Q\)</span> pode ser considerado como uma função <span class="math inline">\(Q:\R^n\to \R\)</span>. Afirmamos que <span class="math inline">\(Q\)</span> é uma forma quadrática. Seja <span class="math inline">\(A_Q=(a_{i,j})\)</span> é a matriz <span class="math inline">\(n\times n\)</span> tal que<br>
@@ -1385,7 +1385,7 @@ a_{i,j}=\left\{\begin{array}{ll} \alpha_{i,i} &amp;\mbox{se $i=j$}\\ \frac 12\al
 Q(v)=vA_Qv^t.
 \]</span> Defina <span class="math inline">\(B:\R^n\times \R^n\to \R\)</span> como a aplicação <span class="math display">\[
 B(u,v)=uA_Qv^t
-\]</span> (considerando <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> como vetores linhas). Como <span class="math inline">\(A_Q\)</span> é uma matriz simétrica e a multiplicação matrcial satisfaz a lei distributiva, temos que <span class="math inline">\(B\)</span> é uma forma bilinear em <span class="math inline">\(\R^n\)</span>. Ora, observe que <span class="math display">\[
+\]</span> (considerando <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> como vetores linhas). Como <span class="math inline">\(A_Q\)</span> é uma matriz simétrica e a multiplicação matrcial satisfaz a lei distributiva, temos que <span class="math inline">\(B\)</span> é uma forma bilinear simétrica em <span class="math inline">\(\R^n\)</span>. Ora, observe que <span class="math display">\[
 Q(v)=v A_Qv^t=B(v,v)
 \]</span> vale para todo <span class="math inline">\(v\in \R^n\)</span>.</li>
 </ol>
@@ -1397,9 +1397,9 @@ Q(v)=v A_Qv^t=B(v,v)
 <p><span class="theorem-title"><strong>Definição 53.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita com base <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span>. A <strong>matriz de Gram</strong> de uma forma bilinear simétrica <span class="math inline">\(B\)</span> em <span class="math inline">\(V\)</span> na base <span class="math inline">\(X\)</span> é a matriz <span class="math inline">\([B]_X\)</span> tal que a entrada de <span class="math inline">\([B]_X\)</span> na posição <span class="math inline">\((i,j)\)</span> é <span class="math inline">\(B(b_i,b_j)\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 53.2</strong></span> Seja <span class="math inline">\(V\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(X\)</span> como na <a href="#def-quad-mat" class="quarto-xref">Definição&nbsp;<span>53.2</span></a> e sejam <span class="math inline">\(u,v\in V\)</span>. Demonstre que <span class="math display">\[
-B(u,v)=u_X\cdot[B]_X\cdot v_X^t \quad \mbox{e}\quad
-Q(u)=u_X\cdot [Q]_X\cdot u_X^t
+<p><span class="theorem-title"><strong>Exercício 53.2</strong></span> Seja <span class="math inline">\(V\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(X\)</span> como na <a href="#def-quad-mat" class="quarto-xref">Definição&nbsp;<span>53.2</span></a> e sejam <span class="math inline">\(u,v\in V\)</span>. Sejam <span class="math inline">\(u_X\)</span> e <span class="math inline">\(v_x\)</span> os vetores colunas das coordenadas de <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> na base <span class="math inline">\(X\)</span>. Demonstre que <span class="math display">\[
+B(u,v)=u_X^t\cdot[B]_X\cdot v_X \quad \mbox{e}\quad
+Q(u)=u_X^t\cdot [Q]_X\cdot u_X
 \]</span> Dica: Veja o <a href="09_alglin1.html#exm-bilin-mat" class="quarto-xref">Exemplo&nbsp;<span>47.2</span></a>.</p>
 </div>
 <div id="lem-base-change-bilin" class="theorem lemma">
@@ -1411,7 +1411,7 @@ Q(u)=u_X\cdot [Q]_X\cdot u_X^t
 <p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(u,v\in V\)</span>. Seja <span class="math inline">\(u_X\)</span> e <span class="math inline">\(u_Y\)</span> os vetores colunas das coordenadas de <span class="math inline">\(u\)</span> nas bases <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, respetivamente. Usamos <a href="06_alglin1.html#lem-mat-tl" class="quarto-xref">Lema&nbsp;<span>44.1</span></a> para obter <span class="math display">\[
 u_X=(\mbox{id}_V(u))_X=[\mbox{id}_V]^Y_X\cdot u_Y=P\cdot u_Y.
 \]</span> Se <span class="math inline">\(A\)</span> é a matriz de <span class="math inline">\(B\)</span> na base <span class="math inline">\(Y\)</span>, então temos que <span class="math display">\[
-u_Y^t\cdot A\cdot v_Y=B_Q(u,v)=u_X^t\cdot [B]_X\cdot v_X =(P\cdot u_Y)^t\cdot [B]_X\cdot (P\cdot u_Y)=
+u_Y^t\cdot A\cdot v_Y=B(u,v)=u_X^t\cdot [B]_X\cdot v_X =(P\cdot u_Y)^t\cdot [B]_X\cdot (P\cdot u_Y)=
 u_Y\cdot P^t\cdot [B]_X\cdot P\cdot u_Y.
 \]</span> Como isso vale, para todo <span class="math inline">\(u,v\in V\)</span>, temos que <span class="math inline">\(A=[B]_Y=P^t\cdot [B]_X\cdot P\)</span>.</p>
 </div>
@@ -1442,11 +1442,11 @@ Ora, nesta base, a matriz de <span class="math inline">\(B\)</span> é como afir
 <p><em>Unicidade:</em> Assuma que existe uma base <span class="math inline">\(Z=\{z_1,\ldots,z_n\}\)</span> tal que <span class="math inline">\([B]_Z\)</span> é diagonal com blocos diagonais <span class="math inline">\(I_{p'}\)</span>, <span class="math inline">\(-I_{q'}\)</span> e <span class="math inline">\(0_{r'\times r'}\)</span>. Primeiro, afirmamos que <span class="math display">\[
 V^\perp=\{v\in V\mid B(v,w)=0\mbox{ para todo }w\in V\}=\left&lt;y_{p+q+1},\ldots,y_{p+q+r}\right&gt;.
 \]</span> (Note que o espaço <span class="math inline">\(V^\perp\)</span> é chamado de <strong>radical</strong> da forma <span class="math inline">\(B\)</span>. Quando <span class="math inline">\(B\)</span> for um produto interno, seu radical é <span class="math inline">\(0\)</span>, mas isso não precisa ser assim para uma forma qualquer.) Primeiro, se <span class="math inline">\(w\in V\)</span>, então, temos para todo <span class="math inline">\(k\in\{1,\ldots,r\}\)</span> que <span class="math display">\[
-B(y_{p+q+k},w)=(y_{p+q+k})_Y D w_Y^t=(D_{p+q+k,p+q+k}(y_{p+q+k})_Y) w_Y^t=0.
+B(y_{p+q+k},w)=(y_{p+q+k})_Y^t D w_Y=(D_{p+q+k,p+q+k}(y_{p+q+k})_Y^t) w_Y=0.
 \]</span> e <span class="math inline">\(\left&lt;y_{p+q+1},\ldots,y_{p+q+r}\right&gt;\leq V^\perp\)</span>. Por outro lado, se <span class="math inline">\(v\in V^\perp\)</span>, escreva <span class="math display">\[
 v=\alpha_1 y_1+\cdots+\alpha_{p}y_p+\alpha_{p+1} y_{p+1}+\cdots+\alpha_{p+q}y_{p+q}+\alpha_{p+q+1} y_{p+q+1}+\cdots+\alpha_{p+q+r}y_{p+q+r}
 \]</span> e considere <span class="math display">\[
-0=B(v,y_k)=v_YD(y_k)_Y^t=D_{k,k}\alpha_k.
+0=B(v,y_k)=v_Y^tD(y_k)_Y=D_{k,k}\alpha_k.
 \]</span> Se <span class="math inline">\(k\in\{1,\ldots,p+q\}\)</span>, então <span class="math inline">\(D_{k,k}\neq 0\)</span> e segue que <span class="math inline">\(\alpha_k=0\)</span>. Portanto <span class="math display">\[
 v=\alpha_{p+q+1} y_{p+q+1}+\cdots+\alpha_{p+q+r}y_{p+q+r}\in\left&lt;y_{p+q+1},\ldots,y_{p+q+r}\right&gt;.
 \]</span> Logo <span class="math inline">\(V^\perp\leq \left&lt;y_{p+q+1},\ldots,y_{p+q+r}\right&gt;\)</span> e, de fato, vale a igualdade <span class="math inline">\(V^\perp= \left&lt;y_{p+q+1},\ldots,y_{p+q+r}\right&gt;\)</span>. Em particular, temos que <span class="math inline">\(\dim V^\perp=r\)</span>. Como o mesmo argumento vale para a base <span class="math inline">\(Z\)</span>, obtemos que <span class="math inline">\(r'=\dim V^\perp=r\)</span>. Como <span class="math inline">\(n=p+q+r=p'+q'+r'\)</span>, temos também que <span class="math inline">\(p+q=p'+q'\)</span>.</p>
