@@ -108,7 +108,7 @@ Pelo resto dessa seção, seja $V$ um espaço vetorial de dimensão finita
 $n$ com produto interno. Vamos mostrar que $V$ possui uma base
 ortonormal.
 
-:::{#prp-}
+:::{#prp-proj-ort}
 Sejam $\ul{u}, \ul{v}$ vetores LI de $V$. Existe um único vetor
 $\tn{proj}_{\ul{v}}(\ul{u})$, chamado *projeção ortogonal de $\ul{u}$
 sobre $\ul{v}$* com as propriedades que
@@ -140,7 +140,7 @@ projeção ortogonal assim:
 
 ## Bases ortogonais e ortonormais 
 
-:::{#thm-}
+:::{#thm-gram-sch}
 1.  Seja $W$ um subespaço de $V$ e suponha que $W$ possui base ortogonal
     $B = \{\ul{w_1},\ldots,\ul{w_s}\}$. Podemos estender $B$ para uma
     base ortogonal de $V$.

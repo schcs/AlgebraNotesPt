@@ -72,6 +72,7 @@ book:
         - AlgebraLinearI/12_alglin1.qmd
         - AlgebraLinearI/13_alglin1.qmd
         - AlgebraLinearI/14_alglin1.qmd
+        - AlgebraLinearI/03_alglin_comput.qmd        
     - part: AlgebraLinearII/index.qmd
       chapters: 
         - AlgebraLinearII/bases.qmd
