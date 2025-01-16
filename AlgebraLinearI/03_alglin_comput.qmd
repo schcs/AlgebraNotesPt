@@ -127,12 +127,12 @@ Verifique visualmente a qualidade destas aproximações. Por exemplo
 f = abs(x)
 plot(f, xlim=(-3,3), ylim=(-1,4))
 ```
-![abs(x)](img/abs.png)
+![f(x)=abs(x)](img/abs.png)
 ```python
 ff = fourier(f)
 plot(ff, xlim=(-3,3), ylim=(-1,4))
 ```
-![Fourier approximation of abs(x)](img/abs_four.png)
+![Fourier approximation of f(x)=abs(x)](img/abs_four.png)
 
 1. Faça a mesma coisa com outras funções, tais como $x$, $x^2$, $\exp(x)$, etc. 
 2. Modifique a sua função `fourier` tal que seja capaz de calcular as aproximações até grau $10$ ou até um grau $k$ arbitrário fornecido pelo usuário. 
