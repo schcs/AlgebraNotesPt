@@ -4,6 +4,7 @@ number-sections: true
 lang: pt-BR
 --- 
 
+
 O espaço vetorial $C^0[-\pi, \pi]$ é o conjunto de todas as funções contínuas no intervalo $[- \pi, \pi]$. Este espaço é um espaço vetorial real com as operações de adição de funções e multiplicação por escalar definidas pontualmente.
 O produto interno neste espaço é definido por:
 $$

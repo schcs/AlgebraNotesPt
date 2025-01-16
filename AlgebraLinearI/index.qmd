@@ -37,3 +37,4 @@ Material disponibilizado sob a licença
 - [O adjunto de uma transformação linear](12_alglin1.qmd)
 - [Diagonalização de operadores autoadjuntos](13_alglin1.qmd)
 - [A Lei da Inêrcia de Sylvester](14_alglin1.qmd)
+- [Computação com Python III](03_alglin_comput.qmd)
