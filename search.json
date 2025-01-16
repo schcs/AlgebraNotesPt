@@ -1453,7 +1453,7 @@
     "href": "AlgebraLinearI/index.html#conteúdo",
     "title": "Álgebra Linear I",
     "section": "Conteúdo",
-    "text": "Conteúdo\n\nEspaços vetoriais e subespaços\nCombinações lineares e geradores\nBases e dimensão\nComputação com Python I\nTransformações lineares\nO núcleo e a imagem\nA matriz de uma transformação linear e mudança de base\nO posto de uma matriz\nDiagonalização\nO produto interno\nComputação com Python II\nÂngulos e ortogonalidade\nAplicação: A Teoria de Fourier\nO adjunto de uma transformação linear\nDiagonalização de operadores autoadjuntos\nA Lei da Inêrcia de Sylvester",
+    "text": "Conteúdo\n\nEspaços vetoriais e subespaços\nCombinações lineares e geradores\nBases e dimensão\nComputação com Python I\nTransformações lineares\nO núcleo e a imagem\nA matriz de uma transformação linear e mudança de base\nO posto de uma matriz\nDiagonalização\nO produto interno\nComputação com Python II\nÂngulos e ortogonalidade\nAplicação: A Teoria de Fourier\nO adjunto de uma transformação linear\nDiagonalização de operadores autoadjuntos\nA Lei da Inêrcia de Sylvester\nComputação com Python III",
     "crumbs": [
       "Álgebra Linear I"
     ]
