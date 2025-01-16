@@ -1472,9 +1472,21 @@ w_n&amp;=v_n-\mbox{proj}_{w_1}(v_n)-\mbox{proj}_{w_2}(v_n)-\cdots-\mbox{proj}_{w
 <div id="exr-fourier" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 54.7</strong></span> Verifique visualmente a qualidade destas aproximações. Por exemplo</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">abs</span>(x)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>))</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ff <span class="op">=</span> fourier(f)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plot(ff, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/abs.png" class="img-fluid figure-img"></p>
+<figcaption>f(x)=abs(x)</figcaption>
+</figure>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ff <span class="op">=</span> fourier(f)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plot(ff, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/abs_four.png" class="img-fluid figure-img"></p>
+<figcaption>Fourier approximation of f(x)=abs(x)</figcaption>
+</figure>
+</div>
 <ol type="1">
 <li>Faça a mesma coisa com outras funções, tais como <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2\)</span>, <span class="math inline">\(\exp(x)\)</span>, etc.</li>
 <li>Modifique a sua função <code>fourier</code> tal que seja capaz de calcular as aproximações até grau <span class="math inline">\(10\)</span> ou até um grau <span class="math inline">\(k\)</span> arbitrário fornecido pelo usuário.</li>
