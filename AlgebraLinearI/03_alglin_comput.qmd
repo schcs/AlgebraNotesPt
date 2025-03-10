@@ -110,7 +110,7 @@ aproximações numéricas em vez de valores exatos.
 :::
 
 :::{#exr-fourier}
-Escreva uma função `fourier(f)` em Python que dada uma função $f\in C^\infty[a,b]$, calcula a aproximação de Fourier para a função $f$ até grau $5$.A sua função deve verificar as seguintes computações.
+Escreva uma função `fourier(f)` em Python que dada uma função $f\in C^\infty[a,b]$, calcula a aproximação de Fourier para a função $f$ até grau $5$. Use a função `orthogonal_projection` modificada no @exr-exr-in-prod-num. A sua função deve verificar as seguintes computações.
 ```python
 fourier(x)
 2.0sin(𝑥)−1.0sin(2𝑥)+0.666666666666667sin(3𝑥)−0.5sin(4𝑥)+0.4sin(5𝑥)

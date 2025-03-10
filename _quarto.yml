@@ -75,6 +75,7 @@ book:
         - AlgebraLinearI/03_alglin_comput.qmd        
     - part: AlgebraLinearII/index.qmd
       chapters: 
+        - AlgebraLinearII/corpos.qmd
         - AlgebraLinearII/bases.qmd
         - AlgebraLinearII/subespacos.qmd
         - AlgebraLinearII/quociente.qmd

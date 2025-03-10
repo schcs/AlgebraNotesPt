@@ -29,8 +29,7 @@ Material disponibilizado sob a licença
 
 ### Bloco I: Espaços vetoriais, transformações lineares e o determinante
 
-- Corpos
-- Espaços vetoriais sobre corpos
+- [Espaços vetoriais sobre corpos](corpos.qmd)
 - [Bases e dimensão](bases.qmd)
 - [Subespaços e a soma direta](subespacos.qmd)
 - [Espaço quociente](quociente.qmd)
