@@ -1,0 +1,200 @@
+--- 
+title: "Espaços vetoriais sobre corpos"
+number-sections: true
+lang: pt-BR
+---
+
+## A definição de um corpo
+
+Um corpo é uma estrutura algébrica que permite realizar os passos da eliminação de Gauss-Jordan. A definição formal é a seguinte.
+
+:::{#def-corpo}
+Seja $\F$ um conjunto não vazio equipado com duas operações $+$ (adição) e $\cdot$ (multiplicação) que satisfazem as seguintes propriedades para todo $a,b,c\in \F$:
+
+
+- $(a+b)+c=a+(b+c)$;
+- $a+b=b+a$;
+- existe elemento neutro $0\in \F$ para a adição: $0+a=a+0=a$;
+- todo $a\in F$ possui negativo; ou seja existe $-a\in \F$ tal que $a+(-a)=0$;
+- $(ab)c=a(bc)$;
+- $ab=ba$;
+- existe elemento neutro $1\in \F\setminus\{0\}$ para multiplicação: $1\cdot a=a\cdot 1=a$;
+- para todo elemento $a\in\F\setminus\{0\}$, existe inverso multiplicativo de $a$, denotado por 
+  $a^{-1}$ que satisfaz $aa^{-1}=1$. 
+- $a(b+c)=ab+ac$.
+
+A estrutura $(\F,+,\cdot)$ chama-se *corpo*. 
+:::
+
+Observe que na definição, nós assumimos que os elementos $0$ e $1$ de um corpo são diferentes. Assim, todo corpo tem pelo menos dois elementos, 
+e de fato existe um corpo $\{0,1\}$ com apenas estes dois elementos, onde as operações $+$ e $\cdot$ são feitas módulo $2$.  
+
+## Exemplos de corpos
+
+:::{#exm-corpo}
+Os seguintes exemplos são corpos.
+
+1. $\Q$, $\R$, $\C$, $\Z_p$ quando $p$ é primo. 
+2. Considere 
+   $$
+   \F=\{a+b\sqrt 2\mid a,b\in \Q\}.
+   $$
+   Afirmamos que $\F$ é corpo. De fato, a maioria das propriedades na @def-corpo, são triviais de verificar. A única propriedade que pode 
+   não ser imedatamente clara é que todo elemento não nulo tem inverso multiplicativo. De fato, considere $a+b\sqrt 2\in\F\setminus\{0\}$ 
+   calcule 
+   $$
+   (a+b\sqrt 2)(a-b\sqrt 2)=a^2-2b^2. 
+   $$
+   Como $\sqrt 2\not\in\Q$, $a^2-2b^2\neq 0$ quando $a\neq 0$ e $b\neq 0$. Logo, 
+   $$
+   (a+b\sqrt 2)\frac{a-b\sqrt 2}{a^2-2b^2}=1.
+   $$
+   Portanto,
+   $$
+   (a+b\sqrt 2)^{-1}=\frac{a-b\sqrt 2}{a^2-2b^2}. 
+   $$
+3. Seja $p$ um primo tal que $-1$ não é quadrado módulo $p$. Pode tomar, por exemplo $p=3,7,11,\ldots$. De fato, pode-se verificar que 
+   $p$ satisfaz esta propriedade se e somente se $p$ é ímpar e $p\equiv -1\pmod 4$. Seja $i$ um símbolo tal que $i^2=-1\in\Z_p$ e considere 
+   $$
+   \F=\{a+bi\mid a,b\in\Z_p\}. 
+   $$
+   As operações em $\F$ fazemos usando as regras naturais e usando também a regra que $i^2=-1$. Ou seja, 
+   \begin{align*}
+   (a+bi)+(c+di)&=a+c+(b+d)i;\\
+   (a+bi)\cdot(c+di)&=ac-bd+(ad+bc)i.
+   \end{align*}
+   Afirmamos que $\F$ é um corpo. De fato, a única propriedade que precisa de verificação mais cuidadosa é que todo elemento não 
+   nulo tem inverso multiplicativo. De fato, seja $a+bi\in\F\setminus\{0\}$. Temos que 
+   $$
+   (a+bi)(a-bi)=a^2+b^2.
+   $$
+   Como, $-1$ não é quadrado em $Z_p$, temos que $a^2+b^2\neq 0$ e 
+   $$
+   (a+bi)\frac{a-bi}{a^2+b^2}=1.
+   $$
+   Logo, 
+   $$
+   (a+bi)^{-1}=\frac{a-bi}{a^2+b^2}.
+   $$
+:::
+
+:::{#exm-nãocorpo}
+Os seguintes não são corpos: $\N$, $\Z$, $\Z_n$ quando $n$ é composto $\R[x]$ (anel de polinômios), etc.  
+:::
+
+## Espaços vetoriais sobre corpos
+
+:::{#def-ev}
+Seja $\F$ um corpo. Um **espaço vetorial** sobre $\F$ é um conjunto $V$ de elementos
+(chamados "vetores") junto com as operações da soma
+($u, v\in V \implies u+v\in V$) e do produto por
+escalar ($u\in V, \lambda\in \F \implies \lambda u\in V$). As
+operações têm que satisfazer as seguintes condições
+
+1.  $(u+v)+w = u + (v + w)\quad \forall u, v, w\in V$
+    ("associatividade\"),
+
+2.  $u + v = v + u\quad \forall u, v\in V$
+    ("commutatividade"),
+
+3.  Existe um elemento $0\in V$ tal que
+    $$u + 0 = u\quad\forall u\in V.$$
+
+4.  Para cada $u\in V$, existe um elemento $-u\in V$ tal que
+    $$u + (-u) = 0,$$
+
+5.  $\lambda(u + v) = \lambda u + \lambda v\quad\forall \lambda\in \F, \forall u, v\in V$,
+
+6.  $(\lambda + \mu)u = \lambda u + \mu u\quad\forall \lambda, \mu\in \F, \forall u\in V$,
+
+7.  $(\lambda\mu)u = \lambda(\mu u)\quad\forall \lambda, \mu\in \F, \forall u\in V$,
+
+8.  $1\cdot u = u\quad \forall u\in V$.
+:::
+
+
+Dados $u, v\in V$, vamos denotar por $u - v$ o
+elemento $u + (-v)$. A partir dessas propriedades, podemos
+deduzir outras. Por exemplo:
+
+:::{#lem-ev-zero} 
+$0\cdot u = 0\,\,\,\forall u\in V$.
+:::
+
+:::{.proof}
+Temos
+$$0u + u \overset{P8}{=} 0u + 1u \overset{6}{=} (0+1)u = 1u \overset{8}{=} u.\qquad (*)$$
+Logo:
+$$0u \overset{3}{=} 0 u + 0 \overset{4}{=} 0u + u -u \overset{(*)}{=} 
+u -u \overset{4}{=} 0.$$
+:::
+
+:::{#exm-ev}
+-   $\F^n$ é um espaço vetorial $\forall n$. [Exercício:]{.underline}
+    confirme que $\F^n$ satisfaz as propriedades 1--8.
+
+-   Quando $n=1$ acima, obtemos que $\F = \F^1$ é um espaço vetorial
+    sobre $\F$. As operações da soma e da multiplicação por escalar são
+    simplesmente a soma e o produto de números em $\F$:
+    $$(a) + (b) = (a+b)$$ $$\lambda(a) = (\lambda a).$$
+
+-   O menor espaço vetorial de todos: $\{0\}$ é um espaço vetorial.
+    Temos somente um jeito de definir a soma e produto por escalar:
+    $$0 + 0 = 0$$ $$\lambda\cdot 0 = 0.$$ Este
+    espaço parece meio idiota, mas ele é muito importante.
+
+-   Denote por $M_{m,n}(\F)$ o conjunto das matrizes $m\times n$ com
+    entradas em $\F$. Se lembre que podemos somar duas matrizes em
+    $M_{m,n}(\F)$:
+    $$\hbox{Se }A = (a_{ij}), B = (b_{ij})\in M_{m,n}(\F)\hbox{ então } A+B = (a_{ij} + b_{ij}) \in M_{m,n}(\F).$$
+    Também podemos multiplicar uma matriz por um escalar:
+    $$\hbox{Se }A = (a_{ij})\in M_{m,n}(\F)\,,\,\lambda\in \F\hbox{ então } \lambda A = (\lambda a_{ij}) \in M_{m,n}(\F).$$
+    De fato, com essas operações, $M_{m,n}(\F)$ é um espaço vetorial.
+    Confirmo, por exemplo, que satisfaz Propriedade 3. A matriz $0$
+    será a matriz cujas entradas são todas $0$:
+    $$0 = \begin{pmatrix}
+    0 & \cdots & 0 \\
+    \vdots & \ddots & \vdots\\
+    0 & \cdots & 0
+    \end{pmatrix}.$$ Para qualquer matriz $A = (a_{ij})$ a gente tem
+    $$A + 0 = (a_{ij}) + (0) = (a_{ij} + 0) = (a_{ij}) = A.\quad\checkmark$$
+    [Exercício]{.underline}: confirme que mais algumas das propriedades
+    valem.
+
+    Os espaços $M_{1,n}(\F)$ e $M_{n,1}(\F)$ são os espaços de vetores
+    linhas e de vetores colunas, respetivamente, de comprimento $n$
+    sobre $\F$. Estes espaços serão identificados com $\F^n$.
+
+-   Um exemplo menos óbvio. Seja $X$ um conjunto qualquer e considere o
+    conjunto das funções (= aplicações) de $X$ a $\F$:
+    $$\mathcal{F}(X, \F) = \{ f : X\to \F\hbox{ uma função}\}.$$ Podemos
+    definir a **soma** de duas funções: Dadas funções $f,g : X\to \F$,
+    definimos uma função nova $(f+g) : X\to \F$ como
+    $$(f+g)(x) := f(x) + g(x).$$ Também podemos definir o produto por
+    escalar de uma função $f$ pelo escalar $\lambda$ assim:
+    $$(\lambda f)(x) := \lambda\cdot f(x).$$ Com essas operações,
+    $\mathcal{F}(X, \F)$ é um espaço vetorial. Vamos confirmar umas
+    propriedades:
+
+    -   Dadas funções $f,g:X\to \F$, queremos confirmar que as funções
+        $f+g$ e $g+f$ são iguais. Para fazer isso, temos que confirmar
+        que $(f+g)(x) = (g+f)(x)$ para todo $x\in X$. Mas isso é fácil:
+        $$(f+g)(x) = f(x) + g(x) = g(x) + f(x) = (g+f)(x).$$
+
+    -   A função $0\in \mathcal{F}(X,\F)$ será a função que leva
+        todo $x\in X$ pro elemento $0\in \F$. Ou seja,
+        $0(x) := 0\,\forall x\in X$. Temos que confirmar que
+        $f+0 = f$, logo temos que confirmar que
+        $(f+0)(x) = f(x)\,\forall x\in X$. Mas
+        $$(f+0)(x) = f(x) + 0(x) = f(x) + 0 = f(x).$$
+
+    [Exercício:]{.underline} Defina a função "$-f$" e confirme que as
+    outras propriedades valem.
+        $0(x) := 0\,\forall x\in X$. Temos que confirmar que
+        $f+0 = f$, logo temos que confirmar que
+        $(f+0)(x) = f(x)\,\forall x\in X$. Mas
+        $$(f+0)(x) = f(x) + 0(x) = f(x) + 0 = f(x).$$
+
+    [Exercício:]{.underline} Defina a função "$-f$" e confirme que as
+    outras propriedades valem.
+:::
