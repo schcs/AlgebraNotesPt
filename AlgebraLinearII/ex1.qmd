@@ -37,6 +37,22 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
 2. Se $ab=ac$, então $b=c$ para todo $a,b,c\in\F$ com $a\neq 0_\F$.
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução: 
+1. Suponha que $a + b = a + c$. Podemos adicionar o elemento neutro aditivo $-a$ em ambos os lados da equação:
+    $$
+    -a + (a + b) = -a + (a + c).
+    $$
+    Pela associatividade da adição, temos:
+    $$
+    (-a + a) + b = (-a + a) + c.
+    $$
+    Como $-a + a = 0_\F$, obtemos:
+    $$
+    0_\F + b = 0_\F + c.
+    $$
+    E, pela propriedade do elemento neutro aditivo, concluímos que $b = c$.
+:::
 
 :::{#exr-}
 Decide quais dos seguintes conjuntos são corpos (com as operações $+$ e $\cdot$ usuais). Justifique sua resposta.
