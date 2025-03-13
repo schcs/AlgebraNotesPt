@@ -190,3 +190,10 @@ font-style: normal;
 .theorem.conjecture[text]:before {
 content: "Conjecture (" attr(text) ") ";
 }
+
+
+.sol {
+  border: 3px outset green;
+	padding: 5px;
+  background-color: #e6ffcc;
+}
