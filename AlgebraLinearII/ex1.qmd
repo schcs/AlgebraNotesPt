@@ -3,9 +3,6 @@
 title: "Exercícios: Lista 1"
 number-sections: true
 lang: pt-BR
-format: html
-filters: 
-  - custom_callout.lua
 --- 
 
 :::{#exr-}
