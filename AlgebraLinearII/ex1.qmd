@@ -20,10 +20,14 @@ Apresentamos a solução dos itens 1. e 3. O leitor poderá fazer itens 2. e 4.
 
 1. O elemento neutro aditivo $0_\F$ é único. Suponha que existam dois elementos neutros aditivos $0_\F$ e $0'_\F$. Então, por definição de elemento neutro aditivo, temos que $0_\F + 0'_\F = 0'_\F$ e $0_\F + 0'_\F = 0_\F$. Portanto, $0_\F = 0'_\F$, mostrando que o elemento neutro aditivo é único.
 
+2.  
+
 3. Se $a\in\F$, então o negativo $-a$ é único. Suponha que existam dois negativos de $a$, denotados por $-a$ e $-a'$. Então, usando a definição do negativo e a associatividade,
    $$
    -a = -a+(a+(-a'))=(-a+a)+(-a')=-a'.
    $$
+
+4. 
 :::
 
 :::{#exr-}
@@ -32,6 +36,7 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
 1. Se $a+b=a+c$, então $b=c$ para todo $a,b,c\in\F$.
 2. Se $ab=ac$, então $b=c$ para todo $a,b,c\in\F$ com $a\neq 0_\F$.
 :::
+
 
 :::{#exr-}
 Decide quais dos seguintes conjuntos são corpos (com as operações $+$ e $\cdot$ usuais). Justifique sua resposta.
