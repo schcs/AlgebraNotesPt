@@ -1,0 +1,113 @@
+
+---
+title: "Exercícios: Lista 1"
+number-sections: true
+lang: pt-BR
+format: html
+filters: 
+  - custom_callout.lua
+--- 
+
+:::{#exr-}
+Seja $\F$ um corpo. Mostre que
+
+1. O elemento neutro aditivo $0_\F$ é único.
+2. O elemento neutro multiplicativo $1_\F$ é único.
+3. Se $a\in\F$, então o negativo $-a$ é único.
+4. Se $a\in\F\setminus\{0_\F\}$, então o inverso $a^{-1}$ é único.
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução: 
+Apresentamos a solução dos itens 1. e 3. O leitor poderá fazer itens 2. e 4. 
+
+1. O elemento neutro aditivo $0_\F$ é único. Suponha que existam dois elementos neutros aditivos $0_\F$ e $0'_\F$. Então, por definição de elemento neutro aditivo, temos que $0_\F + 0'_\F = 0'_\F$ e $0_\F + 0'_\F = 0_\F$. Portanto, $0_\F = 0'_\F$, mostrando que o elemento neutro aditivo é único.
+
+3. Se $a\in\F$, então o negativo $-a$ é único. Suponha que existam dois negativos de $a$, denotados por $-a$ e $-a'$. Então, usando a definição do negativo e a associatividade,
+   $$
+   -a = -a+(a+(-a'))=(-a+a)+(-a')=-a'.
+   $$
+:::
+
+:::{#exr-}
+Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
+
+1. Se $a+b=a+c$, então $b=c$ para todo $a,b,c\in\F$.
+2. Se $ab=ac$, então $b=c$ para todo $a,b,c\in\F$ com $a\neq 0_\F$.
+:::
+
+:::{#exr-}
+Decide quais dos seguintes conjuntos são corpos (com as operações $+$ e $\cdot$ usuais). Justifique sua resposta.
+
+1. $\Z[i]=\{a+bi\mid a,b\in\Z\}$ (como subconjunto de $\C$).
+2. $\Q[i]=\{a+bi\mid a,b\in\Q\}$ (como subconjunto de $\C$).
+3. $\Z_{10}=\{0,\ldots,9\}$ com as operações mod $10$. 
+4. 
+$$
+    \left\{\begin{pmatrix} 0 & 0 \\ 0 & 0\end{pmatrix}, 
+    \begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix}
+    \begin{pmatrix} 0 & 1 \\ 1 & 1\end{pmatrix}
+    \begin{pmatrix} 1 & 1 \\ 1 & 0\end{pmatrix}\right\}
+$$ 
+considerado como subconjunto de $M_2(\Z_2)$.
+:::
+
+
+:::{#exr-}
+A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial sobre um corpo $\F$. 
+
+1. Mostre que o vetor nulo $0_V$ é único.
+2. Mostre que o negativo $-v$ é único para todo $v\in V$. 
+3. Mostre que $\alpha v=0_V$ se e somente se $\alpha=0_\F$ ou $v=0_V$.
+4. Mostre que $(-1_\F)\cdot v=-v$ para todo $v\in V$. 
+:::
+
+:::{#exr-func-fin}
+Seja $\F$ um corpo, $n\in\N$, $X=\{1,\ldots,n\}$, e seja $\mbox{Func}(X,\F)=\{f:X\to\F\}$ o $\F$-espaço vetorial das funções de $X$ para $\F$.
+Para $i\in X$, defina 
+$$
+    f_i:X\to \F,\quad f_i(j)=\left\{\begin{array}{ll}1\mbox{ caso $i=j$}\\0\mbox{ caso $i\neq j$}
+    \end{array}\right.\quad \mbox{para todo $j\in X$}.
+$$ 
+Mostre que $\{f_1,\ldots,f_n\}$ é uma base de $\mbox{Func}(X,\F)$. 
+:::
+
+:::{#exr-}
+Considere o espaço $\mbox{Func}(X,\F)$ como no @exr-func-fin, mas agora ponha $X=\N$. Para todo 
+$i\in\N$, defina $f_i$ na mesma forma como no @exr-func-fin que pode dizer sobre o conjunto $\{f_1,f_2,f_3,\ldots\}$? Ele é L.I.? Ele é gerador? Ele é base?  
+:::
+
+:::{#exr-}
+Usando o Lema de Zorn, demonstre as seguintes afirmações em um espaço vetorial $V$ não nulo qualquer.
+
+1. Se $X\subseteq V$ é um conjunto L.I., então existe uma base $\overline X\subseteq V$ tal que 
+$X\subseteq \overline X$. 
+2. Se $X\subseteq V$ é um conjunto gerador, então existe uma base $\widetilde X\subseteq V$ tal que 
+$\widetilde X\subseteq X$.
+:::
+
+:::{#exr-}
+Considere o conjunto $X=\{(1,-1,0,0),(0,1,-1,0,),(0,0,1,-1),(1,0,-1,0)\}\subseteq\R^4$.
+
+1. Mostre que $X$ não é sistema gerador de $\R^4$.
+2. Ache todos os subconjuntos L.I. de $X$.
+:::
+
+
+:::{#exr-}
+Se $\F$ é corpo e $k\geq 1$, defina 
+$$
+\F[x]_k=\{f\in\F[x]\mid \mbox{grau}f\leq k\}.
+$$
+Considere $X=\{1+x+x^2+x^3,1-x+x^2+x^3,1+x-x^2+x^3\}\subseteq \R[x]_3$. 
+
+1. Mostre que $X$  é L.I.
+2. Ache uma base $\overline X$ de $\R[x]_3$ tal que $X\subseteq \overline X$. 
+:::
+
+
+      
