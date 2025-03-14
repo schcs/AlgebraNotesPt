@@ -202,7 +202,7 @@ U_1&=\{(u,0_V)\mid u\in U\}\\
 V_1&=\{(0_U,v)\mid v\in V\}.
 \end{align*}
 É fácil verificar que $W=U_1\oplus V_1$ considerado como uma suma interna. Em particular, quando $U$ e $V$ têm dimensão finita, então $\dim U\oplus V=\dim U+\dim V$.
-:::
+
 
 
 
