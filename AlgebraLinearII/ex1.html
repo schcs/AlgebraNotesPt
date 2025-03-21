@@ -1408,13 +1408,20 @@ Solução:
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Suponha que <span class="math inline">\(a + b = a + c\)</span>. Podemos adicionar o elemento neutro aditivo <span class="math inline">\(-a\)</span> em ambos os lados da equação: <span class="math display">\[
+<li><p>Suponha que <span class="math inline">\(a + b = a + c\)</span>. Podemos adicionar o elemento neutro aditivo <span class="math inline">\(-a\)</span> em ambos os lados da equação: <span class="math display">\[
 -a + (a + b) = -a + (a + c).
 \]</span> Pela associatividade da adição, temos: <span class="math display">\[
 (-a + a) + b = (-a + a) + c.
 \]</span> Como <span class="math inline">\(-a + a = 0_\F\)</span>, obtemos: <span class="math display">\[
 0_\F + b = 0_\F + c.
-\]</span> E, pela propriedade do elemento neutro aditivo, concluímos que <span class="math inline">\(b = c\)</span>.</li>
+\]</span> E, pela propriedade do elemento neutro aditivo, concluímos que <span class="math inline">\(b = c\)</span>.</p></li>
+<li><p>Suponha que <span class="math inline">\(ab = ac\)</span> com <span class="math inline">\(a \neq 0_\F\)</span>. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de <span class="math inline">\(a\)</span>, denotado por <span class="math inline">\(a^{-1}\)</span>: <span class="math display">\[
+a^{-1}(ab) = a^{-1}(ac).
+\]</span> Pela associatividade da multiplicação, temos: <span class="math display">\[
+(a^{-1}a)b = (a^{-1}a)c.
+\]</span> Como <span class="math inline">\(a^{-1}a = 1_\F\)</span>, obtemos: <span class="math display">\[
+1_\F b = 1_\F c.
+\]</span> E, pela propriedade do elemento neutro multiplicativo, concluímos que <span class="math inline">\(b = c\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -1433,8 +1440,61 @@ Solução:
 \]</span> considerado como subconjunto de <span class="math inline">\(M_2(\Z_2)\)</span>.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><span class="math inline">\(\Z[i]\)</span> não é um corpo. Embora <span class="math inline">\(\Z[i]\)</span> seja fechado sob adição e multiplicação, ele não é fechado sob inversão multiplicativa. Por exemplo, o inverso de <span class="math inline">\(1 + i\)</span> em <span class="math inline">\(\C\)</span> é <span class="math inline">\(\frac{1}{2}(1 - i)\)</span>, que não está em <span class="math inline">\(\Z[i]\)</span>.</p></li>
+<li><p><span class="math inline">\(\Q[i]\)</span> é um corpo. <span class="math inline">\(\Q[i]\)</span> é fechado sob adição, multiplicação e inversão multiplicativa. Para qualquer <span class="math inline">\(a + bi \in \Q[i]\)</span> com <span class="math inline">\(a, b \in \Q\)</span> e <span class="math inline">\(a + bi \neq 0\)</span>, o inverso multiplicativo é <span class="math display">\[
+\frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2}i,
+\]</span> que também está em <span class="math inline">\(\Q[i]\)</span>.</p></li>
+<li><p><span class="math inline">\(\Z_{10}\)</span> não é um corpo. Embora <span class="math inline">\(\Z_{10}\)</span> seja fechado sob adição e multiplicação módulo 10, ele não possui inversos multiplicativos para todos os elementos não nulos. Por exemplo, 2 não tem inverso multiplicativo em <span class="math inline">\(\Z_{10}\)</span>.</p></li>
+<li><p>O conjunto dado é um corpo. Ele contém quatro matrizes <span class="math inline">\(2 \times 2\)</span> sobre <span class="math inline">\(\Z_2\)</span> e é fechado sob adição e multiplicação de matrizes. Além disso, cada elemento não nulo tem um inverso multiplicativo. Por exemplo, o inverso de <span class="math display">\[
+\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+\]</span> é ele mesmo, o inverso de <span class="math display">\[
+\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
+\]</span> é <span class="math display">\[
+\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
+\]</span> e vice-versa. Portanto, todas as propriedades de um corpo são satisfeitas.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 57.4</strong></span> A caraterística de um corpo <span class="math inline">\(\F\)</span> é definida na seguinte forma. Se não existir um número <span class="math inline">\(n\geq 1\)</span> tal que <span class="math inline">\(1+\cdots+1=0\)</span> (tomando <span class="math inline">\(n\)</span> cópias de <span class="math inline">\(1\)</span>), então a caraterística de <span class="math inline">\(\F\)</span> é zero. Se existir tal <span class="math inline">\(n\)</span>, então a caraterística de <span class="math inline">\(\F\)</span> é o menor tal <span class="math inline">\(n\)</span>. Mostre que a caraterística de um corpo ou é zero ou é um número primo.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(\F\)</span> um corpo e suponha que a característica de <span class="math inline">\(\F\)</span> não é zero. Então, existe um número <span class="math inline">\(n \geq 1\)</span> tal que <span class="math inline">\(1 + 1 + \cdots + 1 = 0\)</span> (com <span class="math inline">\(n\)</span> cópias de <span class="math inline">\(1\)</span>). Seja <span class="math inline">\(n\)</span> o menor tal número. Vamos mostrar que <span class="math inline">\(n\)</span> é primo.</p>
+<p>Suponha, por contradição, que <span class="math inline">\(n\)</span> não é primo. Então, existem inteiros <span class="math inline">\(a, b \geq 2\)</span> tais que <span class="math inline">\(n = ab\)</span>. Considere a soma <span class="math display">\[
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1)
+\]</span> onde cada parêntese contém <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> cópias de <span class="math inline">\(1\)</span>, respectivamente. Pela associatividade e comutatividade da adição, temos <span class="math display">\[
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1) = ab = n = 0.
+\]</span> Portanto, temos <span class="math display">\[
+(1 + 1 + \cdots + 1) = 0 \quad \text{ou} \quad (1 + 1 + \cdots + 1) = 0,
+\]</span> onde cada parêntese contém <span class="math inline">\(a\)</span> ou <span class="math inline">\(b\)</span> cópias de <span class="math inline">\(1\)</span>, respectivamente. Isso contradiz a minimalidade de <span class="math inline">\(n\)</span>, pois <span class="math inline">\(a, b &lt; n\)</span>.</p>
+<p>Portanto, <span class="math inline">\(n\)</span> deve ser primo. Concluímos que a característica de um corpo ou é zero ou é um número primo.</p>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 57.5</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial sobre um corpo <span class="math inline">\(\F\)</span>.</p>
