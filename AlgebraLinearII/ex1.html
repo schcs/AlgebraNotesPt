@@ -1511,8 +1511,70 @@ Solução:
     \end{array}\right.\quad \mbox{para todo $j\in X$}.
 \]</span> Mostre que <span class="math inline">\(\{f_1,\ldots,f_n\}\)</span> é uma base de <span class="math inline">\(\mbox{Func}(X,\F)\)</span>.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para mostrar que <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> é L.I., considere uma combinação linear arbitrária dos elementos de <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> que resulta no vetor nulo: <span class="math display">\[
+\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n = 0,
+\]</span> onde <span class="math inline">\(\alpha_1, \alpha_2, \ldots, \alpha_n \in \F\)</span>. Para cada <span class="math inline">\(j \in X\)</span>, temos: <span class="math display">\[
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(j) = 0.
+\]</span> Por definição de <span class="math inline">\(f_i\)</span>, isso se torna: <span class="math display">\[
+\alpha_1 f_1(j) + \alpha_2 f_2(j) + \cdots + \alpha_n f_n(j) = 0.
+\]</span> Note que <span class="math inline">\(f_i(j) = 1\)</span> se <span class="math inline">\(i = j\)</span> e <span class="math inline">\(f_i(j) = 0\)</span> se <span class="math inline">\(i \neq j\)</span>. Portanto, para cada <span class="math inline">\(j \in X\)</span>, a equação acima se reduz a: <span class="math display">\[
+\alpha_j = 0.
+\]</span> Como isso é válido para todo <span class="math inline">\(j \in X\)</span>, concluímos que <span class="math inline">\(\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0\)</span>. Portanto, <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> é L.I.</p>
+<p>Para mostrar que <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> é um sistema gerador de <span class="math inline">\(\mbox{Func}(X, \F)\)</span>, precisamos mostrar que qualquer função <span class="math inline">\(f \in \mbox{Func}(X, \F)\)</span> pode ser escrita como uma combinação linear dos elementos de <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span>.</p>
+<p>Seja <span class="math inline">\(f \in \mbox{Func}(X, \F)\)</span>. Para cada <span class="math inline">\(j \in X\)</span>, defina <span class="math inline">\(\alpha_j = f(j)\)</span>. Então, podemos escrever <span class="math inline">\(f\)</span> como: <span class="math display">\[
+f = \alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n.
+\]</span> Para ver isso, considere qualquer <span class="math inline">\(i \in X\)</span>. Então, <span class="math display">\[
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(i) = \alpha_1 f_1(i) + \alpha_2 f_2(i) + \cdots + \alpha_n f_n(i).
+\]</span> Por definição de <span class="math inline">\(f_i\)</span>, temos <span class="math inline">\(f_i(i) = 1\)</span> e <span class="math inline">\(f_i(j) = 0\)</span> para <span class="math inline">\(j \neq i\)</span>. Portanto, a expressão acima se reduz a: <span class="math display">\[
+\alpha_i f_i(i) = \alpha_i \cdot 1 = \alpha_i.
+\]</span> Como <span class="math inline">\(\alpha_i = f(i)\)</span>, obtemos: <span class="math display">\[
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(i) = f(i).
+\]</span> Como isso é válido para todo <span class="math inline">\(i \in X\)</span>, concluímos que: <span class="math display">\[
+f = \alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n.
+\]</span> Portanto, <span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> é um sistema gerador de <span class="math inline">\(\mbox{Func}(X, \F)\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 57.7</strong></span> Considere o espaço <span class="math inline">\(\mbox{Func}(X,\F)\)</span> como no <a href="#exr-func-fin" class="quarto-xref">Exercício&nbsp;<span>57.6</span></a>, mas agora ponha <span class="math inline">\(X=\N\)</span>. Para todo <span class="math inline">\(i\in\N\)</span>, defina <span class="math inline">\(f_i\)</span> na mesma forma como no <a href="#exr-func-fin" class="quarto-xref">Exercício&nbsp;<span>57.6</span></a> que pode dizer sobre o conjunto <span class="math inline">\(\{f_1,f_2,f_3,\ldots\}\)</span>? Ele é L.I.? Ele é gerador? Ele é base?</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O conjunto <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> é L.I. Para ver isso, considere uma combinação linear finita arbitrária dos elementos de <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> que resulta no vetor nulo: <span class="math display">\[
+\alpha_1 f_1 + \alpha_2 f_2 + \alpha_3 f_3 + \cdots + \alpha_k f_k = 0,
+\]</span> onde <span class="math inline">\(\alpha_1, \alpha_2, \alpha_3, \ldots, \alpha_k \in \F\)</span>. Para cada <span class="math inline">\(j \in \{1, 2, \ldots, k\}\)</span>, temos: <span class="math display">\[
+(\alpha_1 f_1 + \alpha_2 f_2 + \alpha_3 f_3 + \cdots + \alpha_k f_k)(j) = 0.
+\]</span> Por definição de <span class="math inline">\(f_i\)</span>, isso se torna: <span class="math display">\[
+\alpha_1 f_1(j) + \alpha_2 f_2(j) + \alpha_3 f_3(j) + \cdots + \alpha_k f_k(j) = 0.
+\]</span> Note que <span class="math inline">\(f_i(j) = 1\)</span> se <span class="math inline">\(i = j\)</span> e <span class="math inline">\(f_i(j) = 0\)</span> se <span class="math inline">\(i \neq j\)</span>. Portanto, para cada <span class="math inline">\(j \in \{1, 2, \ldots, k\}\)</span>, a equação acima se reduz a: <span class="math display">\[
+\alpha_j = 0.
+\]</span> Como isso é válido para todo <span class="math inline">\(j \in \{1, 2, \ldots, k\}\)</span>, concluímos que <span class="math inline">\(\alpha_1 = \alpha_2 = \alpha_3 = \cdots = \alpha_k = 0\)</span>. Portanto, <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> é L.I.</p>
+<p>No entanto, <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> não é um sistema gerador de <span class="math inline">\(\mbox{Func}(\N, \F)\)</span>. Para ver isso, considere uma função <span class="math inline">\(f \in \mbox{Func}(\N, \F)\)</span> tal que <span class="math inline">\(f(i) = 1\)</span> para todo <span class="math inline">\(i \in \N\)</span>. Não existe uma combinação linear finita dos elementos de <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> que resulta em <span class="math inline">\(f\)</span>, pois qualquer combinação linear finita de <span class="math inline">\(f_i\)</span> terá apenas um número finito de entradas não nulas, enquanto <span class="math inline">\(f\)</span> tem infinitas entradas não nulas.</p>
+<p>Portanto, <span class="math inline">\(\{f_1, f_2, f_3, \ldots\}\)</span> não é uma base de <span class="math inline">\(\mbox{Func}(\N, \F)\)</span>, pois não é um sistema gerador.</p>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 57.8</strong></span> Usando o Lema de Zorn, demonstre as seguintes afirmações em um espaço vetorial <span class="math inline">\(V\)</span> não nulo qualquer.</p>
