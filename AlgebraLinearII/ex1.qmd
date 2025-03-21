@@ -38,7 +38,7 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
 :::
 
 :::{.sol .callout-tip collapse="true"}
-### Solução: 
+### Solução:
 1. Suponha que $a + b = a + c$. Podemos adicionar o elemento neutro aditivo $-a$ em ambos os lados da equação:
     $$
     -a + (a + b) = -a + (a + c).
@@ -52,6 +52,20 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
     0_\F + b = 0_\F + c.
     $$
     E, pela propriedade do elemento neutro aditivo, concluímos que $b = c$.
+
+2. Suponha que $ab = ac$ com $a \neq 0_\F$. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de $a$, denotado por $a^{-1}$:
+    $$
+    a^{-1}(ab) = a^{-1}(ac).
+    $$
+    Pela associatividade da multiplicação, temos:
+    $$
+    (a^{-1}a)b = (a^{-1}a)c.
+    $$
+    Como $a^{-1}a = 1_\F$, obtemos:
+    $$
+    1_\F b = 1_\F c.
+    $$
+    E, pela propriedade do elemento neutro multiplicativo, concluímos que $b = c$.
 :::
 
 :::{#exr-}
@@ -70,10 +84,60 @@ $$
 considerado como subconjunto de $M_2(\Z_2)$.
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. $\Z[i]$ não é um corpo. Embora $\Z[i]$ seja fechado sob adição e multiplicação, ele não é fechado sob inversão multiplicativa. Por exemplo, o inverso de $1 + i$ em $\C$ é $\frac{1}{2}(1 - i)$, que não está em $\Z[i]$.
+
+2. $\Q[i]$ é um corpo. $\Q[i]$ é fechado sob adição, multiplicação e inversão multiplicativa. Para qualquer $a + bi \in \Q[i]$ com $a, b \in \Q$ e $a + bi \neq 0$, 
+o inverso multiplicativo é 
+$$
+\frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2}i,
+$$ 
+que também está em $\Q[i]$.
+
+3. $\Z_{10}$ não é um corpo. Embora $\Z_{10}$ seja fechado sob adição e multiplicação módulo 10, ele não possui inversos multiplicativos para todos os elementos não nulos. Por exemplo, 2 não tem inverso multiplicativo em $\Z_{10}$.
+
+4. O conjunto dado é um corpo. Ele contém quatro matrizes $2 \times 2$ sobre $\Z_2$ e é fechado sob adição e multiplicação de matrizes. Além disso, cada elemento não nulo tem um inverso multiplicativo. Por exemplo, o inverso de 
+$$
+\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+$$ 
+é ele mesmo, o inverso de 
+$$
+\begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix}
+$$ 
+é 
+$$
+\begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
+$$ 
+e vice-versa. Portanto, todas as propriedades de um corpo são satisfeitas.
+:::
 
 :::{#exr-}
-A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
+A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), 
+então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. 
+Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Seja $\F$ um corpo e suponha que a característica de $\F$ não é zero. Então, existe um número $n \geq 1$ tal que $1 + 1 + \cdots + 1 = 0$ (com $n$ cópias de $1$). Seja $n$ o menor tal número. Vamos mostrar que $n$ é primo.
+
+Suponha, por contradição, que $n$ não é primo. Então, existem inteiros $a, b \geq 2$ tais que $n = ab$. Considere a soma
+$$
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1)
+$$
+onde cada parêntese contém $a$ e $b$ cópias de $1$, respectivamente. Pela associatividade e comutatividade da adição, temos
+$$
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1) = ab = n = 0.
+$$
+Portanto, temos
+$$
+(1 + 1 + \cdots + 1) = 0 \quad \text{ou} \quad (1 + 1 + \cdots + 1) = 0,
+$$
+onde cada parêntese contém $a$ ou $b$ cópias de $1$, respectivamente. Isso contradiz a minimalidade de $n$, pois $a, b < n$.
+
+Portanto, $n$ deve ser primo. Concluímos que a característica de um corpo ou é zero ou é um número primo.
+:::
+
 
 :::{#exr-}
 Seja $V$ um espaço vetorial sobre um corpo $\F$. 
