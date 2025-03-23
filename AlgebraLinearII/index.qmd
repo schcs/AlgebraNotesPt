@@ -31,13 +31,13 @@ Material disponibilizado sob a licença
 
 - [Espaços vetoriais sobre corpos](corpos.qmd)
 - [Bases e dimensão](bases.qmd)
-- [Exercícios: Lista 1](ex1.qmd)
 - [Subespaços e a soma direta](subespacos.qmd)
 - [Espaço quociente](quociente.qmd)
 - [Transformações lineares](trans_lin.qmd)
 - [Transformações lineares e matrizes](matrizes.qmd)
 - [O espaço dual](dual.qmd) 
 - [Formas $k$-lineares e o determinante](formas.qmd)
+- [Exercícios: Lista 1](ex1.qmd)
 
 
 ### Bloco II: Endomorfismos de espaços vetoriais de dimensão finita

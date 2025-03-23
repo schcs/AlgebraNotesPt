@@ -84,8 +84,6 @@ $$
 considerado como subconjunto de $M_2(\Z_2)$.
 :::
 
-<<<<<<< HEAD
-=======
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 1. $\Z[i]$ não é um corpo. Embora $\Z[i]$ seja fechado sob adição e multiplicação, ele não é fechado sob inversão multiplicativa. Por exemplo, o inverso de $1 + i$ em $\C$ é $\frac{1}{2}(1 - i)$, que não está em $\Z[i]$.
@@ -114,8 +112,7 @@ $$
 e vice-versa. Portanto, todas as propriedades de um corpo são satisfeitas.
 :::
 
->>>>>>> ca04514f3cb2561749ec0e9bbdf521db56da65e9
-:::{#exr-}
+:::{#exr-carateristica}
 A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), 
 então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. 
 Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
@@ -263,5 +260,74 @@ Considere $X=\{1+x+x^2+x^3,1-x+x^2+x^3,1+x-x^2+x^3\}\subseteq \R[x]_3$.
 2. Ache uma base $\overline X$ de $\R[x]_3$ tal que $X\subseteq \overline X$. 
 :::
 
+:::{#exr-}
+Sejam $U,W$ subespaços de um espaço vetorial $V$. Demonstre que $U\cup W$ é um subespaço de $V$ 
+se e somente se $U\subseteq W$ ou $W\subseteq U$. 
+(Dica: veja a conversa [na página de stackexchange](https://math.stackexchange.com/q/71872).)
+:::
 
-      
+:::{#exr-}
+Seja $\F$ um corpo de caraterística diferente de 2 e seja $V=M_n(\F)$ 
+(espaço de matrizes $n\times n$ sobre $\F$).  Para $A\in V$, denotamos a transposta de $A$ com $A^t$. Defina 
+\begin{align*}
+U_1&=\{A\in V\mid A^t=A\};\\
+U_2&=\{A\in V\mid A^t=-A\}.
+\end{align*}
+Ou seja, $U_1$ é o conjunto das matrizes simétricas, enquanto $U_2$ é o conjunto das matrizes antisimétricas em $V$.
+
+1. Mostre que $V=U_1\oplus U_2$.
+2. Explique a necessidade da condição que a caraterística de $\F$ é diferente de 2.
+[Dica: Consulte o @exm-direct-sum.]
+:::
+
+:::{#exr-}
+Sejam $U_1,U_2,\ldots,U_k$ subespaços de um espaço vetorial $V$. Mostre que as segunites afirmações são equivalentes:
+
+1. Todo elemento $v\in V$ pode ser escrito unicamente como $v=u_1+\cdots+u_k$ com $u_i\in U_i$.
+2. $V=U_1+\cdots+U_k$ e $U_i\cap (\sum_{j\neq i}U_j)=0$ para todo $i\in\{1,\ldots,k\}$.
+:::
+
+:::{#exr-}
+Decide quais dos seguintes conjuntos são subespaços de $V=\mbox{Func}([0,1],\R)$. 
+
+1. $\{f\in V\mid f\mbox{ é limitado}\}$;
+2. $\{f\in V\mid f\mbox{ é limitado superiormente}\}$;
+3. $\{f\in V\mid f\mbox{ é limitado inferiormente}\}$;
+4. $\{f\in V\mid f\mbox{ é diferenciável}\}$;
+5. $\{f\in V\mid f\mbox{ é contínua}\}$;
+6. $\{f\in V\mid f\mbox{ é crescente}\}$;
+:::
+
+:::{#exr-}
+Defina os seguintes vetores em $\R^6$:
+\begin{align*}
+    v_1 &=( 1, 1, -1, -1,  0,  0)\\
+    v_2 &= ( 1,  1,  0,  0, -1,  1)\\
+    v_3 &= (-1, -1, -1, -1,  0,  0)\\
+    v_4 &= ( 0,  0, -1, -1, 2, 0)\\
+    v_5 &= ( 0,  0, 0, 0,  1,  0)\\
+    v_6 &= ( 0,  0,  0,  0,  -1, -1)\\
+\end{align*}
+Defina $U_1=\left<v_1,v_2,v_3\right>$ e $U_2=\left<v_4,v_5,v_6\right>$.
+
+1. Determine uma base para $U_1\cap U_2$. 
+2. Estenda a base determinada no primeiro ponto para uma base de $U_1$ e também para uma base de 
+    $U_2$.
+3. Determina uma base de $U_1+U_2$.
+:::
+
+:::{#exr-}
+Ache um complemento para o espaço $U_1$ em $V$ no exercício anterior.
+:::
+
+:::{#exr-}
+Seja $\F$ um corpo com cardinalidade finita.
+
+1. Deduza do @exr-carateristica que a caraterística de $\F$ é um primo $p$. 
+2. Mostre que $\F$ é um espaço vetorial sobre o corpo $\Z_p$. 
+3. Deduza que $\dim \F$ (considerado como $\Z_p$-espaço) é finita e ponha $\dim \F=d$. 
+4. Mostre que $|\F|=p^d$. 
+5. Parabens! Você acabou de demonstrar o seguinte teorema: ``Se $\F$ é  um corpo finito, então 
+a cardinalidade de $\F$ é uma potência de um primo''.
+(Dica: [página no stackexchange](https://math.stackexchange.com/q/72856))
+:::      

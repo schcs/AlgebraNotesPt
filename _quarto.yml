@@ -77,13 +77,13 @@ book:
       chapters: 
         - AlgebraLinearII/corpos.qmd
         - AlgebraLinearII/bases.qmd
-        - AlgebraLinearII/ex1.qmd
         - AlgebraLinearII/subespacos.qmd
         - AlgebraLinearII/quociente.qmd
         - AlgebraLinearII/trans_lin.qmd
         - AlgebraLinearII/matrizes.qmd
         - AlgebraLinearII/dual.qmd
         - AlgebraLinearII/formas.qmd
+        - AlgebraLinearII/ex1.qmd
         - AlgebraLinearII/autovals.qmd
         - AlgebraLinearII/pol_min.qmd
         - AlgebraLinearII/cayley_hamilton.qmd
