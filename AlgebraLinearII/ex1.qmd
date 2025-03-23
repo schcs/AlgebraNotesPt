@@ -240,6 +240,12 @@ $X\subseteq \overline X$.
 2. Se $X\subseteq V$ é um conjunto gerador, então existe uma base $\widetilde X\subseteq V$ tal que 
 $\widetilde X\subseteq X$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. Seja $X \subseteq V$ um conjunto L.I. Considere a coleção $\mathcal{C}$ de todos os conjuntos L.I. em $V$ que contêm $X$. Note que $\mathcal{C}$ é não vazia, pois $X \in \mathcal{C}$. Ordenamos $\mathcal{C}$ por inclusão. Seja $\{Y_i\}_{i \in I}$ uma cadeia em $\mathcal{C}$. Defina $Y = \bigcup_{i \in I} Y_i$. Usando o argumento na aula, pode-se verificar que $Y$ é L.I. e contém $X$. Portanto, $Y \in \mathcal{C}$, mostrando que toda cadeia em $\mathcal{C}$ tem uma cota superior em $\mathcal{C}$. Pelo Lema de Zorn, $\mathcal{C}$ tem um elemento maximal, denotado por $\overline{X}$. Mostraremos que $\overline{X}$ é uma base de $V$. Suponha, por contradição, que $\overline{X}$ não é um sistema gerador de $V$. Então, existe $v \in V \setminus \overline{X}$ tal que $\overline{X} \cup \{v\}$ é L.I., contradizendo a maximalidade de $\overline{X}$. Portanto, $\overline{X}$ é uma base de $V$ que contém $X$.
+
+2. Seja $X \subseteq V$ um conjunto gerador. Considere a coleção $\mathcal{C}$ de todos os subconjuntos de $X$ que são L.I. Ordenamos $\mathcal{C}$ por inclusão. O resto do argumento é como no item 1 e deixamos ao leitor.
+:::
 
 :::{#exr-}
 Considere o conjunto $X=\{(1,-1,0,0),(0,1,-1,0,),(0,0,1,-1),(1,0,-1,0)\}\subseteq\R^4$.
