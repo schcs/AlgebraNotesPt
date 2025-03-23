@@ -38,7 +38,7 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
 :::
 
 :::{.sol .callout-tip collapse="true"}
-### Solução: 
+### Solução:
 1. Suponha que $a + b = a + c$. Podemos adicionar o elemento neutro aditivo $-a$ em ambos os lados da equação:
     $$
     -a + (a + b) = -a + (a + c).
@@ -52,6 +52,20 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
     0_\F + b = 0_\F + c.
     $$
     E, pela propriedade do elemento neutro aditivo, concluímos que $b = c$.
+
+2. Suponha que $ab = ac$ com $a \neq 0_\F$. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de $a$, denotado por $a^{-1}$:
+    $$
+    a^{-1}(ab) = a^{-1}(ac).
+    $$
+    Pela associatividade da multiplicação, temos:
+    $$
+    (a^{-1}a)b = (a^{-1}a)c.
+    $$
+    Como $a^{-1}a = 1_\F$, obtemos:
+    $$
+    1_\F b = 1_\F c.
+    $$
+    E, pela propriedade do elemento neutro multiplicativo, concluímos que $b = c$.
 :::
 
 :::{#exr-}
@@ -70,9 +84,63 @@ $$
 considerado como subconjunto de $M_2(\Z_2)$.
 :::
 
-:::{#exr-}
-A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
+<<<<<<< HEAD
+=======
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. $\Z[i]$ não é um corpo. Embora $\Z[i]$ seja fechado sob adição e multiplicação, ele não é fechado sob inversão multiplicativa. Por exemplo, o inverso de $1 + i$ em $\C$ é $\frac{1}{2}(1 - i)$, que não está em $\Z[i]$.
+
+2. $\Q[i]$ é um corpo. $\Q[i]$ é fechado sob adição, multiplicação e inversão multiplicativa. Para qualquer $a + bi \in \Q[i]$ com $a, b \in \Q$ e $a + bi \neq 0$, 
+o inverso multiplicativo é 
+$$
+\frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2}i,
+$$ 
+que também está em $\Q[i]$.
+
+3. $\Z_{10}$ não é um corpo. Embora $\Z_{10}$ seja fechado sob adição e multiplicação módulo 10, ele não possui inversos multiplicativos para todos os elementos não nulos. Por exemplo, 2 não tem inverso multiplicativo em $\Z_{10}$.
+
+4. O conjunto dado é um corpo. Ele contém quatro matrizes $2 \times 2$ sobre $\Z_2$ e é fechado sob adição e multiplicação de matrizes. Além disso, cada elemento não nulo tem um inverso multiplicativo. Por exemplo, o inverso de 
+$$
+\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+$$ 
+é ele mesmo, o inverso de 
+$$
+\begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix}
+$$ 
+é 
+$$
+\begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
+$$ 
+e vice-versa. Portanto, todas as propriedades de um corpo são satisfeitas.
 :::
+
+>>>>>>> ca04514f3cb2561749ec0e9bbdf521db56da65e9
+:::{#exr-}
+A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), 
+então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. 
+Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Seja $\F$ um corpo e suponha que a característica de $\F$ não é zero. Então, existe um número $n \geq 1$ tal que $1 + 1 + \cdots + 1 = 0$ (com $n$ cópias de $1$). Seja $n$ o menor tal número. Vamos mostrar que $n$ é primo.
+
+Suponha, por contradição, que $n$ não é primo. Então, existem inteiros $a, b \geq 2$ tais que $n = ab$. Considere a soma
+$$
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1)
+$$
+onde cada parêntese contém $a$ e $b$ cópias de $1$, respectivamente. Pela associatividade e comutatividade da adição, temos
+$$
+(1 + 1 + \cdots + 1)(1 + 1 + \cdots + 1) = ab = n = 0.
+$$
+Portanto, temos
+$$
+(1 + 1 + \cdots + 1) = 0 \quad \text{ou} \quad (1 + 1 + \cdots + 1) = 0,
+$$
+onde cada parêntese contém $a$ ou $b$ cópias de $1$, respectivamente. Isso contradiz a minimalidade de $n$, pois $a, b < n$.
+
+Portanto, $n$ deve ser primo. Concluímos que a característica de um corpo ou é zero ou é um número primo.
+:::
+
 
 :::{#exr-}
 Seja $V$ um espaço vetorial sobre um corpo $\F$. 
@@ -83,6 +151,7 @@ Seja $V$ um espaço vetorial sobre um corpo $\F$.
 4. Mostre que $(-1_\F)\cdot v=-v$ para todo $v\in V$. 
 :::
 
+
 :::{#exr-func-fin}
 Seja $\F$ um corpo, $n\in\N$, $X=\{1,\ldots,n\}$, e seja $\mbox{Func}(X,\F)=\{f:X\to\F\}$ o $\F$-espaço vetorial das funções de $X$ para $\F$.
 Para $i\in X$, defina 
@@ -92,10 +161,78 @@ $$
 $$ 
 Mostre que $\{f_1,\ldots,f_n\}$ é uma base de $\mbox{Func}(X,\F)$. 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para mostrar que $\{f_1, \ldots, f_n\}$ é L.I., considere uma combinação linear arbitrária dos elementos de $\{f_1, \ldots, f_n\}$ que resulta no vetor nulo:
+$$
+\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n = 0,
+$$
+onde $\alpha_1, \alpha_2, \ldots, \alpha_n \in \F$. Para cada $j \in X$, temos:
+$$
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(j) = 0.
+$$
+Por definição de $f_i$, isso se torna:
+$$
+\alpha_1 f_1(j) + \alpha_2 f_2(j) + \cdots + \alpha_n f_n(j) = 0.
+$$
+Note que $f_i(j) = 1$ se $i = j$ e $f_i(j) = 0$ se $i \neq j$. Portanto, para cada $j \in X$, a equação acima se reduz a:
+$$
+\alpha_j = 0.
+$$
+Como isso é válido para todo $j \in X$, concluímos que $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0$. Portanto, $\{f_1, \ldots, f_n\}$ é L.I.
+
+Para mostrar que $\{f_1, \ldots, f_n\}$ é um sistema gerador de $\mbox{Func}(X, \F)$, precisamos mostrar que qualquer função $f \in \mbox{Func}(X, \F)$ pode ser escrita como uma combinação linear dos elementos de $\{f_1, \ldots, f_n\}$.
+
+Seja $f \in \mbox{Func}(X, \F)$. Para cada $j \in X$, defina $\alpha_j = f(j)$. Então, podemos escrever $f$ como:
+$$
+f = \alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n.
+$$
+Para ver isso, considere qualquer $i \in X$. Então,
+$$
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(i) = \alpha_1 f_1(i) + \alpha_2 f_2(i) + \cdots + \alpha_n f_n(i).
+$$
+Por definição de $f_i$, temos $f_i(i) = 1$ e $f_i(j) = 0$ para $j \neq i$. Portanto, a expressão acima se reduz a:
+$$
+\alpha_i f_i(i) = \alpha_i \cdot 1 = \alpha_i.
+$$
+Como $\alpha_i = f(i)$, obtemos:
+$$
+(\alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n)(i) = f(i).
+$$
+Como isso é válido para todo $i \in X$, concluímos que:
+$$
+f = \alpha_1 f_1 + \alpha_2 f_2 + \cdots + \alpha_n f_n.
+$$
+Portanto, $\{f_1, \ldots, f_n\}$ é um sistema gerador de $\mbox{Func}(X, \F)$.
+:::
 
 :::{#exr-}
 Considere o espaço $\mbox{Func}(X,\F)$ como no @exr-func-fin, mas agora ponha $X=\N$. Para todo 
 $i\in\N$, defina $f_i$ na mesma forma como no @exr-func-fin que pode dizer sobre o conjunto $\{f_1,f_2,f_3,\ldots\}$? Ele é L.I.? Ele é gerador? Ele é base?  
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+O conjunto $\{f_1, f_2, f_3, \ldots\}$ é L.I. Para ver isso, considere uma combinação linear finita arbitrária dos elementos de $\{f_1, f_2, f_3, \ldots\}$ que resulta no vetor nulo:
+$$
+\alpha_1 f_1 + \alpha_2 f_2 + \alpha_3 f_3 + \cdots + \alpha_k f_k = 0,
+$$
+onde $\alpha_1, \alpha_2, \alpha_3, \ldots, \alpha_k \in \F$. Para cada $j \in \{1, 2, \ldots, k\}$, temos:
+$$
+(\alpha_1 f_1 + \alpha_2 f_2 + \alpha_3 f_3 + \cdots + \alpha_k f_k)(j) = 0.
+$$
+Por definição de $f_i$, isso se torna:
+$$
+\alpha_1 f_1(j) + \alpha_2 f_2(j) + \alpha_3 f_3(j) + \cdots + \alpha_k f_k(j) = 0.
+$$
+Note que $f_i(j) = 1$ se $i = j$ e $f_i(j) = 0$ se $i \neq j$. Portanto, para cada $j \in \{1, 2, \ldots, k\}$, a equação acima se reduz a:
+$$
+\alpha_j = 0.
+$$
+Como isso é válido para todo $j \in \{1, 2, \ldots, k\}$, concluímos que $\alpha_1 = \alpha_2 = \alpha_3 = \cdots = \alpha_k = 0$. Portanto, $\{f_1, f_2, f_3, \ldots\}$ é L.I.
+
+No entanto, $\{f_1, f_2, f_3, \ldots\}$ não é um sistema gerador de $\mbox{Func}(\N, \F)$. Para ver isso, considere uma função $f \in \mbox{Func}(\N, \F)$ tal que $f(i) = 1$ para todo $i \in \N$. Não existe uma combinação linear finita dos elementos de $\{f_1, f_2, f_3, \ldots\}$ que resulta em $f$, pois qualquer combinação linear finita de $f_i$ terá apenas um número finito de entradas não nulas, enquanto $f$ tem infinitas entradas não nulas.
+
+Portanto, $\{f_1, f_2, f_3, \ldots\}$ não é uma base de $\mbox{Func}(\N, \F)$, pois não é um sistema gerador.
 :::
 
 :::{#exr-}
