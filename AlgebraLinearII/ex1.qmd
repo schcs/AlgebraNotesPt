@@ -70,7 +70,6 @@ $$
 considerado como subconjunto de $M_2(\Z_2)$.
 :::
 
-
 :::{#exr-}
 A caraterística de um corpo $\F$ é definida na seguinte forma. Se não existir um número $n\geq 1$ tal que $1+\cdots+1=0$ (tomando $n$ cópias de $1$), então a caraterística de $\F$ é zero. Se existir tal $n$, então a caraterística de $\F$ é o menor tal $n$. Mostre que a caraterística de um corpo ou é zero ou é um número primo. 
 :::
