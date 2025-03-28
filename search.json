@@ -2470,12 +2470,12 @@
   {
     "objectID": "AlgebraLinearII/ex1.html",
     "href": "AlgebraLinearII/ex1.html",
-    "title": "64  Exercícios: Lista 1",
+    "title": "64  Exercícios: Bloco 1",
     "section": "",
     "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\L}{\\mathbb L}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\newcommand{\\overbar}[1]{\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu}\n\\newcommand{\\ul}[1]{\\underline{#1}}\n\\newcommand{\\tn}[1]{\\textnormal{#1}}\n\\]",
     "crumbs": [
       "Álgebra Linear II",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Exercícios: Lista 1</span>"
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Exercícios: Bloco 1</span>"
     ]
   },
   {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>64&nbsp; Exercícios: Lista 1 – Álgebra</title>
+<title>64&nbsp; Exercícios: Bloco 1 – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Lista 1</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1105,7 +1105,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/ex1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Lista 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1342,9 +1342,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Lista 1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Lista 1</span></h1>
+<h1 class="title"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></h1>
 </div>
 
 
@@ -1694,16 +1694,19 @@ U_2&amp;=\{A\in V\mid A^t=-A\}.
 <p><span class="theorem-title"><strong>Exercício 64.19</strong></span> Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma duas matrizes (arrays) <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> com entradas no mesmo corpo e devolva <code>True</code> se os espaços gerados pelas linhas de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> (respectivamente) são iguais. A função deve devolver <code>False</code> no caso contrário.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Dica:
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use o exercício anterior e ache as formas escalonadas reduzidas de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> usando alguma implementação da Eliminação de Gauss-Jordan. Se usar Python, pode usar a função <code>rref</code> na biblioteca SymPy.</p>
+</div>
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
@@ -1720,16 +1723,19 @@ v_B=v-\sum_{i=1}^kv_{p_i}b_i.
 <p><span class="theorem-title"><strong>Exercício 64.21</strong></span> O exercício anterior pode ser usado para decidir igualdade da forma algorítmica no quociente <span class="math inline">\(\F^n/V\)</span>. Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma uma matriz <span class="math inline">\(B\)</span> <span class="math inline">\((k\times n)\)</span> na forma escalonada reduzida e toma dois vetores <span class="math inline">\(v,w\in\F^n\)</span> e devolve <code>True</code> se e somente se <span class="math inline">\(v+V=w+V\)</span>, onde <span class="math inline">\(V\)</span> denota o espaço gerado pelas linhas de <span class="math inline">\(B\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Dica:
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Implemente o procedimento no exercício anterior e verifique se <span class="math inline">\(v_B=w_B\)</span>.</p>
+</div>
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
@@ -1750,6 +1756,64 @@ Dica:
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.24</strong></span> Resolva os exercícios nas apostilas disponibilizadas nas abas das Semanas 2-3 que não aparecerem nas listas.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.25</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita sobre <span class="math inline">\(\F\)</span> com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respetivamente. Denote por <span class="math inline">\(B^∗\)</span> e <span class="math inline">\(C^∗\)</span> as bases duais de <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> em <span class="math inline">\(V^∗\)</span> e <span class="math inline">\(W^∗\)</span>, respetivamente. Seja <span class="math inline">\(f : V \to W\)</span> linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>. Mostre que <span class="math display">\[
+                                                 [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.26</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U \leq V\)</span>. Deﬁna <span class="math display">\[
+U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
+\]</span></p>
+<ol type="1">
+<li>Demonstre que <span class="math inline">\(U^0 \leq V^*\)</span>.</li>
+<li>Mostre que <span class="math inline">\(\dim U + \dim U^0 = \dim V\)</span> no caso quando <span class="math inline">\(\dim V\)</span> é finita. [Dica: Consulte a Seção 2.8.1 do livro do Rodney.]</li>
+</ol>
+<p>Seja <span class="math inline">\(f : V \to W\)</span> uma aplicação linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>.</p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(\ker f^∗ = (\mbox{Im}\,f)^0\)</span>.</li>
+<li>Mostre que <span class="math inline">\(\mbox{Im}\,f^∗ = (\ker f)^0\)</span>.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.27</strong></span> Deduza do exercício anterior que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobresetiva e que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.28</strong></span> [Segundo Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span>. Mostre, exibindo um isomorﬁsmo, que <span class="math display">\[
+                                             (U +W)/W \cong U/(U \cap W).
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.29</strong></span> [Terceiro Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span> tais que <span class="math inline">\(W \leq U\)</span>. Mostre que <span class="math display">\[
+                                              (V/W)/(U/W)\cong V/U.
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.30</strong></span> Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de <span class="math inline">\(U +W\)</span>.</p>
+</div>
+<div id="exr-funct-hom" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.31</strong></span> Seja <span class="math inline">\(W\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span>. Deﬁne o functor <span class="math inline">\(H_W\)</span> com as seguintes regras:</p>
+<ol type="1">
+<li>Para um <span class="math inline">\(\F\)</span>-espaço vetorial <span class="math inline">\(V\)</span>, defina <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span>.</li>
+<li>Para uma transformação linear <span class="math inline">\(f : V \to U\)</span>, defina <span class="math display">\[
+                             H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
+\]</span></li>
+</ol>
+<p>Demonstre as seguintes afirmações.</p>
+<ol type="1">
+<li>Demonstre, para todo <span class="math inline">\(\F\)</span>-espaço <span class="math inline">\(V\)</span>, que <span class="math inline">\(H_W(\mbox{id}_V) = \mbox{id}_{\textrm{Hom}(W,V)}\)</span>.</li>
+<li>Demonstre que se <span class="math inline">\(f : V_1 \to V_2\)</span> e <span class="math inline">\(g : V_2 \to V_3\)</span> são transformações lineares, então <span class="math inline">\(H_W(g\circ f) = H_W(g)\circ H_W(f)\)</span>.</li>
+</ol>
+<p>As propriedades mostram que o functor <span class="math inline">\(H_W\)</span> é um functor covariante na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.32</strong></span> Seja <span class="math inline">\(W\)</span> como no <a href="#exr-funct-hom" class="quarto-xref">Exercício&nbsp;<span>64.31</span></a>. Mostre que se <span class="math inline">\(f : V \to U\)</span> é injetiva/sobrejetiva, então <span class="math display">\[
+                                         H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
+\]</span> é injetiva/sobrejetiva (respetivamente).</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.33</strong></span> O functor <span class="math inline">\(H_W\)</span> está frequentamente escrito como <span class="math inline">\(\mbox{Hom}(W,−)\)</span> e escrevemos também <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span> e <span class="math inline">\(H_W(f) = \mbox{Hom}(W,f)\)</span>. Deﬁna um functor <span class="math inline">\(\mbox{Hom}(−,W)\)</span>. Este outro functor seria um functor covariante ou contravariante?</p>
 </div>
 
 
