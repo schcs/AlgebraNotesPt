@@ -337,3 +337,64 @@ Seja $\F$ um corpo com cardinalidade finita.
 a cardinalidade de $\F$ é uma potência de um primo''.
 (Dica: [página no stackexchange](https://math.stackexchange.com/q/72856))
 :::      
+
+:::{#exr-}
+Se $B$ é o sistema $b_1,\ldots,b_k$ de vetores de $\F^n$, denote por $M_B$ a matriz $k\times n$ cujas linhas são $b_1,\ldots,b_k$. 
+    
+1. Seja $V\leq \F^n$. Mostre que $V$ possui uma base $B$ tal que $M_B$ está na forma escalonada reduzida. 
+2. Mostre que a base $B$ no item anterior é única para o espaço $V$. 
+:::
+
+:::{#exr-}
+Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma duas matrizes (arrays) $A$ e $B$ com entradas no mesmo corpo e devolva `True` se os espaços gerados pelas linhas de $A$ e $B$ (respectivamente) são iguais. A função deve devolver `False` no caso contrário.
+:::
+
+::: {.callout-tip}
+#### Dica:
+Use o exercício anterior e ache as formas escalonadas reduzidas de $A$ e $B$ usando alguma implementação da Eliminação de Gauss-Jordan. Se usar Python, pode usar a função `rref` na biblioteca SymPy.
+:::
+
+:::{#exr-}
+Seja $V\leq\F^n$ e assuma que $B=\{b_1,\ldots,b_k\}$ é base de $V$ tal que $M_B$ está na forma escalonada reduzida. Assuma que o pivô da linha $i$ está na coluna $p_i$. Seja $v=(v_1,\ldots,v_n)\in \F^n$ arbitrário e defina 
+$$
+v_B=v-\sum_{i=1}^kv_{p_i}b_i.
+$$
+    
+1. Mostre que $v+V=v_B+V$.
+2. Mostre que $(v_B)_{p_i}=0$ para todo $i$.
+3. Mostre, para $v,w\in\F^n$, que $v+V=w+V$ se e somente se $v_B=w_B$.
+:::
+
+:::{#exr-}
+O exercício anterior pode ser usado para decidir igualdade da forma algorítmica no quociente $\F^n/V$. Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma uma matriz $B$ $(k\times n)$ na forma escalonada reduzida e toma dois vetores $v,w\in\F^n$ e devolve `True` se e somente se $v+V=w+V$, onde $V$ denota o espaço gerado pelas linhas de $B$. 
+:::
+
+::: {.callout-tip}
+#### Dica:
+Implemente o procedimento no exercício anterior e verifique se $v_B=w_B$.
+:::
+
+:::{#exr-}
+Sejam $V$ e $W$ $\F$-espaços vetoriais de dimensão finita com $\dim V=k$ e $\dim W=m$. Assuma que $B=\{b_1,\ldots,b_k\}$ e $C=\{c_1,\ldots,c_m\}$ são bases de $V$ e $W$, respectivamente.  
+    
+1.  Considere o mapa 
+$$
+\psi:\mbox{Hom}(V,W)\to W^{k\oplus},\quad f\mapsto (f(b_1),\ldots,f(b_k))
+$$
+onde $W^{k\oplus}=W\oplus\cdots\oplus W$ (soma direta externa de $k$ cópias de $W$). Mostre que $\psi$ é um isomorfismo.
+2. Mostre que $f\mapsto [f]_C^B$ é um isomorfismo $\mbox{Hom}(V,W)\to M_{m\times k}(\F)$.
+:::
+
+:::{#exr-}
+Seja $V=\F_3[x]_3$ e considere as bases $B=\{1,x,x^2,x^3\}$ e $C=\{1,1-x,1-x^2,1-x^3\}$. Seja $d:V\to V$ o endomorfismo definido com $d(f)=f'$ (derivado formal). 
+    
+1. Ache as matrizes $[\mbox{id}_V]_B^C$ e $[\mbox{id}_V]_C^B$.
+2. Ache as matrizes $[f]_B^B$, $[f]_B^C$, $[f]_C^B$ e $[f]_C^C$. 
+:::
+
+:::{#exr-}
+Resolva os exercícios nas apostilas disponibilizadas nas abas das Semanas 2-3 que não aparecerem nas listas.
+:::
+
+
+      

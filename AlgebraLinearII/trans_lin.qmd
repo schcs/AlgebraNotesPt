@@ -33,7 +33,7 @@ Exemplos são dados na aula, e nas notas do John e Rodney.
 :::
 
 
-:::{#lem-}
+:::{#lem-tr-unique-basis}
 Seja $U$ um $\F$-espaço vetorial com base $X=\{x_i\mid i \in I\}$. Seja $V$ um outro $\F$-espaço e seja $f_0:X\to V$ uma aplicação qualquer. Então existe uma única transformação linear $f:U\to V$ tal que $f|_X=f_0$.
 :::
 

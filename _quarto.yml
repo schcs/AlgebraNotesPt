@@ -82,6 +82,7 @@ book:
         - AlgebraLinearII/trans_lin.qmd
         - AlgebraLinearII/matrizes.qmd
         - AlgebraLinearII/dual.qmd
+        - AlgebraLinearII/tensor.qmd
         - AlgebraLinearII/formas.qmd
         - AlgebraLinearII/ex1.qmd
         - AlgebraLinearII/autovals.qmd
