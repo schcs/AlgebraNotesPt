@@ -1,6 +1,6 @@
 
 ---
-title: "Exercícios: Lista 1"
+title: "Exercícios: Bloco 1"
 number-sections: true
 lang: pt-BR
 --- 
@@ -349,7 +349,7 @@ Se $B$ é o sistema $b_1,\ldots,b_k$ de vetores de $\F^n$, denote por $M_B$ a ma
 Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma duas matrizes (arrays) $A$ e $B$ com entradas no mesmo corpo e devolva `True` se os espaços gerados pelas linhas de $A$ e $B$ (respectivamente) são iguais. A função deve devolver `False` no caso contrário.
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 #### Dica:
 Use o exercício anterior e ache as formas escalonadas reduzidas de $A$ e $B$ usando alguma implementação da Eliminação de Gauss-Jordan. Se usar Python, pode usar a função `rref` na biblioteca SymPy.
 :::
@@ -369,7 +369,7 @@ $$
 O exercício anterior pode ser usado para decidir igualdade da forma algorítmica no quociente $\F^n/V$. Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma uma matriz $B$ $(k\times n)$ na forma escalonada reduzida e toma dois vetores $v,w\in\F^n$ e devolve `True` se e somente se $v+V=w+V$, onde $V$ denota o espaço gerado pelas linhas de $B$. 
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 #### Dica:
 Implemente o procedimento no exercício anterior e verifique se $v_B=w_B$.
 :::
@@ -397,4 +397,82 @@ Resolva os exercícios nas apostilas disponibilizadas nas abas das Semanas 2-3 q
 :::
 
 
-      
+:::{#exr-}
+Sejam $V$ e $W$ espaços vetoriais de dimensão finita sobre $\F$ com bases $B$ e $C$, respetivamente. Denote
+por $B^∗$ e $C^∗$ as bases duais de $B$ e $C$ em $V^∗$ e $W^∗$, respetivamente. Seja $f : V \to W$ linear e considere o
+dual $f^∗ : W^∗ \to V^∗$. Mostre que
+$$
+                                                 [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+$$
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial e $U \leq V$. Deﬁna
+$$
+U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
+$$
+
+1. Demonstre que $U^0 \leq V^*$.
+2. Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita. [Dica: Consulte a Seção 2.8.1 do livro do Rodney.]
+
+Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to V^∗$.
+
+1. Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$.
+2. Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$.
+:::
+
+:::{#exr-}
+Deduza do exercício anterior que $f$ é injetiva se e somente se $f^∗$ é sobresetiva e que $f$ é sobrejetiva se
+e somente se $f^∗$ é injetiva.
+:::
+              
+:::{#exr-}
+[Segundo Teorema de Isomorﬁsmo] Seja $V$ um espaço vetorial e $U,W \leq V$. Mostre, exibindo um
+isomorﬁsmo, que
+$$
+                                             (U +W)/W \cong U/(U \cap W).
+$$
+:::
+
+:::{#exr-}
+[Terceiro Teorema de Isomorﬁsmo] 
+Seja $V$ um espaço vetorial e $U,W \leq V$ tais que $W \leq U$. Mostre que
+$$
+                                              (V/W)/(U/W)\cong V/U.
+$$
+:::
+
+:::{#exr-}                                                          
+Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de $U +W$.
+:::
+
+:::{#exr-funct-hom}                                                          
+Seja $W$ um espaço vetorial sobre $\F$. Deﬁne o functor $H_W$ com as seguintes regras:
+
+1. Para um $\F$-espaço vetorial $V$, defina $H_W(V) = \mbox{Hom}(W,V)$.
+2. Para uma transformação linear $f : V \to U$, defina
+$$
+                                H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
+$$
+
+Demonstre as seguintes afirmações.
+
+1. Demonstre, para todo $\F$-espaço $V$, que $H_W(\mbox{id}_V) = \mbox{id}_{\textrm{Hom}(W,V)}$.
+2. Demonstre que se $f : V_1 \to V_2$ e $g : V_2 \to V_3$ são transformações lineares, então $H_W(g\circ f) = H_W(g)\circ H_W(f)$.
+
+As propriedades mostram que o functor $H_W$ é um functor covariante na categoria dos $\F$-espaços vetoriais.
+:::
+
+:::{#exr-}                                                          
+Seja $W$ como no @exr-funct-hom. Mostre que se $f : V \to U$ é injetiva/sobrejetiva, então
+$$
+                                         H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
+$$
+é injetiva/sobrejetiva (respetivamente).
+:::
+
+:::{#exr-}                                                          
+O functor  $H_W$ está  frequentamente escrito como  $\mbox{Hom}(W,−)$ e escrevemos também $H_W(V) = \mbox{Hom}(W,V)$
+e $H_W(f) = \mbox{Hom}(W,f)$. Deﬁna um functor $\mbox{Hom}(−,W)$. Este outro functor seria um functor covariante
+ou contravariante?
+:::
