@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>94&nbsp; Anéis e corpos – Álgebra</title>
+<title>62&nbsp; O produto tensorial – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/extensions.html" rel="next">
-<link href="../GruposECorpos/nilpotent.html" rel="prev">
+<link href="../AlgebraLinearII/formas.html" rel="next">
+<link href="../AlgebraLinearII/dual.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -651,7 +651,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/ringsfields.html"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/tensor.html"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">O produto tensorial</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1092,7 +1092,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/tensor.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearII/tensor.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">O produto tensorial</span></span></a>
   </div>
 </li>
@@ -1295,7 +1295,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/ringsfields.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></span></a>
   </div>
 </li>
@@ -1341,18 +1341,19 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#definições" id="toc-definições" class="nav-link active" data-scroll-target="#definições"><span class="header-section-number">94.1</span> Definições</a></li>
-  <li><a href="#ideais" id="toc-ideais" class="nav-link" data-scroll-target="#ideais"><span class="header-section-number">94.2</span> Ideais</a></li>
-  <li><a href="#anéis-de-polinômios" id="toc-anéis-de-polinômios" class="nav-link" data-scroll-target="#anéis-de-polinômios"><span class="header-section-number">94.3</span> Anéis de polinômios</a></li>
+  <li><a href="#mapas-bilineares" id="toc-mapas-bilineares" class="nav-link active" data-scroll-target="#mapas-bilineares"><span class="header-section-number">62.1</span> Mapas bilineares</a></li>
+  <li><a href="#o-produto-tensorial" id="toc-o-produto-tensorial" class="nav-link" data-scroll-target="#o-produto-tensorial"><span class="header-section-number">62.2</span> O produto tensorial</a></li>
+  <li><a href="#as-propriedades-básicas-do-produto-tensorial" id="toc-as-propriedades-básicas-do-produto-tensorial" class="nav-link" data-scroll-target="#as-propriedades-básicas-do-produto-tensorial"><span class="header-section-number">62.3</span> As propriedades básicas do produto tensorial</a></li>
+  <li><a href="#o-produdo-tensorial-de-vários-espaços" id="toc-o-produdo-tensorial-de-vários-espaços" class="nav-link" data-scroll-target="#o-produdo-tensorial-de-vários-espaços"><span class="header-section-number">62.4</span> O produdo tensorial de vários espaços</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/ringsfields.html"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/tensor.html"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">O produto tensorial</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Anéis e corpos</span></h1>
+<h1 class="title"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">O produto tensorial</span></h1>
 </div>
 
 
@@ -1369,123 +1370,134 @@ window.Quarto = {
 </header>
 
 
-<section id="definições" class="level2" data-number="94.1">
-<h2 data-number="94.1" data-anchor-id="definições"><span class="header-section-number">94.1</span> Definições</h2>
-<div id="def-ring" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 94.1</strong></span> Seja <span class="math inline">\(R\)</span> um conjunto não vazio equipado com duas operações <span class="math inline">\(+\)</span> (adição) e <span class="math inline">\(\cdot\)</span> (multiplicação) que satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in R\)</span>:</p>
-<ul>
-<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
-<li><span class="math inline">\(a+b=b+a\)</span>;</li>
-<li>existe elemento neutro <span class="math inline">\(0\)</span> para a adição: <span class="math inline">\(0+a=a+0=a\)</span>;</li>
-<li><span class="math inline">\(a\in R\)</span> possui negativo; ou seja existe <span class="math inline">\(-a\in R\)</span> tal que <span class="math inline">\(a+(-a)=0\)</span>;</li>
-<li><span class="math inline">\((ab)c=a(bc)\)</span>;</li>
-<li><span class="math inline">\(ab=ba\)</span>;</li>
-<li>existe elemento neutro <span class="math inline">\(1\)</span> para multiplicação: <span class="math inline">\(1\cdot a=a\cdot 1=a\)</span>;</li>
-<li><span class="math inline">\(a(b+c)=ab+ac\)</span>.</li>
-</ul>
-<p>A estrutura <span class="math inline">\((R,+,\cdot)\)</span> chama-se <em>anel comutativo com identidade</em>. Como nesta parte da disciplina nós não vamos tratar anéis que não são comutativos com identidade, nós vamos chamar a estrutura <span class="math inline">\(R\)</span> simplesmente <em>anel</em>.</p>
-</div>
-<p>Em particular, se <span class="math inline">\((R,+,\cdot)\)</span> é um anel então <span class="math inline">\((R,+)\)</span> é&nbsp; um grupo abeliano.</p>
-<div id="def-field" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 94.2</strong></span> Um anel <span class="math inline">\(R\)</span> com pelo menos dois elementos é dito <em>corpo,&nbsp;</em>se, além das propriedades 1-8 acima, todo elemento <span class="math inline">\(a\in R\setminus\{0\}\)</span> possui inverso multiplicativo. Ou seja, se <span class="math inline">\(a\in R\setminus\{0\}\)</span>, então existe <span class="math inline">\(a^{-1}\in R\)</span> tal que <span class="math inline">\(aa^{-1}=1\)</span>. Isto significa, que se <span class="math inline">\((R,+,\cdot)\)</span> é um corpo, então <span class="math inline">\((R,+)\)</span> e <span class="math inline">\((R\setminus\{0\},\cdot)\)</span> são grupos abelianos.</p>
-</div>
-<div id="exr-unique" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 94.1</strong></span> Mostre em um anel <span class="math inline">\(R\)</span> que os elementos <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span> são únicos. Mostre, para <span class="math inline">\(a\in R\)</span> que <span class="math inline">\(-a\)</span> e (caso exista) <span class="math inline">\(a^{-1}\)</span> são únicos.</p>
-</div>
-<div id="exm-ring" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 94.1</strong></span> Os principais exemplos de anéis são <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Z_n\)</span> e <span class="math inline">\(\F[x]\)</span> (com <span class="math inline">\(\F\)</span> sendo um corpo). Os principais exemplos de corpos são <span class="math inline">\(\mathbb Z_p\)</span> (com <span class="math inline">\(p\)</span> primo), <span class="math inline">\(\mathbb Q\)</span>, <span class="math inline">\(\mathbb R\)</span>, e <span class="math inline">\(\mathbb C\)</span>.</p>
-</div>
-</section>
-<section id="ideais" class="level2" data-number="94.2">
-<h2 data-number="94.2" data-anchor-id="ideais"><span class="header-section-number">94.2</span> Ideais</h2>
-<div id="def-ideal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 94.3</strong></span> Um conjunto não vazio <span class="math inline">\(I\)</span> de um anel é dito ideal se</p>
-<ul>
-<li><span class="math inline">\(a\pm b\in I\)</span> para todo <span class="math inline">\(a,b\in I\)</span> (em outras palavras <span class="math inline">\(I\)</span> é um subgrupo de <span class="math inline">\((R,+)\)</span>);</li>
-<li><span class="math inline">\(ab\in I\)</span> para todo <span class="math inline">\(a\in I\)</span> e <span class="math inline">\(b\in R\)</span>.</li>
-</ul>
-</div>
-<div id="exm-ideal" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 94.2</strong></span> Se <span class="math inline">\(R\)</span> é um anel e <span class="math inline">\(a\in R\)</span>, então <span class="math display">\[
-(a)=Ra=\{ba\mid b\in R\}
-\]</span> é um ideal de <span class="math inline">\(R\)</span>. Um ideal desta forma chama-se<em> ideal principal</em>.</p>
-</div>
-<div id="exr-ideal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 94.2</strong></span> Usando a notação do parágrafo anterior, mostre que <span class="math inline">\((a)=R\)</span> se e somente se existe <span class="math inline">\(a^{-1}\in R\)</span>.</p>
-</div>
-<div id="def-ring-quot" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 94.4</strong></span> Se <span class="math inline">\(R\)</span> é um anel e <span class="math inline">\(I\)</span> é um ideal, então o quociente <span class="math display">\[
-R/I=\{I+r\mid r\in R\}
-\]</span> pode ser considerado como um anel com as operações <span class="math display">\[
-(I+a)+(I+b)=I+(a+b),\quad (I+a)(I+b)=I+ab.
+<section id="mapas-bilineares" class="level2" data-number="62.1">
+<h2 data-number="62.1" data-anchor-id="mapas-bilineares"><span class="header-section-number">62.1</span> Mapas bilineares</h2>
+<p>Nestas páginas <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> são <span class="math inline">\(\F\)</span>-espaços vetoriais com algum corpo <span class="math inline">\(\F\)</span>.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 62.1</strong></span> Uma aplicação <span class="math inline">\(f: U \times V \to W\)</span> é chamada de <strong>bilinear</strong> se, para todos <span class="math inline">\(u, u_1, u_2 \in U\)</span>, <span class="math inline">\(v, v_1, v_2 \in V\)</span> e <span class="math inline">\(\alpha, \beta \in \F\)</span>, as seguintes propriedades forem satisfeitas:</p>
+<ol type="1">
+<li><span class="math inline">\(f(u_1 + u_2, v) = f(u_1, v) + f(u_2, v)\)</span>;</li>
+<li><span class="math inline">\(f(u, v_1 + v_2) = f(u, v_1) + f(u, v_2)\)</span>;</li>
+<li><span class="math inline">\(f(\alpha u, v) = \alpha f(u, v)\)</span>;</li>
+<li><span class="math inline">\(f(u, \beta v) = \beta f(u, v)\)</span>.</li>
+</ol>
+<p>O conjunto de todas as aplicaçẽs bilineares <span class="math inline">\(U\times V\to W\)</span> é denotado por <span class="math display">\[
+\mbox{Bil}(U\times V,W).
 \]</span></p>
 </div>
-<div id="exm-ideal" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 94.3</strong></span> Caso <span class="math inline">\(R=\mathbb Z\)</span> e <span class="math inline">\(n\in \mathbb Z\)</span>, o ideal principal <span class="math inline">\((n)\)</span> é o conjunto <span class="math inline">\(\{bn\mid b\in\mathbb Z\}\)</span> dos múltiplos de <span class="math inline">\(n\)</span>. Se <span class="math inline">\(n\geq 2\)</span>, então o quociente <span class="math inline">\(\mathbb Z/(n)\)</span> é o anel <span class="math inline">\(\mathbb Z_n\)</span> das classes residuais.</p>
+<div id="exr-bil-esp" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 62.1</strong></span> Mostre que <span class="math inline">\(\mbox{Bil}(U\times V,W)\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial definindo as operações entre aplicações bilineares.</p>
+</div>
+<div id="exm-inner-product" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 62.1</strong></span> Um exemplo clássico de forma bilinear é o produto interno em espaços vetoriais reais. Por exemplo, se <span class="math inline">\(V = \R^n\)</span>, o produto interno padrão em <span class="math inline">\(\R^n\)</span> é a aplicação <span class="math inline">\(\R^n \times \R^n \to \R\)</span> definida por: <span class="math display">\[
+(u,v)\mapsto u \cdot v = \sum_{i=1}^n u_i v_i,
+\]</span> onde <span class="math inline">\(u = (u_1, u_2, \ldots, u_n)\)</span> e <span class="math inline">\(v = (v_1, v_2, \ldots, v_n)\)</span> são vetores em <span class="math inline">\(\R^n\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 62.2</strong></span> Vimos no <a href="trans_lin.html#lem-tr-unique-basis" class="quarto-xref">Lema&nbsp;<span>59.1</span></a> que quando <span class="math inline">\(B\)</span> é base de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é um espaço qualquer, então toda aplicação <span class="math inline">\(B\to W\)</span> pode ser estendida a uma única transformação linear. Uma coisa similar vale com aplicações bilineares. Sejam <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> respetivamente, e seja <span class="math inline">\(f:B\times C\to W\)</span> uma aplicação qualquer.</p>
+<ol type="1">
+<li>Demonstre que existe uma única aplicação bilinear <span class="math inline">\(\tilde f:U\times V\to W\)</span> tal que <span class="math inline">\(\tilde f|_{B\times C}=f\)</span>.</li>
+<li>Deduza que <span class="math display">\[
+\mbox{Func}(B\times C,W)\cong \mbox{Bil}(U\times V,W)
+\]</span> onde o isomorfismo é entre espaços vetorias.</li>
+</ol>
 </div>
 </section>
-<section id="anéis-de-polinômios" class="level2" data-number="94.3">
-<h2 data-number="94.3" data-anchor-id="anéis-de-polinômios"><span class="header-section-number">94.3</span> Anéis de polinômios</h2>
-<p>Nós vamos trabalhar principalmente com anéis de polinômios e com seus ideais. Eu assumo que vocês têm familiaridade com alguns conceitos relacionados com polinômios que estudamos na disciplina Fundamentos de Álgebra:</p>
-<ul>
-<li>conceito de polinômio sobre um corpo (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>29.1</span></a>);</li>
-<li>grau de um polinômio (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>29.1</span></a>);</li>
-<li>polinômio mônico (<a href="../FundamentosDeAlgebra/pols.html#def-pol" class="quarto-xref">Definição&nbsp;<span>29.1</span></a>);</li>
-<li>divisibilidade entre polinômios (<a href="../FundamentosDeAlgebra/div_pol.html#def-div-pols" class="quarto-xref">Definição&nbsp;<span>30.1</span></a>);</li>
-<li>o MDC de dois polinômios (<a href="../FundamentosDeAlgebra/mdc_pol.html#def-mdc-pol" class="quarto-xref">Definição&nbsp;<span>31.1</span></a>);</li>
-<li>polinômios coprimos (primos entre si) (<a href="../FundamentosDeAlgebra/mdc_pol.html#def-coprime-pol" class="quarto-xref">Definição&nbsp;<span>31.2</span></a>);</li>
-<li>o Algoritmo de Euclides para polinômios (<a href="../FundamentosDeAlgebra/mdc_pol.html#sec-euclid-pols" class="quarto-xref"><span>Seção 31.2</span></a>);</li>
-<li>Polinômios irredutíveis (<a href="../FundamentosDeAlgebra/irred.html#def-irred" class="quarto-xref">Definição&nbsp;<span>34.1</span></a>);</li>
-<li>a caraterização de polinômios irredutíveis sobre <span class="math inline">\(\mathbb C\)</span> e <span class="math inline">\(\mathbb R\)</span> (<a href="../FundamentosDeAlgebra/irred.html#thm-irred-R-C" class="quarto-xref">Teorema&nbsp;<span>34.1</span></a>);</li>
-<li>O critério de Eisenstein para irredutibilidade de um polinômio sobre <span class="math inline">\(\mathbb Q\)</span> (<a href="../FundamentosDeAlgebra/gauss_pt1.html#thm-eisenstein" class="quarto-xref">Teorema&nbsp;<span>36.2</span></a>).</li>
-</ul>
-<p>Seja <span class="math inline">\(\F\)</span> um corpo e considere o anel <span class="math inline">\(R=\F[x]\)</span> de polinômios sobre <span class="math inline">\(\F\)</span>. Seja <span class="math inline">\(f(x)\)</span> um polinômio de <span class="math inline">\(\F[x]\)</span> com grau maior ou igual a <span class="math inline">\(1\)</span>. Pelo exemplo acima,&nbsp; o conjunto <span class="math display">\[
-(f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}
-\]</span> é um ideal de <span class="math inline">\(\F[x]\)</span>.&nbsp;Se <span class="math inline">\(g(x)\in \F[x]\)</span> então denote por <span class="math inline">\(\overline{g(x)}\)</span> o elemento <span class="math inline">\((f(x))+g(x)\)</span> do quociente <span class="math inline">\(\F[x]/(f(x))\)</span>. Usando o Teorema de Divisão de Euclides para polinômios, pode-se escrever que <span class="math display">\[
-g(x)=q(x)f(x)+r(x)\quad \mbox{onde}\quad r(x)=0\mbox{ ou }\mbox{grau}\,r(x)&lt;\mbox{grau}\,f(x),
-\]</span> mas isso implica que <span class="math display">\[
-\overline{r(x)}=\overline{g(x)-q(x)f(x)}=\overline{g(x)}-\overline{q(x)}\overline{f(x)}=
-\overline{g(x)}.
-\]</span> Ou seja, <span class="math inline">\(\overline{g(x)}\)</span> e <span class="math inline">\(\overline{r(x)}\)</span> são elementos iguais em <span class="math inline">\(\F[x]/(f(x))\)</span>. Além disso, se <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>, então a penúltima equação destacada implica que <span class="math inline">\(g(x)=r(x)\)</span>. Estas considerações demonstram o seguinte resultado.</p>
-<div id="lem-euclid-quot" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 94.1</strong></span> Usando a notação acima, todo elemento de <span class="math inline">\(\F[x]/(f(x))\)</span> pode ser escrito unicamente como <span class="math inline">\(\overline{g(x)}\)</span> onde <span class="math inline">\(g(x)\in\F[x]\)</span> com <span class="math inline">\(g(x)=0\)</span> ou <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>. Em particular, pondo <span class="math inline">\(k=\mbox{grau}\,f(x)\)</span>, <span class="math display">\[
-\F[x]/(f(x))=\{\overline{g(x)}\mid g(x)=0\mbox{ ou grau}\,g(x)&lt;k\}=
-\{\alpha_0+\alpha_1\overline x+\cdots+\alpha_{k-1}\overline x^{k-1}\mid \alpha_0,\ldots,\alpha_{k-1}\in\F\}.
-\]</span> e <span class="math inline">\(\F[x]/(f(x))\)</span> é um espaço vetorial de dimensão <span class="math inline">\(k\)</span> sobre <span class="math inline">\(\F\)</span>.</p>
+<section id="o-produto-tensorial" class="level2" data-number="62.2">
+<h2 data-number="62.2" data-anchor-id="o-produto-tensorial"><span class="header-section-number">62.2</span> O produto tensorial</h2>
+<div id="def-tensor-product" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 62.2</strong></span> Um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação bilinear <span class="math inline">\(\tau: U \times V \to W\)</span>, é chamado de <strong>produto tensorial</strong> de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span> se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação bilinear <span class="math inline">\(f: U \times V \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>.</p>
 </div>
-<div id="def-ideal-max" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 94.5</strong></span> Um ideal <span class="math inline">\(I\unlhd\)</span> R$ é dito <em>maximal</em> se não existe ideal <span class="math inline">\(J\)</span> de <span class="math inline">\(R\)</span> tal que tal <span class="math inline">\(I\subset J\subset R\)</span>.</p>
-</div>
-<div id="thm-quot" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 94.1</strong></span> Se <span class="math inline">\(I\neq\{0\}\)</span> é um ideal de <span class="math inline">\(\F[x]\)</span> então existe um único polinômio mônico <span class="math inline">\(f(x)\in I\)</span> tal que <span class="math display">\[
-I=(f(x))=\F[x]f(x)=\{q(x)f(x)\mid q(x)\in \F[x]\}.
-\]</span> Consequentemente, <span class="math inline">\(I\)</span> é principal. Além disso as seguintes são equivalentes:</p>
-<ul>
-<li><span class="math inline">\(I\)</span> é um ideal maximal;</li>
-<li><span class="math inline">\(f(x)\)</span> é um polinômio irredutível;</li>
-<li><span class="math inline">\(\F[x]/I\)</span> é um corpo.</li>
-</ul>
+<div id="thm-tensor-uniqueness" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.1</strong></span> Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, com aplicações bilineares associadas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>, respectivamente. Então, existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(I\subseteq \F[x]\)</span> um ideal não nulo e seja <span class="math inline">\(f(x)\)</span> um polinômio não nulo em <span class="math inline">\(I\)</span> de grau minimal. Multiplicando <span class="math inline">\(f(x)\)</span> com um escalar, podemos assumir que <span class="math inline">\(f(x)\)</span> é um polinômio mônico. Claramente, <span class="math inline">\((f(x))\subseteq I\)</span>. Seja <span class="math inline">\(g(x)\in I\)</span> um polinômio arbitrário. Pelo Teorema de Divisão de Euclides para polinômios, existem <span class="math inline">\(q(x),r(x)\in\F[x]\)</span> únicos tais que <span class="math display">\[
-g(x)=f(x)q(x)+r(x)\quad \mbox{onde}\quad r(x)=0\mbox{ ou }\mbox{grau}\,r(x)&lt;\mbox{grau}\,f(x).
-\]</span> Como <span class="math inline">\(f(x),g(x)\in I\)</span>, vimos que <span class="math inline">\(r(x)\in I\)</span>. Pela minimalidade de <span class="math inline">\(\mbox{grau}\,f(x)\)</span> entre os polinômios não nulos de <span class="math inline">\(I\)</span>, segue obrigatoriamente que <span class="math inline">\(r(x)=0\)</span>. Ou seja <span class="math inline">\(g(x)=f(x)q(x)\)</span>. Isto mostra que <span class="math inline">\(I\subseteq (f(x))\)</span> e portanto&nbsp;<span class="math inline">\(I=(f(x))\)</span>.</p>
-<p>Para a primeira afirmação, precisamos mostrar ainda que <span class="math inline">\(f(x)\)</span> é único. Suponha que existem <span class="math inline">\(f_1(x),f_2(x)\in I\)</span> ambos mônicos tais que <span class="math inline">\(I=(f_1(x))=(f_2(x))\)</span>. Neste caso <span class="math inline">\(f_1(x)\)</span> é um múltiplo de <span class="math inline">\(f_2(x)\)</span> e <span class="math inline">\(f_2(x)\)</span> é um múltiplo de <span class="math inline">\(f_1(x)\)</span>. Como os dois destes polinômios são mônicos, segue que <span class="math inline">\(f_1(x)=f_2(x)\)</span>. Então o polinômio <span class="math inline">\(f(x)\)</span> no lema é único.</p>
-<p>Mostremos agora que as três afirmações no lema são equivalentes. Assuma que <span class="math inline">\(I\)</span> é maximal. Como <span class="math inline">\(I\neq\F[x]\)</span>, temos que <span class="math inline">\(f(x)\)</span> não é invertível; ou seja <span class="math inline">\(\mbox{grau}\,f(x)\geq 1\)</span>. Escreva <span class="math inline">\(f(x)=g(x)h(x)\)</span> com <span class="math inline">\(g(x),h(x)\in\F[x]\)</span> e <span class="math inline">\(\mbox{grau}\,g(x)&lt;\mbox{grau}\,f(x)\)</span>. Observe que <span class="math inline">\(I=(f(x))\subseteq (g(x))\)</span>. Pela maximalidade de <span class="math inline">\(I=(f(x))\)</span>, tem-se que <span class="math inline">\((g(x))=\F[x]\)</span> ou <span class="math inline">\((g(x))=I\)</span>. A segunda opção não é possível pois <span class="math inline">\(f(x)\)</span> é um polinômio de menor grau em <span class="math inline">\(I\)</span>, enquanto na primeira opção <span class="math inline">\(g(x)\)</span> é constante. Obtivemos que <span class="math inline">\(f(x)\)</span> é irredutível.</p>
-<p>Assuma agora que <span class="math inline">\(f(x)\)</span> é irredutível. Seja <span class="math inline">\(g(x)\in \F[x]\)</span> tal que <span class="math inline">\(\overline{g(x)}=g(x)+I\in \F[x]/I\)</span> é um elemento não nulo; ou seja <span class="math inline">\(g(x)\not\in I\)</span>, ou, equivalentemente, <span class="math inline">\(f(x)\nmid g(x)\)</span>. Como <span class="math inline">\(f(x)\)</span> é irredutível, temos que <span class="math inline">\(\mbox{mdc}(f(x),g(x))=1\)</span> e existem (pelo Algoritmo de Euclides) <span class="math inline">\(u(x),v(x)\in\F[x]\)</span> tais que <span class="math display">\[
-u(x)f(x)+v(x)g(x)=1.
-\]</span> Passando para o quociente, isto quer dizer que <span class="math display">\[
-\overline 1=\overline{u(x)f(x)+v(x)g(x)}=\overline{u(x)}\overline{f(x)}+\overline{v(x)}\overline{g(x)}=
-\overline{v(x)}\overline{g(x)}.
-\]</span> Ou seja, <span class="math inline">\(\overline{v(x)}\)</span> é inverso de <span class="math inline">\(\overline{g(x)}\)</span>. Como <span class="math inline">\(g(x)\)</span> foi escolhido arbitrariamente, sujeito à condição que <span class="math inline">\(\overline{g(x)}\neq 0\)</span>, temos que todo elemento não nulo de <span class="math inline">\(\F[x]/I\)</span> possui inverso e que <span class="math inline">\(\F[x]/I\)</span> é um corpo.</p>
-<p>Assuma agora que <span class="math inline">\(\F[x]/I\)</span> é um corpo e seja <span class="math inline">\(J\)</span> um ideal de <span class="math inline">\(\F[x]\)</span> tal que <span class="math inline">\(I\subset J\)</span>. Seja <span class="math inline">\(g(x)\in J\setminus I\)</span>. Como <span class="math inline">\(\F[x]/I\)</span> é um corpo, <span class="math inline">\(\overline{g(x)}\)</span> possui inverso em <span class="math inline">\(\F[x]/I\)</span>; ou seja, existe <span class="math inline">\(h(x)\in \F[x]\)</span> tal que <span class="math inline">\(\overline{g(x)}\overline{h(x)}=\overline 1\)</span>, mas isto é equivalente ao afirmar que <span class="math inline">\(g(x)h(x)=1+q(x)f(x)\)</span>. Como <span class="math inline">\(g(x),f(x)\in J\)</span>, temos que <span class="math inline">\(1\in J\)</span> e isto implica que <span class="math inline">\(J=\F[x]\)</span> e que <span class="math inline">\(I\)</span> é um ideal maximal.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, com as aplicações bilineares canônicas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>. Pela propriedade universal do produto tensorial <span class="math inline">\(W_1\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>. Analogamente, pela propriedade universal do produto tensorial <span class="math inline">\(W_2\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi': W_2 \to W_1\)</span> tal que <span class="math inline">\(\psi' \circ \tau_2 = \tau_1\)</span>.</p>
+<p>Agora, considere o homomorfismo linear <span class="math inline">\(\psi' \circ \psi: W_1 \to W_1\)</span>. Temos: <span class="math display">\[
+(\psi' \circ \psi) \circ \tau_1 = \psi' \circ (\psi \circ \tau_1) = \psi' \circ \tau_2 = \tau_1.
+\]</span> Pela unicidade do homomorfismo linear garantida pela propriedade universal, segue que <span class="math inline">\(\psi' \circ \psi\)</span> é o homomorfismo identidade em <span class="math inline">\(W_1\)</span>. De maneira análoga, podemos mostrar que <span class="math inline">\(\psi \circ \psi'\)</span> é o homomorfismo identidade em <span class="math inline">\(W_2\)</span>. Portanto, <span class="math inline">\(\psi\)</span> é um isomorfismo linear, e a unicidade de <span class="math inline">\(\psi\)</span> segue da propriedade universal do produto tensorial.</p>
+<p>Assim, mostramos que existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
 </div>
-<div id="exm-quot-pol" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 94.4</strong></span> Seja <span class="math inline">\(\F=\mathbb R\)</span> e considere o polinômio <span class="math inline">\(f(x)=x^2+1\in\mathbb R[x]\)</span>. Como <span class="math inline">\(f(x)\)</span> é um polinômio irredutível (porque?), temos que o quociente <span class="math inline">\(\mathbb K=\mathbb R[x]/(x^2+1)\)</span> é um corpo. Pelas considerações acima, <span class="math display">\[
-\mathbb K=\{\alpha_0+\alpha_1\overline x\mid \alpha_0,\alpha_1\in \mathbb R\}.
-\]</span> Além disso, temos que <span class="math inline">\(\overline x^2+1=0\)</span> que implica que <span class="math inline">\(\overline x^2=-1\)</span>. Escrevendo <span class="math inline">\(\overline x=i\)</span>, temos que <span class="math display">\[
-\mathbb K=\{\alpha_0+\alpha_1 i\mid \alpha_0,\alpha_1\in\mathbb R\}\quad\mbox{onde}\quad i^2=-1.
-\]</span> Vemos então que o corpo quociente <span class="math inline">\(\mathbb K\)</span> é nada mais que o corpo bem conhecido <span class="math inline">\(\mathbb C\)</span>. Obtivemos então que <span class="math inline">\(\mathbb C=\mathbb R[x]/(x^2+1)\)</span>.</p>
+<p>Se <span class="math inline">\(W\)</span> for um produto tensorial de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> com aplicação bilinear canônica <span class="math inline">\(\tau\)</span>, então o espaço <span class="math inline">\(W\)</span> será escrito como <span class="math inline">\(U\otimes V\)</span> e o elemento <span class="math inline">\(\tau(u,v)\)</span> será escrito como <span class="math inline">\(u\otimes v\)</span>.</p>
+<div id="cor-tensor" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 62.1</strong></span> Sejam <span class="math inline">\(U,V,W\)</span> <span class="math inline">\(\F\)</span> espaços vetoriais e sejam <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span>, respetivamente. Então os seguintes espaços são isomorfos: <span class="math display">\[
+\mbox{Bil}(U\times V,W)\cong \mbox{Func}(B\times C,W)\cong\mbox{Hom}(U\otimes V,W).
+\]</span></p>
+</div>
+<div id="thm-tensor-existence" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.2</strong></span> Para quaisquer espaços vetoriais <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, existe um produto tensorial <span class="math inline">\(U \otimes V\)</span> e uma aplicação bilinear canônica <span class="math inline">\(\tau: U \times V \to U \otimes V\)</span> que satisfaz a propriedade universal do produto tensorial.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Considere o espaço vetorial <span class="math inline">\(\F(U \times V)\)</span>, o espaço vetorial sobre <span class="math inline">\(\F\)</span> com base no conjunto <span class="math inline">\(U \times V\)</span>. Os elementos de <span class="math inline">\(\F(U \times V)\)</span> são combinações lineares formais de pares <span class="math inline">\((u, v)\)</span>, onde <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>. Definimos um subespaço <span class="math inline">\(R \subseteq \F(U \times V)\)</span> gerado pelas seguintes relações:</p>
+<ol type="1">
+<li><span class="math inline">\((u_1 + u_2, v) - (u_1, v) - (u_2, v)\)</span> para todos <span class="math inline">\(u_1, u_2 \in U\)</span> e <span class="math inline">\(v \in V\)</span>,</li>
+<li><span class="math inline">\((u, v_1 + v_2) - (u, v_1) - (u, v_2)\)</span> para todos <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v_1, v_2 \in V\)</span>,</li>
+<li><span class="math inline">\((\alpha u, v) - \alpha (u, v)\)</span> para todos <span class="math inline">\(u \in U\)</span>, <span class="math inline">\(v \in V\)</span> e <span class="math inline">\(\alpha \in \F\)</span>,</li>
+<li><span class="math inline">\((u, \beta v) - \beta (u, v)\)</span> para todos <span class="math inline">\(u \in U\)</span>, <span class="math inline">\(v \in V\)</span> e <span class="math inline">\(\beta \in \F\)</span>.</li>
+</ol>
+<p>Definimos o espaço quociente <span class="math inline">\(W = \F(U \times V) / R\)</span>. Denotamos a classe de equivalência de <span class="math inline">\((u, v)\)</span> em <span class="math inline">\(W\)</span> por <span class="math inline">\(u \otimes v\)</span>. A aplicação <span class="math inline">\(\tau: U \times V \to W\)</span> é definida por <span class="math inline">\(\tau(u, v) = u \otimes v\)</span>. Por construção, <span class="math inline">\(\tau\)</span> é bilinear.</p>
+<p>Agora, verificamos a propriedade universal. Seja <span class="math inline">\(Z\)</span> um espaço vetorial e <span class="math inline">\(f: U \times V \to Z\)</span> uma aplicação bilinear. Estendemos <span class="math inline">\(f\)</span> para uma aplicação linear <span class="math inline">\(\tilde{f}: \F(U \times V) \to Z\)</span>. Como <span class="math inline">\(f\)</span> é bilinear, os geradores de <span class="math inline">\(R\)</span> são enviados a <span class="math inline">\(0\)</span> por <span class="math inline">\(\tilde{f}\)</span>. Assim, <span class="math inline">\(R \subseteq \ker(\tilde{f})\)</span>. Portanto, <span class="math inline">\(\tilde{f}\)</span> induz uma aplicação linear bem definida <span class="math inline">\(\bar{f}: \F(U \times V) / R \to Z\)</span> definida por <span class="math display">\[
+\bar f(u\otimes v)=\bar{f}((u, v)+R) = f(u, v),
+\]</span> onde <span class="math inline">\((u, v) \in U \times V\)</span>.</p>
+<p>Para mostrar que <span class="math inline">\(\bar{f}\)</span> é única, suponha que exista outra aplicação linear <span class="math inline">\(\bar{f}': \F(U \times V) / R \to Z\)</span> tal que <span class="math inline">\(\bar{f}' \circ \pi = f\)</span>, onde <span class="math inline">\(\pi: \F(U \times V) \to \F(U \times V) / R\)</span> é a projeção canônica. Então, para todo <span class="math inline">\((u, v) \in U \times V\)</span>, temos: <span class="math display">\[
+\bar{f}'((u, v) + R) = f(u, v).
+\]</span> Como <span class="math inline">\(\bar{f}\)</span> também satisfaz <span class="math inline">\(\bar{f}((u, v) + R) = f(u, v)\)</span> e os elementos <span class="math inline">\((u,v)+R\)</span> geram <span class="math inline">\(\F(U\times V)\)</span>, segue que <span class="math inline">\(\bar{f}' = \bar{f}\)</span> em todos os elementos de <span class="math inline">\(\F(U \times V) / R\)</span>. Portanto, <span class="math inline">\(\bar f'=\bar f\)</span> e <span class="math inline">\(\bar{f}\)</span> é única.</p>
+</div>
+</section>
+<section id="as-propriedades-básicas-do-produto-tensorial" class="level2" data-number="62.3">
+<h2 data-number="62.3" data-anchor-id="as-propriedades-básicas-do-produto-tensorial"><span class="header-section-number">62.3</span> As propriedades básicas do produto tensorial</h2>
+<div id="thm-tensor-basis" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.3</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>, com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respectivamente. Então, o produto tensorial <span class="math inline">\(U \otimes V\)</span> tem como base o conjunto <span class="math inline">\(\{b \otimes c \mid b\in B,\ c\in C\}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(U \otimes V\)</span> o produto tensorial de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span>. Por definição, cada elemento de <span class="math inline">\(U \otimes V\)</span> pode ser escrito como uma combinação linear de elementos da forma <span class="math inline">\(u \otimes v\)</span>, onde <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>. Como <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> são bases de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span>, respectivamente, podemos escrever <span class="math inline">\(u = \sum_{i=1}^m \alpha_i b_i\)</span> e <span class="math inline">\(v = \sum_{j=1}^n \beta_j c_j\)</span>, com <span class="math inline">\(b_i\in B\)</span>, <span class="math inline">\(c_j\in C\)</span>, <span class="math inline">\(\alpha_i, \beta_j \in \F\)</span>. Usando a bilinearidade do produto tensorial, temos: <span class="math display">\[
+u \otimes v = \left(\sum_{i=1}^m \alpha_i b_i\right) \otimes \left(\sum_{j=1}^n \beta_j c_j\right) = \sum_{i=1}^m \sum_{j=1}^n \alpha_i \beta_j (b_i \otimes c_j).
+\]</span> Portanto, qualquer elemento de <span class="math inline">\(U \otimes V\)</span> pode ser escrito como uma combinação linear de elementos da forma <span class="math inline">\(b_i \otimes c_j\)</span>, com <span class="math inline">\(b_i \in B\)</span> e <span class="math inline">\(c_j \in C\)</span>. Isso implica que os elementos <span class="math inline">\(b\otimes c\)</span> com <span class="math inline">\(b\in B\)</span> e <span class="math inline">\(c\in C\)</span> geram <span class="math inline">\(U\otimes V\)</span>.</p>
+<p>Agora, mostramos que o conjunto <span class="math inline">\(\{b \otimes c \mid b \in B,\ c \in C\}\)</span> é linearmente independente. Suponha, por contradição, que existe <span class="math inline">\(b_0\otimes c_0\in B\times C\)</span> que pode ser escrito como uma combinação linear dos demais elementos de <span class="math inline">\(B\times C\)</span>: <span class="math display">\[
+b_0\otimes c_0=\sum_{i=1}^m \sum_{j=1}^n \gamma_{ij} (b_i \otimes c_j);
+\]</span> com <span class="math inline">\(b_i\otimes b_j\neq b\otimes c\)</span>. Considere a aplicação <span class="math inline">\(f_0:B\times C\to \F\)</span> definida da seguinte forma <span class="math display">\[
+f_0(b, c)=\left\{\begin{array}{ll} 1 &amp; \mbox {se $(b,c)=(b_0,c_0)$}\\ 0 &amp; \mbox{caso contrário.}\end{array}\right.
+\]</span> Então <span class="math inline">\(f_0\)</span> pode ser estendida a uma única aplicação bilinear <span class="math inline">\(f:U\times V\to \F\)</span>. Pela propriedade universal do produto tensiorial, existe uma única aplicação linear <span class="math inline">\(\bar f:U\otimes V\to \F\)</span> tal que <span class="math inline">\(\bar f(u\otimes v)=f(u,v)\)</span> para <span class="math inline">\(u\in U\)</span> e <span class="math inline">\(v\in V\)</span>. Em particular <span class="math inline">\(\bar f(b,c)=f_0(b,c)\)</span> para <span class="math inline">\(b\in B\)</span> e <span class="math inline">\(c\in C\)</span>. Portanto, <span class="math inline">\(\bar f(b_0\otimes c_0)=1\)</span>, mas <span class="math display">\[
+\bar f\left(\sum_{i=1}^m \sum_{j=1}^n \gamma_{ij} (b_i \otimes c_j)\right)=0.
+\]</span> Mas isso é uma contradição.</p>
+</div>
+<div id="cor-tensor-dimensions" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 62.2</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>, com <span class="math inline">\(\dim U = m\)</span> e <span class="math inline">\(\dim V = n\)</span>. Então, <span class="math inline">\(\dim (U \otimes V) = m \cdot n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(B = \{b_1, b_2, \ldots, b_m\}\)</span> e <span class="math inline">\(C = \{c_1, c_2, \ldots, c_n\}\)</span> bases de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span>, respectivamente. Pelo teorema anterior, a base de <span class="math inline">\(U \otimes V\)</span> é dada por <span class="math inline">\(\{b_i \otimes c_j \mid 1 \leq i \leq m, 1 \leq j \leq n\}\)</span>. O número de elementos dessa base é <span class="math inline">\(m \cdot n\)</span>, pois há <span class="math inline">\(m\)</span> escolhas para <span class="math inline">\(b_i\)</span> e <span class="math inline">\(n\)</span> escolhas para <span class="math inline">\(c_j\)</span>. Assim, <span class="math inline">\(\dim (U \otimes V) = m \cdot n\)</span>.</p>
+</div>
+<div id="thm-tensor-linear-maps" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.4</strong></span> Sejam <span class="math inline">\(f: V \to X\)</span> e <span class="math inline">\(g: U \to Y\)</span> transformações lineares entre espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Então, existe uma transformação linear única <span class="math inline">\(f \otimes g: U \otimes V \to X \otimes Y\)</span> tal que <span class="math inline">\((f \otimes g)(u \otimes v) = f(u) \otimes g(v)\)</span> para todos <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(f: V \to X\)</span> e <span class="math inline">\(g: U \to Y\)</span> transformações lineares. Definimos uma aplicação bilinear <span class="math inline">\(h: U \times V \to X \otimes Y\)</span> por <span class="math inline">\(h(u, v) = f(u) \otimes g(v)\)</span> para todos <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>. É fácil verificar que <span class="math inline">\(h\)</span> é bilinear. Pela propriedade universal do produto tensorial, existe uma transformação linear única <span class="math inline">\(f \otimes g: U \otimes V \to X \otimes Y\)</span> tal que <span class="math inline">\((f \otimes g)(u \otimes v) = h(u, v) = f(u) \otimes g(v)\)</span> para todos <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>.</p>
+</div>
+</section>
+<section id="o-produdo-tensorial-de-vários-espaços" class="level2" data-number="62.4">
+<h2 data-number="62.4" data-anchor-id="o-produdo-tensorial-de-vários-espaços"><span class="header-section-number">62.4</span> O produdo tensorial de vários espaços</h2>
+<div id="def-multilinear-map" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 62.3</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Uma aplicação <span class="math inline">\(f: V_1 \times V_2 \times \cdots \times V_k \to W\)</span> é chamada de multilinear se, para cada <span class="math inline">\(i \in \{1, 2, \ldots, k\}\)</span> e para todos <span class="math inline">\(v_j \in V_j\)</span> (com <span class="math inline">\(j \neq i\)</span>), a aplicação <span class="math inline">\(f(v_1, \ldots, v_{i-1}, -, v_{i+1}, \ldots, v_k): V_i \to W\)</span> for linear.</p>
+</div>
+<div id="def-tensor-product-multiple" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 62.4</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. O produto tensorial <span class="math inline">\(V_1 \otimes V_2 \otimes \cdots \otimes V_k\)</span> é um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação multilinear <span class="math inline">\(\tau: V_1 \times V_2 \times \cdots \times V_k \to W\)</span>, que satisfaz a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação multilinear <span class="math inline">\(f: V_1 \times V_2 \times \cdots \times V_k \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>.</p>
+</div>
+<div id="thm-tensor-multiple-uniqueness" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.5</strong></span> Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> sobre <span class="math inline">\(\F\)</span>, com aplicações multilineares canônicas <span class="math inline">\(\tau_1: V_1 \times V_2 \times \cdots \times V_k \to W_1\)</span> e <span class="math inline">\(\tau_2: V_1 \times V_2 \times \cdots \times V_k \to W_2\)</span>, respectivamente. Então, existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
+</div>
+<div id="thm-tensor-multiple-existence" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.6</strong></span> Para quaisquer espaços vetoriais <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> sobre <span class="math inline">\(\F\)</span>, existe um produto tensorial <span class="math inline">\(V_1 \otimes V_2 \otimes \cdots \otimes V_k\)</span> e uma aplicação multilinear canônica <span class="math inline">\(\tau: V_1 \times V_2 \times \cdots \times V_k \to V_1 \otimes V_2 \otimes \cdots \otimes V_k\)</span> que satisfaz a propriedade universal do produto tensorial.</p>
+</div>
+<div id="thm-tensor-multiple-basis" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.7</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>, com bases <span class="math inline">\(B_1, B_2, \ldots, B_k\)</span>, respectivamente. Então, o produto tensorial <span class="math inline">\(V_1 \otimes V_2 \otimes \cdots \otimes V_k\)</span> tem como base o conjunto <span class="math inline">\(\{b_1 \otimes b_2 \otimes \cdots \otimes b_k \mid b_i \in B_i, 1 \leq i \leq k\}\)</span>.</p>
+</div>
+<div id="cor-tensor-multiple-dimensions" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 62.3</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>, com <span class="math inline">\(\dim V_i = n_i\)</span> para <span class="math inline">\(1 \leq i \leq k\)</span>. Então, <span class="math inline">\(\dim (V_1 \otimes V_2 \otimes \cdots \otimes V_k) = n_1 \cdot n_2 \cdot \cdots \cdot n_k\)</span>.</p>
+</div>
+<div id="thm-tensor-multiple-linear-maps" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 62.8</strong></span> Sejam <span class="math inline">\(f_i: V_i \to W_i\)</span> transformações lineares entre espaços vetoriais sobre <span class="math inline">\(\F\)</span>, para <span class="math inline">\(1 \leq i \leq k\)</span>. Então, existe uma transformação linear única <span class="math inline">\(f_1 \otimes f_2 \otimes \cdots \otimes f_k: V_1 \otimes V_2 \otimes \cdots \otimes V_k \to W_1 \otimes W_2 \otimes \cdots \otimes W_k\)</span> tal que <span class="math display">\[
+(f_1 \otimes f_2 \otimes \cdots \otimes f_k)(v_1 \otimes v_2 \otimes \cdots \otimes v_k) = f_1(v_1) \otimes f_2(v_2) \otimes \cdots \otimes f_k(v_k),
+\]</span> para todos <span class="math inline">\(v_i \in V_i\)</span>, <span class="math inline">\(1 \leq i \leq k\)</span>.</p>
 </div>
 
 
@@ -1911,13 +1923,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/nilpotent.html" class="pagination-link" aria-label="Grupos nilpotentes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">Grupos nilpotentes</span></span>
+      <a href="../AlgebraLinearII/dual.html" class="pagination-link" aria-label="O espaço dual">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">O espaço dual</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/extensions.html" class="pagination-link" aria-label="Extensões de corpos">
-        <span class="nav-page-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">Extensões de corpos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/formas.html" class="pagination-link" aria-label="Formas $k$-lineares e o determinante de operadores">
+        <span class="nav-page-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Formas <span class="math inline">\(k\)</span>-lineares e o determinante de operadores</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
