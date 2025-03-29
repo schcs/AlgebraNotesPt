@@ -2,6 +2,11 @@
 title: "O produto tensorial"
 number-sections: true
 lang: pt-BR
+format:
+  html:
+    math: 
+      mathjax:
+         extensions: ["[tex]/xypic"]
 --- 
 
 ## Mapas bilineares
@@ -18,7 +23,10 @@ Uma aplicação $f: U \times V \to W$ é chamada de **bilinear** se, para todos 
 
 O conjunto de todas as aplicaçẽs bilineares $U\times V\to W$ é denotado por 
 $$
-\mbox{Bil}(U\times V,W).
+\xymatrix{
+A \ar[r]^f \ar[d]_g & B \ar[d]^h \\
+C \ar[r]_k & D
+}
 $$
 :::
 
@@ -54,6 +62,13 @@ $f:B\times C\to W$ uma aplicação qualquer.
 :::{#def-tensor-product}
 Um espaço vetorial $W$, juntamente com uma aplicação bilinear $\tau: U \times V \to W$, é chamado de **produto tensorial** de $U$ e $V$ sobre $\F$ se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação bilinear $f: U \times V \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
 :::
+
+$$
+\begin{tikzcd}
+A \arrow[r, "f"] \arrow[d, "g"'] & B \arrow[d, "h"] \\
+C \arrow[r, "k"'] & D
+\end{tikzcd}
+$$
 
 :::{#thm-tensor-uniqueness}
 Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$ sobre $\F$, com aplicações bilineares associadas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$, respectivamente. Então, existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
