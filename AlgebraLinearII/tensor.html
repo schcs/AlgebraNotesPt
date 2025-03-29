@@ -1408,17 +1408,36 @@ window.Quarto = {
 <section id="o-produto-tensorial" class="level2" data-number="62.2">
 <h2 data-number="62.2" data-anchor-id="o-produto-tensorial"><span class="header-section-number">62.2</span> O produto tensorial</h2>
 <div id="def-tensor-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 62.2</strong></span> Um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação bilinear <span class="math inline">\(\tau: U \times V \to W\)</span>, é chamado de <strong>produto tensorial</strong> de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> (sobre <span class="math inline">\(\F\)</span>) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação bilinear <span class="math inline">\(f: U \times V \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 62.2</strong></span> Um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação bilinear <span class="math inline">\(\tau: U \times V \to W\)</span>, é chamado de <strong>produto tensorial</strong> de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> (sobre <span class="math inline">\(\F\)</span>) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação bilinear <span class="math inline">\(f: U \times V \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>. Ou seja, comuta o seguinte diagrama. <a href="img/tensor_diag.png">[Diagrama do produto tensorial]</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tensor_diag1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Diagrama do produto tensorial</figcaption>
+</figure>
+</div>
 </div>
 <p>Da definição não fica imediatamente claro se o produto tensorial existe e, se sim, ele é único. Nos vamos responder estas duas pertuntas no afirmativo.</p>
 <div id="thm-tensor-uniqueness" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 62.1</strong></span> Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span>, com aplicações bilineares associadas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>, respectivamente. Então, existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, com as aplicações bilineares canônicas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>. Pela propriedade universal do produto tensorial <span class="math inline">\(W_1\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>. Analogamente, pela propriedade universal do produto tensorial <span class="math inline">\(W_2\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi': W_2 \to W_1\)</span> tal que <span class="math inline">\(\psi' \circ \tau_2 = \tau_1\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, com as aplicações bilineares canônicas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>. Pela propriedade universal do produto tensorial <span class="math inline">\(W_1\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>. Analogamente, pela propriedade universal do produto tensorial <span class="math inline">\(W_2\)</span>, existe um único homomorfismo linear <span class="math inline">\(\psi': W_2 \to W_1\)</span> tal que <span class="math inline">\(\psi' \circ \tau_2 = \tau_1\)</span>. Os homomorfismos estão ilustrados no seguinte diagrama.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tensor_diag2.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Primeiro diagrama da unicidade</figcaption>
+</figure>
+</div>
 <p>Agora, considere o homomorfismo linear <span class="math inline">\(\psi' \circ \psi: W_1 \to W_1\)</span>. Temos: <span class="math display">\[
 (\psi' \circ \psi) \circ \tau_1 = \psi' \circ (\psi \circ \tau_1) = \psi' \circ \tau_2 = \tau_1.
-\]</span> Pela unicidade do homomorfismo linear garantida pela propriedade universal, segue que <span class="math inline">\(\psi' \circ \psi\)</span> é o homomorfismo identidade em <span class="math inline">\(W_1\)</span>. De maneira análoga, podemos mostrar que <span class="math inline">\(\psi \circ \psi'\)</span> é o homomorfismo identidade em <span class="math inline">\(W_2\)</span>. Portanto, <span class="math inline">\(\psi\)</span> é um isomorfismo linear, e a unicidade de <span class="math inline">\(\psi\)</span> segue da propriedade universal do produto tensorial.</p>
+\]</span> Pela unicidade do homomorfismo linear garantida pela propriedade universal, segue que <span class="math inline">\(\psi' \circ \psi\)</span> é o homomorfismo identidade em <span class="math inline">\(W_1\)</span> como pode ser visto no seguinte diagrama.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tensor_diag3.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Segundo diagrama da unicidade</figcaption>
+</figure>
+</div>
+<p>De maneira análoga, podemos mostrar que <span class="math inline">\(\psi \circ \psi'\)</span> é o homomorfismo identidade em <span class="math inline">\(W_2\)</span>. Portanto, <span class="math inline">\(\psi\)</span> é um isomorfismo linear, e a unicidade de <span class="math inline">\(\psi\)</span> segue da propriedade universal do produto tensorial.</p>
 <p>Assim, mostramos que existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
 </div>
 <p>Se <span class="math inline">\(W\)</span> for um produto tensorial de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> com aplicação bilinear canônica <span class="math inline">\(\tau\)</span>, então, usando a unicidade de <span class="math inline">\(W\)</span> e <span class="math inline">\(\tau\)</span>, o espaço <span class="math inline">\(W\)</span> será escrito como <span class="math inline">\(U\otimes V\)</span> e o elemento <span class="math inline">\(\tau(u,v)\)</span> será escrito como <span class="math inline">\(u\otimes v\)</span>.</p>
