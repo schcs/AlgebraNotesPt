@@ -11,7 +11,7 @@ format:
 
 ## Mapas bilineares
 
-Nestas páginas $U$ e $V$ são $\F$-espaços vetoriais com algum corpo $\F$. 
+Nesta página $U$ e $V$ são $\F$-espaços vetoriais com algum corpo $\F$. 
 
 :::{#def-}
 Uma aplicação $f: U \times V \to W$ é chamada de **bilinear** se, para todos $u, u_1, u_2 \in U$, $v, v_1, v_2 \in V$ e $\alpha, \beta \in \F$, as seguintes propriedades forem satisfeitas:
@@ -57,13 +57,13 @@ $f:B\times C\to W$ uma aplicação qualquer.
 ## O produto tensorial
 
 :::{#def-tensor-product}
-Um espaço vetorial $W$, juntamente com uma aplicação bilinear $\tau: U \times V \to W$, é chamado de **produto tensorial** de $U$ e $V$ sobre $\F$ se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação bilinear $f: U \times V \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
+Um espaço vetorial $W$, juntamente com uma aplicação bilinear $\tau: U \times V \to W$, é chamado de **produto tensorial** de $U$ e $V$ (sobre $\F$) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação bilinear $f: U \times V \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
 :::
 
-$$
+Da definição não fica imediatamente claro se o produto tensorial existe e, se sim, ele é único. Nos vamos responder estas duas pertuntas no afirmativo.  
 
 :::{#thm-tensor-uniqueness}
-Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$ sobre $\F$, com aplicações bilineares associadas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$, respectivamente. Então, existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
+Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$, com aplicações bilineares associadas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$, respectivamente. Então, existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
 :::
 
 :::{.proof}
@@ -78,7 +78,8 @@ Pela unicidade do homomorfismo linear garantida pela propriedade universal, segu
 Assim, mostramos que existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
 :::
 
-Se $W$ for um produto tensorial de $U$ e $V$ com aplicação bilinear canônica $\tau$, então o espaço $W$ será escrito como $U\otimes V$ e o elemento 
+
+Se $W$ for um produto tensorial de $U$ e $V$ com aplicação bilinear canônica $\tau$, então, usando a unicidade de $W$ e $\tau$, o espaço $W$ será escrito como $U\otimes V$ e o elemento 
 $\tau(u,v)$ será escrito como $u\otimes v$. 
 
 :::{#cor-tensor}
@@ -89,10 +90,10 @@ $$
 :::
 
 :::{#thm-tensor-existence}
-Para quaisquer espaços vetoriais $U$ e $V$ sobre $\F$, existe um produto tensorial $U \otimes V$ e uma aplicação bilinear canônica $\tau: U \times V \to U \otimes V$ que satisfaz a propriedade universal do produto tensorial.
+Para quaisquer espaços vetoriais $U$ e $V$ sobre $\F$, existe um produto tensorial $U \otimes V$ junto com a aplicação bilinear canônica $\tau: U \times V \to U \otimes V$ que satisfaz a propriedade universal do produto tensorial.
 :::
 :::{.proof}
-Considere o espaço vetorial $\F(U \times V)$, o espaço vetorial sobre $\F$ com base no conjunto $U \times V$. Os elementos de $\F(U \times V)$ são combinações lineares formais de pares $(u, v)$, onde $u \in U$ e $v \in V$. Definimos um subespaço $R \subseteq \F(U \times V)$ gerado pelas seguintes relações:
+Considere o espaço vetorial $\F(U \times V)$, o espaço vetorial sobre $\F$ com base no conjunto $U \times V$. Os elementos de $\F(U \times V)$ são combinações lineares formais de pares $(u, v)$, onde $u \in U$ e $v \in V$. Definimos um subespaço $R \subseteq \F(U \times V)$ gerado pelas seguintes elementos:
 
 1. $(u_1 + u_2, v) - (u_1, v) - (u_2, v)$ para todos $u_1, u_2 \in U$ e $v \in V$,
 2. $(u, v_1 + v_2) - (u, v_1) - (u, v_2)$ para todos $u \in U$ e $v_1, v_2 \in V$,
@@ -108,12 +109,10 @@ $$
 $$ 
 onde $(u, v) \in U \times V$.
 
-Para mostrar que $\bar{f}$ é única, suponha que exista outra aplicação linear $\bar{f}': \F(U \times V) / R \to Z$ tal que $\bar{f}' \circ \pi = f$, onde $\pi: \F(U \times V) \to \F(U \times V) / R$ é a projeção canônica. Então, para todo $(u, v) \in U \times V$, temos:
-$$
-\bar{f}'((u, v) + R) = f(u, v).
-$$
-Como $\bar{f}$ também satisfaz $\bar{f}((u, v) + R) = f(u, v)$ e os elementos 
-$(u,v)+R$ geram $\F(U\times V)$, segue que $\bar{f}' = \bar{f}$ em todos os elementos de $\F(U \times V) / R$. Portanto, $\bar f'=\bar f$ e $\bar{f}$ é única.
+Para mostrar que $\bar{f}$ é única, observe que $\bar f(u\otimes v)$ é determinado unicamente
+pelas condições do teorema, pois $\bar f(u\otimes v)=f(u,v)$ para todo $u\in U$ e $v\in V$. 
+Como os elementos da forma $(u,v)$ geram $\F(U\times V)$, os elementos $u\otimes v$ geram $W$, e temos que $\bar f$ é 
+determinado unicamente. 
 :::
 
 
@@ -131,14 +130,14 @@ $$
 Portanto, qualquer elemento de $U \otimes V$ pode ser escrito como uma combinação linear de elementos da forma $b_i \otimes c_j$, com $b_i \in B$ e $c_j \in C$. Isso implica que os elementos 
 $b\otimes c$ com $b\in B$ e $c\in C$ geram $U\otimes V$. 
 
-Agora, mostramos que o conjunto $\{b \otimes c \mid b \in B,\ c \in C\}$ é linearmente independente. Suponha, por contradição, que existe $b_0\otimes c_0\in B\times C$ que pode ser escrito como 
-uma combinação linear dos demais elementos de $B\times C$:
+Agora, mostramos que o conjunto $\{b \otimes c \mid b \in B,\ c \in C\}$ é linearmente independente. Suponha, por contradição, que existe $b_0\otimes c_0$ com $b_0\in B$ e $c_0\in C$ que pode ser escrito como 
+uma combinação linear dos demais elementos de $\{b \otimes c \mid b\in B,\ c\in C\}$:
 $$
 b_0\otimes c_0=\sum_{i=1}^m \sum_{j=1}^n \gamma_{ij} (b_i \otimes c_j);
 $$
-com $b_i\otimes b_j\neq b\otimes c$. Considere a aplicação $f_0:B\times C\to \F$ definida da seguinte forma 
+com $b_i\otimes b_j\neq b_0\otimes c_0$. Considere a aplicação $f_0:B\times C\to \F$ definida da seguinte forma 
 $$
-f_0(b, c)=\left\{\begin{array}{ll} 1 & \mbox {se $(b,c)=(b_0,c_0)$}\\ 0 & \mbox{caso contrário.}\end{array}\right.
+f_0(b, c)=\left\{\begin{array}{ll} 1 & \mbox {se $(b,c)=(b_0,c_0)$};\\ 0 & \mbox{caso contrário.}\end{array}\right.
 $$
 Então $f_0$ pode ser estendida a uma única aplicação bilinear $f:U\times V\to \F$. Pela propriedade 
 universal do produto tensiorial, existe uma única aplicação linear $\bar f:U\otimes V\to \F$ tal que 
@@ -155,14 +154,73 @@ Sejam $U$ e $V$ espaços vetoriais sobre $\F$, com $\dim U = m$ e $\dim V = n$. 
 :::{.proof}
 Sejam $B = \{b_1, b_2, \ldots, b_m\}$ e $C = \{c_1, c_2, \ldots, c_n\}$ bases de $U$ e $V$, respectivamente. Pelo teorema anterior, a base de $U \otimes V$ é dada por $\{b_i \otimes c_j \mid 1 \leq i \leq m, 1 \leq j \leq n\}$. O número de elementos dessa base é $m \cdot n$, pois há $m$ escolhas para $b_i$ e $n$ escolhas para $c_j$. Assim, $\dim (U \otimes V) = m \cdot n$.
 :::
-:::{#thm-tensor-linear-maps}
-Sejam $f: V \to X$ e $g: U \to Y$ transformações lineares entre espaços vetoriais sobre $\F$. Então, existe uma transformação linear única $f \otimes g: U \otimes V \to X \otimes Y$ tal que $(f \otimes g)(u \otimes v) = f(u) \otimes g(v)$ para todos $u \in U$ e $v \in V$.
+
+:::{#exr-unique-ubi}
+Sejam $U$ e $V$ espaços vetoriais e seja $B$ uma base de $V$. Demonstre que todo elemento de 
+$U\otimes V$ pode ser escrito unicamente na forma 
+$$
+u_1\otimes b_1+\cdots+u_k\otimes b_k
+$$
+onde $u_i\in U$ e $b_i\in B$ e os $b_i$ são dois a dois distintos.
 :::
+
+## Transformações lineares do produto tensorial
+
+:::{#thm-tensor-linear-maps}
+Sejam $f: U \to X$ e $g: V \to Y$ transformações lineares entre espaços vetoriais sobre $\F$. Então, existe uma transformação linear única $f \otimes g: U \otimes V \to X \otimes Y$ tal que $(f \otimes g)(u \otimes v) = f(u) \otimes g(v)$ para todos $u \in U$ e $v \in V$.
+:::
+
 :::{.proof}
-Sejam $f: V \to X$ e $g: U \to Y$ transformações lineares. Definimos uma aplicação bilinear $h: U \times V \to X \otimes Y$ por $h(u, v) = f(u) \otimes g(v)$ para todos $u \in U$ e $v \in V$. É fácil verificar 
+Sejam $f: U \to X$ e $g: V \to Y$ transformações lineares. Definimos uma aplicação bilinear $h: U \times V \to X \otimes Y$ por $h(u, v) = f(u) \otimes g(v)$ para todos $u \in U$ e $v \in V$. É fácil verificar 
 que $h$ é bilinear. Pela propriedade universal do produto tensorial, existe uma transformação linear única $f \otimes g: U \otimes V \to X \otimes Y$ tal que $(f \otimes g)(u \otimes v) = h(u, v) = f(u) \otimes g(v)$ para todos $u \in U$ e $v \in V$.
 :::
 
+## Extensão do corpo base usando o produto tensorial
+
+Sejam $\F$ e $\K$ corpos tais que $\F\subseteq \K$. Um $\K$-espaço pode ser considerado como um $\F$-espaço restringindo o múltiplo escalar para $\F$. Muitas vezes, nós queremos o contrário; ou seja, nós temos um $\F$-espaço $V$ que queremos considerar como um $\K$-espaço. 
+Isso acontece frequentamente com $\R$-espaços. Para garantir que um operador linear de 
+um $\R$-espaço  $V$ possui autovalor, consideramos $V$ como um $\C$-espaço.
+
+:::{#def-base-field-extension}
+Seja $V$ um espaço vetorial sobre um corpo $\F$, e seja $\K$ um corpo tal que $\F\subseteq \K$. Definimos o $\K$-espaço $V_\K$ como $V_\K=\K\otimes V$. A soma neste espaço é a soma no produto 
+tensorial $\K\otimes V$ e o múltiplo escalar é definido como 
+$$
+\lambda(\alpha\otimes v)=(\lambda\alpha)\otimes v.
+$$
+para $\lambda,\alpha\in\K$ e $v\in V$.
+:::
+
+:::{#def-base-field-extension}
+Demonstre que o múltiplo escalar em $V_\K$ está bem definido e $V_\K$ é um espaço vetorial sobre
+$\K$. 
+:::
+
+
+
+:::{#thm-base-extension-basis}
+Sejam $\F$, $\K$ e $V$ como na @def-base-field-extension. Se $B$ é uma base de $V$ sobre $\F$, então o conjunto $\{1 \otimes b \mid b \in B\}$ é uma base de $V_\K = \K \otimes_\F V$ sobre $\K$.
+:::
+
+:::{.proof}
+1. **Geração**: Seja $x \in V_\K$. Por definição do produto tensorial, $x$ pode ser escrito como uma combinação linear de elementos da forma $k \otimes v$, onde $k \in \K$ e $v \in V$. Como $B$ é uma base de $V$, podemos escrever $v = \sum_{i=1}^n \alpha_i b_i$ com $\alpha_i \in \F$ e $b_i\in B$. Assim, 
+$$
+k \otimes v = k \otimes \left(\sum_{i=1}^n \alpha_i b_i\right) = \sum_{i=1}^n k \alpha_i \otimes b_i=\sum_{i=1}^n k \alpha_i (1\otimes b_i).
+$$
+Note que $k \alpha_i \in \K$, pois $\F\subseteq \K$. Portanto, $x$ pode ser escrito como uma combinação linear de $\{1 \otimes b\mid b\in B\}$ com coeficientes em $\K$.
+
+2. **Independência linear**: Suponha que $\sum_{i=1}^n k_i (1 \otimes b_i) = 0$ para alguns $k_i \in \K$ com $b_i\in B$. Isso implica que $\sum_{i=1}^n (k_i \otimes b_i) = 0$. Segue do @exr-unique-ubi que
+isso é possível apenas quando $k_i=0$ para todo $i$.  Assim, $\{1 \otimes b\mid b\in B\}$ é linearmente independente e o mesmo conjunto é uma base de $V_\K$. 
+:::
+
+:::{#exm-}
+Se $V$ é um $\R$-espaço vetorial, então $\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
+**complexificação** de $V$. Por exemplo, 
+\begin{align*}
+(\R^n)_{\C}&=\C^n;\\
+\mbox{Mat}_{m\times n}(\R)_\C&=\mbox{Mat}_{m\times n}(\C);\\
+\R[x]_\C&=\C[x].
+\end{align*}
+:::
 
 ## O produdo tensorial de vários espaços
 
