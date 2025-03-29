@@ -58,6 +58,10 @@ $f:B\times C\to W$ uma aplicação qualquer.
 
 :::{#def-tensor-product}
 Um espaço vetorial $W$, juntamente com uma aplicação bilinear $\tau: U \times V \to W$, é chamado de **produto tensorial** de $U$ e $V$ (sobre $\F$) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação bilinear $f: U \times V \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
+Ou seja, comuta o seguinte diagrama.
+[[Diagrama do produto tensorial]](img/tensor_diag.png)
+
+![Diagrama do produto tensorial](img/tensor_diag1.png){width=50%}
 :::
 
 Da definição não fica imediatamente claro se o produto tensorial existe e, se sim, ele é único. Nos vamos responder estas duas pertuntas no afirmativo.  
@@ -67,13 +71,21 @@ Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$, com aplicações bili
 :::
 
 :::{.proof}
-Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$ sobre $\F$, com as aplicações bilineares canônicas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$. Pela propriedade universal do produto tensorial $W_1$, existe um único homomorfismo linear $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$. Analogamente, pela propriedade universal do produto tensorial $W_2$, existe um único homomorfismo linear $\psi': W_2 \to W_1$ tal que $\psi' \circ \tau_2 = \tau_1$.
+Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$ sobre $\F$, com as aplicações bilineares canônicas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$. Pela propriedade universal do produto tensorial $W_1$, existe um único homomorfismo linear $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$. Analogamente, pela propriedade universal do produto tensorial $W_2$, existe um único homomorfismo linear $\psi': W_2 \to W_1$ tal que $\psi' \circ \tau_2 = \tau_1$. Os homomorfismos estão ilustrados no seguinte diagrama.
+
+![Primeiro diagrama da unicidade](img/tensor_diag2.png){width=50%}
+
 
 Agora, considere o homomorfismo linear $\psi' \circ \psi: W_1 \to W_1$. Temos:
 $$
 (\psi' \circ \psi) \circ \tau_1 = \psi' \circ (\psi \circ \tau_1) = \psi' \circ \tau_2 = \tau_1.
 $$
-Pela unicidade do homomorfismo linear garantida pela propriedade universal, segue que $\psi' \circ \psi$ é o homomorfismo identidade em $W_1$. De maneira análoga, podemos mostrar que $\psi \circ \psi'$ é o homomorfismo identidade em $W_2$. Portanto, $\psi$ é um isomorfismo linear, e a unicidade de $\psi$ segue da propriedade universal do produto tensorial.
+Pela unicidade do homomorfismo linear garantida pela propriedade universal, segue que $\psi' \circ \psi$ é o homomorfismo identidade em $W_1$ como pode ser visto no seguinte diagrama.
+
+![Segundo diagrama da unicidade](img/tensor_diag3.png){width=50%}
+
+
+De maneira análoga, podemos mostrar que $\psi \circ \psi'$ é o homomorfismo identidade em $W_2$. Portanto, $\psi$ é um isomorfismo linear, e a unicidade de $\psi$ segue da propriedade universal do produto tensorial.
 
 Assim, mostramos que existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
 :::
