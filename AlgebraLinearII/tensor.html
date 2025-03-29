@@ -1382,7 +1382,10 @@ window.Quarto = {
 <li><span class="math inline">\(f(u, \beta v) = \beta f(u, v)\)</span>.</li>
 </ol>
 <p>O conjunto de todas as aplicaçẽs bilineares <span class="math inline">\(U\times V\to W\)</span> é denotado por <span class="math display">\[
-\mbox{Bil}(U\times V,W).
+\xymatrix{
+A \ar[r]^f \ar[d]_g &amp; B \ar[d]^h \\
+C \ar[r]_k &amp; D
+}
 \]</span></p>
 </div>
 <div id="exr-bil-esp" class="theorem exercise">
@@ -1408,6 +1411,12 @@ window.Quarto = {
 <div id="def-tensor-product" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 62.2</strong></span> Um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação bilinear <span class="math inline">\(\tau: U \times V \to W\)</span>, é chamado de <strong>produto tensorial</strong> de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span> se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação bilinear <span class="math inline">\(f: U \times V \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>.</p>
 </div>
+<p><span class="math display">\[
+\begin{tikzcd}
+A \arrow[r, "f"] \arrow[d, "g"'] &amp; B \arrow[d, "h"] \\
+C \arrow[r, "k"'] &amp; D
+\end{tikzcd}
+\]</span></p>
 <div id="thm-tensor-uniqueness" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 62.1</strong></span> Sejam <span class="math inline">\(W_1\)</span> e <span class="math inline">\(W_2\)</span> dois produtos tensoriais de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>, com aplicações bilineares associadas <span class="math inline">\(\tau_1: U \times V \to W_1\)</span> e <span class="math inline">\(\tau_2: U \times V \to W_2\)</span>, respectivamente. Então, existe um isomorfismo linear único <span class="math inline">\(\psi: W_1 \to W_2\)</span> tal que <span class="math inline">\(\psi \circ \tau_1 = \tau_2\)</span>.</p>
 </div>
@@ -1499,6 +1508,7 @@ f_0(b, c)=\left\{\begin{array}{ll} 1 &amp; \mbox {se $(b,c)=(b_0,c_0)$}\\ 0 &amp
 (f_1 \otimes f_2 \otimes \cdots \otimes f_k)(v_1 \otimes v_2 \otimes \cdots \otimes v_k) = f_1(v_1) \otimes f_2(v_2) \otimes \cdots \otimes f_k(v_k),
 \]</span> para todos <span class="math inline">\(v_i \in V_i\)</span>, <span class="math inline">\(1 \leq i \leq k\)</span>.</p>
 </div>
+
 
 
 </section>
