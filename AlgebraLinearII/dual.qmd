@@ -92,7 +92,7 @@ $$
 \Psi:V\to V^{**},\quad \Psi(v)=\psi_v.
 $$
 
-:::{#lem-}
+:::{#lem-canonical-map-dual}
 A aplicação $\Psi:V\to V^{**}$ é linear e injetiva. Se $\dim V=k$ finita, então $\Psi$ é um isomorfismo entre $V$ e $V^{**}$.
 :::
 

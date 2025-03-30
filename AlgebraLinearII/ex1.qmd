@@ -476,3 +476,25 @@ O functor  $H_W$ está  frequentamente escrito como  $\mbox{Hom}(W,−)$ e escre
 e $H_W(f) = \mbox{Hom}(W,f)$. Deﬁna um functor $\mbox{Hom}(−,W)$. Este outro functor seria um functor covariante
 ou contravariante?
 :::
+
+:::{#exr-}
+Seja $\F[[x]]$ o espaço das séries de potências sobre um corpo $\F$; ou seja, 
+$$
+\F[[x]]=\left\{\sum_{k\geq 0}\alpha_ix^i\mid \alpha_i\in\F\right\};
+$$
+Demonstre que $\F[x]^*\cong \F[[x]]$. 
+:::
+
+:::{#exr-}
+Sejam $V$ e $W$ $\F$-espaços vetoriais, sejam $\Psi_V:V\to V^{**}$ e $\Psi_W:W\to W^{**}$ 
+as funções canônicas definidas no @lem-canonical-map-dual, e seja $f:V\to W$ uma transformação
+linear. Mostre que o seguinte diagrama comuta.
+
+![Diagrama do bidual](img/dual_diag1.png){width=50%}
+
+Dica: Consulte [esta](https://math.stackexchange.com/q/1132689) e [esta](https://math.stackexchange.com/q/1431757) 
+conversa no Stackexhange.
+
+Este exercícios mostra que a transformação $\Psi_V$ é uma [transformação natural](https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)) entre o functor 
+da identidade e o functor bidual $(-)^{**}$ na categoria dos $\F$-espaços vetoriais. 
+:::
