@@ -1336,8 +1336,14 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#head" id="toc-head" class="nav-link active" data-scroll-target="#head"><span class="header-section-number">65</span> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1676,6 +1682,29 @@ U_2&amp;=\{A\in V\mid A^t=-A\}.
 <li><span class="math inline">\(\{f\in V\mid f\mbox{ é crescente}\}\)</span>;</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções limitadas é limitada, e o produto de uma função limitada por um escalar também é limitado.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado superiormente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>. Por exemplo se <span class="math inline">\(f(0)=0\)</span> e f(x)=x$ para <span class="math inline">\(x\in (0,1)\)</span> então, <span class="math inline">\(f\)</span> é limitado superiormente, mas <span class="math inline">\(-f\)</span> não é limitado superiormente.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado inferiormente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>. O mesmo argumento do item anterior se aplica.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é diferenciável}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções diferenciáveis é diferenciável, e o produto de uma função diferenciável por um escalar também é diferenciável.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é contínua}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções contínuas é contínua, e o produto de uma função contínua por um escalar também é contínua.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é crescente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>, pois a função nula não é cresdente e não pertence ao subespaço.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.15</strong></span> Defina os seguintes vetores em <span class="math inline">\(\R^6\)</span>: <span class="math display">\[\begin{align*}
     v_1 &amp;=( 1, 1, -1, -1,  0,  0)\\
@@ -1705,7 +1734,7 @@ U_2&amp;=\{A\in V\mid A^t=-A\}.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1714,7 +1743,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Se a característica de um corpo é <span class="math inline">\(0\)</span> poderíamos somar a unidade <span class="math inline">\(1\)</span> de <span class="math inline">\(\mathbb{F}\)</span> quantas vezes quisermos que sempre obteríamos elementos diferentes dentro do corpo, portanto um corpo de característica 0 só pode ser infinito. Por contrapositiva concluímos que um corpo finito deve possuir característica estritamente positiva e, pelo <a href="#exr-carateristica" class="quarto-xref">Exercício&nbsp;<span>64.4</span></a>, característica prima, para algum primo <span class="math inline">\(p\)</span>. No entanto, se a característica for diferente de zero isso não significa que o corpo tenha que ser finito, procure um exemplo em que isso aconteça.</p></li>
@@ -1737,7 +1766,7 @@ Solução:
 <p><span class="theorem-title"><strong>Exercício 64.19</strong></span> Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma duas matrizes (arrays) <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> com entradas no mesmo corpo e devolva <code>True</code> se os espaços gerados pelas linhas de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> (respectivamente) são iguais. A função deve devolver <code>False</code> no caso contrário.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1746,7 +1775,7 @@ Dica:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use o exercício anterior e ache as formas escalonadas reduzidas de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> usando alguma implementação da Eliminação de Gauss-Jordan. Se usar Python, pode usar a função <code>rref</code> na biblioteca SymPy.</p>
 </div>
@@ -1766,7 +1795,7 @@ v_B=v-\sum_{i=1}^kv_{p_i}b_i.
 <p><span class="theorem-title"><strong>Exercício 64.21</strong></span> O exercício anterior pode ser usado para decidir igualdade da forma algorítmica no quociente <span class="math inline">\(\F^n/V\)</span>. Escreva uma função em uma linguagem de programação (por exemplo, Python) que toma uma matriz <span class="math inline">\(B\)</span> <span class="math inline">\((k\times n)\)</span> na forma escalonada reduzida e toma dois vetores <span class="math inline">\(v,w\in\F^n\)</span> e devolve <code>True</code> se e somente se <span class="math inline">\(v+V=w+V\)</span>, onde <span class="math inline">\(V\)</span> denota o espaço gerado pelas linhas de <span class="math inline">\(B\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1775,7 +1804,7 @@ Dica:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Implemente o procedimento no exercício anterior e verifique se <span class="math inline">\(v_B=w_B\)</span>.</p>
 </div>
@@ -1790,8 +1819,10 @@ Dica:
 <li>Mostre que <span class="math inline">\(f\mapsto [f]_C^B\)</span> é um isomorfismo <span class="math inline">\(\mbox{Hom}(V,W)\to M_{m\times k}(\F)\)</span>.</li>
 </ol>
 </div>
+<section id="head" class="level1" data-number="65">
+<h1 data-number="65"><span class="header-section-number">65</span> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1800,7 +1831,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Para mostrar que <span class="math inline">\(\psi\)</span> é um isomorfismo, precisamos verificar que <span class="math inline">\(\psi\)</span> é linear, injetiva e sobrejetiva.</p>
@@ -1824,20 +1855,35 @@ Solução:
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>51022dc09766180a27024eb5f6de3d2a93d3d499</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.23</strong></span> Seja <span class="math inline">\(V=\F_3[x]_3\)</span> e considere as bases <span class="math inline">\(B=\{1,x,x^2,x^3\}\)</span> e <span class="math inline">\(C=\{1,1-x,1-x^2,1-x^3\}\)</span>. Seja <span class="math inline">\(d:V\to V\)</span> o endomorfismo definido com <span class="math inline">\(d(f)=f'\)</span> (derivado formal).</p>
+<p><span class="theorem-title"><strong>Exercício 65.1</strong></span> Seja <span class="math inline">\(V=\F_3[x]_3\)</span> e considere as bases <span class="math inline">\(B=\{1,x,x^2,x^3\}\)</span> e <span class="math inline">\(C=\{1,1-x,1-x^2,1-x^3\}\)</span>. Seja <span class="math inline">\(d:V\to V\)</span> o endomorfismo definido com <span class="math inline">\(d(f)=f'\)</span> (derivado formal).</p>
 <ol type="1">
 <li>Ache as matrizes <span class="math inline">\([\mbox{id}_V]_B^C\)</span> e <span class="math inline">\([\mbox{id}_V]_C^B\)</span>.</li>
 <li>Ache as matrizes <span class="math inline">\([f]_B^B\)</span>, <span class="math inline">\([f]_B^C\)</span>, <span class="math inline">\([f]_C^B\)</span> e <span class="math inline">\([f]_C^C\)</span>.</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.24</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita sobre <span class="math inline">\(\F\)</span> com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respetivamente. Denote por <span class="math inline">\(B^∗\)</span> e <span class="math inline">\(C^∗\)</span> as bases duais de <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> em <span class="math inline">\(V^∗\)</span> e <span class="math inline">\(W^∗\)</span>, respetivamente. Seja <span class="math inline">\(f : V \to W\)</span> linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>. Mostre que <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.2</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita sobre <span class="math inline">\(\F\)</span> com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respetivamente. Denote por <span class="math inline">\(B^∗\)</span> e <span class="math inline">\(C^∗\)</span> as bases duais de <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> em <span class="math inline">\(V^∗\)</span> e <span class="math inline">\(W^∗\)</span>, respetivamente. Seja <span class="math inline">\(f : V \to W\)</span> linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>. Mostre que <span class="math display">\[
 [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
-\]</span></p>
+\]</span> Dica:</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1846,7 +1892,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita sobre <span class="math inline">\(\F\)</span> com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respectivamente. Denote por <span class="math inline">\(B^∗\)</span> e <span class="math inline">\(C^∗\)</span> as bases duais de <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> em <span class="math inline">\(V^∗\)</span> e <span class="math inline">\(W^∗\)</span>, respectivamente. Seja <span class="math inline">\(f : V \to W\)</span> linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>. Vamos mostrar que <span class="math display">\[
 [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
@@ -1893,7 +1939,7 @@ f^∗(\gamma_j^∗)(b_i) = \gamma_j^∗(f(b_i)).
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.25</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U \leq V\)</span>. Deﬁna <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.3</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U \leq V\)</span>. Deﬁna <span class="math display">\[
 U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
 \]</span></p>
 <ol type="1">
@@ -1907,7 +1953,7 @@ U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1916,7 +1962,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Demonstre que <span class="math inline">\(U^0 \leq V^*\)</span></strong>:
@@ -1962,10 +2008,10 @@ Solução:
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.26</strong></span> Deduza do exercício anterior que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobresetiva e que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva.</p>
+<p><span class="theorem-title"><strong>Exercício 65.4</strong></span> Deduza do exercício anterior que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobresetiva e que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1974,7 +2020,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Deduza que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobrejetiva</strong>:
@@ -1992,20 +2038,20 @@ Solução:
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.27</strong></span> [Segundo Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span>. Mostre, exibindo um isomorﬁsmo, que <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.5</strong></span> [Segundo Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span>. Mostre, exibindo um isomorﬁsmo, que <span class="math display">\[
                                              (U +W)/W \cong U/(U \cap W).
 \]</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.28</strong></span> [Terceiro Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span> tais que <span class="math inline">\(W \leq U\)</span>. Mostre que <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.6</strong></span> [Terceiro Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span> tais que <span class="math inline">\(W \leq U\)</span>. Mostre que <span class="math display">\[
                                               (V/W)/(U/W)\cong V/U.
 \]</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.29</strong></span> Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de <span class="math inline">\(U +W\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 65.7</strong></span> Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de <span class="math inline">\(U +W\)</span>.</p>
 </div>
 <div id="exr-funct-hom" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.30</strong></span> Seja <span class="math inline">\(W\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span>. Deﬁne o functor <span class="math inline">\(H_W\)</span> com as seguintes regras:</p>
+<p><span class="theorem-title"><strong>Exercício 65.8</strong></span> Seja <span class="math inline">\(W\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span>. Deﬁne o functor <span class="math inline">\(H_W\)</span> com as seguintes regras:</p>
 <ol type="1">
 <li>Para um <span class="math inline">\(\F\)</span>-espaço vetorial <span class="math inline">\(V\)</span>, defina <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span>.</li>
 <li>Para uma transformação linear <span class="math inline">\(f : V \to U\)</span>, defina <span class="math display">\[
@@ -2020,20 +2066,20 @@ Solução:
 <p>As propriedades mostram que o functor <span class="math inline">\(H_W\)</span> é um functor covariante na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.31</strong></span> Seja <span class="math inline">\(W\)</span> como no <a href="#exr-funct-hom" class="quarto-xref">Exercício&nbsp;<span>64.30</span></a>. Mostre que se <span class="math inline">\(f : V \to U\)</span> é injetiva/sobrejetiva, então <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.9</strong></span> Seja <span class="math inline">\(W\)</span> como no <a href="#exr-funct-hom" class="quarto-xref">Exercício&nbsp;<span>65.8</span></a>. Mostre que se <span class="math inline">\(f : V \to U\)</span> é injetiva/sobrejetiva, então <span class="math display">\[
                                          H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
 \]</span> é injetiva/sobrejetiva (respetivamente).</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.32</strong></span> O functor <span class="math inline">\(H_W\)</span> está frequentamente escrito como <span class="math inline">\(\mbox{Hom}(W,−)\)</span> e escrevemos também <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span> e <span class="math inline">\(H_W(f) = \mbox{Hom}(W,f)\)</span>. Deﬁna um functor <span class="math inline">\(\mbox{Hom}(−,W)\)</span>. Este outro functor seria um functor covariante ou contravariante?</p>
+<p><span class="theorem-title"><strong>Exercício 65.10</strong></span> O functor <span class="math inline">\(H_W\)</span> está frequentamente escrito como <span class="math inline">\(\mbox{Hom}(W,−)\)</span> e escrevemos também <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span> e <span class="math inline">\(H_W(f) = \mbox{Hom}(W,f)\)</span>. Deﬁna um functor <span class="math inline">\(\mbox{Hom}(−,W)\)</span>. Este outro functor seria um functor covariante ou contravariante?</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.33</strong></span> Seja <span class="math inline">\(\F[[x]]\)</span> o espaço das séries de potências sobre um corpo <span class="math inline">\(\F\)</span>; ou seja, <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 65.11</strong></span> Seja <span class="math inline">\(\F[[x]]\)</span> o espaço das séries de potências sobre um corpo <span class="math inline">\(\F\)</span>; ou seja, <span class="math display">\[
 \F[[x]]=\left\{\sum_{k\geq 0}\alpha_ix^i\mid \alpha_i\in\F\right\};
 \]</span> Demonstre que <span class="math inline">\(\F[x]^*\cong \F[[x]]\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.34</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, sejam <span class="math inline">\(\Psi_V:V\to V^{**}\)</span> e <span class="math inline">\(\Psi_W:W\to W^{**}\)</span> as funções canônicas definidas no <a href="dual.html#lem-canonical-map-dual" class="quarto-xref">Lema&nbsp;<span>61.2</span></a>, e seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear. Mostre que o seguinte diagrama comuta.</p>
+<p><span class="theorem-title"><strong>Exercício 65.12</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, sejam <span class="math inline">\(\Psi_V:V\to V^{**}\)</span> e <span class="math inline">\(\Psi_W:W\to W^{**}\)</span> as funções canônicas definidas no <a href="dual.html#lem-canonical-map-dual" class="quarto-xref">Lema&nbsp;<span>61.2</span></a>, e seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear. Mostre que o seguinte diagrama comuta.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/dual_diag1.png" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -2044,10 +2090,11 @@ Solução:
 <p>Este exercícios mostra que a transformação <span class="math inline">\(\Psi_V\)</span> é uma <a href="https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)">transformação natural</a> entre o functor da identidade e o functor bidual <span class="math inline">\((-)^{**}\)</span> na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.35</strong></span> Demonstre <a href="bases.html#thm-basis-thm" class="quarto-xref">Teorema&nbsp;<span>56.1</span></a>, <a href="quociente.html#lem-quot-equiv" class="quarto-xref">Lema&nbsp;<span>58.1</span></a>, e resolva <a href="subespacos.html#exr-subs-inters" class="quarto-xref">Exercício&nbsp;<span>57.1</span></a>, <a href="trans_lin.html#exr-tr1" class="quarto-xref">Exercício&nbsp;<span>59.1</span></a>, <a href="trans_lin.html#exr-tr2" class="quarto-xref">Exercício&nbsp;<span>59.2</span></a>, <a href="trans_lin.html#exr-tr3" class="quarto-xref">Exercício&nbsp;<span>59.3</span></a>, <a href="matrizes.html#exr-mat1" class="quarto-xref">Exercício&nbsp;<span>60.1</span></a>, <a href="matrizes.html#exr-mat2" class="quarto-xref">Exercício&nbsp;<span>60.2</span></a>, <a href="dual.html#exr-dual-mat" class="quarto-xref">Exercício&nbsp;<span>61.1</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercício 65.13</strong></span> Demonstre <a href="bases.html#thm-basis-thm" class="quarto-xref">Teorema&nbsp;<span>56.1</span></a>, <a href="quociente.html#lem-quot-equiv" class="quarto-xref">Lema&nbsp;<span>58.1</span></a>, e resolva <a href="subespacos.html#exr-subs-inters" class="quarto-xref">Exercício&nbsp;<span>57.1</span></a>, <a href="trans_lin.html#exr-tr1" class="quarto-xref">Exercício&nbsp;<span>59.1</span></a>, <a href="trans_lin.html#exr-tr2" class="quarto-xref">Exercício&nbsp;<span>59.2</span></a>, <a href="trans_lin.html#exr-tr3" class="quarto-xref">Exercício&nbsp;<span>59.3</span></a>, <a href="matrizes.html#exr-mat1" class="quarto-xref">Exercício&nbsp;<span>60.1</span></a>, <a href="matrizes.html#exr-mat2" class="quarto-xref">Exercício&nbsp;<span>60.2</span></a>, <a href="dual.html#exr-dual-mat" class="quarto-xref">Exercício&nbsp;<span>61.1</span></a>.</p>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
