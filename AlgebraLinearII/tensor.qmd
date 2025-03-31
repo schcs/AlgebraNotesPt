@@ -64,7 +64,7 @@ Ou seja, comuta o seguinte diagrama.
 ![Diagrama do produto tensorial](img/tensor_diag1.png){width=50%}
 :::
 
-Da definição não fica imediatamente claro se o produto tensorial existe e, se sim, ele é único. Nos vamos responder estas duas pertuntas no afirmativo.  
+Da definição não fica imediatamente claro se o produto tensorial existe e, se sim, ele é único. Nos vamos responder estas duas perguntas no afirmativo.  
 
 :::{#thm-tensor-uniqueness}
 Sejam $W_1$ e $W_2$ dois produtos tensoriais de $U$ e $V$, com aplicações bilineares associadas $\tau_1: U \times V \to W_1$ e $\tau_2: U \times V \to W_2$, respectivamente. Então, existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
@@ -95,17 +95,46 @@ Se $W$ for um produto tensorial de $U$ e $V$ com aplicação bilinear canônica 
 $\tau(u,v)$ será escrito como $u\otimes v$. 
 
 :::{#cor-tensor}
-Sejam $U,V,W$ $\F$ espaços vetoriais e sejam $B$ e $C$ bases de $U$ e $V$, respetivamente. Então os seguintes espaços são isomorfos:
+Sejam $U,V,W$ $\F$-espaços vetoriais e sejam $B$ e $C$ bases de $U$ e $V$, respetivamente. Então os seguintes espaços são isomorfos:
 $$
 \mbox{Bil}(U\times V,W)\cong \mbox{Func}(B\times C,W)\cong\mbox{Hom}(U\otimes V,W).
 $$
+:::
+
+:::{#exr-espaço-X}
+Seja $X$ um conjunto qualquer e seja $\F$ um corpo. Defina 
+$\F(X)$ como o conjunto das combinações lineares formais em $X$ com coeficientes em $\F$. Ou seja 
+$$
+\F(X)=\{\alpha_1x_1+\cdots+\alpha_kx_k\mid k\geq 0,\ \alpha_i\in\F,\ x_i\in X\}.
+$$ 
+A soma entre duas combinações formais 
+$$
+u=\alpha_1x_1+\cdots+\alpha_kx_k\quad\mbox{e}\quad 
+v=\beta_1x_1+\cdots+\beta_kx_k
+$$
+é definida como 
+$$
+u+v=(\alpha_1+\beta_1)x_1+\cdots+(\alpha_k+\beta_k)x_k
+$$
+(permitindo que alguns coeficientes sejam nulas, pode assumir que os mesmos $x_i$ aparecem em $u$ e também em $v$).
+O múltiplo escalar é definido, para $\alpha\in\F$, como 
+$$
+\alpha v=\alpha\alpha_1 x_1+\cdots+\alpha\alpha_kv_k.
+$$
+
+1. Demonstre que $\F(X)$ é um espaço vetorial.
+2. Mostre que $X$ é uma base de $\F(X)$. 
+3. Demonstre que 
+   $$
+   \F(X)\cong\{f\in\mbox{Func}(X,\K)\mid f(x)=0\mbox{ exceto um número finito de valores $x$}\}.
+   $$
 :::
 
 :::{#thm-tensor-existence}
 Para quaisquer espaços vetoriais $U$ e $V$ sobre $\F$, existe um produto tensorial $U \otimes V$ junto com a aplicação bilinear canônica $\tau: U \times V \to U \otimes V$ que satisfaz a propriedade universal do produto tensorial.
 :::
 :::{.proof}
-Considere o espaço vetorial $\F(U \times V)$, o espaço vetorial sobre $\F$ com base no conjunto $U \times V$. Os elementos de $\F(U \times V)$ são combinações lineares formais de pares $(u, v)$, onde $u \in U$ e $v \in V$. Definimos um subespaço $R \subseteq \F(U \times V)$ gerado pelas seguintes elementos:
+Considere o espaço vetorial $\F(U \times V)$, o espaço vetorial sobre $\F$ com base no conjunto $U \times V$. Os elementos de $\F(U \times V)$ são combinações lineares formais de pares $(u, v)$, onde $u \in U$ e $v \in V$. Definimos um subespaço $R \leq \F(U \times V)$ gerado pelas seguintes elementos:
 
 1. $(u_1 + u_2, v) - (u_1, v) - (u_2, v)$ para todos $u_1, u_2 \in U$ e $v \in V$,
 2. $(u, v_1 + v_2) - (u, v_1) - (u, v_2)$ para todos $u \in U$ e $v_1, v_2 \in V$,
@@ -115,7 +144,7 @@ Considere o espaço vetorial $\F(U \times V)$, o espaço vetorial sobre $\F$ com
 Definimos o espaço quociente $W = \F(U \times V) / R$. Denotamos a classe de equivalência de $(u, v)$ em $W$ por $u \otimes v$. A aplicação $\tau: U \times V \to W$ é definida por $\tau(u, v) = u \otimes v$. Por construção, $\tau$ é bilinear.
 
 Agora, verificamos a propriedade universal. Seja $Z$ um espaço vetorial e $f: U \times V \to Z$ uma aplicação bilinear. Estendemos $f$ para uma aplicação linear $\tilde{f}: \F(U \times V) \to Z$.
-Como $f$ é bilinear, os geradores de $R$ são enviados a $0$ por $\tilde{f}$. Assim, $R \subseteq \ker(\tilde{f})$. Portanto, $\tilde{f}$ induz uma aplicação linear bem definida $\bar{f}: \F(U \times V) / R \to Z$ definida por 
+Como $f$ é bilinear, os geradores de $R$ são enviados a $0$ por $\tilde{f}$. Assim, $R \leq \ker(\tilde{f})$. Portanto, $\tilde{f}$ induz uma aplicação linear bem definida $\bar{f}: \F(U \times V) / R \to Z$ definida por 
 $$
 \bar f(u\otimes v)=\bar{f}((u, v)+R) = f(u, v),
 $$ 
@@ -190,11 +219,11 @@ que $h$ é bilinear. Pela propriedade universal do produto tensorial, existe uma
 ## Extensão do corpo base usando o produto tensorial
 
 Sejam $\F$ e $\K$ corpos tais que $\F\subseteq \K$. Um $\K$-espaço pode ser considerado como um $\F$-espaço restringindo o múltiplo escalar para $\F$. Muitas vezes, nós queremos o contrário; ou seja, nós temos um $\F$-espaço $V$ que queremos considerar como um $\K$-espaço. 
-Isso acontece frequentamente com $\R$-espaços. Para garantir que um operador linear de 
+Isso acontece frequentamente com $\R$-espaços. Por exemplo, Para garantir que um operador linear de 
 um $\R$-espaço  $V$ possui autovalor, consideramos $V$ como um $\C$-espaço.
 
 :::{#def-base-field-extension}
-Seja $V$ um espaço vetorial sobre um corpo $\F$, e seja $\K$ um corpo tal que $\F\subseteq \K$. Definimos o $\K$-espaço $V_\K$ como $V_\K=\K\otimes V$. A soma neste espaço é a soma no produto 
+Seja $V$ um espaço vetorial sobre um corpo $\F$, e seja $\K$ um corpo tal que $\F\subseteq \K$. Considere $\K$ como um $\F$-espaço vetorial. Definimos o $\K$-espaço $V_\K$ como $V_\K=\K\otimes V$. A soma neste espaço é a soma no produto 
 tensorial $\K\otimes V$ e o múltiplo escalar é definido como 
 $$
 \lambda(\alpha\otimes v)=(\lambda\alpha)\otimes v.
@@ -210,7 +239,7 @@ $\K$.
 
 
 :::{#thm-base-extension-basis}
-Sejam $\F$, $\K$ e $V$ como na @def-base-field-extension. Se $B$ é uma base de $V$ sobre $\F$, então o conjunto $\{1 \otimes b \mid b \in B\}$ é uma base de $V_\K = \K \otimes_\F V$ sobre $\K$.
+Sejam $\F$, $\K$ e $V$ como na @def-base-field-extension. Se $B$ é uma base de $V$ sobre $\F$, então o conjunto $\{1 \otimes b \mid b \in B\}$ é uma base de $V_\K = \K \otimes V$ sobre $\K$.
 :::
 
 :::{.proof}
@@ -225,45 +254,72 @@ isso é possível apenas quando $k_i=0$ para todo $i$.  Assim, $\{1 \otimes b\mi
 :::
 
 :::{#exm-}
-Se $V$ é um $\R$-espaço vetorial, então $\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
-**complexificação** de $V$. Por exemplo, 
+Se $V$ é um $\R$-espaço vetorial, então $V_\C=\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
+**complexificação** de $V$. Por exemplo, os seguintes isomorfismos são válidos:
 \begin{align*}
-(\R^n)_{\C}&=\C^n;\\
-\mbox{Mat}_{m\times n}(\R)_\C&=\mbox{Mat}_{m\times n}(\C);\\
-\R[x]_\C&=\C[x].
+(\R^n)_{\C}&\cong\C^n;\\
+\mbox{Mat}_{m\times n}(\R)_\C&\cong\mbox{Mat}_{m\times n}(\C);\\
+\R[x]_\C&\cong\C[x].
 \end{align*}
 :::
 
 ## O produdo tensorial de vários espaços
 
+O produto tensorial $V_1\otimes\cdots\otimes V_k$ pode ser definida também para vários fatores $V_1,\ldots,V_k$. Isso seria 
+possível, por um lado, obsevando que o produto tensorial é associativo; ou seja, 
+$(V_1\otimes V_2)\otimes V_3 \cong V_1\otimes(V_2\otimes V_3)$ (demonstre isso). Para nós, vai ser mais oportuno definir o produto 
+com vários fatores via a propriedade universal. Nesta seção, nós revisamos a construção com as propriedades principais. Como 
+as demonstrações são similares às demonstrações em cima para $U\otimes V$, elas serão omitidas. 
+
 :::{#def-multilinear-map}
-Sejam $V_1, V_2, \ldots, V_k$ e $W$ espaços vetoriais sobre $\F$. Uma aplicação $f: V_1 \times V_2 \times \cdots \times V_k \to W$ é chamada de multilinear se, para cada $i \in \{1, 2, \ldots, k\}$ e para todos $v_j \in V_j$ (com $j \neq i$), a aplicação $f(v_1, \ldots, v_{i-1}, -, v_{i+1}, \ldots, v_k): V_i \to W$ for linear.
+Sejam $V_1, V_2, \ldots, V_k$ e $W$ espaços vetoriais sobre um corpo $\F$. Uma aplicação $f: V_1 \times V_2 \times \cdots \times V_k \to W$ é chamada de **multilinear** se, para cada $i = 1, 2, \ldots, k$, e para todos $v_j \in V_j$ (com $j \neq i$)  fixados, a aplicação 
+$$
+v_i \mapsto f(v_1, v_2, \ldots, v_k)
+$$ 
+é linear em $v_i$.
 :::
 
 :::{#def-tensor-product-multiple}
-Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre $\F$. O produto tensorial $V_1 \otimes V_2 \otimes \cdots \otimes V_k$ é um espaço vetorial $W$, juntamente com uma aplicação multilinear $\tau: V_1 \times V_2 \times \cdots \times V_k \to W$, que satisfaz a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação multilinear $f: V_1 \times V_2 \times \cdots \times V_k \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
+Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre um corpo $\F$. Um espaço vetorial $W$, juntamente com uma aplicação multilinear $\tau: V_1 \times V_2 \times \cdots \times V_k \to W$, é chamado de **produto tensorial** de $V_1, V_2, \ldots, V_k$ (sobre $\F$) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação multilinear $f: V_1 \times V_2 \times \cdots \times V_k \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
 :::
 
-:::{#thm-tensor-multiple-uniqueness}
-Sejam $W_1$ e $W_2$ dois produtos tensoriais de $V_1, V_2, \ldots, V_k$ sobre $\F$, com aplicações multilineares canônicas $\tau_1: V_1 \times V_2 \times \cdots \times V_k \to W_1$ e $\tau_2: V_1 \times V_2 \times \cdots \times V_k \to W_2$, respectivamente. Então, existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
+:::{#thm-tensor-existence-uniqueness}
+Para quaisquer espaços vetoriais $V_1, V_2, \ldots, V_k$ sobre $\F$, existe um produto tensorial $W_1$ juntamente com uma aplicação multilinear canônica $\tau_1: V_1 \times V_2 \times \cdots \times V_k \to W_1$ que satisfaz a propriedade universal do produto tensorial. Além disso, o produto tensorial é único no seguinte sentido: se $W_2$ é outro espaço vetorial com uma aplicação multilinear $\tau_2: V_1 \times V_2 \times \cdots \times V_k \to W_2$ que satisfaz a propriedade universal, então existe um isomorfismo linear único $\psi: W_1 \to W_2$ tal que $\psi \circ \tau_1 = \tau_2$.
 :::
 
-:::{#thm-tensor-multiple-existence}
-Para quaisquer espaços vetoriais $V_1, V_2, \ldots, V_k$ sobre $\F$, existe um produto tensorial $V_1 \otimes V_2 \otimes \cdots \otimes V_k$ e uma aplicação multilinear canônica $\tau: V_1 \times V_2 \times \cdots \times V_k \to V_1 \otimes V_2 \otimes \cdots \otimes V_k$ que satisfaz a propriedade universal do produto tensorial.
+Pela unicidade do produto tensorial, ele vai ser denotado por $V_1\otimes\cdots\otimes V_k$ e $\tau(v_1,\ldots,v_k)$ 
+será escrito como $v_1\otimes\cdots\otimes v_k$. 
+
+:::{#thm-tensor-multiple-isomorphism}
+Sejam $V_1, V_2, \ldots, V_k$ e $Z$ espaços vetoriais sobre um corpo $\F$, e sejam $B_1, B_2, \ldots, B_k$ bases de $V_1, V_2, \ldots, V_k$, respectivamente. Então, os seguintes espaços são isomorfos:
+$$
+\mbox{Func}(B_1 \times B_2 \times \cdots \times B_k, Z) \cong \mbox{MLin}(V_1 \times V_2 \times \cdots \times V_k, Z) \cong \mbox{Hom}(V_1 \otimes V_2 \otimes \cdots \otimes V_k, Z),
+$$
+onde $\mbox{Func}(B_1 \times B_2 \times \cdots \times B_k, Z)$ denota o espaço de todas as funções de $B_1 \times B_2 \times \cdots \times B_k$ em $Z$, $\mbox{MLin}(V_1 \times V_2 \times \cdots \times V_k, Z)$ denota o espaço de todas as aplicações multilineares de $V_1 \times V_2 \times \cdots \times V_k$ em $Z$, e $\mbox{Hom}(V_1 \otimes V_2 \otimes \cdots \otimes V_k, Z)$ denota o espaço de todos os homomorfismos lineares de $V_1 \otimes V_2 \otimes \cdots \otimes V_k$ em $Z$.
 :::
 
 :::{#thm-tensor-multiple-basis}
-Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre $\F$, com bases $B_1, B_2, \ldots, B_k$, respectivamente. Então, o produto tensorial $V_1 \otimes V_2 \otimes \cdots \otimes V_k$ tem como base o conjunto $\{b_1 \otimes b_2 \otimes \cdots \otimes b_k \mid b_i \in B_i, 1 \leq i \leq k\}$.
+Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre $\F$, com bases $B_1, B_2, \ldots, B_k$, respectivamente. Então, o produto tensorial $V_1 \otimes V_2 \otimes \cdots \otimes V_k$ tem como base o conjunto 
+$$
+\{b_1 \otimes b_2 \otimes \cdots \otimes b_k \mid b_i \in B_i \text{ para } i = 1, 2, \ldots, k\}.
+$$
 :::
 
 :::{#cor-tensor-multiple-dimensions}
-Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre $\F$, com $\dim V_i = n_i$ para $1 \leq i \leq k$. Então, $\dim (V_1 \otimes V_2 \otimes \cdots \otimes V_k) = n_1 \cdot n_2 \cdot \cdots \cdot n_k$.
+Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre $\F$, com $\dim V_i = n_i$ para $i = 1, 2, \ldots, k$. Então, 
+$$
+\dim (V_1 \otimes V_2 \otimes \cdots \otimes V_k) = n_1 \cdot n_2 \cdot \cdots \cdot n_k.
+$$
 :::
 
 :::{#thm-tensor-multiple-linear-maps}
-Sejam $f_i: V_i \to W_i$ transformações lineares entre espaços vetoriais sobre $\F$, para $1 \leq i \leq k$. Então, existe uma transformação linear única $f_1 \otimes f_2 \otimes \cdots \otimes f_k: V_1 \otimes V_2 \otimes \cdots \otimes V_k \to W_1 \otimes W_2 \otimes \cdots \otimes W_k$ tal que 
+Sejam $f_i: V_i \to W_i$ transformações lineares entre espaços vetoriais sobre $\F$ para $i = 1, 2, \ldots, k$. Então, existe uma transformação linear única 
 $$
-(f_1 \otimes f_2 \otimes \cdots \otimes f_k)(v_1 \otimes v_2 \otimes \cdots \otimes v_k) = f_1(v_1) \otimes f_2(v_2) \otimes \cdots \otimes f_k(v_k),
+f_1 \otimes f_2 \otimes \cdots \otimes f_k: V_1 \otimes V_2 \otimes \cdots \otimes V_k \to W_1 \otimes W_2 \otimes \cdots \otimes W_k
+$$ 
+tal que 
 $$
-para todos $v_i \in V_i$, $1 \leq i \leq k$.
+(f_1 \otimes f_2 \otimes \cdots \otimes f_k)(v_1 \otimes v_2 \otimes \cdots \otimes v_k) = f_1(v_1) \otimes f_2(v_2) \otimes \cdots \otimes f_k(v_k)
+$$ 
+para todos $v_i \in V_i$.
 :::

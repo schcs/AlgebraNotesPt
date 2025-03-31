@@ -271,6 +271,21 @@ Sejam $U,W$ subespaços de um espaço vetorial $V$. Demonstre que $U\cup W$ é u
 se e somente se $U\subseteq W$ ou $W\subseteq U$. 
 (Dica: veja a conversa [na página de stackexchange](https://math.stackexchange.com/q/71872).)
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+($\Leftarrow$): Suponha sem perda de generalidade que  $U \subseteq W$ . Então, $U \cup W = W$. Como $W$ é um subespaço de  $V$,  $U \cup W$  é um subespaço de \( V \). O  caso  $W \subseteq U$ é análogo.
+ 
+ ($\Rightarrow$): Suponhamos que  $U \cup W$ é um subespaço de $V$ e que tenhamos o caso  $U \not\subseteq W$; afirmamos então que  
+ $W \subseteq U$.  De fato, por nossa suposição  existe um vetor $u \in U \setminus W$. Agora,  se $w$ é um vetor qualquer em $W$  
+ temos que  $u+w \in U \cup W$  pois um subespaço é fechado por soma. 
+ Daí note que $u+w$ não pode pertencer a $W$, pois se não $(u + w) + (-w) = u $ estaria em $W$ e isso iria contradizer  nossa hipótese de 
+ que $ U \not\subseteq W$. Logo a única opção é que $u+w$ esteja em $U$ e como $u$ já pertence a  $U$ temos que $(u+w) +(-u) = w$ também  
+ percente a  $U$, 
+ logo como $w$ é arbitrário concluímos que $W \subseteq U$. Analogamente o leitor pode supor o caso em que $W \not\subseteq U$ e, 
+ utilizando o mesmo argumento, provar que   $U\subseteq W$. 
+
+(Caio Monteiro) 
+:::
 
 :::{#exr-}
 Seja $\F$ um corpo de caraterística diferente de 2 e seja $V=M_n(\F)$ 
@@ -287,7 +302,7 @@ Ou seja, $U_1$ é o conjunto das matrizes simétricas, enquanto $U_2$ é o conju
 :::
 
 :::{#exr-}
-Sejam $U_1,U_2,\ldots,U_k$ subespaços de um espaço vetorial $V$. Mostre que as segunites afirmações são equivalentes:
+Sejam $U_1,U_2,\ldots,U_k$ subespaçose de um espaço vetorial $V$. Mostre que as segunites afirmações são equivalentes:
 
 1. Todo elemento $v\in V$ pode ser escrito unicamente como $v=u_1+\cdots+u_k$ com $u_i\in U_i$.
 2. $V=U_1+\cdots+U_k$ e $U_i\cap (\sum_{j\neq i}U_j)=0$ para todo $i\in\{1,\ldots,k\}$.
@@ -338,6 +353,21 @@ a cardinalidade de $\F$ é uma potência de um primo''.
 (Dica: [página no stackexchange](https://math.stackexchange.com/q/72856))
 :::      
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+(1) Se a característica de um corpo é $0$ poderíamos somar a unidade $1$ de $\mathbb{F}$ quantas vezes quisermos que sempre obteríamos elementos diferentes dentro do corpo, portanto um corpo de característica 0 só pode ser infinito. Por contrapositiva concluímos que um corpo finito deve possuir característica  estritamente positiva e, pelo @exr-carateristica, característica prima, para algum primo $p$. No entanto, se a característica for diferente de zero isso não significa que o corpo tenha que ser finito, procure um exemplo em que isso aconteça. 
+
+ (2)  Como $\mathbb{F}$ é um corpo ele já é fechado por soma e satisfaz a comutatividade da adição de vetores, associatividade da adição de vetores, existência de vetor nulo (o $0$ de $\mathbb{F}$) e de inverso aditivo, uma vez que o inverso do vetor $v$ em $\mathbb{F}$ é o negativo de $v$ como elemento do corpo, isto é , $-v$.  Resta verificar a multiplicação por escalar, que pode ser assim definida.
+ Para cada $\alpha$ em $\mathbb{Z}_{p} =\{\overline{0},\overline{1}, ..., \overline{p-1} \}$ e $v \in \mathbb{F}$ defina $\alpha \cdot v$ como somar o vetor $v$ em $\mathbb{F}$ uma quantidade  $\alpha$ de  vezes ($\alpha$ visto como um número natural) . Ao utilizarmos a  aritmética módulo $p$ e o fato de que $\mathbb{F}$ tem característica $p$, isto é, somar um vetor qualquer de $\mathbb{F}$ $p$ vezes sempre retorna $0$,  podemos verificar que essa multiplicação por escalar satisfaz os demais axiomas de espaço vetorial. Mais que isso, ao somarmos o elemento $1$ de $\mathbb{F}$ um número $p$ de vezes poderemos ver que temos uma cópia  de $\mathbb{Z}_{p}$ contido em $\mathbb{F}$ e que neste contexto é geralmente chamado subcorpo primo de $\mathbb{F}$. 
+
+ (3) Como mostrado no item $2$ temos que $\mathbb{F}$ é espaço vetorial sobre $\mathbb{Z}_{p}$ e portanto possui uma base, que é um subconjunto de $\mathbb{F}$ e como esse último é finito segue que a cardinalidade da base também é finita. Vamos denotar por $d$ a dimensão de $\mathbb{F}$ visto como  $\mathbb{Z}_{p}$ - espaço vetorial. 
+
+ (4) Como todo elemento de $\mathbb{F}$ pode ser escrito unicamente como combinação linear de elementos de uma base com cardinalidade $d$ existe pelo Princípio fundamental da contagem $p$ elevado a $d$ combinações lineares distintas possíveis para elementos  de $\mathbb{F}$ e portanto  $|\mathbb{F}| = p^d$.
+
+ (Caio Monteiro)
+:::
+
+
 :::{#exr-}
 Se $B$ é o sistema $b_1,\ldots,b_k$ de vetores de $\F^n$, denote por $M_B$ a matriz $k\times n$ cujas linhas são $b_1,\ldots,b_k$. 
     
@@ -385,15 +415,46 @@ onde $W^{k\oplus}=W\oplus\cdots\oplus W$ (soma direta externa de $k$ cópias de 
 2. Mostre que $f\mapsto [f]_C^B$ é um isomorfismo $\mbox{Hom}(V,W)\to M_{m\times k}(\F)$.
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. Para mostrar que $\psi$ é um isomorfismo, precisamos verificar que $\psi$ é linear, injetiva e sobrejetiva.
+
+    - **Linearidade**: Seja $f, g \in \mbox{Hom}(V, W)$ e $\alpha \in \F$. Então:
+      $$
+      \psi(\alpha f + g) = ((\alpha f + g)(b_1), \ldots, (\alpha f + g)(b_k)).
+      $$
+      Pela linearidade de $f$ e $g$, isso se torna:
+      $$
+      \psi(\alpha f + g) = (\alpha f(b_1) + g(b_1), \ldots, \alpha f(b_k) + g(b_k)).
+      $$
+      Por outro lado:
+      $$
+      \alpha \psi(f) + \psi(g) = \alpha (f(b_1), \ldots, f(b_k)) + (g(b_1), \ldots, g(b_k)).
+      $$
+      Isso é igual a:
+      $$
+      (\alpha f(b_1) + g(b_1), \ldots, \alpha f(b_k) + g(b_k)).
+      $$
+      Portanto, $\psi(\alpha f + g) = \alpha \psi(f) + \psi(g)$, mostrando que $\psi$ é linear.
+
+    - **Injetividade**: Para verificar que $\psi$ é injetiva, verificamos que $\ker \psi = \{0\}$. Suponha que $f \in \ker \psi$. Isso significa que:
+        $$
+        \psi(f) = (f(b_1), \ldots, f(b_k)) = (0, \ldots, 0).
+        $$
+        Portanto, $f(b_i) = 0$ para todo $i = 1, \ldots, k$. Como $B$ é uma base de $V$, qualquer vetor em $V$ pode ser escrito como uma combinação linear dos vetores de $B$. Assim, $f(v) = 0$ para todo $v \in V$, o que implica que $f$ é a transformação nula. Concluímos que $\ker \psi = \{0\}$, mostrando que $\psi$ é injetiva.
+
+    - **Sobrejetividade**: Seja $(w_1, \ldots, w_k) \in W^{k\oplus}$. Defina $f \in \mbox{Hom}(V, W)$ por $f(b_i) = w_i$ para $i = 1, \ldots, k$ e estenda linearmente. Então $\psi(f) = (w_1, \ldots, w_k)$. Portanto, $\psi$ é sobrejetiva.
+
+    Concluímos que $\psi$ é um isomorfismo.
+
+:::
+
+
 :::{#exr-}
 Seja $V=\F_3[x]_3$ e considere as bases $B=\{1,x,x^2,x^3\}$ e $C=\{1,1-x,1-x^2,1-x^3\}$. Seja $d:V\to V$ o endomorfismo definido com $d(f)=f'$ (derivado formal). 
     
 1. Ache as matrizes $[\mbox{id}_V]_B^C$ e $[\mbox{id}_V]_C^B$.
 2. Ache as matrizes $[f]_B^B$, $[f]_B^C$, $[f]_C^B$ e $[f]_C^C$. 
-:::
-
-:::{#exr-}
-Resolva os exercícios nas apostilas disponibilizadas nas abas das Semanas 2-3 que não aparecerem nas listas.
 :::
 
 
@@ -402,9 +463,53 @@ Sejam $V$ e $W$ espaços vetoriais de dimensão finita sobre $\F$ com bases $B$ 
 por $B^∗$ e $C^∗$ as bases duais de $B$ e $C$ em $V^∗$ e $W^∗$, respetivamente. Seja $f : V \to W$ linear e considere o
 dual $f^∗ : W^∗ \to V^∗$. Mostre que
 $$
-                                                 [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+[f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
 $$
 :::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Sejam $V$ e $W$ espaços vetoriais de dimensão finita sobre $\F$ com bases $B$ e $C$, respectivamente. Denote por $B^∗$ e $C^∗$ as bases duais de $B$ e $C$ em $V^∗$ e $W^∗$, respectivamente. Seja $f : V \to W$ linear e considere o dual $f^∗ : W^∗ \to V^∗$. Vamos mostrar que
+$$
+[f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+$$
+
+1. **Definição do dual**:
+   - O dual $f^∗ : W^∗ \to V^∗$ é definido por $f^∗(\varphi) = \varphi \circ f$ para todo $\varphi \in W^∗$.
+   - Isso significa que $f^∗$ "puxa para trás" os funcionais lineares de $W^∗$ para $V^∗$.
+
+2. **Representação matricial**:
+   - Seja $[f]^B_C$ a matriz que representa $f$ em relação às bases $B$ e $C$.
+   - Seja $[f^∗]^{C^∗}_{B^*}$ a matriz que representa $f^∗$ em relação às bases duais $C^∗$ e $B^∗$.
+
+3. **Propriedade das bases duais**:
+   - Por definição, as bases duais $B^∗ = \{\beta_1^∗, \ldots, \beta_n^∗\}$ e $C^∗ = \{\gamma_1^∗, \ldots, \gamma_m^∗\}$ satisfazem:
+     $$
+     \beta_i^∗(b_j) = \delta_{ij}, \quad \gamma_i^∗(c_j) = \delta_{ij},
+     $$
+     onde $\delta_{ij}$ é o delta de Kronecker.
+
+4. **Cálculo de $[f^∗]^{C^∗}_{B^*}$**:
+   - Para calcular $[f^∗]^{C^∗}_{B^*}$, precisamos determinar as coordenadas de $f^∗(\gamma_j^∗)$ em relação à base $B^∗$.
+   - Por definição de $f^∗$, temos:
+     $$
+     f^∗(\gamma_j^∗)(b_i) = \gamma_j^∗(f(b_i)).
+     $$
+   - Isso significa que a entrada $(i, j)$ de $[f^∗]^{C^∗}_{B^*}$ é dada por $\gamma_j^∗(f(b_i))$.
+
+5. **Relação com $[f]^B_C$**:
+   - A matriz $[f]^B_C$ é definida por $f(b_i) = \sum_{j=1}^m a_{ji} c_j$, onde $a_{ji}$ são as entradas de $[f]^B_C$.
+   - Portanto, $\gamma_j^∗(f(b_i)) = a_{ji}$.
+
+6. **Conclusão**:
+   - As entradas de $[f^∗]^{C^∗}_{B^*}$ são dadas por $a_{ji}$, que são as entradas transpostas de $[f]^B_C$.
+   - Assim, temos:
+     $$
+     [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+     $$
+:::
+
+
 
 :::{#exr-}
 Seja $V$ um espaço vetorial e $U \leq V$. Deﬁna
@@ -413,17 +518,68 @@ U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
 $$
 
 1. Demonstre que $U^0 \leq V^*$.
-2. Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita. [Dica: Consulte a Seção 2.8.1 do livro do Rodney.]
+2. Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita.
 
 Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to V^∗$.
 
-1. Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$.
-2. Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$.
+3. Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$.
+4. Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Demonstre que $U^0 \leq V^*$**:
+   - Para mostrar que $U^0$ é um subespaço de $V^*$, verificamos as condições de fechamento para soma e multiplicação escalar:
+     - Seja $\varphi_1, \varphi_2 \in U^0$. Então, para todo $u \in U$, temos:
+       $$
+       (\varphi_1 + \varphi_2)(u) = \varphi_1(u) + \varphi_2(u) = 0 + 0 = 0.
+       $$
+       Logo, $\varphi_1 + \varphi_2 \in U^0$.
+     - Seja $\varphi \in U^0$ e $\alpha \in \F$. Então, para todo $u \in U$, temos:
+       $$
+       (\alpha \varphi)(u) = \alpha \varphi(u) = \alpha \cdot 0 = 0.
+       $$
+       Logo, $\alpha \varphi \in U^0$.
+     - Assim, $U^0$ é fechado para soma e multiplicação escalar, e portanto $U^0 \leq V^*$.
+
+2. **Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita**:
+   - Seja $B = \{b_1, \ldots, b_k\}$ uma base de $U$ e complete $B$ para uma base $B' = \{b_1, \ldots, b_k, b_{k+1}, \ldots, b_n\}$ de $V$.
+   - Considere a base dual $B^* = \{b_1^*, \ldots, b_n^*\}$ de $V^*$.
+   - Note que $U^0 = \langle b_{k+1}^*, \ldots, b_n^* \rangle$, pois os funcionais $b_{k+1}^*, \ldots, b_n^*$ anulam todos os vetores de $U$.
+   - Assim, $\dim U^0 = n - k$ e $\dim U = k$. Como $\dim V = n$, temos:
+     $$
+     \dim U + \dim U^0 = k + (n - k) = n = \dim V.
+     $$
+
+3. **Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$**:
+   - Por definição, $\ker f^* = \{\varphi \in W^* \mid f^*(\varphi) = 0\}$.
+   - Para $\varphi \in W^*$, temos $f^*(\varphi)(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Assim, $f^*(\varphi) = 0$ significa que $\varphi(f(v)) = 0$ para todo $v \in V$, ou seja, $\varphi$ anula todos os vetores de $\mbox{Im}\,f$.
+   - Portanto, $\ker f^* = (\mbox{Im}\,f)^0$.
+
+4. **Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$**:
+   - Por definição, $\mbox{Im}\,f^* = \{f^*(\varphi) \mid \varphi \in W^*\}$.
+   - Para $\psi \in V^*$, temos $\psi \in \mbox{Im}\,f^*$ se e somente se existe $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Isso significa que $\psi$ anula todos os vetores de $\ker f$, pois se $v \in \ker f$, então $f(v) = 0$ e $\psi(v) = \varphi(0) = 0$.
+   - Assim, $\mbox{Im}\,f^* \subseteq (\ker f)^0$.
+   - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definir $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Portanto, $\mbox{Im}\,f^* = (\ker f)^0$.
 :::
 
 :::{#exr-}
 Deduza do exercício anterior que $f$ é injetiva se e somente se $f^∗$ é sobresetiva e que $f$ é sobrejetiva se
 e somente se $f^∗$ é injetiva.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Deduza que $f$ é injetiva se e somente se $f^∗$ é sobrejetiva**:
+   - Se $f$ é injetiva, então $\ker f = \{0\}$. Pelo exercício anterior, temos $\mbox{Im}\,f^∗ = (\ker f)^0$. Como $\ker f = \{0\}$, segue que $(\ker f)^0 = V^∗$. Portanto, $\mbox{Im}\,f^∗ = V^∗$, o que implica que $f^∗$ é sobrejetiva.
+   - Reciprocamente, se $f^∗$ é sobrejetiva, então $\mbox{Im}\,f^∗ = V^∗$. Pelo exercício anterior, $\mbox{Im}\,f^∗ = (\ker f)^0$. Como $(\ker f)^0 = V^∗$, segue que $\ker f = \{0\}$. Portanto, $f$ é injetiva.
+
+2. **Deduza que $f$ é sobrejetiva se e somente se $f^∗$ é injetiva**:
+   - Se $f$ é sobrejetiva, então $\mbox{Im}\,f = W$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $\mbox{Im}\,f = W$, segue que $(\mbox{Im}\,f)^0 = \{0\}$. Portanto, $\ker f^∗ = \{0\}$, o que implica que $f^∗$ é injetiva.
+   - Reciprocamente, se $f^∗$ é injetiva, então $\ker f^∗ = \{0\}$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $(\mbox{Im}\,f)^0 = \{0\}$, segue que $\mbox{Im}\,f = W$. Portanto, $f$ é sobrejetiva.
 :::
               
 :::{#exr-}
@@ -497,4 +653,9 @@ conversa no Stackexhange.
 
 Este exercícios mostra que a transformação $\Psi_V$ é uma [transformação natural](https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)) entre o functor 
 da identidade e o functor bidual $(-)^{**}$ na categoria dos $\F$-espaços vetoriais. 
+:::
+
+:::{#exr-}
+Demonstre @thm-basis-thm, @lem-quot-equiv, e resolva @exr-subs-inters, @exr-tr1, @exr-tr2, @exr-tr3, 
+@exr-mat1, @exr-mat2, @exr-dual-mat.
 :::

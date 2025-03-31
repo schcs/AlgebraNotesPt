@@ -85,7 +85,7 @@ Nos seguintes exemplos, $\F$ é um corpo arbitrário.
 
 No caso de espaços de dimensão finita, é mais fácil verificar se um sistema é base ou não.
 
-:::{#thm-}
+:::{#thm-basis-thm}
 Seja $V$ um espaço de dimensão $k$ e $X=\{v_1,\ldots,v_k\}$ um sistema de $k$ vetores. As seguintes são equivalentes:
 
 

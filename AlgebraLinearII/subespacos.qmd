@@ -73,7 +73,7 @@ Dada na aula.
 :::
 
 
-:::{#exr-}
+:::{#exr-subs-inters}
 Seja $X\subseteq V$ onde $V$ é um espaço vetorial. Temos que
 $$
 \langle X\rangle=\bigcap_{X\subseteq U\leq V} U.

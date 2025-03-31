@@ -10,7 +10,7 @@ v+U=\{v+u\mid u \in U\}.
 $$
 Claramente $v+U\subseteq V$ e o conjunto $v+U$ chama-se uma <b>classe lateral</b> em $V$.
 
-:::{#lem-}
+:::{#lem-quot-equiv}
 As seguintes são equivalentes para $v_1,v_2\in V$:
 
 
@@ -18,7 +18,6 @@ As seguintes são equivalentes para $v_1,v_2\in V$:
 - $v_1-v_2\in U$
 
 Em particular, $v+U=0+U$ se e somente se $v\in U$.
-
 :::
 
 

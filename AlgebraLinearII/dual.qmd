@@ -54,7 +54,7 @@ V &&
 $$
 o mapa $f^*(\varphi)$ é representado pela flecha diaginal. Note que o morfismo original está de $V$ para $W$, enquanto o morfismo dual está de $W^*$ para $V^*$.
 
-:::{#exr-}
+:::{#exr-dual-mat}
 Seja $f:V\to W$ uma transformação linear entre $\F$-espaços de dimensão finita. Sejam $B$ e $C$ bases de $V$ e $W$, respetivamente. Mostre que
 $$
 [f^*]^{C^*}_{B^*}=([f]^B_C)^t

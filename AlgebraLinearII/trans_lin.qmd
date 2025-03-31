@@ -23,7 +23,7 @@ f(\alpha_1u_1+\cdots+\alpha_ku_k)=\alpha_1f(u_1)+\cdots+\alpha_kf(u_k);
 $$
 ou seja, uma transformação linear preserva combinações lineares.
 
-:::{#exr-}
+:::{#exr-tr1}
 Mostre que $f(0_U)=0_V$ para qualquer transformação linear $f:U\to V$.
 :::
 
@@ -93,7 +93,7 @@ ou seja, $u_1-u_2\in\ker f$. Como $\ker f$ contém apenas a vetor nulo, tem~se q
 :::
 
 
-:::{#exr-}
+:::{#exr-tr2}
 Sejam $f:U\to V$ e $g:V\to W$ transformações lineares. Mostre que $g\circ f:U\to W$ é  linear.
 :::
 
@@ -103,7 +103,7 @@ $$
 f^{-1}:V\to U,\quad f^{-1}(v)=u\mbox{ se e somente se }f(u)=v.
 $$
 
-:::{#exr-}
+:::{#exr-tr3}
 Seja $f:U\to V$ um isomorfismo. Mostre que $f^{-1}:V\to U$ é linear.
 :::
 

@@ -43,7 +43,7 @@ Mas $[b_i]_B$ é o vetor $e_i$ na base canônica de $\F^k$, então $[f]_C^B[b_i]
 :::
 
 
-:::{#exr-}
+:::{#exr-mat1}
 Sejam $V$, $U$, e $W$ espaços vetoriais com bases $B$, $C$ e $D$ e sejam $f:V\to U$ e $g:U\to W$ transformações lineares. Mostre que
 $$
 [g\circ f]_D^B=[g]_D^C[f]_C^B.
@@ -55,7 +55,7 @@ $$
 :::
 
 
-:::{#exr-}
+:::{#exr-mat2}
 Lembre que para dois espaços vetoriais $V,W$ sobre $\F$, denotamos por $\mbox{Hom}(V,W)$ o conjunto de transforações lineares de $V$ para $W$. Note que $\mbox{Hom}(V,W)$ é um espaço vetorial com as operações
 $$
 (f+g)(v)=f(v)+g(v)\quad\mbox{e}\quad (\alpha f)(v)=\alpha f(v)
