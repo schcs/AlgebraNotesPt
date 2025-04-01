@@ -165,7 +165,8 @@ onde $A$ é a matriz com linhas $a_1,\ldots,a_n$.
 Vamos definir o conceito de determinante para operadores $V\to V$ de espaços de dimensão finita independentemente das suas matrizes.
 
 :::{#def-pullback}
-Sejam $U$ e $V$ espaços vetoriai, seja $f:U\to V$ uma aplicação linear, e assuma que $k\geq 1$ fixado. Seja $T\in L^k(V)$. Defina
+Sejam $U$ e $V$ espaços vetoriai, seja $f:U\to V$ uma aplicação linear, e assuma que $k\geq 1$ fixado. 
+Seja $L^k(V)$ o espaço das transformações $k$-lineares $V^k\to \F$ e assuma que $T\in L^k(V)$. Defina
 $f^*T\in L^k(U)$ como 
 $$
 f^*T\in L^k(U): (u_1,\ldots,u_k)\mapsto T(f(u_1),\ldots,f(u_k)).
