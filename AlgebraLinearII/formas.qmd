@@ -4,52 +4,7 @@ number-sections: true
 lang: pt-BR
 --- 
 
-## Formas $k$-lineares
-
-:::{#def-}
-Sejam $V$ e $W$ espaços vetoriais sobre $\F$, $k\geq 1$, e considere o produto cartesiano $V^k=V\times \cdots\times V$ de $k$ cópias de $V$. Dizemos que uma aplicação $f:V^k\to W$ é $k$-linear se ela é linear em todas as variáveis. Em outras palávras,
-$$
-f(v_1,\ldots,\alpha v_i+\beta w,\ldots v_k)=\alpha f(v_1,\ldots,v_i,\ldots v_k)+\beta f(v_1,\ldots,w,\ldots v_k)
-$$
-vale para todo $i\in\{1,\ldots,k\}$, $v_i\in V$ e $w\in V$. Uma aplicação $V^k\to \F$ $k$-linear é chamada de <b>forma (ou funcional) $k$-linear.</b>
-:::
-
-
-:::{#exm-}
-Uma forma $1$-linear é simplesmente uma forma linear $V\to \F$. Uma aplicação ou forma $2$-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma $3$-linear é chamada de <b>trilinear</b>.
-
-Se $V=\R^n$, então o produto interno $\langle\cdot ,\cdot\rangle$ é bilinear. Por outro lado, se $V=\C^n$, então o produto interno  $\langle\cdot ,\cdot\rangle$ não é bilinear (porque?, consulte a @def-sesquilinear). Se $V=\F^n$, então a aplicação
-$$
-d:V^n\to \F,\quad d(a_1,\ldots,a_n)=\det A,
-$$
-onde $A$ é a matriz formada pelas linhas $a_1,\ldots,a_n$, é $n$-linear.
-
-:::
-
-Para $V, W$ espaços sobre $\F$ e $k\geq 1$, o conjunto das aplicações $k$-lineares é um espaço vetorial sobre $\F$. Este espaço é denotado por $L^k(V,W)$. O espaço $L^k(V,\F)$ é escrito como $L^k(V)$. Note que $V^*=L^1(V)$.
-
-:::{#lem-}
-Sejam $V$ e $W$ espaços vetoriais sobre $\F$  e $B$ uma base de $V$. Seja $f_0$ um mapa arbitrário $f_0:B^k\to W$. Existe uma única aplicação $k$-linear $f:V^k\to W$ tal que $f|_{B^k}=f_0$.
-:::
-
-
-:::{.proof}
-Exercício.
-:::
-
-
-:::{#exm-}
-Seja $V=\R^n$ com a base canônica $e_1,\ldots,e_n$. Está bem conhecido que o produto interno $\langle \cdot,\cdot\rangle$ está determinado pelos valores de $\langle e_i,e_j\rangle$ com $i,j\in\{1,\ldots,n\}$. De fato, se $v,w\in\R^n$ (vetores linhas) e $v=(\alpha_1,\ldots,\alpha_n)$, $w=(\beta_1,\ldots,\beta_n)$, então
-$$
-\langle v,w\rangle=\left\langle \sum_{i=1}^n\alpha_je_i,\sum_{j=1}^n\beta_j e_j\right\rangle=\sum_{i,j=1}^n\alpha_i\beta_j\langle e_i,e_j\rangle=\sum_{i=1}^n\alpha_i\beta_i.
-$$
-Ou seja, as igualdades $\langle e_i,e_j\rangle=\delta_{i,j}$ ($\delta$ de Kronecker) determinam o produto interno $\langle\cdot,\cdot\rangle$ completamente.
-:::
-
-
-:::{#exr-}
-Assumindo que $\dim V=m$ e $\dim W=n$, determine $\dim L^k(V,W)$.
-:::
+## Aplicações $k$-lineares alternadas
 
 
 :::{#def-}
@@ -57,7 +12,7 @@ Seja $f:V^k\to W$ uma aplicação $k$-linear. A aplicação $f$ é dita simétri
 \begin{align*}
 &f(v_1,\ldots,v_{i-1},v_i,v_{i+1},\ldots,v_{j-1},v_j,v_{j+1},\ldots,v_n)\\&=f(v_1,\ldots,v_{i-1},v_j,v_{i+1},\ldots,v_{j-1},v_i,v_{j+1},\ldots,v_n)
 \end{align*}
-para todo $i,j\in\{1,\ldots,k\}$ e $v_i\in V$.
+para todo $i,j\in\{1,\ldots,k\}$ e $v_m\in V$.
 A aplicação $f$ é dita alternada se
 $$
 f(v_1,\ldots,v_n)=0
@@ -66,18 +21,18 @@ sempre que $v_i\in V$ e $v_i=v_j$ com algum $i\neq j$. Os espaços de aplicaçõ
 :::
 
 
-:::{#exm-}
+:::{#exm-klin-sym-alter}
 O produto interno $\langle\cdot,\cdot\rangle$ em $\R^n$ é uma forma simétrica bilinear. 
-O determinante de uma matriz pode ser visto como uma aplicação $n$-linear $d:(\F^n)^n\to\F$ é alternada.
+O determinante no @exm-klin de uma matriz pode ser visto como uma aplicação $n$-linear $d:(\F^n)^n\to\F$ é alternada.
 :::
 
 
-:::{#lem-}
+:::{#lem-alter}
 Seja $f:V^k\times W$ uma aplicação $k$-linear alternada. As seguintes afirmações são válidas:
 
 
- - $f(\ldots,v_i,\ldots,v_j,\ldots)=-f(\ldots,v_j,\ldots,v_i,\ldots)$
- -  Se $v_1,\ldots,v_k$ são linearmente dependentes, então $f(v_1,\ldots,v_k)=0$.
+ 1. $f(\ldots,v_i,\ldots,v_j,\ldots)=-f(\ldots,v_j,\ldots,v_i,\ldots)$
+ 2. Se $v_1,\ldots,v_k$ são linearmente dependentes, então $f(v_1,\ldots,v_k)=0$.
 :::
 
 
@@ -87,7 +42,7 @@ Seja $f:V^k\times W$ uma aplicação $k$-linear alternada. As seguintes afirmaç
 0&=f(\ldots,v_i+v_j,\ldots,v_i+v_j,\ldots)\\&=f(\ldots,v_i,\ldots,v_i,\ldots)+f(\ldots,v_i,\ldots,v_j,\ldots)\\&+f(\ldots,v_j,\ldots,v_i,\ldots)+f(\ldots,v_j,\ldots,v_j,\ldots)\\&=f(\ldots,v_i,\ldots,v_j,\ldots)+f(\ldots,v_j,\ldots,v_i,\ldots).
 \end{align*}
 
-2. Se os $v_i$ são L.D., então algum $v_i$ é combinação linear dos demais vetores no sistema. Assuma que $v_1$ é combinação linear de $v_2,\ldots,v_k$. Ou seja,
+1. Se os $v_i$ são L.D., então algum $v_i$ é combinação linear dos demais vetores no sistema. Assuma que $v_1$ é combinação linear de $v_2,\ldots,v_k$. Ou seja,
 $$
 v_1=\alpha_2 v_2+\cdots+\alpha_k v_k.
 $$
@@ -128,34 +83,61 @@ Ou seja, a mesma permutação $\sigma$ pode ser escrita como uma composição de
 
 ## Aplicações $k$-lineares alternadas
 
-:::{#cor-}
+:::{#cor-alter-basis}
 Seja $V$ um espaço vetorial de dimensão $n$ com base $B=\{b_1,\ldots,b_n\}$ e $f:V^k\to W$ uma aplicação $k$-linear alternada.
 
 
- -  Se $v_1,\ldots,v_k\in V$ e $\sigma$ é uma permutação do conjunto $\{1,\ldots,k\}$, então
+1. Se $v_1,\ldots,v_k\in V$ e $\sigma$ é uma permutação do conjunto $\{1,\ldots,k\}$, então
 $$
 f(v_{\sigma(1)},\ldots,v_{\sigma(k)})=(-1)^\sigma f(v_1,\ldots,v_k).
 $$
- -  $f$ está determinada pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_1<\cdots<i_k$.
-
+2. $f$ está determinada pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_1<\cdots<i_k$.
 :::
 
 
 :::{.proof}
 1. Se $\sigma$ é a composição de $m$ transposições, então a permutação $v_{\sigma(1)},\ldots,v_{\sigma(k)}$ de vetores pode ser  obtida da configuração original $v_1,\ldots,v_k$ aplicando as $k$ transposições, cada  uma depois a outra. Cada transposição multiplica o valor de $f$ por $-1$, logo depois de aplicar $m$ transposições, o valor original $f(v_1,\ldots,v_k)$ será multiplicado por $(-1)^m=(-1)^\sigma$.
 
-2. Já demonstramos que $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_j\in\{1,\ldots,n\}$. Note que se $i_j=i_l$ com $j\neq l$, então $f(b_{i_1},\ldots,b_{i_k})=0$. Logo pode-se dizer que $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ onde os $i_j$ são distintos. Existe uma única permutação $\sigma$ de $\{1,\ldots,k\}$ tal que $i_{\sigma(1)}< i_{\sigma(2)}< \cdots <i_{\sigma(k)}$. Pelo item 1., temos que
+2. Por @exm-bilin-mat, $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ com $i_j\in\{1,\ldots,n\}$. 
+   Pela definição da aplicação $k$-linear alternada, se $i_j=i_l$ com $j\neq l$, então $f(b_{i_1},\ldots,b_{i_k})=0$. Logo pode-se dizer que $f$ está determinado pelos valores $f(b_{i_1},\ldots,b_{i_k})$ onde os $i_j$ são distintos. Existe uma única permutação $\sigma$ de $\{1,\ldots,k\}$ tal que $i_{\sigma(1)}< i_{\sigma(2)}< \cdots <i_{\sigma(k)}$. Pelo item 1., temos que
 $$
 (-1)^\sigma f(b_{i_1},\ldots,b_{i_k})=f(b_{i_{\sigma(1)}},\ldots,b_{i_{\sigma(k)}})
 $$
-
 :::
 
+:::{#lem-basis-alter}
+Seja $V$ um espaço vetorial com base $B=\{b_1,\ldots,b_n\}$ e seja $W$ um outro espaço sobre o mesmo corpo $\F$. 
+Seja 
+$$
+B^{\{k\}}=\{(b_{i_1},\ldots,b_{i_k})\mid i_1<\cdots<i_k\}.
+$$
+Considerando 
+$A^k(V,W)$ como um $\F$-espaço vetorial, temos que 
+$$
+A^k(V,W)\cong\mbox{Func}(B^{\{k\}},W).
+$$
+:::
+:::{.proof}
+Este lema nós não vamos provar, pois a prova é trabalhosa. A ideia é que uma função $f\in \mbox{Func}(B^{\{k\}},W)$ determina 
+uma aplicação $k$-linear $B_f:V^k\to W$ por @cor-alter-basis. A parte não trivial é que esta aplicação é alternada. Depois o fato 
+que a correspondência $f\mapsto B_f$ é um isomorfismo  é relativamente simples. 
+
+Vamos provar este resultado no caso particular quando $k=n=\dim V$ e $W=\F$, pois é este caso que nós precisamos entender 
+aqui. Considere então $A^n(V,\F)=A^n(V)$ e observe que 
+$$
+B^{\{n\}}=\{(b_1,\ldots,b_n)\}
+$$
+e em particlar $|B^{\{n\}}|=1$. Se $B:V^n\to \F$ é uma aplicação $n$-linear alternada, então @cor-alter-basis diz que 
+$B$ está determinada pelo valor $B(b_1,\ldots,b_n)=\lambda_B\in \F$. Em outras palavras, a aplicação $A^n(V)\to \mbox{Func}(B^{\{n\}},\F)$ 
+é injetiva e em particular $\dim A^n(V)\leq 1$. Então precisa verificar apenas que $\dim A^n(V)\neq 0$; ou seja, existe elemento 
+não nulo em $A^n(V)$ mas isso segue do fato que o mapa determinante $d:A^n\to \F$ nos exemplos @exm-klin  e @exm-klin-sym-alter é 
+um elemento não nulo de $A^n(V)$. 
+:::
 
 :::{#exr-dims-Ak}
-Determine a dimensão de $S^k(V,W)$ e $A^k(V,W)$ onde $\dim V=m$ e $\dim W=n$. Demonstre em particular que 
+Determine a dimensão de $A^k(V,W)$ onde $\dim V=m$ e $\dim W=n$. Demonstre em particular que 
 $$
-\dim A^k(V)=\binom mk.
+\dim A^k(V,W)=\binom mkn.
 $$
 :::
 

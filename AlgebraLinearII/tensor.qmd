@@ -40,7 +40,7 @@ $$
 onde $u = (u_1, u_2, \ldots, u_n)$ e $v = (v_1, v_2, \ldots, v_n)$ são vetores em $\R^n$.
 :::
 
-:::{#exr-}
+:::{#exr-bilin-basis}
 Vimos no @lem-tr-unique-basis que quando $B$ é base de $V$ e $W$ é um espaço qualquer, 
 então toda aplicação $B\to W$ pode ser estendida a uma única transformação linear. Uma coisa similar 
 vale com aplicações bilineares. Sejam $B$ e $C$ bases de $U$ e $V$ respetivamente, e seja 
@@ -53,6 +53,15 @@ $f:B\times C\to W$ uma aplicação qualquer.
    $$
    onde o isomorfismo é entre espaços vetorias. 
 :::
+
+:::{#exm-}
+Para exemplificar o @exr-bilin-basis, seja $V=\R^n$ com a base canônica $e_1,\ldots,e_n$. Está bem conhecido que o produto interno $\langle \cdot,\cdot\rangle$ está determinado pelos valores de $\langle e_i,e_j\rangle$ com $i,j\in\{1,\ldots,n\}$. De fato, se $v,w\in\R^n$ (vetores linhas) e $v=(\alpha_1,\ldots,\alpha_n)$, $w=(\beta_1,\ldots,\beta_n)$, então
+$$
+\langle v,w\rangle=\left\langle \sum_{i=1}^n\alpha_je_i,\sum_{j=1}^n\beta_j e_j\right\rangle=\sum_{i,j=1}^n\alpha_i\beta_j\langle e_i,e_j\rangle=\sum_{i=1}^n\alpha_i\beta_i.
+$$
+Ou seja, as igualdades $\langle e_i,e_j\rangle=\delta_{i,j}$ ($\delta$ de Kronecker) determinam o produto interno $\langle\cdot,\cdot\rangle$ completamente. Compare o argumento deste exemplo com @exm-bilin-mat.
+:::
+
 
 ## O produto tensorial
 
@@ -116,7 +125,7 @@ $$
 $$
 u+v=(\alpha_1+\beta_1)x_1+\cdots+(\alpha_k+\beta_k)x_k
 $$
-(permitindo que alguns coeficientes sejam nulas, pode assumir que os mesmos $x_i$ aparecem em $u$ e também em $v$).
+(permitindo que alguns coeficientes sejam nulos, pode assumir que os mesmos $x_i$ aparecem em $u$ e também em $v$).
 O múltiplo escalar é definido, para $\alpha\in\F$, como 
 $$
 \alpha v=\alpha\alpha_1 x_1+\cdots+\alpha\alpha_kv_k.
@@ -272,12 +281,23 @@ com vários fatores via a propriedade universal. Nesta seção, nós revisamos a
 as demonstrações são similares às demonstrações em cima para $U\otimes V$, elas serão omitidas. 
 
 :::{#def-multilinear-map}
-Sejam $V_1, V_2, \ldots, V_k$ e $W$ espaços vetoriais sobre um corpo $\F$. Uma aplicação $f: V_1 \times V_2 \times \cdots \times V_k \to W$ é chamada de **multilinear** se, para cada $i = 1, 2, \ldots, k$, e para todos $v_j \in V_j$ (com $j \neq i$)  fixados, a aplicação 
+Sejam $V$ e $W$ espaços vetoriais sobre $\F$, $k\geq 1$, e considere o produto cartesiano $V^k=V\times \cdots\times V$ de $k$ cópias de $V$. Dizemos que uma aplicação $f:V^k\to W$ é $k$-linear se ela é linear em todas as variáveis. Em outras palávras,
 $$
-v_i \mapsto f(v_1, v_2, \ldots, v_k)
-$$ 
-é linear em $v_i$.
+f(v_1,\ldots,\alpha v_i+\beta w,\ldots v_k)=\alpha f(v_1,\ldots,v_i,\ldots v_k)+\beta f(v_1,\ldots,w,\ldots v_k)
+$$
+vale para todo $i\in\{1,\ldots,k\}$, $v_i\in V$ e $w\in V$. Uma aplicação $V^k\to \F$ $k$-linear é chamada de *forma (ou funcional) $k$-linear.*
 :::
+
+:::{#exm-klin}
+Uma forma $1$-linear é simplesmente uma forma linear $V\to \F$. Uma aplicação ou forma $2$-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma $3$-linear é chamada de <b>trilinear</b>.
+
+Se $V=\R^n$, então o produto interno $\langle\cdot ,\cdot\rangle$ é bilinear. Por outro lado, se $V=\C^n$, então o produto interno  $\langle\cdot ,\cdot\rangle$ não é bilinear (porque?, consulte a @def-sesquilinear). Se $V=\F^n$, então a aplicação
+$$
+d:V^n\to \F,\quad d(a_1,\ldots,a_n)=\det A,
+$$
+onde $A$ é a matriz formada pelas linhas $a_1,\ldots,a_n$, é $n$-linear.
+:::
+
 
 :::{#def-tensor-product-multiple}
 Sejam $V_1, V_2, \ldots, V_k$ espaços vetoriais sobre um corpo $\F$. Um espaço vetorial $W$, juntamente com uma aplicação multilinear $\tau: V_1 \times V_2 \times \cdots \times V_k \to W$, é chamado de **produto tensorial** de $V_1, V_2, \ldots, V_k$ (sobre $\F$) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial $Z$ e qualquer aplicação multilinear $f: V_1 \times V_2 \times \cdots \times V_k \to Z$, existe um único homomorfismo linear $\tilde{f}: W \to Z$ tal que $f = \tilde{f} \circ \tau$.
