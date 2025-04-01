@@ -437,8 +437,6 @@ onde $W^{k\oplus}=W\oplus\cdots\oplus W$ (soma direta externa de $k$ cópias de 
 2. Mostre que $f\mapsto [f]_C^B$ é um isomorfismo $\mbox{Hom}(V,W)\to M_{m\times k}(\F)$.
 :::
 
-<<<<<<< HEAD
-=======
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 1. Para mostrar que $\psi$ é um isomorfismo, precisamos verificar que $\psi$ é linear, injetiva e sobrejetiva.
@@ -473,7 +471,6 @@ onde $W^{k\oplus}=W\oplus\cdots\oplus W$ (soma direta externa de $k$ cópias de 
 
 :::
 
->>>>>>> 51022dc09766180a27024eb5f6de3d2a93d3d499
 
 :::{#exr-}
 Seja $V=\F_3[x]_3$ e considere as bases $B=\{1,x,x^2,x^3\}$ e $C=\{1,1-x,1-x^2,1-x^3\}$. Seja $d:V\to V$ o endomorfismo definido com $d(f)=f'$ (derivado formal). 
