@@ -1395,7 +1395,7 @@ window.Quarto = {
 (u,v)\mapsto u \cdot v = \sum_{i=1}^n u_i v_i,
 \]</span> onde <span class="math inline">\(u = (u_1, u_2, \ldots, u_n)\)</span> e <span class="math inline">\(v = (v_1, v_2, \ldots, v_n)\)</span> são vetores em <span class="math inline">\(\R^n\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-bilin-basis" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 62.2</strong></span> Vimos no <a href="trans_lin.html#lem-tr-unique-basis" class="quarto-xref">Lema&nbsp;<span>59.1</span></a> que quando <span class="math inline">\(B\)</span> é base de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é um espaço qualquer, então toda aplicação <span class="math inline">\(B\to W\)</span> pode ser estendida a uma única transformação linear. Uma coisa similar vale com aplicações bilineares. Sejam <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> bases de <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> respetivamente, e seja <span class="math inline">\(f:B\times C\to W\)</span> uma aplicação qualquer.</p>
 <ol type="1">
 <li>Demonstre que existe uma única aplicação bilinear <span class="math inline">\(\tilde f:U\times V\to W\)</span> tal que <span class="math inline">\(\tilde f|_{B\times C}=f\)</span>.</li>
@@ -1403,6 +1403,11 @@ window.Quarto = {
 \mbox{Func}(B\times C,W)\cong \mbox{Bil}(U\times V,W)
 \]</span> onde o isomorfismo é entre espaços vetorias.</li>
 </ol>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 62.2</strong></span> Para exemplificar o <a href="#exr-bilin-basis" class="quarto-xref">Exercício&nbsp;<span>62.2</span></a>, seja <span class="math inline">\(V=\R^n\)</span> com a base canônica <span class="math inline">\(e_1,\ldots,e_n\)</span>. Está bem conhecido que o produto interno <span class="math inline">\(\langle \cdot,\cdot\rangle\)</span> está determinado pelos valores de <span class="math inline">\(\langle e_i,e_j\rangle\)</span> com <span class="math inline">\(i,j\in\{1,\ldots,n\}\)</span>. De fato, se <span class="math inline">\(v,w\in\R^n\)</span> (vetores linhas) e <span class="math inline">\(v=(\alpha_1,\ldots,\alpha_n)\)</span>, <span class="math inline">\(w=(\beta_1,\ldots,\beta_n)\)</span>, então <span class="math display">\[
+\langle v,w\rangle=\left\langle \sum_{i=1}^n\alpha_je_i,\sum_{j=1}^n\beta_j e_j\right\rangle=\sum_{i,j=1}^n\alpha_i\beta_j\langle e_i,e_j\rangle=\sum_{i=1}^n\alpha_i\beta_i.
+\]</span> Ou seja, as igualdades <span class="math inline">\(\langle e_i,e_j\rangle=\delta_{i,j}\)</span> (<span class="math inline">\(\delta\)</span> de Kronecker) determinam o produto interno <span class="math inline">\(\langle\cdot,\cdot\rangle\)</span> completamente. Compare o argumento deste exemplo com <a href="../AlgebraLinearI/09_alglin1.html#exm-bilin-mat" class="quarto-xref">Exemplo&nbsp;<span>47.2</span></a>.</p>
 </div>
 </section>
 <section id="o-produto-tensorial" class="level2" data-number="62.2">
@@ -1454,7 +1459,7 @@ u=\alpha_1x_1+\cdots+\alpha_kx_k\quad\mbox{e}\quad
 v=\beta_1x_1+\cdots+\beta_kx_k
 \]</span> é definida como <span class="math display">\[
 u+v=(\alpha_1+\beta_1)x_1+\cdots+(\alpha_k+\beta_k)x_k
-\]</span> (permitindo que alguns coeficientes sejam nulas, pode assumir que os mesmos <span class="math inline">\(x_i\)</span> aparecem em <span class="math inline">\(u\)</span> e também em <span class="math inline">\(v\)</span>). O múltiplo escalar é definido, para <span class="math inline">\(\alpha\in\F\)</span>, como <span class="math display">\[
+\]</span> (permitindo que alguns coeficientes sejam nulos, pode assumir que os mesmos <span class="math inline">\(x_i\)</span> aparecem em <span class="math inline">\(u\)</span> e também em <span class="math inline">\(v\)</span>). O múltiplo escalar é definido, para <span class="math inline">\(\alpha\in\F\)</span>, como <span class="math display">\[
 \alpha v=\alpha\alpha_1 x_1+\cdots+\alpha\alpha_kv_k.
 \]</span></p>
 <ol type="1">
@@ -1545,7 +1550,7 @@ k \otimes v = k \otimes \left(\sum_{i=1}^n \alpha_i b_i\right) = \sum_{i=1}^n k 
 </ol>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 62.2</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\R\)</span>-espaço vetorial, então <span class="math inline">\(V_\C=\C\otimes V\)</span> é um <span class="math inline">\(\C\)</span>-espaço. Este espaço chama-se de <strong>complexificação</strong> de <span class="math inline">\(V\)</span>. Por exemplo, os seguintes isomorfismos são válidos: <span class="math display">\[\begin{align*}
+<p><span class="theorem-title"><strong>Exemplo 62.3</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\R\)</span>-espaço vetorial, então <span class="math inline">\(V_\C=\C\otimes V\)</span> é um <span class="math inline">\(\C\)</span>-espaço. Este espaço chama-se de <strong>complexificação</strong> de <span class="math inline">\(V\)</span>. Por exemplo, os seguintes isomorfismos são válidos: <span class="math display">\[\begin{align*}
 (\R^n)_{\C}&amp;\cong\C^n;\\
 \mbox{Mat}_{m\times n}(\R)_\C&amp;\cong\mbox{Mat}_{m\times n}(\C);\\
 \R[x]_\C&amp;\cong\C[x].
@@ -1556,9 +1561,15 @@ k \otimes v = k \otimes \left(\sum_{i=1}^n \alpha_i b_i\right) = \sum_{i=1}^n k 
 <h2 data-number="62.6" data-anchor-id="o-produdo-tensorial-de-vários-espaços"><span class="header-section-number">62.6</span> O produdo tensorial de vários espaços</h2>
 <p>O produto tensorial <span class="math inline">\(V_1\otimes\cdots\otimes V_k\)</span> pode ser definida também para vários fatores <span class="math inline">\(V_1,\ldots,V_k\)</span>. Isso seria possível, por um lado, obsevando que o produto tensorial é associativo; ou seja, <span class="math inline">\((V_1\otimes V_2)\otimes V_3 \cong V_1\otimes(V_2\otimes V_3)\)</span> (demonstre isso). Para nós, vai ser mais oportuno definir o produto com vários fatores via a propriedade universal. Nesta seção, nós revisamos a construção com as propriedades principais. Como as demonstrações são similares às demonstrações em cima para <span class="math inline">\(U\otimes V\)</span>, elas serão omitidas.</p>
 <div id="def-multilinear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 62.5</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre um corpo <span class="math inline">\(\F\)</span>. Uma aplicação <span class="math inline">\(f: V_1 \times V_2 \times \cdots \times V_k \to W\)</span> é chamada de <strong>multilinear</strong> se, para cada <span class="math inline">\(i = 1, 2, \ldots, k\)</span>, e para todos <span class="math inline">\(v_j \in V_j\)</span> (com <span class="math inline">\(j \neq i\)</span>) fixados, a aplicação <span class="math display">\[
-v_i \mapsto f(v_1, v_2, \ldots, v_k)
-\]</span> é linear em <span class="math inline">\(v_i\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 62.5</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>, <span class="math inline">\(k\geq 1\)</span>, e considere o produto cartesiano <span class="math inline">\(V^k=V\times \cdots\times V\)</span> de <span class="math inline">\(k\)</span> cópias de <span class="math inline">\(V\)</span>. Dizemos que uma aplicação <span class="math inline">\(f:V^k\to W\)</span> é <span class="math inline">\(k\)</span>-linear se ela é linear em todas as variáveis. Em outras palávras, <span class="math display">\[
+f(v_1,\ldots,\alpha v_i+\beta w,\ldots v_k)=\alpha f(v_1,\ldots,v_i,\ldots v_k)+\beta f(v_1,\ldots,w,\ldots v_k)
+\]</span> vale para todo <span class="math inline">\(i\in\{1,\ldots,k\}\)</span>, <span class="math inline">\(v_i\in V\)</span> e <span class="math inline">\(w\in V\)</span>. Uma aplicação <span class="math inline">\(V^k\to \F\)</span> <span class="math inline">\(k\)</span>-linear é chamada de <em>forma (ou funcional) <span class="math inline">\(k\)</span>-linear.</em></p>
+</div>
+<div id="exm-klin" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 62.4</strong></span> Uma forma <span class="math inline">\(1\)</span>-linear é simplesmente uma forma linear <span class="math inline">\(V\to \F\)</span>. Uma aplicação ou forma <span class="math inline">\(2\)</span>-linear é frequentemente chamada de <b>bilinear</b>, enquanto uma aplicação ou forma <span class="math inline">\(3\)</span>-linear é chamada de <b>trilinear</b>.</p>
+<p>Se <span class="math inline">\(V=\R^n\)</span>, então o produto interno <span class="math inline">\(\langle\cdot ,\cdot\rangle\)</span> é bilinear. Por outro lado, se <span class="math inline">\(V=\C^n\)</span>, então o produto interno <span class="math inline">\(\langle\cdot ,\cdot\rangle\)</span> não é bilinear (porque?, consulte a <a href="sesqui.html#def-sesquilinear" class="quarto-xref">Definição&nbsp;<span>73.2</span></a>). Se <span class="math inline">\(V=\F^n\)</span>, então a aplicação <span class="math display">\[
+d:V^n\to \F,\quad d(a_1,\ldots,a_n)=\det A,
+\]</span> onde <span class="math inline">\(A\)</span> é a matriz formada pelas linhas <span class="math inline">\(a_1,\ldots,a_n\)</span>, é <span class="math inline">\(n\)</span>-linear.</p>
 </div>
 <div id="def-tensor-product-multiple" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 62.6</strong></span> Sejam <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> espaços vetoriais sobre um corpo <span class="math inline">\(\F\)</span>. Um espaço vetorial <span class="math inline">\(W\)</span>, juntamente com uma aplicação multilinear <span class="math inline">\(\tau: V_1 \times V_2 \times \cdots \times V_k \to W\)</span>, é chamado de <strong>produto tensorial</strong> de <span class="math inline">\(V_1, V_2, \ldots, V_k\)</span> (sobre <span class="math inline">\(\F\)</span>) se satisfizer a seguinte propriedade universal: para qualquer espaço vetorial <span class="math inline">\(Z\)</span> e qualquer aplicação multilinear <span class="math inline">\(f: V_1 \times V_2 \times \cdots \times V_k \to Z\)</span>, existe um único homomorfismo linear <span class="math inline">\(\tilde{f}: W \to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \tau\)</span>.</p>
