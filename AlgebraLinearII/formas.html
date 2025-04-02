@@ -1370,8 +1370,10 @@ window.Quarto = {
 </header>
 
 
+<p>A motivação da matéria desta página é a seguinte questão. Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço de dimensão finita e <span class="math inline">\(f:V\to V\)</span> uma transformação linear (operador linear) de <span class="math inline">\(V\)</span>. O determinante de <span class="math inline">\(f\)</span> pode ser calculado como o determinante da matriz <span class="math inline">\([f]_B^B\)</span> onde <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span>. Por <a href="matrizes.html#lem-base-change" class="quarto-xref">Lema&nbsp;<span>60.2</span></a>, o determinante de <span class="math inline">\(f\)</span> independe da escolha da base <span class="math inline">\(B\)</span>. A questão à qual nós procuramos a resposta nesta página é a seguinte: Será que o determinante de <span class="math inline">\(f\)</span> pode ser obtida sem precisar escolher uma base?</p>
 <section id="aplicações-k-lineares-alternadas" class="level2" data-number="63.1">
 <h2 data-number="63.1" data-anchor-id="aplicações-k-lineares-alternadas"><span class="header-section-number">63.1</span> Aplicações <span class="math inline">\(k\)</span>-lineares alternadas</h2>
+<p>Relembra da definição de aplicações <span class="math inline">\(k\)</span>-lineares da <a href="tensor.html#def-multilinear-map" class="quarto-xref">Definição&nbsp;<span>62.5</span></a>.</p>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 63.1</strong></span> Seja <span class="math inline">\(f:V^k\to W\)</span> uma aplicação <span class="math inline">\(k\)</span>-linear. A aplicação <span class="math inline">\(f\)</span> é dita simétrica se <span class="math display">\[\begin{align*}
 &amp;f(v_1,\ldots,v_{i-1},v_i,v_{i+1},\ldots,v_{j-1},v_j,v_{j+1},\ldots,v_n)\\&amp;=f(v_1,\ldots,v_{i-1},v_j,v_{i+1},\ldots,v_{j-1},v_i,v_{j+1},\ldots,v_n)
@@ -1383,7 +1385,7 @@ f(v_1,\ldots,v_n)=0
 <p><span class="theorem-title"><strong>Exemplo 63.1</strong></span> O produto interno <span class="math inline">\(\langle\cdot,\cdot\rangle\)</span> em <span class="math inline">\(\R^n\)</span> é uma forma simétrica bilinear. O determinante no <a href="tensor.html#exm-klin" class="quarto-xref">Exemplo&nbsp;<span>62.4</span></a> de uma matriz pode ser visto como uma aplicação <span class="math inline">\(n\)</span>-linear <span class="math inline">\(d:(\F^n)^n\to\F\)</span> é alternada.</p>
 </div>
 <div id="lem-alter" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 63.1</strong></span> Seja <span class="math inline">\(f:V^k\times W\)</span> uma aplicação <span class="math inline">\(k\)</span>-linear alternada. As seguintes afirmações são válidas:</p>
+<p><span class="theorem-title"><strong>Lema 63.1</strong></span> Seja <span class="math inline">\(f:V^k\to W\)</span> uma aplicação <span class="math inline">\(k\)</span>-linear alternada. As seguintes afirmações são válidas:</p>
 <ol type="1">
 <li><span class="math inline">\(f(\ldots,v_i,\ldots,v_j,\ldots)=-f(\ldots,v_j,\ldots,v_i,\ldots)\)</span></li>
 <li>Se <span class="math inline">\(v_1,\ldots,v_k\)</span> são linearmente dependentes, então <span class="math inline">\(f(v_1,\ldots,v_k)=0\)</span>.</li>
@@ -1443,6 +1445,11 @@ f(v_{\sigma(1)},\ldots,v_{\sigma(k)})=(-1)^\sigma f(v_1,\ldots,v_k).
 \]</span></p></li>
 </ol>
 </div>
+<div id="exm-n-lin-alternada" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 63.3</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial de dimensão <span class="math inline">\(n\)</span>. Afirmamos que existe uma transformação <span class="math inline">\(V^n\to \F\)</span> que seja <span class="math inline">\(n\)</span>-linear alternada. De fato, o determinante é uma tal transformação, mas precisa de uma pequena modificação. Já foi observado que o determinante pode ser visto como uma transformação <span class="math inline">\(n\)</span>-linear <span class="math inline">\((\F^n)^n\to \F\)</span>. Seja <span class="math inline">\(B\)</span> uma base de <span class="math inline">\(V\)</span>. Defina <span class="math display">\[
+d_B(v_1,\ldots,v_n)=d([v_1]_B,\ldots,[v_n]_B)
+\]</span> onde <span class="math inline">\(d(a_1,\ldots,a_n)\)</span> é o determinante da matriz cujas linhas são <span class="math inline">\(a_1,\ldots,a_n\)</span>. É fácil verificar que <span class="math inline">\(d_B:V^n\to \F\)</span> é <span class="math inline">\(n\)</span>-linear e alternada.</p>
+</div>
 <div id="lem-basis-alter" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 63.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial com base <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> e seja <span class="math inline">\(W\)</span> um outro espaço sobre o mesmo corpo <span class="math inline">\(\F\)</span>. Seja <span class="math display">\[
 B^{\{k\}}=\{(b_{i_1},\ldots,b_{i_k})\mid i_1&lt;\cdots&lt;i_k\}.
@@ -1451,10 +1458,10 @@ A^k(V,W)\cong\mbox{Func}(B^{\{k\}},W).
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Este lema nós não vamos provar, pois a prova é trabalhosa. A ideia é que uma função <span class="math inline">\(f\in \mbox{Func}(B^{\{k\}},W)\)</span> determina uma aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(B_f:V^k\to W\)</span> por <a href="#cor-alter-basis" class="quarto-xref">Corolário&nbsp;<span>63.1</span></a>. A parte não trivial é que esta aplicação é alternada. Depois o fato que a correspondência <span class="math inline">\(f\mapsto B_f\)</span> é um isomorfismo é relativamente simples.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Este lema nós não vamos provar, pois a prova é trabalhosa. A ideia é que uma função <span class="math inline">\(f\in \mbox{Func}(B^{\{k\}},W)\)</span> determina uma aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(B_f:V^k\to W\)</span> por <a href="#cor-alter-basis" class="quarto-xref">Corolário&nbsp;<span>63.1</span></a>. A parte não trivial é que esta aplicação é alternada. Depois disso, o fato que a correspondência <span class="math inline">\(f\mapsto B_f\)</span> é um isomorfismo é relativamente simples.</p>
 <p>Vamos provar este resultado no caso particular quando <span class="math inline">\(k=n=\dim V\)</span> e <span class="math inline">\(W=\F\)</span>, pois é este caso que nós precisamos entender aqui. Considere então <span class="math inline">\(A^n(V,\F)=A^n(V)\)</span> e observe que <span class="math display">\[
 B^{\{n\}}=\{(b_1,\ldots,b_n)\}
-\]</span> e em particlar <span class="math inline">\(|B^{\{n\}}|=1\)</span>. Se <span class="math inline">\(B:V^n\to \F\)</span> é uma aplicação <span class="math inline">\(n\)</span>-linear alternada, então <a href="#cor-alter-basis" class="quarto-xref">Corolário&nbsp;<span>63.1</span></a> diz que <span class="math inline">\(B\)</span> está determinada pelo valor <span class="math inline">\(B(b_1,\ldots,b_n)=\lambda_B\in \F\)</span>. Em outras palavras, a aplicação <span class="math inline">\(A^n(V)\to \mbox{Func}(B^{\{n\}},\F)\)</span> é injetiva e em particular <span class="math inline">\(\dim A^n(V)\leq 1\)</span>. Então precisa verificar apenas que <span class="math inline">\(\dim A^n(V)\neq 0\)</span>; ou seja, existe elemento não nulo em <span class="math inline">\(A^n(V)\)</span> mas isso segue do fato que o mapa determinante <span class="math inline">\(d:A^n\to \F\)</span> nos exemplos <a href="tensor.html#exm-klin" class="quarto-xref">Exemplo&nbsp;<span>62.4</span></a> e <a href="#exm-klin-sym-alter" class="quarto-xref">Exemplo&nbsp;<span>63.1</span></a> é um elemento não nulo de <span class="math inline">\(A^n(V)\)</span>.</p>
+\]</span> e em particlar <span class="math inline">\(|B^{\{n\}}|=1\)</span>. Se <span class="math inline">\(B:V^n\to \F\)</span> é uma aplicação <span class="math inline">\(n\)</span>-linear alternada, então <a href="#cor-alter-basis" class="quarto-xref">Corolário&nbsp;<span>63.1</span></a> diz que <span class="math inline">\(B\)</span> está determinada pelo valor <span class="math inline">\(B(b_1,\ldots,b_n)=\lambda_B\in \F\)</span>. Em outras palavras, a aplicação <span class="math inline">\(A^n(V)\to \mbox{Func}(B^{\{n\}},\F)\)</span> é injetiva e em particular <span class="math inline">\(\dim A^n(V)\leq 1\)</span>. Então precisa verificar apenas que <span class="math inline">\(\dim A^n(V)\neq 0\)</span>; ou seja, existe elemento não nulo em <span class="math inline">\(A^n(V)\)</span> mas isso segue do fato que o mapa determinante <span class="math inline">\(d_B:V^n\to \F\)</span> (com uma base <span class="math inline">\(B\)</span> fixada) no <a href="#exm-n-lin-alternada" class="quarto-xref">Exemplo&nbsp;<span>63.3</span></a> é um elemento não nulo de <span class="math inline">\(A^n(V)\)</span>.</p>
 </div>
 <div id="exr-dims-Ak" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 63.1</strong></span> Determine a dimensão de <span class="math inline">\(A^k(V,W)\)</span> onde <span class="math inline">\(\dim V=m\)</span> e <span class="math inline">\(\dim W=n\)</span>. Demonstre em particular que <span class="math display">\[
@@ -1462,21 +1469,34 @@ B^{\{n\}}=\{(b_1,\ldots,b_n)\}
 \]</span></p>
 </div>
 <div id="cor-AkV-dim1" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 63.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span> de dimensão <span class="math inline">\(n\)</span> com base <span class="math inline">\(\{b_1,\ldots,b_n\}\)</span>. Assuma que <span class="math inline">\(\alpha\in\F\)</span>. Então existe uma única forma <span class="math inline">\(n\)</span>-linear <span class="math inline">\(f:V^n\to \F\)</span> tal que <span class="math inline">\(f(b_1,\ldots,b_n)=\alpha\)</span>. Consequentemente <span class="math inline">\(\dim A^n(V)=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Corolário 63.2</strong></span> Ou seja, para todo <span class="math inline">\(\alpha\in\F\)</span>, existe uma única forma <span class="math inline">\(n\)</span>-linear <span class="math inline">\(f:V^n\to \F\)</span> tal que <span class="math inline">\(f(b_1,\ldots,b_n)=\alpha\)</span>. Consequentemente <span class="math inline">\(\dim A^n(V)=1\)</span>.</p>
 </div>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 63.3</strong></span> Existe uma única forma <span class="math inline">\(n\)</span>-linear <span class="math inline">\(f:(\F^n)^n\to \F\)</span> tal que <span class="math inline">\(f(e_1,\ldots,e_n)=1\)</span>. Se <span class="math inline">\(a_i=\sum_j a_{i,j} b_j\in V\)</span>, então <span class="math display">\[
+<p><span class="theorem-title"><strong>Corolário 63.3</strong></span> Existe uma única forma <span class="math inline">\(n\)</span>-linear <span class="math inline">\(f:(\F^n)^n\to \F\)</span> tal que <span class="math inline">\(f(e_1,\ldots,e_n)=1\)</span> onde <span class="math inline">\(\{e_1,\ldots,e_n\}\)</span> é a base canônica de <span class="math inline">\(\F^n\)</span>. Se <span class="math inline">\(a_i=\sum_j a_{i,j} b_j\in V\)</span>, então <span class="math display">\[
 f(a_1,\ldots,a_n)=\sum_{\sigma} (-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}
 \]</span> onde a soma está tomada sobre o conjunto das permutações do conjunto <span class="math inline">\(\{1,\ldots,n\}\)</span>. Em outras palávras, <span class="math display">\[
 f(a_1,\ldots,a_n)=\det A
 \]</span> onde <span class="math inline">\(A\)</span> é a matriz com linhas <span class="math inline">\(a_1,\ldots,a_n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>A unicidade da forma no corolário é consequência do <a href="#cor-AkV-dim1" class="quarto-xref">Corolário&nbsp;<span>63.2</span></a>. Seja <span class="math inline">\(f:(\F^n)^n\to \F\)</span> a forma <span class="math inline">\(n\)</span>-linear alternada única tal que <span class="math inline">\(f(e_1,\ldots,e_n)=1\)</span>, onde <span class="math inline">\(\{e_1,\ldots,e_n\}\)</span> é a base canônica de <span class="math inline">\(\F^n\)</span>. Para qualquer <span class="math inline">\(a_i=\sum_{j=1}^n a_{i,j} e_j\)</span>, temos que <span class="math display">\[
+f(a_1,\ldots,a_n) = f\left(\sum_{j=1}^n a_{1,j} e_j, \ldots, \sum_{j=1}^n a_{n,j} e_j\right).
+\]</span> Usando a <span class="math inline">\(n\)</span>-linearidade de <span class="math inline">\(f\)</span>, expandimos: <span class="math display">\[
+f(a_1,\ldots,a_n) = \sum_{j_1,\ldots,j_n} a_{1,j_1} \cdots a_{n,j_n} f(e_{j_1},\ldots,e_{j_n}).
+\]</span> Como <span class="math inline">\(f\)</span> é alternada, <span class="math inline">\(f(e_{j_1},\ldots,e_{j_n}) = 0\)</span> se <span class="math inline">\(j_1,\ldots,j_n\)</span> não forem todos distintos. Caso contrário, existe uma permutação <span class="math inline">\(\sigma\)</span> tal que <span class="math inline">\((j_1,\ldots,j_n) = (\sigma(1),\ldots,\sigma(n))\)</span>, e temos: <span class="math display">\[
+f(e_{j_1},\ldots,e_{j_n}) = (-1)^\sigma f(e_1,\ldots,e_n) = (-1)^\sigma.
+\]</span> Portanto, <span class="math display">\[
+f(a_1,\ldots,a_n) = \sum_{\sigma \in S_n} (-1)^\sigma a_{1,\sigma(1)} \cdots a_{n,\sigma(n)},
+\]</span> onde <span class="math inline">\(S_n\)</span> é o conjunto de permutações de <span class="math inline">\(\{1,\ldots,n\}\)</span>. Isso coincide com a definição do determinante da matriz <span class="math inline">\(A = [a_{i,j}]\)</span>, ou seja, <span class="math display">\[
+f(a_1,\ldots,a_n) = \det A.
+\]</span></p>
 </div>
 </section>
 <section id="o-pullback-e-o-determinante-de-operadores" class="level2" data-number="63.4">
 <h2 data-number="63.4" data-anchor-id="o-pullback-e-o-determinante-de-operadores"><span class="header-section-number">63.4</span> O pullback e o determinante de operadores</h2>
 <p>Vamos definir o conceito de determinante para operadores <span class="math inline">\(V\to V\)</span> de espaços de dimensão finita independentemente das suas matrizes.</p>
 <div id="def-pullback" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 63.2</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriai, seja <span class="math inline">\(f:U\to V\)</span> uma aplicação linear, e assuma que <span class="math inline">\(k\geq 1\)</span> fixado. Seja <span class="math inline">\(L^k(V)\)</span> o espaço das transformações <span class="math inline">\(k\)</span>-lineares <span class="math inline">\(V^k\to \F\)</span> e assuma que <span class="math inline">\(T\in L^k(V)\)</span>. Defina <span class="math inline">\(f^*T\in L^k(U)\)</span> como <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 63.2</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais, seja <span class="math inline">\(f:U\to V\)</span> uma aplicação linear, e assuma que <span class="math inline">\(k\geq 1\)</span> fixado. Seja <span class="math inline">\(L^k(V)\)</span> o espaço das transformações <span class="math inline">\(k\)</span>-lineares <span class="math inline">\(V^k\to \F\)</span> e assuma que <span class="math inline">\(T\in L^k(V)\)</span>. Defina <span class="math inline">\(f^*T\in L^k(U)\)</span> como <span class="math display">\[
 f^*T\in L^k(U): (u_1,\ldots,u_k)\mapsto T(f(u_1),\ldots,f(u_k)).
 \]</span> É fácil verificar que quando <span class="math inline">\(T\)</span> é uma forma <span class="math inline">\(k\)</span>-linear, então <span class="math inline">\(f^*T\)</span> também é uma forma <span class="math inline">\(k\)</span>-linear. Assim, obtemos uma aplicação <span id="eq-def-fstar"><span class="math display">\[
 f^*:L^k(V)\to L^k(U).
