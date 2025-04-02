@@ -4,8 +4,14 @@ number-sections: true
 lang: pt-BR
 --- 
 
+A motivação da matéria desta página é a seguinte questão. Seja $V$ um $\F$-espaço de dimensão finita e $f:V\to V$ uma transformação linear 
+(operador linear) de $V$. O determinante de $f$ pode ser calculado como o determinante da matriz $[f]_B^B$ onde $B$ é uma base de $V$. 
+Por @lem-base-change, o determinante de $f$ independe da escolha da base $B$. A questão à qual nós procuramos a resposta
+nesta página é a seguinte: Será que o determinante de $f$ pode ser obtida sem precisar escolher uma base?
+
 ## Aplicações $k$-lineares alternadas
 
+Relembra da definição de aplicações $k$-lineares da @def-multilinear-map.
 
 :::{#def-}
 Seja $f:V^k\to W$ uma aplicação $k$-linear. A aplicação $f$ é dita simétrica se
@@ -28,7 +34,7 @@ O determinante no @exm-klin de uma matriz pode ser visto como uma aplicação $n
 
 
 :::{#lem-alter}
-Seja $f:V^k\times W$ uma aplicação $k$-linear alternada. As seguintes afirmações são válidas:
+Seja $f:V^k\to W$ uma aplicação $k$-linear alternada. As seguintes afirmações são válidas:
 
 
  1. $f(\ldots,v_i,\ldots,v_j,\ldots)=-f(\ldots,v_j,\ldots,v_i,\ldots)$
@@ -105,6 +111,18 @@ $$
 $$
 :::
 
+
+:::{#exm-n-lin-alternada}
+Seja $V$ um $\F$-espaço vetorial de dimensão $n$. Afirmamos que existe uma transformação $V^n\to \F$ que seja $n$-linear alternada.
+De fato, o determinante é uma tal transformação, mas precisa de uma pequena modificação. Já foi observado que o determinante 
+pode ser visto como uma transformação $n$-linear $(\F^n)^n\to \F$. Seja $B$ uma base de $V$. Defina 
+$$
+d_B(v_1,\ldots,v_n)=d([v_1]_B,\ldots,[v_n]_B)
+$$
+onde $d(a_1,\ldots,a_n)$ é o determinante da matriz cujas linhas são $a_1,\ldots,a_n$. É fácil verificar que $d_B:V^n\to \F$ é
+$n$-linear e alternada.  
+:::
+
 :::{#lem-basis-alter}
 Seja $V$ um espaço vetorial com base $B=\{b_1,\ldots,b_n\}$ e seja $W$ um outro espaço sobre o mesmo corpo $\F$. 
 Seja 
@@ -119,7 +137,7 @@ $$
 :::
 :::{.proof}
 Este lema nós não vamos provar, pois a prova é trabalhosa. A ideia é que uma função $f\in \mbox{Func}(B^{\{k\}},W)$ determina 
-uma aplicação $k$-linear $B_f:V^k\to W$ por @cor-alter-basis. A parte não trivial é que esta aplicação é alternada. Depois o fato 
+uma aplicação $k$-linear $B_f:V^k\to W$ por @cor-alter-basis. A parte não trivial é que esta aplicação é alternada. Depois disso, o fato 
 que a correspondência $f\mapsto B_f$ é um isomorfismo  é relativamente simples. 
 
 Vamos provar este resultado no caso particular quando $k=n=\dim V$ e $W=\F$, pois é este caso que nós precisamos entender 
@@ -130,7 +148,7 @@ $$
 e em particlar $|B^{\{n\}}|=1$. Se $B:V^n\to \F$ é uma aplicação $n$-linear alternada, então @cor-alter-basis diz que 
 $B$ está determinada pelo valor $B(b_1,\ldots,b_n)=\lambda_B\in \F$. Em outras palavras, a aplicação $A^n(V)\to \mbox{Func}(B^{\{n\}},\F)$ 
 é injetiva e em particular $\dim A^n(V)\leq 1$. Então precisa verificar apenas que $\dim A^n(V)\neq 0$; ou seja, existe elemento 
-não nulo em $A^n(V)$ mas isso segue do fato que o mapa determinante $d:A^n\to \F$ nos exemplos @exm-klin  e @exm-klin-sym-alter é 
+não nulo em $A^n(V)$ mas isso segue do fato que o mapa determinante $d_B:V^n\to \F$ (com uma base $B$ fixada) no @exm-n-lin-alternada é 
 um elemento não nulo de $A^n(V)$. 
 :::
 
@@ -141,14 +159,14 @@ $$
 $$
 :::
 
-
 :::{#cor-AkV-dim1}
-Seja $V$ um espaço vetorial sobre $\F$ de dimensão $n$ com base $\{b_1,\ldots,b_n\}$. Assuma que $\alpha\in\F$. Então existe uma única forma $n$-linear $f:V^n\to \F$ tal que $f(b_1,\ldots,b_n)=\alpha$. Consequentemente $\dim A^n(V)=1$.
+Ou seja, para todo $\alpha\in\F$, existe uma única forma $n$-linear $f:V^n\to \F$ tal que $f(b_1,\ldots,b_n)=\alpha$. 
+Consequentemente $\dim A^n(V)=1$.
 :::
 
-
 :::{#cor-}
-Existe uma única forma $n$-linear $f:(\F^n)^n\to \F$ tal que $f(e_1,\ldots,e_n)=1$. Se $a_i=\sum_j a_{i,j} b_j\in V$, então
+Existe uma única forma $n$-linear $f:(\F^n)^n\to \F$ tal que $f(e_1,\ldots,e_n)=1$ onde $\{e_1,\ldots,e_n\}$ é a base canônica de $\F^n$. 
+Se $a_i=\sum_j a_{i,j} b_j\in V$, então
 $$
 f(a_1,\ldots,a_n)=\sum_{\sigma} (-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}
 $$
@@ -158,6 +176,30 @@ f(a_1,\ldots,a_n)=\det A
 $$
 onde $A$ é a matriz com linhas $a_1,\ldots,a_n$.
 :::
+:::{.proof}
+A unicidade da forma no corolário é consequência do @cor-AkV-dim1.
+Seja $f:(\F^n)^n\to \F$ a forma $n$-linear alternada única tal que $f(e_1,\ldots,e_n)=1$, onde $\{e_1,\ldots,e_n\}$ é a base canônica de $\F^n$. Para qualquer $a_i=\sum_{j=1}^n a_{i,j} e_j$, temos que
+$$
+f(a_1,\ldots,a_n) = f\left(\sum_{j=1}^n a_{1,j} e_j, \ldots, \sum_{j=1}^n a_{n,j} e_j\right).
+$$
+Usando a $n$-linearidade de $f$, expandimos:
+$$
+f(a_1,\ldots,a_n) = \sum_{j_1,\ldots,j_n} a_{1,j_1} \cdots a_{n,j_n} f(e_{j_1},\ldots,e_{j_n}).
+$$
+Como $f$ é alternada, $f(e_{j_1},\ldots,e_{j_n}) = 0$ se $j_1,\ldots,j_n$ não forem todos distintos. Caso contrário, existe uma permutação $\sigma$ tal que $(j_1,\ldots,j_n) = (\sigma(1),\ldots,\sigma(n))$, e temos:
+$$
+f(e_{j_1},\ldots,e_{j_n}) = (-1)^\sigma f(e_1,\ldots,e_n) = (-1)^\sigma.
+$$
+Portanto,
+$$
+f(a_1,\ldots,a_n) = \sum_{\sigma \in S_n} (-1)^\sigma a_{1,\sigma(1)} \cdots a_{n,\sigma(n)},
+$$
+onde $S_n$ é o conjunto de permutações de $\{1,\ldots,n\}$. Isso coincide com a definição do determinante da matriz $A = [a_{i,j}]$, ou seja,
+$$
+f(a_1,\ldots,a_n) = \det A.
+$$
+:::
+
 
 
 ## O pullback e o determinante de operadores
@@ -165,7 +207,7 @@ onde $A$ é a matriz com linhas $a_1,\ldots,a_n$.
 Vamos definir o conceito de determinante para operadores $V\to V$ de espaços de dimensão finita independentemente das suas matrizes.
 
 :::{#def-pullback}
-Sejam $U$ e $V$ espaços vetoriai, seja $f:U\to V$ uma aplicação linear, e assuma que $k\geq 1$ fixado. 
+Sejam $U$ e $V$ espaços vetoriais, seja $f:U\to V$ uma aplicação linear, e assuma que $k\geq 1$ fixado. 
 Seja $L^k(V)$ o espaço das transformações $k$-lineares $V^k\to \F$ e assuma que $T\in L^k(V)$. Defina
 $f^*T\in L^k(U)$ como 
 $$
