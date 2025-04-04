@@ -5,6 +5,10 @@ number-sections: true
 lang: pt-BR
 --- 
 
+Os seguintes exercícios são recomendados para o Bloco I das apostilas de Álgebra Linear II. Salvo indicação em contrário, as soluções foram geradas utilizando o modelo GPT-4o por meio da interface disponibilizada pelo GitHub Copilot no editor VS Code e foram editadas por Csaba. Caso, haja 
+algum erro avize por gentileza pelo email csaba.schneider@gmail.com ou corriga diretamente 
+no [código fonte](https://github.com/schcs/AlgebraNotesPt/blob/main/AlgebraLinearII/ex1.qmd). 
+
 :::{#exr-}
 Seja $\F$ um corpo. Mostre que
 
@@ -445,7 +449,7 @@ onde $W^{k\oplus}=W\oplus\cdots\oplus W$ (soma direta externa de $k$ cópias de 
       $$
       \psi(\alpha f + g) = ((\alpha f + g)(b_1), \ldots, (\alpha f + g)(b_k)).
       $$
-      Pela linearidade de $f$ e $g$, isso se torna:
+      Pela definição de $\alpha f+g$, isso se torna:
       $$
       \psi(\alpha f + g) = (\alpha f(b_1) + g(b_1), \ldots, \alpha f(b_k) + g(b_k)).
       $$
@@ -548,6 +552,7 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
 3. Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$.
 4. Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$.
 :::
+<!--
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
@@ -588,11 +593,13 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
    - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definir $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
    - Portanto, $\mbox{Im}\,f^* = (\ker f)^0$.
 :::
+-->
 
 :::{#exr-}
 Deduza do exercício anterior que $f$ é injetiva se e somente se $f^∗$ é sobresetiva e que $f$ é sobrejetiva se
 e somente se $f^∗$ é injetiva.
 :::
+<!--
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
@@ -604,6 +611,7 @@ e somente se $f^∗$ é injetiva.
    - Se $f$ é sobrejetiva, então $\mbox{Im}\,f = W$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $\mbox{Im}\,f = W$, segue que $(\mbox{Im}\,f)^0 = \{0\}$. Portanto, $\ker f^∗ = \{0\}$, o que implica que $f^∗$ é injetiva.
    - Reciprocamente, se $f^∗$ é injetiva, então $\ker f^∗ = \{0\}$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $(\mbox{Im}\,f)^0 = \{0\}$, segue que $\mbox{Im}\,f = W$. Portanto, $f$ é sobrejetiva.
 :::
+-->
               
 :::{#exr-}
 [Segundo Teorema de Isomorﬁsmo] Seja $V$ um espaço vetorial e $U,W \leq V$. Mostre, exibindo um
@@ -612,6 +620,46 @@ $$
                                              (U +W)/W \cong U/(U \cap W).
 $$
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para demonstrar o Segundo Teorema de Isomorfismo, considere a aplicação
+$$
+\phi: U \to (U + W)/W, \quad u \mapsto u + W.
+$$
+Essa aplicação é bem definida, pois para qualquer $u \in U$, o coset $u + W$ pertence ao quociente $(U + W)/W$.
+
+Agora, verificamos que $\phi$ é linear. Para $u_1, u_2 \in U$ e $\alpha \in \F$, temos:
+$$
+\phi(\alpha u_1 + u_2) = (\alpha u_1 + u_2) + W = \alpha(u_1 + W) + (u_2 + W) = \alpha \phi(u_1) + \phi(u_2).
+$$
+Portanto, $\phi$ é uma transformação linear.
+
+Mostremos que $\phi$ é sobrejetiva. Seja $v + W \in (U + W)/W$ um elemento arbitrário do quociente. Como $v \in U + W$, podemos escrever $v = u + w$ para algum $u \in U$ e $w \in W$. Assim:
+$$
+v + W = (u + w) + W = u + W,
+$$
+onde usamos o fato de que $w \in W$ implica $w + W = W$. Portanto, $v + W$ é a imagem de $u \in U$ sob $\phi$, o que mostra que $\phi$ é sobrejetiva.
+
+O núcleo de $\phi$ é dado por:
+$$
+\ker \phi = \{u \in U \mid \phi(u) = W\} = \{u \in U \mid u + W = W\}.
+$$
+Isso significa que $u \in \ker \phi$ se e somente se $u \in W$. Logo:
+$$
+\ker \phi = U \cap W.
+$$
+
+Pelo Primeiro Teorema de Isomorfismo, temos:
+$$
+U / \ker \phi \cong \mbox{Im}(\phi).
+$$
+Como $\phi$ é sobrejetiva, $\mbox{Im}(\phi) = (U + W)/W$. Assim, obtemos:
+$$
+U / (U \cap W) \cong (U + W)/W.
+$$
+Portanto, $(U + W)/W \cong U / (U \cap W)$.
+:::
+
 
 :::{#exr-}
 [Terceiro Teorema de Isomorﬁsmo] 
@@ -620,10 +668,86 @@ $$
                                               (V/W)/(U/W)\cong V/U.
 $$
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para demonstrar o Terceiro Teorema de Isomorfismo, considere a aplicação
+$$
+\phi: V/W \to (V/W)/(U/W), \quad v + W \mapsto (v + W) + (U/W).
+$$
+Essa aplicação é bem definida, pois para qualquer $v \in V$, o coset $(v + W) + (U/W)$ pertence ao quociente $(V/W)/(U/W)$.
+
+Agora, verificamos que $\phi$ é linear. Para $v_1, v_2 \in V$ e $\alpha \in \F$, temos:
+$$
+\phi(\alpha (v_1 + W) + (v_2 + W)) = \phi((\alpha v_1 + v_2) + W) = ((\alpha v_1 + v_2) + W) + (U/W).
+$$
+Por outro lado:
+$$
+\alpha \phi(v_1 + W) + \phi(v_2 + W) = \alpha ((v_1 + W) + (U/W)) + ((v_2 + W) + (U/W)).
+$$
+Ambas as expressões são iguais, mostrando que $\phi$ é linear.
+
+Mostremos que $\phi$ é sobrejetiva. Seja $(v + W) + (U/W) \in (V/W)/(U/W)$ um elemento arbitrário do quociente. Por definição, $(v + W) + (U/W)$ é a imagem de $v + W \in V/W$ sob $\phi$. Portanto, $\phi$ é sobrejetiva.
+
+O núcleo de $\phi$ é dado por:
+$$
+\ker \phi = \{v + W \in V/W \mid \phi(v + W) = U/W\}.
+$$
+Isso significa que $v + W \in \ker \phi$ se e somente se $(v + W) + (U/W) = U/W$, ou seja, $v + W \in U/W$. Logo:
+$$
+\ker \phi = U/W.
+$$
+
+Pelo Primeiro Teorema de Isomorfismo, temos:
+$$
+(V/W)/\ker \phi \cong \mbox{Im}(\phi).
+$$
+Como $\ker \phi = U/W$, obtemos:
+$$
+(V/W)/(U/W) \cong V/U.
+$$
+Portanto, $(V/W)/(U/W) \cong V/U$.
+:::
 
 :::{#exr-}                                                          
 Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de $U +W$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+A fórmula para a dimensão de $U + W$ pode ser deduzida do Segundo Teorema de Isomorfismo. Pelo teorema, temos:
+$$
+(U + W)/W \cong U/(U \cap W).
+$$
+
+Tomando as dimensões de ambos os lados, obtemos:
+$$
+\dim((U + W)/W) = \dim(U/(U \cap W)).
+$$
+
+Sabemos que, para um quociente de espaços vetoriais, a dimensão é dada por:
+$$
+\dim((U + W)/W) = \dim(U + W) - \dim(W),
+$$
+e
+$$
+\dim(U/(U \cap W)) = \dim(U) - \dim(U \cap W).
+$$
+
+Igualando as duas expressões, obtemos:
+$$
+\dim(U + W) - \dim(W) = \dim(U) - \dim(U \cap W).
+$$
+
+Rearranjando, temos:
+$$
+\dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W).
+$$
+
+Portanto, a fórmula para a dimensão de $U + W$ é:
+$$
+\dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W).
+$$
+:::
+
 
 :::{#exr-funct-hom}                                                          
 Seja $W$ um espaço vetorial sobre $\F$. Deﬁne o functor $H_W$ com as seguintes regras:
@@ -631,7 +755,7 @@ Seja $W$ um espaço vetorial sobre $\F$. Deﬁne o functor $H_W$ com as seguinte
 1. Para um $\F$-espaço vetorial $V$, defina $H_W(V) = \mbox{Hom}(W,V)$.
 2. Para uma transformação linear $f : V \to U$, defina
 $$
-                                H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
+                        H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
 $$
 
 Demonstre as seguintes afirmações.
@@ -641,14 +765,42 @@ Demonstre as seguintes afirmações.
 
 As propriedades mostram que o functor $H_W$ é um functor covariante na categoria dos $\F$-espaços vetoriais.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. Para todo $\F$-espaço $V$, temos que $H_W(\mbox{id}_V)$ é a aplicação:
+   $$
+   H_W(\mbox{id}_V)(\alpha) = \mbox{id}_V \circ \alpha = \alpha, \quad \forall \alpha \in \mbox{Hom}(W, V).
+   $$
+   Isso mostra que $H_W(\mbox{id}_V) = \mbox{id}_{\textrm{Hom}(W,V)}$.
+
+2. Para $f : V_1 \to V_2$ e $g : V_2 \to V_3$, temos que $H_W(g \circ f)$ é a aplicação:
+   $$
+   H_W(g \circ f)(\alpha) = (g \circ f) \circ \alpha = g \circ (f \circ \alpha), \quad \forall \alpha \in \mbox{Hom}(W, V_1).
+   $$
+   Por outro lado, $H_W(g) \circ H_W(f)$ é a aplicação:
+   $$
+   (H_W(g) \circ H_W(f))(\alpha) = H_W(g)(H_W(f)(\alpha)) = H_W(g)(f \circ \alpha) = g \circ (f \circ \alpha).
+   $$
+   Assim, $H_W(g \circ f) = H_W(g) \circ H_W(f)$.
+
+Portanto, o functor $H_W$ é covariante.
+:::
 
 :::{#exr-}                                                          
 Seja $W$ como no @exr-funct-hom. Mostre que se $f : V \to U$ é injetiva/sobrejetiva, então
 $$
-                                         H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
+                               H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
 $$
 é injetiva/sobrejetiva (respetivamente).
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. **Injetividade**: Suponha que $f : V \to U$ é injetiva. Seja $\alpha \in \mbox{Hom}(W, V)$ tal que $H_W(f)(\alpha) = f \circ \alpha = 0$. Isso implica que $f(\alpha(w)) = 0$ para todo $w \in W$. Como $f$ é injetiva, segue que $\alpha(w) = 0$ para todo $w \in W$, ou seja, $\alpha = 0$. Portanto, $H_W(f)$ é injetiva.
+
+2. **Sobrejetividade**: Suponha que $f : V \to U$ é sobrejetiva. Seja $\beta \in \mbox{Hom}(W, U)$. Como $f$ é sobrejetiva, para cada $w \in W$, existe $v \in V$ tal que $f(v) = \beta(w)$. Defina $\alpha \in \mbox{Hom}(W, V)$ por $\alpha(w) = v$. Então, $H_W(f)(\alpha) = f \circ \alpha = \beta$. Assim, $H_W(f)$ é sobrejetiva.
+:::
+
+
 
 :::{#exr-}                                                          
 O functor  $H_W$ está  frequentamente escrito como  $\mbox{Hom}(W,−)$ e escrevemos também $H_W(V) = \mbox{Hom}(W,V)$
@@ -663,6 +815,46 @@ $$
 $$
 Demonstre que $\F[x]^*\cong \F[[x]]$. 
 :::
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explícito entre os dois espaços.
+
+1. **Definição de $\F[x]^*$**:
+   - O espaço $\F[x]^*$ é o dual de $\F[x]$, ou seja, o espaço de todos os funcionais lineares $\varphi: \F[x] \to \F$.
+
+2. **Definição de $\F[[x]]$**:
+   - O espaço $\F[[x]]$ consiste em todas as séries formais de potências $\sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k \in \F$.
+
+3. **Construção do isomorfismo**:
+   - Para cada série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k \in \F[[x]]$, definimos um funcional linear $\varphi_f \in \F[x]^*$ como:
+     $$
+     \varphi_f\left(\sum_{j=0}^n \beta_j x^j\right) = \sum_{j=0}^n \beta_j \alpha_j.
+     $$
+     Em outras palavras, $\varphi_f$ avalia o polinômio $\sum_{j=0}^n \beta_j x^j$ nos coeficientes correspondentes da série formal $f(x)$.
+
+4. **Verificação de linearidade**:
+   - Seja $p(x), q(x) \in \F[x]$ e $\lambda \in \F$. Então:
+     $$
+     \varphi_f(\lambda p(x) + q(x)) = \sum_{j=0}^n (\lambda p_j + q_j) \alpha_j = \lambda \varphi_f(p(x)) + \varphi_f(q(x)).
+     $$
+     Portanto, $\varphi_f$ é linear.
+
+5. **Injetividade**:
+   - Se $\varphi_f = \varphi_g$, então para todo $p(x) \in \F[x]$, temos $\varphi_f(p(x)) = \varphi_g(p(x))$. Isso implica que $\alpha_k = \beta_k$ para todo $k \geq 0$, ou seja, $f(x) = g(x)$. Logo, o mapeamento é injetivo.
+
+6. **Sobrejetividade**:
+   - Seja $\varphi \in \F[x]^*$. Definimos uma série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k = \varphi(x^k)$. Então, para qualquer $p(x) = \sum_{j=0}^n \beta_j x^j \in \F[x]$, temos:
+     $$
+     \varphi(p(x)) = \sum_{j=0}^n \beta_j \varphi(x^j) = \sum_{j=0}^n \beta_j \alpha_j = \varphi_f(p(x)).
+     $$
+     Portanto, $\varphi = \varphi_f$, e o mapeamento é sobrejetivo.
+
+7. **Conclusão**:
+   - O mapeamento $f(x) \mapsto \varphi_f$ é um isomorfismo linear entre $\F[[x]]$ e $\F[x]^*$. Assim, $\F[x]^* \cong \F[[x]]$.
+:::
+-->
+
 
 :::{#exr-}
 Sejam $V$ e $W$ $\F$-espaços vetoriais, sejam $\Psi_V:V\to V^{**}$ e $\Psi_W:W\to W^{**}$ 
@@ -677,8 +869,136 @@ conversa no Stackexhange.
 Este exercícios mostra que a transformação $\Psi_V$ é uma [transformação natural](https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)) entre o functor 
 da identidade e o functor bidual $(-)^{**}$ na categoria dos $\F$-espaços vetoriais. 
 :::
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f^{**} \circ \Psi_V$, onde $f^{**}: V^{**} \to W^{**}$ é o mapa dual-dual de $f$.
+
+1. **Definição de $\Psi_V$ e $\Psi_W$**:
+   - Para cada $v \in V$, $\Psi_V(v)$ é o funcional em $V^*$ definido por:
+     $$
+     \Psi_V(v)(\varphi) = \varphi(v), \quad \forall \varphi \in V^*.
+     $$
+   - Analogamente, para cada $w \in W$, $\Psi_W(w)$ é o funcional em $W^*$ definido por:
+     $$
+     \Psi_W(w)(\psi) = \psi(w), \quad \forall \psi \in W^*.
+     $$
+
+2. **Definição de $f^{**}$**:
+   - Para cada $\Phi \in V^{**}$, $f^{**}(\Phi)$ é o funcional em $W^*$ definido por:
+     $$
+     f^{**}(\Phi)(\psi) = \Phi(f^*(\psi)), \quad \forall \psi \in W^*,
+     $$
+     onde $f^*: W^* \to V^*$ é o mapa dual de $f$, dado por $f^*(\psi)(v) = \psi(f(v))$.
+
+3. **Verificação da comutatividade**:
+   - Seja $v \in V$. Precisamos mostrar que:
+     $$
+     (\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v).
+     $$
+   - Calculando $(\Psi_W \circ f)(v)$:
+     $$
+     (\Psi_W \circ f)(v) = \Psi_W(f(v)).
+     $$
+     Para $\psi \in W^*$, temos:
+     $$
+     \Psi_W(f(v))(\psi) = \psi(f(v)).
+     $$
+
+   - Calculando $(f^{**} \circ \Psi_V)(v)$:
+     $$
+     (f^{**} \circ \Psi_V)(v) = f^{**}(\Psi_V(v)).
+     $$
+     Para $\psi \in W^*$, temos:
+     $$
+     f^{**}(\Psi_V(v))(\psi) = \Psi_V(v)(f^*(\psi)).
+     $$
+     Por definição de $\Psi_V$, temos:
+     $$
+     \Psi_V(v)(f^*(\psi)) = f^*(\psi)(v).
+     $$
+     Por definição de $f^*$, temos:
+     $$
+     f^*(\psi)(v) = \psi(f(v)).
+     $$
+
+   - Concluímos que:
+     $$
+     (\Psi_W \circ f)(v)(\psi) = (f^{**} \circ \Psi_V)(v)(\psi),
+     $$
+     para todo $\psi \in W^*$. Portanto, $(\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v)$.
+
+4. **Conclusão**:
+   - O diagrama comuta, ou seja, $\Psi_W \circ f = f^{**} \circ \Psi_V$.
+:::
+-->
 
 :::{#exr-}
 Demonstre @thm-basis-thm, @lem-quot-equiv, e resolva @exr-subs-inters, @exr-tr1, @exr-tr2, @exr-tr3, 
 @exr-mat1, @exr-mat2, @exr-dual-mat.
+:::
+
+
+:::{#exr-}
+Sejam $U$ e $V$ espaços vetoriais sobre $\F$. Mostre que a aplicação $u\otimes v\mapsto v\otimes u$ ($u\in U$ e $v\in V$) 
+pode ser estendida unicamente para um isomorfismo bem definido $U\otimes V\to V\otimes U$.
+:::
+
+:::{#exr-}
+Sejam $U$, $V$ e $W$ espaços vetoriais sobre $\F$. Mostre que a aplicação 
+$(u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
+pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to V\otimes (U\otimes W)$.
+:::
+
+
+:::{#exr-}
+Sejam $U$ e $V$ espaços vetoriais sobre $\F$. 
+
+1. Mostre que a correspondência  
+   $$
+   \varphi\otimes  v\mapsto (u\mapsto \varphi(u)v)
+   $$
+   pode ser estendida a uma aplicação linear bem definida $\psi:U^*\otimes V\to \mbox{Hom}(U,V)$. 
+2. Mostre que quando $U$ e $V$ têm dimensão finita, então $\psi$ é um isomorfismo. 
+:::
+
+:::{#exr-}
+[Adjunção Hom-Tensor]
+Sejam $U$, $V$ e $W$, vector spaces sobre $\F$. Mostre que 
+$$
+\mbox{Hom}(U\otimes V,W)\cong\mbox{Hom}(U,\mbox{Hom}(V,W)). 
+$$
+[Dica: Defina duas aplicações $\alpha: \mbox{Hom}(U\otimes V,W)\to\mbox{Hom}(U,\mbox{Hom}(V,W))$ e 
+$\beta:\mbox{Hom}(U,\mbox{Hom}(V,W))\to \mbox{Hom}(U\otimes V,W)$ da maneira mais natural possível e mostre que elas são inversas.
+Confira também a discussão na página math.stackexchange.com/q/1849098.]
+:::
+
+
+:::{#exr-}
+[Produto tensorial como functor]
+Seja $W$ um $\F$-espaço vetorial e defina o functor $T_W$ na categoria de $\F$-espaços vetoriais da seguinte forma:
+$$
+T_W(V)=V\otimes W\quad\mbox{se $V$ é um $\F$-espaço}
+$$ 
+e se $f:U\to V$ é uma transformação linear, então defina 
+$$
+T_W(f)=f\otimes \mbox{id}_W:U\otimes W\to V\otimes W
+$$
+onde $f\otimes \mbox{id}_W$ está definida como no @thm-tensor-linear-maps.
+
+1. O functor $T_W$ é covariante ou contravariante?
+2. Mostre que se $f$ é injetiva/sobrejetiva, então $T_W(f)$ é injetiva/sobrejetiva, respetivamente. 
+:::
+
+:::{#exr-}
+Sejam $U$, $V$, $X$ e $Y$ espaços vetoriais com bases $B_U$, $B_V$, $B_X$ e $B_Y$, respetivamente. Assuma que 
+$f:U\to X$ e $g:V\to Y$ são lineares. Escreva a matriz 
+$$[f\otimes g]^{B_U\otimes B_V}_{B_X\otimes B_Y}
+$$ 
+em termos 
+das matrizes 
+$$
+[f]^{B_U}_{B_X}\quad \mbox{e}\quad  [g]^{B_V}_{B_Y}.
+$$ 
+[Dica: Confira o produto de Kronecker de matrizes: https://en.wikipedia.org/wiki/Kronecker_product] 
 :::
