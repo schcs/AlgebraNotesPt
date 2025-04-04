@@ -1361,6 +1361,7 @@ window.Quarto = {
 </header>
 
 
+<p>Os seguintes exercícios são recomendados para o Bloco I das apostilas de Álgebra Linear II. Salvo indicação em contrário, as soluções foram geradas utilizando o modelo GPT-4o por meio da interface disponibilizada pelo GitHub Copilot no editor VS Code e foram editadas por Csaba. Caso, haja algum erro avise por gentileza pelo email csaba.schneider@gmail.com ou corriga diretamente no <a href="https://github.com/schcs/AlgebraNotesPt/blob/main/AlgebraLinearII/ex1.qmd">código fonte</a>.</p>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.1</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo. Mostre que</p>
 <ol type="1">
@@ -1830,7 +1831,7 @@ Solução:
 <ul>
 <li><p><strong>Linearidade</strong>: Seja <span class="math inline">\(f, g \in \mbox{Hom}(V, W)\)</span> e <span class="math inline">\(\alpha \in \F\)</span>. Então: <span class="math display">\[
 \psi(\alpha f + g) = ((\alpha f + g)(b_1), \ldots, (\alpha f + g)(b_k)).
-\]</span> Pela linearidade de <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span>, isso se torna: <span class="math display">\[
+\]</span> Pela definição de <span class="math inline">\(\alpha f+g\)</span>, isso se torna: <span class="math display">\[
 \psi(\alpha f + g) = (\alpha f(b_1) + g(b_1), \ldots, \alpha f(b_k) + g(b_k)).
 \]</span> Por outro lado: <span class="math display">\[
 \alpha \psi(f) + \psi(g) = \alpha (f(b_1), \ldots, f(b_k)) + (g(b_1), \ldots, g(b_k)).
@@ -1929,6 +1930,69 @@ U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
 <li>Mostre que <span class="math inline">\(\mbox{Im}\,f^∗ = (\ker f)^0\)</span>.</li>
 </ol>
 </div>
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Demonstre que $U^0 \leq V^*$**:
+   - Para mostrar que $U^0$ é um subespaço de $V^*$, verificamos as condições de fechamento para soma e multiplicação escalar:
+     - Seja $\varphi_1, \varphi_2 \in U^0$. Então, para todo $u \in U$, temos:
+       $$
+       (\varphi_1 + \varphi_2)(u) = \varphi_1(u) + \varphi_2(u) = 0 + 0 = 0.
+       $$
+       Logo, $\varphi_1 + \varphi_2 \in U^0$.
+     - Seja $\varphi \in U^0$ e $\alpha \in \F$. Então, para todo $u \in U$, temos:
+       $$
+       (\alpha \varphi)(u) = \alpha \varphi(u) = \alpha \cdot 0 = 0.
+       $$
+       Logo, $\alpha \varphi \in U^0$.
+     - Assim, $U^0$ é fechado para soma e multiplicação escalar, e portanto $U^0 \leq V^*$.
+
+2. **Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita**:
+   - Seja $B = \{b_1, \ldots, b_k\}$ uma base de $U$ e complete $B$ para uma base $B' = \{b_1, \ldots, b_k, b_{k+1}, \ldots, b_n\}$ de $V$.
+   - Considere a base dual $B^* = \{b_1^*, \ldots, b_n^*\}$ de $V^*$.
+   - Note que $U^0 = \langle b_{k+1}^*, \ldots, b_n^* \rangle$, pois os funcionais $b_{k+1}^*, \ldots, b_n^*$ anulam todos os vetores de $U$.
+   - Assim, $\dim U^0 = n - k$ e $\dim U = k$. Como $\dim V = n$, temos:
+     $$
+     \dim U + \dim U^0 = k + (n - k) = n = \dim V.
+     $$
+
+3. **Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$**:
+   - Por definição, $\ker f^* = \{\varphi \in W^* \mid f^*(\varphi) = 0\}$.
+   - Para $\varphi \in W^*$, temos $f^*(\varphi)(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Assim, $f^*(\varphi) = 0$ significa que $\varphi(f(v)) = 0$ para todo $v \in V$, ou seja, $\varphi$ anula todos os vetores de $\mbox{Im}\,f$.
+   - Portanto, $\ker f^* = (\mbox{Im}\,f)^0$.
+
+4. **Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$**:
+   - Por definição, $\mbox{Im}\,f^* = \{f^*(\varphi) \mid \varphi \in W^*\}$.
+   - Para $\psi \in V^*$, temos $\psi \in \mbox{Im}\,f^*$ se e somente se existe $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Isso significa que $\psi$ anula todos os vetores de $\ker f$, pois se $v \in \ker f$, então $f(v) = 0$ e $\psi(v) = \varphi(0) = 0$.
+   - Assim, $\mbox{Im}\,f^* \subseteq (\ker f)^0$.
+   - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definir $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Portanto, $\mbox{Im}\,f^* = (\ker f)^0$.
+:::
+-->
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.26</strong></span> Deduza do exercício anterior que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobresetiva e que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva.</p>
+</div>
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Deduza que $f$ é injetiva se e somente se $f^∗$ é sobrejetiva**:
+   - Se $f$ é injetiva, então $\ker f = \{0\}$. Pelo exercício anterior, temos $\mbox{Im}\,f^∗ = (\ker f)^0$. Como $\ker f = \{0\}$, segue que $(\ker f)^0 = V^∗$. Portanto, $\mbox{Im}\,f^∗ = V^∗$, o que implica que $f^∗$ é sobrejetiva.
+   - Reciprocamente, se $f^∗$ é sobrejetiva, então $\mbox{Im}\,f^∗ = V^∗$. Pelo exercício anterior, $\mbox{Im}\,f^∗ = (\ker f)^0$. Como $(\ker f)^0 = V^∗$, segue que $\ker f = \{0\}$. Portanto, $f$ é injetiva.
+
+2. **Deduza que $f$ é sobrejetiva se e somente se $f^∗$ é injetiva**:
+   - Se $f$ é sobrejetiva, então $\mbox{Im}\,f = W$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $\mbox{Im}\,f = W$, segue que $(\mbox{Im}\,f)^0 = \{0\}$. Portanto, $\ker f^∗ = \{0\}$, o que implica que $f^∗$ é injetiva.
+   - Reciprocamente, se $f^∗$ é injetiva, então $\ker f^∗ = \{0\}$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $(\mbox{Im}\,f)^0 = \{0\}$, segue que $\mbox{Im}\,f = W$. Portanto, $f$ é sobrejetiva.
+:::
+-->
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.27</strong></span> [Segundo Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span>. Mostre, exibindo um isomorﬁsmo, que <span class="math display">\[
+                                             (U +W)/W \cong U/(U \cap W).
+\]</span></p>
+</div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1941,51 +2005,32 @@ Solução:
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>Demonstre que <span class="math inline">\(U^0 \leq V^*\)</span></strong>:
-<ul>
-<li>Para mostrar que <span class="math inline">\(U^0\)</span> é um subespaço de <span class="math inline">\(V^*\)</span>, verificamos as condições de fechamento para soma e multiplicação escalar:
-<ul>
-<li>Seja <span class="math inline">\(\varphi_1, \varphi_2 \in U^0\)</span>. Então, para todo <span class="math inline">\(u \in U\)</span>, temos: <span class="math display">\[
-(\varphi_1 + \varphi_2)(u) = \varphi_1(u) + \varphi_2(u) = 0 + 0 = 0.
-\]</span> Logo, <span class="math inline">\(\varphi_1 + \varphi_2 \in U^0\)</span>.</li>
-<li>Seja <span class="math inline">\(\varphi \in U^0\)</span> e <span class="math inline">\(\alpha \in \F\)</span>. Então, para todo <span class="math inline">\(u \in U\)</span>, temos: <span class="math display">\[
-(\alpha \varphi)(u) = \alpha \varphi(u) = \alpha \cdot 0 = 0.
-\]</span> Logo, <span class="math inline">\(\alpha \varphi \in U^0\)</span>.</li>
-<li>Assim, <span class="math inline">\(U^0\)</span> é fechado para soma e multiplicação escalar, e portanto <span class="math inline">\(U^0 \leq V^*\)</span>.</li>
-</ul></li>
-</ul></li>
-<li><strong>Mostre que <span class="math inline">\(\dim U + \dim U^0 = \dim V\)</span> no caso quando <span class="math inline">\(\dim V\)</span> é finita</strong>:
-<ul>
-<li>Seja <span class="math inline">\(B = \{b_1, \ldots, b_k\}\)</span> uma base de <span class="math inline">\(U\)</span> e complete <span class="math inline">\(B\)</span> para uma base <span class="math inline">\(B' = \{b_1, \ldots, b_k, b_{k+1}, \ldots, b_n\}\)</span> de <span class="math inline">\(V\)</span>.</li>
-<li>Considere a base dual <span class="math inline">\(B^* = \{b_1^*, \ldots, b_n^*\}\)</span> de <span class="math inline">\(V^*\)</span>.</li>
-<li>Note que <span class="math inline">\(U^0 = \langle b_{k+1}^*, \ldots, b_n^* \rangle\)</span>, pois os funcionais <span class="math inline">\(b_{k+1}^*, \ldots, b_n^*\)</span> anulam todos os vetores de <span class="math inline">\(U\)</span>.</li>
-<li>Assim, <span class="math inline">\(\dim U^0 = n - k\)</span> e <span class="math inline">\(\dim U = k\)</span>. Como <span class="math inline">\(\dim V = n\)</span>, temos: <span class="math display">\[
-\dim U + \dim U^0 = k + (n - k) = n = \dim V.
-\]</span></li>
-</ul></li>
-<li><strong>Mostre que <span class="math inline">\(\ker f^∗ = (\mbox{Im}\,f)^0\)</span></strong>:
-<ul>
-<li>Por definição, <span class="math inline">\(\ker f^* = \{\varphi \in W^* \mid f^*(\varphi) = 0\}\)</span>.</li>
-<li>Para <span class="math inline">\(\varphi \in W^*\)</span>, temos <span class="math inline">\(f^*(\varphi)(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span>.</li>
-<li>Assim, <span class="math inline">\(f^*(\varphi) = 0\)</span> significa que <span class="math inline">\(\varphi(f(v)) = 0\)</span> para todo <span class="math inline">\(v \in V\)</span>, ou seja, <span class="math inline">\(\varphi\)</span> anula todos os vetores de <span class="math inline">\(\mbox{Im}\,f\)</span>.</li>
-<li>Portanto, <span class="math inline">\(\ker f^* = (\mbox{Im}\,f)^0\)</span>.</li>
-</ul></li>
-<li><strong>Mostre que <span class="math inline">\(\mbox{Im}\,f^∗ = (\ker f)^0\)</span></strong>:
-<ul>
-<li>Por definição, <span class="math inline">\(\mbox{Im}\,f^* = \{f^*(\varphi) \mid \varphi \in W^*\}\)</span>.</li>
-<li>Para <span class="math inline">\(\psi \in V^*\)</span>, temos <span class="math inline">\(\psi \in \mbox{Im}\,f^*\)</span> se e somente se existe <span class="math inline">\(\varphi \in W^*\)</span> tal que <span class="math inline">\(\psi(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span>.</li>
-<li>Isso significa que <span class="math inline">\(\psi\)</span> anula todos os vetores de <span class="math inline">\(\ker f\)</span>, pois se <span class="math inline">\(v \in \ker f\)</span>, então <span class="math inline">\(f(v) = 0\)</span> e <span class="math inline">\(\psi(v) = \varphi(0) = 0\)</span>.</li>
-<li>Assim, <span class="math inline">\(\mbox{Im}\,f^* \subseteq (\ker f)^0\)</span>.</li>
-<li>Por outro lado, se <span class="math inline">\(\psi \in (\ker f)^0\)</span>, então <span class="math inline">\(\psi\)</span> anula todos os vetores de <span class="math inline">\(\ker f\)</span>, e podemos definir <span class="math inline">\(\varphi \in W^*\)</span> tal que <span class="math inline">\(\psi(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span>.</li>
-<li>Portanto, <span class="math inline">\(\mbox{Im}\,f^* = (\ker f)^0\)</span>.</li>
-</ul></li>
-</ol>
+<p>Para demonstrar o Segundo Teorema de Isomorfismo, considere a aplicação <span class="math display">\[
+\phi: U \to (U + W)/W, \quad u \mapsto u + W.
+\]</span> Essa aplicação é bem definida, pois para qualquer <span class="math inline">\(u \in U\)</span>, o coset <span class="math inline">\(u + W\)</span> pertence ao quociente <span class="math inline">\((U + W)/W\)</span>.</p>
+<p>Agora, verificamos que <span class="math inline">\(\phi\)</span> é linear. Para <span class="math inline">\(u_1, u_2 \in U\)</span> e <span class="math inline">\(\alpha \in \F\)</span>, temos: <span class="math display">\[
+\phi(\alpha u_1 + u_2) = (\alpha u_1 + u_2) + W = \alpha(u_1 + W) + (u_2 + W) = \alpha \phi(u_1) + \phi(u_2).
+\]</span> Portanto, <span class="math inline">\(\phi\)</span> é uma transformação linear.</p>
+<p>Mostremos que <span class="math inline">\(\phi\)</span> é sobrejetiva. Seja <span class="math inline">\(v + W \in (U + W)/W\)</span> um elemento arbitrário do quociente. Como <span class="math inline">\(v \in U + W\)</span>, podemos escrever <span class="math inline">\(v = u + w\)</span> para algum <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(w \in W\)</span>. Assim: <span class="math display">\[
+v + W = (u + w) + W = u + W,
+\]</span> onde usamos o fato de que <span class="math inline">\(w \in W\)</span> implica <span class="math inline">\(w + W = W\)</span>. Portanto, <span class="math inline">\(v + W\)</span> é a imagem de <span class="math inline">\(u \in U\)</span> sob <span class="math inline">\(\phi\)</span>, o que mostra que <span class="math inline">\(\phi\)</span> é sobrejetiva.</p>
+<p>O núcleo de <span class="math inline">\(\phi\)</span> é dado por: <span class="math display">\[
+\ker \phi = \{u \in U \mid \phi(u) = W\} = \{u \in U \mid u + W = W\}.
+\]</span> Isso significa que <span class="math inline">\(u \in \ker \phi\)</span> se e somente se <span class="math inline">\(u \in W\)</span>. Logo: <span class="math display">\[
+\ker \phi = U \cap W.
+\]</span></p>
+<p>Pelo Primeiro Teorema de Isomorfismo, temos: <span class="math display">\[
+U / \ker \phi \cong \mbox{Im}(\phi).
+\]</span> Como <span class="math inline">\(\phi\)</span> é sobrejetiva, <span class="math inline">\(\mbox{Im}(\phi) = (U + W)/W\)</span>. Assim, obtemos: <span class="math display">\[
+U / (U \cap W) \cong (U + W)/W.
+\]</span> Portanto, <span class="math inline">\((U + W)/W \cong U / (U \cap W)\)</span>.</p>
 </div>
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.26</strong></span> Deduza do exercício anterior que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobresetiva e que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva.</p>
+<p><span class="theorem-title"><strong>Exercício 64.28</strong></span> [Terceiro Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span> tais que <span class="math inline">\(W \leq U\)</span>. Mostre que <span class="math display">\[
+                                              (V/W)/(U/W)\cong V/U.
+\]</span></p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -1999,40 +2044,72 @@ Solução:
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>Deduza que <span class="math inline">\(f\)</span> é injetiva se e somente se <span class="math inline">\(f^∗\)</span> é sobrejetiva</strong>:
-<ul>
-<li>Se <span class="math inline">\(f\)</span> é injetiva, então <span class="math inline">\(\ker f = \{0\}\)</span>. Pelo exercício anterior, temos <span class="math inline">\(\mbox{Im}\,f^∗ = (\ker f)^0\)</span>. Como <span class="math inline">\(\ker f = \{0\}\)</span>, segue que <span class="math inline">\((\ker f)^0 = V^∗\)</span>. Portanto, <span class="math inline">\(\mbox{Im}\,f^∗ = V^∗\)</span>, o que implica que <span class="math inline">\(f^∗\)</span> é sobrejetiva.</li>
-<li>Reciprocamente, se <span class="math inline">\(f^∗\)</span> é sobrejetiva, então <span class="math inline">\(\mbox{Im}\,f^∗ = V^∗\)</span>. Pelo exercício anterior, <span class="math inline">\(\mbox{Im}\,f^∗ = (\ker f)^0\)</span>. Como <span class="math inline">\((\ker f)^0 = V^∗\)</span>, segue que <span class="math inline">\(\ker f = \{0\}\)</span>. Portanto, <span class="math inline">\(f\)</span> é injetiva.</li>
-</ul></li>
-<li><strong>Deduza que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f^∗\)</span> é injetiva</strong>:
-<ul>
-<li>Se <span class="math inline">\(f\)</span> é sobrejetiva, então <span class="math inline">\(\mbox{Im}\,f = W\)</span>. Pelo exercício anterior, <span class="math inline">\(\ker f^∗ = (\mbox{Im}\,f)^0\)</span>. Como <span class="math inline">\(\mbox{Im}\,f = W\)</span>, segue que <span class="math inline">\((\mbox{Im}\,f)^0 = \{0\}\)</span>. Portanto, <span class="math inline">\(\ker f^∗ = \{0\}\)</span>, o que implica que <span class="math inline">\(f^∗\)</span> é injetiva.</li>
-<li>Reciprocamente, se <span class="math inline">\(f^∗\)</span> é injetiva, então <span class="math inline">\(\ker f^∗ = \{0\}\)</span>. Pelo exercício anterior, <span class="math inline">\(\ker f^∗ = (\mbox{Im}\,f)^0\)</span>. Como <span class="math inline">\((\mbox{Im}\,f)^0 = \{0\}\)</span>, segue que <span class="math inline">\(\mbox{Im}\,f = W\)</span>. Portanto, <span class="math inline">\(f\)</span> é sobrejetiva.</li>
-</ul></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.27</strong></span> [Segundo Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span>. Mostre, exibindo um isomorﬁsmo, que <span class="math display">\[
-                                             (U +W)/W \cong U/(U \cap W).
+<p>Para demonstrar o Terceiro Teorema de Isomorfismo, considere a aplicação <span class="math display">\[
+\phi: V/W \to (V/W)/(U/W), \quad v + W \mapsto (v + W) + (U/W).
+\]</span> Essa aplicação é bem definida, pois para qualquer <span class="math inline">\(v \in V\)</span>, o coset <span class="math inline">\((v + W) + (U/W)\)</span> pertence ao quociente <span class="math inline">\((V/W)/(U/W)\)</span>.</p>
+<p>Agora, verificamos que <span class="math inline">\(\phi\)</span> é linear. Para <span class="math inline">\(v_1, v_2 \in V\)</span> e <span class="math inline">\(\alpha \in \F\)</span>, temos: <span class="math display">\[
+\phi(\alpha (v_1 + W) + (v_2 + W)) = \phi((\alpha v_1 + v_2) + W) = ((\alpha v_1 + v_2) + W) + (U/W).
+\]</span> Por outro lado: <span class="math display">\[
+\alpha \phi(v_1 + W) + \phi(v_2 + W) = \alpha ((v_1 + W) + (U/W)) + ((v_2 + W) + (U/W)).
+\]</span> Ambas as expressões são iguais, mostrando que <span class="math inline">\(\phi\)</span> é linear.</p>
+<p>Mostremos que <span class="math inline">\(\phi\)</span> é sobrejetiva. Seja <span class="math inline">\((v + W) + (U/W) \in (V/W)/(U/W)\)</span> um elemento arbitrário do quociente. Por definição, <span class="math inline">\((v + W) + (U/W)\)</span> é a imagem de <span class="math inline">\(v + W \in V/W\)</span> sob <span class="math inline">\(\phi\)</span>. Portanto, <span class="math inline">\(\phi\)</span> é sobrejetiva.</p>
+<p>O núcleo de <span class="math inline">\(\phi\)</span> é dado por: <span class="math display">\[
+\ker \phi = \{v + W \in V/W \mid \phi(v + W) = U/W\}.
+\]</span> Isso significa que <span class="math inline">\(v + W \in \ker \phi\)</span> se e somente se <span class="math inline">\((v + W) + (U/W) = U/W\)</span>, ou seja, <span class="math inline">\(v + W \in U/W\)</span>. Logo: <span class="math display">\[
+\ker \phi = U/W.
 \]</span></p>
+<p>Pelo Primeiro Teorema de Isomorfismo, temos: <span class="math display">\[
+(V/W)/\ker \phi \cong \mbox{Im}(\phi).
+\]</span> Como <span class="math inline">\(\ker \phi = U/W\)</span>, obtemos: <span class="math display">\[
+(V/W)/(U/W) \cong V/U.
+\]</span> Portanto, <span class="math inline">\((V/W)/(U/W) \cong V/U\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.28</strong></span> [Terceiro Teorema de Isomorﬁsmo] Seja <span class="math inline">\(V\)</span> um espaço vetorial e <span class="math inline">\(U,W \leq V\)</span> tais que <span class="math inline">\(W \leq U\)</span>. Mostre que <span class="math display">\[
-                                              (V/W)/(U/W)\cong V/U.
-\]</span></p>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.29</strong></span> Deduza do Segundo Teorema de Isomorﬁsmo a fórmula para a dimensão de <span class="math inline">\(U +W\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A fórmula para a dimensão de <span class="math inline">\(U + W\)</span> pode ser deduzida do Segundo Teorema de Isomorfismo. Pelo teorema, temos: <span class="math display">\[
+(U + W)/W \cong U/(U \cap W).
+\]</span></p>
+<p>Tomando as dimensões de ambos os lados, obtemos: <span class="math display">\[
+\dim((U + W)/W) = \dim(U/(U \cap W)).
+\]</span></p>
+<p>Sabemos que, para um quociente de espaços vetoriais, a dimensão é dada por: <span class="math display">\[
+\dim((U + W)/W) = \dim(U + W) - \dim(W),
+\]</span> e <span class="math display">\[
+\dim(U/(U \cap W)) = \dim(U) - \dim(U \cap W).
+\]</span></p>
+<p>Igualando as duas expressões, obtemos: <span class="math display">\[
+\dim(U + W) - \dim(W) = \dim(U) - \dim(U \cap W).
+\]</span></p>
+<p>Rearranjando, temos: <span class="math display">\[
+\dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W).
+\]</span></p>
+<p>Portanto, a fórmula para a dimensão de <span class="math inline">\(U + W\)</span> é: <span class="math display">\[
+\dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W).
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-funct-hom" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.30</strong></span> Seja <span class="math inline">\(W\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span>. Deﬁne o functor <span class="math inline">\(H_W\)</span> com as seguintes regras:</p>
 <ol type="1">
 <li>Para um <span class="math inline">\(\F\)</span>-espaço vetorial <span class="math inline">\(V\)</span>, defina <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span>.</li>
 <li>Para uma transformação linear <span class="math inline">\(f : V \to U\)</span>, defina <span class="math display">\[
-                             H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
+                     H_W (f):\mbox{Hom}(W,V)\to \mbox{Hom}(W,U),\quad  H_W (f)(α)=f\circ α.
 \]</span></li>
 </ol>
 <p>Demonstre as seguintes afirmações.</p>
@@ -2042,10 +2119,55 @@ Solução:
 </ol>
 <p>As propriedades mostram que o functor <span class="math inline">\(H_W\)</span> é um functor covariante na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Para todo <span class="math inline">\(\F\)</span>-espaço <span class="math inline">\(V\)</span>, temos que <span class="math inline">\(H_W(\mbox{id}_V)\)</span> é a aplicação: <span class="math display">\[
+H_W(\mbox{id}_V)(\alpha) = \mbox{id}_V \circ \alpha = \alpha, \quad \forall \alpha \in \mbox{Hom}(W, V).
+\]</span> Isso mostra que <span class="math inline">\(H_W(\mbox{id}_V) = \mbox{id}_{\textrm{Hom}(W,V)}\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(f : V_1 \to V_2\)</span> e <span class="math inline">\(g : V_2 \to V_3\)</span>, temos que <span class="math inline">\(H_W(g \circ f)\)</span> é a aplicação: <span class="math display">\[
+H_W(g \circ f)(\alpha) = (g \circ f) \circ \alpha = g \circ (f \circ \alpha), \quad \forall \alpha \in \mbox{Hom}(W, V_1).
+\]</span> Por outro lado, <span class="math inline">\(H_W(g) \circ H_W(f)\)</span> é a aplicação: <span class="math display">\[
+(H_W(g) \circ H_W(f))(\alpha) = H_W(g)(H_W(f)(\alpha)) = H_W(g)(f \circ \alpha) = g \circ (f \circ \alpha).
+\]</span> Assim, <span class="math inline">\(H_W(g \circ f) = H_W(g) \circ H_W(f)\)</span>.</p></li>
+</ol>
+<p>Portanto, o functor <span class="math inline">\(H_W\)</span> é covariante.</p>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.31</strong></span> Seja <span class="math inline">\(W\)</span> como no <a href="#exr-funct-hom" class="quarto-xref">Exercício&nbsp;<span>64.30</span></a>. Mostre que se <span class="math inline">\(f : V \to U\)</span> é injetiva/sobrejetiva, então <span class="math display">\[
-                                         H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
+                               H_W(f):\mbox{Hom}(W,V)\to\mbox{Hom}(W,U)
 \]</span> é injetiva/sobrejetiva (respetivamente).</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Injetividade</strong>: Suponha que <span class="math inline">\(f : V \to U\)</span> é injetiva. Seja <span class="math inline">\(\alpha \in \mbox{Hom}(W, V)\)</span> tal que <span class="math inline">\(H_W(f)(\alpha) = f \circ \alpha = 0\)</span>. Isso implica que <span class="math inline">\(f(\alpha(w)) = 0\)</span> para todo <span class="math inline">\(w \in W\)</span>. Como <span class="math inline">\(f\)</span> é injetiva, segue que <span class="math inline">\(\alpha(w) = 0\)</span> para todo <span class="math inline">\(w \in W\)</span>, ou seja, <span class="math inline">\(\alpha = 0\)</span>. Portanto, <span class="math inline">\(H_W(f)\)</span> é injetiva.</p></li>
+<li><p><strong>Sobrejetividade</strong>: Suponha que <span class="math inline">\(f : V \to U\)</span> é sobrejetiva. Seja <span class="math inline">\(\beta \in \mbox{Hom}(W, U)\)</span>. Como <span class="math inline">\(f\)</span> é sobrejetiva, para cada <span class="math inline">\(w \in W\)</span>, existe <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(f(v) = \beta(w)\)</span>. Defina <span class="math inline">\(\alpha \in \mbox{Hom}(W, V)\)</span> por <span class="math inline">\(\alpha(w) = v\)</span>. Então, <span class="math inline">\(H_W(f)(\alpha) = f \circ \alpha = \beta\)</span>. Assim, <span class="math inline">\(H_W(f)\)</span> é sobrejetiva.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.32</strong></span> O functor <span class="math inline">\(H_W\)</span> está frequentamente escrito como <span class="math inline">\(\mbox{Hom}(W,−)\)</span> e escrevemos também <span class="math inline">\(H_W(V) = \mbox{Hom}(W,V)\)</span> e <span class="math inline">\(H_W(f) = \mbox{Hom}(W,f)\)</span>. Deﬁna um functor <span class="math inline">\(\mbox{Hom}(−,W)\)</span>. Este outro functor seria um functor covariante ou contravariante?</p>
@@ -2055,6 +2177,45 @@ Solução:
 \F[[x]]=\left\{\sum_{k\geq 0}\alpha_ix^i\mid \alpha_i\in\F\right\};
 \]</span> Demonstre que <span class="math inline">\(\F[x]^*\cong \F[[x]]\)</span>.</p>
 </div>
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explícito entre os dois espaços.
+
+1. **Definição de $\F[x]^*$**:
+   - O espaço $\F[x]^*$ é o dual de $\F[x]$, ou seja, o espaço de todos os funcionais lineares $\varphi: \F[x] \to \F$.
+
+2. **Definição de $\F[[x]]$**:
+   - O espaço $\F[[x]]$ consiste em todas as séries formais de potências $\sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k \in \F$.
+
+3. **Construção do isomorfismo**:
+   - Para cada série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k \in \F[[x]]$, definimos um funcional linear $\varphi_f \in \F[x]^*$ como:
+     $$
+     \varphi_f\left(\sum_{j=0}^n \beta_j x^j\right) = \sum_{j=0}^n \beta_j \alpha_j.
+     $$
+     Em outras palavras, $\varphi_f$ avalia o polinômio $\sum_{j=0}^n \beta_j x^j$ nos coeficientes correspondentes da série formal $f(x)$.
+
+4. **Verificação de linearidade**:
+   - Seja $p(x), q(x) \in \F[x]$ e $\lambda \in \F$. Então:
+     $$
+     \varphi_f(\lambda p(x) + q(x)) = \sum_{j=0}^n (\lambda p_j + q_j) \alpha_j = \lambda \varphi_f(p(x)) + \varphi_f(q(x)).
+     $$
+     Portanto, $\varphi_f$ é linear.
+
+5. **Injetividade**:
+   - Se $\varphi_f = \varphi_g$, então para todo $p(x) \in \F[x]$, temos $\varphi_f(p(x)) = \varphi_g(p(x))$. Isso implica que $\alpha_k = \beta_k$ para todo $k \geq 0$, ou seja, $f(x) = g(x)$. Logo, o mapeamento é injetivo.
+
+6. **Sobrejetividade**:
+   - Seja $\varphi \in \F[x]^*$. Definimos uma série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k = \varphi(x^k)$. Então, para qualquer $p(x) = \sum_{j=0}^n \beta_j x^j \in \F[x]$, temos:
+     $$
+     \varphi(p(x)) = \sum_{j=0}^n \beta_j \varphi(x^j) = \sum_{j=0}^n \beta_j \alpha_j = \varphi_f(p(x)).
+     $$
+     Portanto, $\varphi = \varphi_f$, e o mapeamento é sobrejetivo.
+
+7. **Conclusão**:
+   - O mapeamento $f(x) \mapsto \varphi_f$ é um isomorfismo linear entre $\F[[x]]$ e $\F[x]^*$. Assim, $\F[x]^* \cong \F[[x]]$.
+:::
+-->
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.34</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, sejam <span class="math inline">\(\Psi_V:V\to V^{**}\)</span> e <span class="math inline">\(\Psi_W:W\to W^{**}\)</span> as funções canônicas definidas no <a href="dual.html#lem-canonical-map-dual" class="quarto-xref">Lema&nbsp;<span>61.2</span></a>, e seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear. Mostre que o seguinte diagrama comuta.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -2066,8 +2227,109 @@ Solução:
 <p>Dica: Consulte <a href="https://math.stackexchange.com/q/1132689">esta</a> e <a href="https://math.stackexchange.com/q/1431757">esta</a> conversa no Stackexhange.</p>
 <p>Este exercícios mostra que a transformação <span class="math inline">\(\Psi_V\)</span> é uma <a href="https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)">transformação natural</a> entre o functor da identidade e o functor bidual <span class="math inline">\((-)^{**}\)</span> na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 </div>
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f^{**} \circ \Psi_V$, onde $f^{**}: V^{**} \to W^{**}$ é o mapa dual-dual de $f$.
+
+1. **Definição de $\Psi_V$ e $\Psi_W$**:
+   - Para cada $v \in V$, $\Psi_V(v)$ é o funcional em $V^*$ definido por:
+     $$
+     \Psi_V(v)(\varphi) = \varphi(v), \quad \forall \varphi \in V^*.
+     $$
+   - Analogamente, para cada $w \in W$, $\Psi_W(w)$ é o funcional em $W^*$ definido por:
+     $$
+     \Psi_W(w)(\psi) = \psi(w), \quad \forall \psi \in W^*.
+     $$
+
+2. **Definição de $f^{**}$**:
+   - Para cada $\Phi \in V^{**}$, $f^{**}(\Phi)$ é o funcional em $W^*$ definido por:
+     $$
+     f^{**}(\Phi)(\psi) = \Phi(f^*(\psi)), \quad \forall \psi \in W^*,
+     $$
+     onde $f^*: W^* \to V^*$ é o mapa dual de $f$, dado por $f^*(\psi)(v) = \psi(f(v))$.
+
+3. **Verificação da comutatividade**:
+   - Seja $v \in V$. Precisamos mostrar que:
+     $$
+     (\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v).
+     $$
+   - Calculando $(\Psi_W \circ f)(v)$:
+     $$
+     (\Psi_W \circ f)(v) = \Psi_W(f(v)).
+     $$
+     Para $\psi \in W^*$, temos:
+     $$
+     \Psi_W(f(v))(\psi) = \psi(f(v)).
+     $$
+
+   - Calculando $(f^{**} \circ \Psi_V)(v)$:
+     $$
+     (f^{**} \circ \Psi_V)(v) = f^{**}(\Psi_V(v)).
+     $$
+     Para $\psi \in W^*$, temos:
+     $$
+     f^{**}(\Psi_V(v))(\psi) = \Psi_V(v)(f^*(\psi)).
+     $$
+     Por definição de $\Psi_V$, temos:
+     $$
+     \Psi_V(v)(f^*(\psi)) = f^*(\psi)(v).
+     $$
+     Por definição de $f^*$, temos:
+     $$
+     f^*(\psi)(v) = \psi(f(v)).
+     $$
+
+   - Concluímos que:
+     $$
+     (\Psi_W \circ f)(v)(\psi) = (f^{**} \circ \Psi_V)(v)(\psi),
+     $$
+     para todo $\psi \in W^*$. Portanto, $(\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v)$.
+
+4. **Conclusão**:
+   - O diagrama comuta, ou seja, $\Psi_W \circ f = f^{**} \circ \Psi_V$.
+:::
+-->
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.35</strong></span> Demonstre <a href="bases.html#thm-basis-thm" class="quarto-xref">Teorema&nbsp;<span>56.1</span></a>, <a href="quociente.html#lem-quot-equiv" class="quarto-xref">Lema&nbsp;<span>58.1</span></a>, e resolva <a href="subespacos.html#exr-subs-inters" class="quarto-xref">Exercício&nbsp;<span>57.1</span></a>, <a href="trans_lin.html#exr-tr1" class="quarto-xref">Exercício&nbsp;<span>59.1</span></a>, <a href="trans_lin.html#exr-tr2" class="quarto-xref">Exercício&nbsp;<span>59.2</span></a>, <a href="trans_lin.html#exr-tr3" class="quarto-xref">Exercício&nbsp;<span>59.3</span></a>, <a href="matrizes.html#exr-mat1" class="quarto-xref">Exercício&nbsp;<span>60.1</span></a>, <a href="matrizes.html#exr-mat2" class="quarto-xref">Exercício&nbsp;<span>60.2</span></a>, <a href="dual.html#exr-dual-mat" class="quarto-xref">Exercício&nbsp;<span>61.1</span></a>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.36</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\(u\otimes v\mapsto v\otimes u\)</span> (<span class="math inline">\(u\in U\)</span> e <span class="math inline">\(v\in V\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\(U\otimes V\to V\otimes U\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.37</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\((u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)\)</span> (<span class="math inline">\(u\in U\)</span>, <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(w\in W\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\((U\otimes V)\otimes W\to V\otimes (U\otimes W)\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.38</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>.</p>
+<ol type="1">
+<li>Mostre que a correspondência<br>
+<span class="math display">\[
+\varphi\otimes  v\mapsto (u\mapsto \varphi(u)v)
+\]</span> pode ser estendida a uma aplicação linear bem definida <span class="math inline">\(\psi:U^*\otimes V\to \mbox{Hom}(U,V)\)</span>.</li>
+<li>Mostre que quando <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> têm dimensão finita, então <span class="math inline">\(\psi\)</span> é um isomorfismo.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.39</strong></span> [Adjunção Hom-Tensor] Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, vector spaces sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
+\mbox{Hom}(U\otimes V,W)\cong\mbox{Hom}(U,\mbox{Hom}(V,W)).
+\]</span> [Dica: Defina duas aplicações <span class="math inline">\(\alpha: \mbox{Hom}(U\otimes V,W)\to\mbox{Hom}(U,\mbox{Hom}(V,W))\)</span> e <span class="math inline">\(\beta:\mbox{Hom}(U,\mbox{Hom}(V,W))\to \mbox{Hom}(U\otimes V,W)\)</span> da maneira mais natural possível e mostre que elas são inversas. Confira também a discussão na página math.stackexchange.com/q/1849098.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.40</strong></span> [Produto tensorial como functor] Seja <span class="math inline">\(W\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e defina o functor <span class="math inline">\(T_W\)</span> na categoria de <span class="math inline">\(\F\)</span>-espaços vetoriais da seguinte forma: <span class="math display">\[
+T_W(V)=V\otimes W\quad\mbox{se $V$ é um $\F$-espaço}
+\]</span> e se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear, então defina <span class="math display">\[
+T_W(f)=f\otimes \mbox{id}_W:U\otimes W\to V\otimes W
+\]</span> onde <span class="math inline">\(f\otimes \mbox{id}_W\)</span> está definida como no <a href="tensor.html#thm-tensor-linear-maps" class="quarto-xref">Teorema&nbsp;<span>62.4</span></a>.</p>
+<ol type="1">
+<li>O functor <span class="math inline">\(T_W\)</span> é covariante ou contravariante?</li>
+<li>Mostre que se <span class="math inline">\(f\)</span> é injetiva/sobrejetiva, então <span class="math inline">\(T_W(f)\)</span> é injetiva/sobrejetiva, respetivamente.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.41</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> espaços vetoriais com bases <span class="math inline">\(B_U\)</span>, <span class="math inline">\(B_V\)</span>, <span class="math inline">\(B_X\)</span> e <span class="math inline">\(B_Y\)</span>, respetivamente. Assuma que <span class="math inline">\(f:U\to X\)</span> e <span class="math inline">\(g:V\to Y\)</span> são lineares. Escreva a matriz <span class="math display">\[[f\otimes g]^{B_U\otimes B_V}_{B_X\otimes B_Y}
+\]</span> em termos das matrizes <span class="math display">\[
+[f]^{B_U}_{B_X}\quad \mbox{e}\quad  [g]^{B_V}_{B_Y}.
+\]</span> [Dica: Confira o produto de Kronecker de matrizes: https://en.wikipedia.org/wiki/Kronecker_product]</p>
 </div>
 
 
