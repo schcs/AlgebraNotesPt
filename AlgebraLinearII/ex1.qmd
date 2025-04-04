@@ -6,7 +6,7 @@ lang: pt-BR
 --- 
 
 Os seguintes exercícios são recomendados para o Bloco I das apostilas de Álgebra Linear II. Salvo indicação em contrário, as soluções foram geradas utilizando o modelo GPT-4o por meio da interface disponibilizada pelo GitHub Copilot no editor VS Code e foram editadas por Csaba. Caso, haja 
-algum erro avize por gentileza pelo email csaba.schneider@gmail.com ou corriga diretamente 
+algum erro avise por gentileza pelo email csaba.schneider@gmail.com ou corriga diretamente 
 no [código fonte](https://github.com/schcs/AlgebraNotesPt/blob/main/AlgebraLinearII/ex1.qmd). 
 
 :::{#exr-}
