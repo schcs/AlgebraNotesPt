@@ -552,7 +552,7 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
 3. Mostre que $\ker f^∗ = (\mbox{Im}\,f)^0$.
 4. Mostre que $\mbox{Im}\,f^∗ = (\ker f)^0$.
 :::
-<!--
+
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
@@ -573,7 +573,8 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
 2. **Mostre que $\dim U + \dim U^0 = \dim V$ no caso quando $\dim V$ é finita**:
    - Seja $B = \{b_1, \ldots, b_k\}$ uma base de $U$ e complete $B$ para uma base $B' = \{b_1, \ldots, b_k, b_{k+1}, \ldots, b_n\}$ de $V$.
    - Considere a base dual $B^* = \{b_1^*, \ldots, b_n^*\}$ de $V^*$.
-   - Note que $U^0 = \langle b_{k+1}^*, \ldots, b_n^* \rangle$, pois os funcionais $b_{k+1}^*, \ldots, b_n^*$ anulam todos os vetores de $U$.
+   - Note que $U^0 = \langle b_{k+1}^*, \ldots, b_n^* \rangle$, pois os funcionais $b_{k+1}^*, \ldots, b_n^*$ anulam todos os vetores de $U$, mas se $\varphi=\sum_{i}\alpha_ib_i^*$ é 
+   um funcional com $\alpha_i\neq 0$ com $i\in\{1,\ldots,k\}$ então $\varphi(b_k)=\alpha_i\neq 0$. 
    - Assim, $\dim U^0 = n - k$ e $\dim U = k$. Como $\dim V = n$, temos:
      $$
      \dim U + \dim U^0 = k + (n - k) = n = \dim V.
@@ -590,16 +591,16 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
    - Para $\psi \in V^*$, temos $\psi \in \mbox{Im}\,f^*$ se e somente se existe $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
    - Isso significa que $\psi$ anula todos os vetores de $\ker f$, pois se $v \in \ker f$, então $f(v) = 0$ e $\psi(v) = \varphi(0) = 0$.
    - Assim, $\mbox{Im}\,f^* \subseteq (\ker f)^0$.
-   - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definir $\varphi \in W^*$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$.
+   - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definimos $\varphi \in W^*$ na seguinte forma. Seja $Z$ um complemento 
+   de $\mbox{Im}(f)$ em $W$; ou seja $W=\mbox{Im}(f)\oplus Z$. Defina $\varphi$ em $\mbox{Im}(f)$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$ e defina $\vaphi$ em $Z$ tal que $\varphi(z)=0$ para todo $z\in Z$. Note que $\varphi$ está bem definida e $\psi=f^*(\varphi)$. 
    - Portanto, $\mbox{Im}\,f^* = (\ker f)^0$.
 :::
--->
 
 :::{#exr-}
 Deduza do exercício anterior que $f$ é injetiva se e somente se $f^∗$ é sobresetiva e que $f$ é sobrejetiva se
 e somente se $f^∗$ é injetiva.
 :::
-<!--
+
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
@@ -611,7 +612,6 @@ e somente se $f^∗$ é injetiva.
    - Se $f$ é sobrejetiva, então $\mbox{Im}\,f = W$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $\mbox{Im}\,f = W$, segue que $(\mbox{Im}\,f)^0 = \{0\}$. Portanto, $\ker f^∗ = \{0\}$, o que implica que $f^∗$ é injetiva.
    - Reciprocamente, se $f^∗$ é injetiva, então $\ker f^∗ = \{0\}$. Pelo exercício anterior, $\ker f^∗ = (\mbox{Im}\,f)^0$. Como $(\mbox{Im}\,f)^0 = \{0\}$, segue que $\mbox{Im}\,f = W$. Portanto, $f$ é sobrejetiva.
 :::
--->
               
 :::{#exr-}
 [Segundo Teorema de Isomorﬁsmo] Seja $V$ um espaço vetorial e $U,W \leq V$. Mostre, exibindo um
