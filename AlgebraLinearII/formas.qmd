@@ -166,7 +166,7 @@ Consequentemente $\dim A^n(V)=1$.
 
 :::{#cor-}
 Existe uma única forma $n$-linear $f:(\F^n)^n\to \F$ tal que $f(e_1,\ldots,e_n)=1$ onde $\{e_1,\ldots,e_n\}$ é a base canônica de $\F^n$. 
-Se $a_i=\sum_j a_{i,j} b_j\in V$, então
+Se $a_i=\sum_j a_{i,j} e_j\in V$, então
 $$
 f(a_1,\ldots,a_n)=\sum_{\sigma} (-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}
 $$
