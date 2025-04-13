@@ -275,7 +275,7 @@ def XMDC(a,b):
 
 O último resultado na página do Algoritmo de Euclides implica várias propriedades importantes do MDC.
 
-:::{#lem-}
+:::{#lem-mdc-props}
 Sejam $a,b,c\in\Z\setminus\{0\}$. As seguintes afirmações são verdadeiras.
 
 - Se $c\mid ab$ e $\mdc bc=1$, então $c\mid a$.

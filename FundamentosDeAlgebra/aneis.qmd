@@ -7,7 +7,7 @@ lang: pt-BR
 ---
 
 
-:::{#def-}
+:::{#def-rings-fa}
 Assuma que $R$ é um conjunto com pelo menos dois elementos equipado por duas operações $+$ (adição) e $\cdot$ (multiplicação) que satisfazem as seguintes propriedades para todo $a,b,c\in R$:
 
 

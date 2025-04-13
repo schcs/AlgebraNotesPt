@@ -44,8 +44,7 @@ Material disponibilizado sob a licença
 ### Bloco II: Endomorfismos de espaços vetoriais de dimensão finita
 
 - [Autovalores e autovetores](autovals.qmd)
-- [O polinômio mínimo de um operador](pol_min.qmd)
-- [O Teorema de Cayley-Hamilton](cayley_hamilton.qmd)
+- [O polinômio mínimo de um operador e o Teorema de Cayley-Hamilton](pol_min.qmd)
 - [Projeções](projecoes.qmd)
 - [O Teorema da Decomposição Primária e o Teorema Espectral](primaria.qmd)
 - [Endomorfismos nilpotentes e a existência da forma normal de Jordan](nilpotentes.qmd)

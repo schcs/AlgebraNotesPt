@@ -64,13 +64,11 @@ f(x)g(x) & = (x^3+\overline 2x)(\overline 2x+\overline 1)=\overline 2x^4+x^3+x^2
 :::
 
 
-:::{#lem-}
+:::{#lem-deg-mult}
 Seja $R$ um anel e $f(x),g(x)\in R[x]\setminus\{0\}$.
 
-
--  $f(x)g(x)=0$ ou $\grau{f(x)g(x)}\leq \grau{f(x)}+\grau{g(x)}$.
--  Se $R$ for um domínio, então $f(x)g(x)\neq 0$ e $\grau{f(x)g(x)}= \grau{f(x)}+\grau{g(x)}$
-
+1. $f(x)g(x)=0$ ou $\grau{f(x)g(x)}\leq \grau{f(x)}+\grau{g(x)}$.
+2. Se $R$ for um domínio, então $f(x)g(x)\neq 0$ e $\grau{f(x)g(x)}= \grau{f(x)}+\grau{g(x)}$
 :::
 
 
