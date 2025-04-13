@@ -157,9 +157,9 @@ Esta última equação o leitor pode verificar.
 
 :::{.proof}
 (A demonstração do Teorema de Cayley-Hamilton)
-Suponhamos que $B=\{b_1,\ldots,b_n\}$ é uma base de $V$ e seja $(a_{i,j})=[f]_B^B$.   Considere a matriz
+Suponhamos que $B=\{b_1,\ldots,b_n\}$ é uma base de $V$ e seja $A=(a_{i,j})=[f]_B^B$.   Considere a matriz
 $$
-A = \begin{pmatrix}
+B = \begin{pmatrix}
 f-a_{1,1}\mbox{id}_V &  -a_{2,1}\mbox{id}_V & \cdots & -a_{n-1,1}\mbox{id}_V & -a_{n,1}\mbox{id}_V\\
 -a_{1,2}\mbox{id}_V &  f-a_{2,2}\mbox{id}_V & \cdots & -a_{n-1,2}\mbox{id}_V & -a_{n,2}\mbox{id}_V\\
 \vdots & \vdots & \ddots & \vdots & \vdots\\
@@ -167,21 +167,22 @@ f-a_{1,1}\mbox{id}_V &  -a_{2,1}\mbox{id}_V & \cdots & -a_{n-1,1}\mbox{id}_V & -
 -a_{1,n}\mbox{id}_V &  -a_{2,n}\mbox{id}_V & \cdots & -a_{n-1,n}\mbox{id}_V & f-a_{n,n}\mbox{id}_V\\
 \end{pmatrix}
 $$
-A matriz $A$ é um elemento de $M_{n\times n}(R)$. A matriz $A$ pode ser vista como o resultado de substituir $f$ na matriz 
-$t\cdot I-[f]_B^B=t\cdot I-(a_{i,j})$. De fato, nós substituímos $f$ no lugar da incôgnita $t$, e 
+A matriz $B$ é um elemento de $M_{n\times n}(R)$. A matriz $B$ pode ser vista como o resultado de substituir $f$ na matriz 
+$t\cdot I-A$. De fato, nós substituímos $f$ no lugar da incôgnita $t$, e 
 $a_{i,j}\cdot f^0=a_{i,j}\cdot \mbox{id}_V$ no lugar dos escalares $a_{i,j}$. Lembre que 
 $\mbox{pcar}_f(t)=\det (t\cdot I-(a_{i,j}))$ e $\mbox{pcar}_f(t)$ é um polinômio em $t$. 
 
 A substituição $\mbox{pcar}_f(f)$ de $f$ em $\mbox{pcar}_f(t)$ pode ser 
 feita em duas maneiras distintas:
 
-1. primeiro calcular $\mbox{pcar}_f(t)$ e substituir $f$ no lugar de $t$;
-2. primeiro substituir $f$ em $t\cdot I-(a_{i,j})$ como no parágrafo anterior e calcular o determinante da matriz obtida desta forma.
+1. primeiro calcular $\mbox{pcar}_f(t)=\det(t\cdot I-A)$ e substituir $f$ no lugar de $t$;
+2. primeiro substituir $f$ em $t\cdot I-A$ como no parágrafo anterior e calcular o determinante da matriz obtida desta forma.
 
-Deixamos para o leitor verificar que estas duas maneiras de calcular $\mbox{pcar}_f(f)$ dão o mesmo resultado. Mas isso implica que 
-$\det A  =\mbox{pcar}_f(f)$. Pondo $b=(b_1,\ldots,b_n)^t$ (vetor coluna), temos que $Ab=0$. Por outro lado, por @thm-cramer,
+Deixamos para o leitor verificar que estas duas maneiras de calcular $\mbox{pcar}_f(f)$ dão o mesmo resultado. Mas note que a 
+segunda maneira da substituição dá 
+$\det B  =\mbox{pcar}_f(f)$. Pondo $b=(b_1,\ldots,b_n)^t$ (vetor coluna), temos que $Bb=0$. Por outro lado, por @thm-cramer,
 $$
-0=\mbox{adj}(A)Ab=(\det A)I_nb=(\det A)b=\mbox{pcar}_f(f)b.
+0=\mbox{adj}(B)Bb=(\det B)I_nb=(\det B)b=\mbox{pcar}_f(f)b.
 $$
 Logo $\mbox{pcar}_f(f)b_i=0$ para todo $i$. Ou seja, $\mbox{pcar}_f(f)$ é um endomorfismo de $V$ que leva $b_i$ para zero para todo $i$. 
 Como os $b_i$ formam uma base de $V$, obtemos que $\mbox{pcar}_f(f)=0$.
