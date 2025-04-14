@@ -26,7 +26,7 @@ Seja
 $$
 I_f=\{p(t)\in\F[t]\mid p(f)=0\}\subseteq \F[t].
 $$
-Então $I_f$ é fechado para soma e múltiplo escalar. Além disso, se $p(t)\in I_f$ e $q(t)\in \F[t]$, então $p(t)q(t)\in I_f$. (Em outras palávras, $I_f$ é um ideal em $\F[t]$). Ademais, $I_f$ contém polinômios não nulos, existe único polinômio mônico $m_f(t)\in I_f$ de menor grau e
+Então $I_f$ contem um único polinômio mônico não nulo $m_f(t)\in I_f$ de menor grau e
 $$
 I_f=\F[t]m_f(t)=\{q(t)m_f(t)\mid q(t)\in\F[t]\}.
 $$
@@ -35,7 +35,12 @@ $$
 
 
 :::{.proof}
-É fácil verificar que $I_f$ é fechado para a soma, múltiplo escalar e para o produto no sentido do enunciado do lema. O argumento antes do lema mostra que existe polinômio não nulo em $I_f$. Seja $m_f(t)$ um polinômio de menor grau e assuma (por dividir pelo coeficiente líder de $m_f(t)$) que $m_f(t)$ é mônico. Pela propriedade de ser fechado para o produto, temos que $m_f(t)\F[t]\subseteq I_f$. Para provar a outra inclusão, seja $p(t)\in I_f$ arbitrário. Pelo Teorema de Divisão de Euclides (@thm-euclid-pol), temos que
+O argumento antes do lema mostra que existe polinômio não nulo em $I_f$. Seja $m_f(t)$ um polinômio de menor grau e assuma (por dividir pelo coeficiente líder de $m_f(t)$) que $m_f(t)$ é mônico. Se $q(t)\in\F[t]$, então 
+$$
+(qm_f)(f)=q(f)m_f(f)=0;
+$$
+ou seja, $q(t)m_f(t)\in I_f$ e $F[x]m_f(t)\subseteq I_f$. 
+Para provar a outra inclusão, seja $p(t)\in I_f$ arbitrário. Pelo Teorema de Divisão de Euclides (@thm-euclid-pol), temos que
 $$
 p(t)=q(t)m_f(t)+r(t)
 $$
@@ -65,6 +70,13 @@ $$
 \begin{pmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \\ 1 & 1 & 1\end{pmatrix}.
 $$
 Logo $f^2=f^3$ ou seja $f^3-f^2=0$. Como (as matrizes de ) $f^0$, $f$, $f^2$ são L.I., temos que $m_f(t)=t^3-t^2$.
+
+Note, neste caso, que $m_f(t)=\mbox{pcar}_f(t)$, mas esta igualdade não é necessária. Por exemplo, se 
+$$
+f:\F^4\to \F^4,\quad f(x,y,z,v)=(x+y,y,z+v,v)
+$$
+então $m_f(t)=(t-1)^2$ e $\mbox{pcar}_f(t)=(t-1)^4$. Mas observe que $m_f(t)\mid \mbox{pcar}_f(t)$ e isso val valer de maneira geral pelo 
+Teorema de Cayley-Hamilton.
 :::
 
 Antes do lema seguinte, relembre de Fundamentos de Álgebra que $\lambda\in\F$ é raiz de um polinômio $f(t)\in\F[t]$ se e somente se 
@@ -87,7 +99,10 @@ Primeiro, escreva, usando o Teorema de Divisão de Euclides (@thm-euclid-pol), q
 $$
 m_f(t)=q(t)(t-\lambda)+\alpha
 $$
-onde $\alpha\in\F$.
+onde $\alpha\in\F$. Substituindo $f$, obtemos 
+$$
+0=m_f(f)=q(f)(f-\lambda\mbox{id}_V)+\alpha\mbox{id}_V.
+$$
 Assuma que $v\in V_\lambda$ não nulo. Ora
 $$
 0=m_f(f)(v)=(q(f)(f-\lambda\mbox{id}_V)+\alpha\mbox{id}_V)v=\alpha v.
@@ -111,6 +126,7 @@ Aqui, eu escolhi uma demonstração um pouco mais abstrata, mas tecnicamente mai
 Antes da demonstração, nós precisamos de algumas ferramentas. Seja $R$ um anel comutativo (@def-rings-fa) e assuma que $A\in M_{n\times n}(R)$. Denote por $A_{i,j}$ a matriz $(n-1)\times (n-1)$ que obtemos por apagar a $i$-ésima linha e $j$-ésima coluna de $A$. Denote por $\mbox{adj}(A)=(b_{i,j})$ a matriz com entradas $b_{i,j}=(-1)^{i+j}\det A_{j,i}$. A matriz $\mbox{adj}(A)$ é  a **adjunta** de $A$.
 
 :::{#thm-cramer}
+(A regra de Cramer)
 Temos que 
 $$
 \mbox{adj}(A)A=(\det A)I_n.
@@ -178,8 +194,8 @@ feita em duas maneiras distintas:
 1. primeiro calcular $\mbox{pcar}_f(t)=\det(t\cdot I-A)$ e substituir $f$ no lugar de $t$;
 2. primeiro substituir $f$ em $t\cdot I-A$ como no parágrafo anterior e calcular o determinante da matriz obtida desta forma.
 
-Deixamos para o leitor verificar que estas duas maneiras de calcular $\mbox{pcar}_f(f)$ dão o mesmo resultado. Mas comparar estas 
-duas formas de fazer a substituição dá 
+Deixamos para o leitor verificar que estas duas maneiras de calcular $\mbox{pcar}_f(f)$ dão o mesmo resultado. Mas, como foi notado em cima, 
+a matriz  $X$ é exatamente o resultado da substituição de $f$ em $t\cdot I-A$ e assim  
 $\det X  =\mbox{pcar}_f(f)$. Pondo $b=(b_1,\ldots,b_n)^t$ (vetor coluna), temos que $Xb=0$. Por outro lado, por 
 @eq-endo-assoc e por @thm-cramer,
 $$
