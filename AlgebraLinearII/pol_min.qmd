@@ -176,11 +176,11 @@ Esta última equação o leitor pode verificar.
 Suponhamos que $B=\{b_1,\ldots,b_n\}$ é uma base de $V$ e seja $A=(a_{i,j})=[f]_B^B$.   Considere a matriz
 $$
 X = \begin{pmatrix}
-f-a_{1,1}\mbox{id}_V &  -a_{2,1}\mbox{id}_V & \cdots & -a_{n-1,1}\mbox{id}_V & -a_{n,1}\mbox{id}_V\\
--a_{1,2}\mbox{id}_V &  f-a_{2,2}\mbox{id}_V & \cdots & -a_{n-1,2}\mbox{id}_V & -a_{n,2}\mbox{id}_V\\
+f-a_{1,1}\mbox{id}_V &  -a_{1,2}\mbox{id}_V & \cdots & -a_{1,n-1}\mbox{id}_V & -a_{1,n}\mbox{id}_V\\
+-a_{2,1}\mbox{id}_V &  f-a_{2,2}\mbox{id}_V & \cdots & -a_{2,n-1}\mbox{id}_V & -a_{2,n}\mbox{id}_V\\
 \vdots & \vdots & \ddots & \vdots & \vdots\\
--a_{1,n-1}\mbox{id}_V &  -a_{2,n-1}\mbox{id}_V & \cdots & f-a_{n-1,n-1}\mbox{id}_V & -a_{n,n-1}\mbox{id}_V\\
--a_{1,n}\mbox{id}_V &  -a_{2,n}\mbox{id}_V & \cdots & -a_{n-1,n}\mbox{id}_V & f-a_{n,n}\mbox{id}_V\\
+-a_{n-1,1}\mbox{id}_V &  -a_{n-1,2}\mbox{id}_V & \cdots & f-a_{n-1,n-1}\mbox{id}_V & -a_{n-1,n}\mbox{id}_V\\
+-a_{n,1}\mbox{id}_V &  -a_{n,2}\mbox{id}_V & \cdots & -a_{n,n-1}\mbox{id}_V & f-a_{n,n}\mbox{id}_V\\
 \end{pmatrix}
 $$
 A matriz $X$ é um elemento de $M_{n\times n}(R)$. A matriz $X$ pode ser vista como o resultado de substituir $f$ na matriz 
@@ -191,15 +191,15 @@ $\mbox{pcar}_f(t)=\det (t\cdot I-A)$ e $\mbox{pcar}_f(t)$ é um polinômio em $t
 A substituição $\mbox{pcar}_f(f)$ de $f$ em $\mbox{pcar}_f(t)$ pode ser 
 feita em duas maneiras distintas:
 
-1. primeiro calcular $\mbox{pcar}_f(t)=\det(t\cdot I-A)$ e substituir $f$ no lugar de $t$;
+1. primeiro calcular $\mbox{pcar}_f(t)=\det(t\cdot I-A)$ e substituir $f$ no lugar de $t$; ou 
 2. primeiro substituir $f$ em $t\cdot I-A$ como no parágrafo anterior e calcular o determinante da matriz obtida desta forma.
 
 Deixamos para o leitor verificar que estas duas maneiras de calcular $\mbox{pcar}_f(f)$ dão o mesmo resultado. Mas, como foi notado em cima, 
 a matriz  $X$ é exatamente o resultado da substituição de $f$ em $t\cdot I-A$ e assim  
-$\det X  =\mbox{pcar}_f(f)$. Pondo $b=(b_1,\ldots,b_n)^t$ (vetor coluna), temos que $Xb=0$. Por outro lado, por 
+$\det X  =\mbox{pcar}_f(f)$. Pondo $b=(b_1,\ldots,b_n)^t$ (vetor coluna), temos que $X^tb=0$. Por outro lado, por 
 @eq-endo-assoc e por @thm-cramer,
 $$
-0=\mbox{adj}(X)(Xb)=(\mbox{adj}(X)X)b=(\det X)I_nb=(\det X)b=\mbox{pcar}_f(f)b.
+0=\mbox{adj}(X^t)(X^tb)=(\mbox{adj}(X^t)X^t)b=(\det X^t)I_nb=(\det X)I_nb=(\det X)b=\mbox{pcar}_f(f)b.
 $$
 Logo $\mbox{pcar}_f(f)b_i=0$ para todo $i$. Ou seja, $\mbox{pcar}_f(f)$ é um endomorfismo de $V$ que leva $b_i$ para zero para todo $i$. 
 Como os $b_i$ formam uma base de $V$, obtemos que $\mbox{pcar}_f(f)=0$.

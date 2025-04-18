@@ -38,7 +38,7 @@ Material disponibilizado sob a licença
 - [O espaço dual](dual.qmd) 
 - [O produto tensorial](tensor.qmd)
 - [Formas $k$-lineares e o determinante](formas.qmd)
-- [Exercícios: Lista 1](ex1.qmd)
+- [Exercícios para o Bloco 1](ex1.qmd)
 
 
 ### Bloco II: Endomorfismos de espaços vetoriais de dimensão finita
@@ -50,6 +50,7 @@ Material disponibilizado sob a licença
 - [Endomorfismos nilpotentes e a existência da forma normal de Jordan](nilpotentes.qmd)
 - [A unicidade da forma normal de Jordan](unicidade_jordan.qmd)
 - [O Teorema da Decomposição Cíclica](cyclic.qmd)
+- [Exercícios para o Bloco 2](ex2.qmd)
 
 ### Bloco III: Formas sesquilineares e espaços com produto interno
 
