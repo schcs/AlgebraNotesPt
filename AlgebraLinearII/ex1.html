@@ -2204,45 +2204,50 @@ Solução:
 \F[[x]]=\left\{\sum_{k\geq 0}\alpha_ix^i\mid \alpha_i\in\F\right\};
 \]</span> Demonstre que <span class="math inline">\(\F[x]^*\cong \F[[x]]\)</span>.</p>
 </div>
-<!--
-:::{.sol .callout-tip collapse="true"}
-### Solução:
-Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explícito entre os dois espaços.
-
-1. **Definição de $\F[x]^*$**:
-   - O espaço $\F[x]^*$ é o dual de $\F[x]$, ou seja, o espaço de todos os funcionais lineares $\varphi: \F[x] \to \F$.
-
-2. **Definição de $\F[[x]]$**:
-   - O espaço $\F[[x]]$ consiste em todas as séries formais de potências $\sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k \in \F$.
-
-3. **Construção do isomorfismo**:
-   - Para cada série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k \in \F[[x]]$, definimos um funcional linear $\varphi_f \in \F[x]^*$ como:
-     $$
-     \varphi_f\left(\sum_{j=0}^n \beta_j x^j\right) = \sum_{j=0}^n \beta_j \alpha_j.
-     $$
-     Em outras palavras, $\varphi_f$ avalia o polinômio $\sum_{j=0}^n \beta_j x^j$ nos coeficientes correspondentes da série formal $f(x)$.
-
-4. **Verificação de linearidade**:
-   - Seja $p(x), q(x) \in \F[x]$ e $\lambda \in \F$. Então:
-     $$
-     \varphi_f(\lambda p(x) + q(x)) = \sum_{j=0}^n (\lambda p_j + q_j) \alpha_j = \lambda \varphi_f(p(x)) + \varphi_f(q(x)).
-     $$
-     Portanto, $\varphi_f$ é linear.
-
-5. **Injetividade**:
-   - Se $\varphi_f = \varphi_g$, então para todo $p(x) \in \F[x]$, temos $\varphi_f(p(x)) = \varphi_g(p(x))$. Isso implica que $\alpha_k = \beta_k$ para todo $k \geq 0$, ou seja, $f(x) = g(x)$. Logo, o mapeamento é injetivo.
-
-6. **Sobrejetividade**:
-   - Seja $\varphi \in \F[x]^*$. Definimos uma série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k = \varphi(x^k)$. Então, para qualquer $p(x) = \sum_{j=0}^n \beta_j x^j \in \F[x]$, temos:
-     $$
-     \varphi(p(x)) = \sum_{j=0}^n \beta_j \varphi(x^j) = \sum_{j=0}^n \beta_j \alpha_j = \varphi_f(p(x)).
-     $$
-     Portanto, $\varphi = \varphi_f$, e o mapeamento é sobrejetivo.
-
-7. **Conclusão**:
-   - O mapeamento $f(x) \mapsto \varphi_f$ é um isomorfismo linear entre $\F[[x]]$ e $\F[x]^*$. Assim, $\F[x]^* \cong \F[[x]]$.
-:::
--->
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para demonstrar que <span class="math inline">\(\F[x]^* \cong \F[[x]]\)</span>, construiremos um isomorfismo explícito entre os dois espaços.</p>
+<ol type="1">
+<li><strong>Definição de <span class="math inline">\(\F[x]^*\)</span></strong>:
+<ul>
+<li>O espaço <span class="math inline">\(\F[x]^*\)</span> é o dual de <span class="math inline">\(\F[x]\)</span>, ou seja, o espaço de todos os funcionais lineares <span class="math inline">\(\varphi: \F[x] \to \F\)</span>.</li>
+</ul></li>
+<li><strong>Definição de <span class="math inline">\(\F[[x]]\)</span></strong>:
+<ul>
+<li>O espaço <span class="math inline">\(\F[[x]]\)</span> consiste em todas as séries formais de potências <span class="math inline">\(\sum_{k \geq 0} \alpha_k x^k\)</span>, onde <span class="math inline">\(\alpha_k \in \F\)</span>.</li>
+</ul></li>
+<li><strong>Construção do isomorfismo</strong>:
+<ul>
+<li>Para cada série formal <span class="math inline">\(f(x) = \sum_{k \geq 0} \alpha_k x^k \in \F[[x]]\)</span>, definimos um funcional linear <span class="math inline">\(\varphi_f \in \F[x]^*\)</span> como: <span class="math display">\[
+\varphi_f(x^i) = \alpha_i, \quad \forall i \geq 0.
+\]</span> Em outras palavras, <span class="math inline">\(\varphi_f\)</span> é o funcional linear que mapeia cada monômio <span class="math inline">\(x^i\)</span> ao coeficiente <span class="math inline">\(\alpha_i\)</span> da série formal <span class="math inline">\(f(x)\)</span>. Como os <span class="math inline">\(x^i\)</span> formam uma base para <span class="math inline">\(\F[x]\)</span>, este mapeamento pode ser estendido de forma única para um elemento de <span class="math inline">\(\F[x]^*\)</span>.</li>
+</ul></li>
+<li><strong>Injetividade</strong>:
+<ul>
+<li>Para mostrar que o mapeamento é injetivo, considere o núcleo do mapeamento. Seja <span class="math inline">\(\varphi_f \in \F[x]^*\)</span> tal que <span class="math inline">\(\varphi_f(x^i) = 0\)</span> para todo <span class="math inline">\(i \geq 0\)</span>. Isso implica que todos os coeficientes <span class="math inline">\(\alpha_i\)</span> da série formal <span class="math inline">\(f(x) = \sum_{k \geq 0} \alpha_k x^k\)</span> são zero. Portanto, <span class="math inline">\(f(x) = 0\)</span>, o que mostra que o núcleo contém apenas o elemento nulo. Assim, o mapeamento é injetivo.</li>
+</ul></li>
+<li><strong>Sobrejetividade</strong>:
+<ul>
+<li>Seja <span class="math inline">\(\varphi \in \F[x]^*\)</span>. Definimos uma série formal <span class="math inline">\(f(x) = \sum_{k \geq 0} \alpha_k x^k\)</span>, onde <span class="math inline">\(\alpha_k = \varphi(x^k)\)</span>. É claro pela definição de de <span class="math inline">\(\varphi_f\)</span> que <span class="math inline">\(\varphi_f=\varphi\)</span>.</li>
+</ul></li>
+<li><strong>Conclusão</strong>:
+<ul>
+<li>O mapeamento <span class="math inline">\(f(x) \mapsto \varphi_f\)</span> é um isomorfismo linear entre <span class="math inline">\(\F[[x]]\)</span> e <span class="math inline">\(\F[x]^*\)</span>. Assim, <span class="math inline">\(\F[x]^* \cong \F[[x]]\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.34</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, sejam <span class="math inline">\(\Psi_V:V\to V^{**}\)</span> e <span class="math inline">\(\Psi_W:W\to W^{**}\)</span> as funções canônicas definidas no <a href="dual.html#lem-canonical-map-dual" class="quarto-xref">Lema&nbsp;<span>61.2</span></a>, e seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear. Mostre que o seguinte diagrama comuta.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -2254,77 +2259,137 @@ Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explí
 <p>Dica: Consulte <a href="https://math.stackexchange.com/q/1132689">esta</a> e <a href="https://math.stackexchange.com/q/1431757">esta</a> conversa no Stackexhange.</p>
 <p>Este exercícios mostra que a transformação <span class="math inline">\(\Psi_V\)</span> é uma <a href="https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)">transformação natural</a> entre o functor da identidade e o functor bidual <span class="math inline">\((-)^{**}\)</span> na categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 </div>
-<!--
-:::{.sol .callout-tip collapse="true"}
-### Solução:
-Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f^{**} \circ \Psi_V$, onde $f^{**}: V^{**} \to W^{**}$ é o mapa dual-dual de $f$.
-
-1. **Definição de $\Psi_V$ e $\Psi_W$**:
-   - Para cada $v \in V$, $\Psi_V(v)$ é o funcional em $V^*$ definido por:
-     $$
-     \Psi_V(v)(\varphi) = \varphi(v), \quad \forall \varphi \in V^*.
-     $$
-   - Analogamente, para cada $w \in W$, $\Psi_W(w)$ é o funcional em $W^*$ definido por:
-     $$
-     \Psi_W(w)(\psi) = \psi(w), \quad \forall \psi \in W^*.
-     $$
-
-2. **Definição de $f^{**}$**:
-   - Para cada $\Phi \in V^{**}$, $f^{**}(\Phi)$ é o funcional em $W^*$ definido por:
-     $$
-     f^{**}(\Phi)(\psi) = \Phi(f^*(\psi)), \quad \forall \psi \in W^*,
-     $$
-     onde $f^*: W^* \to V^*$ é o mapa dual de $f$, dado por $f^*(\psi)(v) = \psi(f(v))$.
-
-3. **Verificação da comutatividade**:
-   - Seja $v \in V$. Precisamos mostrar que:
-     $$
-     (\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v).
-     $$
-   - Calculando $(\Psi_W \circ f)(v)$:
-     $$
-     (\Psi_W \circ f)(v) = \Psi_W(f(v)).
-     $$
-     Para $\psi \in W^*$, temos:
-     $$
-     \Psi_W(f(v))(\psi) = \psi(f(v)).
-     $$
-
-   - Calculando $(f^{**} \circ \Psi_V)(v)$:
-     $$
-     (f^{**} \circ \Psi_V)(v) = f^{**}(\Psi_V(v)).
-     $$
-     Para $\psi \in W^*$, temos:
-     $$
-     f^{**}(\Psi_V(v))(\psi) = \Psi_V(v)(f^*(\psi)).
-     $$
-     Por definição de $\Psi_V$, temos:
-     $$
-     \Psi_V(v)(f^*(\psi)) = f^*(\psi)(v).
-     $$
-     Por definição de $f^*$, temos:
-     $$
-     f^*(\psi)(v) = \psi(f(v)).
-     $$
-
-   - Concluímos que:
-     $$
-     (\Psi_W \circ f)(v)(\psi) = (f^{**} \circ \Psi_V)(v)(\psi),
-     $$
-     para todo $\psi \in W^*$. Portanto, $(\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v)$.
-
-4. **Conclusão**:
-   - O diagrama comuta, ou seja, $\Psi_W \circ f = f^{**} \circ \Psi_V$.
-:::
--->
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para mostrar que o diagrama comuta, precisamos verificar que <span class="math inline">\(\Psi_W \circ f = f^{**} \circ \Psi_V\)</span>, onde <span class="math inline">\(f^{**}: V^{**} \to W^{**}\)</span> é o mapa dual-dual de <span class="math inline">\(f\)</span>.</p>
+<ol type="1">
+<li><strong>Definição de <span class="math inline">\(\Psi_V\)</span> e <span class="math inline">\(\Psi_W\)</span></strong>:
+<ul>
+<li>Para cada <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(\Psi_V(v)\)</span> é o funcional em <span class="math inline">\(V^{**}\)</span> definido por: <span class="math display">\[
+\Psi_V(v)(\varphi) = \varphi(v), \quad \forall \varphi \in V^*.
+\]</span></li>
+<li>Analogamente, para cada <span class="math inline">\(w \in W\)</span>, <span class="math inline">\(\Psi_W(w)\)</span> é o funcional em <span class="math inline">\(W^{**}\)</span> definido por: <span class="math display">\[
+\Psi_W(w)(\psi) = \psi(w), \quad \forall \psi \in W^*.
+\]</span></li>
+</ul></li>
+<li><strong>Definição de <span class="math inline">\(f^{**}\)</span></strong>:
+<ul>
+<li>Para cada <span class="math inline">\(\Phi \in V^{**}\)</span>, <span class="math inline">\(f^{**}(\Phi)\)</span> é o funcional em <span class="math inline">\(W^*\)</span> definido por: <span class="math display">\[
+f^{**}(\Phi)(\psi) = \Phi(f^*(\psi)), \quad \forall \psi \in W^*,
+\]</span> onde <span class="math inline">\(f^*: W^* \to V^*\)</span> é o mapa dual de <span class="math inline">\(f\)</span>, dado por <span class="math inline">\(f^*(\psi)(v) = \psi(f(v))\)</span>.</li>
+</ul></li>
+<li><strong>Verificação da comutatividade</strong>:
+<ul>
+<li><p>Seja <span class="math inline">\(v \in V\)</span>. Precisamos mostrar que: <span class="math display">\[
+(\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v).
+\]</span></p></li>
+<li><p>Calculando <span class="math inline">\((\Psi_W \circ f)(v)\)</span>: <span class="math display">\[
+(\Psi_W \circ f)(v) = \Psi_W(f(v)).
+\]</span> Para <span class="math inline">\(\psi \in W^*\)</span>, temos: <span class="math display">\[
+\Psi_W(f(v))(\psi) = \psi(f(v)).
+\]</span></p></li>
+<li><p>Calculando <span class="math inline">\((f^{**} \circ \Psi_V)(v)\)</span>: <span class="math display">\[
+(f^{**} \circ \Psi_V)(v) = f^{**}(\Psi_V(v)).
+\]</span> Para <span class="math inline">\(\psi \in W^*\)</span>, temos: <span class="math display">\[
+f^{**}(\Psi_V(v))(\psi) = \Psi_V(v)(f^*(\psi)).
+\]</span> Por definição de <span class="math inline">\(\Psi_V\)</span>, temos: <span class="math display">\[
+\Psi_V(v)(f^*(\psi)) = f^*(\psi)(v).
+\]</span> Por definição de <span class="math inline">\(f^*\)</span>, temos: <span class="math display">\[
+f^*(\psi)(v) = \psi(f(v)).
+\]</span></p></li>
+<li><p>Concluímos que: <span class="math display">\[
+(\Psi_W \circ f)(v)(\psi) = (f^{**} \circ \Psi_V)(v)(\psi),
+\]</span> para todo <span class="math inline">\(\psi \in W^*\)</span>. Portanto, <span class="math inline">\((\Psi_W \circ f)(v) = (f^{**} \circ \Psi_V)(v)\)</span>.</p></li>
+</ul></li>
+<li><strong>Conclusão</strong>:
+<ul>
+<li>O diagrama comuta, ou seja, <span class="math inline">\(\Psi_W \circ f = f^{**} \circ \Psi_V\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.35</strong></span> Demonstre <a href="bases.html#thm-basis-thm" class="quarto-xref">Teorema&nbsp;<span>56.1</span></a>, <a href="quociente.html#lem-quot-equiv" class="quarto-xref">Lema&nbsp;<span>58.1</span></a>, e resolva <a href="subespacos.html#exr-subs-inters" class="quarto-xref">Exercício&nbsp;<span>57.1</span></a>, <a href="trans_lin.html#exr-tr1" class="quarto-xref">Exercício&nbsp;<span>59.1</span></a>, <a href="trans_lin.html#exr-tr2" class="quarto-xref">Exercício&nbsp;<span>59.2</span></a>, <a href="trans_lin.html#exr-tr3" class="quarto-xref">Exercício&nbsp;<span>59.3</span></a>, <a href="matrizes.html#exr-mat1" class="quarto-xref">Exercício&nbsp;<span>60.1</span></a>, <a href="matrizes.html#exr-mat2" class="quarto-xref">Exercício&nbsp;<span>60.2</span></a>, <a href="dual.html#exr-dual-mat" class="quarto-xref">Exercício&nbsp;<span>61.1</span></a>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.36</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\(u\otimes v\mapsto v\otimes u\)</span> (<span class="math inline">\(u\in U\)</span> e <span class="math inline">\(v\in V\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\(U\otimes V\to V\otimes U\)</span>.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Definição do mapa bilinear</strong>:
+<ul>
+<li>Seja <span class="math inline">\(u \in U\)</span> e <span class="math inline">\(v \in V\)</span>. Definimos a aplicação bilinear <span class="math inline">\(f: U \times V \to V \otimes U\)</span> por: <span class="math display">\[
+f(u, v) = v \otimes u.
+\]</span></li>
+<li>Verificamos que <span class="math inline">\(f\)</span> é bilinear:
+<ul>
+<li>Para <span class="math inline">\(u_1, u_2 \in U\)</span>, <span class="math inline">\(v_1, v_2 \in V\)</span>, e <span class="math inline">\(\alpha, \beta \in \F\)</span>, temos: <span class="math display">\[
+f(\alpha u_1 + \beta u_2, v) = v \otimes (\alpha u_1 + \beta u_2) = \alpha (v \otimes u_1) + \beta (v \otimes u_2),
+\]</span> o que mostra a linearidade em <span class="math inline">\(U\)</span>.</li>
+<li>Similarmente, para combinações lineares em <span class="math inline">\(V\)</span>, temos: <span class="math display">\[
+f(u, \alpha v_1 + \beta v_2) = (\alpha v_1 + \beta v_2) \otimes u = \alpha (v_1 \otimes u) + \beta (v_2 \otimes u),
+\]</span> o que mostra a linearidade em <span class="math inline">\(V\)</span>.</li>
+</ul></li>
+</ul></li>
+<li><strong>Extensão pelo produto tensorial</strong>:
+<ul>
+<li>Pela propriedade universal do produto tensorial, existe uma única aplicação linear <span class="math inline">\(T: U \otimes V \to V \otimes U\)</span> tal que: <span class="math display">\[
+T(u \otimes v) = f(u, v) = v \otimes u.
+\]</span></li>
+<li>Assim, <span class="math inline">\(T\)</span> é a extensão linear de <span class="math inline">\(f\)</span> para todo <span class="math inline">\(U \otimes V\)</span>.</li>
+</ul></li>
+<li><strong>Verificação de isomorfismo</strong>:
+<ul>
+<li>Para verificar que <span class="math inline">\(T\)</span> é um isomorfismo, definimos <span class="math inline">\(T^{-1}: V \otimes U \to U \otimes V\)</span> por: <span class="math display">\[
+T^{-1}(v \otimes u) = u \otimes v.
+\]</span></li>
+<li>É fácil verificar que <span class="math inline">\(T \circ T^{-1}\)</span> e <span class="math inline">\(T^{-1} \circ T\)</span> são a identidade, mostrando que <span class="math inline">\(T\)</span> é um isomorfismo.</li>
+</ul></li>
+</ol>
+<p>Portanto, <span class="math inline">\(T\)</span> é um isomorfismo bem definido entre <span class="math inline">\(U \otimes V\)</span> e <span class="math inline">\(V \otimes U\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.37</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\((u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)\)</span> (<span class="math inline">\(u\in U\)</span>, <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(w\in W\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\((U\otimes V)\otimes W\to V\otimes (U\otimes W)\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consulte <a href="https://math.stackexchange.com/q/437706">a discussão no StackExchange</a>.</p>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.38</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>.</p>
@@ -2336,10 +2401,95 @@ Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f
 <li>Mostre que quando <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> têm dimensão finita, então <span class="math inline">\(\psi\)</span> é um isomorfismo.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Definição da aplicação linear <span class="math inline">\(\psi\)</span></strong>:</p>
+<ul>
+<li>Para cada <span class="math inline">\(\varphi \in U^*\)</span> e <span class="math inline">\(v \in V\)</span>, definimos a aplicação bilinear <span class="math inline">\(\psi: U^* \otimes V \to \mbox{Hom}(U, V)\)</span> por: <span class="math display">\[
+\psi(\varphi, v)(u) = \varphi(u)v, \quad \forall u \in U.
+\]</span></li>
+<li>Verificamos que <span class="math inline">\(\psi\)</span> é bem definida e bilinear:
+<ul>
+<li>Para <span class="math inline">\(\varphi_1, \varphi_2 \in U^*\)</span>, <span class="math inline">\(v_1, v_2 \in V\)</span>, e <span class="math inline">\(\alpha, \beta \in \F\)</span>, temos: <span class="math display">\[
+\psi((\alpha \varphi_1 + \beta \varphi_2) \otimes v)(u) = (\alpha \varphi_1(u) + \beta \varphi_2(u))v = \alpha \varphi_1(u)v + \beta \varphi_2(u)v,
+\]</span> o que mostra a linearidade em <span class="math inline">\(U^*\)</span>.</li>
+<li>Similarmente, para combinações lineares em <span class="math inline">\(V\)</span>, temos: <span class="math display">\[
+\psi(\varphi \otimes (\alpha v_1 + \beta v_2))(u) = \varphi(u)(\alpha v_1 + \beta v_2) = \alpha \varphi(u)v_1 + \beta \varphi(u)v_2,
+\]</span> o que mostra a linearidade em <span class="math inline">\(V\)</span>.</li>
+</ul></li>
+<li>Usando a propriedade universal do produto tensorial, existe uma aplicação linear <span class="math inline">\(\tilde \psi:U^*\otimes V\to \mbox{Hom}(U,V)\)</span> que estende <span class="math inline">\(\psi\)</span>, ou seja, <span class="math inline">\(\tilde\psi(\varphi\otimes v)=\psi(\varphi,v)\)</span> vale para todo <span class="math inline">\(\varphi\in U^*\)</span> e <span class="math inline">\(v\in V\)</span>.</li>
+</ul></li>
+<li><p><strong><span class="math inline">\(\psi\)</span> é injetiva</strong>: Para mostrar que <span class="math inline">\(\psi\)</span> é injetiva, construiremos um inverso à direita para <span class="math inline">\(\psi\)</span>. Definimos uma aplicação <span class="math inline">\(\phi: \mbox{Hom}(U, V) \to U^* \otimes V\)</span> da seguinte forma:</p>
+<ul>
+<li>Para cada <span class="math inline">\(T \in \mbox{Hom}(U, V)\)</span>, definimos <span class="math inline">\(\phi(T) = \sum_{i=1}^n \varphi_i \otimes T(u_i)\)</span>, onde <span class="math inline">\(\{u_1, \ldots, u_n\}\)</span> é uma base de <span class="math inline">\(U\)</span> e <span class="math inline">\(\{\varphi_1, \ldots, \varphi_n\}\)</span> é a base dual correspondente em <span class="math inline">\(U^*\)</span>.</li>
+</ul>
+<p>Agora, calculamos <span class="math inline">\(\psi(\phi(T))\)</span>. Seja <span class="math inline">\(u\in U\)</span> e escreva <span class="math inline">\(u=\alpha_1u_1+\cdots+\alpha_nu_n\)</span>. Note que <span class="math inline">\(\alpha_i=\varphi_i(u)\)</span> para todo <span class="math inline">\(i\)</span>. Ora, <span class="math display">\[
+\psi(\phi(T))(u) = \psi\left(\sum_{i=1}^n \varphi_i \otimes T(u_i)\right)(u) = \sum_{i=1}^n \varphi_i(u) T(u_i)=\sum_{i=1}^n \alpha_i T(u_i)=T(u).
+\]</span> Portanto, <span class="math inline">\(\psi(\phi(T)) = T\)</span>, o que mostra que <span class="math inline">\(\phi\)</span> é um inverso à direita de <span class="math inline">\(\psi\)</span>. Assim, <span class="math inline">\(\psi\)</span> é injetiva.</p></li>
+<li><p><strong>Isomorfismo no caso de dimensão finita</strong>: Quando <span class="math inline">\(\dim U\)</span> e <span class="math inline">\(\dim V\)</span> são finitas, <span class="math inline">\(\dim (U^*\otimes V)=\dim\mbox{Hom}(U,V)=\dim U\cdot \dim V\)</span> e uma aplicação linear injetiva entre estes dois espaços precisa ser um isomorphism. Logo <span class="math inline">\(U^*\otimes V\cong \mbox{Hom}(U,V)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.39</strong></span> [Adjunção Hom-Tensor] Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, vector spaces sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
 \mbox{Hom}(U\otimes V,W)\cong\mbox{Hom}(U,\mbox{Hom}(V,W)).
 \]</span> [Dica: Defina duas aplicações <span class="math inline">\(\alpha: \mbox{Hom}(U\otimes V,W)\to\mbox{Hom}(U,\mbox{Hom}(V,W))\)</span> e <span class="math inline">\(\beta:\mbox{Hom}(U,\mbox{Hom}(V,W))\to \mbox{Hom}(U\otimes V,W)\)</span> da maneira mais natural possível e mostre que elas são inversas. Confira também a discussão na página math.stackexchange.com/q/1849098.]</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Definição de <span class="math inline">\(\alpha\)</span></strong>:
+<ul>
+<li>Seja <span class="math inline">\(\alpha: \mbox{Hom}(U \otimes V, W) \to \mbox{Hom}(U, \mbox{Hom}(V, W))\)</span> definida por: <span class="math display">\[
+\alpha(T)(u)(v) = T(u \otimes v), \quad \forall T \in \mbox{Hom}(U \otimes V, W), \, u \in U, \, v \in V.
+\]</span> A bilinearidade do produto tensorial implica que <span class="math inline">\(\alpha(T)\in \mbox{Hom}(U, \mbox{Hom}(V, W))\)</span> e é fácil verificar que <span class="math inline">\(\alpha\)</span> é linear.</li>
+</ul></li>
+<li><strong>Definição de <span class="math inline">\(\beta\)</span></strong>:
+<ul>
+<li>Seja <span class="math inline">\(S\in \mbox{Hom}(U, \mbox{Hom}(V, W))\)</span>. Defina a aplicação bilinear <span class="math inline">\(\beta_S:U\times V\to W\)</span> por <span class="math inline">\(\beta_S(u,v)=S(u)(v)\)</span>. É fácil verificar que <span class="math inline">\(\beta_S\)</span> é bilinear. Pela propriedade universal do produto tensorial, existe único <span class="math inline">\(\tilde\beta_S:U\otimes V\to W\)</span> que estende <span class="math inline">\(\beta_S\)</span>; ou seja <span class="math inline">\(\tilde\beta_S(u\otimes v)=\beta_S(u,v)=S(u)(v)\)</span> para todo <span class="math inline">\(u\in U\)</span> e <span class="math inline">\(v\in V\)</span>. Seja <span class="math inline">\(\beta: \mbox{Hom}(U, \mbox{Hom}(V, W)) \to \mbox{Hom}(U \otimes V, W)\)</span> definida por: <span class="math display">\[
+S\mapsto \tilde \beta_S.
+\]</span> Note que <span class="math inline">\(\beta(S)(u\otimes v)=S(u)(v)\)</span>.</li>
+</ul></li>
+<li><strong>Mostrando que <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> são inversas</strong>:
+<ul>
+<li><p>Para <span class="math inline">\(T \in \mbox{Hom}(U \otimes V, W)\)</span>, temos: <span class="math display">\[
+(\beta \circ \alpha)(T)(u \otimes v) = \alpha(T)(u)(v) = T(u \otimes v).
+\]</span> Assim, <span class="math inline">\(\beta \circ \alpha = \mbox{id}_{\textrm{Hom}(U \otimes V, W)}\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(S \in \mbox{Hom}(U, \mbox{Hom}(V, W))\)</span>, temos: <span class="math display">\[
+(\alpha \circ \beta)(S)(u)(v) = \beta(S)(u \otimes v) = S(u)(v).
+\]</span> Assim, <span class="math inline">\(\alpha \circ \beta = \mbox{id}_{\textrm{Hom}(U, \textrm{Hom}(V, W))}\)</span>.</p></li>
+</ul></li>
+<li><strong>Conclusão</strong>:
+<ul>
+<li>Como <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> são inversas, temos: <span class="math display">\[
+\mbox{Hom}(U \otimes V, W) \cong \mbox{Hom}(U, \mbox{Hom}(V, W)).
+\]</span></li>
+</ul></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.40</strong></span> [Produto tensorial como functor] Seja <span class="math inline">\(W\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e defina o functor <span class="math inline">\(T_W\)</span> na categoria de <span class="math inline">\(\F\)</span>-espaços vetoriais da seguinte forma: <span class="math display">\[
@@ -2351,6 +2501,30 @@ T_W(f)=f\otimes \mbox{id}_W:U\otimes W\to V\otimes W
 <li>O functor <span class="math inline">\(T_W\)</span> é covariante ou contravariante?</li>
 <li>Mostre que se <span class="math inline">\(f\)</span> é injetiva/sobrejetiva, então <span class="math inline">\(T_W(f)\)</span> é injetiva/sobrejetiva, respetivamente.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>O functor <span class="math inline">\(T_W\)</span> é covariante. Isso ocorre porque, para cada transformação linear <span class="math inline">\(f: U \to V\)</span>, o mapa <span class="math inline">\(T_W(f) = f \otimes \mbox{id}_W\)</span> preserva a direção da composição. Em outras palavras, se <span class="math inline">\(g: V \to X\)</span> é outra transformação linear, então: <span class="math display">\[
+T_W(g \circ f) = (g \circ f) \otimes \mbox{id}_W = (g \otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) = T_W(g) \circ T_W(f).
+\]</span> Isso mostra que <span class="math inline">\(T_W\)</span> é um functor covariante.</p></li>
+<li><p>Injetividade de <span class="math inline">\(T_W(f)\)</span>. Se <span class="math inline">\(f\)</span> é injetiva, ela possui uma inversa à esquerda <span class="math inline">\(g: V \to U\)</span> tal que <span class="math inline">\(g(f(u)) = u\)</span> para todo <span class="math inline">\(u \in U\)</span>. Defina <span class="math inline">\(T_W(g): V \otimes  W \to U \otimes W\)</span> como <span class="math inline">\(g \otimes \mbox{id}_W\)</span>. Então, <span class="math display">\[
+T_W(g) \circ T_W(f) = (g\otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) =
+(g \circ f) \otimes \mbox{id}_W = \mbox{id}_U \otimes  \mbox{id}_W = \mbox{id}_{W \otimes W}.
+\]</span> Assim, <span class="math inline">\(T_W(f)\)</span> possui uma inversa à esquerda e é injetiva. Se <span class="math inline">\(f\)</span> é sobrejetiva, então <span class="math inline">\(T_W(f)\)</span> é também sobrejetiva e isso pode ser verificado de maneira similar, usando inversa à direita.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 64.41</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> espaços vetoriais com bases <span class="math inline">\(B_U\)</span>, <span class="math inline">\(B_V\)</span>, <span class="math inline">\(B_X\)</span> e <span class="math inline">\(B_Y\)</span>, respetivamente. Assuma que <span class="math inline">\(f:U\to X\)</span> e <span class="math inline">\(g:V\to Y\)</span> são lineares. Escreva a matriz <span class="math display">\[[f\otimes g]^{B_U\otimes B_V}_{B_X\otimes B_Y}
