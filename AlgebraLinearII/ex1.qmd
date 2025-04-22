@@ -967,6 +967,43 @@ Portanto, $T$ é um isomorfismo bem definido entre $U \otimes V$ e $V \otimes U$
 :::
 
 :::{#exr-}
+Seja $V$ um espaço vetorial de dimensão dois sobre um corpo $\F$ com base $b_1,b_2$. Mostre que 
+não existem $u,v\in V$ tais que 
+$$
+b_1\otimes b_1+b_2\otimes b_2=u\otimes v.
+$$
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para mostrar que não existem $u, v \in V$ tais que $b_1 \otimes b_1 + b_2 \otimes b_2 = u \otimes v$, usaremos o fato de que o produto tensorial é bilinear e que a decomposição de um tensor em um único produto tensorial é única.
+
+1. **Forma geral de $u \otimes v$**:
+   - Seja $u = \alpha_1 b_1 + \alpha_2 b_2$ e $v = \beta_1 b_1 + \beta_2 b_2$, onde $\alpha_1, \alpha_2, \beta_1, \beta_2 \in \F$.
+   - Então:
+     $$
+     u \otimes v = (\alpha_1 b_1 + \alpha_2 b_2) \otimes (\beta_1 b_1 + \beta_2 b_2).
+     $$
+   - Expandindo usando a bilinearidade do produto tensorial:
+     $$
+     u \otimes v = \alpha_1 \beta_1 (b_1 \otimes b_1) + \alpha_1 \beta_2 (b_1 \otimes b_2) + \alpha_2 \beta_1 (b_2 \otimes b_1) + \alpha_2 \beta_2 (b_2 \otimes b_2).
+     $$
+
+2. **Comparação com $b_1 \otimes b_1 + b_2 \otimes b_2$**:
+   - O tensor $b_1 \otimes b_1 + b_2 \otimes b_2$ não possui termos mistos como $b_1 \otimes b_2$ ou $b_2 \otimes b_1$.
+   - Para que $u \otimes v = b_1 \otimes b_1 + b_2 \otimes b_2$, os coeficientes de $b_1 \otimes b_2$ e $b_2 \otimes b_1$ devem ser zero. Isso implica:
+     $$
+     \alpha_1 \beta_2 = 0 \quad \text{e} \quad \alpha_2 \beta_1 = 0.
+     $$
+
+3. **Impossibilidade de satisfazer as condições**:
+   - Se $\alpha_1 \beta_2 = 0$ e $\alpha_2 \beta_1 = 0$, então ou $\alpha_1 = 0$ ou $\beta_2 = 0$, e ou $\alpha_2 = 0$ ou $\beta_1 = 0$. É fácil verificar que nenhuma destas opções resulta no elemento 
+   $b_1\otimes b_1+b_2\otimes b_2$.
+
+4. **Conclusão**:
+   - Não existem $u, v \in V$ tais que $b_1 \otimes b_1 + b_2 \otimes b_2 = u \otimes v$.
+:::
+
+:::{#exr-}
 Sejam $U$, $V$ e $W$ espaços vetoriais sobre $\F$. Mostre que a aplicação 
 $(u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
 pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to V\otimes (U\otimes W)$.
@@ -1088,6 +1125,7 @@ onde $f\otimes \mbox{id}_W$ está definida como no @thm-tensor-linear-maps.
 2. Mostre que se $f$ é injetiva/sobrejetiva, então $T_W(f)$ é injetiva/sobrejetiva, respetivamente. 
 :::
 :::{.sol .callout-tip collapse="true"}
+### Solução:
 1. O functor $T_W$ é covariante. Isso ocorre porque, para cada transformação linear $f: U \to V$, o mapa $T_W(f) = f \otimes \mbox{id}_W$ preserva a direção da composição. Em outras palavras, se $g: V \to X$ é outra transformação linear, então:
    $$
    T_W(g \circ f) = (g \circ f) \otimes \mbox{id}_W = (g \otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) = T_W(g) \circ T_W(f).
@@ -1115,7 +1153,7 @@ das matrizes
 $$
 [f]^{B_U}_{B_X}\quad \mbox{e}\quad  [g]^{B_V}_{B_Y}.
 $$ 
-[Dica: Confira o produto de Kronecker de matrizes: https://en.wikipedia.org/wiki/Kronecker_product] 
+(Dica: Confira o [produto de Kronecker de matrizes](https://en.wikipedia.org/wiki/Kronecker_product).) 
 :::
 
 :::{#exr-perm-par}
@@ -1129,13 +1167,31 @@ $$
 $$
 Mostre que $\sigma(\Phi_n)=(-1)^\sigma\Phi_n$. 
 :::
+<!--:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. Seja $\sigma \in S_n$ uma permutação do conjunto $\{1, \ldots, n\}$. Note que $\sigma(\Phi_n)$ é obtido aplicando $\sigma$ aos índices de cada fator em $\Phi_n$. Assim:
+   $$
+   \sigma(\Phi_n) = \prod_{i<j} (x_{\sigma(i)} - x_{\sigma(j)}).
+   $$
+   Agora, observe que reordenar os índices $i$ e $j$ de acordo com $\sigma$ introduz um fator $(-1)^\sigma$, pois cada troca de dois índices inverte o sinal do produto. Portanto:
+   $$
+   \sigma(\Phi_n) = (-1)^\sigma \Phi_n.
+   $$
+:::
+-->
+
 
 :::{#exr-}
 Seja $\sigma$ uma permutação do conjunto $X=\{1,\ldots,n\}$. Demonstre que $\sigma$ é uma permutação par se e somente se 
 $$
 |\{(i,j)\in X\times X\mid i<j\mbox{ mas }\sigma(i)>\sigma(j)\}|
 $$
-é um número par. [Dica: Use @exr-perm-par.]
+é um número par. Note que um par $(i,j)$ com $i<j$ mas $\sigma(i)>\sigma(j)$ chama-se 
+*inversão* de $\sigma$. [Dica: Use @exr-perm-par.]
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Para mostrar que $\sigma$ é uma permutação par se e somente se o número de inversões é par, note que cada inversão $(i, j)$ com $i < j$ e $\sigma(i) > \sigma(j)$ troca o sinal de $\sigma$. O número total de inversões determina o sinal de $\sigma$, sendo par para permutações pares e ímpar para permutações ímpares. Assim, a paridade do número de inversões coincide com a paridade de $\sigma$.
 :::
 
 :::{#exr-alt-pow}
@@ -1150,6 +1206,37 @@ $f = \tilde f\circ \lambda$.
 $J$ é o espaço gerado por elementos na forma $v_1\otimes\cdots\otimes v_k$  onde $v_i=v_j$ para algum $i\neq j$ e mostre que 
 este espaço satisfaz a propriedade universal.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. **Diagrama da propriedade universal**:
+   O diagrama que representa a propriedade universal da $k$-ésima potência exterior $\Lambda^kV$ é o seguinte:
+
+   ```
+   V^k  ----->  Z
+    |            ^
+    |            |
+    v            |
+   Λ^kV --------> 
+   ```
+
+   Aqui, a seta vertical $V^k \to \Lambda^kV$ é a aplicação $k$-linear $\lambda$, e a seta diagonal $\Lambda^kV \to Z$ é a aplicação linear $\tilde{f}$ que torna o diagrama comutativo, ou seja, $f = \tilde{f} \circ \lambda$.
+
+2. **Unicidade de $\Lambda^kV$**:
+   Seja $\Lambda^kV$ e $\Lambda'^kV$ dois espaços vetoriais que satisfazem a propriedade universal com as aplicações $k$-lineares $\lambda: V^k \to \Lambda^kV$ e $\lambda': V^k \to \Lambda'^kV$. Pela propriedade universal de $\Lambda^kV$, existe uma aplicação linear única $\phi: \Lambda^kV \to \Lambda'^kV$ tal que $\lambda' = \phi \circ \lambda$. Analogamente, pela propriedade universal de $\Lambda'^kV$, existe uma aplicação linear única $\psi: \Lambda'^kV \to \Lambda^kV$ tal que $\lambda = \psi \circ \lambda'$. 
+
+   Compondo as duas aplicações, temos $\psi \circ \phi: \Lambda^kV \to \Lambda^kV$ tal que $\psi \circ \phi \circ \lambda = \lambda$. Pela unicidade da aplicação linear que satisfaz essa propriedade, segue que $\psi \circ \phi = \text{id}_{\Lambda^kV}$. Analogamente, $\phi \circ \psi = \text{id}_{\Lambda'^kV}$. Portanto, $\phi$ é um isomorfismo, mostrando que $\Lambda^kV$ é único a menos de isomorfismo.
+
+3. **Existência de $\Lambda^kV$**:
+   Considere o espaço $W = V \otimes \cdots \otimes V$ (produto tensorial $k$ vezes) e seja $J$ o subespaço de $W$ gerado pelos elementos da forma $v_1 \otimes \cdots \otimes v_k$ onde $v_i = v_j$ para algum $i \neq j$. Defina $\Lambda^kV = W / J$ e seja $\lambda: V^k \to \Lambda^kV$ a composição da aplicação canônica $k$-linear $V^k \to W$ com a projeção $W \to W / J$. 
+
+   Para verificar que $\Lambda^kV$ satisfaz a propriedade universal, seja $f: V^k \to Z$ uma aplicação $k$-linear alternada. Pela propriedade universal do produto tensorial, existe único $\bar f:W\to Z$ que estende $f$. Como $f$ é $k$-linear alternada, $\bar f$ anula nos elementos de $J$. Assim, $\bar f$ induz uma aplicação linear $\tilde{f}: W/J\to Z$ tal que $f = \tilde{f} \circ \lambda$. A unicidade de $\tilde{f}$ segue do fato que os elementos da forma $v_1\otimes\cdots\otimes v_k+J$ 
+   geram $W/J$ e $\tilde f$ está determinado nestes tipos de elementos por $f$; de fato, 
+   $$
+   \tilde f(v_1\otimes\cdots\otimes v_k+J)=f(v_1,\ldots,v_k)
+   $$
+:::
+
+
 
 :::{#exr-alt-pow2}
 Seja $V$ um espaço de dimensão finita e seja $B=\{b_1,\ldots,b_n\}$ uma base de $V$. 
@@ -1163,10 +1250,68 @@ $$
 2. Usando @lem-basis-alter, mostre que $\Lambda^kB$ é uma base de $\Lambda^kV$. 
 3. Determina a dimensão de $\Lambda^k V$ em termos de $n$ e $k$. 
 :::
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **$\Lambda^kB$ é um conjunto gerador de $\Lambda^kV$**:
+   - Seja $v_1, \ldots, v_k \in V$. Como $B = \{b_1, \ldots, b_n\}$ é uma base de $V$, podemos escrever cada $v_i$ como uma combinação linear de elementos de $B$:
+     $$
+     v_i = \sum_{j=1}^n \alpha_{ij} b_j, \quad \text{para } i = 1, \ldots, k.
+     $$
+   - O produto exterior $v_1 \wedge \cdots \wedge v_k$ é então dado por:
+     $$
+     v_1 \wedge \cdots \wedge v_k = \left(\sum_{j_1=1}^n \alpha_{1j_1} b_{j_1}\right) \wedge \cdots \wedge \left(\sum_{j_k=1}^n \alpha_{kj_k} b_{j_k}\right).
+     $$
+   - Expandindo o produto exterior usando bilinearidade, obtemos uma soma de termos da forma:
+     $$
+     \alpha_{1j_1} \cdots \alpha_{kj_k} (b_{j_1} \wedge \cdots \wedge b_{j_k}),
+     $$
+     onde $1 \leq j_1, \ldots, j_k \leq n$. Como $b_{j_1} \wedge \cdots \wedge b_{j_k} \in \Lambda^kB$, isso mostra que $\Lambda^kB$ gera $\Lambda^kV$.
+
+2. **$\Lambda^kB$ é uma base de $\Lambda^kV$**:
+   - Pelo @lem-basis-alter, o espaço $\Lambda^kV$ é isomorfo ao espaço das formas $k$-lineares alternadas $A^k(V)$, e a dimensão de $A^k(V)$ é $\binom{n}{k}$.
+   - O conjunto $\Lambda^kB$ contém exatamente $\binom{n}{k}$ elementos, pois corresponde às combinações de $k$ elementos distintos de $B$.
+   - Como $\Lambda^kB$ é um conjunto gerador de $\Lambda^kV$ e contém exatamente $\dim(\Lambda^kV)$ elementos, segue que $\Lambda^kB$ é linearmente independente e, portanto, uma base de $\Lambda^kV$.
+
+3. **Dimensão de $\Lambda^kV$**:
+   - Como $\Lambda^kB$ é uma base de $\Lambda^kV$, temos:
+     $$
+     \dim(\Lambda^kV) = |\Lambda^kB| = \binom{n}{k}.
+     $$
+   - Portanto, a dimensão de $\Lambda^kV$ é $\binom{n}{k}$, que é o número de combinações de $k$ elementos distintos escolhidos de um conjunto de $n$ elementos.
+:::
+-->
+
 
 :::{#exr-}
 Demonstre @lem-pullback.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+Seja $T \in A^k(V)$. Precisamos mostrar que $f^*T \in A^k(U)$, ou seja, que $f^*T$ é $k$-linear alternada.
+
+1. **$k$-linearidade**:
+   - Seja $u_1, \ldots, u_k \in U$ e suponha que $u_i$ é substituído por $\alpha u_i + \beta u_i'$ para algum $i \in \{1, \ldots, k\}$, com $\alpha, \beta \in \F$ e $u_i' \in U$. Então:
+     $$
+     f^*T(u_1, \ldots, \alpha u_i + \beta u_i', \ldots, u_k) = T(f(u_1), \ldots, f(\alpha u_i + \beta u_i'), \ldots, f(u_k)).
+     $$
+     Usando a $k$-linearidade de $T$ e a linearidade de $f$, temos:
+     \begin{align*}
+     &T(f(u_1), \ldots, \alpha f(u_i) + \beta f(u_i'), \ldots, f(u_k)) \\&= \alpha T(f(u_1), \ldots, f(u_i), \ldots, f(u_k)) + \beta T(f(u_1), \ldots, f(u_i'), \ldots, f(u_k)).
+     \end{align*}
+     Assim, $f^*T$ é $k$-linear.
+
+2. **Alternância**:
+   - Seja $u_1, \ldots, u_k \in U$ com $u_i = u_j$ para algum $i \neq j$. Então:
+     $$
+     f^*T(u_1, \ldots, u_k) = T(f(u_1), \ldots, f(u_k)).
+     $$
+     Como $u_i = u_j$, temos $f(u_i) = f(u_j)$. Como $T$ é alternada, segue que $T(f(u_1), \ldots, f(u_k)) = 0$. Portanto, $f^*T(u_1, \ldots, u_k) = 0$.
+
+Concluímos que $f^*T \in A^k(U)$, e assim a restrição de $f^*$ resulta em uma aplicação linear $f^*_A: A^k(V) \to A^k(U)$.
+:::
+
 
 :::{#exr-determinant-f}
 Usando a @def-determinant-f, demonstre as propriedades comuns do determinante. 
@@ -1174,4 +1319,24 @@ Usando a @def-determinant-f, demonstre as propriedades comuns do determinante.
 1. Se $f,g: V\to V$, então $\det (f\circ g)=\det f\cdot \det g$.
 2. $\det f$ coincide com o determinante da matriz de $f$ em uma base de $V$. 
 3. $\det f=0$ se e somente se $f$ não é invertível.
+:::
+
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Propriedade multiplicativa do determinante**:
+   - Seja $f, g: V \to V$. Pelo @def-determinant-f, o determinante de $f$ é definido como o escalar $\delta \in \F$ tal que $f^*_A = \delta \cdot \text{id}_{A^n(V)}$, onde $A^n(V)$ é o espaço das formas $n$-lineares alternadas em $V$. Similarmente, para $g$, temos $g^*_A = \gamma \cdot \text{id}_{A^n(V)}$.
+   - Considere a composição $f \circ g$. O pullback $(f \circ g)^*_A$ é dado por:
+     $$
+     (f \circ g)^*_A = g^*_A \circ f^*_A.
+     $$
+     Substituindo as expressões para $f^*_A$ e $g^*_A$, temos:
+     \begin{align*}
+     (f \circ g)^*_A &= (\gamma \cdot \text{id}_{A^n(V)}) \circ (\delta \cdot \text{id}_{A^n(V)}) 
+     \\&= (\gamma \cdot \delta) \cdot \text{id}_{A^n(V)}.
+     \end{align*}
+     Assim, $\det(f \circ g) = \det(f) \cdot \det(g)$.
+
+2. A ser inserida.
 :::
