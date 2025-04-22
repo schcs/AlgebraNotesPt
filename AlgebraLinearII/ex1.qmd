@@ -815,7 +815,6 @@ $$
 $$
 Demonstre que $\F[x]^*\cong \F[[x]]$. 
 :::
-<!--
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explícito entre os dois espaços.
@@ -829,31 +828,20 @@ Para demonstrar que $\F[x]^* \cong \F[[x]]$, construiremos um isomorfismo explí
 3. **Construção do isomorfismo**:
    - Para cada série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k \in \F[[x]]$, definimos um funcional linear $\varphi_f \in \F[x]^*$ como:
      $$
-     \varphi_f\left(\sum_{j=0}^n \beta_j x^j\right) = \sum_{j=0}^n \beta_j \alpha_j.
+     \varphi_f(x^i) = \alpha_i, \quad \forall i \geq 0.
      $$
-     Em outras palavras, $\varphi_f$ avalia o polinômio $\sum_{j=0}^n \beta_j x^j$ nos coeficientes correspondentes da série formal $f(x)$.
+   Em outras palavras, $\varphi_f$ é o funcional linear que mapeia cada monômio $x^i$ ao coeficiente $\alpha_i$ da série formal $f(x)$. Como os $x^i$ formam uma base para $\F[x]$, este mapeamento pode ser estendido de forma única para um elemento de $\F[x]^*$. 
 
-4. **Verificação de linearidade**:
-   - Seja $p(x), q(x) \in \F[x]$ e $\lambda \in \F$. Então:
-     $$
-     \varphi_f(\lambda p(x) + q(x)) = \sum_{j=0}^n (\lambda p_j + q_j) \alpha_j = \lambda \varphi_f(p(x)) + \varphi_f(q(x)).
-     $$
-     Portanto, $\varphi_f$ é linear.
+4. **Injetividade**:
+   - Para mostrar que o mapeamento é injetivo, considere o núcleo do mapeamento. Seja $\varphi_f \in \F[x]^*$ tal que $\varphi_f(x^i) = 0$ para todo $i \geq 0$. Isso implica que todos os coeficientes $\alpha_i$ da série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$ são zero. Portanto, $f(x) = 0$, o que mostra que o núcleo contém apenas o elemento nulo. Assim, o mapeamento é injetivo.
 
-5. **Injetividade**:
-   - Se $\varphi_f = \varphi_g$, então para todo $p(x) \in \F[x]$, temos $\varphi_f(p(x)) = \varphi_g(p(x))$. Isso implica que $\alpha_k = \beta_k$ para todo $k \geq 0$, ou seja, $f(x) = g(x)$. Logo, o mapeamento é injetivo.
+5. **Sobrejetividade**:
+   - Seja $\varphi \in \F[x]^*$. Definimos uma série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k = \varphi(x^k)$. 
+    É claro pela definição de de $\varphi_f$ que $\varphi_f=\varphi$. 
 
-6. **Sobrejetividade**:
-   - Seja $\varphi \in \F[x]^*$. Definimos uma série formal $f(x) = \sum_{k \geq 0} \alpha_k x^k$, onde $\alpha_k = \varphi(x^k)$. Então, para qualquer $p(x) = \sum_{j=0}^n \beta_j x^j \in \F[x]$, temos:
-     $$
-     \varphi(p(x)) = \sum_{j=0}^n \beta_j \varphi(x^j) = \sum_{j=0}^n \beta_j \alpha_j = \varphi_f(p(x)).
-     $$
-     Portanto, $\varphi = \varphi_f$, e o mapeamento é sobrejetivo.
-
-7. **Conclusão**:
+6. **Conclusão**:
    - O mapeamento $f(x) \mapsto \varphi_f$ é um isomorfismo linear entre $\F[[x]]$ e $\F[x]^*$. Assim, $\F[x]^* \cong \F[[x]]$.
 :::
--->
 
 
 :::{#exr-}
@@ -869,17 +857,16 @@ conversa no Stackexhange.
 Este exercícios mostra que a transformação $\Psi_V$ é uma [transformação natural](https://pt.wikipedia.org/wiki/Transforma%C3%A7%C3%A3o_natural_(teoria_das_categorias)) entre o functor 
 da identidade e o functor bidual $(-)^{**}$ na categoria dos $\F$-espaços vetoriais. 
 :::
-<!--
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f^{**} \circ \Psi_V$, onde $f^{**}: V^{**} \to W^{**}$ é o mapa dual-dual de $f$.
 
 1. **Definição de $\Psi_V$ e $\Psi_W$**:
-   - Para cada $v \in V$, $\Psi_V(v)$ é o funcional em $V^*$ definido por:
+   - Para cada $v \in V$, $\Psi_V(v)$ é o funcional em $V^{**}$ definido por:
      $$
      \Psi_V(v)(\varphi) = \varphi(v), \quad \forall \varphi \in V^*.
      $$
-   - Analogamente, para cada $w \in W$, $\Psi_W(w)$ é o funcional em $W^*$ definido por:
+   - Analogamente, para cada $w \in W$, $\Psi_W(w)$ é o funcional em $W^{**}$ definido por:
      $$
      \Psi_W(w)(\psi) = \psi(w), \quad \forall \psi \in W^*.
      $$
@@ -931,7 +918,6 @@ Para mostrar que o diagrama comuta, precisamos verificar que $\Psi_W \circ f = f
 4. **Conclusão**:
    - O diagrama comuta, ou seja, $\Psi_W \circ f = f^{**} \circ \Psi_V$.
 :::
--->
 
 :::{#exr-}
 Demonstre @thm-basis-thm, @lem-quot-equiv, e resolva @exr-subs-inters, @exr-tr1, @exr-tr2, @exr-tr3, 
@@ -943,13 +929,52 @@ Demonstre @thm-basis-thm, @lem-quot-equiv, e resolva @exr-subs-inters, @exr-tr1,
 Sejam $U$ e $V$ espaços vetoriais sobre $\F$. Mostre que a aplicação $u\otimes v\mapsto v\otimes u$ ($u\in U$ e $v\in V$) 
 pode ser estendida unicamente para um isomorfismo bem definido $U\otimes V\to V\otimes U$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Definição do mapa bilinear**:
+   - Seja $u \in U$ e $v \in V$. Definimos a aplicação bilinear $f: U \times V \to V \otimes U$ por:
+     $$
+     f(u, v) = v \otimes u.
+     $$
+   - Verificamos que $f$ é bilinear:
+     - Para $u_1, u_2 \in U$, $v_1, v_2 \in V$, e $\alpha, \beta \in \F$, temos:
+       $$
+       f(\alpha u_1 + \beta u_2, v) = v \otimes (\alpha u_1 + \beta u_2) = \alpha (v \otimes u_1) + \beta (v \otimes u_2),
+       $$
+       o que mostra a linearidade em $U$.
+     - Similarmente, para combinações lineares em $V$, temos:
+       $$
+       f(u, \alpha v_1 + \beta v_2) = (\alpha v_1 + \beta v_2) \otimes u = \alpha (v_1 \otimes u) + \beta (v_2 \otimes u),
+       $$
+       o que mostra a linearidade em $V$.
+
+2. **Extensão pelo produto tensorial**:
+   - Pela propriedade universal do produto tensorial, existe uma única aplicação linear $T: U \otimes V \to V \otimes U$ tal que:
+     $$
+     T(u \otimes v) = f(u, v) = v \otimes u.
+     $$
+   - Assim, $T$ é a extensão linear de $f$ para todo $U \otimes V$.
+
+3. **Verificação de isomorfismo**:
+   - Para verificar que $T$ é um isomorfismo, definimos $T^{-1}: V \otimes U \to U \otimes V$ por:
+     $$
+     T^{-1}(v \otimes u) = u \otimes v.
+     $$
+   - É fácil verificar que $T \circ T^{-1}$ e $T^{-1} \circ T$ são a identidade, mostrando que $T$ é um isomorfismo.
+
+Portanto, $T$ é um isomorfismo bem definido entre $U \otimes V$ e $V \otimes U$.
+:::
 
 :::{#exr-}
 Sejam $U$, $V$ e $W$ espaços vetoriais sobre $\F$. Mostre que a aplicação 
 $(u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
 pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to V\otimes (U\otimes W)$.
 :::
-
+:::{.sol .callout-tip collapse="true"}
+### Dica: 
+Consulte [a discussão no StackExchange](https://math.stackexchange.com/q/437706).
+:::
 
 :::{#exr-}
 Sejam $U$ e $V$ espaços vetoriais sobre $\F$. 
@@ -960,6 +985,40 @@ Sejam $U$ e $V$ espaços vetoriais sobre $\F$.
    $$
    pode ser estendida a uma aplicação linear bem definida $\psi:U^*\otimes V\to \mbox{Hom}(U,V)$. 
 2. Mostre que quando $U$ e $V$ têm dimensão finita, então $\psi$ é um isomorfismo. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solution: 
+1. **Definição da aplicação linear $\psi$**:
+   - Para cada $\varphi \in U^*$ e $v \in V$, definimos a aplicação bilinear $\psi: U^* \otimes V \to \mbox{Hom}(U, V)$ por:
+     $$
+     \psi(\varphi, v)(u) = \varphi(u)v, \quad \forall u \in U.
+     $$
+   - Verificamos que $\psi$ é bem definida e bilinear:
+     - Para $\varphi_1, \varphi_2 \in U^*$, $v_1, v_2 \in V$, e $\alpha, \beta \in \F$, temos:
+       $$
+       \psi((\alpha \varphi_1 + \beta \varphi_2) \otimes v)(u) = (\alpha \varphi_1(u) + \beta \varphi_2(u))v = \alpha \varphi_1(u)v + \beta \varphi_2(u)v,
+       $$
+       o que mostra a linearidade em $U^*$.
+     - Similarmente, para combinações lineares em $V$, temos:
+       $$
+       \psi(\varphi \otimes (\alpha v_1 + \beta v_2))(u) = \varphi(u)(\alpha v_1 + \beta v_2) = \alpha \varphi(u)v_1 + \beta \varphi(u)v_2,
+       $$
+       o que mostra a linearidade em $V$.
+   - Usando a propriedade universal do produto tensorial, existe uma aplicação linear $\tilde \psi:U^*\otimes V\to \mbox{Hom}(U,V)$ que estende $\psi$, ou seja, $\tilde\psi(\varphi\otimes v)=\psi(\varphi,v)$ vale para todo $\varphi\in U^*$ e $v\in V$. 
+
+2. **$\psi$ é injetiva**: Para mostrar que $\psi$ é injetiva, construiremos um inverso à direita para $\psi$. Definimos uma aplicação $\phi: \mbox{Hom}(U, V) \to U^* \otimes V$ da seguinte forma:
+   - Para cada $T \in \mbox{Hom}(U, V)$, definimos $\phi(T) = \sum_{i=1}^n \varphi_i \otimes T(u_i)$, onde $\{u_1, \ldots, u_n\}$ é uma base de $U$ e $\{\varphi_1, \ldots, \varphi_n\}$ é a base dual correspondente em $U^*$.
+
+   Agora, calculamos $\psi(\phi(T))$. Seja $u\in U$ e escreva $u=\alpha_1u_1+\cdots+\alpha_nu_n$.
+   Note que $\alpha_i=\varphi_i(u)$ para todo $i$. Ora, 
+   $$
+   \psi(\phi(T))(u) = \psi\left(\sum_{i=1}^n \varphi_i \otimes T(u_i)\right)(u) = \sum_{i=1}^n \varphi_i(u) T(u_i)=\sum_{i=1}^n \alpha_i T(u_i)=T(u).
+   $$
+   Portanto, $\psi(\phi(T)) = T$, o que mostra que $\phi$ é um inverso à direita de $\psi$. Assim, $\psi$ é injetiva.
+
+3. **Isomorfismo no caso de dimensão finita**: Quando $\dim U$ e $\dim V$ são finitas, 
+$\dim (U^*\otimes V)=\dim\mbox{Hom}(U,V)=\dim U\cdot \dim V$ e uma aplicação linear injetiva entre estes dois 
+espaços precisa ser um isomorphism. Logo $U^*\otimes V\cong \mbox{Hom}(U,V)$.
 :::
 
 :::{#exr-}
@@ -972,7 +1031,46 @@ $$
 $\beta:\mbox{Hom}(U,\mbox{Hom}(V,W))\to \mbox{Hom}(U\otimes V,W)$ da maneira mais natural possível e mostre que elas são inversas.
 Confira também a discussão na página math.stackexchange.com/q/1849098.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
 
+1. **Definição de $\alpha$**:
+   - Seja $\alpha: \mbox{Hom}(U \otimes V, W) \to \mbox{Hom}(U, \mbox{Hom}(V, W))$ definida por:
+     $$
+     \alpha(T)(u)(v) = T(u \otimes v), \quad \forall T \in \mbox{Hom}(U \otimes V, W), \, u \in U, \, v \in V.
+     $$
+   A bilinearidade do produto tensorial implica que $\alpha(T)\in \mbox{Hom}(U, \mbox{Hom}(V, W))$ 
+   e é fácil verificar que $\alpha$ é linear.
+
+2. **Definição de $\beta$**:
+   - Seja $S\in \mbox{Hom}(U, \mbox{Hom}(V, W))$. Defina a aplicação bilinear 
+  $\beta_S:U\times V\to W$ por $\beta_S(u,v)=S(u)(v)$. É fácil verificar que $\beta_S$ é bilinear. Pela propriedade universal do produto tensorial, existe único $\tilde\beta_S:U\otimes V\to W$ que 
+  estende $\beta_S$; ou seja $\tilde\beta_S(u\otimes v)=\beta_S(u,v)=S(u)(v)$ para todo $u\in U$ e $v\in V$. 
+  Seja $\beta: \mbox{Hom}(U, \mbox{Hom}(V, W)) \to \mbox{Hom}(U \otimes V, W)$ definida por:
+     $$
+     S\mapsto \tilde \beta_S.
+     $$
+   Note que $\beta(S)(u\otimes v)=S(u)(v)$.
+
+1. **Mostrando que $\alpha$ e $\beta$ são inversas**:
+   - Para $T \in \mbox{Hom}(U \otimes V, W)$, temos:
+     $$
+     (\beta \circ \alpha)(T)(u \otimes v) = \alpha(T)(u)(v) = T(u \otimes v).
+     $$
+     Assim, $\beta \circ \alpha = \mbox{id}_{\textrm{Hom}(U \otimes V, W)}$.
+
+   - Para $S \in \mbox{Hom}(U, \mbox{Hom}(V, W))$, temos:
+     $$
+     (\alpha \circ \beta)(S)(u)(v) = \beta(S)(u \otimes v) = S(u)(v).
+     $$
+     Assim, $\alpha \circ \beta = \mbox{id}_{\textrm{Hom}(U, \textrm{Hom}(V, W))}$.
+
+2. **Conclusão**:
+   - Como $\alpha$ e $\beta$ são inversas, temos:
+     $$
+     \mbox{Hom}(U \otimes V, W) \cong \mbox{Hom}(U, \mbox{Hom}(V, W)).
+     $$
+:::
 
 :::{#exr-}
 [Produto tensorial como functor]
@@ -988,6 +1086,23 @@ onde $f\otimes \mbox{id}_W$ está definida como no @thm-tensor-linear-maps.
 
 1. O functor $T_W$ é covariante ou contravariante?
 2. Mostre que se $f$ é injetiva/sobrejetiva, então $T_W(f)$ é injetiva/sobrejetiva, respetivamente. 
+:::
+:::{.sol .callout-tip collapse="true"}
+1. O functor $T_W$ é covariante. Isso ocorre porque, para cada transformação linear $f: U \to V$, o mapa $T_W(f) = f \otimes \mbox{id}_W$ preserva a direção da composição. Em outras palavras, se $g: V \to X$ é outra transformação linear, então:
+   $$
+   T_W(g \circ f) = (g \circ f) \otimes \mbox{id}_W = (g \otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) = T_W(g) \circ T_W(f).
+   $$
+   Isso mostra que $T_W$ é um functor covariante.
+
+2. Injetividade de $T_W(f)$. Se $f$ é injetiva, ela possui uma inversa à esquerda $g: V \to U$ 
+tal que $g(f(u)) = u$ para todo $u \in U$. Defina $T_W(g): V \otimes  W \to U \otimes W$ como 
+$g \otimes \mbox{id}_W$. Então,
+$$
+T_W(g) \circ T_W(f) = (g\otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) = 
+(g \circ f) \otimes \mbox{id}_W = \mbox{id}_U \otimes  \mbox{id}_W = \mbox{id}_{W \otimes W}.
+$$
+Assim, $T_W(f)$ possui uma inversa à esquerda e é injetiva. Se $f$ é sobrejetiva, então $T_W(f)$ 
+é também sobrejetiva e isso pode ser verificado de maneira similar, usando inversa à direita.
 :::
 
 :::{#exr-}
