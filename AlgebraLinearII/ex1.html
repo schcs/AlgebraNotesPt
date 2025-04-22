@@ -2373,10 +2373,58 @@ T^{-1}(v \otimes u) = u \otimes v.
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.37</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\((u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)\)</span> (<span class="math inline">\(u\in U\)</span>, <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(w\in W\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\((U\otimes V)\otimes W\to V\otimes (U\otimes W)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 64.37</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão dois sobre um corpo <span class="math inline">\(\F\)</span> com base <span class="math inline">\(b_1,b_2\)</span>. Mostre que não existem <span class="math inline">\(u,v\in V\)</span> tais que <span class="math display">\[
+b_1\otimes b_1+b_2\otimes b_2=u\otimes v.
+\]</span></p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para mostrar que não existem <span class="math inline">\(u, v \in V\)</span> tais que <span class="math inline">\(b_1 \otimes b_1 + b_2 \otimes b_2 = u \otimes v\)</span>, usaremos o fato de que o produto tensorial é bilinear e que a decomposição de um tensor em um único produto tensorial é única.</p>
+<ol type="1">
+<li><strong>Forma geral de <span class="math inline">\(u \otimes v\)</span></strong>:
+<ul>
+<li>Seja <span class="math inline">\(u = \alpha_1 b_1 + \alpha_2 b_2\)</span> e <span class="math inline">\(v = \beta_1 b_1 + \beta_2 b_2\)</span>, onde <span class="math inline">\(\alpha_1, \alpha_2, \beta_1, \beta_2 \in \F\)</span>.</li>
+<li>Então: <span class="math display">\[
+u \otimes v = (\alpha_1 b_1 + \alpha_2 b_2) \otimes (\beta_1 b_1 + \beta_2 b_2).
+\]</span></li>
+<li>Expandindo usando a bilinearidade do produto tensorial: <span class="math display">\[
+u \otimes v = \alpha_1 \beta_1 (b_1 \otimes b_1) + \alpha_1 \beta_2 (b_1 \otimes b_2) + \alpha_2 \beta_1 (b_2 \otimes b_1) + \alpha_2 \beta_2 (b_2 \otimes b_2).
+\]</span></li>
+</ul></li>
+<li><strong>Comparação com <span class="math inline">\(b_1 \otimes b_1 + b_2 \otimes b_2\)</span></strong>:
+<ul>
+<li>O tensor <span class="math inline">\(b_1 \otimes b_1 + b_2 \otimes b_2\)</span> não possui termos mistos como <span class="math inline">\(b_1 \otimes b_2\)</span> ou <span class="math inline">\(b_2 \otimes b_1\)</span>.</li>
+<li>Para que <span class="math inline">\(u \otimes v = b_1 \otimes b_1 + b_2 \otimes b_2\)</span>, os coeficientes de <span class="math inline">\(b_1 \otimes b_2\)</span> e <span class="math inline">\(b_2 \otimes b_1\)</span> devem ser zero. Isso implica: <span class="math display">\[
+\alpha_1 \beta_2 = 0 \quad \text{e} \quad \alpha_2 \beta_1 = 0.
+\]</span></li>
+</ul></li>
+<li><strong>Impossibilidade de satisfazer as condições</strong>:
+<ul>
+<li>Se <span class="math inline">\(\alpha_1 \beta_2 = 0\)</span> e <span class="math inline">\(\alpha_2 \beta_1 = 0\)</span>, então ou <span class="math inline">\(\alpha_1 = 0\)</span> ou <span class="math inline">\(\beta_2 = 0\)</span>, e ou <span class="math inline">\(\alpha_2 = 0\)</span> ou <span class="math inline">\(\beta_1 = 0\)</span>. É fácil verificar que nenhuma destas opções resulta no elemento <span class="math inline">\(b_1\otimes b_1+b_2\otimes b_2\)</span>.</li>
+</ul></li>
+<li><strong>Conclusão</strong>:
+<ul>
+<li>Não existem <span class="math inline">\(u, v \in V\)</span> tais que <span class="math inline">\(b_1 \otimes b_1 + b_2 \otimes b_2 = u \otimes v\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 64.38</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>. Mostre que a aplicação <span class="math inline">\((u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)\)</span> (<span class="math inline">\(u\in U\)</span>, <span class="math inline">\(v\in V\)</span> e <span class="math inline">\(w\in W\)</span>) pode ser estendida unicamente para um isomorfismo bem definido <span class="math inline">\((U\otimes V)\otimes W\to V\otimes (U\otimes W)\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2385,14 +2433,14 @@ Dica:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Consulte <a href="https://math.stackexchange.com/q/437706">a discussão no StackExchange</a>.</p>
 </div>
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.38</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 64.39</strong></span> Sejam <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span>.</p>
 <ol type="1">
 <li>Mostre que a correspondência<br>
 <span class="math display">\[
@@ -2402,7 +2450,7 @@ Dica:
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2411,7 +2459,7 @@ Solution:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p><strong>Definição da aplicação linear <span class="math inline">\(\psi\)</span></strong>:</p>
@@ -2443,12 +2491,12 @@ Solution:
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.39</strong></span> [Adjunção Hom-Tensor] Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, vector spaces sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 64.40</strong></span> [Adjunção Hom-Tensor] Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, vector spaces sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
 \mbox{Hom}(U\otimes V,W)\cong\mbox{Hom}(U,\mbox{Hom}(V,W)).
 \]</span> [Dica: Defina duas aplicações <span class="math inline">\(\alpha: \mbox{Hom}(U\otimes V,W)\to\mbox{Hom}(U,\mbox{Hom}(V,W))\)</span> e <span class="math inline">\(\beta:\mbox{Hom}(U,\mbox{Hom}(V,W))\to \mbox{Hom}(U\otimes V,W)\)</span> da maneira mais natural possível e mostre que elas são inversas. Confira também a discussão na página math.stackexchange.com/q/1849098.]</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2457,7 +2505,7 @@ Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Definição de <span class="math inline">\(\alpha\)</span></strong>:
@@ -2492,7 +2540,7 @@ S\mapsto \tilde \beta_S.
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.40</strong></span> [Produto tensorial como functor] Seja <span class="math inline">\(W\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e defina o functor <span class="math inline">\(T_W\)</span> na categoria de <span class="math inline">\(\F\)</span>-espaços vetoriais da seguinte forma: <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 64.41</strong></span> [Produto tensorial como functor] Seja <span class="math inline">\(W\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e defina o functor <span class="math inline">\(T_W\)</span> na categoria de <span class="math inline">\(\F\)</span>-espaços vetoriais da seguinte forma: <span class="math display">\[
 T_W(V)=V\otimes W\quad\mbox{se $V$ é um $\F$-espaço}
 \]</span> e se <span class="math inline">\(f:U\to V\)</span> é uma transformação linear, então defina <span class="math display">\[
 T_W(f)=f\otimes \mbox{id}_W:U\otimes W\to V\otimes W
@@ -2503,16 +2551,16 @@ T_W(f)=f\otimes \mbox{id}_W:U\otimes W\to V\otimes W
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Dica
+Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>O functor <span class="math inline">\(T_W\)</span> é covariante. Isso ocorre porque, para cada transformação linear <span class="math inline">\(f: U \to V\)</span>, o mapa <span class="math inline">\(T_W(f) = f \otimes \mbox{id}_W\)</span> preserva a direção da composição. Em outras palavras, se <span class="math inline">\(g: V \to X\)</span> é outra transformação linear, então: <span class="math display">\[
@@ -2527,33 +2575,91 @@ T_W(g) \circ T_W(f) = (g\otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) =
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.41</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> espaços vetoriais com bases <span class="math inline">\(B_U\)</span>, <span class="math inline">\(B_V\)</span>, <span class="math inline">\(B_X\)</span> e <span class="math inline">\(B_Y\)</span>, respetivamente. Assuma que <span class="math inline">\(f:U\to X\)</span> e <span class="math inline">\(g:V\to Y\)</span> são lineares. Escreva a matriz <span class="math display">\[[f\otimes g]^{B_U\otimes B_V}_{B_X\otimes B_Y}
+<p><span class="theorem-title"><strong>Exercício 64.42</strong></span> Sejam <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> espaços vetoriais com bases <span class="math inline">\(B_U\)</span>, <span class="math inline">\(B_V\)</span>, <span class="math inline">\(B_X\)</span> e <span class="math inline">\(B_Y\)</span>, respetivamente. Assuma que <span class="math inline">\(f:U\to X\)</span> e <span class="math inline">\(g:V\to Y\)</span> são lineares. Escreva a matriz <span class="math display">\[[f\otimes g]^{B_U\otimes B_V}_{B_X\otimes B_Y}
 \]</span> em termos das matrizes <span class="math display">\[
 [f]^{B_U}_{B_X}\quad \mbox{e}\quad  [g]^{B_V}_{B_Y}.
-\]</span> [Dica: Confira o produto de Kronecker de matrizes: https://en.wikipedia.org/wiki/Kronecker_product]</p>
+\]</span> (Dica: Confira o <a href="https://en.wikipedia.org/wiki/Kronecker_product">produto de Kronecker de matrizes</a>.)</p>
 </div>
 <div id="exr-perm-par" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.42</strong></span> Seja <span class="math inline">\(\sigma\)</span> uma permutação do conjunto <span class="math inline">\(X=\{1,\ldots,n\}\)</span> e sejam <span class="math inline">\(x_1,\ldots,x_n\)</span> incôgnitas sobre <span class="math inline">\(\Q\)</span>. Seja <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 64.43</strong></span> Seja <span class="math inline">\(\sigma\)</span> uma permutação do conjunto <span class="math inline">\(X=\{1,\ldots,n\}\)</span> e sejam <span class="math inline">\(x_1,\ldots,x_n\)</span> incôgnitas sobre <span class="math inline">\(\Q\)</span>. Seja <span class="math display">\[
 \Phi_n=\prod_{i&lt;j}(x_i-x_j)\in\Q[x_1,\ldots,x_n]
 \]</span> e seja <span class="math display">\[
 \sigma(\Phi_n)=\prod_{i&lt;j}(x_{\sigma(i)}-x_{\sigma(j)}).
 \]</span> Mostre que <span class="math inline">\(\sigma(\Phi_n)=(-1)^\sigma\Phi_n\)</span>.</p>
 </div>
+<!--:::{.sol .callout-tip collapse="true"}
+### Solução:
+1. Seja $\sigma \in S_n$ uma permutação do conjunto $\{1, \ldots, n\}$. Note que $\sigma(\Phi_n)$ é obtido aplicando $\sigma$ aos índices de cada fator em $\Phi_n$. Assim:
+   $$
+   \sigma(\Phi_n) = \prod_{i<j} (x_{\sigma(i)} - x_{\sigma(j)}).
+   $$
+   Agora, observe que reordenar os índices $i$ e $j$ de acordo com $\sigma$ introduz um fator $(-1)^\sigma$, pois cada troca de dois índices inverte o sinal do produto. Portanto:
+   $$
+   \sigma(\Phi_n) = (-1)^\sigma \Phi_n.
+   $$
+:::
+-->
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.43</strong></span> Seja <span class="math inline">\(\sigma\)</span> uma permutação do conjunto <span class="math inline">\(X=\{1,\ldots,n\}\)</span>. Demonstre que <span class="math inline">\(\sigma\)</span> é uma permutação par se e somente se <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 64.44</strong></span> Seja <span class="math inline">\(\sigma\)</span> uma permutação do conjunto <span class="math inline">\(X=\{1,\ldots,n\}\)</span>. Demonstre que <span class="math inline">\(\sigma\)</span> é uma permutação par se e somente se <span class="math display">\[
 |\{(i,j)\in X\times X\mid i&lt;j\mbox{ mas }\sigma(i)&gt;\sigma(j)\}|
-\]</span> é um número par. <a href="#exr-perm-par" class="quarto-xref">Dica: Use&nbsp;<span>64.42</span></a></p>
+\]</span> é um número par. Note que um par <span class="math inline">\((i,j)\)</span> com <span class="math inline">\(i&lt;j\)</span> mas <span class="math inline">\(\sigma(i)&gt;\sigma(j)\)</span> chama-se <em>inversão</em> de <span class="math inline">\(\sigma\)</span>. <a href="#exr-perm-par" class="quarto-xref">Dica: Use&nbsp;<span>64.43</span></a></p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para mostrar que <span class="math inline">\(\sigma\)</span> é uma permutação par se e somente se o número de inversões é par, note que cada inversão <span class="math inline">\((i, j)\)</span> com <span class="math inline">\(i &lt; j\)</span> e <span class="math inline">\(\sigma(i) &gt; \sigma(j)\)</span> troca o sinal de <span class="math inline">\(\sigma\)</span>. O número total de inversões determina o sinal de <span class="math inline">\(\sigma\)</span>, sendo par para permutações pares e ímpar para permutações ímpares. Assim, a paridade do número de inversões coincide com a paridade de <span class="math inline">\(\sigma\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-alt-pow" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.44</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial. Defina a <span class="math inline">\(k\)</span>-ésima potência exterior <span class="math inline">\(\Lambda^kV\)</span> como um espaço vetorial junto com uma aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(\lambda:V^k\to \Lambda^kV\)</span> que satisfaz a seguinte propriedade universal: Para todo espaço vetorial <span class="math inline">\(Z\)</span> e toda aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(f:V^k\to Z\)</span>, existe uma única aplicação linear <span class="math inline">\(\tilde f:\Lambda^kV\to Z\)</span> tal que <span class="math inline">\(f = \tilde f\circ \lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 64.45</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial. Defina a <span class="math inline">\(k\)</span>-ésima potência exterior <span class="math inline">\(\Lambda^kV\)</span> como um espaço vetorial junto com uma aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(\lambda:V^k\to \Lambda^kV\)</span> que satisfaz a seguinte propriedade universal: Para todo espaço vetorial <span class="math inline">\(Z\)</span> e toda aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(f:V^k\to Z\)</span>, existe uma única aplicação linear <span class="math inline">\(\tilde f:\Lambda^kV\to Z\)</span> tal que <span class="math inline">\(f = \tilde f\circ \lambda\)</span>.</p>
 <ol type="1">
 <li>Desegne o diagrama que corresponde à propriedade universal.</li>
 <li>Demonstre que <span class="math inline">\(\Lambda^kV\)</span> é único a menos de isomorfismo.</li>
 <li>Demonstre que <span class="math inline">\(\Lambda^kV\)</span> existe. [Dica: considere <span class="math inline">\(W=(V\otimes\cdots\otimes V)/J\)</span> (tomando o produto tensorial <span class="math inline">\(k\)</span>-vezes) onde <span class="math inline">\(J\)</span> é o espaço gerado por elementos na forma <span class="math inline">\(v_1\otimes\cdots\otimes v_k\)</span> onde <span class="math inline">\(v_i=v_j\)</span> para algum <span class="math inline">\(i\neq j\)</span> e mostre que este espaço satisfaz a propriedade universal.]</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Diagrama da propriedade universal</strong>: O diagrama que representa a propriedade universal da <span class="math inline">\(k\)</span>-ésima potência exterior <span class="math inline">\(\Lambda^kV\)</span> é o seguinte:</p>
+<pre><code>V^k  -----&gt;  Z
+ |            ^
+ |            |
+ v            |
+Λ^kV --------&gt; </code></pre>
+<p>Aqui, a seta vertical <span class="math inline">\(V^k \to \Lambda^kV\)</span> é a aplicação <span class="math inline">\(k\)</span>-linear <span class="math inline">\(\lambda\)</span>, e a seta diagonal <span class="math inline">\(\Lambda^kV \to Z\)</span> é a aplicação linear <span class="math inline">\(\tilde{f}\)</span> que torna o diagrama comutativo, ou seja, <span class="math inline">\(f = \tilde{f} \circ \lambda\)</span>.</p></li>
+<li><p><strong>Unicidade de <span class="math inline">\(\Lambda^kV\)</span></strong>: Seja <span class="math inline">\(\Lambda^kV\)</span> e <span class="math inline">\(\Lambda'^kV\)</span> dois espaços vetoriais que satisfazem a propriedade universal com as aplicações <span class="math inline">\(k\)</span>-lineares <span class="math inline">\(\lambda: V^k \to \Lambda^kV\)</span> e <span class="math inline">\(\lambda': V^k \to \Lambda'^kV\)</span>. Pela propriedade universal de <span class="math inline">\(\Lambda^kV\)</span>, existe uma aplicação linear única <span class="math inline">\(\phi: \Lambda^kV \to \Lambda'^kV\)</span> tal que <span class="math inline">\(\lambda' = \phi \circ \lambda\)</span>. Analogamente, pela propriedade universal de <span class="math inline">\(\Lambda'^kV\)</span>, existe uma aplicação linear única <span class="math inline">\(\psi: \Lambda'^kV \to \Lambda^kV\)</span> tal que <span class="math inline">\(\lambda = \psi \circ \lambda'\)</span>.</p>
+<p>Compondo as duas aplicações, temos <span class="math inline">\(\psi \circ \phi: \Lambda^kV \to \Lambda^kV\)</span> tal que <span class="math inline">\(\psi \circ \phi \circ \lambda = \lambda\)</span>. Pela unicidade da aplicação linear que satisfaz essa propriedade, segue que <span class="math inline">\(\psi \circ \phi = \text{id}_{\Lambda^kV}\)</span>. Analogamente, <span class="math inline">\(\phi \circ \psi = \text{id}_{\Lambda'^kV}\)</span>. Portanto, <span class="math inline">\(\phi\)</span> é um isomorfismo, mostrando que <span class="math inline">\(\Lambda^kV\)</span> é único a menos de isomorfismo.</p></li>
+<li><p><strong>Existência de <span class="math inline">\(\Lambda^kV\)</span></strong>: Considere o espaço <span class="math inline">\(W = V \otimes \cdots \otimes V\)</span> (produto tensorial <span class="math inline">\(k\)</span> vezes) e seja <span class="math inline">\(J\)</span> o subespaço de <span class="math inline">\(W\)</span> gerado pelos elementos da forma <span class="math inline">\(v_1 \otimes \cdots \otimes v_k\)</span> onde <span class="math inline">\(v_i = v_j\)</span> para algum <span class="math inline">\(i \neq j\)</span>. Defina <span class="math inline">\(\Lambda^kV = W / J\)</span> e seja <span class="math inline">\(\lambda: V^k \to \Lambda^kV\)</span> a composição da aplicação canônica <span class="math inline">\(k\)</span>-linear <span class="math inline">\(V^k \to W\)</span> com a projeção <span class="math inline">\(W \to W / J\)</span>.</p>
+<p>Para verificar que <span class="math inline">\(\Lambda^kV\)</span> satisfaz a propriedade universal, seja <span class="math inline">\(f: V^k \to Z\)</span> uma aplicação <span class="math inline">\(k\)</span>-linear alternada. Pela propriedade universal do produto tensorial, existe único <span class="math inline">\(\bar f:W\to Z\)</span> que estende <span class="math inline">\(f\)</span>. Como <span class="math inline">\(f\)</span> é <span class="math inline">\(k\)</span>-linear alternada, <span class="math inline">\(\bar f\)</span> anula nos elementos de <span class="math inline">\(J\)</span>. Assim, <span class="math inline">\(\bar f\)</span> induz uma aplicação linear <span class="math inline">\(\tilde{f}: W/J\to Z\)</span> tal que <span class="math inline">\(f = \tilde{f} \circ \lambda\)</span>. A unicidade de <span class="math inline">\(\tilde{f}\)</span> segue do fato que os elementos da forma <span class="math inline">\(v_1\otimes\cdots\otimes v_k+J\)</span> geram <span class="math inline">\(W/J\)</span> e <span class="math inline">\(\tilde f\)</span> está determinado nestes tipos de elementos por <span class="math inline">\(f\)</span>; de fato, <span class="math display">\[
+\tilde f(v_1\otimes\cdots\otimes v_k+J)=f(v_1,\ldots,v_k)
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-alt-pow2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.45</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita e seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(\Lambda^kV\)</span> a <span class="math inline">\(k\)</span>-ésima potência exterior de <span class="math inline">\(V\)</span> com <span class="math inline">\(\lambda:V^k\to \Lambda^kV\)</span> sendo a aplicação <span class="math inline">\(k\)</span>-linear canônica. Com <span class="math inline">\(v_1,\ldots,v_k\in V\)</span>, denote <span class="math inline">\(v_1\wedge\cdots\wedge v_k=\lambda(v_1,\ldots,v_k)\)</span>. Seja <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 64.46</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita e seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(\Lambda^kV\)</span> a <span class="math inline">\(k\)</span>-ésima potência exterior de <span class="math inline">\(V\)</span> com <span class="math inline">\(\lambda:V^k\to \Lambda^kV\)</span> sendo a aplicação <span class="math inline">\(k\)</span>-linear canônica. Com <span class="math inline">\(v_1,\ldots,v_k\in V\)</span>, denote <span class="math inline">\(v_1\wedge\cdots\wedge v_k=\lambda(v_1,\ldots,v_k)\)</span>. Seja <span class="math display">\[
 \Lambda^kB=\{b_{i_1}\wedge\cdots\wedge b_{i_k}\mid 1\leq i_1&lt;\cdots&lt;i_k\leq n\}.
 \]</span></p>
 <ol type="1">
@@ -2563,16 +2669,109 @@ T_W(g) \circ T_W(f) = (g\otimes \mbox{id}_W) \circ (f \otimes \mbox{id}_W) =
 <li>Determina a dimensão de <span class="math inline">\(\Lambda^k V\)</span> em termos de <span class="math inline">\(n\)</span> e <span class="math inline">\(k\)</span>.</li>
 </ol>
 </div>
+<!--
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **$\Lambda^kB$ é um conjunto gerador de $\Lambda^kV$**:
+   - Seja $v_1, \ldots, v_k \in V$. Como $B = \{b_1, \ldots, b_n\}$ é uma base de $V$, podemos escrever cada $v_i$ como uma combinação linear de elementos de $B$:
+     $$
+     v_i = \sum_{j=1}^n \alpha_{ij} b_j, \quad \text{para } i = 1, \ldots, k.
+     $$
+   - O produto exterior $v_1 \wedge \cdots \wedge v_k$ é então dado por:
+     $$
+     v_1 \wedge \cdots \wedge v_k = \left(\sum_{j_1=1}^n \alpha_{1j_1} b_{j_1}\right) \wedge \cdots \wedge \left(\sum_{j_k=1}^n \alpha_{kj_k} b_{j_k}\right).
+     $$
+   - Expandindo o produto exterior usando bilinearidade, obtemos uma soma de termos da forma:
+     $$
+     \alpha_{1j_1} \cdots \alpha_{kj_k} (b_{j_1} \wedge \cdots \wedge b_{j_k}),
+     $$
+     onde $1 \leq j_1, \ldots, j_k \leq n$. Como $b_{j_1} \wedge \cdots \wedge b_{j_k} \in \Lambda^kB$, isso mostra que $\Lambda^kB$ gera $\Lambda^kV$.
+
+2. **$\Lambda^kB$ é uma base de $\Lambda^kV$**:
+   - Pelo @lem-basis-alter, o espaço $\Lambda^kV$ é isomorfo ao espaço das formas $k$-lineares alternadas $A^k(V)$, e a dimensão de $A^k(V)$ é $\binom{n}{k}$.
+   - O conjunto $\Lambda^kB$ contém exatamente $\binom{n}{k}$ elementos, pois corresponde às combinações de $k$ elementos distintos de $B$.
+   - Como $\Lambda^kB$ é um conjunto gerador de $\Lambda^kV$ e contém exatamente $\dim(\Lambda^kV)$ elementos, segue que $\Lambda^kB$ é linearmente independente e, portanto, uma base de $\Lambda^kV$.
+
+3. **Dimensão de $\Lambda^kV$**:
+   - Como $\Lambda^kB$ é uma base de $\Lambda^kV$, temos:
+     $$
+     \dim(\Lambda^kV) = |\Lambda^kB| = \binom{n}{k}.
+     $$
+   - Portanto, a dimensão de $\Lambda^kV$ é $\binom{n}{k}$, que é o número de combinações de $k$ elementos distintos escolhidos de um conjunto de $n$ elementos.
+:::
+-->
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.46</strong></span> Demonstre <a href="formas.html#lem-pullback" class="quarto-xref">Lema&nbsp;<span>63.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercício 64.47</strong></span> Demonstre <a href="formas.html#lem-pullback" class="quarto-xref">Lema&nbsp;<span>63.3</span></a>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(T \in A^k(V)\)</span>. Precisamos mostrar que <span class="math inline">\(f^*T \in A^k(U)\)</span>, ou seja, que <span class="math inline">\(f^*T\)</span> é <span class="math inline">\(k\)</span>-linear alternada.</p>
+<ol type="1">
+<li><strong><span class="math inline">\(k\)</span>-linearidade</strong>:
+<ul>
+<li>Seja <span class="math inline">\(u_1, \ldots, u_k \in U\)</span> e suponha que <span class="math inline">\(u_i\)</span> é substituído por <span class="math inline">\(\alpha u_i + \beta u_i'\)</span> para algum <span class="math inline">\(i \in \{1, \ldots, k\}\)</span>, com <span class="math inline">\(\alpha, \beta \in \F\)</span> e <span class="math inline">\(u_i' \in U\)</span>. Então: <span class="math display">\[
+f^*T(u_1, \ldots, \alpha u_i + \beta u_i', \ldots, u_k) = T(f(u_1), \ldots, f(\alpha u_i + \beta u_i'), \ldots, f(u_k)).
+\]</span> Usando a <span class="math inline">\(k\)</span>-linearidade de <span class="math inline">\(T\)</span> e a linearidade de <span class="math inline">\(f\)</span>, temos: <span class="math display">\[\begin{align*}
+&amp;T(f(u_1), \ldots, \alpha f(u_i) + \beta f(u_i'), \ldots, f(u_k)) \\&amp;= \alpha T(f(u_1), \ldots, f(u_i), \ldots, f(u_k)) + \beta T(f(u_1), \ldots, f(u_i'), \ldots, f(u_k)).
+\end{align*}\]</span> Assim, <span class="math inline">\(f^*T\)</span> é <span class="math inline">\(k\)</span>-linear.</li>
+</ul></li>
+<li><strong>Alternância</strong>:
+<ul>
+<li>Seja <span class="math inline">\(u_1, \ldots, u_k \in U\)</span> com <span class="math inline">\(u_i = u_j\)</span> para algum <span class="math inline">\(i \neq j\)</span>. Então: <span class="math display">\[
+f^*T(u_1, \ldots, u_k) = T(f(u_1), \ldots, f(u_k)).
+\]</span> Como <span class="math inline">\(u_i = u_j\)</span>, temos <span class="math inline">\(f(u_i) = f(u_j)\)</span>. Como <span class="math inline">\(T\)</span> é alternada, segue que <span class="math inline">\(T(f(u_1), \ldots, f(u_k)) = 0\)</span>. Portanto, <span class="math inline">\(f^*T(u_1, \ldots, u_k) = 0\)</span>.</li>
+</ul></li>
+</ol>
+<p>Concluímos que <span class="math inline">\(f^*T \in A^k(U)\)</span>, e assim a restrição de <span class="math inline">\(f^*\)</span> resulta em uma aplicação linear <span class="math inline">\(f^*_A: A^k(V) \to A^k(U)\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-determinant-f" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 64.47</strong></span> Usando a <a href="formas.html#def-determinant-f" class="quarto-xref">Definição&nbsp;<span>63.3</span></a>, demonstre as propriedades comuns do determinante.</p>
+<p><span class="theorem-title"><strong>Exercício 64.48</strong></span> Usando a <a href="formas.html#def-determinant-f" class="quarto-xref">Definição&nbsp;<span>63.3</span></a>, demonstre as propriedades comuns do determinante.</p>
 <ol type="1">
 <li>Se <span class="math inline">\(f,g: V\to V\)</span>, então <span class="math inline">\(\det (f\circ g)=\det f\cdot \det g\)</span>.</li>
 <li><span class="math inline">\(\det f\)</span> coincide com o determinante da matriz de <span class="math inline">\(f\)</span> em uma base de <span class="math inline">\(V\)</span>.</li>
 <li><span class="math inline">\(\det f=0\)</span> se e somente se <span class="math inline">\(f\)</span> não é invertível.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Propriedade multiplicativa do determinante</strong>:
+<ul>
+<li>Seja <span class="math inline">\(f, g: V \to V\)</span>. Pelo <a href="formas.html#def-determinant-f" class="quarto-xref">Definição&nbsp;<span>63.3</span></a>, o determinante de <span class="math inline">\(f\)</span> é definido como o escalar <span class="math inline">\(\delta \in \F\)</span> tal que <span class="math inline">\(f^*_A = \delta \cdot \text{id}_{A^n(V)}\)</span>, onde <span class="math inline">\(A^n(V)\)</span> é o espaço das formas <span class="math inline">\(n\)</span>-lineares alternadas em <span class="math inline">\(V\)</span>. Similarmente, para <span class="math inline">\(g\)</span>, temos <span class="math inline">\(g^*_A = \gamma \cdot \text{id}_{A^n(V)}\)</span>.</li>
+<li>Considere a composição <span class="math inline">\(f \circ g\)</span>. O pullback <span class="math inline">\((f \circ g)^*_A\)</span> é dado por: <span class="math display">\[
+(f \circ g)^*_A = g^*_A \circ f^*_A.
+\]</span> Substituindo as expressões para <span class="math inline">\(f^*_A\)</span> e <span class="math inline">\(g^*_A\)</span>, temos: <span class="math display">\[\begin{align*}
+(f \circ g)^*_A &amp;= (\gamma \cdot \text{id}_{A^n(V)}) \circ (\delta \cdot \text{id}_{A^n(V)})
+\\&amp;= (\gamma \cdot \delta) \cdot \text{id}_{A^n(V)}.
+\end{align*}\]</span> Assim, <span class="math inline">\(\det(f \circ g) = \det(f) \cdot \det(g)\)</span>.</li>
+</ul></li>
+<li>A ser inserida.</li>
+</ol>
+</div>
+</div>
 </div>
 
 
