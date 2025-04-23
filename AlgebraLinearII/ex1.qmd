@@ -1005,8 +1005,8 @@ Para mostrar que não existem $u, v \in V$ tais que $b_1 \otimes b_1 + b_2 \otim
 
 :::{#exr-}
 Sejam $U$, $V$ e $W$ espaços vetoriais sobre $\F$. Mostre que a aplicação 
-$(u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
-pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to V\otimes (U\otimes W)$.
+$(u\otimes v)\otimes w\mapsto u\otimes (v\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
+pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to U\otimes (V\otimes W)$.
 :::
 :::{.sol .callout-tip collapse="true"}
 ### Dica: 
