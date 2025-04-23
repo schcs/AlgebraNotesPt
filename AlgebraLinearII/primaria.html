@@ -1370,10 +1370,10 @@ window.Quarto = {
 \end{pmatrix}.
 \]</span> Ou seja, <span class="math inline">\(f\)</span> é diagonalizável com autovalores <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span>. O polinômio minimal de <span class="math inline">\(f\)</span> é <span class="math inline">\(m_f(t)=(t-2)(t-3)=t^2-5t+6\)</span> enquanto o polinômio caraterístico é <span class="math inline">\(\mbox{pcar}_f(t)=(t-2)^3(t-3)^2\)</span>. O espaço <span class="math inline">\(\F^5\)</span> decompõe-se <span class="math display">\[
 \F^5=\langle b_1,b_2,b_3\rangle\oplus\langle b_4,b_5\rangle=V_2\oplus V_3=\ker(f-2\mbox{id})\oplus\ker(f-3\mbox{id}).
-\]</span> Ou seja, a fatoração do polinômio minimal <span class="math inline">\(m_f(t)\)</span> em produto de irredutúveis está refletida em uma fatoração de <span class="math inline">\(V\)</span> em uma soma direta de autoespaços.</p>
+\]</span> Ou seja, a fatoração do polinômio minimal <span class="math inline">\(m_f(t)\)</span> em produto de irredutúveis está refletida em uma decomposição de <span class="math inline">\(V\)</span> em uma soma direta de autoespaços.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 68.2</strong></span> A fatoração do domínio do endomorfismo como no exemplo anterior não é sempre possível. Considere por exemplo <span class="math inline">\(f:\F^5\to \F^5\)</span> um endomorfismo e <span class="math inline">\(B\)</span> é base de <span class="math inline">\(\F^5\)</span> tal que <span class="math display">\[
+<p><span class="theorem-title"><strong>Exemplo 68.2</strong></span> A decomposição do domínio do endomorfismo como no exemplo anterior não é sempre possível. Considere por exemplo <span class="math inline">\(f:\F^5\to \F^5\)</span> um endomorfismo e <span class="math inline">\(B\)</span> é base de <span class="math inline">\(\F^5\)</span> tal que <span class="math display">\[
 [f]_B^B=\begin{pmatrix}
 2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 &amp; 0&amp; 0\\ 0 &amp; 0 &amp; 2 &amp; 0&amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 3&amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0&amp; 3\\
 \end{pmatrix}.
@@ -1388,8 +1388,9 @@ window.Quarto = {
 W_2=\langle b_1,b_2,b_3\rangle =\ker[(f-2\mbox{id})^2]\mbox{ e }W_3=\langle b_4,b_5\rangle =\ker[(f-3\mbox{id})^2]
 \]</span> e <span class="math display">\[
 \F^5=W_2\oplus W_3.
-\]</span> Em outras palavras, <span class="math inline">\(\F^5\)</span> não se decompões como soma direta dos autoespaços, mas existe uma decomposição de <span class="math inline">\(\F^5\)</span> reletindo a decomposição de <span class="math inline">\(m_f(t)\)</span>. Os espaços <span class="math inline">\(W_2\)</span> e <span class="math inline">\(W_3\)</span> são chamados de <b>autoespaços generalizados</b>.</p>
+\]</span> Em outras palavras, <span class="math inline">\(\F^5\)</span> não se decompõe como soma direta dos autoespaços, mas existe uma decomposição de <span class="math inline">\(\F^5\)</span> refletindo a fatoração de <span class="math inline">\(m_f(t)\)</span>. Os espaços <span class="math inline">\(W_2\)</span> e <span class="math inline">\(W_3\)</span> são chamados de <strong>autoespaços generalizados</strong>.</p>
 </div>
+<p>No seguinte exemplo vamos usar a matriz companheira de um polinômio que aparece no <a href="ex2.html#exr-mat-comp" class="quarto-xref">Exercício&nbsp;<span>72.5</span></a>.</p>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 68.3</strong></span> Seja <span class="math inline">\(f:\R^4\to \R^4\)</span> um endomorfismo com matriz <span class="math display">\[
 X=[f]_B^B=\begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; -1\\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{pmatrix}
@@ -1413,24 +1414,24 @@ X=[f]_B^B=\begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; -1\\ 1 &amp; 0 &amp; 0 &amp; 0
 <div id="thm-" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 68.1</strong></span> (O Teorema da Decomposisão Primária) Assuma que <span class="math display">\[
 m_f(t)=q_1(t)^{\alpha_1}\cdots q_k(t)^{\alpha_k}
-\]</span> com <span class="math inline">\(\alpha_i\geq 1\)</span> e os <span class="math inline">\(q_is\)</span> são polinômios irredutúveis distintos em <span class="math inline">\(\F[x]\)</span>. Ponha <span class="math inline">\(W_i=\ker (q_i^{\alpha_i}(f))\)</span>. Então as seguintes são verdadeiras:</p>
-<ul>
+\]</span> com <span class="math inline">\(\alpha_i\geq 1\)</span> e os <span class="math inline">\(q_is\)</span> são polinômios irredutúveis distintos em <span class="math inline">\(\F[x]\)</span>. Ponha <span class="math inline">\(W_i=\ker (q_i(f)^{\alpha_i})\)</span>. Então as seguintes são verdadeiras:</p>
+<ol type="1">
 <li><span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span>;</li>
 <li>cada <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f\)</span>-invariante;</li>
 <li>o polinômio mínimo de <span class="math inline">\(f|_{W_i}\)</span> é <span class="math inline">\(q_i^{\alpha_i}(t)\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math display">\[
 r_i=m_f(t)/q_i^{\alpha_i}(t)=q_1(t)^{\alpha_1}\cdots q_{i-1}(t)^{\alpha_{i-1}}q_{i+1}(t)^{\alpha_{i+1}}\cdots q_k(t)^{\alpha_k}.
-\]</span> Os polinômios <span class="math inline">\(r_1,\ldots,r_k\)</span> são primos entre si, e existem <span class="math inline">\(h_1(t),\ldots,h_k(t)\in\F[x]\)</span> tais que <span class="math display">\[
+\]</span> Temos que <span class="math inline">\(\mbox{mdc}(r_1,\ldots,r_k)=1\)</span>, e o Teorema de Bezout para polinômios (<a href="../FundamentosDeAlgebra/mdc_pol.html#cor-bezout-pol" class="quarto-xref">Corolário&nbsp;<span>31.3</span></a>) diz que existem <span class="math inline">\(h_1(t),\ldots,h_k(t)\in\F[x]\)</span> tais que <span class="math display">\[
 h_1(t)r_1(t)+\cdots+h_k(t)r_k(t)=1;
 \]</span> ou seja <span class="math display">\[
-h_1(f)r_1(f)+\cdots+h_k(f)r_k(f)=\mbox{id}_V;
+h_1(f)r_1(f)+\cdots+h_k(f)r_k(f)=\mbox{id}_V.
 \]</span> Afirmamos que a composição de duas parcelas na soma anterior é o endomorfismo zero. De fato, note que se <span class="math inline">\(i\neq j\)</span>, então <span class="math inline">\(m_f(t)\mid r_i(t)r_j(t)\)</span> e <span class="math display">\[
 h_i(f)r_i(f)h_j(f)r_j(f)=h_i(f)h_j(f)r_i(f)r_j(f)=[(h_ih_j)(f)][(r_ir_j)(f)]=0.
 \]</span> Aqui usamos que <span class="math inline">\(r_i(f)\)</span> <span class="math inline">\(h_j(f)\)</span> comutam pois eles são membros do anel comutativo <span class="math inline">\(\F[f]\)</span>.</p>
-<p>Ora usamos o Teorema que provamos na página <a href="https://schcs.github.io/WP/index.php/ensino/algebra-linear-ii/projecoes/">Projeções</a> para concluir que cada <span class="math inline">\(h_i(f)r_i(f)\)</span> é uma projeção e <span class="math display">\[
+<p>Ora usamos o <a href="projecoes.html#thm-proj" class="quarto-xref">Teorema&nbsp;<span>67.1</span></a> que provamos para projeções para concluir que cada <span class="math inline">\(h_i(f)r_i(f)\)</span> é uma projeção e <span class="math display">\[
 V=\mbox{Im}(h_1(f)r_1(f))\oplus\cdots\oplus \mbox{Im}(h_k(f)r_k(f)).
 \]</span></p>
 <p>Próximo afirmamos que <span class="math inline">\(\mbox{Im}(h_i(f)r_i(f))=\ker(q_i(f)^{\alpha_i})\)</span> para todo <span class="math inline">\(i\)</span>. Se <span class="math inline">\(v\in \mbox{Im}(h_i(f)r_i(f))\)</span>, então <span class="math inline">\(v=(h_i(f)r_i(f))(w)\)</span> e <span class="math display">\[
@@ -1441,20 +1442,20 @@ v&amp;=\mbox{id}_V(v)=(h_1(f)r_1(f)+\cdots+h_i(f)r_i(f)+\cdots+h_k(f)r_k(f))(v)\
 <p>Finalmente, provamos a afirmação sobre o polinômio mínimo de <span class="math inline">\(f|_{W_i}\)</span>. Seja <span class="math inline">\(m_i(t)\)</span> este polinômio mínimo. Como <span class="math inline">\(W_i=\ker(q_i^{\alpha_i}(f))\)</span>, temos que <span class="math inline">\(m_i(t)\mid q_i^{\alpha_i}(t)\)</span>. Ou seja, <span class="math inline">\(m_i(t)=q_i^{\beta_i}(t)\)</span> com algum <span class="math inline">\(\beta_i\in\{1,\ldots,\alpha_i\}\)</span> e isso vale para todo <span class="math inline">\(i\)</span>. Se <span class="math inline">\(v\in V\)</span>, escreva <span class="math inline">\(v=v_1+\cdots+v_k\)</span> com <span class="math inline">\(v_i\in W_i\)</span> e <span class="math display">\[\begin{align*}
 q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v)&amp;=q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1+\cdots+v_k)\\&amp;=
 q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1)+\cdots+q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_k)\\&amp;=0.
-\end{align*}\]</span> Obtemos que <span class="math inline">\(m_f(t)=q_1^{\alpha_1}\cdots q_k^{\alpha_k}\)</span> divide <span class="math inline">\(q_1^{\beta_1}\cdots q_k^{\beta_k}\)</span>. Pelo Teorema da Fatoração para Polinômios, obtemos que <span class="math inline">\(\alpha_i\leq \beta_i\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(\alpha_i=\beta_i\)</span> segue para todo <span class="math inline">\(i\)</span>. Logo <span class="math inline">\(m_i(t)=q_i^{\alpha_i}\)</span>.</p>
+\end{align*}\]</span> Obtemos que <span class="math inline">\(m_f(t)=q_1^{\alpha_1}\cdots q_k^{\alpha_k}\)</span> divide <span class="math inline">\(q_1^{\beta_1}\cdots q_k^{\beta_k}\)</span>. Pelo Teorema da Fatoração para Polinômios (<a href="../FundamentosDeAlgebra/irred.html#thm-tfa-pol" class="quarto-xref">Teorema&nbsp;<span>34.2</span></a>), obtemos que <span class="math inline">\(\alpha_i\leq \beta_i\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(\alpha_i=\beta_i\)</span> segue para todo <span class="math inline">\(i\)</span>. Logo <span class="math inline">\(m_i(t)=q_i^{\alpha_i}\)</span>.</p>
 </div>
-<p>O Teorema espectral é o caso particilar <span class="math inline">\(\F=\C\)</span> do Teorema da Decomposição Primária. Neste caso <span class="math display">\[
+<p>O Teorema espectral é o caso particilar <span class="math inline">\(\F=\C\)</span> do Teorema da Decomposição Primária. Neste caso, pelo Teorema Fundamental da Álgebra (<a href="../FundamentosDeAlgebra/roots.html#thm-fundamental-da-algebra" class="quarto-xref">Teorema&nbsp;<span>32.1</span></a>), <span class="math display">\[
 m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
 \]</span> com <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in \C\)</span> distintos e <span class="math inline">\(\alpha_i\geq 1\)</span>.</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 68.2</strong></span> (O Teorema Espectral) Assuma que <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(f:V\to V\)</span> é como acima. Neste caso, <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 68.2</strong></span> (O Teorema Espectral) Assuma que <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(f:V\to V\)</span> é como acima. Neste caso <span class="math display">\[
 m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
 \]</span> com <span class="math inline">\(\lambda_i\in\C\)</span> distintos e <span class="math inline">\(\alpha_i\geq 1\)</span>. Ponha <span class="math inline">\(W_i=\ker (f-\lambda_i\mbox{id}_V)^{\alpha_i}\)</span>. Então as seguintes são verdadeiras:</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(V=W_1\oplus\cdots\oplus W_k\)</span>;</li>
 <li>cada <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f\)</span>-invariante;</li>
 <li>o polinômio mínimo de <span class="math inline">\(f|_{W_i}\)</span> é <span class="math inline">\((t-\lambda_i)^{\alpha_i}\)</span>.</li>
-</ul>
+</ol>
 </div>
 
 

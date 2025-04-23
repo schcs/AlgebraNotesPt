@@ -1369,31 +1369,34 @@ window.Quarto = {
 </div>
 <p>Seja <span class="math inline">\(V=U\oplus W\)</span> uma decomposição para soma direta. Se <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(v\)</span> pode ser escrito unicamente como <span class="math inline">\(v=u+w\)</span> com <span class="math inline">\(u\in U\)</span> e <span class="math inline">\(w\in W\)</span> e pode-se definir <span class="math inline">\(f:V\to V\)</span> como <span class="math inline">\(f(v)=u\)</span>. O endomorfismo <span class="math inline">\(f\)</span> é uma projeção tal que <span class="math inline">\(\mbox{Im}(f)=U\)</span> e <span class="math inline">\(\ker f=W\)</span>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 67.1</strong></span> As seguintes afirmações são válidas para uma projeção <span class="math inline">\(f:V\to V\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 67.1</strong></span> As seguintes afirmações são equivalentes para um endomorfismo <span class="math inline">\(f:V\to V\)</span>.</p>
 <ol type="1">
+<li><span class="math inline">\(f\)</span> é uma projeção.</li>
 <li><span class="math inline">\(\mbox{Im}(f)\)</span> é <span class="math inline">\(f\)</span>-invariante e <span class="math inline">\(f|_{\textrm{Im}(f)}=\mbox{id}_{\textrm{Im}(f)}\)</span>.</li>
-<li>Os possíveis autovalores de <span class="math inline">\(f\)</span> são <span class="math inline">\(1\)</span> e <span class="math inline">\(0\)</span>.</li>
-<li><span class="math inline">\(f\)</span> é raiz do polinômio <span class="math inline">\(t^2-t\)</span> e <span class="math inline">\(m_f(t)\in\{t,t-1,t^2-t\}\)</span>.</li>
+<li><span class="math inline">\(f\)</span> é raiz do polinômio <span class="math inline">\(t^2-t\)</span> e <span class="math inline">\(m_f(t)\in\{t,t-1,t^2-t\}\)</span>. (Em particular, os possíveis autovalores de <span class="math inline">\(f\)</span> são <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>.)</li>
 <li><span class="math inline">\(V_0=\ker f\)</span>, enquanto <span class="math inline">\(V_1=\ker(\mbox{id}_V-f)=\mbox{Im}(f)\)</span>.</li>
-<li><span class="math inline">\(V=V_0\oplus V_1=\ker f\oplus\mbox{Im}(f)\)</span>.</li>
+<li><span class="math inline">\(V=V_0\oplus V_1\)</span>.</li>
 </ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
-<li><p>Segue da definição.</p></li>
-<li><p>Assuma que <span class="math inline">\(\lambda\)</span> é autovalor com autovetor não nulo <span class="math inline">\(v\)</span>. Tem-se que <span class="math display">\[
-\lambda^2 v=f(f(v))=f^2(v)=f(v)=\lambda v.
-\]</span> Logo <span class="math inline">\(\lambda^2=\lambda\)</span> ou seja <span class="math inline">\(\lambda\in\{0,1\}\)</span>.</p></li>
-<li><p>A definição da projeção implica que <span class="math inline">\(f\)</span> é raiz de <span class="math inline">\(t^2-t\)</span>. Logo <span class="math inline">\(m_f(t)\)</span> é um divisor de <span class="math inline">\(t^2-t\)</span> e as possibilidades são <span class="math inline">\(t\)</span>, <span class="math inline">\(t-1\)</span>, <span class="math inline">\(t^2-t\)</span>.</p></li>
-<li><p><span class="math inline">\(V_0=\ker f\)</span> e <span class="math inline">\(V_1=\ker(\mbox{id}_V-f)\)</span> valem para qualquer <span class="math inline">\(f\)</span> (não precisa ser projeção). Se <span class="math inline">\(f(v)\in \mbox{Im}(f)\)</span>, então <span class="math inline">\(f(f(v))=f(v)\)</span> e <span class="math inline">\(f(v)\in V_1\)</span>. Vice versa, se <span class="math inline">\(v\in V_1\)</span>, então <span class="math inline">\(v=f(v)\in \mbox{Im}(V)\)</span>. Logo <span class="math inline">\(V_1=\mbox{Im}(V)\)</span>.</p></li>
-<li><p>Para concluir que <span class="math inline">\(V=\mbox{Im}(f)+\ker f\)</span>, escreva <span class="math inline">\(v\in V\)</span> como <span class="math inline">\(v=v-f(v)+f(v)\)</span> e note que <span class="math inline">\(v-f(v)\in\ker f\)</span>. Como <span class="math inline">\(\ker f\)</span> e <span class="math inline">\(\mbox{Im}(f)\)</span> são autoespaços com autovalor distinto, temos que <span class="math inline">\(\ker f\cap \mbox{Im}(f)=0\)</span>. Portanto <span class="math inline">\(V= \mbox{Im}(f)\oplus\ker f\)</span>.</p></li>
+<li><span class="math inline">\(\Rightarrow\)</span> 2.: Segue do fato que <span class="math inline">\(f(f(v))=f(v)\)</span> quando <span class="math inline">\(f\)</span> for uma projeção.</li>
+<li><span class="math inline">\(\Rightarrow\)</span> 3.: Assuma afirmação 2. Então temos para <span class="math inline">\(v\in V\)</span> que <span class="math inline">\(f(f(v))=f(v)\)</span>; ou seja, <span class="math inline">\(f^2=f\)</span>. Portanto <span class="math inline">\(f\)</span> é raiz do polinômio <span class="math inline">\(t^2-t\)</span>. O polinômio minimal <span class="math inline">\(m_f(t)\)</span> de <span class="math inline">\(f\)</span> é divisor de <span class="math inline">\(t^2-t\)</span>. A fatoração do polinômio <span class="math inline">\(t^2-t\)</span> é <span class="math inline">\(t^2-t=t(t-1)\)</span>, então os possíveis divisores mônicos são <span class="math inline">\(t\)</span>, <span class="math inline">\(t-1\)</span>, ou <span class="math inline">\(t^2-1\)</span>.<br>
+</li>
+<li><span class="math inline">\(\Rightarrow\)</span> 4.: <span class="math inline">\(V_0=\ker f\)</span> vale para qualquer endomorfismo. Afirmamos que <span class="math inline">\(V_1=\mbox{Im}(f)\)</span>. Se <span class="math inline">\(f\)</span> é raiz de <span class="math inline">\(t^2-t\)</span>, então <span class="math inline">\(f^2=f\)</span>. Se <span class="math inline">\(f(v)\in\mbox{Im}(f)\)</span>, então <span class="math inline">\(f(f(v))=f(v)\)</span>, logo <span class="math inline">\(f(v)\in V_1\)</span>. Seja <span class="math inline">\(v\in V_1\)</span>. Então <span class="math inline">\(f(v)=v\)</span> e <span class="math inline">\(v\in \mbox{Im}(f)\)</span>.</li>
+<li><span class="math inline">\(\Rightarrow\)</span> 5.: Temos que <span class="math inline">\(V_0\cap V_1=0\)</span>, então precisamos provar que <span class="math inline">\(V=V_0+V_1\)</span>. Se <span class="math inline">\(V_1=\mbox{Im}(f)\)</span>, então <span class="math inline">\(f(f(v))=f(v)\)</span> para todo <span class="math inline">\(v\in V\)</span>. Seja <span class="math inline">\(v\in V\)</span>. Escreva <span class="math inline">\(v=(v-f(v))+f(v)\)</span>. Ora <span class="math inline">\(f(v-f(v))=f(v)-f(f(v))=f(v)-f(v)=0\)</span>. Logo <span class="math inline">\(v-f(v)\in\ker f\)</span> e <span class="math inline">\(V=\ker f+\mbox{Im}(f)=V_0+V_1\)</span>.</li>
+<li><span class="math inline">\(\Rightarrow\)</span> 1.: Seja <span class="math inline">\(v\in V\)</span> e escreva <span class="math inline">\(v=v_0+v_1\)</span> com <span class="math inline">\(v_0\in\ker f=V_0\)</span> e <span class="math inline">\(v_1\in V_1\)</span>. Logo <span class="math display">\[
+f(v)=f(v_0+v_1)=f(v_0)+f(v_1)=f(v_1)=v_1
+\]</span> e <span class="math inline">\(f(f(v))=f(v_1)=v_1\)</span>. Logo <span class="math inline">\(f^2=f\)</span> e <span class="math inline">\(f\)</span> é uma projeção.</li>
 </ol>
 </div>
-<p>Se <span class="math inline">\(V=V_1\oplus\cdots\oplus V_k\)</span>, pode-se definir <span class="math inline">\(p_i:V\to V\)</span> por <span class="math display">\[
+<p>Lembre que um espaço vetorial <span class="math inline">\(V\)</span> é soma direta de espaços <span class="math inline">\(V_1,\ldots,V_k\)</span> (ou seja, <span class="math inline">\(V=V_1\oplus\cdots\oplus V_k\)</span>), se <span class="math display">\[
+V=V_1+\cdots+V_k\quad \mbox{e} \quad V_i\cap (\sum_{j\neq i}V_j)=0.
+\]</span> Em particular, não basta assumir que <span class="math inline">\(V_i\cap V_j=0\)</span> para todo <span class="math inline">\(i\neq j\)</span>. Se <span class="math inline">\(V=V_1\oplus\cdots\oplus V_k\)</span>, pode-se definir <span class="math inline">\(p_i:V\to V\)</span> por <span class="math display">\[
 p_i(v)=v_i
 \]</span> onde <span class="math inline">\(v=v_1+\cdots+v_k\)</span> com <span class="math inline">\(v_i\in V_i\)</span>. Definindo assim, temos que <span class="math inline">\(p_i\)</span> é uma projeção para cada <span class="math inline">\(i\)</span>, <span class="math inline">\(p_1+\cdots+p_k=\mbox{id}_V\)</span> e <span class="math inline">\(p_ip_j=0\)</span> quando <span class="math inline">\(i\neq j\)</span>. O teorema seguinte diz que este argumento pode ser revertido.</p>
-<div id="thm-" class="theorem">
+<div id="thm-proj" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 67.1</strong></span> Sejam <span class="math inline">\(p_1,\ldots,p_k:V\to V\)</span> tais que</p>
 <ol type="1">
 <li><span class="math inline">\(p_1+\cdots+p_k=\mbox{id}_V\)</span>;</li>
