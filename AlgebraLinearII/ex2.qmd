@@ -35,7 +35,7 @@ Sejam $f:V\to V$ e $v\in V$.
 2. Mostre que $m_{f,v}(t)\mid m_f(t)$.
 :::
 
-:::{#exr-}
+:::{#exr-mat-comp}
 Seja $p(t)=t^n+\alpha_{n-1} t^{n-1}+\cdots+\alpha_1 t+\alpha_0\in\F[t]$ um polinômio mônico e seja 
 $f:V\to V$ um operador com matriz 
 $$

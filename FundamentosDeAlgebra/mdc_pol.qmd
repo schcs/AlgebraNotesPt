@@ -128,7 +128,7 @@ Dois polinômios $f(x),g(x)\in\F[x]$ são **primos entre si** ou **coprimos** se
 
 
 
-:::{#cor-}
+:::{#cor-bezout-pol}
 Dois polinômios $f(x),g(x)\in\F[x]$ são primos entre si se e somente se existem $u(x),v(x)\in\F[x]$ tais que
 $$
 u(x)f(x)+v(x)g(x)=1.
