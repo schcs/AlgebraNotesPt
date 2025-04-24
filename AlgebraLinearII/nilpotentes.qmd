@@ -59,10 +59,10 @@ de $V$ tal que, para todo $j\in\{1,\ldots,k\}$,
 $$
 \{b_1,\ldots,b_{i_j}\}
 $$
-é uma base de $V_j$. Observamos que nesta base, a matriz de $f$ é triangular superior  com zeros no diagonal. Isso nos levou ao seguinte teorema.
+é uma base de $V_j$. Observamos que nesta base, a matriz de $f$ é triangular superior  com zeros na diagonal. Isso nos levou ao seguinte teorema.
 
 :::{#lem-}
-Se $f:V\to V$ é nilpotente, então existe uma base $B$ tal que $[f]_B^B$ é triangular superior com zeros no diagonal. Em particular, $\mbox{pcar}_f(t)=t^{\dim V}$.
+Se $f:V\to V$ é nilpotente, então existe uma base $B$ tal que $[f]_B^B$ é triangular superior com zeros na diagonal. Em particular, $\mbox{pcar}_f(t)=t^{\dim V}$.
 :::
 
 Seja $f:V\to V$ um endomorfismo e seja $v\in V$. Definimos nos exercícios o polinômio $m_{f,v}(t)$ como o polinômio mônico (não nulo) de menor grau tal que $m_{f,v}(f)(v)=0$. Como no caso do polinômio minimal $m_f(t)$, temos que $m_{f,v}(t)$ é gerador do ideal
@@ -82,7 +82,7 @@ Ora assuma que
 $$
 \alpha_0 v+\alpha_1 f(v)+\cdots+\alpha_{m-1}f^{m-1}(v)=0.
 $$
-Então $p(t)=\alpha_0+\alpha_1 t+\cdots+\alpha_{m-1}t^{m-1}\in I_{f,v}$; ou seja, $p^m\mid p(t)$. Como $\mbox{deg}(p(t))\leq m-1$, temos que $p(t)=0$; ou seja, $\alpha_0=\alpha_1=\cdots=\alpha_{m-1}=0$.
+Então $p(t)=\alpha_0+\alpha_1 t+\cdots+\alpha_{m-1}t^{m-1}\in I_{f,v}$; ou seja, $t^m\mid p(t)$. Como $\mbox{deg}(p(t))\leq m-1$, temos que $p(t)=0$; ou seja, $\alpha_0=\alpha_1=\cdots=\alpha_{m-1}=0$.
 :::
 
 Se $V$, $f$ e $v$ são como no lema anterior, então o espaço $U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle$ é $f$-invariante. O vetor $v$ é chamado de <b>vetor $f$-cíclico</b> e o espaço $U$ é dito <b>$f$-cíclico</b> gerado por $v$. Note que se $U$ é um espaço $f$-cíclico, então a matriz da restrição $f|_U$ na base $B=\{f^{m-1}(v),f^{m-2}(v),\ldots,f(v),v\}$ tem a forma
@@ -100,9 +100,7 @@ $$
 
 
 :::{.proof}
-Podemos observar que a matriz $[f]_B^B$ é a matriz companheira do polinômio $t^n$. Por um exercício em uma lista anterior, $m_f(t)=\mbox{pcar}_f(t)=t^m$.
-
-Alternativamente, podemos também observar que $f^m(b)=0$ para todo $b\in B$. Portanto $f^m=0$ e obtemos que $m_f(t)\mid t^m$. Por outro lado, $f^{m-1}(f)(v)\neq 0$ e assim $t^{m-1}$ não é múltiplo de $m_f(t)$. Portanto $m_f(t)=t^m$.
+Observe que $f^m(b)=0$ para todo $b\in B$. Portanto $f^m=0$ e obtemos que $m_f(t)\mid t^m$. Por outro lado, $f^{m-1}(f)(v)\neq 0$ e assim $t^{m-1}$ não é múltiplo de $m_f(t)$. Portanto $m_f(t)=t^m$.
 
 :::
 
