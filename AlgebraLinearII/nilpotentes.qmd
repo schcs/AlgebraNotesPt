@@ -27,11 +27,9 @@ Assuma que $f:V\to V$ é um endomorfismo tal que $m_f(t)=(t-\lambda)^k$. Ou seja
 :::{#lem-}
 Seja $f:V\to V$ é nilpotente.
 
-
- -  O único autovalor de $f$ é $0$.
- -  $f$ não é invertível; ou seja $\ker f\neq 0$ e $\mbox{Im}(f) < V$.
- -  $m_f(t)=t^k$ onde $k$ é o menor inteiro positivo tal que $f^k=0$.
-
+1.  O único autovalor de $f$ é $0$.
+2.  $f$ não é invertível; ou seja $\ker f\neq 0$ e $\mbox{Im}(f) < V$.
+3.  $m_f(t)=t^k$ onde $k$ é o menor inteiro positivo tal que $f^k=0$.
 :::
 
 
