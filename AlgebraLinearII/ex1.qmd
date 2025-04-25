@@ -1219,10 +1219,10 @@ este espaço satisfaz a propriedade universal.]
    Λ^kV --------> 
    ```
 
-   Aqui, a seta vertical $V^k \to \Lambda^kV$ é a aplicação $k$-linear $\lambda$, e a seta diagonal $\Lambda^kV \to Z$ é a aplicação linear $\tilde{f}$ que torna o diagrama comutativo, ou seja, $f = \tilde{f} \circ \lambda$.
+   Aqui, a seta vertical $V^k \to \Lambda^kV$ é a aplicação $k$-linear alternada $\lambda$, e a seta diagonal $\Lambda^kV \to Z$ é a aplicação linear $\tilde{f}$ que torna o diagrama comutativo, ou seja, $f = \tilde{f} \circ \lambda$.
 
 2. **Unicidade de $\Lambda^kV$**:
-   Seja $\Lambda^kV$ e $\Lambda'^kV$ dois espaços vetoriais que satisfazem a propriedade universal com as aplicações $k$-lineares $\lambda: V^k \to \Lambda^kV$ e $\lambda': V^k \to \Lambda'^kV$. Pela propriedade universal de $\Lambda^kV$, existe uma aplicação linear única $\phi: \Lambda^kV \to \Lambda'^kV$ tal que $\lambda' = \phi \circ \lambda$. Analogamente, pela propriedade universal de $\Lambda'^kV$, existe uma aplicação linear única $\psi: \Lambda'^kV \to \Lambda^kV$ tal que $\lambda = \psi \circ \lambda'$. 
+   Seja $\Lambda^kV$ e $\Lambda'^kV$ dois espaços vetoriais que satisfazem a propriedade universal com as aplicações $k$-lineares alternadas $\lambda: V^k \to \Lambda^kV$ e $\lambda': V^k \to \Lambda'^kV$. Pela propriedade universal de $\Lambda^kV$, existe uma aplicação linear única $\phi: \Lambda^kV \to \Lambda'^kV$ tal que $\lambda' = \phi \circ \lambda$. Analogamente, pela propriedade universal de $\Lambda'^kV$, existe uma aplicação linear única $\psi: \Lambda'^kV \to \Lambda^kV$ tal que $\lambda = \psi \circ \lambda'$. 
 
    Compondo as duas aplicações, temos $\psi \circ \phi: \Lambda^kV \to \Lambda^kV$ tal que $\psi \circ \phi \circ \lambda = \lambda$. Pela unicidade da aplicação linear que satisfaz essa propriedade, segue que $\psi \circ \phi = \text{id}_{\Lambda^kV}$. Analogamente, $\phi \circ \psi = \text{id}_{\Lambda'^kV}$. Portanto, $\phi$ é um isomorfismo, mostrando que $\Lambda^kV$ é único a menos de isomorfismo.
 
