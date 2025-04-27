@@ -1005,8 +1005,8 @@ Para mostrar que não existem $u, v \in V$ tais que $b_1 \otimes b_1 + b_2 \otim
 
 :::{#exr-}
 Sejam $U$, $V$ e $W$ espaços vetoriais sobre $\F$. Mostre que a aplicação 
-$(u\otimes v)\otimes w\mapsto v\otimes (u\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
-pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to V\otimes (U\otimes W)$.
+$(u\otimes v)\otimes w\mapsto u\otimes (v\otimes w)$ ($u\in U$, $v\in V$ e $w\in W$) 
+pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\otimes W\to U\otimes (V\otimes W)$.
 :::
 :::{.sol .callout-tip collapse="true"}
 ### Dica: 
@@ -1196,7 +1196,7 @@ Para mostrar que $\sigma$ é uma permutação par se e somente se o número de i
 
 :::{#exr-alt-pow}
 Seja $V$ um espaço vetorial. Defina a $k$-ésima potência exterior $\Lambda^kV$ como um espaço vetorial junto com uma 
-aplicação $k$-linear $\lambda:V^k\to \Lambda^kV$ que satisfaz a seguinte propriedade universal: Para todo espaço vetorial $Z$ e toda
+aplicação $k$-linear $\lambda:V^k\to \Lambda^kV$ alternada que satisfaz a seguinte propriedade universal: Para todo espaço vetorial $Z$ e toda
 aplicação $k$-linear $f:V^k\to Z$, existe uma única aplicação linear $\tilde f:\Lambda^kV\to Z$ tal que 
 $f = \tilde f\circ \lambda$. 
 
@@ -1219,10 +1219,10 @@ este espaço satisfaz a propriedade universal.]
    Λ^kV --------> 
    ```
 
-   Aqui, a seta vertical $V^k \to \Lambda^kV$ é a aplicação $k$-linear $\lambda$, e a seta diagonal $\Lambda^kV \to Z$ é a aplicação linear $\tilde{f}$ que torna o diagrama comutativo, ou seja, $f = \tilde{f} \circ \lambda$.
+   Aqui, a seta vertical $V^k \to \Lambda^kV$ é a aplicação $k$-linear alternada $\lambda$, e a seta diagonal $\Lambda^kV \to Z$ é a aplicação linear $\tilde{f}$ que torna o diagrama comutativo, ou seja, $f = \tilde{f} \circ \lambda$.
 
 2. **Unicidade de $\Lambda^kV$**:
-   Seja $\Lambda^kV$ e $\Lambda'^kV$ dois espaços vetoriais que satisfazem a propriedade universal com as aplicações $k$-lineares $\lambda: V^k \to \Lambda^kV$ e $\lambda': V^k \to \Lambda'^kV$. Pela propriedade universal de $\Lambda^kV$, existe uma aplicação linear única $\phi: \Lambda^kV \to \Lambda'^kV$ tal que $\lambda' = \phi \circ \lambda$. Analogamente, pela propriedade universal de $\Lambda'^kV$, existe uma aplicação linear única $\psi: \Lambda'^kV \to \Lambda^kV$ tal que $\lambda = \psi \circ \lambda'$. 
+   Seja $\Lambda^kV$ e $\Lambda'^kV$ dois espaços vetoriais que satisfazem a propriedade universal com as aplicações $k$-lineares alternadas $\lambda: V^k \to \Lambda^kV$ e $\lambda': V^k \to \Lambda'^kV$. Pela propriedade universal de $\Lambda^kV$, existe uma aplicação linear única $\phi: \Lambda^kV \to \Lambda'^kV$ tal que $\lambda' = \phi \circ \lambda$. Analogamente, pela propriedade universal de $\Lambda'^kV$, existe uma aplicação linear única $\psi: \Lambda'^kV \to \Lambda^kV$ tal que $\lambda = \psi \circ \lambda'$. 
 
    Compondo as duas aplicações, temos $\psi \circ \phi: \Lambda^kV \to \Lambda^kV$ tal que $\psi \circ \phi \circ \lambda = \lambda$. Pela unicidade da aplicação linear que satisfaz essa propriedade, segue que $\psi \circ \phi = \text{id}_{\Lambda^kV}$. Analogamente, $\phi \circ \psi = \text{id}_{\Lambda'^kV}$. Portanto, $\phi$ é um isomorfismo, mostrando que $\Lambda^kV$ é único a menos de isomorfismo.
 
