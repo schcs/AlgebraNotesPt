@@ -112,7 +112,7 @@ Então
 \begin{align*}
 [T(\ul{v})]_C&=\left[T\left(\sum_{i=1}^m \beta_i\ul{b_i}\right)\right]_C=
 \left[\sum_{i=1}^m \beta_iT(\ul{b_i})\right]_C\\&=
-\sum_{i=1}^m \beta_i[T(\ul{b_i})]_C=[T]_C^B\begin{pmatrix} \beta_1\\ \vdots \\\beta_n\end{pmatrix}=
+\sum_{i=1}^m \beta_i[T(\ul{b_i})]_C=[T]_C^B\begin{pmatrix} \beta_1\\ \vdots \\\beta_m\end{pmatrix}=
 [T]^B_Cv_B.
 \end{align*}
 
