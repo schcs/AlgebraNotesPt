@@ -20,12 +20,12 @@ Ou seja, $f$ é diagonalizável com autovalores $2$ e $3$. O polinômio minimal 
 $$
 \F^5=\langle b_1,b_2,b_3\rangle\oplus\langle b_4,b_5\rangle=V_2\oplus V_3=\ker(f-2\mbox{id})\oplus\ker(f-3\mbox{id}).
 $$
-Ou seja, a fatoração do polinômio minimal $m_f(t)$ em produto de irredutúveis está refletida em uma fatoração de $V$ em uma soma direta de autoespaços.
+Ou seja, a fatoração do polinômio minimal $m_f(t)$ em produto de irredutúveis está refletida em uma decomposição de $V$ em uma soma direta de autoespaços.
 :::
 
 
 :::{#exm-}
-A fatoração do domínio do endomorfismo como no exemplo anterior não é sempre possível. Considere por exemplo
+A decomposição do domínio do endomorfismo como no exemplo anterior não é sempre possível. Considere por exemplo
 $f:\F^5\to \F^5$ um endomorfismo e $B$ é base de $\F^5$ tal que
 $$
 [f]_B^B=\begin{pmatrix}
@@ -49,9 +49,10 @@ e
 $$
 \F^5=W_2\oplus W_3.
 $$
-Em outras palavras, $\F^5$ não se decompões como soma direta dos autoespaços, mas existe uma decomposição de $\F^5$ reletindo a decomposição de $m_f(t)$. Os espaços $W_2$ e $W_3$ são chamados de <b>autoespaços generalizados</b>.
+Em outras palavras, $\F^5$ não se decompõe como soma direta dos autoespaços, mas existe uma decomposição de $\F^5$ refletindo a fatoração de $m_f(t)$. Os espaços $W_2$ e $W_3$ são chamados de **autoespaços generalizados**.
 :::
 
+No seguinte exemplo vamos usar a matriz companheira de um polinômio que aparece no @exr-mat-comp.
 
 :::{#exm-}
 Seja $f:\R^4\to \R^4$ um endomorfismo com matriz
@@ -96,13 +97,11 @@ Assuma que
 $$
 m_f(t)=q_1(t)^{\alpha_1}\cdots q_k(t)^{\alpha_k}
 $$
-com $\alpha_i\geq 1$ e os $q_is$ são polinômios irredutúveis distintos em $\F[x]$. Ponha $W_i=\ker (q_i^{\alpha_i}(f))$. Então as seguintes são verdadeiras:
+com $\alpha_i\geq 1$ e os $q_is$ são polinômios irredutúveis distintos em $\F[x]$. Ponha $W_i=\ker (q_i(f)^{\alpha_i})$. Então as seguintes são verdadeiras:
 
-
- -  $V=W_1\oplus\cdots\oplus W_k$;
- -  cada $W_i$ é $f$-invariante;
- -  o polinômio mínimo de $f|_{W_i}$ é $q_i^{\alpha_i}(t)$.
-
+1.  $V=W_1\oplus\cdots\oplus W_k$;
+2.  cada $W_i$ é $f$-invariante;
+3.  o polinômio mínimo de $f|_{W_i}$ é $q_i^{\alpha_i}(t)$.
 :::
 
 
@@ -111,13 +110,13 @@ Seja
 $$
 r_i=m_f(t)/q_i^{\alpha_i}(t)=q_1(t)^{\alpha_1}\cdots q_{i-1}(t)^{\alpha_{i-1}}q_{i+1}(t)^{\alpha_{i+1}}\cdots q_k(t)^{\alpha_k}.
 $$
-Os polinômios $r_1,\ldots,r_k$ são primos entre si, e existem $h_1(t),\ldots,h_k(t)\in\F[x]$ tais que
+Temos que $\mbox{mdc}(r_1,\ldots,r_k)=1$, e o Teorema de Bezout para polinômios (@cor-bezout-pol) diz que existem $h_1(t),\ldots,h_k(t)\in\F[x]$ tais que
 $$
 h_1(t)r_1(t)+\cdots+h_k(t)r_k(t)=1;
 $$
 ou seja
 $$
-h_1(f)r_1(f)+\cdots+h_k(f)r_k(f)=\mbox{id}_V;
+h_1(f)r_1(f)+\cdots+h_k(f)r_k(f)=\mbox{id}_V.
 $$
 Afirmamos que a composição de duas parcelas na soma anterior é o endomorfismo zero. De fato, note que se $i\neq j$, então $m_f(t)\mid r_i(t)r_j(t)$ e
 $$
@@ -125,7 +124,7 @@ h_i(f)r_i(f)h_j(f)r_j(f)=h_i(f)h_j(f)r_i(f)r_j(f)=[(h_ih_j)(f)][(r_ir_j)(f)]=0.
 $$
 Aqui usamos que $r_i(f)$ $h_j(f)$ comutam pois eles são membros do anel comutativo $\F[f]$.
 
-Ora usamos o Teorema que provamos na página <a href="https://schcs.github.io/WP/index.php/ensino/algebra-linear-ii/projecoes/">Projeções</a> para concluir que cada $h_i(f)r_i(f)$ é uma projeção e
+Ora usamos o @thm-proj que provamos para projeções para concluir que cada $h_i(f)r_i(f)$ é uma projeção e
 $$
 V=\mbox{Im}(h_1(f)r_1(f))\oplus\cdots\oplus \mbox{Im}(h_k(f)r_k(f)).
 $$
@@ -146,11 +145,11 @@ Finalmente, provamos a afirmação sobre o polinômio mínimo de $f|_{W_i}$. Sej
 q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v)&=q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1+\cdots+v_k)\\&=
 q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_1)+\cdots+q_1^{\beta_1}(f)\cdots q_k^{\beta_k}(f)(v_k)\\&=0.
 \end{align*}
-Obtemos que $m_f(t)=q_1^{\alpha_1}\cdots q_k^{\alpha_k}$ divide $q_1^{\beta_1}\cdots q_k^{\beta_k}$. Pelo Teorema da Fatoração para Polinômios, obtemos que $\alpha_i\leq \beta_i$ para todo $i$ e $\alpha_i=\beta_i$ segue para todo $i$. Logo $m_i(t)=q_i^{\alpha_i}$.
+Obtemos que $m_f(t)=q_1^{\alpha_1}\cdots q_k^{\alpha_k}$ divide $q_1^{\beta_1}\cdots q_k^{\beta_k}$. Pelo Teorema da Fatoração para Polinômios (@thm-tfa-pol), obtemos que $\alpha_i\leq \beta_i$ para todo $i$ e $\alpha_i=\beta_i$ segue para todo $i$. Logo $m_i(t)=q_i^{\alpha_i}$.
 
 :::
 
-O Teorema espectral é o caso particilar $\F=\C$ do Teorema da Decomposição Primária. Neste caso
+O Teorema espectral é o caso particilar $\F=\C$ do Teorema da Decomposição Primária. Neste caso, pelo Teorema Fundamental da Álgebra (@thm-fundamental-da-algebra),
 $$
 m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
 $$
@@ -158,15 +157,13 @@ com $\lambda_1,\ldots,\lambda_k\in \C$ distintos e $\alpha_i\geq 1$.
 
 :::{#thm-}
 (O Teorema Espectral)
-Assuma que $\F=\C$ e $f:V\to V$ é como acima. Neste caso,
+Assuma que $\F=\C$ e $f:V\to V$ é como acima. Neste caso
 $$
 m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
 $$
 com $\lambda_i\in\C$ distintos e $\alpha_i\geq 1$. Ponha $W_i=\ker (f-\lambda_i\mbox{id}_V)^{\alpha_i}$. Então as seguintes são verdadeiras:
 
-
- -  $V=W_1\oplus\cdots\oplus W_k$;
- -  cada $W_i$ é $f$-invariante;
- -  o polinômio mínimo de $f|_{W_i}$ é $(t-\lambda_i)^{\alpha_i}$.
-
+1. $V=W_1\oplus\cdots\oplus W_k$;
+2. cada $W_i$ é $f$-invariante;
+3. o polinômio mínimo de $f|_{W_i}$ é $(t-\lambda_i)^{\alpha_i}$.
 :::

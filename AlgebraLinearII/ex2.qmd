@@ -1,0 +1,91 @@
+---
+title: "Exercícios: Bloco 2"
+number-sections: true
+lang: pt-BR
+--- 
+
+
+:::{#exr-}
+Seja $f:V\to V$ um operador diagonalizável. Assuma que 
+os autovalores distintos de $f$ são $\lambda_1,\ldots,\lambda_k$. Mostre que 
+$$
+m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
+$$ 
+:::
+
+
+:::{#exr-}
+Seja $R_\alpha:\R^2\to\R^2$ a rotação por $\alpha$ graus em torno da origem no sentido anti-horário. É conhecido e não precisa provar que $R_\alpha$ é linear.
+
+1. Escreva a matriz $M_\alpha$ de $R_\alpha$ na base canônica de $\R^2$.
+2. Carateriza os ângulos $\alpha$ para os quais $R_\alpha$ é diagonalizável. 
+3. Seja $\overline R_\alpha:\C^2\to \C^2$ a complexificação de $R_\alpha$ cuja matriz na base canônica é a mesma que a matriz de $R_\alpha$. Mostre que $\overline R_\alpha$ é diagonalizável e determine os seus autovetores e autovalores.
+:::
+
+:::{#exr-}
+Seja $A\in M_{n\times n}(\F)$ e considere o operador linear $f_A:M_{n\times n}(\F)\to M_{n\times n}(\F)$, definido por $f_A(B)=AB$.  Será verdade que $A$ e $f_A$ 
+possuem os mesmos autovalores? Será que $A$ e $f_A$ possuem o mesmo
+polinômio característico? Será que $A$ e $f_A$ possuem o mesmo polinômio mínimo? 
+:::
+
+:::{#exr-}
+Sejam $f:V\to V$ e $v\in V$.
+
+1. Mostre que existe um único polinômio mônico não nulo de menor grau $m_{f,v}(t)$ tal que $m_{f,v}(f)(v)=0$. 
+2. Mostre que $m_{f,v}(t)\mid m_f(t)$.
+:::
+
+:::{#exr-mat-comp}
+Seja $p(t)=t^n+\alpha_{n-1} t^{n-1}+\cdots+\alpha_1 t+\alpha_0\in\F[t]$ um polinômio mônico e seja 
+$f:V\to V$ um operador com matriz 
+$$
+    \begin{pmatrix} 0 & 0 & \cdots & 0 & -\alpha_0\\
+                    1 & 0 & \cdots & 0 & -\alpha_1 \\
+                    0 & 1 & \cdots & 0 & - \alpha_2 \\
+                    \vdots & \vdots & \ddots & \vdots & \vdots \\
+                    0 & 0 & \cdots &1 & -\alpha_{n-1}
+    \end{pmatrix}
+$$
+em uma base $B=\{b_1,\ldots,b_n\}$.
+
+1. Mostre que $m_{f,b_1}(t)=p(t)$.
+2. Deduza que $m_f(t)=\mbox{pcar}(t)=p(t)$. 
+   
+[A matriz no exercício chama-se **matriz companheira** do polinômio $p(t)$.]
+:::
+
+:::{#exr-}
+Seja $f:V\to V$ um operador linear tal que $fg=gf$ para todo $g:V\to V$. Mostre que existe algum $\lambda\in\F$ tal que $f(v)=\lambda v$ para todo $v\in V$. 
+:::
+
+:::{#exr-}
+Seja $f:V\to V$ um operador linear e $g:V\to V$ tal que $fg=gf$. Lembre que um espaço $U\leq V$ é $g$-invariante se $g(u)\in U$ para todo $u\in U$. Mostre que 
+
+1. $\ker f$ e $\mbox{Im}(f)$ são $g$-invariantes.
+2. Os autoespaços $V_\lambda$ de $f$ são invariantes por $g$.
+:::
+
+:::{#exr-}
+Seja $f:V\to V$ diagonalizável com autovalores distintos $\lambda_1,\ldots,\lambda_k$. Assuma que $d_1,\ldots,d_k$ são as multiplicidades de $\lambda_1,\ldots,\lambda_k$. (Como $f$ é diagonalizável, as multiplicidades geométricas e algébricas são iguais.) Seja 
+$$
+    C(f)=\{g:V\to V\mid fg=gf\}.
+$$ 
+Demonstre que $C(f)$ é uma subalgebra de $\mbox{End}(V)$ (ou seja, ele é um subespaço e é fechado para a composição de operadores) e que 
+$$
+    \dim C(f)=\sum_{i=1}^k d_i^2. 
+$$
+Dê uma descrição de $C(f)$.
+(A álgebra $C(f)$ chama-se o centralizador de $f$ em $\mbox{End}(V)$.)
+:::
+
+
+:::{#exr-}
+Seja $\Gamma$ um grafo não direcionado com vertices $\{1,\ldots,n\}$ sem arrestas múltiplas e sem laços. 
+A matriz de adjacência $A_\Gamma=(a_{i,j})$ é definida como a matriz $n\times n$ com entrada $a_{i,j}=1$ se e somente se 
+os vértices $i$ e $j$ são adjacentes; caso contrário $a_{i,j}=0$. Como $A_\Gamma$ é uma matriz simétrica, sabe-se de Álgebra Linear I que os autovalores de $A_\Gamma$ são números reais e seja $\lambda_1$ o maior autovalor. 
+
+1. Mostre que $\lambda_1$ é menor ou igual que o máximo entre os graus (número de vizinhos) dos vertices de $v$. 
+2. O grafo $\Gamma$ é dito regular, se cada vértice tem o mesmo grau (ou seja, o mesmo número de vizinhos).  Mostre que se $\Gamma$ for regular, então $\lambda_1=k$ onde $k$ é o número dos vizinhos de um vértice.
+3. Mostre que quando $\Gamma$ é regular e conexo, então a $\dim V_k=1$ (onde $k$ é como no item anterior) e ache gerador para $V_k$.
+4. Ache os autovalores de $A_\Gamma$ no caso quando $\Gamma$ é o grafo completo com $n$ vértices. 
+:::

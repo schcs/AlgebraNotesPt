@@ -8,7 +8,7 @@ lang: pt-BR
 
 Seja $\F$ um corpo. Lembre que $\alpha\in\F$ é raiz de um polinômio $f(x)\in\F[x]$ se $f(\alpha)=0$.
 
-:::{#lem-}
+:::{#lem-root-div}
 Seja $f(x)\in\F[x]\setminus\{0\}$ um polinômio e $\alpha\in\F$. Então existe um polinômio $q(x)\in\F[x]$ tal que
 $$
 f(x)=q(x)(x-\alpha)+f(\alpha).
@@ -30,7 +30,7 @@ Para provar a segunda afirmação, observe que $\alpha$ é raiz do polinômio $f
 :::
 
 
-:::{#cor-}
+:::{#cor-nr-roots}
 Seja $f(x)\in\F[x]\setminus\{0\}$ um polinômio. O número das raízes de $f(x)$ em $\F$ é menor ou igual a $\grau{f(x)}$
 :::
 
@@ -44,7 +44,7 @@ e, como $\beta-\alpha\neq 0$, $g(\beta)=0$. Logo $\beta$ precisa ser raiz de $g(
 :::
 
 
-:::{#thm-}
+:::{#thm-fundamental-da-algebra}
  (O Teorema fundamental da Álgebra)
 Seja $f(x)\in\C[x]$ um polinômio de grau maior ou igual a $1$. Então $f(x)$ possui raiz em $\C$
 :::

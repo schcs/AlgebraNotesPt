@@ -127,11 +127,20 @@ Dois polinômios $f(x),g(x)\in\F[x]$ são **primos entre si** ou **coprimos** se
 :::
 
 
-:::{#cor-}
+
+:::{#cor-bezout-pol}
 Dois polinômios $f(x),g(x)\in\F[x]$ são primos entre si se e somente se existem $u(x),v(x)\in\F[x]$ tais que
 $$
 u(x)f(x)+v(x)g(x)=1.
 $$
+:::
+
+:::{#exr-coprime-pol}
+Sejam $f(x),g(x),h(x)\in\F[x]$ polynômios não nulos tais que $f(x)\mid h(x)$ e $g(x)\mid h(x)$. Mostre que 
+$$
+\frac{f(x)g(x)}{\mbox{mdc}(f(x),g(x))}\mid h(x).
+$$
+(Dica: Consulte @lem-mdc-props.)
 :::
 
 

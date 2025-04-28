@@ -170,7 +170,7 @@ propriedade SIM.
 Pode-se dizer então que um produto interno sobre um espaço vetorial $V$
 é uma forma bilinear simétrica que também é positiva definida.
 
-:::::{#exm-bilin-mat}
+:::::{ }
 Sejam $A$ uma matriz $n\times n$ e $V$ um espaço vetorial de dimensão
 $n$ com base $B = \{\ul{b_1},\ldots,\ul{b_n}\}$. Se lembre que para
 $v\in V$, $[v]_B$ denota o vetor (coluna) das coordenadas de $v$ na base

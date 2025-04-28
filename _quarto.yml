@@ -87,12 +87,12 @@ book:
         - AlgebraLinearII/ex1.qmd
         - AlgebraLinearII/autovals.qmd
         - AlgebraLinearII/pol_min.qmd
-        - AlgebraLinearII/cayley_hamilton.qmd
         - AlgebraLinearII/projecoes.qmd
         - AlgebraLinearII/primaria.qmd
         - AlgebraLinearII/nilpotentes.qmd
         - AlgebraLinearII/unicidade_jordan.qmd
         - AlgebraLinearII/cyclic.qmd
+        - AlgebraLinearII/ex2.qmd
         - AlgebraLinearII/sesqui.qmd
         - AlgebraLinearII/isometrias.qmd
         - AlgebraLinearII/adjuntos.qmd

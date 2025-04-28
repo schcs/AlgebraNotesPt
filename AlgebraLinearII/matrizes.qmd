@@ -78,7 +78,7 @@ Ou seja, a matriz $[\mbox{id}_V]_C^B$ é a matriz de mudança de base de $B$ par
 
 Uma transformação linear $f:V\to V$ chama-se <b>endomorfismo</b> de $V$. Se temos um endomorfismo $f$ de $V$, então normalmente consideramos a sua matriz $[f]_B^B$ tomando a mesma base de $V$ para o domínio e para a codimínio. Quando temos duas bases $B$ e $C$ de $V$, precisaremos a relação entre $[f]_B^B$ e $[f]_C^C$.
 
-:::{#lem-}
+:::{#lem-base-change}
 Seja $f:V\to V$ linear e sejam $B$ e $C$ bases de $V$. Então
 $$
 [f]_C^C=[\mbox{id}_V]_C^B[f]_B^B[\mbox{id}_V]^C_B=[\mbox{id}_V]_C^B[f]_B^B\left([\mbox{id}_V]_C^B\right)^{-1}.

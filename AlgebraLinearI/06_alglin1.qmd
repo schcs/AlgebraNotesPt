@@ -29,11 +29,11 @@ diferentes vetores de coordenadas com respeito a bases diferentes.
 Lembre da demonstração do @cor-isom-Rn que o mapa $\ul{v}\mapsto v_B$ é um isomorfismo $V\to \R^m$ (@def-isom-vect) de espaços vetoriais.  
 
 :::{#exr-mat-equal}
-Suponha que $A$ a $B$ são matrizes $m\times n$ tal que 
+Suponha que $A$ a $B$ são matrizes $n\times m$ tal que 
 $$
 Av=B\ul{v}
 $$
-para todo $\ul{v}\in \R^n$ (vetor coluna). Demonstre que $A=B$.
+para todo $\ul{v}\in \R^m$ (vetor coluna). Demonstre que $A=B$.
 :::
 
 :::{#exm-}
