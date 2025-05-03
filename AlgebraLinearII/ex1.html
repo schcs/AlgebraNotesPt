@@ -2759,17 +2759,40 @@ Solução:
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><strong>Propriedade multiplicativa do determinante</strong>:
+<li>Sejam <span class="math inline">\(f, g: V \to V\)</span> transformações lineares. Precisamos mostrar que <span class="math inline">\(\det(f \circ g) = \det(f) \cdot \det(g)\)</span>.</li>
+</ol>
+<p>A. <strong>Propriedade do pullback</strong>: Seja <span class="math inline">\(T \in A^n(V)\)</span> uma forma <span class="math inline">\(n\)</span>-linear alternada. Pelo <a href="formas.html#def-determinant-f" class="quarto-xref">Definição&nbsp;<span>63.3</span></a>, o pullback <span class="math inline">\(f^*_A\)</span> é uma aplicação linear em <span class="math inline">\(A^n(V)\)</span>, que é de dimensão 1. Assim, <span class="math inline">\(f^*_A\)</span> pode ser identificado com a multiplicação por um escalar <span class="math inline">\(\delta_f\)</span>. O determinante de <span class="math inline">\(f\)</span> é definido como o escalar <span class="math inline">\(\delta_f\)</span>. De forma semelhante, <span class="math inline">\((f \circ g)^*_A\)</span> é o pullback da composição <span class="math inline">\(f \circ g\)</span>.</p>
+<p>B. <strong>Composição dos pullbacks</strong>: Para qualquer <span class="math inline">\(T \in A^n(V)\)</span>, temos: <span class="math display">\[
+   f^*_A(T)(v_1,\ldots,v_n)=T(f(v_1),\ldots,f(v_n)).
+   \]</span> Se <span class="math inline">\(f,g\in\mbox{End}(V)\)</span>, então <span class="math display">\[\begin{align*}
+   (f\circ g)^*_A(T)(v_1,\ldots,v_n)&amp;=T(f(g(v_1)),\ldots,f(g(v_1)))\\&amp;=f^*_A(T)(g(v_1),\ldots,g(v_n))\\&amp;=g^*_A(f^*_A(T))(v_1,\ldots,v_n).
+   \end{align*}\]</span> Em particular, <span class="math inline">\((f\circ g)^*_A=g^*_A\circ f^*_A\)</span>. Como <span class="math inline">\(f^*_A\)</span>, <span class="math inline">\(g^*_A\)</span> e <span class="math inline">\((f\circ g)_A^*\)</span> são multiplicações escalares, segue que: <span class="math display">\[
+   \delta_{f\circ g}T=(f\circ g)^*_A(T)=(g^*_A\circ f^*_A)(T)=g^*_A(f^*_A(T))=g^*_A(\delta_f T)=
+   \delta_g\delta_f T.
+   \]</span> Como isso vale para todo <span class="math inline">\(T\in A^n(V)\)</span>, segue que <span class="math inline">\(\delta_{f\circ g}=\delta_g\delta_f\)</span>; ou seja<br>
+<span class="math display">\[
+   \det(f \circ g) = \det(f) \cdot \det(g).
+   \]</span></p>
+<ol start="2" type="1">
+<li><p><strong>Coincidência com o determinante da matriz</strong>:</p>
+<p>Seja <span class="math inline">\(B = \{b_1, \ldots, b_n\}\)</span> uma base de <span class="math inline">\(V\)</span> e assuma que <span class="math inline">\((a_{ji})\)</span> é a matriz de <span class="math inline">\(f\)</span> na base <span class="math inline">\(B\)</span>. Pelo <a href="formas.html#cor-AkV-dim1" class="quarto-xref">Corolário&nbsp;<span>63.2</span></a>, a forma <span class="math inline">\(n\)</span>-linear alternada <span class="math inline">\(T \in A^n(V)\)</span> é determinada pelo valor <span class="math inline">\(T(b_1, \ldots, b_n)\)</span>. O pullback <span class="math inline">\(f^*_A(T)\)</span> é dado por: <span class="math display">\[
+f^*_A(T)(v_1, \ldots, v_n) = T(f(v_1), \ldots, f(v_n)).
+\]</span> Em particular, para <span class="math inline">\(v_i = b_i\)</span>, temos: <span class="math display">\[\begin{align*}
+f^*_A(T)(b_1, \ldots, b_n) &amp;= T(f(b_1), \ldots, f(b_n)) \\&amp;=
+T\left(\sum_{j=1}^n a_{j1} b_j, \ldots, \sum_{j=1}^n a_{jn} b_j\right)\\&amp;=
+\sum_{\sigma \in S_n}(-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}T(b_1,\ldots,b_n)\\&amp;
+=\det (a_{ji}) T(b_1,\ldots,b_n).
+\end{align*}\]</span> Para justificar a terceira igualdade, veja <a href="formas.html#cor-forma-det" class="quarto-xref">Corolário&nbsp;<span>63.3</span></a>. Em particular <span class="math inline">\(f^*_A(T)=\det (a_{j,i}) T\)</span>; ou seja <span class="math inline">\(\det f=\det (a_{j,i})\)</span>. Assim, <span class="math inline">\(\det f\)</span> coincide com o determinante da matriz de <span class="math inline">\(f\)</span> em qualquer base.</p></li>
+<li><p><strong>Invertibilidade e determinante</strong>:</p>
 <ul>
-<li>Seja <span class="math inline">\(f, g: V \to V\)</span>. Pelo <a href="formas.html#def-determinant-f" class="quarto-xref">Definição&nbsp;<span>63.3</span></a>, o determinante de <span class="math inline">\(f\)</span> é definido como o escalar <span class="math inline">\(\delta \in \F\)</span> tal que <span class="math inline">\(f^*_A = \delta \cdot \text{id}_{A^n(V)}\)</span>, onde <span class="math inline">\(A^n(V)\)</span> é o espaço das formas <span class="math inline">\(n\)</span>-lineares alternadas em <span class="math inline">\(V\)</span>. Similarmente, para <span class="math inline">\(g\)</span>, temos <span class="math inline">\(g^*_A = \gamma \cdot \text{id}_{A^n(V)}\)</span>.</li>
-<li>Considere a composição <span class="math inline">\(f \circ g\)</span>. O pullback <span class="math inline">\((f \circ g)^*_A\)</span> é dado por: <span class="math display">\[
-(f \circ g)^*_A = g^*_A \circ f^*_A.
-\]</span> Substituindo as expressões para <span class="math inline">\(f^*_A\)</span> e <span class="math inline">\(g^*_A\)</span>, temos: <span class="math display">\[\begin{align*}
-(f \circ g)^*_A &amp;= (\gamma \cdot \text{id}_{A^n(V)}) \circ (\delta \cdot \text{id}_{A^n(V)})
-\\&amp;= (\gamma \cdot \delta) \cdot \text{id}_{A^n(V)}.
-\end{align*}\]</span> Assim, <span class="math inline">\(\det(f \circ g) = \det(f) \cdot \det(g)\)</span>.</li>
-</ul></li>
-<li>A ser inserida.</li>
+<li><p>Se <span class="math inline">\(f\)</span> não é invertível, então <span class="math inline">\(\ker(f) \neq \{0\}\)</span>. Isso implica que existe um vetor <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(f(v) = 0\)</span>. Como <span class="math inline">\(f^*_A(T)(v_1, \ldots, v_n) = T(f(v_1), \ldots, f(v_n))\)</span>, se <span class="math inline">\(v_1 = v\)</span> e <span class="math inline">\(v_2, \ldots, v_n\)</span> forem quaisquer vetores, então <span class="math inline">\(f^*_A(T)(v_1, \ldots, v_n) = 0\)</span>. Isso implica que <span class="math inline">\(f^*_A(T) = 0\)</span>, ou seja, <span class="math inline">\(\det(f) = 0\)</span>.</p></li>
+<li><p>Reciprocamente, se <span class="math inline">\(f\)</span> é invertível, então existe <span class="math inline">\(g: V \to V\)</span> tal que <span class="math inline">\(f \circ g = \text{id}_V\)</span>. Pelo item 1, temos: <span class="math display">\[
+\det(f \circ g) = \det(f) \cdot \det(g).
+\]</span> Como <span class="math inline">\(f \circ g = \text{id}_V\)</span>, segue que <span class="math inline">\(\det(f \circ g) = \det(\text{id}_V) = 1\)</span>. Assim: <span class="math display">\[
+\det(f) \cdot \det(g) = 1.
+\]</span> Isso implica que <span class="math inline">\(\det(f) \neq 0\)</span>. Portanto, <span class="math inline">\(f\)</span> é invertível se e somente se <span class="math inline">\(\det(f) \neq 0\)</span>.</p></li>
+</ul>
+<p>Portanto, <span class="math inline">\(\det(f) = 0\)</span> se e somente se <span class="math inline">\(f\)</span> não é invertível.</p></li>
 </ol>
 </div>
 </div>

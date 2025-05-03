@@ -1411,7 +1411,7 @@ f:\F^4\to \F^4,\quad f(x,y,z,v)=(x+y,y,z+v,v)
 <p>Antes do lema seguinte, relembre de Fundamentos de Álgebra que <span class="math inline">\(\lambda\in\F\)</span> é raiz de um polinômio <span class="math inline">\(f(t)\in\F[t]\)</span> se e somente se <span class="math inline">\(t-\lambda\)</span> é um divisor de <span class="math inline">\(f(t)\)</span> (<a href="../FundamentosDeAlgebra/roots.html#lem-root-div" class="quarto-xref">Lema&nbsp;<span>32.1</span></a>). Em símbolos, <span class="math display">\[
 f(\lambda)=0\quad \mbox{se e somente se}\quad (t-\lambda)\mid f(t).
 \]</span></p>
-<div id="lem-" class="theorem lemma">
+<div id="lem-minpol-div-eigen" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 66.2</strong></span> Se <span class="math inline">\(\lambda\)</span> for um autovalor de <span class="math inline">\(f:V\to V\)</span>, então <span class="math inline">\(m_f(\lambda)=0\)</span>, ou equivalentemente, <span class="math inline">\((t-\lambda)\mid m_f(t)\)</span>. Em particular, se <span class="math inline">\(\mbox{Spec}(f)=\{\lambda_1,\ldots,\lambda_k\}\)</span>, então <span class="math display">\[
 (t-\lambda_1)\cdots (t-\lambda_k)\mid m_f(t)
 \]</span> e <span class="math inline">\(\deg m_f(t)\geq k\)</span>.</p>
@@ -1429,7 +1429,7 @@ m_f(t)=q(t)(t-\lambda)+\alpha
 </section>
 <section id="o-teorema-de-cayley-hamilton" class="level2" data-number="66.2">
 <h2 data-number="66.2" data-anchor-id="o-teorema-de-cayley-hamilton"><span class="header-section-number">66.2</span> O Teorema de Cayley-Hamilton</h2>
-<div id="thm-" class="theorem">
+<div id="thm-cayley-hamilton" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 66.1</strong></span> (<a href="https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem">Cayley-Hamilton</a>) Seja <span class="math inline">\(f:V\to V\)</span> um endomorfismo com <span class="math inline">\(\dim V=n\)</span> (finita). Então <span class="math inline">\(\mbox{pcar}_f(f)=0\)</span>. Em particular, <span class="math inline">\(m_f(t)\mid \mbox{pcar}_f(t)\)</span>.</p>
 </div>
 <p>Existem várias demonstrações do Teorema (veja a página da Wikipédia refenciada em cima), e todas têm as suas vantagens e desvantagens. Algumas demonstrações são mais elementares, mas as computações são mais complicadas, algumas são computacionalmente mais simples, mas usam teoria mais profunda, outras funcionam apenas sobre corpo algebricamente fechado (tal como <span class="math inline">\(\C\)</span>). Aqui, eu escolhi uma demonstração um pouco mais abstrata, mas tecnicamente mais fácil. O leitor está encorajado consultar as notas do John e Rodney para demonstrações alternativas e decidir qual gosta mais.</p>

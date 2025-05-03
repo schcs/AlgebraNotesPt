@@ -1367,6 +1367,32 @@ window.Quarto = {
 m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 \]</span></p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(f:V \to V\)</span> um operador diagonalizável com autovalores distintos <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>. Como <span class="math inline">\(f\)</span> é diagonalizável, existe uma base de <span class="math inline">\(V\)</span> formada por autovetores de <span class="math inline">\(f\)</span>. Assim, podemos escrever <span class="math inline">\(V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}\)</span>, onde <span class="math inline">\(V_{\lambda_i}\)</span> é o autoespaço associado ao autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
+<ol type="1">
+<li><p><strong>Definição do polinômio mínimo</strong>: O polinômio mínimo <span class="math inline">\(m_f(t)\)</span> é o menor polinômio mônico tal que <span class="math inline">\(m_f(f) = 0\)</span>. Como <span class="math inline">\(f\)</span> é diagonalizável, o polinômio mínimo de <span class="math inline">\(f\)</span> é dado pelo produto dos fatores lineares associados aos autovalores distintos de <span class="math inline">\(f\)</span>: <span class="math display">\[
+m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k).
+\]</span></p></li>
+<li><p><strong>Verificação</strong>: Para cada autovalor <span class="math inline">\(\lambda_i\)</span>, temos que <span class="math inline">\(f(v) = \lambda_i v\)</span> para todo <span class="math inline">\(v \in V_{\lambda_i}\)</span>. Assim, <span class="math inline">\((f - \lambda_i \cdot \text{id}_V)(v) = 0\)</span> para todo <span class="math inline">\(v \in V_{\lambda_i}\)</span>. Como <span class="math inline">\(V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}\)</span>, segue que <span class="math inline">\((f - \lambda_1 \cdot \text{id}_V) \cdots (f - \lambda_k \cdot \text{id}_V) = 0\)</span> em todo <span class="math inline">\(V\)</span>. Portanto, <span class="math inline">\(m_f(t)\)</span> anula <span class="math inline">\(f\)</span>.</p></li>
+<li><p><strong>Divisibilidade pelo fator <span class="math inline">\((t - \lambda_i)\)</span></strong>: Pelo <a href="pol_min.html#lem-minpol-div-eigen" class="quarto-xref">Lema&nbsp;<span>66.2</span></a>, sabemos que o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> deve ser divisível por <span class="math inline">\((t - \lambda_i)\)</span> para cada autovalor <span class="math inline">\(\lambda_i\)</span> de <span class="math inline">\(f\)</span>. Assim, o polinômio mínimo é exatamente o produto dos fatores lineares <span class="math inline">\((t - \lambda_i)\)</span> para todos os autovalores distintos <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>.</p></li>
+<li><p><strong>Conclusão</strong>: Como <span class="math inline">\(m_f(t)\)</span> é o menor polinômio mônico que anula <span class="math inline">\(f\)</span>, concluímos que: <span class="math display">\[
+m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k).
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.2</strong></span> Seja <span class="math inline">\(R_\alpha:\R^2\to\R^2\)</span> a rotação por <span class="math inline">\(\alpha\)</span> graus em torno da origem no sentido anti-horário. É conhecido e não precisa provar que <span class="math inline">\(R_\alpha\)</span> é linear.</p>
 <ol type="1">
@@ -1374,6 +1400,48 @@ m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 <li>Carateriza os ângulos <span class="math inline">\(\alpha\)</span> para os quais <span class="math inline">\(R_\alpha\)</span> é diagonalizável.</li>
 <li>Seja <span class="math inline">\(\overline R_\alpha:\C^2\to \C^2\)</span> a complexificação de <span class="math inline">\(R_\alpha\)</span> cuja matriz na base canônica é a mesma que a matriz de <span class="math inline">\(R_\alpha\)</span>. Mostre que <span class="math inline">\(\overline R_\alpha\)</span> é diagonalizável e determine os seus autovetores e autovalores.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Matriz <span class="math inline">\(M_\alpha\)</span> de <span class="math inline">\(R_\alpha\)</span> na base canônica</strong>:</p>
+<p>A rotação <span class="math inline">\(R_\alpha\)</span> por <span class="math inline">\(\alpha\)</span> graus em torno da origem no sentido anti-horário é representada na base canônica de <span class="math inline">\(\R^2\)</span> pela matriz: <span class="math display">\[
+M_\alpha = \begin{pmatrix}
+\cos\alpha &amp; -\sin\alpha \\
+\sin\alpha &amp; \cos\alpha
+\end{pmatrix}.
+\]</span></p></li>
+<li><p><strong>Caracterização dos ângulos <span class="math inline">\(\alpha\)</span> para os quais <span class="math inline">\(R_\alpha\)</span> é diagonalizável</strong>:</p>
+<p>Para que <span class="math inline">\(R_\alpha\)</span> seja diagonalizável, precisamos de dois autovetores l.i. de <span class="math inline">\(M_\alpha\)</span>. Os autovalores de <span class="math inline">\(M_\alpha\)</span> são as raízes do polinômio característico: <span class="math display">\[
+\det(tI - M_\alpha) = \det\begin{pmatrix}
+t - \cos\alpha &amp; \sin\alpha \\
+-\sin\alpha &amp; t - \cos\alpha
+\end{pmatrix} = (t - \cos\alpha)^2 + \sin^2\alpha = t^2 - 2t\cos\alpha + 1.
+\]</span> As raízes desse polinômio são: <span class="math display">\[
+t = \cos\alpha \pm i\sin\alpha.
+\]</span> Portanto <span class="math inline">\(R_\alpha\)</span> possui autovalor real se e somente se <span class="math inline">\(\sin\alpha \neq 0\)</span>, ou seja, <span class="math inline">\(\alpha =0\)</span> ou <span class="math inline">\(\alpha=\pi\)</span> (assumindo que <span class="math inline">\(0\leq \alpha&lt;2\pi\)</span>). Se <span class="math inline">\(\alpha=0\)</span>, então <span class="math inline">\(R_\alpha=\mbox{id}_{\R^2}\)</span> e quando <span class="math inline">\(\alpha=\pi\)</span>, então <span class="math inline">\(R_\alpha=-\mbox{id}_{\R^2}\)</span> e nestes caso <span class="math inline">\(R_\alpha\)</span> é diagonalizável. Caso contrário, <span class="math inline">\(R_\alpha\)</span> não possui autovalor real e <span class="math inline">\(R_\alpha\)</span> não é diagonalizável.</p></li>
+<li><p><strong>Diagonalizabilidade de <span class="math inline">\(\overline{R}_\alpha\)</span> e determinação de autovalores e autovetores</strong>:</p>
+<p>A complexificação <span class="math inline">\(\overline{R}_\alpha\)</span> de <span class="math inline">\(R_\alpha\)</span> tem a mesma matriz <span class="math inline">\(M_\alpha\)</span> na base canônica, mas agora considerada sobre <span class="math inline">\(\C^2\)</span>. Os autovalores de <span class="math inline">\(\overline{R}_\alpha\)</span> são: <span class="math display">\[
+\lambda_1 = \cos\alpha + i\sin\alpha, \quad \lambda_2 = \cos\alpha - i\sin\alpha.
+\]</span> Os autovetores associados são obtidos resolvendo <span class="math inline">\((M_\alpha - \lambda I)v = 0\)</span> para cada autovalor:</p>
+<ul>
+<li>Para <span class="math inline">\(\lambda_1 = e^{i\alpha}\)</span>, o autovetor é <span class="math inline">\(v_1 = \begin{pmatrix} 1 \\ -i \end{pmatrix}\)</span>.</li>
+<li>Para <span class="math inline">\(\lambda_2 = e^{-i\alpha}\)</span>, o autovetor é <span class="math inline">\(v_2 = \begin{pmatrix} 1 \\  i \end{pmatrix}\)</span>.</li>
+</ul>
+<p>Assim, <span class="math inline">\(\overline{R}_\alpha\)</span> é diagonalizável sobre <span class="math inline">\(\C\)</span>, com autovalores <span class="math inline">\(\lambda_1 = e^{i\alpha}\)</span> e <span class="math inline">\(\lambda_2 = e^{-i\alpha}\)</span>, e autovetores <span class="math inline">\(v_1 = \begin{pmatrix} 1 \\ i \end{pmatrix}\)</span> e <span class="math inline">\(v_2 = \begin{pmatrix} 1 \\ -i \end{pmatrix}\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.3</strong></span> Seja <span class="math inline">\(A\in M_{n\times n}(\F)\)</span> e considere o operador linear <span class="math inline">\(f_A:M_{n\times n}(\F)\to M_{n\times n}(\F)\)</span>, definido por <span class="math inline">\(f_A(B)=AB\)</span>. Será verdade que <span class="math inline">\(A\)</span> e <span class="math inline">\(f_A\)</span> possuem os mesmos autovalores? Será que <span class="math inline">\(A\)</span> e <span class="math inline">\(f_A\)</span> possuem o mesmo polinômio característico? Será que <span class="math inline">\(A\)</span> e <span class="math inline">\(f_A\)</span> possuem o mesmo polinômio mínimo?</p>
@@ -1384,6 +1452,29 @@ m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 <li>Mostre que existe um único polinômio mônico não nulo de menor grau <span class="math inline">\(m_{f,v}(t)\)</span> tal que <span class="math inline">\(m_{f,v}(f)(v)=0\)</span>.</li>
 <li>Mostre que <span class="math inline">\(m_{f,v}(t)\mid m_f(t)\)</span>.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Existência e unicidade de <span class="math inline">\(m_{f,v}(t)\)</span></strong>:</p>
+<p>Seja <span class="math inline">\(v \in V\)</span>. Considere a sequência <span class="math inline">\(v, f(v), f^2(v), \ldots\)</span>. Como <span class="math inline">\(V\)</span> é de dimensão finita, essa sequência é linearmente dependente. Assim, existem escalares <span class="math inline">\(\alpha_0, \alpha_1, \ldots, \alpha_m \in \F\)</span>, não todos nulos, tais que: <span class="math display">\[
+\alpha_0 v + \alpha_1 f(v) + \cdots + \alpha_m f^m(v) = 0.
+\]</span> Defina o conjunto <span class="math inline">\(I_{f,v} = \{p(t) \in \F[t] \mid p(f)(v) = 0\}\)</span>. Pelo argumento em cima, <span class="math inline">\(I_{f,v}\neq \emptyset\)</span>. Usando o mesmo argumento que no <a href="pol_min.html#lem-polmin" class="quarto-xref">Lema&nbsp;<span>66.1</span></a>, obtemos que existe um único polinômio mônico <span class="math inline">\(m_{f,v}(t)\)</span> de menor grau em <span class="math inline">\(I_{f,v}\)</span> e <span class="math inline">\(I_{f,v}=m_{f,v}(t)\F[t]\)</span>. Assim, <span class="math inline">\(m_{f,v}(t)\)</span> é o menor polinômio mônico tal que <span class="math inline">\(m_{f,v}(f)(v) = 0\)</span>, garantindo sua existência e unicidade.</p></li>
+<li><p><strong>Divisibilidade de <span class="math inline">\(m_{f,v}(t)\)</span> por <span class="math inline">\(m_f(t)\)</span></strong>:</p>
+<p>Claramente, <span class="math inline">\(m_f(t)\in I_{f,v}=m_{f,v}(t)\F[t]\)</span>. Logo, <span class="math inline">\(m_{f,v}(t)\mid m_f(t)\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-mat-comp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.5</strong></span> Seja <span class="math inline">\(p(t)=t^n+\alpha_{n-1} t^{n-1}+\cdots+\alpha_1 t+\alpha_0\in\F[t]\)</span> um polinômio mônico e seja <span class="math inline">\(f:V\to V\)</span> um operador com matriz <span class="math display">\[
@@ -1400,8 +1491,85 @@ m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 </ol>
 <p>[A matriz no exercício chama-se <strong>matriz companheira</strong> do polinômio <span class="math inline">\(p(t)\)</span>.]</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Prova de que <span class="math inline">\(m_{f,b_1}(t) = p(t)\)</span></strong>:</p>
+<p>Seja <span class="math inline">\(B = \{b_1, \ldots, b_n\}\)</span> a base de <span class="math inline">\(V\)</span> e considere a matriz companheira de <span class="math inline">\(p(t)\)</span> dada no enunciado: <span class="math display">\[
+\begin{pmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; -\alpha_0\\
+1 &amp; 0 &amp; \cdots &amp; 0 &amp; -\alpha_1 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; -\alpha_2 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1 &amp; -\alpha_{n-1}
+\end{pmatrix}.
+\]</span> O operador <span class="math inline">\(f\)</span> atua sobre <span class="math inline">\(b_1\)</span> como segue: <span class="math display">\[
+f(b_1) = b_2, \quad f(b_2) = b_3, \quad \ldots, \quad f(b_{n-1}) = b_n, \quad f(b_n) = -\alpha_0 b_1 - \alpha_1 b_2 - \cdots - \alpha_{n-1} b_n.
+\]</span> Assim, a sequência <span class="math inline">\(b_1, f(b_1), f^2(b_1), \ldots, f^{n-1}(b_1)\)</span> é l.i, mas a sequência <span class="math inline">\(b_1, f(b_1), f^2(b_1), \ldots, f^{n-1}(b_1),f^n(b_1)\)</span> satisfaz a relação: <span class="math display">\[
+f^n(b_1) + \alpha_{n-1} f^{n-1}(b_1) + \cdots + \alpha_1 f(b_1) + \alpha_0 b_1 = 0.
+\]</span> Isso mostra que <span class="math inline">\(p(f)(b_1) = 0\)</span>, ou seja, <span class="math inline">\(m_{f,b_1}(t) = p(t)\)</span>, pois <span class="math inline">\(p(t)\)</span> é o menor polinômio mônico que anula <span class="math inline">\(b_1\)</span>.</p></li>
+<li><p><strong>Deduza que <span class="math inline">\(m_f(t) = \mbox{pcar}(t) = p(t)\)</span></strong>:</p>
+<p>Pelo <a href="pol_min.html#thm-cayley-hamilton" class="quarto-xref">Teorema&nbsp;<span>66.1</span></a>, o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> divide o polinômio característico <span class="math inline">\(\mbox{pcar}_f(t)\)</span>. Além disso, como <span class="math inline">\(m_{f,b_1}(t) = p(t)\)</span> e <span class="math inline">\(p(t)\)</span> é de grau <span class="math inline">\(n\)</span>, segue que <span class="math inline">\(m_f(t)\)</span> também é de grau <span class="math inline">\(n\)</span>. Como <span class="math inline">\(\mbox{pcar}_f(t)\)</span> também é um polinômio mônico de grau <span class="math inline">\(n\)</span>, concluímos que: <span class="math display">\[
+m_f(t) = \mbox{pcar}_f(t) = p(t).
+\]</span></p>
+<p>Portanto, o polinômio mínimo, o polinômio característico e o polinômio <span class="math inline">\(p(t)\)</span> coincidem neste caso.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.6</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador linear tal que <span class="math inline">\(fg=gf\)</span> para todo <span class="math inline">\(g:V\to V\)</span>. Mostre que existe algum <span class="math inline">\(\lambda\in\F\)</span> tal que <span class="math inline">\(f(v)=\lambda v\)</span> para todo <span class="math inline">\(v\in V\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Invariância de <span class="math inline">\(\mbox{Im}(g)\)</span> sob <span class="math inline">\(f\)</span></strong>:</p>
+<p>Suponha que <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> comutam, ou seja, <span class="math inline">\(fg = gf\)</span>. Seja <span class="math inline">\(v \in \mbox{Im}(g)\)</span>. Então, existe <span class="math inline">\(u \in V\)</span> tal que <span class="math inline">\(v = g(u)\)</span>. Aplicando <span class="math inline">\(f\)</span> a <span class="math inline">\(v\)</span>, temos: <span class="math display">\[
+f(v) = f(g(u)) = g(f(u)),
+\]</span> onde usamos a comutatividade de <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span>. Como <span class="math inline">\(g(f(u)) \in \mbox{Im}(g)\)</span>, segue que <span class="math inline">\(f(v) \in \mbox{Im}(g)\)</span>. Portanto, <span class="math inline">\(\mbox{Im}(g)\)</span> é <span class="math inline">\(f\)</span>-invariante.</p></li>
+<li><p><strong><span class="math inline">\(f\)</span> age por multiplicação escalar em todo <span class="math inline">\(v\in V\)</span></strong>:</p>
+<p>A partir do item 1, sabemos que <span class="math inline">\(\mbox{Im}(g)\)</span> é <span class="math inline">\(f\)</span>-invariante para qualquer operador <span class="math inline">\(g\)</span> que comuta com <span class="math inline">\(f\)</span>. Agora, considere um vetor não nulo <span class="math inline">\(v \in V\)</span> e um operador <span class="math inline">\(g: V \to V\)</span> cuja imagem é <span class="math inline">\(\langle v \rangle\)</span>, o subespaço gerado por <span class="math inline">\(v\)</span>. Como <span class="math inline">\(f\)</span> comuta com <span class="math inline">\(g\)</span>, segue que <span class="math inline">\(\mbox{Im}(g) = \langle v \rangle\)</span> é <span class="math inline">\(f\)</span>-invariante. Isso implica que <span class="math inline">\(f(v) \in \langle v \rangle\)</span>, ou seja, <span class="math inline">\(f\)</span> deixa <span class="math inline">\(\langle v \rangle\)</span> invariante.</p>
+<p>Como isso vale para qualquer vetor <span class="math inline">\(v \in V\)</span>, segue que para todo <span class="math inline">\(v\in V\)</span>, existe <span class="math inline">\(\lambda_v\in\F\)</span> tal que <span class="math inline">\(f(v)=\lambda_vv\)</span>.</p></li>
+<li><p><strong>Igualdade de <span class="math inline">\(\lambda_v\)</span> e <span class="math inline">\(\lambda_u\)</span> para <span class="math inline">\(v, u \in V\)</span></strong>:</p>
+<p>A partir do item 2, sabemos que para todo <span class="math inline">\(v \in V\)</span>, existe <span class="math inline">\(\lambda_v \in \F\)</span> tal que <span class="math inline">\(f(v) = \lambda_v v\)</span>. Precisa provar que <span class="math inline">\(\lambda_u=\lambda_v\)</span> para todo <span class="math inline">\(u,v\in V\)</span> não nulo. Suponha que <span class="math inline">\(u, v \in V\)</span> são linearmente dependentes. Isso significa que existe um escalar <span class="math inline">\(c \in \F\)</span> tal que <span class="math inline">\(v = c u\)</span>. Aplicando <span class="math inline">\(f\)</span> a <span class="math inline">\(v\)</span>, temos: <span class="math display">\[
+f(v) = f(c u) = c f(u).
+\]</span> Como <span class="math inline">\(f(u) = \lambda_u u\)</span>, segue que: <span class="math display">\[
+f(v) = c (\lambda_u u) = \lambda_u (c u) = \lambda_u v.
+\]</span> Por outro lado, sabemos que <span class="math inline">\(f(v) = \lambda_v v\)</span>. Comparando as duas expressões para <span class="math inline">\(f(v)\)</span>, obtemos: <span class="math display">\[
+\lambda_v v = \lambda_u v.
+\]</span> Como <span class="math inline">\(v \neq 0\)</span>, podemos cancelar <span class="math inline">\(v\)</span> e concluir que: <span class="math display">\[
+\lambda_v = \lambda_u.
+\]</span> Ora assuma que <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> são l.i. Neste caso, <span class="math display">\[
+f(v + u) = \lambda_v v + \lambda_u u.
+\]</span> Por outro lado, pelo item 2, <span class="math inline">\(f(v + u)\)</span> também deve ser da forma <span class="math inline">\(\lambda_{v+u}(v + u)\)</span>, ou seja: <span class="math display">\[
+f(v + u) = \lambda_{v+u}(v + u).
+\]</span> Comparando as duas expressões, segue que: <span class="math display">\[
+\lambda_{v+u}(v + u) = \lambda_v v + \lambda_u u.
+\]</span> Como <span class="math inline">\(v\)</span> e <span class="math inline">\(u\)</span> são l.i., isso só é possível se <span class="math inline">\(\lambda_v = \lambda_u\)</span> para todos os <span class="math inline">\(v, u \in V\)</span>.</p>
+<p>Assim, concluímos que <span class="math inline">\(\lambda_v = \lambda\)</span> é constante para todos os vetores <span class="math inline">\(v \in V\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.7</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador linear e <span class="math inline">\(g:V\to V\)</span> tal que <span class="math inline">\(fg=gf\)</span>. Lembre que um espaço <span class="math inline">\(U\leq V\)</span> é <span class="math inline">\(g\)</span>-invariante se <span class="math inline">\(g(u)\in U\)</span> para todo <span class="math inline">\(u\in U\)</span>. Mostre que</p>
@@ -1410,12 +1578,90 @@ m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 <li>Os autoespaços <span class="math inline">\(V_\lambda\)</span> de <span class="math inline">\(f\)</span> são invariantes por <span class="math inline">\(g\)</span>.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong><span class="math inline">\(\ker f\)</span> e <span class="math inline">\(\mbox{Im}(f)\)</span> são <span class="math inline">\(g\)</span>-invariantes</strong>:</p>
+<ul>
+<li><p><strong>Invariância de <span class="math inline">\(\ker f\)</span></strong>: Seja <span class="math inline">\(v \in \ker f\)</span>, ou seja, <span class="math inline">\(f(v) = 0\)</span>. Como <span class="math inline">\(fg = gf\)</span>, temos: <span class="math display">\[
+f(g(v)) = g(f(v)) = g(0) = 0.
+\]</span> Isso implica que <span class="math inline">\(g(v) \in \ker f\)</span>. Portanto, <span class="math inline">\(\ker f\)</span> é <span class="math inline">\(g\)</span>-invariante.</p></li>
+<li><p><strong>Invariância de <span class="math inline">\(\mbox{Im}(f)\)</span></strong>: Seja <span class="math inline">\(v \in V\)</span> e <span class="math inline">\(f(v) \in \mbox{Im}(f)\)</span>. Como <span class="math inline">\(fg = gf\)</span>, temos: <span class="math display">\[
+g(f(v)) = f(g(v)).
+\]</span> Isso mostra que <span class="math inline">\(g(f(v)) \in \mbox{Im}(f)\)</span>. Portanto, <span class="math inline">\(\mbox{Im}(f)\)</span> é <span class="math inline">\(g\)</span>-invariante.</p></li>
+</ul></li>
+<li><p><strong>Os autoespaços <span class="math inline">\(V_\lambda\)</span> de <span class="math inline">\(f\)</span> são invariantes por <span class="math inline">\(g\)</span></strong>:</p>
+<p>Seja <span class="math inline">\(\lambda \in \F\)</span> um autovalor de <span class="math inline">\(f\)</span> e <span class="math inline">\(v \in V_\lambda\)</span>, ou seja, <span class="math inline">\(f(v) = \lambda v\)</span>. Como <span class="math inline">\(fg = gf\)</span>, temos: <span class="math display">\[
+f(g(v)) = g(f(v)) = g(\lambda v) = \lambda g(v).
+\]</span> Isso implica que <span class="math inline">\(g(v) \in V_\lambda\)</span>. Portanto, <span class="math inline">\(V_\lambda\)</span> é <span class="math inline">\(g\)</span>-invariante.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.8</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> diagonalizável com autovalores distintos <span class="math inline">\(\lambda_1,\ldots,\lambda_k\)</span>. Assuma que <span class="math inline">\(d_1,\ldots,d_k\)</span> são as multiplicidades de <span class="math inline">\(\lambda_1,\ldots,\lambda_k\)</span>. (Como <span class="math inline">\(f\)</span> é diagonalizável, as multiplicidades geométricas e algébricas são iguais.) Seja <span class="math display">\[
     C(f)=\{g:V\to V\mid fg=gf\}.
 \]</span> Demonstre que <span class="math inline">\(C(f)\)</span> é uma subalgebra de <span class="math inline">\(\mbox{End}(V)\)</span> (ou seja, ele é um subespaço e é fechado para a composição de operadores) e que <span class="math display">\[
     \dim C(f)=\sum_{i=1}^k d_i^2.
 \]</span> Dê uma descrição de <span class="math inline">\(C(f)\)</span>. (A álgebra <span class="math inline">\(C(f)\)</span> chama-se o centralizador de <span class="math inline">\(f\)</span> em <span class="math inline">\(\mbox{End}(V)\)</span>.)</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong><span class="math inline">\(C(f)\)</span> é um subespaço de <span class="math inline">\(\mbox{End}(V)\)</span></strong>:</p>
+<p>Para mostrar que <span class="math inline">\(C(f)\)</span> é um subespaço de <span class="math inline">\(\mbox{End}(V)\)</span>, verificamos as seguintes propriedades:</p>
+<ul>
+<li><strong>Fechamento sob adição</strong>: Se <span class="math inline">\(g, h \in C(f)\)</span>, então <span class="math inline">\(fg = gf\)</span> e <span class="math inline">\(fh = hf\)</span>. Para <span class="math inline">\(g + h\)</span>, temos: <span class="math display">\[
+f(g + h) = fg + fh = gf + hf = (g + h)f.
+\]</span> Assim, <span class="math inline">\(g + h \in C(f)\)</span>.</li>
+<li><strong>Fechamento sob multiplicação por escalares</strong>: Seja <span class="math inline">\(g \in C(f)\)</span> e <span class="math inline">\(\alpha \in \F\)</span>. Então: <span class="math display">\[
+f(\alpha g) = \alpha fg = \alpha gf = (\alpha g)f.
+\]</span> Assim, <span class="math inline">\(\alpha g \in C(f)\)</span>.</li>
+</ul>
+<p>Portanto, <span class="math inline">\(C(f)\)</span> é um subespaço de <span class="math inline">\(\mbox{End}(V)\)</span>.</p></li>
+<li><p><strong><span class="math inline">\(C(f)\)</span> é fechado para a composição de operadores</strong>:</p>
+<p>Seja <span class="math inline">\(g, h \in C(f)\)</span>. Então, <span class="math inline">\(fg = gf\)</span> e <span class="math inline">\(fh = hf\)</span>. Para <span class="math inline">\(gh\)</span>, temos: <span class="math display">\[
+f(gh) = (fg)h = (gf)h = g(fh) = g(hf) = (gh)f.
+\]</span> Assim, <span class="math inline">\(gh \in C(f)\)</span>, o que mostra que <span class="math inline">\(C(f)\)</span> é fechado para a composição de operadores.</p></li>
+<li><p><strong>Dimensão de <span class="math inline">\(C(f)\)</span></strong>:</p>
+<p>Como <span class="math inline">\(f\)</span> é diagonalizável com autovalores distintos <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>, temos a decomposição de <span class="math inline">\(V\)</span> como soma direta dos autoespaços: <span class="math display">\[
+V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}.
+\]</span> Seja <span class="math inline">\(g \in C(f)\)</span>. Como <span class="math inline">\(fg = gf\)</span>, segue que <span class="math inline">\(g\)</span> preserva cada autoespaço <span class="math inline">\(V_{\lambda_i}\)</span>, ou seja, <span class="math inline">\(g(V_{\lambda_i}) \subseteq V_{\lambda_i}\)</span> para todo <span class="math inline">\(i\)</span>. Assim, <span class="math inline">\(g\)</span> pode ser representado como uma matriz bloco diagonal, onde cada bloco corresponde a uma transformação linear em <span class="math inline">\(V_{\lambda_i}\)</span>. Por outro lado, suponha que <span class="math inline">\(g\)</span> preserva todos os autoespaços <span class="math inline">\(V_{\lambda_i}\)</span>. Isso significa que, para cada <span class="math inline">\(v \in V_{\lambda_i}\)</span>, temos <span class="math inline">\(g(v) \in V_{\lambda_i}\)</span>. Como <span class="math inline">\(f(v) = \lambda_i v\)</span> para <span class="math inline">\(v \in V_{\lambda_i}\)</span>, temos: <span class="math display">\[
+f(g(v)) = \lambda_i g(v).
+\]</span> Por outro lado, como <span class="math inline">\(g(v) \in V_{\lambda_i}\)</span>, também temos: <span class="math display">\[
+g(f(v)) = g(\lambda_i v) = \lambda_i g(v).
+\]</span> Assim, <span class="math inline">\(f(g(v)) = g(f(v))\)</span> para todo <span class="math inline">\(v \in V_{\lambda_i}\)</span>. Como <span class="math inline">\(V\)</span> é a soma direta dos autoespaços <span class="math inline">\(V_{\lambda_i}\)</span>, segue que <span class="math inline">\(f(g(v)) = g(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span>. Portanto, <span class="math inline">\(fg = gf\)</span>, ou seja, <span class="math inline">\(g \in C(f)\)</span>.</p>
+<p>A dimensão de <span class="math inline">\(C(f)\)</span> é dada pela soma das dimensões dos espaços de endomorfismos de cada <span class="math inline">\(V_{\lambda_i}\)</span>. Como <span class="math inline">\(\dim V_{\lambda_i} = d_i\)</span>, temos: <span class="math display">\[
+\dim C(f) = \sum_{i=1}^k \dim \mbox{End}(V_{\lambda_i}) = \sum_{i=1}^k d_i^2.
+\]</span></p></li>
+<li><p><strong>Descrição de <span class="math inline">\(C(f)\)</span></strong>:</p>
+<p>O centralizador <span class="math inline">\(C(f)\)</span> consiste em todos os operadores lineares <span class="math inline">\(g: V \to V\)</span> que preservam a decomposição em autoespaços de <span class="math inline">\(f\)</span>. Explicitamente, <span class="math inline">\(g\)</span> pode ser representado como uma matriz bloco diagonal, onde cada bloco é uma matriz arbitrária de dimensão <span class="math inline">\(d_i \times d_i\)</span> correspondente ao autoespaço <span class="math inline">\(V_{\lambda_i}\)</span>.</p>
+<p>Assim, temos: <span class="math display">\[
+C(f) = \bigoplus_{i=1}^k \mbox{End}(V_{\lambda_i}),
+\]</span> onde cada <span class="math inline">\(\mbox{End}(V_{\lambda_i})\)</span> é o espaço de todas as transformações lineares em <span class="math inline">\(V_{\lambda_i}\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.9</strong></span> Seja <span class="math inline">\(\Gamma\)</span> um grafo não direcionado com vertices <span class="math inline">\(\{1,\ldots,n\}\)</span> sem arrestas múltiplas e sem laços. A matriz de adjacência <span class="math inline">\(A_\Gamma=(a_{i,j})\)</span> é definida como a matriz <span class="math inline">\(n\times n\)</span> com entrada <span class="math inline">\(a_{i,j}=1\)</span> se e somente se os vértices <span class="math inline">\(i\)</span> e <span class="math inline">\(j\)</span> são adjacentes; caso contrário <span class="math inline">\(a_{i,j}=0\)</span>. Como <span class="math inline">\(A_\Gamma\)</span> é uma matriz simétrica, sabe-se de Álgebra Linear I que os autovalores de <span class="math inline">\(A_\Gamma\)</span> são números reais e seja <span class="math inline">\(\lambda_1\)</span> o maior autovalor.</p>
@@ -1426,13 +1672,117 @@ m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 <li>Ache os autovalores de <span class="math inline">\(A_\Gamma\)</span> no caso quando <span class="math inline">\(\Gamma\)</span> é o grafo completo com <span class="math inline">\(n\)</span> vértices.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Prova de que <span class="math inline">\(\lambda_1 \leq \max \deg(v)\)</span></strong>:</p>
+<p>Seja <span class="math inline">\(x \in \R^n\)</span> um autovetor associado ao maior autovalor <span class="math inline">\(\lambda_1\)</span> de <span class="math inline">\(A_\Gamma\)</span>, com <span class="math inline">\(\|x\| = 1\)</span>. Então, temos: <span class="math display">\[
+\lambda_1 = x^\top A_\Gamma x = \sum_{i=1}^n \sum_{j=1}^n a_{i,j} x_i x_j.
+\]</span> Como <span class="math inline">\(a_{i,j} = 1\)</span> se e somente se os vértices <span class="math inline">\(i\)</span> e <span class="math inline">\(j\)</span> são adjacentes, podemos reescrever a soma como: <span class="math display">\[
+\lambda_1 = \sum_{i=1}^n x_i \sum_{j \sim i} x_j,
+\]</span> onde <span class="math inline">\(j \sim i\)</span> indica que <span class="math inline">\(j\)</span> é vizinho de <span class="math inline">\(i\)</span>. Pelo valor absoluto, temos: <span class="math display">\[
+|\lambda_1| \leq \sum_{i=1}^n |x_i| \cdot \deg(i) \cdot \max |x_j| \leq \max \deg(v).
+\]</span> Assim, <span class="math inline">\(\lambda_1 \leq \max \deg(v)\)</span>.</p></li>
+<li><p><strong>Prova de que <span class="math inline">\(\lambda_1 = k\)</span> quando <span class="math inline">\(\Gamma\)</span> é regular</strong>:</p>
+<p>Se <span class="math inline">\(\Gamma\)</span> é regular, todos os vértices têm o mesmo grau <span class="math inline">\(k\)</span>. Para qualquer vetor constante <span class="math inline">\(x = (1, 1, \ldots, 1)^\top\)</span>, temos: <span class="math display">\[
+A_\Gamma x = kx,
+\]</span> pois cada vértice tem exatamente <span class="math inline">\(k\)</span> vizinhos. Assim, <span class="math inline">\(x\)</span> é um autovetor associado ao autovalor <span class="math inline">\(\lambda_1 = k\)</span>. Como <span class="math inline">\(\lambda_1\)</span> é o maior autovalor, segue que <span class="math inline">\(\lambda_1 = k\)</span>.</p></li>
+<li><p><strong>Prova de que <span class="math inline">\(\dim V_k = 1\)</span> quando <span class="math inline">\(\Gamma\)</span> é regular e conexo</strong>: Let <span class="math inline">\(x\)</span> be an eigenvector of <span class="math inline">\(A_\Gamma\)</span> with eigenvalue <span class="math inline">\(\lambda_1 = k\)</span>, and assume <span class="math inline">\(|x_i|\)</span> is the largest among all entries of <span class="math inline">\(x\)</span>. Without loss of generality, let <span class="math inline">\(|x_i| = 1\)</span>. For each vertex <span class="math inline">\(j\)</span> adjacent to <span class="math inline">\(i\)</span>, we have the eigenvector equation: <span class="math display">\[
+(A_\Gamma x)_i = k x_i.
+\]</span> Expanding the left-hand side, we get: <span class="math display">\[
+\sum_{j \sim i} x_j = k x_i,
+\]</span> where the sum is over all vertices <span class="math inline">\(j\)</span> adjacent to <span class="math inline">\(i\)</span>. Since <span class="math inline">\(|x_i| = 1\)</span> is the largest, we must have <span class="math inline">\(|x_j| \leq |x_i| = 1\)</span> for all <span class="math inline">\(j\)</span>. For the equality to hold in the sum, it must be the case that <span class="math inline">\(x_j = x_i\)</span> for all <span class="math inline">\(j\)</span> adjacent to <span class="math inline">\(i\)</span>. Thus, <span class="math inline">\(x_i = x_j\)</span> for all <span class="math inline">\(j \sim i\)</span>. Agora, repita o argumento para os vertices que são adjacentes com <span class="math inline">\(j\)</span>, e depois para os vertices que são adjacentes com os vizinhos de <span class="math inline">\(j\)</span>. Como <span class="math inline">\(\Gamma\)</span> é conexo, vamos atingir todo vértices de <span class="math inline">\(\Gamma\)</span> que implica que <span class="math inline">\(x_i=x_j\)</span> para todo <span class="math inline">\(j\)</span>.</p></li>
+<li><p><strong>Autovalores de <span class="math inline">\(A_\Gamma\)</span> para o grafo completo</strong>:</p>
+<p>No caso do grafo completo com <span class="math inline">\(n\)</span> vértices, cada vértice tem grau <span class="math inline">\(n-1\)</span>. A matriz de adjacência <span class="math inline">\(A_\Gamma\)</span> é dada por: <span class="math display">\[
+A_\Gamma = J_n - I_n,
+\]</span> onde <span class="math inline">\(J_n\)</span> é a matriz <span class="math inline">\(n \times n\)</span> de todos os <span class="math inline">\(1\)</span>s e <span class="math inline">\(I_n\)</span> é a matriz identidade. O maior autovalor de <span class="math inline">\(A_\Gamma\)</span> é <span class="math inline">\(\lambda_1 = n-1\)</span>, com autovetor <span class="math inline">\(x = (1, 1, \ldots, 1)^\top\)</span>. Os outros autovalores são <span class="math inline">\(\lambda_2 = \lambda_3 = \cdots = \lambda_n = -1\)</span>, pois <span class="math inline">\(J_n\)</span> tem posto <span class="math inline">\(1\)</span> e <span class="math inline">\(I_n\)</span> subtrai <span class="math inline">\(1\)</span> da diagonal.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.10</strong></span> Deduza do Teorema da Decomposição Primária que um endomorfismo <span class="math inline">\(f:V\to V\)</span> é diagonalizável se e somente se <span class="math display">\[
 m_f(t)=(t-\lambda_1)\cdots (t-\lambda_k)
 \]</span> com <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in \F\)</span> distintos.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Se <span class="math inline">\(f\)</span> é diagonalizável, então <span class="math inline">\(m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)\)</span> com <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> distintos</strong>:</p>
+<p>Se <span class="math inline">\(f\)</span> é diagonalizável, existe uma base de <span class="math inline">\(V\)</span> formada por autovetores de <span class="math inline">\(f\)</span>. Assim, podemos escrever <span class="math inline">\(V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}\)</span>, onde <span class="math inline">\(V_{\lambda_i}\)</span> é o autoespaço associado ao autovalor <span class="math inline">\(\lambda_i\)</span>. Por <a href="pol_min.html#lem-minpol-div-eigen" class="quarto-xref">Lema&nbsp;<span>66.2</span></a>, segue que <span class="math inline">\(t-\lambda_i\)</span> divide <span class="math inline">\(m_{f}(t)\)</span> e assim <span class="math inline">\(\prod_i(t-\lambda_i)\)</span> divide <span class="math inline">\(m_f(t)\)</span>. Por outro lado, se <span class="math inline">\(v\in V_{\lambda_j}\)</span>, e como os operadores <span class="math inline">\(f-\lambda_i\mbox{id}_V\)</span> comutam, temos que <span class="math display">\[
+\prod_{i=1}^k(f-\lambda_i\mbox{id}_V)(v)=0.
+\]</span> Como isso vale para todo autovetor de <span class="math inline">\(f\)</span> e <span class="math inline">\(V\)</span> é soma direta dos autoespaços de <span class="math inline">\(f\)</span>, temos que <span class="math inline">\(\prod_i(f-\lambda_i\mbox{id}_V)=0\)</span>. Logo, <span class="math inline">\(\prod_i(t-\lambda_i)=m_f(t)\)</span>.</p></li>
+<li><p><strong>Se <span class="math inline">\(m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)\)</span> com <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> distintos, então <span class="math inline">\(f\)</span> é diagonalizável</strong>:</p>
+<p>Suponha que <span class="math inline">\(m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)\)</span>, com <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> distintos. Pelo Teorema da Decomposição Primária, temos que: <span class="math display">\[
+V = \ker(f - \lambda_1 \text{id}_V) \oplus \cdots \oplus \ker(f - \lambda_k \text{id}_V).
+\]</span> Cada <span class="math inline">\(\ker(f - \lambda_i \text{id}_V)\)</span> é o autoespaço associado ao autovalor <span class="math inline">\(\lambda_i\)</span>. Assim, <span class="math inline">\(V\)</span> é soma direta de autoespaços e <span class="math inline">\(f\)</span> é diagonalizável.</p></li>
+<li><p><strong>Conclusão</strong>:</p>
+<p>Pelo Teorema da Decomposição Primária, <span class="math inline">\(f\)</span> é diagonalizável se e somente se o polinômio mínimo de <span class="math inline">\(f\)</span> é da forma: <span class="math display">\[
+m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k),
+\]</span> com <span class="math inline">\(\lambda_1, \ldots, \lambda_k \in \F\)</span> distintos.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.11</strong></span> Seja <span class="math inline">\(p:V\to V\)</span> uma projeção e <span class="math inline">\(f:V\to V\)</span> um endomorfismo qualquer. Mostre que <span class="math inline">\(pf=fp\)</span> se e somente se <span class="math inline">\(\ker p\)</span> e <span class="math inline">\(\mbox{Im}(p)\)</span> são <span class="math inline">\(f\)</span>-invariantes.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Se <span class="math inline">\(pf = fp\)</span>, então <span class="math inline">\(\ker p\)</span> e <span class="math inline">\(\mbox{Im}(p)\)</span> são <span class="math inline">\(f\)</span>-invariantes</strong>:</p>
+<ul>
+<li><p><strong>Invariância de <span class="math inline">\(\ker p\)</span></strong>: Seja <span class="math inline">\(v \in \ker p\)</span>, ou seja, <span class="math inline">\(p(v) = 0\)</span>. Aplicando <span class="math inline">\(p\)</span> a <span class="math inline">\(f(v)\)</span>, temos: <span class="math display">\[
+p(f(v)) = (pf)(v) = (fp)(v) = f(p(v)) = f(0) = 0.
+\]</span> Isso implica que <span class="math inline">\(f(v) \in \ker p\)</span>. Portanto, <span class="math inline">\(\ker p\)</span> é <span class="math inline">\(f\)</span>-invariante.</p></li>
+<li><p><strong>Invariância de <span class="math inline">\(\mbox{Im}(p)\)</span></strong>: Seja <span class="math inline">\(v \in V\)</span> e <span class="math inline">\(p(v) \in \mbox{Im}(p)\)</span>. Aplicando <span class="math inline">\(p\)</span> a <span class="math inline">\(f(p(v))\)</span>, temos: <span class="math display">\[
+p(f(p(v))) = (pf)(p(v)) = (fp)(p(v)) = f(p(p(v))) = f(p(v)).
+\]</span> Isso mostra que <span class="math inline">\(f(p(v)) \in \mbox{Im}(p)\)</span>. Portanto, <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante.</p></li>
+</ul></li>
+<li><p><strong>Se <span class="math inline">\(\ker p\)</span> e <span class="math inline">\(\mbox{Im}(p)\)</span> são <span class="math inline">\(f\)</span>-invariantes, então <span class="math inline">\(pf = fp\)</span></strong>:</p>
+<ul>
+<li>Seja <span class="math inline">\(v \in V\)</span>. Podemos escrever <span class="math inline">\(v = u + w\)</span>, onde <span class="math inline">\(u \in \ker p\)</span> e <span class="math inline">\(w \in \mbox{Im}(p)\)</span>. Como <span class="math inline">\(p\)</span> é uma projeção, temos <span class="math inline">\(p(u) = 0\)</span> e <span class="math inline">\(p(w) = w\)</span>.</li>
+<li>Aplicando <span class="math inline">\(pf\)</span> a <span class="math inline">\(v\)</span>, temos: <span class="math display">\[
+pf(v) = pf(u + w) = pf(u) + pf(w).
+\]</span> Como <span class="math inline">\(u \in \ker p\)</span>, temos <span class="math inline">\(pf(u) = p(f(u)) = 0\)</span> (pois <span class="math inline">\(\ker p\)</span> é <span class="math inline">\(f\)</span>-invariante). Como <span class="math inline">\(w \in \mbox{Im}(p)\)</span>, temos <span class="math inline">\(pf(w) = p(f(w)) = f(p(w))\)</span> (pois <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante). Assim: <span class="math display">\[
+pf(v) = 0 + f(p(w)) = f(p(u + w)) = f(p(v)).
+\]</span> Portanto, <span class="math inline">\(pf = fp\)</span>.</li>
+</ul></li>
+<li><p><strong>Conclusão</strong>:</p>
+<p>Mostramos que <span class="math inline">\(pf = fp\)</span> se e somente se <span class="math inline">\(\ker p\)</span> e <span class="math inline">\(\mbox{Im}(p)\)</span> são <span class="math inline">\(f\)</span>-invariantes.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.12</strong></span> Um endomorfismo <span class="math inline">\(f:V\to V\)</span> é dito triangularizável se existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([f]_B^B\)</span> é matriz triangular superior. Deduza do Teorema da Decomposição Primária, que <span class="math inline">\(f\)</span> é triangularizável se e somente se <span class="math display">\[
