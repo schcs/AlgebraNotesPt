@@ -85,7 +85,7 @@ $$
 f(\lambda)=0\quad \mbox{se e somente se}\quad (t-\lambda)\mid f(t).
 $$ 
 
-:::{#lem-}
+:::{#lem-minpol-div-eigen}
 Se $\lambda$ for um autovalor de $f:V\to V$, então $m_f(\lambda)=0$, ou equivalentemente, $(t-\lambda)\mid m_f(t)$. Em particular, se $\mbox{Spec}(f)=\{\lambda_1,\ldots,\lambda_k\}$, então
 $$
 (t-\lambda_1)\cdots (t-\lambda_k)\mid m_f(t)
@@ -115,7 +115,7 @@ do @exr-coprime-pol.
 
 ## O Teorema de Cayley-Hamilton
 
-:::{#thm-}
+:::{#thm-cayley-hamilton}
 ([Cayley-Hamilton](https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem))
 Seja $f:V\to V$ um endomorfismo com $\dim V=n$ (finita). Então $\mbox{pcar}_f(f)=0$. Em particular, $m_f(t)\mid \mbox{pcar}_f(t)$.
 :::

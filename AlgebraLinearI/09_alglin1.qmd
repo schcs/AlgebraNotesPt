@@ -170,7 +170,7 @@ propriedade SIM.
 Pode-se dizer então que um produto interno sobre um espaço vetorial $V$
 é uma forma bilinear simétrica que também é positiva definida.
 
-:::::{ }
+:::{#exm-bilin-mat}
 Sejam $A$ uma matriz $n\times n$ e $V$ um espaço vetorial de dimensão
 $n$ com base $B = \{\ul{b_1},\ldots,\ul{b_n}\}$. Se lembre que para
 $v\in V$, $[v]_B$ denota o vetor (coluna) das coordenadas de $v$ na base
@@ -190,10 +190,11 @@ forma bilinear: \begin{aligned}
   & = \lambda\langle \ul{u},\ul{v}\rangle_A\qquad\checkmark
 \end{aligned} [Exercício]{.underline}: Confirme que a função é linear
 no primeiro componente também.
+:::
 
 ## Formas bilineares simétricas
 
-Em geral, esta forma não vai ser simétrica. Por exemplo, pegue
+Em geral, a forma no @exm-bilin-mat não vai ser simétrica. Por exemplo, pegue
 $A = \begin{pmatrix}
 0 & 1 \\ 0 & 0
 \end{pmatrix}$, $\ul{u} = \begin{pmatrix}
@@ -227,7 +228,7 @@ $$\langle\ul{v},\ul{u}\rangle_A = \ul{v}^tA\ul{u} = \begin{pmatrix}
 \end{pmatrix} = \begin{pmatrix}
 0
 \end{pmatrix} = \ul{\ul{0}}.$$ De fato, temos o seguinte lema.
-:::
+
 
 :::{#lem-}
 A forma bilinear $\langle-,-\rangle_A$ é simétrica se, e somente se, a

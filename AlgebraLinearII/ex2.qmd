@@ -12,7 +12,29 @@ $$
 m_f(t)=(t-\lambda_1)\cdots(t-\lambda_k).
 $$ 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
 
+Seja $f:V \to V$ um operador diagonalizável com autovalores distintos $\lambda_1, \ldots, \lambda_k$. Como $f$ é diagonalizável, existe uma base de $V$ formada por autovetores de $f$. Assim, podemos escrever $V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}$, onde $V_{\lambda_i}$ é o autoespaço associado ao autovalor $\lambda_i$.
+
+1. **Definição do polinômio mínimo**:
+   O polinômio mínimo $m_f(t)$ é o menor polinômio mônico tal que $m_f(f) = 0$. Como $f$ é diagonalizável, o polinômio mínimo de $f$ é dado pelo produto dos fatores lineares associados aos autovalores distintos de $f$:
+   $$
+   m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k).
+   $$
+
+2. **Verificação**:
+   Para cada autovalor $\lambda_i$, temos que $f(v) = \lambda_i v$ para todo $v \in V_{\lambda_i}$. Assim, $(f - \lambda_i \cdot \text{id}_V)(v) = 0$ para todo $v \in V_{\lambda_i}$. Como $V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}$, segue que $(f - \lambda_1 \cdot \text{id}_V) \cdots (f - \lambda_k \cdot \text{id}_V) = 0$ em todo $V$. Portanto, $m_f(t)$ anula $f$.
+
+3. **Divisibilidade pelo fator $(t - \lambda_i)$**:
+   Pelo @lem-minpol-div-eigen, sabemos que o polinômio mínimo $m_f(t)$ deve ser divisível por $(t - \lambda_i)$ para cada autovalor $\lambda_i$ de $f$. Assim, o polinômio mínimo é exatamente o produto dos fatores lineares $(t - \lambda_i)$ para todos os autovalores distintos $\lambda_1, \ldots, \lambda_k$.
+
+4. **Conclusão**:
+   Como $m_f(t)$ é o menor polinômio mônico que anula $f$, concluímos que:
+   $$
+   m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k).
+   $$
+:::
 
 :::{#exr-}
 Seja $R_\alpha:\R^2\to\R^2$ a rotação por $\alpha$ graus em torno da origem no sentido anti-horário. É conhecido e não precisa provar que $R_\alpha$ é linear.
@@ -21,6 +43,50 @@ Seja $R_\alpha:\R^2\to\R^2$ a rotação por $\alpha$ graus em torno da origem no
 2. Carateriza os ângulos $\alpha$ para os quais $R_\alpha$ é diagonalizável. 
 3. Seja $\overline R_\alpha:\C^2\to \C^2$ a complexificação de $R_\alpha$ cuja matriz na base canônica é a mesma que a matriz de $R_\alpha$. Mostre que $\overline R_\alpha$ é diagonalizável e determine os seus autovetores e autovalores.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Matriz $M_\alpha$ de $R_\alpha$ na base canônica**:
+
+   A rotação $R_\alpha$ por $\alpha$ graus em torno da origem no sentido anti-horário é representada na base canônica de $\R^2$ pela matriz:
+   $$
+   M_\alpha = \begin{pmatrix}
+   \cos\alpha & -\sin\alpha \\
+   \sin\alpha & \cos\alpha
+   \end{pmatrix}.
+   $$
+
+2. **Caracterização dos ângulos $\alpha$ para os quais $R_\alpha$ é diagonalizável**:
+
+   Para que $R_\alpha$ seja diagonalizável, precisamos de dois autovetores 
+   l.i. de $M_\alpha$. Os autovalores de $M_\alpha$ são as raízes do polinômio característico:
+   $$
+   \det(tI - M_\alpha) = \det\begin{pmatrix}
+   t - \cos\alpha & \sin\alpha \\
+   -\sin\alpha & t - \cos\alpha
+   \end{pmatrix} = (t - \cos\alpha)^2 + \sin^2\alpha = t^2 - 2t\cos\alpha + 1.
+   $$
+   As raízes desse polinômio são:
+   $$
+   t = \cos\alpha \pm i\sin\alpha.
+   $$
+   Portanto $R_\alpha$ possui autovalor real se e somente se $\sin\alpha \neq 0$, ou seja, $\alpha =0$ ou $\alpha=\pi$ (assumindo que $0\leq \alpha<2\pi$). Se $\alpha=0$, então 
+   $R_\alpha=\mbox{id}_{\R^2}$ e quando $\alpha=\pi$, então $R_\alpha=-\mbox{id}_{\R^2}$ 
+   e nestes caso $R_\alpha$ é diagonalizável. Caso contrário, $R_\alpha$ não possui autovalor
+   real e $R_\alpha$ não é diagonalizável.
+
+3. **Diagonalizabilidade de $\overline{R}_\alpha$ e determinação de autovalores e autovetores**:
+
+   A complexificação $\overline{R}_\alpha$ de $R_\alpha$ tem a mesma matriz $M_\alpha$ na base canônica, mas agora considerada sobre $\C^2$. Os autovalores de $\overline{R}_\alpha$ são:
+   $$
+   \lambda_1 = \cos\alpha + i\sin\alpha, \quad \lambda_2 = \cos\alpha - i\sin\alpha.
+   $$
+   Os autovetores associados são obtidos resolvendo $(M_\alpha - \lambda I)v = 0$ para cada autovalor:
+   - Para $\lambda_1 = e^{i\alpha}$, o autovetor é $v_1 = \begin{pmatrix} 1 \\ -i \end{pmatrix}$.
+   - Para $\lambda_2 = e^{-i\alpha}$, o autovetor é $v_2 = \begin{pmatrix} 1 \\  i \end{pmatrix}$.
+
+   Assim, $\overline{R}_\alpha$ é diagonalizável sobre $\C$, com autovalores $\lambda_1 = e^{i\alpha}$ e $\lambda_2 = e^{-i\alpha}$, e autovetores $v_1 = \begin{pmatrix} 1 \\ i \end{pmatrix}$ e $v_2 = \begin{pmatrix} 1 \\ -i \end{pmatrix}$.
+:::
 
 :::{#exr-}
 Seja $A\in M_{n\times n}(\F)$ e considere o operador linear $f_A:M_{n\times n}(\F)\to M_{n\times n}(\F)$, definido por $f_A(B)=AB$.  Será verdade que $A$ e $f_A$ 
@@ -28,12 +94,34 @@ possuem os mesmos autovalores? Será que $A$ e $f_A$ possuem o mesmo
 polinômio característico? Será que $A$ e $f_A$ possuem o mesmo polinômio mínimo? 
 :::
 
+
+
 :::{#exr-}
 Sejam $f:V\to V$ e $v\in V$.
 
 1. Mostre que existe um único polinômio mônico não nulo de menor grau $m_{f,v}(t)$ tal que $m_{f,v}(f)(v)=0$. 
 2. Mostre que $m_{f,v}(t)\mid m_f(t)$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Existência e unicidade de $m_{f,v}(t)$**:
+
+   Seja $v \in V$. Considere a sequência $v, f(v), f^2(v), \ldots$. Como $V$ é de dimensão finita, essa sequência é linearmente dependente. Assim, existem escalares $\alpha_0, \alpha_1, \ldots, \alpha_m \in \F$, não todos nulos, tais que:
+   $$
+   \alpha_0 v + \alpha_1 f(v) + \cdots + \alpha_m f^m(v) = 0.
+   $$
+Defina o conjunto $I_{f,v} = \{p(t) \in \F[t] \mid p(f)(v) = 0\}$. Pelo argumento em cima, 
+$I_{f,v}\neq \emptyset$. 
+Usando o mesmo argumento que no @lem-polmin, obtemos que 
+existe um único polinômio mônico $m_{f,v}(t)$ de menor grau em $I_{f,v}$ e 
+$I_{f,v}=m_{f,v}(t)\F[t]$.  Assim, $m_{f,v}(t)$ é o menor polinômio mônico tal que $m_{f,v}(f)(v) = 0$, garantindo sua existência e unicidade.
+
+2. **Divisibilidade de $m_{f,v}(t)$ por $m_f(t)$**:
+
+    Claramente, $m_f(t)\in I_{f,v}=m_{f,v}(t)\F[t]$. Logo, $m_{f,v}(t)\mid m_f(t)$. 
+:::
+
 
 :::{#exr-mat-comp}
 Seja $p(t)=t^n+\alpha_{n-1} t^{n-1}+\cdots+\alpha_1 t+\alpha_0\in\F[t]$ um polinômio mônico e seja 
@@ -53,16 +141,129 @@ em uma base $B=\{b_1,\ldots,b_n\}$.
    
 [A matriz no exercício chama-se **matriz companheira** do polinômio $p(t)$.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Prova de que $m_{f,b_1}(t) = p(t)$**:
+
+   Seja $B = \{b_1, \ldots, b_n\}$ a base de $V$ e considere a matriz companheira de $p(t)$ dada no enunciado:
+   $$
+   \begin{pmatrix} 
+   0 & 0 & \cdots & 0 & -\alpha_0\\
+   1 & 0 & \cdots & 0 & -\alpha_1 \\
+   0 & 1 & \cdots & 0 & -\alpha_2 \\
+   \vdots & \vdots & \ddots & \vdots & \vdots \\
+   0 & 0 & \cdots & 1 & -\alpha_{n-1}
+   \end{pmatrix}.
+   $$
+   O operador $f$ atua sobre $b_1$ como segue:
+   $$
+   f(b_1) = b_2, \quad f(b_2) = b_3, \quad \ldots, \quad f(b_{n-1}) = b_n, \quad f(b_n) = -\alpha_0 b_1 - \alpha_1 b_2 - \cdots - \alpha_{n-1} b_n.
+   $$
+   Assim, a sequência $b_1, f(b_1), f^2(b_1), \ldots, f^{n-1}(b_1)$ é l.i, mas 
+   a sequência $b_1, f(b_1), f^2(b_1), \ldots, f^{n-1}(b_1),f^n(b_1)$ satisfaz a relação:
+   $$
+   f^n(b_1) + \alpha_{n-1} f^{n-1}(b_1) + \cdots + \alpha_1 f(b_1) + \alpha_0 b_1 = 0.
+   $$
+   Isso mostra que $p(f)(b_1) = 0$, ou seja, $m_{f,b_1}(t) = p(t)$, pois $p(t)$ é o menor polinômio mônico que anula $b_1$.
+
+2. **Deduza que $m_f(t) = \mbox{pcar}(t) = p(t)$**:
+
+   Pelo @thm-cayley-hamilton, o polinômio mínimo $m_f(t)$ divide o polinômio característico $\mbox{pcar}_f(t)$. Além disso, como $m_{f,b_1}(t) = p(t)$ e $p(t)$ é de grau $n$, segue que $m_f(t)$ também é de grau $n$. Como $\mbox{pcar}_f(t)$ também é um polinômio mônico de grau $n$, concluímos que:
+   $$
+   m_f(t) = \mbox{pcar}_f(t) = p(t).
+   $$
+
+   Portanto, o polinômio mínimo, o polinômio característico e o polinômio $p(t)$ coincidem neste caso.
+:::
 
 :::{#exr-}
 Seja $f:V\to V$ um operador linear tal que $fg=gf$ para todo $g:V\to V$. Mostre que existe algum $\lambda\in\F$ tal que $f(v)=\lambda v$ para todo $v\in V$. 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Invariância de $\mbox{Im}(g)$ sob $f$**:
+
+   Suponha que $f$ e $g$ comutam, ou seja, $fg = gf$. Seja $v \in \mbox{Im}(g)$. Então, existe $u \in V$ tal que $v = g(u)$. Aplicando $f$ a $v$, temos:
+   $$
+   f(v) = f(g(u)) = g(f(u)),
+   $$
+   onde usamos a comutatividade de $f$ e $g$. Como $g(f(u)) \in \mbox{Im}(g)$, segue que $f(v) \in \mbox{Im}(g)$. Portanto, $\mbox{Im}(g)$ é $f$-invariante.
+
+2. **$f$ age por multiplicação escalar em todo $v\in V$**:
+
+   A partir do item 1, sabemos que $\mbox{Im}(g)$ é $f$-invariante para qualquer operador $g$ que comuta com $f$. Agora, considere um vetor não nulo $v \in V$ e um operador $g: V \to V$ cuja imagem é $\langle v \rangle$, o subespaço gerado por $v$. Como $f$ comuta com $g$, segue que $\mbox{Im}(g) = \langle v \rangle$ é $f$-invariante. Isso implica que $f(v) \in \langle v \rangle$, ou seja, $f$ deixa $\langle v \rangle$ invariante.
+
+   Como isso vale para qualquer vetor $v \in V$, segue que para todo $v\in V$, existe 
+   $\lambda_v\in\F$ tal que $f(v)=\lambda_vv$.
+
+3. **Igualdade de $\lambda_v$ e $\lambda_u$ para $v, u \in V$**:
+
+   A partir do item 2, sabemos que para todo $v \in V$, existe $\lambda_v \in \F$ tal que $f(v) = \lambda_v v$. Precisa provar que $\lambda_u=\lambda_v$ para todo $u,v\in V$ não nulo. Suponha que $u, v \in V$ são linearmente dependentes. Isso significa que existe um escalar $c \in \F$ tal que $v = c u$. Aplicando $f$ a $v$, temos:
+   $$
+   f(v) = f(c u) = c f(u).
+   $$
+   Como $f(u) = \lambda_u u$, segue que:
+   $$
+   f(v) = c (\lambda_u u) = \lambda_u (c u) = \lambda_u v.
+   $$
+   Por outro lado, sabemos que $f(v) = \lambda_v v$. Comparando as duas expressões para $f(v)$, obtemos:
+   $$
+   \lambda_v v = \lambda_u v.
+   $$
+   Como $v \neq 0$, podemos cancelar $v$ e concluir que:
+   $$
+   \lambda_v = \lambda_u.
+   $$
+   Ora assuma que $u$ e $v$ são l.i. Neste caso, 
+   $$
+   f(v + u) = \lambda_v v + \lambda_u u.
+   $$
+   Por outro lado, pelo item 2, $f(v + u)$ também deve ser da forma $\lambda_{v+u}(v + u)$, ou seja:
+   $$
+   f(v + u) = \lambda_{v+u}(v + u).
+   $$
+   Comparando as duas expressões, segue que:
+   $$
+   \lambda_{v+u}(v + u) = \lambda_v v + \lambda_u u.
+   $$
+   Como $v$ e $u$ são l.i., isso só é possível se $\lambda_v = \lambda_u$ para todos os $v, u \in V$.
+
+   Assim, concluímos que $\lambda_v = \lambda$ é constante para todos os vetores $v \in V$.
+:::
+
 
 :::{#exr-}
 Seja $f:V\to V$ um operador linear e $g:V\to V$ tal que $fg=gf$. Lembre que um espaço $U\leq V$ é $g$-invariante se $g(u)\in U$ para todo $u\in U$. Mostre que 
 
 1. $\ker f$ e $\mbox{Im}(f)$ são $g$-invariantes.
 2. Os autoespaços $V_\lambda$ de $f$ são invariantes por $g$.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **$\ker f$ e $\mbox{Im}(f)$ são $g$-invariantes**:
+
+   - **Invariância de $\ker f$**: Seja $v \in \ker f$, ou seja, $f(v) = 0$. Como $fg = gf$, temos:
+     $$
+     f(g(v)) = g(f(v)) = g(0) = 0.
+     $$
+     Isso implica que $g(v) \in \ker f$. Portanto, $\ker f$ é $g$-invariante.
+
+   - **Invariância de $\mbox{Im}(f)$**: Seja $v \in V$ e $f(v) \in \mbox{Im}(f)$. Como $fg = gf$, temos:
+     $$
+     g(f(v)) = f(g(v)).
+     $$
+     Isso mostra que $g(f(v)) \in \mbox{Im}(f)$. Portanto, $\mbox{Im}(f)$ é $g$-invariante.
+
+2. **Os autoespaços $V_\lambda$ de $f$ são invariantes por $g$**:
+
+   Seja $\lambda \in \F$ um autovalor de $f$ e $v \in V_\lambda$, ou seja, $f(v) = \lambda v$. Como $fg = gf$, temos:
+   $$
+   f(g(v)) = g(f(v)) = g(\lambda v) = \lambda g(v).
+   $$
+   Isso implica que $g(v) \in V_\lambda$. Portanto, $V_\lambda$ é $g$-invariante.
 :::
 
 :::{#exr-}
@@ -77,7 +278,65 @@ $$
 Dê uma descrição de $C(f)$.
 (A álgebra $C(f)$ chama-se o centralizador de $f$ em $\mbox{End}(V)$.)
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
 
+1. **$C(f)$ é um subespaço de $\mbox{End}(V)$**:
+
+   Para mostrar que $C(f)$ é um subespaço de $\mbox{End}(V)$, verificamos as seguintes propriedades:
+   - **Fechamento sob adição**: Se $g, h \in C(f)$, então $fg = gf$ e $fh = hf$. Para $g + h$, temos:
+     $$
+     f(g + h) = fg + fh = gf + hf = (g + h)f.
+     $$
+     Assim, $g + h \in C(f)$.
+   - **Fechamento sob multiplicação por escalares**: Seja $g \in C(f)$ e $\alpha \in \F$. Então:
+     $$
+     f(\alpha g) = \alpha fg = \alpha gf = (\alpha g)f.
+     $$
+     Assim, $\alpha g \in C(f)$.
+
+   Portanto, $C(f)$ é um subespaço de $\mbox{End}(V)$.
+
+2. **$C(f)$ é fechado para a composição de operadores**:
+
+   Seja $g, h \in C(f)$. Então, $fg = gf$ e $fh = hf$. Para $gh$, temos:
+   $$
+   f(gh) = (fg)h = (gf)h = g(fh) = g(hf) = (gh)f.
+   $$
+   Assim, $gh \in C(f)$, o que mostra que $C(f)$ é fechado para a composição de operadores.
+
+3. **Dimensão de $C(f)$**:
+
+   Como $f$ é diagonalizável com autovalores distintos $\lambda_1, \ldots, \lambda_k$, temos a decomposição de $V$ como soma direta dos autoespaços:
+   $$
+   V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}.
+   $$
+   Seja $g \in C(f)$. Como $fg = gf$, segue que $g$ preserva cada autoespaço $V_{\lambda_i}$, ou seja, $g(V_{\lambda_i}) \subseteq V_{\lambda_i}$ para todo $i$. Assim, $g$ pode ser representado como uma matriz bloco diagonal, onde cada bloco corresponde a uma transformação linear em $V_{\lambda_i}$.
+   Por outro lado, suponha que $g$ preserva todos os autoespaços $V_{\lambda_i}$. Isso significa que, para cada $v \in V_{\lambda_i}$, temos $g(v) \in V_{\lambda_i}$. Como $f(v) = \lambda_i v$ para $v \in V_{\lambda_i}$, temos:
+$$
+f(g(v)) = \lambda_i g(v).
+$$
+Por outro lado, como $g(v) \in V_{\lambda_i}$, também temos:
+$$
+g(f(v)) = g(\lambda_i v) = \lambda_i g(v).
+$$
+Assim, $f(g(v)) = g(f(v))$ para todo $v \in V_{\lambda_i}$. Como $V$ é a soma direta dos autoespaços $V_{\lambda_i}$, segue que $f(g(v)) = g(f(v))$ para todo $v \in V$. Portanto, $fg = gf$, ou seja, $g \in C(f)$.
+
+   A dimensão de $C(f)$ é dada pela soma das dimensões dos espaços de endomorfismos de cada $V_{\lambda_i}$. Como $\dim V_{\lambda_i} = d_i$, temos:
+   $$
+   \dim C(f) = \sum_{i=1}^k \dim \mbox{End}(V_{\lambda_i}) = \sum_{i=1}^k d_i^2.
+   $$
+
+4. **Descrição de $C(f)$**:
+
+   O centralizador $C(f)$ consiste em todos os operadores lineares $g: V \to V$ que preservam a decomposição em autoespaços de $f$. Explicitamente, $g$ pode ser representado como uma matriz bloco diagonal, onde cada bloco é uma matriz arbitrária de dimensão $d_i \times d_i$ correspondente ao autoespaço $V_{\lambda_i}$.
+
+   Assim, temos:
+   $$
+   C(f) = \bigoplus_{i=1}^k \mbox{End}(V_{\lambda_i}),
+   $$
+   onde cada $\mbox{End}(V_{\lambda_i})$ é o espaço de todas as transformações lineares em $V_{\lambda_i}$.
+:::
 
 :::{#exr-}
 Seja $\Gamma$ um grafo não direcionado com vertices $\{1,\ldots,n\}$ sem arrestas múltiplas e sem laços. 
@@ -89,6 +348,53 @@ os vértices $i$ e $j$ são adjacentes; caso contrário $a_{i,j}=0$. Como $A_\Ga
 3. Mostre que quando $\Gamma$ é regular e conexo, então a $\dim V_k=1$ (onde $k$ é como no item anterior) e ache gerador para $V_k$.
 4. Ache os autovalores de $A_\Gamma$ no caso quando $\Gamma$ é o grafo completo com $n$ vértices. 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Prova de que $\lambda_1 \leq \max \deg(v)$**:
+
+   Seja $x \in \R^n$ um autovetor associado ao maior autovalor $\lambda_1$ de $A_\Gamma$, com $\|x\| = 1$. Então, temos:
+   $$
+   \lambda_1 = x^\top A_\Gamma x = \sum_{i=1}^n \sum_{j=1}^n a_{i,j} x_i x_j.
+   $$
+   Como $a_{i,j} = 1$ se e somente se os vértices $i$ e $j$ são adjacentes, podemos reescrever a soma como:
+   $$
+   \lambda_1 = \sum_{i=1}^n x_i \sum_{j \sim i} x_j,
+   $$
+   onde $j \sim i$ indica que $j$ é vizinho de $i$. Pelo valor absoluto, temos:
+   $$
+   |\lambda_1| \leq \sum_{i=1}^n |x_i| \cdot \deg(i) \cdot \max |x_j| \leq \max \deg(v).
+   $$
+   Assim, $\lambda_1 \leq \max \deg(v)$.
+
+2. **Prova de que $\lambda_1 = k$ quando $\Gamma$ é regular**:
+
+   Se $\Gamma$ é regular, todos os vértices têm o mesmo grau $k$. Para qualquer vetor constante $x = (1, 1, \ldots, 1)^\top$, temos:
+   $$
+   A_\Gamma x = kx,
+   $$
+   pois cada vértice tem exatamente $k$ vizinhos. Assim, $x$ é um autovetor associado ao autovalor $\lambda_1 = k$. Como $\lambda_1$ é o maior autovalor, segue que $\lambda_1 = k$.
+
+3. **Prova de que $\dim V_k = 1$ quando $\Gamma$ é regular e conexo**:
+    Let $x$ be an eigenvector of $A_\Gamma$ with eigenvalue $\lambda_1 = k$, and assume $|x_i|$ is the largest among all entries of $x$. Without loss of generality, let $|x_i| = 1$. For each vertex $j$ adjacent to $i$, we have the eigenvector equation:
+    $$
+    (A_\Gamma x)_i = k x_i.
+    $$
+    Expanding the left-hand side, we get:
+    $$
+    \sum_{j \sim i} x_j = k x_i,
+    $$
+    where the sum is over all vertices $j$ adjacent to $i$. Since $|x_i| = 1$ is the largest, we must have $|x_j| \leq |x_i| = 1$ for all $j$. For the equality to hold in the sum, it must be the case that $x_j = x_i$ for all $j$ adjacent to $i$. Thus, $x_i = x_j$ for all $j \sim i$. Agora, repita o argumento para os vertices que são adjacentes com $j$, e depois para os vertices que são adjacentes com os vizinhos de $j$. Como $\Gamma$ é conexo, vamos atingir todo vértices de $\Gamma$ que implica que $x_i=x_j$ para todo $j$. 
+
+4. **Autovalores de $A_\Gamma$ para o grafo completo**:
+
+   No caso do grafo completo com $n$ vértices, cada vértice tem grau $n-1$. A matriz de adjacência $A_\Gamma$ é dada por:
+   $$
+   A_\Gamma = J_n - I_n,
+   $$
+   onde $J_n$ é a matriz $n \times n$ de todos os $1$s e $I_n$ é a matriz identidade. O maior autovalor de $A_\Gamma$ é $\lambda_1 = n-1$, com autovetor $x = (1, 1, \ldots, 1)^\top$. Os outros autovalores são $\lambda_2 = \lambda_3 = \cdots = \lambda_n = -1$, pois $J_n$ tem posto $1$ e $I_n$ subtrai $1$ da diagonal.
+
+:::
 
 :::{#exr-}
 Deduza do Teorema da Decomposição Primária que um endomorfismo $f:V\to V$ 
@@ -98,9 +404,75 @@ m_f(t)=(t-\lambda_1)\cdots (t-\lambda_k)
 $$
 com $\lambda_1,\ldots,\lambda_k\in \F$ distintos.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Se $f$ é diagonalizável, então $m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)$ com $\lambda_1, \ldots, \lambda_k$ distintos**:
+
+    Se $f$ é diagonalizável, existe uma base de $V$ formada por autovetores de $f$. Assim, podemos escrever $V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}$, onde $V_{\lambda_i}$ é o autoespaço associado ao autovalor $\lambda_i$. 
+    Por @lem-minpol-div-eigen, segue que $t-\lambda_i$ divide $m_{f}(t)$ e assim 
+    $\prod_i(t-\lambda_i)$ divide $m_f(t)$. Por outro lado, se $v\in V_{\lambda_j}$, 
+    e como os operadores $f-\lambda_i\mbox{id}_V$ comutam, temos que
+    $$
+    \prod_{i=1}^k(f-\lambda_i\mbox{id}_V)(v)=0.
+    $$
+    Como isso vale para todo autovetor de $f$ e $V$ é soma direta dos autoespaços de $f$, temos que $\prod_i(f-\lambda_i\mbox{id}_V)=0$. Logo, $\prod_i(t-\lambda_i)=m_f(t)$.
+
+
+2. **Se $m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)$ com $\lambda_1, \ldots, \lambda_k$ distintos, então $f$ é diagonalizável**:
+
+    Suponha que $m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k)$, com $\lambda_1, \ldots, \lambda_k$ distintos. Pelo Teorema da Decomposição Primária, temos que:
+    $$
+    V = \ker(f - \lambda_1 \text{id}_V) \oplus \cdots \oplus \ker(f - \lambda_k \text{id}_V).
+    $$
+    Cada $\ker(f - \lambda_i \text{id}_V)$ é o autoespaço associado ao autovalor $\lambda_i$. 
+    Assim, $V$ é soma direta de autoespaços e $f$ é diagonalizável. 
+
+3. **Conclusão**:
+
+    Pelo Teorema da Decomposição Primária, $f$ é diagonalizável se e somente se o polinômio mínimo de $f$ é da forma:
+    $$
+    m_f(t) = (t - \lambda_1) \cdots (t - \lambda_k),
+    $$
+    com $\lambda_1, \ldots, \lambda_k \in \F$ distintos.
+:::
 
 :::{#exr-}
 Seja $p:V\to V$ uma projeção e $f:V\to V$ um endomorfismo qualquer. Mostre que $pf=fp$ se e somente se $\ker p$ e $\mbox{Im}(p)$ são $f$-invariantes. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Se $pf = fp$, então $\ker p$ e $\mbox{Im}(p)$ são $f$-invariantes**:
+
+    - **Invariância de $\ker p$**: Seja $v \in \ker p$, ou seja, $p(v) = 0$. Aplicando $p$ a $f(v)$, temos:
+      $$
+      p(f(v)) = (pf)(v) = (fp)(v) = f(p(v)) = f(0) = 0.
+      $$
+      Isso implica que $f(v) \in \ker p$. Portanto, $\ker p$ é $f$-invariante.
+
+    - **Invariância de $\mbox{Im}(p)$**: Seja $v \in V$ e $p(v) \in \mbox{Im}(p)$. Aplicando $p$ a $f(p(v))$, temos:
+      $$
+      p(f(p(v))) = (pf)(p(v)) = (fp)(p(v)) = f(p(p(v))) = f(p(v)).
+      $$
+      Isso mostra que $f(p(v)) \in \mbox{Im}(p)$. Portanto, $\mbox{Im}(p)$ é $f$-invariante.
+
+2. **Se $\ker p$ e $\mbox{Im}(p)$ são $f$-invariantes, então $pf = fp$**:
+
+    - Seja $v \in V$. Podemos escrever $v = u + w$, onde $u \in \ker p$ e $w \in \mbox{Im}(p)$. Como $p$ é uma projeção, temos $p(u) = 0$ e $p(w) = w$.
+    - Aplicando $pf$ a $v$, temos:
+      $$
+      pf(v) = pf(u + w) = pf(u) + pf(w).
+      $$
+      Como $u \in \ker p$, temos $pf(u) = p(f(u)) = 0$ (pois $\ker p$ é $f$-invariante). Como $w \in \mbox{Im}(p)$, temos $pf(w) = p(f(w)) = f(p(w))$ (pois $\mbox{Im}(p)$ é $f$-invariante). Assim:
+      $$
+      pf(v) = 0 + f(p(w)) = f(p(u + w)) = f(p(v)).
+      $$
+      Portanto, $pf = fp$.
+
+3. **Conclusão**:
+
+    Mostramos que $pf = fp$ se e somente se $\ker p$ e $\mbox{Im}(p)$ são $f$-invariantes.
 :::
 
 :::{#exr-}
