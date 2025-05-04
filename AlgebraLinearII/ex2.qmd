@@ -475,7 +475,7 @@ Seja $p:V\to V$ uma projeção e $f:V\to V$ um endomorfismo qualquer. Mostre que
     Mostramos que $pf = fp$ se e somente se $\ker p$ e $\mbox{Im}(p)$ são $f$-invariantes.
 :::
 
-:::{#exr-}
+:::{#exr-triang}
 Um endomorfismo $f:V\to V$ é dito triangularizável se existe uma base $B$ de $V$ tal que $[f]_B^B$ é matriz 
 triangular superior. Deduza do Teorema da Decomposição Primária, que $f$ é triangularizável se e somente se 
 $$
@@ -484,9 +484,39 @@ $$
 com $\lambda_1,\ldots,\lambda_k\in\F$ não necessáriamente distintos. 
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Se $f$ é triangularizável, então $m_f(t)$ é produto de fatores lineares**:
+
+   Suponha que $f$ seja triangularizável. Isso significa que existe uma base $B$ de $V$ tal que $[f]_B^B$ é uma matriz triangular superior. O polinômio característico de uma matriz triangular superior é o produto dos fatores lineares $(t - \lambda_i)$, onde $\lambda_i$ são os elementos da diagonal. Pelo Teorema de Cayley-Hamilton, o polinômio mínimo $m_f(t)$ divide o polinômio característico e, portanto, também é um produto de fatores lineares.
+
+2. **Se $m_f(t)$ é produto de fatores lineares, então $f$ é triangularizável**:
+
+   Suponha que o polinômio mínimo de $f$ seja da forma:
+   $$
+   m_f(t) = (t - \lambda_1)^{m_1} \cdots (t - \lambda_k)^{m_k},
+   $$
+   com $\lambda_1, \ldots, \lambda_k \in \F$ distintos. Pelo Teorema da Decomposição Primária, o espaço $V$ pode ser escrito como uma soma direta dos autoespaços generalizados:
+   $$
+   V = \bigoplus_{i=1}^k V_{\lambda_i},
+   $$
+   onde $V_{\lambda_i} = \ker((f - \lambda_i \cdot \text{id})^{m_i})$ é o autoespaço generalizado associado ao autovalor $\lambda_i$.
+
+   - **Triangularizabilidade de operadores nilpotentes**: 
+   Pelo Teorema da Decomposição Primária, em cada subespaço $V_{\lambda_i}$, 
+   o polinômio minimal da restrição $f_i$ de $f$ para $V_{\lambda_i}$ é $(t-\lambda_i)^{m_1}$. Logo, o operador $f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}$ é nilpotente. Pelo argumento apresentado nas notas de aula ou no exercício abaixo, operadores nilpotentes são triangularizáveis. Assim, $f_i-\lambda_i\text{id}_{V_{\lambda_i}}$ é triangularizável em $V_{\lambda_i}$.
+   Daqui, segue que $f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}_{V_{\lambda_i}}$ também é triangularizável em $V_{\lambda_i}$.
+
+   - **Triangularizabilidade de $f$ em $V$**: Como $V$ é a soma direta dos subespaços $V_{\lambda_i}$ e $f$ é triangularizável em cada $V_{\lambda_i}$, segue que $f$ é triangularizável em $V$.
+
+3. **Conclusão**:
+
+   Pelo argumento acima, mostramos que $f$ é triangularizável se e somente se o polinômio mínimo $m_f(t)$ é um produto de fatores lineares da forma $(t - \lambda_1) \cdots (t - \lambda_k)$, com $\lambda_1, \ldots, \lambda_k \in \F$.
+:::
 
 :::{#exr-}
-Deduza do Exercício 4 que no caso de $\F=\C$, todo endomorfismo $f:V\to V$ é triangularizável e ache um endomorfismo $\R^2\to \R^2$ que não seja triangularizável.
+Deduza do @exr-triang que no caso de $\F=\C$, todo endomorfismo $f:V\to V$ é triangularizável e ache um endomorfismo $\R^2\to \R^2$ que não seja triangularizável.
 :::
 
 :::{#exr-}
