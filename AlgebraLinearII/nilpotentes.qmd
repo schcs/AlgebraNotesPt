@@ -59,7 +59,7 @@ $$
 $$
 é uma base de $V_j$. Observamos que nesta base, a matriz de $f$ é triangular superior  com zeros na diagonal. Isso nos levou ao seguinte teorema.
 
-:::{#lem-}
+:::{#lem-nilp-triang}
 Se $f:V\to V$ é nilpotente, então existe uma base $B$ tal que $[f]_B^B$ é triangular superior com zeros na diagonal. Em particular, $\mbox{pcar}_f(t)=t^{\dim V}$.
 :::
 
@@ -153,7 +153,7 @@ Como foi observado em cima, $f_0=f-\lambda\mbox{id}_V$ é nilpotente. Pelo Teore
 :::
 
 
-:::{#cor-}
+:::{#cor-blocos-jordan}
 Seja $f:V\to V$ um endomorfismo com $m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}$. Então existe uma base de $V$ na qual a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor $\lambda_i$.
 :::
 

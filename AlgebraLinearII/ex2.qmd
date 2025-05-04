@@ -177,7 +177,7 @@ em uma base $B=\{b_1,\ldots,b_n\}$.
    Portanto, o polinômio mínimo, o polinômio característico e o polinômio $p(t)$ coincidem neste caso.
 :::
 
-:::{#exr-}
+:::{#exr-centro}
 Seja $f:V\to V$ um operador linear tal que $fg=gf$ para todo $g:V\to V$. Mostre que existe algum $\lambda\in\F$ tal que $f(v)=\lambda v$ para todo $v\in V$. 
 :::
 :::{.sol .callout-tip collapse="true"}
@@ -234,7 +234,7 @@ Seja $f:V\to V$ um operador linear tal que $fg=gf$ para todo $g:V\to V$. Mostre 
 :::
 
 
-:::{#exr-}
+:::{#exr-f-invar}
 Seja $f:V\to V$ um operador linear e $g:V\to V$ tal que $fg=gf$. Lembre que um espaço $U\leq V$ é $g$-invariante se $g(u)\in U$ para todo $u\in U$. Mostre que 
 
 1. $\ker f$ e $\mbox{Im}(f)$ são $g$-invariantes.
@@ -504,11 +504,14 @@ com $\lambda_1,\ldots,\lambda_k\in\F$ não necessáriamente distintos.
    onde $V_{\lambda_i} = \ker((f - \lambda_i \cdot \text{id})^{m_i})$ é o autoespaço generalizado associado ao autovalor $\lambda_i$.
 
    - **Triangularizabilidade de operadores nilpotentes**: 
-   Pelo Teorema da Decomposição Primária, em cada subespaço $V_{\lambda_i}$, 
-   o polinômio minimal da restrição $f_i$ de $f$ para $V_{\lambda_i}$ é $(t-\lambda_i)^{m_1}$. Logo, o operador $f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}$ é nilpotente. Pelo argumento apresentado nas notas de aula ou no exercício abaixo, operadores nilpotentes são triangularizáveis. Assim, $f_i-\lambda_i\text{id}_{V_{\lambda_i}}$ é triangularizável em $V_{\lambda_i}$.
-   Daqui, segue que $f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}_{V_{\lambda_i}}$ também é triangularizável em $V_{\lambda_i}$.
+   Pelo Teorema da Decomposição Primária, em cada subespaço $V_{\lambda_i}$ é $f$-invariante e 
+   o polinômio minimal da restrição $f_i$ de $f$ para $V_{\lambda_i}$ é $(t-\lambda_i)^{m_i}$. Logo, o operador $f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}$ é nilpotente. Pelo argumento apresentado nas notas de aula ou no @exr-nilp-triang, operadores nilpotentes são triangularizáveis. Assim, $f_i-\lambda_i\text{id}_{V_{\lambda_i}}$ é triangularizável em $V_{\lambda_i}$.
+   Daqui, segue que $f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}$ também é triangularizável em $V_{\lambda_i}$.
 
-   - **Triangularizabilidade de $f$ em $V$**: Como $V$ é a soma direta dos subespaços $V_{\lambda_i}$ e $f$ é triangularizável em cada $V_{\lambda_i}$, segue que $f$ é triangularizável em $V$.
+   - **Triangularizabilidade de $f$ em $V$**: Como $V$ é a soma direta dos subespaços $V_{\lambda_i}$ 
+   $f$-invariantes e $f$ é triangularizável em cada $V_{\lambda_i}$. Se escolhemos bases $B_i$ 
+   para cada $V_{\lambda_i}$ tais que $[f_i]_{B_i}^{B_i}$ é triangular, 
+   $B=B_1\cup\cdots\cup B_k$ é base de $V$ tal que $[f]^B_B$ é triangular.  Segue que $f$ é triangularizável em $V$.
 
 3. **Conclusão**:
 
@@ -518,23 +521,92 @@ com $\lambda_1,\ldots,\lambda_k\in\F$ não necessáriamente distintos.
 :::{#exr-}
 Deduza do @exr-triang que no caso de $\F=\C$, todo endomorfismo $f:V\to V$ é triangularizável e ache um endomorfismo $\R^2\to \R^2$ que não seja triangularizável.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Triangularizabilidade de $f$ sobre $\C$**:
+
+   Pelo @exr-triang e pelo Teorema Espectral (@thm-espectral), sabemos que, no caso de $\F = \C$, todo endomorfismo $f: V \to V$ é triangularizável. Isso ocorre porque o polinômio mínimo $m_f(t)$ de $f$ pode ser fatorado como um produto de fatores lineares da forma $(t - \lambda_i)$, onde $\lambda_i \in \C$ são os autovalores de $f$. 
+
+2. **Exemplo de um endomorfismo em $\R^2$ que não é triangularizável**:
+
+   Considere o endomorfismo $f: \R^2 \to \R^2$ definido por:
+   $$
+   f(x, y) = (-y, x).
+   $$
+   A matriz de $f$ na base canônica é:
+   $$
+   [f] = \begin{pmatrix}
+   0 & -1 \\
+   1 & 0
+   \end{pmatrix}.
+   $$
+   O polinômio característico de $f$ é:
+   $$
+   \mbox{pcar}_f(t) = \det(tI - [f]) = \det\begin{pmatrix}
+   t & 1 \\
+   -1 & t
+   \end{pmatrix} = t^2 + 1.
+   $$
+   O polinômio mínimo de $f$ também é $m_f(t) = t^2 + 1$. Note que $t^2 + 1$ não pode ser fatorado em $\R$, pois não possui raízes reais. Assim, $f$ não possui autovalores reais e, portanto, não é triangularizável sobre $\R$.
+
+3. **Conclusão**:
+
+   - Sobre $\C$, todo endomorfismo é triangularizável.
+   - Sobre $\R$, o endomorfismo $f(x, y) = (-y, x)$ é um exemplo de um operador que não é triangularizável, pois seu polinômio mínimo não pode ser fatorado em fatores lineares sobre $\R$.
+:::
 
 :::{#exr-}
 Seja $p:V\to V$ uma projeção e $f:V\to V$ um operador arbitrário. Mostre que 
 $\mbox{Im}(p)$ é invariante por $f$ se e somente se $pfp=fp$. 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Se $\mbox{Im}(p)$ é $f$-invariante, então $pfp = fp$**:
+
+   Suponha que $\mbox{Im}(p)$ seja $f$-invariante. Isso significa que, para todo $v \in V$, temos $f(p(v)) \in \mbox{Im}(p)$. Como $p$ é a projeção sobre $\mbox{Im}(p)$, segue que $p(f(p(v))) = f(p(v))$. Assim, $pfp = fp$.
+
+2. **Se $pfp = fp$, então $\mbox{Im}(p)$ é $f$-invariante**:
+
+   Suponha agora que $pfp = fp$. Para mostrar que $\mbox{Im}(p)$ é $f$-invariante, seja $v \in \mbox{Im}(p)$. Isso significa que existe $u \in V$ tal que $v = p(u)$. Aplicando $f$ a $v$, temos:
+   $$
+   f(v) = f(p(u)).
+   $$
+   Usando a hipótese $pfp = fp$, obtemos:
+   $$
+   p(f(v)) = p(f(p(u))) = f(p(u)) = f(v).
+   $$
+   Isso mostra que $f(v) \in \mbox{Im}(p)$, ou seja, $\mbox{Im}(p)$ é $f$-invariante.
+
+3. **Conclusão**:
+
+   Mostramos que $\mbox{Im}(p)$ é $f$-invariante se e somente se $pfp = fp$.
+:::
 
 :::{#exr-}
 Seja $f:V\to V$ um operador tal que $f$ comuta com toda projeção $p:V\to V$. O que pode dizer sobre $f$?
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+Seja $v\in V$ não nulo e seja $p$ uma projeção tal que $\mbox{Im}(p)=\left<v\right>$. Como $f$ 
+comuta com toda projeção, $f$ comuta com $p$, e $mbox{Im}(p)=\left<v\right>$ é $f$-invariante 
+(@ex-f-invar). Ora, o argumento no @exr-centro mostra que $f=\lambda\text{id}_V$. 
 :::
 
 :::{#exr-}
 Seja $f(t)=\alpha_k t^k+\alpha_{k-1}t^{k-1}+\cdots+\alpha_1 t+\alpha_0\in \F[t]$ e $p:V\to V$ uma projeção. Determine $f(p)$. 
 :::
 
-:::{#exr-}
+:::{#exr-nilp-triang}
 Seja $f: V\to V$ um endomorfismo nilpotente. Mostre que existe uma base $B$ de $V$ tal que 
 $[f]_B^B$ está na forma triangular superior com zeros na diagonal.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Dica: 
+
+Confira o argumento antes do @lem-nilp-triang.
 :::
 
 :::{#exr-}
@@ -555,6 +627,42 @@ Seja $f:V\to V$ um endomorfismo de $V$ sobre um corpo qualquer de caraterística
 diagonal.
 2. Mostre que a afirmação do item anterior é falsa sobre caraterística $2$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Prova para característica diferente de $2$**:
+
+   Seja $f: V \to V$ um endomorfismo tal que $f^2 = \mbox{id}_V$. Isso implica que $f$ é uma involução, ou seja, $f \circ f = \mbox{id}_V$. Vamos mostrar que existe uma base $B$ de $V$ na qual a matriz de $f$ é diagonal com $1$ ou $-1$ na diagonal.
+
+    -  **Os autovalores de $f$ são raízes de $m_f(t)$**: Pelo @lem-minpol-div-eigen, sabemos que os autovalores de $f$ são raízes do polinômio mínimo $m_f(t)$. Como $f^2 = \mbox{id}_V$, temos que
+   $m_f(t)$ divide o polinômio $t^2 - 1$. Assim, as únicos autovores possíveis de $f$ são $\lambda = 1$ e $\lambda = -1$.
+
+
+   - **Autoespaços de $f$**: Defina os autoespaços $V_1 = \ker(f - \mbox{id}_V)$ e $V_{-1} = \ker(f + \mbox{id}_V)$. Se $\F$ tem caraterística diferente de $2$, temos que 
+   $V_1\cap V_{-1}=0$. Esses subespaços são $f$-invariantes. Para $v\in V$, escreva 
+   $$
+   v=\frac{v+f(v)}2+\frac{v-f(v)}2.
+   $$
+   Note que o primeiro termo desta decomposição está em $V_1$ e o segundo está em $V_{-1}$, Logo
+   $V=V_1+V_{-1}$ e $V=V_1\oplus V_{-1}$. Como $V$ é soma direta de autoespaços, temos que 
+   $f$ é diagonalizável.
+
+
+2. **Contraexemplo para característica $2$**:
+
+   Agora, considere o caso em que o corpo $\F$ tem característica $2$. Nesse caso, $1 = -1$ em $\F$, e o polinômio $t^2 - 1 = (t - 1)(t + 1)$ se reduz a $t^2 - 1 = (t - 1)^2$. Isso significa que $f$ não é necessariamente diagonalizável, pois $f$ possui dois autovalores distintos. 
+
+   - **Exemplo**: Seja $V = \F^2$ e $f: V \to V$ definido por:
+     $$
+     [f] = \begin{pmatrix}
+     1 & 1 \\
+     0 & 1
+     \end{pmatrix}.
+     $$
+     Aqui, $f^2 = \mbox{id}_V$, mas $f$ não é diagonalizável, pois a matriz de $f$ não pode ser reduzida a uma forma diagonal. O único autovalor de $f$ é $1$, mas o autoespaço associado tem dimensão $1$, enquanto $\dim V = 2$.
+
+   Portanto, a afirmação do item 1 é falsa em característica $2$.
+:::
 
 :::{#exr-}
 Seja $f:V\to V$ um endomorphismo nilpotente. Mostre que as seguintes afirmações são equivalentes:
@@ -562,6 +670,48 @@ Seja $f:V\to V$ um endomorphismo nilpotente. Mostre que as seguintes afirmaçõe
 1. $V$ é $f$-cíclico;
 2. $\mbox{pcar}_f(t)=m_f(t)$;
 3. existe $v\in V$ tal que $\mbox{pcar}_f(t)=m_{f,v}(t)$.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Prova de que (1) $\implies$ (2)**:
+
+   Suponha que $V$ é $f$-cíclico. Isso significa que existe $v \in V$ tal que $V = \langle v, f(v), f^2(v), \ldots \rangle$. Nesse caso, o espaço $V$ é gerado pelos vetores $v, f(v), f^2(v), \ldots, f^{m-1}(v)$, onde $m$ é o menor inteiro positivo tal que $f^m(v) = 0$. Assim, a matriz de $f$ na base $\{v, f(v), \ldots, f^{m-1}(v)\}$ tem a forma:
+   $$
+   [f]_B^B = \begin{pmatrix}
+   0 & 1 & 0 & \cdots & 0 \\
+   0 & 0 & 1 & \cdots & 0 \\
+   \vdots & \vdots & \ddots & \ddots & \vdots \\
+   0 & 0 & 0 & \cdots & 1 \\
+   0 & 0 & 0 & \cdots & 0
+   \end{pmatrix}.
+   $$
+   Nesse caso, o polinômio característico de $f$ é $\mbox{pcar}_f(t) = t^m$. 
+   Além disso, temos que $m_{f,v}(t)=t^m$ also. Como 
+   $$
+   m_{f,v}(t)\mid m_f(t)\mid \mbox{pcar}(t)
+   $$ 
+   temos que os três polinîmios são iguais e o polinômio mínimo de $f$ também é $m_f(t) = t^m$. Portanto, $\mbox{pcar}_f(t) = m_f(t)$.
+
+2. **Prova de que (2) $\implies$ (3)**:
+
+   Suponha que $\mbox{pcar}_f(t) = m_f(t)$. Como $f$ é nilpotente, temos que $\mbox{pcar}_f(t) = m_f(t)=t^m$ com algum $m$.  
+    Se $v\in V$, então $m_{f,v}(t)=t^{m_v}$ com $m_v\leq m$. Se $m_v\leq m-1$ para todo $v$, então
+    $f^{m-1}(v)=0$ para todo $v\in V$, e $f^{m-1}=0$. Mas isso contradiz ao fato que $m_f(t)=t^m$. 
+    Portanto existe $v\in V$ tal que $m_{f,v}(t)=t^m$. 
+   
+ 
+3. **Prova de que (3) $\implies$ (1)**:
+
+   Suponha que existe $v \in V$ tal que $\mbox{pcar}_f(t) = m_{f,v}(t)$. Isso significa que 
+   $v,f(v),f^2(v),\ldots,f^{m-1}(v)$ são l.i. e $v$ gera um espaço $f$-cíclico $U = \langle v, f(v), f^2(v), \ldots \rangle$ tal que $\dim U = \deg m_{f,v}(t)$. Como $\mbox{pcar}_f(t) = m_{f,v}(t)$, segue que $\dim U = \dim V$. Portanto, $V = U$, e $V$ é $f$-cíclico.
+
+4. **Conclusão**:
+
+   Mostramos que as três afirmações são equivalentes:
+   - $V$ é $f$-cíclico;
+   - $\mbox{pcar}_f(t) = m_f(t)$;
+   - Existe $v \in V$ tal que $\mbox{pcar}_f(t) = m_{f,v}(t)$.
 :::
 
 :::{#exr-}
@@ -605,4 +755,37 @@ $$
 1. Quais são as possibilidades para os blocos de Jordan na decomposição de $f$?
 2. Qual é o polinômio caraterístico de $f$ nos casos listados no item anterior?
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução:
 
+1. **Possibilidades para os blocos de Jordan**:
+
+   O polinômio mínimo de $f$ é dado por:
+   $$
+   m_f(t) = (t-1)(t+1)^3(t-2)^3.
+   $$
+   Pelo @cor-blocos-jordan, sabemos que os blocos de Jordan de $f$ correspondem aos autovalores $1$, $-1$, e $2$, e que o maior tamanho de bloco associado a cada autovalor é determinado pela maior potência de $(t-\lambda)$ que aparece em $m_f(t)$. Assim:
+   - Para $\lambda = 1$, há apenas blocos $1 \times 1$.
+   - Para $\lambda = -1$, o maior bloco associado tem tamanho $3\times 3$
+   - Para $\lambda = 2$, o maior bloco é de tamanho $3 \times 3$.
+
+   Além disso, os tamanhas dos blocos têm de somar 10.
+
+As possibilidades para os blocos são:
+
+- $J_1(1)$, $J_1(1)$, $J_1(1)$, $J_1(1)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^4(t+1)^3(t-2)^3$.
+- $J_1(1)$, $J_1(1)$, $J_1(1)$, $J_1(-1)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^3(t+1)^4(t-2)^3$.
+- $J_1(1)$, $J_1(1)$, $J_1(1)$, $J_1(2)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^3(t+1)^3(t-2)^4$.
+- $J_1(1)$, $J_1(1)$, $J_1(-1)$, $J_1(2)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^2(t+1)^4(t-2)^4$.
+- $J_1(1)$, $J_1(1)$, $J_2(-1)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^2(t+1)^5(t-2)^3$.
+- $J_1(1)$, $J_1(1)$, $J_2(2)$, $J_{3}(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)^2(t+1)^3(t-2)^5$.
+- $J_1(1)$, $J_3(-1)$, $J_3(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3$.
+- $J_1(1)$, $J_3(-1)$, $J_3(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6$.
+- $J_1(1)$, $J_1(-1)$, $J_2(-1)$, $J_3(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3$.
+- $J_1(1)$, $J_1(-1)$, $J_3(-1)$, $J_2(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^4(t-2)^5$.
+- $J_1(1)$, $J_3(-1)$, $J_1(2)$, $J_2(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6$.
+- $J_1(1)$, $J_1(-1)$, $J_1(-1)$, $J_1(-1)$, $J_3(-1)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3$.
+- $J_1(1)$, $J_1(-1)$, $J_1(-1)$, $J_3(-1)$, $J_1(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^5(t-2)^4$.
+- $J_1(1)$, $J_1(-1)$, $J_3(-1)$, $J_1(2)$, $J_1(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^4(t-2)^5$.
+- $J_1(1)$, $J_3(-1)$, $J_1(2)$, $J_1(2)$, $J_1(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6$.
+:::
