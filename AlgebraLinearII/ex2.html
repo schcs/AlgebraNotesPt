@@ -1784,13 +1784,44 @@ pf(v) = 0 + f(p(w)) = f(p(u + w)) = f(p(v)).
 </div>
 </div>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-triang" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.12</strong></span> Um endomorfismo <span class="math inline">\(f:V\to V\)</span> é dito triangularizável se existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([f]_B^B\)</span> é matriz triangular superior. Deduza do Teorema da Decomposição Primária, que <span class="math inline">\(f\)</span> é triangularizável se e somente se <span class="math display">\[
 m_f(t)=(t-\lambda_1)\cdots (t-\lambda_k)
 \]</span> com <span class="math inline">\(\lambda_1,\ldots,\lambda_k\in\F\)</span> não necessáriamente distintos.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Se <span class="math inline">\(f\)</span> é triangularizável, então <span class="math inline">\(m_f(t)\)</span> é produto de fatores lineares</strong>:</p>
+<p>Suponha que <span class="math inline">\(f\)</span> seja triangularizável. Isso significa que existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([f]_B^B\)</span> é uma matriz triangular superior. O polinômio característico de uma matriz triangular superior é o produto dos fatores lineares <span class="math inline">\((t - \lambda_i)\)</span>, onde <span class="math inline">\(\lambda_i\)</span> são os elementos da diagonal. Pelo Teorema de Cayley-Hamilton, o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> divide o polinômio característico e, portanto, também é um produto de fatores lineares.</p></li>
+<li><p><strong>Se <span class="math inline">\(m_f(t)\)</span> é produto de fatores lineares, então <span class="math inline">\(f\)</span> é triangularizável</strong>:</p>
+<p>Suponha que o polinômio mínimo de <span class="math inline">\(f\)</span> seja da forma: <span class="math display">\[
+m_f(t) = (t - \lambda_1)^{m_1} \cdots (t - \lambda_k)^{m_k},
+\]</span> com <span class="math inline">\(\lambda_1, \ldots, \lambda_k \in \F\)</span> distintos. Pelo Teorema da Decomposição Primária, o espaço <span class="math inline">\(V\)</span> pode ser escrito como uma soma direta dos autoespaços generalizados: <span class="math display">\[
+V = \bigoplus_{i=1}^k V_{\lambda_i},
+\]</span> onde <span class="math inline">\(V_{\lambda_i} = \ker((f - \lambda_i \cdot \text{id})^{m_i})\)</span> é o autoespaço generalizado associado ao autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
+<ul>
+<li><p><strong>Triangularizabilidade de operadores nilpotentes</strong>: Pelo Teorema da Decomposição Primária, em cada subespaço <span class="math inline">\(V_{\lambda_i}\)</span>, o polinômio minimal da restrição <span class="math inline">\(f_i\)</span> de <span class="math inline">\(f\)</span> para <span class="math inline">\(V_{\lambda_i}\)</span> é <span class="math inline">\((t-\lambda_i)^{m_1}\)</span>. Logo, o operador <span class="math inline">\(f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}\)</span> é nilpotente. Pelo argumento apresentado nas notas de aula ou no exercício abaixo, operadores nilpotentes são triangularizáveis. Assim, <span class="math inline">\(f_i-\lambda_i\text{id}_{V_{\lambda_i}}\)</span> é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>. Daqui, segue que <span class="math inline">\(f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}_{V_{\lambda_i}}\)</span> também é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>.</p></li>
+<li><p><strong>Triangularizabilidade de <span class="math inline">\(f\)</span> em <span class="math inline">\(V\)</span></strong>: Como <span class="math inline">\(V\)</span> é a soma direta dos subespaços <span class="math inline">\(V_{\lambda_i}\)</span> e <span class="math inline">\(f\)</span> é triangularizável em cada <span class="math inline">\(V_{\lambda_i}\)</span>, segue que <span class="math inline">\(f\)</span> é triangularizável em <span class="math inline">\(V\)</span>.</p></li>
+</ul></li>
+<li><p><strong>Conclusão</strong>:</p>
+<p>Pelo argumento acima, mostramos que <span class="math inline">\(f\)</span> é triangularizável se e somente se o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> é um produto de fatores lineares da forma <span class="math inline">\((t - \lambda_1) \cdots (t - \lambda_k)\)</span>, com <span class="math inline">\(\lambda_1, \ldots, \lambda_k \in \F\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 72.13</strong></span> Deduza do Exercício 4 que no caso de <span class="math inline">\(\F=\C\)</span>, todo endomorfismo <span class="math inline">\(f:V\to V\)</span> é triangularizável e ache um endomorfismo <span class="math inline">\(\R^2\to \R^2\)</span> que não seja triangularizável.</p>
+<p><span class="theorem-title"><strong>Exercício 72.13</strong></span> Deduza do <a href="#exr-triang" class="quarto-xref">Exercício&nbsp;<span>72.12</span></a> que no caso de <span class="math inline">\(\F=\C\)</span>, todo endomorfismo <span class="math inline">\(f:V\to V\)</span> é triangularizável e ache um endomorfismo <span class="math inline">\(\R^2\to \R^2\)</span> que não seja triangularizável.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.14</strong></span> Seja <span class="math inline">\(p:V\to V\)</span> uma projeção e <span class="math inline">\(f:V\to V\)</span> um operador arbitrário. Mostre que <span class="math inline">\(\mbox{Im}(p)\)</span> é invariante por <span class="math inline">\(f\)</span> se e somente se <span class="math inline">\(pfp=fp\)</span>.</p>
