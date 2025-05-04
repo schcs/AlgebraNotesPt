@@ -789,3 +789,8 @@ As possibilidades para os blocos são:
 - $J_1(1)$, $J_1(-1)$, $J_3(-1)$, $J_1(2)$, $J_1(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^4(t-2)^5$.
 - $J_1(1)$, $J_3(-1)$, $J_1(2)$, $J_1(2)$, $J_1(2)$, $J_3(2)$; $\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6$.
 :::
+
+:::{#exr-}
+Demonstre @lem-mult-eigen, @thm-cramer, @lem-autovals-nilp, @lem-minpol-jordan e resolva @exr-eigenspace-directsum, 
+@exr-basis-directsum
+:::

@@ -33,7 +33,7 @@ todo $\lambda$.   Temos que $\lambda$ é autovalor de $f$ se e somente se $V_\la
 :::
 
 
-:::{#exr-}
+:::{#exr-eigenspace-directsum}
 Mostre que $V_\lambda\leq V$. Sejam $\lambda_1,\ldots,\lambda_k\in\F$ distintos. Mostre que
 $$
 V_{\lambda_1}+\cdots+V_{\lambda_k}=V_{\lambda_1}\oplus\cdots\oplus V_{\lambda_k}.
@@ -126,7 +126,7 @@ O conjunto dos autovalores de $f$ chama-se o <b>espectro</b> de $f$. A <b>multip
 :::
 
 
-:::{#lem-}
+:::{#lem-mult-eigen}
 A multiplicidade geométrica de um autovalor de um endomorfismo é menor ou igual a sua multiplicidade algébrica.
 :::
 
