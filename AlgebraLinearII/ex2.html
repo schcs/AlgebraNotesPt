@@ -1527,7 +1527,7 @@ m_f(t) = \mbox{pcar}_f(t) = p(t).
 </div>
 </div>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-centro" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.6</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador linear tal que <span class="math inline">\(fg=gf\)</span> para todo <span class="math inline">\(g:V\to V\)</span>. Mostre que existe algum <span class="math inline">\(\lambda\in\F\)</span> tal que <span class="math inline">\(f(v)=\lambda v\)</span> para todo <span class="math inline">\(v\in V\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1571,7 +1571,7 @@ f(v + u) = \lambda_{v+u}(v + u).
 </div>
 </div>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-f-invar" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.7</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador linear e <span class="math inline">\(g:V\to V\)</span> tal que <span class="math inline">\(fg=gf\)</span>. Lembre que um espaço <span class="math inline">\(U\leq V\)</span> é <span class="math inline">\(g\)</span>-invariante se <span class="math inline">\(g(u)\in U\)</span> para todo <span class="math inline">\(u\in U\)</span>. Mostre que</p>
 <ol type="1">
 <li><span class="math inline">\(\ker f\)</span> e <span class="math inline">\(\mbox{Im}(f)\)</span> são <span class="math inline">\(g\)</span>-invariantes.</li>
@@ -1811,8 +1811,8 @@ m_f(t) = (t - \lambda_1)^{m_1} \cdots (t - \lambda_k)^{m_k},
 V = \bigoplus_{i=1}^k V_{\lambda_i},
 \]</span> onde <span class="math inline">\(V_{\lambda_i} = \ker((f - \lambda_i \cdot \text{id})^{m_i})\)</span> é o autoespaço generalizado associado ao autovalor <span class="math inline">\(\lambda_i\)</span>.</p>
 <ul>
-<li><p><strong>Triangularizabilidade de operadores nilpotentes</strong>: Pelo Teorema da Decomposição Primária, em cada subespaço <span class="math inline">\(V_{\lambda_i}\)</span>, o polinômio minimal da restrição <span class="math inline">\(f_i\)</span> de <span class="math inline">\(f\)</span> para <span class="math inline">\(V_{\lambda_i}\)</span> é <span class="math inline">\((t-\lambda_i)^{m_1}\)</span>. Logo, o operador <span class="math inline">\(f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}\)</span> é nilpotente. Pelo argumento apresentado nas notas de aula ou no exercício abaixo, operadores nilpotentes são triangularizáveis. Assim, <span class="math inline">\(f_i-\lambda_i\text{id}_{V_{\lambda_i}}\)</span> é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>. Daqui, segue que <span class="math inline">\(f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}_{V_{\lambda_i}}\)</span> também é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>.</p></li>
-<li><p><strong>Triangularizabilidade de <span class="math inline">\(f\)</span> em <span class="math inline">\(V\)</span></strong>: Como <span class="math inline">\(V\)</span> é a soma direta dos subespaços <span class="math inline">\(V_{\lambda_i}\)</span> e <span class="math inline">\(f\)</span> é triangularizável em cada <span class="math inline">\(V_{\lambda_i}\)</span>, segue que <span class="math inline">\(f\)</span> é triangularizável em <span class="math inline">\(V\)</span>.</p></li>
+<li><p><strong>Triangularizabilidade de operadores nilpotentes</strong>: Pelo Teorema da Decomposição Primária, em cada subespaço <span class="math inline">\(V_{\lambda_i}\)</span> é <span class="math inline">\(f\)</span>-invariante e o polinômio minimal da restrição <span class="math inline">\(f_i\)</span> de <span class="math inline">\(f\)</span> para <span class="math inline">\(V_{\lambda_i}\)</span> é <span class="math inline">\((t-\lambda_i)^{m_i}\)</span>. Logo, o operador <span class="math inline">\(f_i - \lambda_i \cdot \text{id}_{V_{\lambda_i}}\)</span> é nilpotente. Pelo argumento apresentado nas notas de aula ou no <a href="#exr-nilp-triang" class="quarto-xref">Exercício&nbsp;<span>72.17</span></a>, operadores nilpotentes são triangularizáveis. Assim, <span class="math inline">\(f_i-\lambda_i\text{id}_{V_{\lambda_i}}\)</span> é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>. Daqui, segue que <span class="math inline">\(f_i=f_i-\lambda_i\text{id}_{V_{\lambda_i}}+\lambda_i\text{id}_{V_{\lambda_i}}\)</span> também é triangularizável em <span class="math inline">\(V_{\lambda_i}\)</span>.</p></li>
+<li><p><strong>Triangularizabilidade de <span class="math inline">\(f\)</span> em <span class="math inline">\(V\)</span></strong>: Como <span class="math inline">\(V\)</span> é a soma direta dos subespaços <span class="math inline">\(V_{\lambda_i}\)</span> <span class="math inline">\(f\)</span>-invariantes e <span class="math inline">\(f\)</span> é triangularizável em cada <span class="math inline">\(V_{\lambda_i}\)</span>. Se escolhemos bases <span class="math inline">\(B_i\)</span> para cada <span class="math inline">\(V_{\lambda_i}\)</span> tais que <span class="math inline">\([f_i]_{B_i}^{B_i}\)</span> é triangular, <span class="math inline">\(B=B_1\cup\cdots\cup B_k\)</span> é base de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([f]^B_B\)</span> é triangular. Segue que <span class="math inline">\(f\)</span> é triangularizável em <span class="math inline">\(V\)</span>.</p></li>
 </ul></li>
 <li><p><strong>Conclusão</strong>:</p>
 <p>Pelo argumento acima, mostramos que <span class="math inline">\(f\)</span> é triangularizável se e somente se o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> é um produto de fatores lineares da forma <span class="math inline">\((t - \lambda_1) \cdots (t - \lambda_k)\)</span>, com <span class="math inline">\(\lambda_1, \ldots, \lambda_k \in \F\)</span>.</p></li>
@@ -1823,17 +1823,114 @@ V = \bigoplus_{i=1}^k V_{\lambda_i},
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.13</strong></span> Deduza do <a href="#exr-triang" class="quarto-xref">Exercício&nbsp;<span>72.12</span></a> que no caso de <span class="math inline">\(\F=\C\)</span>, todo endomorfismo <span class="math inline">\(f:V\to V\)</span> é triangularizável e ache um endomorfismo <span class="math inline">\(\R^2\to \R^2\)</span> que não seja triangularizável.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Triangularizabilidade de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(\C\)</span></strong>:</p>
+<p>Pelo <a href="#exr-triang" class="quarto-xref">Exercício&nbsp;<span>72.12</span></a> e pelo Teorema Espectral (<a href="primaria.html#thm-espectral" class="quarto-xref">Teorema&nbsp;<span>68.2</span></a>), sabemos que, no caso de <span class="math inline">\(\F = \C\)</span>, todo endomorfismo <span class="math inline">\(f: V \to V\)</span> é triangularizável. Isso ocorre porque o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> de <span class="math inline">\(f\)</span> pode ser fatorado como um produto de fatores lineares da forma <span class="math inline">\((t - \lambda_i)\)</span>, onde <span class="math inline">\(\lambda_i \in \C\)</span> são os autovalores de <span class="math inline">\(f\)</span>.</p></li>
+<li><p><strong>Exemplo de um endomorfismo em <span class="math inline">\(\R^2\)</span> que não é triangularizável</strong>:</p>
+<p>Considere o endomorfismo <span class="math inline">\(f: \R^2 \to \R^2\)</span> definido por: <span class="math display">\[
+f(x, y) = (-y, x).
+\]</span> A matriz de <span class="math inline">\(f\)</span> na base canônica é: <span class="math display">\[
+[f] = \begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}.
+\]</span> O polinômio característico de <span class="math inline">\(f\)</span> é: <span class="math display">\[
+\mbox{pcar}_f(t) = \det(tI - [f]) = \det\begin{pmatrix}
+t &amp; 1 \\
+-1 &amp; t
+\end{pmatrix} = t^2 + 1.
+\]</span> O polinômio mínimo de <span class="math inline">\(f\)</span> também é <span class="math inline">\(m_f(t) = t^2 + 1\)</span>. Note que <span class="math inline">\(t^2 + 1\)</span> não pode ser fatorado em <span class="math inline">\(\R\)</span>, pois não possui raízes reais. Assim, <span class="math inline">\(f\)</span> não possui autovalores reais e, portanto, não é triangularizável sobre <span class="math inline">\(\R\)</span>.</p></li>
+<li><p><strong>Conclusão</strong>:</p>
+<ul>
+<li>Sobre <span class="math inline">\(\C\)</span>, todo endomorfismo é triangularizável.</li>
+<li>Sobre <span class="math inline">\(\R\)</span>, o endomorfismo <span class="math inline">\(f(x, y) = (-y, x)\)</span> é um exemplo de um operador que não é triangularizável, pois seu polinômio mínimo não pode ser fatorado em fatores lineares sobre <span class="math inline">\(\R\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.14</strong></span> Seja <span class="math inline">\(p:V\to V\)</span> uma projeção e <span class="math inline">\(f:V\to V\)</span> um operador arbitrário. Mostre que <span class="math inline">\(\mbox{Im}(p)\)</span> é invariante por <span class="math inline">\(f\)</span> se e somente se <span class="math inline">\(pfp=fp\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Se <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante, então <span class="math inline">\(pfp = fp\)</span></strong>:</p>
+<p>Suponha que <span class="math inline">\(\mbox{Im}(p)\)</span> seja <span class="math inline">\(f\)</span>-invariante. Isso significa que, para todo <span class="math inline">\(v \in V\)</span>, temos <span class="math inline">\(f(p(v)) \in \mbox{Im}(p)\)</span>. Como <span class="math inline">\(p\)</span> é a projeção sobre <span class="math inline">\(\mbox{Im}(p)\)</span>, segue que <span class="math inline">\(p(f(p(v))) = f(p(v))\)</span>. Assim, <span class="math inline">\(pfp = fp\)</span>.</p></li>
+<li><p><strong>Se <span class="math inline">\(pfp = fp\)</span>, então <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante</strong>:</p>
+<p>Suponha agora que <span class="math inline">\(pfp = fp\)</span>. Para mostrar que <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante, seja <span class="math inline">\(v \in \mbox{Im}(p)\)</span>. Isso significa que existe <span class="math inline">\(u \in V\)</span> tal que <span class="math inline">\(v = p(u)\)</span>. Aplicando <span class="math inline">\(f\)</span> a <span class="math inline">\(v\)</span>, temos: <span class="math display">\[
+f(v) = f(p(u)).
+\]</span> Usando a hipótese <span class="math inline">\(pfp = fp\)</span>, obtemos: <span class="math display">\[
+p(f(v)) = p(f(p(u))) = f(p(u)) = f(v).
+\]</span> Isso mostra que <span class="math inline">\(f(v) \in \mbox{Im}(p)\)</span>, ou seja, <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante.</p></li>
+<li><p><strong>Conclusão</strong>:</p>
+<p>Mostramos que <span class="math inline">\(\mbox{Im}(p)\)</span> é <span class="math inline">\(f\)</span>-invariante se e somente se <span class="math inline">\(pfp = fp\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.15</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador tal que <span class="math inline">\(f\)</span> comuta com toda projeção <span class="math inline">\(p:V\to V\)</span>. O que pode dizer sobre <span class="math inline">\(f\)</span>?</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(v\in V\)</span> não nulo e seja <span class="math inline">\(p\)</span> uma projeção tal que <span class="math inline">\(\mbox{Im}(p)=\left&lt;v\right&gt;\)</span>. Como <span class="math inline">\(f\)</span> comuta com toda projeção, <span class="math inline">\(f\)</span> comuta com <span class="math inline">\(p\)</span>, e <span class="math inline">\(mbox{Im}(p)=\left&lt;v\right&gt;\)</span> é <span class="math inline">\(f\)</span>-invariante (<span class="citation" data-cites="ex-f-invar">@ex-f-invar</span>). Ora, o argumento no <a href="#exr-centro" class="quarto-xref">Exercício&nbsp;<span>72.6</span></a> mostra que <span class="math inline">\(f=\lambda\text{id}_V\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.16</strong></span> Seja <span class="math inline">\(f(t)=\alpha_k t^k+\alpha_{k-1}t^{k-1}+\cdots+\alpha_1 t+\alpha_0\in \F[t]\)</span> e <span class="math inline">\(p:V\to V\)</span> uma projeção. Determine <span class="math inline">\(f(p)\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-nilp-triang" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.17</strong></span> Seja <span class="math inline">\(f: V\to V\)</span> um endomorfismo nilpotente. Mostre que existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\([f]_B^B\)</span> está na forma triangular superior com zeros na diagonal.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Confira o argumento antes do <a href="nilpotentes.html#lem-nilp-triang" class="quarto-xref">Lema&nbsp;<span>69.2</span></a>.</p>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.18</strong></span> Seja <span class="math inline">\(f:\R^4\to \R^4\)</span> dado pela segiuinte matriz na base canônica: <span class="math display">\[
@@ -1852,6 +1949,42 @@ V = \bigoplus_{i=1}^k V_{\lambda_i},
 <li>Mostre que a afirmação do item anterior é falsa sobre caraterística <span class="math inline">\(2\)</span>.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Prova para característica diferente de <span class="math inline">\(2\)</span></strong>:</p>
+<p>Seja <span class="math inline">\(f: V \to V\)</span> um endomorfismo tal que <span class="math inline">\(f^2 = \mbox{id}_V\)</span>. Isso implica que <span class="math inline">\(f\)</span> é uma involução, ou seja, <span class="math inline">\(f \circ f = \mbox{id}_V\)</span>. Vamos mostrar que existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal com <span class="math inline">\(1\)</span> ou <span class="math inline">\(-1\)</span> na diagonal.</p>
+<ul>
+<li><p><strong>Os autovalores de <span class="math inline">\(f\)</span> são raízes de <span class="math inline">\(m_f(t)\)</span></strong>: Pelo <a href="pol_min.html#lem-minpol-div-eigen" class="quarto-xref">Lema&nbsp;<span>66.2</span></a>, sabemos que os autovalores de <span class="math inline">\(f\)</span> são raízes do polinômio mínimo <span class="math inline">\(m_f(t)\)</span>. Como <span class="math inline">\(f^2 = \mbox{id}_V\)</span>, temos que <span class="math inline">\(m_f(t)\)</span> divide o polinômio <span class="math inline">\(t^2 - 1\)</span>. Assim, as únicos autovores possíveis de <span class="math inline">\(f\)</span> são <span class="math inline">\(\lambda = 1\)</span> e <span class="math inline">\(\lambda = -1\)</span>.</p></li>
+<li><p><strong>Autoespaços de <span class="math inline">\(f\)</span></strong>: Defina os autoespaços <span class="math inline">\(V_1 = \ker(f - \mbox{id}_V)\)</span> e <span class="math inline">\(V_{-1} = \ker(f + \mbox{id}_V)\)</span>. Se <span class="math inline">\(\F\)</span> tem caraterística diferente de <span class="math inline">\(2\)</span>, temos que <span class="math inline">\(V_1\cap V_{-1}=0\)</span>. Esses subespaços são <span class="math inline">\(f\)</span>-invariantes. Para <span class="math inline">\(v\in V\)</span>, escreva <span class="math display">\[
+v=\frac{v+f(v)}2+\frac{v-f(v)}2.
+\]</span> Note que o primeiro termo desta decomposição está em <span class="math inline">\(V_1\)</span> e o segundo está em <span class="math inline">\(V_{-1}\)</span>, Logo <span class="math inline">\(V=V_1+V_{-1}\)</span> e <span class="math inline">\(V=V_1\oplus V_{-1}\)</span>. Como <span class="math inline">\(V\)</span> é soma direta de autoespaços, temos que <span class="math inline">\(f\)</span> é diagonalizável.</p></li>
+</ul></li>
+<li><p><strong>Contraexemplo para característica <span class="math inline">\(2\)</span></strong>:</p>
+<p>Agora, considere o caso em que o corpo <span class="math inline">\(\F\)</span> tem característica <span class="math inline">\(2\)</span>. Nesse caso, <span class="math inline">\(1 = -1\)</span> em <span class="math inline">\(\F\)</span>, e o polinômio <span class="math inline">\(t^2 - 1 = (t - 1)(t + 1)\)</span> se reduz a <span class="math inline">\(t^2 - 1 = (t - 1)^2\)</span>. Isso significa que <span class="math inline">\(f\)</span> não é necessariamente diagonalizável, pois <span class="math inline">\(f\)</span> possui dois autovalores distintos.</p>
+<ul>
+<li><strong>Exemplo</strong>: Seja <span class="math inline">\(V = \F^2\)</span> e <span class="math inline">\(f: V \to V\)</span> definido por: <span class="math display">\[
+[f] = \begin{pmatrix}
+1 &amp; 1 \\
+0 &amp; 1
+\end{pmatrix}.
+\]</span> Aqui, <span class="math inline">\(f^2 = \mbox{id}_V\)</span>, mas <span class="math inline">\(f\)</span> não é diagonalizável, pois a matriz de <span class="math inline">\(f\)</span> não pode ser reduzida a uma forma diagonal. O único autovalor de <span class="math inline">\(f\)</span> é <span class="math inline">\(1\)</span>, mas o autoespaço associado tem dimensão <span class="math inline">\(1\)</span>, enquanto <span class="math inline">\(\dim V = 2\)</span>.</li>
+</ul>
+<p>Portanto, a afirmação do item 1 é falsa em característica <span class="math inline">\(2\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.20</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorphismo nilpotente. Mostre que as seguintes afirmações são equivalentes:</p>
 <ol type="1">
@@ -1859,6 +1992,47 @@ V = \bigoplus_{i=1}^k V_{\lambda_i},
 <li><span class="math inline">\(\mbox{pcar}_f(t)=m_f(t)\)</span>;</li>
 <li>existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(\mbox{pcar}_f(t)=m_{f,v}(t)\)</span>.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Prova de que (1) <span class="math inline">\(\implies\)</span> (2)</strong>:</p>
+<p>Suponha que <span class="math inline">\(V\)</span> é <span class="math inline">\(f\)</span>-cíclico. Isso significa que existe <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(V = \langle v, f(v), f^2(v), \ldots \rangle\)</span>. Nesse caso, o espaço <span class="math inline">\(V\)</span> é gerado pelos vetores <span class="math inline">\(v, f(v), f^2(v), \ldots, f^{m-1}(v)\)</span>, onde <span class="math inline">\(m\)</span> é o menor inteiro positivo tal que <span class="math inline">\(f^m(v) = 0\)</span>. Assim, a matriz de <span class="math inline">\(f\)</span> na base <span class="math inline">\(\{v, f(v), \ldots, f^{m-1}(v)\}\)</span> tem a forma: <span class="math display">\[
+[f]_B^B = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
+\end{pmatrix}.
+\]</span> Nesse caso, o polinômio característico de <span class="math inline">\(f\)</span> é <span class="math inline">\(\mbox{pcar}_f(t) = t^m\)</span>. Além disso, temos que <span class="math inline">\(m_{f,v}(t)=t^m\)</span> also. Como <span class="math display">\[
+m_{f,v}(t)\mid m_f(t)\mid \mbox{pcar}(t)
+\]</span> temos que os três polinîmios são iguais e o polinômio mínimo de <span class="math inline">\(f\)</span> também é <span class="math inline">\(m_f(t) = t^m\)</span>. Portanto, <span class="math inline">\(\mbox{pcar}_f(t) = m_f(t)\)</span>.</p></li>
+<li><p><strong>Prova de que (2) <span class="math inline">\(\implies\)</span> (3)</strong>:</p>
+<p>Suponha que <span class="math inline">\(\mbox{pcar}_f(t) = m_f(t)\)</span>. Como <span class="math inline">\(f\)</span> é nilpotente, temos que <span class="math inline">\(\mbox{pcar}_f(t) = m_f(t)=t^m\)</span> com algum <span class="math inline">\(m\)</span>.<br>
+Se <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(m_{f,v}(t)=t^{m_v}\)</span> com <span class="math inline">\(m_v\leq m\)</span>. Se <span class="math inline">\(m_v\leq m-1\)</span> para todo <span class="math inline">\(v\)</span>, então <span class="math inline">\(f^{m-1}(v)=0\)</span> para todo <span class="math inline">\(v\in V\)</span>, e <span class="math inline">\(f^{m-1}=0\)</span>. Mas isso contradiz ao fato que <span class="math inline">\(m_f(t)=t^m\)</span>. Portanto existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(m_{f,v}(t)=t^m\)</span>.</p></li>
+<li><p><strong>Prova de que (3) <span class="math inline">\(\implies\)</span> (1)</strong>:</p>
+<p>Suponha que existe <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(\mbox{pcar}_f(t) = m_{f,v}(t)\)</span>. Isso significa que <span class="math inline">\(v,f(v),f^2(v),\ldots,f^{m-1}(v)\)</span> são l.i. e <span class="math inline">\(v\)</span> gera um espaço <span class="math inline">\(f\)</span>-cíclico <span class="math inline">\(U = \langle v, f(v), f^2(v), \ldots \rangle\)</span> tal que <span class="math inline">\(\dim U = \deg m_{f,v}(t)\)</span>. Como <span class="math inline">\(\mbox{pcar}_f(t) = m_{f,v}(t)\)</span>, segue que <span class="math inline">\(\dim U = \dim V\)</span>. Portanto, <span class="math inline">\(V = U\)</span>, e <span class="math inline">\(V\)</span> é <span class="math inline">\(f\)</span>-cíclico.</p></li>
+<li><p><strong>Conclusão</strong>:</p>
+<p>Mostramos que as três afirmações são equivalentes:</p>
+<ul>
+<li><span class="math inline">\(V\)</span> é <span class="math inline">\(f\)</span>-cíclico;</li>
+<li><span class="math inline">\(\mbox{pcar}_f(t) = m_f(t)\)</span>;</li>
+<li>Existe <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(\mbox{pcar}_f(t) = m_{f,v}(t)\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.21</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um endomorphismo e assuma que <span class="math inline">\(V=V_1\oplus\cdots\oplus V_k\)</span> onde todo <span class="math inline">\(V_i\)</span> é <span class="math inline">\(f\)</span>-invariante. Seja <span class="math inline">\(f_i=f|_{V_i}\)</span>. Mostre que <span class="math display">\[\begin{align*}
@@ -1892,6 +2066,51 @@ V = \bigoplus_{i=1}^k V_{\lambda_i},
 <li>Quais são as possibilidades para os blocos de Jordan na decomposição de <span class="math inline">\(f\)</span>?</li>
 <li>Qual é o polinômio caraterístico de <span class="math inline">\(f\)</span> nos casos listados no item anterior?</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Possibilidades para os blocos de Jordan</strong>:</p>
+<p>O polinômio mínimo de <span class="math inline">\(f\)</span> é dado por: <span class="math display">\[
+m_f(t) = (t-1)(t+1)^3(t-2)^3.
+\]</span> Pelo <a href="nilpotentes.html#cor-blocos-jordan" class="quarto-xref">Corolário&nbsp;<span>69.2</span></a>, sabemos que os blocos de Jordan de <span class="math inline">\(f\)</span> correspondem aos autovalores <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, e <span class="math inline">\(2\)</span>, e que o maior tamanho de bloco associado a cada autovalor é determinado pela maior potência de <span class="math inline">\((t-\lambda)\)</span> que aparece em <span class="math inline">\(m_f(t)\)</span>. Assim:</p>
+<ul>
+<li>Para <span class="math inline">\(\lambda = 1\)</span>, há apenas blocos <span class="math inline">\(1 \times 1\)</span>.</li>
+<li>Para <span class="math inline">\(\lambda = -1\)</span>, o maior bloco associado tem tamanho <span class="math inline">\(3\times 3\)</span></li>
+<li>Para <span class="math inline">\(\lambda = 2\)</span>, o maior bloco é de tamanho <span class="math inline">\(3 \times 3\)</span>.</li>
+</ul>
+<p>Além disso, os tamanhas dos blocos têm de somar 10.</p></li>
+</ol>
+<p>As possibilidades para os blocos são:</p>
+<ul>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^4(t+1)^3(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^3(t+1)^4(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^3(t+1)^3(t-2)^4\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^2(t+1)^4(t-2)^4\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_2(-1)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^2(t+1)^5(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_2(2)\)</span>, <span class="math inline">\(J_{3}(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)^2(t+1)^3(t-2)^5\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_2(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_2(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^4(t-2)^5\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_2(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^6(t-2)^3\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^5(t-2)^4\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_1(-1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^4(t-2)^5\)</span>.</li>
+<li><span class="math inline">\(J_1(1)\)</span>, <span class="math inline">\(J_3(-1)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_1(2)\)</span>, <span class="math inline">\(J_3(2)\)</span>; <span class="math inline">\(\mbox{pcar}(t)=(t-1)(t+1)^3(t-2)^6\)</span>.</li>
+</ul>
+</div>
+</div>
 </div>
 
 
