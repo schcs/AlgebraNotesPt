@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6da01c45cb18db4f1f3b47799c1b1791.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-98b61740a8858c6aa6cda418e1b1e7a5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1367,60 +1367,79 @@ f^{-1}(A)=\{v\in V\mid f(v)\in A\}.
 \]</span> Note que <span class="math inline">\(f\)</span> não precisa ser invertivel.</p>
 <div id="exr-jjjj" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 71.1</strong></span> Demonstre as seguintes aformações para um endomorfismo <span class="math inline">\(f:V\to V\)</span> e para <span class="math inline">\(A,B\leq V\)</span>:</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(f^{-1}(A)\leq V\)</span>;</li>
 <li><span class="math inline">\(\ker f\leq f^{-1}(A)\)</span>;</li>
 <li><span class="math inline">\(f^{-1}(f(A))=A+\ker f\)</span>;</li>
 <li><span class="math inline">\(f^{-1}(A+B)=f^{-1}(A)+f^{-1}(B)\)</span>;</li>
 <li><span class="math inline">\(f(A\cap B)=f(A)\cap f(B)\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div id="thm-" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 71.1</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão não necessariamente finita e <span class="math inline">\(f:V\to V\)</span> um operador nilpotente com grau de nilpotência <span class="math inline">\(d\)</span> (ou seja, <span class="math inline">\(m_f(t)=t^d\)</span>).</p>
-<ul>
-<li>Existe um vetor <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(f^{m-1}(v)\neq 0\)</span>.</li>
-<li>Pondo <span class="math inline">\(U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle\)</span>, existe <span class="math inline">\(W\leq V\)</span> <span class="math inline">\(f\)</span>-invariante tal que <span class="math inline">\(V=U\oplus W\)</span>.</li>
-</ul>
+<ol type="1">
+<li>Existe um vetor <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(f^{d-1}(v)\neq 0\)</span> (de fato, qualquer base de <span class="math inline">\(V\)</span> contém um tal vetor).</li>
+<li>Pondo <span class="math inline">\(U=\langle v,f(v),\ldots,f^{d-1}(v)\rangle\)</span>, existe <span class="math inline">\(W\leq V\)</span> <span class="math inline">\(f\)</span>-invariante tal que <span class="math inline">\(V=U\oplus W\)</span>.</li>
+</ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Indução por <span class="math inline">\(m\)</span>. Se <span class="math inline">\(d=0\)</span>, então <span class="math inline">\(f=0\)</span>, <span class="math inline">\(U=\langle v\rangle\)</span> e qualquer complemento <span class="math inline">\(W\)</span> de <span class="math inline">\(U\)</span> em <span class="math inline">\(V\)</span> serve.</p>
-<p>Assuma que a afirmação está verdadeira para operadores de grau de nilpotência <span class="math inline">\(d-1\)</span>. Considere <span class="math inline">\(X=\mbox{Im}(f)\)</span>. Então a restrição <span class="math inline">\(f_X=f|_X\)</span> tem grau de nilpotência <span class="math inline">\(m-1\)</span> e <span class="math inline">\(U_X=U\cap X=\langle f(v),\ldots,f^{m-1}(v)\rangle\)</span> é um espaço <span class="math inline">\(f\)</span>-cíclico de dimensão <span class="math inline">\(m-1\)</span> em <span class="math inline">\(X\)</span>. Pela hipótese da indução, existe <span class="math inline">\(W_X\leq X\)</span> espaço <span class="math inline">\(f\)</span>-invariante tal que <span class="math display">\[
-X=U_X+W_X.
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li><p>Seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(f^{d-1}(b_i)=0\)</span> para todo <span class="math inline">\(i\)</span>, então o endomorfismo <span class="math inline">\(f^{d-1}\)</span> se anula na base <span class="math inline">\(B\)</span>, e assim <span class="math inline">\(f^{d-1}=0\)</span>. Mas neste caso, o grau de nilpotência de <span class="math inline">\(f\)</span> seria <span class="math inline">\(d-1\)</span> e não <span class="math inline">\(d\)</span>. Portanto existe algum <span class="math inline">\(b_i\)</span> tal que <span class="math inline">\(f^{d-1}(b_i)\neq 0\)</span>.</p></li>
+<li><p>Indução por <span class="math inline">\(d\)</span>. Se <span class="math inline">\(d=1\)</span>, então <span class="math inline">\(f=0\)</span> e <span class="math inline">\(U=\left&lt;v\right&gt;\)</span>. Como <span class="math inline">\(f=0\)</span>, qualquer complemento <span class="math inline">\(W\)</span> de <span class="math inline">\(U\)</span> em <span class="math inline">\(V\)</span> será <span class="math inline">\(f\)</span>-invariante e pode ser escolhido para satisfazer as afirmações do teorema. Assuma que a afirmação está verdadeira para operadores de grau de nilpotência <span class="math inline">\(d-1\)</span>. Considere <span class="math inline">\(X=\mbox{Im}(f)\)</span>. Então a restrição <span class="math inline">\(f_X=f|_X\)</span> tem grau de nilpotência <span class="math inline">\(m-1\)</span> e <span class="math inline">\(U_X=U\cap X=\langle f(v),\ldots,f^{m-1}(v)\rangle=f(U)\)</span> é um espaço <span class="math inline">\(f\)</span>-cíclico de dimensão <span class="math inline">\(m-1\)</span> em <span class="math inline">\(X\)</span>. Pela hipótese da indução, existe <span class="math inline">\(W_X\leq X\)</span> espaço <span class="math inline">\(f\)</span>-invariante tal que <span class="math display">\[
+X=U_X\oplus W_X.
 \]</span> Ponha <span class="math display">\[
 \widetilde W=f^{-1}(W_X)=\{v\in V\mid f(v)\in W_X\}
-\]</span> e note que <span class="math inline">\(W\leq \widetilde W_X\)</span>, pois <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante.</p>
-<p><i>Afirmação 1:</i> <span class="math inline">\(V=U+\widetilde W\)</span>.</p>
-<p><i>Prova da afirmação:</i> De fato, <span class="math display">\[\begin{align*}
+\]</span> e note que <span class="math inline">\(W_X\leq \widetilde W\)</span>, pois <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante.</p></li>
+</ol>
+<ol type="a">
+<li><em>Afirmação:</em> <span class="math inline">\(V=U+\widetilde W\)</span>.</li>
+</ol>
+<ul>
+<li><em>Prova da afirmação:</em> De fato, <span class="math display">\[\begin{align*}
 V&amp;=f^{-1}(X)=f^{-1}(U_X+W_X)=f^{-1}(U_X)+f^{-1}(W_X)\\&amp;=f^{-1}(f(U))+f^{-1}(W_X)=U+\ker f+\widetilde W\\&amp;
 U+\widetilde W.
-\end{align*}\]</span> A última equação vale, pois <span class="math inline">\(\ker f\leq \widetilde W=f^{-1}(W_X)\)</span>.</p>
-<p><i>Afirmação 2:</i> <span class="math inline">\(U\cap W_X=0\)</span>.</p>
-<p><i>Prova da afirmação:</i> Usando a definição de <span class="math inline">\(U_X\)</span> e que <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante, obtemos que <span class="math display">\[
+\end{align*}\]</span> A última equação vale, pois <span class="math inline">\(\ker f\leq \widetilde W=f^{-1}(W_X)\)</span>.</li>
+</ul>
+<ol start="2" type="a">
+<li><em>Afirmação:</em> <span class="math inline">\(U\cap W_X=0\)</span>.</li>
+</ol>
+<ul>
+<li><em>Prova da afirmação:</em> Usando a definição de <span class="math inline">\(U_X\)</span> e que <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante, obtemos que <span class="math display">\[
 f(U\cap W_X)=f(U)\cap f(W_X)\leq U_X\cap W_X=0.
 \]</span> Ou seja, <span class="math inline">\(U\cap W_X\leq \ker f\)</span>. Ora, <span class="math display">\[
 U\cap W_X\leq U\cap \ker f\cap W_X=\langle f^{m-1}(v)\rangle\cap W_X\leq U_X\cap W_X=0.
-\]</span></p>
-<p><i>Afirmação 3:</i> <span class="math inline">\(W_X\cap (U\cap \widetilde W)=0\)</span> e <span class="math inline">\(W_X\oplus (U\cap \widetilde W)\leq \widetilde W\)</span>.</p>
-<p><i>Prova da afirmação:</i> A primeira afirmação (com a interseção) segue da Afirmação 2, enquanto a segunda segue da primeira e do fato que <span class="math inline">\(W_X\leq \widetilde W\)</span>.</p>
+\]</span></li>
+</ul>
+<ol start="3" type="a">
+<li><em>Afirmação:</em> <span class="math inline">\(W_X\cap (U\cap \widetilde W)=0\)</span> e <span class="math inline">\(W_X\oplus (U\cap \widetilde W)\leq \widetilde W\)</span>.</li>
+</ol>
+<ul>
+<li><p><em>Prova da afirmação:</em> A primeira afirmação (com a interseção) segue da Afirmação b, enquanto a segunda segue da primeira e do fato que <span class="math inline">\(W_X\leq \widetilde W\)</span>.</p>
 <p>Agora escolha um complemento <span class="math inline">\(Z\)</span> de <span class="math inline">\(W_X\oplus (U\cap \widetilde W)\)</span> em <span class="math inline">\(\widetilde W\)</span>. Qualquer complemento linear serve, não precisa ser <span class="math inline">\(f\)</span>-invariante. Tendo escolhido <span class="math inline">\(Z\)</span>, temos que <span class="math display">\[\begin{equation}\label{eq:ds}
-\widetilde W=(W_X\oplus (U\cap \widetilde W))\oplus Z;
-\end{equation}\]</span> em particular, <span class="math inline">\(Z\cap (W_X\oplus (U\cap \widetilde W))=0\)</span>.</p>
-<p><i>Afirmação 4:</i> <span class="math inline">\(V=U\oplus(W_X\oplus Z)\)</span>.</p>
-<p><i>Prova da afirmação:</i> Primeiro, <span class="math display">\[
+  \widetilde W=(W_X\oplus (U\cap \widetilde W))\oplus Z;
+  \end{equation}\]</span> em particular, <span class="math inline">\(Z\cap (W_X\oplus (U\cap \widetilde W))=0\)</span>.</p></li>
+</ul>
+<ol start="4" type="a">
+<li><em>Afirmação:</em> <span class="math inline">\(V=U\oplus(W_X\oplus Z)\)</span>.</li>
+</ol>
+<ul>
+<li><em>Prova da afirmação:</em> Primeiro, <span class="math display">\[
 V=U+\widetilde W= U+W_X\oplus (U\cap \widetilde W)\oplus Z=U+W_X\oplus Z.
 \]</span> Ademais,<span class="math inline">\(W_X\oplus Z\leq \widetilde W\)</span>, e, usando o fato que <span class="math inline">\(\widetilde W\)</span> é soma direta como acima, <span class="math display">\[
 U\cap (W_X\oplus Z)\leq (W_X\oplus Z)\cap(U\cap \widetilde W)=0.
-\]</span></p>
-<p><i>Afirmação 5:</i> <span class="math inline">\(W_X\oplus Z\)</span> é <span class="math inline">\(f\)</span>-invariante.</p>
-<p><i>Prova da afirmação:</i> <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante por escolha, enquanto <span class="math inline">\(Z\leq \widetilde W=f^{-1}(W_X)\)</span> que implica que <span class="math inline">\(f(Z)\leq W_X\)</span>. Logo <span class="math inline">\(f(Z\oplus W_X)\leq W_X\)</span> e <span class="math inline">\(W_X\oplus Z\)</span> é <span class="math inline">\(f\)</span>-invariante.</p>
+\]</span></li>
+</ul>
+<ol start="5" type="a">
+<li><em>Afirmação:</em> <span class="math inline">\(W_X\oplus Z\)</span> é <span class="math inline">\(f\)</span>-invariante.</li>
+</ol>
+<ul>
+<li><em>Prova da afirmação:</em> <span class="math inline">\(W_X\)</span> é <span class="math inline">\(f\)</span>-invariante por escolha, enquanto <span class="math inline">\(Z\leq \widetilde W=f^{-1}(W_X)\)</span> que implica que <span class="math inline">\(f(Z)\leq W_X\)</span>. Logo <span class="math inline">\(f(Z\oplus W_X)\leq W_X\)</span> e <span class="math inline">\(W_X\oplus Z\)</span> é <span class="math inline">\(f\)</span>-invariante.</li>
+</ul>
 </div>
-<div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 71.1</strong></span> Assuma que <span class="math inline">\(f:V\to V\)</span> é um endomorfismo nilpotente de um espaço <span class="math inline">\(V\)</span> de dimensão finita. Então <span class="math display">\[
-V=W_1\oplus \cdots\oplus W_k
-\]</span> onde cada <span class="math inline">\(W_i\)</span> é um espaço <span class="math inline">\(f\)</span>-cíclico (em particular, <span class="math inline">\(W_i\)</span> é <span class="math inline">\(f\)</span>-invariante).</p>
-</div>
+<p>Com este resultado, podemos finalmente provar o <a href="nilpotentes.html#thm-cyclic-decomp" class="quarto-xref">Teorema&nbsp;<span>69.1</span></a>.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Indução pela dimensão de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(\dim V=1\)</span>, então <span class="math inline">\(V\)</span> é <span class="math inline">\(f\)</span>-cíclico e a afirmação vale com <span class="math inline">\(k=1\)</span> e <span class="math inline">\(W_1=V\)</span>. Assuma que o corolário vale para espaços de dimensão menor que algum <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(V\)</span> um espaço de dimensão <span class="math inline">\(k\)</span> e <span class="math inline">\(f:V\to V\)</span> nilpotente de grau <span class="math inline">\(m\)</span>. Pelo resultado anterior, existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(f^{m-1}(v)\neq 0\)</span> e defina <span class="math inline">\(W_1=\langle v,f(v),\ldots,f^{m-1}(v)\rangle\)</span>. Se <span class="math inline">\(m=\dim V\)</span> e <span class="math inline">\(W_1=V\)</span>, então o corolário vale com <span class="math inline">\(k=1\)</span> e <span class="math inline">\(W_1=V\)</span> e não temos nada mais para provar. No caso contrário, o teorema anterior implica que <span class="math inline">\(V=W_1\oplus W\)</span> com algum <span class="math inline">\(W\)</span> espaço <span class="math inline">\(f\)</span>-invariante. Agora <span class="math inline">\(\dim W &lt; \dim V\)</span> e aplicamos a hipótese da indução para <span class="math inline">\(W\)</span>: <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span><a href="nilpotentes.html#thm-cyclic-decomp" class="quarto-xref">Teorema&nbsp;<span>69.1</span></a> Indução pela dimensão de <span class="math inline">\(V\)</span>. Se <span class="math inline">\(\dim V=1\)</span>, então <span class="math inline">\(V\)</span> é <span class="math inline">\(f\)</span>-cíclico e a afirmação vale com <span class="math inline">\(k=1\)</span> e <span class="math inline">\(W_1=V\)</span>. Assuma que o corolário vale para espaços de dimensão menor que algum <span class="math inline">\(k\geq 2\)</span> e seja <span class="math inline">\(V\)</span> um espaço de dimensão <span class="math inline">\(k\)</span> e <span class="math inline">\(f:V\to V\)</span> nilpotente de grau <span class="math inline">\(m\)</span>. Pelo resultado anterior, existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(f^{m-1}(v)\neq 0\)</span> e defina <span class="math inline">\(W_1=\langle v,f(v),\ldots,f^{m-1}(v)\rangle\)</span>. Se <span class="math inline">\(m=\dim V\)</span> e <span class="math inline">\(W_1=V\)</span>, então o corolário vale com <span class="math inline">\(k=1\)</span> e <span class="math inline">\(W_1=V\)</span> e não temos nada mais para provar. No caso contrário, o teorema anterior implica que <span class="math inline">\(V=W_1\oplus W\)</span> com algum <span class="math inline">\(W\)</span> espaço <span class="math inline">\(f\)</span>-invariante. Agora <span class="math inline">\(\dim W &lt; \dim V\)</span> e aplicamos a hipótese da indução para <span class="math inline">\(W\)</span>: <span class="math display">\[
 W=W_2\oplus \cdots \oplus W_k
 \]</span> com <span class="math inline">\(W_i\)</span> sendo <span class="math inline">\(f\)</span>-cíclico para todo <span class="math inline">\(i\)</span>. Ora <span class="math display">\[
 W=W_1\oplus W_2\oplus \cdots \oplus W_k.
