@@ -127,14 +127,14 @@ A matriz no lema anterior chama-se <b>bloco de Jordan</b> com autovalor $\lambda
 :::
 
 
-:::{#thm-}
+:::{#thm-cyclic-decomp}
 (O Teorema da Decomposição em Espaços Cíclicos)
 Seja $f:V\to V$ um endomorfismo nilpotente. Então $V$ pode ser decomposto em uma soma direta $V=W_1\oplus W_2\oplus \cdots \oplus W_k$ onde os $W_i$ são $f$-espaços cíclicos.
 :::
 
 
 :::{.proof}
-Este teorema vai ser provado nas aulas seguintes. Neste momento, é mais interessante estudar as suas conseqências.
+Este teorema vai ser provado [mais tarde](cyclic.qmd). Neste momento, é mais interessante estudar as suas conseqências.
 :::
 
 
