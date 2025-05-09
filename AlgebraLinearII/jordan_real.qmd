@@ -43,8 +43,8 @@ $$
 m_{f_\C}(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}(t-\lambda_{s+1})^{r_{s+1}}(t-\overline\lambda_{s+1})^{r_{s+1}}
 \cdots (t-\lambda_{s+t})^{r_{s+t}}(t-\overline\lambda_{s+t})^{r_{s+t}}
 $$
-onde $\lambda_1,\ldots,\lambda_s$ são os autovalores reais distintos de $m_f(t)$ e $\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}$
-são os autovalores complexos e não reais distintos de $m_f(t)$. Se $i\geq s+1$, pondo 
+onde $\lambda_1,\ldots,\lambda_s$ são os autovalores reais distintos de $f_\C$ e $\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}$
+são os autovalores complexos e não reais distintos de $f_\C$. Se $i\geq s+1$, pondo 
 $$ 
 q_i(t)=(t-\lambda_i)(t-\overline\lambda_i)=t^2-(\lambda_i+\overline\lambda_i)t+\lambda_i\overline\lambda_i\in\R[t],
 $$
@@ -113,7 +113,7 @@ Seja $f\in\mbox{End}(V)$ como em cima.
 Como no caso dos números complexos, pode-se definir a parte real e a parte imaginária de um vetor em $V_\C=\C\otimes V$.
 Para um vetor $v\in V_\C$ denote por 
 $$
-\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{i2}(v-\varepsilon(v)).
+\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{2i}(v-\varepsilon(v)).
 $$
 
 :::{#exr-re-im-vect}
@@ -208,17 +208,13 @@ $$
    \end{align*} 
    Logo
    \begin{align*}
-   f(\mbox{Re}(w_1))&=\frac12 f(w_1+\varepsilon(w_1))=\frac 12(f(w_1)+\varepsilon(f(w_1)))=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)
-   \\&=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
-   f(\mbox{Im}(w_1))&=\frac1{2i} f(w_1-\varepsilon(w_1))=\frac 1{2i}(f(w_1)-\varepsilon(f(w_1)))=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)
-   \\&=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);\\
+   f(\mbox{Re}(w_1))&=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+   f(\mbox{Im}(w_1))&=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);
    \end{align*}
    Para $k\geq 2$,
    \begin{align*}
-   f(\mbox{Re}(w_k))&=\frac12 f(w_k+\varepsilon(w_k))=\frac 12(f(w_k)+\varepsilon(f(w_k)))=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)
-   \\&=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
-   f(\mbox{Im}(w_k))&=\frac1{2i} f(w_k-\varepsilon(w_k))=\frac 1{2i}(f(w_k)-\varepsilon(f(w_k)))=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)
-   \\&=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).\\
+   f(\mbox{Re}(w_k))&=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+   f(\mbox{Im}(w_k))&=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).
    \end{align*}
 :::
 
