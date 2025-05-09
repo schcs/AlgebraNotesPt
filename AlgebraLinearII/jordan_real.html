@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>54&nbsp; Computações com Python III – Álgebra</title>
+<title>72&nbsp; Forma normal de Jordan real – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/index.html" rel="next">
-<link href="../AlgebraLinearI/14_alglin1.html" rel="prev">
+<link href="../AlgebraLinearII/ex2.html" rel="next">
+<link href="../AlgebraLinearII/cyclic.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -687,7 +652,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/03_alglin_comput.html"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Computações com Python III</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/jordan_real.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Forma normal de Jordan real</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1069,7 +1034,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearI/03_alglin_comput.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearI/03_alglin_comput.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Computações com Python III</span></span></a>
   </div>
 </li>
@@ -1188,7 +1153,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/jordan_real.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearII/jordan_real.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Forma normal de Jordan real</span></span></a>
   </div>
 </li>
@@ -1383,18 +1348,17 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#o-espaço-de-funções-analíticas" id="toc-o-espaço-de-funções-analíticas" class="nav-link active" data-scroll-target="#o-espaço-de-funções-analíticas"><span class="header-section-number">54.1</span> O espaço de funções analíticas</a></li>
-  <li><a href="#ortogonalização-de-gram-schmidt" id="toc-ortogonalização-de-gram-schmidt" class="nav-link" data-scroll-target="#ortogonalização-de-gram-schmidt"><span class="header-section-number">54.2</span> Ortogonalização de Gram-Schmidt</a></li>
-  <li><a href="#as-séries-de-fourier" id="toc-as-séries-de-fourier" class="nav-link" data-scroll-target="#as-séries-de-fourier"><span class="header-section-number">54.3</span> As séries de Fourier</a></li>
+  <li><a href="#a-complexificação" id="toc-a-complexificação" class="nav-link active" data-scroll-target="#a-complexificação"><span class="header-section-number">72.1</span> A complexificação</a></li>
+  <li><a href="#bloco-de-jordan-real" id="toc-bloco-de-jordan-real" class="nav-link" data-scroll-target="#bloco-de-jordan-real"><span class="header-section-number">72.2</span> Bloco de Jordan real</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/03_alglin_comput.html"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Computações com Python III</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/jordan_real.html"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Forma normal de Jordan real</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Computações com Python III</span></h1>
+<h1 class="title"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Forma normal de Jordan real</span></h1>
 </div>
 
 
@@ -1411,113 +1375,152 @@ window.Quarto = {
 </header>
 
 
-<section id="o-espaço-de-funções-analíticas" class="level2" data-number="54.1">
-<h2 data-number="54.1" data-anchor-id="o-espaço-de-funções-analíticas"><span class="header-section-number">54.1</span> O espaço de funções analíticas</h2>
-<p>Sejam <span class="math inline">\(a,b\in\R\)</span> com <span class="math inline">\(a&lt;b\)</span> e considere e espaço vetorial <span class="math inline">\(C^\infty[a,b]\)</span> de funções analíticas no intervalo <span class="math inline">\([a,b]\)</span>. O espaço <span class="math inline">\(C^\infty[a,b]\)</span> é espaço com produto interno onde o produto interno para <span class="math inline">\(f,g\in C^\infty[a,b]\)</span> é definido como <span id="eq-prod-int-int"><span class="math display">\[
-\left&lt;f,g\right&gt;=\int_a^b fg\, dx.
-\tag{54.1}\]</span></span> Hoje, nós vamos fazer algumas computações no espaço <span class="math inline">\(C^\infty[a,b]\)</span>.</p>
-<div id="exm-ip-int" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 54.1</strong></span> Ponha, por exemplo, <span class="math inline">\(a=-1\)</span>, <span class="math inline">\(b=1\)</span>. Vamos verificar que as funções <span class="math inline">\(f(x)=x\)</span> e <span class="math inline">\(g(x)=x^2\)</span> são ortogonais.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> integrate, var, cos, sin, pi, Integral, plot</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> var(<span class="st">'x'</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>f, g <span class="op">=</span> x, x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>integrate( f<span class="op">*</span>g, (x,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="a-complexificação" class="level2" data-number="72.1">
+<h2 data-number="72.1" data-anchor-id="a-complexificação"><span class="header-section-number">72.1</span> A complexificação</h2>
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita sobre <span class="math inline">\(\R\)</span> e <span class="math inline">\(f\in\mbox{End}(V)\)</span>. Nós queremos achar uma base de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> está em uma forma canônica e queremos que esta forma seja o mais simples possível. O problema é que o polinômio mínimo <span class="math inline">\(m_f(t)\)</span> de <span class="math inline">\(f\)</span> não se fatora como no <a href="primaria.html#thm-espectral" class="quarto-xref">Teorema&nbsp;<span>68.2</span></a> e o procedimento que foi utilizado com <span class="math inline">\(\C\)</span>-espaços pode não funcionar. Nós abordamos o problema usando a complexificação introduzido anteriormente.</p>
+<p>Lembre do <a href="tensor.html#exm-complexificação" class="quarto-xref">Exemplo&nbsp;<span>62.3</span></a> onde construímos a complexificação <span class="math inline">\(V_\C=\C\otimes V\)</span> (veja também o <a href="tensor.html#thm-base-extension-basis" class="quarto-xref">Teorema&nbsp;<span>62.5</span></a>). Seja <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. O espaço <span class="math inline">\(V_\C\)</span> está considerado inicialmente como um <span class="math inline">\(\R\)</span>-espaço de dimensão <span class="math inline">\(2n\)</span> com base <span class="math inline">\(\{1\otimes b_1,i\otimes b_1,\ldots,1\otimes b_n,i\otimes b_n\}\)</span>, mas foi explicado no <a href="tensor.html#thm-base-extension-basis" class="quarto-xref">Teorema&nbsp;<span>62.5</span></a> que <span class="math inline">\(V_\C\)</span> é também um <span class="math inline">\(\C\)</span>-espaço de dimensão <span class="math inline">\(n\)</span> com base <span class="math inline">\(B_\C=\{1\otimes b_1,\ldots,1\otimes b_n\}\)</span>. Aqui <span class="math inline">\(V_\C\)</span> será considerado como <span class="math inline">\(\R\)</span>-espaço e também como <span class="math inline">\(\C\)</span>-espaço e isso será claramente indicado.</p>
+<p>Como <span class="math inline">\(f\in\mbox{End}_\R(V)\)</span>, definimos <span class="math inline">\(f_\C=\mbox{id}_\C\otimes f\in \mbox{End}_{\C}(V_\C)\)</span>. Seja <span class="math inline">\(A=(a_{k,l})\in M_{n\times n}(\R)\)</span> a matriz de <span class="math inline">\(f\)</span> na base <span class="math inline">\(B\)</span>; ou seja <span class="math inline">\(f(b_k)=\sum_{l=1}^n a_{l,k}b_l\)</span>. Neste caso, <span class="math display">\[
+f_\C(1\otimes b_k)=1\otimes f(b_k)=1\otimes \sum_{l=1}^n a_{l,k}b_l=\sum_{l=1}^n a_{l,k}(1\otimes b_l).
+\]</span> Portanto, a matriz de <span class="math inline">\(f_\C\)</span> na base <span class="math inline">\(B_\C\)</span> é a mesma <span class="math inline">\(A\)</span>. Em particular, <span class="math display">\[
+m_{f_\C}(t)=m_f(t)\quad\mbox{e}\quad \mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t).
+\]</span></p>
+<p>Note também que o espaço original <span class="math inline">\(V\)</span> pode ser identificado com o <span class="math inline">\(\R\)</span>-subespaço <span class="math inline">\(1\otimes V=\{1\otimes v\mid v\in V\}\)</span> dentro de <span class="math inline">\(\C\otimes V\)</span> a nós vamos fazer esta identificação neste texto. Além disso, <span class="math inline">\(1\otimes V\)</span> é <span class="math inline">\(f_\C\)</span>-invariante, pois <span class="math inline">\(f_\C(1\otimes v)=1\otimes f(v)\)</span> e isso mostra que <span class="math inline">\(f_\C\)</span> age na mesma forma em <span class="math inline">\(1\otimes V\)</span> como <span class="math inline">\(f\)</span> age no espaço original <span class="math inline">\(V\)</span>. A partir deste ponto <span class="math inline">\(f\)</span> denota a restrição de <span class="math inline">\(f_\C\)</span> para <span class="math inline">\(1\otimes V\)</span>. Portanto, nós vamos focar em achar uma <span class="math inline">\(\R\)</span>-base de <span class="math inline">\(1\otimes V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> está em uma forma canômica.</p>
+<p>Lembre que o conjugado complexo de um número complexo <span class="math inline">\(\lambda=a+bi\)</span> é o número <span class="math inline">\(\overline \lambda=a-bi\)</span>. Quando fatoramos os polinômios <span class="math inline">\(m_{f}(t)\)</span> e <span class="math inline">\(m_{f_\C}(t)\)</span> sobre <span class="math inline">\(\R\)</span> e <span class="math inline">\(\C\)</span>, respetivamente, podemos ter resultados diferentes. Isso acontece porque sobre <span class="math inline">\(\C\)</span> todo polinômio pode ser fatorado em fatores lineares, mas isso não vale necessariamente sobre <span class="math inline">\(\R\)</span>. Mas como <span class="math inline">\(m_{f_\C}(t)\in\R[t]\)</span>, sabe-se do <a href="../FundamentosDeAlgebra/roots.html#lem-comp-conj-root" class="quarto-xref">Lema&nbsp;<span>32.2</span></a> que se <span class="math inline">\(\lambda\in\C\)</span> é raiz de <span class="math inline">\(m_{f_\C}(t)\)</span>, então <span class="math inline">\(\overline\lambda\)</span> é também raiz. Além disso, se <span class="math inline">\((t-\lambda)^r\mid m_{f_\C}(t)\)</span>, então <span class="math inline">\((t-\overline\lambda)^r\mid m_{f_\C}(t)\)</span> (verifique isso). Portanto, ao fatorar <span class="math inline">\(m_{f}(t)=m_{f_\C}(t)\)</span>, temos que <span class="math display">\[
+m_{f_\C}(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}(t-\lambda_{s+1})^{r_{s+1}}(t-\overline\lambda_{s+1})^{r_{s+1}}
+\cdots (t-\lambda_{s+t})^{r_{s+t}}(t-\overline\lambda_{s+t})^{r_{s+t}}
+\]</span> onde <span class="math inline">\(\lambda_1,\ldots,\lambda_s\)</span> são os autovalores reais de <span class="math inline">\(m_f(t)\)</span> e <span class="math inline">\(\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}\)</span> são os autovalores complexos e não reais de <span class="math inline">\(m_f(t)\)</span>. Se <span class="math inline">\(i\geq s+1\)</span>, pondo <span class="math display">\[
+q_i(t)=(t-\lambda_i)(t-\overline\lambda_i)=t^2-(\lambda_i+\overline\lambda_i)t+\lambda_i\overline\lambda_i\in\R[t],
+\]</span> obtemos a fatoração de <span class="math inline">\(m_f(t)\in\R[t]\)</span> como produto de irredutíveis em <span class="math inline">\(\R[t]\)</span>: <span class="math display">\[
+m_f(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}q_{s+1}(t)^{r_{s+1}}\cdots q_{s+t}(t)^{r_{s+t}}.
+\]</span></p>
+<p>A aplicação <span class="math display">\[
+(\lambda,v)\mapsto \overline \lambda\otimes v
+\]</span> é <span class="math inline">\(\R\)</span>-bilinear e assim pode ser estendida a uma aplicação <span class="math inline">\(\R\)</span>-linear <span class="math display">\[
+\varepsilon:V_\C\to V_\C, \quad\alpha\otimes v\mapsto \overline\alpha\otimes v\quad\mbox{onde}\quad \alpha\in\C\mbox{ e }v\in V.
+\]</span> Como <span class="math inline">\(\varepsilon^2=\mbox{id}_V\)</span>, temos que <span class="math inline">\(\varepsilon\)</span> é um isomorfismo do <span class="math inline">\(\R\)</span>-espaço vetorial <span class="math inline">\(V_\C\)</span>. Além disso, <span class="math display">\[
+V=1\otimes V=\{v\in V_\C\mid \varepsilon(v)=v\}.
+\]</span></p>
+<div id="lem-eps-flambda" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 72.1</strong></span> Seja <span class="math inline">\(f\)</span>, <span class="math inline">\(\varepsilon\)</span> com em cima e seja <span class="math inline">\(\lambda\in\C\)</span>. Então <span class="math display">\[
+(f-\lambda\mbox{id}_V)\varepsilon=\varepsilon(f-\overline\lambda\mbox{id}_V).
+\]</span> Consequentemente, se <span class="math inline">\(r\geq 1\)</span>, então <span class="math display">\[
+(f-\lambda\mbox{id}_V)^r\varepsilon=\varepsilon(f-\overline\lambda\mbox{id}_V)^r.
+\]</span></p>
 </div>
-<p>Observe como a função <a href="https://docs.sympy.org/latest/modules/integrals/integrals.html"><code>integrate</code></a> está usada para calcular a integral.</p>
-<div id="exr-ip-int1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.1</strong></span> Escreva uma função <code>inner_product(f, g, var, a, b)</code> que devolve o produto interno das funções <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> sobre o intervalo <span class="math inline">\([a,b]\)</span>. A sua função deve verificar os seguintes valores.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>inner_product( x, x<span class="op">**</span><span class="dv">2</span>, x, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span> )</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>inner_product( <span class="dv">1</span>, x<span class="op">**</span><span class="dv">2</span>, x, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span> )</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="op">/</span><span class="dv">3</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>inner_product( cos(x), sin(x), x, <span class="op">-</span>pi, pi )</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>inner_product( cos(x), cos(x), x, <span class="op">-</span>pi, pi )</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>𝜋</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<div id="exr-proj-ort" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.2</strong></span> Escreva uma função <code>orthogonal_projection(f, g, var, a, b)</code> para calcular a projeção ortogonal de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(g\)</span> (<a href="10_alglin1.html#prp-proj-ort" class="quarto-xref">Proposição&nbsp;<span>49.1</span></a>) considerando o produto interno na <a href="#eq-prod-int-int" class="quarto-xref">Equação&nbsp;<span>54.1</span></a>. Use a função <code>inner_product</code> que escreveu no <a href="#exr-ip-int1" class="quarto-xref">Exercício&nbsp;<span>54.1</span></a>. A sua implementação deve verificar as seguintes computações.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>orthogonal_projection( x, x<span class="op">**</span><span class="dv">2</span>, x, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span> )</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>orthogonal_projection( <span class="dv">1</span>, x<span class="op">**</span><span class="dv">2</span>, x, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span> )</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="er">x</span><span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="dv">3</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>orthogonal_projection( x<span class="op">**</span><span class="dv">2</span>, cos(x), x, <span class="op">-</span>pi, pi )</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>−<span class="dv">4</span><span class="er">cos</span>(𝑥)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ortogonalização-de-gram-schmidt" class="level2" data-number="54.2">
-<h2 data-number="54.2" data-anchor-id="ortogonalização-de-gram-schmidt"><span class="header-section-number">54.2</span> Ortogonalização de Gram-Schmidt</h2>
-<p>O processo de ortogonalização de Gram-Schmidt está descrita na demonstração do <a href="10_alglin1.html#thm-gram-sch" class="quarto-xref">Teorema&nbsp;<span>49.1</span></a>. Vamos revisar o processo aqui rapidamente. Assuma que <span class="math inline">\(v_1,\ldots,v_n\)</span> é um sistema L.I. em um espaço vetorial <span class="math inline">\(V\)</span> com produto interno. Defina os vetores <span class="math inline">\(w_1,\ldots,w_n\)</span> da seguinte forma: <span class="math display">\[\begin{align*}
-w_1&amp;=v_1;\\
-w_2&amp;=v_2-\mbox{proj}_{w_1}(v_2);\\
-w_3&amp;=v_3-\mbox{proj}_{w_1}(v_3)-\mbox{proj}_{w_2}(v_3);\\
-&amp;\vdots\\
-w_n&amp;=v_n-\mbox{proj}_{w_1}(v_n)-\mbox{proj}_{w_2}(v_n)-\cdots-\mbox{proj}_{w_{n-1}}(v_n).
-\end{align*}\]</span> Então o sistema <span class="math inline">\(w_1,\ldots,w_n\)</span> é ortogonal e os subespaços <span class="math inline">\(\left&lt;v_1,\ldots,v_i\right&gt;\)</span>, <span class="math inline">\(\left&lt;w_1,\ldots,w_i\right&gt;\)</span> são iguais para todo <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>.</p>
-<div id="exr-gram-sch" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.3</strong></span> Escreva uma função <code>gram_schmidt(funcs, var, a, b)</code> que, dada uma lista <code>funcs</code> de funções (assumindo que elas são L.I.), aplica o processo de ortogonalização de Gram-Schmidt para esta lista. A sua função deve verificar as seguintes computações.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gram_schmidt([<span class="dv">1</span>,x,x<span class="op">**</span><span class="dv">2</span>], x, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, x, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">3</span>]</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>gram_schmidt([<span class="dv">1</span>,x,x<span class="op">**</span><span class="dv">2</span>], x, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, x <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> x <span class="op">+</span> <span class="dv">1</span><span class="op">/</span><span class="dv">6</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>gram_schmidt([<span class="dv">1</span>,cos(x),sin(x)], x, <span class="op">-</span>pi, pi)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, cos(x), sin(x)]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Dica:</strong> Cria uma lista <code>ws</code> para guardar as funções <span class="math inline">\(w_1,\ldots,w_n\)</span>. Assumindo que as funções <span class="math inline">\(w_1,\ldots,w_{k}\)</span> foram calculadas e estão na lista <code>ws</code>, o próximo elemento de <code>ws</code> pode ser calculado com</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">-</span> <span class="bu">sum</span>(orthogonal_projection(f, w, var, a, b) <span class="cf">for</span> w <span class="kw">in</span> ws)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>onde <code>f</code> é o elemento atual de <code>funcs</code>.</p>
-</div>
-<div id="exr-gram-sch1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.4</strong></span> Usando a função <code>gram_schmidt</code> no <a href="#exr-gram-sch" class="quarto-xref">Exercício&nbsp;<span>54.3</span></a>, calcule uma base ortogonal para o espaço <span class="math inline">\(\R_4[x]\)</span> considerando o produto interno na <a href="#eq-prod-int-int" class="quarto-xref">Equação&nbsp;<span>54.1</span></a> sobre o intervalo <span class="math inline">\([-1,1]\)</span> e sobre o intervalo <span class="math inline">\([0,1]\)</span>. Verifique com a função <code>inner_product</code> escrita no <a href="#exr-ip-int1" class="quarto-xref">Exercício&nbsp;<span>54.1</span></a> que as funções no output são de fato ortogonais.</p>
-</div>
-</section>
-<section id="as-séries-de-fourier" class="level2" data-number="54.3">
-<h2 data-number="54.3" data-anchor-id="as-séries-de-fourier"><span class="header-section-number">54.3</span> As séries de Fourier</h2>
-<p>Para calcular as séries de Fourier de algumas funções como no <a href="11_alglin1.html#thm-fourier" class="quarto-xref">Teorema&nbsp;<span>50.1</span></a>, vamos primeiro aprender como calcular integrais numericamente.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>integrate( cos(x)<span class="op">*</span>sin(x), (x, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span>sin<span class="op">^</span><span class="dv">2</span>(<span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span><span class="op">+</span>sin(<span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>integrate( cos(x)<span class="op">*</span>sin(x), (x, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>)).evalf()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>−<span class="fl">0.0593741960791174</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Integral(cos(x)<span class="op">*</span>sin(x),(x,<span class="op">-</span><span class="dv">2</span>,<span class="dv">1</span>))</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>...integral <span class="bu">object</span>...</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Integral( cos(x)<span class="op">*</span>sin(x), (x, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>)).evalf()</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>−<span class="fl">0.0593741960791174</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Consulte o <a href="https://docs.sympy.org/latest/modules/evalf.html#sums-and-integrals">manual</a> para mais informações.</p>
-<div id="exr-in-prod-num" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.5</strong></span> Modifique a sua implementação do produto interno e projeção ortogonal no <a href="#exr-ip-int1" class="quarto-xref">Exercício&nbsp;<span>54.1</span></a> e no <a href="#exr-proj-ort" class="quarto-xref">Exercício&nbsp;<span>54.2</span></a> tal que elas devolvam aproximações numéricas em vez de valores exatos.</p>
-</div>
-<div id="exr-fourier" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.6</strong></span> Escreva uma função <code>fourier(f)</code> em Python que dada uma função <span class="math inline">\(f\in C^\infty[a,b]\)</span>, calcula a aproximação de Fourier para a função <span class="math inline">\(f\)</span> até grau <span class="math inline">\(5\)</span>. Use a função <code>orthogonal_projection</code> modificada no <a href="#exr-in-prod-num" class="quarto-xref">Exercício&nbsp;<span>54.5</span></a>. A sua função deve verificar as seguintes computações.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fourier(x)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fl">2.0</span><span class="er">sin</span>(𝑥)−<span class="fl">1.0</span><span class="er">sin</span>(<span class="dv">2</span><span class="er">𝑥</span>)<span class="op">+</span><span class="fl">0.666666666666667</span><span class="er">sin</span>(<span class="dv">3</span><span class="er">𝑥</span>)−<span class="fl">0.5</span><span class="er">sin</span>(<span class="dv">4</span><span class="er">𝑥</span>)<span class="op">+</span><span class="fl">0.4</span><span class="er">sin</span>(<span class="dv">5</span><span class="er">𝑥</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>fourier(x<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>−<span class="fl">4.0</span><span class="er">cos</span>(𝑥)<span class="op">+</span><span class="fl">1.0</span><span class="er">cos</span>(<span class="dv">2</span><span class="er">𝑥</span>)−<span class="fl">0.444444444444444</span><span class="er">cos</span>(<span class="dv">3</span><span class="er">𝑥</span>)<span class="op">+</span><span class="fl">0.25</span><span class="er">cos</span>(<span class="dv">4</span><span class="er">𝑥</span>)−<span class="fl">0.16</span><span class="er">cos</span>(<span class="dv">5</span><span class="er">𝑥</span>)<span class="op">+</span><span class="fl">3.28986813369645</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>fourier(<span class="bu">abs</span>(x))</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>−<span class="fl">1.27323954473516</span><span class="er">cos</span>(𝑥)−<span class="fl">0.141471060526129</span><span class="er">cos</span>(<span class="dv">3</span><span class="er">𝑥</span>)−<span class="fl">0.0509295817894065</span><span class="er">cos</span>(<span class="dv">5</span><span class="er">𝑥</span>)<span class="op">+</span><span class="fl">1.5707963267949</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="exr-fourier" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 54.7</strong></span> Verifique visualmente a qualidade destas aproximações. Por exemplo</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">abs</span>(x)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/abs.png" class="img-fluid figure-img"></p>
-<figcaption>f(x)=abs(x)</figcaption>
-</figure>
-</div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ff <span class="op">=</span> fourier(f)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plot(ff, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/abs_four.png" class="img-fluid figure-img"></p>
-<figcaption>Fourier approximation of f(x)=abs(x)</figcaption>
-</figure>
-</div>
+<div id="lem-eigenvalues-jordan-real" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 72.2</strong></span> Seja <span class="math inline">\(f\in\mbox{End}(V)\)</span> como em cima.</p>
 <ol type="1">
-<li>Faça a mesma coisa com outras funções, tais como <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2\)</span>, <span class="math inline">\(\exp(x)\)</span>, etc.</li>
-<li>Modifique a sua função <code>fourier</code> tal que seja capaz de calcular as aproximações até grau <span class="math inline">\(10\)</span> ou até um grau <span class="math inline">\(k\)</span> arbitrário fornecido pelo usuário.</li>
-<li>Verifique se a qualidade das aproximações melhora assim que <span class="math inline">\(k\)</span> aumenta.</li>
+<li>Se <span class="math inline">\(\lambda\in\C\)</span> é autovalor de <span class="math inline">\(f_\C\)</span>, então <span class="math inline">\(\overline \lambda\)</span> (conjugado complexo) é também autovalor de <span class="math inline">\(f_\C\)</span>.</li>
+<li>Assuma que <span class="math inline">\(\lambda,\overline\lambda\in\C\setminus\R\)</span> é um par de autovalores conjugados de <span class="math inline">\(f_\C\)</span> e assuma que <span class="math inline">\(W_\lambda=\ker(f_\C-\lambda\mbox{id}_V)^{r}\)</span> e <span class="math inline">\(W_{\overline\lambda}=\ker(f_\C-\overline\lambda\mbox{id}_V)^{r}\)</span> são os autoespaços generalizados onde <span class="math inline">\(r\)</span> é o expoente de <span class="math inline">\(t-\lambda\)</span> e de <span class="math inline">\(t-\overline\lambda\)</span> em <span class="math inline">\(m_f(t)\)</span>. Então <span class="math inline">\(W_{\overline\lambda}=\varepsilon(W_\lambda)\)</span>.</li>
+<li>Se <span class="math inline">\(w_1,\ldots,w_m\in W_\lambda\)</span> e base de um subespaço <span class="math inline">\(f\)</span>-invariante de <span class="math inline">\(W_\lambda\)</span> tal que a matriz da restrição de <span class="math inline">\(f\)</span> nesta base é um bloco de Jordan <span class="math inline">\(J_m(\lambda)\)</span>, então <span class="math inline">\(\varepsilon(w_1),\ldots,\varepsilon(w_m)\in W_{\overline\lambda}\)</span> é base de um subespaço <span class="math inline">\(f\)</span>-invariante de <span class="math inline">\(W_{\overline\lambda}\)</span> tal que a matriz da restrição de <span class="math inline">\(f\)</span> nesta base é um bloco de Jordan <span class="math inline">\(J_{m}(\overline\lambda)\)</span>.</li>
+<li>Seja <span class="math inline">\(\lambda\in\R\)</span> um autovalor de <span class="math inline">\(f_\C\)</span> e seja <span class="math inline">\(W_\lambda=\ker(f-\lambda\mbox{id}_V)^r\)</span> o autoespaço generalizado onde <span class="math inline">\(r\)</span> é o expoente de <span class="math inline">\(t-\lambda\)</span> em <span class="math inline">\(m_f(t)\)</span>. Então <span class="math inline">\(\varepsilon(W_\lambda)=W_\lambda\)</span>.</li>
 </ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li>Segue do fato que <span class="math inline">\(\mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t)\in\R[t]\)</span> e do <a href="../FundamentosDeAlgebra/roots.html#lem-comp-conj-root" class="quarto-xref">Lema&nbsp;<span>32.2</span></a> (veja a discussão em cima).</li>
+<li>Assuma que <span class="math inline">\(w\in W_{\lambda}\)</span>. Então, <a href="#lem-eps-flambda" class="quarto-xref">Lema&nbsp;<span>72.1</span></a> implica que <span class="math display">\[
+(f-\overline\lambda\mbox{id}_V)^r(\varepsilon(w))=\varepsilon((f-\lambda\mbox{id}_V)^r(w))=\varepsilon(0)=0.
+\]</span> Isso significa que <span class="math inline">\(\varepsilon(W_\lambda)\leq W_{\overline\lambda}\)</span>. O mesmo argumento implica que <span class="math inline">\(\varepsilon(W_{\overline\lambda})\leq W_{\lambda}\)</span>. A aplicação <span class="math inline">\(\varepsilon\big |_{W_\lambda}\)</span> é injetiva, e como a composição <span class="math inline">\(\mbox{id}_{W_{\overline\lambda}}=\varepsilon^2\big|_{W_{\overline\lambda}}:W_{\overline\lambda}\to W_{\overline\lambda}\)</span> é sobrejetiva, temos que <span class="math inline">\(\varepsilon\big|_{W_{\overline\lambda}}:W_{\lambda}\to W_{\overline\lambda}\)</span> é também sobrejetiva.</li>
+</ol>
+</div>
+<p>Como no caso dos números complexos, pode-se definir a parte real e a parte imaginária de um vetor em <span class="math inline">\(V_\C=\C\otimes V\)</span>. Para um vetor <span class="math inline">\(v\in V_\C\)</span> denote por <span class="math display">\[
+\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{i2}(v-\varepsilon(v)).
+\]</span> Então <span class="math inline">\(v=\mbox{Re}(v)+i\mbox{Im}(v)\)</span>, <span class="math inline">\(\varepsilon(v)=\mbox{Re}(v)-i\mbox{Im}(v)\)</span> e <span class="math inline">\(\mbox{Re}(v),\mbox{Im}(v)\in 1\otimes V\)</span>.</p>
+<div id="exr-re-im-vect" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 72.1</strong></span> Demonstre as seguintes propriedades:</p>
+<ol type="1">
+<li><span class="math inline">\(f_{\C}(\mbox{Re}(v))=\mbox{Re}(f_{\C}(v))\)</span>;</li>
+<li><span class="math inline">\(f_{\C}(\mbox{Im}(v))=\mbox{Im}(f_{\C}(v))\)</span>;</li>
+<li>se <span class="math inline">\(\lambda=a+bi\in\C\)</span>, então <span class="math inline">\(\mbox{Re}(\lambda v)=a\mbox{Re}(v)-b\mbox{Im}(v)\)</span> e <span class="math inline">\(\mbox{Im}(\lambda v)=b\mbox{Re}(v)+a\mbox{Im}(v)\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="bloco-de-jordan-real" class="level2" data-number="72.2">
+<h2 data-number="72.2" data-anchor-id="bloco-de-jordan-real"><span class="header-section-number">72.2</span> Bloco de Jordan real</h2>
+<p>Seja <span class="math inline">\(\lambda\in \C\)</span>. Se <span class="math inline">\(\lambda\in\R\)</span>, então um <strong>bloco de Jordan real</strong> associado a <span class="math inline">\(\lambda\)</span> é um bloco de Jordan usual como foi definido antes. Se <span class="math inline">\(\lambda=a+bi\in\C\setminus\R\)</span> um número complexo com <span class="math inline">\(a,b\in\R\)</span> e <span class="math inline">\(b\neq 0\)</span>, então <strong>bloco de Jordan real</strong> associado a <span class="math inline">\(\lambda\)</span> é uma matriz de ordem <span class="math inline">\(2k\)</span> da forma <span class="math display">\[
+J_{2k}(a, b) =
+\begin{bmatrix}
+\begin{bmatrix}
+a &amp; b \\
+-b &amp; a
+\end{bmatrix} &amp; \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix} &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \begin{bmatrix}
+a &amp; b \\
+-b &amp; a
+\end{bmatrix} &amp; \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix} &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \begin{bmatrix}
+a &amp; b \\
+-b &amp; a
+\end{bmatrix} &amp; \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix} \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; \begin{bmatrix}
+a &amp; b \\
+-b &amp; a
+\end{bmatrix}
+\end{bmatrix}.
+\]</span> Aqui, <span class="math inline">\(J_{2k}(a, b)\)</span> é uma matriz de ordem <span class="math inline">\(2k\)</span> composta por blocos <span class="math inline">\(2 \times 2\)</span> diagonais e superdiagonais, onde cada bloco diagonal é <span class="math inline">\(\begin{bmatrix} a &amp; b \\ -b &amp; a \end{bmatrix}\)</span> e cada bloco superdiagonal é <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>.</p>
+<div id="lem-gen-eigenspace-real1" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 72.3</strong></span> Seja <span class="math inline">\(\lambda\in\R\)</span> um autovalor de <span class="math inline">\(f_\C\)</span> e assuma que <span class="math inline">\(w_1,\ldots,w_m\)</span> é uma base de um subespaço <span class="math inline">\(f_\C\)</span>-invariante de <span class="math inline">\(W_\lambda\)</span> tal que a matriz da restrição de <span class="math inline">\(f_\C\)</span> nesta base é um bloco de Jordan <span class="math inline">\(J_m(\lambda)\)</span>. Então o espaço gerado por <span class="math inline">\(\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)\)</span> em <span class="math inline">\(1\otimes V\)</span> tem dimensão <span class="math inline">\(m\)</span>, ele é <span class="math inline">\(f\)</span>-invariante e a matriz da restrição de <span class="math inline">\(f\)</span> nesta base é <span class="math inline">\(J_m(\lambda)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro, note que <span class="math inline">\(\dim_\C W=m\)</span> e <span class="math inline">\(\dim_{\R}W=2m\)</span>. Além disso, como <span class="math inline">\(w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)\)</span>, temos que <span class="math inline">\(\mbox{Re}(w_1),i\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),i\mbox{Im}(w_m)\)</span> é um conjunto gerador do <span class="math inline">\(\R\)</span>-espaço <span class="math inline">\(W\)</span>. Como este conjunto possiu <span class="math inline">\(2m=\dim_\R W\)</span> elementos, ele precisa ser base e em particular os elementos <span class="math inline">\(\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)\)</span> são linearmente independentes. Ora, <span class="math display">\[
+f(\mbox{Re}(w_1))=\mbox{Re}(f_\C(w_1))=\mbox{Re}(\lambda w_1)=\lambda\mbox{Re}(w_1);
+\]</span> e se <span class="math inline">\(k\in\{2,\ldots,m\}\)</span>, então <span class="math display">\[
+f(\mbox{Re}(w_k))=\mbox{Re}(f_\C(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)=\mbox{Re}(w_{k-1})+\lambda\mbox{Re}(w_k).
+\]</span> Logo, a matriz da restrição de <span class="math inline">\(f\)</span> para <span class="math inline">\(W\)</span> na base indicada é o bloco de Jordan <span class="math inline">\(J_m(\lambda)\)</span>.</p>
+</div>
+<div id="lem-gen-eigspace-real" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 72.4</strong></span> Assuma que <span class="math inline">\(w_1,\ldots,w_m\in W_\lambda\)</span> como no item 3. do <a href="#lem-eigenvalues-jordan-real" class="quarto-xref">Lema&nbsp;<span>72.2</span></a> e seja <span class="math display">\[
+W=\left&lt;w_1,\ldots,w_m,\varepsilon(w_1),\ldots,\varepsilon(w_m)\right&gt;=\left&lt;w_1,\ldots,w_m\right&gt;\oplus\left&lt;\varepsilon(w_1),\ldots,\varepsilon(w_m)\right&gt;.
+\]</span></p>
+<ol type="1">
+<li>Os vetores <span class="math inline">\(\mbox{Re}(w_1),\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),\mbox{Im}(w_m)\)</span> formam uma base do espaço <span class="math inline">\(W\)</span>.</li>
+<li><span class="math inline">\(W\)</span> é <span class="math inline">\(f\)</span>-invariante;</li>
+<li>assumindo que <span class="math inline">\(\lambda=a+bi\)</span>, a matriz da restrição de <span class="math inline">\(f\)</span> para <span class="math inline">\(W\)</span> é um bloco de Jordan <span class="math inline">\(J_{2m}(a,b)\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li>Note que <span class="math inline">\(W\)</span> é gerado por <span class="math inline">\(w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)\)</span> e <span class="math inline">\(\varepsilon(w_i)=\mbox{Re}(w_i)-i\mbox{Im}(w_i)\)</span>. Portanto <span class="math inline">\(W\)</span> será também gerado pelos vetores <span class="math inline">\(\mbox{Re}(w_i)\)</span> e <span class="math inline">\(mbox{Im}(w_i)\)</span>. Além disso, <span class="math inline">\(\dim W=2m\)</span> e este conjunto gerador tem <span class="math inline">\(2n\)</span> vetores, temos que eles formam uma base de <span class="math inline">\(W\)</span>.</li>
+<li><span class="math inline">\(W\)</span> é soma direta de dois subespaços <span class="math inline">\(f_\C\)</span>-invariantes.</li>
+<li>Temos para todo <span class="math inline">\(1\leq k\leq m\)</span> que <span class="math display">\[\begin{align*}
+f(w_1)&amp;=\lambda w_1,\\
+f(w_k)&amp;=w_{k-1}+\lambda f(w_k),\\
+f(\varepsilon(w_1))&amp;=\overline \lambda \varepsilon(w_1),\\
+f(\varepsilon(w_k))&amp;=\varepsilon(w_{k-1})+\overline \lambda \varepsilon(w_k).
+\end{align*}\]</span> Logo <span class="math display">\[\begin{align*}
+f(\mbox{Re}(w_1))&amp;=\frac12 f(w_1+\varepsilon(w_1))=\frac 12(f(w_1)+\varepsilon(f(w_1)))=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)
+\\&amp;=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+f(\mbox{Im}(w_1))&amp;=\frac1{2i} f(w_1-\varepsilon(w_1))=\frac 1{2i}(f(w_1)-\varepsilon(f(w_1)))=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)
+\\&amp;=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);\\
+\end{align*}\]</span> Para <span class="math inline">\(k\geq 2\)</span>, <span class="math display">\[\begin{align*}
+f(\mbox{Re}(w_k))&amp;=\frac12 f(w_k+\varepsilon(w_k))=\frac 12(f(w_k)+\varepsilon(f(w_k)))=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)
+\\&amp;=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+f(\mbox{Im}(w_k))&amp;=\frac1{2i} f(w_k-\varepsilon(w_k))=\frac 1{2i}(f(w_k)-\varepsilon(f(w_k)))=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)
+\\&amp;=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).\\
+\end{align*}\]</span></li>
+</ol>
+</div>
+<div id="cor-jordan-real" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corolário 72.1</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\R\)</span>-espaço vetorial e <span class="math inline">\(f\in\mbox{End}(V)\)</span>. Temos que existe uma base <span class="math inline">\(B\)</span> de <span class="math inline">\(V\)</span> na qual a matriz de <span class="math inline">\(f\)</span> é diagonal em blocos e cada bloco é um bloco de Jordan real. Além disso, os blocos de Jordan reais são unicamente determinados pelo endomorfismo <span class="math inline">\(f\)</span> a menos da sua ordem.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Identifique <span class="math inline">\(V\)</span> com <span class="math inline">\(1\otimes V\)</span> dentro de <span class="math inline">\(V_\C=\C\otimes V\)</span> e <span class="math inline">\(f\)</span> com a restrição de <span class="math inline">\(f_\C\)</span> para <span class="math inline">\(1\otimes V\)</span> como em cima. Primeiro ache uma base de <span class="math inline">\(V_\C\)</span> na qual a matriz de <span class="math inline">\(f\)</span> está na forma normal de Jordan. Se <span class="math inline">\(\lambda\in\R\)</span> é um autovalor, então cada bloco de Jordan <span class="math inline">\(J_(\lambda)\)</span> com autovalor <span class="math inline">\(\lambda\)</span> determina um bloco de Jordan <span class="math inline">\(J_m(\lambda)\)</span> como no <a href="#lem-gen-eigenspace-real1" class="quarto-xref">Lema&nbsp;<span>72.3</span></a>. Se <span class="math inline">\(\lambda=a+bi\not\in\R\)</span>, então um par de bloco <span class="math inline">\(J_m(\lambda),J_m(\overline\lambda)\)</span> determina um bloco real <span class="math inline">\(J_{2m}(a,b)\)</span> como no <a href="#lem-gen-eigspace-real" class="quarto-xref">Lema&nbsp;<span>72.4</span></a>. A unicidade segue do teorema da unicidide dos blocos de Jordan para <span class="math inline">\(f_\C\)</span> (<a href="unicidade_jordan.html#thm-jordan-unique" class="quarto-xref">Teorema&nbsp;<span>70.1</span></a>).</p>
 </div>
 
 
@@ -1925,13 +1928,13 @@ w_n&amp;=v_n-\mbox{proj}_{w_1}(v_n)-\mbox{proj}_{w_2}(v_n)-\cdots-\mbox{proj}_{w
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearI/14_alglin1.html" class="pagination-link" aria-label="A Lei da Inêrcia de Sylvester">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">A Lei da Inêrcia de Sylvester</span></span>
+      <a href="../AlgebraLinearII/cyclic.html" class="pagination-link" aria-label="A decomposição cíclica">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">A decomposição cíclica</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/index.html" class="pagination-link" aria-label="Álgebra Linear II">
-        <span class="nav-page-text">Álgebra Linear II</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/ex2.html" class="pagination-link" aria-label="Exercícios: Bloco 2">
+        <span class="nav-page-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
