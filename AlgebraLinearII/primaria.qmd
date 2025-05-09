@@ -155,7 +155,7 @@ m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}
 $$
 com $\lambda_1,\ldots,\lambda_k\in \C$ distintos e $\alpha_i\geq 1$.
 
-:::{#thm-}
+:::{#thm-espectral}
 (O Teorema Espectral)
 Assuma que $\F=\C$ e $f:V\to V$ é como acima. Neste caso
 $$

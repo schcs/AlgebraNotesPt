@@ -1,0 +1,257 @@
+--- 
+title: "Forma normal de Jordan real"
+number-sections: true
+lang: pt-BR
+---
+
+## A complexificação
+
+Seja $V$ um espaço vetorial de dimensão finita sobre $\R$ e $f\in\mbox{End}(V)$. Nós queremos achar uma base de $V$ na qual 
+a matriz de $f$ está em uma forma canônica e queremos que esta forma seja o mais simples possível. O problema é que o polinômio mínimo $m_f(t)$ de $f$ 
+não necessariamente se fatora como no @thm-espectral e o procedimento que foi utilizado com $\C$-espaços pode não funcionar. Nós abordamos o problema 
+usando a complexificação introduzido anteriormente. 
+
+Lembre do @exm-complexificação onde construímos a complexificação 
+$V_\C=\C\otimes V$ (veja também o @thm-base-extension-basis). 
+Seja $B=\{b_1,\ldots,b_n\}$ uma base de $V$. O espaço $V_\C$ está considerado inicialmente como 
+um $\R$-espaço de dimensão $2n$ com base $\{1\otimes b_1,i\otimes b_1,\ldots,1\otimes b_n,i\otimes b_n\}$, mas foi explicado no 
+@thm-base-extension-basis que $V_\C$ é também um $\C$-espaço de dimensão $n$ com base $B_\C=\{1\otimes b_1,\ldots,1\otimes b_n\}$.
+Aqui $V_\C$ será considerado como $\R$-espaço e também como $\C$-espaço e isso será claramente indicado.
+
+
+Como $f\in\mbox{End}_\R(V)$, definimos $f_\C=\mbox{id}_\C\otimes f\in \mbox{End}_{\C}(V_\C)$. 
+Seja $A=(a_{k,l})\in M_{n\times n}(\R)$ a matriz de $f$ na base $B$; ou seja $f(b_k)=\sum_{l=1}^n a_{l,k}b_l$. Neste caso, 
+$$
+f_\C(1\otimes b_k)=1\otimes f(b_k)=1\otimes \sum_{l=1}^n a_{l,k}b_l=\sum_{l=1}^n a_{l,k}(1\otimes b_l).
+$$
+Portanto, a matriz de $f_\C$ na base $B_\C$ é a mesma $A$. Em particular, 
+$$
+m_{f_\C}(t)=m_f(t)\quad\mbox{e}\quad \mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t).
+$$
+
+Note também que o espaço original $V$ pode ser identificado com o $\R$-subespaço $1\otimes V=\{1\otimes v\mid v\in V\}$ dentro de $\C\otimes V$ 
+a nós vamos fazer esta identificação neste texto. Além disso, $1\otimes V$ é $f_\C$-invariante, pois $f_\C(1\otimes v)=1\otimes f(v)$ e isso mostra que 
+$f_\C$ age na mesma forma em $1\otimes V$ como $f$ age no espaço original $V$. A partir deste ponto $f$ denota a restrição de $f_\C$ para $1\otimes V$. Portanto, nós vamos focar em achar uma $\R$-base de $1\otimes V$ na qual 
+a matriz de $f$ está em uma forma canômica.
+
+
+Lembre que o conjugado complexo de um número complexo $\lambda=a+bi$ é o número $\overline \lambda=a-bi$. 
+Quando fatoramos os polinômios $m_{f}(t)$ e $m_{f_\C}(t)$ sobre $\R$ e $\C$, respetivamente, podemos ter resultados diferentes. Isso 
+acontece porque sobre $\C$ todo polinômio pode ser fatorado em fatores lineares, mas isso não vale sobre $\R$. Mas como $m_{f_\C}(t)\in\R[t]$, sabe-se do @lem-comp-conj-root que se $\lambda\in\C$ é raiz de $m_{f_\C}(t)$, então $\overline\lambda$ é também raiz. Além disso, se $(t-\lambda)^r\mid m_{f_\C}(t)$, 
+então $(t-\overline\lambda)^r\mid m_{f_\C}(t)$ (verifique isso). Portanto, ao fatorar $m_{f}(t)=m_{f_\C}(t)$, temos que 
+$$
+m_{f_\C}(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}(t-\lambda_{s+1})^{r_{s+1}}(t-\overline\lambda_{s+1})^{r_{s+1}}
+\cdots (t-\lambda_{s+t})^{r_{s+t}}(t-\overline\lambda_{s+t})^{r_{s+t}}
+$$
+onde $\lambda_1,\ldots,\lambda_s$ são os autovalores reais distintos de $m_f(t)$ e $\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}$
+são os autovalores complexos e não reais distintos de $m_f(t)$. Se $i\geq s+1$, pondo 
+$$ 
+q_i(t)=(t-\lambda_i)(t-\overline\lambda_i)=t^2-(\lambda_i+\overline\lambda_i)t+\lambda_i\overline\lambda_i\in\R[t],
+$$
+obtemos a fatoração de $m_f(t)\in\R[t]$ como produto de irredutíveis em $\R[t]$:
+$$
+m_f(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}q_{s+1}(t)^{r_{s+1}}\cdots q_{s+t}(t)^{r_{s+t}}. 
+$$
+
+## O conjugado complexo dos vetores em $V_\C$
+
+A aplicação 
+$$
+(\lambda,v)\mapsto \overline \lambda\otimes v
+$$
+é $\R$-bilinear e assim pode ser estendida a uma aplicação $\R$-linear 
+$$
+\varepsilon:V_\C\to V_\C, \quad\alpha\otimes v\mapsto \overline\alpha\otimes v\quad\mbox{onde}\quad \alpha\in\C\mbox{ e }v\in V.
+$$
+Como $\varepsilon^2=\mbox{id}_V$, temos que $\varepsilon$ é um isomorfismo do $\R$-espaço vetorial $V_\C$. Além disso, 
+$$
+V=1\otimes V=\{v\in V_\C\mid \varepsilon(v)=v\}.
+$$
+
+:::{#lem-eps-flambda}
+Seja $f$, $\varepsilon$ com em cima e seja $\lambda\in\C$. Então $f\varepsilon=\varepsilon f$ e 
+$$
+(f-\lambda\mbox{id}_V)\varepsilon=\varepsilon(f-\overline\lambda\mbox{id}_V).
+$$
+Consequentemente, se $r\geq 1$, então
+$$
+(f-\lambda\mbox{id}_V)^r\varepsilon=\varepsilon(f-\overline\lambda\mbox{id}_V)^r.
+$$
+:::
+:::{.proof}
+Exercício.
+:::
+
+:::{#lem-eigenvalues-jordan-real}
+Seja $f\in\mbox{End}(V)$ como em cima.
+
+1. Se $\lambda\in\C$ é autovalor de $f_\C$, então $\overline \lambda$ (conjugado complexo) é também autovalor de $f_\C$. 
+2. Assuma que $\lambda,\overline\lambda\in\C\setminus\R$ é um par de autovalores conjugados de $f_\C$ e assuma que 
+   $W_\lambda=\ker(f_\C-\lambda\mbox{id}_V)^{r}$ e $W_{\overline\lambda}=\ker(f_\C-\overline\lambda\mbox{id}_V)^{r}$ são os autoespaços 
+   generalizados onde $r$ é o expoente de $t-\lambda$ e de $t-\overline\lambda$ em  $m_f(t)$. Então $W_{\overline\lambda}=\varepsilon(W_\lambda)$.
+3. Se $w_1,\ldots,w_m\in W_\lambda$ e base de um subespaço $f_\C$-invariante de $W_\lambda$ tal que a matriz da restrição de $f_\C$ nesta base é 
+   um bloco de Jordan $J_m(\lambda)$, então  $\varepsilon(w_1),\ldots,\varepsilon(w_m)\in W_{\overline\lambda}$ é base de 
+   um subespaço $f_\C$-invariante de $W_{\overline\lambda}$ tal que a matriz da restrição de $f_\C$ nesta base é um bloco de Jordan
+   $J_{m}(\overline\lambda)$. 
+4. Seja $\lambda\in\R$ um autovalor de $f_\C$ e seja $W_\lambda=\ker(f-\lambda\mbox{id}_V)^r$ o autoespaço generalizado 
+   onde $r$ é o expoente de $t-\lambda$ em $m_f(t)$. Então $\varepsilon(W_\lambda)=W_\lambda$. 
+:::
+:::{.proof}
+1. Segue do fato que $\mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t)\in\R[t]$ e do @lem-comp-conj-root (veja a discussão em cima).
+2. Assuma que $w\in W_{\lambda}$. Então, @lem-eps-flambda implica que 
+   $$
+   (f-\overline\lambda\mbox{id}_V)^r(\varepsilon(w))=\varepsilon((f-\lambda\mbox{id}_V)^r(w))=\varepsilon(0)=0.
+   $$
+   Isso significa que $\varepsilon(W_\lambda)\leq W_{\overline\lambda}$. O mesmo argumento implica que 
+   $\varepsilon(W_{\overline\lambda})\leq W_{\lambda}$. A aplicação $\varepsilon\big |_{W_\lambda}$ é injetiva, e como a 
+   composição $\mbox{id}_{W_{\overline\lambda}}=\varepsilon^2\big|_{W_{\overline\lambda}}:W_{\overline\lambda}\to W_{\overline\lambda}$ é sobrejetiva, 
+   temos que  $\varepsilon\big|_{W_{\overline\lambda}}:W_{\lambda}\to W_{\overline\lambda}$ é também sobrejetiva. 
+3. Exercício.
+4. Exercício.
+:::
+
+Como no caso dos números complexos, pode-se definir a parte real e a parte imaginária de um vetor em $V_\C=\C\otimes V$.
+Para um vetor $v\in V_\C$ denote por 
+$$
+\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{i2}(v-\varepsilon(v)).
+$$
+
+:::{#exr-re-im-vect}
+Demonstre as seguintes propriedades:
+
+1. $v=\mbox{Re}(v)+i\mbox{Im}(v)$;
+2. $\varepsilon(v)=\mbox{Re}(v)-i\mbox{Im}(v)$; 
+3. $\mbox{Re}(v),\mbox{Im}(v)\in 1\otimes V$;
+4. $f_{\C}(\mbox{Re}(v))=\mbox{Re}(f_{\C}(v))$;
+5. $f_{\C}(\mbox{Im}(v))=\mbox{Im}(f_{\C}(v))$;
+6. se $\lambda=a+bi\in\C$, então $\mbox{Re}(\lambda v)=a\mbox{Re}(v)-b\mbox{Im}(v)$ e $\mbox{Im}(\lambda v)=b\mbox{Re}(v)+a\mbox{Im}(v)$. 
+:::
+
+## Bloco de Jordan real
+
+Seja $\lambda\in \C$. Se $\lambda\in\R$, então um **bloco de Jordan real** associado a $\lambda$  é um bloco de Jordan usual como foi definido antes. 
+Se $\lambda=a+bi\in\C\setminus\R$ um número complexo com $a,b\in\R$ e $b\neq 0$, então **bloco de Jordan real** associado a $\lambda$ é uma matriz de ordem $2k$ da forma
+$$
+J_{2k}(a, b) = 
+\begin{bmatrix}
+\begin{bmatrix}
+a & b \\
+-b & a
+\end{bmatrix} & \begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix} & 0 & \cdots & 0 \\
+0 & \begin{bmatrix}
+a & b \\
+-b & a
+\end{bmatrix} & \begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \ddots & \vdots \\
+0 & 0 & \cdots & \begin{bmatrix}
+a & b \\
+-b & a
+\end{bmatrix} & \begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix} \\
+0 & 0 & \cdots & 0 & \begin{bmatrix}
+a & b \\
+-b & a
+\end{bmatrix}
+\end{bmatrix}.
+$$
+Aqui, $J_{2k}(a, b)$ é uma matriz de ordem $2k$ composta por blocos $2 \times 2$ diagonais e superdiagonais, onde cada bloco diagonal é $\begin{bmatrix} a & b \\ -b & a \end{bmatrix}$ e cada bloco superdiagonal é $\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$.
+
+:::{#lem-gen-eigenspace-real1}
+Seja $\lambda\in\R$ um autovalor de $f_\C$ e assuma que $w_1,\ldots,w_m$ é uma base de um subespaço $f_\C$-invariante de $W_\lambda$ tal que
+a matriz da restrição de $f_\C$ nesta base é um bloco de Jordan $J_m(\lambda)$. Então o espaço gerado por $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)$ em $1\otimes V$ tem dimensão $m$, ele é $f$-invariante e a matriz da restrição de $f$ nesta base é $J_m(\lambda)$. 
+:::
+:::{.proof}
+Primeiro, note que $\dim_\C W=m$ e $\dim_{\R}W=2m$. Como $\varepsilon(W_\lambda)=W_\lambda$, $\mbox{Re}(w_i)=1/2(w_i+\varepsilon(w_i))\in W_\lambda$ 
+e $\mbox{Im}(w_i)=1/(i2)(w_i-\varepsilon(w_i))\in W_\lambda$.  Além disso, como $w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)$, temos que 
+$\mbox{Re}(w_1),i\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),i\mbox{Im}(w_m)$ é um conjunto gerador do $\R$-espaço $W$. Como este conjunto possiu 
+$2m=\dim_\R W$ elementos, ele precisa ser base e em particular os elementos $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)\in 1\otimes V$ são linearmente independentes. 
+Ora, 
+$$
+f(\mbox{Re}(w_1))=f_\C(\mbox{Re}(w_1))=\mbox{Re}(f_\C(w_1))=\mbox{Re}(\lambda w_1)=\lambda\mbox{Re}(w_1);
+$$
+e se $k\in\{2,\ldots,m\}$, então
+$$
+f(\mbox{Re}(w_k))=f_\C(\mbox{Re}(w_k))=\mbox{Re}(f_\C(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)=\mbox{Re}(w_{k-1})+\lambda\mbox{Re}(w_k).
+$$
+Logo, o espaço gerado por $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)$ é $f$-invariante e a matriz da restrição de $f$ para $W$ na base indicada é o bloco de Jordan $J_m(\lambda)$. 
+:::
+
+:::{#lem-gen-eigspace-real}
+Assuma que $w_1,\ldots,w_m\in W_\lambda$ como no item 3. do @lem-eigenvalues-jordan-real e seja 
+$$
+W=\left<w_1,\ldots,w_m,\varepsilon(w_1),\ldots,\varepsilon(w_m)\right>=\left<w_1,\ldots,w_m\right>\oplus\left<\varepsilon(w_1),\ldots,\varepsilon(w_m)\right>.
+$$ 
+
+1. Os vetores $\mbox{Re}(w_1),\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),\mbox{Im}(w_m)$ formam uma base do espaço $W$.
+2. $W$ é $f_\C$-invariante;
+3. assumindo que $\lambda=a+bi$, a matriz da restrição de $f$ para $W$ é um bloco de Jordan $J_{2m}(a,b)$.
+:::
+:::{.proof}
+1. Note que $W$ é gerado por $w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)$ e $\varepsilon(w_i)=\mbox{Re}(w_i)-i\mbox{Im}(w_i)$. Portanto 
+   $W$ será também gerado pelos vetores $\mbox{Re}(w_i)$ e $\mbox{Im}(w_i)$. Além disso, $\dim W=2m$ e este conjunto gerador tem $2m$ vetores, 
+   temos que eles formam uma base de $W$. 
+2. $W$ é soma direta de dois subespaços $f_\C$-invariantes. 
+3. Temos para todo $1\leq k\leq m$ que 
+   \begin{align*}
+   f(w_1)&=\lambda w_1,\\
+   f(w_k)&=w_{k-1}+\lambda f(w_k),\\
+   f(\varepsilon(w_1))&=\overline \lambda \varepsilon(w_1),\\
+   f(\varepsilon(w_k))&=\varepsilon(w_{k-1})+\overline \lambda \varepsilon(w_k).
+   \end{align*} 
+   Logo
+   \begin{align*}
+   f(\mbox{Re}(w_1))&=\frac12 f(w_1+\varepsilon(w_1))=\frac 12(f(w_1)+\varepsilon(f(w_1)))=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)
+   \\&=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+   f(\mbox{Im}(w_1))&=\frac1{2i} f(w_1-\varepsilon(w_1))=\frac 1{2i}(f(w_1)-\varepsilon(f(w_1)))=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)
+   \\&=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);\\
+   \end{align*}
+   Para $k\geq 2$,
+   \begin{align*}
+   f(\mbox{Re}(w_k))&=\frac12 f(w_k+\varepsilon(w_k))=\frac 12(f(w_k)+\varepsilon(f(w_k)))=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)
+   \\&=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+   f(\mbox{Im}(w_k))&=\frac1{2i} f(w_k-\varepsilon(w_k))=\frac 1{2i}(f(w_k)-\varepsilon(f(w_k)))=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)
+   \\&=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).\\
+   \end{align*}
+:::
+
+:::{#cor-jordan-real}
+Seja $V$ um $\R$-espaço vetorial e $f\in\mbox{End}(V)$. Temos que existe uma base $B$ de $V$ na qual a matriz de $f$ é diagonal em blocos e cada 
+bloco é um bloco de Jordan real. Além disso, os blocos de Jordan reais são unicamente determinados pelo endomorfismo $f$ a menos da sua ordem.
+:::
+:::{.proof}
+Identifique $V$ com $1\otimes V$ dentro de $V_\C=\C\otimes V$ e $f$ com a restrição de $f_\C$ para $1\otimes V$ como em cima.
+Decomponha $V$ como soma direta 
+$$
+V=W_1\oplus\cdots W_s\oplus W_{s+1}\oplus \varepsilon(W_{s+1})\oplus \cdots\oplus W_{s+r}\oplus\varepsilon(W_{s+r})
+$$  
+de espaços $f$-invariantes tal que a matriz da restrição de $f$ para cada somando direto é um bloco 
+de Jordan. Assuma que os blocos de Jordan que correspondem aos somandos diretos são 
+$$
+J_{m_1}(\lambda_1),J_{m_2}(\lambda_2),\ldots,J_{m_s}(\lambda_s),J_{m_{s+1}}(\lambda_{s+1}),J_{m_{s+1}}(\overline\lambda_{s+1}),
+\ldots,J_{m_{s+r}}(\lambda_{s+r}),J_{m_{s+r}}(\overline\lambda_{s+r})
+$$
+onde $\lambda_1,\ldots,\lambda_s\in \R$ e $\lambda_{s+1},\ldots,\lambda_{s+r}\not\in \R$. Assuma que o bloco do Jordan para $W_i$ está 
+obtido na base $w_{i,1},\ldots,w_{i,m_i}$ (com $i\in\{1,\ldots,s+r\}$) e para $\varepsilon(W_i)$ na base 
+$\varepsilon(w_{i,1}),\ldots,\varepsilon(w_{i,m_i})$ (com $i\in\{s+1,\ldots,s+r\}$). Considere os seguintes vetores em $1\otimes V$:
+\begin{align*}
+&\mbox{Re}(w_{1,1}),\ldots,\mbox{Re}(w_{1,m_1}),\ldots,\mbox{Re}(w_{s,1}),\ldots,\mbox{Re}(w_{s,m_s}),\\
+&\mbox{Re}(w_{s+1,1}),\mbox{Im}(w_{s+1,1}),\ldots,\mbox{Re}(w_{s+1,m_{s+1}}),\mbox{Im}(w_{s+1,m_{s+1}}),\ldots,\\
+&\mbox{Re}(w_{s+r,1}),\mbox{Im}(w_{s+r,1}),\ldots,\mbox{Re}(w_{s+r,m_{s+r}}),\mbox{Im}(w_{s+r,m_{s+r}}).
+\end{align*}
+Pelo que foi visto em cima, estes vetores formam uma base para $1\otimes V$ e a matriz nesta base é diagonal em blocos e cada bloco 
+é um bloco  de Jordan real.
+
+A unicidade segue do fato que os blocos de Jordan reais determinam os blocos na forma normal complexa do operador 
+$f_\C$.  De fato, se a forma normal de Jordan real  de $f$ tem um bloco $J_m(\lambda)$ com $\lambda\in\R$ este bloco vai aparecer entre os blocos complexos 
+de $f_\C$. Se $f$ tem um bloco na forma $J_{2m}(a,b)$, então este bloco vai corresponder a um par de blocos na forma $J_m(a+bi)$ e $J_m(a-bi)$. 
+Como os blocos complexos de $f_\C$ são unicamente determinados, os blocos reais de $f$ também são.
+:::
+

@@ -24,7 +24,7 @@ Assuma que $f:V\to V$ é um endomorfismo tal que $m_f(t)=(t-\lambda)^k$. Ou seja
 :::
 
 
-:::{#lem-}
+:::{#lem-autovals-nilp}
 Seja $f:V\to V$ é nilpotente.
 
 1.  O único autovalor de $f$ é $0$.
@@ -59,7 +59,7 @@ $$
 $$
 é uma base de $V_j$. Observamos que nesta base, a matriz de $f$ é triangular superior  com zeros na diagonal. Isso nos levou ao seguinte teorema.
 
-:::{#lem-}
+:::{#lem-nilp-triang}
 Se $f:V\to V$ é nilpotente, então existe uma base $B$ tal que $[f]_B^B$ é triangular superior com zeros na diagonal. Em particular, $\mbox{pcar}_f(t)=t^{\dim V}$.
 :::
 
@@ -127,18 +127,18 @@ A matriz no lema anterior chama-se <b>bloco de Jordan</b> com autovalor $\lambda
 :::
 
 
-:::{#thm-}
+:::{#thm-cyclic-decomp}
 (O Teorema da Decomposição em Espaços Cíclicos)
 Seja $f:V\to V$ um endomorfismo nilpotente. Então $V$ pode ser decomposto em uma soma direta $V=W_1\oplus W_2\oplus \cdots \oplus W_k$ onde os $W_i$ são $f$-espaços cíclicos.
 :::
 
 
 :::{.proof}
-Este teorema vai ser provado nas aulas seguintes. Neste momento, é mais interessante estudar as suas conseqências.
+Este teorema vai ser provado [mais tarde](cyclic.qmd). Neste momento, é mais interessante estudar as suas conseqências.
 :::
 
 
-:::{#exr-}
+:::{#exr-basis-directsum}
 Seja $f:V\to V$ um endomorfismo e assuma que $V=W_1\oplus W_2$ onde $W_i$ são $f$-invariantes. Sejam $B_1=\{b_1,\ldots,b_m\}$ e $B_2=\{b_{m+1},\ldots,b_n\}$ bases de $W_1$ e $W_2$, respetivamente. Então $B=B_1\cup B_2$ é uma base de $V$. Mostre que $[f]_B^B$ é diagonal em blocos com os blocos sendo $[f|_{W_1}]_{B_1}^{B_1}$ e $[f|_{W_2}]_{B_2}^{B_2}$.
 :::
 
@@ -153,7 +153,7 @@ Como foi observado em cima, $f_0=f-\lambda\mbox{id}_V$ é nilpotente. Pelo Teore
 :::
 
 
-:::{#cor-}
+:::{#cor-blocos-jordan}
 Seja $f:V\to V$ um endomorfismo com $m_f(t)=(t-\lambda_1)^{\alpha_1}\cdots (t-\lambda_k)^{\alpha_k}$. Então existe uma base de $V$ na qual a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan com autovalor $\lambda_i$.
 :::
 

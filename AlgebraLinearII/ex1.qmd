@@ -1013,6 +1013,8 @@ pode ser estendida unicamente para um isomorfismo bem definido $(U\otimes V)\oti
 Consulte [a discussão no StackExchange](https://math.stackexchange.com/q/437706).
 :::
 
+
+
 :::{#exr-}
 Sejam $U$ e $V$ espaços vetoriais sobre $\F$. 
 
@@ -1320,23 +1322,66 @@ Usando a @def-determinant-f, demonstre as propriedades comuns do determinante.
 2. $\det f$ coincide com o determinante da matriz de $f$ em uma base de $V$. 
 3. $\det f=0$ se e somente se $f$ não é invertível.
 :::
-
-
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
+1. Sejam $f, g: V \to V$ transformações lineares. Precisamos mostrar que $\det(f \circ g) = \det(f) \cdot \det(g)$.
 
-1. **Propriedade multiplicativa do determinante**:
-   - Seja $f, g: V \to V$. Pelo @def-determinant-f, o determinante de $f$ é definido como o escalar $\delta \in \F$ tal que $f^*_A = \delta \cdot \text{id}_{A^n(V)}$, onde $A^n(V)$ é o espaço das formas $n$-lineares alternadas em $V$. Similarmente, para $g$, temos $g^*_A = \gamma \cdot \text{id}_{A^n(V)}$.
-   - Considere a composição $f \circ g$. O pullback $(f \circ g)^*_A$ é dado por:
-     $$
-     (f \circ g)^*_A = g^*_A \circ f^*_A.
-     $$
-     Substituindo as expressões para $f^*_A$ e $g^*_A$, temos:
-     \begin{align*}
-     (f \circ g)^*_A &= (\gamma \cdot \text{id}_{A^n(V)}) \circ (\delta \cdot \text{id}_{A^n(V)}) 
-     \\&= (\gamma \cdot \delta) \cdot \text{id}_{A^n(V)}.
-     \end{align*}
-     Assim, $\det(f \circ g) = \det(f) \cdot \det(g)$.
+A. **Propriedade do pullback**: Seja $T \in A^n(V)$ uma forma $n$-linear alternada. Pelo @def-determinant-f, o pullback $f^*_A$ é uma aplicação linear em $A^n(V)$, que é de dimensão 1. Assim, $f^*_A$ pode ser identificado com a multiplicação por um escalar $\delta_f$. 
+O determinante de $f$ é definido como o escalar $\delta_f$. De forma semelhante, $(f \circ g)^*_A$ é o pullback da composição $f \circ g$.
 
-2. A ser inserida.
+B. **Composição dos pullbacks**: Para qualquer $T \in A^n(V)$, temos:
+   $$
+   f^*_A(T)(v_1,\ldots,v_n)=T(f(v_1),\ldots,f(v_n)).
+   $$
+   Se $f,g\in\mbox{End}(V)$, então 
+   \begin{align*}
+   (f\circ g)^*_A(T)(v_1,\ldots,v_n)&=T(f(g(v_1)),\ldots,f(g(v_1)))\\&=f^*_A(T)(g(v_1),\ldots,g(v_n))\\&=g^*_A(f^*_A(T))(v_1,\ldots,v_n).
+   \end{align*}
+   Em particular, $(f\circ g)^*_A=g^*_A\circ f^*_A$. 
+   Como $f^*_A$, $g^*_A$ e $(f\circ g)_A^*$ são multiplicações escalares, segue que:
+   $$
+   \delta_{f\circ g}T=(f\circ g)^*_A(T)=(g^*_A\circ f^*_A)(T)=g^*_A(f^*_A(T))=g^*_A(\delta_f T)=
+   \delta_g\delta_f T.
+   $$
+   Como isso vale para todo $T\in A^n(V)$, segue que $\delta_{f\circ g}=\delta_g\delta_f$; ou seja  
+   $$
+   \det(f \circ g) = \det(f) \cdot \det(g).
+   $$
+
+
+2. **Coincidência com o determinante da matriz**:
+
+   Seja $B = \{b_1, \ldots, b_n\}$ uma base de $V$ e assuma que 
+   $(a_{ji})$ é a matriz de $f$ na base $B$. Pelo @cor-AkV-dim1, a forma $n$-linear alternada $T \in A^n(V)$ é determinada pelo valor $T(b_1, \ldots, b_n)$. O pullback 
+   $f^*_A(T)$ é dado por:
+   $$
+   f^*_A(T)(v_1, \ldots, v_n) = T(f(v_1), \ldots, f(v_n)).
+   $$
+   Em particular, para $v_i = b_i$, temos:
+   \begin{align*}
+   f^*_A(T)(b_1, \ldots, b_n) &= T(f(b_1), \ldots, f(b_n)) \\&= 
+   T\left(\sum_{j=1}^n a_{j1} b_j, \ldots, \sum_{j=1}^n a_{jn} b_j\right)\\&=
+   \sum_{\sigma \in S_n}(-1)^\sigma a_{1,\sigma(1)}\cdots a_{n,\sigma(n)}T(b_1,\ldots,b_n)\\&
+   =\det (a_{ji}) T(b_1,\ldots,b_n).
+   \end{align*}
+   Para justificar a terceira igualdade, veja @cor-forma-det.
+   Em particular $f^*_A(T)=\det (a_{j,i}) T$; ou seja $\det f=\det (a_{j,i})$. 
+   Assim, $\det f$ coincide com o determinante da matriz de $f$ em qualquer base.
+
+3. **Invertibilidade e determinante**:
+
+      - Se $f$ não é invertível, então $\ker(f) \neq \{0\}$. Isso implica que existe um vetor $v \in V$ tal que $f(v) = 0$. Como $f^*_A(T)(v_1, \ldots, v_n) = T(f(v_1), \ldots, f(v_n))$, se $v_1 = v$ e $v_2, \ldots, v_n$ forem quaisquer vetores, então $f^*_A(T)(v_1, \ldots, v_n) = 0$. Isso implica que $f^*_A(T) = 0$, ou seja, $\det(f) = 0$.
+
+      - Reciprocamente, se $f$ é invertível, então existe $g: V \to V$ tal que $f \circ g = \text{id}_V$. Pelo item 1, temos:
+         $$
+         \det(f \circ g) = \det(f) \cdot \det(g).
+         $$
+         Como $f \circ g = \text{id}_V$, segue que $\det(f \circ g) = \det(\text{id}_V) = 1$. Assim:
+         $$
+         \det(f) \cdot \det(g) = 1.
+         $$
+         Isso implica que $\det(f) \neq 0$. Portanto, $f$ é invertível se e somente se $\det(f) \neq 0$.
+
+      Portanto, $\det(f) = 0$ se e somente se $f$ não é invertível.
 :::
+

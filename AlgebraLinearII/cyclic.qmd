@@ -12,51 +12,50 @@ Note que $f$ não precisa ser invertivel.
 :::{#exr-jjjj}
 Demonstre as seguintes aformações para um endomorfismo $f:V\to V$ e para $A,B\leq V$:
 
-
- -  $f^{-1}(A)\leq V$;
- -  $\ker f\leq f^{-1}(A)$;
- -  $f^{-1}(f(A))=A+\ker f$;
- -  $f^{-1}(A+B)=f^{-1}(A)+f^{-1}(B)$;
- -  $f(A\cap B)=f(A)\cap f(B)$.
-
+1. $f^{-1}(A)\leq V$;
+2. $\ker f\leq f^{-1}(A)$;
+3. $f^{-1}(f(A))=A+\ker f$;
+4. $f^{-1}(A+B)=f^{-1}(A)+f^{-1}(B)$;
+5. $f(A\cap B)=f(A)\cap f(B)$.
 :::
 
 
 :::{#thm-}
 Seja $V$ um espaço vetorial de dimensão não necessariamente finita e $f:V\to V$ um operador nilpotente com grau de nilpotência $d$ (ou seja, $m_f(t)=t^d$).
 
-
- -  Existe um vetor $v\in V$ tal que $f^{m-1}(v)\neq 0$.
- -  Pondo $U=\langle v,f(v),\ldots,f^{m-1}(v)\rangle$, existe $W\leq V$ $f$-invariante tal que $V=U\oplus W$.
-
+1. Existe um vetor $v\in V$ tal que $f^{d-1}(v)\neq 0$ (de fato, qualquer base de $V$ contém um tal vetor).
+2. Pondo $U=\langle v,f(v),\ldots,f^{d-1}(v)\rangle$, existe $W\leq V$ $f$-invariante tal que $V=U\oplus W$.
 :::
 
 
 :::{.proof}
-Indução por $m$. Se $d=0$, então $f=0$, $U=\langle v\rangle$ e qualquer complemento $W$ de $U$ em $V$ serve.
+1. Seja $B$ uma base de $V$. Se $f^{d-1}(b)=0$ para todo $b\in B$, então o endomorfismo 
+$f^{d-1}$ se anula na base $B$, e assim $f^{d-1}=0$. Mas neste caso, o grau de nilpotência de $f$ seria $d-1$ e não $d$. 
+Portanto existe algum $b\in B$ tal que $f^{d-1}(b)\neq 0$. 
 
-Assuma que a afirmação está verdadeira para operadores de grau de nilpotência $d-1$. Considere $X=\mbox{Im}(f)$. Então a restrição $f_X=f|_X$ tem grau de nilpotência $m-1$ e $U_X=U\cap X=\langle f(v),\ldots,f^{m-1}(v)\rangle$ é um espaço $f$-cíclico de dimensão $m-1$ em $X$. Pela hipótese da indução, existe $W_X\leq X$ espaço $f$-invariante tal que
+1. Indução por $d$. Se $d=1$, então $f=0$ e $U=\left<v\right>$. Como $f=0$,  qualquer complemento $W$ de $U$ em $V$ será $f$-invariante e pode ser escolhido para satisfazer as afirmações do teorema.
+Assuma que a afirmação está verdadeira para operadores de grau de nilpotência $d-1$. Considere $X=\mbox{Im}(f)$. Então a restrição $f_X=f|_X$ tem grau de nilpotência $m-1$ e $U_X=U\cap X=\langle f(v),\ldots,f^{m-1}(v)\rangle=f(U)$ é um espaço $f$-cíclico de dimensão $m-1$ em $X$. Pela hipótese da indução, existe $W_X\leq X$ espaço $f$-invariante tal que
 $$
-X=U_X+W_X.
+X=U_X\oplus W_X.
 $$
 Ponha
 $$
 \widetilde W=f^{-1}(W_X)=\{v\in V\mid f(v)\in W_X\}
 $$
-e note que $W\leq \widetilde W_X$, pois $W_X$ é $f$-invariante.
+e note que $W_X\leq \widetilde W$, pois $W_X$ é $f$-invariante.
 
-<i>Afirmação 1:</i> $V=U+\widetilde W$.
+a. *Afirmação:* $V=U+\widetilde W$.
 
-<i>Prova da afirmação:</i> De fato,
+- *Prova da afirmação:* De fato,
 \begin{align*}
 V&=f^{-1}(X)=f^{-1}(U_X+W_X)=f^{-1}(U_X)+f^{-1}(W_X)\\&=f^{-1}(f(U))+f^{-1}(W_X)=U+\ker f+\widetilde W\\&
 U+\widetilde W.
 \end{align*}
 A última equação vale, pois $\ker f\leq \widetilde W=f^{-1}(W_X)$.
 
-<i>Afirmação 2:</i> $U\cap W_X=0$.
+b. *Afirmação:* $U\cap W_X=0$.
 
-<i>Prova da afirmação:</i> Usando a definição de $U_X$ e que $W_X$ é $f$-invariante, obtemos que
+- *Prova da afirmação:* Usando a definição de $U_X$ e que $W_X$ é $f$-invariante, obtemos que
 $$
 f(U\cap W_X)=f(U)\cap f(W_X)\leq U_X\cap W_X=0.
 $$
@@ -65,19 +64,19 @@ $$
 U\cap W_X\leq U\cap \ker f\cap W_X=\langle f^{m-1}(v)\rangle\cap W_X\leq U_X\cap W_X=0.
 $$
 
-<i>Afirmação 3:</i> $W_X\cap (U\cap \widetilde W)=0$ e $W_X\oplus (U\cap \widetilde W)\leq \widetilde W$.
+c. *Afirmação:* $W_X\cap (U\cap \widetilde W)=0$ e $W_X\oplus (U\cap \widetilde W)\leq \widetilde W$.
 
-<i>Prova da afirmação:</i> A primeira afirmação (com a interseção) segue da Afirmação 2, enquanto a segunda segue da primeira e do fato que $W_X\leq \widetilde W$.
+- *Prova da afirmação:* A primeira afirmação (com a interseção) segue da Afirmação b, enquanto a segunda segue da primeira e do fato que $W_X\leq \widetilde W$.
 
-Agora escolha um complemento $Z$ de $W_X\oplus (U\cap \widetilde W)$ em $\widetilde W$. Qualquer complemento linear serve, não precisa ser $f$-invariante. Tendo escolhido $Z$, temos que
-\begin{equation}\label{eq:ds}
-\widetilde W=(W_X\oplus (U\cap \widetilde W))\oplus Z;
-\end{equation}
-em particular, $Z\cap (W_X\oplus (U\cap \widetilde W))=0$.
+    Agora escolha um complemento $Z$ de $W_X\oplus (U\cap \widetilde W)$ em $\widetilde W$. Qualquer complemento linear serve, não precisa ser $f$-invariante. Tendo escolhido $Z$, temos que
+    \begin{equation}\label{eq:ds}
+    \widetilde W=(W_X\oplus (U\cap \widetilde W))\oplus Z;
+    \end{equation}
+    em particular, $Z\cap (W_X\oplus (U\cap \widetilde W))=0$.
 
-<i>Afirmação 4:</i> $V=U\oplus(W_X\oplus Z)$.
+d. *Afirmação:* $V=U\oplus(W_X\oplus Z)$.
 
-<i>Prova da afirmação:</i> Primeiro,
+- *Prova da afirmação:* Primeiro,
 $$
 V=U+\widetilde W= U+W_X\oplus (U\cap \widetilde W)\oplus Z=U+W_X\oplus Z.
 $$
@@ -86,23 +85,16 @@ $$
 U\cap (W_X\oplus Z)\leq (W_X\oplus Z)\cap(U\cap \widetilde W)=0.
 $$
 
-<i>Afirmação 5:</i> $W_X\oplus Z$ é $f$-invariante.
+e. *Afirmação:* $W_X\oplus Z$ é $f$-invariante.
 
-<i>Prova da afirmação:</i> $W_X$ é $f$-invariante por escolha, enquanto $Z\leq \widetilde W=f^{-1}(W_X)$ que implica que $f(Z)\leq W_X$. Logo $f(Z\oplus W_X)\leq W_X$ e $W_X\oplus Z$ é $f$-invariante.
-
+- *Prova da afirmação:* $W_X$ é $f$-invariante por escolha, enquanto $Z\leq \widetilde W=f^{-1}(W_X)$ que implica que $f(Z)\leq W_X$. Logo $f(Z\oplus W_X)\leq W_X$ e $W_X\oplus Z$ é $f$-invariante.
 :::
 
 
-:::{#cor-}
-Assuma que $f:V\to V$ é um endomorfismo nilpotente de um espaço $V$ de dimensão finita. Então
-$$
-V=W_1\oplus \cdots\oplus W_k
-$$
-onde cada $W_i$ é um espaço $f$-cíclico (em particular, $W_i$ é $f$-invariante).
-:::
-
+Com este resultado, podemos finalmente provar o @thm-cyclic-decomp.
 
 :::{.proof}
+[@thm-cyclic-decomp]
 Indução pela dimensão de $V$. Se $\dim V=1$, então $V$ é $f$-cíclico e a afirmação vale com $k=1$ e $W_1=V$. Assuma que o corolário vale para espaços de dimensão menor que algum $k\geq 2$ e seja $V$ um espaço de dimensão $k$ e $f:V\to V$ nilpotente de grau $m$. Pelo resultado anterior, existe $v\in V$ tal que $f^{m-1}(v)\neq 0$ e defina $W_1=\langle v,f(v),\ldots,f^{m-1}(v)\rangle$. Se $m=\dim V$ e $W_1=V$, então o corolário vale com $k=1$ e $W_1=V$ e não temos nada mais para provar. No caso contrário, o teorema anterior implica que $V=W_1\oplus W$ com algum $W$ espaço $f$-invariante. Agora $\dim W < \dim V$ e aplicamos a hipótese da indução para $W$:
 $$
 W=W_2\oplus \cdots \oplus W_k

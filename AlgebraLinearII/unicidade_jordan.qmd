@@ -5,7 +5,7 @@ lang: pt-BR
 --- 
 Vamos denotar por $J_k(\lambda)$ a matriz que é um bloco de Jordan $k\times k$ com autovalor $\lambda$.
 
-:::{#lem-}
+:::{#lem-minpol-jordan}
 Seja $f:V\to V$ um endomorfismo com matriz $J_{k}(\lambda)$. Então $m_f(t)=(t-\lambda)^k$.
 :::
 
@@ -23,9 +23,6 @@ $$
 :::
 
 
-:::{.proof}
-Exercício.
-:::
 
 
 :::{#cor-}
@@ -42,7 +39,7 @@ Em particular, os autovalores de $f$ são $\lambda_1,\ldots,\lambda_k$.
 :::
 
 
-:::{#thm-}
+:::{#thm-jordan-unique}
 Seja $f:V\to V$ um endomorfismo tal que a matriz de $f$ é diagonal em blocos e cada bloco é um bloco de Jordan. Assuma que estes blocos são
 $$
 J_{i_{1,1}}(\lambda_1),\ldots,J_{i_{1,m_1}}(\lambda_1), J_{i_{2,1}}(\lambda_2),\ldots, J_{i_{2,m_2}}(\lambda_2),
