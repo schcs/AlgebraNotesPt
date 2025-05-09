@@ -1389,7 +1389,7 @@ m_{f_\C}(t)=m_f(t)\quad\mbox{e}\quad \mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t).
 <p>Lembre que o conjugado complexo de um número complexo <span class="math inline">\(\lambda=a+bi\)</span> é o número <span class="math inline">\(\overline \lambda=a-bi\)</span>. Quando fatoramos os polinômios <span class="math inline">\(m_{f}(t)\)</span> e <span class="math inline">\(m_{f_\C}(t)\)</span> sobre <span class="math inline">\(\R\)</span> e <span class="math inline">\(\C\)</span>, respetivamente, podemos ter resultados diferentes. Isso acontece porque sobre <span class="math inline">\(\C\)</span> todo polinômio pode ser fatorado em fatores lineares, mas isso não vale sobre <span class="math inline">\(\R\)</span>. Mas como <span class="math inline">\(m_{f_\C}(t)\in\R[t]\)</span>, sabe-se do <a href="../FundamentosDeAlgebra/roots.html#lem-comp-conj-root" class="quarto-xref">Lema&nbsp;<span>32.2</span></a> que se <span class="math inline">\(\lambda\in\C\)</span> é raiz de <span class="math inline">\(m_{f_\C}(t)\)</span>, então <span class="math inline">\(\overline\lambda\)</span> é também raiz. Além disso, se <span class="math inline">\((t-\lambda)^r\mid m_{f_\C}(t)\)</span>, então <span class="math inline">\((t-\overline\lambda)^r\mid m_{f_\C}(t)\)</span> (verifique isso). Portanto, ao fatorar <span class="math inline">\(m_{f}(t)=m_{f_\C}(t)\)</span>, temos que <span class="math display">\[
 m_{f_\C}(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}(t-\lambda_{s+1})^{r_{s+1}}(t-\overline\lambda_{s+1})^{r_{s+1}}
 \cdots (t-\lambda_{s+t})^{r_{s+t}}(t-\overline\lambda_{s+t})^{r_{s+t}}
-\]</span> onde <span class="math inline">\(\lambda_1,\ldots,\lambda_s\)</span> são os autovalores reais distintos de <span class="math inline">\(m_f(t)\)</span> e <span class="math inline">\(\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}\)</span> são os autovalores complexos e não reais distintos de <span class="math inline">\(m_f(t)\)</span>. Se <span class="math inline">\(i\geq s+1\)</span>, pondo <span class="math display">\[
+\]</span> onde <span class="math inline">\(\lambda_1,\ldots,\lambda_s\)</span> são os autovalores reais distintos de <span class="math inline">\(f_\C\)</span> e <span class="math inline">\(\lambda_{s+1},\overline\lambda_{s+1},\ldots,\lambda_{s+t},\overline\lambda_{s+t}\)</span> são os autovalores complexos e não reais distintos de <span class="math inline">\(f_\C\)</span>. Se <span class="math inline">\(i\geq s+1\)</span>, pondo <span class="math display">\[
 q_i(t)=(t-\lambda_i)(t-\overline\lambda_i)=t^2-(\lambda_i+\overline\lambda_i)t+\lambda_i\overline\lambda_i\in\R[t],
 \]</span> obtemos a fatoração de <span class="math inline">\(m_f(t)\in\R[t]\)</span> como produto de irredutíveis em <span class="math inline">\(\R[t]\)</span>: <span class="math display">\[
 m_f(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}q_{s+1}(t)^{r_{s+1}}\cdots q_{s+t}(t)^{r_{s+t}}.
@@ -1435,7 +1435,7 @@ V=1\otimes V=\{v\in V_\C\mid \varepsilon(v)=v\}.
 </ol>
 </div>
 <p>Como no caso dos números complexos, pode-se definir a parte real e a parte imaginária de um vetor em <span class="math inline">\(V_\C=\C\otimes V\)</span>. Para um vetor <span class="math inline">\(v\in V_\C\)</span> denote por <span class="math display">\[
-\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{i2}(v-\varepsilon(v)).
+\mbox{Re}(v)=\frac 12(v+\varepsilon(v))\quad\mbox{e}\quad \mbox{Im}(v)=\frac 1{2i}(v-\varepsilon(v)).
 \]</span></p>
 <div id="exr-re-im-vect" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 72.1</strong></span> Demonstre as seguintes propriedades:</p>
@@ -1513,15 +1513,11 @@ f(w_k)&amp;=w_{k-1}+\lambda f(w_k),\\
 f(\varepsilon(w_1))&amp;=\overline \lambda \varepsilon(w_1),\\
 f(\varepsilon(w_k))&amp;=\varepsilon(w_{k-1})+\overline \lambda \varepsilon(w_k).
 \end{align*}\]</span> Logo <span class="math display">\[\begin{align*}
-f(\mbox{Re}(w_1))&amp;=\frac12 f(w_1+\varepsilon(w_1))=\frac 12(f(w_1)+\varepsilon(f(w_1)))=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)
-\\&amp;=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
-f(\mbox{Im}(w_1))&amp;=\frac1{2i} f(w_1-\varepsilon(w_1))=\frac 1{2i}(f(w_1)-\varepsilon(f(w_1)))=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)
-\\&amp;=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);\\
+f(\mbox{Re}(w_1))&amp;=\mbox{Re}(f(w_1))=\mbox{Re}(\lambda w_1)=a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+f(\mbox{Im}(w_1))&amp;=\mbox{Im}(f(w_1))=\mbox{Im}(\lambda w_1)=b\mbox{Re}(w_1)+a\mbox{Im}(w_1);
 \end{align*}\]</span> Para <span class="math inline">\(k\geq 2\)</span>, <span class="math display">\[\begin{align*}
-f(\mbox{Re}(w_k))&amp;=\frac12 f(w_k+\varepsilon(w_k))=\frac 12(f(w_k)+\varepsilon(f(w_k)))=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)
-\\&amp;=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
-f(\mbox{Im}(w_k))&amp;=\frac1{2i} f(w_k-\varepsilon(w_k))=\frac 1{2i}(f(w_k)-\varepsilon(f(w_k)))=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)
-\\&amp;=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).\\
+f(\mbox{Re}(w_k))&amp;=\mbox{Re}(f(w_k))=\mbox{Re}(w_{k-1}+\lambda w_k)=\mbox{Re}(w_{k-1})+a\mbox{Re}(w_1)-b\mbox{Im}(w_1);\\
+f(\mbox{Im}(w_k))&amp;=\mbox{Im}(f(w_k))=\mbox{Im}(w_{k-1}+\lambda w_k)=\mbox{Im}(w_{k-1})+b\mbox{Re}(w_1)+a\mbox{Im}(w_1).
 \end{align*}\]</span></li>
 </ol>
 </div>
