@@ -29,9 +29,9 @@ Seja $V$ um espaço vetorial de dimensão não necessariamente finita e $f:V\to 
 
 
 :::{.proof}
-1. Seja $B=\{b_1,\ldots,b_n\}$ uma base de $V$. Se $f^{d-1}(b_i)=0$ para todo $i$, então o endomorfismo 
+1. Seja $B$ uma base de $V$. Se $f^{d-1}(b)=0$ para todo $b\in B$, então o endomorfismo 
 $f^{d-1}$ se anula na base $B$, e assim $f^{d-1}=0$. Mas neste caso, o grau de nilpotência de $f$ seria $d-1$ e não $d$. 
-Portanto existe algum $b_i$ tal que $f^{d-1}(b_i)\neq 0$. 
+Portanto existe algum $b\in B$ tal que $f^{d-1}(b)\neq 0$. 
 
 1. Indução por $d$. Se $d=1$, então $f=0$ e $U=\left<v\right>$. Como $f=0$,  qualquer complemento $W$ de $U$ em $V$ será $f$-invariante e pode ser escolhido para satisfazer as afirmações do teorema.
 Assuma que a afirmação está verdadeira para operadores de grau de nilpotência $d-1$. Considere $X=\mbox{Im}(f)$. Então a restrição $f_X=f|_X$ tem grau de nilpotência $m-1$ e $U_X=U\cap X=\langle f(v),\ldots,f^{m-1}(v)\rangle=f(U)$ é um espaço $f$-cíclico de dimensão $m-1$ em $X$. Pela hipótese da indução, existe $W_X\leq X$ espaço $f$-invariante tal que

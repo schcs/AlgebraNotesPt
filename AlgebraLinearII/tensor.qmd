@@ -262,7 +262,7 @@ Note que $k \alpha_i \in \K$, pois $\F\subseteq \K$. Portanto, $x$ pode ser escr
 isso é possível apenas quando $k_i=0$ para todo $i$.  Assim, $\{1 \otimes b\mid b\in B\}$ é linearmente independente e o mesmo conjunto é uma base de $V_\K$. 
 :::
 
-:::{#exm-}
+:::{#exm-complexificação}
 Se $V$ é um $\R$-espaço vetorial, então $V_\C=\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
 **complexificação** de $V$. Por exemplo, os seguintes isomorfismos são válidos:
 \begin{align*}

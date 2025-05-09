@@ -92,6 +92,7 @@ book:
         - AlgebraLinearII/nilpotentes.qmd
         - AlgebraLinearII/unicidade_jordan.qmd
         - AlgebraLinearII/cyclic.qmd
+        - AlgebraLinearII/jordan_real.qmd
         - AlgebraLinearII/ex2.qmd
         - AlgebraLinearII/sesqui.qmd
         - AlgebraLinearII/isometrias.qmd
