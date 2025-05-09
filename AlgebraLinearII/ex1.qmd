@@ -1196,8 +1196,8 @@ Para mostrar que $\sigma$ é uma permutação par se e somente se o número de i
 
 :::{#exr-alt-pow}
 Seja $V$ um espaço vetorial. Defina a $k$-ésima potência exterior $\Lambda^kV$ como um espaço vetorial junto com uma 
-aplicação $k$-linear $\lambda:V^k\to \Lambda^kV$ alternada que satisfaz a seguinte propriedade universal: Para todo espaço vetorial $Z$ e toda
-aplicação $k$-linear $f:V^k\to Z$, existe uma única aplicação linear $\tilde f:\Lambda^kV\to Z$ tal que 
+aplicação $k$-linear alternada $\lambda:V^k\to \Lambda^kV$ que satisfaz a seguinte propriedade universal: Para todo espaço vetorial $Z$ e toda
+aplicação $k$-linear alternada $f:V^k\to Z$, existe uma única aplicação linear $\tilde f:\Lambda^kV\to Z$ tal que 
 $f = \tilde f\circ \lambda$. 
 
 1. Desegne o diagrama que corresponde à propriedade universal.
