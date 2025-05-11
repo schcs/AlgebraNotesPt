@@ -1369,18 +1369,18 @@ window.Quarto = {
 
 
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.1</strong></span> Se <span class="math inline">\(\F\)</span> é um corpo, uma aplicação bijetiva <span class="math inline">\(\sigma:\F\to \F\)</span>, <span class="math inline">\(a\mapsto a^\sigma\)</span>, chama-se <b>automorfismo</b>, se</p>
-<ul>
+<p><span class="theorem-title"><strong>Definição 74.1</strong></span> Se <span class="math inline">\(\F\)</span> é um corpo, uma aplicação bijetiva <span class="math inline">\(\sigma:\F\to \F\)</span>, <span class="math inline">\(a\mapsto a^\sigma\)</span>, chama-se <strong>automorfismo</strong>, se</p>
+<ol type="1">
 <li><span class="math inline">\((a+b)^\sigma=a^\sigma+b^\sigma\)</span>;</li>
 <li><span class="math inline">\((ab)^\sigma=a^\sigma b^\sigma\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 74.1</strong></span> &nbsp;</p>
 <ol type="1">
-<li><p>A bijeção <span class="math inline">\(\mbox{id}_\F\)</span> é automorfismo para todo corpo <span class="math inline">\(\F\)</span>. Este automorfismo chama-se <b>automorfismo trivial</b>. Os corpos <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\Z_p\)</span> não têm automorfismos não triviais (consegue demonstrar?).</p></li>
+<li><p>A bijeção <span class="math inline">\(\mbox{id}_\F\)</span> é automorfismo para todo corpo <span class="math inline">\(\F\)</span>. Este automorfismo chama-se <strong>automorfismo trivial</strong>. Os corpos <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\Z_p\)</span> não têm automorfismos não triviais (consegue demonstrar?).</p></li>
 <li><p>Se <span class="math inline">\(\F=\C\)</span>, então <span class="math inline">\(\sigma:\C\to \C\)</span>, <span class="math inline">\(z^\sigma=\bar z\)</span> (conjugado complexo) é um automorfismo de <span class="math inline">\(\C\)</span>.</p></li>
-<li><p>Se <span class="math inline">\(\F\)</span> é um corpo de caraterística <span class="math inline">\(p\)</span> (primo), então a aplicação <span class="math inline">\(\varphi:a\mapsto a^p\)</span> é injetiva e satisfaz as duas propriedades na definição de automorfismo. Para um corpo arbitrário, <span class="math inline">\(\varphi\)</span> não precisa ser sobrejetiva, mas se <span class="math inline">\(\F\)</span> é finito, então <span class="math inline">\(\varphi\)</span>, sendo injetiva, será obrigatoriamente sobrejetiva e é um automorfismo. O automorfismo <span class="math inline">\(\varphi\)</span> de um corpo finito <span class="math inline">\(\F\)</span> é chamado de <b>automorfismo de Frobenius</b>.</p></li>
+<li><p>Se <span class="math inline">\(\F\)</span> é um corpo de caraterística <span class="math inline">\(p\)</span> (primo), então a aplicação <span class="math inline">\(\varphi:a\mapsto a^p\)</span> é injetiva e satisfaz as duas propriedades na definição de automorfismo. Para um corpo arbitrário, <span class="math inline">\(\varphi\)</span> não precisa ser sobrejetiva, mas se <span class="math inline">\(\F\)</span> é finito, então <span class="math inline">\(\varphi\)</span>, sendo injetiva, será obrigatoriamente sobrejetiva e é um automorfismo. O automorfismo <span class="math inline">\(\varphi\)</span> de um corpo finito <span class="math inline">\(\F\)</span> é chamado de <strong>automorfismo de Frobenius</strong>.</p></li>
 <li><p>É fácil provar que a composição de automorfismos é automorfismo. Em particular, se <span class="math inline">\(\F\)</span> é um corpo finito de caraterística <span class="math inline">\(p\)</span>, então <span class="math display">\[
 \varphi^k:\F\to \F, \quad a\mapsto a^{p^k}
 \]</span> é um automorfismo de <span class="math inline">\(\F\)</span>. Vocês vão aprender na disciplina Grupos e Corpos que todos os automorfismos de corpos finitos têm esta forma.</p></li>
@@ -1390,11 +1390,11 @@ window.Quarto = {
 </ol>
 </div>
 <div id="def-sesquilinear" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.2</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Uma aplicação <span class="math inline">\(B:V\times V\to \F\)</span> chama-se <b>forma <span class="math inline">\(\sigma\)</span>-sesquilinear</b> se</p>
-<ul>
+<p><span class="theorem-title"><strong>Definição 74.2</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Uma aplicação <span class="math inline">\(B:V\times V\to \F\)</span> chama-se <strong>forma <span class="math inline">\(\sigma\)</span>-sesquilinear</strong> se</p>
+<ol type="1">
 <li><span class="math inline">\(B(\alpha u+\beta v,w)=\alpha B(u,w)+\beta B(v,w)\)</span>.</li>
 <li><span class="math inline">\(B(u,\alpha v+\beta w)=\alpha^\sigma B(u,v)+ \beta^\sigma B(u,w)\)</span>.</li>
-</ul>
+</ol>
 <p>Ou seja, uma forma sesquilinear, é uma forma de duas variáveis que é linear na primeira variável e <span class="math inline">\(\sigma\)</span>-semilinear na segunda.</p>
 </div>
 <div id="def-" class="theorem definition">
@@ -1402,10 +1402,10 @@ window.Quarto = {
 \mbox{Rad}_L(B)=\{v\in V\mid B(v,w)=0\mbox{ para todo }w\in V\}
 \]</span> e <span class="math display">\[
 \mbox{Rad}_R(B)=\{w\in V\mid B(v,w)=0\mbox{ para todo }v\in V\}.
-\]</span> O <span class="math inline">\(\mbox{Rad}_L(B)\)</span> chama-se <b>radical à esquerda</b>, enquanto <span class="math inline">\(\mbox{Rad}_R(B)\)</span> chama-se <b>radical à direita</b>.</p>
+\]</span> O <span class="math inline">\(\mbox{Rad}_L(B)\)</span> chama-se <strong>radical à esquerda</strong>, enquanto <span class="math inline">\(\mbox{Rad}_R(B)\)</span> chama-se <strong>radical à direita</strong>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.4</strong></span> Assuma que <span class="math inline">\(B:V\times V\to \F\)</span> é uma forma sesquilinear sobre um espaço <span class="math inline">\(V\)</span> de dimensão <span class="math inline">\(n\)</span>, finita. Seja <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Definimos a <b>matriz de Gram</b> de <span class="math inline">\(B\)</span> como a matriz <span class="math inline">\(G_X(B)=(B(b_i,b_j))_{i,j}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.4</strong></span> Assuma que <span class="math inline">\(B:V\times V\to \F\)</span> é uma forma sesquilinear sobre um espaço <span class="math inline">\(V\)</span> de dimensão <span class="math inline">\(n\)</span>, finita. Seja <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> uma base de <span class="math inline">\(V\)</span>. Definimos a <strong>matriz de Gram</strong> de <span class="math inline">\(B\)</span> como a matriz <span class="math inline">\(G_X(B)=(B(b_i,b_j))_{i,j}\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 74.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(B\)</span> como na definição anterior, assuma que <span class="math inline">\(u,v\in V\)</span> e denote por <span class="math inline">\([u]_X\)</span> e <span class="math inline">\([v]_X\)</span> os vetores colunas das coordenadas de <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> na base <span class="math inline">\(X\)</span>, respetivamente. Se <span class="math inline">\((\alpha_1,\ldots,\alpha_n)\in\F^n\)</span>, então denote <span class="math display">\[
@@ -1438,23 +1438,25 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 \end{align*}\]</span> Isso implica que <span class="math inline">\(G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.5</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear <span class="math inline">\(B\)</span> chama-se <b>reflexiva</b>, se <span class="math inline">\(B(u,v)=0\)</span> implica que <span class="math inline">\(B(v,u)=0\)</span>. Se <span class="math inline">\(B\)</span> é uma forma refexiva, então <span class="math inline">\(\mbox{Rad}_L(B)=\mbox{Rad}_R(B)\)</span> e este espaço é chamado de <b>radical</b> de <span class="math inline">\(B\)</span> e será denotado por <span class="math inline">\(\mbox{Rad}(B)\)</span>. A forma <span class="math inline">\(B\)</span> é dita <b>não degenerada</b> se <span class="math inline">\(\mbox{Rad}(B)=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.5</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear <span class="math inline">\(B\)</span> chama-se <strong>reflexiva</strong>, se <span class="math inline">\(B(u,v)=0\)</span> implica que <span class="math inline">\(B(v,u)=0\)</span>. Se <span class="math inline">\(B\)</span> é uma forma refexiva, então <span class="math inline">\(\mbox{Rad}_L(B)=\mbox{Rad}_R(B)\)</span> e este espaço é chamado de <strong>radical</strong> de <span class="math inline">\(B\)</span> e será denotado por <span class="math inline">\(\mbox{Rad}(B)\)</span>. A forma <span class="math inline">\(B\)</span> é dita <strong>não degenerada</strong> se <span class="math inline">\(\mbox{Rad}(B)=0\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 74.6</strong></span> Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear.</p>
-<ul>
-<li><span class="math inline">\(B\)</span> é chamada <b><span class="math inline">\(\sigma\)</span>-Hermitiana</b> se <span class="math inline">\(B(u,v)=B(v,u)^\sigma\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</li>
-<li><span class="math inline">\(B\)</span> é chamada <b>alternada</b> se <span class="math inline">\(B(u,u)=0\)</span> para todo <span class="math inline">\(u\in U\)</span>.</li>
-</ul>
+<ol type="1">
+<li><span class="math inline">\(B\)</span> é chamada <strong><span class="math inline">\(\sigma\)</span>-Hermitiana</strong> se <span class="math inline">\(B(u,v)=B(v,u)^\sigma\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</li>
+<li><span class="math inline">\(B\)</span> é chamada <strong>simétrica</strong> se <span class="math inline">\(B(u,v)=B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span></li>
+<li><span class="math inline">\(B\)</span> é chamada <strong>alternada</strong> se <span class="math inline">\(B(u,u)=0\)</span> para todo <span class="math inline">\(u\in V\)</span>.</li>
+</ol>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 74.3</strong></span> As seguintes são verdadeiras para uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear não trivial:</p>
-<ul>
+<ol type="1">
 <li>Se <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-Hermitiana, então <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>.</li>
 <li>Se <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</li>
 <li>Se <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</li>
 <li>Se <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, e <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>, então <span class="math inline">\(B\)</span> é alternada.</li>
-</ul>
+<li>Se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</li>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
@@ -1469,32 +1471,35 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 \alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
 \]</span> Ou seja <span class="math inline">\(\alpha^\sigma=\alpha\)</span> para todo <span class="math inline">\(\alpha\in\F\)</span> e <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</p></li>
 <li><p>Assuma que <span class="math inline">\(B(u,v)=-B(v,u)\)</span> para todo <span class="math inline">\(u,v\)</span>. Então <span class="math inline">\(B(u,u)=-B(u,u)\)</span> ou seja <span class="math inline">\(2B(u,u)=0\)</span> para todo <span class="math inline">\(u\in V\)</span>. Se a caraterística do corpo é diferente de <span class="math inline">\(2\)</span>, isso implica que <span class="math inline">\(B(u,u)=0\)</span> para todo <span class="math inline">\(u\in V\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\(B\)</span> simétrica e esolha <span class="math inline">\(u,v\in V\)</span> tal que <span class="math inline">\(B(u,v)\neq 1\)</span>. Então temos que para <span class="math inline">\(\alpha\in\F\)</span> que <span class="math display">\[
+\alpha=B(\alpha u,v)=B(v,\alpha u)=\alpha^\sigma B(v,u)=\alpha^\sigma B(u,v)=\alpha^\sigma.
+\]</span> Logo, <span class="math inline">\(\alpha^\sigma=\alpha\)</span> para todo <span class="math inline">\(\alpha\in \F\)</span> e <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</p></li>
 </ol>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.7</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana é chamada <b>simétrica</b> se <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>. Se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(B(u,v)=B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.7</strong></span> Uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana é chamada <strong>simétrica</strong> se <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>. Se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(B(u,v)=B(v,u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 74.3</strong></span> Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo simétrica) ou alternada sobre <span class="math inline">\(V\)</span> de dimensão finita. Seja <span class="math inline">\(G=G_X(B)\)</span> a matriz de Gram de <span class="math inline">\(B\)</span> em uma base <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span>. Mostre que</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(B\)</span> é simétrica se e somente se <span class="math inline">\(G^t=G\)</span>;</li>
 <li><span class="math inline">\(B\)</span> é alternada se e somente se <span class="math inline">\(G^t=-G\)</span>;</li>
 <li><span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-Hermitiana se e somente se <span class="math inline">\(G^t=G^\sigma\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div id="thm-" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 74.1</strong></span> (O Teorema de Birkhoff-von Neumann) Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva com <span class="math inline">\(\dim (V/\mbox{Rad}(B))\geq 2\)</span>. Então</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(B\)</span> é alternada; ou</li>
 <li><span class="math inline">\(B\)</span> é simétrica; ou</li>
 <li><span class="math inline">\(B\)</span> é múltiplo escalar de uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana com <span class="math inline">\(\sigma\neq \sigma^2=\mbox{id}_\F\)</span></li>
-</ul>
+</ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Nós não demonstramos este teorema. A leitora interessada na demonstração pode consultar <a href="https://nickpgill.github.io/files/2014/06/Lecture13.pdf">as notas de Nick Gill</a>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Nós não demonstramos este teorema. A leitora interessada na demonstração pode consultar as notas de <a href="https://nickpgill.github.io/files/2014/06/Lecture13.pdf">Nick Gill</a>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.8</strong></span> Se <span class="math inline">\(V\)</span> é um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span>, então <span class="math inline">\(u,v\in V\)</span> são ditos <b>ortogonais</b> se <span class="math inline">\(B(u,v)=0\)</span>. Escrevemos neste caso que <span class="math inline">\(u\perp v\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.8</strong></span> Se <span class="math inline">\(V\)</span> é um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span>, então <span class="math inline">\(u,v\in V\)</span> são ditos <strong>ortogonais</strong> se <span class="math inline">\(B(u,v)=0\)</span>. Escrevemos neste caso que <span class="math inline">\(u\perp v\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 74.2</strong></span> Se <span class="math inline">\(B\)</span> é alternada e <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(v\perp v\)</span>.</p>
@@ -1503,11 +1508,11 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 <p><span class="theorem-title"><strong>Exercício 74.4</strong></span> Seja <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Denote por <span class="math inline">\(\mbox{Fix}(\F)=\{a\in\F\mid a^\sigma=a\}\)</span>. Mostre que <span class="math inline">\(\mbox{Fix}(\sigma)\)</span> é um corpo.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.9</strong></span> Seja <span class="math inline">\(B:V\times V\to \F\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo formas simétricas). Defina <span class="math inline">\(Q:V\to \F\)</span> como <span class="math inline">\(Q(v)=B(v,v)\)</span>. Então <span class="math inline">\(Q\)</span> é chamada de <b>forma quadrática</b> associada com <span class="math inline">\(B\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.9</strong></span> Seja <span class="math inline">\(B:V\times V\to \F\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo formas simétricas). Defina <span class="math inline">\(Q:V\to \F\)</span> como <span class="math inline">\(Q(v)=B(v,v)\)</span>. Então <span class="math inline">\(Q\)</span> é chamada de <strong>forma quadrática</strong> associada com <span class="math inline">\(B\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 74.4</strong></span> Usando a notação da definição anterior, as seguintes afirmações são válidas para todo <span class="math inline">\(u,v\in V\)</span> e <span class="math inline">\(\alpha\in\F\)</span>:</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(Q(v)\in\mbox{Fix}(\sigma)\)</span>;</li>
 <li><span class="math inline">\(Q(\alpha v)=\alpha\alpha^\sigma Q(v)=\alpha^{\sigma+1}Q(v)\)</span>;</li>
 <li>se <span class="math inline">\(B\)</span> é simétrica, então <span class="math inline">\(Q(\alpha v)=\alpha^2 Q(v)\)</span>;</li>
@@ -1515,7 +1520,7 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 <li>se <span class="math inline">\(u\perp v\)</span>, então <span class="math inline">\(Q(u+v)=Q(u)+Q(v)\)</span> (Teorema de Pitágoras);</li>
 <li><span class="math inline">\(Q(u+v)+Q(u-v)=2Q(u)+2Q(v)\)</span> (Regra do Paralelogramo);</li>
 <li>se <span class="math inline">\(B\)</span> for simétrica, então <span class="math inline">\(Q(u+v)-Q(u)-Q(v)=2B(u,v)\)</span>.</li>
-</ul>
+</ol>
 <p>Em particular, se <span class="math inline">\(B\)</span> for simétrica e <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, então <span class="math display">\[
 B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
 \]</span> e <span class="math inline">\(B\)</span> está determinada por <span class="math inline">\(Q\)</span>.</p>
@@ -1524,7 +1529,7 @@ B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
 <p><span class="proof-title"><em>Comprovação</em>. </span>Simples, só aplicar a definição de <span class="math inline">\(Q\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.10</strong></span> Seja <span class="math inline">\(V\)</span> com forma <span class="math inline">\(\sigma\)</span>-hermitiana <span class="math inline">\(B\)</span>. Um vetor <span class="math inline">\(v\in V\)</span> é dito <b>isotrópico</b> se <span class="math inline">\(Q(v)=B(v,v)=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 74.10</strong></span> Seja <span class="math inline">\(V\)</span> com forma <span class="math inline">\(\sigma\)</span>-hermitiana <span class="math inline">\(B\)</span>. Um vetor <span class="math inline">\(v\in V\)</span> é dito <strong>isotrópico</strong> se <span class="math inline">\(Q(v)=B(v,v)=0\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 74.3</strong></span> Se <span class="math inline">\(V=\R^n\)</span> ou <span class="math inline">\(\C^n\)</span> e <span class="math inline">\(B\)</span> é o produto interno usual, então <span class="math inline">\(0\)</span> é o único vetor isotrôpico.</p>
@@ -1536,18 +1541,18 @@ B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
 <p><span class="theorem-title"><strong>Exercício 74.6</strong></span> Seja <span class="math inline">\(B\)</span> uma forma sesquilinear reflexiva sobre um espaço <span class="math inline">\(V\)</span> de dimensão finita. Assuma que <span class="math inline">\(G\)</span> é a matriz da forma em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)\)</span>. Em particular, <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 74.11</strong></span> Seja <span class="math inline">\(V\)</span> um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span> e <span class="math inline">\(U\leq V\)</span>. Definimos o <b>espaço ortogonal</b> <span class="math inline">\(U^\perp\)</span> de <span class="math inline">\(U\)</span> como <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 74.11</strong></span> Seja <span class="math inline">\(V\)</span> um espaço com forma sesquilinear reflexiva <span class="math inline">\(B\)</span> e <span class="math inline">\(U\leq V\)</span>. Definimos o <strong>espaço ortogonal</strong> <span class="math inline">\(U^\perp\)</span> de <span class="math inline">\(U\)</span> como <span class="math display">\[
 U^\perp=\{v\in V\mid B(v,u)=0\mbox{ para todo }u\in U\}.
 \]</span></p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 74.5</strong></span> As seguintes afirmações são válidas para o espaço ortogonal em relação a uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva:</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(U^\perp\leq V\)</span>;</li>
 <li>Se <span class="math inline">\(U\leq W\)</span>, então <span class="math inline">\(W^\perp\leq U^\perp\)</span>;</li>
 <li><span class="math inline">\(\mbox{Rad}(V)=V^\perp\)</span> e <span class="math inline">\(V^\perp\leq U^\perp\)</span> para todo <span class="math inline">\(U\leq V\)</span>;</li>
 <li>Se <span class="math inline">\(B\)</span> é não degenerada e <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim U^\perp+\dim U=\dim V\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>As afirmações 1., 2., 3. são simples. Vamos provar apenas 4. Assuma que <span class="math inline">\(\dim V=n\)</span>, que <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> é uma base de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(\{b_1,\ldots,b_k\}\)</span> é base de <span class="math inline">\(U\)</span>, e seja <span class="math inline">\(G=G_X(B)\)</span> a matriz de <span class="math inline">\(B\)</span> na base <span class="math inline">\(X\)</span>. Temos por resultado anterior que um vetor <span class="math inline">\(v\)</span> com <span class="math inline">\([v]_X=(\alpha_1,\ldots,\alpha_n)^t\)</span> pertençe a <span class="math inline">\(U^\perp\)</span> se e somente se <span class="math display">\[
@@ -1558,7 +1563,7 @@ U^\perp=\{v\in V\mid B(v,u)=0\mbox{ para todo }u\in U\}.
 (\alpha_1,\ldots,\alpha_n)G e_i =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}
 \]</span> onde <span class="math inline">\(e_1,\ldots,e_n\)</span> é a base canônica de <span class="math inline">\(\F^n\)</span>. Mas o sistema anterior é um sistema linear homogêneo com incôgnitas <span class="math inline">\(\alpha_1,\ldots,\alpha_n\)</span> e a matriz desta sistema está formada pelas primeiras <span class="math inline">\(k\)</span> linhas de <span class="math inline">\(G^t\)</span>. Como <span class="math inline">\(B\)</span> é não degenerada, <span class="math inline">\(G^t\)</span> tem posto <span class="math inline">\(k\)</span> e o espaço de soluções tem dimensão <span class="math inline">\(n-k\)</span>.</p>
 </div>
-<p>Na situação do item 4. do resultado anterior, se <span class="math inline">\(U\cap U^\perp=0\)</span>, então <span class="math inline">\(V=U\oplus U^\perp\)</span> e <span class="math inline">\(U^\perp\)</span> é chamado de <b>complemento ortogonal</b> de <span class="math inline">\(U\)</span>. Neste caso, escrevemos que <span class="math inline">\(V=U\perp U^\perp\)</span> para indicar que os dois espaços na decomposição são ortogonais.</p>
+<p>Na situação do item 4. do resultado anterior, se <span class="math inline">\(U\cap U^\perp=0\)</span>, então <span class="math inline">\(V=U\oplus U^\perp\)</span> e <span class="math inline">\(U^\perp\)</span> é chamado de <strong>complemento ortogonal</strong> de <span class="math inline">\(U\)</span>. Neste caso, escrevemos que <span class="math inline">\(V=U\perp U^\perp\)</span> para indicar que os dois espaços na decomposição são ortogonais.</p>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 74.4</strong></span> Considere <span class="math inline">\(V=\C^2\)</span> com a forma bilinear simétrica <span class="math inline">\(B(v,w)=v_1w_1+v_2w_2\)</span> para <span class="math inline">\(v=(v_1,v_2)\)</span> e <span class="math inline">\(w=(w_1,w_2)\)</span> pertencentes a <span class="math inline">\(\C^2\)</span>. Observe que não aplicamos o conjugado complexo na segunda variável! Note que esta forma está não degenerada, pois na base canônica a sua matriz é a matriz identidade. Considere a base <span class="math inline">\(\{(1,i),(1,-i)\}\)</span> de <span class="math inline">\(\C^2\)</span>. Nesta base, a matriz da forma é <span class="math display">\[
 \begin{pmatrix} 0 &amp; 2 \\ 2 &amp; 0\end{pmatrix}
