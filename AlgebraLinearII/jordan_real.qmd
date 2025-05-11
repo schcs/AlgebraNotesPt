@@ -53,7 +53,7 @@ $$
 m_f(t)=(t-\lambda_1)^{r_1}\cdots (t-\lambda_s)^{r_s}q_{s+1}(t)^{r_{s+1}}\cdots q_{s+t}(t)^{r_{s+t}}. 
 $$
 
-## O conjugado complexo dos vetores em $V_\C$
+## O conjugado complexo dos vetores em $V_\C$ {#sec-cconjugado}
 
 A aplicação 
 $$

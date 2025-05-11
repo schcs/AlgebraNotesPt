@@ -791,6 +791,21 @@ As possibilidades para os blocos são:
 :::
 
 :::{#exr-}
-Demonstre @lem-mult-eigen, @thm-cramer, @lem-autovals-nilp, @lem-minpol-jordan e resolva @exr-eigenspace-directsum, 
-@exr-basis-directsum
+Usando a notação introduzida na @sec-cconjugado, seja $V$ um $\R$-espaço vetorial e considere a complexificação $V_\C=\C\otimes V$. Seja $W\leq \C\otimes V$ e ponha 
+$$
+\mbox{Re}(W)=\{\mbox{Re}(w)\mid w\in W\}\quad\mbox{e}\quad \mbox{Im}(W)=\{\mbox{Im}(w)\mid w\in W\}.
+$$
+Mostre que as seguintes são equivalentes.
+
+1. $W$ é $\varepsilon$-invariante;
+2. $\mbox{Re}(W)$ e $\mbox{Im}(W)$ são $\R$-subespaços de $W$;
+3. $W=\mbox{Re}(W)\oplus \mbox{Im}(W)$ considerado como $\R$-subespaço.
 :::
+
+:::{#exr-}
+Demonstre @lem-mult-eigen, @thm-cramer, @lem-autovals-nilp, @lem-minpol-jordan, @lem-eps-flambda, @lem-eigenvalues-jordan-real (itens 3. e 4.), 
+e resolva @exr-eigenspace-directsum, @exr-basis-directsum, @exr-jjjj, @exr-re-im-vect.
+:::
+
+
+
