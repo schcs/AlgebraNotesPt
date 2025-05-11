@@ -169,7 +169,8 @@ Seja $\lambda\in\R$ um autovalor de $f_\C$ e assuma que $w_1,\ldots,w_m$ é uma 
 a matriz da restrição de $f_\C$ nesta base é um bloco de Jordan $J_m(\lambda)$. Então o espaço gerado por $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)$ em $1\otimes V$ tem dimensão $m$, ele é $f$-invariante e a matriz da restrição de $f$ nesta base é $J_m(\lambda)$. 
 :::
 :::{.proof}
-Primeiro, note que $\dim_\C W=m$ e $\dim_{\R}W=2m$. Como $\varepsilon(W_\lambda)=W_\lambda$, $\mbox{Re}(w_i)=1/2(w_i+\varepsilon(w_i))\in W_\lambda$ 
+Primeiro, note que $\dim_\C W=m$ e $\dim_{\R}W=2m$.
+Como $\varepsilon(W_\lambda)=W_\lambda$, $\mbox{Re}(w_i)=1/2(w_i+\varepsilon(w_i))\in W_\lambda$ 
 e $\mbox{Im}(w_i)=1/(i2)(w_i-\varepsilon(w_i))\in W_\lambda$.  Além disso, como $w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)$, temos que 
 $\mbox{Re}(w_1),i\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),i\mbox{Im}(w_m)$ é um conjunto gerador do $\R$-espaço $W$. Como este conjunto possiu 
 $2m=\dim_\R W$ elementos, ele precisa ser base e em particular os elementos $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)\in 1\otimes V$ são linearmente independentes. 
