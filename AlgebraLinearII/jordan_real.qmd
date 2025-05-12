@@ -94,7 +94,11 @@ Seja $f\in\mbox{End}(V)$ como em cima.
    um subespaço $f_\C$-invariante de $W_{\overline\lambda}$ tal que a matriz da restrição de $f_\C$ nesta base é um bloco de Jordan
    $J_{m}(\overline\lambda)$. 
 4. Seja $\lambda\in\R$ um autovalor de $f_\C$ e seja $W_\lambda=\ker(f-\lambda\mbox{id}_V)^r$ o autoespaço generalizado 
-   onde $r$ é o expoente de $t-\lambda$ em $m_f(t)$. Então $\varepsilon(W_\lambda)=W_\lambda$. 
+   onde $r$ é o expoente de $t-\lambda$ em $m_f(t)$. Então $\varepsilon(W_\lambda)=W_\lambda$ e $W_\lambda=\mbox{Re}(W_\lambda)\oplus \mbox{Im}(W_\lambda)$ como $\R$-espaço onde 
+   $$
+   \mbox{Re}(W_\lambda)=\{\mbox{Re}(w)\mid w\in W_\lambda\}\quad\mbox{e}\quad
+   \mbox{Im}(W_\lambda)=\{\mbox{Im}(w)\mid w\in W_\lambda\}.
+   $$
 :::
 :::{.proof}
 1. Segue do fato que $\mbox{pcar}_{f_\C}(t)=\mbox{pcar}_f(t)\in\R[t]$ e do @lem-comp-conj-root (veja a discussão em cima).
@@ -165,15 +169,19 @@ $$
 Aqui, $J_{2k}(a, b)$ é uma matriz de ordem $2k$ composta por blocos $2 \times 2$ diagonais e superdiagonais, onde cada bloco diagonal é $\begin{bmatrix} a & b \\ -b & a \end{bmatrix}$ e cada bloco superdiagonal é $\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$.
 
 :::{#lem-gen-eigenspace-real1}
-Seja $\lambda\in\R$ um autovalor de $f_\C$ e assuma que $w_1,\ldots,w_m$ é uma base de um subespaço $f_\C$-invariante de $W_\lambda$ tal que
+Seja $\lambda\in\R$ um autovalor de $f_\C$ e considere o autoespaço generalizado $W_\lambda$. 
+Assuma que $w_1,\ldots,w_m$ é uma base de um subespaço $f_\C$-invariante de $W_\lambda$ tal que
 a matriz da restrição de $f_\C$ nesta base é um bloco de Jordan $J_m(\lambda)$. Então o espaço gerado por $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)$ em $1\otimes V$ tem dimensão $m$, ele é $f$-invariante e a matriz da restrição de $f$ nesta base é $J_m(\lambda)$. 
 :::
 :::{.proof}
-Primeiro, note que $\dim_\C W=m$ e $\dim_{\R}W=2m$.
-Como $\varepsilon(W_\lambda)=W_\lambda$, $\mbox{Re}(w_i)=1/2(w_i+\varepsilon(w_i))\in W_\lambda$ 
-e $\mbox{Im}(w_i)=1/(i2)(w_i-\varepsilon(w_i))\in W_\lambda$.  Além disso, como $w_i=\mbox{Re}(w_i)+i\mbox{Im}(w_i)$, temos que 
-$\mbox{Re}(w_1),i\mbox{Im}(w_1),\ldots,\mbox{Re}(w_m),i\mbox{Im}(w_m)$ é um conjunto gerador do $\R$-espaço $W$. Como este conjunto possiu 
-$2m=\dim_\R W$ elementos, ele precisa ser base e em particular os elementos $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)\in 1\otimes V$ são linearmente independentes. 
+Note que o sistema $w_1,\ldots,w_m$ faz parte de uma base de $w_1,\ldots,w_m,w_{m+1},\ldots,w_{m+s}$ de $W_\lambda$. 
+Além disso, $W_\lambda$ é $\varepsilon$-invariante e assim $\mbox{Re}(w_k)=1/2(w_k-\varepsilon(w_k))\in W_\lambda$ e 
+$\mbox{Re}(w_k)=1/(2i)(w_k+\varepsilon(w_k))\in W_\lambda$. Além disso, como $w_k=\mbox{Re}(w_k)+i\mbox{Im}(w_k)$, temos que 
+o $\R$-espaço é gerado pelos vetores $\mbox{Re}(w_k),i\mbox{Im}(w_k)$ com $k\in\{1,\ldots,m+s\}$. Como 
+$\dim_\R W_\lambda=2\dim_\C W_\lambda=2(m+s)$, temos que os vetores $\mbox{Re}(w_k),i\mbox{Im}(w_k)$ com $k\in\{1,\ldots,m+s\}$ formam 
+uma $\R$-base de $W_\lambda$ e em particular eles são linearmente independentes. Portanto $\mbox{Re}(w_1),\ldots,\mbox{Re}(w_m)$ são também linearmente 
+independentes.
+
 Ora, 
 $$
 f(\mbox{Re}(w_1))=f_\C(\mbox{Re}(w_1))=\mbox{Re}(f_\C(w_1))=\mbox{Re}(\lambda w_1)=\lambda\mbox{Re}(w_1);

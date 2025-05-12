@@ -5,7 +5,7 @@ lang: pt-BR
 --- 
 
 :::{#def-}
-Se $\F$ é um corpo, uma aplicação bijetiva $\sigma:\F\to \F$, $a\mapsto a^\sigma$, chama-se **automorfismo**, se
+Se $\F$ é um corpo, uma aplicação bijetiva $\sigma:\F\to \F$, $a\mapsto a^\sigma$, chama-se **automorfismo**, se valem para todo $a,b\in \F$ 
 
 
 1. $(a+b)^\sigma=a^\sigma+b^\sigma$;
@@ -36,7 +36,8 @@ então $a+b\sqrt 2\mapsto a-b\sqrt 2$ é um automorfismo.
 
 
 :::{#def-sesquilinear}
-Seja $V$ um $\F$-espaço vetorial e $\sigma:\F\to\F$ um automorfismo. Uma aplicação $B:V\times V\to \F$ chama-se **forma $\sigma$-sesquilinear** se
+Seja $V$ um $\F$-espaço vetorial e $\sigma:\F\to\F$ um automorfismo. Uma aplicação $B:V\times V\to \F$ chama-se **forma $\sigma$-sesquilinear** se temos 
+para todo $u,v,w\in V$ e $\alpha,\beta\in\F$ que 
 
 1. $B(\alpha u+\beta v,w)=\alpha B(u,w)+\beta B(v,w)$.
 2. $B(u,\alpha v+\beta w)=\alpha^\sigma B(u,v)+ \beta^\sigma B(u,w)$.
@@ -59,7 +60,7 @@ O $\mbox{Rad}_L(B)$ chama-se **radical à esquerda**, enquanto $\mbox{Rad}_R(B)$
 
 
 :::{#def-}
-Assuma que $B:V\times V\to \F$ é uma forma sesquilinear sobre um espaço $V$ de dimensão $n$, finita. Seja $X=\{b_1,\ldots,b_n\}$ uma base de $V$. Definimos a **matriz de Gram** de $B$ como a matriz $G_X(B)=(B(b_i,b_j))_{i,j}$.
+Assuma que $B:V\times V\to \F$ é uma forma $\sigma$-sesquilinear sobre um espaço $V$ de dimensão $n$, finita. Seja $X=\{b_1,\ldots,b_n\}$ uma base de $V$. Definimos a **matriz de Gram** de $B$ como a matriz $G_X(B)=(B(b_i,b_j))_{i,j}$.
 :::
 
 
@@ -131,10 +132,9 @@ Seja $B$ uma forma $\sigma$-sesquilinear.
 As seguintes são verdadeiras para uma forma $\sigma$-sesquilinear não trivial:
 
 1.  Se $B$ é $\sigma$-Hermitiana, então $\sigma^2=\mbox{id}_\F$.
-2.  Se $B$ é alternada, então $B(u,v)=-B(v,u)$ para todo $u,v\in V$.
-3.  Se $B$ é alternada, então $\sigma=\mbox{id}_\F$.
-4.  Se $\mbox{car}(\F)\neq 2$, e $B(u,v)=-B(v,u)$ para todo $u,v\in V$, então $B$ é alternada.
-5.  Se $B$ é simétrica, então $\sigma=\mbox{id}_\F$. 
+2.  Se $B$ é alternada, então $\sigma=\mbox{id}_\F$ e $B(u,v)=-B(v,u)$ para todo $u,v\in V$.
+3.  Se $\mbox{car}(\F)\neq 2$, e $B(u,v)=-B(v,u)$ para todo $u,v\in V$, então $B$ é alternada.
+4.  Se $B$ é simétrica, então $\sigma=\mbox{id}_\F$. 
 :::
 
 
@@ -145,31 +145,25 @@ $$
 $$
 Logo $\alpha^{\sigma^2}=\alpha$ e $\sigma^2=\mbox{id}_\F$.
 
-2. Com $u,v\in V$, calculemos que
+2. Escolhe $u,v\in V$ tal que $B(u,v)=-B(v,u)=1$ (é possível trocando $u$ por um múltiplo escalar) e seja $\alpha\in \F$. Agora
+$$
+\alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
+$$
+Ou seja $\alpha^\sigma=\alpha$ para todo $\alpha\in\F$ e $\sigma=\mbox{id}_\F$.  Com $u,v\in V$, calculemos que
 \begin{align*}
 0&=B(u+v,u+v)=B(u,u)+B(u,v)+B(v,u)+B(v,v)\\&=B(u,v)+B(v,u).
 \end{align*}
 Logo $B(u,v)=-B(v,u)$.
-
-3. Escolhe $u,v\in V$ tal que $B(u,v)=-B(v,u)=1$ (é possível trocando $u$ por um múltiplo escalar) e seja $\alpha\in \F$. Agora
-$$
-\alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
-$$
-Ou seja $\alpha^\sigma=\alpha$ para todo $\alpha\in\F$ e $\sigma=\mbox{id}_\F$.
-
-4. Assuma que $B(u,v)=-B(v,u)$ para todo $u,v$. Então $B(u,u)=-B(u,u)$ ou seja $2B(u,u)=0$ para todo $u\in V$. Se a caraterística do corpo é diferente de $2$, isso implica que $B(u,u)=0$ para todo $u\in V$.
+ 
+3. Assuma que $B(u,v)=-B(v,u)$ para todo $u,v$. Então $B(u,u)=-B(u,u)$ ou seja $2B(u,u)=0$ para todo $u\in V$. Se a caraterística do corpo é diferente de $2$, isso implica que $B(u,u)=0$ para todo $u\in V$.
    
-5. Seja $B$ simétrica e esolha $u,v\in V$ tal que $B(u,v)\neq 1$. Então temos que para $\alpha\in\F$ que 
+4. Seja $B$ simétrica e esolha $u,v\in V$ tal que $B(u,v)= 1$. Então temos que para $\alpha\in\F$ que 
    $$
    \alpha=B(\alpha u,v)=B(v,\alpha u)=\alpha^\sigma B(v,u)=\alpha^\sigma B(u,v)=\alpha^\sigma.
    $$
    Logo, $\alpha^\sigma=\alpha$ para todo $\alpha\in \F$ e $\sigma=\mbox{id}_\F$. 
 :::
 
-
-:::{#def-}
-Uma forma $\sigma$-Hermitiana é chamada **simétrica** se $\sigma=\mbox{id}_\F$. Se $B$ é simétrica, então $B(u,v)=B(v,u)$ para todo $u,v\in V$.
-:::
 
 
 :::{#exr-}
