@@ -286,7 +286,8 @@ A equação anterior é equivalente ao sistema de equações
 $$
 (\alpha_1,\ldots,\alpha_n)G e_i =0\quad \mbox{para todo}\quad i\in\{1,\ldots,k\}
 $$
-onde $e_1,\ldots,e_n$ é a base canônica de $\F^n$. Mas o sistema anterior é um sistema linear homogêneo com incôgnitas $\alpha_1,\ldots,\alpha_n$ e a matriz desta sistema está formada pelas primeiras $k$ linhas de $G^t$. Como $B$ é não degenerada, $G^t$ tem posto $k$ e o espaço de soluções tem dimensão $n-k$.
+onde $e_1,\ldots,e_n$ é a base canônica de $\F^n$. Mas o sistema anterior é um sistema linear homogêneo com incôgnitas $\alpha_1,\ldots,\alpha_n$ e a matriz desta sistema está formada pelas primeiras $k$ colunas de $G$. Como $B$ é não degenerada, $G$ tem posto $n$ e as primeiras $k$ colunas de $G$ são 
+linearmente independentes. Portanto, o espaço de soluções tem dimensão $n-k$.
 :::
 
 Na situação do item 4. do resultado anterior, se $U\cap U^\perp=0$, então $V=U\oplus U^\perp$ e $U^\perp$ é chamado de **complemento ortogonal** de $U$. Neste caso, escrevemos que $V=U\perp U^\perp$ para indicar que os dois espaços na decomposição são ortogonais.
