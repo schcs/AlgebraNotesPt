@@ -1414,7 +1414,7 @@ v=\sum_{b\in X} \frac{B(v,b)}{B(b,b)}b
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(V_0=\mbox{Rad}(V)\)</span> e escreva <span class="math inline">\(V=W\perp V_0\)</span> com um complemento <span class="math inline">\(W\)</span> de <span class="math inline">\(V_0\)</span> qualquer. A restrição de <span class="math inline">\(B\)</span> para <span class="math inline">\(W\)</span> é não degenerada. Se <span class="math inline">\(X_W\)</span> é uma base ortogonal de <span class="math inline">\(W\)</span> e <span class="math inline">\(X_0\)</span> é uma base qualquer de <span class="math inline">\(V_0\)</span>, então <span class="math inline">\(X_W\cup X_0\)</span> é base ortogonal de <span class="math inline">\(V\)</span>. Então precisamos achar base ortogonal no espaço <span class="math inline">\(W\)</span> e assumimos sem perder a generalidade que <span class="math inline">\(B\)</span> é não degenerada em <span class="math inline">\(V\)</span>.</p>
 <p>Avançamos por indução em <span class="math inline">\(\dim V\)</span>. Se <span class="math inline">\(\dim V=1\)</span>, então qualquer vetor <span class="math inline">\(v\in V\setminus\{0\}\)</span> é uma base ortogonal. Assuma que espaços de dimensão <span class="math inline">\(n-1\)</span> com formas não degeneradas têm bases ortogonais e assuma que <span class="math inline">\(\dim V=n\)</span>. Seja <span class="math inline">\(Q\)</span> a forma quadrática associada com <span class="math inline">\(B\)</span>; ou seja <span class="math inline">\(Q(v)=B(v,v)\)</span>. Afirmamos que existe <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\(Q(v)\neq 0\)</span>. Caso contrário, escolha <span class="math inline">\(u,v\in V\)</span> tal que <span class="math inline">\(B(u,v)=1\)</span> (eles existem) e obtenha pelo item 4. do <a href="sesqui.html#lem-quadratic-form" class="quarto-xref">Lema&nbsp;<span>74.4</span></a> que <span class="math display">\[
 0=B(u,v)+B(v,u)=B(u,v)+B(u,v)^\sigma=1+1^\sigma.
-\]</span> Ou seja, <span class="math inline">\(1^\sigma=-1\)</span>. Mas se <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, isso é impossível, pois <span class="math inline">\(1^\sigma=1\)</span> para todo automorfismo de <span class="math inline">\(\F\)</span>. Logo existe vetor <span class="math inline">\(b_1\in V\)</span> tal que <span class="math inline">\(Q(b_1)=B(b_1,b_1)\neq 0\)</span>. Seja <span class="math inline">\(U=\langle b_1\rangle\)</span> e considere <span class="math inline">\(U^\perp\)</span>. Temos que <span class="math inline">\(\dim U^\perp=\dim V-1\)</span> (<span class="math inline">\(B\)</span> é não degenerada). Além disso, <span class="math inline">\(U\cap U^\perp=0\)</span>, pois se <span class="math inline">\(w\in U\cap U^\perp\)</span>, então <span class="math inline">\(u=\alpha b_1\)</span> com algum <span class="math inline">\(\alpa\in\F\)</span> e <span class="math inline">\(0=B(\alpha b_1,b_1)=\alpha Q(b_1)\)</span> que implica que <span class="math inline">\(\alpha=0\)</span> e portanto <span class="math inline">\(w=\alpha b_1=0\)</span>. Isso implica que <span class="math inline">\(V=U\oplus U^\perp\)</span>. A restrição de <span class="math inline">\(B\)</span> para <span class="math inline">\(U^\perp\)</span> é não degenerada, pois se <span class="math inline">\(w\)</span> está no radical da restrição de <span class="math inline">\(B\)</span> para <span class="math inline">\(U^\perp\)</span>, então <span class="math inline">\(w\in U^\perp\)</span> e <span class="math inline">\(w\in (U^\perp)^\perp=U\)</span> e assim <span class="math inline">\(w=0\)</span>. Pela hipótese da indução <span class="math inline">\(U^\perp\)</span> possui uma base <span class="math inline">\(\{b_2,\ldots,b_n\}\)</span> ortogonal. Ora <span class="math inline">\(\{b_1,\ldots,b_n\}\)</span> é base ortogonal de <span class="math inline">\(V\)</span>.</p>
+\]</span> Ou seja, <span class="math inline">\(1^\sigma=-1\)</span>. Mas se <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span>, isso é impossível, pois <span class="math inline">\(1^\sigma=1\)</span> para todo automorfismo de <span class="math inline">\(\F\)</span>. Logo existe vetor <span class="math inline">\(b_1\in V\)</span> tal que <span class="math inline">\(Q(b_1)=B(b_1,b_1)\neq 0\)</span>. Seja <span class="math inline">\(U=\langle b_1\rangle\)</span> e considere <span class="math inline">\(U^\perp\)</span>. Temos que <span class="math inline">\(\dim U^\perp=\dim V-1\)</span> (<span class="math inline">\(B\)</span> é não degenerada). Além disso, <span class="math inline">\(U\cap U^\perp=0\)</span>, pois se <span class="math inline">\(w\in U\cap U^\perp\)</span>, então <span class="math inline">\(u=\alpha b_1\)</span> com algum <span class="math inline">\(\alpha\in\F\)</span> e <span class="math inline">\(0=B(\alpha b_1,b_1)=\alpha Q(b_1)\)</span> que implica que <span class="math inline">\(\alpha=0\)</span> e portanto <span class="math inline">\(w=\alpha b_1=0\)</span>. Isso implica que <span class="math inline">\(V=U\oplus U^\perp\)</span>. A restrição de <span class="math inline">\(B\)</span> para <span class="math inline">\(U^\perp\)</span> é não degenerada, pois se <span class="math inline">\(w\)</span> está no radical da restrição de <span class="math inline">\(B\)</span> para <span class="math inline">\(U^\perp\)</span>, então <span class="math inline">\(w\in U^\perp\)</span> e <span class="math inline">\(w\in (U^\perp)^\perp=U\)</span> e assim <span class="math inline">\(w=0\)</span>. Pela hipótese da indução <span class="math inline">\(U^\perp\)</span> possui uma base <span class="math inline">\(\{b_2,\ldots,b_n\}\)</span> ortogonal. Ora <span class="math inline">\(\{b_1,\ldots,b_n\}\)</span> é base ortogonal de <span class="math inline">\(V\)</span>.</p>
 </div>
 </section>
 <section id="o-teorema-de-inêrcia-de-sylvester" class="level2" data-number="75.3">
@@ -1443,15 +1443,15 @@ v=\sum_{b\in X} \frac{B(v,b)}{B(b,b)}b
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(\{b_1,\ldots,b_n\}\)</span> é base ortogonal de <span class="math inline">\(V\)</span> e seja <span class="math inline">\(\alpha_i=B(b_i,b_i)\neq 0\)</span>.</p>
 <ol type="1">
 <li><p>Se <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(B\)</span> é simétrica, então podemos substituir <span class="math inline">\(b_i\)</span> por <span class="math inline">\(b_i'=(\alpha_i)^{1/2} b_i\)</span> e <span class="math inline">\(\{b_1',\ldots,b_n'\}\)</span> é base ortonormal.</p></li>
-<li><p>Ponha <span class="math inline">\(b_i'=|\alpha_i|^{1/2}b_i\)</span>. Ora <span class="math inline">\(\{b_1',\ldots,b_n'\}\)</span> é base com <span class="math inline">\(B(b_i',b_i')=\pm 1\)</span>.</p></li>
-</ol>
+<li><p>Ponha <span class="math inline">\(b_i'=|\alpha_i|^{1/2}b_i\)</span>. Ora <span class="math inline">\(\{b_1',\ldots,b_n'\}\)</span> é base com <span class="math inline">\(B(b_i',b_i')=\pm 1\)</span>.</p>
 <p>Assuma agora que <span class="math inline">\(X=\{b_1,\ldots,b_k,b_{k+1},\ldots,b_n\}\)</span> é base de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(Q(b_i)=-1\)</span> para <span class="math inline">\(i\in\{1,\ldots,k\}\)</span> e <span class="math inline">\(Q(b_i)=1\)</span> para os demais <span class="math inline">\(i\)</span>. Seja <span class="math inline">\(Y=\{c_1,\ldots,c_m,c_{m+1},\ldots,c_n\}\)</span> uma outra base com <span class="math inline">\(Q(c_j)=-1\)</span> para <span class="math inline">\(j\in\{1,\ldots,m\}\)</span> e <span class="math inline">\(Q(c_j)=1\)</span> para os demais <span class="math inline">\(j\)</span>. Assuma que <span class="math inline">\(k\geq m\)</span>. Afirmamos que <span class="math display">\[
 b_1,\ldots,b_k,c_{m+1},\ldots,c_n
 \]</span> é um sistema L.I. Assuma que <span class="math display">\[
 \alpha_1b_1+\cdots +\alpha_kb_k+\alpha_{m+1}c_{m+1}+\cdots+\alpha_nc_n=0.
 \]</span> Logo <span class="math display">\[
 \alpha_1b_1+\cdots+ \alpha_kb_k=-\alpha_{m+1}c_{m+1}-\cdots-\alpha_nc_n.
-\]</span> Aplicando <span class="math inline">\(Q\)</span> nos vetores <span class="math inline">\(v\)</span> e <span class="math inline">\(w\)</span> nos dois lados da equação acima, obtemos que <span class="math inline">\(Q(v) \leq 0\)</span>, enquanto <span class="math inline">\(Q(w) \geq 0\)</span>. Portanto <span class="math inline">\(Q(v)=Q(w)=0\)</span> e <span class="math inline">\(\alpha_i=0\)</span> para todo <span class="math inline">\(i\)</span>. Isso implica que <span class="math inline">\(k+n-m\leq n\)</span>; ou seja, <span class="math inline">\(k\leq m\)</span>; ou seja <span class="math inline">\(k=m\)</span>.</p>
+\]</span> Aplicando <span class="math inline">\(Q\)</span> nos vetores <span class="math inline">\(v\)</span> e <span class="math inline">\(w\)</span> nos dois lados da equação acima, obtemos que <span class="math inline">\(Q(v) \leq 0\)</span>, enquanto <span class="math inline">\(Q(w) \geq 0\)</span>. Portanto <span class="math inline">\(Q(v)=Q(w)=0\)</span> e <span class="math inline">\(\alpha_i=0\)</span> para todo <span class="math inline">\(i\)</span>. Isso implica que <span class="math inline">\(k+n-m\leq n\)</span>; ou seja, <span class="math inline">\(k\leq m\)</span>; ou seja <span class="math inline">\(k=m\)</span>.</p></li>
+</ol>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 75.3</strong></span> O par <span class="math inline">\((p,n-p)\)</span> no resultado anterior é chamado <strong>assinatura</strong> de <span class="math inline">\(B\)</span>. A assinatura está bem definida nas situações do item 2. no corolário anterior.</p>
@@ -1472,28 +1472,50 @@ B_0(v,w)=v_1w_1+\cdots+v_nw_n.
 \]</span> para <span class="math inline">\(v=(v_1,\ldots,v_n)\)</span> e <span class="math inline">\(w=(w_1,\ldots,w_n)\)</span>.</li>
 </ol>
 </div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 75.2</strong></span> Considere o espaço de Minkowski <span class="math inline">\(\R^{1+3}\)</span>, que é o espaço <span class="math inline">\(\R^4\)</span> com a forma bilinear simétrica <span class="math inline">\(B\)</span> definida por <span class="math display">\[
+B(v,w) = v_tw_t - v_xw_x - v_yw_y - v_zw_z,
+\]</span> onde <span class="math inline">\(v = (v_t, v_x, v_y, v_z)\)</span> e <span class="math inline">\(w = (w_t, w_x, w_y, w_z)\)</span>. A forma quadrática assiciada com esta forma é <span class="math display">\[
+Q(v)=v_0^2-v_x^2-v_y^2-v_z^2.
+\]</span> Nota que a matriz desta forma na base canômica é <span class="math display">\[
+\begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\
+                0 &amp; -1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; -1 &amp; 0 \\
+                0 &amp; 0 &amp; 0 &amp; -1
+\end{pmatrix}.
+\]</span></p>
+<p>Geometricamente, o espaço de Minkowski é usado na relatividade especial para descrever o espaço-tempo. Os vetores podem ser classificados em três tipos:</p>
+<ol type="1">
+<li><strong>Vetores tipo-tempo</strong>: Vetores <span class="math inline">\(v\)</span> tais que <span class="math inline">\(Q(v) &gt; 0\)</span>. Esses vetores representam eventos que podem ser observados por um observador que encontra-se na origem (por exemplo, a trajetória de uma partícula com massa positiva).</li>
+<li><strong>Vetores tipo-luz</strong>: Vetores <span class="math inline">\(v\)</span> tais que <span class="math inline">\(Q(v) = 0\)</span>. Esses vetores representam trajetórias de partículas sem massa, como fótons.</li>
+<li><strong>Vetores tipo-espaço</strong>: Vetores <span class="math inline">\(v\)</span> tais que <span class="math inline">\(Q(v) &lt; 0\)</span>. Esses vetores representam eventos que não podem ser observados por um observador na origem.</li>
+</ol>
+<p>Por exemplo, considere os vetores <span class="math inline">\(v = (1, 0, 0, 0)\)</span> e <span class="math inline">\(w = (0, 1, 0, 0)\)</span>. Temos: <span class="math display">\[
+B(v,v) = 1, \quad B(w,w) = -1, \quad B(v,w) = 0.
+\]</span> Isso mostra que <span class="math inline">\(v\)</span> é tipo-tempo, <span class="math inline">\(w\)</span> é tipo-espaço, e eles são ortogonais em relação à forma <span class="math inline">\(B\)</span>.</p>
+</div>
 </section>
 <section id="formas-canônicas-de-matrizes-associadas-com-formas" class="level2" data-number="75.4">
 <h2 data-number="75.4" data-anchor-id="formas-canônicas-de-matrizes-associadas-com-formas"><span class="header-section-number">75.4</span> Formas canônicas de matrizes associadas com formas</h2>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolário 75.4</strong></span> Seja <span class="math inline">\(A\)</span> uma matiz com entradas em um corpo <span class="math inline">\(\F\)</span> de caraterística diferente de <span class="math inline">\(2\)</span>.</p>
+<p><span class="theorem-title"><strong>Corolário 75.4</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz quadrada <span class="math inline">\(n\times n\)</span> com entradas em um corpo <span class="math inline">\(\F\)</span> de caraterística diferente de <span class="math inline">\(2\)</span>.</p>
 <ol type="1">
 <li>Se <span class="math inline">\(A\)</span> é simétrica, então existe uma matriz <span class="math inline">\(X\)</span> com entradas em <span class="math inline">\(\F\)</span> tal que <span class="math display">\[
-XAX^t
+X^tAX
 \]</span> é diagonal.</li>
-<li>Se <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(A^t=\overline A\)</span> (conjugada complexa de <span class="math inline">\(A\)</span>), então existe <span class="math inline">\(X\)</span> com entradas em <span class="math inline">\(\C\)</span> tal que <span class="math display">\[
-XA\overline X^t=I_{\pm 1,0}
+<li>Se <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(A^*=A^{t\sigma}=\overline A\)</span> (conjugada complexa de <span class="math inline">\(A\)</span>), então existe <span class="math inline">\(X\)</span> com entradas em <span class="math inline">\(\C\)</span> tal que <span class="math display">\[
+X^{t\sigma}A\overline X=I_{\pm 1,0}
 \]</span> onde <span class="math inline">\(I_{\pm 1,0}\)</span> é uma matriz diagonal com entradas <span class="math inline">\(-1,\ldots,-1,1,\ldots,1,0,\ldots,0\)</span> na diagonal.</li>
 <li>Se <span class="math inline">\(\F=\C\)</span> e <span class="math inline">\(A\)</span> é simétrica, então existe <span class="math inline">\(X\)</span> com entradas em <span class="math inline">\(\C\)</span> tal que <span class="math display">\[
-XA X^t=I_0
+X^tA X=I_0
 \]</span> onde <span class="math inline">\(I_0\)</span> é matriz diagonal com entradas <span class="math inline">\(1,\ldots,1,0,\ldots,0\)</span> na diagonal principal.</li>
 <li>Se <span class="math inline">\(\F=\R\)</span> e <span class="math inline">\(A\)</span> é simétrica, então existe <span class="math inline">\(X\)</span> com entradas em <span class="math inline">\(\R\)</span> tal que <span class="math display">\[
-XAX^t=I_{\pm 1,0}
+X^tAX=I_{\pm 1,0}
 \]</span> onde <span class="math inline">\(I_{\pm 1,0}\)</span> é uma matriz diagonal com entradas <span class="math inline">\(-1,\ldots,-1,1,\ldots,1,0,\ldots,0\)</span> na diagonal.</li>
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Em todos os casos considere a forma <span class="math inline">\(B_A\)</span> com matriz <span class="math inline">\(A\)</span> em uma base. Diagonalize a forma e aplique a formula para mudança de base na página anterior.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Em todos os casos considere a forma <span class="math inline">\(B_A\)</span> com matriz <span class="math inline">\(A\)</span> em uma base. Diagonalize a forma e aplique a formula para mudança de base no <a href="sesqui.html#lem-basechange-sesqui" class="quarto-xref">Lema&nbsp;<span>74.3</span></a>.</p>
 </div>
 
 
