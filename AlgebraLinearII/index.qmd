@@ -62,5 +62,5 @@ Material disponibilizado sob a licença
 - [Operadores normais](normais.qmd)
 - [Transformações ortogonais de ℝ<sup>n</sup>](ortogonais.qmd)
 - [SO<sub>2</sub> e SO<sub>3</sub>](so_2_so_3.qmd)
-- O produto tensorial
+- [Exercícios para o Bloco 3](ex3.qmd)
 

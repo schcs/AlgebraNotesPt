@@ -101,6 +101,7 @@ book:
         - AlgebraLinearII/normais.qmd
         - AlgebraLinearII/ortogonais.qmd
         - AlgebraLinearII/so_2_so_3.qmd
+        - AlgebraLinearII/ex3.qmd
     - part:  GruposECorpos/index.qmd
       chapters:
         - GruposECorpos/definitions.qmd

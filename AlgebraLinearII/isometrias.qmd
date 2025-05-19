@@ -191,7 +191,7 @@ $$
 X^tAX
 $$
 é diagonal.
-2. Se $\F=\C$ e $A^*=A^{t\sigma}=\overline A$ (conjugada complexa de $A$), então existe $X$ com entradas em $\C$ tal que
+2. Se $\F=\C$ e $A^*=A^{t\sigma}= A$, então existe $X$ com entradas em $\C$ tal que
 $$
 X^{t\sigma}A\overline X=I_{\pm 1,0}
 $$
