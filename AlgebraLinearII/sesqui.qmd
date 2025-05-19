@@ -126,7 +126,7 @@ $$
 :::
 
 
-:::{#lem-}
+:::{#lem-basechange-sesqui}
 Assuma que $V$ tem dimensão finita e sejam $X$ e $Y$ bases de $V$. Então
 $$
 G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
