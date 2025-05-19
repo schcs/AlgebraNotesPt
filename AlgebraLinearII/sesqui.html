@@ -1519,6 +1519,9 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 74.4</strong></span> Demonstre que se <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim \mbox{Rad}_L=\dim \mbox{Rad}_R\)</span>. (Dica: Use o Lema anterior para obter sistemas de equações lineares para caraterizar <span class="math inline">\(\mbox{Rad}_L\)</span> e <span class="math inline">\(\mbox{Rad}_R\)</span> e mostre que os espaços de soluções têm a mesma dimensão.)</p>
 </div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 74.5</strong></span> Seja <span class="math inline">\(B\)</span> uma forma sesquilinear reflexiva sobre um espaço <span class="math inline">\(V\)</span> de dimensão finita. Assuma que <span class="math inline">\(G\)</span> é a matriz da forma em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)\)</span>. Em particular, <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
+</div>
 </section>
 <section id="formas-reflexivas-e-o-teorema-de-birkhoff-von-neumann" class="level2" data-number="74.5">
 <h2 data-number="74.5" data-anchor-id="formas-reflexivas-e-o-teorema-de-birkhoff-von-neumann"><span class="header-section-number">74.5</span> Formas reflexivas e o Teorema de Birkhoff-von Neumann</h2>
@@ -1546,7 +1549,7 @@ G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma
 <section id="formas-quadráticas" class="level2" data-number="74.6">
 <h2 data-number="74.6" data-anchor-id="formas-quadráticas"><span class="header-section-number">74.6</span> Formas quadráticas</h2>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 74.5</strong></span> Seja <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Denote por <span class="math inline">\(\mbox{Fix}(\F)=\{a\in\F\mid a^\sigma=a\}\)</span>. Mostre que <span class="math inline">\(\mbox{Fix}(\sigma)\)</span> é um corpo.</p>
+<p><span class="theorem-title"><strong>Exercício 74.6</strong></span> Seja <span class="math inline">\(\sigma:\F\to\F\)</span> um automorfismo. Denote por <span class="math inline">\(\mbox{Fix}(\F)=\{a\in\F\mid a^\sigma=a\}\)</span>. Mostre que <span class="math inline">\(\mbox{Fix}(\sigma)\)</span> é um corpo.</p>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 74.9</strong></span> Seja <span class="math inline">\(B:V\times V\to \F\)</span> uma forma <span class="math inline">\(\sigma\)</span>-Hermitiana (incluindo formas simétricas). Defina <span class="math inline">\(Q:V\to \F\)</span> como <span class="math inline">\(Q(v)=B(v,v)\)</span>. Então <span class="math inline">\(Q\)</span> é chamada de <strong>forma quadrática</strong> associada com <span class="math inline">\(B\)</span>.</p>
@@ -1576,10 +1579,7 @@ B(u,v)=\frac 12(Q(u+v)-Q(u)-Q(v))
 <p><span class="theorem-title"><strong>Exemplo 74.3</strong></span> Se <span class="math inline">\(V=\R^n\)</span> ou <span class="math inline">\(\C^n\)</span> e <span class="math inline">\(B\)</span> é o produto interno usual, então <span class="math inline">\(0\)</span> é o único vetor isotrôpico.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 74.6</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão maior ou igual a <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\C\)</span> e seja <span class="math inline">\(B\)</span> uma forma simétrica em <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(V\)</span> possui um vetor não nulo isotrópico. Este exercício mostra que é mesmo necessário usar o conjugado complexo na segunda variável na definição do produto interno para <span class="math inline">\(\C\)</span>-espaços. Usando formas simétricas, não é possível obter um produto interno que resulta em uma métrica.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 74.7</strong></span> Seja <span class="math inline">\(B\)</span> uma forma sesquilinear reflexiva sobre um espaço <span class="math inline">\(V\)</span> de dimensão finita. Assuma que <span class="math inline">\(G\)</span> é a matriz da forma em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)\)</span>. Em particular, <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
+<p><span class="theorem-title"><strong>Exercício 74.7</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão maior ou igual a <span class="math inline">\(2\)</span> sobre <span class="math inline">\(\C\)</span> e seja <span class="math inline">\(B\)</span> uma forma simétrica em <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(V\)</span> possui um vetor não nulo isotrópico. Este exercício mostra que é mesmo necessário usar o conjugado complexo na segunda variável na definição do produto interno para <span class="math inline">\(\C\)</span>-espaços. Usando formas simétricas, não é possível obter um produto interno que resulta em uma métrica.</p>
 </div>
 </section>
 <section id="espaços-e-complementos-ortogonais" class="level2" data-number="74.7">
