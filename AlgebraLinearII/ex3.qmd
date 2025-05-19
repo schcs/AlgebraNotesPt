@@ -1,0 +1,95 @@
+---
+title: "Exercícios: Bloco 3"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#exr-}
+Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que 
+
+1. $0^\sigma=0$;
+2. $1^\sigma=1$;
+3. $(-a)^\sigma=-(a^\sigma)$ para todo $a\in\F$;
+4. $(b^{-1})^\sigma=(b^\sigma)^{-1}$ para todo $b\in\F\setminus\{0\}$.
+:::
+
+:::{#exr-}
+Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
+:::
+
+:::{#exr-}
+Seja $\sigma$ um automorfismo de $\R$. Mostre que 
+
+1. $x^\sigma\geq 0$  para $x\geq 0$;
+2. $\sigma$ é crescente;
+3. $\sigma$ é contínua;
+4. $\Q\subseteq\mbox{Fix}(\sigma)$;
+5. usando que $\Q$ é denso em $\R$, deduza que $\sigma=\mbox{id}_\R$.
+:::
+
+:::{#exr-}
+Seja $\sigma$ um automorfismo contínuo de $\C$. Mostre que
+
+1. $\R\subseteq \mbox{Fix}(\sigma)$;
+2. $\sigma=\mbox{id}_\C$ ou $\sigma$ é o conjugado complexo.
+
+[Obs: $\C$ tem automorfismos que não são contínuos; veja a [discussão no StackExchange](https://math.stackexchange.com/q/412010).
+:::
+
+:::{#exr-}
+Seja $V$ um $\F$-espaço e denote por 
+$\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre $V$. 
+
+1. Demonstre que $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ são espaços vetoriais com a soma e múltiplo escalar óbvia entre formas.
+2. Mostre que $\mbox{Bil}(V)\cong (V\otimes V)^*$.
+3. Seja $\Lambda^2V$ a potência exterior definida no @exr-alt-pow. Mostre que $\mbox{Bil}_A(V)\cong \Lambda^2(V)^*$.
+4. Estude a definição de $\Lambda^2(V)$ no @exr-alt-pow, e dê uma construção de um espaço vetorial $S^2(V)$ que satisfaz a mesma propriedade universal que $\Lambda^2(V)$, mas com funções f:V\times V\to Z$ bilinear *simétrica* (em vez de alternada). Mostre que $\mbox{Bil}_S(V)\cong S^2(V)^*$.
+5. Determine $\dim \mbox{Bil}(V)$, $\dim \mbox{Bil}_S(V)$, $\dim\mbox{Bil}_A(V)$. 
+:::
+
+:::{#exr-}
+Seja $B$ uma forma $\sigma$-sesquilinear sobre um espaço $V$ de dimensão finita. Mostre que os radicals laterais 
+$\mbox{Rad}_L(B)$ e $\mbox{Rad}_R(B)$ têm a mesma dimensão. 
+:::
+
+:::{#def-}
+Seja $\sigma$ um automorfismo de um corpo $\F$. 
+Uma aplicação $f:V\to W$ entre $\F$-espaços vetoriais é chamada $\sigma$-semilinear, se $f(u+v)=f(u)+f(v)$ e $f(\alpha u)=\alpha^\sigma f(u)$ para todo 
+$u,v\in V$ e $\alpha\in\F$.
+:::
+
+:::{#exr-}
+Seja $V$ um $\F$-espaço vetorial e $\sigma\in\mbox{Aut}(\F)$. Seja $\varphi: V\to V^*$ uma aplicação $\sigma$-semilinear e defina $B_\varphi:V\times V\to \F$ 
+como 
+$$
+    B_\varphi(u,v)=\varphi(v)(u).
+$$
+
+1. Mostre que $B_\varphi$ é $\sigma$-sesquilinear.
+2. Mostre que a aplicação $\varphi\mapsto B_\varphi$ é uma bijeção 
+    $$
+        \{\varphi: V\to V^*\mid \varphi\mbox{ é $\sigma$-semilinear}\}\to \{B: V\times V\to \F\mid B\mbox{ é $\sigma$-sesquilinear}\}.
+    $$
+3. Mostre que $\varphi$ é linear se e somente se $B_\varphi$ é bilinear.
+:::
+
+:::{#exr-}
+Seja $V$ um espaço de dimensão finita com forma $\sigma$-sesquilinear reflexiva $B$. Seja $G$ a matriz de $B$ 
+em uma base de $V$. Mostre que $\dim\mbox{Rad}(B)=\dim V-\mbox{posto}(G)$. Deduza que $B$ é não degenerada se e somente se $G$ é invertível.
+:::
+
+:::{#exr-}
+Denote por $H_2$ o espaço $\R^2$ com forma $B(e_1,e_1)=B(e_2,e_2)=0$ e $B(e_1,e_2)=B(e_2,e_1)=1$ na base canônica $\{e_1,e_2\}$ de $\R^2$. 
+
+1. Mostre que $H_2$ não é isométrico a $\R^2$ equipado com o produto interno usual. 
+2. Mostre que $H_2\perp H_2$ é isométrico a $\R^{2+2}$.
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial sobre $\Z_p$ de dimensão maior ou igual a $3$ com uma forma bilinear simétrica. 
+
+1. Mostre que $V$ possui vetor não nulo isotrópico. 
+2. Mostre que a afirmação no item anterior não é verdadeira se $\dim V=1$ ou $\dim V=2$. 
+:::
+
+
