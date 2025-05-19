@@ -130,9 +130,9 @@ O espaço $\R^{p+q}$ (também denotado por $\R^{p,q}$) é o espaço vetorial $\R
 
 
 :::{#exm-}
-Note que $\R^{0+q}$ é o espaço $\R^q$ com o produto interno usual em $\R^q$. O espaço $\R^{1+3}$ é o espaço de Lorentz usado na relatividade especial. Descrita na seguinte forma. 
+Note que $\R^{0+q}$ é o espaço $\R^q$ com o produto interno usual em $\R^q$. O espaço $\R^{1+3}$ é o espaço de Minkowski usado na relatividade especial. Descrita na seguinte forma. 
 
-Considere o espaço de Minkowski $\R^{1+3}$, que é o espaço $\R^4$ com a forma bilinear simétrica $B$ definida por
+O espaço de Minkowski $\R^{1+3}$ é o espaço $\R^4$ com a forma bilinear simétrica $B$ definida por
 $$
 B(v,w) = v_tw_t - v_xw_x - v_yw_y - v_zw_z,
 $$
