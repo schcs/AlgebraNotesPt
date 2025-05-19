@@ -33,7 +33,7 @@ Seja $V$ um espaço vetorial de dimensão finita com forma sesquilinear reflexiv
 
 
 :::{#def-}
-Seja $V$ um espaço com forma sesquilinear reflexiva $B$. Um sistema de vetores $X$ de $V$ é dito **ortogonal** se $B(b_i,b_j)=0$ (ou seja, $b_i\perp b_j$) para todo $b_i,b_j\in X$ distintos. O sistema $X$ é dito **ortonormal** se ele é ortogonal e $Q(b_i)=B(b_i,b_i)=1$ para todo $b_i\in X$.
+Seja $V$ um espaço com forma sesquilinear reflexiva $B$. Um sistema de vetores $X$ de $V$ é dito **ortogonal** se $B(b_i,b_j)=0$ (ou seja, $b_i\perp b_j$) para todo $b_i,b_j\in X$ distintos. Quando a forma é $\sigma$-hermitiana, o sistema $X$ é dito **ortonormal** se ele é ortogonal e $Q(b_i)=B(b_i,b_i)=1$ para todo $b_i\in X$.
 :::
 
 
@@ -50,7 +50,7 @@ $$
 :::
 
 
-:::{#thm-}
+:::{#thm-orth-basis}
 Seja $V$ um $\F$-espaço de dimensão finita sobre um corpo de caraterística diferente de $2$ e $B$ uma forma $\sigma$-Hermitiana (incluindo simétrica). Então $V$ possui uma base ortogonal.
 :::
 
@@ -88,7 +88,7 @@ Seja $\sigma\in\mbox{Aut}(\C)$ tal que $\sigma$ é contínuo. Mostre que $\sigma
 
 
 :::{#cor-}
-Assuma que $V$ e $B$ são como no resultado anterior e assuma que $B$ é não-degenerada.
+Assuma que $V$ e $B$ são como no @thm-orth-basis e assuma que $B$ é não-degenerada.
 
 1.  Se $\F=\C$ e $\sigma=\mbox{id}_\C$, então $V$ possui uma base ortonornal.
 2.  Se $\F=\R$ ou $\F=\C$ e $\sigma$ é o conjugado complexo, então $V$ possui uma base ortogonal $\{b_1,\ldots,b_n\}$ tal que $B(b_i,b_i)=\pm 1$. Além disso, o número $p$ de $b_i$ com $B(b_i,b_i)=-1$ é independente a base escolhida.
@@ -130,7 +130,38 @@ O espaço $\R^{p+q}$ (também denotado por $\R^{p,q}$) é o espaço vetorial $\R
 
 
 :::{#exm-}
-Note que $\R^{0+q}$ é o espaço $\R^q$ com o produto interno usual em $\R^q$. O espaço $\R^{1+3}$ é o espaço de Lorentz usado na relatividade especial.
+Note que $\R^{0+q}$ é o espaço $\R^q$ com o produto interno usual em $\R^q$. O espaço $\R^{1+3}$ é o espaço de Lorentz usado na relatividade especial. Descrita na seguinte forma. 
+
+Considere o espaço de Minkowski $\R^{1+3}$, que é o espaço $\R^4$ com a forma bilinear simétrica $B$ definida por
+$$
+B(v,w) = v_tw_t - v_xw_x - v_yw_y - v_zw_z,
+$$
+onde $v = (v_t, v_x, v_y, v_z)$ e $w = (w_t, w_x, w_y, w_z)$. A forma quadrática assiciada com esta forma é 
+$$
+Q(v)=v_t^2-v_x^2-v_y^2-v_z^2.
+$$
+Nota que a matriz desta forma na base canômica é 
+$$
+\begin{pmatrix} 1 & 0 & 0 & 0 \\
+                0 & -1 & 0 & 0 \\
+                0 & 0 & -1 & 0 \\
+                0 & 0 & 0 & -1 
+\end{pmatrix}.
+$$
+
+Geometricamente, o espaço de Minkowski é usado na relatividade especial para descrever o espaço-tempo. Os vetores podem ser classificados em três tipos:
+
+1. **Vetores tipo-tempo**: Vetores $v$ tais que $Q(v) > 0$. Esses vetores representam eventos que podem ser acessos por um observador que encontra-se 
+   na origem (por exemplo, a trajetória de uma partícula com massa positiva).
+2. **Vetores tipo-luz**: Vetores $v$ tais que $Q(v) = 0$. Esses vetores representam trajetórias de partículas sem massa, como fótons.
+3. **Vetores tipo-espaço**: Vetores $v$ tais que $Q(v) < 0$. Esses vetores representam eventos que não podem ser acessos por um observador 
+   na origem.
+
+Por exemplo, considere os vetores $v = (1, 0, 0, 0)$ e $w = (0, 1, 0, 0)$. Temos:
+$$
+B(v,v) = 1, \quad B(w,w) = -1, \quad B(v,w) = 0.
+$$
+Isso mostra que $v$ é tipo-tempo, $w$ é tipo-espaço, e eles são ortogonais em relação à forma $B$.
 :::
 
 
@@ -146,38 +177,6 @@ $$
 para $v=(v_1,\ldots,v_n)$ e $w=(w_1,\ldots,w_n)$.
 :::
 
-:::{#exm-}
-Considere o espaço de Minkowski $\R^{1+3}$, que é o espaço $\R^4$ com a forma bilinear simétrica $B$ definida por
-$$
-B(v,w) = v_tw_t - v_xw_x - v_yw_y - v_zw_z,
-$$
-onde $v = (v_t, v_x, v_y, v_z)$ e $w = (w_t, w_x, w_y, w_z)$. A forma quadrática assiciada com esta forma é 
-$$
-Q(v)=v_0^2-v_x^2-v_y^2-v_z^2.
-$$
-Nota que a matriz desta forma na base canômica é 
-$$
-\begin{pmatrix} 1 & 0 & 0 & 0 \\
-                0 & -1 & 0 & 0 \\
-                0 & 0 & -1 & 0 \\
-                0 & 0 & 0 & -1 
-\end{pmatrix}.
-$$
-
-Geometricamente, o espaço de Minkowski é usado na relatividade especial para descrever o espaço-tempo. Os vetores podem ser classificados em três tipos:
-
-1. **Vetores tipo-tempo**: Vetores $v$ tais que $Q(v) > 0$. Esses vetores representam eventos que podem ser observados por um observador que encontra-se 
-   na origem (por exemplo, a trajetória de uma partícula com massa positiva).
-2. **Vetores tipo-luz**: Vetores $v$ tais que $Q(v) = 0$. Esses vetores representam trajetórias de partículas sem massa, como fótons.
-3. **Vetores tipo-espaço**: Vetores $v$ tais que $Q(v) < 0$. Esses vetores representam eventos que não podem ser observados por um observador 
-   na origem.
-
-Por exemplo, considere os vetores $v = (1, 0, 0, 0)$ e $w = (0, 1, 0, 0)$. Temos:
-$$
-B(v,v) = 1, \quad B(w,w) = -1, \quad B(v,w) = 0.
-$$
-Isso mostra que $v$ é tipo-tempo, $w$ é tipo-espaço, e eles são ortogonais em relação à forma $B$.
-:::
 
 
 ## Formas canônicas de matrizes associadas com formas 
@@ -193,7 +192,7 @@ $$
 é diagonal.
 2. Se $\F=\C$ e $A^*=A^{t\sigma}= A$, então existe $X$ com entradas em $\C$ tal que
 $$
-X^{t\sigma}A\overline X=I_{\pm 1,0}
+X^{t\sigma}A X=I_{\pm 1,0}
 $$
 onde $I_{\pm 1,0}$ é uma matriz diagonal com entradas $-1,\ldots,-1,1,\ldots,1,0,\ldots,0$ na diagonal.
 3. Se $\F=\C$ e $A$ é simétrica, então existe $X$ com entradas em $\C$ tal que
