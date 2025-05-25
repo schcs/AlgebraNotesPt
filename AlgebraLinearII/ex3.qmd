@@ -13,6 +13,12 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
 4. $(b^{-1})^\sigma=(b^\sigma)^{-1}$ para todo $b\in\F\setminus\{0\}$.
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+:::
+
+
 :::{#exr-}
 Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
 :::
