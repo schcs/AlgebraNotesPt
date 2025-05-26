@@ -1433,6 +1433,7 @@ Portanto, <span class="math inline">\((b^{-1})^\sigma\)</span> é o inverso mult
 (b^{-1})^\sigma = (b^\sigma)^{-1}.
 \]</span></p></li>
 </ol>
+<p>(Caio Monteiro)</p>
 </div>
 </div>
 </div>
@@ -1451,8 +1452,7 @@ Solução:
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<section id="caso-mathbbf-mathbbq" class="level3" data-number="81.0.1">
-<h3 data-number="81.0.1" data-anchor-id="caso-mathbbf-mathbbq"><span class="header-section-number">81.0.1</span> Caso <span class="math inline">\(\mathbb{F} = \mathbb{Q}\)</span></h3>
+<p>Caso <span class="math inline">\(\mathbb{F} = \mathbb{Q}\)</span></p>
 <p>Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\mathbb{Q}\)</span>. Então:</p>
 <ol type="1">
 <li><p>Para <span class="math inline">\(n \in \mathbb{Z}^+\)</span>, temos: <span class="math display">\[
@@ -1473,9 +1473,7 @@ n^\sigma = (-m)^\sigma = (-1)^\sigma m^\sigma = -m = n
 \]</span></p></li>
 </ol>
 <p>Portanto, <span class="math inline">\(\sigma\)</span> fixa todos os números racionais, ou seja, <span class="math inline">\(\sigma = \text{id}_{\mathbb{Q}}\)</span>.</p>
-</section>
-<section id="caso-mathbbf-mathbbz_p" class="level3" data-number="81.0.2">
-<h3 data-number="81.0.2" data-anchor-id="caso-mathbbf-mathbbz_p"><span class="header-section-number">81.0.2</span> Caso <span class="math inline">\(\mathbb{F} = \mathbb{Z}_p\)</span></h3>
+<p>Caso <span class="math inline">\(\mathbb{F} = \mathbb{Z}_p\)</span></p>
 <p>Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\mathbb{Z}_p\)</span>. Como <span class="math inline">\(\mathbb{Z}_p\)</span> tem <span class="math inline">\(p\)</span> elementos e <span class="math inline">\(\sigma\)</span> é bijetora:</p>
 <ol type="1">
 <li><p>Temos que <span class="math inline">\(0^\sigma = 0\)</span> e <span class="math inline">\(1^\sigma = 1\)</span> (pelo Exercício 81.1)</p></li>
@@ -1484,7 +1482,7 @@ k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{
 \]</span></p></li>
 </ol>
 <p>Portanto, <span class="math inline">\(\sigma = \text{id}_{\mathbb{Z}_p}\)</span>.</p>
-</section>
+<p>(Caio Monteiro)</p>
 </div>
 </div>
 </div>
@@ -1497,6 +1495,61 @@ k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{
 <li><span class="math inline">\(\Q\subseteq\mbox{Fix}(\sigma)\)</span>;</li>
 <li>usando que <span class="math inline">\(\Q\)</span> é denso em <span class="math inline">\(\R\)</span>, deduza que <span class="math inline">\(\sigma=\mbox{id}_\R\)</span>.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Mostrar que <span class="math inline">\(x^\sigma \geq 0\)</span> para <span class="math inline">\(x \geq 0\)</span></strong></p>
+<p>Se <span class="math inline">\(x \geq 0\)</span>, então existe <span class="math inline">\(y \in \mathbb{R}\)</span> tal que <span class="math inline">\(x = y^2\)</span>. Logo: <span class="math display">\[
+x^\sigma = (y^2)^\sigma = (y^\sigma)^2 \geq 0
+\]</span></p></li>
+<li><p><strong>Mostrar que <span class="math inline">\(\sigma\)</span> é crescente</strong></p>
+<p>Sejam <span class="math inline">\(a, b \in \mathbb{R}\)</span> com <span class="math inline">\(a &lt; b\)</span>. Então:</p>
+<ul>
+<li><span class="math inline">\(b - a &gt; 0\)</span></li>
+<li>Pelo item anterior, <span class="math inline">\((b - a)^\sigma \geq 0\)</span></li>
+<li>Mas <span class="math inline">\((b - a)^\sigma = b^\sigma - a^\sigma \geq 0\)</span> ⇒ <span class="math inline">\(b^\sigma \geq a^\sigma\)</span></li>
+</ul>
+<p>Além disso, se <span class="math inline">\(b^\sigma = a^\sigma\)</span>, como <span class="math inline">\(\sigma\)</span> é injetiva, teríamos <span class="math inline">\(b = a\)</span>, o que é uma contradição. Portanto, <span class="math inline">\(b^\sigma &gt; a^\sigma\)</span>.</p></li>
+<li><p><strong>Mostrar que <span class="math inline">\(\sigma\)</span> é contínua</strong></p>
+<ul>
+<li><span class="math inline">\(\sigma\)</span> é crescente (pelo item 2)</li>
+<li>Funções crescentes só podem ter descontinuidades do tipo salto</li>
+<li>Mas <span class="math inline">\(\sigma\)</span> é bijetiva, e descontinuidades do tipo salto violariam a sobrejetividade
+<ul>
+<li>(Imagine o gráfico com um salto: haveria valores no contradomínio que não seriam atingidos)</li>
+</ul></li>
+<li>Portanto, <span class="math inline">\(\sigma\)</span> não pode ter descontinuidades e é contínua</li>
+</ul></li>
+<li><p><strong>Mostrar que <span class="math inline">\(\mathbb{Q} \subseteq \text{Fix}(\sigma)\)</span></strong></p>
+<p>A demonstração é análoga ao caso <span class="math inline">\(\mathbb{Q}\)</span> no Exercício 81.2:</p>
+<ul>
+<li>Para qualquer <span class="math inline">\(q \in \mathbb{Q}\)</span>, temos <span class="math inline">\(q^\sigma = q\)</span></li>
+<li>Portanto, <span class="math inline">\(\mathbb{Q}\)</span> está contido no conjunto dos pontos fixos de <span class="math inline">\(\sigma\)</span></li>
+</ul></li>
+<li><p><strong>Concluir que <span class="math inline">\(\sigma = \text{id}_\mathbb{R}\)</span></strong></p>
+<p>Seja <span class="math inline">\(x \in \mathbb{R}\)</span> arbitrário:</p>
+<ul>
+<li>Como <span class="math inline">\(\mathbb{Q}\)</span> é denso em <span class="math inline">\(\mathbb{R}\)</span>, existe <span class="math inline">\((q_n) \subseteq \mathbb{Q}\)</span> com <span class="math inline">\(q_n \to x\)</span></li>
+<li>Pela continuidade de <span class="math inline">\(\sigma\)</span>: <span class="math display">\[
+x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+\]</span></li>
+<li>Logo, <span class="math inline">\(\sigma\)</span> fixa todos os reais e portanto <span class="math inline">\(\sigma = \text{id}_\mathbb{R}\)</span></li>
+</ul></li>
+</ol>
+<p>(Caio Monteiro)</p>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.4</strong></span> Seja <span class="math inline">\(\sigma\)</span> um automorfismo contínuo de <span class="math inline">\(\C\)</span>. Mostre que</p>
