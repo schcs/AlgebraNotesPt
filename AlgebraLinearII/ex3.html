@@ -1559,6 +1559,44 @@ x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n
 </ol>
 <p>[Obs: <span class="math inline">\(\C\)</span> tem automorfismos que não são contínuos; veja a <a href="https://math.stackexchange.com/q/412010">discussão no StackExchange</a>.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="mostrar-que-mathbbr-subseteq-textfixsigma" class="level3" data-number="81.0.1">
+<h3 data-number="81.0.1" data-anchor-id="mostrar-que-mathbbr-subseteq-textfixsigma"><span class="header-section-number">81.0.1</span> 1. Mostrar que <span class="math inline">\(\mathbb{R} \subseteq \text{Fix}(\sigma)\)</span></h3>
+<p>Seja <span class="math inline">\(x \in \mathbb{R}\)</span>. Como: - <span class="math inline">\(\sigma\)</span> é contínuo - <span class="math inline">\(\sigma\)</span> coincide com a identidade em <span class="math inline">\(\mathbb{Q}\)</span> (pelo Exercício 81.3) - <span class="math inline">\(\mathbb{Q}\)</span> é denso em <span class="math inline">\(\mathbb{R}\)</span></p>
+<p>Então, tomando <span class="math inline">\((q_n) \subseteq \mathbb{Q}\)</span> com <span class="math inline">\(q_n \to x\)</span>, temos: <span class="math display">\[
+x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+\]</span></p>
+<p>Portanto, <span class="math inline">\(\sigma\)</span> fixa todos os números reais.</p>
+</section>
+<section id="mostrar-que-sigma-textid_mathbbc-ou-sigma-é-o-conjugado-complexo" class="level3" data-number="81.0.2">
+<h3 data-number="81.0.2" data-anchor-id="mostrar-que-sigma-textid_mathbbc-ou-sigma-é-o-conjugado-complexo"><span class="header-section-number">81.0.2</span> 2. Mostrar que <span class="math inline">\(\sigma = \text{id}_{\mathbb{C}}\)</span> ou <span class="math inline">\(\sigma\)</span> é o conjugado complexo</h3>
+<p>Para qualquer <span class="math inline">\(z = a + bi \in \mathbb{C}\)</span> com <span class="math inline">\(a,b \in \mathbb{R}\)</span>: - Pelo item anterior, <span class="math inline">\(a^\sigma = a\)</span> e <span class="math inline">\(b^\sigma = b\)</span></p>
+<p>Para <span class="math inline">\(i\)</span>, temos: <span class="math display">\[
+(i^2)^\sigma = (-1)^\sigma = -1 = (i^\sigma)^2
+\]</span> Logo <span class="math inline">\(i^\sigma\)</span> deve satisfazer <span class="math inline">\(x^2 = -1\)</span>, portanto <span class="math inline">\(i^\sigma = i\)</span> ou <span class="math inline">\(i^\sigma = -i\)</span>.</p>
+<p><strong>Caso 1:</strong> Se <span class="math inline">\(i^\sigma = i\)</span> <span class="math display">\[
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a + bi = z
+\]</span> Portanto <span class="math inline">\(\sigma = \text{id}_{\mathbb{C}}\)</span>.</p>
+<p><strong>Caso 2:</strong> Se <span class="math inline">\(i^\sigma = -i\)</span> <span class="math display">\[
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z}
+\]</span> Portanto <span class="math inline">\(\sigma\)</span> é o conjugado complexo.</p>
+<p>Não existem outras possibilidades, pois as únicas raízes complexas de <span class="math inline">\(x^2 = -1\)</span> são <span class="math inline">\(i\)</span> e <span class="math inline">\(-i\)</span>.</p>
+<p>(Caio Monteiro)</p>
+</section>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.5</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço e denote por <span class="math inline">\(\mbox{Bil}(V)\)</span>, <span class="math inline">\(\mbox{Bil}_S(V)\)</span>, <span class="math inline">\(\mbox{Bil}_A(V)\)</span> os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre <span class="math inline">\(V\)</span>.</p>
 <ol type="1">
