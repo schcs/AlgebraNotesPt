@@ -60,6 +60,8 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
    (b^{-1})^\sigma = (b^\sigma)^{-1}.
    $$
 
+(Caio Monteiro)
+
 :::
 
 :::{#exr-}
@@ -117,6 +119,8 @@ Seja $\sigma$ um automorfismo de $\mathbb{Z}_p$. Como $\mathbb{Z}_p$ tem $p$ ele
 
 Portanto, $\sigma = \text{id}_{\mathbb{Z}_p}$.
 
+(Caio Monteiro)
+
 :::
 
 :::{#exr-}
@@ -172,7 +176,7 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
      $$
    - Logo, $\sigma$ fixa todos os reais e portanto $\sigma = \text{id}_\mathbb{R}$
 
-
+(Caio Monteiro)
 
 :::
 
