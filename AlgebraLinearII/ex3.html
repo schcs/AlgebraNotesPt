@@ -1439,6 +1439,55 @@ Portanto, <span class="math inline">\((b^{-1})^\sigma\)</span> é o inverso mult
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.2</strong></span> Seja <span class="math inline">\(\F=\Q\)</span> ou <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\)</span> primo. Mostre que o único automorfismo de <span class="math inline">\(\F\)</span> é <span class="math inline">\(\mbox{id}_\F\)</span>.</p>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="caso-mathbbf-mathbbq" class="level3" data-number="81.0.1">
+<h3 data-number="81.0.1" data-anchor-id="caso-mathbbf-mathbbq"><span class="header-section-number">81.0.1</span> Caso <span class="math inline">\(\mathbb{F} = \mathbb{Q}\)</span></h3>
+<p>Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\mathbb{Q}\)</span>. Então:</p>
+<ol type="1">
+<li><p>Para <span class="math inline">\(n \in \mathbb{Z}^+\)</span>, temos: <span class="math display">\[
+n^\sigma = (\underbrace{1 + \cdots + 1}_{n \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{n \text{ vezes}} = n
+\]</span></p></li>
+<li><p>Para <span class="math inline">\(-1\)</span> observamos que: <span class="math display">\[
+1 = 1^\sigma = (-1)^\sigma (-1)^\sigma
+\]</span> Logo <span class="math inline">\(((-1)^\sigma)^2 -1 = 0\)</span>. A equação <span class="math inline">\(x^2 - 1\)</span> só possui duas raízes sobre <span class="math inline">\(\mathbb{Q}\)</span>, nomeadamente <span class="math inline">\(1\)</span> e <span class="math inline">\(-1\)</span>. Como já sabemos que <span class="math inline">\(1^\sigma = 1\)</span>, isso implica que <span class="math inline">\((-1)^\sigma = -1\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(n \in \mathbb{Z}^-\)</span>, <span class="math inline">\(n = -m\)</span> com <span class="math inline">\(m \in \mathbb{Z}^+\)</span>, então: <span class="math display">\[
+n^\sigma = (-m)^\sigma = (-1)^\sigma m^\sigma = -m = n
+\]</span></p>
+<p>Logo <span class="math inline">\(\sigma\)</span> fixa todos os números inteiros.</p></li>
+<li><p>Seja <span class="math inline">\(b\)</span> um número inteiro não nulo e <span class="math inline">\(b^{-1}\)</span> seu inverso em <span class="math inline">\(\mathbb{Q}\)</span>. Pelo exercício anterior: <span class="math display">\[
+(b^{-1})^\sigma = (b^\sigma)^{-1} = b^{-1}
+\]</span> onde a última igualdade vem das nossas considerações anteriores.</p></li>
+<li><p>Para qualquer <span class="math inline">\(ab^{-1} \in \mathbb{Q}\)</span>: <span class="math display">\[
+(ab^{-1})^{\sigma} = a^\sigma (b^{-1})^\sigma = ab^{-1}
+\]</span></p></li>
+</ol>
+<p>Portanto, <span class="math inline">\(\sigma\)</span> fixa todos os números racionais, ou seja, <span class="math inline">\(\sigma = \text{id}_{\mathbb{Q}}\)</span>.</p>
+</section>
+<section id="caso-mathbbf-mathbbz_p" class="level3" data-number="81.0.2">
+<h3 data-number="81.0.2" data-anchor-id="caso-mathbbf-mathbbz_p"><span class="header-section-number">81.0.2</span> Caso <span class="math inline">\(\mathbb{F} = \mathbb{Z}_p\)</span></h3>
+<p>Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\mathbb{Z}_p\)</span>. Como <span class="math inline">\(\mathbb{Z}_p\)</span> tem <span class="math inline">\(p\)</span> elementos e <span class="math inline">\(\sigma\)</span> é bijetora:</p>
+<ol type="1">
+<li><p>Temos que <span class="math inline">\(0^\sigma = 0\)</span> e <span class="math inline">\(1^\sigma = 1\)</span> (pelo Exercício 81.1)</p></li>
+<li><p>Para <span class="math inline">\(k \in \mathbb{Z}_p\)</span>, <span class="math inline">\(k\)</span> é igual à soma de <span class="math inline">\(1\)</span> uma quantidade <span class="math inline">\(k\)</span> de vezes: <span class="math display">\[
+k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{k \text{ vezes}} = k
+\]</span></p></li>
+</ol>
+<p>Portanto, <span class="math inline">\(\sigma = \text{id}_{\mathbb{Z}_p}\)</span>.</p>
+</section>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.3</strong></span> Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\R\)</span>. Mostre que</p>
 <ol type="1">
