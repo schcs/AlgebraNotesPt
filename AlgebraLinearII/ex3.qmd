@@ -17,7 +17,49 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
 ### Solução:
 
 :::
+1. **Mostrar que $0^\sigma = 0$:**  
 
+   Como $\sigma$ é um automorfismo, temos:  
+   $$
+   0^\sigma = (0 + 0)^\sigma = 0^\sigma + 0^\sigma.
+   $$  
+   Subtraindo $0^\sigma$ de ambos os lados, obtemos:  
+   $$
+   0 = 0^\sigma.
+   $$
+
+2. **Mostrar que $1^\sigma = 1$:**  
+
+   Como $\sigma$ é um automorfismo, temos:  
+   $$
+   1^\sigma = (1 \cdot 1)^\sigma = 1^\sigma \cdot 1^\sigma.
+   $$  
+   Como $1^\sigma \neq 0$ (pois $\sigma$ é injetivo pela nossa conta anterior), podemos multiplicar ambos os lados por $(1^\sigma)^{-1}$:  
+   $$
+   1 = 1^\sigma.
+   $$
+
+3. **Mostrar que $(-a)^\sigma = -(a^\sigma)$ para todo $a \in \mathbb{F}$:**  
+
+   Sabemos que $a + (-a) = 0$. Aplicando $\sigma$ a ambos os lados:  
+   $$
+   a^\sigma + (-a)^\sigma = 0^\sigma = 0.
+   $$  
+   Portanto, $(-a)^\sigma$ é o inverso aditivo de $a^\sigma$, ou seja:  
+   $$
+   (-a)^\sigma = -(a^\sigma).
+   $$
+
+4. **Mostrar que $(b^{-1})^\sigma = (b^\sigma)^{-1}$ para todo $b \in \mathbb{F} \setminus \{0\}$:**  
+
+   Sabemos que $b \cdot b^{-1} = 1$. Aplicando $\sigma$ a ambos os lados:  
+   $$
+   b^\sigma \cdot (b^{-1})^\sigma = 1^\sigma = 1.
+   $$  
+   Portanto, $(b^{-1})^\sigma$ é o inverso multiplicativo de $b^\sigma$, ou seja:  
+   $$
+   (b^{-1})^\sigma = (b^\sigma)^{-1}.
+   $$
 
 :::{#exr-}
 Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
