@@ -189,6 +189,52 @@ Seja $\sigma$ um automorfismo contínuo de $\C$. Mostre que
 [Obs: $\C$ tem automorfismos que não são contínuos; veja a [discussão no StackExchange](https://math.stackexchange.com/q/412010).
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+### 1. Mostrar que $\mathbb{R} \subseteq \text{Fix}(\sigma)$
+
+Seja $x \in \mathbb{R}$. Como:
+- $\sigma$ é contínuo
+- $\sigma$ coincide com a identidade em $\mathbb{Q}$ (pelo Exercício 81.3)
+- $\mathbb{Q}$ é denso em $\mathbb{R}$
+
+Então, tomando $(q_n) \subseteq \mathbb{Q}$ com $q_n \to x$, temos:
+$$
+x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+$$
+
+Portanto, $\sigma$ fixa todos os números reais.
+
+### 2. Mostrar que $\sigma = \text{id}_{\mathbb{C}}$ ou $\sigma$ é o conjugado complexo
+
+Para qualquer $z = a + bi \in \mathbb{C}$ com $a,b \in \mathbb{R}$:
+- Pelo item anterior, $a^\sigma = a$ e $b^\sigma = b$
+
+Para $i$, temos:
+$$
+(i^2)^\sigma = (-1)^\sigma = -1 = (i^\sigma)^2
+$$
+Logo $i^\sigma$ deve satisfazer $x^2 = -1$, portanto $i^\sigma = i$ ou $i^\sigma = -i$.
+
+**Caso 1:** Se $i^\sigma = i$
+$$
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a + bi = z
+$$
+Portanto $\sigma = \text{id}_{\mathbb{C}}$.
+
+**Caso 2:** Se $i^\sigma = -i$
+$$
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z}
+$$
+Portanto $\sigma$ é o conjugado complexo.
+
+Não existem outras possibilidades, pois as únicas raízes complexas de $x^2 = -1$ são $i$ e $-i$.
+
+(Caio Monteiro)
+
+:::
+
 :::{#exr-}
 Seja $V$ um $\F$-espaço e denote por 
 $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre $V$. 
