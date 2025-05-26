@@ -66,6 +66,13 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
 Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+
+
+:::
+
 :::{#exr-}
 Seja $\sigma$ um automorfismo de $\R$. Mostre que 
 
