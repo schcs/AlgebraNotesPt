@@ -1,0 +1,294 @@
+---
+title: "Exercícios: Bloco 3"
+number-sections: true
+lang: pt-BR
+--- 
+
+:::{#exr-}
+Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que 
+
+1. $0^\sigma=0$;
+2. $1^\sigma=1$;
+3. $(-a)^\sigma=-(a^\sigma)$ para todo $a\in\F$;
+4. $(b^{-1})^\sigma=(b^\sigma)^{-1}$ para todo $b\in\F\setminus\{0\}$.
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Mostrar que $0^\sigma = 0$:**  
+
+   Como $\sigma$ é um automorfismo, temos:  
+   $$
+   0^\sigma = (0 + 0)^\sigma = 0^\sigma + 0^\sigma.
+   $$  
+   Subtraindo $0^\sigma$ de ambos os lados, obtemos:  
+   $$
+   0 = 0^\sigma.
+   $$
+
+2. **Mostrar que $1^\sigma = 1$:**  
+
+   Como $\sigma$ é um automorfismo, temos:  
+   $$
+   1^\sigma = (1 \cdot 1)^\sigma = 1^\sigma \cdot 1^\sigma.
+   $$  
+   Como $1^\sigma \neq 0$ (pois $\sigma$ é injetivo pela nossa conta anterior), podemos multiplicar ambos os lados por $(1^\sigma)^{-1}$:  
+   $$
+   1 = 1^\sigma.
+   $$
+
+3. **Mostrar que $(-a)^\sigma = -(a^\sigma)$ para todo $a \in \mathbb{F}$:**  
+
+   Sabemos que $a + (-a) = 0$. Aplicando $\sigma$ a ambos os lados:  
+   $$
+   a^\sigma + (-a)^\sigma = 0^\sigma = 0.
+   $$  
+   Portanto, $(-a)^\sigma$ é o inverso aditivo de $a^\sigma$, ou seja:  
+   $$
+   (-a)^\sigma = -(a^\sigma).
+   $$
+
+4. **Mostrar que $(b^{-1})^\sigma = (b^\sigma)^{-1}$ para todo $b \in \mathbb{F} \setminus \{0\}$:**  
+
+   Sabemos que $b \cdot b^{-1} = 1$. Aplicando $\sigma$ a ambos os lados:  
+   $$
+   b^\sigma \cdot (b^{-1})^\sigma = 1^\sigma = 1.
+   $$  
+   Portanto, $(b^{-1})^\sigma$ é o inverso multiplicativo de $b^\sigma$, ou seja:  
+   $$
+   (b^{-1})^\sigma = (b^\sigma)^{-1}.
+   $$
+
+(Caio Monteiro)
+
+:::
+
+:::{#exr-}
+Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+**Caso $\mathbb{F} = \mathbb{Q}$**
+
+Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
+
+1. Para $n \in \mathbb{Z}^+$, temos:
+   $$
+   n^\sigma = (\underbrace{1 + \cdots + 1}_{n \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{n \text{ vezes}} = n
+   $$
+
+2. Para $-1$ observamos que:
+   $$
+   1 = 1^\sigma = (-1)^\sigma (-1)^\sigma
+   $$
+   Logo $((-1)^\sigma)^2 -1 = 0$. A equação $x^2 - 1$ só possui duas raízes sobre $\mathbb{Q}$, nomeadamente $1$ e $-1$. Como já sabemos que $1^\sigma = 1$, isso implica que $(-1)^\sigma = -1$.
+
+3. Para $n \in \mathbb{Z}^-$, $n = -m$ com $m \in \mathbb{Z}^+$, então:
+   $$
+   n^\sigma = (-m)^\sigma = (-1)^\sigma m^\sigma = -m = n
+   $$
+
+   Logo $\sigma$ fixa todos os números inteiros.
+
+4. Seja $b$ um número inteiro não nulo e $b^{-1}$ seu inverso em $\mathbb{Q}$. Pelo exercício anterior:
+   $$
+   (b^{-1})^\sigma = (b^\sigma)^{-1} = b^{-1}
+   $$
+   onde a última igualdade vem das nossas considerações anteriores.
+
+5. Para qualquer $ab^{-1} \in \mathbb{Q}$:
+   $$
+   (ab^{-1})^{\sigma} = a^\sigma (b^{-1})^\sigma = ab^{-1}
+   $$
+
+Portanto, $\sigma$ fixa todos os números racionais, ou seja, $\sigma = \text{id}_{\mathbb{Q}}$.
+
+**Caso $\mathbb{F} = \mathbb{Z}_p$**
+
+Seja $\sigma$ um automorfismo de $\mathbb{Z}_p$. Como $\mathbb{Z}_p$ tem $p$ elementos e $\sigma$ é bijetora:
+
+1. Temos que $0^\sigma = 0$ e $1^\sigma = 1$ (pelo Exercício 81.1)
+
+2. Para $k \in \mathbb{Z}_p$, $k$ é igual à soma de $1$ uma quantidade $k$ de vezes:
+   $$
+   k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{k \text{ vezes}} = k
+   $$
+
+Portanto, $\sigma = \text{id}_{\mathbb{Z}_p}$.
+
+(Caio Monteiro)
+
+:::
+
+:::{#exr-}
+Seja $\sigma$ um automorfismo de $\R$. Mostre que 
+
+1. $x^\sigma\geq 0$  para $x\geq 0$;
+2. $\sigma$ é crescente;
+3. $\sigma$ é contínua;
+4. $\Q\subseteq\mbox{Fix}(\sigma)$;
+5. usando que $\Q$ é denso em $\R$, deduza que $\sigma=\mbox{id}_\R$.
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Mostrar que $x^\sigma \geq 0$ para $x \geq 0$**
+
+   Se $x \geq 0$, então existe $y \in \mathbb{R}$ tal que $x = y^2$. Logo:
+   $$
+   x^\sigma = (y^2)^\sigma = (y^\sigma)^2 \geq 0
+   $$
+
+2. **Mostrar que $\sigma$ é crescente**
+
+   Sejam $a, b \in \mathbb{R}$ com $a < b$. Então:
+   - $b - a > 0$
+   - Pelo item anterior, $(b - a)^\sigma \geq 0$
+   - Mas $(b - a)^\sigma = b^\sigma - a^\sigma \geq 0$ ⇒ $b^\sigma \geq a^\sigma$
+   
+   Além disso, se $b^\sigma = a^\sigma$, como $\sigma$ é injetiva, teríamos $b = a$, o que é uma contradição. Portanto, $b^\sigma > a^\sigma$.
+
+3. **Mostrar que $\sigma$ é contínua**
+
+   - $\sigma$ é crescente (pelo item 2)
+   - Funções crescentes só podem ter descontinuidades do tipo salto
+   - Mas $\sigma$ é bijetiva, e descontinuidades do tipo salto violariam a sobrejetividade
+     - (Imagine o gráfico com um salto: haveria valores no contradomínio que não seriam atingidos)
+   - Portanto, $\sigma$ não pode ter descontinuidades e é contínua
+
+4. **Mostrar que $\mathbb{Q} \subseteq \text{Fix}(\sigma)$**
+
+   A demonstração é análoga ao caso $\mathbb{Q}$ no Exercício 81.2:
+   - Para qualquer $q \in \mathbb{Q}$, temos $q^\sigma = q$
+   - Portanto, $\mathbb{Q}$ está contido no conjunto dos pontos fixos de $\sigma$
+
+5. **Concluir que $\sigma = \text{id}_\mathbb{R}$**
+
+   Seja $x \in \mathbb{R}$ arbitrário:
+   - Como $\mathbb{Q}$ é denso em $\mathbb{R}$, existe $(q_n) \subseteq \mathbb{Q}$ com $q_n \to x$
+   - Pela continuidade de $\sigma$:
+     $$
+     x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+     $$
+   - Logo, $\sigma$ fixa todos os reais e portanto $\sigma = \text{id}_\mathbb{R}$
+
+(Caio Monteiro)
+
+:::
+
+:::{#exr-}
+Seja $\sigma$ um automorfismo contínuo de $\C$. Mostre que
+
+1. $\R\subseteq \mbox{Fix}(\sigma)$;
+2. $\sigma=\mbox{id}_\C$ ou $\sigma$ é o conjugado complexo.
+
+[Obs: $\C$ tem automorfismos que não são contínuos; veja a [discussão no StackExchange](https://math.stackexchange.com/q/412010).
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+**1. Mostrar que $\mathbb{R} \subseteq \text{Fix}(\sigma)$**
+
+Seja $x \in \mathbb{R}$. Como:
+- $\sigma$ é contínuo
+- $\sigma$ coincide com a identidade em $\mathbb{Q}$ (pelo Exercício 81.3)
+- $\mathbb{Q}$ é denso em $\mathbb{R}$
+
+Então, tomando $(q_n) \subseteq \mathbb{Q}$ com $q_n \to x$, temos:
+$$
+x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+$$
+
+Portanto, $\sigma$ fixa todos os números reais.
+
+**2. Mostrar que $\sigma = \text{id}_{\mathbb{C}}$ ou $\sigma$ é o conjugado complexo**
+
+Para qualquer $z = a + bi \in \mathbb{C}$ com $a,b \in \mathbb{R}$:
+- Pelo item anterior, $a^\sigma = a$ e $b^\sigma = b$
+
+Para $i$, temos:
+$$
+(i^2)^\sigma = (-1)^\sigma = -1 = (i^\sigma)^2
+$$
+Logo $i^\sigma$ deve satisfazer $x^2 = -1$, portanto $i^\sigma = i$ ou $i^\sigma = -i$.
+
+**Caso 1:** Se $i^\sigma = i$
+$$
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a + bi = z
+$$
+Portanto $\sigma = \text{id}_{\mathbb{C}}$.
+
+**Caso 2:** Se $i^\sigma = -i$
+$$
+z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z}
+$$
+Portanto $\sigma$ é o conjugado complexo.
+
+Não existem outras possibilidades, pois as únicas raízes complexas de $x^2 = -1$ são $i$ e $-i$.
+
+(Caio Monteiro)
+
+:::
+
+:::{#exr-}
+Seja $V$ um $\F$-espaço e denote por 
+$\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre $V$. 
+
+1. Demonstre que $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ são espaços vetoriais com a soma e múltiplo escalar óbvia entre formas.
+2. Mostre que $\mbox{Bil}(V)\cong (V\otimes V)^*$.
+3. Seja $\Lambda^2V$ a potência exterior definida no @exr-alt-pow. Mostre que $\mbox{Bil}_A(V)\cong \Lambda^2(V)^*$.
+4. Estude a definição de $\Lambda^2(V)$ no @exr-alt-pow, e dê uma construção de um espaço vetorial $S^2(V)$ que satisfaz a mesma propriedade universal que $\Lambda^2(V)$, mas com funções f:V\times V\to Z$ bilinear *simétrica* (em vez de alternada). Mostre que $\mbox{Bil}_S(V)\cong S^2(V)^*$.
+5. Determine $\dim \mbox{Bil}(V)$, $\dim \mbox{Bil}_S(V)$, $\dim\mbox{Bil}_A(V)$. 
+:::
+
+:::{#exr-}
+Seja $B$ uma forma $\sigma$-sesquilinear sobre um espaço $V$ de dimensão finita. Mostre que os radicals laterais 
+$\mbox{Rad}_L(B)$ e $\mbox{Rad}_R(B)$ têm a mesma dimensão. 
+:::
+
+:::{#def-}
+Seja $\sigma$ um automorfismo de um corpo $\F$. 
+Uma aplicação $f:V\to W$ entre $\F$-espaços vetoriais é chamada $\sigma$-semilinear, se $f(u+v)=f(u)+f(v)$ e $f(\alpha u)=\alpha^\sigma f(u)$ para todo 
+$u,v\in V$ e $\alpha\in\F$.
+:::
+
+:::{#exr-}
+Seja $V$ um $\F$-espaço vetorial e $\sigma\in\mbox{Aut}(\F)$. Seja $\varphi: V\to V^*$ uma aplicação $\sigma$-semilinear e defina $B_\varphi:V\times V\to \F$ 
+como 
+$$
+    B_\varphi(u,v)=\varphi(v)(u).
+$$
+
+1. Mostre que $B_\varphi$ é $\sigma$-sesquilinear.
+2. Mostre que a aplicação $\varphi\mapsto B_\varphi$ é uma bijeção 
+    $$
+        \{\varphi: V\to V^*\mid \varphi\mbox{ é $\sigma$-semilinear}\}\to \{B: V\times V\to \F\mid B\mbox{ é $\sigma$-sesquilinear}\}.
+    $$
+3. Mostre que $\varphi$ é linear se e somente se $B_\varphi$ é bilinear.
+:::
+
+:::{#exr-}
+Seja $V$ um espaço de dimensão finita com forma $\sigma$-sesquilinear reflexiva $B$. Seja $G$ a matriz de $B$ 
+em uma base de $V$. Mostre que $\dim\mbox{Rad}(B)=\dim V-\mbox{posto}(G)$. Deduza que $B$ é não degenerada se e somente se $G$ é invertível.
+:::
+
+:::{#exr-}
+Denote por $H_2$ o espaço $\R^2$ com forma $B(e_1,e_1)=B(e_2,e_2)=0$ e $B(e_1,e_2)=B(e_2,e_1)=1$ na base canônica $\{e_1,e_2\}$ de $\R^2$. 
+
+1. Mostre que $H_2$ não é isométrico a $\R^2$ equipado com o produto interno usual. 
+2. Mostre que $H_2\perp H_2$ é isométrico a $\R^{2+2}$.
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial sobre $\Z_p$ de dimensão maior ou igual a $3$ com uma forma bilinear simétrica. 
+
+1. Mostre que $V$ possui vetor não nulo isotrópico. 
+2. Mostre que a afirmação no item anterior não é verdadeira se $\dim V=1$ ou $\dim V=2$. 
+:::
+
+

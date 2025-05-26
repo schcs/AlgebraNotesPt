@@ -192,6 +192,11 @@ O $\mbox{Rad}_L(B)$ chama-se **radical à esquerda**, enquanto $\mbox{Rad}_R(B)$
 Demonstre que se $\dim V$ é finita, então $\dim \mbox{Rad}_L=\dim \mbox{Rad}_R$. (Dica: Use o Lema anterior para obter sistemas de equações lineares para caraterizar $\mbox{Rad}_L$ e $\mbox{Rad}_R$ e mostre que os espaços de soluções têm a mesma dimensão.)
 :::
 
+:::{#exr-}
+Seja $B$ uma forma sesquilinear reflexiva sobre um espaço $V$ de dimensão finita. Assuma que $G$ é a matriz da forma em uma base de $V$. Mostre que $\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)$. Em particular, $B$ é não degenerada se e somente se $G$ é invertível.
+:::
+
+
 ## Formas reflexivas e o Teorema de Birkhoff-von Neumann
 
 :::{#def-}
@@ -279,9 +284,6 @@ Seja $V$ um espaço de dimensão maior ou igual a $2$ sobre $\C$ e seja $B$ uma 
 :::
 
 
-:::{#exr-}
-Seja $B$ uma forma sesquilinear reflexiva sobre um espaço $V$ de dimensão finita. Assuma que $G$ é a matriz da forma em uma base de $V$. Mostre que $\dim \mbox{Rad}(V)=\dim V-\mbox{posto}(G)$. Em particular, $B$ é não degenerada se e somente se $G$ é invertível.
-:::
 
 
 
