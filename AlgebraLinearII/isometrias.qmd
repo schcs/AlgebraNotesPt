@@ -37,7 +37,7 @@ Seja $V$ um espaço com forma sesquilinear reflexiva $B$. Um sistema de vetores 
 :::
 
 
-:::{#exr-}
+:::{#exr-orth-basis}
 Seja $B$ uma forma $\sigma$-sesquilinear reflexiva sobre um espaço $V$.
 
 

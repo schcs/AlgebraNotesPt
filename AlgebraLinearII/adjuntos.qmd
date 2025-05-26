@@ -6,7 +6,7 @@ lang: pt-BR
 
 Nesta página, $V$ é um $\F$-espaço vetorial com $\mbox{car}(\F)\neq 2$ e $B$ é uma forma $\sigma$-hermitiana ou alternada não degenerada sobre $V$. Note que no caso de $\sigma$-hermitiana, $\sigma^2=\mbox{id}_\F$. Quando $\sigma=\mbox{id}_\F$, então $B$ é uma forma simétrica. Quando $B$ é alternada, então $\sigma=\mbox{id}_\F$.
 
-Lembre que $V^*$ é o espaço dual de $V$; ou seja,
+Lembre que $V^*$ é o espaço dual de $V$ (@sec-dual-def); ou seja,
 $$
 V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
 $$
@@ -32,7 +32,7 @@ Ou seja, a transformação $\Phi$ é $\sigma$-semilinear. Além disso, $\Phi$ é
 :::{.proof}
 O fato que $\Phi$ é $\sigma$-semilinear segue do fato que $B$ é $\sigma$-semilinear na segunda variável. Vamos mostrar que $\Phi$ é injetiva. Note que se $\Phi(v_1)=\Phi(v_2)$ com $v_1,v_2\in V$, então $B(w,v_1)=B(w,v_2)$ vale para todo $w\in V$ e assim $v_1-v_2\in\mbox{Rad}(B)=0$. Logo $v_1=v_2$ e segue que $\Phi$ é injetiva.
 
-Assuma agora que $\dim V$ é finita e mostremos que $\Phi$ é sobrejetiva. Aqui nós tratamos apenas formas $\sigma$-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal $B=\{b_1,\ldots,b_n\}$ em $V$. Note que $Q(b_i)=B(b_i,b_i)\neq 0$. Por exercício  anterior, temos, para $v\in V$ que
+Assuma agora que $\dim V$ é finita e mostremos que $\Phi$ é sobrejetiva. Aqui nós tratamos apenas formas $\sigma$-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal $B=\{b_1,\ldots,b_n\}$ em $V$. Note que $Q(b_i)=B(b_i,b_i)\neq 0$. Pelo @exr-orth-basis, temos, para $v\in V$ que
 $$
 v=\sum_{i=1}^n \frac{B(v,b_i)}{Q(b_i)}b_i.
 $$
@@ -49,7 +49,7 @@ $$
 
 
 :::{#def-}
-Sejam $V$ e $W$ espaços vetoriais sobre $\F$ e assuma que $B_V$ e $B_W$ são formas $\sigma$-hermitianas não degeneradas sobre $V$ e $W$, respetivamente. Assuma que $f:V\to W$ é uma transformação linear. Uma aplicação $g:W\to F$ é chamada <b>adjunta</b> de $f$ se
+Sejam $V$ e $W$ espaços vetoriais sobre $\F$ e assuma que $B_V$ e $B_W$ são formas $\sigma$-hermitianas não degeneradas sobre $V$ e $W$, respetivamente. Assuma que $f:V\to W$ é uma transformação linear. Uma aplicação $g:W\to F$ é chamada **adjunta** de $f$ se
 $$
 B_W(f(v),w)=B_V(v,g(w))\quad\mbox{para todo}\quad v\in V,\ w\in W.
 $$
@@ -140,12 +140,10 @@ $$
 :::{#lem-}
 Assuma que $f,g: V\to W$ e $\alpha_1,\alpha_2\in \F$. Assuma que existem $f^*$ e $g^*$. Então temos que
 
-
- -  $(\alpha_1f+\alpha_2g)^*=\alpha_1^\sigma f^*+\alpha_2^\sigma g^*$;
- -  $f^{**}=f$;
- -  Se $f$ é invertível e existe $(f^{-1})^*$, então $(f^{-1})^*=(f^*)^{-1}$
- -  se $f,g:V\to V$, então $(f\circ g)^*=g^*\circ f^*$
-
+1.  $(\alpha_1f+\alpha_2g)^*=\alpha_1^\sigma f^*+\alpha_2^\sigma g^*$;
+2.  $f^{**}=f$;
+3.  Se $f$ é invertível e existe $(f^{-1})^*$, então $(f^{-1})^*=(f^*)^{-1}$
+4.  se $f,g:V\to V$, então $(f\circ g)^*=g^*\circ f^*$
 :::
 
 
