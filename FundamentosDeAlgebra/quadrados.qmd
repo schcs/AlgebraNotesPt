@@ -44,7 +44,7 @@ Observamos duas coisas:
 
 No lema seguinte demonstramos que as observações feitas no exemplo anterior não são coincidências.
 
-:::{#lem-}
+:::{#lem-no-squares}
 Seja $p$ um primo com $p\geq 3$. O número de quadrados em $\Z_p^*$ é $(p-1)/2$. Além disso, $\overline a\in\Z_p^*$ é um quadrado se e somente se $\overline a^{(p-1)/2}=\overline 1$ e $\overline a$ não é quadrado se e somente se $\overline a^{(p-1)/2}=\overline{-1}$
 :::
 
