@@ -1399,6 +1399,45 @@ Solução:
 </div>
 </div>
 </div>
+<ol type="1">
+<li><p><strong>Mostrar que <span class="math inline">\(0^\sigma = 0\)</span>:</strong></p>
+<p>Como <span class="math inline">\(\sigma\)</span> é um automorfismo, temos:<br>
+<span class="math display">\[
+0^\sigma = (0 + 0)^\sigma = 0^\sigma + 0^\sigma.
+\]</span><br>
+Subtraindo <span class="math inline">\(0^\sigma\)</span> de ambos os lados, obtemos:<br>
+<span class="math display">\[
+0 = 0^\sigma.
+\]</span></p></li>
+<li><p><strong>Mostrar que <span class="math inline">\(1^\sigma = 1\)</span>:</strong></p>
+<p>Como <span class="math inline">\(\sigma\)</span> é um automorfismo, temos:<br>
+<span class="math display">\[
+1^\sigma = (1 \cdot 1)^\sigma = 1^\sigma \cdot 1^\sigma.
+\]</span><br>
+Como <span class="math inline">\(1^\sigma \neq 0\)</span> (pois <span class="math inline">\(\sigma\)</span> é injetivo pela nossa conta anterior), podemos multiplicar ambos os lados por <span class="math inline">\((1^\sigma)^{-1}\)</span>:<br>
+<span class="math display">\[
+1 = 1^\sigma.
+\]</span></p></li>
+<li><p><strong>Mostrar que <span class="math inline">\((-a)^\sigma = -(a^\sigma)\)</span> para todo <span class="math inline">\(a \in \mathbb{F}\)</span>:</strong></p>
+<p>Sabemos que <span class="math inline">\(a + (-a) = 0\)</span>. Aplicando <span class="math inline">\(\sigma\)</span> a ambos os lados:<br>
+<span class="math display">\[
+a^\sigma + (-a)^\sigma = 0^\sigma = 0.
+\]</span><br>
+Portanto, <span class="math inline">\((-a)^\sigma\)</span> é o inverso aditivo de <span class="math inline">\(a^\sigma\)</span>, ou seja:<br>
+<span class="math display">\[
+(-a)^\sigma = -(a^\sigma).
+\]</span></p></li>
+<li><p><strong>Mostrar que <span class="math inline">\((b^{-1})^\sigma = (b^\sigma)^{-1}\)</span> para todo <span class="math inline">\(b \in \mathbb{F} \setminus \{0\}\)</span>:</strong></p>
+<p>Sabemos que <span class="math inline">\(b \cdot b^{-1} = 1\)</span>. Aplicando <span class="math inline">\(\sigma\)</span> a ambos os lados:<br>
+<span class="math display">\[
+b^\sigma \cdot (b^{-1})^\sigma = 1^\sigma = 1.
+\]</span><br>
+Portanto, <span class="math inline">\((b^{-1})^\sigma\)</span> é o inverso multiplicativo de <span class="math inline">\(b^\sigma\)</span>, ou seja:<br>
+<span class="math display">\[
+(b^{-1})^\sigma = (b^\sigma)^{-1}.
+\]</span></p></li>
+</ol>
+<p>:::</p>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.2</strong></span> Seja <span class="math inline">\(\F=\Q\)</span> ou <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\)</span> primo. Mostre que o único automorfismo de <span class="math inline">\(\F\)</span> é <span class="math inline">\(\mbox{id}_\F\)</span>.</p>
 </div>
