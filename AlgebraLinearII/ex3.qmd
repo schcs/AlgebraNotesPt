@@ -16,7 +16,6 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
-:::
 1. **Mostrar que $0^\sigma = 0$:**  
 
    Como $\sigma$ é um automorfismo, temos:  
