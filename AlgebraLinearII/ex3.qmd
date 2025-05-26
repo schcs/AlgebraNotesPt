@@ -69,7 +69,53 @@ Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
+### Caso $\mathbb{F} = \mathbb{Q}$
 
+Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
+
+1. Para $n \in \mathbb{Z}^+$, temos:
+   $$
+   n^\sigma = (\underbrace{1 + \cdots + 1}_{n \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{n \text{ vezes}} = n
+   $$
+
+2. Para $-1$ observamos que:
+   $$
+   1 = 1^\sigma = (-1)^\sigma (-1)^\sigma
+   $$
+   Logo $((-1)^\sigma)^2 -1 = 0$. A equação $x^2 - 1$ só possui duas raízes sobre $\mathbb{Q}$, nomeadamente $1$ e $-1$. Como já sabemos que $1^\sigma = 1$, isso implica que $(-1)^\sigma = -1$.
+
+3. Para $n \in \mathbb{Z}^-$, $n = -m$ com $m \in \mathbb{Z}^+$, então:
+   $$
+   n^\sigma = (-m)^\sigma = (-1)^\sigma m^\sigma = -m = n
+   $$
+
+   Logo $\sigma$ fixa todos os números inteiros.
+
+4. Seja $b$ um número inteiro não nulo e $b^{-1}$ seu inverso em $\mathbb{Q}$. Pelo exercício anterior:
+   $$
+   (b^{-1})^\sigma = (b^\sigma)^{-1} = b^{-1}
+   $$
+   onde a última igualdade vem das nossas considerações anteriores.
+
+5. Para qualquer $ab^{-1} \in \mathbb{Q}$:
+   $$
+   (ab^{-1})^{\sigma} = a^\sigma (b^{-1})^\sigma = ab^{-1}
+   $$
+
+Portanto, $\sigma$ fixa todos os números racionais, ou seja, $\sigma = \text{id}_{\mathbb{Q}}$.
+
+### Caso $\mathbb{F} = \mathbb{Z}_p$
+
+Seja $\sigma$ um automorfismo de $\mathbb{Z}_p$. Como $\mathbb{Z}_p$ tem $p$ elementos e $\sigma$ é bijetora:
+
+1. Temos que $0^\sigma = 0$ e $1^\sigma = 1$ (pelo Exercício 81.1)
+
+2. Para $k \in \mathbb{Z}_p$, $k$ é igual à soma de $1$ uma quantidade $k$ de vezes:
+   $$
+   k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{1^\sigma + \cdots + 1^\sigma}_{k \text{ vezes}} = k
+   $$
+
+Portanto, $\sigma = \text{id}_{\mathbb{Z}_p}$.
 
 :::
 
