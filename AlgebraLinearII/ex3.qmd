@@ -69,7 +69,7 @@ Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
-### Caso $\mathbb{F} = \mathbb{Q}$
+Caso $\mathbb{F} = \mathbb{Q}$
 
 Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
 
@@ -104,7 +104,7 @@ Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
 
 Portanto, $\sigma$ fixa todos os números racionais, ou seja, $\sigma = \text{id}_{\mathbb{Q}}$.
 
-### Caso $\mathbb{F} = \mathbb{Z}_p$
+Caso $\mathbb{F} = \mathbb{Z}_p$
 
 Seja $\sigma$ um automorfismo de $\mathbb{Z}_p$. Como $\mathbb{Z}_p$ tem $p$ elementos e $\sigma$ é bijetora:
 
@@ -127,6 +127,53 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
 3. $\sigma$ é contínua;
 4. $\Q\subseteq\mbox{Fix}(\sigma)$;
 5. usando que $\Q$ é denso em $\R$, deduza que $\sigma=\mbox{id}_\R$.
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução:
+
+1. **Mostrar que $x^\sigma \geq 0$ para $x \geq 0$**
+
+   Se $x \geq 0$, então existe $y \in \mathbb{R}$ tal que $x = y^2$. Logo:
+   $$
+   x^\sigma = (y^2)^\sigma = (y^\sigma)^2 \geq 0
+   $$
+
+2. **Mostrar que $\sigma$ é crescente**
+
+   Sejam $a, b \in \mathbb{R}$ com $a < b$. Então:
+   - $b - a > 0$
+   - Pelo item anterior, $(b - a)^\sigma \geq 0$
+   - Mas $(b - a)^\sigma = b^\sigma - a^\sigma \geq 0$ ⇒ $b^\sigma \geq a^\sigma$
+   
+   Além disso, se $b^\sigma = a^\sigma$, como $\sigma$ é injetiva, teríamos $b = a$, o que é uma contradição. Portanto, $b^\sigma > a^\sigma$.
+
+3. **Mostrar que $\sigma$ é contínua**
+
+   - $\sigma$ é crescente (pelo item 2)
+   - Funções crescentes só podem ter descontinuidades do tipo salto
+   - Mas $\sigma$ é bijetiva, e descontinuidades do tipo salto violariam a sobrejetividade
+     - (Imagine o gráfico com um salto: haveria valores no contradomínio que não seriam atingidos)
+   - Portanto, $\sigma$ não pode ter descontinuidades e é contínua
+
+4. **Mostrar que $\mathbb{Q} \subseteq \text{Fix}(\sigma)$**
+
+   A demonstração é análoga ao caso $\mathbb{Q}$ no Exercício 81.2:
+   - Para qualquer $q \in \mathbb{Q}$, temos $q^\sigma = q$
+   - Portanto, $\mathbb{Q}$ está contido no conjunto dos pontos fixos de $\sigma$
+
+5. **Concluir que $\sigma = \text{id}_\mathbb{R}$**
+
+   Seja $x \in \mathbb{R}$ arbitrário:
+   - Como $\mathbb{Q}$ é denso em $\mathbb{R}$, existe $(q_n) \subseteq \mathbb{Q}$ com $q_n \to x$
+   - Pela continuidade de $\sigma$:
+     $$
+     x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
+     $$
+   - Logo, $\sigma$ fixa todos os reais e portanto $\sigma = \text{id}_\mathbb{R}$
+
+
+
 :::
 
 :::{#exr-}
