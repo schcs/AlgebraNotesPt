@@ -1375,7 +1375,7 @@ window.Quarto = {
 
 
 <p>Nesta página, <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial com <span class="math inline">\(\mbox{car}(\F)\neq 2\)</span> e <span class="math inline">\(B\)</span> é uma forma <span class="math inline">\(\sigma\)</span>-hermitiana ou alternada não degenerada sobre <span class="math inline">\(V\)</span>. Note que no caso de <span class="math inline">\(\sigma\)</span>-hermitiana, <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>. Quando <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>, então <span class="math inline">\(B\)</span> é uma forma simétrica. Quando <span class="math inline">\(B\)</span> é alternada, então <span class="math inline">\(\sigma=\mbox{id}_\F\)</span>.</p>
-<p>Lembre que <span class="math inline">\(V^*\)</span> é o espaço dual de <span class="math inline">\(V\)</span>; ou seja, <span class="math display">\[
+<p>Lembre que <span class="math inline">\(V^*\)</span> é o espaço dual de <span class="math inline">\(V\)</span> (<a href="dual.html#sec-dual-def" class="quarto-xref"><span>Seção 61.1</span></a>); ou seja, <span class="math display">\[
 V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
 \]</span> Para <span class="math inline">\(v\in V\)</span>, definimos <span class="math inline">\(\varphi_v\in V^*\)</span> com <span class="math display">\[
 \varphi_v(w)=B(w,v).
@@ -1389,7 +1389,7 @@ V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>O fato que <span class="math inline">\(\Phi\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear segue do fato que <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear na segunda variável. Vamos mostrar que <span class="math inline">\(\Phi\)</span> é injetiva. Note que se <span class="math inline">\(\Phi(v_1)=\Phi(v_2)\)</span> com <span class="math inline">\(v_1,v_2\in V\)</span>, então <span class="math inline">\(B(w,v_1)=B(w,v_2)\)</span> vale para todo <span class="math inline">\(w\in V\)</span> e assim <span class="math inline">\(v_1-v_2\in\mbox{Rad}(B)=0\)</span>. Logo <span class="math inline">\(v_1=v_2\)</span> e segue que <span class="math inline">\(\Phi\)</span> é injetiva.</p>
-<p>Assuma agora que <span class="math inline">\(\dim V\)</span> é finita e mostremos que <span class="math inline">\(\Phi\)</span> é sobrejetiva. Aqui nós tratamos apenas formas <span class="math inline">\(\sigma\)</span>-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> em <span class="math inline">\(V\)</span>. Note que <span class="math inline">\(Q(b_i)=B(b_i,b_i)\neq 0\)</span>. Por exercício anterior, temos, para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
+<p>Assuma agora que <span class="math inline">\(\dim V\)</span> é finita e mostremos que <span class="math inline">\(\Phi\)</span> é sobrejetiva. Aqui nós tratamos apenas formas <span class="math inline">\(\sigma\)</span>-hermitianas; o caso das formas alternadas é exercício. Escolha uma base ortogonal <span class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> em <span class="math inline">\(V\)</span>. Note que <span class="math inline">\(Q(b_i)=B(b_i,b_i)\neq 0\)</span>. Pelo <a href="isometrias.html#exr-orth-basis" class="quarto-xref">Exercício&nbsp;<span>75.1</span></a>, temos, para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
 v=\sum_{i=1}^n \frac{B(v,b_i)}{Q(b_i)}b_i.
 \]</span> Seja <span class="math inline">\(\varphi\in V^*\)</span> e defina <span class="math display">\[
 v=\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n.
@@ -1398,7 +1398,7 @@ v=\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)
 \]</span></p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 76.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span> e assuma que <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span> são formas <span class="math inline">\(\sigma\)</span>-hermitianas não degeneradas sobre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Assuma que <span class="math inline">\(f:V\to W\)</span> é uma transformação linear. Uma aplicação <span class="math inline">\(g:W\to F\)</span> é chamada <b>adjunta</b> de <span class="math inline">\(f\)</span> se <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 76.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span> e assuma que <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span> são formas <span class="math inline">\(\sigma\)</span>-hermitianas não degeneradas sobre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Assuma que <span class="math inline">\(f:V\to W\)</span> é uma transformação linear. Uma aplicação <span class="math inline">\(g:W\to F\)</span> é chamada <strong>adjunta</strong> de <span class="math inline">\(f\)</span> se <span class="math display">\[
 B_W(f(v),w)=B_V(v,g(w))\quad\mbox{para todo}\quad v\in V,\ w\in W.
 \]</span></p>
 </div>
@@ -1449,12 +1449,12 @@ A^*=A^{t\sigma}.
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 76.4</strong></span> Assuma que <span class="math inline">\(f,g: V\to W\)</span> e <span class="math inline">\(\alpha_1,\alpha_2\in \F\)</span>. Assuma que existem <span class="math inline">\(f^*\)</span> e <span class="math inline">\(g^*\)</span>. Então temos que</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\((\alpha_1f+\alpha_2g)^*=\alpha_1^\sigma f^*+\alpha_2^\sigma g^*\)</span>;</li>
 <li><span class="math inline">\(f^{**}=f\)</span>;</li>
 <li>Se <span class="math inline">\(f\)</span> é invertível e existe <span class="math inline">\((f^{-1})^*\)</span>, então <span class="math inline">\((f^{-1})^*=(f^*)^{-1}\)</span></li>
 <li>se <span class="math inline">\(f,g:V\to V\)</span>, então <span class="math inline">\((f\circ g)^*=g^*\circ f^*\)</span></li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>

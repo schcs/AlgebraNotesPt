@@ -1349,8 +1349,18 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#sec-dual-def" id="toc-sec-dual-def" class="nav-link active" data-scroll-target="#sec-dual-def"><span class="header-section-number">61.1</span> A definição do dual</a></li>
+  <li><a href="#o-dual-de-uma-transformação-linear" id="toc-o-dual-de-uma-transformação-linear" class="nav-link" data-scroll-target="#o-dual-de-uma-transformação-linear"><span class="header-section-number">61.2</span> O dual de uma transformação linear</a></li>
+  <li><a href="#o-dual-como-functor" id="toc-o-dual-como-functor" class="nav-link" data-scroll-target="#o-dual-como-functor"><span class="header-section-number">61.3</span> O dual como functor</a></li>
+  <li><a href="#o-bidual" id="toc-o-bidual" class="nav-link" data-scroll-target="#o-bidual"><span class="header-section-number">61.4</span> O bidual</a></li>
+  <li><a href="#o-bidual-como-functor" id="toc-o-bidual-como-functor" class="nav-link" data-scroll-target="#o-bidual-como-functor"><span class="header-section-number">61.5</span> O bidual como functor</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1374,8 +1384,10 @@ window.Quarto = {
 </header>
 
 
+<section id="sec-dual-def" class="level2" data-number="61.1">
+<h2 data-number="61.1" data-anchor-id="sec-dual-def"><span class="header-section-number">61.1</span> A definição do dual</h2>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 61.1</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial, então <span class="math inline">\(V^*=\mbox{Hom}(V,\F)\)</span> é dito <b>espaço dual</b> de <span class="math inline">\(V\)</span>. Os elementos de <span class="math inline">\(V^*\)</span> são chamados de <b>formas lineares</b> ou <b>funcionais lineares</b> de <span class="math inline">\(V\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 61.1</strong></span> Se <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial, então <span class="math inline">\(V^*=\mbox{Hom}(V,\F)\)</span> é dito <strong>espaço dual</strong> de <span class="math inline">\(V\)</span>. Os elementos de <span class="math inline">\(V^*\)</span> são chamados de <strong>formas lineares</strong> ou <strong>funcionais lineares</strong> de <span class="math inline">\(V\)</span>.</p>
 </div>
 <p>Se <span class="math inline">\(\dim V=k\)</span> é finita, então <span class="math inline">\(\dim V^*=\dim V=k\)</span>.</p>
 <p>Seja <span class="math inline">\(B=\{b_i\mid i\in I\}\)</span> uma base de <span class="math inline">\(V\)</span>. Para <span class="math inline">\(i\in I\)</span>, defina <span class="math display">\[
@@ -1394,7 +1406,10 @@ b_i^*\in V^*,\quad b_i^*(b_j)=\delta_{i,j}=\left\{\begin{array}{cc} 1 &amp; \mbo
 \end{align*}\]</span> Então <span class="math inline">\(\alpha_{i_j}=0\)</span> para todo <span class="math inline">\(j\)</span>. Ou seja, <span class="math inline">\(B^*\)</span> é L.I.</p>
 <p>Se <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\dim V=\dim V^*\)</span> e assim <span class="math inline">\(B^*\)</span> (sendo um conjunto L.I. com cardinalidade <span class="math inline">\(\dim V^*\)</span>) é base de <span class="math inline">\(B^*\)</span>.</p>
 </div>
-<p>Quando <span class="math inline">\(\dim V\)</span> for finita, a base <span class="math inline">\(B^*\)</span> é chamada de <b>base dual</b> de <span class="math inline">\(B\)</span>. Note que se <span class="math inline">\(\dim V\)</span> é infinita, então <span class="math inline">\(B^*\)</span> não é conjunto gerador, pois a funcional <span class="math inline">\(\varphi\in V^*\)</span> que leva <span class="math inline">\(\varphi(b_i)=1\)</span> para todo <span class="math inline">\(i\)</span> não pertence ao subespaço <span class="math inline">\(\langle B^*\rangle\)</span>.</p>
+<p>Quando <span class="math inline">\(\dim V\)</span> for finita, a base <span class="math inline">\(B^*\)</span> é chamada de <strong>base dual</strong> de <span class="math inline">\(B\)</span>. Note que se <span class="math inline">\(\dim V\)</span> é infinita, então <span class="math inline">\(B^*\)</span> não é conjunto gerador, pois a funcional <span class="math inline">\(\varphi\in V^*\)</span> que leva <span class="math inline">\(\varphi(b_i)=1\)</span> para todo <span class="math inline">\(i\)</span> não pertence ao subespaço <span class="math inline">\(\langle B^*\rangle\)</span>.</p>
+</section>
+<section id="o-dual-de-uma-transformação-linear" class="level2" data-number="61.2">
+<h2 data-number="61.2" data-anchor-id="o-dual-de-uma-transformação-linear"><span class="header-section-number">61.2</span> O dual de uma transformação linear</h2>
 <p>Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> <span class="math inline">\(\F\)</span>-espaços vetoriais, e seja <span class="math inline">\(f\in\mbox{Hom}(V,W)\)</span>. Definimos o dual <span class="math inline">\(f^*\in \mbox{Hom}(W^*,V^*)\)</span> com a regra <span class="math display">\[
 f^*(\varphi)=\varphi\circ f.
 \]</span> Usando diagramas <span class="math display">\[
@@ -1409,18 +1424,24 @@ V &amp;&amp;
 [f^*]^{C^*}_{B^*}=([f]^B_C)^t
 \]</span> onde <span class="math inline">\((-)^t\)</span> significa a matriz transposta.</p>
 </div>
+</section>
+<section id="o-dual-como-functor" class="level2" data-number="61.3">
+<h2 data-number="61.3" data-anchor-id="o-dual-como-functor"><span class="header-section-number">61.3</span> O dual como functor</h2>
 <p>Se <span class="math inline">\(\F\)</span> é um corpo, a <a href="https://pt.wikipedia.org/wiki/Teoria_das_categorias">categoria</a> dos <span class="math inline">\(\F\)</span>-espaços vetoriais consiste</p>
-<ul>
+<ol type="1">
 <li>nos <span class="math inline">\(\F\)</span>-espaços vetoriais; e</li>
 <li>nos transformações lineares entre <span class="math inline">\(\F\)</span>-espaços.</li>
-</ul>
+</ol>
 <p>Neste contesto, as transformações lineares também são chamadas de morfismos ou flechas.</p>
 <p>O conceito “dual” associa um espaço vetorial <span class="math inline">\(V\)</span> com seu dual <span class="math inline">\(V^*\)</span> e cada morfismo <span class="math inline">\(f:V\to W\)</span> com o seu dual <span class="math inline">\(f^*:W^*\to V^*\)</span>. Além disso, é fácil verificar que <span class="math display">\[
 \mbox{id}_V^*=\mbox{id}_{V^*}
 \]</span> e que se <span class="math inline">\(f:V\to U\)</span> e <span class="math inline">\(g:U\to W\)</span> são transformações lineares, então <span class="math display">\[
 (g\circ f)^*=f^*\circ g^*.
-\]</span> Devido a estas propriedades, dizemos que o dual é um <b>functor contravariante</b> da categoria de espaços vetoriais.</p>
-<p>Note que a correspondência entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^*\)</span> não é natural (ou canônica), pois precisa-se fixar uma base para definí-la. No entanto, existe uma correspondência natural entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^{**}=(V^*)^*\)</span>. Os elementos de <span class="math inline">\(V^{**}\)</span> são transformações lineares em <span class="math inline">\(\mbox{Hom}(V^*,\F)=\mbox{Hom}(\mbox{Hom}(V,\F),\F)\)</span>. Ou seja, se <span class="math inline">\(\psi\in V^{**}\)</span>, então <span class="math inline">\(\psi:V^*\to \F\)</span> é linear.</p>
+\]</span> Devido a estas propriedades, dizemos que o dual é um <strong>functor contravariante</strong> da categoria de espaços vetoriais.</p>
+</section>
+<section id="o-bidual" class="level2" data-number="61.4">
+<h2 data-number="61.4" data-anchor-id="o-bidual"><span class="header-section-number">61.4</span> O bidual</h2>
+<p>Note que a correspondência entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^*\)</span> não é natural (ou canônica), pois precisa-se fixar uma base para definí-la. No entanto, existe uma correspondência natural entre <span class="math inline">\(V\)</span> e <span class="math inline">\(V^{**}=(V^*)^*\)</span> (o bidual de <span class="math inline">\(V\)</span>). Os elementos de <span class="math inline">\(V^{**}\)</span> são transformações lineares em <span class="math inline">\(\mbox{Hom}(V^*,\F)=\mbox{Hom}(\mbox{Hom}(V,\F),\F)\)</span>. Ou seja, se <span class="math inline">\(\psi\in V^{**}\)</span>, então <span class="math inline">\(\psi:V^*\to \F\)</span> é linear.</p>
 <p>Seja <span class="math inline">\(v\in V\)</span> e defina <span class="math display">\[
 \psi_v:V^*\to \F,\quad \psi_v(\varphi)=\varphi(v)\quad \mbox{para todo}\quad \varphi\in V^*.
 \]</span> O leitor deve verificar que <span class="math inline">\(\psi_v:V^*\to \F\)</span> é linear e assim <span class="math inline">\(\psi_v\in V^{**}\)</span>. Defina <span class="math display">\[
@@ -1435,6 +1456,9 @@ V &amp;&amp;
 \]</span> Isso é uma contradição, então <span class="math inline">\(v=0\)</span> deve valer. Assim <span class="math inline">\(\ker\Psi=0\)</span> e <span class="math inline">\(\Psi\)</span> é injetiva.</p>
 <p>Se <span class="math inline">\(\dim V=k\)</span> finita, então <span class="math inline">\(\dim V^{**}=\dim V^*=\dim V\)</span> e uma aplicação injetiva <span class="math inline">\(V\to V^{**}\)</span> é um isomorfismo.</p>
 </div>
+</section>
+<section id="o-bidual-como-functor" class="level2" data-number="61.5">
+<h2 data-number="61.5" data-anchor-id="o-bidual-como-functor"><span class="header-section-number">61.5</span> O bidual como functor</h2>
 <p>Note que se <span class="math inline">\(f\in\mbox{Hom}(V,W)\)</span>, então já definimos <span class="math inline">\(f^*:W^*\to V^*\)</span> e podemos definir <span class="math inline">\(f^{**}:V^{**}\to W^{**}\)</span> como <span class="math display">\[
 f^{**}(\gamma)=\gamma \circ f^*\quad\mbox{para todo}\quad \gamma\in V^{**}.
 \]</span> Usando diagramas <span class="math display">\[
@@ -1450,9 +1474,10 @@ f^{**}(\gamma)(\varphi)=(\gamma\circ f^*)(\varphi)=\gamma(f^*(\varphi))=\gamma(\
 \mbox{id}_V^{**}=\mbox{id}_{V^{**}}
 \]</span> e que se <span class="math inline">\(f:V\to U\)</span> e <span class="math inline">\(g:U\to W\)</span> são transformações lineares, então <span class="math display">\[
 (g\circ f)^{**}=g^{**}\circ f^{**}.
-\]</span> Ou seja, o duplo dual é um <b>functor covariante</b> da categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
+\]</span> Ou seja, o bidual é um <strong>functor covariante</strong> da categoria dos <span class="math inline">\(\F\)</span>-espaços vetoriais.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

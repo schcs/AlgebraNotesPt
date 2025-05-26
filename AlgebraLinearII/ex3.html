@@ -1599,18 +1599,47 @@ z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z
 <li>Demonstre que <span class="math inline">\(\mbox{Bil}(V)\)</span>, <span class="math inline">\(\mbox{Bil}_S(V)\)</span>, <span class="math inline">\(\mbox{Bil}_A(V)\)</span> são espaços vetoriais com a soma e múltiplo escalar óbvia entre formas.</li>
 <li>Mostre que <span class="math inline">\(\mbox{Bil}(V)\cong (V\otimes V)^*\)</span>.</li>
 <li>Seja <span class="math inline">\(\Lambda^2V\)</span> a potência exterior definida no <a href="ex1.html#exr-alt-pow" class="quarto-xref">Exercício&nbsp;<span>64.45</span></a>. Mostre que <span class="math inline">\(\mbox{Bil}_A(V)\cong \Lambda^2(V)^*\)</span>.</li>
-<li>Estude a definição de <span class="math inline">\(\Lambda^2(V)\)</span> no <a href="ex1.html#exr-alt-pow" class="quarto-xref">Exercício&nbsp;<span>64.45</span></a>, e dê uma construção de um espaço vetorial <span class="math inline">\(S^2(V)\)</span> que satisfaz a mesma propriedade universal que <span class="math inline">\(\Lambda^2(V)\)</span>, mas com funções f:VVZ$ bilinear <em>simétrica</em> (em vez de alternada). Mostre que <span class="math inline">\(\mbox{Bil}_S(V)\cong S^2(V)^*\)</span>.</li>
+<li>Estude a definição de <span class="math inline">\(\Lambda^2(V)\)</span> no <a href="ex1.html#exr-alt-pow" class="quarto-xref">Exercício&nbsp;<span>64.45</span></a>, e dê uma construção de um espaço vetorial <span class="math inline">\(S^2(V)\)</span> que satisfaz a mesma propriedade universal que <span class="math inline">\(\Lambda^2(V)\)</span>, mas com funções <span class="math inline">\(f:V\times V\to Z\)</span> bilineares <em>simétricas</em> (em vez de alternadas). Mostre que <span class="math inline">\(\mbox{Bil}_S(V)\cong S^2(V)^*\)</span>.</li>
 <li>Determine <span class="math inline">\(\dim \mbox{Bil}(V)\)</span>, <span class="math inline">\(\dim \mbox{Bil}_S(V)\)</span>, <span class="math inline">\(\dim\mbox{Bil}_A(V)\)</span>.</li>
 </ol>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 81.6</strong></span> Seja <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear sobre um espaço <span class="math inline">\(V\)</span> de dimensão finita. Mostre que os radicals laterais <span class="math inline">\(\mbox{Rad}_L(B)\)</span> e <span class="math inline">\(\mbox{Rad}_R(B)\)</span> têm a mesma dimensão.</p>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Esboço da solução:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Espaço vetorial:</strong><br>
+Os conjuntos <span class="math inline">\(\mbox{Bil}(V)\)</span>, <span class="math inline">\(\mbox{Bil}_S(V)\)</span> e <span class="math inline">\(\mbox{Bil}_A(V)\)</span> são subespaços vetoriais do espaço de todas as funções <span class="math inline">\(V \times V \to \F\)</span>, pois a soma e o múltiplo escalar de formas bilineares (simétricas ou alternadas) continuam sendo formas bilineares (simétricas ou alternadas, respectivamente).</p></li>
+<li><p><strong>Isomorfismo <span class="math inline">\(\mbox{Bil}(V) \cong (V \otimes V)^*\)</span>:</strong><br>
+Pela propriedade universal do produto tensorial, toda forma bilinear <span class="math inline">\(B: V \times V \to \F\)</span> corresponde unicamente a um funcional linear <span class="math inline">\(\varphi_B: V \otimes V \to \F\)</span> tal que <span class="math inline">\(\varphi_B(v \otimes w) = B(v, w)\)</span>. Assim, <span class="math inline">\(\mbox{Bil}(V) \cong (V \otimes V)^*\)</span>.</p></li>
+<li><p><strong>Isomorfismo <span class="math inline">\(\mbox{Bil}_A(V) \cong (\Lambda^2 V)^*\)</span>:</strong><br>
+Pelo <a href="ex1.html#exr-alt-pow" class="quarto-xref">Exercício&nbsp;<span>64.45</span></a>, toda forma bilinear alternada <span class="math inline">\(A: V \times V \to \F\)</span> corresponde unicamente a um funcional linear <span class="math inline">\(\psi_A: \Lambda^2 V \to \F\)</span> tal que <span class="math inline">\(\psi_A(v \wedge w) = A(v, w)\)</span>. Assim, <span class="math inline">\(\mbox{Bil}_A(V) \cong (\Lambda^2 V)^*\)</span>.</p></li>
+<li><p><strong>Construção de <span class="math inline">\(S^2(V)\)</span> e isomorfismo <span class="math inline">\(\mbox{Bil}_S(V) \cong (S^2 V)^*\)</span>:</strong><br>
+Defina <span class="math inline">\(S^2(V)\)</span> como o quociente de <span class="math inline">\(V \otimes V\)</span> pelo subespaço gerado pelos elementos <span class="math inline">\(v \otimes w - w \otimes v\)</span>. Assim, <span class="math inline">\(S^2(V)\)</span> satisfaz a propriedade universal para formas bilineares simétricas. Toda forma bilinear simétrica <span class="math inline">\(S: V \times V \to \F\)</span> corresponde unicamente a um funcional linear <span class="math inline">\(\phi_S: S^2(V) \to \F\)</span> tal que <span class="math inline">\(\phi_S(v \odot w) = S(v, w)\)</span>, onde <span class="math inline">\(v \odot w\)</span> é a classe simétrica de <span class="math inline">\(v \otimes w\)</span>. Portanto, <span class="math inline">\(\mbox{Bil}_S(V) \cong (S^2 V)^*\)</span>.</p></li>
+<li><p><strong>Dimensões:</strong><br>
+Seja <span class="math inline">\(n = \dim V\)</span>.</p>
+<ul>
+<li><span class="math inline">\(\dim \mbox{Bil}(V) = \dim (V\otimes V)=n^2\)</span>.</li>
+<li><span class="math inline">\(\dim \mbox{Bil}_S(V) = \dim (S^2(V))=\frac{n(n+1)}{2}\)</span> (também igual à dimensão do espaço de matrizes simétricas).</li>
+<li><span class="math inline">\(\dim \mbox{Bil}_A(V) = \dim(A^2(V))=\frac{n(n-1)}{2}\)</span> (também igual à dimensão do espaço de matrizes alternadas).</li>
+</ul></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 81.1</strong></span> Seja <span class="math inline">\(\sigma\)</span> um automorfismo de um corpo <span class="math inline">\(\F\)</span>. Uma aplicação <span class="math inline">\(f:V\to W\)</span> entre <span class="math inline">\(\F\)</span>-espaços vetoriais é chamada <span class="math inline">\(\sigma\)</span>-semilinear, se <span class="math inline">\(f(u+v)=f(u)+f(v)\)</span> e <span class="math inline">\(f(\alpha u)=\alpha^\sigma f(u)\)</span> para todo <span class="math inline">\(u,v\in V\)</span> e <span class="math inline">\(\alpha\in\F\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 81.7</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\sigma\in\mbox{Aut}(\F)\)</span>. Seja <span class="math inline">\(\varphi: V\to V^*\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e defina <span class="math inline">\(B_\varphi:V\times V\to \F\)</span> como <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercício 81.6</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\sigma\in\mbox{Aut}(\F)\)</span>. Seja <span class="math inline">\(\varphi: V\to V^*\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e defina <span class="math inline">\(B_\varphi:V\times V\to \F\)</span> como <span class="math display">\[
     B_\varphi(u,v)=\varphi(v)(u).
 \]</span></p>
 <ol type="1">
@@ -1621,22 +1650,245 @@ z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z
 <li>Mostre que <span class="math inline">\(\varphi\)</span> é linear se e somente se <span class="math inline">\(B_\varphi\)</span> é bilinear.</li>
 </ol>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 81.8</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita com forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva <span class="math inline">\(B\)</span>. Seja <span class="math inline">\(G\)</span> a matriz de <span class="math inline">\(B\)</span> em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim\mbox{Rad}(B)=\dim V-\mbox{posto}(G)\)</span>. Deduza que <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong><span class="math inline">\(B_\varphi\)</span> é <span class="math inline">\(\sigma\)</span>-sesquilinear:</strong><br>
+Seja <span class="math inline">\(\varphi: V \to V^*\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear. Para <span class="math inline">\(u, u' \in V\)</span>, <span class="math inline">\(v, v' \in V\)</span>, <span class="math inline">\(\alpha, \beta \in \F\)</span>:</li>
+</ol>
+<ul>
+<li>Linearidade na primeira variável: Como <span class="math inline">\(\varphi(v)\in V^*\)</span> é linear, temos <span class="math display">\[
+B_\varphi(\alpha u + \beta u', v) = \varphi(v)(\alpha u + \beta u') = \alpha \varphi(v)(u) + \beta \varphi(v)(u') = \alpha B_\varphi(u, v) + \beta B_\varphi(u', v).
+\]</span></li>
+<li><span class="math inline">\(\sigma\)</span>-semilinearidade na segunda variável: Como <span class="math inline">\(\varphi:V\to V^*\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear, temos <span class="math display">\[
+B_\varphi(u, \alpha v + \beta v') = \varphi(\alpha v + \beta v')(u) = (\alpha^\sigma \varphi(v) + \beta^\sigma \varphi(v'))(u) = \alpha^\sigma \varphi(v)(u) + \beta^\sigma \varphi(v')(u) = \alpha^\sigma B_\varphi(u, v) + \beta^\sigma B_\varphi(u, v').
+\]</span> Logo, <span class="math inline">\(B_\varphi\)</span> é <span class="math inline">\(\sigma\)</span>-sesquilinear.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>A aplicação <span class="math inline">\(\varphi \mapsto B_\varphi\)</span> é uma bijeção:</strong><br>
+</li>
+</ol>
+<ul>
+<li><strong>Injetividade:</strong> Se <span class="math inline">\(B_\varphi = B_\psi\)</span>, então para todo <span class="math inline">\(u, v \in V\)</span>, <span class="math inline">\(\varphi(v)(u) = \psi(v)(u)\)</span>. Logo, <span class="math inline">\(\varphi(v) = \psi(v)\)</span> para todo <span class="math inline">\(v\)</span>, ou seja, <span class="math inline">\(\varphi = \psi\)</span>.</li>
+<li><strong>Sobrejetividade:</strong> Dado <span class="math inline">\(B: V \times V \to \F\)</span> <span class="math inline">\(\sigma\)</span>-sesquilinear, defina <span class="math inline">\(\varphi_B: V \to V^*\)</span> por <span class="math inline">\(\varphi_B(v)(u) = B(u, v)\)</span>.
+<ul>
+<li>Para <span class="math inline">\(v, v' \in V\)</span>, <span class="math inline">\(\alpha, \beta \in \F\)</span>: <span class="math display">\[
+\varphi_B(\alpha v + \beta v')(u) = B(u, \alpha v + \beta v') = \alpha^\sigma B(u, v) + \beta^\sigma B(u, v') = \alpha^\sigma \varphi_B(v)(u) + \beta^\sigma \varphi_B(v')(u).
+\]</span> Portanto, <span class="math inline">\(\varphi_B\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear e <span class="math inline">\(B_{\varphi_B} = B\)</span>.</li>
+</ul></li>
+<li>Assim, <span class="math inline">\(\varphi \mapsto B_\varphi\)</span> é uma bijeção entre aplicações <span class="math inline">\(\sigma\)</span>-semilineares <span class="math inline">\(V \to V^*\)</span> e formas <span class="math inline">\(\sigma\)</span>-sesquilineares <span class="math inline">\(V \times V \to \F\)</span>.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong><span class="math inline">\(\varphi\)</span> é linear se e somente se <span class="math inline">\(B_\varphi\)</span> é bilinear:</strong><br>
+</li>
+</ol>
+<ul>
+<li>Se <span class="math inline">\(\varphi\)</span> é linear, então na segunda variável temos: <span class="math display">\[
+B_\varphi(u, \alpha v + \beta v') = \varphi(\alpha v + \beta v')(u) = \alpha \varphi(v)(u) + \beta \varphi(v')(u) = \alpha B_\varphi(u, v) + \beta B_\varphi(u, v').
+\]</span> Ou seja, <span class="math inline">\(B_\varphi\)</span> é bilinear.</li>
+<li>Reciprocamente, se <span class="math inline">\(B_\varphi\)</span> é bilinear, então para todo <span class="math inline">\(u \in V\)</span>: <span class="math display">\[
+\varphi(\alpha v + \beta v')(u) = B_\varphi(u, \alpha v + \beta v') = \alpha B_\varphi(u, v) + \beta B_\varphi(u, v') = \alpha \varphi(v)(u) + \beta \varphi(v')(u).
+\]</span> Como isso vale para todo <span class="math inline">\(u\)</span>, segue que <span class="math inline">\(\varphi(\alpha v + \beta v') = \alpha \varphi(v) + \beta \varphi(v')\)</span>, ou seja, <span class="math inline">\(\varphi\)</span> é linear.</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 81.9</strong></span> Denote por <span class="math inline">\(H_2\)</span> o espaço <span class="math inline">\(\R^2\)</span> com forma <span class="math inline">\(B(e_1,e_1)=B(e_2,e_2)=0\)</span> e <span class="math inline">\(B(e_1,e_2)=B(e_2,e_1)=1\)</span> na base canônica <span class="math inline">\(\{e_1,e_2\}\)</span> de <span class="math inline">\(\R^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 81.7</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita com forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva <span class="math inline">\(B\)</span>. Seja <span class="math inline">\(G\)</span> a matriz de <span class="math inline">\(B\)</span> em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim\mbox{Rad}(B)=\dim V-\mbox{posto}(G)\)</span>. Deduza que <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita e <span class="math inline">\(B\)</span> uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva sobre <span class="math inline">\(V\)</span>. Seja <span class="math inline">\(G\)</span> a matriz de Gram de <span class="math inline">\(B\)</span> em uma base de <span class="math inline">\(V\)</span>.</p>
+<p>O radical de <span class="math inline">\(B\)</span> é definido por <span class="math display">\[
+\mbox{Rad}(B) = \{v \in V \mid B(v, w) = 0 \text{ para todo } w \in V\}.
+\]</span></p>
+<p>Na base escolhida, um vetor <span class="math inline">\(v\)</span> com coordenadas <span class="math inline">\([v]_X = (\alpha_1, \ldots, \alpha_n)^t\)</span> pertence ao radical se e somente se <span class="math display">\[
+B(v, w) = ([v]_X)^t G ([w]_X)^\sigma = 0 \quad \text{para todo } w \in V.
+\]</span> Isso equivale a dizer que <span class="math inline">\(([v]_X)^t G = 0\)</span>, ou seja, <span class="math inline">\([v]_X\)</span> está no núcleo (espaço nulo) da matriz <span class="math inline">\(G^t\)</span>. As matrizes <span class="math inline">\(G\)</span> e <span class="math inline">\(G^t\)</span> têm o mesmo posto, portanto, <span class="math display">\[
+\dim \mbox{Rad}(B) = \dim \ker(G^t) = n - \operatorname{posto}(G^t) = n - \operatorname{posto}(G) = \dim V - \operatorname{posto}(G).
+\]</span></p>
+<p>Em particular, <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(\mbox{Rad}(B) = 0\)</span>, ou seja, se e somente se <span class="math inline">\(\operatorname{posto}(G) = \dim V\)</span>, isto é, se <span class="math inline">\(G\)</span> é invertível.</p>
+</div>
+</div>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.8</strong></span> Denote por <span class="math inline">\(H_2\)</span> o espaço <span class="math inline">\(\R^2\)</span> com forma <span class="math inline">\(B(e_1,e_1)=B(e_2,e_2)=0\)</span> e <span class="math inline">\(B(e_1,e_2)=B(e_2,e_1)=1\)</span> na base canônica <span class="math inline">\(\{e_1,e_2\}\)</span> de <span class="math inline">\(\R^2\)</span>.</p>
 <ol type="1">
 <li>Mostre que <span class="math inline">\(H_2\)</span> não é isométrico a <span class="math inline">\(\R^2\)</span> equipado com o produto interno usual.</li>
 <li>Mostre que <span class="math inline">\(H_2\perp H_2\)</span> é isométrico a <span class="math inline">\(\R^{2+2}\)</span>.</li>
 </ol>
 </div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong><span class="math inline">\(H_2\)</span> não é isométrico a <span class="math inline">\(\R^2\)</span> com o produto interno usual:</strong></li>
+</ol>
+<p>O produto interno usual em <span class="math inline">\(\R^2\)</span> é dado por <span class="math inline">\(B_0(u,v) = u_1 v_1 + u_2 v_2\)</span>, cuja matriz na base canônica é a identidade: <span class="math display">\[
+G_0 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+\]</span> Já a matriz de <span class="math inline">\(B\)</span> em <span class="math inline">\(H_2\)</span> é <span class="math display">\[
+G = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
+\]</span> O posto de ambas é <span class="math inline">\(2\)</span>, mas as formas não são equivalentes: no produto interno usual, <span class="math inline">\(B_0(e_1, e_1) = 1 \neq 0\)</span>, enquanto em <span class="math inline">\(H_2\)</span>, <span class="math inline">\(B(e_1, e_1) = 0\)</span>. Além disso, no produto interno usual, todo vetor não nulo tem <span class="math inline">\(B_0(v, v) &gt; 0\)</span>, enquanto em <span class="math inline">\(H_2\)</span> existem vetores não nulos isotrópicos, por exemplo <span class="math inline">\(e_1\)</span> e <span class="math inline">\(e_2\)</span>. Portanto, não existe isometria entre <span class="math inline">\((\R^2, B)\)</span> e <span class="math inline">\((\R^2, B_0)\)</span>.</p>
+<ol start="2" type="1">
+<li><strong><span class="math inline">\(H_2 \perp H_2\)</span> é isométrico a <span class="math inline">\(\R^{2+2}\)</span>:</strong></li>
+</ol>
+<p>Considere <span class="math inline">\(V = H_2 \oplus H_2\)</span> com a forma <span class="math inline">\(B((u_1, u_2), (v_1, v_2)) = B_{H_2}(u_1, v_1) + B_{H_2}(u_2, v_2)\)</span>. A matriz de <span class="math inline">\(B\)</span> em relação à base <span class="math inline">\(\{e_1, e_2, f_1, f_2\}\)</span> (onde <span class="math inline">\(\{e_1, e_2\}\)</span> é base do primeiro <span class="math inline">\(H_2\)</span> e <span class="math inline">\(\{f_1, f_2\}\)</span> do segundo) é <span class="math display">\[
+G' = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{pmatrix}
+\]</span> Esta matriz é simétrica e tem posto <span class="math inline">\(4\)</span>. A base de <span class="math inline">\(\R^{2+2}\)</span> (ou seja, <span class="math inline">\(\R^4\)</span>) na qual a matriz da forma <span class="math inline">\(B\)</span> correspondente a <span class="math inline">\(H_2 \perp H_2\)</span> é diagonal com duas entradas <span class="math inline">\(1\)</span> e duas entradas <span class="math inline">\(-1\)</span> pode ser explicitamente construída como segue:</p>
+<p>Considere a base <span class="math inline">\(\{e_1, e_2, f_1, f_2\}\)</span> de <span class="math inline">\(H_2 \perp H_2\)</span>, onde <span class="math inline">\(e_1, e_2\)</span> são a base do primeiro <span class="math inline">\(H_2\)</span> e <span class="math inline">\(f_1, f_2\)</span> do segundo. Defina os seguintes vetores: <span class="math display">\[
+\begin{aligned}
+u_1 &amp;= \frac{1}{\sqrt{2}}(e_1 + e_2), \\
+u_2 &amp;= \frac{1}{\sqrt{2}}(e_1 - e_2), \\
+u_3 &amp;= \frac{1}{\sqrt{2}}(f_1 + f_2), \\
+u_4 &amp;= \frac{1}{\sqrt{2}}(f_1 - f_2).
+\end{aligned}
+\]</span></p>
+<p>Nessa base, a matriz da forma <span class="math inline">\(B\)</span> é diagonal, com duas entradas <span class="math inline">\(1\)</span> e duas entradas <span class="math inline">\(-1\)</span>: <span class="math display">\[
+B(u_1, u_1) = 1, \quad B(u_2, u_2) = -1, \quad B(u_3, u_3) = 1, \quad B(u_4, u_4) = -1,
+\]</span> e todos os produtos cruzados são zero.</p>
+<p>Portanto, a base explícita é <span class="math inline">\(\{u_1, u_2, u_3, u_4\}\)</span> conforme acima. Portanto, <span class="math inline">\(H_2 \perp H_2\)</span> é isométrico a <span class="math inline">\(\R^{2+2}\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.9</strong></span> Seja <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\geq 3\)</span> e <span class="math inline">\(a,b \in \F\)</span> com <span class="math inline">\(a\neq 0\)</span>. Mostre que existem <span class="math inline">\(u, v \in \F\)</span> tais que <span class="math inline">\(u^2 + a v^2 = c\)</span>.</p>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(Q=\{x^2\mid x\in \F\}\)</span>. Como <span class="math inline">\(\F\)</span> possui <span class="math inline">\(p\)</span> elementos com <span class="math inline">\(p\)</span> ímpar, temos que <span class="math inline">\(|Q|=(p+1)/2\)</span> (<a href="../FundamentosDeAlgebra/quadrados.html#lem-no-squares" class="quarto-xref">Lema&nbsp;<span>23.1</span></a>). Se <span class="math inline">\(a\neq 0\)</span>, então <span class="math inline">\(|aQ|=(p+1)/2\)</span> e <span class="math inline">\(|c-aQ|=(p+1)/2\)</span>. Mas como <span class="math inline">\(|\F|=p\)</span>, temos que <span class="math display">\[
+Q\cap (c-aQ)\neq \emptyset.
+\]</span> Portanto existe elemento na inteerseção. Chamando este elemento de <span class="math inline">\(u^2\)</span>, temos que <span class="math inline">\(u^2=c-av^2\)</span> com algum <span class="math inline">\(v\in \F\)</span> e assim <span class="math display">\[
+u^2+av^2=c.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-gauss-ff" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 81.10</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial sobre <span class="math inline">\(\Z_p\)</span> de dimensão maior ou igual a <span class="math inline">\(3\)</span> com uma forma bilinear simétrica.</p>
 <ol type="1">
 <li>Mostre que <span class="math inline">\(V\)</span> possui vetor não nulo isotrópico.</li>
 <li>Mostre que a afirmação no item anterior não é verdadeira se <span class="math inline">\(\dim V=1\)</span> ou <span class="math inline">\(\dim V=2\)</span>.</li>
 </ol>
+</div>
+<div class="sol callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solução
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Assuma que <span class="math inline">\(\dim V\geq 3\)</span> e seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortogonal de <span class="math inline">\(V\)</span> (existe por <a href="isometrias.html#thm-orth-basis" class="quarto-xref">Teorema&nbsp;<span>75.1</span></a>). Assuma que <span class="math inline">\(a_i=Q(b_i)=B(b_i,b_i)\)</span> para todo <span class="math inline">\(i\)</span>. Se <span class="math inline">\(Q(b_i)=0\)</span> com algum <span class="math inline">\(i\)</span>, então <span class="math inline">\(b_i\)</span> é vetor isotrópico, e o exercício está resolvido. Assuma que <span class="math inline">\(Q(b_i)\neq 0\)</span> para todo <span class="math inline">\(i\)</span>. Sejam <span class="math inline">\(u,v\in \Z_p\)</span> tal que <span class="math inline">\(u^2+(a_2/a_1)v^2=-a_3/a_1\)</span>; ou seja <span class="math inline">\(u^2a_1+v_2a_2+a_3=0\)</span> (existem por <a href="#exr-gauss-ff" class="quarto-xref">Exercício&nbsp;<span>81.10</span></a>). Como <span class="math inline">\(a_3\neq 0\)</span>, <span class="math inline">\((u,v)\neq (0,0)\)</span>. Seja <span class="math inline">\(v=u b_1+vb_2+b_3\)</span>. Então <span class="math display">\[
+Q(v)=u^2a_1+v^2b_2+b_3=0.
+\]</span> Temos que <span class="math inline">\(v\)</span> é vetor não nulo isotrópico.</li>
+<li>Se <span class="math inline">\(\dim V=1\)</span> com base <span class="math inline">\(\{b\}\)</span>, então <span class="math inline">\(Q(\alpha b)=\alpha^2 Q(b)\)</span>. Então se escolhemos a forma em tal modo que <span class="math inline">\(Q(b)=B(b,b)=1\)</span>, então não existe vetor não nulo isotrópico. Assuma que <span class="math inline">\(\dim V=2\)</span> com base <span class="math inline">\(\{b_1,b_2\}\)</span> seja <span class="math inline">\(B\)</span> uma forma bilinear sobre <span class="math inline">\(V\)</span> tal que <span class="math inline">\(B(b_1,b_2)=B(b_2,b_1)=0\)</span> e <span class="math inline">\(B(b_1,b_1)=\delta_1\)</span> e <span class="math inline">\(B(b_2,b_2)=\delta_2\)</span> tal que <span class="math inline">\(-\delta_1/\delta_2\)</span> não é quadrado. Ora, se <span class="math inline">\((u,v)\neq(0,0)\)</span>, então <span class="math display">\[
+Q(ub_1+vb_2)=u^2Q(b_1)+v^2Q(b_2)=u^2\delta_1+v^2\delta_2.
+\]</span> Se <span class="math inline">\(Q(ub_1+vb_2)=0\)</span>, então <span class="math inline">\(v\neq 0\)</span> e <span class="math inline">\(-\delta_1/\delta_2=(u/v)^2\)</span> que contradiz à escolha de <span class="math inline">\(\delta_1,\delta_2\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.11</strong></span> Sejam <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> transformações lineares tais que existem <span class="math inline">\(f^*\)</span> e <span class="math inline">\(g^*\)</span>. Mostre que as seguintes afirmações estão válidas.</p>
+<ol type="1">
+<li>Se <span class="math inline">\(\alpha,\beta\in\F\)</span> e <span class="math inline">\(f,g:V\to W\)</span>, então existe <span class="math inline">\((\alpha f+\beta g)^*\)</span> e <span class="math inline">\((\alpha f+\beta g)^*=\alpha^\sigma f^*+\beta^\sigma g^*\)</span>.</li>
+<li>Existe <span class="math inline">\((f^*)^*\)</span> e <span class="math inline">\((f^*)^*=f\)</span>.</li>
+<li>Se <span class="math inline">\(f:U\to V\)</span> e <span class="math inline">\(g:V\to W\)</span>, então existe <span class="math inline">\((g\circ f)^*\)</span> e <span class="math inline">\((g\circ f)^*=f^*\circ g^*\)</span>.</li>
+<li>Existe <span class="math inline">\((\mbox{id}_V)^*\)</span> para todo espaço <span class="math inline">\(V\)</span> e <span class="math inline">\((\mbox{id}_V)^*=\mbox{id}_V\)</span>.</li>
+<li>Se <span class="math inline">\(f:V\to V\)</span> é invertível e existe <span class="math inline">\((f^{-1})^*\)</span>, então <span class="math inline">\((f^{-1})^*=(f^*)^{-1}\)</span>.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.12</strong></span> Sejam <span class="math inline">\(\K\)</span> e <span class="math inline">\(\F\)</span> corpos tais que <span class="math inline">\(\K\subseteq \F\)</span>. Assuma que <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial.</p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(\F\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial.</li>
+<li>Mostre que <span class="math inline">\(V\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial.</li>
+<li>Seja <span class="math inline">\(B_\F\)</span> uma base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span> e seja <span class="math inline">\(B_V\)</span> uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
+\{\alpha b\mid \alpha \in B_\F\mbox{ e }b\in B_V\}
+\]</span> é uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>.</li>
+<li>Deduza que <span class="math inline">\(\dim_\K V=\dim_\K \F\cdot \dim_\F V\)</span>.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.13</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e assuma que <span class="math inline">\(\dim_\F V=\dim_\F W\)</span> e <span class="math inline">\(\dim_{\textrm{Fix}(\sigma)}\F\)</span> são todas finitas. Mostre que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f\)</span> é injetiva.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.14</strong></span> Suponha que <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são espaços vetoriais e <span class="math inline">\(\alpha: V\to W\)</span> é uma transformação linear que possui adjunta <span class="math inline">\(\alpha^\#:W\to V\)</span>. Na aula, definimos <span class="math inline">\(\Phi_V:V\to V^*\)</span> com a regra <span class="math inline">\(v\mapsto B(-,v)\)</span> e defina <span class="math inline">\(\Phi_W\)</span> na maneira análoga. Seja <span class="math inline">\(\alpha^*:W^*\to V^*\)</span> a transformação dual de <span class="math inline">\(\alpha\)</span>. Mostre que o seguinte diagrama comuta:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/adj_dual.png" class="img-fluid figure-img"></p>
+<figcaption>Diagrama adjunto dual</figcaption>
+</figure>
+</div>
+<p>[Este exercício explica o comportamento similar do adjunto <span class="math inline">\(\alpha^\#\)</span> e o dual <span class="math inline">\(\alpha^*\)</span>.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.15</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> tal que <span class="math inline">\(f\)</span> possui adjunto <span class="math inline">\(f^*\)</span>. Assumindo que <span class="math inline">\(\dim V\)</span> e <span class="math inline">\(\dim W\)</span> são finitas, mostre que <span class="math inline">\(\ker f=\mbox{Im}(f^*)^\perp\)</span> e <span class="math inline">\(\mbox{Im}(f)=(\ker f^*)^\perp\)</span>. Quais destas afirmações vale nos casos quando a dimensão de <span class="math inline">\(V\)</span> ou a dimensão de <span class="math inline">\(W\)</span> é infinita?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.16</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma transformação linear que possui adjunto e assuma que <span class="math inline">\(\dim V\)</span> e <span class="math inline">\(\dim W\)</span> são finitas. O espaço <span class="math inline">\(\mbox{coker}(f)=W/\mbox{Im}(f)\)</span> é chamado de <em>conúcleo</em> de <span class="math inline">\(f\)</span>. Mostre que <span class="math inline">\(\ker f\cong\mbox{coker}(f^*)\)</span>. Assumindo que <span class="math inline">\(\dim V\)</span> e <span class="math inline">\(\dim W\)</span> são finitas, deduza que <span class="math display">\[\begin{align*}
+    \dim \ker f&amp;=\dim \ker f^*+\dim V-\dim W\\
+    \dim \mbox{Im}(f)&amp;=\dim\mbox{Im}(f^*).
+\end{align*}\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.17</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma isometria de espaços de dimensão finita que possui adjunto. Mostre que <span class="math inline">\(f\circ f^*=\mbox{id}_W\)</span> e <span class="math inline">\(f^*\circ f=\mbox{id}_V\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 81.18</strong></span> Considere <span class="math display">\[
+    V=\{f:[-1,1]\to \R\mid f\mbox{ é contínua}\}
+\]</span> com o forma bilinear <span class="math display">\[
+    \langle f,g\rangle = \int_{-1}^1 f(t)g(t)\,dt.
+    \]</span> Mostre que as funções <span class="math inline">\(\mbox{sen}(n\pi x)\)</span>, <span class="math inline">\(\cos(n\pi x)\)</span> com <span class="math inline">\(n\in \Z\)</span> formam um sistema ortonormal.</p>
 </div>
 
 

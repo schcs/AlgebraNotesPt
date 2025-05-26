@@ -2351,7 +2351,62 @@
     "href": "AlgebraLinearII/dual.html",
     "title": "61  O espaço dual",
     "section": "",
-    "text": "\\[\n\\newcommand{\\Z}{\\mathbb Z}\n\\newcommand{\\Q}{\\mathbb Q}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\C}{\\mathbb C}\n\\newcommand{\\F}{\\mathbb F}\n\\newcommand{\\K}{\\mathbb K}\n\\newcommand{\\L}{\\mathbb L}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n\\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n\\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n\\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n\\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n\\newcommand{\\lxor}{\\dot\\lor}\n\\newcommand{\\cond}{\\Rightarrow}\n\\newcommand{\\bicond}{\\Leftrightarrow}\n\\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n\\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n\\newcommand{\\real}[1]{\\mathfrak R(#1)}\n\\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n\\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n\\DeclareMathOperator{\\sen}{sen}\n\\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n\\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n\\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n\\newcommand{\\overbar}[1]{\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu}\n\\newcommand{\\ul}[1]{\\underline{#1}}\n\\newcommand{\\tn}[1]{\\textnormal{#1}}\n\\]",
+    "text": "61.1 A definição do dual\nSe \\(\\dim V=k\\) é finita, então \\(\\dim V^*=\\dim V=k\\).\nSeja \\(B=\\{b_i\\mid i\\in I\\}\\) uma base de \\(V\\). Para \\(i\\in I\\), defina \\[\nb_i^*\\in V^*,\\quad b_i^*(b_j)=\\delta_{i,j}=\\left\\{\\begin{array}{cc} 1 & \\mbox{se $i=j$}\\\\\n0 & \\mbox{se $i\\neq j$}\\end{array}\\right.\n\\]\nQuando \\(\\dim V\\) for finita, a base \\(B^*\\) é chamada de base dual de \\(B\\). Note que se \\(\\dim V\\) é infinita, então \\(B^*\\) não é conjunto gerador, pois a funcional \\(\\varphi\\in V^*\\) que leva \\(\\varphi(b_i)=1\\) para todo \\(i\\) não pertence ao subespaço \\(\\langle B^*\\rangle\\).",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/dual.html#sec-dual-def",
+    "href": "AlgebraLinearII/dual.html#sec-dual-def",
+    "title": "61  O espaço dual",
+    "section": "",
+    "text": "Definição 61.1 Se \\(V\\) é um \\(\\F\\)-espaço vetorial, então \\(V^*=\\mbox{Hom}(V,\\F)\\) é dito espaço dual de \\(V\\). Os elementos de \\(V^*\\) são chamados de formas lineares ou funcionais lineares de \\(V\\).\n\n\n\n\nLema 61.1 O conjunto \\(B^*=\\{b_i^*\\mid i\\in I\\}\\) é L.I. em \\(V^*\\). Além disso, se \\(\\dim V\\) é finita, então \\(B^*\\) é base de \\(V^*\\).\n\n\nComprovação. Assuma que uma combinação linear \\[\n\\alpha_1 b_{i_1}^*+\\cdots+\\alpha_m b_{i_m}^*=0_{V^*}.\n\\] Denote o lado esquerdo da equação anterior por \\(\\varphi\\). Seja \\(j\\in\\{1,\\ldots,m\\}\\) e calculemos que \\[\\begin{align*}\n0&=\\varphi(b_{i_j})=(\\alpha_1 b_{i_1}^*+\\cdots+\\alpha_m b_{i_m}^*)(b_{i_j})\\\\&=\n\\alpha_1 b_{i_1}^*(b_{i_j})+\\cdots+\\alpha_jb_{i_j}^*(b_{i_j})+\\cdots+\\alpha_m b_{i_m}^*(b_{i_j})\\\\&=\\alpha_{i_j}.\n\\end{align*}\\] Então \\(\\alpha_{i_j}=0\\) para todo \\(j\\). Ou seja, \\(B^*\\) é L.I.\nSe \\(\\dim V\\) é finita, então \\(\\dim V=\\dim V^*\\) e assim \\(B^*\\) (sendo um conjunto L.I. com cardinalidade \\(\\dim V^*\\)) é base de \\(B^*\\).",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/dual.html#o-dual-de-uma-transformação-linear",
+    "href": "AlgebraLinearII/dual.html#o-dual-de-uma-transformação-linear",
+    "title": "61  O espaço dual",
+    "section": "61.2 O dual de uma transformação linear",
+    "text": "61.2 O dual de uma transformação linear\nSejam \\(V\\) e \\(W\\) \\(\\F\\)-espaços vetoriais, e seja \\(f\\in\\mbox{Hom}(V,W)\\). Definimos o dual \\(f^*\\in \\mbox{Hom}(W^*,V^*)\\) com a regra \\[\nf^*(\\varphi)=\\varphi\\circ f.\n\\] Usando diagramas \\[\n\\begin{array}{cc}\nW & \\stackrel{\\varphi}{\\longrightarrow} & \\F\\\\\nf\\uparrow & \\nearrow \\\\\nV &&\n\\end{array}\n\\] o mapa \\(f^*(\\varphi)\\) é representado pela flecha diaginal. Note que o morfismo original está de \\(V\\) para \\(W\\), enquanto o morfismo dual está de \\(W^*\\) para \\(V^*\\).\n\nExercício 61.1 Seja \\(f:V\\to W\\) uma transformação linear entre \\(\\F\\)-espaços de dimensão finita. Sejam \\(B\\) e \\(C\\) bases de \\(V\\) e \\(W\\), respetivamente. Mostre que \\[\n[f^*]^{C^*}_{B^*}=([f]^B_C)^t\n\\] onde \\((-)^t\\) significa a matriz transposta.",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/dual.html#o-dual-como-functor",
+    "href": "AlgebraLinearII/dual.html#o-dual-como-functor",
+    "title": "61  O espaço dual",
+    "section": "61.3 O dual como functor",
+    "text": "61.3 O dual como functor\nSe \\(\\F\\) é um corpo, a categoria dos \\(\\F\\)-espaços vetoriais consiste\n\nnos \\(\\F\\)-espaços vetoriais; e\nnos transformações lineares entre \\(\\F\\)-espaços.\n\nNeste contesto, as transformações lineares também são chamadas de morfismos ou flechas.\nO conceito “dual” associa um espaço vetorial \\(V\\) com seu dual \\(V^*\\) e cada morfismo \\(f:V\\to W\\) com o seu dual \\(f^*:W^*\\to V^*\\). Além disso, é fácil verificar que \\[\n\\mbox{id}_V^*=\\mbox{id}_{V^*}\n\\] e que se \\(f:V\\to U\\) e \\(g:U\\to W\\) são transformações lineares, então \\[\n(g\\circ f)^*=f^*\\circ g^*.\n\\] Devido a estas propriedades, dizemos que o dual é um functor contravariante da categoria de espaços vetoriais.",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/dual.html#o-bidual",
+    "href": "AlgebraLinearII/dual.html#o-bidual",
+    "title": "61  O espaço dual",
+    "section": "61.4 O bidual",
+    "text": "61.4 O bidual\nNote que a correspondência entre \\(V\\) e \\(V^*\\) não é natural (ou canônica), pois precisa-se fixar uma base para definí-la. No entanto, existe uma correspondência natural entre \\(V\\) e \\(V^{**}=(V^*)^*\\) (o bidual de \\(V\\)). Os elementos de \\(V^{**}\\) são transformações lineares em \\(\\mbox{Hom}(V^*,\\F)=\\mbox{Hom}(\\mbox{Hom}(V,\\F),\\F)\\). Ou seja, se \\(\\psi\\in V^{**}\\), então \\(\\psi:V^*\\to \\F\\) é linear.\nSeja \\(v\\in V\\) e defina \\[\n\\psi_v:V^*\\to \\F,\\quad \\psi_v(\\varphi)=\\varphi(v)\\quad \\mbox{para todo}\\quad \\varphi\\in V^*.\n\\] O leitor deve verificar que \\(\\psi_v:V^*\\to \\F\\) é linear e assim \\(\\psi_v\\in V^{**}\\). Defina \\[\n\\Psi:V\\to V^{**},\\quad \\Psi(v)=\\psi_v.\n\\]\n\nLema 61.2 A aplicação \\(\\Psi:V\\to V^{**}\\) é linear e injetiva. Se \\(\\dim V=k\\) finita, então \\(\\Psi\\) é um isomorfismo entre \\(V\\) e \\(V^{**}\\).\n\n\nComprovação. O leitor pode verificar que \\(\\Psi\\) é linear. Seja \\(v\\in\\ker \\Psi\\). Então \\(\\psi_v=0\\). Assuma que \\(v\\neq 0\\) e seja \\(B\\) uma base de \\(V\\) que contém \\(v\\) e considere o elemento \\(v^*\\) na base dual. Então \\[\n0=\\psi_v(v^*)=v^*(v)=1.\n\\] Isso é uma contradição, então \\(v=0\\) deve valer. Assim \\(\\ker\\Psi=0\\) e \\(\\Psi\\) é injetiva.\nSe \\(\\dim V=k\\) finita, então \\(\\dim V^{**}=\\dim V^*=\\dim V\\) e uma aplicação injetiva \\(V\\to V^{**}\\) é um isomorfismo.",
+    "crumbs": [
+      "Álgebra Linear II",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
+    ]
+  },
+  {
+    "objectID": "AlgebraLinearII/dual.html#o-bidual-como-functor",
+    "href": "AlgebraLinearII/dual.html#o-bidual-como-functor",
+    "title": "61  O espaço dual",
+    "section": "61.5 O bidual como functor",
+    "text": "61.5 O bidual como functor\nNote que se \\(f\\in\\mbox{Hom}(V,W)\\), então já definimos \\(f^*:W^*\\to V^*\\) e podemos definir \\(f^{**}:V^{**}\\to W^{**}\\) como \\[\nf^{**}(\\gamma)=\\gamma \\circ f^*\\quad\\mbox{para todo}\\quad \\gamma\\in V^{**}.\n\\] Usando diagramas \\[\n\\begin{array}{cc}\nV^* & \\stackrel{\\gamma}{\\longrightarrow} & \\F\\\\\nf^*\\uparrow & \\nearrow \\\\\nW^* &&\n\\end{array}\n\\] o mapa \\(f^{**}(\\gamma)\\) está representado pela flecha diagonal. Mais detalhadamente, temos para \\(\\gamma\\in V^{**}\\), \\(\\varphi\\in W^*\\) que \\[\nf^{**}(\\gamma)(\\varphi)=(\\gamma\\circ f^*)(\\varphi)=\\gamma(f^*(\\varphi))=\\gamma(\\varphi\\circ f).\n\\]\nÉ fácil verificar que \\[\n\\mbox{id}_V^{**}=\\mbox{id}_{V^{**}}\n\\] e que se \\(f:V\\to U\\) e \\(g:U\\to W\\) são transformações lineares, então \\[\n(g\\circ f)^{**}=g^{**}\\circ f^{**}.\n\\] Ou seja, o bidual é um functor covariante da categoria dos \\(\\F\\)-espaços vetoriais.",
     "crumbs": [
       "Álgebra Linear II",
       "<span class='chapter-number'>61</span>  <span class='chapter-title'>O espaço dual</span>"
