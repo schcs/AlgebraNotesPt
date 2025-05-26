@@ -71,7 +71,7 @@ Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
-Caso $\mathbb{F} = \mathbb{Q}$
+**Caso $\mathbb{F} = \mathbb{Q}$**
 
 Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
 
@@ -106,7 +106,7 @@ Seja $\sigma$ um automorfismo de $\mathbb{Q}$. Então:
 
 Portanto, $\sigma$ fixa todos os números racionais, ou seja, $\sigma = \text{id}_{\mathbb{Q}}$.
 
-Caso $\mathbb{F} = \mathbb{Z}_p$
+**Caso $\mathbb{F} = \mathbb{Z}_p$**
 
 Seja $\sigma$ um automorfismo de $\mathbb{Z}_p$. Como $\mathbb{Z}_p$ tem $p$ elementos e $\sigma$ é bijetora:
 
@@ -192,7 +192,7 @@ Seja $\sigma$ um automorfismo contínuo de $\C$. Mostre que
 :::{.sol .callout-tip collapse="true"}
 ### Solução:
 
-### 1. Mostrar que $\mathbb{R} \subseteq \text{Fix}(\sigma)$
+**1. Mostrar que $\mathbb{R} \subseteq \text{Fix}(\sigma)$**
 
 Seja $x \in \mathbb{R}$. Como:
 - $\sigma$ é contínuo
@@ -206,7 +206,7 @@ $$
 
 Portanto, $\sigma$ fixa todos os números reais.
 
-### 2. Mostrar que $\sigma = \text{id}_{\mathbb{C}}$ ou $\sigma$ é o conjugado complexo
+**2. Mostrar que $\sigma = \text{id}_{\mathbb{C}}$ ou $\sigma$ é o conjugado complexo**
 
 Para qualquer $z = a + bi \in \mathbb{C}$ com $a,b \in \mathbb{R}$:
 - Pelo item anterior, $a^\sigma = a$ e $b^\sigma = b$
