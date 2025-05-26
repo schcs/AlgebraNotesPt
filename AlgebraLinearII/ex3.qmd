@@ -61,6 +61,8 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
    (b^{-1})^\sigma = (b^\sigma)^{-1}.
    $$
 
+:::
+
 :::{#exr-}
 Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
 :::
