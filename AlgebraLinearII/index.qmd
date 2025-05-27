@@ -57,7 +57,7 @@ Material disponibilizado sob a licença
 
 - [Formas sequilineares](sesqui.qmd)
 - [Isometrias de formas sesquilineares](isometrias.qmd)
-- [Operadores adjuntos](isometrias.qmd)
+- [Operadores adjuntos](adjuntos.qmd)
 - [Operadores autoadjuntos](autoadjuntos.qmd)
 - [Operadores normais](normais.qmd)
 - [Transformações ortogonais de ℝ<sup>n</sup>](ortogonais.qmd)
