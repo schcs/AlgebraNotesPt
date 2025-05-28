@@ -666,7 +666,7 @@ item 2. precisa que as dimensões são finitas. Logo, item 1. vale com espaços 
 item 2. pode não valer.
 :::
 
-:::{#exr-}
+:::{#exr-coker}
 Seja $f:V\to W$ uma transformação linear que possui adjunto  e assuma que $\dim V$ e $\dim W$ são finitas. 
 O espaço $\mbox{coker}(f)=W/\mbox{Im}(f)$ é chamado de *conúcleo* de $f$. Mostre que $\ker f\cong\mbox{coker}(f^*)$. Assumindo que $\dim V$ e $\dim W$ são finitas, 
 deduza que 
@@ -696,6 +696,12 @@ $$
 \dim\mbox{Im}(f)=V-\dim\ker f=V-(\dim V-\dim W+\dim\ker f^*)=\dim W-\dim\ker f^*=\dim \mbox{Im}(f^*).
 $$
 :::
+
+:::{#exr-}
+Deduza do @exr-coker que o posto coluna de uma matriz $m\times n$ com entradas em um corpo $\F$ é a mesma que
+o posto linha.
+:::
+
 
 :::{#exr-}
 Seja $f:V\to W$ uma isometria de espaços de dimensão finita que possui adjunto. Mostre que $f\circ f^*=\mbox{id}_W$ e $f^*\circ f=\mbox{id}_V$. 
