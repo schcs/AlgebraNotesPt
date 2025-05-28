@@ -20,7 +20,7 @@ $$
 \Phi:V\to V^*,\quad \Phi(v)=\varphi_v.
 $$
 
-:::{#lem-}
+:::{#lem-repr-riesz-herm}
 Temos para todo $\alpha_1,\alpha_2\in\F$ e $v_1,v_2\in V$ que
 $$
 \Phi(\alpha_1v_1+\alpha_2v_2)=\alpha_1^\sigma \Phi(v_1)+\alpha_2^\sigma\Phi(v_2).
@@ -44,9 +44,39 @@ Afirmamos que $\varphi=\Phi(v)=\varphi_v$. Para isso, precisa-se provar que $\va
 $$
 \varphi_v(b_i)=B(b_i,v)=B\left(b_i,\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n\right)=\varphi(b_i).
 $$
-
 :::
 
+
+:::{#exm-without-repr}
+A aplicação no @lem-repr-riesz-herm pode não ser sobrejetiva quando a dimensão dos espaços é infinita. Considere
+por exemplo $V=\R[x]$ com a forma bilinear simpetrica 
+$$
+B(p(x),q(x))=\int_0^1 p(x)q(x)\,dx.
+$$
+Seja $\alpha_0\in V$ e $\varphi\in V^*$ dada por 
+$$
+\varphi(p(x))=p(\alpha_0).
+$$
+Claramente, $\varphi\neq 0$. Assuma que existe $q_0(x)\in V$ tal que 
+$$
+\varphi(p(x))=B(p(x),q_0(x))\quad \mbox{para todo}\quad p(x)\in V.
+$$
+Seja $p(x)=x-\alpha_0$; então $\varphi(p(x))=p(\alpha_0)=0$, mas $p(x)\neq 0$. Note que 
+$$
+\varphi(p^2(x)q_0(x))=p(\alpha_0)^2q_0(\alpha_0)=0.
+$$
+Por outro lado, 
+$$
+0=\varphi(p^2(x)q_0(x))=\int_0^1 p^2(x)q_0^2(x)\, dx=\int_0^1 (p(x)q_0(x))^2\, dx.
+$$
+Como a função $(p(x)q_0(x))^2$ é contínua em $[0,1]$ e não negativa, a sua integral é nula se e somente se 
+$p(x)q_0(x)=0$ em $[0,1]$. Mas $p(x)=0$ apenas para $x=\alpha_0$, logo $q_0(x)=0$ para todo $x\in[0,1]\setminus\{\alpha_0\}$ que implica que $q_0(x)$ é a função nula. Mas se $q_0(x)$ é  
+a função nula, então 
+$$
+\varphi=B(-,q_0(x))=0
+$$
+que é absurdo.
+:::
 
 :::{#def-}
 Sejam $V$ e $W$ espaços vetoriais sobre $\F$ e assuma que $B_V$ e $B_W$ são formas $\sigma$-hermitianas não degeneradas sobre $V$ e $W$, respetivamente. Assuma que $f:V\to W$ é uma transformação linear. Uma aplicação $g:W\to F$ é chamada **adjunta** de $f$ se
@@ -100,6 +130,30 @@ $$
 A unicidade segue do lema anterior.
 :::
 
+
+:::{#exm-without-adj}
+Seja $V=\R[x]$ com o mesmo produto interno que no @exm-without-repr. Seja $D:V\to V$, definida por 
+$D(p(x))=p'(x)$ (derivada). Afirmamos que $D$ não possui adjunto. Assuma por contradição que $D^*:V\to V$ é adjunto 
+de $D$; ou seja 
+$$
+B(D(p(x)),q(x))=B(p(x),D^*(q(x)))\mbox{ para todo }p(x),q(x)\in V.
+$$
+Por outro lado, 
+$$
+B(D(p(x)),q(x))=B(p'(x),q(x))=\int_0^1 p'(x)q(x)\, dx=p(1)q(1)-p(0)q(0)-\int_0^1 p(x)q'(x)\, dx.
+$$
+Suponha que $q(x)\in V$ tal que $q(1)=1$ e $q(0)=0$ e seja $q_1(x)=D^*(q(x))$. 
+Então 
+\begin{align*}
+B(p(x),q_1(x))&=B(p(x),D^*(q(x)))=B(D(p(x)),q(x))\\&=p(1)q(1)-\int_0^1 p(x)q'(x)\, dx\\&=p(1)q(1)-B(p(x),q'(x)).
+\end{align*}
+Ou seja, 
+$$
+B(p(x),q_1(x)-q'(x))=p(1)q(1)=p(1)\mbox{ para todo }p(x)\in V. 
+$$
+Isso quer dizer que a funcional $\varphi:p\mapsto p(1)$ em $V^*$ é representada por $q(x)-q'(x)$; ou seja 
+$\varphi=B(-,q(x)-q'(x))$. Mas isso é uma contradição por @exm-without-repr. 
+:::
 
 :::{#lem-}
 Usando a notação do teorema anterior, assuma que $X_V$ e $X_W$ são bases de $V$ e $W$, respetivamente. Sejam $A$ e $A^*$ as matrizes de $f$ e $f^*$ nas bases $X_V$ e $X_W$, respetivamente e sejam $G_V$ e $G_W$ as matrizes de Gram das formas $B_V$ e $B_W$. Temos que

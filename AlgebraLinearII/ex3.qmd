@@ -240,34 +240,49 @@ Seja $V$ um $\F$-espaço e denote por
 $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre $V$. 
 
 1. Demonstre que $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ são espaços vetoriais com a soma e múltiplo escalar óbvia entre formas.
-2. Mostre que $\mbox{Bil}(V)\cong (V\otimes V)^*$.
-3. Seja $\Lambda^2V$ a potência exterior definida no @exr-alt-pow. Mostre que $\mbox{Bil}_A(V)\cong \Lambda^2(V)^*$.
-4. Estude a definição de $\Lambda^2(V)$ no @exr-alt-pow, e dê uma construção de um espaço vetorial $S^2(V)$ que satisfaz a mesma propriedade universal que $\Lambda^2(V)$, mas com funções $f:V\times V\to Z$ bilineares *simétricas* (em vez de alternadas). Mostre que $\mbox{Bil}_S(V)\cong S^2(V)^*$.
-5. Determine $\dim \mbox{Bil}(V)$, $\dim \mbox{Bil}_S(V)$, $\dim\mbox{Bil}_A(V)$. 
+2. Assumindo que $\dim V=n$, mostre que 
+   \begin{align*}
+   \mbox{Bil}(V)&\cong M_{n\times n}(\F);\\
+   \mbox{Bil}_S(V)&\cong \{A\in M_{n\times n}\mid A^t=A\};\\
+   \mbox{Bil}_A(V)&\cong \{A\in M_{n\times n}\mid A^t=-A\}\mbox{ se car}\,\F\neq 0.\\
+   \end{align*}
+3. Determine $\dim \mbox{Bil}(V)$, $\dim \mbox{Bil}_S(V)$, $\dim\mbox{Bil}_A(V)$. 
 :::
-
-
-
 :::{.sol .callout-tip collapse="true"}
 ### Esboço da solução:
 
 1. **Espaço vetorial:**  
    Os conjuntos $\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$ e $\mbox{Bil}_A(V)$ são subespaços vetoriais do espaço de todas as funções $V \times V \to \F$, pois a soma e o múltiplo escalar de formas bilineares (simétricas ou alternadas) continuam sendo formas bilineares (simétricas ou alternadas, respectivamente).
+2. **Isomorfismos com matrizes:**
+   - Fixe uma base $\{e_1, \ldots, e_n\}$ de $V$. Toda forma bilinear $B$ é determinada pelos valores $B(e_i, e_j)$, que podem ser organizados na matriz de Gram $G_X(B) = (B(e_i, e_j))_{i,j}$. Assim, $\mbox{Bil}(V) \cong M_{n \times n}(\F)$, identificando cada forma bilinear com sua matriz de Gram. É fácil verificar que a identificação $B\mapsto G_X(B)$ é um isomorfismo $\operatorname{Bil}(V)\to M_{n\times n}(\F)$. 
+   - $B$ é simétrica se $B(u, v) = B(v, u)$, o que equivale a $G_X(B)^t = G_X(B)$. Portanto, $\mbox{Bil}_S(V) \cong \{A \in M_{n \times n}(\F) \mid A^t = A\}$.
+   - $B$ é alternada se $B(v, v) = 0$ para todo $v$, o que implica que a diagonal de $G_X(B)$ é nula e $G_X(B)^t = -G_X(B)$. Assim, $\mbox{Bil}_A(V) \cong \{A \in M_{n \times n}(\F) \mid A^t = -A,\, a_{ii}=0\}$, supondo $\operatorname{car}(\F) \neq 2$.
+3. **Dimensões:**
+- $\dim \mbox{Bil}(V) = n^2$, pois $\dim M_{n \times n}(\F)=n^2$.
+- $\dim \mbox{Bil}_S(V) = \frac{n(n+1)}{2}$, pois uma matriz simétrica é determinada pelos $n$ elementos da diagonal e pelos $\frac{n(n-1)}{2}$ elementos acima (ou abaixo) da diagonal.
+- $\dim \mbox{Bil}_A(V) = \frac{n(n-1)}{2}$, pois uma matriz alternada (com $a_{ii}=0$ e $a_{ij} = -a_{ji}$) é determinada apenas pelos elementos acima da diagonal, totalizando $\frac{n(n-1)}{2}$ parâmetros (válido se $\operatorname{car}(\F) \neq 2$).
+:::
 
-2. **Isomorfismo $\mbox{Bil}(V) \cong (V \otimes V)^*$:**  
+:::{#exr-}
+Seja $V$ um $\F$-espaço e denote por 
+$\mbox{Bil}(V)$, $\mbox{Bil}_S(V)$, $\mbox{Bil}_A(V)$ os conjuntos das formas bilineares, bilieares simétricas, e bilineares alternadas sobre $V$. 
+
+1. Mostre que $\mbox{Bil}(V)\cong (V\otimes V)^*$.
+2. Seja $\Lambda^2V$ a potência exterior definida no @exr-alt-pow. Mostre que $\mbox{Bil}_A(V)\cong \Lambda^2(V)^*$.
+3. Estude a definição de $\Lambda^2(V)$ no @exr-alt-pow, e dê uma construção de um espaço vetorial $S^2(V)$ que satisfaz a mesma propriedade universal que $\Lambda^2(V)$, mas com funções $f:V\times V\to Z$ bilineares *simétricas* (em vez de alternadas). Mostre que $\mbox{Bil}_S(V)\cong S^2(V)^*$.
+:::
+
+:::{.sol .callout-tip collapse="true"}
+### Esboço da solução:
+
+1. **Isomorfismo $\mbox{Bil}(V) \cong (V \otimes V)^*$:**  
    Pela propriedade universal do produto tensorial, toda forma bilinear $B: V \times V \to \F$ corresponde unicamente a um funcional linear $\varphi_B: V \otimes V \to \F$ tal que $\varphi_B(v \otimes w) = B(v, w)$. Assim, $\mbox{Bil}(V) \cong (V \otimes V)^*$.
 
-3. **Isomorfismo $\mbox{Bil}_A(V) \cong (\Lambda^2 V)^*$:**  
+2. **Isomorfismo $\mbox{Bil}_A(V) \cong (\Lambda^2 V)^*$:**  
    Pelo @exr-alt-pow, toda forma bilinear alternada $A: V \times V \to \F$ corresponde unicamente a um funcional linear $\psi_A: \Lambda^2 V \to \F$ tal que $\psi_A(v \wedge w) = A(v, w)$. Assim, $\mbox{Bil}_A(V) \cong (\Lambda^2 V)^*$.
 
-4. **Construção de $S^2(V)$ e isomorfismo $\mbox{Bil}_S(V) \cong (S^2 V)^*$:**  
+3. **Construção de $S^2(V)$ e isomorfismo $\mbox{Bil}_S(V) \cong (S^2 V)^*$:**  
    Defina $S^2(V)$ como o quociente de $V \otimes V$ pelo subespaço gerado pelos elementos $v \otimes w - w \otimes v$. Assim, $S^2(V)$ satisfaz a propriedade universal para formas bilineares simétricas. Toda forma bilinear simétrica $S: V \times V \to \F$ corresponde unicamente a um funcional linear $\phi_S: S^2(V) \to \F$ tal que $\phi_S(v \odot w) = S(v, w)$, onde $v \odot w$ é a classe simétrica de $v \otimes w$. Portanto, $\mbox{Bil}_S(V) \cong (S^2 V)^*$.
-
-5. **Dimensões:**  
-   Seja $n = \dim V$.
-   - $\dim \mbox{Bil}(V) = \dim (V\otimes V)=n^2$.
-   - $\dim \mbox{Bil}_S(V) = \dim (S^2(V))=\frac{n(n+1)}{2}$ (também igual à dimensão do espaço de matrizes simétricas).
-   - $\dim \mbox{Bil}_A(V) = \dim(A^2(V))=\frac{n(n-1)}{2}$ (também igual à dimensão do espaço de matrizes alternadas).
 :::
 
 
@@ -460,16 +475,53 @@ Se $Q(ub_1+vb_2)=0$, então $v\neq 0$ e $-\delta_1/\delta_2=(u/v)^2$ que contrad
 
 
 :::{#exr-}
-Sejam $f$ e $g$ transformações lineares tais que existem $f^*$ e $g^*$. Mostre que as seguintes afirmações estão válidas.
+Sejam $U$, $V$, $W$ espaços com formas $\sigma$-hermitianas, $f$ e $g$ transformações lineares tais que existem $f^*$ e $g^*$. Mostre que as seguintes afirmações estão válidas.
 
 1. Se $\alpha,\beta\in\F$ e $f,g:V\to W$, então existe $(\alpha f+\beta g)^*$ e $(\alpha f+\beta g)^*=\alpha^\sigma f^*+\beta^\sigma g^*$.
 2. Existe $(f^*)^*$ e  $(f^*)^*=f$. 
 3. Se $f:U\to V$ e $g:V\to W$, então existe $(g\circ f)^*$ e $(g\circ f)^*=f^*\circ g^*$.
 4. Existe $(\mbox{id}_V)^*$ para todo espaço $V$ e $(\mbox{id}_V)^*=\mbox{id}_V$.
-5. Se $f:V\to V$ é invertível e existe $(f^{-1})^*$, então $(f^{-1})^*=(f^*)^{-1}$. 
+5. Se $f:V\to W$ é invertível e existe $(f^{-1})^*$, então $(f^{-1})^*=(f^*)^{-1}$. 
 :::
 
-:::{#exr-}
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **$(\alpha f+\beta g)^* = \alpha^\sigma f^* + \beta^\sigma g^*$:**  
+Sejam $f, g: V \to W$ transformações lineares com adjuntas $f^*, g^*$. Pela definição de adjunto em espaços hermitianos:
+$$
+B_W((\alpha f + \beta g)(v), w) = \alpha B_W(f(v), w) + \beta B_W(g(v), w)
+$$
+Como $B_W(f(v), w) = B_V(v, f^*(w))$ e $B_W(g(v), w) = B_V(v, g^*(w))$, temos:
+$$
+B_W((\alpha f + \beta g)(v), w) = B_V(v, \alpha^\sigma f^*(w) + \beta^\sigma g^*(w))=
+B_V(v, (\alpha^\sigma f^* + \beta^\sigma g^*)(w))
+$$
+Pela unicidade do adjunto, temos $(\alpha f + \beta g)^* = \alpha^\sigma f^* + \beta^\sigma g^*$.
+
+2. **$(f^*)^* = f$:**  
+Pela definição, $B_W(f(v), w) = B_V(v, f^*(w))$ para todo $v, w$. Temos 
+$$
+B_V(f^*(w),v))=B_V(v, f^*(w))^\sigma = B_W(f(v), w)^\sigma=B_W(w,f(v)). 
+$$
+Pela unicidado do adjunto, $(f^*)^* = f$.
+3. **$(g \circ f)^* = f^* \circ g^*$:**  
+Para $f: U \to V$ e $g: V \to W$, temos:
+$$
+B_W(g(f(u)), w) = B_V(f(u), g^*(w)) = B_U(u, f^*(g^*(w)))
+$$
+Logo, pela unicidade do adjunto, $(g \circ f)^* = f^* \circ g^*$.
+4. **$(\mbox{id}_V)^* = \mbox{id}_V$:**  
+Para a identidade, $B_V(v, w) = B_V(v, w)$, então o adjunto da identidade é a própria identidade.
+5. **$(f^{-1})^* = (f^*)^{-1}$:**  
+Segue do item anterior, pois 
+$$
+\mbox{id}_V=(\mbox{id}_V)^*=(f\circ f^{-1})^*=(f^{-1})^*\circ f^*.
+$$
+Obtemos por conta similar, que $\mbox{id}_V=f^*\circ (f^{-1})^*$. Portanto, $(f^{-1})^*=(f^*)^{-1}$. 
+:::
+
+:::{#exr-kf-lin}
 Sejam $\K$ e $\F$ corpos tais que $\K\subseteq \F$. Assuma que $V$ é um $\F$-espaço vetorial.
 
 1. Mostre que $\F$ é um $\K$-espaço vetorial.
@@ -481,24 +533,137 @@ $$
 é uma base de $V$ sobre $\K$. 
 4. Deduza que $\dim_\K V=\dim_\K \F\cdot \dim_\F V$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **$\F$ é um $\K$-espaço vetorial:**  
+A soma e a multiplicação por escalares de $\K$ em $\F$ são herdadas da estrutura de corpo, e $\K \subseteq \F$. Assim, $\F$ é um espaço vetorial sobre $\K$.
+
+2. **$V$ é um $\K$-espaço vetorial:**  
+Como $V$ é um $\F$-espaço vetorial e $\K\subseteq \F$, o múltiplo escalar com os elementos de $\K$ satisfaz
+os axiomas na definição de espaços vetoriais.  Logo $V$ é um $\K$-espaço vetorial.
+
+3. **A família $\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}$ é base de $V$ sobre $\K$:**
+Seja $B_\F$ uma base de $\F$ sobre $\K$ e $B_V$ uma base de $V$ sobre $\F$.  
+- **Gerador:** Todo $v \in V$ pode ser escrito como $v = \sum_{i=1}^n \lambda_i b_i$ com $\lambda_i \in \F$, $b_i \in B_V$. Cada $\lambda_i$ pode ser escrito como combinação linear de elementos de $B_\F$ com coeficientes em $\K$, ou seja, $\lambda_i = \sum_{j=1}^m \alpha_{ij} \alpha_j$ com $\alpha_{ij} \in \K$, $\alpha_j \in B_\F$. Assim,
+  $$
+  v = \sum_{i=1}^n \sum_{j=1}^m \alpha_{ij} (\alpha_j b_i),
+  $$
+  ou seja, $v$ é combinação linear sobre $\K$ dos elementos $\alpha_j b_i$.
+- **Linearmente independente:** Suponha $\sum_{i,j} \beta_{ij} (\alpha_j b_i) = 0$ com $\beta_{ij} \in \K$. Reescreva como $\sum_{i} \left( \sum_j \beta_{ij} \alpha_j \right) b_i = 0$. Como $B_V$ é base sobre $\F$, cada coeficiente $\sum_j \beta_{ij} \alpha_j = 0$ em $\F$. Como $B_\F$ é base de $\F$ sobre $\K$, segue que todos os $\beta_{ij} = 0$. Portanto, $\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}$ é base de $V$ sobre $\K$.
+
+4. **Fórmula das dimensões:**  
+Se $m = \dim_\K \F$ e $n = \dim_\F V$, então
+$$
+\dim_\K V = m \cdot n = \dim_\K \F \cdot \dim_\F V.
+$$
+:::
+
 
 :::{#exr-}
 Seja $f:V\to W$ uma aplicação $\sigma$-semilinear e assuma que $\dim_\F V=\dim_\F W$ e $\dim_{\textrm{Fix}(\sigma)}\F$ são todas finitas. Mostre que 
 $f$ é sobrejetiva se e somente se $f$ é injetiva.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
 
+Seja $\K=\textrm{Fix}(\sigma)$. A aplicação $f$ é $\K$-linear. Além disso $\dim_{\K}V=\dim_\K\F\cdot 
+\dim_\F V$ é finita. Ora, a afirmação segue pelo Teorema de Núcleo e Imagem para aplicações $\K$-lineares. 
+:::
 
 :::{#exr-}
-Suponha que $V$ e $W$ são espaços vetoriais e $\alpha: V\to W$ é uma transformação linear que possui adjunta $\alpha^\#:W\to V$. Na aula, definimos $\Phi_V:V\to V^*$ 
+Suponha que $V$ e $W$ são espaços vetoriais com formas $B_V$ e $B_W$ $\sigma$-hermitianas não degeneradas e seja $\alpha: V\to W$ uma transformação linear que possui adjunta $\alpha^\#:W\to V$. Na aula, definimos $\Phi_V:V\to V^*$ 
 com a regra $v\mapsto B(-,v)$ e defina $\Phi_W$ na maneira análoga. Seja $\alpha^*:W^*\to V^*$ a transformação dual de $\alpha$. Mostre que o seguinte diagrama comuta:
 
 ![Diagrama adjunto dual](img/adj_dual.png)
 
 [Este exercício explica o comportamento similar do adjunto $\alpha^\#$ e o dual $\alpha^*$.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
 
-:::{#exr-}
+Seja $B_V$ uma forma bilinear não degenerada em $V$ e $B_W$ uma forma bilinear não degenerada em $W$. Defina $\Phi_V: V \to V^*$ por $\Phi_V(v) = B_V(-, v)$ e $\Phi_W: W \to W^*$ por $\Phi_W(w) = B_W(-, w)$. Seja $\alpha: V \to W$ uma transformação linear com adjunta $\alpha^\#: W \to V$, isto é,
+$$
+B_W(\alpha(v), w) = B_V(v, \alpha^\#(w)) \quad \text{para todo } v \in V,\, w \in W.
+$$
+Seja $\alpha^*: W^* \to V^*$ o dual de $\alpha$, isto é, $\alpha^*(\varphi) = \varphi \circ \alpha$ para $\varphi \in W^*$.
+
+Queremos mostrar que o seguinte diagrama comuta:
+$$
+\begin{array}{ccc}
+W & \xrightarrow{\Phi_W} & W^* \\
+\alpha^\# \downarrow & & \downarrow \alpha^* \\
+V & \xrightarrow{\Phi_V} & V^*
+\end{array}
+$$
+Ou seja,
+$$
+\alpha^* \circ \Phi_W = \Phi_V \circ \alpha^\#.
+$$
+
+**Demonstração:**
+
+Para $w \in W$ e $v \in V$,
+$$
+\begin{align*}
+(\alpha^* \circ \Phi_W)(w)(v) &= \alpha^*(\Phi_W(w))(v) \\
+&= \Phi_W(w)(\alpha(v)) \\
+&= B_W(\alpha(v), w)
+\end{align*}
+$$
+Por outro lado,
+$$
+\begin{align*}
+(\Phi_V \circ \alpha^\#)(w)(v) &= \Phi_V(\alpha^\#(w))(v) \\
+&= B_V(v, \alpha^\#(w))
+\end{align*}
+$$
+Mas, pela definição de adjunto, $B_W(\alpha(v), w) = B_V(v, \alpha^\#(w))$ para todo $v \in V$, $w \in W$.
+
+Portanto,
+$$
+(\alpha^* \circ \Phi_W)(w) = (\Phi_V \circ \alpha^\#)(w)
+$$
+para todo $w \in W$, ou seja, o diagrama comuta.
+:::
+
+
+:::{#exr-ker-im-perp}
 Seja $f:V\to W$ tal que $f$ possui adjunto $f^*$. Assumindo que $\dim V$ e $\dim W$ são finitas, mostre que $\ker f=\mbox{Im}(f^*)^\perp$ e $\mbox{Im}(f)=(\ker f^*)^\perp$. Quais destas afirmações vale nos casos quando a dimensão de $V$ ou a dimensão de $W$ é infinita?
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Assuma que $f:V\to W$ é linear e possui adjunto $f^*:W\to V$, com $\dim V$ e $\dim W$ finitas. Seja $B_V$ e $B_W$ formas não degeneradas em $V$ e $W$.
+
+1. **Provar que $\ker f = \operatorname{Im}(f^*)^\perp$**:
+Seja $v \in V$. Então 
+\begin{align*}
+v \in \ker f&\Leftrightarrow\\
+f(v) = 0&\Leftrightarrow\\
+B_W(f(v),w)=0\mbox{ para todo }w\in W \mbox{($B_W$ é não degenerada) }&\Leftrightarrow\\
+B_V(v,f^*(w))=0\mbox{ para todo }w\in W &\Leftrightarrow\\
+v\perp f^*(w)\mbox{ para todo }w\in W &\Leftrightarrow\\
+v\in \mbox{Im}(f^*)^\perp
+\end{align*}
+2. Provar que **$\operatorname{Im}(f) = (\ker f^*)^\perp$**:
+Seja $y=f(v) \in \mbox{Im}(f)$. Se $w\in \ker{f^*}$, então 
+$$
+B_W(y,w)=B_W(f(v),w)=B_V(v,f^*(w))=B_V(v,0)=0.
+$$ 
+Logo $y\in (\ker{f^*})^\perp$ e obtemos que $\mbox{Im}(f)\leq (\ker{f^*})^\perp$. Afirmamos que quando $\dim V$ e 
+$\dim W$ são finitas, então 
+$\dim \mbox{Im}(f)=\dim (\ker{f^*})^\perp$. Segue do item 1. que, 
+$$
+\dim V-\dim \mbox{Im}(f)=\dim \ker f=\dim   \operatorname{Im}(f^*)^\perp=\dim V-\dim \mbox{Im}(f^*). 
+$$
+Ou seja, $\dim \mbox{Im}(f)=\dim \mbox{Im}(f^*)$. Por outro lado, 
+$$
+\dim (\ker f^*)^\perp=\dim W-\dim \ker f^*=\dim \mbox{Im}(f^*).
+$$
+3. **Caso de dimensão infinita:**: A demonstração do item 1. não precisa que a dimensão seja finita. O argumento do 
+item 2. precisa que as dimensões são finitas. Logo, item 1. vale com espaços de dimensão finita, enquanto 
+item 2. pode não valer.
 :::
 
 :::{#exr-}
@@ -510,9 +675,68 @@ deduza que
     \dim \mbox{Im}(f)&=\dim\mbox{Im}(f^*).
 \end{align*}
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $f:V\to W$ uma transformação linear entre espaços de dimensão finita, com adjunto $f^*:W\to V$. O conúcleo de $f$ é $\operatorname{coker}(f) = W/\operatorname{Im}(f)$.
+
+1. **Isomorfismo $\ker f \cong \operatorname{coker}(f^*)$:**
+Segue do item 1. do @exr-ker-im-perp que 
+$$
+\dim \ker f=\dim \mbox{Im}(f^*)^\perp=V-\dim\mbox{Im}(f^*)=
+\dim V/\mbox{Im}(f^*)=\dim \mbox{coker}(f^*).
+$$ 
+Logo $\ker f\cong  \mbox{coker}(f^*)$. 
+2. **Fórmulas das dimensões:** Temos que 
+$$
+\dim \ker f=\dim \mbox{coker}(f^*)=\dim V-\dim \mbox{Im}(f^*)=\dim V-\dim W+\dim\ker f^*.
+$$
+Ora, 
+$$
+\dim\mbox{Im}(f)=V-\dim\ker f=V-(\dim V-\dim W+\dim\ker f^*)=\dim W-\dim\ker f^*=\dim \mbox{Im}(f^*).
+$$
+:::
 
 :::{#exr-}
 Seja $f:V\to W$ uma isometria de espaços de dimensão finita que possui adjunto. Mostre que $f\circ f^*=\mbox{id}_W$ e $f^*\circ f=\mbox{id}_V$. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $f:V\to W$ uma isometria entre espaços de dimensão finita, com adjunto $f^*$. Como $f$ é isometria, temos para todo $v \in V$ e $w \in W$:
+$$
+B_W(f(v), f(w)) = B_V(v, w).
+$$
+
+Pela definição de adjunto, para todo $v \in V$ e $w \in W$:
+$$
+B_W(f(v), w) = B_V(v, f^*(w)).
+$$
+
+Agora, substitua $w$ por $f(u)$:
+$$
+B_W(f(v), f(u)) = B_V(v, f^*(f(u))).
+$$
+Mas, pela isometria,
+$$
+B_W(f(v), f(u)) = B_V(v, u).
+$$
+Logo,
+$$
+B_V(v, f^*(f(u))) = B_V(v, u)
+$$
+para todo $v, u \in V$. Como $B_V$ é não degenerada, segue que $f^* \circ f = \operatorname{id}_V$.
+
+Analogamente, trocando os papéis de $f$ e $f^*$, para todo $w, w' \in W$ existe $v \in V$ tal que $f(v) = w'$, e então:
+$$
+B_W(w, w') = B_W(w, f(v)) = B_V(f^*(w), v) = B_W(f(f^*(w)), w').
+$$
+Como isso vale para todo $w'$, segue que $f \circ f^* = \operatorname{id}_W$.
+
+Portanto,
+$$
+f^* \circ f = \operatorname{id}_V \quad \text{e} \quad f \circ f^* = \operatorname{id}_W.
+$$
 :::
 
 :::{#exr-}
