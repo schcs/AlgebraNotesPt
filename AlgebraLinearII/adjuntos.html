@@ -1382,7 +1382,7 @@ V^*=\mbox{Hom}(V,\F)=\{f:V\to \F\mid \mbox{$f$ é linear}\}.
 \]</span> O fato que <span class="math inline">\(\varphi_v\in V^*\)</span> segue do fato que <span class="math inline">\(B\)</span> é linear na primeira variável. Defina <span class="math display">\[
 \Phi:V\to V^*,\quad \Phi(v)=\varphi_v.
 \]</span></p>
-<div id="lem-" class="theorem lemma">
+<div id="lem-repr-riesz-herm" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 76.1</strong></span> Temos para todo <span class="math inline">\(\alpha_1,\alpha_2\in\F\)</span> e <span class="math inline">\(v_1,v_2\in V\)</span> que <span class="math display">\[
 \Phi(\alpha_1v_1+\alpha_2v_2)=\alpha_1^\sigma \Phi(v_1)+\alpha_2^\sigma\Phi(v_2).
 \]</span> Ou seja, a transformação <span class="math inline">\(\Phi\)</span> é <span class="math inline">\(\sigma\)</span>-semilinear. Além disso, <span class="math inline">\(\Phi\)</span> é injetiva, e quando <span class="math inline">\(\dim V\)</span> é finita, então <span class="math inline">\(\Phi\)</span> é sobrejetiva. Portanto, quando <span class="math inline">\(\dim V\)</span> for finita, <span class="math inline">\(\Phi:V\to V^*\)</span> é uma bijeção semilinear.</p>
@@ -1396,6 +1396,22 @@ v=\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)
 \]</span> Afirmamos que <span class="math inline">\(\varphi=\Phi(v)=\varphi_v\)</span>. Para isso, precisa-se provar que <span class="math inline">\(\varphi(w)=\varphi_v(w)=B(w,v)\)</span> para todo <span class="math inline">\(w\in V\)</span>, mas é suficiente verificar esta igualdade nos elementos na base; ou seja precisamos provar que <span class="math inline">\(\varphi(b_i)=B(b_i,v)\)</span> para todo <span class="math inline">\(i\)</span>. Vamos calcular que <span class="math display">\[
 \varphi_v(b_i)=B(b_i,v)=B\left(b_i,\frac{\varphi(b_1)^\sigma}{Q(b_1)}b_1+\cdots+\frac{\varphi(b_n)^\sigma}{Q(b_n)}b_n\right)=\varphi(b_i).
 \]</span></p>
+</div>
+<div id="exm-without-repr" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 76.1</strong></span> A aplicação no <a href="#lem-repr-riesz-herm" class="quarto-xref">Lema&nbsp;<span>76.1</span></a> pode não ser sobrejetiva quando a dimensão dos espaços é infinita. Considere por exemplo <span class="math inline">\(V=\R[x]\)</span> com a forma bilinear simpetrica <span class="math display">\[
+B(p(x),q(x))=\int_0^1 p(x)q(x)\,dx.
+\]</span> Seja <span class="math inline">\(\alpha_0\in V\)</span> e <span class="math inline">\(\varphi\in V^*\)</span> dada por <span class="math display">\[
+\varphi(p(x))=p(\alpha_0).
+\]</span> Claramente, <span class="math inline">\(\varphi\neq 0\)</span>. Assuma que existe <span class="math inline">\(q_0(x)\in V\)</span> tal que <span class="math display">\[
+\varphi(p(x))=B(p(x),q_0(x))\quad \mbox{para todo}\quad p(x)\in V.
+\]</span> Seja <span class="math inline">\(p(x)=x-\alpha_0\)</span>; então <span class="math inline">\(\varphi(p(x))=p(\alpha_0)=0\)</span>, mas <span class="math inline">\(p(x)\neq 0\)</span>. Note que <span class="math display">\[
+\varphi(p^2(x)q_0(x))=p(\alpha_0)^2q_0(\alpha_0)=0.
+\]</span> Por outro lado, <span class="math display">\[
+0=\varphi(p^2(x)q_0(x))=\int_0^1 p^2(x)q_0^2(x)\, dx=\int_0^1 (p(x)q_0(x))^2\, dx.
+\]</span> Como a função <span class="math inline">\((p(x)q_0(x))^2\)</span> é contínua em <span class="math inline">\([0,1]\)</span> e não negativa, a sua integral é nula se e somente se <span class="math inline">\(p(x)q_0(x)=0\)</span> em <span class="math inline">\([0,1]\)</span>. Mas <span class="math inline">\(p(x)=0\)</span> apenas para <span class="math inline">\(x=\alpha_0\)</span>, logo <span class="math inline">\(q_0(x)=0\)</span> para todo <span class="math inline">\(x\in[0,1]\setminus\{\alpha_0\}\)</span> que implica que <span class="math inline">\(q_0(x)\)</span> é a função nula. Mas se <span class="math inline">\(q_0(x)\)</span> é<br>
+a função nula, então <span class="math display">\[
+\varphi=B(-,q_0(x))=0
+\]</span> que é absurdo.</p>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 76.1</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais sobre <span class="math inline">\(\F\)</span> e assuma que <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span> são formas <span class="math inline">\(\sigma\)</span>-hermitianas não degeneradas sobre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Assuma que <span class="math inline">\(f:V\to W\)</span> é uma transformação linear. Uma aplicação <span class="math inline">\(g:W\to F\)</span> é chamada <strong>adjunta</strong> de <span class="math inline">\(f\)</span> se <span class="math display">\[
@@ -1426,6 +1442,17 @@ B_V(v,g_1(w))=B_W(f(v),g)=B_V(v,g_2(w)).
 \]</span> É fácil verificar que <span class="math inline">\(\psi_w\in V^*\)</span>. Pelo lema acima, existe único <span class="math inline">\(w^*\in V\)</span> tal que <span class="math inline">\(\psi_w=\varphi_{w^*}\)</span>. Defina <span class="math inline">\(f^*(w)=w^*=B_V(-,w^*)\)</span>. Assim temos que <span class="math display">\[
 B_W(f(v),w)=\psi_w(v)=\varphi_{w^*}(v)=B_V(v,w^*)=B_V(v,f^*(w)).
 \]</span> A unicidade segue do lema anterior.</p>
+</div>
+<div id="exm-without-adj" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 76.2</strong></span> Seja <span class="math inline">\(V=\R[x]\)</span> com o mesmo produto interno que no <a href="#exm-without-repr" class="quarto-xref">Exemplo&nbsp;<span>76.1</span></a>. Seja <span class="math inline">\(D:V\to V\)</span>, definida por <span class="math inline">\(D(p(x))=p'(x)\)</span> (derivada). Afirmamos que <span class="math inline">\(D\)</span> não possui adjunto. Assuma por contradição que <span class="math inline">\(D^*:V\to V\)</span> é adjunto de <span class="math inline">\(D\)</span>; ou seja <span class="math display">\[
+B(D(p(x)),q(x))=B(p(x),D^*(q(x)))\mbox{ para todo }p(x),q(x)\in V.
+\]</span> Por outro lado, <span class="math display">\[
+B(D(p(x)),q(x))=B(p'(x),q(x))=\int_0^1 p'(x)q(x)\, dx=p(1)q(1)-p(0)q(0)-\int_0^1 p(x)q'(x)\, dx.
+\]</span> Suponha que <span class="math inline">\(q(x)\in V\)</span> tal que <span class="math inline">\(q(1)=1\)</span> e <span class="math inline">\(q(0)=0\)</span> e seja <span class="math inline">\(q_1(x)=D^*(q(x))\)</span>. Então <span class="math display">\[\begin{align*}
+B(p(x),q_1(x))&amp;=B(p(x),D^*(q(x)))=B(D(p(x)),q(x))\\&amp;=p(1)q(1)-\int_0^1 p(x)q'(x)\, dx\\&amp;=p(1)q(1)-B(p(x),q'(x)).
+\end{align*}\]</span> Ou seja, <span class="math display">\[
+B(p(x),q_1(x)-q'(x))=p(1)q(1)=p(1)\mbox{ para todo }p(x)\in V.
+\]</span> Isso quer dizer que a funcional <span class="math inline">\(\varphi:p\mapsto p(1)\)</span> em <span class="math inline">\(V^*\)</span> é representada por <span class="math inline">\(q(x)-q'(x)\)</span>; ou seja <span class="math inline">\(\varphi=B(-,q(x)-q'(x))\)</span>. Mas isso é uma contradição por <a href="#exm-without-repr" class="quarto-xref">Exemplo&nbsp;<span>76.1</span></a>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 76.3</strong></span> Usando a notação do teorema anterior, assuma que <span class="math inline">\(X_V\)</span> e <span class="math inline">\(X_W\)</span> são bases de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, respetivamente. Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(A^*\)</span> as matrizes de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^*\)</span> nas bases <span class="math inline">\(X_V\)</span> e <span class="math inline">\(X_W\)</span>, respetivamente e sejam <span class="math inline">\(G_V\)</span> e <span class="math inline">\(G_W\)</span> as matrizes de Gram das formas <span class="math inline">\(B_V\)</span> e <span class="math inline">\(B_W\)</span>. Temos que <span class="math display">\[
