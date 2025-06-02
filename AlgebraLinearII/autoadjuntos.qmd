@@ -7,12 +7,11 @@ lang: pt-BR
 Nesta página $V$ é um $\F$-espaço vetorial, $\sigma\in\mbox{Aut}(\F)$ com $\sigma^2=\mbox{id}_\F$ e $B$ é uma forma $\sigma$-hermitiana não degenerada sobre $V$.
 
 :::{#def-}
-Um operador $f:V\to V$ é <b>autoadjunto</b> se existe $f^*$ e $f^*=f$. Em outras palavras,
+Um operador $f:V\to V$ é **autoadjunto** se existe $f^*$ e $f^*=f$. Em outras palavras,
 $$
 B(f(v),w)=B(v,f(w))
 $$
 para todo $v,w\in V$.
-
 :::
 
 
@@ -20,9 +19,8 @@ para todo $v,w\in V$.
 Seja $f:V\to V$ autoadjunto.
 
 
- -  Se $\lambda\in\F$ é um autovalor de $f$ tal que $V_\lambda$ contém um vetor não isotrópico, então $\lambda\in\mbox{Fix}(\sigma)$.
- -  Sejam $v_1$ e $v_2$  autovetores de $f$ associados com autovalores $\lambda_1$ e $\lambda_2$, respetivamente, tais que $\lambda_1^\sigma\neq \lambda_2$. Então $v_1\perp v_2$ (ou seja, $B(v_1,v_2)=0$).
-
+1.  Se $\lambda\in\F$ é um autovalor de $f$ tal que $V_\lambda$ contém um vetor não isotrópico, então $\lambda\in\mbox{Fix}(\sigma)$.
+2.  Sejam $v_1$ e $v_2$  autovetores de $f$ associados com autovalores $\lambda_1$ e $\lambda_2$, respetivamente, tais que $\lambda_1^\sigma\neq \lambda_2$. Então $v_1\perp v_2$ (ou seja, $B(v_1,v_2)=0$).
 :::
 
 
@@ -42,15 +40,15 @@ Como $\lambda_1\neq \lambda_2^\sigma$, nos resta que $B(v_1,v_2)=0$.
 
 
 :::{#def-}
-Seja $V$ um espaço vetorial sobre $\F$ onde $\F=\R$ ou $\F=\C$ e seja $\sigma=\mbox{id}_\R$ se $\F=\R$ e $\sigma$ o conjugado complexo se $\F=\C$. Um <b>produto interno</b> sobre $V$ é uma forma $\sigma$-hermitiana que satisfaz a propriedade de positividade; ou seja,
+Seja $V$ um espaço vetorial sobre $\F$ onde $\F=\R$ ou $\F=\C$ e seja $\sigma=\mbox{id}_\R$ se $\F=\R$ e $\sigma$ o conjugado complexo se $\F=\C$. Um **produto interno** sobre $V$ é uma forma $\sigma$-hermitiana que satisfaz a propriedade de positividade; ou seja,
 $$
 Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
 $$
-e $Q(v)=0$ se e somente se $v=0$. Neste caso dizemos que $V$ é um <b>espaço com produto interno</b>. A forma $B(-,-)$ é frquentamente escrita como $\langle -,-\rangle$. Se $V$ é espaço com produto interno e $v\in V$, então $Q(v)\geq 0$ e definimos
+e $Q(v)=0$ se e somente se $v=0$. Neste caso dizemos que $V$ é um **espaço com produto interno**. A forma $B(-,-)$ é frquentamente escrita como $\langle -,-\rangle$. Se $V$ é espaço com produto interno e $v\in V$, então $Q(v)\geq 0$ e definimos
 $$
 \|v\|=\sqrt{Q(v)}=\sqrt{\langle v,v\rangle}\in \R.
 $$
-O número $\|v\|$ é chamado <b>norma</b> de $v$. Temos que $\|v\|\geq 0$ e $\|v\|=0$ se e somente se $v=0$.
+O número $\|v\|$ é chamado **norma** de $v$. Temos que $\|v\|\geq 0$ e $\|v\|=0$ se e somente se $v=0$.
 :::
 
 
@@ -72,9 +70,8 @@ Note que a notação $\langle u,v\rangle$ foi usada anteriormente para o espaço
 Assuma que $V$ é espaço com produto interno e $f:V\to V$ é autoadjunto.
 
 
- -  Os autovalores de $v$ são números reais.
- -  Se $v_1$ e $v_2$ são autovetores de $f$ com autovalores distintos, então $v_1\perp v_2$.
-
+1.  Os autovalores de $v$ são números reais.
+2.  Se $v_1$ e $v_2$ são autovetores de $f$ com autovalores distintos, então $v_1\perp v_2$.
 :::
 
 
@@ -82,7 +79,6 @@ Assuma que $V$ é espaço com produto interno e $f:V\to V$ é autoadjunto.
 1. Se $v$ é uma autovetor não nulo de $f$ com autovalor $\lambda$, então $v$ não é isotrópico (pela positividade do produto interno) e temos pelo lema anterior que $\lambda\in\mbox{Fix}(\sigma)=\R$.
 
 2. Sejam $v_1$ e $v_2$ autovetores de $f$ com autovalores distintos $\lambda_1$ e $\lambda_2$, respetivamente. Temos pelo item 1. que $\lambda_1,\lambda_2\in\R$ e $\lambda_1\neq \lambda_2^\sigma=\lambda_2$. O lema acima implica que $v_1\perp v_2$.
-
 :::
 
 
@@ -113,26 +109,22 @@ Considere $U=\mbox{span}\{b_1\}$. Então $\dim U^\perp=n-1$, $U^{\perp}\cap U=0$
 
 
 :::{#def-}
-Para uma matriz $A\in M_{n\times n}(\C)$, denotamos $A^*=\overline A^t$ (conjugada transposta). Uma matrix $A\in M_{n\times n}(\C)$ é chamada <b>hermitiana</b> se $A=A^*$. Uma matriz $A\in M_{n\times n}(\R)$ é chamada <b>ortogonal</b> se as colunas de $A$ são ortonormais. Uma matriz $A\in M_{n\times n}(\C)$ é chamada de <b>unitária</b> as colunas de $A$ são ortonormais (no produto interno de $\C^n$).
+Para uma matriz $A\in M_{n\times n}(\C)$, denotamos $A^*=\overline A^t$ (conjugada transposta). Uma matrix $A\in M_{n\times n}(\C)$ é chamada **hermitiana** se $A=A^*$. Uma matriz $A\in M_{n\times n}(\R)$ é chamada **ortogonal** se as colunas de $A$ são ortonormais. Uma matriz $A\in M_{n\times n}(\C)$ é chamada de **unitária** as colunas de $A$ são ortonormais (no produto interno de $\C^n$).
 :::
 
 
 :::{#exr-}
 Mostre que
 
-
- -  $A$ é ortogonal se e somente se $A^tA=I$ e $A^{-1}=A^t$;
- -  $A$ é unitária se e somente se $A^*A=I$ e $A^{-1}=A^*$.
-
+1.  $A$ é ortogonal se e somente se $A^tA=I$ e $A^{-1}=A^t$;
+2.  $A$ é unitária se e somente se $A^*A=I$ e $A^{-1}=A^*$.
 :::
 
 
 :::{#cor-}
 
-
- -  Seja $A\in M_{n\times n}(\R)$ uma matriz simétrica. Existe uma matriz ortogonal $P$ tal que $P^tAP$ é diagonal.
- -  $A\in M_{n\times n}(\C)$ uma matriz hermitiana. Existe uma matriz unitária $P$ tal que $P^*AP$ é diagonal.
-
+1.  Seja $A\in M_{n\times n}(\R)$ uma matriz simétrica. Existe uma matriz ortogonal $P$ tal que $P^tAP$ é diagonal.
+2.  $A\in M_{n\times n}(\C)$ uma matriz hermitiana. Existe uma matriz unitária $P$ tal que $P^*AP$ é diagonal.
 :::
 
 
