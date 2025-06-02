@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-105369d5fd55098ccafd04893d0a0f40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-232c3d0678e1ad48a977779543e17309.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1376,16 +1376,16 @@ window.Quarto = {
 
 <p>Nesta página <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial, <span class="math inline">\(\sigma\in\mbox{Aut}(\F)\)</span> com <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span> e <span class="math inline">\(B\)</span> é uma forma <span class="math inline">\(\sigma\)</span>-hermitiana não degenerada sobre <span class="math inline">\(V\)</span>.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 77.1</strong></span> Um operador <span class="math inline">\(f:V\to V\)</span> é <b>autoadjunto</b> se existe <span class="math inline">\(f^*\)</span> e <span class="math inline">\(f^*=f\)</span>. Em outras palavras, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 77.1</strong></span> Um operador <span class="math inline">\(f:V\to V\)</span> é <strong>autoadjunto</strong> se existe <span class="math inline">\(f^*\)</span> e <span class="math inline">\(f^*=f\)</span>. Em outras palavras, <span class="math display">\[
 B(f(v),w)=B(v,f(w))
 \]</span> para todo <span class="math inline">\(v,w\in V\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 77.1</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> autoadjunto.</p>
-<ul>
+<ol type="1">
 <li>Se <span class="math inline">\(\lambda\in\F\)</span> é um autovalor de <span class="math inline">\(f\)</span> tal que <span class="math inline">\(V_\lambda\)</span> contém um vetor não isotrópico, então <span class="math inline">\(\lambda\in\mbox{Fix}(\sigma)\)</span>.</li>
 <li>Sejam <span class="math inline">\(v_1\)</span> e <span class="math inline">\(v_2\)</span> autovetores de <span class="math inline">\(f\)</span> associados com autovalores <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span>, respetivamente, tais que <span class="math inline">\(\lambda_1^\sigma\neq \lambda_2\)</span>. Então <span class="math inline">\(v_1\perp v_2\)</span> (ou seja, <span class="math inline">\(B(v_1,v_2)=0\)</span>).</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
@@ -1399,11 +1399,11 @@ B(f(v),w)=B(v,f(w))
 </ol>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 77.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span> onde <span class="math inline">\(\F=\R\)</span> ou <span class="math inline">\(\F=\C\)</span> e seja <span class="math inline">\(\sigma=\mbox{id}_\R\)</span> se <span class="math inline">\(\F=\R\)</span> e <span class="math inline">\(\sigma\)</span> o conjugado complexo se <span class="math inline">\(\F=\C\)</span>. Um <b>produto interno</b> sobre <span class="math inline">\(V\)</span> é uma forma <span class="math inline">\(\sigma\)</span>-hermitiana que satisfaz a propriedade de positividade; ou seja, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 77.2</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial sobre <span class="math inline">\(\F\)</span> onde <span class="math inline">\(\F=\R\)</span> ou <span class="math inline">\(\F=\C\)</span> e seja <span class="math inline">\(\sigma=\mbox{id}_\R\)</span> se <span class="math inline">\(\F=\R\)</span> e <span class="math inline">\(\sigma\)</span> o conjugado complexo se <span class="math inline">\(\F=\C\)</span>. Um <strong>produto interno</strong> sobre <span class="math inline">\(V\)</span> é uma forma <span class="math inline">\(\sigma\)</span>-hermitiana que satisfaz a propriedade de positividade; ou seja, <span class="math display">\[
 Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
-\]</span> e <span class="math inline">\(Q(v)=0\)</span> se e somente se <span class="math inline">\(v=0\)</span>. Neste caso dizemos que <span class="math inline">\(V\)</span> é um <b>espaço com produto interno</b>. A forma <span class="math inline">\(B(-,-)\)</span> é frquentamente escrita como <span class="math inline">\(\langle -,-\rangle\)</span>. Se <span class="math inline">\(V\)</span> é espaço com produto interno e <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(Q(v)\geq 0\)</span> e definimos <span class="math display">\[
+\]</span> e <span class="math inline">\(Q(v)=0\)</span> se e somente se <span class="math inline">\(v=0\)</span>. Neste caso dizemos que <span class="math inline">\(V\)</span> é um <strong>espaço com produto interno</strong>. A forma <span class="math inline">\(B(-,-)\)</span> é frquentamente escrita como <span class="math inline">\(\langle -,-\rangle\)</span>. Se <span class="math inline">\(V\)</span> é espaço com produto interno e <span class="math inline">\(v\in V\)</span>, então <span class="math inline">\(Q(v)\geq 0\)</span> e definimos <span class="math display">\[
 \|v\|=\sqrt{Q(v)}=\sqrt{\langle v,v\rangle}\in \R.
-\]</span> O número <span class="math inline">\(\|v\|\)</span> é chamado <b>norma</b> de <span class="math inline">\(v\)</span>. Temos que <span class="math inline">\(\|v\|\geq 0\)</span> e <span class="math inline">\(\|v\|=0\)</span> se e somente se <span class="math inline">\(v=0\)</span>.</p>
+\]</span> O número <span class="math inline">\(\|v\|\)</span> é chamado <strong>norma</strong> de <span class="math inline">\(v\)</span>. Temos que <span class="math inline">\(\|v\|\geq 0\)</span> e <span class="math inline">\(\|v\|=0\)</span> se e somente se <span class="math inline">\(v=0\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 77.2</strong></span> Uma forma <span class="math inline">\(B\)</span> que define produto interno é não degenerada. Além disso, se <span class="math inline">\(\dim V=n\)</span> for finita, então <span class="math inline">\((V,B)\)</span> é isométrico ao espaço <span class="math inline">\(\R^{0+n}\)</span> ou <span class="math inline">\(\C^{0+n}\)</span>.</p>
@@ -1415,10 +1415,10 @@ Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
 <p>Note que a notação <span class="math inline">\(\langle u,v\rangle\)</span> foi usada anteriormente para o espaço gerado por <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span>. A partir deste ponto, este espaço será denotado por <span class="math inline">\(\mbox{span}\langle u,v\rangle\)</span>.</p>
 <div id="cor-" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corolário 77.1</strong></span> Assuma que <span class="math inline">\(V\)</span> é espaço com produto interno e <span class="math inline">\(f:V\to V\)</span> é autoadjunto.</p>
-<ul>
+<ol type="1">
 <li>Os autovalores de <span class="math inline">\(v\)</span> são números reais.</li>
 <li>Se <span class="math inline">\(v_1\)</span> e <span class="math inline">\(v_2\)</span> são autovetores de <span class="math inline">\(f\)</span> com autovalores distintos, então <span class="math inline">\(v_1\perp v_2\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
@@ -1442,21 +1442,21 @@ Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
 <p>Considere <span class="math inline">\(U=\mbox{span}\{b_1\}\)</span>. Então <span class="math inline">\(\dim U^\perp=n-1\)</span>, <span class="math inline">\(U^{\perp}\cap U=0\)</span> e <span class="math inline">\(V=U\perp U^\perp\)</span>. Além disso, <span class="math inline">\(U\)</span> sendo <span class="math inline">\(f\)</span>-invariante, <span class="math inline">\(U^\perp\)</span> é invariante por <span class="math inline">\(f^*=f\)</span>. Por hipótese de indução, <span class="math inline">\(U^\perp\)</span> possui uma base ortonormal <span class="math inline">\(\{b_2,\ldots,b_n\}\)</span> que composta de autovetores de <span class="math inline">\(f\)</span>. Ora, <span class="math inline">\(\{b_1,\ldots,b_n\}\)</span> é base ortonormal de <span class="math inline">\(V\)</span> composta de autovetores de <span class="math inline">\(f\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 77.3</strong></span> Para uma matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>, denotamos <span class="math inline">\(A^*=\overline A^t\)</span> (conjugada transposta). Uma matrix <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é chamada <b>hermitiana</b> se <span class="math inline">\(A=A^*\)</span>. Uma matriz <span class="math inline">\(A\in M_{n\times n}(\R)\)</span> é chamada <b>ortogonal</b> se as colunas de <span class="math inline">\(A\)</span> são ortonormais. Uma matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é chamada de <b>unitária</b> as colunas de <span class="math inline">\(A\)</span> são ortonormais (no produto interno de <span class="math inline">\(\C^n\)</span>).</p>
+<p><span class="theorem-title"><strong>Definição 77.3</strong></span> Para uma matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>, denotamos <span class="math inline">\(A^*=\overline A^t\)</span> (conjugada transposta). Uma matrix <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é chamada <strong>hermitiana</strong> se <span class="math inline">\(A=A^*\)</span>. Uma matriz <span class="math inline">\(A\in M_{n\times n}(\R)\)</span> é chamada <strong>ortogonal</strong> se as colunas de <span class="math inline">\(A\)</span> são ortonormais. Uma matriz <span class="math inline">\(A\in M_{n\times n}(\C)\)</span> é chamada de <strong>unitária</strong> as colunas de <span class="math inline">\(A\)</span> são ortonormais (no produto interno de <span class="math inline">\(\C^n\)</span>).</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 77.1</strong></span> Mostre que</p>
-<ul>
+<ol type="1">
 <li><span class="math inline">\(A\)</span> é ortogonal se e somente se <span class="math inline">\(A^tA=I\)</span> e <span class="math inline">\(A^{-1}=A^t\)</span>;</li>
 <li><span class="math inline">\(A\)</span> é unitária se e somente se <span class="math inline">\(A^*A=I\)</span> e <span class="math inline">\(A^{-1}=A^*\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div id="cor-" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corolário 77.3</strong></span> &nbsp;</p>
-<ul>
+<ol type="1">
 <li>Seja <span class="math inline">\(A\in M_{n\times n}(\R)\)</span> uma matriz simétrica. Existe uma matriz ortogonal <span class="math inline">\(P\)</span> tal que <span class="math inline">\(P^tAP\)</span> é diagonal.</li>
 <li><span class="math inline">\(A\in M_{n\times n}(\C)\)</span> uma matriz hermitiana. Existe uma matriz unitária <span class="math inline">\(P\)</span> tal que <span class="math inline">\(P^*AP\)</span> é diagonal.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Nos dois casos, considere a transformação <span class="math inline">\(f_A:\F^n\to \F^n\)</span>, <span class="math inline">\(f_A(v)=A\cdot v\)</span>. A transformação <span class="math inline">\(f_A\)</span> é autoadjunta em relação ao produto interno em <span class="math inline">\(\F^n\)</span>. Além disso, a matriz de <span class="math inline">\(f_A\)</span> na base canônica é a própria <span class="math inline">\(A\)</span>. Pelo teorema anterior, <span class="math inline">\(f_A\)</span> é diaganalizável. Mais precisamente, existe uma base ortonormal <span class="math inline">\(B\)</span> tal que <span class="math inline">\([f_A]_B^B\)</span> é diagonal <span class="math inline">\(D\)</span>. Seja <span class="math inline">\(P\)</span> a matriz que tem os elementos de <span class="math inline">\(B\)</span> nas suas colunas. Temos que <span class="math display">\[
