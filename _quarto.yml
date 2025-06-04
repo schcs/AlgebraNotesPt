@@ -98,7 +98,6 @@ book:
         - AlgebraLinearII/isometrias.qmd
         - AlgebraLinearII/adjuntos.qmd
         - AlgebraLinearII/autoadjuntos.qmd
-        - AlgebraLinearII/normais.qmd
         - AlgebraLinearII/ortogonais.qmd
         - AlgebraLinearII/so_2_so_3.qmd
         - AlgebraLinearII/ex3.qmd
