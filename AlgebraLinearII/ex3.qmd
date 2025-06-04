@@ -427,7 +427,7 @@ e todos os produtos cruzados são zero.
 Portanto, a base explícita é $\{u_1, u_2, u_3, u_4\}$ conforme acima. Portanto, $H_2 \perp H_2$ é isométrico a $\R^{2+2}$.
 :::
 
-:::{#exr-}
+:::{#exr-ff-quadrados}
 Seja $\F=\Z_p$ com $p\geq 3$ e $a,b \in \F$ com $a\neq 0$. Mostre que existem $u, v \in \F$ tais que $u^2 + a v^2 = c$.
 :::
 :::{.sol .callout-tip collapse="true"}
@@ -755,4 +755,84 @@ $$
     \langle f,g\rangle = \int_{-1}^1 f(t)g(t)\,dt.
     $$ 
 Mostre que as funções $\mbox{sen}(n\pi x)$, $\cos(n\pi x)$ com $n\in \Z$ formam um sistema ortonormal. 
+:::
+
+:::{#exr-}
+Seja $V$ um $\C$-espaço vetorial de dimensão maior ou igual a $2$ e seja $B$ uma forma bilinear simétrica sober $V$. Mostre que $V$ possui 
+vetor isotrópico não nulo.
+:::
+
+:::{#exr-}
+Seja $\F$ um corpo de caraterística diferente de 2, denote por $I_{p+q+r}$ a matriz diagonal sobre $\F$ que tem $p$
+entradas $−1$, $q$ entradas $1$ e $r$ entradas zero (nesta ordem) na diagonal principal. Seja $\sigma$ um automorfismo
+de $\F$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as seguintes afirmações:
+
+1. Se $A \in M_{n\times n}(\F)$ com $A^t = A^\sigma$ , então existe uma matriz $X \in M_{n\times n}(\F)$ tal que 
+   $X^{σt}AX$ é diagonal.
+2. Se $A \in M_{n\times n}(\F)$ com $A^t = A$, então existe uma matriz $X \in M_{n×n}(\F)$ tal que $X^tAX$ é diagonal.
+3. Se $A \in M_{n×n}(\C)$ com $A^t = A$, então existe uma matriz $X \in M_{n×n}(\C)$ tal que $X^tAX = I_{0+q+r}$.
+4. Se $A \in M_{n×n}(\C)$ com $A^t = \overline A$, então existe uma matriz $X \in M_{n×n}(\C)$ tal que $\overline X^tAX = I_{p+q+r}$.
+5. Se $A \in M_{n×n}(\R)$ com $A^t = A$, então existe uma matriz $X \in M_{n×n}(\C)$ tal que $X^tAX = I_{p+q+r}$.
+
+[Dica: Considere $A$ como matriz de Gram de alguma forma em $\F^n$ e seja $X$ uma matriz mudança debase.] 
+:::
+
+:::{#exr-}
+Seja $V$ um espaço vetorial com uma forma $\sigma$-sesquilinear simétrica $B$.
+
+1. Assuma que $X$ é um sistema ortogonal composta por vetores não isotrópicos. Mostre que $X$ é L.I.
+2. Seja $B$ uma base ortogonal de $V$ composta por vetores não isotrópicos e seja $v \in V$. Mostre que
+$$
+v = \sum_{b∈B} \frac{B(v, b)}{B(b, b)} b 
+$$
+e que a soma na linha anterior tem um número finito de somandos não nulos mesmo quando
+$\dim V$ é infinita.
+:::
+
+:::{#exr-}
+Revise o procedimento de ortogonalização de  Gram-Schmidt e reflita se ele pode ser usado no contexto mais geral de formas $\sigma$-hermitianas 
+não degeneradas.
+:::
+
+:::{#exr-}
+Seja $V = \R^4$ com formas alternadas $B_1$ e $B_2$ dadas pelas seguintes matrizes na base canônica:
+$$
+G(B_1) = \begin{pmatrix}   0 & 1 & 1 & 1 \\
+                           −1 & 0 & 1 & 1\\
+                           −1 & −1 & 0 & 1\\
+                           −1 & −1 & −1 &  0
+         \end{pmatrix}
+\quad \mbox{e}\quad  
+G(B_2) = \begin{pmatrix} 0 &  −1 &  0 & 0\\
+                        1 & 0 & −1 & 0\\
+                        0 & 1 & 0 & −1\\
+                        0 & 0 & 1 & 0\\
+\end{pmatrix}.
+$$
+Mostre que $(V, B_1)$ e $(V, B_2)$ são isométricas.
+:::
+
+:::{#exr-}
+Seja $V$ um $\F$-espaço vetorial de dimensão $2$ com forma alternada $B$. Um **par hipérbólico** é um par $e,f\in V$ tal que 
+$B(e,e)=B(f,f)=0$ e $B(e,f)=1$. Um **plano hiperbólico** é um subespaço $H$ gerado por um par hiperbólico. 
+
+1. Mostre que quando $\dim V=2$ e $B$ é não degenerada, então $V$ é um plano hipérbólico. 
+2. Mostre que quando $\dim V$ é finita e $B$ é não degenerada, então $V$ é uma soma direta de planos hiperbólicos ortogonais 2 a 2.
+3. Deduza que na situação do item 2., $\dim V$ é par.
+4. Deduza que quando $n$ é par, existe uma única classe de isometria de $\F$-espaços de dimensão $n$ com formas 
+   alternadas não degeneradas.
+:::
+
+
+:::{#exr-ff-exists-unitary}
+Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ com forma simétrica e não degenerada $B$ e
+assuma que $\dim V \geq 2$. Mostre que $V$ possui um elemento $v \in V$ tal que $Q(v) = B(v, v) = 1$. 
+[Dica: Toma dois elementos $u, v \in V$ ortogonais não isotrópicos (justificando que eles existem). Vai precisar 
+que $1$ pode ser escrito como combinação linear de quadrados; veja @exr-ff-quadrados.]
+:::
+
+:::{#exr-}
+Seja $V$ como no @exr-ff-exists-unitary. Seja $a \in \Z_p$ um elemento fixo em $\Z_p \setminus \{x^2 \mid x \in \Z_p\}$. 
+Mostre que existe uma base $X$ de $V$ tal que $G_X(B)$ é diagonal e as entradas na diagonal são ou $(1,\ldots, 1)$ ou 
+$(1, \ldots , 1, a)$.
 :::
