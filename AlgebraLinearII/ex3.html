@@ -1810,7 +1810,7 @@ B(u_1, u_1) = 1, \quad B(u_2, u_2) = -1, \quad B(u_3, u_3) = 1, \quad B(u_4, u_4
 </div>
 </div>
 </div>
-<div id="exr-" class="theorem exercise">
+<div id="exr-ff-quadrados" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 80.10</strong></span> Seja <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\geq 3\)</span> e <span class="math inline">\(a,b \in \F\)</span> com <span class="math inline">\(a\neq 0\)</span>. Mostre que existem <span class="math inline">\(u, v \in \F\)</span> tais que <span class="math inline">\(u^2 + a v^2 = c\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -2146,6 +2146,62 @@ f^* \circ f = \operatorname{id}_V \quad \text{e} \quad f \circ f^* = \operatorna
 \]</span> com o forma bilinear <span class="math display">\[
     \langle f,g\rangle = \int_{-1}^1 f(t)g(t)\,dt.
     \]</span> Mostre que as funções <span class="math inline">\(\mbox{sen}(n\pi x)\)</span>, <span class="math inline">\(\cos(n\pi x)\)</span> com <span class="math inline">\(n\in \Z\)</span> formam um sistema ortonormal.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.21</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\C\)</span>-espaço vetorial de dimensão maior ou igual a <span class="math inline">\(2\)</span> e seja <span class="math inline">\(B\)</span> uma forma bilinear simétrica sober <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(V\)</span> possui vetor isotrópico não nulo.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.22</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística diferente de 2, denote por <span class="math inline">\(I_{p+q+r}\)</span> a matriz diagonal sobre <span class="math inline">\(\F\)</span> que tem <span class="math inline">\(p\)</span> entradas <span class="math inline">\(−1\)</span>, <span class="math inline">\(q\)</span> entradas <span class="math inline">\(1\)</span> e <span class="math inline">\(r\)</span> entradas zero (nesta ordem) na diagonal principal. Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\F\)</span>; no caso de <span class="math inline">\(\F = \C\)</span>, seja <span class="math inline">\(\bar z\)</span> o conjugado complexo. Demonstre as seguintes afirmações:</p>
+<ol type="1">
+<li>Se <span class="math inline">\(A \in M_{n\times n}(\F)\)</span> com <span class="math inline">\(A^t = A^\sigma\)</span> , então existe uma matriz <span class="math inline">\(X \in M_{n\times n}(\F)\)</span> tal que <span class="math inline">\(X^{σt}AX\)</span> é diagonal.</li>
+<li>Se <span class="math inline">\(A \in M_{n\times n}(\F)\)</span> com <span class="math inline">\(A^t = A\)</span>, então existe uma matriz <span class="math inline">\(X \in M_{n×n}(\F)\)</span> tal que <span class="math inline">\(X^tAX\)</span> é diagonal.</li>
+<li>Se <span class="math inline">\(A \in M_{n×n}(\C)\)</span> com <span class="math inline">\(A^t = A\)</span>, então existe uma matriz <span class="math inline">\(X \in M_{n×n}(\C)\)</span> tal que <span class="math inline">\(X^tAX = I_{0+q+r}\)</span>.</li>
+<li>Se <span class="math inline">\(A \in M_{n×n}(\C)\)</span> com <span class="math inline">\(A^t = \overline A\)</span>, então existe uma matriz <span class="math inline">\(X \in M_{n×n}(\C)\)</span> tal que <span class="math inline">\(\overline X^tAX = I_{p+q+r}\)</span>.</li>
+<li>Se <span class="math inline">\(A \in M_{n×n}(\R)\)</span> com <span class="math inline">\(A^t = A\)</span>, então existe uma matriz <span class="math inline">\(X \in M_{n×n}(\C)\)</span> tal que <span class="math inline">\(X^tAX = I_{p+q+r}\)</span>.</li>
+</ol>
+<p>[Dica: Considere <span class="math inline">\(A\)</span> como matriz de Gram de alguma forma em <span class="math inline">\(\F^n\)</span> e seja <span class="math inline">\(X\)</span> uma matriz mudança debase.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.23</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial com uma forma <span class="math inline">\(\sigma\)</span>-sesquilinear simétrica <span class="math inline">\(B\)</span>.</p>
+<ol type="1">
+<li>Assuma que <span class="math inline">\(X\)</span> é um sistema ortogonal composta por vetores não isotrópicos. Mostre que <span class="math inline">\(X\)</span> é L.I.</li>
+<li>Seja <span class="math inline">\(B\)</span> uma base ortogonal de <span class="math inline">\(V\)</span> composta por vetores não isotrópicos e seja <span class="math inline">\(v \in V\)</span>. Mostre que <span class="math display">\[
+v = \sum_{b∈B} \frac{B(v, b)}{B(b, b)} b
+\]</span> e que a soma na linha anterior tem um número finito de somandos não nulos mesmo quando <span class="math inline">\(\dim V\)</span> é infinita.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.24</strong></span> Revise o procedimento de ortogonalização de Gram-Schmidt e reflita se ele pode ser usado no contexto mais geral de formas <span class="math inline">\(\sigma\)</span>-hermitianas não degeneradas.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.25</strong></span> Seja <span class="math inline">\(V = \R^4\)</span> com formas alternadas <span class="math inline">\(B_1\)</span> e <span class="math inline">\(B_2\)</span> dadas pelas seguintes matrizes na base canônica: <span class="math display">\[
+G(B_1) = \begin{pmatrix}   0 &amp; 1 &amp; 1 &amp; 1 \\
+                           −1 &amp; 0 &amp; 1 &amp; 1\\
+                           −1 &amp; −1 &amp; 0 &amp; 1\\
+                           −1 &amp; −1 &amp; −1 &amp;  0
+         \end{pmatrix}
+\quad \mbox{e}\quad  
+G(B_2) = \begin{pmatrix} 0 &amp;  −1 &amp;  0 &amp; 0\\
+                        1 &amp; 0 &amp; −1 &amp; 0\\
+                        0 &amp; 1 &amp; 0 &amp; −1\\
+                        0 &amp; 0 &amp; 1 &amp; 0\\
+\end{pmatrix}.
+\]</span> Mostre que <span class="math inline">\((V, B_1)\)</span> e <span class="math inline">\((V, B_2)\)</span> são isométricas.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.26</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\F\)</span>-espaço vetorial de dimensão <span class="math inline">\(2\)</span> com forma alternada <span class="math inline">\(B\)</span>. Um <strong>par hipérbólico</strong> é um par <span class="math inline">\(e,f\in V\)</span> tal que <span class="math inline">\(B(e,e)=B(f,f)=0\)</span> e <span class="math inline">\(B(e,f)=1\)</span>. Um <strong>plano hiperbólico</strong> é um subespaço <span class="math inline">\(H\)</span> gerado por um par hiperbólico.</p>
+<ol type="1">
+<li>Mostre que quando <span class="math inline">\(\dim V=2\)</span> e <span class="math inline">\(B\)</span> é não degenerada, então <span class="math inline">\(V\)</span> é um plano hipérbólico.</li>
+<li>Mostre que quando <span class="math inline">\(\dim V\)</span> é finita e <span class="math inline">\(B\)</span> é não degenerada, então <span class="math inline">\(V\)</span> é uma soma direta de planos hiperbólicos ortogonais 2 a 2.</li>
+<li>Deduza que na situação do item 2., <span class="math inline">\(\dim V\)</span> é par.</li>
+<li>Deduza que quando <span class="math inline">\(n\)</span> é par, existe uma única classe de isometria de <span class="math inline">\(\F\)</span>-espaços de dimensão <span class="math inline">\(n\)</span> com formas alternadas não degeneradas.</li>
+</ol>
+</div>
+<div id="exr-ff-exists-unitary" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.27</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita sobre <span class="math inline">\(\Z_p\)</span> com forma simétrica e não degenerada <span class="math inline">\(B\)</span> e assuma que <span class="math inline">\(\dim V \geq 2\)</span>. Mostre que <span class="math inline">\(V\)</span> possui um elemento <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(Q(v) = B(v, v) = 1\)</span>. [Dica: Toma dois elementos <span class="math inline">\(u, v \in V\)</span> ortogonais não isotrópicos (justificando que eles existem). Vai precisar que <span class="math inline">\(1\)</span> pode ser escrito como combinação linear de quadrados; veja <a href="#exr-ff-quadrados" class="quarto-xref">Exercício&nbsp;<span>80.10</span></a>.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.28</strong></span> Seja <span class="math inline">\(V\)</span> como no <a href="#exr-ff-exists-unitary" class="quarto-xref">Exercício&nbsp;<span>80.27</span></a>. Seja <span class="math inline">\(a \in \Z_p\)</span> um elemento fixo em <span class="math inline">\(\Z_p \setminus \{x^2 \mid x \in \Z_p\}\)</span>. Mostre que existe uma base <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(G_X(B)\)</span> é diagonal e as entradas na diagonal são ou <span class="math inline">\((1,\ldots, 1)\)</span> ou <span class="math inline">\((1, \ldots , 1, a)\)</span>.</p>
 </div>
 
 
