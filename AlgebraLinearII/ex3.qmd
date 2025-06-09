@@ -836,3 +836,88 @@ Seja $V$ como no @exr-ff-exists-unitary. Seja $a \in \Z_p$ um elemento fixo em $
 Mostre que existe uma base $X$ de $V$ tal que $G_X(B)$ é diagonal e as entradas na diagonal são ou $(1,\ldots, 1)$ ou 
 $(1, \ldots , 1, a)$.
 :::
+
+
+:::{#exr-}
+Seja $f:V\to V$ um operador normal de um $\C$-espaço $V$ de dimensão finita. Assuma que todos os autovalores de $f$ são reais. 
+
+1. Mostre que $f$ é autoadjunto. 
+2. Deduza que quando $f:V\to V$ é um operador normal diagonalizável de um $\R$-espaço de dimensão finita, então ele é autoadjunto.
+:::
+
+
+:::{#exr-}
+Considere o operador $f:\C^2\to \C^2$ dada pela seguinte matriz na base canônica: 
+$$
+    \begin{pmatrix} 1 & i \\ i & 1\end{pmatrix}.
+$$
+
+1. Mostre que $f$ é normal, mas não é autoadjunto.
+2. Ache uma matriz $P$ unitária, tal que $PAP^*$ é diagonal.
+:::
+
+:::{#exr-}
+Mostre que todo operador $f$ de um $\F$-espaço vetorial $V$ de dimensão finita pode ser escrito como 
+$$
+    f = f_1+f_2
+$$
+onde $f_1$ é autoadjunto e $f_2$ é anti-autoadjunto (ou seja, $f_2^*=-f_2$).
+:::
+
+
+:::{#exr-}
+Seja $V$ um espaço com forma $\sigma$-hermitiana e $f:V\to V$ uma projeção (ou seja, $f^2=f$). Mostre que $f$ é autoadjunto se e somente se $V=\ker f\perp \mbox{Im}(f)$.  [Eu acho que $V$ não precisa ser de dimensão finita, mas se seu argumento precisar desta condição, pode assumir.]
+:::
+
+
+:::{#exr-}
+Seja $\ell^2$ o $\R$-espaço de sequências $a=(a_1,a_2,a_3,\ldots)$ reais tal que 
+$$
+    \sum_{i\geq 1}a_i^2< \infty
+$$
+considerado com produto interno 
+$$
+    \left< a,b\right>=\sum_{i\geq 1}a_ib_i.
+$$
+(Não precisa provar fato que $\ell^2$ é um espaço vetorial com produto interno, mas quero que reflita sobre nisso pensando porque está certo.) Considere o operador 
+$$ 
+    f:\ell^2\to \ell^2,\quad (a_1,a_2,a_3,\ldots)\mapsto (a_1,a_2/2,a_3/3,\ldots ).
+$$
+
+
+1. Mostre que $f$ é autoadjunto.
+2. Mostre que $f$ é injetivo. 
+3. Mostre que $f$ não é sobrejetivo. [Dica: a sequência $(1/n)_{n\geq 1}\in\ell^2$ não está na imagem de $f$.]
+4. Deduza que o adjunto de um operador injetivo não precisa ser sobrejetivo em espaços de dimensão infinita.
+[Achei o exemplo na página math.stackexchange.com/q/269105.]
+:::
+
+:::{#exr-}
+Seja $\ell^2$ o mesmo espaço vetorial que no exercício anterior e seja 
+$$
+    f:\ell^2\to \ell^2,\quad (a_1,a_2,a_3,\ldots)\mapsto (0,a_1,a_2,\ldots)
+$$ 
+o operador *right shift*.
+
+1. Mostre que $f$ possui adjunto. 
+2. Mostre que $f$ é injetiva, enquanto $f^*$ é sobrejetiva. 
+3. Verifique se $f$ é normal.
+:::
+
+:::{#exr-}
+Seja $\overline \ell^2$ o $\R$-espaço de sequências infinitas nas duas direções. Ou seja 
+$$    
+   \overline\ell^2=\{(a_i)_{i\in \Z}\mid a_i\in \R,\ \sum_{i\in\Z}a_i^2< \infty\}.
+$$
+O produto interno de $\overline\ell^2$ está definido como 
+$$
+\left<a,b\right>=\sum_{i\in \Z}a_ib_i.    
+$$
+Defina $f$ como o operador *right shift* em $\overline\ell^2$:
+$$
+    f:\overline \ell^2\to \overline \ell^2,\quad (a_i)_{i\in \Z}\mapsto (a_{i-1})_{i\in \Z}.
+$$ 
+
+1. Mostre que $f$ possui adjunto. 
+2. Mostre que $f$ é normal, mas não é autoadjunto.
+:::
