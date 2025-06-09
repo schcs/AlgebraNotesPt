@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>78&nbsp; Operadores ortogonais – Álgebra</title>
+<title>78&nbsp; Operadores ortogonais e unitárias – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -652,7 +652,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1190,7 +1190,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></span></a>
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1349,9 +1349,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais</span></h1>
+<h1 class="title"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></h1>
 </div>
 
 
@@ -1368,25 +1368,30 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math inline">\(\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\)</span> Nesta página consideramos <span class="math inline">\(\R^n\)</span> com o produto interno usual <span class="math inline">\(\langle-,-\rangle\)</span>.</p>
+<p><span class="math inline">\(\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\)</span> Nesta página <span class="math inline">\(V\)</span> é um espaço vetorial com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span> sobre <span class="math inline">\(\R\)</span> ou <span class="math inline">\(\C\)</span>. Os espaços <span class="math inline">\(\R^n\)</span> e <span class="math inline">\(\C^n\)</span> serão considerados com seus produtos internos usuais.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.1</strong></span> A <b>distáncia</b> de <span class="math inline">\(v,w\in \R^n\)</span> está definida como <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 78.1</strong></span> A <strong>distáncia</strong> de <span class="math inline">\(v,w\in V\)</span> está definida como <span class="math display">\[
 d(v,w)=\|v-w\|=\langle v-w,v-w\rangle^{1/2}.
-\]</span> Uma aplicação (não necessariamente linear) <span class="math inline">\(f:\R^n\to \R^n\)</span> é chamada de <b>isometria</b> se ela preserva distáncia. Ou seja, <span class="math display">\[
-d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in \R^n.
+\]</span> Uma aplicação (não necessariamente linear) <span class="math inline">\(f:V\to V\)</span> é chamada de <strong>isometria</strong> se ela preserva distáncia. Ou seja, <span class="math display">\[
+d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in V.
 \]</span></p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 78.1</strong></span> Se <span class="math inline">\(v_0\in \R^n\)</span>, então <span class="math inline">\(T_{v_0}:v\mapsto v+v_0\)</span> é uma isometria. Este exemplo mostra que uma isometria não precisa ser linear. Em <span class="math inline">\(\R^2\)</span>, a rotação <span class="math inline">\(R_{\alpha}\)</span> no redor da origem por <span class="math inline">\(\alpha\)</span> graus é também uma isometria. Note que <span class="math inline">\(R_\alpha\)</span> é linear.</p>
 </div>
-<p>É imediato observar que uma isometria <span class="math inline">\(f:\R^n\to \R^n\)</span> é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas nós não provaremos esta afirmação por falta de tempo.</p>
+<p>É imediato observar que uma isometria <span class="math inline">\(f:V\to V\)</span> é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas esta afirmação não vamos provar.</p>
+<p>Escreva <span class="math inline">\(\left&lt;u,v\right&gt;=\mbox{Re}\left&lt;u,v\right&gt;+i\mbox{Im}\left&lt;u,v\right&gt;\)</span>. Quando <span class="math inline">\(V\)</span> é um <span class="math inline">\(\R\)</span>-espaço, então <span class="math inline">\(\mbox{Im}\left&lt;u,v\right&gt;=0\)</span>. Segue da identidade da polarização que <span class="math display">\[
+\|u+v\|^2-\|u\|^2-\|v\|^2=2\mbox{Re}\left&lt;u,v\right&gt;.
+\]</span> Além disso, calculando <span class="math inline">\(\left&lt;u,iv\right&gt;\)</span>, obtemos que <span id="eq-im-re-inner-prod"><span class="math display">\[
+\mbox{Im}\left&lt;u,v\right&gt;=\mbox{Re}\left&lt;u,iv\right&gt;.
+\tag{78.1}\]</span></span></p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 78.1</strong></span> As seguintes são equivalentes para uma transformação linear <span class="math inline">\(f:\R^n\to \R^n\)</span>.</p>
-<ul>
-<li><span class="math inline">\(f\)</span> preserva o produto interno em <span class="math inline">\(\R^n\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a norma em <span class="math inline">\(\R^n\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a distância em <span class="math inline">\(\R^n\)</span></li>
-</ul>
+<p><span class="theorem-title"><strong>Teorema 78.1</strong></span> As seguintes são equivalentes para uma transformação linear <span class="math inline">\(f:V\to V\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> preserva o produto interno em <span class="math inline">\(V\)</span>.</li>
+<li><span class="math inline">\(f\)</span> preserva a norma em <span class="math inline">\(V\)</span>.</li>
+<li><span class="math inline">\(f\)</span> preserva a distância em <span class="math inline">\(V\)</span></li>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(f\)</span> preserva produto interno. Então, para todo <span class="math inline">\(v\in V\)</span>, <span class="math display">\[
@@ -1398,52 +1403,64 @@ d(f(v),f(w))=\|f(v)-f(w)\|=\|f(v-w)\|=\|v-w\|=d(v,w).
 <p>Assuma agora que <span class="math inline">\(f\)</span> preserva distância. Note para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
 \|f(v)\|=d(0,f(v))=d(0,v)=\|v\|
 \]</span> e assim <span class="math inline">\(f\)</span> preserva a norma. Note que no meio da linha anterior, usamos que <span class="math inline">\(f(0)=0\)</span>. Ora, temos pela identidade de polarização para <span class="math inline">\(v,w\in V\)</span>, que <span class="math display">\[\begin{align*}
-\langle f(v),f(w)\rangle&amp;=\frac 12(\|f(v)+f(w)\|-\|f(v)\|-\|f(w)\|)\\
+\mbox{Re}\langle f(v),f(w)\rangle&amp;=\frac 12(\|f(v)+f(w)\|^2-\|f(v)\|^2-\|f(w)\|^2)\\
 &amp;=\frac 12(\|f(v+w)\|-\|f(v)\|-\|f(w)\|)\\&amp;=\frac 12(\|v+w\|-\|v\|-\|w\|)\\
-&amp;=\langle v,w\rangle.
-\end{align*}\]</span> Logo, <span class="math inline">\(f\)</span> preserva produto interno.</p>
+&amp;=\mbox{Re}\langle v,w\rangle.
+\end{align*}\]</span> Então segue que <span class="math inline">\(\mbox{Re}\langle f(v),f(w)\rangle=\mbox{Re}\langle v,w\rangle\)</span> e segue do <a href="#eq-im-re-inner-prod" class="quarto-xref">Equação&nbsp;<span>78.1</span></a> que o mesmo vale para a parte imaginária. Logo, <span class="math inline">\(f\)</span> preserva produto interno.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.2</strong></span> Uma <b>transformação ortogonal</b> de <span class="math inline">\(\R^n\)</span> é uma isometria linear de <span class="math inline">\(\R^n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 78.2</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Quando o corpo é <span class="math inline">\(\R\)</span>, uma isometria linear de <span class="math inline">\(V\)</span> chama-se <strong>transformação ortogonal</strong> de <span class="math inline">\(V\)</span>.</li>
+<li>Quando o corpo é <span class="math inline">\(\C\)</span>, uma isometria linear de <span class="math inline">\(V\)</span> chama-se <strong>transformação unitátária</strong> de <span class="math inline">\(V\)</span>.</li>
+</ol>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 78.2</strong></span> Seja <span class="math inline">\(f:\R^n\to \R^n\)</span> uma transformação ortogonal e seja <span class="math inline">\(A\)</span> a sua matriz na base canônica. Então <span class="math inline">\(A^tA=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz ortogonal. Em particular, uma transformação ortogonal de <span class="math inline">\(\R^n\)</span> é invertível.</p>
+<p><span class="theorem-title"><strong>Teorema 78.2</strong></span> Seja <span class="math inline">\(\dim V\)</span> finita, <span class="math inline">\(f:V\to V\)</span> uma isometria linear e seja <span class="math inline">\(A\)</span> a sua matriz em uma base ortonormal.</p>
+<ol type="1">
+<li>Se o corpo é <span class="math inline">\(\R\)</span>, então <span class="math inline">\(A^tA=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz ortogonal.</li>
+<li>Se o corpo é <span class="math inline">\(\C\)</span>, então <span class="math inline">\(A^*A=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz unitária.</li>
+<li>Em particular, uma transformação ortogonal ou unitária de <span class="math inline">\(V\)</span> é invertível.</li>
+</ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Note que a base canônica <span class="math inline">\(e_1,\ldots,e_n\)</span> é ortonormal. As colunas de <span class="math inline">\(A\)</span> são <span class="math inline">\(f(e_1),\ldots,f(e_n)\)</span>. Como <span class="math inline">\(f\)</span> preserva produto interno, estes vetores formam uma base ortonormal.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> uma base ortonormal de <span class="math inline">\(V\)</span>. As colunas de <span class="math inline">\(A\)</span> são <span class="math inline">\([f(b_1)]_X^X,\ldots,[f(b_n)]_X^X\)</span>. Como <span class="math inline">\(f\)</span> preserva produto interno, <span class="math inline">\(f(b_1),\ldots,f(b_n)\)</span> é base ortonormal de <span class="math inline">\(V\)</span>. Além disso, como <span class="math inline">\(X\)</span> é base ortonormal, a transformação <span class="math inline">\(V\to \R^n\)</span> ou <span class="math inline">\(V\to \C^n\)</span> definida como <span class="math inline">\(v\mapsto [v]_X^X\)</span> é uma isometria, portanto os vetores <span class="math inline">\([f(b_1)]_X^X,\ldots,[f(b_n)]_X^X\)</span> são ortonormais. Logo <span class="math inline">\(A\)</span> é matriz ortogonal.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 78.1</strong></span> Seja <span class="math inline">\(f:\R^n \to \R^n\)</span> uma transformação ortogonal.</p>
-<ul>
-<li>O determinante de <span class="math inline">\(f\)</span> é <span class="math inline">\(\pm 1\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in\C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\overline \lambda\)</span> também é um autovalor de <span class="math inline">\(f\)</span>.</li>
+<p><span class="theorem-title"><strong>Lema 78.1</strong></span> Assuma que <span class="math inline">\(\det V\)</span> é finita, e seja <span class="math inline">\(f:V \to V\)</span> uma isometria linear.</p>
+<ol type="1">
+<li><span class="math inline">\(|\det f|=1\)</span>;</li>
+<li>se o corpo é <span class="math inline">\(\R\)</span>, então o determinante de <span class="math inline">\(f\)</span> é <span class="math inline">\(\pm 1\)</span>.</li>
 <li>Se <span class="math inline">\(\lambda\in \C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(|\lambda|=1\)</span>.</li>
 <li>Se <span class="math inline">\(\lambda\in \R\)</span> é uma autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\lambda=\pm 1\)</span>.</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(A\)</span> a matriz de <span class="math inline">\(f\)</span> na base canônica e note que <span class="math display">\[
-1=\det I=\det AA^{-1}=\det AA^t=(\det A)^2.
-\]</span> Logo <span class="math inline">\(\det A=\pm 1\)</span>. Se <span class="math inline">\(\lambda\in\C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\overline \lambda\)</span> também é, pois <span class="math inline">\(\mbox{pcar}_f(t)\in\R[t]\)</span>. Para provar afirmação 3., considere o operador <span class="math inline">\(f_\C:\C^n\to\C^n\)</span>, <span class="math inline">\(f_\C(v)=Av\)</span> para todo <span class="math inline">\(v\in \C^n\)</span> considerado como vetor coluna. Note que <span class="math inline">\(f_\C^*\)</span> é a transformação <span class="math inline">\(v\mapsto A^tv\)</span>. Seja <span class="math inline">\(v\in \C^n\)</span> um autovetor com autovalor <span class="math inline">\(\lambda\in \C\)</span>. Agora <span class="math display">\[
-\lambda\overline \lambda\|v\|=\langle\lambda v,\lambda v\rangle = \langle Av,Av\rangle=\langle v,A^tAv\rangle=\langle v,v\rangle.
-\]</span> Como <span class="math inline">\(v\neq 0\)</span>, temos que <span class="math inline">\(\langle v,v\rangle\neq 0\)</span> e <span class="math inline">\(\lambda\overline\lambda=\|\lambda\|^2=1\)</span>. Finalmente, afirmação 4. segue trivialmente da afirmação 3.</p>
+1=\det I=\det A^*A=\det A^*\det A=\overline{\det A}\det A=|\det A|^2.
+\]</span> Logo <span class="math inline">\(|\det A|=1\)</span>. Se <span class="math inline">\(A\)</span> é matriz com entradas reais, então <span class="math inline">\(\det A=\pm 1\)</span>. Para provar afirmação 3., lembre que <span class="math inline">\(f\)</span> preserva norma, e se <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\lambda\)</span>, então <span class="math display">\[
+\|\lambda| \|v\|=\|\lambda v\|=\|f(v)\|=\|v\|
+\]</span> e segue que <span class="math inline">\(|\lambda|=1\)</span>. Finalmente, afirmação 4. segue trivialmente da afirmação 3.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.3</strong></span> O conjunto das transformações ortogonais de <span class="math inline">\(\R^n\)</span> é denotado por <span class="math inline">\(O_n\)</span>. O conjunto das transformações ortogonais com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(SO_n\)</span>. O nome de <span class="math inline">\(O_n\)</span> é <b>grupo ortogonal</b> enquanto <span class="math inline">\(SO_n\)</span> é chamado de <b>grupo ortogonal especial</b>. Os grupos <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante <span class="math inline">\(1\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 78.3</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial com produto interno.</p>
+<p>Se <span class="math inline">\(V\)</span> é <span class="math inline">\(\R\)</span>-espaço, então o conjunto das transformações ortogonais de <span class="math inline">\(V\)</span> é denotado por <span class="math inline">\(\operatorname{O}(V)\)</span>. O conjunto das transformações ortogonais com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(\operatorname{SO}(V)\)</span>. O nome de <span class="math inline">\(\operatorname{O}(V)\)</span> é <strong>grupo ortogonal</strong> enquanto <span class="math inline">\(\operatorname{SO}(V)\)</span> é chamado de <strong>grupo ortogonal especial</strong> de <span class="math inline">\(V\)</span>. Assuma que <span class="math inline">\(V\)</span> é <span class="math inline">\(\C\)</span>-espaço. O conjunto das transformações unitárias de <span class="math inline">\(V\)</span> é denotado por <span class="math inline">\(\operatorname{U}(V)\)</span>. O conjunto das transformações unitárias com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(\operatorname{SU}(V)\)</span>. O nome de <span class="math inline">\(\operatorname{U}(V)\)</span> é <strong>grupo unitário</strong> enquanto <span class="math inline">\(\operatorname{SU}(V)\)</span> é chamado de <strong>grupo unitário especial</strong>.</p>
+<p>Quando <span class="math inline">\(V=\R^n\)</span> ou <span class="math inline">\(V=\C^n\)</span>, então escrevemos <span class="math inline">\(\operatorname{O}_n\)</span>, <span class="math inline">\(\operatorname{SO}_n\)</span>, <span class="math inline">\(\operatorname{U}_n\)</span>, <span class="math inline">\(\operatorname{SU}_n\)</span>. Os grupos <span class="math inline">\(\operatorname{O}_n\)</span> e <span class="math inline">\(\operatorname{SO}_n\)</span> podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante <span class="math inline">\(1\)</span>. Os grupos <span class="math inline">\(\operatorname{U}_n\)</span> e <span class="math inline">\(\operatorname{SU}_n\)</span> podem ser identificados com os conjuntos das matrizes unitárias e matrizes unitárias com determinante <span class="math inline">\(1\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 78.2</strong></span> Sejam <span class="math inline">\(f,g\in O_n\)</span>. Então</p>
-<ul>
-<li><span class="math inline">\(f\circ g\in O_n\)</span></li>
-<li>Se <span class="math inline">\(f,g\in SO_n\)</span>, então <span class="math inline">\(f\circ g\in SO_n\)</span>.</li>
-<li><span class="math inline">\(f^{-1}\in O_n\)</span></li>
-<li>Se <span class="math inline">\(f\in SO_n\)</span>, então <span class="math inline">\(f^{-1}\in SO_n\)</span>.</li>
-</ul>
+<p><span class="theorem-title"><strong>Lema 78.2</strong></span> Sejam <span class="math inline">\(f,g\in \operatorname{O}(V)\)</span>. Então</p>
+<ol type="1">
+<li><span class="math inline">\(f\circ g\in \operatorname{O}(V)\)</span></li>
+<li>Se <span class="math inline">\(f,g\in \operatorname{SO}(V)\)</span>, então <span class="math inline">\(f\circ g\in \operatorname{SO}(V)\)</span>.</li>
+<li><span class="math inline">\(f^{-1}\in \operatorname{O}(V)\)</span></li>
+<li>Se <span class="math inline">\(f\in \operatorname{SO}(V)\)</span>, então <span class="math inline">\(f^{-1}\in \operatorname{SO}\)</span>(V).</li>
+</ol>
+<p>O mesmo vale para <span class="math inline">\(f,g\in \operatorname{U}(V)\)</span> e <span class="math inline">\(\operatorname{SU}\)</span>(V).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<p>O lema anterior diz essentialmente que <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos <span class="math inline">\(O_n\)</span> e <span class="math inline">\(SO_n\)</span> têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.</p>
+<p>O lema anterior diz essentialmente que <span class="math inline">\(\operatorname{O}(V)\)</span> e <span class="math inline">\(\operatorname{SO}(V)\)</span> são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos <span class="math inline">\(\operatorname{O}_n\)</span>, <span class="math inline">\(\operatorname{SO}_n\)</span>, <span class="math inline">\(\operatorname{U}_n\)</span> e <span class="math inline">\(\operatorname{SU}_n\)</span> têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.</p>
 
 
 
