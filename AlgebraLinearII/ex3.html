@@ -2203,6 +2203,68 @@ G(B_2) = \begin{pmatrix} 0 &amp;  −1 &amp;  0 &amp; 0\\
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 80.28</strong></span> Seja <span class="math inline">\(V\)</span> como no <a href="#exr-ff-exists-unitary" class="quarto-xref">Exercício&nbsp;<span>80.27</span></a>. Seja <span class="math inline">\(a \in \Z_p\)</span> um elemento fixo em <span class="math inline">\(\Z_p \setminus \{x^2 \mid x \in \Z_p\}\)</span>. Mostre que existe uma base <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(G_X(B)\)</span> é diagonal e as entradas na diagonal são ou <span class="math inline">\((1,\ldots, 1)\)</span> ou <span class="math inline">\((1, \ldots , 1, a)\)</span>.</p>
 </div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.29</strong></span> Seja <span class="math inline">\(f:V\to V\)</span> um operador normal de um <span class="math inline">\(\C\)</span>-espaço <span class="math inline">\(V\)</span> de dimensão finita. Assuma que todos os autovalores de <span class="math inline">\(f\)</span> são reais.</p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> é autoadjunto.</li>
+<li>Deduza que quando <span class="math inline">\(f:V\to V\)</span> é um operador normal diagonalizável de um <span class="math inline">\(\R\)</span>-espaço de dimensão finita, então ele é autoadjunto.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.30</strong></span> Considere o operador <span class="math inline">\(f:\C^2\to \C^2\)</span> dada pela seguinte matriz na base canônica: <span class="math display">\[
+    \begin{pmatrix} 1 &amp; i \\ i &amp; 1\end{pmatrix}.
+\]</span></p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> é normal, mas não é autoadjunto.</li>
+<li>Ache uma matriz <span class="math inline">\(P\)</span> unitária, tal que <span class="math inline">\(PAP^*\)</span> é diagonal.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.31</strong></span> Mostre que todo operador <span class="math inline">\(f\)</span> de um <span class="math inline">\(\F\)</span>-espaço vetorial <span class="math inline">\(V\)</span> de dimensão finita pode ser escrito como <span class="math display">\[
+    f = f_1+f_2
+\]</span> onde <span class="math inline">\(f_1\)</span> é autoadjunto e <span class="math inline">\(f_2\)</span> é anti-autoadjunto (ou seja, <span class="math inline">\(f_2^*=-f_2\)</span>).</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.32</strong></span> Seja <span class="math inline">\(V\)</span> um espaço com forma <span class="math inline">\(\sigma\)</span>-hermitiana e <span class="math inline">\(f:V\to V\)</span> uma projeção (ou seja, <span class="math inline">\(f^2=f\)</span>). Mostre que <span class="math inline">\(f\)</span> é autoadjunto se e somente se <span class="math inline">\(V=\ker f\perp \mbox{Im}(f)\)</span>. [Eu acho que <span class="math inline">\(V\)</span> não precisa ser de dimensão finita, mas se seu argumento precisar desta condição, pode assumir.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.33</strong></span> Seja <span class="math inline">\(\ell^2\)</span> o <span class="math inline">\(\R\)</span>-espaço de sequências <span class="math inline">\(a=(a_1,a_2,a_3,\ldots)\)</span> reais tal que <span class="math display">\[
+    \sum_{i\geq 1}a_i^2&lt; \infty
+\]</span> considerado com produto interno <span class="math display">\[
+    \left&lt; a,b\right&gt;=\sum_{i\geq 1}a_ib_i.
+\]</span> (Não precisa provar fato que <span class="math inline">\(\ell^2\)</span> é um espaço vetorial com produto interno, mas quero que reflita sobre nisso pensando porque está certo.) Considere o operador <span class="math display">\[
+    f:\ell^2\to \ell^2,\quad (a_1,a_2,a_3,\ldots)\mapsto (a_1,a_2/2,a_3/3,\ldots ).
+\]</span></p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> é autoadjunto.</li>
+<li>Mostre que <span class="math inline">\(f\)</span> é injetivo.</li>
+<li>Mostre que <span class="math inline">\(f\)</span> não é sobrejetivo. [Dica: a sequência <span class="math inline">\((1/n)_{n\geq 1}\in\ell^2\)</span> não está na imagem de <span class="math inline">\(f\)</span>.]</li>
+<li>Deduza que o adjunto de um operador injetivo não precisa ser sobrejetivo em espaços de dimensão infinita. [Achei o exemplo na página math.stackexchange.com/q/269105.]</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.34</strong></span> Seja <span class="math inline">\(\ell^2\)</span> o mesmo espaço vetorial que no exercício anterior e seja <span class="math display">\[
+    f:\ell^2\to \ell^2,\quad (a_1,a_2,a_3,\ldots)\mapsto (0,a_1,a_2,\ldots)
+\]</span> o operador <em>right shift</em>.</p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> possui adjunto.</li>
+<li>Mostre que <span class="math inline">\(f\)</span> é injetiva, enquanto <span class="math inline">\(f^*\)</span> é sobrejetiva.</li>
+<li>Verifique se <span class="math inline">\(f\)</span> é normal.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.35</strong></span> Seja <span class="math inline">\(\overline \ell^2\)</span> o <span class="math inline">\(\R\)</span>-espaço de sequências infinitas nas duas direções. Ou seja <span class="math display">\[    
+   \overline\ell^2=\{(a_i)_{i\in \Z}\mid a_i\in \R,\ \sum_{i\in\Z}a_i^2&lt; \infty\}.
+\]</span> O produto interno de <span class="math inline">\(\overline\ell^2\)</span> está definido como <span class="math display">\[
+\left&lt;a,b\right&gt;=\sum_{i\in \Z}a_ib_i.    
+\]</span> Defina <span class="math inline">\(f\)</span> como o operador <em>right shift</em> em <span class="math inline">\(\overline\ell^2\)</span>: <span class="math display">\[
+    f:\overline \ell^2\to \overline \ell^2,\quad (a_i)_{i\in \Z}\mapsto (a_{i-1})_{i\in \Z}.
+\]</span></p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> possui adjunto.</li>
+<li>Mostre que <span class="math inline">\(f\)</span> é normal, mas não é autoadjunto.</li>
+</ol>
+</div>
 
 
 
