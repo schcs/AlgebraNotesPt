@@ -1,20 +1,21 @@
 --- 
-title: "Operadores ortogonais"
+title: "Operadores ortogonais e unitárias"
 number-sections: true
 lang: pt-BR
 --- 
 
 $\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}$
-Nesta página consideramos $\R^n$ com o produto interno usual $\langle-,-\rangle$.
+Nesta página $V$ é um espaço vetorial com produto interno $\left<-,-\right>$ sobre $\R$ ou $\C$. Os espaços $\R^n$ e $\C^n$ serão considerados 
+com seus produtos internos usuais. 
 
 :::{#def-}
-A <b>distáncia</b> de $v,w\in \R^n$ está definida como
+A **distáncia** de $v,w\in V$ está definida como
 $$
 d(v,w)=\|v-w\|=\langle v-w,v-w\rangle^{1/2}.
 $$
-Uma aplicação (não necessariamente linear) $f:\R^n\to \R^n$ é chamada de <b>isometria</b> se ela preserva distáncia. Ou seja,
+Uma aplicação (não necessariamente linear) $f:V\to V$ é chamada de **isometria** se ela preserva distáncia. Ou seja,
 $$
-d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in \R^n.
+d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in V.
 $$
 :::
 
@@ -23,16 +24,25 @@ $$
 Se $v_0\in \R^n$, então $T_{v_0}:v\mapsto v+v_0$ é uma isometria. Este exemplo mostra que uma isometria não precisa ser linear. Em $\R^2$, a rotação $R_{\alpha}$ no redor da origem por $\alpha$ graus é também uma isometria. Note que $R_\alpha$ é linear.
 :::
 
-É imediato observar que uma isometria $f:\R^n\to \R^n$ é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas nós não provaremos esta afirmação por falta de tempo.
+É imediato observar que uma isometria $f:V\to V$ é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas esta afirmação não vamos provar.
+
+
+Escreva $\left<u,v\right>=\mbox{Re}\left<u,v\right>+i\mbox{Im}\left<u,v\right>$. Quando $V$ é um $\R$-espaço, então $\mbox{Im}\left<u,v\right>=0$.  Segue da identidade da polarização que 
+$$
+\|u+v\|^2-\|u\|^2-\|v\|^2=2\mbox{Re}\left<u,v\right>. 
+$$
+Além disso, calculando $\left<u,iv\right>$, obtemos que 
+$$
+\mbox{Im}\left<u,v\right>=\mbox{Re}\left<u,iv\right>.
+$${#eq-im-re-inner-prod}
+
 
 :::{#thm-}
-As seguintes são equivalentes para uma transformação linear $f:\R^n\to \R^n$.
+As seguintes são equivalentes para uma transformação linear $f:V\to V$.
 
-
- -  $f$ preserva o produto interno em $\R^n$.
- -  $f$ preserva a norma em $\R^n$.
- -  $f$ preserva a distância em $\R^n$
-
+1.  $f$ preserva o produto interno em $V$.
+2.  $f$ preserva a norma em $V$.
+3.  $f$ preserva a distância em $V$
 :::
 
 
@@ -55,70 +65,83 @@ $$
 $$
 e assim $f$ preserva a norma. Note que no meio da linha anterior, usamos que $f(0)=0$. Ora, temos pela identidade de polarização para $v,w\in V$, que
 \begin{align*}
-\langle f(v),f(w)\rangle&=\frac 12(\|f(v)+f(w)\|-\|f(v)\|-\|f(w)\|)\\
+\mbox{Re}\langle f(v),f(w)\rangle&=\frac 12(\|f(v)+f(w)\|^2-\|f(v)\|^2-\|f(w)\|^2)\\
 &=\frac 12(\|f(v+w)\|-\|f(v)\|-\|f(w)\|)\\&=\frac 12(\|v+w\|-\|v\|-\|w\|)\\
-&=\langle v,w\rangle.
+&=\mbox{Re}\langle v,w\rangle.
 \end{align*}
+Então segue que $\mbox{Re}\langle f(v),f(w)\rangle=\mbox{Re}\langle v,w\rangle$ e segue do @eq-im-re-inner-prod que o mesmo vale para a parte imaginária. 
 Logo, $f$ preserva produto interno.
-
 :::
 
 
 :::{#def-}
-Uma <b>transformação ortogonal</b> de $\R^n$ é uma isometria linear de $\R^n$.
+1. Quando o corpo é $\R$, uma isometria linear de $V$  chama-se **transformação ortogonal** de $V$. 
+2. Quando o corpo é $\C$, uma isometria linear de $V$ chama-se **transformação unitátária** de $V$. 
 :::
 
 
 :::{#thm-}
-Seja $f:\R^n\to \R^n$ uma transformação ortogonal e seja $A$ a sua matriz na base canônica. Então $A^tA=I$; ou seja, as colunas de $A$ são ortonormais e $A$ é uma matriz ortogonal. Em particular, uma transformação ortogonal de $\R^n$ é invertível.
+Seja $\dim V$ finita, $f:V\to V$ uma isometria linear e seja $A$ a sua matriz em uma base ortonormal. 
+
+1. Se o corpo é $\R$, então $A^tA=I$; ou seja, as colunas de $A$ são ortonormais e $A$ é uma matriz ortogonal. 
+2. Se o corpo é $\C$, então $A^*A=I$; ou seja, as colunas de $A$ são ortonormais e $A$ é uma matriz unitária.
+3. Em particular, uma transformação ortogonal ou unitária de $V$ é invertível.
 :::
 
 
 :::{.proof}
-Note que a base canônica $e_1,\ldots,e_n$ é ortonormal. As colunas de $A$ são $f(e_1),\ldots,f(e_n)$. Como $f$ preserva produto interno, estes vetores formam uma base  ortonormal.
+Seja $X=\{b_1,\ldots,b_n\}$ uma base ortonormal de $V$. As colunas de $A$ são $[f(b_1)]_X^X,\ldots,[f(b_n)]_X^X$. Como $f$ preserva produto interno,  $f(b_1),\ldots,f(b_n)$ é base ortonormal de $V$. Além disso, como $X$ é base ortonormal, a transformação $V\to \R^n$ ou $V\to \C^n$ definida como 
+$v\mapsto [v]_X^X$ é uma isometria, portanto os vetores $[f(b_1)]_X^X,\ldots,[f(b_n)]_X^X$ são ortonormais. Logo $A$ é matriz ortogonal.
 :::
 
 
 :::{#lem-}
-Seja $f:\R^n \to \R^n$ uma transformação ortogonal.
+Assuma que $\det V$ é finita, e seja $f:V \to V$ uma isometria linear.
 
-
- -  O determinante de $f$ é $\pm 1$.
- -  Se $\lambda\in\C$ é um autovalor de $f$, então $\overline \lambda$ também é um autovalor de $f$.
- -  Se $\lambda\in \C$ é um autovalor de $f$, então $|\lambda|=1$.
- -  Se $\lambda\in \R$ é uma autovalor de $f$, então $\lambda=\pm 1$.
-
+1.  $|\det f|=1$;
+2.  se o corpo é $\R$, então o determinante de $f$ é $\pm 1$.
+3.  Se $\lambda\in \C$ é um autovalor de $f$, então $|\lambda|=1$.
+4.  Se $\lambda\in \R$ é uma autovalor de $f$, então $\lambda=\pm 1$.
 :::
 
 
 :::{.proof}
 Seja $A$ a matriz de $f$ na base canônica e note que
 $$
-1=\det I=\det AA^{-1}=\det AA^t=(\det A)^2.
+1=\det I=\det A^*A=\det A^*\det A=\overline{\det A}\det A=|\det A|^2.
 $$
-Logo $\det A=\pm 1$. Se $\lambda\in\C$ é um autovalor de $f$, então $\overline \lambda$ também é, pois $\mbox{pcar}_f(t)\in\R[t]$. Para provar afirmação 3., considere o operador $f_\C:\C^n\to\C^n$, $f_\C(v)=Av$ para todo $v\in \C^n$ considerado como vetor coluna. Note que $f_\C^*$ é a transformação $v\mapsto A^tv$. Seja $v\in \C^n$ um autovetor com autovalor $\lambda\in \C$. Agora
+Logo $|\det A|=1$. Se $A$ é matriz com entradas reais, então $\det A=\pm 1$.  Para provar afirmação 3., 
+lembre que $f$ preserva norma, e se $v$ é autovetor de $f$ com autovalor $\lambda$, então 
 $$
-\lambda\overline \lambda\|v\|=\langle\lambda v,\lambda v\rangle = \langle Av,Av\rangle=\langle v,A^tAv\rangle=\langle v,v\rangle.
+\|\lambda| \|v\|=\|\lambda v\|=\|f(v)\|=\|v\|
 $$
-Como $v\neq 0$, temos que $\langle v,v\rangle\neq 0$ e $\lambda\overline\lambda=\|\lambda\|^2=1$.
+e segue que $|\lambda|=1$. 
 Finalmente, afirmação 4. segue trivialmente da afirmação 3.
 :::
 
 
 :::{#def-}
-O conjunto das transformações ortogonais de $\R^n$ é denotado por $O_n$. O conjunto das transformações ortogonais com determinante igual a $1$ é denotado por $SO_n$. O nome de $O_n$ é <b>grupo ortogonal</b> enquanto $SO_n$ é chamado de <b>grupo ortogonal especial</b>. Os grupos $O_n$ e $SO_n$ podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante $1$.
+Seja $V$ um espaço vetorial com produto interno. 
+
+Se $V$ é $\R$-espaço, então o conjunto das transformações ortogonais de $V$ é denotado por $\operatorname{O}(V)$. O conjunto das transformações ortogonais com determinante igual a $1$ é denotado por $\operatorname{SO}(V)$. O nome de $\operatorname{O}(V)$ é **grupo ortogonal** enquanto $\operatorname{SO}(V)$ é 
+chamado de **grupo ortogonal especial** de $V$. 
+Assuma que $V$ é $\C$-espaço. O conjunto das transformações unitárias de $V$ é denotado por $\operatorname{U}(V)$. O conjunto das transformações unitárias com determinante igual a $1$ é denotado por $\operatorname{SU}(V)$. O nome de $\operatorname{U}(V)$ é **grupo unitário** enquanto $\operatorname{SU}(V)$ é 
+chamado de **grupo unitário especial**. 
+
+Quando $V=\R^n$ ou $V=\C^n$, então escrevemos $\operatorname{O}_n$, $\operatorname{SO}_n$, $\operatorname{U}_n$, $\operatorname{SU}_n$.  Os grupos $\operatorname{O}_n$ e $\operatorname{SO}_n$ podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante $1$.
+Os grupos $\operatorname{U}_n$ e $\operatorname{SU}_n$ podem ser identificados com os conjuntos das matrizes unitárias e matrizes unitárias com determinante $1$.
 :::
 
 
 :::{#lem-}
-Sejam $f,g\in O_n$. Então
+Sejam $f,g\in \operatorname{O}(V)$. Então
 
+1.  $f\circ g\in \operatorname{O}(V)$
+2.  Se $f,g\in \operatorname{SO}(V)$, então $f\circ g\in \operatorname{SO}(V)$.
+3.  $f^{-1}\in \operatorname{O}(V)$
+4.  Se $f\in \operatorname{SO}(V)$, então $f^{-1}\in \operatorname{SO}$(V).
 
- -  $f\circ g\in O_n$
- -  Se $f,g\in SO_n$, então $f\circ g\in SO_n$.
- -  $f^{-1}\in O_n$
- -  Se $f\in SO_n$, então $f^{-1}\in SO_n$.
-
+O mesmo vale para $f,g\in \operatorname{U}(V)$ e $\operatorname{SU}$(V).
 :::
 
 
@@ -126,4 +149,5 @@ Sejam $f,g\in O_n$. Então
 Exercício.
 :::
 
-O lema anterior diz essentialmente que $O_n$ e $SO_n$ são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos $O_n$ e $SO_n$ têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.
+O lema anterior diz essentialmente que $\operatorname{O}(V)$ e $\operatorname{SO}(V)$ são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos $\operatorname{O}_n$, $\operatorname{SO}_n$, $\operatorname{U}_n$ e 
+$\operatorname{SU}_n$ têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.

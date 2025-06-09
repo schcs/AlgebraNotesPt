@@ -88,7 +88,7 @@ Assuma que $V$ é espaço com produto interno e $f:V\to V$ é autoadjunto.
 ## Diagonalização de operadores autoadjuntos
 
 :::{#cor-}
-Seja $A\in M_{n\times n}(\C)$ tal que $A^t=\overline A$ (a transposta é igual à conjugada complexa). Então os autovalores de $A$ são números reais. Em particular, se $A\in M_{n\times n}(\R)$ tal que $A^t = A$ e $\lambda\in\C$ é autovalor de $A$, então $\lambda\in \C$.
+Seja $A\in M_{n\times n}(\C)$ tal que $A^t=\overline A$ (a transposta é igual à conjugada complexa). Então os autovalores de $A$ são números reais. Em particular, se $A\in M_{n\times n}(\R)$ tal que $A^t = A$ e $\lambda\in\C$ é autovalor de $A$, então $\lambda\in \R$.
 :::
 
 
@@ -208,7 +208,7 @@ Assuma que $f:V\to V$ é normal.
 :::{.proof}
 1. Seja $v\in V$. Então
 \begin{align*}
-\|f(v)\|^2&=\langle f(v),f(v)\rangle =\langle v,f^*(f(v))\rangle=\overline{\langle f(f^*(v),v\rangle}\\&=\overline{\langle f^*(v),f^*(v)\rangle}\\&=\overline{\| f^*(v)\|}=\|f^*(v)\|.
+\|f(v)\|^2&=\langle f(v),f(v)\rangle =\langle v,f^*(f(v))\rangle=\overline{\langle f(f^*(v),v\rangle}\\&=\overline{\langle f^*(v),f^*(v)\rangle}\\&=\overline{\| f^*(v)\|^2}=\|f^*(v)\|^2.
 \end{align*}
 
 1. Assuma que $f(v)=\lambda v$; ou seja $(f-\lambda\mbox{id})(v)=0$. Obtemos que $\|(f-\lambda\mbox{id})(v)\|=0$. Pelo item anterior, $\|(f-\lambda\mbox{id})^*(v)\|=0$. Então $(f-\lambda\mbox{id})^*(v)=0$; ou seja, $f^*(v)=\overline \lambda v$.
