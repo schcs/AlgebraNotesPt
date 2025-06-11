@@ -502,7 +502,7 @@ Pela unicidade do adjunto, temos $(\alpha f + \beta g)^* = \alpha^\sigma f^* + \
 2. **$(f^*)^* = f$:**  
 Pela definição, $B_W(f(v), w) = B_V(v, f^*(w))$ para todo $v, w$. Temos 
 $$
-B_V(f^*(w),v))=B_V(v, f^*(w))^\sigma = B_W(f(v), w)^\sigma=B_W(w,f(v)). 
+B_V(f^*(w),v)=B_V(v, f^*(w))^\sigma = B_W(f(v), w)^\sigma=B_W(w,f(v)). 
 $$
 Pela unicidado do adjunto, $(f^*)^* = f$.
 3. **$(g \circ f)^* = f^* \circ g^*$:**  

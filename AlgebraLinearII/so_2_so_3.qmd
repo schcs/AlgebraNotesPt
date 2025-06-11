@@ -81,7 +81,7 @@ Ora, $Kk=k\times k=0$.
 (A fórmiula de Rodriguez)
 Seja $R:\R^3\to \R^3$ a rotação ao redor de um eixo $k=(k_x,k_y,k_z)$ unitário por ângulo $\vartheta$. A matriz de $R$ na base canônica é
 $$
-[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
+[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=(\cos\vartheta)I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
 $$
 :::
 
@@ -154,7 +154,7 @@ I+\sum_{n\geq 1}\frac{\vartheta^{2n-1}K^{2n-1}}{(2n-1)!}+\sum_{n\geq 1}\frac{\va
 I+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}K}{(2n-1)!}+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}K^2}{(2n)!}\\
 &=I+K\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}}{(2n-1)!}+K^2\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}}{(2n)!}
 \\
-&=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}
+&=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2\left(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}\right)
 \\
 &=I+K\sen\vartheta+K^2(1-\cos\vartheta).
 \end{align*}
