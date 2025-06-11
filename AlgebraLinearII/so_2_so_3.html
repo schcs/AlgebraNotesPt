@@ -1417,7 +1417,7 @@ k\times v&amp;=\det\begin{pmatrix} i &amp; j &amp; k \\ k_x &amp; k_y &amp; k_z 
 </div>
 <div id="thm-" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 79.3</strong></span> (A fórmiula de Rodriguez) Seja <span class="math inline">\(R:\R^3\to \R^3\)</span> a rotação ao redor de um eixo <span class="math inline">\(k=(k_x,k_y,k_z)\)</span> unitário por ângulo <span class="math inline">\(\vartheta\)</span>. A matriz de <span class="math inline">\(R\)</span> na base canônica é <span class="math display">\[
-[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
+[R]=I+(\sen\vartheta)K+(1-\cos\vartheta)K^2=(\cos\vartheta)I+(\sen\vartheta)K+(1-\cos\vartheta)k^tk
 \]</span></p>
 </div>
 <div class="proof">
@@ -1465,7 +1465,7 @@ I+\sum_{n\geq 1}\frac{\vartheta^{2n-1}K^{2n-1}}{(2n-1)!}+\sum_{n\geq 1}\frac{\va
 I+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}K}{(2n-1)!}+\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}K^2}{(2n)!}\\
 &amp;=I+K\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n-1}}{(2n-1)!}+K^2\sum_{n\geq 1}(-1)^{n-1}\frac{\vartheta^{2n}}{(2n)!}
 \\
-&amp;=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}
+&amp;=I+K\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n+1}}{(2n+1)!}+K^2\left(1-\sum_{n\geq 0}(-1)^{n}\frac{\vartheta^{2n}}{(2n)!}\right)
 \\
 &amp;=I+K\sen\vartheta+K^2(1-\cos\vartheta).
 \end{align*}\]</span> Ora o resultado segue do Teorema de Rodriguez.</p>
