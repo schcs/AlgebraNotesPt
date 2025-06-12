@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>78&nbsp; Operadores ortogonais e unitárias – Álgebra</title>
+<title>80&nbsp; Operadores positivos e decomposição em valores singulares – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../AlgebraLinearII/so_2_so_3.html" rel="next">
-<link href="../AlgebraLinearII/autoadjuntos.html" rel="prev">
+<link href="../AlgebraLinearII/ex3.html" rel="next">
+<link href="../AlgebraLinearII/so_2_so_3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -652,7 +652,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/positive.html"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Operadores positivos e decomposição em valores singulares</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -1189,7 +1189,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link active">
+  <a href="../AlgebraLinearII/ortogonais.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></span></a>
   </div>
 </li>
@@ -1201,7 +1201,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../AlgebraLinearII/positive.html" class="sidebar-item-text sidebar-link">
+  <a href="../AlgebraLinearII/positive.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Operadores positivos e decomposição em valores singulares</span></span></a>
   </div>
 </li>
@@ -1349,15 +1349,21 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#operadores-positivos" id="toc-operadores-positivos" class="nav-link active" data-scroll-target="#operadores-positivos"><span class="header-section-number">80.1</span> Operadores positivos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ortogonais.html"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/positive.html"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Operadores positivos e decomposição em valores singulares</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Operadores ortogonais e unitárias</span></h1>
+<h1 class="title"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Operadores positivos e decomposição em valores singulares</span></h1>
 </div>
 
 
@@ -1374,101 +1380,81 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math inline">\(\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\)</span> Nesta página <span class="math inline">\(V\)</span> é um espaço vetorial com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span> sobre <span class="math inline">\(\R\)</span> ou <span class="math inline">\(\C\)</span>. Os espaços <span class="math inline">\(\R^n\)</span> e <span class="math inline">\(\C^n\)</span> serão considerados com seus produtos internos usuais.</p>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.1</strong></span> A <strong>distáncia</strong> de <span class="math inline">\(v,w\in V\)</span> está definida como <span class="math display">\[
-d(v,w)=\|v-w\|=\langle v-w,v-w\rangle^{1/2}.
-\]</span> Uma aplicação (não necessariamente linear) <span class="math inline">\(f:V\to V\)</span> é chamada de <strong>isometria</strong> se ela preserva distáncia. Ou seja, <span class="math display">\[
-d(f(v),f(w))=d(v,w)\quad\mbox{para todo}\quad v,w\in V.
-\]</span></p>
-</div>
-<div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 78.1</strong></span> Se <span class="math inline">\(v_0\in \R^n\)</span>, então <span class="math inline">\(T_{v_0}:v\mapsto v+v_0\)</span> é uma isometria. Este exemplo mostra que uma isometria não precisa ser linear. Em <span class="math inline">\(\R^2\)</span>, a rotação <span class="math inline">\(R_{\alpha}\)</span> no redor da origem por <span class="math inline">\(\alpha\)</span> graus é também uma isometria. Note que <span class="math inline">\(R_\alpha\)</span> é linear.</p>
-</div>
-<p>É imediato observar que uma isometria <span class="math inline">\(f:V\to V\)</span> é injetiva. Acontece que uma isometria precisa ser também sobrejetiva, mas esta afirmação não vamos provar.</p>
-<p>Escreva <span class="math inline">\(\left&lt;u,v\right&gt;=\mbox{Re}\left&lt;u,v\right&gt;+i\mbox{Im}\left&lt;u,v\right&gt;\)</span>. Quando <span class="math inline">\(V\)</span> é um <span class="math inline">\(\R\)</span>-espaço, então <span class="math inline">\(\mbox{Im}\left&lt;u,v\right&gt;=0\)</span>. Segue da identidade da polarização que <span class="math display">\[
-\|u+v\|^2-\|u\|^2-\|v\|^2=2\mbox{Re}\left&lt;u,v\right&gt;.
-\]</span> Além disso, calculando <span class="math inline">\(\left&lt;u,iv\right&gt;\)</span>, obtemos que <span id="eq-im-re-inner-prod"><span class="math display">\[
-\mbox{Im}\left&lt;u,v\right&gt;=\mbox{Re}\left&lt;u,iv\right&gt;.
-\tag{78.1}\]</span></span></p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 78.1</strong></span> As seguintes são equivalentes para uma transformação linear <span class="math inline">\(f:V\to V\)</span>.</p>
-<ol type="1">
-<li><span class="math inline">\(f\)</span> preserva o produto interno em <span class="math inline">\(V\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a norma em <span class="math inline">\(V\)</span>.</li>
-<li><span class="math inline">\(f\)</span> preserva a distância em <span class="math inline">\(V\)</span></li>
-</ol>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(f\)</span> preserva produto interno. Então, para todo <span class="math inline">\(v\in V\)</span>, <span class="math display">\[
-\|f(v)\|^2=\langle f(v),f(v)\rangle =\langle v,v\rangle=\|v\|.
-\]</span> Ou seja, <span class="math inline">\(f\)</span> preserva a norma.</p>
-<p>Agora, assuma que <span class="math inline">\(f\)</span> preserva a norma. Então temos para todo <span class="math inline">\(v,w\in V\)</span> que <span class="math display">\[
-d(f(v),f(w))=\|f(v)-f(w)\|=\|f(v-w)\|=\|v-w\|=d(v,w).
-\]</span> Logo <span class="math inline">\(f\)</span> preserva distância. Note que no meio da equação anterior, usamos que <span class="math inline">\(f\)</span> é linear.</p>
-<p>Assuma agora que <span class="math inline">\(f\)</span> preserva distância. Note para <span class="math inline">\(v\in V\)</span> que <span class="math display">\[
-\|f(v)\|=d(0,f(v))=d(0,v)=\|v\|
-\]</span> e assim <span class="math inline">\(f\)</span> preserva a norma. Note que no meio da linha anterior, usamos que <span class="math inline">\(f(0)=0\)</span>. Ora, temos pela identidade de polarização para <span class="math inline">\(v,w\in V\)</span>, que <span class="math display">\[\begin{align*}
-\mbox{Re}\langle f(v),f(w)\rangle&amp;=\frac 12(\|f(v)+f(w)\|^2-\|f(v)\|^2-\|f(w)\|^2)\\
-&amp;=\frac 12(\|f(v+w)\|-\|f(v)\|-\|f(w)\|)\\&amp;=\frac 12(\|v+w\|-\|v\|-\|w\|)\\
-&amp;=\mbox{Re}\langle v,w\rangle.
-\end{align*}\]</span> Então segue que <span class="math inline">\(\mbox{Re}\langle f(v),f(w)\rangle=\mbox{Re}\langle v,w\rangle\)</span> e segue do <a href="#eq-im-re-inner-prod" class="quarto-xref">Equação&nbsp;<span>78.1</span></a> que o mesmo vale para a parte imaginária. Logo, <span class="math inline">\(f\)</span> preserva produto interno.</p>
+<p>Nesta página, <span class="math inline">\(V\)</span> é um <span class="math inline">\(\C\)</span>-espaço de dimensão finita <span class="math inline">\(n\)</span> com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>.</p>
+<section id="operadores-positivos" class="level2" data-number="80.1">
+<h2 data-number="80.1" data-anchor-id="operadores-positivos"><span class="header-section-number">80.1</span> Operadores positivos</h2>
+<div id="exr-zero-op" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 80.1</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é tal que <span class="math display">\[
+\left&lt;f(v),v\right&gt;=0\quad\mbox{para todo}\quad v\in V,
+\]</span> então <span class="math inline">\(f=0\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.2</strong></span> &nbsp;</p>
-<ol type="1">
-<li>Quando o corpo é <span class="math inline">\(\R\)</span>, uma isometria linear de <span class="math inline">\(V\)</span> chama-se <strong>transformação ortogonal</strong> de <span class="math inline">\(V\)</span>.</li>
-<li>Quando o corpo é <span class="math inline">\(\C\)</span>, uma isometria linear de <span class="math inline">\(V\)</span> chama-se <strong>transformação unitátária</strong> de <span class="math inline">\(V\)</span>.</li>
-</ol>
+<p><span class="theorem-title"><strong>Definição 80.1</strong></span> Um operador <span class="math inline">\(f\in\mbox{End}(V)\)</span> é dito <strong>positivo</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;\in \R\)</span> e <span class="math inline">\(\left&lt;f(v),v\right&gt;\geq 0\)</span> para todo <span class="math inline">\(v\in V\)</span>. <span class="math inline">\(f\)</span> é dito <strong>positivo definido</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;&gt; 0\)</span> para todo <span class="math inline">\(v\in V\)</span>.</p>
 </div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 78.2</strong></span> Seja <span class="math inline">\(\dim V\)</span> finita, <span class="math inline">\(f:V\to V\)</span> uma isometria linear e seja <span class="math inline">\(A\)</span> a sua matriz em uma base ortonormal.</p>
-<ol type="1">
-<li>Se o corpo é <span class="math inline">\(\R\)</span>, então <span class="math inline">\(A^tA=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz ortogonal.</li>
-<li>Se o corpo é <span class="math inline">\(\C\)</span>, então <span class="math inline">\(A^*A=I\)</span>; ou seja, as colunas de <span class="math inline">\(A\)</span> são ortonormais e <span class="math inline">\(A\)</span> é uma matriz unitária.</li>
-<li>Em particular, uma transformação ortogonal ou unitária de <span class="math inline">\(V\)</span> é invertível.</li>
-</ol>
+<div id="lem-pos" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 80.1</strong></span> Um operador positivo é autoadjunto e portanto é ortogonalmente diagonalizável. Além disso, os seus autovalores são não negativos. Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores são não negativos.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(X=\{b_1,\ldots,b_n\}\)</span> uma base ortonormal de <span class="math inline">\(V\)</span>. As colunas de <span class="math inline">\(A\)</span> são <span class="math inline">\([f(b_1)]_X^X,\ldots,[f(b_n)]_X^X\)</span>. Como <span class="math inline">\(f\)</span> preserva produto interno, <span class="math inline">\(f(b_1),\ldots,f(b_n)\)</span> é base ortonormal de <span class="math inline">\(V\)</span>. Além disso, como <span class="math inline">\(X\)</span> é base ortonormal, a transformação <span class="math inline">\(V\to \R^n\)</span> ou <span class="math inline">\(V\to \C^n\)</span> definida como <span class="math inline">\(v\mapsto [v]_X^X\)</span> é uma isometria, portanto os vetores <span class="math inline">\([f(b_1)]_X^X,\ldots,[f(b_n)]_X^X\)</span> são ortonormais. Logo <span class="math inline">\(A\)</span> é matriz ortogonal.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Assums que <span class="math inline">\(f\)</span> é positivo. Então <span class="math inline">\(\left&lt;f(v),v\right&gt;\in\R\)</span> e assim <span class="math inline">\(\left&lt;f(v),v\right&gt;=\left&lt;v,f(v)\right&gt;\)</span>. Mas também <span class="math display">\[
+\left&lt;f(v),v\right&gt;=\left&lt;v,f^*(v)\right&gt;.
+\]</span> Logo, <span class="math inline">\(\left&lt;v,f(v)\right&gt;=\left&lt;v,f^*(v)\right&gt;\)</span> para todo <span class="math inline">\(v\in V\)</span>; ou seja, <span class="math inline">\(\left&lt;v,(f-f^*)(v)\right&gt;=0\)</span> para todo <span class="math inline">\(v\in V\)</span>. Ora, <a href="#exr-zero-op" class="quarto-xref">Exercício&nbsp;<span>80.1</span></a> implica que <span class="math inline">\(f-f^*=0\)</span>, portanto <span class="math inline">\(f=f^*\)</span>. O fato que <span class="math inline">\(f\)</span> é diagonalizável segue por <a href="autoadjuntos.html#thm-diag-selfadj" class="quarto-xref">Teorema&nbsp;<span>77.1</span></a>. Se <span class="math inline">\(\lambda\)</span> é autovalor de <span class="math inline">\(f\)</span> com autovetor <span class="math inline">\(v\)</span>, então <span class="math display">\[
+0\leq \left&lt;f(v),v\right&gt;=\lambda\left&lt;v,v\right&gt;=\lambda\|v\|^2,
+\]</span> logo <span class="math inline">\(\lambda \geq 0\)</span>.</p>
+<p>Assuma agora que <span class="math inline">\(f\)</span> é autoadjunto e seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortonormal composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\geq 0\)</span>, respetivamente. Seja <span class="math inline">\(v=\sum_{i=1}^n\alpha_i b_i\)</span>. Então <span class="math display">\[
+\left&lt;f(v),v\right&gt;=\left&lt;f\left(\sum_{i=1}^n\alpha_i b_i\right),\sum_{i=1}^n\alpha_i b_i\right&gt;=
+\sum_{i=1}^n \lambda_i|\alpha_i|^2\geq 0.
+\]</span> Portanto <span class="math inline">\(f\)</span> é positivo.</p>
 </div>
+<p>Seja <span class="math inline">\(f\in\mbox{End}(V)\)</span> positivo. Pelo <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>, temos que <span class="math inline">\(f\)</span> é ortogonalmente diagonalizável e existe uma base ortonormal <span class="math inline">\(b_1,\ldots,b_n\)</span> composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\)</span>, respetivamente, tais que <span class="math inline">\(\lambda_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>. Considere o operador, <span class="math inline">\(g:b_i\mapsto \sqrt{\lambda_i} b_i\)</span> para todo <span class="math inline">\(i\)</span>. Note que</p>
+<ol type="1">
+<li><span class="math inline">\(g\)</span> é autoadjunto;</li>
+<li>os autovalores de <span class="math inline">\(g\)</span> são <span class="math inline">\(\sqrt{\lambda_1},\ldots,\sqrt{\lambda_n}\)</span>;</li>
+<li><span class="math inline">\(g\)</span> é positivo por <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>;</li>
+<li><span class="math inline">\(g^2=f\)</span>;</li>
+<li>se <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\lambda_i\)</span> então <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(g\)</span> com autovalor <span class="math inline">\(\sqrt{\lambda_i}\)</span>.</li>
+</ol>
+<p>Então, podemos dizer que <span class="math inline">\(g\)</span> é raiz quadrada de <span class="math inline">\(f\)</span> e escrevemos <span class="math inline">\(g=\sqrt f\)</span>.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 78.1</strong></span> Assuma que <span class="math inline">\(\det V\)</span> é finita, e seja <span class="math inline">\(f:V \to V\)</span> uma isometria linear.</p>
-<ol type="1">
-<li><span class="math inline">\(|\det f|=1\)</span>;</li>
-<li>se o corpo é <span class="math inline">\(\R\)</span>, então o determinante de <span class="math inline">\(f\)</span> é <span class="math inline">\(\pm 1\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in \C\)</span> é um autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(|\lambda|=1\)</span>.</li>
-<li>Se <span class="math inline">\(\lambda\in \R\)</span> é uma autovalor de <span class="math inline">\(f\)</span>, então <span class="math inline">\(\lambda=\pm 1\)</span>.</li>
-</ol>
+<p><span class="theorem-title"><strong>Lema 80.2</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é positivo. Então existe único <span class="math inline">\(g\in\mbox{End}(V)\)</span> positivo tal que <span class="math inline">\(g^2=f\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(A\)</span> a matriz de <span class="math inline">\(f\)</span> na base canônica e note que <span class="math display">\[
-1=\det I=\det A^*A=\det A^*\det A=\overline{\det A}\det A=|\det A|^2.
-\]</span> Logo <span class="math inline">\(|\det A|=1\)</span>. Se <span class="math inline">\(A\)</span> é matriz com entradas reais, então <span class="math inline">\(\det A=\pm 1\)</span>. Para provar afirmação 3., lembre que <span class="math inline">\(f\)</span> preserva norma, e se <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\lambda\)</span>, então <span class="math display">\[
-\|\lambda| \|v\|=\|\lambda v\|=\|f(v)\|=\|v\|
-\]</span> e segue que <span class="math inline">\(|\lambda|=1\)</span>. Finalmente, afirmação 4. segue trivialmente da afirmação 3.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g\)</span> como no argumento no parágrafo antes do lema. A existência segue da construção de <span class="math inline">\(g\)</span>. Para a unicidade, suponha que <span class="math inline">\(h\)</span> também é positivo e <span class="math inline">\(h^2 = f\)</span>. Então <span class="math inline">\(h\)</span> é autoadjunto e existe uma base ortonormal <span class="math inline">\(c_1,\ldots,c_n\)</span> tal que <span class="math inline">\(h(c_i) = \mu_i c_i\)</span> para certos <span class="math inline">\(\mu_i \geq 0\)</span>. Como <span class="math inline">\(h^2=f\)</span>, temos que <span class="math inline">\(f(c_i)=\mu_i^2 c_i\)</span>, ou seja, cada <span class="math inline">\(c_i\)</span> é autovetor para <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\mu_i^2\)</span>. Mas os autovetores de <span class="math inline">\(f\)</span> são autovetores de <span class="math inline">\(g\)</span>, e assim <span class="math inline">\(g(c_i)=\mu_ic_i\)</span> e isso implica que <span class="math inline">\(g(c_i)=h(c_i)\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(g=h\)</span>.</p>
 </div>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 78.3</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial com produto interno.</p>
-<p>Se <span class="math inline">\(V\)</span> é <span class="math inline">\(\R\)</span>-espaço, então o conjunto das transformações ortogonais de <span class="math inline">\(V\)</span> é denotado por <span class="math inline">\(\operatorname{O}(V)\)</span>. O conjunto das transformações ortogonais com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(\operatorname{SO}(V)\)</span>. O nome de <span class="math inline">\(\operatorname{O}(V)\)</span> é <strong>grupo ortogonal</strong> enquanto <span class="math inline">\(\operatorname{SO}(V)\)</span> é chamado de <strong>grupo ortogonal especial</strong> de <span class="math inline">\(V\)</span>. Assuma que <span class="math inline">\(V\)</span> é <span class="math inline">\(\C\)</span>-espaço. O conjunto das transformações unitárias de <span class="math inline">\(V\)</span> é denotado por <span class="math inline">\(\operatorname{U}(V)\)</span>. O conjunto das transformações unitárias com determinante igual a <span class="math inline">\(1\)</span> é denotado por <span class="math inline">\(\operatorname{SU}(V)\)</span>. O nome de <span class="math inline">\(\operatorname{U}(V)\)</span> é <strong>grupo unitário</strong> enquanto <span class="math inline">\(\operatorname{SU}(V)\)</span> é chamado de <strong>grupo unitário especial</strong>.</p>
-<p>Quando <span class="math inline">\(V=\R^n\)</span> ou <span class="math inline">\(V=\C^n\)</span>, então escrevemos <span class="math inline">\(\operatorname{O}_n\)</span>, <span class="math inline">\(\operatorname{SO}_n\)</span>, <span class="math inline">\(\operatorname{U}_n\)</span>, <span class="math inline">\(\operatorname{SU}_n\)</span>. Os grupos <span class="math inline">\(\operatorname{O}_n\)</span> e <span class="math inline">\(\operatorname{SO}_n\)</span> podem ser identificados com os conjuntos das matrizes ortogonais e matrizes ortogonais com determinante <span class="math inline">\(1\)</span>. Os grupos <span class="math inline">\(\operatorname{U}_n\)</span> e <span class="math inline">\(\operatorname{SU}_n\)</span> podem ser identificados com os conjuntos das matrizes unitárias e matrizes unitárias com determinante <span class="math inline">\(1\)</span>.</p>
-</div>
-<div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 78.2</strong></span> Sejam <span class="math inline">\(f,g\in \operatorname{O}(V)\)</span>. Então</p>
-<ol type="1">
-<li><span class="math inline">\(f\circ g\in \operatorname{O}(V)\)</span></li>
-<li>Se <span class="math inline">\(f,g\in \operatorname{SO}(V)\)</span>, então <span class="math inline">\(f\circ g\in \operatorname{SO}(V)\)</span>.</li>
-<li><span class="math inline">\(f^{-1}\in \operatorname{O}(V)\)</span></li>
-<li>Se <span class="math inline">\(f\in \operatorname{SO}(V)\)</span>, então <span class="math inline">\(f^{-1}\in \operatorname{SO}\)</span>(V).</li>
-</ol>
-<p>O mesmo vale para <span class="math inline">\(f,g\in \operatorname{U}(V)\)</span> e <span class="math inline">\(\operatorname{SU}\)</span>(V).</p>
+<div id="lem-fstarf-positive" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 80.3</strong></span> Seja <span class="math inline">\(f\in \mbox{End}(V)\)</span> qualquer. Então <span class="math inline">\(f^* f\)</span> é um operador autoadjunto e positivo e existe <span class="math inline">\(\sqrt{f^*f}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
-<p>O lema anterior diz essentialmente que <span class="math inline">\(\operatorname{O}(V)\)</span> e <span class="math inline">\(\operatorname{SO}(V)\)</span> são grupos. Nesta disciplina nós não definimos o conceito dos grupos, eles vão aparecer muito na disciplina Grupos e Corpos. Os grupos <span class="math inline">\(\operatorname{O}_n\)</span>, <span class="math inline">\(\operatorname{SO}_n\)</span>, <span class="math inline">\(\operatorname{U}_n\)</span> e <span class="math inline">\(\operatorname{SU}_n\)</span> têm muitas aplicações nas áreas da física teórica, mecánica clássica, robótica, gráfica computacional, etc.</p>
+<div id="prp-polar" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 80.1</strong></span> (Decomposição polar) Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> um operador qualquer. Então <span class="math inline">\(f=u p\)</span> onde <span class="math inline">\(u\)</span> é unitário e <span class="math inline">\(p\)</span> é positivo.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Considere o operador <span class="math inline">\(p = \sqrt{f^* f}\)</span>, que é positivo por <a href="#lem-fstarf-positive" class="quarto-xref">Lema&nbsp;<span>80.3</span></a>. Se <span class="math inline">\(p\)</span> é invertível, defina <span class="math inline">\(u = f p^{-1}\)</span>. Então: <span class="math display">\[
+u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} = p^{-1} p^2 p^{-1} = \mbox{id}_V,
+\]</span> ou seja, <span class="math inline">\(u\)</span> é unitário. Assim, <span class="math inline">\(f = u p\)</span>.</p>
+<p>Se <span class="math inline">\(p\)</span> não é invertível, considere a restrição ao complemento ortogonal do núcleo de <span class="math inline">\(p\)</span>, onde <span class="math inline">\(p\)</span> é invertível, e defina <span class="math inline">\(u\)</span> como acima nesse subespaço, estendendo <span class="math inline">\(u\)</span> por zero no núcleo. Assim, <span class="math inline">\(u\)</span> é unitário no suporte de <span class="math inline">\(p\)</span> e <span class="math inline">\(f = u p\)</span>.</p>
+<p>Portanto, todo operador admite tal decomposição.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 80.1</strong></span> (Decomposição em valores singulares) Seja <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>. Então <span class="math inline">\(A\)</span> pode ser escrito como <span class="math inline">\(A=UDV\)</span> onde <span class="math inline">\(U,V\)</span> são unitárias e <span class="math inline">\(D\)</span> é diagonal com numeros reais não negativos na diagonal principal. Além disso, as entradas na diagonal de <span class="math inline">\(D\)</span> são unicamente determinadas por <span class="math inline">\(A\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(A\)</span> e a matriz do operador <span class="math inline">\(f\)</span> na base canônica. Pela <a href="#prp-polar" class="quarto-xref">Proposição&nbsp;<span>80.1</span></a>, temos que <span class="math inline">\(f=z p\)</span> onde <span class="math inline">\(z\)</span> é unitária e <span class="math inline">\(p\)</span> é positiva. Assuma que <span class="math inline">\(P\)</span> e <span class="math inline">\(Z\)</span> são as matrizes de <span class="math inline">\(p\)</span> e <span class="math inline">\(z\)</span> na base canônica. Então <span class="math inline">\(A=ZP\)</span> e <span class="math inline">\(Z\)</span> é matriz unitária e <span class="math inline">\(P\)</span> é hermitiana. Em particular, <span class="math inline">\(P\)</span> é ortogonalmente diagonalizável e existe alguma matriz unitária <span class="math inline">\(W\)</span> tal que <span class="math inline">\(W^*PW=D\)</span> diagonal. Como <span class="math inline">\(P\)</span> é positivo e <span class="math inline">\(D\)</span> contém os autovalores de <span class="math inline">\(P\)</span> na diagonal, as entradas de <span class="math inline">\(P\)</span> na diagonal principal são reais a não negativos. Ora, <span class="math display">\[
+W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD.
+\]</span> Ora, <span class="math display">\[
+A=ZWDW^*
+\]</span> e toma <span class="math inline">\(D=D\)</span>, <span class="math inline">\(U=ZW\)</span> e <span class="math inline">\(V=W^*\)</span>.</p>
+<p>Assuma que as entradas de <span class="math inline">\(D\)</span> na diagonal principal são <span class="math inline">\(\delta_1,\ldots,\delta_n\)</span>. Tem-se que <span class="math display">\[
+A^*A=V^*D^*U^*UDV=V^*D^2*V,
+\]</span> que implica que os autovalores de <span class="math inline">\(A^*A\)</span> são <span class="math inline">\(A^*A\)</span> são <span class="math inline">\(\delta_1^2,\ldots,\delta_n^2\)</span>. Como <span class="math inline">\(\delta_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>, temos que estes autovalores são unicamente determinados por <span class="math inline">\(A^*A\)</span> e também por <span class="math inline">\(A\)</span>.</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 80.2</strong></span> As entradas na diagonal principal da matriz <span class="math inline">\(D\)</span> são chamadas dos <strong>valores singulares</strong> da matriz <span class="math inline">\(A\)</span>.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1872,13 +1858,13 @@ d(f(v),f(w))=\|f(v)-f(w)\|=\|f(v-w)\|=\|v-w\|=d(v,w).
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../AlgebraLinearII/autoadjuntos.html" class="pagination-link" aria-label="Operadores autoadjuntos e normais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Operadores autoadjuntos e normais</span></span>
+      <a href="../AlgebraLinearII/so_2_so_3.html" class="pagination-link" aria-label="SO<sub>2</sub> e SO<sub>3</sub>">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../AlgebraLinearII/so_2_so_3.html" class="pagination-link" aria-label="SO<sub>2</sub> e SO<sub>3</sub>">
-        <span class="nav-page-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">SO<sub>2</sub> e SO<sub>3</sub></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../AlgebraLinearII/ex3.html" class="pagination-link" aria-label="Exercícios: Bloco 3">
+        <span class="nav-page-text"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 3</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
