@@ -1,0 +1,129 @@
+--- 
+title: "Operadores positivos e decomposição em valores singulares"
+number-sections: true
+lang: pt-BR
+--- 
+
+Nesta página, $V$ é um $\C$-espaço de dimensão finita $n$ com produto interno $\left<-,-\right>$.
+
+## Operadores positivos
+
+:::{#exr-zero-op}
+Assuma que $f\in\mbox{End}(V)$ é tal que 
+$$
+\left<f(v),v\right>=0\quad\mbox{para todo}\quad v\in V,
+$$
+então $f=0$. 
+:::
+
+:::{#def-}
+Um operador $f\in\mbox{End}(V)$ é dito **positivo** se $\left<f(v),v\right>\in \R$ e $\left<f(v),v\right>\geq 0$ para todo $v\in V$.
+$f$ é dito **positivo definido** se $\left<f(v),v\right>> 0$ para todo $v\in V$. 
+:::
+
+:::{#lem-pos}
+Um operador positivo é autoadjunto e portanto é ortogonalmente diagonalizável. Além disso, os seus autovalores são não negativos. 
+Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores são não negativos. 
+:::
+
+:::{.proof}
+Assums que $f$ é positivo. Então $\left<f(v),v\right>\in\R$ e assim $\left<f(v),v\right>=\left<v,f(v)\right>$. Mas também 
+$$
+\left<f(v),v\right>=\left<v,f^*(v)\right>.
+$$
+Logo, $\left<v,f(v)\right>=\left<v,f^*(v)\right>$ para todo $v\in V$; ou seja, $\left<v,(f-f^*)(v)\right>=0$ para todo $v\in V$. Ora, @exr-zero-op implica que 
+$f-f^*=0$, portanto $f=f^*$. O fato que $f$ é diagonalizável segue por @thm-diag-selfadj. Se $\lambda$ é autovalor de $f$ com autovetor $v$, então 
+$$
+0\leq \left<f(v),v\right>=\lambda\left<v,v\right>=\lambda\|v\|^2,
+$$
+logo $\lambda \geq 0$. 
+
+Assuma agora que $f$ é autoadjunto e seja $b_1,\ldots,b_n$ uma base ortonormal composta por autovetores de $f$ que correspondem aos 
+autovalores $\lambda_1,\ldots,\lambda_n\geq 0$, respetivamente. Seja $v=\sum_{i=1}^n\alpha_i b_i$. Então 
+$$
+\left<f(v),v\right>=\left<f\left(\sum_{i=1}^n\alpha_i b_i\right),\sum_{i=1}^n\alpha_i b_i\right>=
+\sum_{i=1}^n \lambda_i|\alpha_i|^2\geq 0.
+$$ 
+Portanto $f$ é positivo. 
+:::
+
+Seja $f\in\mbox{End}(V)$ positivo. Pelo @lem-pos, temos que $f$ é ortogonalmente diagonalizável e existe uma base ortonormal 
+$b_1,\ldots,b_n$ composta por autovetores de $f$ que correspondem aos autovalores $\lambda_1,\ldots,\lambda_n$, respetivamente, 
+tais que $\lambda_i\geq 0$ para todo $i$. Considere o operador, $g:b_i\mapsto \sqrt{\lambda_i} b_i$ para todo $i$. Note que 
+
+1. $g$ é autoadjunto;
+2. os autovalores de $g$ são $\sqrt{\lambda_1},\ldots,\sqrt{\lambda_n}$;
+3. $g$ é positivo por @lem-pos;
+4. $g^2=f$;
+5. se $v$ é autovetor de $f$ com autovalor $\lambda_i$ então $v$ é autovetor de $g$ com autovalor $\sqrt{\lambda_i}$. 
+
+Então, podemos dizer que $g$ é raiz quadrada de $f$ e escrevemos $g=\sqrt f$. 
+
+:::{#lem-}
+Assuma que $f\in\mbox{End}(V)$ é positivo. Então existe único $g\in\mbox{End}(V)$ positivo tal que $g^2=f$. 
+:::
+
+:::{.proof}
+Seja $g$ como no argumento no parágrafo antes do lema. 
+A existência segue da construção de $g$. Para a unicidade, suponha que $h$ também é positivo e $h^2 = f$. Então $h$ é autoadjunto 
+e existe uma base ortonormal $c_1,\ldots,c_n$  tal que $h(c_i) = \mu_i c_i$ para certos $\mu_i \geq 0$. Como $h^2=f$, temos que 
+$f(c_i)=\mu_i^2 c_i$, ou seja, cada $c_i$ é autovetor para $f$ com autovalor $\mu_i^2$. Mas os autovetores de $f$ são autovetores de $g$, e assim 
+$g(c_i)=\mu_ic_i$ e isso implica que $g(c_i)=h(c_i)$ para todo $i$ e $g=h$. 
+:::
+
+:::{#lem-fstarf-positive}
+Seja $f\in \mbox{End}(V)$ qualquer. Então $f^* f$ é um operador autoadjunto e positivo e existe $\sqrt{f^*f}$.  
+:::
+:::{.proof}
+Exercício.
+:::
+
+:::{#prp-polar}
+(Decomposição polar)
+Assuma que $f\in\mbox{End}(V)$ um operador qualquer. Então $f=u p$ onde $u$ é unitário e $p$ é positivo. 
+:::
+
+:::{.proof}
+Considere o operador $p = \sqrt{f^* f}$, que é positivo por @lem-fstarf-positive. Se $p$ é invertível, defina $u = f p^{-1}$. Então:
+$$
+u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} = p^{-1} p^2 p^{-1} = \mbox{id}_V,
+$$
+ou seja, $u$ é unitário. Assim, $f = u p$.
+
+Se $p$ não é invertível, considere a restrição ao complemento ortogonal do núcleo de $p$, onde $p$ é invertível, e defina $u$ como acima nesse subespaço, estendendo $u$ por zero no núcleo. Assim, $u$ é unitário no suporte de $p$ e $f = u p$.
+
+Portanto, todo operador admite tal decomposição.
+:::
+
+:::{#thm-}
+(Decomposição em valores singulares)
+Seja $A\in M_{n\times n}(\C)$. Então $A$ pode ser escrito como $A=UDV$ onde $U,V$ são unitárias e $D$ é diagonal com numeros reais não negativos na diagonal principal.
+Além disso, as entradas na diagonal de $D$ são unicamente determinadas por $A$. 
+:::
+
+:::{.proof}
+Assuma que $A$ e a matriz do operador $f$ na base canônica. Pela @prp-polar, temos que $f=z p$ onde $z$ é unitária e 
+$p$ é positiva. Assuma que $P$ e $Z$ são as matrizes de $p$ e $z$ na base canônica. Então $A=ZP$ e 
+$Z$ é matriz unitária e $P$ é hermitiana. Em particular, $P$ é ortogonalmente diagonalizável e existe alguma matriz unitária 
+$W$ tal que $W^*PW=D$ diagonal. Como $P$ é positivo e $D$ contém os autovalores de $P$ na diagonal, as entradas de $P$ na diagonal principal são 
+reais a não negativos. Ora,
+$$
+W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD.
+$$
+Ora, 
+$$
+A=ZWDW^*
+$$
+e toma $D=D$, $U=ZW$ e $V=W^*$. 
+
+Assuma que as entradas de $D$ na diagonal principal são $\delta_1,\ldots,\delta_n$. Tem-se que 
+$$
+A^*A=V^*D^*U^*UDV=V^*D^2*V,
+$$ 
+que implica que os autovalores de $A^*A$ são $A^*A$ são $\delta_1^2,\ldots,\delta_n^2$. Como $\delta_i\geq 0$ para todo $i$, temos que 
+estes autovalores são unicamente determinados por $A^*A$ e também por $A$. 
+::: 
+
+:::{#def-}
+As entradas na diagonal principal da matriz $D$ são chamadas dos **valores singulares** da matriz $A$.
+:::

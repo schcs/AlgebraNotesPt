@@ -61,5 +61,6 @@ Material disponibilizado sob a licença
 - [Operadores autoadjuntos e normais](autoadjuntos.qmd)
 - [Transformações ortogonais de ℝ<sup>n</sup>](ortogonais.qmd)
 - [SO<sub>2</sub> e SO<sub>3</sub>](so_2_so_3.qmd)
+- [Operadores positivos e a decomposição em valores singulares](positive.qmd)
 - [Exercícios para o Bloco 3](ex3.qmd)
 

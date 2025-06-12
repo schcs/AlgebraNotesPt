@@ -97,7 +97,7 @@ Considere $A$ como a matriz de uma transformação linear $f_A:\C^n\to \C^n$ em 
 :::
 
 
-:::{#thm-}
+:::{#thm-diag-selfadj}
 (O Teorema de Diagonalização para Operadores Autoadjuntos)
 Seja $V$ um espaço com produto interno e assuma que $\dim V=n$ é finita e seja $f:V\to V$ um operador autoadjunto. Então os autovalores de $f$ são números reais e $V$ possui uma base $B$ ortonormal formada por autovetores de $f$. Em particular, $f$ é diagonalizável e $[f]_B^B=D$ é diagonal.
 :::
