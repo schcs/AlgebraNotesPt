@@ -47,6 +47,8 @@ $$
 Portanto $f$ é positivo. 
 :::
 
+## A raiz quadrada de um operador positivo
+
 Seja $f\in\mbox{End}(V)$ positivo. Pelo @lem-pos, temos que $f$ é ortogonalmente diagonalizável e existe uma base ortonormal 
 $b_1,\ldots,b_n$ composta por autovetores de $f$ que correspondem aos autovalores $\lambda_1,\ldots,\lambda_n$, respetivamente, 
 tais que $\lambda_i\geq 0$ para todo $i$. Considere o operador, $g:b_i\mapsto \sqrt{\lambda_i} b_i$ para todo $i$. Note que 
@@ -78,6 +80,8 @@ Seja $f\in \mbox{End}(V)$ qualquer. Então $f^* f$ é um operador autoadjunto e 
 Exercício.
 :::
 
+## A decomposição polar
+
 :::{#prp-polar}
 (Decomposição polar)
 Assuma que $f\in\mbox{End}(V)$ um operador qualquer. Então $f=u p$ onde $u$ é unitário e $p$ é positivo. 
@@ -94,6 +98,8 @@ Se $p$ não é invertível, considere a restrição ao complemento ortogonal do 
 
 Portanto, todo operador admite tal decomposição.
 :::
+
+## Valores singulares
 
 :::{#thm-}
 (Decomposição em valores singulares)
