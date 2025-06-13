@@ -1355,6 +1355,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#operadores-positivos" id="toc-operadores-positivos" class="nav-link active" data-scroll-target="#operadores-positivos"><span class="header-section-number">80.1</span> Operadores positivos</a></li>
+  <li><a href="#a-raiz-quadrada-de-um-operador-positivo" id="toc-a-raiz-quadrada-de-um-operador-positivo" class="nav-link" data-scroll-target="#a-raiz-quadrada-de-um-operador-positivo"><span class="header-section-number">80.2</span> A raiz quadrada de um operador positivo</a></li>
+  <li><a href="#a-decomposição-polar" id="toc-a-decomposição-polar" class="nav-link" data-scroll-target="#a-decomposição-polar"><span class="header-section-number">80.3</span> A decomposição polar</a></li>
+  <li><a href="#valores-singulares" id="toc-valores-singulares" class="nav-link" data-scroll-target="#valores-singulares"><span class="header-section-number">80.4</span> Valores singulares</a></li>
   </ul>
 </nav>
     </div>
@@ -1405,6 +1408,9 @@ window.Quarto = {
 \sum_{i=1}^n \lambda_i|\alpha_i|^2\geq 0.
 \]</span> Portanto <span class="math inline">\(f\)</span> é positivo.</p>
 </div>
+</section>
+<section id="a-raiz-quadrada-de-um-operador-positivo" class="level2" data-number="80.2">
+<h2 data-number="80.2" data-anchor-id="a-raiz-quadrada-de-um-operador-positivo"><span class="header-section-number">80.2</span> A raiz quadrada de um operador positivo</h2>
 <p>Seja <span class="math inline">\(f\in\mbox{End}(V)\)</span> positivo. Pelo <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>, temos que <span class="math inline">\(f\)</span> é ortogonalmente diagonalizável e existe uma base ortonormal <span class="math inline">\(b_1,\ldots,b_n\)</span> composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\)</span>, respetivamente, tais que <span class="math inline">\(\lambda_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>. Considere o operador, <span class="math inline">\(g:b_i\mapsto \sqrt{\lambda_i} b_i\)</span> para todo <span class="math inline">\(i\)</span>. Note que</p>
 <ol type="1">
 <li><span class="math inline">\(g\)</span> é autoadjunto;</li>
@@ -1426,6 +1432,9 @@ window.Quarto = {
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
 </div>
+</section>
+<section id="a-decomposição-polar" class="level2" data-number="80.3">
+<h2 data-number="80.3" data-anchor-id="a-decomposição-polar"><span class="header-section-number">80.3</span> A decomposição polar</h2>
 <div id="prp-polar" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposição 80.1</strong></span> (Decomposição polar) Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> um operador qualquer. Então <span class="math inline">\(f=u p\)</span> onde <span class="math inline">\(u\)</span> é unitário e <span class="math inline">\(p\)</span> é positivo.</p>
 </div>
@@ -1436,6 +1445,9 @@ u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} 
 <p>Se <span class="math inline">\(p\)</span> não é invertível, considere a restrição ao complemento ortogonal do núcleo de <span class="math inline">\(p\)</span>, onde <span class="math inline">\(p\)</span> é invertível, e defina <span class="math inline">\(u\)</span> como acima nesse subespaço, estendendo <span class="math inline">\(u\)</span> por zero no núcleo. Assim, <span class="math inline">\(u\)</span> é unitário no suporte de <span class="math inline">\(p\)</span> e <span class="math inline">\(f = u p\)</span>.</p>
 <p>Portanto, todo operador admite tal decomposição.</p>
 </div>
+</section>
+<section id="valores-singulares" class="level2" data-number="80.4">
+<h2 data-number="80.4" data-anchor-id="valores-singulares"><span class="header-section-number">80.4</span> Valores singulares</h2>
 <div id="thm-" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 80.1</strong></span> (Decomposição em valores singulares) Seja <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>. Então <span class="math inline">\(A\)</span> pode ser escrito como <span class="math inline">\(A=UDV\)</span> onde <span class="math inline">\(U,V\)</span> são unitárias e <span class="math inline">\(D\)</span> é diagonal com numeros reais não negativos na diagonal principal. Além disso, as entradas na diagonal de <span class="math inline">\(D\)</span> são unicamente determinadas por <span class="math inline">\(A\)</span>.</p>
 </div>
