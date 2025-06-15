@@ -206,7 +206,7 @@ Exercício.
 :::
 
 
-:::{#lem-}
+:::{#lem-adjoint-invariant}
 Sejam $V$ e $B_V$ como nos resultados anteriores e seja $f:V\to V$ um operador que possui adjunto $f^*$. Assuma que $W\leq V$ é $f$-invariante. Então $W^\perp$ é $f^*$-invariante.
 :::
 
