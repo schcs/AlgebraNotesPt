@@ -921,3 +921,50 @@ $$
 1. Mostre que $f$ possui adjunto. 
 2. Mostre que $f$ é normal, mas não é autoadjunto.
 :::
+
+:::{#exr-}
+Seja $T:\R^3\to\R^3$ uma transformação ortogonal com $\det T=-1$. Mostre que 
+
+1. $T$ é uma reflexão em relação a um plano que passa pela origem; ou 
+2. $T$ é uma rotoreflexão (ou seja uma rotação por um eixo $k$ e ângulo $\vartheta$ seguida por uma reflexão 
+    em relação a um plano perpendicular a $k$).
+
+Dê exemplo explícito para os dois casos.
+:::
+
+
+
+
+:::{#exr-}
+Descreeve as possibilidades para os autovalores de um operador ortogonal de $\R^4$. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de $SO_4$. 
+:::
+
+:::{#exr-}
+Assista os vídeos de 3Blue1Brown nos links youtu.be/d4EgbgTm0Bg e youtu.be/zjMuIxRvygQ sobre os quaternions e sua ligação com $SO_3$. [Se precisar, pode ligar as legendas auto-geradas em português.]
+:::
+
+
+:::{#exr-}
+Denote por $SU_2$ o grupo de matrizes unitárias $2\times 2$ com entradas em $\C$ e com determinante $1$. 
+Para cada quatérnio unitário $q=a+bi+cj+dk$, denote por $A_q$ a matriz 
+$$
+\begin{pmatrix} a+ib & c+id \\ -c+id & a-ib\end{pmatrix}.
+$$
+
+1. Verifique que $A_q\in SU_2$.
+2. Verifique que $\psi:q\mapsto A_q$ é um homomorfismo de grupos; ou seja, $A_{q_1q_2}=A_{q_1}A_{q_2}$. 
+3. Demonstre que o mapa $\psi: q\mapsto A_q$ é uma bijeção entre o grupo de quatérnios unitários e $SU_2$.
+:::
+
+:::{#exr-}
+Seja $f:\R^n\to\R^n$ uma isometria (ou seja $f$ preserva distância em $\R^n$) tal que $f(0)=0$. 
+
+1. Mostre que $f$ preserva norma.
+2. Mostre que $f$ é linear e deduza que $f$ é uma transformação ortogonal. [Dica, mostre que $\|f(\alpha v)-\alpha f(v)\|=0$ e $\|f(u+v)-f(u)-f(v)\|=0$ para todo $u,v\in \R^n$ e $\alpha\in \R$.]
+:::
+
+:::{#exr-}
+Seja $f:\R^n\to \R^n$ uma isometria. Mostre que $f$ é a composição de uma translação ($T_w:\R^n\to\R^n$, $v\mapsto v+w$ para todo $v$) e uma transformação ortogonal.
+:::
+
+
