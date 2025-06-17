@@ -1,0 +1,190 @@
+--- 
+title: "Espaços normados"
+number-sections: true
+lang: pt-BR
+--- 
+
+
+## Definição e exemplos
+
+:::{#def-normed}
+Um **espaço vetorial normado** é um par $(V, \|-\|)$, onde:
+
+1. $V$ é um espaço vetorial sobre um corpo $\mathbb{K}$ ($\mathbb{R}$ ou $\mathbb{C}$).
+2. $\|\cdot\|: V \to \mathbb{R}$ é uma função chamada **norma**, que satisfaz as seguintes propriedades para todos $x, y \in V$ e $\alpha \in \mathbb{K}$:
+    - **Positividade**: $\|x\| \geq 0$ e $\|x\| = 0$ se, e somente se, $x = 0$.
+    - **Homogeneidade**: $\|\alpha x\| = |\alpha| \|x\|$.
+    - **Desigualdade Triangular**: $\|x + y\| \leq \|x\| + \|y\|$.
+:::
+
+:::{#exm-normed-examples}
+
+1. **Espaços com Produto Interno**:  
+Se $V$ é um espaço vetorial com um produto interno $\langle \cdot, \cdot \rangle$, a norma induzida é dada por:  
+$$
+\|x\| = \sqrt{\langle x, x \rangle}.
+$$  
+Por exemplo, no espaço $\mathbb{R}^n$ com o produto interno usual $\langle x, y \rangle = \sum_{i=1}^n x_i y_i$, a norma é a norma euclidiana.
+
+2. **Norma $\|x\|_p$**:  
+Para $1 \leq p < \infty$, a norma $\|x\|_p$ em $\mathbb{R}^n$ é definida como:  
+$$
+\|x\|_p = \left( \sum_{i=1}^n |x_i|^p \right)^{1/p}.
+$$  
+Por exemplo, para $p = 2$, temos a norma euclidiana.
+
+3. **Norma $\|x\|_1$**:  
+A norma $\|x\|_1$ é um caso especial da norma $\|x\|_p$ com $p = 1$:  
+$$
+\|x\|_1 = \sum_{i=1}^n |x_i|.
+$$  
+Essa norma é frequentemente usada em otimização e estatística.
+
+4. **Norma $\|x\|_\infty$**:  
+ A norma $\|x\|_\infty$ é definida como:  
+$$
+\|x\|_\infty = \max_{1 \leq i \leq n} |x_i|.
+$$  
+Essa norma mede o maior valor absoluto entre as componentes de $x$.
+
+5. **Espaços $L_p$**:  
+Seja $(X, \mathcal{A}, \mu)$ um espaço de medida e $1 \leq p < \infty$. O espaço $L_p(X, \mu)$ é o conjunto de todas as funções mensuráveis $f: X \to \mathbb{K}$ (onde $\mathbb{K}$ é $\mathbb{R}$ ou $\mathbb{C}$) tais que:  
+$$
+\|f\|_p = \left( \int_X |f(x)|^p \, d\mu(x) \right)^{1/p} < \infty.
+$$  
+Para $p = \infty$, o espaço $L_\infty(X, \mu)$ consiste em funções mensuráveis essencialmente limitadas, com a norma:  
+$$
+\|f\|_\infty = \operatorname{ess\,sup}_{x \in X} |f(x)|,
+$$  
+onde $\operatorname{ess\,sup}$ denota o supremo essencial.  
+Os espaços $L_p$ são exemplos importantes de espaços normados, amplamente utilizados em análise funcional e teoria da medida.
+
+Note que os exemplos 2., 3., e 4., podem ser considerados em um espaço qualquer de dimensão finita escolhendo uma base. De fato, se $V$ é espaço de dimensão finita com base $X=\{b_1,\ldots,b_n\}$ e $v\in V$, 
+pode definir 
+$$
+\|v\|_p=\|[v]_x\|=\left(\sum_{i=1}^n|\alpha|^p\right)^{1/p}
+$$
+onde $[v]_X=(\alpha_1,\ldots,\alpha_n)\in\K^n$ é o vetor das coordenadas de $v$ na base $X$. Claramente, 
+a norma obtida assim em $V$ depende da base $X$. 
+:::
+
+## Distância em Espaços Normados
+
+:::{#def-distance}
+A norma em um espaço vetorial normado $(V, \|\cdot\|)$ induz uma **distância** $d: V \times V \to \mathbb{R}$, definida por:  
+$$
+d(x, y) = \|x - y\|,
+$$  
+para todos $x, y \in V$.
+:::
+
+:::{#lem-distance}
+A função $d(x, y)$ satisfaz as seguintes propriedades para todos $x, y, z \in V$:
+
+1. **Não-negatividade**: $d(x, y) \geq 0$ e $d(x, y) = 0$ se, e somente se, $x = y$.
+2. **Simetria**: $d(x, y) = d(y, x)$.
+3. **Desigualdade Triangular**: $d(x, z) \leq d(x, y) + d(y, z)$.
+
+Essas propriedades garantem que $d(x, y)$ é uma métrica, tornando $V$ um espaço métrico.
+:::
+
+Se $V$ é espaço métrico, então podemos definir conceitos topológicos em $V$. Por exemplo, uma sequência 
+$v_n$ de vetores em $V$ é dito **convergente** se existe $v\in V$ tal que para todo $\varepsilon>0$, existe 
+$N\geq 0$ em tal forma que 
+$$
+d(v_n,v)=\|v_n-v\|\leq \varepsilon 
+$$
+sempre que $n\geq N$. Pode-se definir similarmente o conceito de sequências de Cauchy. 
+
+:::{#def-banach}
+Um espaço normado $V$ chama-se **espaço de Banach** se $V$ é completo como espaço métrico. Ou seja, toda 
+sequência de Cauchy em $V$ é convergente.  
+:::
+
+:::{#exr-norm-cont}
+Seja $V$ espaço normado de dimensão finita e seja $\|-\|$ uma norma em $V$. Considere $\|-\|$ como uma 
+função $V\to \R$. Escolha uma base $X$ de $V$ de defina a norma $\|-\|_2$ como no @exm-normed-examples.  
+Mostre que $\|-\|$ é uma função contínua em na norma $\|-\|_2$. Ou seja, mostre que para todo $v\in V$, para todo $\varepsilon>0$ existe $\delta>0$ tal que sempre quando $x\in V$ tal que $\|v-x\|_2\leq \delta$, então $|\|v\|-\|x\||\leq \varepsilon$.  
+:::
+
+
+## Normas Equivalentes
+
+:::{#def-equivalent-norms}
+Duas normas $\|\cdot\|_a$ e $\|\cdot\|_b$ em um espaço vetorial $V$ são chamadas **equivalentes** se existem constantes positivas $C_1$ e $C_2$ tais que:  
+$$
+C_1 \|x\|_a \leq \|x\|_b \leq C_2 \|x\|_a,
+$$  
+para todo $x \in V$.  
+Normas equivalentes induzem as mesmas noções de convergência e topologia em $V$.
+:::
+
+
+
+:::{#exr-eq-normas}
+Mostre que a equivalência de normas é ume relação de equivalência sobre o conjunto de normas em $V$. Ou seja 
+
+1. toda norma $\|-\|$ é equivalente a si mesma;
+2. se $\|-\|_a$ e $\|-\|_b$ são equivalentes, então $\|-\|_a$ e $\|-\|_b$ são equivalentes.
+3. se $\|-\|_a$ e $\|-\|_b$ são equivalentes e $\|-\|_b$ e $\|-\|_c$ são equivalentes, então 
+$\|-\|_a$ e $\|-\|_c$ são equivalentes
+:::
+
+
+:::{#thm-equivalence-finite-dim}
+Em um espaço vetorial de dimensão finita $V$, todas as normas são equivalentes.  
+Ou seja, se $\|\cdot\|_a$ e $\|\cdot\|_b$ são duas normas em $V$, então existem constantes positivas $C_1$ e $C_2$ tais que:  
+$$
+C_1 \|x\|_a \leq \|x\|_b \leq C_2 \|x\|_a,
+$$  
+para todo $x \in V$.
+:::
+
+
+:::{.proof}
+Seja $X$ uma base fixada para $V$ e considere a norma $\|-\|_2$ relativa a base $X$. 
+Para demonstrar o teorema, basta mostrar que qualquer norma $\|-\|$ em $V$ é equivalente à norma $\|-\|_2$.  
+Ou seja, precisamos encontrar constantes positivas $C_1$ e $C_2$ tais que:  
+$$
+C_1 \|x\|_2 \leq \|x\| \leq C_2 \|x\|_2,
+$$  
+para todo $x \in V$.  
+
+
+Seja 
+$$
+B = \{v\in V\mid \|v\|_2=1\}.
+$$
+Para provar o teorema, é suficiente mostrar que existem constantes positivas $C_1$ e $C_2$ tais que:  
+$$
+C_1 \leq \|x\| \leq C_2,
+$$  
+para todo $x \in B$. Isso ocorre porque, para qualquer $x \in V \setminus \{0\}$, podemos escrever $x = \|x\|_2 \cdot u$, onde $u = x / \|x\|_2 \in B$. Assim, temos:  
+$$
+\|x\| = \| \|x\|_2 \cdot u \| = \|x\|_2 \cdot \|u\|.
+$$  
+Portanto, se a desigualdade acima for válida para todos os vetores em $B$ com constantes $C_1$ e $C_2$, então 
+$$
+C_1\|x\|_2\leq \|x\|_2 \cdot \|u\|\leq C_2 \|x\|_2;
+$$
+ou seja, 
+$$
+C_1\|x\|_2\leq \|x\|\leq C_2 \|x\|_2;
+$$
+
+
+A bola $B$ é compacta é $V$, pois a bola 
+$$
+\{v\in \K^n\mid \|v\|_2=1\}
+$$
+é compacta em $\K^n$ (Teorema de Heine-Borel).
+A função $\|-\|: B \to \mathbb{R}$ é contínua e atinge seus valores máximo e mínimo em $B$. Assim, existem constantes positivas $C_1$ e $C_2$ tais que:  
+$$
+C_1 = \min_{x \in B} \|x\| \quad \text{e} \quad C_2 = \max_{x \in B} \|x\|.
+$$  
+Portanto, para todo $x \in B$, temos:  
+$$
+C_1 \leq \|x\| \leq C_2.
+$$  
+Isso prova a desigualdade desejada.
+:::

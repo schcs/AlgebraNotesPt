@@ -94,8 +94,24 @@ u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} 
 $$
 ou seja, $u$ é unitário. Assim, $f = u p$.
 
-Se $p$ não é invertível, considere a restrição ao complemento ortogonal do núcleo de $p$, onde $p$ é invertível, e defina $u$ como acima nesse subespaço, estendendo $u$ por zero no núcleo. Assim, $u$ é unitário no suporte de $p$ e $f = u p$.
-
+Se $p$ não é invertível, seja $K=\ker p$ e $W=K^\perp$. O espaço $K$ é trivialmente $p$-invariante. 
+Como $p^*=p$ (@lem-pos), @lem-adjoint-invariant implica que $W$ é $p$-invariante. Seja $p_W=p|_W$ 
+(restrição para $W$). Ora, se $a\in\ker p_W$, então $a\perp a$ e $a=0$; ou seja, $\ker p_W=0$ e $p_W$ é invertível. 
+Defina $u$ como 
+$$
+u(a)=\left\{\begin{array}{ll}
+            fp_W^{-1}(a) & \mbox{se $a\in W$;}\\
+            a & \mbox{se $a\in K$}\end{array}\right.
+$$
+O leitor pode verificar que $u$ é unitário. Além disso, se $a\in W$, então 
+$up(a)=fp_W^{-1}p_W(a)=f(a)$. Se $a\in K$, então $p(a)=p^2(a)=f*f(a)=0$ e 
+$$
+0=\left<f^*f(a),a\right>=\left<f(a),f(a)\right>
+$$
+e $f(a)=0$. Portanto 
+$$
+up(a)=0=f(a)
+$$
 Portanto, todo operador admite tal decomposição.
 :::
 
