@@ -140,7 +140,7 @@ e toma $D=D$, $U=ZW$ e $V=W^*$.
 
 Assuma que as entradas de $D$ na diagonal principal são $\delta_1,\ldots,\delta_n$. Tem-se que 
 $$
-A^*A=V^*D^*U^*UDV=V^*D^2*V,
+A^*A=V^*D^*U^*UDV=V^*D^2V,
 $$ 
 que implica que os autovalores de $A^*A$ são $A^*A$ são $\delta_1^2,\ldots,\delta_n^2$. Como $\delta_i\geq 0$ para todo $i$, temos que 
 estes autovalores são unicamente determinados por $A^*A$ e também por $A$. 
