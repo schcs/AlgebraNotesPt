@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-2348831875b6ec1fe79672212d4a4524.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -2276,6 +2276,40 @@ G(B_2) = \begin{pmatrix} 0 &amp;  −1 &amp;  0 &amp; 0\\
 <li>Mostre que <span class="math inline">\(f\)</span> possui adjunto.</li>
 <li>Mostre que <span class="math inline">\(f\)</span> é normal, mas não é autoadjunto.</li>
 </ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.36</strong></span> Seja <span class="math inline">\(T:\R^3\to\R^3\)</span> uma transformação ortogonal com <span class="math inline">\(\det T=-1\)</span>. Mostre que</p>
+<ol type="1">
+<li><span class="math inline">\(T\)</span> é uma reflexão em relação a um plano que passa pela origem; ou</li>
+<li><span class="math inline">\(T\)</span> é uma rotoreflexão (ou seja uma rotação por um eixo <span class="math inline">\(k\)</span> e ângulo <span class="math inline">\(\vartheta\)</span> seguida por uma reflexão em relação a um plano perpendicular a <span class="math inline">\(k\)</span>).</li>
+</ol>
+<p>Dê exemplo explícito para os dois casos.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.37</strong></span> Descreeve as possibilidades para os autovalores de um operador ortogonal de <span class="math inline">\(\R^4\)</span>. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de <span class="math inline">\(SO_4\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.38</strong></span> Assista os vídeos de 3Blue1Brown nos links youtu.be/d4EgbgTm0Bg e youtu.be/zjMuIxRvygQ sobre os quaternions e sua ligação com <span class="math inline">\(SO_3\)</span>. [Se precisar, pode ligar as legendas auto-geradas em português.]</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.39</strong></span> Denote por <span class="math inline">\(SU_2\)</span> o grupo de matrizes unitárias <span class="math inline">\(2\times 2\)</span> com entradas em <span class="math inline">\(\C\)</span> e com determinante <span class="math inline">\(1\)</span>. Para cada quatérnio unitário <span class="math inline">\(q=a+bi+cj+dk\)</span>, denote por <span class="math inline">\(A_q\)</span> a matriz <span class="math display">\[
+\begin{pmatrix} a+ib &amp; c+id \\ -c+id &amp; a-ib\end{pmatrix}.
+\]</span></p>
+<ol type="1">
+<li>Verifique que <span class="math inline">\(A_q\in SU_2\)</span>.</li>
+<li>Verifique que <span class="math inline">\(\psi:q\mapsto A_q\)</span> é um homomorfismo de grupos; ou seja, <span class="math inline">\(A_{q_1q_2}=A_{q_1}A_{q_2}\)</span>.</li>
+<li>Demonstre que o mapa <span class="math inline">\(\psi: q\mapsto A_q\)</span> é uma bijeção entre o grupo de quatérnios unitários e <span class="math inline">\(SU_2\)</span>.</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.40</strong></span> Seja <span class="math inline">\(f:\R^n\to\R^n\)</span> uma isometria (ou seja <span class="math inline">\(f\)</span> preserva distância em <span class="math inline">\(\R^n\)</span>) tal que <span class="math inline">\(f(0)=0\)</span>.</p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(f\)</span> preserva norma.</li>
+<li>Mostre que <span class="math inline">\(f\)</span> é linear e deduza que <span class="math inline">\(f\)</span> é uma transformação ortogonal. [Dica, mostre que <span class="math inline">\(\|f(\alpha v)-\alpha f(v)\|=0\)</span> e <span class="math inline">\(\|f(u+v)-f(u)-f(v)\|=0\)</span> para todo <span class="math inline">\(u,v\in \R^n\)</span> e <span class="math inline">\(\alpha\in \R\)</span>.]</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 82.41</strong></span> Seja <span class="math inline">\(f:\R^n\to \R^n\)</span> uma isometria. Mostre que <span class="math inline">\(f\)</span> é a composição de uma translação (<span class="math inline">\(T_w:\R^n\to\R^n\)</span>, <span class="math inline">\(v\mapsto v+w\)</span> para todo <span class="math inline">\(v\)</span>) e uma transformação ortogonal.</p>
 </div>
 
 
