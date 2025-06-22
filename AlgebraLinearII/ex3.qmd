@@ -1291,12 +1291,50 @@ Seja $T:\R^3\to\R^3$ uma transformação ortogonal com $\det T=-1$. Mostre que
 
 Dê exemplo explícito para os dois casos.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+Como $TT^*=T^*T=\mbox{id}_V$, temos que $T$ é normal e assim é diagonalizável. 
+Sejam $\lambda_1,\lambda_2,\lambda_3$ os autovaores complexos de $T$. Sabemos que 
+
+a. $|\lambda_i|=1$;
+b. $\lambda_1\lambda_2\lambda_3=-1$;
+c. se $\lambda\in \C$ é autovalor então o conjugado $\overline\lambda$ é também autovalor. 
+
+As possibilidades para os autovalores de $T$ são 
+
+1. $\lambda_1=-1$ e $\lambda_2=\lambda_3=1$.
+2. $\lambda_1=-1$, $\lambda_2=\cos \vartheta +i\sen\vartheta$, $\lambda_3=\cos \vartheta -i\sen\vartheta$. 
+
+Além disso, os autoespaços são ortogonais. 
+
+No caso 1,  $T$ é reflexão em relação ao plano $V_1$ (autoespaço com autovalor 1). No caso 2, 
+$T$ é a composição de uma reflexão pelo plano $V_{-1}^\perp$ e uma rotação por ângulo $\vartheta$ no redor 
+da reta $V_{-1}$. 
+:::
 
 
 
 
 :::{#exr-}
-Descreeve as possibilidades para os autovalores de um operador ortogonal de $\R^4$. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de $SO_4$. 
+Descreeve as possibilidades para os autovalores de um operador ortogonal de $\R^4$. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de $\operatorname{SO}_4$. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Autovalores de operadores ortogonais em $\R^4$:**
+
+Os autovalores de um operador ortogonal $T: \R^4 \to \R^4$ têm módulo 1, pois $T$ preserva normas. Além disso, os autovalores podem ser reais ($\pm 1$) ou complexos conjugados ($e^{i\theta}, e^{-i\theta}$). As possibilidades são:
+- Quatro autovalores reais: $\{1,1,1,1\}$, $\{1,-1,-1,-1\}$, 
+$\{1, 1, -1, -1\}$, $\{1, 1, 1, -1\}$, $\{-1,-1,-1,-1\}$.
+- Dois autovalores reais e dois complexos conjugados: $\{1,1,e^{i\theta}, e^{-i\theta}\}$, 
+$\{1, -1, e^{i\theta}, e^{-i\theta}\}$, ou $\{-1, -1, e^{i\theta}, e^{-i\theta}\}$.
+- Quatro autovalores complexos conjugados: $\{e^{i\theta_1}, e^{-i\theta_1}, e^{i\theta_2}, e^{-i\theta_2}\}$.
+
+### Exemplos para cada caso de operadores ortogonais em $\R^4$
+
+
+#### Caso especial para $\operatorname{SO}_4$
+Para $\operatorname{SO}_4$, o determinante é $1$, então os autovalores devem satisfazer a condição de produto $\lambda_1 \lambda_2 \lambda_3 \lambda_4 = 1$.
 :::
 
 :::{#exr-}
@@ -1316,15 +1354,53 @@ $$
 3. Demonstre que o mapa $\psi: q\mapsto A_q$ é uma bijeção entre o grupo de quatérnios unitários e $SU_2$.
 :::
 
-:::{#exr-}
+:::{#exr-isometry-linear}
 Seja $f:\R^n\to\R^n$ uma isometria (ou seja $f$ preserva distância em $\R^n$) tal que $f(0)=0$. 
 
 1. Mostre que $f$ preserva norma.
 2. Mostre que $f$ é linear e deduza que $f$ é uma transformação ortogonal. [Dica, mostre que $\|f(\alpha v)-\alpha f(v)\|=0$ e $\|f(u+v)-f(u)-f(v)\|=0$ para todo $u,v\in \R^n$ e $\alpha\in \R$.]
 :::
+:::{.sol .callout-tip collapse="true"}
+Consulta as notas da aula.
+:::
 
 :::{#exr-}
 Seja $f:\R^n\to \R^n$ uma isometria. Mostre que $f$ é a composição de uma translação ($T_w:\R^n\to\R^n$, $v\mapsto v+w$ para todo $v$) e uma transformação ortogonal.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $f: \R^n \to \R^n$ uma isometria. Por definição, $f$ preserva distâncias, ou seja, para todo $u, v \in \R^n$:
+$$
+\|f(u) - f(v)\| = \|u - v\|.
+$$
+
+1. **Decomposição de $f$:**
+
+Seja $w = f(0)$. Defina $T_w: \R^n \to \R^n$ como a translação por $w$, ou seja:
+$$
+T_w(v) = v + w.
+$$
+Considere a função $g: \R^n \to \R^n$ dada por:
+$$
+g(v) = f(v) - w.
+$$
+Então, para todo $u, v \in \R^n$:
+$$
+\|g(u) - g(v)\| = \|f(u) - w - (f(v) - w)\| = \|f(u) - f(v)\| = \|u - v\|.
+$$
+Logo, $g$ preserva distâncias e satisfaz $g(0) = 0$.
+
+2. **$g$ é uma transformação ortogonal:**
+
+Pelo @exr-isometry-linear, toda isometria que fixa a origem é linear e ortogonal. Assim, $g$ é uma transformação ortogonal.
+
+3. **Conclusão:**
+
+Como $f(v) = g(v) + w$, temos que $f$ é a composição de uma translação $T_w$ e uma transformação ortogonal $g$:
+$$
+f(v) = T_w(g(v)).
+$$
 :::
 
 
