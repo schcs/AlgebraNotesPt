@@ -104,11 +104,11 @@ u(a)=\left\{\begin{array}{ll}
             a & \mbox{se $a\in K$}\end{array}\right.
 $$
 O leitor pode verificar que $u$ é unitário. Além disso, se $a\in W$, então 
-$up(a)=fp_W^{-1}p_W(a)=f(a)$. Se $a\in K$, então $p(a)=p^2(a)=f*f(a)=0$ e 
+$up(a)=fp_W^{-1}p_W(a)=f(a)$. Se $a\in K$, então $0=p(a)=p^2(a)=f^*f(a)$ e 
 $$
 0=\left<f^*f(a),a\right>=\left<f(a),f(a)\right>
 $$
-e $f(a)=0$. Portanto 
+e $f(a)=0$. Logo,
 $$
 up(a)=0=f(a)
 $$
@@ -140,7 +140,7 @@ e toma $D=D$, $U=ZW$ e $V=W^*$.
 
 Assuma que as entradas de $D$ na diagonal principal são $\delta_1,\ldots,\delta_n$. Tem-se que 
 $$
-A^*A=V^*D^*U^*UDV=V^*D^2V,
+A^*A=V^*D^*U^*UDV=V^*D^2*V,
 $$ 
 que implica que os autovalores de $A^*A$ são $A^*A$ são $\delta_1^2,\ldots,\delta_n^2$. Como $\delta_i\geq 0$ para todo $i$, temos que 
 estes autovalores são unicamente determinados por $A^*A$ e também por $A$. 

@@ -15,7 +15,7 @@ Seja $f\in\mbox{End}(V)$ e $U\leq V$. O subespaço $U$ chama-se $f$-invariante s
 
 Seja $V=U\oplus W$ uma decomposição para soma direta. Se $v\in V$, então $v$ pode ser escrito unicamente como $v=u+w$ com $u\in U$ e $w\in W$ e pode-se definir $f:V\to V$ como $f(v)=u$. O endomorfismo $f$ é uma projeção tal que $\mbox{Im}(f)=U$ e $\ker f=W$.
 
-:::{#lem-}
+:::{#lem-projections}
 As seguintes afirmações são equivalentes para um endomorfismo $f:V\to V$.
 
 1. $f$ é uma projeção.
