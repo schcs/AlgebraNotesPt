@@ -1331,10 +1331,10 @@ $\{1, 1, -1, -1\}$, $\{1, 1, 1, -1\}$, $\{-1,-1,-1,-1\}$.
 $\{1, -1, e^{i\theta}, e^{-i\theta}\}$, ou $\{-1, -1, e^{i\theta}, e^{-i\theta}\}$.
 - Quatro autovalores complexos conjugados: $\{e^{i\theta_1}, e^{-i\theta_1}, e^{i\theta_2}, e^{-i\theta_2}\}$.
 
-**Exemplos para cada caso de operadores ortogonais em $\R^4$**
+2. **Exemplos para cada caso de operadores ortogonais em $\R^4$**
 
 
-**Caso especial para $\operatorname{SO}_4$**
+3. **Caso especial para $\operatorname{SO}_4$**
 Para $\operatorname{SO}_4$, o determinante é $1$, então os autovalores devem satisfazer a condição de produto $\lambda_1 \lambda_2 \lambda_3 \lambda_4 = 1$.
 :::
 
