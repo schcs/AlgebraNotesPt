@@ -1027,7 +1027,7 @@ Agora, considere a base $\{v_1, v_2, \ldots, v_{n}\}$ de $V$. A matriz de Gram d
 
 
 :::{#exr-}
-Seja $f:V\to V$ um operador normal de um $\C$-espaço $V$ de dimensão finita. Assuma que todos os autovalores de $f$ são reais. 
+Seja $f:V\to V$ um operador normal de um $\C$-espaço $V$ de dimensão finita com produto interno. Assuma que todos os autovalores de $f$ são reais. 
 
 1. Mostre que $f$ é autoadjunto. 
 2. Deduza que quando $f:V\to V$ é um operador normal diagonalizável de um $\R$-espaço de dimensão finita, então ele é autoadjunto.
@@ -1057,6 +1057,7 @@ Considere o operador $f:\C^2\to \C^2$ dada pela seguinte matriz na base canônic
 $$
     \begin{pmatrix} 1 & i \\ i & 1\end{pmatrix}.
 $$
+Considere $\C^2$ com o produto interno usual. 
 
 1. Mostre que $f$ é normal, mas não é autoadjunto.
 2. Ache uma matriz $P$ unitária, tal que $P^*AP$ é diagonal.
@@ -1100,7 +1101,7 @@ $$
 :::
 
 :::{#exr-}
-Mostre que todo operador $f$ de um $\F$-espaço vetorial $V$ de dimensão finita com forma hermitiana não degenerada  pode ser escrito como 
+Mostre para $\F$ um corpo de caraterística diferente de $2$ que todo operador $f$ de um $\F$-espaço vetorial $V$ de dimensão finita com forma hermitiana não degenerada  pode ser escrito como 
 $$
     f = f_1+f_2
 $$

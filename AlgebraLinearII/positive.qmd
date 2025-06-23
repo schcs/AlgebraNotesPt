@@ -8,13 +8,26 @@ Nesta página, $V$ é um $\C$-espaço de dimensão finita $n$ com produto intern
 
 ## Operadores positivos
 
-:::{#exr-zero-op}
+:::{#lem-zero-op}
 Assuma que $f\in\mbox{End}(V)$ é tal que 
 $$
 \left<f(v),v\right>=0\quad\mbox{para todo}\quad v\in V.
 $$
 Mostre que $f=0$. 
 :::
+:::{.proof}
+Conta simples mostra que 
+\begin{align*}
+\left<f(v),w\right>&=\frac 14(\left<f(v+w),v+w\right>-\left<f(v-w),v-w\right>)+\\
+&+\frac i4(\left<f(v+iw),v+iw\right>-\left<f(v-iw),v-iw\right>)=0
+\end{align*}
+vale para todo $v,w\in V$. Ora, toma $w=f(v)$ para obter que $\|f(v)\|^2=\left<f(v),f(v)\right>=0$; 
+ou seja $f(v)=0$. 
+:::
+
+Note que o @lem-zero-op não vale para $\R$-espaços. Por exemplo, a rotação $f$ por 90 graus em $\R^2$ 
+tem a propriedade que $f(v)\perp v$; ou seja $\left<f(v),v\right>=0$ para todo $v\in \R^2$, mas $f\neq 0$. 
+
 
 :::{#def-}
 Um operador $f\in\mbox{End}(V)$ é dito **positivo** se $\left<f(v),v\right>\in \R$ e $\left<f(v),v\right>\geq 0$ para todo $v\in V$.
@@ -32,7 +45,7 @@ adjunto $f^*$,
 $$
 \left<f(v),v\right>=\left<v,f^*(v)\right>.
 $$
-Logo, $\left<v,f(v)\right>=\left<v,f^*(v)\right>$ para todo $v\in V$; ou seja, $\left<v,(f-f^*)(v)\right>=0$ para todo $v\in V$. Ora, @exr-zero-op implica que 
+Logo, $\left<v,f(v)\right>=\left<v,f^*(v)\right>$ para todo $v\in V$; ou seja, $\left<v,(f-f^*)(v)\right>=0$ para todo $v\in V$. Ora, @lem-zero-op implica que 
 $f-f^*=0$, portanto $f=f^*$. O fato que $f$ é diagonalizável segue por @thm-diag-selfadj. Se $\lambda$ é autovalor de $f$ com autovetor $v$, então 
 $$
 0\leq \left<f(v),v\right>=\lambda\left<v,v\right>=\lambda\|v\|^2,
