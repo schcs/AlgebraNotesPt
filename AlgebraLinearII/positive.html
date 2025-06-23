@@ -1392,21 +1392,28 @@ window.Quarto = {
 <p>Nesta página, <span class="math inline">\(V\)</span> é um <span class="math inline">\(\C\)</span>-espaço de dimensão finita <span class="math inline">\(n\)</span> com produto interno <span class="math inline">\(\left&lt;-,-\right&gt;\)</span>.</p>
 <section id="operadores-positivos" class="level2" data-number="80.1">
 <h2 data-number="80.1" data-anchor-id="operadores-positivos"><span class="header-section-number">80.1</span> Operadores positivos</h2>
-<div id="exr-zero-op" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 80.1</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é tal que <span class="math display">\[
+<div id="lem-zero-op" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 80.1</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é tal que <span class="math display">\[
 \left&lt;f(v),v\right&gt;=0\quad\mbox{para todo}\quad v\in V.
 \]</span> Mostre que <span class="math inline">\(f=0\)</span>.</p>
 </div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Conta simples mostra que <span class="math display">\[\begin{align*}
+\left&lt;f(v),w\right&gt;&amp;=\frac 14(\left&lt;f(v+w),v+w\right&gt;-\left&lt;f(v-w),v-w\right&gt;)+\\
+&amp;+\frac i4(\left&lt;f(v+iw),v+iw\right&gt;-\left&lt;f(v-iw),v-iw\right&gt;)=0
+\end{align*}\]</span> vale para todo <span class="math inline">\(v,w\in V\)</span>. Ora, toma <span class="math inline">\(w=f(v)\)</span> para obter que <span class="math inline">\(\|f(v)\|^2=\left&lt;f(v),f(v)\right&gt;=0\)</span>; ou seja <span class="math inline">\(f(v)=0\)</span>.</p>
+</div>
+<p>Note que o <a href="#lem-zero-op" class="quarto-xref">Lema&nbsp;<span>80.1</span></a> não vale para <span class="math inline">\(\R\)</span>-espaços. Por exemplo, a rotação <span class="math inline">\(f\)</span> por 90 graus em <span class="math inline">\(\R^2\)</span> tem a propriedade que <span class="math inline">\(f(v)\perp v\)</span>; ou seja <span class="math inline">\(\left&lt;f(v),v\right&gt;=0\)</span> para todo <span class="math inline">\(v\in \R^2\)</span>, mas <span class="math inline">\(f\neq 0\)</span>.</p>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 80.1</strong></span> Um operador <span class="math inline">\(f\in\mbox{End}(V)\)</span> é dito <strong>positivo</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;\in \R\)</span> e <span class="math inline">\(\left&lt;f(v),v\right&gt;\geq 0\)</span> para todo <span class="math inline">\(v\in V\)</span>. <span class="math inline">\(f\)</span> é dito <strong>positivo definido</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;&gt; 0\)</span> para todo <span class="math inline">\(v\in V\)</span>.</p>
 </div>
 <div id="lem-pos" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 80.1</strong></span> Um operador positivo é autoadjunto e portanto é ortogonalmente diagonalizável. Além disso, os seus autovalores são não negativos. Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores são não negativos.</p>
+<p><span class="theorem-title"><strong>Lema 80.2</strong></span> Um operador positivo é autoadjunto e portanto é ortogonalmente diagonalizável. Além disso, os seus autovalores são não negativos. Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores são não negativos.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assums que <span class="math inline">\(f\)</span> é positivo. Então <span class="math inline">\(\left&lt;f(v),v\right&gt;\in\R\)</span> e assim <span class="math inline">\(\left&lt;f(v),v\right&gt;=\left&lt;v,f(v)\right&gt;\)</span>. Mas também, pela definição do adjunto <span class="math inline">\(f^*\)</span>, <span class="math display">\[
 \left&lt;f(v),v\right&gt;=\left&lt;v,f^*(v)\right&gt;.
-\]</span> Logo, <span class="math inline">\(\left&lt;v,f(v)\right&gt;=\left&lt;v,f^*(v)\right&gt;\)</span> para todo <span class="math inline">\(v\in V\)</span>; ou seja, <span class="math inline">\(\left&lt;v,(f-f^*)(v)\right&gt;=0\)</span> para todo <span class="math inline">\(v\in V\)</span>. Ora, <a href="#exr-zero-op" class="quarto-xref">Exercício&nbsp;<span>80.1</span></a> implica que <span class="math inline">\(f-f^*=0\)</span>, portanto <span class="math inline">\(f=f^*\)</span>. O fato que <span class="math inline">\(f\)</span> é diagonalizável segue por <a href="autoadjuntos.html#thm-diag-selfadj" class="quarto-xref">Teorema&nbsp;<span>77.1</span></a>. Se <span class="math inline">\(\lambda\)</span> é autovalor de <span class="math inline">\(f\)</span> com autovetor <span class="math inline">\(v\)</span>, então <span class="math display">\[
+\]</span> Logo, <span class="math inline">\(\left&lt;v,f(v)\right&gt;=\left&lt;v,f^*(v)\right&gt;\)</span> para todo <span class="math inline">\(v\in V\)</span>; ou seja, <span class="math inline">\(\left&lt;v,(f-f^*)(v)\right&gt;=0\)</span> para todo <span class="math inline">\(v\in V\)</span>. Ora, <a href="#lem-zero-op" class="quarto-xref">Lema&nbsp;<span>80.1</span></a> implica que <span class="math inline">\(f-f^*=0\)</span>, portanto <span class="math inline">\(f=f^*\)</span>. O fato que <span class="math inline">\(f\)</span> é diagonalizável segue por <a href="autoadjuntos.html#thm-diag-selfadj" class="quarto-xref">Teorema&nbsp;<span>77.1</span></a>. Se <span class="math inline">\(\lambda\)</span> é autovalor de <span class="math inline">\(f\)</span> com autovetor <span class="math inline">\(v\)</span>, então <span class="math display">\[
 0\leq \left&lt;f(v),v\right&gt;=\lambda\left&lt;v,v\right&gt;=\lambda\|v\|^2,
 \]</span> logo <span class="math inline">\(\lambda \geq 0\)</span>.</p>
 <p>Assuma agora que <span class="math inline">\(f\)</span> é autoadjunto e seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortonormal composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\geq 0\)</span>, respetivamente. Seja <span class="math inline">\(v=\sum_{i=1}^n\alpha_i b_i\)</span>. Então <span class="math display">\[
@@ -1418,11 +1425,11 @@ window.Quarto = {
 </section>
 <section id="a-raiz-quadrada-de-um-operador-positivo" class="level2" data-number="80.2">
 <h2 data-number="80.2" data-anchor-id="a-raiz-quadrada-de-um-operador-positivo"><span class="header-section-number">80.2</span> A raiz quadrada de um operador positivo</h2>
-<p>Seja <span class="math inline">\(f\in\mbox{End}(V)\)</span> positivo. Pelo <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>, temos que <span class="math inline">\(f\)</span> é ortogonalmente diagonalizável e existe uma base ortonormal <span class="math inline">\(b_1,\ldots,b_n\)</span> composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\)</span>, respetivamente, tais que <span class="math inline">\(\lambda_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>. Considere o operador, <span class="math inline">\(g:b_i\mapsto \sqrt{\lambda_i} b_i\)</span> para todo <span class="math inline">\(i\)</span>. Note que</p>
+<p>Seja <span class="math inline">\(f\in\mbox{End}(V)\)</span> positivo. Pelo <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.2</span></a>, temos que <span class="math inline">\(f\)</span> é ortogonalmente diagonalizável e existe uma base ortonormal <span class="math inline">\(b_1,\ldots,b_n\)</span> composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\)</span>, respetivamente, tais que <span class="math inline">\(\lambda_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>. Considere o operador, <span class="math inline">\(g:b_i\mapsto \sqrt{\lambda_i} b_i\)</span> para todo <span class="math inline">\(i\)</span>. Note que</p>
 <ol type="1">
 <li><span class="math inline">\(g\)</span> é autoadjunto;</li>
 <li>os autovalores de <span class="math inline">\(g\)</span> são <span class="math inline">\(\sqrt{\lambda_1},\ldots,\sqrt{\lambda_n}\)</span>;</li>
-<li><span class="math inline">\(g\)</span> é positivo por <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>;</li>
+<li><span class="math inline">\(g\)</span> é positivo por <a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.2</span></a>;</li>
 <li><span class="math inline">\(g^2=f\)</span>;</li>
 <li>se <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\lambda_i\)</span> então <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(g\)</span> com autovalor <span class="math inline">\(\sqrt{\lambda_i}\)</span>.</li>
 </ol>
@@ -1430,13 +1437,13 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Definição 80.2</strong></span> O operador <span class="math inline">\(g\)</span> é dito <strong>raiz quadrada</strong> de <span class="math inline">\(f\)</span> e escrevemos <span class="math inline">\(g=\sqrt f\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 80.2</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é positivo. Então existe único <span class="math inline">\(g\in\mbox{End}(V)\)</span> positivo tal que <span class="math inline">\(g^2=f\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 80.3</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é positivo. Então existe único <span class="math inline">\(g\in\mbox{End}(V)\)</span> positivo tal que <span class="math inline">\(g^2=f\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g\)</span> como no argumento no parágrafo antes do lema. A existência segue da construção de <span class="math inline">\(g\)</span>. Para a unicidade, suponha que <span class="math inline">\(h\)</span> também é positivo e <span class="math inline">\(h^2 = f\)</span>. Então <span class="math inline">\(h\)</span> é autoadjunto e existe uma base ortonormal <span class="math inline">\(c_1,\ldots,c_n\)</span> tal que <span class="math inline">\(h(c_i) = \mu_i c_i\)</span> para certos <span class="math inline">\(\mu_i \geq 0\)</span>. Como <span class="math inline">\(h^2=f\)</span>, temos que <span class="math inline">\(f(c_i)=\mu_i^2 c_i\)</span>, ou seja, cada <span class="math inline">\(c_i\)</span> é autovetor para <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\mu_i^2\)</span>. Mas, pela observação 5. em cima, os autovetores de <span class="math inline">\(f\)</span> são autovetores de <span class="math inline">\(g\)</span>, e assim <span class="math inline">\(g(c_i)=\mu_ic_i\)</span> e isso implica que <span class="math inline">\(g(c_i)=h(c_i)\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(g=h\)</span>.</p>
 </div>
 <div id="lem-fstarf-positive" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 80.3</strong></span> Seja <span class="math inline">\(f\in \mbox{End}(V)\)</span> qualquer. Então <span class="math inline">\(f^* f\)</span> é um operador autoadjunto e positivo e existe <span class="math inline">\(\sqrt{f^*f}\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 80.4</strong></span> Seja <span class="math inline">\(f\in \mbox{End}(V)\)</span> qualquer. Então <span class="math inline">\(f^* f\)</span> é um operador autoadjunto e positivo e existe <span class="math inline">\(\sqrt{f^*f}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Precisa verificar que <span class="math display">\[
@@ -1452,7 +1459,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Proposição 80.1</strong></span> (Decomposição polar) Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> um operador qualquer. Então <span class="math inline">\(f=u p\)</span> onde <span class="math inline">\(u\)</span> é unitário e <span class="math inline">\(p\)</span> é positivo.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Considere o operador <span class="math inline">\(p = \sqrt{f^* f}\)</span>, que é positivo por <a href="#lem-fstarf-positive" class="quarto-xref">Lema&nbsp;<span>80.3</span></a>. Se <span class="math inline">\(p\)</span> é invertível, defina <span class="math inline">\(u = f p^{-1}\)</span>. Então: <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Considere o operador <span class="math inline">\(p = \sqrt{f^* f}\)</span>, que é positivo por <a href="#lem-fstarf-positive" class="quarto-xref">Lema&nbsp;<span>80.4</span></a>. Se <span class="math inline">\(p\)</span> é invertível, defina <span class="math inline">\(u = f p^{-1}\)</span>. Então: <span class="math display">\[
 u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} = p^{-1} p^2 p^{-1} = \mbox{id}_V,
 \]</span> ou seja, <span class="math inline">\(u\)</span> é unitário. Assim, <span class="math inline">\(f = u p\)</span>.</p>
 <p>Se <span class="math inline">\(p\)</span> não é invertível, seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortonormal composta por autovetores de <span class="math inline">\(p\)</span> com autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\geq 0\)</span>. Assuma ainda que <span class="math inline">\(\lambda_1,\ldots,\lambda_k&gt;0\)</span> e <span class="math inline">\(\lambda_{k+1}=\cdots=\lambda_n=0\)</span>. Com <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>, ponha <span class="math inline">\(c_i=f(b_i)\)</span>. Afirmamos que <span class="math inline">\(c_1,\ldots,c_n\)</span> é um sistema ortogonal com <span class="math inline">\(\|c_i\|=\lambda_i\)</span>. De fato, <span class="math display">\[
