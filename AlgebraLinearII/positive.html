@@ -1394,8 +1394,8 @@ window.Quarto = {
 <h2 data-number="80.1" data-anchor-id="operadores-positivos"><span class="header-section-number">80.1</span> Operadores positivos</h2>
 <div id="exr-zero-op" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 80.1</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é tal que <span class="math display">\[
-\left&lt;f(v),v\right&gt;=0\quad\mbox{para todo}\quad v\in V,
-\]</span> então <span class="math inline">\(f=0\)</span>.</p>
+\left&lt;f(v),v\right&gt;=0\quad\mbox{para todo}\quad v\in V.
+\]</span> Mostre que <span class="math inline">\(f=0\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 80.1</strong></span> Um operador <span class="math inline">\(f\in\mbox{End}(V)\)</span> é dito <strong>positivo</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;\in \R\)</span> e <span class="math inline">\(\left&lt;f(v),v\right&gt;\geq 0\)</span> para todo <span class="math inline">\(v\in V\)</span>. <span class="math inline">\(f\)</span> é dito <strong>positivo definido</strong> se <span class="math inline">\(\left&lt;f(v),v\right&gt;&gt; 0\)</span> para todo <span class="math inline">\(v\in V\)</span>.</p>
@@ -1404,13 +1404,14 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Lema 80.1</strong></span> Um operador positivo é autoadjunto e portanto é ortogonalmente diagonalizável. Além disso, os seus autovalores são não negativos. Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores são não negativos.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assums que <span class="math inline">\(f\)</span> é positivo. Então <span class="math inline">\(\left&lt;f(v),v\right&gt;\in\R\)</span> e assim <span class="math inline">\(\left&lt;f(v),v\right&gt;=\left&lt;v,f(v)\right&gt;\)</span>. Mas também <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Assums que <span class="math inline">\(f\)</span> é positivo. Então <span class="math inline">\(\left&lt;f(v),v\right&gt;\in\R\)</span> e assim <span class="math inline">\(\left&lt;f(v),v\right&gt;=\left&lt;v,f(v)\right&gt;\)</span>. Mas também, pela definição do adjunto <span class="math inline">\(f^*\)</span>, <span class="math display">\[
 \left&lt;f(v),v\right&gt;=\left&lt;v,f^*(v)\right&gt;.
 \]</span> Logo, <span class="math inline">\(\left&lt;v,f(v)\right&gt;=\left&lt;v,f^*(v)\right&gt;\)</span> para todo <span class="math inline">\(v\in V\)</span>; ou seja, <span class="math inline">\(\left&lt;v,(f-f^*)(v)\right&gt;=0\)</span> para todo <span class="math inline">\(v\in V\)</span>. Ora, <a href="#exr-zero-op" class="quarto-xref">Exercício&nbsp;<span>80.1</span></a> implica que <span class="math inline">\(f-f^*=0\)</span>, portanto <span class="math inline">\(f=f^*\)</span>. O fato que <span class="math inline">\(f\)</span> é diagonalizável segue por <a href="autoadjuntos.html#thm-diag-selfadj" class="quarto-xref">Teorema&nbsp;<span>77.1</span></a>. Se <span class="math inline">\(\lambda\)</span> é autovalor de <span class="math inline">\(f\)</span> com autovetor <span class="math inline">\(v\)</span>, então <span class="math display">\[
 0\leq \left&lt;f(v),v\right&gt;=\lambda\left&lt;v,v\right&gt;=\lambda\|v\|^2,
 \]</span> logo <span class="math inline">\(\lambda \geq 0\)</span>.</p>
 <p>Assuma agora que <span class="math inline">\(f\)</span> é autoadjunto e seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortonormal composta por autovetores de <span class="math inline">\(f\)</span> que correspondem aos autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\geq 0\)</span>, respetivamente. Seja <span class="math inline">\(v=\sum_{i=1}^n\alpha_i b_i\)</span>. Então <span class="math display">\[
 \left&lt;f(v),v\right&gt;=\left&lt;f\left(\sum_{i=1}^n\alpha_i b_i\right),\sum_{i=1}^n\alpha_i b_i\right&gt;=
+\left&lt;\sum_{i=1}^n\alpha_i \lambda_i b_i,\sum_{i=1}^n\alpha_i b_i\right&gt;
 \sum_{i=1}^n \lambda_i|\alpha_i|^2\geq 0.
 \]</span> Portanto <span class="math inline">\(f\)</span> é positivo.</p>
 </div>
@@ -1425,18 +1426,24 @@ window.Quarto = {
 <li><span class="math inline">\(g^2=f\)</span>;</li>
 <li>se <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\lambda_i\)</span> então <span class="math inline">\(v\)</span> é autovetor de <span class="math inline">\(g\)</span> com autovalor <span class="math inline">\(\sqrt{\lambda_i}\)</span>.</li>
 </ol>
-<p>Então, podemos dizer que <span class="math inline">\(g\)</span> é raiz quadrada de <span class="math inline">\(f\)</span> e escrevemos <span class="math inline">\(g=\sqrt f\)</span>.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 80.2</strong></span> O operador <span class="math inline">\(g\)</span> é dito <strong>raiz quadrada</strong> de <span class="math inline">\(f\)</span> e escrevemos <span class="math inline">\(g=\sqrt f\)</span>.</p>
+</div>
 <div id="lem-" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 80.2</strong></span> Assuma que <span class="math inline">\(f\in\mbox{End}(V)\)</span> é positivo. Então existe único <span class="math inline">\(g\in\mbox{End}(V)\)</span> positivo tal que <span class="math inline">\(g^2=f\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g\)</span> como no argumento no parágrafo antes do lema. A existência segue da construção de <span class="math inline">\(g\)</span>. Para a unicidade, suponha que <span class="math inline">\(h\)</span> também é positivo e <span class="math inline">\(h^2 = f\)</span>. Então <span class="math inline">\(h\)</span> é autoadjunto e existe uma base ortonormal <span class="math inline">\(c_1,\ldots,c_n\)</span> tal que <span class="math inline">\(h(c_i) = \mu_i c_i\)</span> para certos <span class="math inline">\(\mu_i \geq 0\)</span>. Como <span class="math inline">\(h^2=f\)</span>, temos que <span class="math inline">\(f(c_i)=\mu_i^2 c_i\)</span>, ou seja, cada <span class="math inline">\(c_i\)</span> é autovetor para <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\mu_i^2\)</span>. Mas os autovetores de <span class="math inline">\(f\)</span> são autovetores de <span class="math inline">\(g\)</span>, e assim <span class="math inline">\(g(c_i)=\mu_ic_i\)</span> e isso implica que <span class="math inline">\(g(c_i)=h(c_i)\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(g=h\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(g\)</span> como no argumento no parágrafo antes do lema. A existência segue da construção de <span class="math inline">\(g\)</span>. Para a unicidade, suponha que <span class="math inline">\(h\)</span> também é positivo e <span class="math inline">\(h^2 = f\)</span>. Então <span class="math inline">\(h\)</span> é autoadjunto e existe uma base ortonormal <span class="math inline">\(c_1,\ldots,c_n\)</span> tal que <span class="math inline">\(h(c_i) = \mu_i c_i\)</span> para certos <span class="math inline">\(\mu_i \geq 0\)</span>. Como <span class="math inline">\(h^2=f\)</span>, temos que <span class="math inline">\(f(c_i)=\mu_i^2 c_i\)</span>, ou seja, cada <span class="math inline">\(c_i\)</span> é autovetor para <span class="math inline">\(f\)</span> com autovalor <span class="math inline">\(\mu_i^2\)</span>. Mas, pela observação 5. em cima, os autovetores de <span class="math inline">\(f\)</span> são autovetores de <span class="math inline">\(g\)</span>, e assim <span class="math inline">\(g(c_i)=\mu_ic_i\)</span> e isso implica que <span class="math inline">\(g(c_i)=h(c_i)\)</span> para todo <span class="math inline">\(i\)</span> e <span class="math inline">\(g=h\)</span>.</p>
 </div>
 <div id="lem-fstarf-positive" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lema 80.3</strong></span> Seja <span class="math inline">\(f\in \mbox{End}(V)\)</span> qualquer. Então <span class="math inline">\(f^* f\)</span> é um operador autoadjunto e positivo e existe <span class="math inline">\(\sqrt{f^*f}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Precisa verificar que <span class="math display">\[
+\left&lt;f^*f(v),v\right&gt;\geq 0\quad\mbox{para todo}\quad v\in V.
+\]</span> Mas, como <span class="math inline">\((f^*)^*=f\)</span>, <span class="math display">\[
+\left&lt;f^*f(v),v\right&gt;=\left&lt;f(v),(f^*)^*v\right&gt;=\left&lt;f(v),f(v)\right&gt;=\|f(v)\|^2\geq 0.
+\]</span></p>
 </div>
 </section>
 <section id="a-decomposição-polar" class="level2" data-number="80.3">
@@ -1448,34 +1455,32 @@ window.Quarto = {
 <p><span class="proof-title"><em>Comprovação</em>. </span>Considere o operador <span class="math inline">\(p = \sqrt{f^* f}\)</span>, que é positivo por <a href="#lem-fstarf-positive" class="quarto-xref">Lema&nbsp;<span>80.3</span></a>. Se <span class="math inline">\(p\)</span> é invertível, defina <span class="math inline">\(u = f p^{-1}\)</span>. Então: <span class="math display">\[
 u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} = p^{-1} p^2 p^{-1} = \mbox{id}_V,
 \]</span> ou seja, <span class="math inline">\(u\)</span> é unitário. Assim, <span class="math inline">\(f = u p\)</span>.</p>
-<p>Se <span class="math inline">\(p\)</span> não é invertível, seja <span class="math inline">\(K=\ker p\)</span> e <span class="math inline">\(W=K^\perp\)</span>. O espaço <span class="math inline">\(K\)</span> é trivialmente <span class="math inline">\(p\)</span>-invariante. Como <span class="math inline">\(p^*=p\)</span> (<a href="#lem-pos" class="quarto-xref">Lema&nbsp;<span>80.1</span></a>), <a href="adjuntos.html#lem-adjoint-invariant" class="quarto-xref">Lema&nbsp;<span>76.5</span></a> implica que <span class="math inline">\(W\)</span> é <span class="math inline">\(p\)</span>-invariante. Seja <span class="math inline">\(p_W=p|_W\)</span> (restrição para <span class="math inline">\(W\)</span>). Ora, se <span class="math inline">\(a\in\ker p_W\)</span>, então <span class="math inline">\(a\perp a\)</span> e <span class="math inline">\(a=0\)</span>; ou seja, <span class="math inline">\(\ker p_W=0\)</span> e <span class="math inline">\(p_W\)</span> é invertível. Defina <span class="math inline">\(u\)</span> como <span class="math display">\[
-u(a)=\left\{\begin{array}{ll}
-            fp_W^{-1}(a) &amp; \mbox{se $a\in W$;}\\
-            a &amp; \mbox{se $a\in K$}\end{array}\right.
-\]</span> O leitor pode verificar que <span class="math inline">\(u\)</span> é unitário. Além disso, se <span class="math inline">\(a\in W\)</span>, então <span class="math inline">\(up(a)=fp_W^{-1}p_W(a)=f(a)\)</span>. Se <span class="math inline">\(a\in K\)</span>, então <span class="math inline">\(0=p(a)=p^2(a)=f^*f(a)\)</span> e <span class="math display">\[
-0=\left&lt;f^*f(a),a\right&gt;=\left&lt;f(a),f(a)\right&gt;
-\]</span> e <span class="math inline">\(f(a)=0\)</span>. Logo, <span class="math display">\[
-up(a)=0=f(a)
-\]</span> Portanto, todo operador admite tal decomposição.</p>
+<p>Se <span class="math inline">\(p\)</span> não é invertível, seja <span class="math inline">\(b_1,\ldots,b_n\)</span> uma base ortonormal composta por autovetores de <span class="math inline">\(p\)</span> com autovalores <span class="math inline">\(\lambda_1,\ldots,\lambda_n\geq 0\)</span>. Assuma ainda que <span class="math inline">\(\lambda_1,\ldots,\lambda_k&gt;0\)</span> e <span class="math inline">\(\lambda_{k+1}=\cdots=\lambda_n=0\)</span>. Com <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>, ponha <span class="math inline">\(c_i=f(b_i)\)</span>. Afirmamos que <span class="math inline">\(c_1,\ldots,c_n\)</span> é um sistema ortogonal com <span class="math inline">\(\|c_i\|=\lambda_i\)</span>. De fato, <span class="math display">\[
+\left&lt;c_i,c_j\right&gt;=\left&lt;f(b_i),f(b_j)\right&gt;=\left&lt;b_i,f^*f(b_j)\right&gt;=\left&lt;b_i,p^2(b_j)\right&gt;=\lambda_j^2\left&lt;b_i,b_j\right&gt;
+\]</span> e a afirmação segue do fato que os <span class="math inline">\(b_i\)</span> formam base ortonormal. Para <span class="math inline">\(i\in\{1,\ldots,k\}\)</span>, seja <span class="math inline">\(d_i=\lambda_i^{-1}c_i\)</span> e note que <span class="math inline">\(d_1,\ldots,d_k\)</span> é um sistema ortonormal. Usando ortogonalização de Gram-Schmidt, estenda este sistema para sistema ortonormal <span class="math inline">\(d_1,\ldots,d_n\)</span>. Com o sistema estendido, temos que <span class="math inline">\(c_i=\lambda_i d_i\)</span> vale para todo <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>. Seja <span class="math inline">\(u:V\to V\)</span> a aplicação que manda <span class="math inline">\(b_i\mapsto d_i\)</span>. Como os <span class="math inline">\(b_i\)</span> e os <span class="math inline">\(d_i\)</span> formam sistema ortonormal, temos que <span class="math inline">\(u\)</span> é operador unitário. Além disso, vale para todo <span class="math inline">\(i\)</span> que <span class="math display">\[
+up(b_i)=u(\lambda_i b_i)=\lambda_i u(b_i)=\lambda_i d_i
+\]</span> e <span class="math display">\[
+f(b_i)=c_i=\lambda_i d_i.
+\]</span> Portanto <span class="math inline">\(f\)</span> <span class="math inline">\(up\)</span> são iguais sobre uma base que implica que <span class="math inline">\(f=up\)</span>.</p>
 </div>
 </section>
 <section id="valores-singulares" class="level2" data-number="80.4">
 <h2 data-number="80.4" data-anchor-id="valores-singulares"><span class="header-section-number">80.4</span> Valores singulares</h2>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 80.1</strong></span> (Decomposição em valores singulares) Seja <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>. Então <span class="math inline">\(A\)</span> pode ser escrito como <span class="math inline">\(A=UDV\)</span> onde <span class="math inline">\(U,V\)</span> são unitárias e <span class="math inline">\(D\)</span> é diagonal com numeros reais não negativos na diagonal principal. Além disso, as entradas na diagonal de <span class="math inline">\(D\)</span> são unicamente determinadas por <span class="math inline">\(A\)</span>.</p>
+<p><span class="theorem-title"><strong>Teorema 80.1</strong></span> (Decomposição em valores singulares) Seja <span class="math inline">\(A\in M_{n\times n}(\C)\)</span>. Então <span class="math inline">\(A\)</span> pode ser escrita como <span class="math inline">\(A=UDV\)</span> onde <span class="math inline">\(U,V\)</span> são matrizes unitárias e <span class="math inline">\(D\)</span> é matriz diagonal com números reais não negativos na diagonal principal. Além disso, as entradas na diagonal de <span class="math inline">\(D\)</span> são unicamente determinadas por <span class="math inline">\(A\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(A\)</span> e a matriz do operador <span class="math inline">\(f\)</span> na base canônica. Pela <a href="#prp-polar" class="quarto-xref">Proposição&nbsp;<span>80.1</span></a>, temos que <span class="math inline">\(f=z p\)</span> onde <span class="math inline">\(z\)</span> é unitária e <span class="math inline">\(p\)</span> é positiva. Assuma que <span class="math inline">\(P\)</span> e <span class="math inline">\(Z\)</span> são as matrizes de <span class="math inline">\(p\)</span> e <span class="math inline">\(z\)</span> na base canônica. Então <span class="math inline">\(A=ZP\)</span> e <span class="math inline">\(Z\)</span> é matriz unitária e <span class="math inline">\(P\)</span> é hermitiana. Em particular, <span class="math inline">\(P\)</span> é ortogonalmente diagonalizável e existe alguma matriz unitária <span class="math inline">\(W\)</span> tal que <span class="math inline">\(W^*PW=D\)</span> diagonal. Como <span class="math inline">\(P\)</span> é positivo e <span class="math inline">\(D\)</span> contém os autovalores de <span class="math inline">\(P\)</span> na diagonal, as entradas de <span class="math inline">\(P\)</span> na diagonal principal são reais a não negativos. Ora, <span class="math display">\[
-W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD.
-\]</span> Ora, <span class="math display">\[
-A=ZWDW^*
-\]</span> e toma <span class="math inline">\(D=D\)</span>, <span class="math inline">\(U=ZW\)</span> e <span class="math inline">\(V=W^*\)</span>.</p>
+W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD
+\]</span> e obtemos que <span class="math display">\[
+A=ZWDW^*.
+\]</span> Tomando <span class="math inline">\(D=D\)</span>, <span class="math inline">\(U=ZW\)</span> e <span class="math inline">\(V=W^*\)</span>, obtemos a decomposição no enunciado.</p>
 <p>Assuma que as entradas de <span class="math inline">\(D\)</span> na diagonal principal são <span class="math inline">\(\delta_1,\ldots,\delta_n\)</span>. Tem-se que <span class="math display">\[
-A^*A=V^*D^*U^*UDV=V^*D^2 V,
+A^*A=V^*D^*U^*UDV=V^*D^2V,
 \]</span> que implica que os autovalores de <span class="math inline">\(A^*A\)</span> são <span class="math inline">\(A^*A\)</span> são <span class="math inline">\(\delta_1^2,\ldots,\delta_n^2\)</span>. Como <span class="math inline">\(\delta_i\geq 0\)</span> para todo <span class="math inline">\(i\)</span>, temos que estes autovalores são unicamente determinados por <span class="math inline">\(A^*A\)</span> e também por <span class="math inline">\(A\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 80.2</strong></span> As entradas na diagonal principal da matriz <span class="math inline">\(D\)</span> são chamadas dos <strong>valores singulares</strong> da matriz <span class="math inline">\(A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 80.3</strong></span> As entradas na diagonal principal da matriz <span class="math inline">\(D\)</span> são chamadas dos <strong>valores singulares</strong> da matriz <span class="math inline">\(A\)</span>.</p>
 </div>
 
 
