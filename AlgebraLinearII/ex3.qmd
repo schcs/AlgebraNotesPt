@@ -428,19 +428,19 @@ Portanto, a base explícita é $\{u_1, u_2, u_3, u_4\}$ conforme acima. Portanto
 :::
 
 :::{#exr-ff-quadrados}
-Seja $\F=\Z_p$ com $p\geq 3$ e $a,b \in \F$ com $a\neq 0$. Mostre que existem $u, v \in \F$ tais que $u^2 + a v^2 = c$.
+Seja $\F=\Z_p$ com $p\geq 3$ e $a,b \in \F$ com $a\neq 0$. Mostre que existem $u, v \in \F$ tais que $u^2 + a v^2 = b$.
 :::
 :::{.sol .callout-tip collapse="true"}
 ### Solução
 
-Seja $Q=\{x^2\mid x\in \F\}$. Como $\F$ possui $p$ elementos com $p$ ímpar, temos que $|Q|=(p+1)/2$ (@lem-no-squares). Se $a\neq 0$, então $|aQ|=(p+1)/2$ e $|c-aQ|=(p+1)/2$. Mas como $|\F|=p$, temos que 
+Seja $Q=\{x^2\mid x\in \F\}$. Como $\F$ possui $p$ elementos com $p$ ímpar, temos que $|Q|=(p+1)/2$ (@lem-no-squares). Se $a\neq 0$, então $|aQ|=(p+1)/2$ e $|b-aQ|=(p+1)/2$. Mas como $|\F|=p$, temos que 
 $$
-Q\cap (c-aQ)\neq \emptyset.
+Q\cap (b-aQ)\neq \emptyset.
 $$
 Portanto existe elemento na inteerseção. Chamando este elemento de $u^2$, temos que 
-$u^2=c-av^2$ com algum $v\in \F$ e assim
+$u^2=b-av^2$ com algum $v\in \F$ e assim
 $$
-u^2+av^2=c.
+u^2+av^2=b.
 $$ 
 :::
 
@@ -702,6 +702,18 @@ Deduza do @exr-coker que o posto coluna de uma matriz $m\times n$ com entradas e
 o posto linha.
 :::
 
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $A$ uma matriz $m \times n$ com entradas em um corpo $\F$. Considere $A$ como a matriz na base canônica da transformação linear $f: \F^n \to \F^m$ dada por $f(x) = Ax$. O posto coluna de $A$ é $\dim \operatorname{Im}(f)$. 
+O posto linha de $A$ coincide com o posto coluna de $A^t$ que é 
+a matriz de $f^*$, onde $f^*: \F^m \to \F^n$ é o adjunto de $f$,
+considerando $\F^n$ e $\F^m$ com as formas bilineares standard. 
+O posto coluna de $A^t$ é igual a $\dim \operatorname{Im}(f^*)$
+Pelo @exr-coker, temos que $\dim \operatorname{Im}(f) = \dim \operatorname{Im}(f^*)$. Assim, o posto coluna de $A$ é igual ao posto linha de $A$.
+:::
+
+
 
 :::{#exr-}
 Seja $f:V\to W$ uma isometria de espaços de dimensão finita que possui adjunto. Mostre que $f\circ f^*=\mbox{id}_W$ e $f^*\circ f=\mbox{id}_V$. 
@@ -758,14 +770,42 @@ Mostre que as funções $\mbox{sen}(n\pi x)$, $\cos(n\pi x)$ com $n\in \Z$ forma
 :::
 
 :::{#exr-}
-Seja $V$ um $\C$-espaço vetorial de dimensão maior ou igual a $2$ e seja $B$ uma forma bilinear simétrica sober $V$. Mostre que $V$ possui 
+Seja $V$ um $\C$-espaço vetorial de dimensão maior ou igual a $2$ e seja $B$ uma forma bilinear simétrica sobre $V$. Mostre que $V$ possui 
 vetor isotrópico não nulo.
 :::
+
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $V$ um $\C$-espaço vetorial de dimensão maior ou igual a $2$ e $B$ uma forma bilinear simétrica sobre $V$. Seja $U\leq V$ um subespaço de dimensão $2$ e escolha uma base ortogonal $\{e_1, e_2\}$ de $U$ (existe por @thm-orth-basis). Assuma que $B(e_i, e_i) = a_i$ para $i\in\{1,2\}$. Se $a_i = 0$ para algum $i$, então $e_i$ é isotrópico, e o exercício está resolvido.
+
+Caso contrário, suponha que $a_i \neq 0$ para todo $i$. Considere o vetor $v = \alpha e_1 + \beta e_2$, onde $\alpha, \beta \in \C$. Temos:
+$$
+B(v, v) = \alpha^2 a_1 + \beta^2 a_2.
+$$
+Queremos encontrar $\alpha, \beta \in \C$ não ambos nulos tais que $B(v, v) = 0$. Isso equivale a resolver a equação:
+$$
+\alpha^2 a_1 + \beta^2 a_2 = 0.
+$$
+Dividindo por $a_1$, obtemos:
+$$
+\alpha^2 + \frac{a_2}{a_1} \beta^2 = 0.
+$$
+Como $\C$ é algebricamente fechado, existe $\beta \neq 0$ tal que $\beta^2 = -a_1/a_2$. Escolha $\alpha = 1$. Assim, temos:
+$$
+\alpha^2 + \frac{a_2}{a_1} \beta^2 = 1^2 -1 = 0.
+$$
+Logo, o vetor $v = e_1 + \beta e_2$ é isotrópico e não nulo.
+
+Portanto, $V$ possui vetor isotrópico não nulo.
+:::
+
+
 
 :::{#exr-}
 Seja $\F$ um corpo de caraterística diferente de 2, denote por $I_{p+q+r}$ a matriz diagonal sobre $\F$ que tem $p$
 entradas $−1$, $q$ entradas $1$ e $r$ entradas zero (nesta ordem) na diagonal principal. Seja $\sigma$ um automorfismo
-de $\F$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as seguintes afirmações:
+de $\F$ com $\sigma^2=\mbox{id}_\F$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as seguintes afirmações:
 
 1. Se $A \in M_{n\times n}(\F)$ com $A^t = A^\sigma$ , então existe uma matriz $X \in M_{n\times n}(\F)$ tal que 
    $X^{σt}AX$ é diagonal.
@@ -776,11 +816,26 @@ de $\F$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as 
 
 [Dica: Considere $A$ como matriz de Gram de alguma forma em $\F^n$ e seja $X$ uma matriz mudança debase.] 
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $A \in M_{n \times n}(\F)$ com $A^t = A^\sigma$. Considere $V = \F^n$ com a forma $\sigma$-sesquilinear $B$ dada por $B(v, w) = v^t A w^\sigma$. Ora, 
+$$
+B(w,v)=w^tAv^\sigma=(w^tAv^\sigma)^t=v^{\sigma t}A^tw=v^{\sigma t}A^\sigma w=(v^t A^\sigma w^\sigma)^\sigma
+=B(v,w)^\sigma;
+$$
+ou seja $B$ é $\sigma$-hermitiana. 
+Pelo @thm-orth-basis,  existe uma base ortogonal $\{e_1, \ldots, e_n\}$ de $V$ tal que $B(e_i, e_j) = 0$ para $i \neq j$. Seja $\overline X$ a matriz cujas colunas são os vetores da base ortogonal. Então, na nova base, a matriz de $B$ é diagonal e por @lem-basechange-sesqui, $\overline X^{t} A \overline X^\sigma$ é diagonal. Ora, tome 
+$X=X^\sigma$ e lembre que $\sigma^2=\mbox{id}_\F$. 
+
+A solução dos outros itens é similar.
+:::
+
 
 :::{#exr-}
 Seja $V$ um espaço vetorial com uma forma $\sigma$-sesquilinear simétrica $B$.
 
-1. Assuma que $X$ é um sistema ortogonal composta por vetores não isotrópicos. Mostre que $X$ é L.I.
+1. Assuma que $X$ é um sistema ortogonal composto por vetores não isotrópicos. Mostre que $X$ é L.I.
 2. Seja $B$ uma base ortogonal de $V$ composta por vetores não isotrópicos e seja $v \in V$. Mostre que
 $$
 v = \sum_{b∈B} \frac{B(v, b)}{B(b, b)} b 
@@ -788,6 +843,50 @@ $$
 e que a soma na linha anterior tem um número finito de somandos não nulos mesmo quando
 $\dim V$ é infinita.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **$X$ é L.I.:**  
+Seja $X$ um sistema ortogonal composto por vetores não isotrópicos. Suponha que $\sum_{i=1}^n \alpha_i x_i = 0$, com $\alpha_i \in \F$ e $x_i\in X$. Para cada $j$, temos:
+$$
+B\left(\sum_{i=1}^n \alpha_i x_i, x_j\right) = B(0, x_j) = 0.
+$$
+Por linearidade de $B$, isso implica:
+$$
+\sum_{i=1}^n \alpha_i B(x_i, x_j) = 0.
+$$
+Como $X$ é ortogonal, $B(x_i, x_j) = 0$ para $i \neq j$, e $B(x_j, x_j) \neq 0$ (pois $x_j$ não é isotrópico). Assim:
+$$
+\alpha_j B(x_j, x_j) = 0.
+$$
+Como $B(x_j, x_j) \neq 0$, segue que $\alpha_j = 0$. Portanto, todos os $\alpha_i = 0$, e $X$ é L.I.
+
+2. **Representação de $v$:**  
+Seja $X$ uma base ortogonal composta por vetores não isotrópicos. 
+Se $v\in V$, então $v$ é combinação linear de vetores de $X$:
+$$
+v=\sum_{i=1}^n \alpha_i b_i
+$$ {#eq-comb-lin-v}
+onde $\alpha_i\in \F$ e $b_i\in X$. 
+Para cada $b \in X$, temos:
+$$ 
+B(v, b) = B\left(\sum_{i=1}^n \alpha_ib_i,b\right)=\left\{\begin{array}{ll}
+   \alpha_i B(b_i,b_i) & \mbox{se $b=b_i$ com algum $i$}\\ 
+   0 & \mbox{caso contrário.}\end{array}\right.
+$$
+Ou seja, o coeficiente de $b\in X$ na combinação linear para $v$ na base $X$ é 
+$$
+\frac{B(v,b)}{B(b,b)}.
+$$
+Em particular, 
+$$
+v=\sum_{b\in X}\frac{B(v,b)}{B(b,b)} b 
+$$
+e esta soma é finita, o coeficiente de $b$ será não nula apenas para os $b$ que aparecem 
+na combinação linear na @eq-comb-lin-v. 
+:::
+
+
 
 :::{#exr-}
 Revise o procedimento de ortogonalização de  Gram-Schmidt e reflita se ele pode ser usado no contexto mais geral de formas $\sigma$-hermitianas 
@@ -811,8 +910,37 @@ G(B_2) = \begin{pmatrix} 0 &  −1 &  0 & 0\\
 $$
 Mostre que $(V, B_1)$ e $(V, B_2)$ são isométricas.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+Seja $e_1,e_2,e_3,e_4$ a base canônica de $\R^4$ e considere os seguintes vetores:
+\begin{align*}
+b_1&=(1,0,0,0);\\
+b_2&=(1,1,0,0);\\
+b_3&=(1,1,1,0);\\
+b_4&=(1,1,1,1).\\
+\end{align*}
+É fácil verificar que $b_1,b_2,b_3,b_4$ são l.i. e então eles formam uma base $X$ de $\R^4$. 
+É uma conta fácil que a matriz de $B_2$ nesta base coincide com $G(B_1)$. 
+Portanto
+$$
+B_2(b_i,b_j)=B_1(e_i,e_j)\quad\mbox{para todo}\quad i,j\in\{1,\ldots,4\}. 
+$$
+Considerando o isomorfismo $f$ que manda $b_i\mapsto e_i$ para todo $i$, temos que  
+$f$ é uma isometria $(\R^4,B_2)\to (\R^4,B_1)$. 
 
-:::{#exr-}
+**Solução alternativa:** Como $\det G(B_1)=\det G(B_2)=1$, temos que $B_1$ e $B_2$ são formas alternadas não 
+degeneradas. Segue do @exr-hyperbolic-planes que $(\R^4,B_1)$ e $(\R^4,B_2)$ são somas diretas de dois planos hyperbólicos. Portanto, $(\R^4,B_1)$ e $(\R^4,B_2)$ são isométricos com o espaço $(\R^4,B)$ tal que a matriz de 
+Gram de $B$ é 
+$$
+\begin{pmatrix} 0 & 1 & 0 & 0 \\ -1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & -1 & 0\end{pmatrix}
+$$
+Como a isometria é uma relação de equivalência, temos que $(\R^4,B_1)$ e $(\R^4,B_2)$ são isométricos. 
+:::
+
+
+
+
+:::{#exr-hyperbolic-planes}
 Seja $V$ um $\F$-espaço vetorial de dimensão $2$ com forma alternada $B$. Um **par hipérbólico** é um par $e,f\in V$ tal que 
 $B(e,e)=B(f,f)=0$ e $B(e,f)=1$. Um **plano hiperbólico** é um subespaço $H$ gerado por um par hiperbólico. 
 
@@ -822,7 +950,36 @@ $B(e,e)=B(f,f)=0$ e $B(e,f)=1$. Um **plano hiperbólico** é um subespaço $H$ g
 4. Deduza que quando $n$ é par, existe uma única classe de isometria de $\F$-espaços de dimensão $n$ com formas 
    alternadas não degeneradas.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
 
+1. **$V$ é um plano hiperbólico quando $\dim V = 2$ e $B$ é não degenerada:**  
+Seja $V$ um espaço vetorial de dimensão 2 com forma alternada não degenerada $B$. Escolha $e \in V$ não nulo  
+e note que $B(e, e) = 0$ (pois $B$ é alternada). Como $B$ é não degenerada, existe $f \in V$ tal que $B(e, f) \neq 0$. Multiplicando $f$ por um escalar apropriado, podemos assumir que $B(e, f) = 1$. Como $B$ é alternada, temos $B(f, f) = 0$. Assim, $\{e, f\}$ é um par hiperbólico, e $V$ é o plano hiperbólico gerado por $e$ e $f$.
+
+2. **$V$ é soma direta de planos hiperbólicos ortogonais quando $\dim V$ é finita e $B$ é não degenerada:**  
+Seja $V$ um espaço vetorial de dimensão finita com forma alternada não degenerada $B$. 
+Procedemos por indução em $\dim V$. Se $\dim V=1$ então $B$ é degenerada e o resultado segue do fato que a premissa é falsa. Se $\dim V=2$, então o resultado vale por item 1. Assuma que o resultado vale para espaços de dimensão menor que $\dim V$. Seja $e_1\in V$ não nulo e note que $B(e_1,e_1)=0$. Como $B$ é não degenerada, existe 
+$f_1\in V$ tal que $B(e_1,f_1)\neq 0$. Tomando um múltiplo escalar adequado de $f_1$, podemos assumir que 
+$B(e_1,f_1)=1$ e $B(f_1,f_1)=0$ (pois $B$ é alternada). Portanto $e_1,f_1$ é um par hiperbólico. 
+Seja $H_1=\left<e_1,f_1\right>$. Como a restrição de $B$ para $H_1$ é não degenerada, temos que $V=H_1\oplus H_1^\perp$. 
+Além disso, a restrição de $B$ para $H_1^\perp$ é alternada e não degenerada e por hipótese de indução, 
+$H_1^\perp$ é soma direta de planos hiperbólicos 
+$$
+H_1^\perp=H_2\oplus\cdots \oplus H_m
+$$
+dois a dois ortogonais. Ora, temos que 
+$$
+V=H_1\oplus H_1^\perp =H_1\oplus H_2\oplus\cdots \oplus H_m
+$$
+onde os $H_i$ são planos hiperbólicos dois a dois ortogonais. 
+
+3. **$\dim V$ é par:**  
+Se $V$ é soma direta de $m$ planos hiperbólicos, então $\dim V = 2m$, que é par.
+
+4. **Única classe de isometria para $\dim V = n$ par:**  
+Se $\dim V = n$ é par e $B$ é alternada e não degenerada, então $V$ é soma direta de $n/2$ planos hiperbólicos. Qualquer outro espaço vetorial de dimensão $n$ com forma alternada não degenerada também será soma direta de $n/2$ planos hiperbólicos. Assim, todos esses espaços são isométricos, e existe uma única classe de isometria.
+:::
 
 :::{#exr-ff-exists-unitary}
 Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ com forma simétrica e não degenerada $B$ e
@@ -830,12 +987,43 @@ assuma que $\dim V \geq 2$. Mostre que $V$ possui um elemento $v \in V$ tal que 
 [Dica: Toma dois elementos $u, v \in V$ ortogonais não isotrópicos (justificando que eles existem). Vai precisar 
 que $1$ pode ser escrito como combinação linear de quadrados; veja @exr-ff-quadrados.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $V$ um espaço vetorial de dimensão finita sobre $\Z_p$ com forma simétrica e não degenerada $B$. Como $\dim V$ é finita, existe uma base ortogonal $\{e_1, e_2, \ldots, e_n\}$ de $V$ (pelo Teorema da Base Ortogonal). Assuma que $B(e_i, e_i) = a_i$ para todo $i$. Como $B$ é não degenerada, tem-se que $a_i\neq 0$ para todo $i$. 
+
+Escolha dois vetores ortogonais $e_1, e_2$ na base com $B(e_1, e_1) = a_1$ e $B(e_2, e_2) = a_2$. Como a base é ortogonal, temos $B(e_1, e_2) = 0$. Considere o vetor $v = u e_1 + v e_2$, onde $u, v \in \Z_p$. Temos:
+$$
+B(v, v) = u^2 a_1 + v^2 a_2.
+$$
+Queremos encontrar $u, v \in \Z_p$ tais que $B(v, v) = 1$. Isso equivale a resolver a equação:
+$$
+u^2  + v^2 \frac{a_2}{a_1} = \frac 1{a_1}.
+$$
+Esta equação tem solução por @exr-ff-quadrados.
+:::
+
 
 :::{#exr-}
 Seja $V$ como no @exr-ff-exists-unitary. Seja $a \in \Z_p$ um elemento fixo em $\Z_p \setminus \{x^2 \mid x \in \Z_p\}$. 
 Mostre que existe uma base $X$ de $V$ tal que $G_X(B)$ é diagonal e as entradas na diagonal são ou $(1,\ldots, 1)$ ou 
 $(1, \ldots , 1, a)$.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+Note que se $x\in \Z_p\setminus\{0\}$, então $x=x_0^2$ ou $x=ax_0^2$ com algum $x_0$ (veja @lem-no-squares).  
+
+
+**Base da indução:**  
+Para $\dim V = 1$, seja $b'$ base de $v$ e assuma que $B(b',b')=x\neq 0$ Escreva $x=x_0^2$ ou $x=ax_0^2$ com algum 
+$x_0\in \Z_p$ e seja $b=x_0^{-1}b'$. Então $B(b,b)=1$ ou $B(b,b)=a$.  
+
+**Passo indutivo:**  
+Assuma que o resultado é válido para espaços de dimensão $n-1$. Seja $V$ um espaço vetorial de dimensão $n$ sobre $\Z_p$ com forma simétrica e não degenerada $B$. Escolha $v_1 \in V$ tal que $Q(v_1) = 1$ (existe por @exr-ff-exists-unitary). Seja $H = \langle v_1 \rangle^\perp$, o subespaço ortogonal a $v_1$. Como $B$ é não degenerada, a restrição de $B$ a $H$ é uma forma simétrica e não degenerada, e $\dim H = n-1$. Pelo passo indutivo, existe uma base ortogonal $\{v_2, \ldots, v_{n}\}$ de $H$ tal que os valores de $B(v_i,v_i)$ são $1$ para $i\leq n-1$ e $B(v_n,v_n)=1$ ou $B(v_n,v_n)=a$.  
+
+Agora, considere a base $\{v_1, v_2, \ldots, v_{n}\}$ de $V$. A matriz de Gram de $B$ nesta base é diagonal com entradas $1, \ldots, 1$ ou $1, \ldots, 1, a$.  
+:::
+
 
 
 :::{#exr-}
@@ -843,6 +1031,24 @@ Seja $f:V\to V$ um operador normal de um $\C$-espaço $V$ de dimensão finita. A
 
 1. Mostre que $f$ é autoadjunto. 
 2. Deduza que quando $f:V\to V$ é um operador normal diagonalizável de um $\R$-espaço de dimensão finita, então ele é autoadjunto.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Mostrar que $f$ é autoadjunto:**  
+Seja $f: V \to V$ um operador normal em um $\C$-espaço de dimensão finita, com todos os autovalores reais. Como $f$ é normal, existe uma base ortonormal de autovetores de $f$. Seja $X=\{v_1, \ldots, v_n\}$ essa base, com autovalores $\{\lambda_1, \ldots, \lambda_n\} \subseteq \R$. Logo a matriz de $f$ nesta base é 
+$$
+D=\begin{pmatrix}
+\lambda_1 & 0        & \cdots & 0 \\
+0         & \lambda_2 & \cdots & 0 \\
+\vdots    & \vdots    & \ddots & \vdots \\
+0         & 0         & \cdots & \lambda_n
+\end{pmatrix}
+$$
+Como a base $X$ é ortonormal, a matriz de $f^*$ na base $X$ é $D^*=\overline D^t=D$. Portanto $f=f^*$ e $f$ é autoadjunto. 
+
+2. **Deduza que operadores normais diagonalizáveis em $\R$ são autoadjuntos:**  
+Seja $f: V \to V$ um operador normal diagonalizável em um $\R$-espaço de dimensão finita. Como $f$ é diagonalizável, seus autovalores são reais. Pelo item anterior, isso implica que $f$ é autoadjunto.
 :::
 
 
@@ -853,20 +1059,103 @@ $$
 $$
 
 1. Mostre que $f$ é normal, mas não é autoadjunto.
-2. Ache uma matriz $P$ unitária, tal que $PAP^*$ é diagonal.
+2. Ache uma matriz $P$ unitária, tal que $P^*AP$ é diagonal.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Mostrar que $f$ é normal, mas não autoadjunto:**  
+A matriz de $f$ é:
+$$
+A = \begin{pmatrix} 1 & i \\ i & 1 \end{pmatrix}.
+$$
+Para verificar se $f$ é normal, calculamos $AA^*$ e $A^*A$, onde $A^*$ é o conjugado transposto de $A$:
+$$
+A^* = \begin{pmatrix} 1 & -i \\ -i & 1 \end{pmatrix}.
+$$
+$$
+AA^* = \begin{pmatrix} 1 & i \\ i & 1 \end{pmatrix} \begin{pmatrix} 1 & -i \\ -i & 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}.
+$$
+$$
+A^*A = \begin{pmatrix} 1 & -i \\ -i & 1 \end{pmatrix} \begin{pmatrix} 1 & i \\ i & 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}.
+$$
+Como $AA^* = A^*A$, $f$ é normal. Para verificar se $f$ é autoadjunto, verificamos se $A = A^*$. Como $A \neq A^*$, $f$ não é autoadjunto.
+
+2. **Encontrar uma matriz unitária $P$ tal que $PAP^*$ seja diagonal:**  
+Os autovalores de $A$ são obtidos resolvendo $\det(A - \lambda I) = 0$:
+$$
+\det\left(\begin{pmatrix} 1-\lambda & i \\ i & 1-\lambda \end{pmatrix}\right) = (1-\lambda)^2 - (-1) = \lambda^2 - 2\lambda+2.
+$$
+Os autovalores são $\lambda_1 = 1+i$ e $\lambda_2 = 1-i$. Os autovetores correspondentes são 
+$v_1=(1,1)$ (para $\lambda_1$) e $v_2=(1,-1)$ (para $\lambda_2$).
+
+Normalize os autovetores para obter uma matriz unitária $P$:
+$$
+P = \frac 1{\sqrt 2}\begin{pmatrix} 1 &  1 \\ 1 & -1 \end{pmatrix}.
+$$
+Então:
+$$
+P^*AP = \begin{pmatrix} 1+i & 0 \\ 0 & 1-i \end{pmatrix}.
+$$
 :::
 
 :::{#exr-}
-Mostre que todo operador $f$ de um $\F$-espaço vetorial $V$ de dimensão finita pode ser escrito como 
+Mostre que todo operador $f$ de um $\F$-espaço vetorial $V$ de dimensão finita com forma hermitiana não degenerada  pode ser escrito como 
 $$
     f = f_1+f_2
 $$
 onde $f_1$ é autoadjunto e $f_2$ é anti-autoadjunto (ou seja, $f_2^*=-f_2$).
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
 
+Seja $f: V \to V$ um operador em um $\F$-espaço vetorial de dimensão finita. Podemos escrever $f$ como:
+$$
+f = \frac{1}{2}(f + f^*) + \frac{1}{2}(f - f^*),
+$$
+onde $f^*$ é o adjunto de $f$.
+
+1. **$f_1 = \frac{1}{2}(f + f^*)$ é autoadjunto:**  
+Para verificar que $f_1$ é autoadjunto, calculamos:
+$$
+f_1^* = \left(\frac{1}{2}(f + f^*)\right)^* = \frac{1}{2}(f^* + (f^*)^*) = \frac{1}{2}(f^* + f) = f_1.
+$$
+Logo, $f_1$ é autoadjunto.
+
+2. **$f_2 = \frac{1}{2}(f - f^*)$ é anti-autoadjunto:**  
+Para verificar que $f_2$ é anti-autoadjunto, calculamos:
+$$
+f_2^* = \left(\frac{1}{2}(f - f^*)\right)^* = \frac{1}{2}(f^* - (f^*)^*) = \frac{1}{2}(f^* - f) = -f_2.
+$$
+Logo, $f_2$ é anti-autoadjunto.
+
+Portanto, podemos decompor $f$ como:
+$$
+f = f_1 + f_2,
+$$
+onde $f_1$ é autoadjunto e $f_2$ é anti-autoadjunto.
+:::
 
 :::{#exr-}
-Seja $V$ um espaço com forma $\sigma$-hermitiana e $f:V\to V$ uma projeção (ou seja, $f^2=f$). Mostre que $f$ é autoadjunto se e somente se $V=\ker f\perp \mbox{Im}(f)$.  [Eu acho que $V$ não precisa ser de dimensão finita, mas se seu argumento precisar desta condição, pode assumir.]
+Seja $V$ um espaço com forma $\sigma$-hermitiana não degenerada e $f:V\to V$ uma projeção (ou seja, $f^2=f$). Mostre que $f$ é autoadjunto se e somente se $V=\ker f\oplus \mbox{Im}(f)$ e $\ker f\perp \mbox{Im}(f)$.  [Eu acho que $V$ não precisa ser de dimensão finita, mas se seu argumento precisar desta condição, pode assumir.]
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $f: V \to V$ uma projeção, ou seja, $f^2 = f$. Pelo @lem-projections, temos que 
+$V=\ker f\oplus \mbox{Im}(f)$. Assuma que $f$ é autoadjunto, ou seja, $f^* = f$. 
+Segue do @exr-ker-im-perp que $\ker f=\mbox{Im}(f)^\perp$ então vale a decomposição de $V$. 
+
+Reciprocamente, assuma que $V = \ker f \oplus \operatorname{Im}(f)$ com $\ker f \perp \operatorname{Im}(f)$. Sejam 
+$v=v_1+v_2$ e $w=w_1+w_2$ elementos de $V$ tais que $v_1,w_1\in\ker f$ e $v_2,w_2\in\mbox{Im}(f)$. Tem-se que 
+$$
+B(f(v),w)=B(v_2,w_1+w_2)=B(v_2,w_2)
+$$
+e, similarmente,
+$$
+B(v,f(w))=B(v_1+v_2,w_2)=B(v_2,w_2).
+$$
+Logo, a unicidade do adjunto implica que $f=f^*$.
 :::
 
 
@@ -891,6 +1180,26 @@ $$
 4. Deduza que o adjunto de um operador injetivo não precisa ser sobrejetivo em espaços de dimensão infinita.
 [Achei o exemplo na página math.stackexchange.com/q/269105.]
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Mostrar que $f$ é autoadjunto:**  
+Seja $f: \ell^2 \to \ell^2$ definido por $f(a_1, a_2, a_3, \ldots) = (a_1, a_2/2, a_3/3, \ldots)$. Para verificar se $f$ é autoadjunto, calculamos:
+$$
+\langle f(a), b \rangle = \sum_{i \geq 1} \frac{a_i}{i} b_i = \sum_{i \geq 1} a_i \frac{b_i}{i} = \langle a, f(b) \rangle.
+$$
+Logo, $f$ é autoadjunto.
+
+2. **Mostrar que $f$ é injetivo:**  
+Seja $f(a) = 0$. Isso implica que $\frac{a_i}{i} = 0$ para todo $i \geq 1$, ou seja, $a_i = 0$ para todo $i$. Portanto, $a = 0$, e $f$ é injetivo.
+
+3. **Mostrar que $f$ não é sobrejetivo:**  
+Considere a sequência $b = (1/n)_{n \geq 1} \in \ell^2$. Suponha que existe $a \in \ell^2$ tal que $f(a) = b$. Isso implica que $\frac{a_n}{n} = \frac{1}{n}$ para todo $n \geq 1$, ou seja, $a_n = 1$ para todo $n$. No entanto, a sequência $(1, 1, 1, \ldots)$ não pertence a $\ell^2$, pois $\sum_{n \geq 1} a_n^2 = \sum_{n \geq 1} 1 = \infty$. Portanto, $b \notin \operatorname{Im}(f)$, e $f$ não é sobrejetivo.
+
+4. **Dedução:**  
+Como $f$ é autoadjunto e injetivo, mas não sobrejetivo, concluímos que o adjunto de um operador injetivo não precisa ser sobrejetivo em espaços de dimensão infinita.
+:::
+
 
 :::{#exr-}
 Seja $\ell^2$ o mesmo espaço vetorial que no exercício anterior e seja 
@@ -903,6 +1212,35 @@ o operador *right shift*.
 2. Mostre que $f$ é injetiva, enquanto $f^*$ é sobrejetiva. 
 3. Verifique se $f$ é normal.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Mostrar que $f$ possui adjunto:**  
+Seja $f: \ell^2 \to \ell^2$ definido por $f(a_1, a_2, a_3, \ldots) = (0, a_1, a_2, \ldots)$. Para verificar se $f$ possui adjunto, consideramos o operador $f^*: \ell^2 \to \ell^2$ definido por $f^*(a_1, a_2, a_3, \ldots) = (a_2, a_3, a_4, \ldots)$. Para todo $x, y \in \ell^2$, temos:
+$$
+\langle f(x), y \rangle = \sum_{i \geq 1} (f(x))_i y_i = \sum_{i \geq 2} x_{i-1} y_i = \sum_{i \geq 1} x_i y_{i+1} = \langle x, f^*(y) \rangle.
+$$
+Logo, $f^*$ é o adjunto de $f$.
+
+2. **Mostrar que $f$ é injetivo e $f^*$ é sobrejetivo:**  
+- Para verificar que $f$ é injetivo, suponha que $f(x) = 0$. Isso implica que $(0, x_1, x_2, \ldots) = 0$, ou seja, $x_i = 0$ para todo $i \geq 1$. Portanto, $x = 0$, e $f$ é injetivo.
+- Para verificar que $f^*$ é sobrejetivo, seja $y \in \ell^2$. Defina $x \in \ell^2$ por $x_i = y_{i+1}$ para todo $i \geq 1$. Então:
+$$
+f^*(x) = (x_2, x_3, x_4, \ldots) = (y_1, y_2, y_3, \ldots) = y.
+$$
+Logo, $f^*$ é sobrejetivo.
+
+3. **Verificar se $f$ é normal:**  
+Para verificar se $f$ é normal, calculamos $f f^*$ e $f^* f$:
+$$
+f f^*(a_1, a_2, a_3, \ldots) = f(a_2, a_3, a_4, \ldots) = (0, a_2, a_3, \ldots),
+$$
+$$
+f^* f(a_1, a_2, a_3, \ldots) = f^*(0, a_1, a_2, \ldots) = (a_1, a_2, a_3, \ldots).
+$$
+Como $f f^* \neq f^* f$, $f$ não é normal.
+:::
+
 
 :::{#exr-}
 Seja $\overline \ell^2$ o $\R$-espaço de sequências infinitas nas duas direções. Ou seja 
@@ -921,6 +1259,28 @@ $$
 1. Mostre que $f$ possui adjunto. 
 2. Mostre que $f$ é normal, mas não é autoadjunto.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Mostrar que $f$ possui adjunto:**  
+Seja $f: \overline{\ell}^2 \to \overline{\ell}^2$ definido por $f((a_i)_{i \in \mathbb{Z}}) = (a_{i-1})_{i \in \mathbb{Z}}$. Para verificar se $f$ possui adjunto, consideramos o operador $f^*: \overline{\ell}^2 \to \overline{\ell}^2$ definido por $f^*((a_i)_{i \in \mathbb{Z}}) = (a_{i+1})_{i \in \mathbb{Z}}$. Para todo $x, y \in \overline{\ell}^2$, temos:
+$$
+\langle f(x), y \rangle = \sum_{i \in \mathbb{Z}} (f(x))_i y_i = \sum_{i \in \mathbb{Z}} x_{i-1} y_i = \sum_{i \in \mathbb{Z}} x_i y_{i+1} = \langle x, f^*(y) \rangle.
+$$
+Logo, $f^*$ é o adjunto de $f$.
+
+2. **Mostrar que $f$ é normal, mas não autoadjunto:**  
+Para verificar se $f$ é normal, calculamos $f f^*$ e $f^* f$:
+$$
+f f^*((a_i)_{i \in \mathbb{Z}}) = f((a_{i+1})_{i \in \mathbb{Z}}) = (a_i)_{i \in \mathbb{Z}},
+$$
+$$
+f^* f((a_i)_{i \in \mathbb{Z}}) = f^*((a_{i-1})_{i \in \mathbb{Z}}) = (a_i)_{i \in \mathbb{Z}}.
+$$
+Como $f f^* = f^* f$, $f$ é normal.
+
+Para verificar se $f$ é autoadjunto, verificamos se $f = f^*$. Como $f((a_i)_{i \in \mathbb{Z}}) = (a_{i-1})_{i \in \mathbb{Z}}$ e $f^*((a_i)_{i \in \mathbb{Z}}) = (a_{i+1})_{i \in \mathbb{Z}}$, temos $f \neq f^*$. Logo, $f$ não é autoadjunto.
+:::
 
 :::{#exr-}
 Seja $T:\R^3\to\R^3$ uma transformação ortogonal com $\det T=-1$. Mostre que 
@@ -931,12 +1291,50 @@ Seja $T:\R^3\to\R^3$ uma transformação ortogonal com $\det T=-1$. Mostre que
 
 Dê exemplo explícito para os dois casos.
 :::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+Como $TT^*=T^*T=\mbox{id}_V$, temos que $T$ é normal e assim é diagonalizável. 
+Sejam $\lambda_1,\lambda_2,\lambda_3$ os autovaores complexos de $T$. Sabemos que 
+
+a. $|\lambda_i|=1$;
+b. $\lambda_1\lambda_2\lambda_3=-1$;
+c. se $\lambda\in \C$ é autovalor então o conjugado $\overline\lambda$ é também autovalor. 
+
+As possibilidades para os autovalores de $T$ são 
+
+1. $\lambda_1=-1$ e $\lambda_2=\lambda_3=1$.
+2. $\lambda_1=-1$, $\lambda_2=\cos \vartheta +i\sen\vartheta$, $\lambda_3=\cos \vartheta -i\sen\vartheta$. 
+
+Além disso, os autoespaços são ortogonais. 
+
+No caso 1,  $T$ é reflexão em relação ao plano $V_1$ (autoespaço com autovalor 1). No caso 2, 
+$T$ é a composição de uma reflexão pelo plano $V_{-1}^\perp$ e uma rotação por ângulo $\vartheta$ no redor 
+da reta $V_{-1}$. 
+:::
 
 
 
 
 :::{#exr-}
-Descreeve as possibilidades para os autovalores de um operador ortogonal de $\R^4$. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de $SO_4$. 
+Descreeve as possibilidades para os autovalores de um operador ortogonal de $\R^4$. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de $\operatorname{SO}_4$. 
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+1. **Autovalores de operadores ortogonais em $\R^4$:**
+
+Os autovalores de um operador ortogonal $T: \R^4 \to \R^4$ têm módulo 1, pois $T$ preserva normas. Além disso, os autovalores podem ser reais ($\pm 1$) ou complexos conjugados ($e^{i\theta}, e^{-i\theta}$). As possibilidades são:
+- Quatro autovalores reais: $\{1,1,1,1\}$, $\{1,-1,-1,-1\}$, 
+$\{1, 1, -1, -1\}$, $\{1, 1, 1, -1\}$, $\{-1,-1,-1,-1\}$.
+- Dois autovalores reais e dois complexos conjugados: $\{1,1,e^{i\theta}, e^{-i\theta}\}$, 
+$\{1, -1, e^{i\theta}, e^{-i\theta}\}$, ou $\{-1, -1, e^{i\theta}, e^{-i\theta}\}$.
+- Quatro autovalores complexos conjugados: $\{e^{i\theta_1}, e^{-i\theta_1}, e^{i\theta_2}, e^{-i\theta_2}\}$.
+
+### Exemplos para cada caso de operadores ortogonais em $\R^4$
+
+
+#### Caso especial para $\operatorname{SO}_4$
+Para $\operatorname{SO}_4$, o determinante é $1$, então os autovalores devem satisfazer a condição de produto $\lambda_1 \lambda_2 \lambda_3 \lambda_4 = 1$.
 :::
 
 :::{#exr-}
@@ -956,15 +1354,53 @@ $$
 3. Demonstre que o mapa $\psi: q\mapsto A_q$ é uma bijeção entre o grupo de quatérnios unitários e $SU_2$.
 :::
 
-:::{#exr-}
+:::{#exr-isometry-linear}
 Seja $f:\R^n\to\R^n$ uma isometria (ou seja $f$ preserva distância em $\R^n$) tal que $f(0)=0$. 
 
 1. Mostre que $f$ preserva norma.
 2. Mostre que $f$ é linear e deduza que $f$ é uma transformação ortogonal. [Dica, mostre que $\|f(\alpha v)-\alpha f(v)\|=0$ e $\|f(u+v)-f(u)-f(v)\|=0$ para todo $u,v\in \R^n$ e $\alpha\in \R$.]
 :::
+:::{.sol .callout-tip collapse="true"}
+Consulta as notas da aula.
+:::
 
 :::{#exr-}
 Seja $f:\R^n\to \R^n$ uma isometria. Mostre que $f$ é a composição de uma translação ($T_w:\R^n\to\R^n$, $v\mapsto v+w$ para todo $v$) e uma transformação ortogonal.
+:::
+:::{.sol .callout-tip collapse="true"}
+### Solução
+
+Seja $f: \R^n \to \R^n$ uma isometria. Por definição, $f$ preserva distâncias, ou seja, para todo $u, v \in \R^n$:
+$$
+\|f(u) - f(v)\| = \|u - v\|.
+$$
+
+1. **Decomposição de $f$:**
+
+Seja $w = f(0)$. Defina $T_w: \R^n \to \R^n$ como a translação por $w$, ou seja:
+$$
+T_w(v) = v + w.
+$$
+Considere a função $g: \R^n \to \R^n$ dada por:
+$$
+g(v) = f(v) - w.
+$$
+Então, para todo $u, v \in \R^n$:
+$$
+\|g(u) - g(v)\| = \|f(u) - w - (f(v) - w)\| = \|f(u) - f(v)\| = \|u - v\|.
+$$
+Logo, $g$ preserva distâncias e satisfaz $g(0) = 0$.
+
+2. **$g$ é uma transformação ortogonal:**
+
+Pelo @exr-isometry-linear, toda isometria que fixa a origem é linear e ortogonal. Assim, $g$ é uma transformação ortogonal.
+
+3. **Conclusão:**
+
+Como $f(v) = g(v) + w$, temos que $f$ é a composição de uma translação $T_w$ e uma transformação ortogonal $g$:
+$$
+f(v) = T_w(g(v)).
+$$
 :::
 
 
