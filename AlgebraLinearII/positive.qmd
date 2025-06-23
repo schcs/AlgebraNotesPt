@@ -11,9 +11,9 @@ Nesta página, $V$ é um $\C$-espaço de dimensão finita $n$ com produto intern
 :::{#exr-zero-op}
 Assuma que $f\in\mbox{End}(V)$ é tal que 
 $$
-\left<f(v),v\right>=0\quad\mbox{para todo}\quad v\in V,
+\left<f(v),v\right>=0\quad\mbox{para todo}\quad v\in V.
 $$
-então $f=0$. 
+Mostre que $f=0$. 
 :::
 
 :::{#def-}
@@ -27,7 +27,8 @@ Vice versa, um operador autoadjunto é positivo se e somente se seus autvalores 
 :::
 
 :::{.proof}
-Assums que $f$ é positivo. Então $\left<f(v),v\right>\in\R$ e assim $\left<f(v),v\right>=\left<v,f(v)\right>$. Mas também 
+Assums que $f$ é positivo. Então $\left<f(v),v\right>\in\R$ e assim $\left<f(v),v\right>=\left<v,f(v)\right>$. Mas também, pela definição do 
+adjunto $f^*$, 
 $$
 \left<f(v),v\right>=\left<v,f^*(v)\right>.
 $$
@@ -42,6 +43,7 @@ Assuma agora que $f$ é autoadjunto e seja $b_1,\ldots,b_n$ uma base ortonormal 
 autovalores $\lambda_1,\ldots,\lambda_n\geq 0$, respetivamente. Seja $v=\sum_{i=1}^n\alpha_i b_i$. Então 
 $$
 \left<f(v),v\right>=\left<f\left(\sum_{i=1}^n\alpha_i b_i\right),\sum_{i=1}^n\alpha_i b_i\right>=
+\left<\sum_{i=1}^n\alpha_i \lambda_i b_i,\sum_{i=1}^n\alpha_i b_i\right>
 \sum_{i=1}^n \lambda_i|\alpha_i|^2\geq 0.
 $$ 
 Portanto $f$ é positivo. 
@@ -59,7 +61,9 @@ tais que $\lambda_i\geq 0$ para todo $i$. Considere o operador, $g:b_i\mapsto \s
 4. $g^2=f$;
 5. se $v$ é autovetor de $f$ com autovalor $\lambda_i$ então $v$ é autovetor de $g$ com autovalor $\sqrt{\lambda_i}$. 
 
-Então, podemos dizer que $g$ é raiz quadrada de $f$ e escrevemos $g=\sqrt f$. 
+:::{#def-}
+O operador $g$ é dito **raiz quadrada** de $f$ e escrevemos $g=\sqrt f$. 
+:::
 
 :::{#lem-}
 Assuma que $f\in\mbox{End}(V)$ é positivo. Então existe único $g\in\mbox{End}(V)$ positivo tal que $g^2=f$. 
@@ -69,7 +73,7 @@ Assuma que $f\in\mbox{End}(V)$ é positivo. Então existe único $g\in\mbox{End}
 Seja $g$ como no argumento no parágrafo antes do lema. 
 A existência segue da construção de $g$. Para a unicidade, suponha que $h$ também é positivo e $h^2 = f$. Então $h$ é autoadjunto 
 e existe uma base ortonormal $c_1,\ldots,c_n$  tal que $h(c_i) = \mu_i c_i$ para certos $\mu_i \geq 0$. Como $h^2=f$, temos que 
-$f(c_i)=\mu_i^2 c_i$, ou seja, cada $c_i$ é autovetor para $f$ com autovalor $\mu_i^2$. Mas os autovetores de $f$ são autovetores de $g$, e assim 
+$f(c_i)=\mu_i^2 c_i$, ou seja, cada $c_i$ é autovetor para $f$ com autovalor $\mu_i^2$. Mas, pela observação 5. em cima, os autovetores de $f$ são autovetores de $g$, e assim 
 $g(c_i)=\mu_ic_i$ e isso implica que $g(c_i)=h(c_i)$ para todo $i$ e $g=h$. 
 :::
 
@@ -77,7 +81,14 @@ $g(c_i)=\mu_ic_i$ e isso implica que $g(c_i)=h(c_i)$ para todo $i$ e $g=h$.
 Seja $f\in \mbox{End}(V)$ qualquer. Então $f^* f$ é um operador autoadjunto e positivo e existe $\sqrt{f^*f}$.  
 :::
 :::{.proof}
-Exercício.
+Precisa verificar que 
+$$
+\left<f^*f(v),v\right>\geq 0\quad\mbox{para todo}\quad v\in V.
+$$
+Mas, como $(f^*)^*=f$, 
+$$
+\left<f^*f(v),v\right>=\left<f(v),(f^*)^*v\right>=\left<f(v),f(v)\right>=\|f(v)\|^2\geq 0.
+$$
 :::
 
 ## A decomposição polar
@@ -94,33 +105,33 @@ u^* u = (f p^{-1})^* (f p^{-1}) = (p^{-1})^* f^* f p^{-1} = p^{-1} f^* f p^{-1} 
 $$
 ou seja, $u$ é unitário. Assim, $f = u p$.
 
-Se $p$ não é invertível, seja $K=\ker p$ e $W=K^\perp$. O espaço $K$ é trivialmente $p$-invariante. 
-Como $p^*=p$ (@lem-pos), @lem-adjoint-invariant implica que $W$ é $p$-invariante. Seja $p_W=p|_W$ 
-(restrição para $W$). Ora, se $a\in\ker p_W$, então $a\perp a$ e $a=0$; ou seja, $\ker p_W=0$ e $p_W$ é invertível. 
-Defina $u$ como 
+Se $p$ não é invertível, seja $b_1,\ldots,b_n$ uma base ortonormal composta por autovetores de $p$  com 
+autovalores $\lambda_1,\ldots,\lambda_n\geq 0$. Assuma ainda que $\lambda_1,\ldots,\lambda_k>0$ e $\lambda_{k+1}=\cdots=\lambda_n=0$. 
+Com $i\in\{1,\ldots,n\}$, ponha $c_i=f(b_i)$. Afirmamos que $c_1,\ldots,c_n$ é um sistema ortogonal com 
+$\|c_i\|=\lambda_i$. De fato, 
 $$
-u(a)=\left\{\begin{array}{ll}
-            fp_W^{-1}(a) & \mbox{se $a\in W$;}\\
-            a & \mbox{se $a\in K$}\end{array}\right.
+\left<c_i,c_j\right>=\left<f(b_i),f(b_j)\right>=\left<b_i,f^*f(b_j)\right>=\left<b_i,p^2(b_j)\right>=\lambda_j^2\left<b_i,b_j\right>
 $$
-O leitor pode verificar que $u$ é unitário. Além disso, se $a\in W$, então 
-$up(a)=fp_W^{-1}p_W(a)=f(a)$. Se $a\in K$, então $0=p(a)=p^2(a)=f^*f(a)$ e 
+e a afirmação segue do fato que os $b_i$ formam base ortonormal. 
+Para $i\in\{1,\ldots,k\}$, seja $d_i=\lambda_i^{-1}c_i$ e note que $d_1,\ldots,d_k$ é um sistema ortonormal. Usando ortogonalização de 
+Gram-Schmidt, estenda este sistema para sistema ortonormal $d_1,\ldots,d_n$. Com o sistema estendido, temos que $c_i=\lambda_i d_i$ 
+vale para todo $i\in\{1,\ldots,n\}$. Seja $u:V\to V$ a aplicação que manda 
+$b_i\mapsto d_i$. Como os $b_i$ e os $d_i$ formam sistema ortonormal, temos que $u$ é operador unitário. Além disso, vale para todo $i$ que
 $$
-0=\left<f^*f(a),a\right>=\left<f(a),f(a)\right>
+up(b_i)=u(\lambda_i b_i)=\lambda_i u(b_i)=\lambda_i d_i
 $$
-e $f(a)=0$. Logo,
+e 
 $$
-up(a)=0=f(a)
+f(b_i)=c_i=\lambda_i d_i.
 $$
-Portanto, todo operador admite tal decomposição.
+Portanto $f$ $up$ são iguais sobre uma base que implica que $f=up$. 
 :::
 
 ## Valores singulares
 
 :::{#thm-}
 (Decomposição em valores singulares)
-Seja $A\in M_{n\times n}(\C)$. Então $A$ pode ser escrito como $A=UDV$ onde $U,V$ são unitárias e $D$ é diagonal com numeros reais não negativos na diagonal principal.
-Além disso, as entradas na diagonal de $D$ são unicamente determinadas por $A$. 
+Seja $A\in M_{n\times n}(\C)$. Então $A$ pode ser escrita como $A=UDV$ onde $U,V$ são matrizes unitárias e $D$ é matriz diagonal com números reais não negativos na diagonal principal. Além disso, as entradas na diagonal de $D$ são unicamente determinadas por $A$. 
 :::
 
 :::{.proof}
@@ -130,17 +141,17 @@ $Z$ é matriz unitária e $P$ é hermitiana. Em particular, $P$ é ortogonalment
 $W$ tal que $W^*PW=D$ diagonal. Como $P$ é positivo e $D$ contém os autovalores de $P$ na diagonal, as entradas de $P$ na diagonal principal são 
 reais a não negativos. Ora,
 $$
-W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD.
+W^*AW=W^*ZPW=W^*ZWW^*PW=W^*ZWD
 $$
-Ora, 
+e obtemos que
 $$
-A=ZWDW^*
+A=ZWDW^*.
 $$
-e toma $D=D$, $U=ZW$ e $V=W^*$. 
+Tomando $D=D$, $U=ZW$ e $V=W^*$, obtemos a decomposição no enunciado. 
 
 Assuma que as entradas de $D$ na diagonal principal são $\delta_1,\ldots,\delta_n$. Tem-se que 
 $$
-A^*A=V^*D^*U^*UDV=V^*D^2 V,
+A^*A=V^*D^*U^*UDV=V^*D^2V,
 $$ 
 que implica que os autovalores de $A^*A$ são $A^*A$ são $\delta_1^2,\ldots,\delta_n^2$. Como $\delta_i\geq 0$ para todo $i$, temos que 
 estes autovalores são unicamente determinados por $A^*A$ e também por $A$. 
