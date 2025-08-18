@@ -208,10 +208,11 @@ $$
 :::
 
 :::{#exm-tautologies}
-As seguintes proposições são tautologias. Pode-se verificar, construindo por exemplo tabelas-verdade que o valor lógico destas proposições é sempre verdadeiro, independentemente do valor lógico de $P$ e $Q$. 
+As seguintes proposições são tautologias. Pode-se verificar, construindo por exemplo tabelas-verdade que o valor lógico destas proposições é sempre verdadeiro, independentemente do valor lógico de $P$, $Q$ e $R$. 
 
 1. $P\lor \neg P$;
 2. $((P\cond Q)\land (P\cond\neg Q))\cond \neg P$;
 3. $((P\cond Q)\land (Q\cond R)) \cond (P\cond R)$;
 4. $((P\lor Q)\land (P\cond R)\land (Q\cond R))\cond R$.
 :::
+
