@@ -4,7 +4,7 @@ number-sections: true
 lang: pt-BR
 --- 
 
-
+ 
 :::{#exr-}
 Seja $f:V\to V$ um operador diagonalizável. Assuma que 
 os autovalores distintos de $f$ são $\lambda_1,\ldots,\lambda_k$. Mostre que 
