@@ -4,8 +4,8 @@ lang: pt-BR
 
 ---
 
-# Lista de Exercícios 2
-## Iniciação à Matemática, 2024/I {.unnumbered}
+# Lista de Exercícios (Popositções e conjuntos)
+## Iniciação à Matemática, {.unnumbered}
 
 ::: {.content-hidden}
 $$
