@@ -27,8 +27,9 @@ Material disponibilizado sob a licença
 
 ## Apostilas
 
-- [Proposições e sentenças](prop.qmd) [Exercícios](ex1.qmd)
+- [Proposições e sentenças](prop.qmd) 
 - [Conjuntos](conjuntos.qmd)
+- [Exercícios](ex1.qmd)
 - [Quantificadores](quant.qmd)
 - [Pares ordenados e relações](relations.qmd)
 - [Relações de equivalência](equivalence.qmd)
