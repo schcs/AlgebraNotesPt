@@ -4,8 +4,7 @@ lang: pt-BR
 
 ---
 
-# Lista de Exercícios (Popositções e conjuntos)
-## Iniciação à Matemática, {.unnumbered}
+# Lista de Exercícios (Poposições e conjuntos) 
 
 ::: {.content-hidden}
 $$

@@ -16,7 +16,7 @@ Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que atrib
 - $\pi > \sqrt{10}$;
 - $1+2=3$.
 
-Cada proposição é ou *verdadeira* ou *falsa* — não pode ser ambas ao mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição da lista anterior é falsa, mas ainda é uma proposição (com valor lógico *falso*).
+Cada proposição é ou *verdadeira* ou *falsa* — não pode ser ambas ao mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição da lista anterior é falsa, mas ainda é uma proposição (com valor lógico *falso*).
 
 Nesta disciplina, trabalhamos principalmente com proposições sobre objetos matemáticos, pois proposições cotidianas, tais como "O Pedro é estudante", costumam ser ambíguas e podem não ter um valor lógico bem definido (por exemplo, se Pedro não está matriculado no momento ou não frequenta as aulas, fica duvidoso considerá‑lo estudante).
 
@@ -197,7 +197,7 @@ Os últimos dois itens do @exr-true-table2 correspondem às leis distributivas e
 ## Tautologias
 
 :::{#def-tautology}
-Uma proposição composta é chamada de *tautologia* se o seu valor de verdade é verdadeiro independentemente dos valores de verdade das proposições atómicas que compõem a fórmula.
+Uma proposição composta é chamada de *tautologia* se o seu valor verdade é verdadeiro independentemente dos valores verdade das proposições atómicas que compõem a fórmula.
 :::
 
 :::{#exm-}
