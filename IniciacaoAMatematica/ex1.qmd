@@ -29,6 +29,10 @@ Determine o valor verdade das seguintes proposições.
 :::
 
 :::{#exr-}
+Resolva os exercícios @exr-true-table0, @exr-true-table, @exr-true-table2.
+:::
+
+:::{#exr-}
 Considere as proposições
 $$
 A:2+3\leq 5,\qquad B:\mbox{$10$ é múltiplo de $5$}.
@@ -80,6 +84,12 @@ Usando tabelas-verdade, justifique as segintes afirmações.
 
 
 :::{#exr-}
+Usando tabelas-verdade, verifique que as propisições no @exm-tautologies são tautologias. Descubra o significado informal destas proposições e 
+e explique informalmente também porque as masmas são tautologias. Por exemplo, a primeira expressão diz que 'ou $P$ ou $\neg P$ é verdadeira' ou seja 
+'$P$ é verdadeira ou $P$ é false' que é a exigência que cada proposição precisa ser valor de verdade.
+:::
+
+:::{#exr-}
 Seja $a$ um número natural e  seja $P$ a proposição que '$a$ é primo' e seja $Q$ a proposição que '$a\geq 3$'. Escreva em palavras as seguintes proposições.
 
 1. $\neg (P\lor Q)$;
@@ -91,5 +101,58 @@ Dê exemplos de números $a$ tais que
 4. $\neg (P\lor Q)$ e $\neg (P\land Q)$ são falsas.
 5. $\neg (P\lor Q)$ é verdadeira e  $\neg (P\land Q)$ é falsa. 
 6. $\neg (P\lor Q)$ é falsa e  $\neg (P\land Q)$ é verdadeira. 
+:::
+
+:::{#exr-}
+Sejam $A=\{-4,-2,0,2,4\}$ e $B=\{0,1,2,3,4\}$. Determine os seguintes conjuntos.
+
+1. $A\cup B$; 
+2. $A\cap B$; 
+3. $A\smallsetminus B$; 
+4. $B\smallsetminus A$;
+5. $(A\smallsetminus B)\cup B\smallsetminus A$;
+6. $(A\smallsetminus B)\cap B\smallsetminus A$;
+:::
+
+:::{#exr-}
+Demonstre as seguintes afirmações para conjuntos $A$, $B$, e $C$.
+
+1. $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
+2. Assumindo que $A$ e $B$ são subconjuntos de $X$, $(A\cap B)^c=A^c\cup B^c$. 
+:::
+
+:::{#exr-}
+Demonstre que as seguintes afirmações são equivalentes para conjuntos $A$ e $B$:
+
+1. $A\subseteq B$;
+2. $A\cup B=B$;
+3. $A\cap B=A$. 
+
+[Dica: Demonstre que 1. implica 2., que 2. implica 3. e que 3. implica 1.]
+:::
+
+:::{#exr-}
+Quais dos seguintes conjuntos são vazios?
+
+1. $\{x\in \R\mid x^2-6x+5=0\}$;
+2. $\{x\in \R\mid x^2+6x+5=0\}$;
+3. $\{x\in \N\mid x^2-x-1=0\}$;
+4. $\{x\in \N\mid 3<x<4\}$;
+5. $\{x\in \R\mid 3<x<4\}$.
+:::
+
+
+:::{#exr-}
+Demonstre para conjuntos $A$ e $B$ que 
+$$
+(A\smallsetminus B)\cup (B\smallsetminus A)=(A\cup B)\smallsetminus(A\cap B).
+$$
+:::
+
+:::{#exr-}
+Assuma que $A$ é o conjunto dos inteiros pares e $B$ é conjunto dos inteiros que são múltiplos de $3$. Descreva o conjunto 
+$$
+(A\smallsetminus B)\cup (B\smallsetminus A).
+$$
 :::
 

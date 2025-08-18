@@ -16,6 +16,7 @@ book:
     - part: IniciacaoAMatematica/index.qmd
       chapters: 
         - IniciacaoAMatematica/prop.qmd
+        - IniciacaoAMatematica/ex1.qmd
         - IniciacaoAMatematica/conjuntos.qmd
         - IniciacaoAMatematica/quant.qmd
         - IniciacaoAMatematica/relations.qmd
