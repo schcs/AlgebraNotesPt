@@ -203,6 +203,17 @@
     ]
   },
   {
+    "objectID": "IniciacaoAMatematica/conjuntos.html#o-paradoxo-de-russel",
+    "href": "IniciacaoAMatematica/conjuntos.html#o-paradoxo-de-russel",
+    "title": "3  Conjuntos",
+    "section": "3.7 O Paradoxo de Russel",
+    "text": "3.7 O Paradoxo de Russel\nComo foi dito em cima, esta teoria básica dos conjuntos não é uma teoria matematicamente consistente, pois resulta em contradições, o mais conhecido sendo o Paradoxo do Russel.\nSe nós permitirmos a criação de conjuntos sem nenhuma restrição, precisa existir o conjunto \\(\\Omega\\) dos todos os conjuntos (conjunto universal). Defina o seguinte subconjunto \\(\\Delta\\) de \\(\\Omega\\): \\[\n\\Delta=\\{A\\in\\Omega\\mid A\\not\\in A\\}.\n\\] A definição de \\(\\Delta\\) pode aparecer estranha, pois geralmente \\(A\\not\\in A\\) para um conjunto \\(A\\). (Mas \\(A\\subseteq A\\)!) Então pode parecer que todo conjunto é elemento de \\(\\Delta\\). Por outro lado, como \\(\\Omega\\) é o conjunto de todos os conjuntos, temos que \\(\\Omega\\in\\Omega\\) e \\(\\Omega\\not\\in\\Delta\\).\nOra, \\(\\Delta\\) é um subconjunto de \\(\\Omega\\), ele é um conjunto e assim \\(\\Delta\\in\\Omega\\). Agora podemos perguntar se \\(\\Delta\\in\\Delta\\)? Mas considerando a definição de \\(\\Delta\\), nós temos que \\[\n\\begin{align*}\n\\Delta\\in\\Delta&\\Rightarrow \\Delta\\not\\in\\Delta\\\\\n\\Delta\\not\\in\\Delta&\\Rightarrow \\Delta\\in\\Delta.\n\\end{align*}\n\\] Portanto as duas alternativas \\(\\Delta\\in\\Delta\\) e \\(\\Delta\\not\\in\\Delta\\) nos leva a uma contradição.\n\nPor este motivo é necessário desenvolver uma teoria rigorosa da teoria dos conjuntos que não permite a criação de conjuntos sem controle e por exemplo não permite a criação do conjunto de todos os conjuntos. A teoria mais amplamente usada é a Teoria de Zermelo-Fraenkel.\nO Paradoxo do Barbeiro é uma forma popular do Paradoxo de Russel.",
+    "crumbs": [
+      "Iniciação à Matemática",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Conjuntos</span>"
+    ]
+  },
+  {
     "objectID": "IniciacaoAMatematica/quant.html",
     "href": "IniciacaoAMatematica/quant.html",
     "title": "4  Quantificadores",

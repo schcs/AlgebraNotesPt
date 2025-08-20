@@ -1372,6 +1372,7 @@ window.Quarto = {
   <li><a href="#conjuntos-definidos-com-predicato" id="toc-conjuntos-definidos-com-predicato" class="nav-link" data-scroll-target="#conjuntos-definidos-com-predicato"><span class="header-section-number">3.4</span> Conjuntos definidos com predicato</a></li>
   <li><a href="#propriedades-adicionais-das-operações-dos-conjuntos" id="toc-propriedades-adicionais-das-operações-dos-conjuntos" class="nav-link" data-scroll-target="#propriedades-adicionais-das-operações-dos-conjuntos"><span class="header-section-number">3.5</span> Propriedades adicionais das operações dos conjuntos</a></li>
   <li><a href="#o-complemento" id="toc-o-complemento" class="nav-link" data-scroll-target="#o-complemento"><span class="header-section-number">3.6</span> O complemento</a></li>
+  <li><a href="#o-paradoxo-de-russel" id="toc-o-paradoxo-de-russel" class="nav-link" data-scroll-target="#o-paradoxo-de-russel"><span class="header-section-number">3.7</span> O Paradoxo de Russel</a></li>
   </ul>
 </nav>
     </div>
@@ -1542,6 +1543,23 @@ x  \in A^c\cap B^c.
 \end{align*}\]</span> Logo, <span class="math inline">\((A\cup B)^c\subseteq A^c\cap B^c\)</span>. Revertendo o argumento, obtemos que <span class="math inline">\(A^c\cap B^c\subseteq (A\cup B)^c\)</span>.</p>
 <p>A verificação da afirmação 2. é exercício.</p>
 </div>
+</section>
+<section id="o-paradoxo-de-russel" class="level2" data-number="3.7">
+<h2 data-number="3.7" data-anchor-id="o-paradoxo-de-russel"><span class="header-section-number">3.7</span> O Paradoxo de Russel</h2>
+<p>Como foi dito em cima, esta teoria básica dos conjuntos não é uma teoria matematicamente consistente, pois resulta em contradições, o mais conhecido sendo o <a href="https://pt.wikipedia.org/wiki/Paradoxo_de_Russell">Paradoxo do Russel</a>.</p>
+<p>Se nós permitirmos a criação de conjuntos sem nenhuma restrição, precisa existir o conjunto <span class="math inline">\(\Omega\)</span> dos todos os conjuntos (conjunto universal). Defina o seguinte subconjunto <span class="math inline">\(\Delta\)</span> de <span class="math inline">\(\Omega\)</span>: <span class="math display">\[
+\Delta=\{A\in\Omega\mid A\not\in A\}.
+\]</span> A definição de <span class="math inline">\(\Delta\)</span> pode aparecer estranha, pois geralmente <span class="math inline">\(A\not\in A\)</span> para um conjunto <span class="math inline">\(A\)</span>. (Mas <span class="math inline">\(A\subseteq A\)</span>!) Então pode parecer que todo conjunto é elemento de <span class="math inline">\(\Delta\)</span>. Por outro lado, como <span class="math inline">\(\Omega\)</span> é o conjunto de todos os conjuntos, temos que <span class="math inline">\(\Omega\in\Omega\)</span> e <span class="math inline">\(\Omega\not\in\Delta\)</span>.</p>
+<p>Ora, <span class="math inline">\(\Delta\)</span> é um subconjunto de <span class="math inline">\(\Omega\)</span>, ele é um conjunto e assim <span class="math inline">\(\Delta\in\Omega\)</span>. Agora podemos perguntar se <span class="math inline">\(\Delta\in\Delta\)</span>? Mas considerando a definição de <span class="math inline">\(\Delta\)</span>, nós temos que <span class="math display">\[
+\begin{align*}
+\Delta\in\Delta&amp;\Rightarrow \Delta\not\in\Delta\\
+\Delta\not\in\Delta&amp;\Rightarrow \Delta\in\Delta.
+\end{align*}
+\]</span> Portanto as duas alternativas <span class="math inline">\(\Delta\in\Delta\)</span> e <span class="math inline">\(\Delta\not\in\Delta\)</span> nos leva a uma contradição.</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/fpXlGqhO2Fk?si=mcj8IDzYA5WZOxPj" width="560" height="315" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Por este motivo é necessário desenvolver uma teoria rigorosa da teoria dos conjuntos que não permite a criação de conjuntos sem controle e por exemplo não permite a criação do conjunto de todos os conjuntos. A teoria mais amplamente usada é a <a href="https://pt.wikipedia.org/wiki/Axiomas_de_Zermelo-Fraenkel">Teoria de Zermelo-Fraenkel</a>.</p>
+<p>O Paradoxo do Barbeiro é uma forma popular do Paradoxo de Russel.</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/D3f1nu6pWe8?si=nYSMLkbh-8yHuCiY" width="560" height="315" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>
