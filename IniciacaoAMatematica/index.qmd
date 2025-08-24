@@ -31,6 +31,7 @@ Material disponibilizado sob a licença
 - [Conjuntos](conjuntos.qmd)
 - [Exercícios](ex1.qmd)
 - [Quantificadores](quant.qmd)
+- [Exercícios](ex2.qmd)
 - [Pares ordenados e relações](relations.qmd)
 - [Relações de equivalência](equivalence.qmd)
 - [Exemplos importantes de relações de equivalência](equivalence_examples.qmd)

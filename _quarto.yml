@@ -19,6 +19,7 @@ book:
         - IniciacaoAMatematica/conjuntos.qmd
         - IniciacaoAMatematica/ex1.qmd
         - IniciacaoAMatematica/quant.qmd
+        - IniciacaoAMatematica/ex2.qmd
         - IniciacaoAMatematica/relations.qmd
         - IniciacaoAMatematica/equivalence.qmd
         - IniciacaoAMatematica/equivalence_examples.qmd
