@@ -131,6 +131,7 @@ A veracidade de proposições compostas pode ser estudada usando tabelas-verdade
 Construa as tabelas-verdade dos conectivos $\lor$, $\neg$, $\lxor$, $\cond$, $\bicond$. 
 :::
 
+
 Considere a seguinte expressão.
 $$
 (P \land \neg Q) \lor (\neg P \land Q). 
@@ -155,6 +156,19 @@ $$
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \equiv P \lxor Q.
 $$
+
+
+Usando tabelas-verdade pode-se verificar as seguintes afirmações.
+
+:::{#lem-}
+1. $P\land Q \equiv Q\land P$;
+2. $P\lor Q \equiv Q\lor P$;
+3. $P\land P\equiv P$;
+4. $P\lor P\equiv P$
+5. $(P\land Q)\land R\equiv P\land (Q\land R)$;
+5. $(P\lor Q)\lor R\equiv P\lor (Q\lor R)$;
+:::
+
 
 :::{#exr-true-table}
 Usando tabelas‑verdade, verifique, para proposições $P$ e $Q$, que 
