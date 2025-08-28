@@ -21,9 +21,6 @@ book:
         - IniciacaoAMatematica/quant.qmd
         - IniciacaoAMatematica/ex2.qmd
         - IniciacaoAMatematica/relations.qmd
-        - IniciacaoAMatematica/equivalence.qmd
-        - IniciacaoAMatematica/equivalence_examples.qmd
-        - IniciacaoAMatematica/order.qmd
         - IniciacaoAMatematica/functions.qmd
         - IniciacaoAMatematica/naturais.qmd
         - IniciacaoAMatematica/int_rat.qmd
