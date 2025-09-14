@@ -47,6 +47,24 @@ $$
 $$ 
 :::
 
+## $k$-uplas ordenadas e produto cartesiano de vários conjuntos
+
+Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
+$$
+(a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
+$$
+
+Podemos definir o produto cartesiano de conjuntos $A_1,\ldots,A_k$ como 
+$$
+A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\}\colon a_i\in A_i\}.
+$$
+
+:::{#exm-k-upla}
+Similarmente ao plano cartesiano, um ponto no espaço cartesiano pode ser caraterizado por uma $3$-upla  (tripla) $(x,y,z)\in\R\times \R\times \R=\R^3$. Assim o espaço cartesiano pode ser identificado com o conjunto $\R^3=\R\times \R\times\R$. 
+
+Na disciplina GAAL, vocês estudam o espaço $\R^n$ que pode ser visto como o produto cartesiano $\R\times\cdots\times\R$ de $n$ cópias de $\R$ e seus elementos são $n$-uplas $(x_1,\ldots,x_n)$ com $x_i\in \R$.
+:::
+
 ## Relações
 
 :::{#def-relation}
@@ -118,20 +136,3 @@ Seja $R$ uma relação sobre $A$.
 Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antisimétricas, e todas as relações neste exemplo são transitivas.
 :::
 
-## $k$-uplas ordenadas e produto cartesiano de vários conjuntos
-
-Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
-$$
-(a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
-$$
-
-Podemos definir o produto cartesiano de conjuntos $A_1,\ldots,A_k$ como 
-$$
-A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\}\colon a_i\in A_i\}.
-$$
-
-:::{#exm-k-upla}
-Similarmente ao plano cartesiano, um ponto no espaço cartesiano pode ser caraterizado por uma $3$-upla  (tripla) $(x,y,z)\in\R\times \R\times \R=\R^3$. Assim o espaço cartesiano pode ser identificado com o conjunto $\R^3=\R\times \R\times\R$. 
-
-Na disciplina GAAL, vocês estudam o espaço $\R^n$ que pode ser visto como o produto cartesiano $\R\times\cdots\times\R$ de $n$ cópias de $\R$ e seus elementos são $n$-uplas $(x_1,\ldots,x_n)$ com $x_i\in \R$.
-:::
