@@ -25,7 +25,7 @@ Sejam $A=\{0,2,4\}$ e $B=\{1,2,3,4\}$. Faça uma lista dos elementos de $A\times
 :::{#exr-}
 Sejam $A$, $B$ e $C$ conjuntos.
 
-1. O que pode dizer sobre $\emptyset\times A$ and $A\times \emptyset$? Justifique.
+1. O que pode dizer sobre $\emptyset\times A$ e $A\times \emptyset$? Justifique.
 2. Demonstre que $B=C$ se e somente se $\forall A:A\times B=A\times C$.
 3. Assumindo que $A\times B=B\times A$, o que pode dizer sobre $A$ e $B$? 
 :::
@@ -37,12 +37,16 @@ Demonstre as seguintes igualdades para conjuntos $A$, $B$, $C$, $D$:
 2. $(A\cap B)\times C=(A\times C)\cap (B\times C)$;
 3. $A\times (B\cup C)=(A\times B)\cup (A\times C)$; 
 4. $A\times (B\cap C)=(A\times B)\cap (A\times C)$;
-5. $(A\times B)\cap (C\times D)=(A\cap B)\times (B\cap D)$. 
+5. $(A\times B)\cap (C\times D)=(A\cap C)\times (B\cap D)$. 
 :::
 
 :::{#exr-}
 Sejam $A$, $B$, $C$ e $D$ conjuntos.
-Será que a igualdade $(A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D)$ é 
+Será que a igualdade 
+$$
+(A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D) 
+$$
+é 
 sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo. 
 :::
 
@@ -61,7 +65,6 @@ Seja $A=\{1,2,3,4,5,6\}$. Dê exemplo de relação $R$ no conjunto $A$ para cada
 1. $R$ é reflexiva, mas não é simétrica.
 2. $R$ é simétrica, mas não é reflexiva.
 3. $R$ é simétrica e antisimétrica. 
-4. $R$ é transitiva e simétrica, mas não é reflexiva. 
 :::
 
 
@@ -86,14 +89,14 @@ Sejam $R$ e $Q$ duas relações em um conjunto $A$. Considere $R\cup Q$ e $R\cap
 :::
 
 :::{#exr-}
-Um aluno gostaria de provar que se $R$ é uma relação transitiva e simétrica sobre um conjunto $A$, então $R$ é reflexiva. O aluno pediu fez o seguinte argumento: 
+Um aluno gostaria de provar que se $R$ é uma relação transitiva e simétrica sobre um conjunto $A$, então $R$ é reflexiva. O aluno  fez o seguinte argumento: 
 
 Seja $R$ uma relação transitiva e simétrica sobre um conjunto $A$. Assuma que $a\in A$ é um elemento qualquer. Seja 
 $b\in A$ tal que $aRb$. Como $R$ é simétrica, temos que $bRa$. Como $R$ é transitiva, 
 $aRb$ e $bRa$ implicam que $aRa$. Portanto, provamos para um elemento $a\in A$ qualquer que $aRa$ e assim 
 $R$ é reflexiva. 
 
-1. Será que a resposta do aluno está certa. Critique a resposta.
+1. Será que a prova do aluno está certa? Critique a resposta.
 2. Se você não concorda com o argumento do aluno, dê exemplo explícito de uma relação $R$ que 
 seja transitiva e simétrica, mas não é reflexiva. 
 :::
