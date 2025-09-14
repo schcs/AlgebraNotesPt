@@ -38,12 +38,13 @@ Demonstre as seguintes igualdades para conjuntos $A$, $B$, $C$, $D$:
 3. $A\times (B\cup C)=(A\times B)\cup (A\times C)$; 
 4. $A\times (B\cap C)=(A\times B)\cap (A\times C)$;
 5. $(A\times B)\cap (C\times D)=(A\cap B)\times (B\cap D)$. 
+:::
 
 :::{#exr-}
 Sejam $A$, $B$, $C$ e $D$ conjuntos.
 Será que a igualdade $(A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D)$ é 
 sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo. 
-
+:::
 
 :::{#exr-}
 Seja $A=\{1,2,3,4,5,6\}$. Faça uma lista dos pares ordenados que pertencem às seguintes relações:
