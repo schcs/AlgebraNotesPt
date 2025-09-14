@@ -1397,7 +1397,7 @@ window.Quarto = {
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 7.2</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> conjuntos.</p>
 <ol type="1">
-<li>O que pode dizer sobre <span class="math inline">\(\emptyset\times A\)</span> and <span class="math inline">\(A\times \emptyset\)</span>? Justifique.</li>
+<li>O que pode dizer sobre <span class="math inline">\(\emptyset\times A\)</span> e <span class="math inline">\(A\times \emptyset\)</span>? Justifique.</li>
 <li>Demonstre que <span class="math inline">\(B=C\)</span> se e somente se <span class="math inline">\(\forall A:A\times B=A\times C\)</span>.</li>
 <li>Assumindo que <span class="math inline">\(A\times B=B\times A\)</span>, o que pode dizer sobre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>?</li>
 </ol>
@@ -1409,11 +1409,13 @@ window.Quarto = {
 <li><span class="math inline">\((A\cap B)\times C=(A\times C)\cap (B\times C)\)</span>;</li>
 <li><span class="math inline">\(A\times (B\cup C)=(A\times B)\cup (A\times C)\)</span>;</li>
 <li><span class="math inline">\(A\times (B\cap C)=(A\times B)\cap (A\times C)\)</span>;</li>
-<li><span class="math inline">\((A\times B)\cap (C\times D)=(A\cap B)\times (B\cap D)\)</span>.</li>
+<li><span class="math inline">\((A\times B)\cap (C\times D)=(A\cap C)\times (B\cap D)\)</span>.</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 7.4</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> e <span class="math inline">\(D\)</span> conjuntos. Será que a igualdade <span class="math inline">\((A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D)\)</span> é sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo.</p>
+<p><span class="theorem-title"><strong>Exercício 7.4</strong></span> Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> e <span class="math inline">\(D\)</span> conjuntos. Será que a igualdade <span class="math display">\[
+(A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D)
+\]</span> é sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 7.5</strong></span> Seja <span class="math inline">\(A=\{1,2,3,4,5,6\}\)</span>. Faça uma lista dos pares ordenados que pertencem às seguintes relações:</p>
@@ -1430,7 +1432,6 @@ window.Quarto = {
 <li><span class="math inline">\(R\)</span> é reflexiva, mas não é simétrica.</li>
 <li><span class="math inline">\(R\)</span> é simétrica, mas não é reflexiva.</li>
 <li><span class="math inline">\(R\)</span> é simétrica e antisimétrica.</li>
-<li><span class="math inline">\(R\)</span> é transitiva e simétrica, mas não é reflexiva.</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
@@ -1453,10 +1454,10 @@ window.Quarto = {
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 7.9</strong></span> Um aluno gostaria de provar que se <span class="math inline">\(R\)</span> é uma relação transitiva e simétrica sobre um conjunto <span class="math inline">\(A\)</span>, então <span class="math inline">\(R\)</span> é reflexiva. O aluno pediu fez o seguinte argumento:</p>
+<p><span class="theorem-title"><strong>Exercício 7.9</strong></span> Um aluno gostaria de provar que se <span class="math inline">\(R\)</span> é uma relação transitiva e simétrica sobre um conjunto <span class="math inline">\(A\)</span>, então <span class="math inline">\(R\)</span> é reflexiva. O aluno fez o seguinte argumento:</p>
 <p>Seja <span class="math inline">\(R\)</span> uma relação transitiva e simétrica sobre um conjunto <span class="math inline">\(A\)</span>. Assuma que <span class="math inline">\(a\in A\)</span> é um elemento qualquer. Seja <span class="math inline">\(b\in A\)</span> tal que <span class="math inline">\(aRb\)</span>. Como <span class="math inline">\(R\)</span> é simétrica, temos que <span class="math inline">\(bRa\)</span>. Como <span class="math inline">\(R\)</span> é transitiva, <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRa\)</span> implicam que <span class="math inline">\(aRa\)</span>. Portanto, provamos para um elemento <span class="math inline">\(a\in A\)</span> qualquer que <span class="math inline">\(aRa\)</span> e assim <span class="math inline">\(R\)</span> é reflexiva.</p>
 <ol type="1">
-<li>Será que a resposta do aluno está certa. Critique a resposta.</li>
+<li>Será que a prova do aluno está certa? Critique a resposta.</li>
 <li>Se você não concorda com o argumento do aluno, dê exemplo explícito de uma relação <span class="math inline">\(R\)</span> que seja transitiva e simétrica, mas não é reflexiva.</li>
 </ol>
 </div>
