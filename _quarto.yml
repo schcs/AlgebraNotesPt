@@ -21,6 +21,7 @@ book:
         - IniciacaoAMatematica/quant.qmd
         - IniciacaoAMatematica/ex2.qmd
         - IniciacaoAMatematica/relations.qmd
+        - IniciacaoAMatematica/ex3.qmd
         - IniciacaoAMatematica/functions.qmd
         - IniciacaoAMatematica/naturais.qmd
         - IniciacaoAMatematica/int_rat.qmd

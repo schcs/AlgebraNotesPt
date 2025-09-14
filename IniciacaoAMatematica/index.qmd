@@ -33,6 +33,7 @@ Material disponibilizado sob a licença
 - [Quantificadores](quant.qmd)
 - [Exercícios](ex2.qmd)
 - [Pares ordenados e relações](relations.qmd)
+- [Exercícios](ex3.qmd)
 - [Funções](functions.qmd)
 - [Números naturais](naturais.qmd)
 - [Os números inteiros e racionais](int_rat.qmd)
