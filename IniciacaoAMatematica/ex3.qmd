@@ -10,7 +10,6 @@ format:
 ---
 
 # Lista de Exercícios
-## Iniciação à Matemática, 2024/I {.unnumbered}
 
 ::: {.content-hidden}
 $$
