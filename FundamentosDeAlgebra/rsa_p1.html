@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,14 +69,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../FundamentosDeAlgebra/miller.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4d0b7d9c44e37d891c0c2464e8b5854a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3ae2e506ec027f913583b733d9fa28e9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -659,7 +660,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -700,7 +701,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Álgebra</a> 
     </div>
@@ -1482,11 +1485,11 @@ p-q=\sqrt{(p+q)^2-4n}.
 <h2 data-number="25.2" data-anchor-id="um-exemplo-detalhado-em-python"><span class="header-section-number">25.2</span> Um exemplo detalhado em Python</h2>
 <p>Nesta página, vamos realizar uma computação em Python para ilustrar o processo de gerar as chaves, criptografar e descriptografar, usando criptografia RSA. Note que a computação feita aqui é só para ilustrar como combinar os algoritmos estudados neste bloco para criptografia; na pratica, algumas tarefas (tal como a escolha de primos aleatórios) devem ser resolvidas com muito mais cuidado.</p>
 <p>Primeiro, precisamos carregar algumas bibliotecas.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> factorint</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> factorint</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor, log</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor, log</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Vamos precisar das funções ExpModN (exponenciação rápida) e XMDC (Algoritmo Estendido de Euclides) que foram definidas em aulas anteriores:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ExpModN( a, e, n ):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ExpModN( a, e, n ):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    A, P, E <span class="op">=</span> a, <span class="dv">1</span>, e</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> E <span class="op">!=</span> <span class="dv">0</span>:        </span>
@@ -1497,8 +1500,8 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            E <span class="op">=</span> E<span class="op">//</span><span class="dv">2</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        A <span class="op">=</span> (A<span class="op">*</span>A) <span class="op">%</span> n</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> P</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> P</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> XMDC(a,b):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    x0, x <span class="op">=</span> <span class="dv">1</span>, <span class="dv">0</span><span class="op">;</span> y0, y <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nós trabalhamos com números positivos, mas aceitamos argumentos negativos</span></span>
@@ -1522,9 +1525,9 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        x, x0 <span class="op">=</span> x0 <span class="op">-</span> q<span class="op">*</span>x, x</span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        y, y0 <span class="op">=</span> y0 <span class="op">-</span> q<span class="op">*</span>y, y </span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, sign_a<span class="op">*</span>x0, sign_b<span class="op">*</span>y0</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, sign_a<span class="op">*</span>x0, sign_b<span class="op">*</span>y0</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>O algoritmos de gerar as chaves públicas e privadas necessita a computação de inverso modular. Isso pode ser feito facilmente usando o algoritmo estendido de Euclides, mas nós colocamos aqui uma função que vai resolver esta tarefa:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inverso_modular( a, n ):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inverso_modular( a, n ):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    d, u, v <span class="op">=</span> XMDC( a, n )</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> d <span class="op">!=</span> <span class="dv">1</span>:</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
@@ -1533,9 +1536,9 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> u <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        u <span class="op">+=</span> n</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para escolher os primos <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span>, precisaremos de um teste de primalidade. Usaremos o Teste de Primalidade de Miller. Este teste não é deterministico, terá uma probabilidade pequena de erro, mas esta probabilidade pode ser reduzida para um nível tão baixa que na prática um número que passa por este teste pode ser tratado como primo.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> IsStrongPseudoPrimeInBase( n, b ):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> IsStrongPseudoPrimeInBase( n, b ):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    q <span class="op">=</span> n<span class="op">-</span><span class="dv">1</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">0</span></span>
@@ -1553,8 +1556,8 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> r<span class="op">*</span>r <span class="op">%</span> n</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> TesteMillerRabin( n, k <span class="op">=</span> <span class="dv">0</span>):</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> TesteMillerRabin( n, k <span class="op">=</span> <span class="dv">0</span>):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> floor(log( n )) <span class="op">+</span> <span class="dv">1</span></span>
@@ -1564,9 +1567,9 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> IsStrongPseudoPrimeInBase( n, b ):</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"COMPOSTO"</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"PROVAVELMENTE PRIMO"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"PROVAVELMENTE PRIMO"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A seguinte função será usada para escolher um primo aleatório de certo comprimento na base binária. A ideia, e tomar um número aleatório do comprimento desejado, verificar se ele e primo, e se não, aumentar o número até obtermos um número que é (pseudo)primo.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> primo_aleatório( nr_bits ):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> primo_aleatório( nr_bits ):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    p, is_pr <span class="op">=</span> <span class="dv">0</span>, <span class="va">False</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1579,16 +1582,16 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        p <span class="op">+=</span> <span class="dv">2</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para gerar as chaves públicas e privadas, vamos escolher dois primos aleatórios <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span> tais que o comprimento do produto <span class="math inline">\(n=pq\)</span> é 2048. Seguimos a recomendação que o comprimento de um dos primos seja 40% do comprimento do produto, enquanto o outro contribua com 60% ao comprimento total. Com essa condição, a chave será mais resistente aos ataques para fatorar o produto.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>p_comp <span class="op">=</span> floor( <span class="fl">.4</span><span class="op">*</span><span class="dv">2048</span> )</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>p_comp <span class="op">=</span> floor( <span class="fl">.4</span><span class="op">*</span><span class="dv">2048</span> )</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>q_comp <span class="op">=</span> <span class="dv">2048</span><span class="op">-</span>p_comp</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> primo_aleatório( p_comp )</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> primo_aleatório( q_comp )</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> p<span class="op">*</span>q</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> p<span class="op">*</span>q</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Vamos agora computar as chaves <span class="math inline">\(e\)</span> e <span class="math inline">\(d\)</span> usadas para criptografar e descriptografar. A seguinte função vai devolver um número aleatório entre <span class="math inline">\(2\)</span> e <span class="math inline">\(n\)</span>, invertível módulo <span class="math inline">\(\varphi(n)=(p-1)(q-1)\)</span> junto com seu inverso.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> key_pair( p, q ):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> key_pair( p, q ):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    n, phin <span class="op">=</span> p<span class="op">*</span>q, (p<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(q<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    d, e <span class="op">=</span> <span class="va">False</span>, <span class="dv">0</span></span>
@@ -1596,29 +1599,29 @@ p-q=\sqrt{(p+q)^2-4n}.
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        e <span class="op">=</span> random.randint( <span class="dv">1</span>, n )</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        d <span class="op">=</span> inverso_modular( e, phin )</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> e, d</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> e, d</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Rodamos a função que acabamos de definir para gerar as chaves:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>e, d <span class="op">=</span> key_pair( p, q )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>e, d <span class="op">=</span> key_pair( p, q )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Verifiquemos que <span class="math inline">\(ed\equiv 1\pmod{\varphi(n)}\)</span>.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>e<span class="op">*</span>d <span class="op">%</span>((p<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(q<span class="op">-</span><span class="dv">1</span>))</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>e<span class="op">*</span>d <span class="op">%</span>((p<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(q<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Agora definamos as funções de criptografar e descriptografar. Definimos estas funções com expressões-lambda.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="kw">lambda</span> a: ExpModN( a, e, n )</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="kw">lambda</span> b: ExpModN( b, d, n )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="kw">lambda</span> a: ExpModN( a, e, n )</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="kw">lambda</span> b: ExpModN( b, d, n )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Assuma que a mensagem da Alice é um número aleatório <span class="math inline">\(a\)</span> entre <span class="math inline">\(1\)</span> e <span class="math inline">\(n\)</span>. Alice vai criptografar esta mensagem como <span class="math inline">\(b=C(a)\)</span> e vai enviar ao Bob. Ao receber a mensagem <span class="math inline">\(b\)</span>, o Bob vai descriptografar a mensagem da Alice como <span class="math inline">\(c=C(b)\)</span>. Pelo que provamos na aula, <span class="math inline">\(c\)</span> coincide com a mensagem original <span class="math inline">\(a\)</span>; ou seja <span class="math inline">\(c=a\)</span>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> random.randint( <span class="dv">1</span>, n )</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> random.randint( <span class="dv">1</span>, n )</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> C(a)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> D(b)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">==</span> c</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">==</span> c</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para ilustrar a dificuldade de quebrar a criptografia RSA, usaremos a chave usada pelo site ufmg.com em novembro de 2022. O número <span class="math inline">\(n\)</span> usada por esta página pode ser acesso pelas funcionalidades da segurança do browser. A chave aparece como um número hexadecimal com o carater “:” separando pares de dígitos. O seguinte código transforma este número para um número inteiro de Python.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="st">"C1:D9:49:08:FF:1B:2B:F7:F9:81:E7:EA:CB:21:6B:FC:DA:39:6B:0B:21:8D:A8:19:5F:D5:B3:84:8C:5B:D7:3A:E6:8F:9A:0C:63:AD:F3:FB:BE:27:A7:36:36:3F:24:57:0F:17:68:32:1E:8E:87:92:9E:B7:09:1B:44:81:78:3E:50:1E:A8:BC:D4:E1:83:BB:99:4B:30:66:3F:EB:6D:6A:1F:02:71:02:86:4C:00:D6:F3:6C:3A:61:61:18:21:6F:A8:39:A2:33:B8:31:86:8B:91:FE:F8:69:15:AA:AF:CC:DA:39:8A:E6:13:75:F7:D9:E7:F4:39:C1:35:AF:D5:E7:E1:4C:3E:A6:F2:11:B1:E2:A8:89:29:AE:89:31:1C:E7:F7:89:BF:04:DD:61:02:A1:2D:28:4C:DE:54:62:1E:D5:3C:4A:75:1A:49:24:1E:69:0F:F2:7A:4A:21:4A:57:39:DC:97:68:90:D9:3C:95:55:59:A1:49:3F:E1:D9:07:CE:B6:CE:32:84:0F:F0:F1:7C:A8:78:93:48:69:32:4D:37:7E:4D:96:2E:84:52:90:67:03:AE:F5:31:1C:B0:26:8A:89:BC:01:0B:EA:80:D7:A4:5B:4A:F0:78:0C:AB:E3:A6:A7:88:F1:CD:B9:96:EB:5B:B9:BF:6E:E3:EC:28:A2:CD"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="st">"C1:D9:49:08:FF:1B:2B:F7:F9:81:E7:EA:CB:21:6B:FC:DA:39:6B:0B:21:8D:A8:19:5F:D5:B3:84:8C:5B:D7:3A:E6:8F:9A:0C:63:AD:F3:FB:BE:27:A7:36:36:3F:24:57:0F:17:68:32:1E:8E:87:92:9E:B7:09:1B:44:81:78:3E:50:1E:A8:BC:D4:E1:83:BB:99:4B:30:66:3F:EB:6D:6A:1F:02:71:02:86:4C:00:D6:F3:6C:3A:61:61:18:21:6F:A8:39:A2:33:B8:31:86:8B:91:FE:F8:69:15:AA:AF:CC:DA:39:8A:E6:13:75:F7:D9:E7:F4:39:C1:35:AF:D5:E7:E1:4C:3E:A6:F2:11:B1:E2:A8:89:29:AE:89:31:1C:E7:F7:89:BF:04:DD:61:02:A1:2D:28:4C:DE:54:62:1E:D5:3C:4A:75:1A:49:24:1E:69:0F:F2:7A:4A:21:4A:57:39:DC:97:68:90:D9:3C:95:55:59:A1:49:3F:E1:D9:07:CE:B6:CE:32:84:0F:F0:F1:7C:A8:78:93:48:69:32:4D:37:7E:4D:96:2E:84:52:90:67:03:AE:F5:31:1C:B0:26:8A:89:BC:01:0B:EA:80:D7:A4:5B:4A:F0:78:0C:AB:E3:A6:A7:88:F1:CD:B9:96:EB:5B:B9:BF:6E:E3:EC:28:A2:CD"</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> n.replace( <span class="st">':'</span>, <span class="st">''</span> )</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>( n, base <span class="op">=</span> <span class="dv">16</span> )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>( n, base <span class="op">=</span> <span class="dv">16</span> )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Agora para quebrar a criptografia, é necessário fatorar este número. Verificar que o número não é pseudoprimo para a base <span class="math inline">\(2\)</span> (e então não é primo) é fácil, mas fatorar é difícil e de fato não pode ser feito usando as funcionalidades de Python.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>IsStrongPseudoPrimeInBase( n, <span class="dv">2</span> )</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>IsStrongPseudoPrimeInBase( n, <span class="dv">2</span> )</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>factorint( n )</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>...não há resposta...</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>...não há resposta...</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -1675,13 +1678,14 @@ p-q=\sqrt{(p+q)^2-4n}.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

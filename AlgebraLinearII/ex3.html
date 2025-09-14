@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../AlgebraLinearII/normed.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4d0b7d9c44e37d891c0c2464e8b5854a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3ae2e506ec027f913583b733d9fa28e9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -624,7 +625,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -665,7 +666,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Álgebra</a> 
     </div>
@@ -1384,12 +1387,12 @@ window.Quarto = {
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução:
+<span class="screen-reader-only">Dica</span>Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1441,12 +1444,12 @@ Portanto, <span class="math inline">\((b^{-1})^\sigma\)</span> é o inverso mult
 <p><span class="theorem-title"><strong>Exercício 81.2</strong></span> Seja <span class="math inline">\(\F=\Q\)</span> ou <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\)</span> primo. Mostre que o único automorfismo de <span class="math inline">\(\F\)</span> é <span class="math inline">\(\mbox{id}_\F\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução:
+<span class="screen-reader-only">Dica</span>Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1497,12 +1500,12 @@ k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução:
+<span class="screen-reader-only">Dica</span>Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1560,12 +1563,12 @@ x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n
 <p>[Obs: <span class="math inline">\(\C\)</span> tem automorfismos que não são contínuos; veja a <a href="https://math.stackexchange.com/q/412010">discussão no StackExchange</a>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução:
+<span class="screen-reader-only">Dica</span>Solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1606,12 +1609,12 @@ z^\sigma = (a + bi)^\sigma = a^\sigma + b^\sigma i^\sigma = a - bi = \overline{z
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Esboço da solução:
+<span class="screen-reader-only">Dica</span>Esboço da solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1645,12 +1648,12 @@ Os conjuntos <span class="math inline">\(\mbox{Bil}(V)\)</span>, <span class="ma
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Esboço da solução:
+<span class="screen-reader-only">Dica</span>Esboço da solução:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1683,12 +1686,12 @@ Defina <span class="math inline">\(S^2(V)\)</span> como o quociente de <span cla
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1739,12 +1742,12 @@ B_\varphi(u, \alpha v + \beta v') = \varphi(\alpha v + \beta v')(u) = \alpha \va
 <p><span class="theorem-title"><strong>Exercício 81.8</strong></span> Seja <span class="math inline">\(V\)</span> um espaço de dimensão finita com forma <span class="math inline">\(\sigma\)</span>-sesquilinear reflexiva <span class="math inline">\(B\)</span>. Seja <span class="math inline">\(G\)</span> a matriz de <span class="math inline">\(B\)</span> em uma base de <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(\dim\mbox{Rad}(B)=\dim V-\mbox{posto}(G)\)</span>. Deduza que <span class="math inline">\(B\)</span> é não degenerada se e somente se <span class="math inline">\(G\)</span> é invertível.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1771,12 +1774,12 @@ B(v, w) = ([v]_X)^t G ([w]_X)^\sigma = 0 \quad \text{para todo } w \in V.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1820,12 +1823,12 @@ B(u_1, u_1) = 1, \quad B(u_2, u_2) = -1, \quad B(u_3, u_3) = 1, \quad B(u_4, u_4
 <p><span class="theorem-title"><strong>Exercício 81.10</strong></span> Seja <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\geq 3\)</span> e <span class="math inline">\(a,b \in \F\)</span> com <span class="math inline">\(a\neq 0\)</span>. Mostre que existem <span class="math inline">\(u, v \in \F\)</span> tais que <span class="math inline">\(u^2 + a v^2 = b\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1847,12 +1850,12 @@ u^2+av^2=b.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1880,12 +1883,12 @@ Q(ub_1+vb_2)=u^2Q(b_1)+v^2Q(b_2)=u^2\delta_1+v^2\delta_2.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1929,12 +1932,12 @@ Segue do item anterior, pois <span class="math display">\[
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1967,12 +1970,12 @@ Se <span class="math inline">\(m = \dim_\K \F\)</span> e <span class="math inlin
 <p><span class="theorem-title"><strong>Exercício 81.14</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e assuma que <span class="math inline">\(\dim_\F V=\dim_\F W\)</span> e <span class="math inline">\(\dim_{\textrm{Fix}(\sigma)}\F\)</span> são todas finitas. Mostre que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f\)</span> é injetiva.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1994,12 +1997,12 @@ Solução
 <p>[Este exercício explica o comportamento similar do adjunto <span class="math inline">\(\alpha^\#\)</span> e o dual <span class="math inline">\(\alpha^*\)</span>.]</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2040,12 +2043,12 @@ V &amp; \xrightarrow{\Phi_V} &amp; V^*
 <p><span class="theorem-title"><strong>Exercício 81.16</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> tal que <span class="math inline">\(f\)</span> possui adjunto <span class="math inline">\(f^*\)</span>. Assumindo que <span class="math inline">\(\dim V\)</span> e <span class="math inline">\(\dim W\)</span> são finitas, mostre que <span class="math inline">\(\ker f=\mbox{Im}(f^*)^\perp\)</span> e <span class="math inline">\(\mbox{Im}(f)=(\ker f^*)^\perp\)</span>. Quais destas afirmações vale nos casos quando a dimensão de <span class="math inline">\(V\)</span> ou a dimensão de <span class="math inline">\(W\)</span> é infinita?</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2080,12 +2083,12 @@ B_W(y,w)=B_W(f(v),w)=B_V(v,f^*(w))=B_V(v,0)=0.
 \end{align*}\]</span></p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2110,12 +2113,12 @@ Solução
 <p><span class="theorem-title"><strong>Exercício 81.18</strong></span> Deduza do <a href="#exr-coker" class="quarto-xref">Exercício&nbsp;<span>81.17</span></a> que o posto coluna de uma matriz <span class="math inline">\(m\times n\)</span> com entradas em um corpo <span class="math inline">\(\F\)</span> é a mesma que o posto linha.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2129,12 +2132,12 @@ Solução
 <p><span class="theorem-title"><strong>Exercício 81.19</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma isometria de espaços de dimensão finita que possui adjunto. Mostre que <span class="math inline">\(f\circ f^*=\mbox{id}_W\)</span> e <span class="math inline">\(f^*\circ f=\mbox{id}_V\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2173,12 +2176,12 @@ f^* \circ f = \operatorname{id}_V \quad \text{e} \quad f \circ f^* = \operatorna
 <p><span class="theorem-title"><strong>Exercício 81.21</strong></span> Seja <span class="math inline">\(V\)</span> um <span class="math inline">\(\C\)</span>-espaço vetorial de dimensão maior ou igual a <span class="math inline">\(2\)</span> e seja <span class="math inline">\(B\)</span> uma forma bilinear simétrica sobre <span class="math inline">\(V\)</span>. Mostre que <span class="math inline">\(V\)</span> possui vetor isotrópico não nulo.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2210,12 +2213,12 @@ B(v, v) = \alpha^2 a_1 + \beta^2 a_2.
 <p>[Dica: Considere <span class="math inline">\(A\)</span> como matriz de Gram de alguma forma em <span class="math inline">\(\F^n\)</span> e seja <span class="math inline">\(X\)</span> uma matriz mudança debase.]</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2239,12 +2242,12 @@ v = \sum_{b∈B} \frac{B(v, b)}{B(b, b)} b
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2294,12 +2297,12 @@ G(B_2) = \begin{pmatrix} 0 &amp;  −1 &amp;  0 &amp; 0\\
 \]</span> Mostre que <span class="math inline">\((V, B_1)\)</span> e <span class="math inline">\((V, B_2)\)</span> são isométricas.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2330,12 +2333,12 @@ B_2(b_i,b_j)=B_1(e_i,e_j)\quad\mbox{para todo}\quad i,j\in\{1,\ldots,4\}.
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2363,12 +2366,12 @@ Se <span class="math inline">\(\dim V = n\)</span> é par e <span class="math in
 <p><span class="theorem-title"><strong>Exercício 81.27</strong></span> Seja <span class="math inline">\(V\)</span> um espaço vetorial de dimensão finita sobre <span class="math inline">\(\Z_p\)</span> com forma simétrica e não degenerada <span class="math inline">\(B\)</span> e assuma que <span class="math inline">\(\dim V \geq 2\)</span>. Mostre que <span class="math inline">\(V\)</span> possui um elemento <span class="math inline">\(v \in V\)</span> tal que <span class="math inline">\(Q(v) = B(v, v) = 1\)</span>. [Dica: Toma dois elementos <span class="math inline">\(u, v \in V\)</span> ortogonais não isotrópicos (justificando que eles existem). Vai precisar que <span class="math inline">\(1\)</span> pode ser escrito como combinação linear de quadrados; veja <a href="#exr-ff-quadrados" class="quarto-xref">Exercício&nbsp;<span>81.10</span></a>.]</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2387,12 +2390,12 @@ u^2  + v^2 \frac{a_2}{a_1} = \frac 1{a_1}.
 <p><span class="theorem-title"><strong>Exercício 81.28</strong></span> Seja <span class="math inline">\(V\)</span> como no <a href="#exr-ff-exists-unitary" class="quarto-xref">Exercício&nbsp;<span>81.27</span></a>. Seja <span class="math inline">\(a \in \Z_p\)</span> um elemento fixo em <span class="math inline">\(\Z_p \setminus \{x^2 \mid x \in \Z_p\}\)</span>. Mostre que existe uma base <span class="math inline">\(X\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(G_X(B)\)</span> é diagonal e as entradas na diagonal são ou <span class="math inline">\((1,\ldots, 1)\)</span> ou <span class="math inline">\((1, \ldots , 1, a)\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2415,12 +2418,12 @@ Assuma que o resultado é válido para espaços de dimensão <span class="math i
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2452,12 +2455,12 @@ Seja <span class="math inline">\(f: V \to V\)</span> um operador normal diagonal
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2493,12 +2496,12 @@ P^*AP = \begin{pmatrix} 1+i &amp; 0 \\ 0 &amp; 1-i \end{pmatrix}.
 \]</span> onde <span class="math inline">\(f_1\)</span> é autoadjunto e <span class="math inline">\(f_2\)</span> é anti-autoadjunto (ou seja, <span class="math inline">\(f_2^*=-f_2\)</span>).</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2527,12 +2530,12 @@ f = f_1 + f_2,
 <p><span class="theorem-title"><strong>Exercício 81.32</strong></span> Seja <span class="math inline">\(V\)</span> um espaço com forma <span class="math inline">\(\sigma\)</span>-hermitiana não degenerada e <span class="math inline">\(f:V\to V\)</span> uma projeção (ou seja, <span class="math inline">\(f^2=f\)</span>). Mostre que <span class="math inline">\(f\)</span> é autoadjunto se e somente se <span class="math inline">\(V=\ker f\oplus \mbox{Im}(f)\)</span> e <span class="math inline">\(\ker f\perp \mbox{Im}(f)\)</span>. [Eu acho que <span class="math inline">\(V\)</span> não precisa ser de dimensão finita, mas se seu argumento precisar desta condição, pode assumir.]</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2563,12 +2566,12 @@ B(v,f(w))=B(v_1+v_2,w_2)=B(v_2,w_2).
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2600,12 +2603,12 @@ Como <span class="math inline">\(f\)</span> é autoadjunto e injetivo, mas não 
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2650,12 +2653,12 @@ f^* f(a_1, a_2, a_3, \ldots) = f^*(0, a_1, a_2, \ldots) = (a_1, a_2, a_3, \ldots
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2686,12 +2689,12 @@ f^* f((a_i)_{i \in \mathbb{Z}}) = f^*((a_{i-1})_{i \in \mathbb{Z}}) = (a_i)_{i \
 <p>Dê exemplo explícito para os dois casos.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2717,12 +2720,12 @@ Solução
 <p><span class="theorem-title"><strong>Exercício 81.37</strong></span> Descreeve as possibilidades para os autovalores de um operador ortogonal de <span class="math inline">\(\R^4\)</span>. Dê exemplo para todos os casos e destaque as possibilidades para as operadores de <span class="math inline">\(\operatorname{SO}_4\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2765,7 +2768,7 @@ Solução
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2784,12 +2787,12 @@ Dica
 <p><span class="theorem-title"><strong>Exercício 81.41</strong></span> Seja <span class="math inline">\(f:\R^n\to \R^n\)</span> uma isometria. Mostre que <span class="math inline">\(f\)</span> é a composição de uma translação (<span class="math inline">\(T_w:\R^n\to\R^n\)</span>, <span class="math inline">\(v\mapsto v+w\)</span> para todo <span class="math inline">\(v\)</span>) e uma transformação ortogonal.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solução
+<span class="screen-reader-only">Dica</span>Solução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2876,13 +2879,14 @@ f(v) = T_w(g(v)).
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
