@@ -167,7 +167,7 @@ A prova da afirmação 2. é similar e será exercício do leitor.
 ## O complemento
 
 :::{#def-complement}
-Sejam $A$ e $B$ conjuntos tais que $A\subseteq B$. O *complemento* de $A$ em $B$ é o conjunto $A\setminus B$.  O complemento é denotado por $A^c$. Note que o complemento depende de $B$, mesmo que isso não está indicado na notação. 
+Sejam $A$ e $B$ conjuntos tais que $A\subseteq B$. O *complemento* de $A$ em $B$ é o conjunto $B\setminus A$.  O complemento é denotado por $A^c$. Note que o complemento depende de $B$, mesmo que isso não está indicado na notação. 
 :::
 
 O seguinte resultado é uma versão das Leis de De Morgan (@exr-true-table2) para conjuntos.
