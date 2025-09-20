@@ -1368,13 +1368,12 @@ window.Quarto = {
   <li><a href="#k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" id="toc-k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" class="nav-link" data-scroll-target="#k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos"><span class="header-section-number">6.3</span> <span class="math inline">\(k\)</span>-uplas ordenadas e produto cartesiano de vários conjuntos</a></li>
   <li><a href="#relações" id="toc-relações" class="nav-link" data-scroll-target="#relações"><span class="header-section-number">6.4</span> Relações</a></li>
   <li><a href="#propriedades-de-relações" id="toc-propriedades-de-relações" class="nav-link" data-scroll-target="#propriedades-de-relações"><span class="header-section-number">6.5</span> Propriedades de relações</a></li>
-  <li><a href="#relações-de-equivalência" id="toc-relações-de-equivalência" class="nav-link" data-scroll-target="#relações-de-equivalência"><span class="header-section-number">6.6</span> Relações de equivalência</a></li>
+  <li><a href="#sec-rel-eq" id="toc-sec-rel-eq" class="nav-link" data-scroll-target="#sec-rel-eq"><span class="header-section-number">6.6</span> Relações de equivalência</a></li>
   <li><a href="#classes-de-equivalência" id="toc-classes-de-equivalência" class="nav-link" data-scroll-target="#classes-de-equivalência"><span class="header-section-number">6.7</span> Classes de equivalência</a></li>
   <li><a href="#partições" id="toc-partições" class="nav-link" data-scroll-target="#partições"><span class="header-section-number">6.8</span> Partições</a></li>
   <li><a href="#exemplo-classes-residuais" id="toc-exemplo-classes-residuais" class="nav-link" data-scroll-target="#exemplo-classes-residuais"><span class="header-section-number">6.9</span> Exemplo: Classes residuais</a></li>
-  <li><a href="#mais-duas-relações" id="toc-mais-duas-relações" class="nav-link" data-scroll-target="#mais-duas-relações"><span class="header-section-number">6.10</span> Mais duas relações</a></li>
+  <li><a href="#mais-exemplos" id="toc-mais-exemplos" class="nav-link" data-scroll-target="#mais-exemplos"><span class="header-section-number">6.10</span> Mais exemplos</a></li>
   <li><a href="#relação-de-ordem" id="toc-relação-de-ordem" class="nav-link" data-scroll-target="#relação-de-ordem"><span class="header-section-number">6.11</span> Relação de ordem</a></li>
-  <li><a href="#ordem-total-ou-linear" id="toc-ordem-total-ou-linear" class="nav-link" data-scroll-target="#ordem-total-ou-linear"><span class="header-section-number">6.12</span> Ordem total ou linear</a></li>
   </ul>
 </nav>
     </div>
@@ -1402,7 +1401,7 @@ window.Quarto = {
 
 <section id="pares-ordenados" class="level2" data-number="6.1">
 <h2 data-number="6.1" data-anchor-id="pares-ordenados"><span class="header-section-number">6.1</span> Pares ordenados</h2>
-<p>A ordem dos elementos em um conjunto não faz diferença; ou seja, os conjuntos <span class="math inline">\(\{a,b\}\)</span> e <span class="math inline">\(\{b,a\}\)</span> são iguais. Além disso, os conjuntos <span class="math inline">\(\{a,a,b\}\)</span> e <span class="math inline">\(\{b,b,a\}\)</span> são também iguais ao conjunto <span class="math inline">\(\{a,b\}\)</span> e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os <em>pares ordenados</em>. O par ordenado dos objetos <span class="math inline">\(a,b\)</span> é denotado por <span class="math inline">\((a,b)\)</span>.</p>
+<p>A ordem dos elementos em um conjunto não faz diferença; ou seja, os conjuntos <span class="math inline">\(\{a,b\}\)</span> e <span class="math inline">\(\{b,a\}\)</span> são iguais. Além disso, os conjuntos <span class="math inline">\(\{a,a,b\}\)</span> e <span class="math inline">\(\{b,b,a\}\)</span> são também iguais ao conjunto <span class="math inline">\(\{a,b\}\)</span> e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os <em>pares ordenados</em> e as <em>tuplas ordenadas</em>. O par ordenado dos objetos <span class="math inline">\(a,b\)</span> é denotado por <span class="math inline">\((a,b)\)</span>.</p>
 <p>A propriedade fundamental de pares ordenados é que <span class="math display">\[
 (a,b)=(c,d)\quad \bicond\quad  a=c\mbox{ e }b=d.
 \]</span></p>
@@ -1468,7 +1467,7 @@ A\times B=\{(1,1),(1,3),(1,4),(2,1),(2,3),(2,4)\}
 </section>
 <section id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos" class="level2" data-number="6.3">
 <h2 data-number="6.3" data-anchor-id="k-uplas-ordenadas-e-produto-cartesiano-de-vários-conjuntos"><span class="header-section-number">6.3</span> <span class="math inline">\(k\)</span>-uplas ordenadas e produto cartesiano de vários conjuntos</h2>
-<p>Similarmente ao par ordenado, podemos considerar coleções ordenadas <span class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> (chamadas de <span class="math inline">\(k\)</span>-uplas) de objetos. A propriedade fundamental destes <span class="math inline">\(k\)</span>-uplas é que <span class="math display">\[
+<p>Similarmente ao par ordenado, podemos considerar coleções ordenadas <span class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> (chamadas de <span class="math inline">\(k\)</span>-uplas ou tuplas) de objetos. A propriedade fundamental destes <span class="math inline">\(k\)</span>-uplas é que <span class="math display">\[
 (a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
 \]</span></p>
 <p>Podemos definir o produto cartesiano de conjuntos <span class="math inline">\(A_1,\ldots,A_k\)</span> como <span class="math display">\[
@@ -1484,7 +1483,7 @@ A_1\times \cdots \times A_k=\{(a_1,a_2,\ldots,a_k)\mid \forall i\in\{1,\ldots,k\
 <div id="def-relation" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 6.2</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos. Uma relação entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é um subconjunto <span class="math display">\[
 R\subseteq A\times B.
-\]</span> Quando <span class="math inline">\(A=B\)</span> e <span class="math inline">\(R\subseteq A\times A\)</span>, dizemos que <span class="math inline">\(R\)</span> é uma relação sobre <span class="math inline">\(A\)</span>.</p>
+\]</span> Quando <span class="math inline">\(A=B\)</span> e <span class="math inline">\(R\subseteq A\times A\)</span>, dizemos que <span class="math inline">\(R\)</span> é uma relação sobre <span class="math inline">\(A\)</span> ou uma relação em <span class="math inline">\(A\)</span>.</p>
 </div>
 <div id="exm-relation" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 6.5</strong></span> Por exemplo, considerando o conjunto no <a href="#exm-prod-cart" class="quarto-xref">Exemplo&nbsp;<span>6.2</span></a>, o conjunto <span class="math display">\[
@@ -1492,7 +1491,7 @@ R=\{(1,3),(1,4),(2,1)\}
 \]</span> é uma relação entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</p>
 </div>
 <div id="def-relation2" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 6.3</strong></span> Seja <span class="math inline">\(R\subseteq A\times B\)</span>. Quando <span class="math inline">\((a,b)\in R\)</span> dizemos que <span class="math inline">\(a\)</span> está relacionado com <span class="math inline">\(B\)</span>, <span class="math inline">\(a\)</span> está em relação com <span class="math inline">\(b\)</span>, ou que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> estão relacionados. Neste caso escrevemos <span class="math display">\[
+<p><span class="theorem-title"><strong>Definição 6.3</strong></span> Seja <span class="math inline">\(R\subseteq A\times B\)</span>. Quando <span class="math inline">\((a,b)\in R\)</span> dizemos que <span class="math inline">\(a\)</span> está relacionado com <span class="math inline">\(b\)</span>, <span class="math inline">\(a\)</span> está em relação com <span class="math inline">\(b\)</span>, ou que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> estão relacionados. Neste caso escrevemos <span class="math display">\[
 aRb.
 \]</span></p>
 </div>
@@ -1532,8 +1531,8 @@ aRb.
 <p><span class="theorem-title"><strong>Exemplo 6.8</strong></span> Considerando as relações no <a href="#exm-relations3" class="quarto-xref">Exemplo&nbsp;<span>6.7</span></a>, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antisimétricas, e todas as relações neste exemplo são transitivas.</p>
 </div>
 </section>
-<section id="relações-de-equivalência" class="level2" data-number="6.6">
-<h2 data-number="6.6" data-anchor-id="relações-de-equivalência"><span class="header-section-number">6.6</span> Relações de equivalência</h2>
+<section id="sec-rel-eq" class="level2" data-number="6.6">
+<h2 data-number="6.6" data-anchor-id="sec-rel-eq"><span class="header-section-number">6.6</span> Relações de equivalência</h2>
 <p>Relações de equivalência fornecem uma ferramenta importante na matemática, pois elas nos permitem considerar objetos distintos como fossem iguais. Comecemos com o seguinte exemplo. Considere as frações <span class="math inline">\(2/3\)</span> e <span class="math inline">\(4/6\)</span>. Se perguntar um aluno aleatório da matemática, ele ou ela provavelmente vai dizer que estas duas são iguais. Mas se perguntar o mesmo aluno quais são os numeradores destas frações, o mesmo aluno vai responder que o numerador do primeiro é <span class="math inline">\(2\)</span> enquanto o numerador do seguindo é <span class="math inline">\(4\)</span>. Mas isso, parece contraditório, pois se elas são iguais, as suas caraterísticas devem ser as mesmas, e como podem ter numeradores diferentes?</p>
 <p>A solução a este paradoxo é reconhecer que <span class="math inline">\(2/3\)</span> e <span class="math inline">\(4/6\)</span> são frações diferentes, mas representam o mesmo número racional e elas podem ser trocadas entre si em contas aritméticas. Ou seja, elas são <em>equivalentes</em> do ponto de vista da aritmética. O conceito da relação de equivalência captura este fenômeno e nos permite analisar conceitos similares de maneira matematicamente rigorosa.</p>
 <div id="def-eq-rel" class="theorem definition">
@@ -1543,7 +1542,7 @@ aRb.
 <li><span class="math inline">\(R\)</span> é simétrica (ou seja <span class="math inline">\(aRb\)</span> implica <span class="math inline">\(bRa\)</span> para todo <span class="math inline">\(a,b\in A\)</span>); e</li>
 <li><span class="math inline">\(R\)</span> é transitiva (ou seja <span class="math inline">\(aRb\)</span> e <span class="math inline">\(bRc\)</span> implica <span class="math inline">\(aRc\)</span> para todo <span class="math inline">\(a,b,c\in A\)</span>).</li>
 </ol>
-<p>As relações de equivalência são normalmente denotados com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong b\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
+<p>As relações de equivalência são normalmente denotadas com os símbolos <span class="math inline">\(\equiv\)</span>, <span class="math inline">\(\cong\)</span>, etc, e escrevemos <span class="math inline">\(a\equiv b\)</span> ou <span class="math inline">\(a\cong b\)</span> em vez de <span class="math inline">\(aRb\)</span>.</p>
 </div>
 <div id="exm-eq-eg" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 6.9</strong></span> O protôtipo das relações de equivalência é a relação de igualdade. A relação de igualdade <span class="math display">\[
@@ -1589,7 +1588,7 @@ a\equiv b\quad\mbox{se e somente se $a-b$ é par}.
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <ol type="1">
 <li>Note que <span class="math inline">\(a\in[a]\)</span> é equivalente a dizer que <span class="math inline">\(a\equiv a\)</span> e isso vale pois a relação <span class="math inline">\(\equiv\)</span> é reflexiva.</li>
-<li>Assuma primeiro que <span class="math inline">\([a]=[b]\)</span>. Vamos provar que <span class="math inline">\(a\equiv b\)</span>. Temos por item 1. que <span class="math inline">\(a\in[a]\)</span>. Mas como <span class="math inline">\([a]=[b]\)</span> isso implica que <span class="math inline">\(a\in [b]\)</span>. Ora, a definição de <span class="math inline">\([b]\)</span> implica que <span class="math inline">\(b\equiv a\)</span> e a simetria da relação <span class="math inline">\(\equiv\)</span> implica que <span class="math inline">\(a\equiv b\)</span>. Agora assuma que <span class="math inline">\(a\equiv b\)</span>. Vamos provar que <span class="math inline">\([a]=[b]\)</span>; ou seja <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Na primeira inclusão, seja <span class="math inline">\(x\in[a]\)</span>. Pela definição de <span class="math inline">\([a]\)</span>, temos que <span class="math inline">\(a\equiv x\)</span>. Por suposição, temos que <span class="math inline">\(a\equiv b\)</span> e a simetria implica que <span class="math inline">\(b\equiv a\)</span>. Ora, <span class="math inline">\(b\equiv a\)</span> e <span class="math inline">\(a\equiv x\)</span> e a transitividade implica que <span class="math inline">\(b\equiv x\)</span>. Ou seja <span class="math inline">\(x\in [b]\)</span>, pela definição de <span class="math inline">\([b]\)</span>. A inclusão que <span class="math inline">\([b]\subseteq [a]\)</span> pode ser demonstrada da mesma forma. Assuma que <span class="math inline">\(y\in [b]\)</span>; ou seja <span class="math inline">\(b\equiv y\)</span>. Como temos <span class="math inline">\(a\equiv b\)</span> e <span class="math inline">\(b\equiv y\)</span>, a transitividade implica que <span class="math inline">\(a\equiv y\)</span>; ou seja a definição de <span class="math inline">\([a]\)</span> dá que <span class="math inline">\(y\in[a]\)</span>. Ou seja, temos que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span> e assim <span class="math inline">\([a]=[b]\)</span> como foi afirmado.</li>
+<li>Assuma primeiro que <span class="math inline">\([a]=[b]\)</span>. Vamos provar que <span class="math inline">\(a\equiv b\)</span>. Temos por item 1. que <span class="math inline">\(a\in[a]\)</span>. Mas como <span class="math inline">\([a]=[b]\)</span> isso implica que <span class="math inline">\(a\in [b]\)</span>. Ora, a definição de <span class="math inline">\([b]\)</span> implica que <span class="math inline">\(b\equiv a\)</span> e a simetria da relação <span class="math inline">\(\equiv\)</span> implica que <span class="math inline">\(a\equiv b\)</span>. Agora assuma que <span class="math inline">\(a\equiv b\)</span>. Vamos provar que <span class="math inline">\([a]=[b]\)</span>; ou seja <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span>. Na primeira inclusão, seja <span class="math inline">\(x\in[a]\)</span>. Pela definição de <span class="math inline">\([a]\)</span>, temos que <span class="math inline">\(a\equiv x\)</span>. Por suposição, temos que <span class="math inline">\(a\equiv b\)</span> e a simetria implica que <span class="math inline">\(b\equiv a\)</span>. Ora, <span class="math inline">\(b\equiv a\)</span> e <span class="math inline">\(a\equiv x\)</span> e a transitividade implicam que <span class="math inline">\(b\equiv x\)</span>. Ou seja <span class="math inline">\(x\in [b]\)</span>, pela definição de <span class="math inline">\([b]\)</span>. A inclusão que <span class="math inline">\([b]\subseteq [a]\)</span> pode ser demonstrada da mesma forma. Assuma que <span class="math inline">\(y\in [b]\)</span>; ou seja <span class="math inline">\(b\equiv y\)</span>. Como temos <span class="math inline">\(a\equiv b\)</span> e <span class="math inline">\(b\equiv y\)</span>, a transitividade implica que <span class="math inline">\(a\equiv y\)</span>; ou seja a definição de <span class="math inline">\([a]\)</span> dá que <span class="math inline">\(y\in[a]\)</span>. Ou seja, temos que <span class="math inline">\([a]\subseteq [b]\)</span> e <span class="math inline">\([b]\subseteq [a]\)</span> e assim <span class="math inline">\([a]=[b]\)</span> como foi afirmado.</li>
 <li>Assuma que <span class="math inline">\(c\in [a]\cap [b]\)</span>. Isso quer dizer que <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(b\equiv c\)</span>. Por simetria temos também que <span class="math inline">\(c\equiv b\)</span>. Ora por transitividade, <span class="math inline">\(a\equiv c\)</span> e <span class="math inline">\(c\equiv b\)</span> implicam que <span class="math inline">\(a\equiv b\)</span> e item 2. mostra que <span class="math inline">\([a]=[b]\)</span>.</li>
 </ol>
 </div>
@@ -1623,7 +1622,7 @@ a\equiv_{\mathcal P} b\quad \bicond\quad \mbox{$a$ e $b$ estão no mesma parte d
 <ol type="1">
 <li>Reflexividade: se <span class="math inline">\(a\in A\)</span>, então <span class="math inline">\(a\)</span> claramente pertence à mesma parte de <span class="math inline">\(\mathcal P\)</span> que <span class="math inline">\(a\)</span> e <span class="math inline">\(a\equiv_{\mathcal P} a\)</span>. Logo <span class="math inline">\(\equiv_{\mathcal P}\)</span> é reflexiva.</li>
 <li>Simetria: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span>, então <span class="math inline">\(a,b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Logo <span class="math inline">\(b,a\)</span> também pertencem à mesma parte e assim <span class="math inline">\(b\equiv_{\mathcal P}a\)</span>. Portanto <span class="math inline">\(\equiv_{\mathcal P}\)</span> é simétrica.</li>
-<li>Transitividade: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span> e <span class="math inline">\(b\equiv_{\mathcal P}c\)</span>, então <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span> e <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> também pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Isso implica que <span class="math inline">\(a\)</span> e <span class="math inline">\(c\)</span> pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Portanto <span class="math inline">\(a\equiv_{\mathcal P}c\)</span> e a relação <span class="math inline">\(\equiv_{\mathcal P}\)</span> é transitiva.</li>
+<li>Transitividade: se <span class="math inline">\(a\equiv_{\mathcal P}b\)</span> e <span class="math inline">\(b\equiv_{\mathcal P}c\)</span>, então <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> pertencem à mesma parte <span class="math inline">\(X\)</span> de <span class="math inline">\(\mathcal P\)</span> e <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> também pertencem à mesma parte <span class="math inline">\(Y\)</span> de <span class="math inline">\(\mathcal P\)</span>. Como <span class="math inline">\(b\in X\cap Y\)</span>, temos que <span class="math inline">\(X\cap Y\neq \emptyset\)</span> e a contrapositiva do item 2. da <a href="../GruposECorpos/classes.html#def-partition" class="quarto-xref">Definição&nbsp;<span>89.1</span></a> implica que <span class="math inline">\(X=Y\)</span>. Isso implica que <span class="math inline">\(a,c\in X\)</span>; ou seja, eles pertencem à mesma parte de <span class="math inline">\(\mathcal P\)</span>. Portanto <span class="math inline">\(a\equiv_{\mathcal P}c\)</span> e a relação <span class="math inline">\(\equiv_{\mathcal P}\)</span> é transitiva.</li>
 </ol>
 <p>Finalmente, seja <span class="math inline">\(a\in A\)</span> e assuma que <span class="math inline">\(a\in X\in\mathcal P\)</span> (ou seja <span class="math inline">\(a\)</span> pertence ao bloco <span class="math inline">\(X\)</span> de <span class="math inline">\(\mathcal P\)</span>). A classe de equivalência de <span class="math inline">\(a\)</span> é <span class="math display">\[
 [a]=\{b\in A\mid a\equiv_{\mathcal P}b\}=\{b\in A\mid b\in X\}=X.
@@ -1654,11 +1653,11 @@ c-a=(b-a)+(c-b)=3k_1+3k_2=3(k_1+k_2).
 [0]=\{a\in\Z\mid 0\equiv_3 a\}=\{a\in\Z\mid a-0=3k\}=\{a\in\Z\mid a=3k\}=\{3k\mid k\in \Z\}.
 \]</span> Ou seja, <span class="math display">\[
 [0]=\{0,3,-3,6,-6,\ldots\}=\{3k\mid k\in\Z\}.
-\]</span> Similarmente <span class="math display">\[
-[1]=\{a\in\Z\mid 1\equiv_3 a\}=\{a\in\Z\mid a-1=3k\}=\{a\in\Z\mid a=3k+1\}=\{1,-2,4,-5,7,-8,10,\ldots\}
-\]</span> e <span class="math display">\[
-[2]=\{a\in\Z\mid 2\equiv_3 a\}=\{a\in\Z\mid a-2=3k\}=\{a\in\Z\mid a=3k+2\}=\{2,-1,5,-4,8,-7,\ldots\}
-\]</span></p>
+\]</span> Similarmente <span class="math display">\[\begin{align*}
+[1]&amp;=\{a\in\Z\mid 1\equiv_3 a\}=\{a\in\Z\mid a-1=3k\}=\{a\in\Z\mid a=3k+1\}\\&amp;=\{1,-2,4,-5,7,-8,10,\ldots\}
+\end{align*}\]</span> e <span class="math display">\[\begin{align*}
+[2]&amp;=\{a\in\Z\mid 2\equiv_3 a\}=\{a\in\Z\mid a-2=3k\}=\{a\in\Z\mid a=3k+2\}\\&amp;=\{2,-1,5,-4,8,-7,\ldots\}
+\end{align*}\]</span></p>
 <p>Obtemos que todo número inteiro pertençe a uma das classes de equivalência <span class="math inline">\([0],[1],[2]\)</span>. De fato se <span class="math inline">\(a\in\Z\)</span>, então o resto de <span class="math inline">\(a\)</span> quando dividido por <span class="math inline">\(3\)</span> é <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> e <span class="math inline">\(a\in[r]\)</span> onde <span class="math inline">\(r\)</span> é o seu resto. Assim temos apenas estas três classes.</p>
 <div id="exr-class-res" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 6.1</strong></span> Seja <span class="math inline">\(n\geq 2\)</span> um inteiro e defina a relação <span class="math inline">\(\equiv_n\)</span> sobre <span class="math inline">\(\Z\)</span> na seguinte forma: <span class="math display">\[
@@ -1666,9 +1665,24 @@ a\equiv_n b\quad\mbox{se e somente se $b-a=kn$ com algum $k\in \Z$}.
 \]</span> Descreve as classes de equivalência para a relação <span class="math inline">\(\equiv_n\)</span>.</p>
 </div>
 </section>
-<section id="mais-duas-relações" class="level2" data-number="6.10">
-<h2 data-number="6.10" data-anchor-id="mais-duas-relações"><span class="header-section-number">6.10</span> Mais duas relações</h2>
-<p>Os seguintes dois exemplos importantes serão tratados como exercícios.</p>
+<section id="mais-exemplos" class="level2" data-number="6.10">
+<h2 data-number="6.10" data-anchor-id="mais-exemplos"><span class="header-section-number">6.10</span> Mais exemplos</h2>
+<div id="exm-rationais" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 6.15</strong></span> O exemplo dado no início da <a href="#sec-rel-eq" class="quarto-xref"><span>Seção 6.6</span></a> pode ser formalizado na seguinte maneira usando relações de equivalência. Uma fração <span class="math inline">\(a/b\)</span> pode ser identificado com um par ordenado <span class="math inline">\((a,b)\in\Z\times (\Z\setminus\{0\})\)</span>. De fato, a ordem dos números na fração é importante, <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são números inteiros e <span class="math inline">\(b\neq 0\)</span> (pois divisão por zero não é permitida). Mas as frações não satisfazem a propriedade principal dos pares ordenados, pois <span class="math inline">\(a/b\)</span> e <span class="math inline">\(c/d\)</span> podem ser iguais (como números racionais) mesmo quando <span class="math inline">\(a\neq c\)</span> ou <span class="math inline">\(b\neq d\)</span>. Considere <span class="math inline">\(A=\Z\times (\Z\setminus\{0\})\)</span> e considere a seguinte relação <span class="math inline">\(\sim\)</span> sobre <span class="math inline">\(A\)</span>: <span class="math display">\[
+(a,b)\sim (c,d)\quad\mbox{se e somente se}\quad ad=bc.
+\]</span> Afirmamos que <span class="math inline">\(\sim\)</span> é uma relação de equivalência. Na prova vamos precisar da lei cancelativa que diz que quando <span class="math inline">\(x,y,z\in \Z\)</span> tal que <span class="math inline">\(z\neq 0\)</span>, a equação <span class="math inline">\(xz=yz\)</span> implica que <span class="math inline">\(x=y\)</span> (ou seja, <span class="math inline">\(z\)</span> pode ser <em>cancelado</em>).</p>
+<ol type="1">
+<li><strong>Reflexividade:</strong> Seja <span class="math inline">\((a,b)\in A\)</span>. Então <span class="math inline">\(ab=ba\)</span>, portanto <span class="math inline">\((a,b)\sim (a,b)\)</span>.</li>
+<li><strong>Simetria:</strong> Assuma que <span class="math inline">\((a,b),(c,d)\in A\)</span> tais que <span class="math inline">\((a,b)\sim (c,d)\)</span>. Então <span class="math inline">\(ad=bc\)</span>. Mas isso implica que <span class="math inline">\(cb=da\)</span> que mostra que <span class="math inline">\((c,d)\sim (a,b)\)</span>.</li>
+<li><strong>Transitividade:</strong> Assuma que <span class="math inline">\((a,b),(c,d),(e,f)\in A\)</span> tais que <span class="math inline">\((a,b)\sim (c,d)\)</span> e <span class="math inline">\((c,d)\sim (e,f)\)</span>. A definição de <span class="math inline">\(\sim\)</span> implica que <span class="math display">\[\begin{align*}
+ad&amp;=bc\\ cf&amp;=de.
+\end{align*}\]</span> Multiplicando as duas equações: <span class="math inline">\(adcf=bcde\)</span>. Como <span class="math inline">\(c,d\neq 0\)</span>, podemos usar a lei cancelativa que implica que <span class="math inline">\(af=be\)</span> que implica que <span class="math inline">\((a,b)\sim (e,f)\)</span>.</li>
+</ol>
+<p>Note que <span class="math inline">\((a,b)\sim (c,d)\)</span> se e somente se <span class="math inline">\(ad=bc\)</span>. Dado que <span class="math inline">\(b,d\neq 0\)</span>, esta relação equivale a dizer que <span class="math inline">\(a/b=c/d\)</span> como números racionais. Isso quer dizer que a classe da equivalência <span class="math inline">\([(a,b)]\)</span> contém exatamente os pares <span class="math inline">\((c,d)\)</span> tais que <span class="math inline">\(a/b\)</span> e <span class="math inline">\(c/d\)</span> representam o mesmo número racional. Por exemplo, <span class="math display">\[
+[(1,2)]=\{(1,2),(2,4),(-1,-2),(-2,-4),(3,6),(-3,-6),\ldots\}
+\]</span> Em outras palavras, as classes de equivalência correspondem aos números racionais.</p>
+</div>
+<p>O seguinte exemplo é similar e deixamos ao leitor verificar os detalhes.</p>
 <div id="exr-ntimesn" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 6.2</strong></span> Seja <span class="math inline">\(A=\N\times \N\)</span> e defina a seguinte relação sobre <span class="math inline">\(A\)</span>: <span class="math display">\[
 (a,b)\equiv (c,d)\quad\bicond \quad a+d=b+c.
@@ -1680,17 +1694,6 @@ a\equiv_n b\quad\mbox{se e somente se $b-a=kn$ com algum $k\in \Z$}.
 </ol>
 </div>
 <p>No seguinte exemplo voltamos ao exemplo motivador da seção e estudamos a relação que explica melhor os números racionais.</p>
-<div id="exr-ztimesz" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 6.3</strong></span> Seja <span class="math inline">\(A=\Z\times \Z\setminus\{0\}\)</span> e defina a seguinte relação sobre <span class="math inline">\(A\)</span>: <span class="math display">\[
-(a,b)\equiv (c,d)\quad\bicond \quad ad=bc.
-\]</span></p>
-<ol type="1">
-<li>Mostre que <span class="math inline">\(\equiv\)</span> é uma relação de equivalência.</li>
-<li>Ache as classes de equivalência dos elementos <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((2,4)\)</span>, e <span class="math inline">\((3,6)\)</span>.</li>
-<li>Dê uma descrição de todas as classes de equivalência.</li>
-<li>Mostre que <span class="math inline">\((a,b)\equiv (c,d)\)</span> se e somente se as frações <span class="math inline">\(a/b\)</span> e <span class="math inline">\(c/d\)</span> representam o mesmo número racional.</li>
-</ol>
-</div>
 </section>
 <section id="relação-de-ordem" class="level2" data-number="6.11">
 <h2 data-number="6.11" data-anchor-id="relação-de-ordem"><span class="header-section-number">6.11</span> Relação de ordem</h2>
@@ -1703,7 +1706,7 @@ a\equiv_n b\quad\mbox{se e somente se $b-a=kn$ com algum $k\in \Z$}.
 </ol>
 </div>
 <div id="exm-relation-order" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 6.15</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exemplo 6.16</strong></span> &nbsp;</p>
 <ol type="1">
 <li><p>Se <span class="math inline">\(A\)</span> é um conjunto de números, então as relações <span class="math inline">\(\leq\)</span> e <span class="math inline">\(\geq\)</span> são relações de ordem, mas as relações <span class="math inline">\(&lt;\)</span> e <span class="math inline">\(&gt;\)</span> não são relações de ordem pela <a href="#def-ordem" class="quarto-xref">Definição&nbsp;<span>6.8</span></a> (pois elas não são reflexivas).</p></li>
 <li><p>Assuma que <span class="math inline">\(X\)</span> é um conjunto e seja <span class="math display">\[
@@ -1712,16 +1715,13 @@ A=\{Y\mid Y\subseteq X\}.
 <li><p>Seja <span class="math inline">\(A=\N\)</span> e considere a relação <span class="math inline">\(\mid\)</span> de divisibilidade. Em outras palávras, <span class="math inline">\(a\mid b\)</span> se e somente se <span class="math inline">\(b=qa\)</span> com algum <span class="math inline">\(q\in\N\)</span>. Então <span class="math inline">\(\mid\)</span> é uma relação de ordem sobre <span class="math inline">\(A\)</span>. Note que a mesma relação não é relação de ordem sobre <span class="math inline">\(\Z\)</span>, pois <span class="math inline">\(2\mid -2\)</span> e <span class="math inline">\(-2\mid 2\)</span>, mas <span class="math inline">\(-2\neq 2\)</span>. Ou seja, <span class="math inline">\(\mid\)</span> não é antisimétrica em <span class="math inline">\(\Z\)</span>.</p></li>
 </ol>
 </div>
-</section>
-<section id="ordem-total-ou-linear" class="level2" data-number="6.12">
-<h2 data-number="6.12" data-anchor-id="ordem-total-ou-linear"><span class="header-section-number">6.12</span> Ordem total ou linear</h2>
 <div id="def-ordem-total" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 6.9</strong></span> Seja <span class="math inline">\(R\)</span> uma relação de ordem sobre o conjunto <span class="math inline">\(A\)</span>, Dizemos que <span class="math inline">\(R\)</span> é uma ordem total ou ordem linear se <span class="math display">\[
 aRb\quad \mbox{ou}\quad bRa
 \]</span> vale para todo <span class="math inline">\(a,b\in R\)</span>.</p>
 </div>
 <div id="exr-ordem-total" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 6.4</strong></span> Entre os exemplos no <a href="#exm-relation-order" class="quarto-xref">Exemplo&nbsp;<span>6.15</span></a>, 1. é ordem total, mas 2. e 3. não são ordens totais.</p>
+<p><span class="theorem-title"><strong>Exercício 6.3</strong></span> Entre os exemplos no <a href="#exm-relation-order" class="quarto-xref">Exemplo&nbsp;<span>6.16</span></a>, 1. é ordem total, mas 2. e 3. não são ordens totais.</p>
 </div>
 
 
