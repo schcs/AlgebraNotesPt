@@ -1,0 +1,51 @@
+::Q13::
+Seja \(R\) uma relação sobre o conjunto \(A = \{1,2,3\}\) definida por \(R = \{(1,1), (2,2), (3,3), (1,2), (2,1)\}\). 
+Quais propriedades \(R\) possui?
+{
+    =%33.3333%Reflexiva #Todos os pares (a,a) estão em R
+    =%33.3333%Simétrica #Se (1,2) está em R, (2,1) também está
+    =%33.3333%Transitiva #Por exemplo, (1,2) e (2,1) estão, mas (1,1) já está, mas se (1,2) e (2,3) estivessem, (1,3) não está
+}
+
+::Q14::
+Se \(R\) é uma relação de equivalência sobre um conjunto \(A\), então:
+{
+    ~%-100%R é apenas reflexiva e simétrica
+    ~%-100%R é apenas simétrica e transitiva
+    =R é reflexiva, simétrica e transitiva #Definição de relação de equivalência
+    ~%-100%R é apenas reflexiva e transitiva
+}
+
+::Q15::
+Seja \(A = \{1,2,3,4\}\) e \(R = \{(1,2), (2,3), (3,4)\}\). R é transitiva?
+{
+    ~%-100%Sim, pois para todo (a,b) e (b,c) em R, (a,c) está em R
+    =Não, pois (1,2) e (2,3) estão em R, mas (1,3) não está em R #Falta o par (1,3)
+}
+
+::Q16::
+Se \(R\) é uma relação sobre \(A\) tal que \((a,b) \in R\) implica \((b,a) \in R\), então \(R\) é:
+{
+    ~%-100%Reflexiva
+    =Simétrica #Definição de simetria
+    ~%-100%Transitiva
+    ~%-100%Antissimétrica
+}
+
+::Q17::
+Se \(R\) é uma relação de ordem parcial sobre \(A\), então \(R\) é:
+{
+    =Reflexiva, antissimétrica e transitiva #Definição de ordem parcial
+    ~%-100%Reflexiva, simétrica e transitiva
+    ~%-100%Apenas reflexiva e transitiva
+    ~%-100%Apenas antissimétrica e transitiva
+}
+
+::Q18::
+Seja \(A = \{1,2,3\}\) e \(R = \{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3), (3,2)\}\). R é uma relação de equivalência?
+{
+    ~%-100%Sim #R é reflexiva, simétrica e transitiva
+    ~%-100%Não, pois não é reflexiva
+    ~%-100%Não, pois não é simétrica
+    =Não, pois não é transitiva
+}
