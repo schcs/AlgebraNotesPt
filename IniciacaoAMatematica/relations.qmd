@@ -7,7 +7,8 @@ lang: pt
 ## Pares ordenados
 
 A ordem dos elementos em um conjunto não faz diferença; ou seja, os conjuntos $\{a,b\}$ e $\{b,a\}$ são iguais. Além disso, os conjuntos 
-$\{a,a,b\}$ e $\{b,b,a\}$ são também iguais ao conjunto $\{a,b\}$ e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os *pares ordenados*. O par ordenado dos objetos $a,b$ é denotado 
+$\{a,a,b\}$ e $\{b,b,a\}$ são também iguais ao conjunto $\{a,b\}$ e não tem como indicar quantas vezes um conjunto contém algum elemento. Às vezes é necessário trabalhar com coleções ordenadas de objetos (onde a ordem faz diferença) que podem também conter elementos mais que uma vez. Para isso servem os *pares ordenados* 
+e as *tuplas ordenadas*. O par ordenado dos objetos $a,b$ é denotado 
 por $(a,b)$. 
 
 A propriedade fundamental de pares ordenados é que 
@@ -59,7 +60,7 @@ $$
 
 ## $k$-uplas ordenadas e produto cartesiano de vários conjuntos
 
-Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
+Similarmente ao par ordenado, podemos considerar coleções ordenadas $(a_1,a_2,\ldots,a_k)$ (chamadas de $k$-uplas ou tuplas) de objetos. A propriedade fundamental destes $k$-uplas é que 
 $$
 (a_1,a_2,\ldots,a_k)=(b_1,b_2,\ldots,b_k)\quad\mbox{se e somente se}\quad \forall i\in\{1,\ldots,k\}\colon a_i=b_i.
 $$
@@ -82,7 +83,7 @@ Sejam $A$ e $B$ conjuntos. Uma relação entre $A$ e $B$ é um subconjunto
 $$
 R\subseteq A\times B.
 $$
-Quando $A=B$ e $R\subseteq A\times A$, dizemos que $R$ é uma relação sobre $A$.  
+Quando $A=B$ e $R\subseteq A\times A$, dizemos que $R$ é uma relação sobre $A$ ou uma relação em $A$.  
 :::
 
 :::{#exm-relation}
@@ -94,7 +95,7 @@ $$
 :::
 
 :::{#def-relation2}
-Seja $R\subseteq A\times B$. Quando $(a,b)\in R$ dizemos que $a$ está relacionado com $B$, $a$ está em relação com $b$, ou que $a$ e $b$ estão relacionados.  Neste caso escrevemos 
+Seja $R\subseteq A\times B$. Quando $(a,b)\in R$ dizemos que $a$ está relacionado com $b$, $a$ está em relação com $b$, ou que $a$ e $b$ estão relacionados.  Neste caso escrevemos 
 $$
 aRb.
 $$
@@ -146,7 +147,7 @@ Seja $R$ uma relação sobre $A$.
 Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antisimétricas, e todas as relações neste exemplo são transitivas.
 :::
 
-## Relações de equivalência
+## Relações de equivalência {#sec-rel-eq}
 
 Relações de equivalência fornecem uma ferramenta importante na matemática, pois elas nos permitem 
 considerar objetos distintos como fossem iguais. Comecemos com o seguinte exemplo. Considere as frações 
@@ -168,7 +169,7 @@ Seja $A$ um conjunto. Uma relação $R\subseteq A\times A$ é dita *relação de
 2. $R$ é simétrica (ou seja $aRb$ implica $bRa$ para todo $a,b\in A$); e
 3. $R$ é transitiva (ou seja $aRb$ e $bRc$ implica $aRc$ para todo $a,b,c\in A$).
 
-As relações de equivalência são normalmente denotados com os símbolos $\equiv$, $\cong$, etc, e escrevemos $a\equiv b$ ou $a\cong b$ em vez de $aRb$. 
+As relações de equivalência são normalmente denotadas com os símbolos $\equiv$, $\cong$, etc, e escrevemos $a\equiv b$ ou $a\cong b$ em vez de $aRb$. 
 :::
 
 :::{#exm-eq-eg}
@@ -238,7 +239,7 @@ $[a]=[b]$ isso implica que $a\in [b]$. Ora, a definição de $[b]$ implica que $
 da relação $\equiv$ implica que $a\equiv b$. Agora assuma que $a\equiv b$. Vamos provar que $[a]=[b]$; 
 ou seja $[a]\subseteq [b]$ e $[b]\subseteq [a]$. 
 Na primeira inclusão, seja $x\in[a]$. Pela definição de $[a]$, temos que $a\equiv x$. Por suposição, temos 
-que $a\equiv b$ e a simetria implica que $b\equiv a$. Ora, $b\equiv a$ e $a\equiv x$ e a transitividade implica que 
+que $a\equiv b$ e a simetria implica que $b\equiv a$. Ora, $b\equiv a$ e $a\equiv x$ e a transitividade implicam que 
 $b\equiv x$. Ou seja $x\in [b]$, pela definição de $[b]$. A inclusão que $[b]\subseteq [a]$ pode 
 ser demonstrada da mesma forma. Assuma que $y\in [b]$; ou seja $b\equiv y$. Como temos $a\equiv b$ e 
 $b\equiv y$, a transitividade implica que $a\equiv y$; ou seja a definição de $[a]$ dá que $y\in[a]$. 
@@ -288,7 +289,8 @@ Assuma agora que $\mathcal P$ é uma partição de $A$ e defina $\equiv_{\mathca
 
 1. Reflexividade: se $a\in A$, então $a$ claramente pertence à mesma parte de $\mathcal P$ que $a$ e $a\equiv_{\mathcal P} a$. Logo $\equiv_{\mathcal P}$ é reflexiva. 
 2.  Simetria: se $a\equiv_{\mathcal P}b$, então $a,b$ pertencem à mesma parte de $\mathcal P$. Logo $b,a$ também pertencem à mesma parte e assim $b\equiv_{\mathcal P}a$. Portanto $\equiv_{\mathcal P}$ é simétrica. 
-3. Transitividade: se $a\equiv_{\mathcal P}b$ e $b\equiv_{\mathcal P}c$, então $a$ e $b$ pertencem à mesma parte de $\mathcal P$ e $b$ e $c$ também pertencem à mesma parte de $\mathcal P$. Isso implica que $a$ e $c$ pertencem à mesma parte de $\mathcal P$. Portanto $a\equiv_{\mathcal P}c$ e a relação $\equiv_{\mathcal P}$ é transitiva.
+3. Transitividade: se $a\equiv_{\mathcal P}b$ e $b\equiv_{\mathcal P}c$, então $a$ e $b$ pertencem à mesma parte $X$ de $\mathcal P$ e $b$ e $c$ também pertencem à mesma parte $Y$ de $\mathcal P$. Como $b\in X\cap Y$, temos que $X\cap Y\neq \emptyset$ e a contrapositiva do item 2. da @def-partition implica que 
+$X=Y$. Isso implica que $a,c\in X$; ou seja,  eles pertencem à mesma parte de $\mathcal P$. Portanto $a\equiv_{\mathcal P}c$ e a relação $\equiv_{\mathcal P}$ é transitiva.
 
 Finalmente, seja $a\in A$ e assuma que $a\in X\in\mathcal P$ (ou seja $a$ pertence ao bloco 
 $X$ de $\mathcal P$). A classe de equivalência de $a$ é 
@@ -339,13 +341,13 @@ $$
 [0]=\{0,3,-3,6,-6,\ldots\}=\{3k\mid k\in\Z\}.
 $$
 Similarmente 
-$$
-[1]=\{a\in\Z\mid 1\equiv_3 a\}=\{a\in\Z\mid a-1=3k\}=\{a\in\Z\mid a=3k+1\}=\{1,-2,4,-5,7,-8,10,\ldots\}
-$$
+\begin{align*}
+[1]&=\{a\in\Z\mid 1\equiv_3 a\}=\{a\in\Z\mid a-1=3k\}=\{a\in\Z\mid a=3k+1\}\\&=\{1,-2,4,-5,7,-8,10,\ldots\}
+\end{align*}
 e
-$$
-[2]=\{a\in\Z\mid 2\equiv_3 a\}=\{a\in\Z\mid a-2=3k\}=\{a\in\Z\mid a=3k+2\}=\{2,-1,5,-4,8,-7,\ldots\}
-$$
+\begin{align*}
+[2]&=\{a\in\Z\mid 2\equiv_3 a\}=\{a\in\Z\mid a-2=3k\}=\{a\in\Z\mid a=3k+2\}\\&=\{2,-1,5,-4,8,-7,\ldots\}
+\end{align*}
 
 Obtemos que todo número inteiro pertençe a uma das classes de equivalência $[0],[1],[2]$. De fato se $a\in\Z$, então o resto de $a$ quando dividido por $3$ é $0$, $1$ ou $2$ e $a\in[r]$ onde $r$ é o seu resto. Assim temos apenas estas três classes. 
 
@@ -357,9 +359,41 @@ $$
 Descreve as classes de equivalência para a relação $\equiv_n$. 
 :::
 
-## Mais duas relações
+## Mais exemplos
 
-Os seguintes dois exemplos importantes serão tratados como exercícios.
+
+:::{#exm-rationais}
+O exemplo dado no início da @sec-rel-eq pode ser formalizado na seguinte maneira usando relações de equivalência. 
+Uma fração $a/b$ pode ser identificado com um par ordenado $(a,b)\in\Z\times (\Z\setminus\{0\})$. 
+De fato, a ordem dos números na fração é importante, $a$ e $b$ são números inteiros e $b\neq 0$ (pois divisão por zero não é permitida).
+Mas as frações não satisfazem a propriedade principal dos pares ordenados, pois $a/b$ e $c/d$ podem ser iguais (como números racionais) mesmo quando 
+$a\neq c$ ou $b\neq d$. Considere $A=\Z\times (\Z\setminus\{0\})$ e considere a seguinte relação $\sim$ sobre $A$:
+$$
+(a,b)\sim (c,d)\quad\mbox{se e somente se}\quad ad=bc.
+$$
+Afirmamos que $\sim$ é uma relação de equivalência. Na prova vamos precisar da lei cancelativa que diz que quando $x,y,z\in \Z$ tal que $z\neq 0$, a equação 
+$xz=yz$ implica que $x=y$ (ou seja, $z$ pode ser *cancelado*).  
+
+1. **Reflexividade:** Seja $(a,b)\in A$. Então $ab=ba$, portanto $(a,b)\sim (a,b)$.
+2. **Simetria:** Assuma que $(a,b),(c,d)\in A$ tais que $(a,b)\sim (c,d)$. Então $ad=bc$. Mas isso implica que $cb=da$ que 
+mostra que $(c,d)\sim (a,b)$. 
+3. **Transitividade:** Assuma que $(a,b),(c,d),(e,f)\in A$ tais que $(a,b)\sim (c,d)$ e $(c,d)\sim (e,f)$. A definição de $\sim$ implica que 
+\begin{align*}
+ad&=bc\\ cf&=de.
+\end{align*}
+Multiplicando as duas equações: $adcf=bcde$. Como $c,d\neq 0$, podemos usar a lei cancelativa que implica que $af=be$ que implica que $(a,b)\sim (e,f)$.   
+
+Note que $(a,b)\sim (c,d)$ se e somente se $ad=bc$. Dado que $b,d\neq 0$, esta relação equivale a dizer que $a/b=c/d$ como números racionais. Isso quer dizer que 
+a classe da equivalência $[(a,b)]$ contém exatamente os pares $(c,d)$ tais que $a/b$ e $c/d$ representam o mesmo número racional. Por exemplo, 
+$$
+[(1,2)]=\{(1,2),(2,4),(-1,-2),(-2,-4),(3,6),(-3,-6),\ldots\}
+$$
+Em outras palavras, 
+as classes de equivalência correspondem aos números racionais.  
+:::
+
+O seguinte exemplo é similar e deixamos ao leitor verificar os detalhes.
+
 
 :::{#exr-ntimesn}
 Seja $A=\N\times \N$ e defina a seguinte relação sobre $A$:
@@ -375,17 +409,6 @@ $$
 No seguinte exemplo voltamos ao exemplo motivador da seção e estudamos a relação 
 que explica melhor os números racionais. 
 
-:::{#exr-ztimesz}
-Seja $A=\Z\times \Z\setminus\{0\}$ e defina a seguinte relação sobre $A$:
-$$
-(a,b)\equiv (c,d)\quad\bicond \quad ad=bc.
-$$
-
-1. Mostre que $\equiv$ é uma relação de equivalência.
-2. Ache as classes de equivalência dos elementos $(1,2)$, $(2,4)$, e $(3,6)$. 
-3. Dê uma descrição de todas as classes de equivalência.
-4. Mostre que $(a,b)\equiv (c,d)$ se e somente se as frações $a/b$ e $c/d$ representam o mesmo número racional.
-:::
 
 ## Relação de ordem 
 
@@ -413,7 +436,6 @@ As relações $\subseteq$ e $\supseteq$ são relações de ordem sobre $A$.
 
 
 
-## Ordem total ou linear
 
 :::{#def-ordem-total}
 Seja $R$ uma relação de ordem sobre o conjunto $A$, Dizemos que $R$ é uma ordem total ou ordem linear se 
