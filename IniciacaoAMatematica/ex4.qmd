@@ -1,0 +1,126 @@
+---
+number-sections: true
+lang: pt-BR
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{4}
+---
+
+# Lista de Exercícios
+
+::: {.content-hidden}
+$$
+{{< include ../macros.tex >}}
+$$
+:::
+
+Nos seguintes exercícios, 
+\begin{align*}
+A&=\{1,2,3,4,5\};\\
+B&=\{4,6,8\};\\
+C&=\{1,3,5,7\}.
+\end{align*}
+
+:::{#exr-}
+Seja $f:A\to B$, definida por 
+$$
+1\mapsto 4,\ 2\mapsto 6,\ 3\mapsto 8,\ 4\mapsto 8,\ 5\mapsto 6.
+$$
+
+1. Quais das seguintes afirmações são verdadeiras para $f$?
+    a. $f$ é injetiva;
+    b. $f$ é sobrejetiva;
+    c. $f$ é bijetiva.
+2. Decida se $f$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
+:::
+
+
+:::{#exr-}
+Seja $g:B\to C$ definida por 
+$$
+4\mapsto 1,\ 6\mapsto 5,\ 8\mapsto 7.
+$$
+
+1. Quais das seguintes afirmações são verdadeiras para $g$?
+    a. $g$ é injetiva;
+    b. $g$ é sobrejetiva;
+    c. $g$ é bijetiva.
+2. Decida se $g$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
+:::
+
+:::{#exr-}
+Considere a função $h=g\circ f:A\to C$.
+
+1. Calcule $h(a)$ para todo $a\in A$. 
+2. Quais das seguintes afirmações são verdadeiras para $h$?
+    a. $h$ é injetiva;
+    b. $h$ é sobrejetiva;
+    c. $h$ é bijetiva.
+3. Decida se $h$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
+:::
+
+
+
+:::{#exr-}
+Qual é o número de funções diferentes com domínio $A$ e codomínio $B$? Quantas destas são injetivas e quantas são sobrejetivas? 
+Responde as mesmas perguntas para funções com domínio $B$ e codomíonio $C$. 
+:::
+
+
+:::{#exr-}
+Seja $f:\R\to \R$ definida com $f(x)=x^2$. 
+
+1. Restrinja o codomínio de $f$, sem mudar o seu domínio, tal que a nova função seja sobrejetiva. 
+2. Considere a função $\tilde f$ obtida no item 1. Decida se $\tilde f$ tem inversa à esquerda ou à direita. Construa a inversa caso ela existir. 
+3. Ache um conjunto $C\subseteq \R$ (maior possível) tal que a restrição $\tilde f|_C$ é invertível. Determine a inversa de $\tilde f|_C$ explicitamente. 
+:::
+
+:::{#exr-}
+Considere a matriz 
+$$
+A=\begin{pmatrix}
+1 & 1 \\ 0 & 1\\ 0 & 0 \end{pmatrix}
+$$
+e seja $F:\R^2\to \R^3$ a função
+$$
+F\begin{pmatrix} x \\ y\end{pmatrix} =A\begin{pmatrix} x \\ y\end{pmatrix}.
+$$
+
+1. Quais das seguintes afirmações são verdadeiras para $F$?
+    a. $F$ é injetiva;
+    b. $F$ é sobrejetiva;
+    c. $F$ é bijetiva.
+2. Decida se $F$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
+:::
+
+:::{#exr-}
+Considere a matriz 
+$$
+B=\begin{pmatrix}
+1 & 0 & 0 \\ 1 & 1 & 0 \end{pmatrix}
+$$
+e seja $G:\R^3\to \R^2$ a função
+$$
+G\begin{pmatrix} x \\ y\\ z\end{pmatrix} =B\begin{pmatrix} x \\ y\\ z\end{pmatrix}.
+$$
+
+1. Quais das seguintes afirmações são verdadeiras para $G$?
+    a. $G$ é injetiva;
+    b. $G$ é sobrejetiva;
+    c. $G$ é bijetiva.
+2. Decida se $G$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
+:::
+
+
+:::{#exr-}
+Sejam $f:A\to B$ e $g:B\to C$ funções. Decide quais das seguintes afirmações são verdadeiras. Se uma afirmação for verdadeira, dê uma prova; caso contrário, exiba um contra-exemplo.
+
+1. Se $f$ e $g$ são injetivas, então $g\circ f$ é injetiva. 
+2. Se $f$ e $g$ são sobrejetivas, então $g\circ f$ é sobrejetiva. 
+3. Se $f$ e $g$ são bijetivas, então $g\circ f$ é bijetiva. 
+4. Se $g$ é sobrejetiva, então $g\circ f$ é sobrejetiva. 
+5. Se $f$ é injetiva, então $g\circ f$ é injetiva.
+:::
