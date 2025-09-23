@@ -43,7 +43,7 @@ Demonstre as seguintes igualdades para conjuntos $A$, $B$, $C$, $D$:
 Sejam $A$, $B$, $C$ e $D$ conjuntos.
 Será que a igualdade 
 $$
-(A\times B)\cup (C\times D)=(A\cup B)\times (B\cup D) 
+(A\times B)\cup (C\times D)=(A\cup C)\times (B\cup D) 
 $$
 é 
 sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo. 
