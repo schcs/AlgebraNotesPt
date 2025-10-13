@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3ae2e506ec027f913583b733d9fa28e9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1489,6 +1489,45 @@ G\begin{pmatrix} x \\ y\\ z\end{pmatrix} =B\begin{pmatrix} x \\ y\\ z\end{pmatri
 <li>Se <span class="math inline">\(g\)</span> é sobrejetiva, então <span class="math inline">\(g\circ f\)</span> é sobrejetiva.</li>
 <li>Se <span class="math inline">\(f\)</span> é injetiva, então <span class="math inline">\(g\circ f\)</span> é injetiva.</li>
 </ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 9.9</strong></span> Seja <span class="math inline">\(\mathbb R_{\geq 0}=\{x\in\mathbb R\mid x\geq 0\}\)</span> e seja <span class="math inline">\(f:\mathbb R\to \mathbb R_{\geq 0}, f(x)=x^2\)</span> e <span class="math inline">\(g:\mathbb R_{\geq 0}\to \mathbb R\)</span>, <span class="math inline">\(g(x)=\sqrt x\)</span>. Mostre que</p>
+<ol type="1">
+<li><span class="math inline">\(g\)</span> é inversa à direita de <span class="math inline">\(f\)</span>;</li>
+<li><span class="math inline">\(g\)</span> não é inversa de <span class="math inline">\(f\)</span>.</li>
+</ol>
+</div>
+<div class="{exr-}">
+<p>Seja <span class="math inline">\(\mathbb R_{+}=\{x\in\mathbb R\mid x&gt; 0\}\)</span>, seja <span class="math inline">\(f:\mathbb R\to \mathbb R, f(x)=\exp(x)(=e^x)\)</span>. Decida se <span class="math inline">\(f\)</span> possui inversa à esquerda ou à direita e contstrua a inversa quando existir.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 9.10</strong></span> Seja <span class="math inline">\(f:\mathbb R\to\mathbb R\)</span>, <span class="math inline">\(f(x)=x^2\)</span>. Determine os seguintes conjuntos:</p>
+<ol type="1">
+<li><span class="math inline">\(f([-1,1])\)</span>;</li>
+<li><span class="math inline">\(f([0,1])\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{1\})\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{0\})\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(\{-1\})\)</span>;</li>
+<li><span class="math inline">\(f^{-1}([-1,0])\)</span>;</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 9.11</strong></span> Seja <span class="math inline">\(f:A\to B\)</span> uma função. Mostre que <span class="math display">\[
+\mathcal P_f=\{f^{-1}(\{b\})\mid b\in\mbox{Im}(f)\}
+\]</span> é uma partição de <span class="math inline">\(A\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 9.12</strong></span> Determine a partição <span class="math inline">\(\mathcal P_f\)</span> para a função <span class="math inline">\(f:\mathbb R^2\to \mathbb R\)</span>, <span class="math inline">\(f(x,y)=x-y\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 9.13</strong></span> Seja <span class="math inline">\(f:A\to B\)</span> uma função, sejam <span class="math inline">\(X_1,X_2\subseteq A\)</span> e <span class="math inline">\(Y_1,Y_2\subseteq B\)</span>. Demonstre que</p>
+<ol type="1">
+<li><span class="math inline">\(f(X_1\cup X_2)=f(X_1)\cup f(X_2)\)</span>;</li>
+<li><span class="math inline">\(f(X_1\cap X_2)\subseteq f(X_1)\cap f(X_2)\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(Y_1\cup Y_2)=f^{-1}(Y_1)\cup f^{-1}(Y_2)\)</span>;</li>
+<li><span class="math inline">\(f^{-1}(Y_1\cap Y_2)= f^{-1}(Y_1)\cap f^{-1}(Y_2)\)</span>.</li>
+</ol>
+<p>Dê exemplo explícito de uma função <span class="math inline">\(f:A\to B\)</span> e subconjuntos <span class="math inline">\(X_1,X_2\subseteq A\)</span> tais que <span class="math inline">\(f(X_1\cap X_2)\neq f(X_1)\cap f(X_2)\)</span> mostrando que em geral igualdade não vale no item 2. do exercício anterior.</p>
 </div>
 
 
