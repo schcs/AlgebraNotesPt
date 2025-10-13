@@ -132,7 +132,7 @@ Seja $\R_{\geq 0}=\{x\in\R\mid x\geq 0\}$ e seja $f:\R\to \R_{\geq 0}, f(x)=x^2$
 2. $g$ não é inversa de $f$.
 :::
 
-:::{exr-}
+:::{#exr-}
 Seja $\R_{+}=\{x\in\R\mid x> 0\}$, seja $f:\R\to \R, f(x)=\exp(x)(=e^x)$. Decida se $f$ possui  inversa à esquerda ou à direita e contstrua a inversa quando existir. 
 :::
 
