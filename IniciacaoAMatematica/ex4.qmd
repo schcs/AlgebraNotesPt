@@ -124,3 +124,52 @@ Sejam $f:A\to B$ e $g:B\to C$ funções. Decide quais das seguintes afirmações
 4. Se $g$ é sobrejetiva, então $g\circ f$ é sobrejetiva. 
 5. Se $f$ é injetiva, então $g\circ f$ é injetiva.
 :::
+
+:::{#exr-}
+Seja $\R_{\geq 0}=\{x\in\R\mid x\geq 0\}$ e seja $f:\R\to \R_{\geq 0}, f(x)=x^2$ e $g:\R_{\geq 0}\to \R$, $g(x)=\sqrt x$. Mostre que 
+
+1. $g$ é  inversa à direita de $f$;
+2. $g$ não é inversa de $f$.
+:::
+
+:::{exr-}
+Seja $\R_{+}=\{x\in\R\mid x> 0\}$, seja $f:\R\to \R, f(x)=\exp(x)(=e^x)$. Decida se $f$ possui  inversa à esquerda ou à direita e contstrua a inversa quando existir. 
+:::
+
+:::{#exr-}
+Seja $f:\R\to\R$, $f(x)=x^2$. 
+Determine os seguintes conjuntos:
+
+1. $f([-1,1])$;
+2. $f([0,1])$;
+3. $f^{-1}(\{1\})$;
+4. $f^{-1}(\{0\})$;
+5. $f^{-1}(\{-1\})$;
+6. $f^{-1}([-1,0])$;
+:::
+
+
+:::{#exr-}
+Seja $f:A\to B$ uma função. Mostre que 
+$$
+\mathcal P_f=\{f^{-1}(\{b\})\mid b\in\mbox{Im}(f)\} 
+$$ 
+é uma partição de $A$. 
+:::
+
+:::{#exr-}
+Determine a partição $\mathcal P_f$ para a função $f:\R^2\to \R$, $f(x,y)=x-y$. 
+:::
+
+
+:::{#exr-} 
+Seja $f:A\to B$ uma função, sejam $X_1,X_2\subseteq A$ e $Y_1,Y_2\subseteq B$. Demonstre que 
+
+1. $f(X_1\cup X_2)=f(X_1)\cup f(X_2)$; 
+2. $f(X_1\cap X_2)\subseteq f(X_1)\cap f(X_2)$;
+3. $f^{-1}(Y_1\cup Y_2)=f^{-1}(Y_1)\cup f^{-1}(Y_2)$; 
+4. $f^{-1}(Y_1\cap Y_2)= f^{-1}(Y_1)\cap f^{-1}(Y_2)$.
+
+Dê exemplo explícito de uma função $f:A\to B$ e subconjuntos $X_1,X_2\subseteq A$ tais que $f(X_1\cap X_2)\neq f(X_1)\cap f(X_2)$ mostrando que em geral igualdade não vale no item 2. do exercício anterior.
+:::
+
