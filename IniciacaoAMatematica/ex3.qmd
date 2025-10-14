@@ -10,7 +10,6 @@ format:
 ---
 
 # Lista de Exercícios
-## Iniciação à Matemática, 2024/I {.unnumbered}
 
 ::: {.content-hidden}
 $$
@@ -20,6 +19,34 @@ $$
 
 :::{#exr-}
 Sejam $A=\{0,2,4\}$ e $B=\{1,2,3,4\}$. Faça uma lista dos elementos de $A\times A$, $A\times B$, $B\times A$ e $B\times B$. 
+:::
+
+:::{#exr-}
+Sejam $A$, $B$ e $C$ conjuntos.
+
+1. O que pode dizer sobre $\emptyset\times A$ e $A\times \emptyset$? Justifique.
+2. Demonstre que $B=C$ se e somente se $\forall A:A\times B=A\times C$.
+3. Assumindo que $A\times B=B\times A$, o que pode dizer sobre $A$ e $B$? 
+:::
+
+:::{#exr-}
+Demonstre as seguintes igualdades para conjuntos $A$, $B$, $C$, $D$:
+
+1. $(A\cup B)\times C=(A\times C)\cup (B\times C)$;
+2. $(A\cap B)\times C=(A\times C)\cap (B\times C)$;
+3. $A\times (B\cup C)=(A\times B)\cup (A\times C)$; 
+4. $A\times (B\cap C)=(A\times B)\cap (A\times C)$;
+5. $(A\times B)\cap (C\times D)=(A\cap C)\times (B\cap D)$. 
+:::
+
+:::{#exr-}
+Sejam $A$, $B$, $C$ e $D$ conjuntos.
+Será que a igualdade 
+$$
+(A\times B)\cup (C\times D)=(A\cup C)\times (B\cup D) 
+$$
+é 
+sempre verdadeira. Se sim, dê prova; se não, dê contraexemplo. 
 :::
 
 :::{#exr-}
@@ -37,7 +64,6 @@ Seja $A=\{1,2,3,4,5,6\}$. Dê exemplo de relação $R$ no conjunto $A$ para cada
 1. $R$ é reflexiva, mas não é simétrica.
 2. $R$ é simétrica, mas não é reflexiva.
 3. $R$ é simétrica e antisimétrica. 
-4. $R$ é transitiva e simétrica, mas não é reflexiva. 
 :::
 
 
@@ -62,10 +88,105 @@ Sejam $R$ e $Q$ duas relações em um conjunto $A$. Considere $R\cup Q$ e $R\cap
 :::
 
 :::{#exr-}
-Um aluno gostaria de provar que se $R$ é uma relação transitiva e simétrica sobre um conjunto $A$, então $R$ é reflexiva. O aluno pediu a página ChatGPT (https://chat.openai.com/) para ajuda. A resposta do programa foi a seguinte:
+Um aluno gostaria de provar que se $R$ é uma relação transitiva e simétrica sobre um conjunto $A$, então $R$ é reflexiva. O aluno  fez o seguinte argumento: 
 
-![ChatGPT](img/relations_gpt.png)
+Seja $R$ uma relação transitiva e simétrica sobre um conjunto $A$. Assuma que $a\in A$ é um elemento qualquer. Seja 
+$b\in A$ tal que $aRb$. Como $R$ é simétrica, temos que $bRa$. Como $R$ é transitiva, 
+$aRb$ e $bRa$ implicam que $aRa$. Portanto, provamos para um elemento $a\in A$ qualquer que $aRa$ e assim 
+$R$ é reflexiva. 
 
-Critique a resposta do programa e decida se ela está certa. 
+1. Será que a prova do aluno está certa? Critique a resposta.
+2. Se você não concorda com o argumento do aluno, dê exemplo explícito de uma relação $R$ que 
+seja transitiva e simétrica, mas não é reflexiva. 
+:::
+
+:::{#exr-}
+Revisar a relação $\equiv_n$ em $\Z$ no @exr-class-res. Escolha um valor pequeno para $n$ 
+(por exemplo, $n=3,4,5$) e responda às seguintes perguntas:
+
+1. Mostre que temos apenas um número finito de classes de equivalência.
+2. Mostre que cada classe contem infinitos elementos.
+3. Descreve a classe de equivalência dos números $-3,-2,-1,0,1,2,3$. 
+4. Faça uma lista de todas as classes de equivalência para o $n$ escolhido.
+:::
+
+
+:::{#exr-}
+Seja $A=\N\times \N$ e seja $R$ a relação em $A$ definida com a seguinte regra:
+$$
+(a,b)R(c,d)\quad\mbox{se e somente se}\quad a+d=b+c.
+$$
+
+1. Demonstre que $R$ é uma relação de equivalência.
+2. Ache as classes de equivalência dos elementos $(1,1)$, $(1,2)$, $(2,1)$, $(6,4)$.
+3. Mostre que há infinitas classes de equivalência e cada classe contem infinitos elementos.
+4. Faça uma lista das classes de equivalência listando cada classe exatamente uma vez.
+:::
+
+:::{#exr-}
+Seja $A=\Z\times \Z\smallsetminus\{0\}$ e seja $R$ a relação em $A$ definida com a  seguinte regra:
+$$
+(a,b)R(c,d)\quad\mbox{se e somente se}\quad ad=bc.
+$$
+
+1. Demonstre que $R$ é uma relação de equivalência.
+2. Ache as classes de equivalência dos elementos $(1,1)$, $(1,2)$, $(2,1)$, $(6,3)$.
+3. Mostre que há infinitas classes de equivalência e cada classe contem infinitos elementos.
+4. Faça uma lista das classes de equivalência listando cada classe exatamente uma vez.
+5. Explique porque a mesma relação não é equivalência sobre o conjunto $\Z\times\Z$. 
+:::
+
+
+
+:::{#exr-}
+Considere $A=\R^2$ e defina a seguinte relação $R$ em $A$:
+$$
+(x_1,y_1)R(x_2,y_2)\quad\mbox{se e somente se}\quad x_1<x_2 \mbox{ ou }x_1=x_2 \mbox{ e } y_1\leq y_2.
+$$
+
+1. Mostre que $R$ é uma relação de ordem.
+2. Decida se $R$ é ordem total ou não.
+3. Considere o ponto $(1,2)\in \R^2$. Faça um esboço dos seguintes conjuntos no plano:
+$$
+\{(x,y)\in\R\mid (1,2)R(x,y)\}\quad\mbox{e}\quad \{(x,y)\in\R\mid (x,y)R(1,2)\}. 
+$$
+:::
+
+
+:::{#exr-}
+Sejam $A$ e $B$ conjuntos com relações de ordem $R_A$ e $R_B$, respetivamente. Defina uma relação $R_C$ em $C=A\times B$ na seguinte maneira:
+$$
+(a_1,b_1)R_C(a_2,b_2)\quad\mbox{se e somente se}\quad [a_1R_Aa_2 \mbox{ e } a_1\neq a_2] \mbox{ ou }[a_1=a_2 \mbox{ e } y_1R_By_2].
+$$
+Mostre que $R_C$ é uma relação de ordem. 
+:::
+
+:::{#exr-refl-trans}
+Seja $R\subseteq A\times A$ 
+uma relação reflexiva e transitiva. Define $Q\subseteq A\times A$, com a regra
+que $aQb$ se e somente se $aRb$ e $bRa$. Moste que $Q$ é uma relação de 
+equivalência.
+:::
+
+:::{#exr-}
+Considere a relação $\mid$ para números inteiros; ou seja, para $a,b\in\Z$, $a\mid b$ se existir 
+$q\in \Z$ tal que $b=qa$. 
+
+1. Mostre que $\mid$ é uma relação reflexiva, transitiva, mas não é simétrica. 
+2. Aplique a construção do @exr-refl-trans para a relação $\mid$ e descreva a relação que obteve. 
+Verifique que a relação obtida desta forma é uma equivalência.
+:::
+
+:::{#exr-}
+Seja $A$ um conjunto e sejam $R,\ Q\subseteq A\times A$ relações. Demostre 
+as seguintes afirmações.
+
+1. Se $R$ e $Q$ são relações de equivalência, então $R\cap Q$ também é.
+2. Se $R$ e $Q$ são relações de equivaléncia, então pode ser que 
+$R\cup Q$ não é.
+3. Se $R$ e $Q$ são relações de ordem, então $R\cap Q$ também é.
+4. Se $R$ e $Q$ são relações de ordem, então pode ser que $R\cup Q$ não é.
+5. Se $R$ e $Q$ são ordens totais, então pode ser que $R\cup Q$ não é.
+6. Se $R$ e $Q$ são ordens totais, então pode ser que $R\cap Q$ não é.
 :::
 

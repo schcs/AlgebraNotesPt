@@ -17,12 +17,13 @@ book:
       chapters: 
         - IniciacaoAMatematica/prop.qmd
         - IniciacaoAMatematica/conjuntos.qmd
+        - IniciacaoAMatematica/ex1.qmd
         - IniciacaoAMatematica/quant.qmd
+        - IniciacaoAMatematica/ex2.qmd
         - IniciacaoAMatematica/relations.qmd
-        - IniciacaoAMatematica/equivalence.qmd
-        - IniciacaoAMatematica/equivalence_examples.qmd
-        - IniciacaoAMatematica/order.qmd
+        - IniciacaoAMatematica/ex3.qmd
         - IniciacaoAMatematica/functions.qmd
+        - IniciacaoAMatematica/ex4.qmd
         - IniciacaoAMatematica/naturais.qmd
         - IniciacaoAMatematica/int_rat.qmd
     - part: FundamentosDeAlgebra/index.qmd

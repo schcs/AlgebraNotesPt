@@ -167,7 +167,7 @@ A prova da afirmação 2. é similar e será exercício do leitor.
 ## O complemento
 
 :::{#def-complement}
-Sejam $A$ e $B$ conjuntos tais que $A\subseteq B$. O *complemento* de $A$ em $B$ é o conjunto $A\setminus B$.  O complemento é denotado por $A^c$. Note que o complemento depende de $B$, mesmo que isso não está indicado na notação. 
+Sejam $A$ e $B$ conjuntos tais que $A\subseteq B$. O *complemento* de $A$ em $B$ é o conjunto $B\setminus A$.  O complemento é denotado por $A^c$. Note que o complemento depende de $B$, mesmo que isso não está indicado na notação. 
 :::
 
 O seguinte resultado é uma versão das Leis de De Morgan (@exr-true-table2) para conjuntos.
@@ -194,3 +194,37 @@ Logo, $(A\cup B)^c\subseteq A^c\cap B^c$. Revertendo o argumento, obtemos que $A
 
 A verificação da afirmação 2. é exercício.
 :::
+
+## O Paradoxo de Russel
+
+Como foi dito em cima, esta teoria básica dos conjuntos não é uma teoria matematicamente consistente, 
+pois resulta em contradições, o mais conhecido sendo o [Paradoxo do Russel](https://pt.wikipedia.org/wiki/Paradoxo_de_Russell). 
+
+Se nós permitirmos a criação de conjuntos sem nenhuma restrição, precisa existir o conjunto $\Omega$ dos 
+todos os conjuntos (conjunto universal). Defina o seguinte subconjunto $\Delta$ de $\Omega$:
+$$
+\Delta=\{A\in\Omega\mid A\not\in A\}.
+$$
+A definição de $\Delta$ pode aparecer estranha, pois geralmente $A\not\in A$ para um conjunto 
+$A$. (Mas $A\subseteq A$!) Então pode parecer que todo conjunto é elemento de $\Delta$. Por outro lado,
+como $\Omega$ é o conjunto de todos os conjuntos, temos que $\Omega\in\Omega$ e $\Omega\not\in\Delta$. 
+
+Ora, $\Delta$ é um subconjunto de $\Omega$, ele é um conjunto e assim $\Delta\in\Omega$. Agora podemos perguntar se $\Delta\in\Delta$? Mas 
+considerando a definição de $\Delta$, nós temos que 
+$$
+\begin{align*}
+\Delta\in\Delta&\Rightarrow \Delta\not\in\Delta\\
+\Delta\not\in\Delta&\Rightarrow \Delta\in\Delta.
+\end{align*}
+$$
+Portanto as duas alternativas $\Delta\in\Delta$ e $\Delta\not\in\Delta$ nos leva a uma contradição. 
+
+{{< video https://www.youtube.com/embed/fpXlGqhO2Fk?si=mcj8IDzYA5WZOxPj width="560" height="315" >}}
+
+Por este motivo é necessário desenvolver uma teoria rigorosa da teoria dos conjuntos que não permite 
+a criação de conjuntos sem controle e por exemplo não permite a criação do conjunto de todos os conjuntos. A teoria mais amplamente usada é a [Teoria de Zermelo-Fraenkel](https://pt.wikipedia.org/wiki/Axiomas_de_Zermelo-Fraenkel).
+
+O Paradoxo do Barbeiro é uma forma popular do Paradoxo de Russel.
+
+{{< video https://youtu.be/D3f1nu6pWe8?si=nYSMLkbh-8yHuCiY width="560" height="315" >}}
+

@@ -27,13 +27,14 @@ Material disponibilizado sob a licença
 
 ## Apostilas
 
-- [Proposições e sentenças](prop.qmd)
+- [Proposições e sentenças](prop.qmd) 
 - [Conjuntos](conjuntos.qmd)
+- [Exercícios](ex1.qmd)
 - [Quantificadores](quant.qmd)
+- [Exercícios](ex2.qmd)
 - [Pares ordenados e relações](relations.qmd)
-- [Relações de equivalência](equivalence.qmd)
-- [Exemplos importantes de relações de equivalência](equivalence_examples.qmd)
-- [Relações de ordem](order.qmd)
+- [Exercícios](ex3.qmd)
 - [Funções](functions.qmd)
+- [Exercícios](ex4.qmd)
 - [Números naturais](naturais.qmd)
 - [Os números inteiros e racionais](int_rat.qmd)

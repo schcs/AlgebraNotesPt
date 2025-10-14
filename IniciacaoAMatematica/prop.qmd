@@ -8,51 +8,51 @@ lang: pt
 
 ## Proposições simples
 
-Entender o significado de afirmações na matemática exige o conhecimento dos elementos da lógica básica que vamos estudar nesta página. Além disso, a compreensão deste conteúdo é importante também no trabalho com expressões lógicas (booleanas) nas [linguagens de programação](https://panda.ime.usp.br/aulasPython/static/aulasPython/aula05.html).
+Entender o significado de afirmações na matemática exige o conhecimento dos elementos da lógica básica que vamos estudar nesta página. Além disso, a compreensão deste conteúdo é importante também para trabalhar com expressões lógicas (booleanas) nas [linguagens de programação](https://panda.ime.usp.br/aulasPython/static/aulasPython/aula05.html).
 
-Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que afirma um fato. Por exemplo, as seguintes afirmações são proposições:
+Na matemática, uma *proposição* (ou *sentença*) é uma afirmação que atribui um fato. Por exemplo, as seguintes afirmações são proposições:
 
 - $1\neq 2$;
 - $\pi > \sqrt{10}$;
 - $1+2=3$.
 
-Cada proposição deve ser ou *verdadeira* ou *falsa*, mas não pode ser verdadeira *e* falsa no mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor de verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição na lista anterior é falsa, mas ela é ainda uma proposição (com valor lógico *falso*).
+Cada proposição é ou *verdadeira* ou *falsa* — não pode ser ambas ao mesmo tempo. A veracidade ou falsidade de uma proposição chama-se *valor lógico* ou *valor verdade*. Cada proposição tem exatamente um dos dois valores lógicos: *verdadeiro* ou *falso*. É importante notar que uma proposição não precisa ser verdadeira. Por exemplo, a segunda proposição da lista anterior é falsa, mas ainda é uma proposição (com valor lógico *falso*).
 
-Nesta disciplina, nós lidamos com proposições sobre objetos de matemática, como nos exemplos anteriores, pois as proposições cotadianas, tais como "O Pedro é estudante" são frequentamente demasiado ambíguas para terem um valor lógico bem definido. (Pode ser que o Pedro não está matriculado no momento, ou pode ser que mesmo sendo matriculado não frequenta as aulas. Nestes casos, pode ser questionável se o Pedro é de fato um estudante.) 
+Nesta disciplina, trabalhamos principalmente com proposições sobre objetos matemáticos, pois proposições cotidianas, tais como "O Pedro é estudante", costumam ser ambíguas e podem não ter um valor lógico bem definido (por exemplo, se Pedro não está matriculado no momento ou não frequenta as aulas, fica duvidoso considerá‑lo estudante).
 
-As seguintes não são proposições. 
+As seguintes não são proposições.
 
 - O número $10$ é interessante. 
-- Você deve estudar mais.
+- Você deve estudar mais. 
 
- Nos dois  casos, a afirmação é subjetiva, pode ser verdadeira para uma pessoa e falsa para uma outra.
+Em ambos os casos a afirmação é subjetiva: pode ser verdadeira para uma pessoa e falsa para outra.
 
 
 :::{#exm-prop-simple}
-A propisição que "2 é um número par" é verdadeira, enquanto a proposição "3 é um número negativo" é falsa. Similarmente, a proposição "$2+3=5$" é verdadeira, enquanto a proposição "$2+3<5$" é falsa.
+A proposição "2 é um número par" é verdadeira, enquanto a proposição "3 é um número negativo" é falsa. Analogamente, a proposição "$2+3=5$" é verdadeira, enquanto a proposição "$2+3<5$" é falsa.
 :::
 
-As proposições no exemplo anterior e na lista em cima são *proposições simples*.
+As proposições no exemplo anterior e na lista acima são *proposições simples*.
 
 ## Proposições compostas
 
-Usando as operações lógicas, pode-se formar proposições compostas a partir das proposições simples (ou atómicas). As principais operações lógicas (ou conectivos) são **conjunção** (e), **disjunção** (ou) e a **negação** (não). 
+Usando conectivos lógicos, pode‑se formar proposições compostas a partir das proposições simples (ou atómicas). As principais operações lógicas (ou conectivos) são **conjunção** (e), **disjunção** (ou) e **negação** (não). 
 
 Sejam $A$ e $B$ proposições. 
 
 
 **A conjunção ($\land$)**: 
-A conjunção das proposições $A$ e $B$ é a proposição $A\land B$ (leia-se "$A$ e $B$"). A proposição $A\land B$ é verdadeira se $A$ é verdadeira e $B$ é verdadeira. Caso contrário, $A\land B$ é falsa.
+A conjunção das proposições $A$ e $B$ é a proposição $A\land B$ (leia‑se "$A$ e $B$"). A proposição $A\land B$ é verdadeira se $A$ é verdadeira e $B$ é verdadeira. Caso contrário, $A\land B$ é falsa.
 
 
 **A disjunção ($\lor$)**: 
-A disjunção das proposições $A$ e $B$ é a proposição $A\lor B$ (leia-se "$A$ ou $B$"). A proposição $A\lor B$  é verdadeira se  $A$ é verdadeira ou $B$ é verdadeira. Em particular, se ambas de $A$ e $B$ são verdadeiras, então $A\lor B$ é verdadeira. Caso contrário, $A\lor B$ é falsa.
+A disjunção das proposições $A$ e $B$ é a proposição $A\lor B$ (leia‑se "$A$ ou $B$"). A proposição $A\lor B$ é verdadeira se $A$ é verdadeira ou $B$ é verdadeira. Em particular, se ambas $A$ e $B$ são verdadeiras, então $A\lor B$ é verdadeira. Caso contrário, $A\lor B$ é falsa.
 
 **A negação ($\neg$)**: 
-A negação da proposição $A$ é $\neg A$ (leia-se "não $A$"). A proposição  $\neg A$ é verdadeira se $A$ é falsa. Caso contrário $\neg A$ é falsa
+A negação da proposição $A$ é $\neg A$ (leia‑se "não $A$"). A proposição $\neg A$ é verdadeira se $A$ é falsa; caso contrário, $\neg A$ é falsa.
 
 :::{#exm-prop-composta}
-Considere por exemplo as seguintes duas proposições $A$ e $B$.
+Considere, por exemplo, as seguintes duas proposições $A$ e $B$.
 \begin{align*}
 A&:2+4=3;\\
 B&:\mbox{$9$ é múltiplo de $3$}.
@@ -76,53 +76,48 @@ A\lor \neg B&:\mbox{falsa}\\
 \end{align*}
 :::
 
-As operações $\neg$, $\lor$ e $\land$ podem ser combinadas para obter afirmações mais complexas. Por exemplo a afirmação
+As operações $\neg$, $\lor$ e $\land$ podem ser combinadas para obter afirmações mais complexas. Por exemplo, a afirmação
 $$
 [\neg(A\land B)]\lor [\neg(A\lor B)]
 $$
-é verdadeira, pois ela é a disjunção de duas afirmações, a primeira sendo verdadeira, enquanto a segunda sendo falsa.
+é verdadeira, pois é a disjunção de duas afirmações, a primeira sendo verdadeira e a segunda falsa.
 
-Note que nós usamos parênteses para indicar a ordem das operações. A última expressão poderia ser escrita também como 
+Note que usamos parênteses para indicar a ordem das operações. A última expressão poderia ser escrita também como 
 $$
 \neg(A\land B)\lor \neg(A\lor B)
 $$
-sem nenhuma ambiguidade. Em caso de dúvida, é melhor adicionar as parênteses que omitir. Às vezes, as parênteses são necessários para a interpretação da expressão. Por exemplo, a expressão 
-$$
-A\lor B \land C
-$$
-está ambígua, pois pode denotar $(A\lor B)\land C$ ou 
-$A\lor(B\land C)$. Se $A$ é verdadeira e $C$ é falsa, então $(A\lor B)\land C$ é falsa, mas $A\lor (B\land C)$ é verdadeira (independentemente do valor lógico de $B$). Nestes casos, as operações são feitas da esquerda para a direita, e a proposição deve ser interpretada como $(A\lor B)\land C$. Tendo dito isso, é melhor colocar as parénteses. 
+sem ambiguidade. Em caso de dúvida, é melhor adicionar parênteses na expressão. Sem parênteses, costuma‑se adotar a precedência: $\neg$ tem maior precedência, depois $\land$, depois $\lor$; quando ainda houver ambiguidade, use parênteses.
 
-Outras operações lógicas que são frequentamente usadas são a **disjunção exclusiva** $\lxor$, a **condicional** $\cond$ e **bicondicional** $\bicond$.
+Outras operações lógicas frequentemente usadas são a **disjunção exclusiva** $\lxor$, a **condicional** $\cond$ e o **bicondicional** $\bicond$.
 
 **Disjunção exclusiva ($\lxor$)**: 
-A disjunção exclusiva (XOR ou XOU) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou $A$ ou $B$ mas não ambas). A proposição $A\lxor B$ é verdadeira se $A$ é verdadeira ou $B$ é verdadeira, mas não quando $A$ e $B$ são ambas verdadeiras. Caso contrário $A\lxor B$ é falsa.
+A disjunção exclusiva (XOR) das proposições $A$ e $B$ é a proposição $A\lxor B$ (ou "$A$ ou $B$, mas não ambas"). A proposição $A\lxor B$ é verdadeira se exatamente uma entre $A$ e $B$ é verdadeira. Caso contrário, $A\lxor B$ é falsa.
 
 **Condicional ($\cond$)**: 
-A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia-se "$A$ implica $B$"). A proposição $A\cond B$ é verdadeira se $A$ é falsa, ou $A$ e $B$ são ambas verdadeiras. Caso contrário, $A\cond B$ é falsa.
+A condicional das proposições $A$ e $B$ é a proposição $A\cond B$ (leia‑se "$A$ implica $B$"). A proposição $A\cond B$ é falsa apenas quando $A$ é verdadeira e $B$ é falsa; nos demais casos é verdadeira. Em particular, se $A$ é falsa, então $A\cond B$ é sempre verdadeira.
 
-**Bicondicional ($\bicond$)**: A bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia-se "$A$ é equivalente a $B$"). A proposição $A\bicond B$ é verdadeira se $A$ e $B$ têm o mesmo valor lógico; ou seja, $A$ e $B$ são ambas verdadeiras ou $A$ e $B$ são ambas falsas. Caso contrário, $A\bicond B$ é falsa.
+**Bicondicional ($\bicond$)**: 
+O bicondicional das proposições $A$ e $B$ é a proposição $A\bicond B$ (leia‑se "$A$ é equivalente a $B$" ou "$A$ vale se e somente se $B$ vale"). A proposição $A\bicond B$ é verdadeira se $A$ e $B$ têm o mesmo valor lógico (ambas verdadeiras ou ambas falsas); caso contrário, é falsa.
 
-
-Note que a disjunção exclusiva $\lxor$ está mais próxima ao  significado cotadiano da palavra "ou". Nas expressões de matemática "ou" normalmente significa disjunção inclusiva e quando queremos disjunção exclusiva, isso deve ser claramente indicada. Por exemplo a proposição 
+Note que a disjunção exclusiva $\lxor$ está mais próxima do significado cotidiano de "ou". Em matemática, "ou" normalmente significa disjunção inclusiva; quando queremos disjunção exclusiva, isso deve ser indicado explicitamente. Por exemplo, a proposição 
 $$
 \mbox{($6$ é par)}\lor \mbox{($6$ é um múltiplo de $3$)}
 $$
-é considerada verdadeira, mas 
+é verdadeira, mas 
 $$
 \mbox{($6$ é par)}\lxor \mbox{($6$ é um múltiplo de $3$)}
 $$
 é falsa.
 
-Note também que a condicional $A\cond B$ é verdadeira sempre quando $A$ é falsa. Em outras palavras, a implicação é considerada verdadeira sempre quando a premissa $A$ é falsa. Por exemplo, a proposição 
+Note também que a condicional $A\cond B$ é verdadeira sempre que $A$ é falsa. Em outras palavras, uma implicação com premissa falsa é considerada verdadeira. Por exemplo, a proposição 
 $$
 \mbox{($5$ é par)}\cond\mbox{($10$ é um múltiplo de $3$)}
 $$
-é considerada verdadeira. É importante notar que isso não quer dizer de forma nenhuma que $10$ é um múltiplo de $3$! Quer dizer apenas que a afirmação que "$5$ é par" implica que "$10$ é múltiplo de $3$". Ou seja, uma afirmação falsa implica qualquer outra afirmação. Nós vamos ver situações ainda nesta disciplina que vão explicar melhor o porquê desta regra.
+é verdadeira. Isso não significa que $10$ é múltiplo de $3$: apenas que a afirmação "se $5$ é par então $10$ é múltiplo de $3$" é verdadeira, devido à premissa falsa. Veremos situações nesta disciplina que explicam por que essa convenção é útil.
 
 ## A tabela-verdade
 
-A veracidade de proposições compostas pode ser estudada usando tabelas-verdade. Sejam $P$ e $Q$ proposições simples. A tabela verdade da proposição $P\land Q$ é a seguinte. 
+A veracidade de proposições compostas pode ser estudada usando tabelas-verdade. Sejam $P$ e $Q$ proposições simples. A tabela‑verdade da proposição $P\land Q$ é a seguinte. 
 
 
 | $P$ | $Q$ | $P\land Q$ |
@@ -132,11 +127,16 @@ A veracidade de proposições compostas pode ser estudada usando tabelas-verdade
 | F | V | F       |
 | F | F | F       |
 
+:::{#exr-true-table0}
+Construa as tabelas-verdade dos conectivos $\lor$, $\neg$, $\lxor$, $\cond$, $\bicond$. 
+:::
+
+
 Considere a seguinte expressão.
 $$
 (P \land \neg Q) \lor (\neg P \land Q). 
 $$
-A sua tabela-verdade pode ser escrita como 
+A sua tabela‑verdade pode ser escrita como 
 
 
 
@@ -148,17 +148,30 @@ A sua tabela-verdade pode ser escrita como
 | F | V | V | F | F | V | V |
 | F | F | V | V | F | F | F |
 
-Note que a expressão $(P \land \neg Q) \lor (\neg P \land Q)$ é verdadeira se e somente se $P$ é verdadeira ou $Q$ é verdadeira, mas elas não são verdadeiras no mesmo tempo. Logo, pode se concluir que 
+Note que a expressão $(P \land \neg Q) \lor (\neg P \land Q)$ é verdadeira se, e somente se, exatamente uma entre $P$ e $Q$ é verdadeira. Logo, pode‑se concluir que 
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \bicond P \lxor Q
 $$
-é verdadeira para quaisquer proposições $P$ e $Q$ (independentemente seu valor lógico). Neste caso escrevemos também que 
+é sempre verdadeira para quaisquer proposições $P$ e $Q$ (independentemente de seus valores lógicos). Neste caso escrevemos também que 
 $$
 (P \land \neg Q) \lor (\neg P \land Q) \equiv P \lxor Q.
 $$
 
+
+Usando tabelas-verdade pode-se verificar as seguintes afirmações.
+
+:::{#lem-}
+1. $P\land Q \equiv Q\land P$;
+2. $P\lor Q \equiv Q\lor P$;
+3. $P\land P\equiv P$;
+4. $P\lor P\equiv P$
+5. $(P\land Q)\land R\equiv P\land (Q\land R)$;
+5. $(P\lor Q)\lor R\equiv P\lor (Q\lor R)$;
+:::
+
+
 :::{#exr-true-table}
-Usando tabelas-verdade, verifique, para proposições $P$ e $Q$, que 
+Usando tabelas‑verdade, verifique, para proposições $P$ e $Q$, que 
 $$
 P\cond Q \equiv (\neg P) \lor Q
 $$
@@ -169,15 +182,18 @@ $$
 :::
 
 :::{#exr-true-table2}
-Demonstre as seguintes afirmações usando tabelas-verdade.
+Demonstre as seguintes afirmações usando tabelas‑verdade.
 
-1. $\neg(P\lor Q)\equiv \neg P \land \neg Q$;
-2. $\neg(P\land Q) \equiv \neg P \lor \neg Q$;
-3. $P\land(Q\lor R)\equiv (P\land Q)\lor (P\land R)$;
-4. $P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)$.
+1. $P\cond Q\equiv \neg Q\cond \neg P$ 
+2. $\neg(P\lor Q)\equiv \neg P \land \neg Q$;
+3. $\neg(P\land Q) \equiv \neg P \lor \neg Q$;
+4. $P\land(Q\lor R)\equiv (P\land Q)\lor (P\land R)$;
+5. $P\lor(Q\land R)\equiv (P\lor Q)\land (P\lor R)$.
 :::
 
-As primeiras duas afirmações no exercício anterior são conhecidas como as [*Leis de de Morgan*](https://pt.wikipedia.org/wiki/Teoremas_de_De_Morgan). Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
+A primeira afirmação no @exr-true-table2 é conhecida como *contraposição*: a proposição $\neg Q\cond \neg P$ chama‑se a *contrapositiva* de $P\cond Q$. Este princípio é muito usado em demonstrações: provar que a negação de $Q$ implica a negação de $P$ é equivalente a provar que $P$ implica $Q$.
+
+As duas afirmações seguintes são as [*Leis de De Morgan*](https://pt.wikipedia.org/wiki/Teoremas_de_De_Morgan). Elas são importantes quando formamos negações de proposições compostas. Por exemplo, se 
 $$
 P:\ \mbox{$2$ é primo}, \quad Q:\ \mbox{$3$ divide $7$}
 $$
@@ -189,4 +205,31 @@ P\lor Q&:\ \mbox{$2$ é primo ou $3$ divide $7$}\\
 \neg(P\lor Q)\equiv \neg P\land \neg Q&:\ \mbox{$2$ não é primo e $3$ não divide $7$}.
 \end{align*}
 
-O terceiro e quarto itens do @exr-true-table2 podem ser vistos como uma forma da distributividade entre as conectivas $\lor$ e $\land$. 
+Os últimos dois itens do @exr-true-table2 correspondem às leis distributivas entre $\lor$ e $\land$. 
+
+
+## Tautologias
+
+:::{#def-tautology}
+Uma proposição composta é chamada de *tautologia* se o seu valor verdade é verdadeiro independentemente dos valores verdade das proposições atómicas que compõem a fórmula.
+:::
+
+:::{#exm-}
+As afirmações no @exr-true-table2 podem ser vistas como tautologias. Por exemplo, a primeira expressão diz que a seguinte proposição é uma tautologia:
+$$
+P\cond Q\bicond \neg Q\cond \neg P
+$$
+:::
+
+:::{#exm-tautologies}
+As seguintes proposições são tautologias. Pode-se verificar, construindo por exemplo tabelas-verdade que o valor lógico destas proposições é sempre verdadeiro, independentemente do valor lógico de $P$, $Q$ e $R$. 
+
+1. $P\lor \neg P$;
+2. $(P\land \neg P)\cond Q$;
+3. $((P\cond P)\cond P \cond) P$;
+4. $(P\cond (Q\land \neg Q))\cond \neg P$;
+2. $((P\cond Q)\land (P\cond\neg Q))\cond \neg P$;
+3. $((P\cond Q)\land (Q\cond R)) \cond (P\cond R)$;
+4. $((P\lor Q)\land (P\cond R)\land (Q\cond R))\cond R$.
+:::
+
