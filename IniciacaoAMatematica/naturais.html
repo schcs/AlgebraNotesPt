@@ -1370,9 +1370,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#os-axiomas-do-peano" id="toc-os-axiomas-do-peano" class="nav-link active" data-scroll-target="#os-axiomas-do-peano"><span class="header-section-number">10.1</span> Os axiomas do Peano</a></li>
-  <li><a href="#o-princípio-da-indução" id="toc-o-princípio-da-indução" class="nav-link" data-scroll-target="#o-princípio-da-indução"><span class="header-section-number">10.2</span> O Princípio da Indução</a></li>
+  <li><a href="#sec-principio-inducao" id="toc-sec-principio-inducao" class="nav-link" data-scroll-target="#sec-principio-inducao"><span class="header-section-number">10.2</span> O Princípio da Indução</a></li>
   <li><a href="#aritmética" id="toc-aritmética" class="nav-link" data-scroll-target="#aritmética"><span class="header-section-number">10.3</span> Aritmética</a></li>
   <li><a href="#ordenação" id="toc-ordenação" class="nav-link" data-scroll-target="#ordenação"><span class="header-section-number">10.4</span> Ordenação</a></li>
+  <li><a href="#a-segunda-forma-do-princípio-da-indução" id="toc-a-segunda-forma-do-princípio-da-indução" class="nav-link" data-scroll-target="#a-segunda-forma-do-princípio-da-indução"><span class="header-section-number">10.5</span> A segunda forma do Princípio da Indução</a></li>
+  <li><a href="#a-boa-ordenação-dos-naturais" id="toc-a-boa-ordenação-dos-naturais" class="nav-link" data-scroll-target="#a-boa-ordenação-dos-naturais"><span class="header-section-number">10.6</span> A boa ordenação dos naturais</a></li>
   </ul>
 </nav>
     </div>
@@ -1419,8 +1421,8 @@ window.Quarto = {
 2=S(1),\quad 3=S(2)=S(S(1)),\quad 4=S(3)=S(S(2))=S(S(S(1))), \quad \mbox{etc}.
 \]</span> O Axioma 5. diz que todo número natural pode ser obtido continuando este processo. O conjunto dos números naturais é denotado por <span class="math inline">\(\N\)</span>. Note que o nosso conceito de naturais começa com o número <span class="math inline">\(1\)</span> e o número zero não é considerado (por nos) natural.</p>
 </section>
-<section id="o-princípio-da-indução" class="level2" data-number="10.2">
-<h2 data-number="10.2" data-anchor-id="o-princípio-da-indução"><span class="header-section-number">10.2</span> O Princípio da Indução</h2>
+<section id="sec-principio-inducao" class="level2" data-number="10.2">
+<h2 data-number="10.2" data-anchor-id="sec-principio-inducao"><span class="header-section-number">10.2</span> O Princípio da Indução</h2>
 <p>O Axioma 5. é conhecido como o <em>Axioma da Indução</em> ou <em>Princípio da Indução</em>. Este axioma é útil se queremos provar alguma afirmação sobre números naturais. Assuma por exemplo que <span class="math inline">\(P(n)\)</span> é um predicato válido para o conjunto <span class="math inline">\(\N\)</span> dos naturais (veja a <a href="quant.html#def-predicato" class="quarto-xref">Definição&nbsp;<span>4.1</span></a>). Para provar que <span class="math inline">\(P(n)\)</span> é verdadeira para todo <span class="math inline">\(n\in\N\)</span>, é suficiente provar que</p>
 <ol type="1">
 <li><span class="math inline">\(P(1)\)</span> é verdadeira; e</li>
@@ -1464,7 +1466,7 @@ P(S(n))\colon S(n)=1\lor (\exists n'\in\N:S(n)=S(n'))
 <p><span class="theorem-title"><strong>Exemplo 10.1</strong></span> Vamos calcular por exemplo que <span class="math inline">\(2+2=2\cdot 2=4\)</span> usando a <a href="#def-arit-nat" class="quarto-xref">Definição&nbsp;<span>10.2</span></a>. Primeiro, <span class="math display">\[
 2+2=2+S(1)=S(2+1)=S(S(2))=4.
 \]</span> Depois, <span class="math display">\[
-2\cdots 2=2\cdot S(1)=2\cdot 1+2=2+2=4.
+2\cdot 2=2\cdot S(1)=2\cdot 1+2=2+2=4.
 \]</span></p>
 </div>
 <p>Vamos provar primeiro alguma afirmações simples sobre as operações com os naturais.</p>
@@ -1517,26 +1519,26 @@ S(a)+1=S(S(a)).
 a+(b+1)=a+S(b)=S(a+b).
 \]</span> Portanto, vale que <span class="math inline">\((a+b)+1=a+(b+1)\)</span> para todo <span class="math inline">\(a,b\in\N\)</span>.</p>
 <ol start="2" type="a">
-<li><p>Hipótese de indução. Assuma que <span class="math inline">\((a+b)+c=a+(b+c)\)</span> vale para algum <span class="math inline">\(c\in N\)</span> e para todo <span class="math inline">\(a,b\in\N\)</span>.</p></li>
+<li><p>Hipótese de indução. Assuma que <span class="math inline">\((a+b)+c=a+(b+c)\)</span> vale para algum <span class="math inline">\(c\in \N\)</span> e para todo <span class="math inline">\(a,b\in\N\)</span>.</p></li>
 <li><p>O passo indutivo. Precisa provar que <span class="math inline">\((a+b)+S(c)=a+(b+S(c))\)</span> vale para todo <span class="math inline">\(c\in\N\)</span>. De fato, <span class="math display">\[
 (a+b)+S(c)=S((a+b)+c)=S(a+(b+c))=a+S(b+c)=a+(b+S(c)).
 \]</span></p></li>
 </ol></li>
-<li><p>Indução por <span class="math inline">\(b\)</span>. <em>Base da indução:</em> Provar para <span class="math inline">\(b=1\)</span>. Ou seja, <span class="math inline">\(a+1=1+a\)</span>. Mas isso segue do <a href="#lem-arit-nat" class="quarto-xref">Lema&nbsp;<span>10.3</span></a>.</p>
-<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\(a+b=b+a\)</span> vale para todo <span class="math inline">\(a\in\N\)</span> e algum <span class="math inline">\(b\in N\)</span>.</p>
+<li><p>Indução por <span class="math inline">\(b\)</span>. <em>Base da indução:</em> Provar para <span class="math inline">\(b=1\)</span>. Ou seja, <span class="math inline">\(a+1=1+a\)</span>. Mas isso segue do <a href="#lem-arit-nat0" class="quarto-xref">Lema&nbsp;<span>10.2</span></a>.</p>
+<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\(a+b=b+a\)</span> vale para todo <span class="math inline">\(a\in\N\)</span> e algum <span class="math inline">\(b\in \N\)</span>.</p>
 <p><em>Passo indutivo:</em> Provar que <span class="math inline">\(a+S(b)=S(b)+a\)</span> vale para todo <span class="math inline">\(a\in \N\)</span>. De fato, temos que <span class="math display">\[\begin{align*}
 a+S(b)&amp;=S(a+b)=S(b+a)=b+S(a)=b+(a+1)\\&amp;=b+(1+a)=(b+1)+a=S(b)+a.
 \end{align*}\]</span> Note que nesta conta usamos, (A2), (HI), (A2), (A1), a base da indução, associatividade, (A1).</p></li>
 <li><p>Indução por <span class="math inline">\(c\)</span>.</p>
 <p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, <span class="math inline">\((a+b)\cdot 1=a\cdot 1+b\cdot 1\)</span>. Mas isso segue da regra (M1) aplicando três vezes.</p>
-<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((a+b)c=ac+bc\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>.</p>
+<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((a+b)c=ac+bc\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in \N\)</span>.</p>
 <p><em>Passo indutivo:</em> Provar que <span class="math inline">\((a+b)S(c)=aS(c)+bS(c)\)</span>. De fato, <span class="math display">\[\begin{align*}
 (a+b)S(c)&amp;=(a+b)c+(a+b)=(ac+bc)+(a+b)\\&amp;=((ac+bc)+a)+b=(ac+(bc+a))+b\\&amp;=(ac+(a+bc))+b=((ac+a)+bc)+b\\&amp;=(ac+a)+(bc+b)=aS(c)+bS(c).
 \end{align*}\]</span> Deixamos para o leitor identificar as regras que foram usadas em dada um dos passos na conta anterior.</p></li>
 <li><p>Indução por <span class="math inline">\(c\)</span>.</p>
 <p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, <span class="math inline">\((ab)\cdot 1=a(b\cdot 1)\)</span>. Mas isso segue da regra (M1).</p>
-<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((ab)c=a(bc)\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>.</p>
-<p><em>Passo indutivo:</em> Precisa provar que <span class="math inline">\((ab)S(c)=a(bS(c))\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in N\)</span>. De fato, <span class="math display">\[
+<p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\((ab)c=a(bc)\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span> e algum <span class="math inline">\(c\in \N\)</span>.</p>
+<p><em>Passo indutivo:</em> Precisa provar que <span class="math inline">\((ab)S(c)=a(bS(c))\)</span> vale para todo <span class="math inline">\(a,b\in\N\)</span>. De fato, <span class="math display">\[
 (ab)S(c)=(ab)c+ab=a(bc)+ab=a(bc+b)=a(bS(c)).
 \]</span></p></li>
 <li><p>Indução por <span class="math inline">\(b\)</span>.</p>
@@ -1546,7 +1548,7 @@ a+S(b)&amp;=S(a+b)=S(b+a)=b+S(a)=b+(a+1)\\&amp;=b+(1+a)=(b+1)+a=S(b)+a.
 aS(b)=ab+a=ba+a=ba+1\cdot a=(b+1)a=S(b)a.
 \]</span></p></li>
 <li><p>Indução por <span class="math inline">\(c\)</span>.</p>
-<p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, se <span class="math inline">\(a+a=b+1\)</span>, então <span class="math inline">\(b=c\)</span>. Assuma que <span class="math inline">\(a+1=b+1\)</span>. Isso implica por (A1) que <span class="math inline">\(S(b)=S(c)\)</span>. Ora, <span class="math inline">\(a=b\)</span> segue do Axioma (P4).</p>
+<p><em>Base da indução:</em> Provar para <span class="math inline">\(c=1\)</span>. Ou seja, se <span class="math inline">\(a+1=b+1\)</span>, então <span class="math inline">\(b=c\)</span>. Assuma que <span class="math inline">\(a+1=b+1\)</span>. Isso implica por (A1) que <span class="math inline">\(S(a)=S(b)\)</span>. Ora, <span class="math inline">\(a=b\)</span> segue do Axioma (P4).</p>
 <p><em>Hipótese da indução</em>: Assumir que <span class="math inline">\(a+c=b+c\)</span> implica que <span class="math inline">\(a=b\)</span> para todo <span class="math inline">\(a,b\in\N\)</span>.</p>
 <p><em>Passo indutivo:</em> Assuma que <span class="math inline">\(a+S(c)=b+S(c)\)</span>. Isso implica que <span class="math display">\[
 S(a+c)=a+S(c)=b+S(c)=S(b+c).
@@ -1575,7 +1577,7 @@ S(a+c)=a+S(c)=b+S(c)=S(b+c).
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
 <div>
 <ol type="1">
-<li><p>Indução por <span class="math inline">\(a\)</span>. Se <span class="math inline">\(a=1\)</span>, então <span class="math inline">\(1\leq 1\)</span>, pois <span class="math inline">\(1=1\)</span>. Assuma que <span class="math inline">\(1\leq a\)</span> com algum <span class="math inline">\(a\)</span>; ou seja <span class="math inline">\(1=a\)</span> ou <span class="math inline">\(1&lt;a\)</span> e neste segundo caso <span class="math inline">\(a=1+c\)</span> com algum <span class="math inline">\(c\in\N\)</span>. Se <span class="math inline">\(1=a\)</span>, então <span class="math inline">\(S(a)=S(1)=1+1\)</span> e <span class="math inline">\(1&lt;S(a)\)</span>. Se <span class="math inline">\(a=1+c\)</span>, então <span class="math inline">\(S(a)=S(1+c)=1+c+1=(1+1)+c\)</span> e <span class="math inline">\(1&lt;S(a)\)</span>.</p></li>
+<li><p>Indução por <span class="math inline">\(a\)</span>. Se <span class="math inline">\(a=1\)</span>, então <span class="math inline">\(1\leq 1\)</span>, pois <span class="math inline">\(1=1\)</span>. Assuma que <span class="math inline">\(1\leq a\)</span> com algum <span class="math inline">\(a\)</span>; ou seja <span class="math inline">\(1=a\)</span> ou <span class="math inline">\(1&lt;a\)</span> e neste segundo caso <span class="math inline">\(a=1+c\)</span> com algum <span class="math inline">\(c\in\N\)</span>. Se <span class="math inline">\(1=a\)</span>, então <span class="math inline">\(S(a)=S(1)=1+1\)</span> e <span class="math inline">\(1&lt;S(a)\)</span>. Se <span class="math inline">\(a=1+c\)</span>, então <span class="math inline">\(S(a)=S(1+c)=(1+c)+1=1+(c+1)\)</span> e <span class="math inline">\(1&lt;S(a)\)</span>.</p></li>
 <li><p>Como <span class="math inline">\(a=a\)</span>, temos que <span class="math inline">\(a\leq a\)</span> e a relação é reflexiva.</p></li>
 <li><p>Assuma que <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(b\leq a\)</span>, mas <span class="math inline">\(a\neq b\)</span>. Nós procuramos uma contradição. Neste caso, <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(b&lt;a\)</span>. Portanto <span class="math inline">\(b=a+c_1\)</span> e <span class="math inline">\(a=b+c_2\)</span> com <span class="math inline">\(c_1,c_2\in\N\)</span> e <span class="math display">\[
 a=b+c_2=a+c_1+c_2.
@@ -1585,7 +1587,7 @@ a=b+c_2=a+c_1+c_2.
 1=c_1+c_2+1=S(c_1+c_2)
 \]</span> e isso contradiz ao Axioma (P3).</p></li>
 <li><p>Assuma que <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(b\leq c\)</span> e provaremos que <span class="math inline">\(a\leq c\)</span>. Se <span class="math inline">\(a=b\)</span> ou <span class="math inline">\(b=c\)</span>, então <span class="math inline">\(a\leq c\)</span> vale trivialmente. Assuma que <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(b&lt;c\)</span>. Então <span class="math inline">\(b=a+c_1\)</span> e <span class="math inline">\(c=b+c_2\)</span> com <span class="math inline">\(c_1,c_2\in\N\)</span>. Ora, <span class="math display">\[
-c=b+c_2+a+c_1+c_2.
+c=b+c_2=a+c_1+c_2.
 \]</span> Logo <span class="math inline">\(a&lt;c\)</span> e <span class="math inline">\(a\leq c\)</span> também vale.</p></li>
 </ol>
 </div>
@@ -1630,6 +1632,32 @@ bc=(a+x)c=ac+xc
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Assuma que <span class="math inline">\(ac=bc\)</span>. A relação <span class="math inline">\(a&lt;b\)</span> é impossível, pois neste caso vale <span class="math inline">\(ac&lt;bc\)</span>. Similarmente, <span class="math inline">\(b&lt;a\)</span> é também impossível. Ora, segue do <a href="#lem-ord-nat-total" class="quarto-xref">Lema&nbsp;<span>10.5</span></a> que a única opção é <span class="math inline">\(a=b\)</span>.</p>
+</div>
+</section>
+<section id="a-segunda-forma-do-princípio-da-indução" class="level2" data-number="10.5">
+<h2 data-number="10.5" data-anchor-id="a-segunda-forma-do-princípio-da-indução"><span class="header-section-number">10.5</span> A segunda forma do Princípio da Indução</h2>
+<p>O Princípio da Indução pode ser formalizado na seguinte maneira que é equivalente ao princípio na <a href="#sec-principio-inducao" class="quarto-xref"><span>Seção 10.2</span></a>. Assuma que <span class="math inline">\(P(n)\)</span> é um predicato válido para o conjunto <span class="math inline">\(\N\)</span> dos naturais (veja a <a href="quant.html#def-predicato" class="quarto-xref">Definição&nbsp;<span>4.1</span></a>). Para provar que <span class="math inline">\(P(n)\)</span> é verdadeira para todo <span class="math inline">\(n\in\N\)</span>, é suficiente provar que</p>
+<ol type="1">
+<li><span class="math inline">\(P(1)\)</span> é verdadeira; e</li>
+<li>se <span class="math inline">\(P(a)\)</span> é verdadeira para todo <span class="math inline">\(a\in \{x\in \N\mid 1\leq a\leq n\}=\{1,\ldots,n\}\)</span>, então <span class="math inline">\(P(S(n))\)</span> é também verdadeira.</li>
+</ol>
+</section>
+<section id="a-boa-ordenação-dos-naturais" class="level2" data-number="10.6">
+<h2 data-number="10.6" data-anchor-id="a-boa-ordenação-dos-naturais"><span class="header-section-number">10.6</span> A boa ordenação dos naturais</h2>
+<div id="def-well-order" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 10.4</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto com ordem total <span class="math inline">\(\preceq\)</span>. Dizemos que <span class="math inline">\(X\)</span> está <em>bem ordenado</em> se todo subconjunto não vazio <span class="math inline">\(Y\subseteq X\)</span> possui menor elemento. Ou seja, se <span class="math inline">\(Y\subseteq X\)</span> tal que <span class="math inline">\(Y\neq \emptyset\)</span>, temos que <span class="math display">\[
+\exists a\in Y:(\forall b\in Y: a\leq b).
+\]</span></p>
+</div>
+<div id="lem-N-well-ordered" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 10.7</strong></span> Temos que <span class="math inline">\(\N\)</span> com a ordenação acima definida é um conjunto bem ordenado.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Provaremos a seguinte afirmação por indução em <span class="math inline">\(n\)</span>: <em>Se <span class="math inline">\(Y\subseteq \N\)</span> tal que <span class="math inline">\(n\in Y\)</span>, então <span class="math inline">\(Y\)</span> possui menor elemento.</em></p>
+<p><em>Base da Indução:</em> Se <span class="math inline">\(n=1\)</span> e <span class="math inline">\(n\in Y\)</span>, então <span class="math inline">\(n=1\)</span> é necessariamente menor elemento de <span class="math inline">\(Y\)</span>, pois ele é o menor natural por item 1. do <a href="#lem-order-nat" class="quarto-xref">Lema&nbsp;<span>10.4</span></a>.</p>
+<p><em>Hipótese da Indução:</em> Assuma para todo <span class="math inline">\(a\in\{1,\ldots,n\}=\{x\in \N\mid 1\leq x\leq n\}\)</span> que se <span class="math inline">\(a\in Y\subseteq \N\)</span>, então <span class="math inline">\(Y\)</span> possui menor elemento.</p>
+<p><em>Passo indutivo</em>: Assuma que <span class="math inline">\(Y\subseteq \N\)</span> tal que <span class="math inline">\(S(n)\in Y\)</span>. Se <span class="math inline">\(S(n)\leq y\)</span> para todo <span class="math inline">\(y\in Y\)</span>, então <span class="math inline">\(S(n)\)</span> é menor elemento de <span class="math inline">\(Y\)</span>. Se existir <span class="math inline">\(a\in Y\)</span> tal que <span class="math inline">\(a &lt; S(n)\)</span>, então<br>
+<span class="math inline">\(a\in\{1,\ldots,n\}\)</span> e tambem <span class="math inline">\(a\in Y\)</span> e a Hipótese da Indução implica que <span class="math inline">\(Y\)</span> possui menor elemento.</p>
 </div>
 <!--
 ## Coeficientes binomiais
