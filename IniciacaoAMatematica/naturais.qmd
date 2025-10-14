@@ -28,7 +28,7 @@ $$
 $$
 O Axioma 5. diz que todo número natural pode ser obtido continuando este processo. O conjunto dos números naturais é denotado por $\N$. Note que o nosso conceito de naturais começa com o número $1$ e o número zero não é considerado (por nos) natural.
 
-## O Princípio da Indução
+## O Princípio da Indução {#sec-principio-inducao}
 
 O Axioma 5. é conhecido como o *Axioma da Indução* ou *Princípio da Indução*. Este axioma é útil se queremos provar alguma afirmação sobre números naturais. Assuma por exemplo que $P(n)$ é um predicato válido para o conjunto $\N$ dos naturais (veja a @def-predicato). Para provar que $P(n)$ é verdadeira para todo $n\in\N$, é suficiente provar que 
 
@@ -90,7 +90,7 @@ $$
 $$
 Depois, 
 $$
-2\cdots 2=2\cdot S(1)=2\cdot 1+2=2+2=4.
+2\cdot 2=2\cdot S(1)=2\cdot 1+2=2+2=4.
 $$
 :::
 
@@ -162,7 +162,7 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
     $$
     Portanto, vale que $(a+b)+1=a+(b+1)$ para todo $a,b\in\N$. 
 
-    b. Hipótese de indução. Assuma que $(a+b)+c=a+(b+c)$ vale para algum $c\in N$ e para todo $a,b\in\N$. 
+    b. Hipótese de indução. Assuma que $(a+b)+c=a+(b+c)$ vale para algum $c\in \N$ e para todo $a,b\in\N$. 
 
     c. O passo indutivo. Precisa provar que $(a+b)+S(c)=a+(b+S(c))$ vale para todo $c\in\N$. De fato, 
     $$
@@ -170,9 +170,9 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
     $$
 
 2. Indução por $b$. 
-   *Base da indução:* Provar para $b=1$. Ou seja, $a+1=1+a$. Mas isso segue do @lem-arit-nat.
+   *Base da indução:* Provar para $b=1$. Ou seja, $a+1=1+a$. Mas isso segue do @lem-arit-nat0.
 
-   *Hipótese da indução*: Assumir que $a+b=b+a$ vale para todo $a\in\N$ e algum $b\in N$. 
+   *Hipótese da indução*: Assumir que $a+b=b+a$ vale para todo $a\in\N$ e algum $b\in \N$. 
 
    *Passo indutivo:* Provar que $a+S(b)=S(b)+a$ vale para todo $a\in \N$. De fato, temos que 
    \begin{align*}
@@ -184,7 +184,7 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
    
    *Base da indução:* Provar para $c=1$. Ou seja, $(a+b)\cdot 1=a\cdot 1+b\cdot 1$. Mas isso segue da regra (M1) aplicando três vezes.
 
-   *Hipótese da indução*: Assumir que $(a+b)c=ac+bc$ vale para todo $a,b\in\N$ e algum $c\in N$. 
+   *Hipótese da indução*: Assumir que $(a+b)c=ac+bc$ vale para todo $a,b\in\N$ e algum $c\in \N$. 
 
    *Passo indutivo:* Provar que $(a+b)S(c)=aS(c)+bS(c)$. De fato, 
    \begin{align*}
@@ -192,13 +192,13 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
    \end{align*}
    Deixamos para o leitor identificar as regras que foram usadas em dada um dos passos na conta anterior. 
 
-3. Indução por $c$. 
+4. Indução por $c$. 
    
    *Base da indução:* Provar para $c=1$. Ou seja, $(ab)\cdot 1=a(b\cdot 1)$. Mas isso segue da regra (M1).
 
-   *Hipótese da indução*: Assumir que $(ab)c=a(bc)$ vale para todo $a,b\in\N$ e algum $c\in N$. 
+   *Hipótese da indução*: Assumir que $(ab)c=a(bc)$ vale para todo $a,b\in\N$ e algum $c\in \N$. 
 
-   *Passo indutivo:* Precisa provar que $(ab)S(c)=a(bS(c))$ vale para todo $a,b\in\N$ e algum $c\in N$.
+   *Passo indutivo:* Precisa provar que $(ab)S(c)=a(bS(c))$ vale para todo $a,b\in\N$.
    De fato, 
    $$
    (ab)S(c)=(ab)c+ab=a(bc)+ab=a(bc+b)=a(bS(c)).
@@ -217,7 +217,7 @@ Vamos provar apenas algumas destas afirmações. O resto é exercício.
 
 6. Indução por $c$. 
 
-   *Base da indução:* Provar para $c=1$. Ou seja, se $a+a=b+1$, então $b=c$. Assuma que $a+1=b+1$. Isso implica por (A1) que $S(b)=S(c)$. Ora, $a=b$ segue do Axioma (P4).
+   *Base da indução:* Provar para $c=1$. Ou seja, se $a+1=b+1$, então $b=c$. Assuma que $a+1=b+1$. Isso implica por (A1) que $S(a)=S(b)$. Ora, $a=b$ segue do Axioma (P4).
 
    *Hipótese da indução*: Assumir que $a+c=b+c$ implica que $a=b$ para todo $a,b\in\N$. 
 
@@ -250,7 +250,7 @@ Temos as seguintes propriedades para todo $a,b,c\in\N$.
 :::
 :::{.proof}
 :::{}
-1. Indução por $a$. Se $a=1$, então $1\leq 1$, pois $1=1$. Assuma que $1\leq a$ com algum $a$; ou seja $1=a$ ou $1<a$ e neste segundo caso $a=1+c$ com algum $c\in\N$. Se $1=a$, então $S(a)=S(1)=1+1$ e $1<S(a)$. Se $a=1+c$, então $S(a)=S(1+c)=1+c+1=(1+1)+c$ e $1<S(a)$. 
+1. Indução por $a$. Se $a=1$, então $1\leq 1$, pois $1=1$. Assuma que $1\leq a$ com algum $a$; ou seja $1=a$ ou $1<a$ e neste segundo caso $a=1+c$ com algum $c\in\N$. Se $1=a$, então $S(a)=S(1)=1+1$ e $1<S(a)$. Se $a=1+c$, então $S(a)=S(1+c)=(1+c)+1=1+(c+1)$ e $1<S(a)$. 
 
 2. Como $a=a$, temos que $a\leq a$ e a relação é reflexiva. 
 
@@ -270,7 +270,7 @@ e isso contradiz ao Axioma (P3).
 
 4. Assuma que $a\leq b$ e $b\leq c$ e provaremos que $a\leq c$. Se $a=b$ ou $b=c$, então $a\leq c$ vale trivialmente. Assuma que $a<b$ e $b<c$. Então $b=a+c_1$ e $c=b+c_2$ com $c_1,c_2\in\N$. Ora, 
 $$
-c=b+c_2+a+c_1+c_2.
+c=b+c_2=a+c_1+c_2.
 $$ 
 Logo $a<c$ e $a\leq c$ também vale.
 :::
@@ -326,6 +326,46 @@ Vale a lei cancelativa para a multiplicação. Ou seja, se $ac=bc$, então $a=b$
 :::
 :::{.proof}
 Assuma que $ac=bc$. A relação $a<b$ é impossível, pois neste caso vale $ac<bc$. Similarmente, $b<a$ é também impossível. Ora, segue do @lem-ord-nat-total que a única opção é $a=b$. 
+:::
+
+## A segunda forma do Princípio da Indução
+
+O Princípio da Indução pode ser formalizado na seguinte maneira que é equivalente ao princípio na 
+@sec-principio-inducao. 
+Assuma que $P(n)$ é um predicato válido para o conjunto $\N$ dos naturais (veja a @def-predicato). Para provar que $P(n)$ é verdadeira para todo $n\in\N$, é suficiente provar que 
+
+1. $P(1)$ é verdadeira; e 
+2. se $P(a)$ é verdadeira para todo $a\in \{x\in \N\mid 1\leq a\leq n\}=\{1,\ldots,n\}$, 
+então $P(S(n))$ é também verdadeira. 
+
+
+## A boa ordenação dos naturais 
+
+:::{#def-well-order}
+Seja $X$ um conjunto com ordem total $\preceq$. Dizemos que $X$ está *bem ordenado* se todo subconjunto 
+não vazio $Y\subseteq X$ possui menor elemento. Ou seja, se $Y\subseteq X$ tal que $Y\neq \emptyset$, 
+temos que 
+$$
+\exists a\in Y:(\forall b\in Y: a\leq b).
+$$
+:::
+
+:::{#lem-N-well-ordered}
+Temos que $\N$ com a ordenação acima definida é um conjunto bem ordenado.
+:::
+
+:::{.proof}
+Provaremos a seguinte afirmação por indução em $n$: *Se $Y\subseteq \N$ tal que $n\in Y$, então 
+$Y$ possui menor elemento.* 
+
+*Base da Indução:* Se $n=1$ e $n\in Y$, então $n=1$ é necessariamente menor elemento de $Y$, pois ele
+é o menor natural por item 1. do @lem-order-nat. 
+
+*Hipótese da Indução:* Assuma para todo $a\in\{1,\ldots,n\}=\{x\in \N\mid 1\leq x\leq n\}$ que se $a\in Y\subseteq \N$, então $Y$ possui menor elemento.
+
+*Passo indutivo*: Assuma que $Y\subseteq \N$ tal que $S(n)\in Y$. Se $S(n)\leq y$ para todo 
+$y\in Y$, então $S(n)$ é menor elemento de $Y$. Se existir $a\in Y$ tal que $a < S(n)$, então  
+$a\in\{1,\ldots,n\}$ e tambem $a\in Y$ e a Hipótese da Indução implica que $Y$ possui menor elemento. 
 :::
 
 <!--
