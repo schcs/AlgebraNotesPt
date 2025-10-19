@@ -117,7 +117,7 @@ As seguintes são verdadeiras para todo $a\in\N$.
    $$
    Agora, usando regra (A1) e (HI), obtemos que 
    $$
-   1+S(a)=S(1+a)=S(S(a)).
+   1+S(a)=S(1+a)=S(a+1)=S(S(a)).
    $$
    Portanto item 1. é verdadeiro para todo $a\in\N$. 
 
