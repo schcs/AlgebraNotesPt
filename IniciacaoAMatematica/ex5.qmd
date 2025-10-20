@@ -1,0 +1,44 @@
+---
+number-sections: true
+lang: pt-BR
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{4}
+---
+
+# Lista de Exercícios
+
+:::{#exr-}
+Demonstre, usando apenas os Axiomas de Peano e a definição da adição, que $1\neq a+b$ para todo $a,b\in\N$. 
+:::
+
+
+:::{#exr-}
+Defina $m^n$, para $m,n\in\N$, usando as regras 
+
+1. $m^1=m$;
+2. $m^{S(n)}=m^n\cdot m$.
+
+Demonstre, para todo $a,b,c\in\N$, usando indução e as propriedades da adição e multiplicação enunciadas e provadas na aula que 
+
+1. $a^{b+c}=a^b\cdot a^c$;
+2. $a^{bc}=(a^b)^c$; 
+3. $(ab)^c=a^c\cdot b^c$.
+:::
+
+
+:::{#exr-}
+Demonstre as seguintes afirmações por indução.
+
+1. $2(1+2+\cdots+n)=n(n+1)$;
+2. $6(1^2+\cdots+n^2)=n(n+1)(n+2)$;
+3. $4(1^3+\cdots+n^3)=n^2(n+1)$. 
+:::
+
+:::{#exr-}
+Demonstre is items do @lem-fibonacci que aparecem sem demonstração. 
+:::
+

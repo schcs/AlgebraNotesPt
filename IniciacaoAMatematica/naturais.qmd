@@ -342,11 +342,11 @@ então $P(S(n))$ é também verdadeira.
 ## A boa ordenação dos naturais 
 
 :::{#def-well-order}
-Seja $X$ um conjunto com ordem total $\preceq$. Dizemos que $X$ está *bem ordenado* se todo subconjunto 
-não vazio $Y\subseteq X$ possui menor elemento. Ou seja, se $Y\subseteq X$ tal que $Y\neq \emptyset$, 
+Seja $Y$ um conjunto com ordem total $\preceq$ (@def-ordem-total). Dizemos que $Y$ está *bem ordenado* se todo subconjunto 
+não vazio $X\subseteq Y$ possui menor elemento. Ou seja, se $X\subseteq Y$ tal que $X\neq \emptyset$, 
 temos que 
 $$
-\exists a\in Y:(\forall b\in Y: a\leq b).
+\exists a\in X:(\forall b\in X: a\preceq b).
 $$
 :::
 
@@ -355,16 +355,76 @@ Temos que $\N$ com a ordenação acima definida é um conjunto bem ordenado.
 :::
 
 :::{.proof}
-Provaremos a seguinte afirmação por indução em $n$: *Se $Y\subseteq \N$ tal que $n\in Y$, então 
-$Y$ possui menor elemento.* 
+Seja $X\subseteq \N$ um subconjunto que não possui menor elemento. Vamos provar que 
+$X=\emptyset$. De fato vamos provar por indução que $n\not\in X$ para todo $n\in \N$. 
 
-*Base da Indução:* Se $n=1$ e $n\in Y$, então $n=1$ é necessariamente menor elemento de $Y$, pois ele
-é o menor natural por item 1. do @lem-order-nat. 
+*Base da Indução:* Se $n=1$ e $n\in X$, então $n=1$ é necessariamente menor elemento de $X$, pois ele
+é o menor natural por item 1. do @lem-order-nat. Como $X$ não possui menor elemento, obtemos que 
+$1\not\in X$.  
 
-*Hipótese da Indução:* Assuma para todo $a\in\{1,\ldots,n\}=\{x\in \N\mid 1\leq x\leq n\}$ que se $a\in Y\subseteq \N$, então $Y$ possui menor elemento.
+*Hipótese da Indução:* Assuma para todo $a\in\{1,\ldots,n\}=\{x\in \N\mid 1\leq x\leq n\}$ que $a\not\in X$.
 
-*Passo indutivo*: Assuma que $Y\subseteq \N$ tal que $S(n)\in Y$. Se $S(n)\leq y$ para todo 
-$y\in Y$, então $S(n)$ é menor elemento de $Y$. Se existir $a\in Y$ tal que $a < S(n)$, então  
-$a\in\{1,\ldots,n\}$ e tambem $a\in Y$ e a Hipótese da Indução implica que $Y$ possui menor elemento. 
+*Passo indutivo*: Supondo a Hipótese da Indução, se $S(n)\in X$, $S(n)$ seria menor elemento de $X$ 
+(pois $1,\ldots,n\not\in X$). Como $X$ não possui menor elemento, temos $S(n)\not\in X$. 
+
+Portanto $n\not\in X$ para todo $x\in \N$ e assim $X=\emptyset$. Ou seja, um subconjunto de $\N$ 
+que não possui menor element precisa ser igual a $\emptyset$. 
 :::
 
+## Provas por indução -- Os números de Fibonacci
+
+Definimos a [sequência de Fibonacci](https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci)
+na forma seguinte: $F_1=1$, $F_2=1$, $F_{k}=F_{k-1}+F_{k-2}$ para $k\geq 3$. Aplicando a definição, 
+temos que 
+$$
+F_1=1,\ F_2=1,\ F_3=2,\ F_4=3,\ F_5=5,\ F_6=8,\ F_7=13,\ \mbox{etc}.
+$$
+
+:::{#lem-fibonacci}
+As seguintes propriedades são válidas para a sequência de Fibonacci e para $m,n\geq 1$:
+
+1. $F_1+F_2+\cdots+F_n+1=F_{n+2}$;
+2. $F_1+F_3+\cdots+F_{2n+1}=F_{2n+2}$;
+3. $F_2+F_4+\cdots+F_{2n}+1=F_{2n+1}$;
+4. $F_1^2+F_2^2+\cdots+F_n^2=F_nF_{n+1}$;
+5. $F_{m+1}F_n+F_{m+2}F_{n+1}=F_{m+n+2}$;
+6. $F_n^2+F_{n+1}^2=F_{2n+2}$ com $n\geq 2$.
+:::
+
+:::{.proof}
+Vamos provar algumas destas igualdades, o resto é exercício para o leitor. As provas vão por 
+indução. 
+
+1. *Base da indução*: $n=1$, temos que 
+   $$
+   F_1+1=1+1=2=F_3. 
+   $$ 
+
+   *Hipótese da Indução:* Assuma que a afirmação vale para algum $n\geq 2$.
+
+   *Passo indutivo*: Considere $n+1$:
+   $$ 
+   F_1+\cdots+F_n+F_{n+1}+1=(F_1+\cdots+F_n+1)+F_{n+1}=F_{n+2}+F_{n+1}=F_{n+3}.
+   $$ 
+   
+<!-- break list -->
+5. Provamos por indução em $n$. *Base da Indução:* $n=1$. Neste caso
+   $$
+   F_{m+1}F_1+F_{m+2}F_2=F_{m+1}+F_{m+2}=F_{m+3}=F_{m+n+2}
+   $$
+   vale para todo $m\in \N$. 
+
+   *Hipótese da Indução*: Assuma para algum $n\in \N$ e para todo $m\in \N$ que 
+   $$
+   F_{m+1}F_n+F_{m+2}F_{n+1}=F_{m+n+2}.
+   $$
+
+   *Passo Indutivo:* Provaremos a afirmação para $n+1$. 
+   \begin{align*}
+   F_{m+1}F_{n+1}+F_{m+2}F_{n+2}&=F_{m+1}F_{n+1}+F_{m+2}(F_n+F_{n+1})\\&=
+   F_{m+1}F_{n+1}+F_{m+2}F_n+F_{m+2}F_{n+1}\\&=(F_{m+1}+F_{m+2})F_{n+1}+F_{m+2}F_{n}\\
+   &=F_{m+3}F_{n+1}+F_{m+2}F_n=F_{m+1+n+2}=F_{m+n+3}.
+   \end{align*}
+
+Os demais itens são exercício.
+:::
