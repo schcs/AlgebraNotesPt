@@ -1376,7 +1376,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#os-números-inteiros." id="toc-os-números-inteiros." class="nav-link active" data-scroll-target="#os-números-inteiros."><span class="header-section-number">11.1</span> Os números inteiros.</a></li>
-  <li><a href="#os-números-racionais" id="toc-os-números-racionais" class="nav-link" data-scroll-target="#os-números-racionais"><span class="header-section-number">11.2</span> Os números racionais</a></li>
+  <li><a href="#as-operações-entre-números-inteiros" id="toc-as-operações-entre-números-inteiros" class="nav-link" data-scroll-target="#as-operações-entre-números-inteiros"><span class="header-section-number">11.2</span> As operações entre números inteiros</a></li>
+  <li><a href="#ordenação-entre-números-inteiros" id="toc-ordenação-entre-números-inteiros" class="nav-link" data-scroll-target="#ordenação-entre-números-inteiros"><span class="header-section-number">11.3</span> Ordenação entre números inteiros</a></li>
+  <li><a href="#os-números-racionais" id="toc-os-números-racionais" class="nav-link" data-scroll-target="#os-números-racionais"><span class="header-section-number">11.4</span> Os números racionais</a></li>
   </ul>
 </nav>
     </div>
@@ -1404,8 +1406,10 @@ window.Quarto = {
 
 <section id="os-números-inteiros." class="level2" data-number="11.1">
 <h2 data-number="11.1" data-anchor-id="os-números-inteiros."><span class="header-section-number">11.1</span> Os números inteiros.</h2>
-<p>Nas aulas anteriores, nós construímos os números naturais. Agora, vamos construir os números inteiros.</p>
-<p>Considere o conjunto <span class="math inline">\(\N\times\N\)</span> e considere a relação <span class="math inline">\(\sim\)</span> sobre <span class="math inline">\(\N\times\N\)</span> definida como <span class="math display">\[
+<p>Nas aulas anteriores, construímos os números naturais. Agora, vamos construir os números inteiros.</p>
+<p>Tendo construído os números naturais, já possuímos a “metade” dos inteiros; isto é, já temos os números positivos. A ideia para construir os números negativos e o zero é considerar um número inteiro geral como uma diferença formal “<span class="math inline">\(a-b\)</span>” de números naturais <span class="math inline">\(a,b\in\N\)</span>. O problema com essa abordagem é que a subtração não está sempre definida entre os naturais, pois <span class="math inline">\(\N\)</span> não é fechado para a operação <span class="math inline">\(-\)</span>. Para resolver este problema, identificamos a diferença formal “<span class="math inline">\(a-b\)</span>” com o par ordenado <span class="math inline">\((a,b)\in\N\times\N\)</span>. Por exemplo, o número “menos dois” será identificado com <span class="math inline">\((1,3)\)</span> (pois <span class="math inline">\(-2=1-3\)</span>).</p>
+<p>Entretanto, surge outro problema: vários pares ordenados podem representar o mesmo número inteiro. Por exemplo, <span class="math inline">\((1,3)\)</span>, <span class="math inline">\((2,4)\)</span>, <span class="math inline">\((3,5)\)</span>, etc., todos representam o número “menos 2”, já que <span class="math inline">\(1-3=2-4=3-5=\cdots=-2\)</span>. A solução para este problema é utilizar o conceito de relação de equivalência e considerar estes pares como equivalentes. Assim, cada número inteiro será representado por uma classe de equivalência de pares ordenados de números naturais.</p>
+<p>A implementação formal da ideia informal do parágrafo anterior é a seguinte. Considere o conjunto <span class="math inline">\(\N\times\N\)</span> e considere a relação <span class="math inline">\(\sim\)</span> sobre <span class="math inline">\(\N\times\N\)</span> definida como <span class="math display">\[
 (a,b)\sim (c,d)\quad\mbox{quando}\quad a+d=b+c.
 \]</span></p>
 <div id="lem-rel-int" class="theorem lemma">
@@ -1414,20 +1418,26 @@ window.Quarto = {
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Consulte o <a href="relations.html#exr-ntimesn" class="quarto-xref">Exercício&nbsp;<span>6.2</span></a></p>
 </div>
-<p>Seja <span class="math inline">\((a,b)\in\N\times \N\)</span>. A classe de equivalência de <span class="math inline">\((a,b)\)</span> será denotado por <span class="math inline">\([a,b]\)</span>. Por exemplo <span class="math display">\[\begin{align*}
+<p>Seja <span class="math inline">\((a,b)\in\N\times \N\)</span>. A classe de equivalência de <span class="math inline">\((a,b)\)</span> será denotada por <span class="math inline">\([a,b]\)</span>. Por exemplo: <span class="math display">\[\begin{align*}
 [1,1]&amp;=\{(1,1),(2,2),(3,3),\ldots\}\\
 [2,1]&amp;=\{(2,1),(3,2),(4,3),\ldots\}\\
 [1,2]&amp;=\{(1,2),(2,3),(3,4),\ldots\}
-\end{align*}\]</span> Observe que a classe <span class="math inline">\([1,1]\)</span> contem os pares na form <span class="math inline">\((a,a)\)</span>; ou seja, os pares com os dois componentes iguals. A classe <span class="math inline">\([2,1]\)</span> contem os pares na forma <span class="math inline">\([a+1,a]\)</span>; ou seja, os pares onde o primeiro componente é um maior que o segundo. A classe <span class="math inline">\([1,2]\)</span> contém os pares na forma <span class="math inline">\((a,a+1)\)</span> onde o segundo componente é um maior que o primeiro. Geralmente, temos uma classe na forma <span id="eq-pair-zero"><span class="math display">\[
-[1,1]=\{(a,a)\mid a\in\N\}
+\end{align*}\]</span></p>
+<p>Observe que a classe <span class="math inline">\([1,1]\)</span> contém os pares da forma <span class="math inline">\((a,a)\)</span>; ou seja, pares com ambos os componentes iguais. A classe <span class="math inline">\([2,1]\)</span> contém os pares da forma <span class="math inline">\((a+1,a)\)</span>; isto é, pares onde o primeiro componente é uma unidade maior que o segundo. A classe <span class="math inline">\([1,2]\)</span> contém os pares da forma <span class="math inline">\((a,a+1)\)</span>, onde o segundo componente é uma unidade maior que o primeiro.</p>
+<p>Em geral, temos uma classe da forma <span id="eq-pair-zero"><span class="math display">\[
+[1,1]=\{(a,a)\mid a\in\N\},
 \tag{11.1}\]</span></span> e as demais classes têm a forma <span id="eq-pair-pos"><span class="math display">\[
 [1+k,1]=\{(a+k,a)\mid a\in \N\}
 \tag{11.2}\]</span></span> ou <span id="eq-pair-neg"><span class="math display">\[
-[1,1+k]\{(a,a+k)\mid a\in \N\}.
-\tag{11.3}\]</span></span> A ideia de construir os número inteiros é que a classe na <a href="#eq-pair-pos" class="quarto-xref">Equação&nbsp;<span>11.2</span></a> pode ser identificada com o número <span class="math inline">\(k\in\N\)</span>, enquanto a classe na <a href="#eq-pair-zero" class="quarto-xref">Equação&nbsp;<span>11.1</span></a> pode ser identificada com um novo número que representa a ideia do zero, e a classe na <a href="#eq-pair-neg" class="quarto-xref">Equação&nbsp;<span>11.3</span></a> com um número que representa a ideia do negativo de <span class="math inline">\(k\)</span>.</p>
+[1,1+k]=\{(a,a+k)\mid a\in \N\}.
+\tag{11.3}\]</span></span></p>
+<p>A ideia por trás da construção dos números inteiros é que a classe descrita em <a href="#eq-pair-pos" class="quarto-xref">Equação&nbsp;<span>11.2</span></a> pode ser identificada com o número natural <span class="math inline">\(k\in\N\)</span>, a classe em <a href="#eq-pair-zero" class="quarto-xref">Equação&nbsp;<span>11.1</span></a> representa o zero, e a classe em <a href="#eq-pair-neg" class="quarto-xref">Equação&nbsp;<span>11.3</span></a> representa o oposto (negativo) de <span class="math inline">\(k\)</span>.</p>
 <div id="def-int" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 11.1</strong></span> Um número inteiro é uma classe de equivalência <span class="math inline">\([a,b]\)</span> para a relação <span class="math inline">\(\sim\)</span>. O conjunto dos inteiros é denotado por <span class="math inline">\(\mathbb Z\)</span>.</p>
 </div>
+</section>
+<section id="as-operações-entre-números-inteiros" class="level2" data-number="11.2">
+<h2 data-number="11.2" data-anchor-id="as-operações-entre-números-inteiros"><span class="header-section-number">11.2</span> As operações entre números inteiros</h2>
 <div id="def-int-ops" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 11.2</strong></span> Definimos as operações de <span class="math inline">\(+\)</span> e <span class="math inline">\(\cdot\)</span> entre elementos de <span class="math inline">\(\Z\)</span>:</p>
 <ol type="1">
@@ -1442,6 +1452,7 @@ window.Quarto = {
 <li><span class="math inline">\(x+y=y+x\)</span>;</li>
 <li>Existe elemento neutro para a soma. Nomeadamente, denotando <span class="math inline">\(0=[1,1]\)</span>, temos que <span class="math inline">\(x+0=0+x=x\)</span>;</li>
 <li><span class="math inline">\(x\)</span> possui negativo <span class="math inline">\(-x\)</span> que satisfaz <span class="math inline">\(x+(-x)=0\)</span>;</li>
+<li><span class="math inline">\(0\cdot x=0\)</span>;</li>
 <li><span class="math inline">\((xy)z=x(yz)\)</span>;</li>
 <li><span class="math inline">\(xy=yx\)</span>;</li>
 <li>Existe elemento neutro para o produto. Nomeadamente, denotando <span class="math inline">\(1_\Z=[2,1]\)</span>, temos que <span class="math inline">\(1_\Z x=x1_\Z=x\)</span>;</li>
@@ -1463,7 +1474,7 @@ ac+bd+a'd+b'c=(a+b')c+(b+a')d=(a'+b)c+(a+b')d=ad+bc+a'c+b'd
 <p>Note que no ponto 4., o inverso de <span class="math inline">\(x=[x_1,x_2]\)</span> é <span class="math inline">\([x_2,x_1]\)</span>. De fato, <span class="math display">\[
 [x_1,x_2]+[x_2,x_1]=[x_1+x_2,x_2+x_1]=0.
 \]</span></p>
-<p>As demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. Para ilustrar a técnica, vamos provar o item 8 e o item 9. O resto é exercício para o leitor.</p>
+<p>As demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. Para ilustrar a técnica, vamos provar o item 9. e o item 10. O resto é exercício para o leitor.</p>
 <p>Assuma que <span class="math inline">\(x=[x_1,x_2]\)</span>, <span class="math inline">\(y=[y_1,y_2]\)</span>, <span class="math inline">\(z=[z_1,z_2]\)</span> e vamos computar que <span class="math display">\[\begin{align*}
 x(y+z)&amp;=[x_1,x_2]([y_1,y_2]+[z_1,z_2])=[x_1,x_2]([y_1+z_1,y_2+z_2])\\&amp;=
 [x_1(y_1+z_1)+x_2(y_2+z_2),x_1(y_2+z_2)+x_2(y_1+z_1)]\\&amp;=
@@ -1472,7 +1483,7 @@ x(y+z)&amp;=[x_1,x_2]([y_1,y_2]+[z_1,z_2])=[x_1,x_2]([y_1+z_1,y_2+z_2])\\&amp;=
 xy+xz&amp;=[x_1,x_2][y_1,y_2]+[x_1,x_2][z_1,z_2]\\&amp;=[x_1y_1+x_2y_2,x_1y_2+x_2y_1]+[x_1z_1+x_2z_2,x_1z_2+x_2z_1]\\&amp;=
 [x_1y_1+x_2y_2+x_1z_1+x_2z_2,x_1y_2+x_2y_1+x_1z_2+x_2z_1]
 \end{align*}\]</span></p>
-<p>Assuma que <span class="math inline">\(x+z=y+z\)</span>. Sejam <span class="math inline">\(x=[x_1,x_2]\)</span>, <span class="math inline">\(y=[y_1,y_2]\)</span>, <span class="math inline">\(z=[z_1,z_2]\)</span> e assuma que <span class="math inline">\(x+z=y+z\)</span>; ou seja, <span class="math display">\[
+<p>Sejam <span class="math inline">\(x=[x_1,x_2]\)</span>, <span class="math inline">\(y=[y_1,y_2]\)</span>, <span class="math inline">\(z=[z_1,z_2]\)</span> e assuma que <span class="math inline">\(x+z=y+z\)</span>; ou seja, <span class="math display">\[
 [x_1+z_1,x_2+z_2]=[y_1+z_1,y_2+z_2].
 \]</span> Logo, <span class="math display">\[
 x_1+z_1+y_2+z_2=x_2+z_2+y_1+z_1.
@@ -1480,48 +1491,67 @@ x_1+z_1+y_2+z_2=x_2+z_2+y_1+z_1.
 x_1+y_2=x_2+y_1;
 \]</span> ou seja, <span class="math inline">\(x=[x_1,x_2]=[y_1,y_2]=y\)</span>.</p>
 </div>
-<div id="def-int-pos" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 11.3</strong></span> Seja <span class="math inline">\(x=[x_1,x_2]\)</span>.</p>
+<p>Como já foi observado acima, o número natural <span class="math inline">\(k\)</span> pode ser identificado com o inteiro <span class="math inline">\([k+1,1]\in\Z\)</span>. Sob essa identificação, as operações definidas em <span class="math inline">\(\Z\)</span> estendem as operações em <span class="math inline">\(\N\)</span>. Por exemplo, se <span class="math inline">\(k_1,k_2\in\N\)</span>, os inteiros correspondentes são <span class="math inline">\([k_1+1,1]\)</span> e <span class="math inline">\([k_2+1,1]\)</span>, e sua soma é o inteiro associado a <span class="math inline">\(k_1+k_2\)</span>: <span class="math display">\[
+[k_1+1,1]+[k_2+1,1]=[k_1+k_2+2,2]=[k_1+k_2+1,1].
+\]</span> A mesma observação vale para o produto; os detalhes ficam ao leitor.</p>
+</section>
+<section id="ordenação-entre-números-inteiros" class="level2" data-number="11.3">
+<h2 data-number="11.3" data-anchor-id="ordenação-entre-números-inteiros"><span class="header-section-number">11.3</span> Ordenação entre números inteiros</h2>
+<div id="lem-pre-ordering" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 11.3</strong></span> Denote por <span class="math inline">\(P_\Z\)</span> o conjunto <span class="math display">\[
+P_\Z=\{[a,b]\in\Z\mid a\geq b\}
+\]</span> e ponha <span class="math display">\[
+-P_\Z=\{z\in\Z\mid -z\in P_\Z\}.
+\]</span></p>
 <ol type="1">
-<li>Se <span class="math inline">\(x_2&lt;x_1\)</span>, então <span class="math inline">\(x\)</span> chama-se <em>positivo</em>.</li>
-<li>Se <span class="math inline">\(x_1&lt;x_2\)</span>, então <span class="math inline">\(x\)</span> chama-se <em>negativo</em>.</li>
+<li><span class="math inline">\(\Z=P_\Z\cup -P_\Z\)</span> e <span class="math inline">\(P_\Z\cap -P_\Z=\{0\}\)</span>;</li>
+<li>se <span class="math inline">\(a,b\in P_\Z\)</span>, então <span class="math inline">\(a+b,ab\in P_\Z\)</span>;</li>
+<li>se <span class="math inline">\(a\in \Z\)</span>, então <span class="math inline">\(a^2\in P_\Z\)</span>;</li>
+<li><span class="math inline">\(-1\not\in P_\Z\)</span>.</li>
 </ol>
-<p>Segue da definição da igualdade entre números inteiros que a positividade do número está bem definida; ou seja, ela não depende da escolha do representante.</p>
-<p>Se <span class="math inline">\(x,y\in\Z\)</span>, dizemos que <span class="math inline">\(x&lt;y\)</span> se <span class="math inline">\(y-x=y+(-x)\)</span> é positivo. Dizemos que <span class="math inline">\(x\leq y\)</span> se <span class="math inline">\(x=y\)</span> ou <span class="math inline">\(x&lt;y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span></p>
+<ol type="1">
+<li>Se <span class="math inline">\(z=[a,b]\in \Z\)</span> com <span class="math inline">\(a\geq b\)</span>, então <span class="math inline">\(z\in P_\Z\)</span>. Se <span class="math inline">\(z=[a,b]\in\Z\)</span> com <span class="math inline">\(a&lt;b\)</span>, então <span class="math inline">\(-z=[b,a]\in \Z\)</span>. Portanto <span class="math inline">\(\Z=P_\Z\cup -P_\Z\)</span>. Claramente, <span class="math inline">\(0=[1,1]\in P_\Z\cap -P_\Z\)</span>. Se <span class="math inline">\(z=[a,b]\in P_\Z\cap -P_\Z\)</span>, então <span class="math inline">\([a,b]\in P_\Z\)</span> e <span class="math inline">\(-[a,b]=[b,a]\in P_\Z\)</span> e <span class="math inline">\(a\geq b\)</span> e <span class="math inline">\(b\geq a\)</span>. A antisimetria da relação <span class="math inline">\(\geq\)</span> implica que <span class="math inline">\(a=b\)</span> e <span class="math inline">\(z=[a,b]=[a,a]=0\)</span>. Portanto <span class="math inline">\(P_\Z\cap -P_\Z=\{0\}\)</span>.</li>
+</ol>
+<p>Os demais itens ficam para exercício.</p>
+</div>
+<div id="def-Z-ord" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 11.3</strong></span> Se <span class="math inline">\(x,y\in\Z\)</span>, dizemos que <span class="math inline">\(x\leq y\)</span> se <span class="math inline">\(y-x=y+(-x)\in P_\Z\)</span>. Em particular, se <span class="math inline">\(x\in P_\Z\)</span>, então <span class="math inline">\(0\leq x\)</span> e se <span class="math inline">\(x\in -P_\Z\)</span>, então <span class="math inline">\(x\leq 0\)</span>.</p>
 </div>
 <div id="lem-int-pos" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 11.3</strong></span> Sejam <span class="math inline">\(x,y,z\in\Z\)</span> As seguinte propriedades estão válidas.</p>
+<p><span class="theorem-title"><strong>Lema 11.4</strong></span> Sejam <span class="math inline">\(x,y,z\in\Z\)</span> As seguinte propriedades estão válidas.</p>
 <ol type="1">
 <li><span class="math inline">\(x\leq x\)</span>;</li>
 <li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(y\leq x\)</span>, então <span class="math inline">\(x=y\)</span>;</li>
 <li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(y\leq z\)</span>, então <span class="math inline">\(x\leq z\)</span>;</li>
 <li>se <span class="math inline">\(x\leq y\)</span>, então <span class="math inline">\(x+z\leq y+z\)</span>;</li>
-<li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(z\)</span> é positivo, então <span class="math inline">\(xz\leq yz\)</span>;</li>
-<li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(z\)</span> é negativo, então <span class="math inline">\(yz\leq xz\)</span>;</li>
+<li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(z\geq 0\)</span>, então <span class="math inline">\(xz\leq yz\)</span>;</li>
+<li>se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(z\leq 0\)</span>, então <span class="math inline">\(yz\leq xz\)</span>;</li>
 <li>temos que exatamente uma das alternativas <span class="math inline">\(x&lt;y\)</span> ou <span class="math inline">\(x=y\)</span> ou <span class="math inline">\(y&lt;x\)</span> está válida.</li>
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Provaremos por exemplo o item 5. Assuma que <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(z\)</span> é positivo. Se <span class="math inline">\(x=y\)</span>, então não tem nada para provar e assuma que <span class="math inline">\(x&lt;y\)</span>. Logo, <span class="math inline">\(y-x\)</span> é positivo. Colocando, <span class="math inline">\(x=[x_1,x_2]\)</span>, <span class="math inline">\(y=[y_1,y_2]\)</span>, <span class="math inline">\(z=[z_1,z_2]\)</span>, temos que <span class="math display">\[
-y-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].
-\]</span> Pela positividade, obtemos que <span class="math inline">\(y_1+x_2&gt;y_2+x_1\)</span>. Como <span class="math inline">\(z\)</span> é positivo, temos que <span class="math inline">\(z=[1+a,1]\)</span> e assim <span class="math display">\[\begin{align*}
-(y-x)z&amp;=[(y_1+x_2)(1+a)+y_2+x_1,y_1+x_2+(y_2+x_1)(1+a)]\\&amp;=
-[y_1+x_2+ay_1+ax_2+y_2+x_1,y_1+x_2+y_2+x_1+y_2a+x_1a]\\&amp;=
-[ay_1+ax_2,y_2a+x_1a]=[a(y_1+x_2),a(y_2+x_1)].
-\end{align*}\]</span> Ora, a compatibilidade das operações com a ordenação dos naturais implica que <span class="math inline">\(a(y_1+x_2)&gt;a(y_2+x_1)\)</span>. Ou seja, <span class="math inline">\(yz-xz=(y-x)z\)</span> é positivo e <span class="math inline">\(xz&lt;yz\)</span>.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Estas afirmações seguem das afirmações do <a href="#lem-pre-ordering" class="quarto-xref">Lema&nbsp;<span>11.3</span></a>.</p>
+<ol type="1">
+<li>Como <span class="math inline">\(0=x-x\in P_\Z\)</span>, temos <span class="math inline">\(x\leq x\)</span>.</li>
+<li>Se <span class="math inline">\(x\leq y\)</span> e <span class="math inline">\(y\leq x\)</span>, então <span class="math inline">\(y-x\in P_\Z\)</span> e <span class="math inline">\(x-y\in P_\Z\)</span>. A segunda afirmação implica que <span class="math inline">\(-(x-y)=y-x\in -P_\Z\)</span> e assim <span class="math inline">\(y-x\in P_\Z\cap -P_\Z=\{0\}\)</span>. Portanto <span class="math inline">\(y-x\in P_\Z\)</span> e <span class="math inline">\(y-x\)</span>.</li>
+</ol>
 </div>
-<p>O <a href="#lem-int-pos" class="quarto-xref">Lema&nbsp;<span>11.3</span></a> diz que a relação <span class="math inline">\(\leq\)</span> é uma relação de ordem total no conjunto <span class="math inline">\(\Z\)</span> que é compatível com as operações.</p>
+<p>O <a href="#lem-int-pos" class="quarto-xref">Lema&nbsp;<span>11.4</span></a> diz que a relação <span class="math inline">\(\leq\)</span> é uma relação de ordem total no conjunto <span class="math inline">\(\Z\)</span> que é compatível com as operações.</p>
 </section>
-<section id="os-números-racionais" class="level2" data-number="11.2">
-<h2 data-number="11.2" data-anchor-id="os-números-racionais"><span class="header-section-number">11.2</span> Os números racionais</h2>
-<p>Vamos agora ver como definir os números racionais. Aqui vamos dar as definições e resultados principais; as demonstrações serão feitas pelo leitor.</p>
+<section id="os-números-racionais" class="level2" data-number="11.4">
+<h2 data-number="11.4" data-anchor-id="os-números-racionais"><span class="header-section-number">11.4</span> Os números racionais</h2>
+<p>A construção dos números racionais a partir dos inteiros é análoga à construção dos inteiros a partir dos naturais. Pensamos um número racional como uma fração formal <span class="math inline">\(a/b\)</span>, com <span class="math inline">\(a\in\Z\)</span> e <span class="math inline">\(b\in\Z\setminus\{0\}\)</span>. Como <span class="math inline">\(\Z\)</span> não é fechado para divisão, essa fração, em geral, não define um inteiro; por isso a representamos pelo par ordenado <span class="math inline">\((a,b)\in\Z\times(\Z\setminus\{0\})\)</span>. Diferentes pares podem representar o mesmo valor (por exemplo, <span class="math inline">\(1/2\)</span> corresponde a qualquer um dos pares <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((2,4)\)</span>, <span class="math inline">\((3,6)\)</span>, etc.). Para identificar tais pares, introduzimos uma relação de equivalência em <span class="math inline">\(\Z\times(\Z\setminus\{0\})\)</span> e definimos os números racionais como as classes de equivalência resultantes.</p>
+<p>A seguir formalizamos essa estratégia e definimos as operações; como o procedimento é muito semelhante ao caso dos inteiros, omitimos detalhes e deixamos as verificações ao leitor.</p>
 <div id="def-rat-rel" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 11.4</strong></span> Considere o conjunto <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span> e seja <span class="math inline">\(\sim\)</span> a relação em <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span> definida pela regra que <span class="math display">\[
 (a,b)\sim (c,d)\quad\mbox{quando}\quad ad=bc.
 \]</span></p>
 </div>
 <div id="lem-rat-equiv" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 11.4</strong></span> A relação <span class="math inline">\(\sim\)</span> é uma relação de equivalência no conjunto <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span>. Se <span class="math inline">\((a,b)\in\Z\times\Z\setminus\{0\}\)</span>, então a sua classe de equivalência será denotada por <span class="math inline">\([a,b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Lema 11.5</strong></span> A relação <span class="math inline">\(\sim\)</span> é uma relação de equivalência no conjunto <span class="math inline">\(\Z\times\Z\setminus\{0\}\)</span>. Se <span class="math inline">\((a,b)\in\Z\times\Z\setminus\{0\}\)</span>, então a sua classe de equivalência será denotada por <span class="math inline">\([a,b]\)</span>.</p>
 </div>
 <div id="def-rat" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 11.5</strong></span> Um número racional é uma classe de equivalência <span class="math inline">\([a,b]\)</span>. O conjunto dos números racionais é denotado por <span class="math inline">\(\Q\)</span>.</p>
@@ -1533,39 +1563,43 @@ y-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].
 \end{align*}\]</span></p>
 </div>
 <div id="lem-rat-ops" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 11.5</strong></span> As operações na <a href="#def-rat-ops" class="quarto-xref">Definição&nbsp;<span>11.6</span></a> são bem definidas; ou seja, o resultado não depende da escolha dos representantes das classes de equivalência. Além disso, elas satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in\Q\)</span>.</p>
-<ul>
-<li><strong>(A1):</strong> <span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
-<li><strong>(A2):</strong> <span class="math inline">\(a+b=b+a\)</span>;</li>
-<li><strong>(A3):</strong> existe <span class="math inline">\(0_\Q\in\Q\)</span> tal que <span class="math inline">\(a+0_\Q=0_\Q+a=a\)</span>;</li>
-<li><strong>(A4):</strong> para todo <span class="math inline">\(a\in\Q\)</span> existe <span class="math inline">\(-a\in\Q\)</span> tal que <span class="math inline">\(a+(-a)=0_\Q\)</span>;</li>
-<li><strong>(M1):</strong> <span class="math inline">\((ab)c=a(bc)\)</span>;</li>
-<li><strong>(M2):</strong> <span class="math inline">\(ab=ba\)</span>;</li>
-<li><strong>(M3):</strong> existe <span class="math inline">\(1_\Q\in\Q\)</span> tal que <span class="math inline">\(a1_\Q=1_\Q a=a\)</span>;</li>
-<li><strong>(M4):</strong> para todo <span class="math inline">\(a\in\Q\setminus\{0_\Q\}\)</span> existe <span class="math inline">\(a^{-1}\in\Q\)</span> tal que <span class="math inline">\(aa^{-1}=1_\Q\)</span>;</li>
-<li><strong>(D):</strong> <span class="math inline">\((a+b)c=ac+bc\)</span>.</li>
-</ul>
+<p><span class="theorem-title"><strong>Lema 11.6</strong></span> As operações na <a href="#def-rat-ops" class="quarto-xref">Definição&nbsp;<span>11.6</span></a> são bem definidas; ou seja, o resultado não depende da escolha dos representantes das classes de equivalência. Além disso, elas satisfazem as seguintes propriedades para todo <span class="math inline">\(a,b,c\in\Q\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span>;</li>
+<li><span class="math inline">\(a+b=b+a\)</span>;</li>
+<li>existe <span class="math inline">\(0_\Q\in\Q\)</span> tal que <span class="math inline">\(a+0_\Q=0_\Q+a=a\)</span>;</li>
+<li>para todo <span class="math inline">\(a\in\Q\)</span> existe <span class="math inline">\(-a\in\Q\)</span> tal que <span class="math inline">\(a+(-a)=0_\Q\)</span>;</li>
+<li><span class="math inline">\((ab)c=a(bc)\)</span>;</li>
+<li><span class="math inline">\(ab=ba\)</span>;</li>
+<li>existe <span class="math inline">\(1_\Q\in\Q\)</span> tal que <span class="math inline">\(a1_\Q=1_\Q a=a\)</span>;</li>
+<li>para todo <span class="math inline">\(a\in\Q\setminus\{0_\Q\}\)</span> existe <span class="math inline">\(a^{-1}\in\Q\)</span> tal que <span class="math inline">\(aa^{-1}=1_\Q\)</span>;</li>
+<li><span class="math inline">\((a+b)c=ac+bc\)</span>.</li>
+<li><span class="math inline">\(0a=0\)</span>.</li>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>É tarefa do leitor. Só vamos comentar que <span class="math inline">\(0_\Q=[0,1]\)</span>, <span class="math inline">\(1_\Q=[1,1]\)</span>, se <span class="math inline">\(a=[x,y]\)</span>, então <span class="math inline">\(-a=[-x,y]\)</span> e se <span class="math inline">\(a\neq [0,1]\)</span>, então <span class="math inline">\(a^{-1}=[y,x]\)</span>.</p>
 </div>
 <p>Nós escrevemos o número racional <span class="math inline">\([x,y]\)</span> como <span class="math inline">\(x/y\)</span>. Os números <span class="math inline">\(0_\Q\)</span> e <span class="math inline">\(1_\Q\)</span> serão escritos simplesmente como <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>. Note, para <span class="math inline">\(k\in \Z\)</span> que o número <span class="math inline">\([k,1]=k/1\)</span> pode ser identificado com o inteiro <span class="math inline">\(k\)</span>. Assim, podemos pensar os inteiros como números racionais e escrever que <span class="math inline">\(\Z\subseteq\Q\)</span>. Se <span class="math inline">\(a,b\in\Q\)</span>, então <span class="math inline">\(a+(-b)\)</span> será escrito como <span class="math inline">\(a-b\)</span> e <span class="math inline">\(ab^{-1}\)</span> será escrito como <span class="math inline">\(a/b\)</span>.</p>
 <p>Entre os números racionais, podemos definir os números não negativos como <span class="math display">\[
-\Q^+=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+P_\Q=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+\]</span> e defina <span class="math display">\[
+-P_\Q=\{-x\mid x\in P_\Q\}.
 \]</span></p>
 <div id="lem-qplus" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 11.6</strong></span> Temos que <span class="math inline">\(\Q^+\)</span> satisfaz as seguintes propriedades.</p>
-<ul>
-<li><strong>(O1):</strong> Se <span class="math inline">\(a,b\in\Q^+\)</span>, então <span class="math inline">\(a+b,ab\in\Q^+\)</span>;</li>
-<li><strong>(O2):</strong> Se <span class="math inline">\(a\in\Q\)</span>, então <span class="math inline">\(a\in\Q^+\)</span> ou <span class="math inline">\(-a\in\Q^+\)</span>;</li>
-<li><strong>(O3):</strong> <span class="math inline">\(\Q^+\cap\{x\in\Q\mid -x\in\Q^+\}=\{0\}\)</span>.</li>
-</ul>
+<p><span class="theorem-title"><strong>Lema 11.7</strong></span> Temos que <span class="math inline">\(P_\Q\)</span> satisfaz as seguintes propriedades.</p>
+<ol type="1">
+<li><span class="math inline">\(\Q=P_\Q\cup -P_\Q\)</span> e <span class="math inline">\(P_\Q\cap -P_\Q=\{0\}\)</span>;</li>
+<li>se <span class="math inline">\(a,b\in P_\Q\)</span>, então <span class="math inline">\(a+b,ab\in P_\Q\)</span>;</li>
+<li>se <span class="math inline">\(a\in \Q\)</span>, então <span class="math inline">\(a^2\in P_\Q\)</span>;</li>
+<li><span class="math inline">\(-1\not\in P_\Q\)</span>.</li>
+</ol>
 </div>
 <div id="def-order-q" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 11.7</strong></span> Defina para <span class="math inline">\(a,b\in\Q\)</span> a relação <span class="math inline">\(a\leq b\)</span> para significar que <span class="math inline">\(b-a\in\Q^+\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 11.7</strong></span> Defina para <span class="math inline">\(a,b\in\Q\)</span> a relação <span class="math inline">\(a\leq b\)</span> para significar que <span class="math inline">\(b-a\in P_\Q\)</span>.</p>
 </div>
 <div id="lem-order-q" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 11.7</strong></span> Temos que <span class="math inline">\(\leq\)</span> é uma ordem total no conjunto <span class="math inline">\(\Q\)</span>. Ou seja, temos para todo <span class="math inline">\(a,b,c\in\Q\)</span>, que</p>
+<p><span class="theorem-title"><strong>Lema 11.8</strong></span> Temos que <span class="math inline">\(\leq\)</span> é uma ordem total no conjunto <span class="math inline">\(\Q\)</span>. Ou seja, temos para todo <span class="math inline">\(a,b,c\in\Q\)</span>, que</p>
 <ol type="1">
 <li><span class="math inline">\(a\leq a\)</span>;</li>
 <li>se <span class="math inline">\(a\leq b\)</span> e <span class="math inline">\(b\leq a\)</span>, então <span class="math inline">\(a=b\)</span>;</li>
