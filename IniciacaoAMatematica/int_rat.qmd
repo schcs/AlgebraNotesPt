@@ -6,9 +6,15 @@ lang: pt-BR
 
 ## Os números inteiros. 
 
-Nas aulas anteriores, nós construímos os números naturais. Agora, vamos construir os números inteiros. 
+Nas aulas anteriores, construímos os números naturais. Agora, vamos construir os números inteiros.
 
-Considere o conjunto $\N\times\N$ e considere a relação $\sim$ sobre $\N\times\N$ definida como 
+Tendo construído os números naturais, já possuímos a "metade" dos inteiros; isto é, já temos os números positivos. A ideia para construir os números negativos e o zero é considerar um número inteiro geral como uma diferença formal "$a-b$" de números naturais $a,b\in\N$. O problema com essa abordagem é que a subtração não está sempre definida entre os naturais, pois $\N$ não é fechado para a operação $-$. Para resolver este problema, identificamos a diferença formal "$a-b$" com o par ordenado $(a,b)\in\N\times\N$. Por exemplo, o número "menos dois" será identificado com $(1,3)$ (pois $-2=1-3$). 
+
+Entretanto, surge outro problema: vários pares ordenados podem representar o mesmo número inteiro. Por exemplo, $(1,3)$, $(2,4)$, $(3,5)$, etc., todos representam o número "menos 2", já que $1-3=2-4=3-5=\cdots=-2$. A solução para este problema é utilizar o conceito de relação de equivalência e considerar estes pares como equivalentes. Assim, cada número inteiro será representado por uma classe de equivalência de pares ordenados de números naturais.
+
+
+
+A implementação formal da ideia informal do parágrafo anterior é a seguinte. Considere o conjunto $\N\times\N$ e considere a relação $\sim$ sobre $\N\times\N$ definida como 
 $$
 (a,b)\sim (c,d)\quad\mbox{quando}\quad a+d=b+c.
 $$
@@ -20,30 +26,36 @@ A relação $\sim$ é uma relação de equivalência.
 Consulte o @exr-ntimesn
 :::
 
-Seja $(a,b)\in\N\times \N$. A classe de equivalência de $(a,b)$ será denotado por $[a,b]$. Por exemplo 
+Seja $(a,b)\in\N\times \N$. A classe de equivalência de $(a,b)$ será denotada por $[a,b]$. Por exemplo:
 \begin{align*}
 [1,1]&=\{(1,1),(2,2),(3,3),\ldots\}\\
 [2,1]&=\{(2,1),(3,2),(4,3),\ldots\}\\
 [1,2]&=\{(1,2),(2,3),(3,4),\ldots\}
 \end{align*}
-Observe que a classe $[1,1]$ contem os pares na form $(a,a)$; ou seja, os pares com os dois componentes iguals. A classe $[2,1]$ contem os pares na forma $[a+1,a]$; ou seja, os pares onde o primeiro componente é um maior que o segundo. A classe $[1,2]$ contém os pares na forma $(a,a+1)$ onde o segundo componente é um maior que o primeiro. Geralmente, temos uma classe na forma 
+
+Observe que a classe $[1,1]$ contém os pares da forma $(a,a)$; ou seja, pares com ambos os componentes iguais. A classe $[2,1]$ contém os pares da forma $(a+1,a)$; isto é, pares onde o primeiro componente é uma unidade maior que o segundo. A classe $[1,2]$ contém os pares da forma $(a,a+1)$, onde o segundo componente é uma unidade maior que o primeiro. 
+
+Em geral, temos uma classe da forma 
 $$
-[1,1]=\{(a,a)\mid a\in\N\}
+[1,1]=\{(a,a)\mid a\in\N\},
 $${#eq-pair-zero}
 e as demais classes têm a forma 
 $$
-[1+k,1]=\{(a+k,a)\mid a\in \N\} 
+[1+k,1]=\{(a+k,a)\mid a\in \N\}
 $${#eq-pair-pos}
 ou 
 $$
-[1,1+k]\{(a,a+k)\mid a\in \N\}.
+[1,1+k]=\{(a,a+k)\mid a\in \N\}.
 $${#eq-pair-neg}
-A ideia de construir os número inteiros é que a classe na @eq-pair-pos pode ser identificada com o número $k\in\N$, enquanto a classe na @eq-pair-zero pode ser identificada com um novo número que representa a ideia do zero, e a classe na @eq-pair-neg com um número que representa a ideia do negativo de $k$.
+
+A ideia por trás da construção dos números inteiros é que a classe descrita em @eq-pair-pos pode ser identificada com o número natural $k\in\N$, a classe em @eq-pair-zero representa o zero, e a classe em @eq-pair-neg representa o oposto (negativo) de $k$.
 
 :::{#def-int}
 Um número inteiro é uma classe de equivalência $[a,b]$ para a relação $\sim$. O conjunto dos inteiros é denotado por $\mathbb Z$. 
 :::
 
+
+## As operações entre números inteiros
 
 :::{#def-int-ops}
 Definimos as operações de $+$ e $\cdot$ entre elementos de $\Z$:
@@ -60,12 +72,13 @@ As operações $+$ e $\cdot$ são bem definidas; ou seja, o resultado não depen
 2. $x+y=y+x$;
 3. Existe elemento neutro para a soma. Nomeadamente, denotando $0=[1,1]$, temos que $x+0=0+x=x$;
 4. $x$ possui negativo $-x$ que satisfaz $x+(-x)=0$;
-5. $(xy)z=x(yz)$;
-6. $xy=yx$;
-7. Existe elemento neutro para o produto. Nomeadamente, denotando $1_\Z=[2,1]$, temos que $1_\Z x=x1_\Z=x$;
-8. $x(y+z)=xy+xz$;
-9. se $x+z=y+z$, então $x=y$;
-10. se $xz=yz$ e $z\neq 0$, então $x=y$.
+5. $0\cdot x=0$; 
+6. $(xy)z=x(yz)$;
+7. $xy=yx$;
+8. Existe elemento neutro para o produto. Nomeadamente, denotando $1_\Z=[2,1]$, temos que $1_\Z x=x1_\Z=x$;
+9. $x(y+z)=xy+xz$;
+10. se $x+z=y+z$, então $x=y$;
+11. se $xz=yz$ e $z\neq 0$, então $x=y$.
 :::
 
 :::{.proof}
@@ -96,7 +109,7 @@ $$
 $$
 
 As demais afirmações são fáceis de provar usando as propriedades já provadas dos números naturais. 
-Para ilustrar a técnica, vamos provar o  item 8 e o item 9. O resto é exercício para o leitor. 
+Para ilustrar a técnica, vamos provar o  item 9. e o item 10. O resto é exercício para o leitor. 
 
 Assuma que $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$ e vamos computar que 
 \begin{align*}
@@ -110,7 +123,7 @@ xy+xz&=[x_1,x_2][y_1,y_2]+[x_1,x_2][z_1,z_2]\\&=[x_1y_1+x_2y_2,x_1y_2+x_2y_1]+[x
 [x_1y_1+x_2y_2+x_1z_1+x_2z_2,x_1y_2+x_2y_1+x_1z_2+x_2z_1]
 \end{align*}
 
-Assuma que $x+z=y+z$. Sejam $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$ e assuma que 
+Sejam $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$ e assuma que 
 $x+z=y+z$; ou seja, 
 $$
 [x_1+z_1,x_2+z_2]=[y_1+z_1,y_2+z_2].
@@ -126,16 +139,43 @@ $$
 ou seja, $x=[x_1,x_2]=[y_1,y_2]=y$. 
 :::
 
-:::{#def-int-pos}
-Seja $x=[x_1,x_2]$. 
+Como já foi observado acima, o número natural $k$ pode ser identificado com o inteiro $[k+1,1]\in\Z$. Sob essa identificação, as operações definidas em $\Z$ estendem as operações em $\N$. Por exemplo, se $k_1,k_2\in\N$, os inteiros correspondentes são $[k_1+1,1]$ e $[k_2+1,1]$, e sua soma é o inteiro associado a $k_1+k_2$:
+$$
+[k_1+1,1]+[k_2+1,1]=[k_1+k_2+2,2]=[k_1+k_2+1,1].
+$$
+A mesma observação vale para o produto; os detalhes ficam ao leitor.
 
-1. Se $x_2<x_1$, então $x$ chama-se *positivo*.
-2. Se $x_1<x_2$, então $x$ chama-se *negativo*.
+## Ordenação entre números inteiros
 
-Segue da definição da igualdade entre números inteiros que a positividade do número está bem definida; 
-ou seja, ela não depende da escolha do representante. 
 
-Se $x,y\in\Z$, dizemos que $x<y$ se $y-x=y+(-x)$ é positivo. Dizemos que $x\leq y$ se $x=y$ ou $x<y$. 
+:::{#lem-pre-ordering}
+Denote por $P_\Z$ o conjunto 
+$$
+P_\Z=\{[a,b]\in\Z\mid a\geq b\}
+$$ 
+e ponha 
+$$
+-P_\Z=\{z\in\Z\mid -z\in P_\Z\}.
+$$
+
+1. $\Z=P_\Z\cup -P_\Z$ e $P_\Z\cap -P_\Z=\{0\}$;
+2. se $a,b\in P_\Z$, então $a+b,ab\in P_\Z$;
+3. se $a\in \Z$, então $a^2\in P_\Z$;
+4. $-1\not\in P_\Z$.
+:::
+
+:::{.proof}
+1. Se $z=[a,b]\in \Z$ com $a\geq b$, então $z\in P_\Z$. Se $z=[a,b]\in\Z$ com $a<b$, 
+então $-z=[b,a]\in \Z$. Portanto $\Z=P_\Z\cup -P_\Z$.  Claramente, $0=[1,1]\in P_\Z\cap -P_\Z$. 
+Se $z=[a,b]\in P_\Z\cap -P_\Z$, então $[a,b]\in P_\Z$ e $-[a,b]=[b,a]\in P_\Z$ e $a\geq b$ e $b\geq a$. 
+A antisimetria da relação $\geq$ implica que $a=b$ e $z=[a,b]=[a,a]=0$. Portanto $P_\Z\cap -P_\Z=\{0\}$. 
+
+Os demais itens ficam para exercício. 
+:::
+
+:::{#def-Z-ord}
+Se $x,y\in\Z$, dizemos que $x\leq y$ se $y-x=y+(-x)\in P_\Z$. Em particular, se $x\in P_\Z$, então 
+$0\leq x$ e se $x\in -P_\Z$, então $x\leq 0$. 
 :::
 
 :::{#lem-int-pos}
@@ -145,33 +185,32 @@ Sejam $x,y,z\in\Z$ As seguinte propriedades estão válidas.
 2. se $x\leq y$ e $y\leq x$, então $x=y$;
 3. se $x\leq y$ e $y\leq z$, então $x\leq z$; 
 4. se $x\leq y$, então $x+z\leq y+z$; 
-5. se $x\leq y$ e $z$ é positivo, então $xz\leq yz$;
-6. se $x\leq y$ e $z$ é negativo, então $yz\leq xz$;
+5. se $x\leq y$ e $z\geq 0$, então $xz\leq yz$;
+6. se $x\leq y$ e $z\leq 0$, então $yz\leq xz$;
 7. temos que exatamente uma das alternativas $x<y$ ou $x=y$ ou $y<x$ está válida.
 :::
 :::{.proof}
-Provaremos por exemplo o item 5. Assuma que $x\leq y$ e $z$ é positivo. Se $x=y$, então não tem nada para provar e assuma que 
-$x<y$. Logo, $y-x$ é positivo. Colocando, $x=[x_1,x_2]$, $y=[y_1,y_2]$, $z=[z_1,z_2]$, temos que 
-$$
-y-x=[y_1,y_2]+[x_2,x_1]=[y_1+x_2,y_2+x_1].
-$$
-Pela positividade, obtemos que $y_1+x_2>y_2+x_1$. 
-Como $z$ é positivo, temos que $z=[1+a,1]$ e assim 
-\begin{align*}
-(y-x)z&=[(y_1+x_2)(1+a)+y_2+x_1,y_1+x_2+(y_2+x_1)(1+a)]\\&=
-[y_1+x_2+ay_1+ax_2+y_2+x_1,y_1+x_2+y_2+x_1+y_2a+x_1a]\\&=
-[ay_1+ax_2,y_2a+x_1a]=[a(y_1+x_2),a(y_2+x_1)].
-\end{align*}
-Ora, a compatibilidade das operações com a ordenação dos naturais implica que $a(y_1+x_2)>a(y_2+x_1)$. 
-Ou seja, $yz-xz=(y-x)z$ é positivo e $xz<yz$. 
+Estas afirmações seguem das afirmações do @lem-pre-ordering. 
+
+1. Como $0=x-x\in P_\Z$, temos $x\leq x$. 
+2. Se $x\leq y$ e $y\leq x$, então $y-x\in P_\Z$ e $x-y\in P_\Z$. A segunda afirmação implica que 
+$-(x-y)=y-x\in -P_\Z$ e assim $y-x\in P_\Z\cap -P_\Z=\{0\}$. Portanto $y-x\in P_\Z$ e $y-x$. 
 :::
 
-O @lem-int-pos diz que a relação $\leq$ é uma relação de ordem total no conjunto $\Z$ que é compatível com 
-as operações.
+O @lem-int-pos diz que a relação $\leq$ é uma relação de ordem total no conjunto $\Z$ que é compatível com  as operações.
 
 ## Os números racionais
 
-Vamos agora ver como definir os números racionais. Aqui vamos dar as definições e resultados principais; as demonstrações serão feitas pelo leitor. 
+A construção dos números racionais a partir dos inteiros é análoga à construção dos inteiros
+a partir dos naturais. Pensamos um número racional como uma fração formal $a/b$, com $a\in\Z$ e $b\in\Z\setminus\{0\}$.
+Como $\Z$ não é fechado para divisão, essa fração, em geral, não define um inteiro; por isso a representamos pelo par
+ordenado $(a,b)\in\Z\times(\Z\setminus\{0\})$. Diferentes pares podem representar o mesmo valor (por exemplo, $1/2$
+corresponde a qualquer um dos pares $(1,2)$, $(2,4)$, $(3,6)$, etc.). Para identificar tais pares, introduzimos
+uma relação de equivalência em $\Z\times(\Z\setminus\{0\})$ e definimos os números racionais como as classes
+de equivalência resultantes.
+
+A seguir formalizamos essa estratégia e definimos as operações; como o procedimento é muito semelhante ao caso dos inteiros,
+omitimos detalhes e deixamos as verificações ao leitor.
 
 :::{#def-rat-rel}
 Considere o conjunto $\Z\times\Z\setminus\{0\}$ e seja $\sim$ a relação em $\Z\times\Z\setminus\{0\}$ definida pela regra que 
@@ -199,15 +238,16 @@ As operações $+$ e $\cdot$ serão definidas entre números racionais $[a,b],[c
 :::{#lem-rat-ops}
 As operações na @def-rat-ops são bem definidas; ou seja, o resultado não depende da escolha dos representantes das classes de equivalência. Além disso, elas satisfazem as seguintes propriedades para todo $a,b,c\in\Q$.
 
-- **(A1):** $(a+b)+c=a+(b+c)$;
-- **(A2):** $a+b=b+a$;
-- **(A3):** existe $0_\Q\in\Q$ tal que $a+0_\Q=0_\Q+a=a$; 
-- **(A4):** para todo $a\in\Q$ existe $-a\in\Q$ tal que $a+(-a)=0_\Q$;
-- **(M1):** $(ab)c=a(bc)$;
-- **(M2):** $ab=ba$;
-- **(M3):** existe $1_\Q\in\Q$ tal que $a1_\Q=1_\Q a=a$; 
-- **(M4):** para todo $a\in\Q\setminus\{0_\Q\}$ existe $a^{-1}\in\Q$ tal que $aa^{-1}=1_\Q$;
-- **(D):** $(a+b)c=ac+bc$.
+1.  $(a+b)+c=a+(b+c)$;
+2.  $a+b=b+a$;
+3.  existe $0_\Q\in\Q$ tal que $a+0_\Q=0_\Q+a=a$; 
+4.  para todo $a\in\Q$ existe $-a\in\Q$ tal que $a+(-a)=0_\Q$;
+5.  $(ab)c=a(bc)$;
+6.  $ab=ba$;
+7.  existe $1_\Q\in\Q$ tal que $a1_\Q=1_\Q a=a$; 
+8.  para todo $a\in\Q\setminus\{0_\Q\}$ existe $a^{-1}\in\Q$ tal que $aa^{-1}=1_\Q$;
+9.  $(a+b)c=ac+bc$.
+10. $0a=0$.
 :::
 :::{.proof}
 É tarefa do leitor. Só vamos comentar que $0_\Q=[0,1]$, $1_\Q=[1,1]$, se $a=[x,y]$, então $-a=[-x,y]$ e se $a\neq [0,1]$, então $a^{-1}=[y,x]$.
@@ -217,19 +257,24 @@ Nós escrevemos o número racional $[x,y]$ como $x/y$. Os números $0_\Q$ e $1_\
 
 Entre os números racionais, podemos definir os números não negativos como 
 $$
-\Q^+=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+P_\Q=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+$$
+e defina 
+$$
+-P_\Q=\{-x\mid x\in P_\Q\}.
 $$
 
 :::{#lem-qplus}
-Temos que $\Q^+$ satisfaz as seguintes propriedades.
+Temos que $P_\Q$ satisfaz as seguintes propriedades.
 
-- **(O1):** Se $a,b\in\Q^+$, então $a+b,ab\in\Q^+$;
-- **(O2):** Se $a\in\Q$, então $a\in\Q^+$ ou $-a\in\Q^+$;
-- **(O3):** $\Q^+\cap\{x\in\Q\mid -x\in\Q^+\}=\{0\}$.
+1. $\Q=P_\Q\cup -P_\Q$ e $P_\Q\cap -P_\Q=\{0\}$;
+2. se $a,b\in P_\Q$, então $a+b,ab\in P_\Q$;
+3. se $a\in \Q$, então $a^2\in P_\Q$;
+4. $-1\not\in P_\Q$.
 :::
 
 :::{#def-order-q}
-Defina para $a,b\in\Q$ a relação $a\leq b$ para significar que $b-a\in\Q^+$. 
+Defina para $a,b\in\Q$ a relação $a\leq b$ para significar que $b-a\in P_\Q$. 
 :::
 
 :::{#lem-order-q}
