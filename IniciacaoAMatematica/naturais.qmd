@@ -435,5 +435,16 @@ indução.
    &=F_{m+3}F_{n+1}+F_{m+2}F_n=F_{m+1+n+2}=F_{m+n+3}.
    \end{align*}
 
+6. Segue do item 5. Aplicando
+   $F_{m+1}F_n+F_{m+2}F_{n+1}=F_{m+n+2}$
+   com $m=n$ e substituindo $n$ por $n+1$, obtemos
+   $$
+   F_{n+1}F_{n+1}+F_{n+2}F_{n+2}=F_{n+(n+1)+2},
+   $$
+   isto é,
+   $$
+   F_{n+1}^2+F_{n+2}^2=F_{2n+3}.
+   $$
+
 Os demais itens são exercício.
 :::
