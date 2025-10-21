@@ -81,7 +81,7 @@ Defina a multiplicação com as seguintes duas regras para todo $n,m\in\N$:
 - **(M2)** $n\cdot S(m)=n\cdot m+n$.
 :::
 
-Note que estas definições podemo ser vistas como definições recursivas. O seguinte exemplo simples ilustra o uso destas regras. 
+Note que estas definições podem ser vistas como definições recursivas. O seguinte exemplo simples ilustra o uso destas regras. 
 
 :::{#exm-arit-nat}
 Vamos calcular por exemplo que $2+2=2\cdot 2=4$ usando a @def-arit-nat. Primeiro, 
@@ -93,6 +93,15 @@ $$
 2\cdot 2=2\cdot S(1)=2\cdot 1+2=2+2=4.
 $$
 :::
+
+A afirmação $2+2=4$ parece óbvia para quem cursou o ensino fundamental, mas, se nos perguntarmos “como se demonstra matematicamente que $2+2=4$?”, muita gente não saberia responder. A questão pode soar trivial, mas a busca por uma demonstração rigorosa nos leva ao cerne dos fundamentos da matemática. Uma das primeiras tentativas sistemáticas de axiomatizar a matemática foi o [Principia Mathematica](https://pt.wikipedia.org/wiki/Principia_Mathematica), de [Bertrand Russell](https://pt.wikipedia.org/wiki/Bertrand_Russell) e [Alfred North Whitehead](https://pt.wikipedia.org/wiki/Alfred_North_Whitehead), publicado entre 1910 e 1913. Famosamente, a demonstração de que $1+1=2$ só aparece na página 379.
+
+Os seguintes dois vídeos falam sobre o assunto. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AwbZaTjXo-s?si=5bVXccOcEqkz7sUL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v9tXHIWeK2M?si=1vnDb5VAcfii9L-u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Vamos provar primeiro alguma afirmações simples sobre as operações com os naturais. 
 
