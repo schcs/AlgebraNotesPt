@@ -383,7 +383,7 @@ que não possui menor element precisa ser igual a $\emptyset$.
 ## Provas por indução -- Os números de Fibonacci
 
 Definimos a [sequência de Fibonacci](https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci)
-na forma seguinte: $F_1=1$, $F_2=1$, $F_{k}=F_{k-1}+F_{k-2}$ para $k\geq 3$. Aplicando a definição, 
+na forma seguinte: $F_1=1$, $F_2=1$, $F_{k+2}=F_{k}+F_{k+1}$ para $k\geq 1$. Aplicando a definição, 
 temos que 
 $$
 F_1=1,\ F_2=1,\ F_3=2,\ F_4=3,\ F_5=5,\ F_6=8,\ F_7=13,\ \mbox{etc}.
