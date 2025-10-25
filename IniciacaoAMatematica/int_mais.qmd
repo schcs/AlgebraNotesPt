@@ -1,0 +1,135 @@
+---
+title: "Mais sobre inteiros e racionais"
+number-sections: true
+lang: pt-BR
+---
+
+## Coeficientes binomiais
+
+Os números que aparecem no triângulo de Pascal são chamados de coeficientes binomiais. 
+
+Primeiras seis linhas do triângulo de Pascal:
+```
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+1   5   10   10   5   1
+```
+
+A regra de formação do triângulo de Pascal é a seguinte: cada número é a soma dos dois números diretamente acima dele. Os números nas bordas do triângulo são sempre $1$. Contando as linhas a partir de $0$, a $n$-ésima linha do triângulo de Pascal contém $n + 1$ números.
+Os números na $n$-ésima linha são denotados por $\binom{n}{0}, \binom{n}{1}, \binom{n}{2}, \ldots, \binom{n}{n}$. A regra de formação pode ser expressa como:
+$$ 
+\binom n0=\binom nn=1, \quad \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}\quad \text{para } 1 \leq k \leq n-1. 
+$$
+
+O número $\binom{n}{k}$ é chamado de *coeficiente binomial*. 
+
+:::{#lem-}
+O coeficiente binomial $\binom nk$ coincide com o número 
+de maneiras de escolher  $k$ elementos de um conjunto com $n$ elementos. 
+Em outras palavras $\binom nk$ coincide com o número de subconjuntos com $k$ elementos 
+de um conjunto com $n$ elementos. 
+:::
+:::{.proof}
+Demonstremos por indução em $n$ começando com $n=0$. Quando $n=0$, a afirmação é verdadeira 
+porque $\binom 00=1$ e temos apenas uma maneira de escolher zero elementos de um conjunto com zero 
+elementos (não escolhendo nenhum). Assuma que a afirmação é verdadeira para $n\geq 0$.
+Ora assuma que 
+temos um conjunto de $n+1$ elementos e queremos formar um subconjunto com $k$ elementos. 
+Se $k=0$ ou $k=n+1$, há apenas uma maneira de fazer isso: escolher o conjunto vazio ou o conjunto todo, respectivamente. Logo $\binom {n+1}0=\binom{n+1}{n+1}=1$. 
+Agora, suponha que $1 \leq k \leq n$. Então temos duas possibilidades. Pode ser que o $n+1$-ésimo 
+elemento esteja no subconjunto escolhido ou não. Se o $n+1$-ésimo elemento estiver no subconjunto, 
+então precisamos escolher os outros $k-1$ elementos dos primeiros $n$ elementos, o que pode ser feito de 
+$\binom{n}{k-1}$ maneiras. Se o $n+1$-ésimo elemento não estiver no subconjunto, então precisamos escolher os $k$ elementos
+dos primeiros $n$ elementos, o que pode ser feito de $\binom{n}{k}$ maneiras. Portanto, o número total de maneiras de escolher $k$
+elementos de um conjunto com $n+1$ elementos é a soma dessas duas possibilidades, ou seja,
+$$
+\binom{n+1}{k} = \binom{n}{k-1} + \binom{n}{k}.
+$$
+:::
+
+O coeficiente binomial $\binom nk$ é frequentamente escrito usando fatorial. Se $k\in \Z$ e $k\geq 0$, 
+então $k!$ é definido como 
+$$
+0!=1\quad \mbox{e}\quad k!=1\cdot 2 \cdots n.
+$$
+Por exemplo, os fatoriais dos números $0$, $1$, $2$, $3$, $4$, $5$, $6$ são 
+$$
+0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6, \quad 4!=24, \quad 5!=120, \quad 6!=720.
+$$
+
+:::{#lem-fatorial}
+Se $n$ e $k$ são inteiros com $n\geq 0$ e $0\leq k \leq n$, então 
+$$
+\binom nk = \frac{n!}{k!(n-k)!}=\frac{n(n-1)(n-2)\cdots (n-k+1)}{k!}.
+$$
+:::
+:::{.proof}
+Demonstremos por indução em $n$. Quando $n=0$, a afirmação é verdadeira, pois $\binom 00=1$ e 
+$$
+\frac{0!}{0!0!}=1.
+$$
+Assuma que a afirmação é verdadeira para algum $n\geq 0$. Se $k=0$ ou $k=n+1$, então
+$$
+\binom{n+1}0=1=\frac{(n+1)!}{0!(n+1)!} \quad \mbox{e}\quad \binom{n+1}{n+1}=1=\frac{(n+1)!}{(n+1)!0!}.
+$$
+Agora, suponha que $1\leq k \leq n$. Então, pela definição do coeficiente binomial e pela hipótese de indução, temos
+\begin{align*}
+\binom{n+1}k & = \binom nk + \binom{n}{k-1} \\
+& = \frac{n!}{k!(n
+-k)!} + \frac{n!}{(k-1)!(n-(k-1))!} \\
+& = \frac{n!(n-k+1)}{k!(n-k+1)(n-k)!} + \frac{n!k}{k!(n-k+1)(n-k)!} \\
+& = \frac{n!(n+1)}{k!(n-k+1)(n-k)!} \\
+& = \frac{(n+1)!}{k!((n+1)-k)!}.
+\end{align*}
+:::
+
+O fatorial $k!$ também tem uma interpretação combinatória. O número $k!$ é o número de maneiras de ordenar $k$ elementos distintos. Por exemplo, se temos $3$ elementos distintos $A$, $B$ e $C$, as possíveis permutações são $ABC$, $ACB$, $BAC$, $BCA$, $CAB$ e $CBA$, totalizando $3! = 6$ ordenações.
+
+## O binómio de Newton
+
+O binómio de Newton é uma fórmula que expressa a expansão de potências de binômios. 
+Sabe-se que 
+\begin{align*}
+(a+b)^2 &= a^2 + 2ab + b^2\\
+(a+b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3\\
+\end{align*}
+
+Considere 
+$$
+(a+b)^n = (a+b)(a+b)\cdots (a+b) \quad \text{($n$ fatores)}.
+$$
+A potência $(a+b)^n$ pode ser expandida como uma soma de termos da forma $a^{n-k}b^k$. Inicialmente podemos pensar assim: ao expandir o produto, cada termo $a^{n-k}b^k$ é obtido escolhendo-se $a$ de $n-k$ fatores e $b$ de $k$ fatores. O número de maneiras de fazer isso é exatamente o coeficiente binomial $\binom nk$. Portanto, a expansão geral é dada por:
+\begin{align*}
+(a + b)^n &= \binom n0 a^n+\binom n1 a^{n-1}b+\binom n2 a^{n-2}b^2+\cdots+\binom n{n-1} ab^{n-1}+\binom n{n} b^n\\
+&= \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k.
+\end{align*}    
+
+
+A seguir, apresentamos uma demonstração formal do binómio de Newton usando indução matemática.
+
+:::{#lem-binomio}
+Para quaisquer números  $a$ e $b$ e um inteiro não negativo $n$, temos:
+$$
+(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k.
+$$
+:::
+:::{.proof}
+Demonstremos por indução em $n$. Quando $n=0$, a afirmação é verdadeira, pois 
+$$
+(a + b)^0 = 1 = \sum_{k=0}^{0} \binom{0}{k} a^{0-k} b^k.
+$$
+Assuma que a afirmação é verdadeira para algum $n\geq 0$. Então, temos
+\begin{align*}
+(a + b)^{n+1} & = (a + b)(a + b)^n \\
+& = (a + b) \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k \\
+& = \sum_{k=0}^{n} \binom{n}{k} a^{n-k+1} b^k + \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^{k+1} \\
+& = a^{n+1} + \sum_{k=1}^{n} \binom{n}{k} a^{n-k+1} b^k + \sum_{k=0}^{n-1} \binom{n}{k} a^{n-k} b^{k+1} + b^{n+1} \\
+& = a^{n+1} + \sum_{k=1}^{n} \binom{n}{k} a^{n-k+1} b^k + \sum_{k=1}^{n} \binom{n}{k-1} a^{n-(k-1)} b^k + b^{n+1} \\
+& = a^{n+1} + \sum_{k=1}^{n} \left( \binom{n}{k} + \binom{n}{k-1} \right) a^{n-k+1} b^k + b^{n+1} \\
+& = a^{n+1} + \sum_{k=1}^{n} \binom{n+1}{k} a^{n-k+1} b^k + b^{n+1} \\
+& = \sum_{k=0}^{n+1} \binom{n+1}{k} a^{(n+1)-k} b^k.
+\end{align*}
+::: 
