@@ -135,12 +135,6 @@ Assuma que a afirmação é verdadeira para algum $n\geq 0$. Então, temos
 ::: 
 
 
-
-
-
-
-
-
 ## O Lema de divisão de Euclides
 
 

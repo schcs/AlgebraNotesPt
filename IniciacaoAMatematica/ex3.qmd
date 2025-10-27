@@ -63,12 +63,12 @@ Seja $A=\{1,2,3,4,5,6\}$. Dê exemplo de relação $R$ no conjunto $A$ para cada
 
 1. $R$ é reflexiva, mas não é simétrica.
 2. $R$ é simétrica, mas não é reflexiva.
-3. $R$ é simétrica e antisimétrica. 
+3. $R$ é simétrica e antissimétrica. 
 :::
 
 
 :::{#exr-}
-Determine quais das seguintes relações são reflexivas, simétricas, antisimétricas, ou transitivas no conjunto $\R$:
+Determine quais das seguintes relações são reflexivas, simétricas, antissimétricas, ou transitivas no conjunto $\R$:
 
 1. $aRb$ se e somente se $a-b\leq 1$;
 2. $aRb$ se e somente se $|a-b|\leq 1$;

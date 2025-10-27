@@ -47,8 +47,8 @@ Demonstre que $ab=0$ implica que $a=0$ ou $b=0$ para todo $a,b\in\Z$.
 :::
 
 :::{#exr-div-N}
-Se $a,b\in\N$, dizemos que $a$ divide $b$ ($a\mid b$) se existir $q\in \N$ tal que $b=qa$. Demonstre as seguintes afrirmações, 
-usando  os Axiomas de Peano, a definição das operações e os resultados demonstrados e enunciados na aula 
+Se $a,b\in\N$, dizemos que $a$ divide $b$ (e escrevemos que $a\mid b$) se existir $q\in \N$ tal que $b=qa$. Demonstre as seguintes afrirmações, 
+usando  os Axiomas de Peano, a definição das operações e os resultados demonstrados ou enunciados na aula 
 
 1. Mostre, para $a,b\in\N$ que se $a|b$,  então $a\leq b$.
 2. Mostre que a relação $|$ é uma ordem parcial sobre o conjunto $\N$. 
@@ -57,7 +57,7 @@ usando  os Axiomas de Peano, a definição das operações e os resultados demon
 
 :::{#exr-}
 Defina a relação $|$ entre números inteiros na mesma forma que no @exr-div-N (para todo $a,b\in\Z$, $a\mid b$ se existir $q\in \Z$ tal que $b=qa$). 
-Mostre que a relação $|$ não é antisimétrica e assim ela é não é uma ordem total em $\Z$.  
+Mostre que a relação $|$ não é antissimétrica e assim ela é não é uma ordem total em $\Z$.  
 :::
 
 

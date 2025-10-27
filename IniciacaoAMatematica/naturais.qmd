@@ -254,7 +254,7 @@ Temos as seguintes propriedades para todo $a,b,c\in\N$.
 
 1. $1\leq a$.
 2. a relação $\leq$ é reflexiva: $a\leq a$;
-3. a relação $\leq$ é antisimétrica: se $a\leq b$ e $b\leq a$, então $a=b$;
+3. a relação $\leq$ é antissimétrica: se $a\leq b$ e $b\leq a$, então $a=b$;
 4. a relação $\leq$ é transitiva: se $a\leq b$ e $b\leq c$, então $a\leq b$. 
 :::
 :::{.proof}
