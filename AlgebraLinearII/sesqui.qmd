@@ -149,7 +149,7 @@ Isso implica que $G_Y(B)=([\mbox{id}]^Y_X)^t G_X(B) [\mbox{id}^Y_X]^\sigma$.
 Seja $B$ uma forma $\sigma$-Hermitiana (incluindo simétrica) ou alternada sobre $V$ de dimensão finita. Seja $G=G_X(B)$ a matriz de Gram de $B$ em uma base $X$ de $V$. Mostre que
 
 1.  $B$ é simétrica se e somente se $G^t=G$ (ou seja, a matriz $G$ é simétrica);
-2.  assumindo que a caraterística é diferente de $2$, $B$ é alternada se e somente se $G^t=-G$ (ou seja, a matriz $G$ é antisimétrica);
+2.  assumindo que a caraterística é diferente de $2$, $B$ é alternada se e somente se $G^t=-G$ (ou seja, a matriz $G$ é antissimétrica);
 3.  $B$ é $\sigma$-Hermitiana se e somente se $G^t=G^\sigma$ (ou seja, a matriz $G$ é $\sigma$-hermitiana).
 :::
 

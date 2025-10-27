@@ -301,7 +301,7 @@ Seja $\F$ um corpo de caraterística diferente de 2 e seja $V=M_n(\F)$
 U_1&=\{A\in V\mid A^t=A\};\\
 U_2&=\{A\in V\mid A^t=-A\}.
 \end{align*}
-Ou seja, $U_1$ é o conjunto das matrizes simétricas, enquanto $U_2$ é o conjunto das matrizes antisimétricas em $V$.
+Ou seja, $U_1$ é o conjunto das matrizes simétricas, enquanto $U_2$ é o conjunto das matrizes antissimétricas em $V$.
 
 1. Mostre que $V=U_1\oplus U_2$.
 2. Explique a necessidade da condição que a caraterística de $\F$ é diferente de 2.
