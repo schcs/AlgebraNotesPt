@@ -168,7 +168,7 @@ $$
 1. Se $z=[a,b]\in \Z$ com $a\geq b$, então $z\in P_\Z$. Se $z=[a,b]\in\Z$ com $a<b$, 
 então $-z=[b,a]\in \Z$. Portanto $\Z=P_\Z\cup -P_\Z$.  Claramente, $0=[1,1]\in P_\Z\cap -P_\Z$. 
 Se $z=[a,b]\in P_\Z\cap -P_\Z$, então $[a,b]\in P_\Z$ e $-[a,b]=[b,a]\in P_\Z$ e $a\geq b$ e $b\geq a$. 
-A antisimetria da relação $\geq$ implica que $a=b$ e $z=[a,b]=[a,a]=0$. Portanto $P_\Z\cap -P_\Z=\{0\}$. 
+A antissimetria da relação $\geq$ implica que $a=b$ e $z=[a,b]=[a,a]=0$. Portanto $P_\Z\cap -P_\Z=\{0\}$. 
 
 Os demais itens ficam para exercício. 
 :::
