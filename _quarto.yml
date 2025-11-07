@@ -26,6 +26,7 @@ book:
         - IniciacaoAMatematica/ex4.qmd
         - IniciacaoAMatematica/naturais.qmd
         - IniciacaoAMatematica/int_rat.qmd
+        - IniciacaoAMatematica/int_mais.qmd
         - IniciacaoAMatematica/ex5.qmd
     - part: FundamentosDeAlgebra/index.qmd
       chapters: 

@@ -34,11 +34,51 @@ Demonstre, para todo $a,b,c\in\N$, usando indução e as propriedades da adiçã
 Demonstre as seguintes afirmações por indução.
 
 1. $2(1+2+\cdots+n)=n(n+1)$;
-2. $6(1^2+\cdots+n^2)=n(n+1)(n+2)$;
-3. $4(1^3+\cdots+n^3)=n^2(n+1)$. 
+2. $6(1^2+\cdots+n^2)=n(n+1)(2n+1)$;
+3. $4(1^3+\cdots+n^3)=n^2(n+1)^2$. 
 :::
 
 :::{#exr-}
 Demonstre is items do @lem-fibonacci que aparecem sem demonstração. 
 :::
 
+:::{#exr-}
+Demonstre que $ab=0$ implica que $a=0$ ou $b=0$ para todo $a,b\in\Z$. 
+:::
+
+:::{#exr-div-N}
+Se $a,b\in\N$, dizemos que $a$ divide $b$ (e escrevemos que $a\mid b$) se existir $q\in \N$ tal que $b=qa$. Demonstre as seguintes afrirmações, 
+usando  os Axiomas de Peano, a definição das operações e os resultados demonstrados ou enunciados na aula 
+
+1. Mostre, para $a,b\in\N$ que se $a|b$,  então $a\leq b$.
+2. Mostre que a relação $|$ é uma ordem parcial sobre o conjunto $\N$. 
+3. Mostre que $|$ não é uma ordem total.
+:::
+
+:::{#exr-}
+Defina a relação $|$ entre números inteiros na mesma forma que no @exr-div-N (para todo $a,b\in\Z$, $a\mid b$ se existir $q\in \Z$ tal que $b=qa$). 
+Mostre que a relação $|$ não é antissimétrica e assim ela é não é uma ordem total em $\Z$.  
+:::
+
+
+:::{#exr-}
+Seja $n\in \Z$ com $n\geq 2$, e defina a seguinte relação $\equiv$ entre $a,b\in \Z$:
+$$
+a\equiv b\mbox{ se e somente se }n\mid a-b.
+$$
+
+1. Mostre que $\equiv$ é uma relação de equivalência. 
+2. Faça uma lista das classes de equivalência para valores pequenos de $n$ ($n=2,3,4$). 
+:::
+
+:::{#exr-}
+Demonstre as seguintes afirmações.
+
+1. $1\cdot 1!+2\cdot 2!+\cdots+n\cdot n!=(n+1)!-1$.
+2. $\binom n0+\binom n1+\cdots+\binom nn=2^n$
+3. $\binom n1+2\binom n2+\cdots+n\binom nn=2^{n-1}n$.
+:::
+
+:::{#exr-}
+Demonstre as afirmações dos @lem-int-ops, @lem-pre-ordering, @lem-int-pos (que não têm demonstração nas apostilas). 
+:::

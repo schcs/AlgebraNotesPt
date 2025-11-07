@@ -139,12 +139,12 @@ Seja $R$ uma relação sobre $A$.
 
 1. Dizemos que $R$ é *reflexiva* se $aRa$ para todo $a\in A$ (ou seja $(a,a)\in R$ para todo $a\in A$). 
 2. Dizemos que $R$ é *simétrica* se $aRb$ implica que $bRa$ para todo $a,b\in A$. 
-3. Dizemos que $R$ é *antisimétrica* se $aRb$ e $bRa$ implicam que $a=b$ para todo $a,b\in A$. 
+3. Dizemos que $R$ é *antissimétrica* se $aRb$ e $bRa$ implicam que $a=b$ para todo $a,b\in A$. 
 4. Dizemos que $R$ é *transitiva* se $aRb$ e $bRc$ implicam que $aRc$ para todo $a,b,c\in A$. 
 :::
 
 :::{#exm-rel-props}
-Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antisimétricas, e todas as relações neste exemplo são transitivas.
+Considerando as relações no @exm-relations3, temos que as relações de igualdade, maior ou igual, menor ou igual, e divisor são reflexivas. A igualdade é simétrica. As relações maior ou igual, menor ou igual, maior e menor são antissimétricas, e todas as relações neste exemplo são transitivas.
 :::
 
 ## Relações de equivalência {#sec-rel-eq}
@@ -416,7 +416,7 @@ que explica melhor os números racionais.
 Seja $A$ um conjunto e $R$ uma relação em $A$. Dizemos que $R$ é uma relação de *ordem* (ou *ordem parcial*) em $A$ se 
 
 1. $R$ é reflexiva ($aRa$ para todo $a\in A$);
-2. $R$ é antisimétrica (se $aRb$ e $bRa$ então $a=b$ para todo $a,b\in A$);
+2. $R$ é antissimétrica (se $aRb$ e $bRa$ então $a=b$ para todo $a,b\in A$);
 3. $R$ é transitiva (se $aRb$ e $bRc$ então $aRc$ para todo $a,b,c\in A$).
 :::
 
@@ -431,7 +431,7 @@ A=\{Y\mid Y\subseteq X\}.
 $$
 As relações $\subseteq$ e $\supseteq$ são relações de ordem sobre $A$. 
 
-3. Seja $A=\N$ e considere a relação $\mid$ de divisibilidade. Em outras palávras, $a\mid b$ se e somente se $b=qa$ com algum $q\in\N$. Então $\mid$ é uma relação de ordem sobre $A$. Note que a mesma relação não é relação de ordem sobre $\Z$, pois $2\mid -2$ e $-2\mid 2$, mas $-2\neq 2$. Ou seja, $\mid$ não é antisimétrica em $\Z$. 
+3. Seja $A=\N$ e considere a relação $\mid$ de divisibilidade. Em outras palávras, $a\mid b$ se e somente se $b=qa$ com algum $q\in\N$. Então $\mid$ é uma relação de ordem sobre $A$. Note que a mesma relação não é relação de ordem sobre $\Z$, pois $2\mid -2$ e $-2\mid 2$, mas $-2\neq 2$. Ou seja, $\mid$ não é antissimétrica em $\Z$. 
 :::
 
 
