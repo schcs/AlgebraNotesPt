@@ -7,7 +7,7 @@ lang: pt-BR
 ## Os axiomas do Peano
 
 :::{#def-naturais}
-Os números naturais são definidas usando os axiomas de [Peano](https://pt.wikipedia.org/wiki/Giuseppe_Peano). 
+Os números naturais são definidas usando os axiomas de [Peano](https://pt.wikipedia.org/wiki/Giuseppe_Peano).  
 
 - **(P1):** O número $1$ é natural.
 - **(P2):** Todo número natural $n$ tem um sucessor denotado por $S(n)$. 
