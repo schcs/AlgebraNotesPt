@@ -1384,10 +1384,9 @@ window.Quarto = {
   <li><a href="#coeficientes-binomiais" id="toc-coeficientes-binomiais" class="nav-link active" data-scroll-target="#coeficientes-binomiais"><span class="header-section-number">12.1</span> Coeficientes binomiais</a></li>
   <li><a href="#o-binómio-de-newton" id="toc-o-binómio-de-newton" class="nav-link" data-scroll-target="#o-binómio-de-newton"><span class="header-section-number">12.2</span> O binómio de Newton</a></li>
   <li><a href="#o-lema-de-divisão-de-euclides" id="toc-o-lema-de-divisão-de-euclides" class="nav-link" data-scroll-target="#o-lema-de-divisão-de-euclides"><span class="header-section-number">12.3</span> O Lema de divisão de Euclides</a></li>
-  <li><a href="#números-primos" id="toc-números-primos" class="nav-link" data-scroll-target="#números-primos"><span class="header-section-number">12.4</span> Números primos</a></li>
-  <li><a href="#expansão-de-naturais-na-base-b" id="toc-expansão-de-naturais-na-base-b" class="nav-link" data-scroll-target="#expansão-de-naturais-na-base-b"><span class="header-section-number">12.5</span> Expansão de naturais na base <span class="math inline">\(b\)</span></a></li>
-  <li><a href="#expansão-de-racionais" id="toc-expansão-de-racionais" class="nav-link" data-scroll-target="#expansão-de-racionais"><span class="header-section-number">12.6</span> Expansão de racionais</a></li>
-  <li><a href="#critérios-de-divisibilidade" id="toc-critérios-de-divisibilidade" class="nav-link" data-scroll-target="#critérios-de-divisibilidade"><span class="header-section-number">12.7</span> Critérios de divisibilidade</a></li>
+  <li><a href="#expansão-de-naturais-na-base-b" id="toc-expansão-de-naturais-na-base-b" class="nav-link" data-scroll-target="#expansão-de-naturais-na-base-b"><span class="header-section-number">12.4</span> Expansão de naturais na base <span class="math inline">\(b\)</span></a></li>
+  <li><a href="#expansão-de-racionais" id="toc-expansão-de-racionais" class="nav-link" data-scroll-target="#expansão-de-racionais"><span class="header-section-number">12.5</span> Expansão de racionais</a></li>
+  <li><a href="#critérios-de-divisibilidade" id="toc-critérios-de-divisibilidade" class="nav-link" data-scroll-target="#critérios-de-divisibilidade"><span class="header-section-number">12.6</span> Critérios de divisibilidade</a></li>
   </ul>
 </nav>
     </div>
@@ -1502,47 +1501,25 @@ a = bq + r \quad \text{com } 0 \leq r &lt; b.
 \]</span> Aqui, <span class="math inline">\(q\)</span> é chamado de <em>quociente</em> e <span class="math inline">\(r\)</span> é chamado de <em>resto</em> da divisão de <span class="math inline">\(a\)</span> por <span class="math inline">\(b\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro, provemos a existência de tais inteiros <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span>. Considere o conjunto <span class="math display">\[S = \{a - bk \mid k \in \Z \text{ e } a - bk \geq 0\}.\]</span> O conjunto <span class="math inline">\(S\)</span> é não vazio, pois, escolhendo <span class="math inline">\(k\)</span> adequadamente, podemos garantir que <span class="math inline">\(a - bk\)</span> seja não negativo. Pelo Princípio da Boa Ordem (<a href="naturais.html#lem-N-well-ordered" class="quarto-xref">Lema&nbsp;<span>10.7</span></a>), o conjunto <span class="math inline">\(S\)</span> possui um menor elemento, que chamaremos de <span class="math inline">\(r\)</span>. Assim, existe um inteiro <span class="math inline">\(q\)</span> tal que <span class="math inline">\(r = a - bq\)</span> e <span class="math inline">\(r \geq 0\)</span>. Agora, precisamos mostrar que <span class="math inline">\(r &lt; b\)</span>. Suponha, por contradição, que <span class="math inline">\(r \geq b\)</span>. Então, podemos escrever: <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro, provemos a existência de tais inteiros <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span>. Considere o conjunto <span class="math display">\[S = \{a - bk \mid k \in \Z \text{ e } a - bk \geq 0\}.\]</span> O conjunto <span class="math inline">\(S\)</span> é não vazio, pois, escolhendo <span class="math inline">\(k\)</span> adequadamente, podemos garantir que <span class="math inline">\(a - bk\)</span> seja não negativo. Pelo Princípio da Boa Ordem, o conjunto <span class="math inline">\(S\)</span> possui um menor elemento, que chamaremos de <span class="math inline">\(r\)</span>. Assim, existe um inteiro <span class="math inline">\(q\)</span> tal que <span class="math inline">\(r = a - bq\)</span> e <span class="math inline">\(r \geq 0\)</span>. Agora, precisamos mostrar que <span class="math inline">\(r &lt; b\)</span>. Suponha, por contradição, que <span class="math inline">\(r \geq b\)</span>. Então, podemos escrever: <span class="math display">\[
 r - b = a - bq - b = a - b(q + 1).
 \]</span> Como <span class="math inline">\(r - b \geq 0\)</span>, isso implica que <span class="math inline">\(a - b(q + 1) \geq 0\)</span>, o que significa que <span class="math inline">\(r - b\)</span> pertence ao conjunto <span class="math inline">\(S\)</span>. No entanto, isso contradiz a escolha de <span class="math inline">\(r\)</span> como o menor elemento de <span class="math inline">\(S\)</span>. Portanto, devemos ter <span class="math inline">\(r &lt; b\)</span>.</p>
 <p>Agora, provemos a unicidade de <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span>. Suponha que existam outros inteiros <span class="math inline">\(q'\)</span> e <span class="math inline">\(r'\)</span> tais que: <span class="math display">\[
 a = bq' + r' \quad \text{com } 0 \leq r' \leq r&lt; b.
-\]</span> Subtraindo as duas expressões para <span class="math inline">\(a\)</span>, obtemos: <span class="math display">\[bq + r = bq' + r' \implies b(q - q') = r' - r.\]</span> Isso implica que <span class="math inline">\(b\)</span> divide <span class="math inline">\(r' - r\)</span>. No entanto, como <span class="math inline">\(0 \leq r\leq r' &lt; b\)</span>, a diferença <span class="math inline">\(r' - r\)</span> deve satisfazer <span class="math inline">\(0 \leq r' - r &lt; b\)</span>. A única maneira de <span class="math inline">\(b\)</span> dividir <span class="math inline">\(r' - r\)</span> dentro desse intervalo é se <span class="math inline">\(r' - r = 0\)</span>, ou seja, <span class="math inline">\(r' = r\)</span>. Substituindo isso de volta na equação <span class="math inline">\(b(q - q') = r' - r\)</span>, obtemos <span class="math inline">\(b(q - q') = 0\)</span>, o que implica que <span class="math inline">\(q - q' = 0\)</span>, ou seja, <span class="math inline">\(q = q'\)</span>. Portanto, os inteiros <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span> são únicos.</p>
+\]</span> Subtraindo as duas expressões para <span class="math inline">\(a\)</span>, obtemos: <span class="math display">\[bq + r = bq' + r' \implies b(q - q') = r' - r.\]</span> Isso implica que <span class="math inline">\(b\)</span> divide <span class="math inline">\(r' - r\)</span>. No entanto, como <span class="math inline">\(0 \leq r'\leq r' &lt; b\)</span>, a diferença <span class="math inline">\(r' - r\)</span> deve satisfazer <span class="math inline">\(0 \leq r' - r &lt; b\)</span>. A única maneira de <span class="math inline">\(b\)</span> dividir <span class="math inline">\(r' - r\)</span> dentro desse intervalo é se <span class="math inline">\(r' - r = 0\)</span>, ou seja, <span class="math inline">\(r' = r\)</span>. Substituindo isso de volta na equação <span class="math inline">\(b(q - q') = r' - r\)</span>, obtemos <span class="math inline">\(b(q - q') = 0\)</span>, o que implica que <span class="math inline">\(q - q' = 0\)</span>, ou seja, <span class="math inline">\(q = q'\)</span>. Portanto, os inteiros <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span> são únicos.</p>
 </div>
-<div id="def-divisivel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 12.1</strong></span> Um número inteiro <span class="math inline">\(a\)</span> é <em>divisível</em> por um número inteiro <span class="math inline">\(b\)</span> se existe um inteiro <span class="math inline">\(k\)</span> tal que <span class="math inline">\(a = bk\)</span>. Nesse caso, dizemos que <span class="math inline">\(b\)</span> é um divisor de <span class="math inline">\(a\)</span> e que <span class="math inline">\(a\)</span> é um múltiplo de <span class="math inline">\(b\)</span>. Por exemplo, <span class="math inline">\(12\)</span> é divisível por <span class="math inline">\(3\)</span> porque <span class="math inline">\(12 = 3 \cdot 4\)</span>.</p>
-</div>
+<p>Um número inteiro <span class="math inline">\(a\)</span> é <em>divisível</em> por um número inteiro <span class="math inline">\(b\)</span> se existe um inteiro <span class="math inline">\(k\)</span> tal que <span class="math inline">\(a = bk\)</span>. Nesse caso, dizemos que <span class="math inline">\(b\)</span> é um divisor de <span class="math inline">\(a\)</span> e que <span class="math inline">\(a\)</span> é um múltiplo de <span class="math inline">\(b\)</span>. Por exemplo, <span class="math inline">\(12\)</span> é divisível por <span class="math inline">\(3\)</span> porque <span class="math inline">\(12 = 3 \cdot 4\)</span>.</p>
 </section>
-<section id="números-primos" class="level2" data-number="12.4">
-<h2 data-number="12.4" data-anchor-id="números-primos"><span class="header-section-number">12.4</span> Números primos</h2>
-<div id="def-primo" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 12.2</strong></span> Um número natural <span class="math inline">\(p\)</span> maior que <span class="math inline">\(1\)</span> é chamado de <em>número primo</em> se seus únicos divisores são <span class="math inline">\(1\)</span> e <span class="math inline">\(p\)</span>. Se um número natural maior que <span class="math inline">\(1\)</span> não é primo, então ele é chamado de <em>número composto</em>. Por convenção, o número <span class="math inline">\(1\)</span> não é considerado nem primo nem composto.</p>
-</div>
-<div id="lem-divisivel" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 12.5</strong></span> Todo número natural <span class="math inline">\(n\geq 2\)</span> é divisível por algum número primo.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Fazemos indução em <span class="math inline">\(n\)</span>. Se <span class="math inline">\(n=1\)</span>, então não há nada para provar porque <span class="math inline">\(1\)</span> não é considerado. Assuma que a afirmação é verdadeira para todo número natural entre <span class="math inline">\(1\)</span> e <span class="math inline">\(n\)</span>. Se <span class="math inline">\(n+1\)</span> é primo, então ele é divisível por si mesmo. Se <span class="math inline">\(n+1\)</span> não é primo, então existem inteiros <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> tais que <span class="math inline">\(n+1=ab\)</span> com <span class="math inline">\(2\leq a,b\leq n\)</span>. Pela hipótese de indução, existe um número primo <span class="math inline">\(p\)</span> que divide <span class="math inline">\(a\)</span>. Então <span class="math inline">\(p\)</span> também divide <span class="math inline">\(n+1\)</span>. Portanto, em ambos os casos, o número <span class="math inline">\(n+1\)</span> é divisível por algum número primo.</p>
-</div>
-<div id="thm-infinitos-primos" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.1</strong></span> Existem infinitos números primos.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Assuma ao contrário que existem apenas finitos números primos <span class="math inline">\(p_1,p_2,\ldots,p_n\)</span>. Considere o número <span class="math display">\[
-N = p_1p_2\cdots p_n + 1.
-\]</span> Por <a href="#lem-divisivel" class="quarto-xref">Lema&nbsp;<span>12.5</span></a>, <span class="math inline">\(N\)</span> é disvisível por algum número primo. Seja esse número primo <span class="math inline">\(p\)</span>. Então <span class="math inline">\(p\)</span> deve ser igual a algum dos primos <span class="math inline">\(p_1,p_2,\ldots,p_n\)</span> (pela suposição inicial). Mas observe que <span class="math inline">\(N\)</span> não pode ser divisível por <span class="math inline">\(p_i\)</span> para qualquer <span class="math inline">\(i=1,2,\ldots,n\)</span>, pois ao dividir <span class="math inline">\(N\)</span> por <span class="math inline">\(p_i\)</span> o resto é <span class="math inline">\(1\)</span>. Portanto, nossa suposição inicial deve estar errada, e assim existem infinitos números primos.</p>
-</div>
-</section>
-<section id="expansão-de-naturais-na-base-b" class="level2" data-number="12.5">
-<h2 data-number="12.5" data-anchor-id="expansão-de-naturais-na-base-b"><span class="header-section-number">12.5</span> Expansão de naturais na base <span class="math inline">\(b\)</span></h2>
+<section id="expansão-de-naturais-na-base-b" class="level2" data-number="12.4">
+<h2 data-number="12.4" data-anchor-id="expansão-de-naturais-na-base-b"><span class="header-section-number">12.4</span> Expansão de naturais na base <span class="math inline">\(b\)</span></h2>
 <p>Números naturais são escritos normalmente como sequências de algarismos na base decimal. Por exemplo, a sequência <span class="math inline">\(1056\)</span> significa o número <span class="math display">\[
 1\cdot 1000+0\cdot 100+5\cdot 10+6.
 \]</span> Mais geralmente, a sequência <span class="math inline">\([a_na_{n-1}\cdots a_1a_0]\)</span> denota o número <span class="math display">\[
 \sum_{k=0}^n a_k\cdot 10^k.
 \]</span></p>
 <p>É possível fazer a mesma coisa em uma outra base <span class="math inline">\(b\)</span> assumindo que <span class="math inline">\(b\geq 2\)</span>.</p>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.2</strong></span> Assuma que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são números naturais e <span class="math inline">\(b\geq 2\)</span>. Então <span class="math inline">\(a\)</span> pode ser escrito unicamente na forma <span class="math display">\[
+<div id="thm-exp-nat" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 12.1</strong></span> Assuma que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são números naturais e <span class="math inline">\(b\geq 2\)</span>. Então <span class="math inline">\(a\)</span> pode ser escrito unicamente na forma <span class="math display">\[
 a=[a_na_{n-1}\cdots a_0]_b=\sum_{k=0}^n a_kb^k
 \]</span> onde <span class="math inline">\(n\geq 0\)</span> e <span class="math inline">\(a_k\in\{0,\ldots,b-1\}\)</span> para todo <span class="math inline">\(k\)</span></p>
 </div>
@@ -1563,7 +1540,7 @@ a=\sum_{k=0}^n a_kb^k=b\cdot\left(\sum_{k=1}^n a_kb^{k-1}\right)+a_0
 a=\sum_{k=0}^m c_kb^k=b\cdot\left(\sum_{k=1}^m c_kb^{k-1}\right)+c_0.
 \]</span> Pela unicidade do resto no Teorema de Euclides, obtemos que <span class="math inline">\(r=a_0=c_0\)</span>; ou seja, os últimos algarismos são determinados unicamento.</p>
 <p>Agora, <span class="math display">\[
-q=\sum_{k=1}^n a_kb^{k-1}=\sum_{k=1}^m c_kb^{k-1};
+q=(a-r)/b=\sum_{k=1}^n a_kb^{k-1}=\sum_{k=1}^m c_kb^{k-1};
 \]</span> ou seja <span class="math display">\[
 q=[a_n\cdots a_1]_b=[c_m\cdots c_1]_b.
 \]</span> A hipótese de indução aplica-se para o número <span class="math inline">\(q\)</span>, e assim as as sequências <span class="math inline">\([a_n\cdots a_1]_b\)</span> e <span class="math inline">\([c_m\cdots c_1]_b\)</span> são iguais. Portanto as duas expansões para o número <span class="math inline">\(a\)</span> são iguais como foi afirmado.</p>
@@ -1585,11 +1562,11 @@ q=[a_n\cdots a_1]_b=[c_m\cdots c_1]_b.
 <p>Juntando as peças, obtemos que <span class="math inline">\(168=[1133]_5\)</span>.</p>
 </div>
 </section>
-<section id="expansão-de-racionais" class="level2" data-number="12.6">
-<h2 data-number="12.6" data-anchor-id="expansão-de-racionais"><span class="header-section-number">12.6</span> Expansão de racionais</h2>
+<section id="expansão-de-racionais" class="level2" data-number="12.5">
+<h2 data-number="12.5" data-anchor-id="expansão-de-racionais"><span class="header-section-number">12.5</span> Expansão de racionais</h2>
 <p>Comecemos por um resultado conhecido de cálculo.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 12.6</strong></span> Se <span class="math inline">\(|q| &lt;1\)</span>, então a série <span class="math display">\[
+<p><span class="theorem-title"><strong>Lema 12.5</strong></span> Se <span class="math inline">\(|q| &lt;1\)</span>, então a série <span class="math display">\[
 \sum_{n=0}^\infty q^n
 \]</span> é convergente e a sua soma é igual a <span class="math display">\[
 \frac{1}{1-q}.
@@ -1604,10 +1581,10 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
 [a_na_{n-1}\cdots a_1a_0]+\sum_{k=1}^{\infty}a_{-k}10^{-k}.
 \end{align*}\]</span> A expressão acima mostra que cada fração decimal não negativa pode ser escrita como a soma de um número natural e uma fração decimal na forma <span class="math inline">\([0,a_{-1}a_{-2}\cdots]\)</span>. Como os números naturais foram tratados na unidade anterior, aqui vamos focar apenas frações na forma <span class="math inline">\([0,a_{-1}a_{-2}\cdots]\)</span>. Uma fração natural desta forma pode ser finita ou infinita. Quando a sequência de algarismos depois da vírgula é infinita, então a fração é infinita; caso contrário a fração é finita. Uma fração finita pode ser escrita na forma <span class="math inline">\([0,a_{-1}a_{-2}\cdots a_{-n}]\)</span>. Note que uma fração finita pode ser considerada infinita adicionando uma sequência infinita de zeros e assim nós frequentemente assumimos que as frações analizadas são infinitas.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 12.7</strong></span> Para qualquer sequência (possivelmente infinita) de algarismos, a expansão <span class="math inline">\([0,a_{1}a_{2}\cdots]\)</span> representa um número real entre zero e um</p>
+<p><span class="theorem-title"><strong>Lema 12.6</strong></span> Para qualquer sequência (possivelmente infinita) de algarismos, a expansão <span class="math inline">\([0,a_{1}a_{2}\cdots]\)</span> representa um número real entre zero e um</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>PPrecisa provar que a série <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Precisa provar que a série <span class="math display">\[
 \sum_{k=1}^\infty a_{k}10^{-k}
 \]</span> é convergente e converge a um número entre zero e um. Como <span class="math inline">\(0\leq a_i\leq 9\)</span> para todo <span class="math inline">\(i\)</span>, obtemos que <span class="math display">\[
 \sum_{k=1}^\infty a_{k}10^{-k}\leq\sum_{k=1}^\infty 9\cdot 10^{-k}=\frac 9{10}\sum_{k=0}^\infty 10^{-k}=\frac 9{10}\frac 1{1-1/10}=1.
@@ -1623,7 +1600,7 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
 1/44=0,02272727\cdots=0,02\overline{27}.
 \]</span></p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.3</strong></span> As seguintes afirmações são verdadeiras.</p>
+<p><span class="theorem-title"><strong>Teorema 12.2</strong></span> As seguintes afirmações são verdadeiras.</p>
 <ul>
 <li>Toda expansão decimal periódica representa um número racional.</li>
 <li>Se <span class="math inline">\(a/b\)</span> é um número racional tal que <span class="math inline">\(0&lt;a&lt;b\)</span>, então sua expansão decimal é periódica</li>
@@ -1680,16 +1657,16 @@ a=0,1010010001000010000010000001\cdots.
 \]</span> Pelo lema anterior, <span class="math inline">\(a\)</span> é um número real, mas a sua expansão decimal não é periódoca, portanto este número não é racional.</p>
 <p>Exatamente como a expansão dos números naturais pode ser calculada em qualquer base <span class="math inline">\(d\geq 2\)</span>, a expansão dos números racionais também pode ser calculada em bases <span class="math inline">\(d\)</span> tal que <span class="math inline">\(d\geq 2\)</span>. Os resultados em uma base arbitrária são muito similares aos resultados na base <span class="math inline">\(d=10\)</span> (caso decimal) e estes detalhes são omitidos. No entanto recomendamos que o leitor traduza os resultados acima para uma base <span class="math inline">\(d\neq 10\)</span>.</p>
 </section>
-<section id="critérios-de-divisibilidade" class="level2" data-number="12.7">
-<h2 data-number="12.7" data-anchor-id="critérios-de-divisibilidade"><span class="header-section-number">12.7</span> Critérios de divisibilidade</h2>
+<section id="critérios-de-divisibilidade" class="level2" data-number="12.6">
+<h2 data-number="12.6" data-anchor-id="critérios-de-divisibilidade"><span class="header-section-number">12.6</span> Critérios de divisibilidade</h2>
 <p>Seja <span class="math inline">\(a\)</span> um número natural escrito na base <span class="math inline">\(10\)</span> (decimal) como <span class="math display">\[
 a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
 \]</span> É bem conhecido que, para alguns valores de <span class="math inline">\(b\)</span>, a divisibilidade de <span class="math inline">\(a\)</span> por <span class="math inline">\(b\)</span> pode ser determinado olhando apenas os dígitos de <span class="math inline">\(a\)</span>.</p>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 12.1</strong></span> Demonstre que para todo <span class="math inline">\(i\geq 0\)</span>, existe <span class="math inline">\(q_i\in\N_0\)</span> tal que <span class="math inline">\(10^i=3q_i+1\)</span></p>
 </div>
-<div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 12.4</strong></span> (Critérios de divisibilidade) As seguintes afirmações são verdadeiras para um número natural <span class="math inline">\(a=[a_na_{n-1}\cdots a_1a_0]\)</span> escrito na base decimal.</p>
+<div id="thm-crit-div" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 12.3</strong></span> (Critérios de divisibilidade) As seguintes afirmações são verdadeiras para um número natural <span class="math inline">\(a=[a_na_{n-1}\cdots a_1a_0]\)</span> escrito na base decimal.</p>
 <ul>
 <li><span class="math inline">\(2\mid a\)</span> se e somente se <span class="math inline">\(2\mid a_0\)</span>;</li>
 <li><span class="math inline">\(3\mid a\)</span> se e somente se <span class="math inline">\(3\mid a_n+a_{n-1}+\cdots+a_0\)</span>;</li>
