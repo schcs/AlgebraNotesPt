@@ -143,26 +143,26 @@ Escreva os números $a=-10,\ldots,10$ na base $b=-2$ sem usar o sinal de menos.
 :::
 
 :::{#exr-}
-Mostre que todo número inteiro pode ser escrito de forma única na como expansão na base $b\geq -2$. Ou 
-seja, se $a\in\Z$ 
+Mostre que todo número inteiro pode ser escrito de forma única na como expansão na base $b=-2$. Ou 
+seja, se $a\in\Z$, então $a$ pode ser escrito na forma
 $$
 a=\sum_{i=0}^n a_i(-2)^i
 $$
 e a sequência dos algarismos $a_0,\ldots,a_n\in\{0,1\}$ é unicamente determinada por $a$.
-[Dica: Use indução em $|a|$.]
+[Dica: Use indução em $|a|$ e siga os passos da demonstração do @thm-exp-nat.]
 :::
 
 
 :::{#exr-}
 Sejam $a_0,q\in \Z$ e considere a progressão geométrica
 $$
-a_0,a_1=a_0\cdot q,a_2=a_1\cdot q,\ldots
+a_0,\ a_1=a_0\cdot q,\ a_2=a_1\cdot q,\ldots
 $$
 Demonstre que a soma dos $n$ primeiros termos desta progressão é dada por
 $$
 S_n=\begin{cases}
 na_0,&\mbox{se }q=1;\\
-a_0\frac{q^n-1}{q-1},&\mbox{se }q\neq 1.
+a_0\displaystyle{\frac{q^n-1}{q-1}},&\mbox{se }q\neq 1.
 \end{cases}
 $$
 :::

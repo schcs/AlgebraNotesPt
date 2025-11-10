@@ -134,6 +134,7 @@ Assuma que a afirmação é verdadeira para algum $n\geq 0$. Então, temos
 \end{align*}
 ::: 
 
+
 ## O Lema de divisão de Euclides
 
 
@@ -147,7 +148,7 @@ Aqui, $q$ é chamado de *quociente* e $r$ é chamado de *resto* da divisão de $
 :::{.proof}
 Primeiro, provemos a existência de tais inteiros $q$ e $r$. Considere o conjunto 
 $$S = \{a - bk \mid k \in \Z \text{ e } a - bk \geq 0\}.$$
-O conjunto $S$ é não vazio, pois, escolhendo $k$ adequadamente, podemos garantir que $a - bk$ seja não negativo. Pelo Princípio da Boa Ordem (@lem-N-well-ordered), o conjunto $S$ possui um menor elemento, que chamaremos de $r$. Assim, existe um inteiro $q$ tal que $r = a - bq$ e $r \geq 0$. Agora, precisamos mostrar que $r < b$. Suponha, por contradição, que $r \geq b$. Então, podemos escrever:
+O conjunto $S$ é não vazio, pois, escolhendo $k$ adequadamente, podemos garantir que $a - bk$ seja não negativo. Pelo Princípio da Boa Ordem, o conjunto $S$ possui um menor elemento, que chamaremos de $r$. Assim, existe um inteiro $q$ tal que $r = a - bq$ e $r \geq 0$. Agora, precisamos mostrar que $r < b$. Suponha, por contradição, que $r \geq b$. Então, podemos escrever:
 $$
 r - b = a - bq - b = a - b(q + 1).
 $$
@@ -159,40 +160,14 @@ a = bq' + r' \quad \text{com } 0 \leq r' \leq r< b.
 $$
 Subtraindo as duas expressões para $a$, obtemos:
 $$bq + r = bq' + r' \implies b(q - q') = r' - r.$$
-Isso implica que $b$ divide $r' - r$. No entanto, como $0 \leq r\leq r' < b$, a diferença $r' - r$ deve satisfazer $0 \leq r' - r < b$. A única maneira de $b$ dividir $r' - r$ dentro desse intervalo é se $r' - r = 0$, ou seja, $r' = r$. Substituindo isso de volta na equação $b(q - q') = r' - r$, obtemos $b(q - q') = 0$, o que implica que $q - q' = 0$, ou seja, $q = q'$. Portanto, os inteiros $q$ e $r$ são únicos.
+Isso implica que $b$ divide $r' - r$. No entanto, como $0 \leq r'\leq r' < b$, a diferença $r' - r$ deve satisfazer $0 \leq r' - r < b$. A única maneira de $b$ dividir $r' - r$ dentro desse intervalo é se $r' - r = 0$, ou seja, $r' = r$. Substituindo isso de volta na equação $b(q - q') = r' - r$, obtemos $b(q - q') = 0$, o que implica que $q - q' = 0$, ou seja, $q = q'$. Portanto, os inteiros $q$ e $r$ são únicos.
 :::
 
-:::{#def-divisivel}
 Um número inteiro $a$ é *divisível* por um número inteiro $b$ se existe um inteiro $k$ tal que $a = bk$. Nesse caso, dizemos que $b$ é um divisor de $a$ e que $a$ é um múltiplo de $b$. Por exemplo, $12$ é divisível por $3$ porque $12 = 3 \cdot 4$.
-:::
 
-## Números primos
 
-:::{#def-primo} 
-Um número natural $p$ maior que $1$ é chamado de *número primo* se seus únicos divisores são $1$ e $p$. Se um número natural maior que $1$ não é primo, então ele é chamado de *número composto*. Por convenção, o número $1$ não é considerado nem primo nem composto.
-:::
-
-:::{#lem-divisivel}
-Todo número natural $n\geq 2$ é divisível por algum número primo.
-:::
-:::{.proof}
-Fazemos indução em $n$. Se $n=1$, então não há nada para provar porque $1$ não é considerado. 
-Assuma que a afirmação é verdadeira para todo número natural entre $1$ e $n$. Se $n+1$ é primo, então ele é divisível por si mesmo. Se $n+1$ não é primo, então existem inteiros $a$ e $b$ tais que $n+1=ab$ com $2\leq a,b\leq n$. Pela hipótese de indução, existe um número primo $p$ que divide $a$. Então $p$ também divide $n+1$. Portanto, em ambos os casos, o número $n+1$ é divisível por algum número primo.
-:::
-
-:::{#thm-infinitos-primos}
-Existem infinitos números primos.
-:::
-:::{.proof}
-Assuma ao contrário que existem apenas finitos números primos $p_1,p_2,\ldots,p_n$. Considere o número
-$$
-N = p_1p_2\cdots p_n + 1.
-$$
-Por @lem-divisivel, $N$ é disvisível por algum número primo. Seja esse número primo $p$. Então $p$ deve ser igual a algum dos primos $p_1,p_2,\ldots,p_n$ (pela suposição inicial). Mas observe que $N$ não pode ser divisível por $p_i$ para qualquer $i=1,2,\ldots,n$, pois ao dividir $N$ por $p_i$ o resto é $1$. Portanto, nossa suposição inicial deve estar errada, e assim existem infinitos números primos.
-:::
 
 ## Expansão de naturais na base $b$
-
 Números naturais são escritos normalmente como sequências de algarismos na base decimal. Por exemplo, a sequência $1056$ significa o número
 $$
 1\cdot 1000+0\cdot 100+5\cdot 10+6.
@@ -204,7 +179,7 @@ $$
 
 É possível fazer a mesma coisa em uma outra base $b$ assumindo que $b\geq 2$.
 
-:::{#thm-}
+:::{#thm-exp-nat}
 Assuma que $a$ e $b$ são números  naturais e $b\geq 2$. Então $a$ pode ser escrito unicamente na forma
 $$
 a=[a_na_{n-1}\cdots a_0]_b=\sum_{k=0}^n a_kb^k
@@ -246,7 +221,7 @@ Pela unicidade do resto no Teorema de Euclides, obtemos que $r=a_0=c_0$; ou seja
 
 Agora,
 $$
-q=\sum_{k=1}^n a_kb^{k-1}=\sum_{k=1}^m c_kb^{k-1};
+q=(a-r)/b=\sum_{k=1}^n a_kb^{k-1}=\sum_{k=1}^m c_kb^{k-1};
 $$
 ou seja
 $$
@@ -324,7 +299,7 @@ Para qualquer sequência (possivelmente infinita) de algarismos, a expansão $[0
 
 
 :::{.proof}
-PPrecisa provar que a série
+Precisa provar que a série
 $$
 \sum_{k=1}^\infty a_{k}10^{-k}
 $$
