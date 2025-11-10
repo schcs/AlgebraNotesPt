@@ -37,7 +37,7 @@ Material disponibilizado sob a licença
 - [Funções](functions.qmd)
 - [Exercícios](ex4.qmd)
 - [Números naturais](naturais.qmd)
-- [Os números inteiros e racionais](int_rat.qmd)
+- [Os números inteiros e racionais e reais](int_rat.qmd)
 - [Mais sobre inteiros e racionais](int_mais.qmd)       
 - [Exercícios](ex5.qmd)
 

@@ -287,6 +287,58 @@ que diz que $1=[1]_5$.
 Juntando as peças, obtemos que $168=[1133]_5$.
 :::
 
+## Critérios de divisibilidade
+
+
+Seja $a$ um número natural escrito na base $10$ (decimal) como
+$$
+a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
+$$
+É bem conhecido que, para alguns valores de $b$, a divisibilidade de $a$ por $b$ pode ser determinado olhando apenas os dígitos de $a$.
+
+:::{#exr-}
+Demonstre que para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$
+:::
+
+
+:::{#thm-}
+(Critérios de divisibilidade)
+As seguintes afirmações são verdadeiras para um número natural $a=[a_na_{n-1}\cdots a_1a_0]$ escrito na base decimal.
+
+
+-  $2\mid a$ se e somente se $2\mid a_0$;
+-  $3\mid a$ se e somente se $3\mid a_n+a_{n-1}+\cdots+a_0$;
+-  $4\mid a$ se e somente se $4\mid [a_1a_0]$;
+-  $5\mid a$ se e somente se $5\mid a_0$;
+-  $7\mid a$ se e somente se $7\mid [a_n\cdots a_1]-2a_0$;
+-  $8\mid a$ se e somente se $8\mid [a_2a_1a_0]$;
+-  $9\mid a$ se e somente se $9\mid a_n+a_{n-1}+\cdots+a_0$;
+-  $10\mid a$ se e somente se $10\mid a_0$ (ou seja, $a_0=0$);
+-  $11\mid a$ se e somente se $11\mid (-1)^na_n+(-1)^{n-1}a_{n-1}+\cdots-a_1+a_0$;
+:::
+
+
+:::{.proof}
+Demonstraremos algumas destas afirmações, o resto será exercício.
+
+1. Considere que
+\begin{align*}
+a&=[a_na_{n-1}\cdots a_1a_0]=\sum_{k=0}^n10^ka_k=10\left(\sum_{k=1}^n10^{k-1}a_k\right)+a_0\\&=10q+a_0
+\end{align*}
+com
+$$
+q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
+$$
+Como $2\mid 10$, obtemos que o número $a$ é divisível por $2$ se e somente se o algarismo $a_0$ é divisível por $2$.
+
+3. Temos, pelo exercício antes do teorema, para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$. Agora considere
+\begin{align*}
+a&=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&=3\sum_{k=0}^nq_ka_k+
+\sum_{k=0}^na_k.
+\end{align*}
+No última expressão, a primeira parcela é um múltiplo de $3$. Logo $a$ é divisível por $3$ se e somente se a segunda parcela na última expressão é divisível por $3$, mas esta segunda parcela é justamente a soma dos dígitos de $a$.
+:::
+
 
 
 ## Expansão de racionais
@@ -306,7 +358,7 @@ $$
 
 
 :::{.proof}
-EExercício
+Exercício
 :::
 
 No bloco anterior, estudamos expansões de números naturais na base $b$. Escrevemos naturais na base $b$ como $[a_na_{n-1}\cdots a_1a_0]_b$. Quando $b=10$, escrevemos o mesmo número como $[a_na_{n-1}\cdots a_1a_0]$ (sem explicitamente indicar a base).
@@ -324,7 +376,7 @@ Para qualquer sequência (possivelmente infinita) de algarismos, a expansão $[0
 
 
 :::{.proof}
-PPrecisa provar que a série
+Precisa provar que a série
 $$
 \sum_{k=1}^\infty a_{k}10^{-k}
 $$
@@ -355,10 +407,8 @@ $$
 :::{#thm-}
 As seguintes afirmações são verdadeiras.
 
-
 -  Toda expansão decimal periódica representa um número racional.
 -  Se $a/b$ é um número racional tal que $0<a<b$, então sua expansão decimal é periódica
-
 :::
 
 
@@ -419,8 +469,7 @@ Obtemos pela unicidade na Teorema de Divisão de Euclides que $q_{m+r+1}=q_{m+1}
 $$
 q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
 $$
-para todo $k\geq m+1$. Ou seja, a expansão do número $a/b$ é periódoca.
-
+para todo $k\geq m+1$. Ou seja, a expansão do número $a/b$ é periódica.
 :::
 
 
@@ -447,54 +496,3 @@ Pelo lema anterior, $a$ é um número real, mas a sua expansão decimal não é 
 Exatamente como a expansão dos números naturais pode ser calculada em qualquer base $d\geq 2$, a expansão dos números racionais também pode ser calculada em bases $d$ tal que $d\geq 2$. Os resultados em uma base arbitrária são muito similares aos resultados na base $d=10$ (caso decimal) e estes detalhes são omitidos. No entanto recomendamos que o leitor traduza os resultados acima para uma base $d\neq 10$.
 
 
-## Critérios de divisibilidade
-
-
-Seja $a$ um número natural escrito na base $10$ (decimal) como
-$$
-a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
-$$
-É bem conhecido que, para alguns valores de $b$, a divisibilidade de $a$ por $b$ pode ser determinado olhando apenas os dígitos de $a$.
-
-:::{#exr-}
-Demonstre que para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$
-:::
-
-
-:::{#thm-}
-(Critérios de divisibilidade)
-As seguintes afirmações são verdadeiras para um número natural $a=[a_na_{n-1}\cdots a_1a_0]$ escrito na base decimal.
-
-
--  $2\mid a$ se e somente se $2\mid a_0$;
--  $3\mid a$ se e somente se $3\mid a_n+a_{n-1}+\cdots+a_0$;
--  $4\mid a$ se e somente se $4\mid [a_1a_0]$;
--  $5\mid a$ se e somente se $5\mid a_0$;
--  $7\mid a$ se e somente se $7\mid [a_n\cdots a_1]-2a_0$;
--  $8\mid a$ se e somente se $8\mid [a_2a_1a_0]$;
--  $9\mid a$ se e somente se $9\mid a_n+a_{n-1}+\cdots+a_0$;
--  $10\mid a$ se e somente se $10\mid a_0$ (ou seja, $a_0=0$);
--  $11\mid a$ se e somente se $11\mid (-1)^na_n+(-1)^{n-1}a_{n-1}+\cdots-a_1+a_0$;
-:::
-
-
-:::{.proof}
-Demonstraremos algumas destas afirmações, o resto será exercício.
-
-1. Considere que
-\begin{align*}
-a&=[a_na_{n-1}\cdots a_1a_0]=\sum_{k=0}^n10^ka_k=10\left(\sum_{k=1}^n10^{k-1}a_k\right)+a_0\\&=10q+a_0
-\end{align*}
-com
-$$
-q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
-$$
-Como $2\mid 10$, obtemos que o número $a$ é divisível por $2$ se e somente se o algarismo $a_0$ é divisível por $2$.
-
-3. Temos, pelo exercício antes do teorema, para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$. Agora considere
-\begin{align*}
-a&=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&=3\sum_{k=0}^nq_ka_k+
-\sum_{k=0}^na_k.
-\end{align*}
-No última expressão, a primeira parcela é um múltiplo de $3$. Logo $a$ é divisível por $3$ se e somente se a segunda parcela na última expressão é divisível por $3$, mas esta segunda parcela é justamente a soma dos dígitos de $a$.
-:::

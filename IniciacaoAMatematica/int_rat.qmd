@@ -1,5 +1,5 @@
 ---
-title: "Os números inteiros e racionais"
+title: "Os números inteiros, racionais e reais"
 number-sections: true
 lang: pt-BR
 ---
@@ -290,3 +290,93 @@ Além disso, a relação $\leq$ é compatível com as operações. Ou seja,
 1. se $a\leq b$, então $a+c\leq b+c$;
 2. se $a\leq b$ e $c\in\Q^+$, então $ac\leq bc$. 
 :::
+
+## Os números reais
+
+A construção dos números reais a partir dos racionais pode ser feita de várias maneiras. Uma das mais comuns é através de sequências de Cauchy ou cortes de Dedekind. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vsZXwUBuwO4?si=1mD8Q1tbR9zweMaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+Aqui, vamos apenas assumir a existência dos números reais e suas propriedades básicas. 
+
+
+
+Primeiro, devemos explicar porque os números racionais não são suficientes. Os problemas começam a surgir se tentamos 
+calcular raízes. 
+
+:::{#lem-sqrt2-not-rat}
+Não existe nenhum número racional $x$ tal que $x^2=2$. 
+:::
+:::{.proof}
+De fato, seja se $x=a/b$ com $a,b\in\N$, $b\neq 0$ e $x^2=2$. A expressão $a/b$ não é unica, mas existem 
+$a,b\in\N$ tais que $a$ é mínimo possível, pela Princípio da Boa Ordem (@lem-N-well-ordered). Ora,
+$$
+\left(\frac{a}{b}\right)^2=2\implies a^2=2b^2.
+$$ 
+Logo, $a^2$ é par e assim $a$ é par. Escreva $a=2a_1$ com $a_1\in\N$. Ora, $a^2=4a_1^2$ e assim $4a_1^2=2b^2$, ou seja, $b^2=2a_1^2$. Logo, $b^2$ é par e assim $b$ é par e podemos escrever $b=2b_1$ com $b_1\in\N$. Ora, 
+$$
+x=\frac{a}{b}=\frac{2a_1}{2b_1}=\frac{a_1}{b_1}.
+$$
+Mas $a_1<a$ e isso contradiz a escolha de $a,b$, sendo $a$ mínimo possível. Portanto, não existe nenhum número racional $x$ tal que $x^2=2$.
+:::
+
+:::{#exm-sqrt2}
+Considere por exemplo a função 
+$$
+f:\Q\to\Q,\quad f(x)=x^2-2.
+$$
+Note que $f(1)=-1<0$ e $f(2)=2>0$. Entretanto, não existe nenhum número racional entre $1$ e $2$ tal que $f(x)=0$,
+
+![Gráfico da função f(x)=x^2-2](xsquare.png){#fig-fx}
+
+como mostra o @lem-sqrt2-not-rat. Ou seja, esta função não satisfaz o notável 
+[Teorema do Valor Intermediário](https://pt.wikipedia.org/wiki/Teorema_do_valor_intermedi%C3%A1rio),
+que diz que se uma função contínua $f:[a,b]\to\R$ satisfaz $f(a)<0$ e $f(b)>0$, então existe $c\in(a,b)$ tal que $f(c)=0$. 
+O Teorema do Valor Intermediário é uma das propriedades fundamentais das funções reais e é está amplamente usado no 
+estudo de funções nas áreas de Cálculo e Análise. 
+:::
+
+Os problemas acima são causadas pelos "buracos" nos números racionais. O termo técnico que descreve essa propriedade 
+é que os números racionais não são completos. A completude dos números reais é uma 
+propriedade fundamental que distingue os números reais dos racionais. Para expressar a propriedade de completude, precisamos 
+algumas definições adicionais. 
+
+:::{#def-bdd}
+Seja $X$ um conjunto parcialmente ordenado (@def-ordem) e $A\subseteq X$. 
+
+1. Dizemos que $A$ está **limitado superiormente** se existe $u\in X$ tal que $a\leq u$ para todo $a\in A$. O elemento $u$ é chamado de **cota superior** de $A$.
+2. Seja $A\subseteq X$ limitado superiormnete. Dizemos que $s\in X$ é o **supremo** de $A$ se 
+
+   a. $s$ é uma cota superior de $A$; e 
+   b. se $u$ é qualquer outra cota superior de $A$, então $s\leq u$. 
+
+O supremo de $A$ será denotado por $\sup A$.
+:::
+
+:::{#exm-supQ}
+Seja $\Q$ o conjunto dos números racionais e considere o subconjunto 
+$$
+A=\{x\in\Q\mid x^2<2\}.
+$$ 
+O conjunto $A$ está limitado superiormente. Por exemplo, $2$ é uma cota superior de $A$, pois se $x\in A$, então $x^2<2<4$ e assim $x<2$. Na verdade, qualquer número racional maior ou igual a $\sqrt{2}$ é uma cota superior de $A$. Entretanto, o conjunto $A$ não possui supremo em $\Q$. De fato, se $s=\sup A$, então $s^2=2$. Mas isso é impossível pelo @lem-sqrt2-not-rat.
+:::
+
+O exemplo mostra que o conjunto dos números racionais não é completo, pois existe um subconjunto limitado superiormente que não possui supremo. A introdução dos números reais resolve esse problema. Informalmente falando, os números reais formam um 
+sistema de números que satisfazem as propriedades principais dos números naturais e, além disso, são completos no sentido que todo subconjunto não vazio limitado superiormente possui supremo.
+
+**As propriedades dos números reais**: Os números reais formam um conjunto $\R$ junto com as operações $+$ e $\cdot$ e a relação de ordem $\leq$ que satisfazem as seguintes propriedades:
+
+1. As propriedades 1.-10. do @lem-rat-ops;
+2. As propriedades do @lem-order-q;
+3. (Propriedade de Completude) Se $A\subseteq \R$ é não vazio e limitado superiormente, então $A$ possui supremo em $\R$.
+
+
+As demais propriedades dos números reais podem ser deduzidas das propriedades acima. A existência do supremo pode ser 
+usada para calcular raízes quadradas e outras raízes. Por exemplo, considere o conjunto 
+$$
+A=\{x\in\R\mid x^2<2\}.
+$$
+O conjunto $A$ está limitado superiormente (por exemplo, por $2$) e é não vazio (por exemplo, $1\in A$). Portanto, $A$ possui supremo em $\R$; ou seja, existe $s=\sup A\in\R$. Podemos provar que $s^2=2$ usando as propriedades dos números reais. Assim, o número $s$ é a raiz quadrada de $2$ nos números reais, que será denotada por $\sqrt{2}$. 
+
