@@ -82,3 +82,109 @@ Demonstre as seguintes afirmações.
 :::{#exr-}
 Demonstre as afirmações dos @lem-int-ops, @lem-pre-ordering, @lem-int-pos (que não têm demonstração nas apostilas). 
 :::
+
+:::{#exr-}
+Determine o quociente e o resto da divisão de $a$ por $b$, onde são os seguintes: 
+
+1. $a=27$, $b=5$;
+2. $a=111$, $b=11$;
+3. $a=-27$, $b=5$;
+4. $a=-111$, $b=11$. 
+:::
+
+:::{#exr-}
+Demonstre as seguintes afirmações para todo $a,b,c\in\Z$:
+
+1. Se $c\mid a$ e $c\mid b$, então $c\mid (a+b)$;
+2. Se $c\mid a$, então $c\mid ka$ para todo $k\in\Z$;
+3. Se $c\mid b$ e $c\mid (a+b)$, então $c\mid a$.
+:::
+
+
+:::{#exr-}
+Seja $a\in \Z$. Demonstre as seguintes afirmações:  
+
+1. Na divisão de $a^2$ por $4$, o resto é $0$ ou $1$.
+2. Na divisão de $a^2$ por $8$, o resto é $0$, $1$, ou $4$.
+:::
+
+:::{#exr-}
+Seja $k\geq 0$ um inteiro. 
+
+1. Mostre que o resto de $10^k$ na divisão por $3$ é $1$. 
+2. Faça a mesma coisa  para o resto de $10^k$ na divisão por $9$.
+3. Mostre que o resto de $10^k$ na divisão por $11$ é $1$ se $k$ é par e $10$ se $k$ é ímpar.
+:::
+
+:::{#exr-}
+Sejam $a,\ b,\ c\in\Z$. Demonstre as seguintes afirmações ou dê
+contraexemplo:
+
+1. se $ac\mid bc$, então $a\mid b$;
+2. se $a\mid b$ e $a\mid c$, então $a\mid (b-c)$;
+3. se $c\mid (a+b)$, então $c\mid a$ ou $c\mid b$.
+4. se $a\mid b$ e $c\nmid a$, então $c\nmid b$.
+:::
+
+:::{#exr-}
+Escreva o número $a$ na base $b$ para:
+
+1. $a=133$, $b=2$;
+2. $a=133$, $b=3$;
+3. $a=133$, $b=4$;
+4. $a=133$, $b=5$;
+5. $a=133$, $b=8$.
+6. $a=133$, $b=16$.
+:::
+
+:::{#exr-}
+Na aula consideramos bases $b\geq 2$. Considere a base $b=-2$ com os algarismos $0$ e $1$.
+Escreva os números $a=-10,\ldots,10$ na base $b=-2$ sem usar o sinal de menos. 
+:::
+
+:::{#exr-}
+Mostre que todo número inteiro pode ser escrito de forma única na como expansão na base $b=-2$. Ou 
+seja, se $a\in\Z$, então $a$ pode ser escrito na forma
+$$
+a=\sum_{i=0}^n a_i(-2)^i
+$$
+e a sequência dos algarismos $a_0,\ldots,a_n\in\{0,1\}$ é unicamente determinada por $a$.
+[Dica: Use indução em $|a|$ e siga os passos da demonstração do @thm-exp-nat.]
+:::
+
+
+:::{#exr-}
+Sejam $a_0,q\in \Z$ e considere a progressão geométrica
+$$
+a_0,\ a_1=a_0\cdot q,\ a_2=a_1\cdot q,\ldots
+$$
+Demonstre que a soma dos $n$ primeiros termos desta progressão é dada por
+$$
+S_n=\begin{cases}
+na_0,&\mbox{se }q=1;\\
+a_0\displaystyle{\frac{q^n-1}{q-1}},&\mbox{se }q\neq 1.
+\end{cases}
+$$
+:::
+
+:::{#exr-}
+Demonstre os critérios de divisibilidade no @thm-crit-div que não têm demonstração na apostila.
+:::
+
+:::{#exr-}
+Representa os números $a,b\in\Q$ com pares ordenados $(m,n)\in\Z\times(\Z\setminus\{0\})$ e 
+calcule $a+b$ e $a\cdot b$ usando estas representações para os seguintes casos:
+
+1. $a=1/2$ e $b=1/3$.
+2. $a=2/5$ e $b=3/4$.
+3. $a=5/6$ e $b=7/8$.
+:::
+
+:::{#exr-}
+Escreva o número $0,10\overline{123}$ na forma de fração.
+:::
+
+
+:::{#exr-}
+Escreva o número racional $a=5/7$ na forma decimal.
+:::

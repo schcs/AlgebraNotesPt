@@ -204,7 +204,7 @@ $$
 
 É possível fazer a mesma coisa em uma outra base $b$ assumindo que $b\geq 2$.
 
-:::{#thm-}
+:::{#thm-exp-nat}
 Assuma que $a$ e $b$ são números  naturais e $b\geq 2$. Então $a$ pode ser escrito unicamente na forma
 $$
 a=[a_na_{n-1}\cdots a_0]_b=\sum_{k=0}^n a_kb^k
@@ -287,6 +287,7 @@ que diz que $1=[1]_5$.
 Juntando as peças, obtemos que $168=[1133]_5$.
 :::
 
+
 ## Critérios de divisibilidade
 
 
@@ -301,7 +302,7 @@ Demonstre que para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$
 :::
 
 
-:::{#thm-}
+:::{#thm-crit-div}
 (Critérios de divisibilidade)
 As seguintes afirmações são verdadeiras para um número natural $a=[a_na_{n-1}\cdots a_1a_0]$ escrito na base decimal.
 
@@ -494,5 +495,4 @@ $$
 Pelo lema anterior, $a$ é um número real, mas a sua expansão decimal não é periódoca, portanto este número não é racional.
 
 Exatamente como a expansão dos números naturais pode ser calculada em qualquer base $d\geq 2$, a expansão dos números racionais também pode ser calculada em bases $d$ tal que $d\geq 2$. Os resultados em uma base arbitrária são muito similares aos resultados na base $d=10$ (caso decimal) e estes detalhes são omitidos. No entanto recomendamos que o leitor traduza os resultados acima para uma base $d\neq 10$.
-
 
