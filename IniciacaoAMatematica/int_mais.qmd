@@ -436,7 +436,7 @@ Demonstre que para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$
 :::
 
 
-:::{#thm-}
+:::{#thm-crit-div}
 (Critérios de divisibilidade)
 As seguintes afirmações são verdadeiras para um número natural $a=[a_na_{n-1}\cdots a_1a_0]$ escrito na base decimal.
 
