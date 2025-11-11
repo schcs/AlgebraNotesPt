@@ -1610,15 +1610,18 @@ a=[a_na_{n-1}\cdots a_1a_0]_{10}=[a_na_{n-1}\cdots a_1a_0].
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Demonstraremos algumas destas afirmações, o resto será exercício.</p>
 <ol type="1">
-<li><p>Considere que <span class="math display">\[\begin{align*}
+<li>Considere que <span class="math display">\[\begin{align*}
 a&amp;=[a_na_{n-1}\cdots a_1a_0]=\sum_{k=0}^n10^ka_k=10\left(\sum_{k=1}^n10^{k-1}a_k\right)+a_0\\&amp;=10q+a_0
 \end{align*}\]</span> com <span class="math display">\[
 q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
-\]</span> Como <span class="math inline">\(2\mid 10\)</span>, obtemos que o número <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(2\)</span> se e somente se o algarismo <span class="math inline">\(a_0\)</span> é divisível por <span class="math inline">\(2\)</span>.</p></li>
-<li><p>Temos, pelo exercício antes do teorema, para todo <span class="math inline">\(i\geq 0\)</span>, existe <span class="math inline">\(q_i\in\N_0\)</span> tal que <span class="math inline">\(10^i=3q_i+1\)</span>. Agora considere <span class="math display">\[\begin{align*}
+\]</span> Como <span class="math inline">\(2\mid 10\)</span>, obtemos que o número <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(2\)</span> se e somente se o algarismo <span class="math inline">\(a_0\)</span> é divisível por <span class="math inline">\(2\)</span>.</li>
+</ol>
+<!-- break list so next starts at 3 -->
+<ol start="3" type="1">
+<li>Temos, pelo exercício antes do teorema, para todo <span class="math inline">\(i\geq 0\)</span>, existe <span class="math inline">\(q_i\in\N_0\)</span> tal que <span class="math inline">\(10^i=3q_i+1\)</span>. Agora considere <span class="math display">\[\begin{align*}
 a&amp;=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&amp;=3\sum_{k=0}^nq_ka_k+
 \sum_{k=0}^na_k.
-\end{align*}\]</span> No última expressão, a primeira parcela é um múltiplo de <span class="math inline">\(3\)</span>. Logo <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(3\)</span> se e somente se a segunda parcela na última expressão é divisível por <span class="math inline">\(3\)</span>, mas esta segunda parcela é justamente a soma dos dígitos de <span class="math inline">\(a\)</span>.</p></li>
+\end{align*}\]</span> No última expressão, a primeira parcela é um múltiplo de <span class="math inline">\(3\)</span>. Logo <span class="math inline">\(a\)</span> é divisível por <span class="math inline">\(3\)</span> se e somente se a segunda parcela na última expressão é divisível por <span class="math inline">\(3\)</span>, mas esta segunda parcela é justamente a soma dos dígitos de <span class="math inline">\(a\)</span>.</li>
 </ol>
 </div>
 </section>
@@ -1677,10 +1680,10 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
   a&amp;=\sum_{k=1}^\infty a_k10^{-k}=\frac u{10^{m}}+\sum_{k=1}^\infty \frac{v}{10^{m+kr}}\\&amp;=\frac u{10^{m}}+\frac{v}{10^{m+r}}\sum_{k=0}^\infty \frac{1}{10^{kr}}=\frac{u}{10^{m}}+\frac{v}{10^{m+r}}\frac{1}{1-10^{-r}}.
   \end{align*}\]</span> Ora note apenas que o número no lado direito da última equação é um número racional.</p></li>
 <li><p>Assuma que <span class="math inline">\(0&lt; a&lt;b\)</span> e considere o racional <span class="math inline">\(q=a/b\)</span>. Vamos determinar a sequência de algarismos para <span class="math inline">\(q&lt;1\)</span>. Seja <span class="math inline">\(a_0=a\)</span>, <span class="math inline">\(q_0=0\)</span> e escreva, usando o Teorema de Divisão de Euclides, <span class="math display">\[
-10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1&lt;b.
-\]</span> Assuma que as sequências <span class="math inline">\(a_0,\ldots,a_k\)</span> e <span class="math inline">\(q_0,\ldots,q_k\)</span> são determinadas, e defina <span class="math inline">\(q_{k+1}\)</span> e <span class="math inline">\(a_{k+1}\)</span> pela equação <span class="math display">\[
-10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}&lt;b
-\]</span> usando o Teorema de Divisão de Euclides.</p></li>
+  10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1&lt;b.
+  \]</span> Assuma que as sequências <span class="math inline">\(a_0,\ldots,a_k\)</span> e <span class="math inline">\(q_0,\ldots,q_k\)</span> são determinadas, e defina <span class="math inline">\(q_{k+1}\)</span> e <span class="math inline">\(a_{k+1}\)</span> pela equação <span class="math display">\[
+  10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}&lt;b
+  \]</span> usando o Teorema de Divisão de Euclides.</p></li>
 </ol>
 <p>Afirmamos que a expansão decimal de <span class="math inline">\(a/b\)</span> é <span class="math inline">\([0,q_1q_2\cdots]\)</span>. Para isso nós precisamos verificar que <span class="math display">\[
   \sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
