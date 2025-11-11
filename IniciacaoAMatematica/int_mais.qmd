@@ -431,49 +431,48 @@ As seguintes afirmações são verdadeiras.
   Ora note apenas que o número no lado direito da última equação é um número racional.
 
 2. Assuma que $0< a<b$ e considere o racional $q=a/b$. Vamos determinar a sequência de algarismos para 
-   $q<1$. Seja $a_0=a$, $q_0=0$ e escreva, usando o Teorema de Divisão de Euclides,
-  $$
-  10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1<b.
-  $$
-  Assuma que as sequências $a_0,\ldots,a_k$ e $q_0,\ldots,q_k$ são determinadas, e defina $q_{k+1}$ e $a_{k+1}$ pela equação
-  $$
-  10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}<b
-  $$
-  usando o Teorema de Divisão de Euclides.
-
-  Afirmamos que a expansão decimal de $a/b$ é $[0,q_1q_2\cdots]$. Para isso nós precisamos verificar que
-  $$
-  \sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
-  $$
-  De fato, nós provaremos que
-  $$
-  10^k a=\sum_{i=1}^k10^{k-i}q_ib+a_k
-  $$
-  Para $k=1$, esta afirmação segue da expressão acima para $10a_0=10a$. Assuma que esta igualdade é verdadeira para algum $k$. Então
-  \begin{align*}
-  10^{k+1}a&=10\cdot 10^ka=10\cdot\left(\sum_{i=1}^k10^{k-i}q_ib+a_k\right)
-  \\&=\sum_{i=1}^{k}10^{k+1-i}q_ib+10a_k\\&=
-  \sum_{i=1}^{k}10^{k+1-i}q_ib+q_{k+1}b+a_{k+1}\\&=\sum_{i=1}^{k+1}10^{k+1-i}q_ib+a_{k+1}.
-  \end{align*}
-  Então a afirmação é verdadeira para todo $k$. Segue, para todo $k\geq 1$, da mesma afirmação que
-  $$
-  \frac ab=\sum_{i=1}^k10^{-i}q_i+a_k/(10^kb)=[0,q_1\cdots q_k]+\frac{a_k}{10^kb};
-  $$
-  e assim
-  $$
-  \frac ab-[0,q_1\cdots q_k]=\frac{a_k}{10^kb}<\frac{b}{10^kb}=10^{-k}.
-  $$
-  Isso implica que a sequência $[0,q_1\cdots q_k]$ converge para $a/b$ quando $k\to\infty$ e então a expansão do número racional $a/b$ é $[0,q_1q_2\cdots]$.
-
-  Finalmente precisamos provar que a expansão $[0,q_1q_2\cdots]$ de $a/b$ é periódica. Para isso, note que a sequência $a_1,a_2,\ldots$ é uma sequência de números naturais com $a_i\in\{0,\ldots,b-1\}$ para todo $i$. Então vai existir $m$ e $r$ tal que $a_{m+r}=a_m$. Logo
-  $$
-  q_{m+r+1}b+a_{m+r+1}=10a_{m+r}=10a_m=q_{m+1}b+a_{m+1}.
-  $$
-  Obtemos pela unicidade na Teorema de Divisão de Euclides que $q_{m+r+1}=q_{m+1}$ e $a_{m+r+1}=a_{m+1}$. Similarmente, $q_{m+r+2}=q_{m+2}$ e $a_{m+r+2}=a_{m+2}$ e mais geralmente
-  $$
-  q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
-  $$
-  para todo $k\geq m+1$. Ou seja, a expansão do número $a/b$ é periódica.
+    $q<1$. Seja $a_0=a$, $q_0=0$ e escreva, usando o Teorema de Divisão de Euclides,
+    $$
+    10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1<b.
+    $$
+    Assuma que as sequências $a_0,\ldots,a_k$ e $q_0,\ldots,q_k$ são determinadas, e defina $q_{k+1}$ e $a_{k+1}$ pela equação
+    $$
+    10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}<b
+    $$
+    usando o Teorema de Divisão de Euclides.
+    
+    Afirmamos que a expansão decimal de $a/b$ é $[0,q_1q_2\cdots]$. Para isso nós precisamos verificar que]$$
+    \sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
+    $$
+    De fato, nós provaremos que
+    $$
+    10^k a=\sum_{i=1}^k10^{k-i}q_ib+a_k
+    $$
+    Para $k=1$, esta afirmação segue da expressão acima para $10a_0=10a$. Assuma que esta igualdade é verdadeira para algum $k$. Então
+    \begin{align*}
+    10^{k+1}a&=10\cdot 10^ka=10\cdot\left(\sum_{i=1}^k10^{k-i}q_ib+a_k\right)
+    \\&=\sum_{i=1}^{k}10^{k+1-i}q_ib+10a_k\\&=
+    \sum_{i=1}^{k}10^{k+1-i}q_ib+q_{k+1}b+a_{k+1}\\&=\sum_{i=1}^{k+1}10^{k+1-i}q_ib+a_{k+1}.
+    \end{align*}
+    Então a afirmação é verdadeira para todo $k$. Segue, para todo $k\geq 1$, da mesma afirmação que
+    $$
+    \frac ab=\sum_{i=1}^k10^{-i}q_i+a_k/(10^kb)=[0,q_1\cdots q_k]+\frac{a_k}{10^kb};
+    $$
+    e assim
+    $$
+    \frac ab-[0,q_1\cdots q_k]=\frac{a_k}{10^kb}<\frac{b}{10^kb}=10^{-k}.
+    $$
+    Isso implica que a sequência $[0,q_1\cdots q_k]$ converge para $a/b$ quando $k\to\infty$ e então a expansão do número racional $a/b$ é $[0,q_1q_2\cdots]$.
+    
+    Finalmente precisamos provar que a expansão $[0,q_1q_2\cdots]$ de $a/b$ é periódica. Para isso, note que a sequência $a_1,a_2,\ldots$ é uma sequência de números naturais com $a_i\in\{0,\ldots,b-1\}$ para todo $i$. Então vai existir $m$ e $r$ tal que $a_{m+r}=a_m$. Logo
+    $$
+    q_{m+r+1}b+a_{m+r+1}=10a_{m+r}=10a_m=q_{m+1}b+a_{m+1}.
+    $$
+    Obtemos pela unicidade na Teorema de Divisão de Euclides que $q_{m+r+1}=q_{m+1}$ e $a_{m+r+1}=a_{m+1}$. Similarmente, $q_{m+r+2}=q_{m+2}$ e $a_{m+r+2}=a_{m+2}$ e mais geralmente
+    $$
+    q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
+    $$
+    para todo $k\geq m+1$. Ou seja, a expansão do número $a/b$ é periódica.
 :::
 
 
