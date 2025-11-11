@@ -288,7 +288,8 @@ Temos que $\leq$ é uma ordem total no conjunto $\Q$. Ou seja, temos para todo $
 Além disso, a relação $\leq$ é compatível com as operações. Ou seja, 
 
 1. se $a\leq b$, então $a+c\leq b+c$;
-2. se $a\leq b$ e $c\in\Q^+$, então $ac\leq bc$. 
+2. se $a\leq b$ e $c\geq 0$, então $ac\leq bc$.
+3. se $a\leq b$ e $c\leq 0$, então $bc\leq ac$. 
 :::
 
 ## Os números reais
