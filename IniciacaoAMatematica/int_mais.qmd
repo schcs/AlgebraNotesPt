@@ -332,6 +332,8 @@ q=\sum_{k=1}^n10^{k-1}a_k\in\mathbb N.
 $$
 Como $2\mid 10$, obtemos que o número $a$ é divisível por $2$ se e somente se o algarismo $a_0$ é divisível por $2$.
 
+<!-- break list so next starts at 3 -->
+
 3. Temos, pelo exercício antes do teorema, para todo $i\geq 0$, existe $q_i\in\N_0$ tal que $10^i=3q_i+1$. Agora considere
 \begin{align*}
 a&=[a_n\cdots a_1a_0]=\sum_{k=0}^n 10^ka_k=\sum_{k=0}^n (3q_k+1)a_k\\&=3\sum_{k=0}^nq_ka_k+
@@ -428,15 +430,16 @@ As seguintes afirmações são verdadeiras.
   \end{align*}
   Ora note apenas que o número no lado direito da última equação é um número racional.
 
-2. Assuma que $0< a<b$ e considere o racional $q=a/b$. Vamos determinar a sequência de algarismos para $q<1$. Seja $a_0=a$, $q_0=0$ e escreva, usando o Teorema de Divisão de Euclides,
-$$
-10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1<b.
-$$
-Assuma que as sequências $a_0,\ldots,a_k$ e $q_0,\ldots,q_k$ são determinadas, e defina $q_{k+1}$ e $a_{k+1}$ pela equação
-$$
-10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}<b
-$$
-usando o Teorema de Divisão de Euclides.
+2. Assuma que $0< a<b$ e considere o racional $q=a/b$. Vamos determinar a sequência de algarismos para 
+   $q<1$. Seja $a_0=a$, $q_0=0$ e escreva, usando o Teorema de Divisão de Euclides,
+  $$
+  10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1<b.
+  $$
+  Assuma que as sequências $a_0,\ldots,a_k$ e $q_0,\ldots,q_k$ são determinadas, e defina $q_{k+1}$ e $a_{k+1}$ pela equação
+  $$
+  10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}<b
+  $$
+  usando o Teorema de Divisão de Euclides.
 
   Afirmamos que a expansão decimal de $a/b$ é $[0,q_1q_2\cdots]$. Para isso nós precisamos verificar que
   $$
