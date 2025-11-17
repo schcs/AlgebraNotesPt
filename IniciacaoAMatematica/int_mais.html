@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -666,9 +666,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Álgebra</a> 
     </div>
@@ -1676,34 +1674,30 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
   [0,a_1a_2\cdots]=[0,a_1a_2\cdots a_m\overline{a_{m+1}\cdots a_{m+r}}]
   \]</span> e seja <span class="math inline">\(a\)</span> o número representado por esta expansão. Pelo lema anterior, <span class="math inline">\(0\leq a\leq 1\)</span>. Sejam <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> os números naturais <span class="math display">\[
   u=[a_1a_2\cdots a_m]\quad\mbox{e}\quad v=[a_{m+1}\cdots a_{m+r}].
-  \]</span> Tem-se que <span class="math display">\[\begin{align*}
-  a&amp;=\sum_{k=1}^\infty a_k10^{-k}=\frac u{10^{m}}+\sum_{k=1}^\infty \frac{v}{10^{m+kr}}\\&amp;=\frac u{10^{m}}+\frac{v}{10^{m+r}}\sum_{k=0}^\infty \frac{1}{10^{kr}}=\frac{u}{10^{m}}+\frac{v}{10^{m+r}}\frac{1}{1-10^{-r}}.
-  \end{align*}\]</span> Ora note apenas que o número no lado direito da última equação é um número racional.</p></li>
-<li><p>Assuma que <span class="math inline">\(0&lt; a&lt;b\)</span> e considere o racional <span class="math inline">\(q=a/b\)</span>. Vamos determinar a sequência de algarismos para <span class="math inline">\(q&lt;1\)</span>. Seja <span class="math inline">\(a_0=a\)</span>, <span class="math inline">\(q_0=0\)</span> e escreva, usando o Teorema de Divisão de Euclides, <span class="math display">\[
-10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1&lt;b.
-\]</span> Assuma que as sequências <span class="math inline">\(a_0,\ldots,a_k\)</span> e <span class="math inline">\(q_0,\ldots,q_k\)</span> são determinadas, e defina <span class="math inline">\(q_{k+1}\)</span> e <span class="math inline">\(a_{k+1}\)</span> pela equação <span class="math display">\[
-10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}&lt;b
-\]</span> usando o Teorema de Divisão de Euclides.</p>
-<p>Afirmamos que a expansão decimal de <span class="math inline">\(a/b\)</span> é <span class="math inline">\([0,q_1q_2\cdots]\)</span>. Para isso nós precisamos verificar que]<span class="math display">\[
-\sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
-\]</span> De fato, nós provaremos que <span class="math display">\[
-10^k a=\sum_{i=1}^k10^{k-i}q_ib+a_k
-\]</span> Para <span class="math inline">\(k=1\)</span>, esta afirmação segue da expressão acima para <span class="math inline">\(10a_0=10a\)</span>. Assuma que esta igualdade é verdadeira para algum <span class="math inline">\(k\)</span>. Então <span class="math display">\[\begin{align*}
-10^{k+1}a&amp;=10\cdot 10^ka=10\cdot\left(\sum_{i=1}^k10^{k-i}q_ib+a_k\right)
-\\&amp;=\sum_{i=1}^{k}10^{k+1-i}q_ib+10a_k\\&amp;=
-\sum_{i=1}^{k}10^{k+1-i}q_ib+q_{k+1}b+a_{k+1}\\&amp;=\sum_{i=1}^{k+1}10^{k+1-i}q_ib+a_{k+1}.
-\end{align*}\]</span> Então a afirmação é verdadeira para todo <span class="math inline">\(k\)</span>. Segue, para todo <span class="math inline">\(k\geq 1\)</span>, da mesma afirmação que <span class="math display">\[
-\frac ab=\sum_{i=1}^k10^{-i}q_i+a_k/(10^kb)=[0,q_1\cdots q_k]+\frac{a_k}{10^kb};
-\]</span> e assim <span class="math display">\[
-\frac ab-[0,q_1\cdots q_k]=\frac{a_k}{10^kb}&lt;\frac{b}{10^kb}=10^{-k}.
-\]</span> Isso implica que a sequência <span class="math inline">\([0,q_1\cdots q_k]\)</span> converge para <span class="math inline">\(a/b\)</span> quando <span class="math inline">\(k\to\infty\)</span> e então a expansão do número racional <span class="math inline">\(a/b\)</span> é <span class="math inline">\([0,q_1q_2\cdots]\)</span>.</p>
-<p>Finalmente precisamos provar que a expansão <span class="math inline">\([0,q_1q_2\cdots]\)</span> de <span class="math inline">\(a/b\)</span> é periódica. Para isso, note que a sequência <span class="math inline">\(a_1,a_2,\ldots\)</span> é uma sequência de números naturais com <span class="math inline">\(a_i\in\{0,\ldots,b-1\}\)</span> para todo <span class="math inline">\(i\)</span>. Então vai existir <span class="math inline">\(m\)</span> e <span class="math inline">\(r\)</span> tal que <span class="math inline">\(a_{m+r}=a_m\)</span>. Logo <span class="math display">\[
-q_{m+r+1}b+a_{m+r+1}=10a_{m+r}=10a_m=q_{m+1}b+a_{m+1}.
-\]</span> Obtemos pela unicidade na Teorema de Divisão de Euclides que <span class="math inline">\(q_{m+r+1}=q_{m+1}\)</span> e <span class="math inline">\(a_{m+r+1}=a_{m+1}\)</span>. Similarmente, <span class="math inline">\(q_{m+r+2}=q_{m+2}\)</span> e <span class="math inline">\(a_{m+r+2}=a_{m+2}\)</span> e mais geralmente <span class="math display">\[
-q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
-\]</span> para todo <span class="math inline">\(k\geq m+1\)</span>. Ou seja, a expansão do número <span class="math inline">\(a/b\)</span> é periódica.</p></li>
+  \]</span> Multiplicando <span class="math inline">\(a\)</span> por <span class="math inline">\(10^{m}\)</span>, obtemos <span class="math display">\[
+  10^{m}a= [a_1a_2\cdots a_m,a_{m+1}\cdots a_{m+r}a_{m+1}\cdots a_{m+r}\cdots].
+  \]</span> Ora multiplicando <span class="math inline">\(a\)</span> por <span class="math inline">\(10^{m+r}\)</span>, obtemos <span class="math display">\[
+  10^{m+r}a=[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r},a_{m+1}\cdots a_{m+r}a_{m+1}\cdots a_{m+r}\cdots].
+  \]</span> Subtraindo as duas expressões acima, obtemos <span class="math display">\[
+  10^{m+r}a-10^{m}a=[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r}]-[a_1a_2\cdots a_m].
+  \]</span> Portanto, <span class="math display">\[
+  a = \frac{[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r}]-[a_1a_2\cdots a_m]}{10^{m+r}-10^{m}}.
+  \]</span></p></li>
+<li><p>Considere o número racional <span class="math inline">\(x=a/b\)</span> onde <span class="math inline">\(0&lt;a&lt;b\)</span>. Assuma que <span class="math display">\[
+x=[0,q_1q_2q_3\cdots].
+\]</span> Ora, <span class="math display">\[
+10x=\frac{10a}{b}=[q_1,q_2q_3q_4\cdots]=q_1+[0,q_2q_3q_4\cdots].
+\]</span> Ou seja, <span class="math display">\[
+10a= bq_1 + b[0,q_2q_3q_4\cdots]=bq_1+a_1
+\]</span> onde <span class="math inline">\(q_1,a_1\in \Z\)</span> e <span class="math inline">\(0\leq a_1&lt;b\)</span>. Consequentemente, o primeiro dígito <span class="math inline">\(q_1\)</span> da expansão decimal de <span class="math inline">\(a/b\)</span> é o quociente da divisão de <span class="math inline">\(10a\)</span> por <span class="math inline">\(b\)</span> no Lema de Divisão de Euclides (<a href="#lem-euclides" class="quarto-xref">Lema&nbsp;<span>12.4</span></a>).</p>
+<p>Ora, <span class="math display">\[
+\frac{10a_1}{b}=[q_2,q_3q_4\cdots]=q_2+[0,q_3q_4\cdots]
+\]</span> e <span class="math display">\[
+10a_1=bq_2 + b[0,q_3q_4\cdots]=bq_2+a_2
+\]</span> onde <span class="math inline">\(q_2,a_2\in \Z\)</span> e <span class="math inline">\(0\leq a_2&lt;b\)</span>. Consequentemente, o segundo dígito <span class="math inline">\(q_2\)</span> da expansão decimal de <span class="math inline">\(a/b\)</span> é o quociente da divisão de <span class="math inline">\(10a_1\)</span> por <span class="math inline">\(b\)</span> no <a href="#lem-euclides" class="quarto-xref">Lema&nbsp;<span>12.4</span></a>. Repetindo este processo, obtemos sequências todos os dígitos <span class="math inline">\(q_i\)</span> da expansão decimal de <span class="math inline">\(a/b\)</span>. Note que a sequência de dígitos vai ser periódica, pois todo <span class="math inline">\(a_i\in\{0,1\ldots,b-1\}\)</span> e assim algum <span class="math inline">\(a_i\)</span> vai se repetir. Quando <span class="math inline">\(a_i=a_j\)</span> com algum <span class="math inline">\(i&lt;j\)</span>, então a computação do dígito <span class="math inline">\(q_{i+1}\)</span> é a mesma que a computação do dígito <span class="math inline">\(q_{j+1}\)</span>. Portanto, a sequência de dígitos <span class="math inline">\(q_i\)</span> vai se repetir a partir deste ponto.</p></li>
 </ol>
 </div>
+<p>Note que o argumento na demonstração do segundo item do teorema acima dá um algoritmo para calcular a expansão decimal de um número racional <span class="math inline">\(a/b\)</span> onde <span class="math inline">\(0&lt;a&lt;b\)</span>. Podemos também notar que o período da expansão decimal de <span class="math inline">\(a/b\)</span> é no máximo <span class="math inline">\(b-1\)</span>, pois existem apenas <span class="math inline">\(b\)</span> possíveis restos na divisão de <span class="math inline">\(10a_i\)</span> por <span class="math inline">\(b\)</span>. Além disso, o procedimento funciona em qualquer base, não apenas na base decimal. Argumentos mais formais podem ser encontrados nas apostilas de Fundamentos de Álgebra (<a href="../FundamentosDeAlgebra/racionais.html#thm-exp-rac" class="quarto-xref">Teorema&nbsp;<span>16.1</span></a>).</p>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 12.2</strong></span> A demonstração do resultado anterior dá um algoritmo para calcular a expansão de um número natural <span class="math inline">\(a/b\)</span> onde <span class="math inline">\(0&lt;a&lt;b\)</span>. Considere por exemplo o racional <span class="math inline">\(1/54\)</span>. Seguindo a demonstração do teorema para <span class="math inline">\(a=1\)</span> e <span class="math inline">\(b=54\)</span>, fazemos a seguinte conta.<span class="math display">\[\begin{align*}
 10a=10=0\cdot 54+10\quad &amp;\Rightarrow\quad q_1=0\mbox{ e }a_1=10\\

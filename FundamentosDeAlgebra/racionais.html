@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -701,9 +701,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Álgebra</a> 
     </div>
@@ -1465,7 +1463,7 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
 <p><span class="theorem-title"><strong>Lema 16.2</strong></span> Para qualquer sequência (possivelmente infinita) de algarismos, a expansão <span class="math inline">\([0,a_{1}a_{2}\cdots]\)</span> representa um número real entre zero e um</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>PPrecisa provar que a série <span class="math display">\[
+<p><span class="proof-title"><em>Comprovação</em>. </span>Precisa provar que a série <span class="math display">\[
 \sum_{k=1}^\infty a_{k}10^{-k}
 \]</span> é convergente e converge a um número entre zero e um. Como <span class="math inline">\(0\leq a_i\leq 9\)</span> para todo <span class="math inline">\(i\)</span>, obtemos que <span class="math display">\[
 \sum_{k=1}^\infty a_{k}10^{-k}\leq\sum_{k=1}^\infty 9\cdot 10^{-k}=\frac 9{10}\sum_{k=0}^\infty 10^{-k}=\frac 9{10}\frac 1{1-1/10}=1.
@@ -1480,16 +1478,16 @@ a&amp;=\sum_{k=n}^{-\infty}a_k10^k=\sum_{k=0}^n a_k10^k+\sum_{k=1}^{\infty}a_{-k
 \]</span> Por exemplo <span class="math display">\[
 1/44=0,02272727\cdots=0,02\overline{27}.
 \]</span></p>
-<div id="thm-" class="theorem">
+<div id="thm-exp-rac" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 16.1</strong></span> As seguintes afirmações são verdadeiras.</p>
-<ul>
+<ol type="1">
 <li>Toda expansão decimal periódica representa um número racional.</li>
 <li>Se <span class="math inline">\(a/b\)</span> é um número racional tal que <span class="math inline">\(0&lt;a&lt;b\)</span>, então sua expansão decimal é periódica</li>
-</ul>
+</ol>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span></p>
-<ol start="11" type="1">
+<ol type="1">
 <li><p>Considere a expansão decimal <span class="math display">\[
 [0,a_1a_2\cdots]=[0,a_1a_2\cdots a_m\overline{a_{m+1}\cdots a_{m+r}}]
 \]</span> e seja <span class="math inline">\(a\)</span> o número representado por esta expansão. Pelo lema anterior, <span class="math inline">\(0\leq a\leq 1\)</span>. Sejam <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> os números naturais <span class="math display">\[
@@ -1501,9 +1499,7 @@ a&amp;=\sum_{k=1}^\infty a_k10^{-k}=\frac u{10^{m}}+\sum_{k=1}^\infty \frac{v}{1
 10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1&lt;b.
 \]</span> Assuma que as sequências <span class="math inline">\(a_0,\ldots,a_k\)</span> e <span class="math inline">\(q_0,\ldots,q_k\)</span> são determinadas, e defina <span class="math inline">\(q_{k+1}\)</span> e <span class="math inline">\(a_{k+1}\)</span> pela equação <span class="math display">\[
 10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}&lt;b
-\]</span> usando o Teorema de Divisão de Euclides.</p></li>
-</ol>
-<p>Afirmamos que a expansão decimal de <span class="math inline">\(a/b\)</span> é <span class="math inline">\([0,q_1q_2\cdots]\)</span>. Para isso nós precisamos verificar que <span class="math display">\[
+\]</span> usando o Teorema de Divisão de Euclides. Afirmamos que a expansão decimal de <span class="math inline">\(a/b\)</span> é <span class="math inline">\([0,q_1q_2\cdots]\)</span>. Para isso nós precisamos verificar que <span class="math display">\[
 \sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
 \]</span> De fato, nós provaremos que <span class="math display">\[
 10^k a=\sum_{i=1}^k10^{k-i}q_ib+a_k
@@ -1520,7 +1516,8 @@ a&amp;=\sum_{k=1}^\infty a_k10^{-k}=\frac u{10^{m}}+\sum_{k=1}^\infty \frac{v}{1
 q_{m+r+1}b+a_{m+r+1}=10a_{m+r}=10a_m=q_{m+1}b+a_{m+1}.
 \]</span> Obtemos pela unicidade na Teorema de Divisão de Euclides que <span class="math inline">\(q_{m+r+1}=q_{m+1}\)</span> e <span class="math inline">\(a_{m+r+1}=a_{m+1}\)</span>. Similarmente, <span class="math inline">\(q_{m+r+2}=q_{m+2}\)</span> e <span class="math inline">\(a_{m+r+2}=a_{m+2}\)</span> e mais geralmente <span class="math display">\[
 q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
-\]</span> para todo <span class="math inline">\(k\geq m+1\)</span>. Ou seja, a expansão do número <span class="math inline">\(a/b\)</span> é periódoca.</p>
+\]</span> para todo <span class="math inline">\(k\geq m+1\)</span>. Ou seja, a expansão do número <span class="math inline">\(a/b\)</span> é periódoca.</p></li>
+</ol>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 16.1</strong></span> A demonstração do resultado anterior dá um algoritmo para calcular a expansão de um número natural <span class="math inline">\(a/b\)</span> onde <span class="math inline">\(0&lt;a&lt;b\)</span>. Considere por exemplo o racional <span class="math inline">\(1/54\)</span>. Seguindo a demonstração do teorema para <span class="math inline">\(a=1\)</span> e <span class="math inline">\(b=54\)</span>, fazemos a seguinte conta.<span class="math display">\[\begin{align*}
