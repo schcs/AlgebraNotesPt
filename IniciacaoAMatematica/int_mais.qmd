@@ -424,56 +424,52 @@ As seguintes afirmações são verdadeiras.
   $$
   u=[a_1a_2\cdots a_m]\quad\mbox{e}\quad v=[a_{m+1}\cdots a_{m+r}].
   $$
-  Tem-se que
-  \begin{align*}
-  a&=\sum_{k=1}^\infty a_k10^{-k}=\frac u{10^{m}}+\sum_{k=1}^\infty \frac{v}{10^{m+kr}}\\&=\frac u{10^{m}}+\frac{v}{10^{m+r}}\sum_{k=0}^\infty \frac{1}{10^{kr}}=\frac{u}{10^{m}}+\frac{v}{10^{m+r}}\frac{1}{1-10^{-r}}.
-  \end{align*}
-  Ora note apenas que o número no lado direito da última equação é um número racional.
+  Multiplicando $a$ por $10^{m}$, obtemos
+  $$
+  10^{m}a= [a_1a_2\cdots a_m,a_{m+1}\cdots a_{m+r}a_{m+1}\cdots a_{m+r}\cdots].
+  $$ 
+  Ora multiplicando $a$ por $10^{m+r}$, obtemos
+  $$
+  10^{m+r}a=[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r},a_{m+1}\cdots a_{m+r}a_{m+1}\cdots a_{m+r}\cdots].
+  $$ 
+  Subtraindo as duas expressões acima, obtemos
+  $$
+  10^{m+r}a-10^{m}a=[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r}]-[a_1a_2\cdots a_m].
+  $$
+  Portanto,
+  $$
+  a = \frac{[a_1a_2\cdots a_ma_{m+1}\cdots a_{m+r}]-[a_1a_2\cdots a_m]}{10^{m+r}-10^{m}}.
+  $$
 
-2. Assuma que $0< a<b$ e considere o racional $q=a/b$. Vamos determinar a sequência de algarismos para 
-    $q<1$. Seja $a_0=a$, $q_0=0$ e escreva, usando o Teorema de Divisão de Euclides,
+2. Considere o número racional $x=a/b$ onde $0<a<b$. Assuma que 
     $$
-    10a_0=q_1b+a_1\quad\mbox{onde}\quad 0\leq a_1<b.
+    x=[0,q_1q_2q_3\cdots].
     $$
-    Assuma que as sequências $a_0,\ldots,a_k$ e $q_0,\ldots,q_k$ são determinadas, e defina $q_{k+1}$ e $a_{k+1}$ pela equação
+    Ora, 
     $$
-    10a_k=q_{k+1}b+a_{k+1}\quad\mbox{onde}\quad 0\leq a_{k+1}<b
+    10x=\frac{10a}{b}=[q_1,q_2q_3q_4\cdots]=q_1+[0,q_2q_3q_4\cdots].
     $$
-    usando o Teorema de Divisão de Euclides.
-    
-    Afirmamos que a expansão decimal de $a/b$ é $[0,q_1q_2\cdots]$. Para isso nós precisamos verificar que]$$
-    \sum_{k=1}^\infty q_k10^{-k}\to \frac ab.
+    Ou seja, 
+    $$ 
+    10a= bq_1 + b[0,q_2q_3q_4\cdots]=bq_1+a_1
+    $$ 
+    onde $q_1,a_1\in \Z$ e $0\leq a_1<b$. Consequentemente, o primeiro dígito $q_1$ da expansão decimal de $a/b$ é o quociente da divisão de $10a$ por $b$ no Lema de Divisão de Euclides (@lem-euclides). 
+
+    Ora, 
     $$
-    De fato, nós provaremos que
+    \frac{10a_1}{b}=[q_2,q_3q_4\cdots]=q_2+[0,q_3q_4\cdots]
     $$
-    10^k a=\sum_{i=1}^k10^{k-i}q_ib+a_k
+    e 
     $$
-    Para $k=1$, esta afirmação segue da expressão acima para $10a_0=10a$. Assuma que esta igualdade é verdadeira para algum $k$. Então
-    \begin{align*}
-    10^{k+1}a&=10\cdot 10^ka=10\cdot\left(\sum_{i=1}^k10^{k-i}q_ib+a_k\right)
-    \\&=\sum_{i=1}^{k}10^{k+1-i}q_ib+10a_k\\&=
-    \sum_{i=1}^{k}10^{k+1-i}q_ib+q_{k+1}b+a_{k+1}\\&=\sum_{i=1}^{k+1}10^{k+1-i}q_ib+a_{k+1}.
-    \end{align*}
-    Então a afirmação é verdadeira para todo $k$. Segue, para todo $k\geq 1$, da mesma afirmação que
+    10a_1=bq_2 + b[0,q_3q_4\cdots]=bq_2+a_2
     $$
-    \frac ab=\sum_{i=1}^k10^{-i}q_i+a_k/(10^kb)=[0,q_1\cdots q_k]+\frac{a_k}{10^kb};
-    $$
-    e assim
-    $$
-    \frac ab-[0,q_1\cdots q_k]=\frac{a_k}{10^kb}<\frac{b}{10^kb}=10^{-k}.
-    $$
-    Isso implica que a sequência $[0,q_1\cdots q_k]$ converge para $a/b$ quando $k\to\infty$ e então a expansão do número racional $a/b$ é $[0,q_1q_2\cdots]$.
-    
-    Finalmente precisamos provar que a expansão $[0,q_1q_2\cdots]$ de $a/b$ é periódica. Para isso, note que a sequência $a_1,a_2,\ldots$ é uma sequência de números naturais com $a_i\in\{0,\ldots,b-1\}$ para todo $i$. Então vai existir $m$ e $r$ tal que $a_{m+r}=a_m$. Logo
-    $$
-    q_{m+r+1}b+a_{m+r+1}=10a_{m+r}=10a_m=q_{m+1}b+a_{m+1}.
-    $$
-    Obtemos pela unicidade na Teorema de Divisão de Euclides que $q_{m+r+1}=q_{m+1}$ e $a_{m+r+1}=a_{m+1}$. Similarmente, $q_{m+r+2}=q_{m+2}$ e $a_{m+r+2}=a_{m+2}$ e mais geralmente
-    $$
-    q_{k+r}=q_{k}\quad e \quad a_{k+r}=a_{k}.
-    $$
-    para todo $k\geq m+1$. Ou seja, a expansão do número $a/b$ é periódica.
+    onde $q_2,a_2\in \Z$ e $0\leq a_2<b$. Consequentemente, o segundo dígito $q_2$ da expansão decimal de $a/b$ é o quociente da divisão de $10a_1$ por $b$ no @lem-euclides. 
+    Repetindo este processo, obtemos sequências todos os dígitos $q_i$ da expansão decimal de $a/b$. Note que a sequência de dígitos vai ser periódica, pois todo $a_i\in\{0,1\ldots,b-1\}$ e assim algum $a_i$ 
+    vai se repetir. Quando $a_i=a_j$ com algum $i<j$, então a computação do dígito $q_{i+1}$ é a mesma que a computação do dígito $q_{j+1}$. Portanto, a sequência de dígitos $q_i$ vai se repetir a partir deste ponto.
 :::
+
+Note que o argumento na demonstração do segundo item do teorema acima dá um algoritmo para calcular a expansão decimal de um número racional $a/b$ onde $0<a<b$. Podemos também notar que o período da expansão decimal de $a/b$ é no máximo $b-1$, pois existem apenas $b$ possíveis restos na divisão de $10a_i$ por $b$. Além disso, o procedimento funciona em qualquer base, não apenas na base decimal. Argumentos 
+mais formais podem ser encontrados nas apostilas de Fundamentos de Álgebra (@thm-exp-rac). 
 
 
 :::{#exm-}

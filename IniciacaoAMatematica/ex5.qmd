@@ -181,10 +181,36 @@ calcule $a+b$ e $a\cdot b$ usando estas representações para os seguintes casos
 :::
 
 :::{#exr-}
-Escreva o número $0,10\overline{123}$ na forma de fração.
+Escreva o número $0,10\overline{123}$ na forma fracional.
 :::
 
 
 :::{#exr-}
-Escreva o número racional $a=5/7$ na forma decimal.
+Seja $a=5/7$. 
+1. Escreva o número racional $a=5/7$ na forma decimal.
+2. Determine o período e o pré-período da expansão decimal de $a$.
+3. Escreva o mesmo número $a$ como expansão na base $3$.
 :::
+
+:::{#exr-}
+Considere o número $x=a/b$ onde $a,b\in\N$ são tais que $0<a<b$. Assuma ainda que 
+não existe nenhum $c\in\N$, com $c>1$, que divide simultaneamente $a$ e $b$ (ou seja, a fração $a/b$ está na sua forma irredutível). Mostre que a expansão decimal de $x$ é finita se e somente se $b$ é da forma $b=2^m5^n$ para alguns inteiros $m,n\geq 0$.
+:::
+
+:::{#exr-}
+Seja $x=a/b$ um número racional com $a,b\in\N$ e $0<a<b$. Mostre que o comprimento do período da expansão decimal de $x$ é o menor que $b$. 
+:::
+
+:::{#exr-}
+Demonstre que o número $0,\overline{9}=0,999\cdots$ é igual a $1$.
+:::
+
+:::{#exr-}
+Seja $a=[a_n\cdots a_1a_0]_b$ um número natural escrito na base $b\geq 2$. 
+
+1. Mostre que $b\mid a$ se e somente se $a_0=0$.
+2. Mostre que $b-1\mid a$ se e somente se a soma dos dígitos de $a$ é múltiplo de $b-1$.
+3. Mostre que $b+1\mid a$ se e somente se a soma dos dígitos de $a$ com sinais alternados (começando com sinal positivo) é múltiplo de $b+1$.
+:::
+
+
