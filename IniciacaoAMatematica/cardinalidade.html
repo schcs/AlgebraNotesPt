@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.26">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>89&nbsp; As primeiras definições – Álgebra</title>
+<title>15&nbsp; Cardinalidade dos conjuntos finitos e infinitos – Álgebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../GruposECorpos/lagrange.html" rel="next">
-<link href="../GruposECorpos/index.html" rel="prev">
+<link href="../IniciacaoAMatematica/ex6.html" rel="next">
+<link href="../IniciacaoAMatematica/ex5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -653,7 +653,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/definitions.html"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">As primeiras definições</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/cardinalidade.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cardinalidade dos conjuntos finitos e infinitos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -779,7 +779,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../IniciacaoAMatematica/cardinalidade.html" class="sidebar-item-text sidebar-link">
+  <a href="../IniciacaoAMatematica/cardinalidade.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cardinalidade dos conjuntos finitos e infinitos</span></span></a>
   </div>
 </li>
@@ -1267,7 +1267,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../GruposECorpos/definitions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">As primeiras definições</span></span></a>
   </div>
 </li>
@@ -1397,20 +1397,19 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#operações-binárias-e-grupos" id="toc-operações-binárias-e-grupos" class="nav-link active" data-scroll-target="#operações-binárias-e-grupos"><span class="header-section-number">89.1</span> Operações binárias e grupos</a></li>
-  <li><a href="#notações" id="toc-notações" class="nav-link" data-scroll-target="#notações"><span class="header-section-number">89.2</span> Notações</a></li>
-  <li><a href="#os-primeiros-exemplos" id="toc-os-primeiros-exemplos" class="nav-link" data-scroll-target="#os-primeiros-exemplos"><span class="header-section-number">89.3</span> Os primeiros exemplos</a></li>
-  <li><a href="#ordem-de-grupo-ordem-de-elemento" id="toc-ordem-de-grupo-ordem-de-elemento" class="nav-link" data-scroll-target="#ordem-de-grupo-ordem-de-elemento"><span class="header-section-number">89.4</span> Ordem de grupo, ordem de elemento</a></li>
-  <li><a href="#a-notação-cíclica-para-permutações" id="toc-a-notação-cíclica-para-permutações" class="nav-link" data-scroll-target="#a-notação-cíclica-para-permutações"><span class="header-section-number">89.5</span> A notação cíclica para permutações</a></li>
+  <li><a href="#a-noção-de-cardinalidade" id="toc-a-noção-de-cardinalidade" class="nav-link active" data-scroll-target="#a-noção-de-cardinalidade"><span class="header-section-number">15.1</span> A noção de cardinalidade</a></li>
+  <li><a href="#conjuntos-finitos-e-infinitos" id="toc-conjuntos-finitos-e-infinitos" class="nav-link" data-scroll-target="#conjuntos-finitos-e-infinitos"><span class="header-section-number">15.2</span> Conjuntos finitos e infinitos</a></li>
+  <li><a href="#conjuntos-infinitos-enumeráveis-e-não-enumeráveis" id="toc-conjuntos-infinitos-enumeráveis-e-não-enumeráveis" class="nav-link" data-scroll-target="#conjuntos-infinitos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">15.3</span> Conjuntos infinitos enumeráveis e não enumeráveis</a></li>
+  <li><a href="#a-cardinalidade-do-conjunto-das-partes" id="toc-a-cardinalidade-do-conjunto-das-partes" class="nav-link" data-scroll-target="#a-cardinalidade-do-conjunto-das-partes"><span class="header-section-number">15.4</span> A cardinalidade do conjunto das partes</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../GruposECorpos/index.html">Grupos e Corpos</a></li><li class="breadcrumb-item"><a href="../GruposECorpos/definitions.html"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">As primeiras definições</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/index.html">Iniciação à Matemática</a></li><li class="breadcrumb-item"><a href="../IniciacaoAMatematica/cardinalidade.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cardinalidade dos conjuntos finitos e infinitos</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">As primeiras definições</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cardinalidade dos conjuntos finitos e infinitos</span></h1>
 </div>
 
 
@@ -1427,186 +1426,137 @@ window.Quarto = {
 </header>
 
 
-<section id="operações-binárias-e-grupos" class="level2" data-number="89.1">
-<h2 data-number="89.1" data-anchor-id="operações-binárias-e-grupos"><span class="header-section-number">89.1</span> Operações binárias e grupos</h2>
-<div id="def-binary-op" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.1</strong></span> Seja <span class="math inline">\(X\)</span> um conjunto. Uma função <span class="math inline">\(f\colon X\times X\to X\)</span> é dita uma <em>operação binária</em> ou simplesmente uma <em>operação</em>. Se <span class="math inline">\(x,y\in X\)</span>, então o resultado da operação entre <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> é <span class="math inline">\(f(x,y)\)</span>. Normalmente o resultado de uma operação entre <span class="math inline">\(x,y\in X\)</span> será escrito como <span class="math inline">\(x\cdot y\)</span>, <span class="math inline">\(x+y\)</span>, <span class="math inline">\(x\circ y\)</span>, <span class="math inline">\(x\diamond y\)</span>, ou, quando não houver risco de ambiguidade, simplesmente como <span class="math inline">\(xy\)</span>.</p>
+<section id="a-noção-de-cardinalidade" class="level2" data-number="15.1">
+<h2 data-number="15.1" data-anchor-id="a-noção-de-cardinalidade"><span class="header-section-number">15.1</span> A noção de cardinalidade</h2>
+<p>A cardinalidade de um conjunto é uma medida que indica a quantidade de elementos presentes nesse conjunto. Em outras palavras, é o “tamanho” do conjunto.</p>
+<div id="def-cardinalidade" class="definition theorem">
+<p><span class="theorem-title"><strong>Definição 15.1</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> dois conjuntos. Dizemos que <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> têm a mesma cardinalidade se existe uma função bijetora <span class="math inline">\(f: A \to B\)</span>. Neste caso, escrevemos <span class="math inline">\(|A| = |B|\)</span>.</p>
 </div>
-<div id="def-props-binary-op" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.2</strong></span> Sejam <span class="math inline">\(X\)</span> um conjunto e <span class="math inline">\(\cdot\)</span> uma operação em <span class="math inline">\(X\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 15.1</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Sejam os conjuntos <span class="math inline">\(A = \{1, 2, 3\}\)</span> e <span class="math inline">\(B = \{4, 5, 6\}\)</span>. Podemos definir uma função bijetora <span class="math inline">\(f: A \to B\)</span> tal que:</li>
+</ol>
 <ul>
-<li>A operação <span class="math inline">\(\cdot\)</span> é dita <em>associativa</em>, se <span class="math inline">\((x\cdot y)\cdot z=x\cdot(y\cdot z)\)</span> para todo <span class="math inline">\(x,y,z\in X\)</span>.</li>
-<li>A operação <span class="math inline">\(\cdot\)</span> é dita <em>comutativa</em>, se <span class="math inline">\(x\cdot y=y\cdot x\)</span> para todo <span class="math inline">\(x,y\in X\)</span>.</li>
-<li><span class="math inline">\(X\)</span> possui <em>elemento neutro</em> para a operação <span class="math inline">\(\cdot\)</span>, se existir um elemento <span class="math inline">\(e\in X\)</span> tal que <span class="math inline">\(ex=xe=x\)</span> para todo <span class="math inline">\(x\in X\)</span>.</li>
-<li>Assuma que <span class="math inline">\(X\)</span> possui elemento neutro <span class="math inline">\(e\)</span> para a operação <span class="math inline">\(\cdot\)</span> e seja <span class="math inline">\(x\in X\)</span>. Diz-se que <span class="math inline">\(x\)</span> possui <em>inverso</em>, se existe <span class="math inline">\(y\in X\)</span> tal que <span class="math inline">\(xy=yx=e\)</span>. O elemento <span class="math inline">\(y\)</span> é dito <em>um inverso</em> de <span class="math inline">\(x\)</span> (o inverso pode não ser único).</li>
+<li><span class="math inline">\(f(1) = 4\)</span></li>
+<li><span class="math inline">\(f(2) = 5\)</span></li>
+<li><span class="math inline">\(f(3) = 6\)</span>.</li>
 </ul>
+<p>Ou seja, cada elemento de <span class="math inline">\(A\)</span> é mapeado para um elemento único de <span class="math inline">\(B\)</span>, e vice-versa. Portanto, os conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> têm a mesma cardinalidade: <span class="math inline">\(|A| = |B|\)</span>.</p>
+<ol start="2" type="1">
+<li>Ora, se <span class="math inline">\(C=\{4,5\}\)</span>, então não existe função bijetora entre <span class="math inline">\(A\)</span> e <span class="math inline">\(C\)</span>, pois <span class="math inline">\(A\)</span> tem mais elementos que <span class="math inline">\(C\)</span>. Portanto, <span class="math inline">\(|A| \neq |C|\)</span>.</li>
+</ol>
 </div>
-<div id="def-grp" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.3</strong></span> Assuma que <span class="math inline">\(X\)</span> é um conjunto com uma operação <span class="math inline">\(\cdot\)</span>. Dizemos que <span class="math inline">\(X\)</span> é um <em>grupo</em> se</p>
-<ul>
-<li>a operação <span class="math inline">\(\cdot\)</span> é associativa;</li>
-<li><span class="math inline">\(X\)</span> possui elemento neutro;</li>
-<li>todo elemento de <span class="math inline">\(X\)</span> possui inverso.</li>
-</ul>
-<p>Além disso, se a <span class="math inline">\(\cdot\)</span> é comutativa, então <span class="math inline">\(X\)</span> é dito <em>grupo comutativo</em> ou <em>grupo abeliano</em>.</p>
+</section>
+<section id="conjuntos-finitos-e-infinitos" class="level2" data-number="15.2">
+<h2 data-number="15.2" data-anchor-id="conjuntos-finitos-e-infinitos"><span class="header-section-number">15.2</span> Conjuntos finitos e infinitos</h2>
+<div id="def-conjuntos-finitos" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 15.2</strong></span> Se um conjunto <span class="math inline">\(A\)</span> tem a mesma cardinaldidade do conjunto <span class="math inline">\(\{1, 2, \ldots, n\}\)</span> para algum número natural <span class="math inline">\(n\)</span>, dizemos que <span class="math inline">\(A\)</span> é um conjunto finito e escrevemos <span class="math inline">\(|A| = n\)</span>. Caso contrário, dizemos que <span class="math inline">\(A\)</span> é um conjunto infinito.</p>
 </div>
-<p>Se <span class="math inline">\(G\)</span> é um grupo com a operação <span class="math inline">\(\cdot\)</span>, então, para evitar ambiguidade, escrevemos que <em><span class="math inline">\((G,\cdot)\)</span> é um grupo</em>. Quando não há perigo de ambiguidade, escreve-se simplesmente que <em><span class="math inline">\(G\)</span> é um grupo</em>. Por exemplo, <span class="math inline">\((\Z,+)\)</span> é um grupo, mas <span class="math inline">\((\Z,\cdot)\)</span> não é.</p>
-<div id="lem-unique" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 89.1</strong></span> Seja <span class="math inline">\(G\)</span> um grupo.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 15.2</strong></span> OS conjuntos <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> do exemplo anterior são conjuntos finitos, com cardinalidades <span class="math inline">\(|A| = 3\)</span>, <span class="math inline">\(|B| = 3\)</span> e <span class="math inline">\(|C| = 2\)</span>. O conjuinto dos números naturais <span class="math inline">\(\mathbb{N} = \{0, 1, 2, 3, \ldots\}\)</span> é um conjunto infinito, pois não existe um número natural <span class="math inline">\(n\)</span> tal que <span class="math inline">\(\mathbb{N}\)</span> tenha a mesma cardinalidade de <span class="math inline">\(\{1, 2, \ldots, n\}\)</span>.</p>
+</div>
+</section>
+<section id="conjuntos-infinitos-enumeráveis-e-não-enumeráveis" class="level2" data-number="15.3">
+<h2 data-number="15.3" data-anchor-id="conjuntos-infinitos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">15.3</span> Conjuntos infinitos enumeráveis e não enumeráveis</h2>
+<p>Os conjuntos infinitos têm muitas propriedades interessantes e inesperados. Por exemplo, se <span class="math inline">\(A\)</span> é um conjunto infinito, então é possível que a cardinalidade de <span class="math inline">\(A\)</span> seja igual à cardinalidade de um subconjunto próprio de <span class="math inline">\(A\)</span>. Por exemplo, o conjunto dos números pares <span class="math inline">\(\{0, 2, 4, 6, \ldots\}\)</span> é um subconjunto próprio do conjunto dos números naturais <span class="math inline">\(\mathbb{N}\)</span>, mas ambos os conjuntos têm a mesma cardinalidade, ou seja, <span class="math inline">\(|\mathbb{N}| = |\{0, 2, 4, 6, \ldots\}|\)</span>. Isso vale porque, por exemplo, a função <span class="math inline">\(f: \mathbb{N} \to \{0, 2, 4, 6, \ldots\}\)</span> dada por <span class="math inline">\(f(n) = 2n\)</span> é uma bijeção entre esses dois conjuntos.</p>
+<p>Estes tipos de fenômenos são ilustrados pelo paradoxo do Hotel de [Hilbert]{https://pt.wikipedia.org/wiki/David_Hilbert}, que pode ser assistido nos vídeos a seguir:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WK47hxmVdv4?si=LKB_ZLkehaCdVNHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OxGsU8oIWjY?si=bB5pJR72av54lEuX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<div id="def-conjuntos-enumeraveis" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 15.3</strong></span> Um conjunto infinito <span class="math inline">\(A\)</span> é dito enumerável se ele tem a mesma cardinalidade do conjunto dos números naturais <span class="math inline">\(\mathbb{N}\)</span>. Caso contrário, dizemos que <span class="math inline">\(A\)</span> é um conjunto não enumerável.</p>
+</div>
+<p>Para um conjunto ser enumerável significa que é possível listar todos os seus elementos em uma sequência infinita; ou seja, os elementos do conjunto podem ser listados, como primeiro, segundo, terceiro, e assim por diante.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 15.3</strong></span> &nbsp;</p>
+<ol type="1">
+<li>O conjunto dos números inteiros <span class="math inline">\(\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}\)</span> é um conjunto infinito enumerável. Podemos definir uma função bijetora <span class="math inline">\(f: \mathbb{N} \to \mathbb{Z}\)</span> da seguinte forma:</li>
+</ol>
 <ul>
-<li>O elemento neutro de <span class="math inline">\(G\)</span> é único.</li>
-<li>Se <span class="math inline">\(g\in G\)</span>, o inverso de <span class="math inline">\(G\)</span> é único.</li>
+<li><span class="math inline">\(f(0) = 0\)</span></li>
+<li><span class="math inline">\(f(1) = 1\)</span></li>
+<li><span class="math inline">\(f(2) = -1\)</span></li>
+<li><span class="math inline">\(f(3) = 2\)</span></li>
+<li><span class="math inline">\(f(4) = -2\)</span></li>
+<li>e assim por diante. Portanto, <span class="math inline">\(|\mathbb{Z}| = |\mathbb{N}|\)</span>.</li>
 </ul>
+<ol start="2" type="1">
+<li>O conjunto dos números racionais <span class="math inline">\(\mathbb{Q}\)</span> também é um conjunto infinito enumerável. Podemos listar todos os números racionais em uma sequência, na maneira seguinte. Escreva os números racionais na forma de frações <span class="math inline">\(\frac{p}{q}\)</span>, onde <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span> são inteiros e <span class="math inline">\(q \neq 0\)</span>. Organize essas frações em uma grade infinita, onde a linha representa o numerador <span class="math inline">\(p\)</span> e a coluna representa o denominador <span class="math inline">\(q\)</span>.</li>
+</ol>
+<pre><code>1/1  -1/1  1/2  -1/2  1/3  -1/3  1/4  -1/4  1/5  -1/5  ...
+2/1  -2/1  2/2  -2/2  2/3  -2/3  2/4  -2/4  2/5  -2/5  ...
+3/1  -3/1  3/2  -3/2  3/3  -3/3  3/4  -3/4  3/5  -3/5  ...
+4/1  -4/1  4/2  -4/2  4/3  -4/3  4/4  -4/4  4/5  -4/5  ...
+5/1  -5/1  5/2  -5/2  5/3  -5/3  5/4  -5/4  5/5  -5/5  ...
+...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...</code></pre>
+<p>Em seguida, percorra essa grade em uma diagonal, ignorando as frações que não estão na forma mais simples (ou seja, aquelas que podem ser simplificadas). Ou seja, listamos os números racionais na seguinte ordem: <span class="math display">\[
+1/1,\ -1/1,\ 2/1,\ 1/2,\ -2/1,\ 3/1,\ -1/2,\ \cancel{2/2},\ -3/1,\ 4/1, \ldots
+\]</span> Dessa forma, podemos listar todos os números racionais sequencialmente, Portanto, <span class="math inline">\(|\mathbb{Q}| = |\mathbb{N}|\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 15.4</strong></span> O conjunto dos números reais <span class="math inline">\(\mathbb{R}\)</span> é um conjunto infinito não enumerável. Isso pode ser demonstrado usando o argumento da diagonalização de Cantor. Vamos usar o argumento que o o intervalo <span class="math inline">\((0,1)\)</span> é não enumerável, o que implica que <span class="math inline">\(\mathbb{R}\)</span> também é não enumerável. Suponha, para fins de contradição, que exista uma maneira de enumerar os números reais no intervalo <span class="math inline">\((0,1)\)</span>. Isso significa que podemos listar todos os números reais nesse intervalo como uma sequência infinita: <span class="math display">\[
+a_1=0,b_{11}b_{12}b_{13}b_{14}\ldots \\
+a_2=0,b_{21}b_{22}b_{23}b_{24}\ldots \\
+a_3=0,b_{31}b_{32}b_{33}b_{34}\ldots \\
+a_4=0,b_{41}b_{42}b_{43}b_{44}\ldots \\
+\vdots
+\]</span> Para garantir a unicidade, assumimos que nenhum número termina com uma sequência infinita de 9s, enquanto nas expansões finitas, assumimos que a sequência de dígitos tem uma sequência infinita de 0s.<br>
+Agora, vamos construir um novo número real <span class="math inline">\(c\)</span> no intervalo <span class="math inline">\((0,1)\)</span> que difere de cada número <span class="math inline">\(a_n\)</span> na <span class="math inline">\(n\)</span>-ésima casa decimal. Definimos o número <span class="math display">\[
+c=0,c_1c_2c_3c_4\ldots
+\]</span> na seguinte forma. Escolhemos o dígito <span class="math inline">\(c_1\)</span> diferente de <span class="math inline">\(b_{11}\)</span> e diferente de 9. Similarmente, escolhemos o dígito <span class="math inline">\(c_2\)</span> diferente de <span class="math inline">\(b_{22}\)</span> e diferente de 9, e assim por diante. Dessa forma, garantimos que o número <span class="math inline">\(c\)</span> difere de cada número <span class="math inline">\(a_n\)</span> na <span class="math inline">\(n\)</span>-ésima casa decimal; ou seja o número <span class="math inline">\(c\)</span> não aparece na noss lista, mas também não possui uma sequência infinita de 9s. Isso contradiz nossa suposição inicial de que todos os números reais no intervalo <span class="math inline">\((0,1)\)</span> foram enumerados. Portanto, concluímos que o conjunto dos números reais <span class="math inline">\(\mathbb{R}\)</span> é não enumerável.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 15.1</strong></span> Os seguintes conjuntos tem a mesma cardinalidade dos números reais <span class="math inline">\(\mathbb{R}\)</span>:</p>
+<ol type="1">
+<li>O intervalo aberto <span class="math inline">\((0,1)\)</span>.</li>
+<li>O intervalo semiaberto <span class="math inline">\([0,1)\)</span>.</li>
+<li>O intervalo fechado <span class="math inline">\([0,1]\)</span>.</li>
+<li>Um intervalo qualquer <span class="math inline">\((a,b)\)</span>, <span class="math inline">\([a,b]\)</span>, ou <span class="math inline">\([a,b)\)</span>onde <span class="math inline">\(a &lt; b\)</span> e <span class="math inline">\(a,b \in \mathbb{R}\)</span>.</li>
+<li><span class="math inline">\((0,+\infty)\)</span> e <span class="math inline">\([0, +\infty)\)</span>, <span class="math inline">\((-\infty,0)\)</span> e <span class="math inline">\((-\infty,0]\)</span>.</li>
+</ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício. Consulte, <a href="../FundamentosDeAlgebra/res_classes.html#lem-unique-inverse-zn" class="quarto-xref">Lema&nbsp;<span>25.3</span></a> para a unicidade do inverso.</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>A demonstração pode ser feita construindo funções bijetoras entre estes conjuntos.</p>
+<p>Por exemplo, para mostrar que o intervalo aberto <span class="math inline">\((0,1)\)</span> tem a mesma cardinalidade que o intervalo semiaberto <span class="math inline">\([0,1)\)</span>, podemos definir a função bijetora <span class="math inline">\(f: (0,1) \to [0,1)\)</span> da seguinte forma: <span class="math display">\[
+f(x) =
+\begin{cases}
+0, &amp; \text{se } x=1/2 \\
+1/2^{k+1}, &amp; \text{se } x = 1/2^k \text{ para algum } k \in \mathbb{N} \\
+x, &amp; \text{caso contrário}
+\end{cases}
+\]</span> Essa função mapeia o ponto <span class="math inline">\(1/2\)</span> para <span class="math inline">\(0\)</span>, os pontos da forma <span class="math inline">\(1/2^k\)</span> para <span class="math inline">\(1/2^{k+1}\)</span>, e mantém todos os outros pontos inalterados. É possível verificar que essa função é bijetora, garantindo que cada elemento de <span class="math inline">\((0,1)\)</span> é mapeado para um elemento único de <span class="math inline">\([0,1)\)</span>, e vice-versa.</p>
+<p>Entre, os intervalos <span class="math inline">\((0,1)\)</span> e <span class="math inline">\((a,b)\)</span>, podemos definir a função bijetora <span class="math inline">\(g: (0,1) \to (a,b)\)</span> dada por: <span class="math display">\[
+g(x) = a + (b-a)x.
+\]</span> Essa função mapeia o intervalo <span class="math inline">\((0,1)\)</span> para o intervalo <span class="math inline">\((a,b)\)</span> de forma bijetora.</p>
+<p>Entre os intervalos <span class="math inline">\((0,1)\)</span> e <span class="math inline">\(\R\)</span> podemos definir a função bijetora <span class="math inline">\(h: (0,1) \to \R\)</span> dada por: <span class="math display">\[
+h(x) = \tan\left(\pi x - \frac{\pi}{2}\right).
+\]</span> Essa função mapeia o intervalo <span class="math inline">\((0,1)\)</span> para todo o conjunto dos números reais de forma bijetora.</p>
+<p>Entre os intervalos <span class="math inline">\(\R\)</span> e <span class="math inline">\((0,+\infty)\)</span> podemos definir a função bijetora <span class="math inline">\(k: \R \to (0,+\infty)\)</span> dada por: <span class="math display">\[
+k(x) = e^x.
+\]</span></p>
+<p>Usando essas ideias, podemos construir funções bijetoras entre todos os conjuntos mencionados, demonstrando que eles têm a mesma cardinalidade dos números reais <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
 </section>
-<section id="notações" class="level2" data-number="89.2">
-<h2 data-number="89.2" data-anchor-id="notações"><span class="header-section-number">89.2</span> Notações</h2>
-<p>Usamos dois sistemas principais de notações quando consideramos grupos:</p>
-<p><em>Notação aditiva:</em> a operação é denotada por <span class="math inline">\(+\)</span>, o elemento neutro por <span class="math inline">\(0\)</span>, o inverso de <span class="math inline">\(g\)</span> por <span class="math inline">\(-g\)</span>. A soma <span class="math inline">\(g+\cdots+g\)</span> (<span class="math inline">\(n\)</span> vezes) está escrita como <span class="math inline">\(n\cdot g\)</span> ou <span class="math inline">\(ng\)</span>. Se <span class="math inline">\(n\)</span> for um número natural, elemento <span class="math inline">\(n(-g)=-(ng)\)</span> será escrita como <span class="math inline">\(-ng\)</span>. Concordamos também que <span class="math inline">\(0g=0\)</span>. Esta notação é usada principalmente em grupos abelianos.</p>
-<p><em>Notação multiplicativa:</em> A operação é denotada por <span class="math inline">\(\cdot\)</span> ou simplesmente por concatenação, por exemplo <span class="math inline">\(xy\)</span>. O elemento neutro é denotado por <span class="math inline">\(1\)</span>, o inverso de <span class="math inline">\(g\)</span> por <span class="math inline">\(g^{-1}\)</span>. O produto <span class="math inline">\(g\cdots g\)</span> (<span class="math inline">\(n\)</span> vezes) será escrito como <span class="math inline">\(g^n\)</span>. Se <span class="math inline">\(n\)</span> for um número natural, o elemento <span class="math inline">\((g^{-1})^n=(g^n)^{-1}\)</span> será escrito como <span class="math inline">\(g^{-n}\)</span>. Além disso, <span class="math inline">\(g^0=1\)</span>. Esta notação é mais comum que a notação aditiva e pode ser usada em grupos abelianos e também em grupos não abelianos.</p>
-</section>
-<section id="os-primeiros-exemplos" class="level2" data-number="89.3">
-<h2 data-number="89.3" data-anchor-id="os-primeiros-exemplos"><span class="header-section-number">89.3</span> Os primeiros exemplos</h2>
-<div id="exm-first-examples" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.1</strong></span> Aqui são os primeiros exemplos de grupos. Ao longo da disciplina, nós vamos estudar exemplos mais complexos. Assumimos que os alunos sabem pelo menos a definição de um corpo e conhecem os exemplos básicos, tais como <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\R\)</span>, <span class="math inline">\(\C\)</span>, ou <span class="math inline">\(\Z_p\)</span>.</p>
-<ul>
-<li><span class="math inline">\((\Z,+)\)</span> é um grupo abeliano.</li>
-<li>Os conjuntos <span class="math inline">\(\{1,-1\}\)</span>, <span class="math inline">\(\{1,-1,i,-i\}\)</span> são grupos abelianos com a multiplicação (<span class="math inline">\(i\)</span> é a unidade imaginária).</li>
-<li>Se <span class="math inline">\(\F\)</span> é um corpo, então <span class="math inline">\((\F,+)\)</span> e <span class="math inline">\((\F\setminus\{0\},\cdot)\)</span> são grupos abelianos. O conjunto <span class="math inline">\(\F\setminus\{0\}\)</span> será denotado por <span class="math inline">\(\F^*\)</span>.</li>
-<li>Se <span class="math inline">\(R\)</span> é um anel, então <span class="math inline">\((R,+)\)</span> é um grupo abeliano. Se <span class="math inline">\(R^*\)</span> é o conjunto dos elementos invertíveis de <span class="math inline">\(R\)</span>, então <span class="math inline">\((R^*,\cdot)\)</span> é também um grupo abeliano.</li>
-<li>Seja <span class="math inline">\(X\)</span> um conjunto não vaziu. Definimos <span class="math display">\[
-\sym X=\{f\colon X\to X\mid \mbox{$f$ é bijetiva}\}.
-\]</span> O conjunto <span class="math inline">\(\sym X\)</span> é um grupo com a operação de composição e o nome deste grupo é o <em>grupo simétrico</em> sobre o conjunto <span class="math inline">\(X\)</span>. Os elementos de <span class="math inline">\(\sym X\)</span> são chamadas de <em>permutações</em> (do conjunto <span class="math inline">\(X\)</span>). Frequentemente, <span class="math inline">\(X=\{1,\ldots,n\}\)</span> e neste caso escrevemos <span class="math inline">\(\sym X=S_n\)</span> e o nome do grupo é <em>grupo simétrico de grau <span class="math inline">\(n\)</span></em>.</li>
-<li>Se <span class="math inline">\(V\)</span> é um espaço vetorial sobre um corpo <span class="math inline">\(\F\)</span>, então definimos <span class="math display">\[
-\GLV V=\{f\colon V\to V\mid \mbox{$f$ é linear a bijetiva}\}.
-\]</span> O conjunto <span class="math inline">\(\GLV V\)</span> é um grupo com a operação de composição. O grupo <span class="math inline">\(\GLV V\)</span> é chamado de <em>grupo geral linear</em>. Se <span class="math inline">\(V\)</span> tem dimensão finita, então pode-se definir <span class="math display">\[
-\SLV V=\{f\in \GLV V\mid \det f=1\}.
-\]</span> (Note que o determinante de um operador linear de um espaço de dimensão finita é bem definido e independe da base.) O grupo <span class="math inline">\(\SLV V\)</span> é chamado de <em>grupo especial linear</em>.</li>
-<li>Seja <span class="math inline">\(\F\)</span> um corpo e <span class="math inline">\(n\geq 1\)</span>. Defina <span class="math display">\[
-\GL n\F=\{A\in M_{n\times n}(\F)\mid \mbox{$A$ é invertível}\}
-\]</span> e <span class="math display">\[
-\SL n\F=\{A\in \GL n\F\mid \det A=1\}.
-\]</span> Estes conjuntos são grupos com a operação de multiplicação matricial. Os grupos <span class="math inline">\(\GL n\F\)</span> e <span class="math inline">\(\SL n\F\)</span> são também chamados de grupo geral linear e grupo especial linear. Se <span class="math inline">\(\F=\Z_p\)</span>, então escrevemos <span class="math inline">\(\GL np\)</span> e <span class="math inline">\(\SL np\)</span> para <span class="math inline">\(\GL n{\Z_p}\)</span> e para <span class="math inline">\(\SL n{\Z_p}\)</span>. Similarmente, se <span class="math inline">\(\F\)</span> é um corpo finito de ordem <span class="math inline">\(q\)</span>, então escreve-se <span class="math inline">\(\GL n\F=\GL nq\)</span>. Esta notação usa o fato que um corpo finito está unicamente determinado, a menos de isomorfismo, pela sua cardinalidade. Se <span class="math inline">\(V\)</span> é um espaço vetorial de dimensão <span class="math inline">\(n\)</span> sobre <span class="math inline">\(\F\)</span>, então os grupos <span class="math inline">\(\GLV V\)</span>, <span class="math inline">\(\GL n\F\)</span>, e <span class="math inline">\(\SLV V\)</span>, <span class="math inline">\(\SL n\F\)</span> são claramente relacionados, e nós vamos estudar esta relação mais tarde quando tratarmos o conceito de isomorfismo. Neste momento é importante entender que <span class="math inline">\(\GLV V\)</span> e <span class="math inline">\(\GL n\F\)</span> não são idênticos (iguais).</li>
-<li>Seja <span class="math inline">\(n\geq 3\)</span> e considere um polígono regular com <span class="math inline">\(n\)</span> lados desenhado no plano. Este polígono possui <span class="math inline">\(n\)</span> simetrias de rotação (por <span class="math inline">\(360/n\)</span> graus para <span class="math inline">\(n=0,\ldots,n-1\)</span>) e <span class="math inline">\(n\)</span> simetrias reflexivas. A coleção destas simetrias é fechada para a composição e é chamada de <em>grupo diedral</em> de grau <span class="math inline">\(n\)</span>. O grupo diedral é denotado por <span class="math inline">\(D_n\)</span>.</li>
-</ul>
-</div>
-</section>
-<section id="ordem-de-grupo-ordem-de-elemento" class="level2" data-number="89.4">
-<h2 data-number="89.4" data-anchor-id="ordem-de-grupo-ordem-de-elemento"><span class="header-section-number">89.4</span> Ordem de grupo, ordem de elemento</h2>
-<div id="def-order" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.4</strong></span> A <em>ordem</em> de um grupo <span class="math inline">\(X\)</span> é a cardinalidade de <span class="math inline">\(X\)</span> e é denotada por <span class="math inline">\(|X|\)</span>. Se <span class="math inline">\(|X|\)</span> é finita, então dizemos que <span class="math inline">\(X\)</span> é um <em>grupo finito</em>. Caso contrário, diz-se que <span class="math inline">\(X\)</span> é um <em>grupo infinito</em>. Se <span class="math inline">\(x\in X\)</span>, então a <em>ordem</em> <span class="math inline">\(|x|\)</span> de <span class="math inline">\(x\)</span> é definida na maneira seguinte. Se existir <span class="math inline">\(n\geq 1\)</span> tal que <span class="math inline">\(x^n=1\)</span>, então <span class="math inline">\(|x|\)</span> é igual ao menor tal <span class="math inline">\(n\geq 1\)</span>. Se tal número <span class="math inline">\(n\)</span> não existir, então <span class="math inline">\(|x|\)</span> é infinito.</p>
-</div>
-<div id="exm-order" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.2</strong></span> &nbsp;</p>
-<ul>
-<li>A ordem de <span class="math inline">\(S_n\)</span> (e mais geralmente a ordem de <span class="math inline">\(\sym X\)</span> quando <span class="math inline">\(|X|=n\)</span>) é o número total de permutações do conjunto <span class="math inline">\(\{1,\ldots,n\}\)</span>. Sabemos de Análise Combinatória que este número é <span class="math inline">\(n!\)</span> (n fatorial). Logo <span class="math inline">\(|S_n|=n!\)</span>.</li>
-<li><span class="math inline">\(|D_n|=2n\)</span>.</li>
-<li>A ordem de <span class="math inline">\(\operatorname{GL}(n,p)\)</span> é <span class="math display">\[
-p^{n(n-1)/2}\prod_{k=1}^n (p^k-1).
-\]</span> Mais geralmente, se <span class="math inline">\(\mathbb F\)</span> é um corpo finito com <span class="math inline">\(q\)</span> elementos, então a ordem de <span class="math inline">\(\operatorname{GL}(n,q)\)</span> pode ser calculada usando a mesma fórmula, só substituindo <span class="math inline">\(p\)</span> com <span class="math inline">\(q\)</span>. O leitor vai verificar isso nos exercícios.</li>
-</ul>
-</div>
-<div id="exm-order-el" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.3</strong></span> &nbsp;</p>
-<ul>
-<li>Se <span class="math inline">\(G\)</span> for um grupo, o único elemento de ordem <span class="math inline">\(1\)</span> é a identidade <span class="math inline">\(1\)</span>.</li>
-<li>Se <span class="math inline">\(a\in\Z\setminus\{0\}\)</span>, então <span class="math inline">\(|a|=\infty\)</span>.</li>
-<li>Se <span class="math inline">\(2\in \Z_6\)</span>, então <span class="math inline">\(|2|=3\)</span>.</li>
-<li>Se <span class="math inline">\(2\in\Z_5^*\)</span>, então <span class="math inline">\(|2|=4\)</span>.</li>
-<li>Seja <span class="math inline">\(M\)</span> a matriz <span class="math display">\[
-\begin{pmatrix} 0 &amp; i \\ i &amp; 0\end{pmatrix}\in\operatorname{GL}(2,\C).
-\]</span> Então <span class="math inline">\(|M|=4\)</span>.</li>
-<li>Seja <span class="math inline">\(A\)</span> a matriz <span class="math display">\[
-\begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 1\end{pmatrix}\in\operatorname{GL}(2,\C).
-\]</span> Então <span class="math inline">\(|A|=\infty\)</span>.</li>
-</ul>
-</div>
-<div id="exr-oder" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 89.1</strong></span> Demonstre que se <span class="math inline">\(G\)</span> é um grupo finito e <span class="math inline">\(a\in G\)</span>, então <span class="math inline">\(|a|\)</span> é finito.</p>
-</div>
-<div id="lem-order-div" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 89.2</strong></span> Assuma que <span class="math inline">\(a\in G\)</span> e <span class="math inline">\(a^k=1\)</span> com algum <span class="math inline">\(k\geq 1\)</span>. Então <span class="math inline">\(|a|\)</span> é um divisor de <span class="math inline">\(k\)</span>.</p>
+<section id="a-cardinalidade-do-conjunto-das-partes" class="level2" data-number="15.4">
+<h2 data-number="15.4" data-anchor-id="a-cardinalidade-do-conjunto-das-partes"><span class="header-section-number">15.4</span> A cardinalidade do conjunto das partes</h2>
+<p>O leitor pode se perguntar se existe uma cardinalidade maior que a do conjunto dos números reais. A resposta é sim, e de fato existem cardinalidades infinitas cada vez maiores. Uma maneira de construir conjuntos com cardinalidades maiores é considerar o conjunto das partes de um conjunto dado.</p>
+<p>Lembra que o conjunto das partes <span class="math inline">\(\mathcal P(A)\)</span> de um conjunto <span class="math inline">\(A\)</span> é o conjunto formado por todos os subconjuntos de <span class="math inline">\(A\)</span>. Por exemplo, se <span class="math inline">\(A = \{1, 2\}\)</span>, então o conjunto das partes de <span class="math inline">\(A\)</span> é dado por: <span class="math display">\[
+\mathcal P(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}.
+\]</span></p>
+<div id="thm-cardenalidade-conjunto-das-partes" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 15.1</strong></span> Sendo <span class="math inline">\(A\)</span> um conjunto qualquer (possívelmente infinito), não existe uma função sobrejetora de <span class="math inline">\(A\)</span> para <span class="math inline">\(\mathcal P(A)\)</span>. Em particular, a cardinalidade de <span class="math inline">\(\mathcal P(A)\)</span> é estritamente maior que a cardinalidade de <span class="math inline">\(A\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Primeiro, a definição de <span class="math inline">\(|a|\)</span> implica que <span class="math inline">\(|a|\)</span> é finito. Assuma que <span class="math inline">\(m=|a|\)</span> e escreva, <span class="math inline">\(k=qm+r\)</span> com <span class="math inline">\(r\in\{0,\ldots,m-1\}\)</span> (<a href="../FundamentosDeAlgebra/divisao.html#thm-euclides" class="quarto-xref">Teorema&nbsp;<span>17.1</span></a>). Temos que <span class="math display">\[
-1=a^k=a^{qm+r}=(a^m)^qa^r=a^r.
-\]</span> Ou seja, <span class="math inline">\(a^r=1\)</span>. Como <span class="math inline">\(m\)</span> é o menor inteiro positivo tal que <span class="math inline">\(a^m=1\)</span>, obtemos que <span class="math inline">\(r=0\)</span>. Logo <span class="math inline">\(m\mid k\)</span>, como foi afirmado.</p>
-</div>
-<div id="exm-fermat-euler" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.4</strong></span> Seja <span class="math inline">\(p\)</span> um primo e seja <span class="math inline">\(\Z_p^*=\Z_p\setminus\{0\}\)</span>. Considere o grupo <span class="math inline">\((\Z_p,\cdot)\)</span>. Pelo Pequeno Teorema de Fermat (<a href="../FundamentosDeAlgebra/fermat_euler.html#thm-ptf" class="quarto-xref">Teorema&nbsp;<span>27.1</span></a>), temos que <span class="math inline">\(a^{p-1}=1\)</span> para todo <span class="math inline">\(a\in \Z_p^*\)</span>. O lema anterior implica que <span class="math inline">\(|a|\mid p-1\)</span>.</p>
-<p>Similarmente, denote the por <span class="math inline">\(\Z_n^*\)</span> o conjunto de elementos invertíveis de <span class="math inline">\(\Z_n\)</span>. Então <span class="math inline">\(\Z_n^*\)</span> é um grupo para a multiplicação entre classes residuais. Sabemos do Teorema de Euler (<a href="../FundamentosDeAlgebra/fermat_euler.html#thm-euler" class="quarto-xref">Teorema&nbsp;<span>27.3</span></a>) que <span class="math display">\[
-a^{\varphi(n)}=1\quad\mbox{para todo}\quad a\in\Z_n^*.
-\]</span> Logo, <span class="math inline">\(|a|\mid\varphi(n)\)</span> vale para todo <span class="math inline">\(a\in\Z_n^*\)</span>.</p>
-</div>
-</section>
-<section id="a-notação-cíclica-para-permutações" class="level2" data-number="89.5">
-<h2 data-number="89.5" data-anchor-id="a-notação-cíclica-para-permutações"><span class="header-section-number">89.5</span> A notação cíclica para permutações</h2>
-<p>O grupo simétrico está entre os grupos mais importantes. Portanto é importante entender a notação usada para os elementos de <span class="math inline">\(S_n\)</span>.</p>
-<p>Primeiro, se <span class="math inline">\(\sigma\in\sym\Omega\)</span> e <span class="math inline">\(\alpha\in\Omega\)</span>, então a imagem de <span class="math inline">\(\alpha\)</span> por <span class="math inline">\(\sigma\)</span> será denotada por <span class="math display">\[
-\alpha\sigma.
-\]</span> Ou seja, a bijeção <span class="math inline">\(\sigma\)</span> será escrita no lado direito de <span class="math inline">\(\alpha\)</span>! Quando necessário, poderá-se usar parêntesis e escrever <span class="math inline">\((\alpha)\sigma\)</span>.</p>
-<p>É uma consequência desta notação que as permutações serão compostas da esquerda para a direita. Ou seja, a composição <span class="math inline">\(\sigma_1\sigma_2\)</span> será calculada por aplicar <span class="math inline">\(\sigma_1\)</span> primeiro e <span class="math inline">\(\sigma_2\)</span> depois.</p>
-<p>Considere por exemplo <span class="math inline">\(S_8\)</span>; ou seja, o grupo de permutações do conjunto <span class="math inline">\(\Omega=\{1,\ldots,8\}\)</span>. Uma permutação <span class="math inline">\(\sigma\in S_8\)</span> é uma bijeção <span class="math inline">\(\sigma:\Omega\to\Omega\)</span>. Uma notação sensata é fazer uma lista de <span class="math inline">\(\Omega\)</span> com as imagens dos seus elementos. Por exemplo, <span class="math display">\[
-\sigma_1=\left[\begin{array}{cccccccc}
-1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8\\
-2 &amp; 3 &amp; 4 &amp; 8 &amp; 7 &amp; 6 &amp; 1 &amp; 5
-\end{array}\right].
-\]</span> Neste caso, <span class="math inline">\(1\sigma_1=2\)</span>, <span class="math inline">\(2\sigma_1=3\)</span>, <span class="math inline">\(3\sigma_1=4\)</span>, etc. Se <span class="math inline">\(\sigma_2\)</span> for um outro elemento de <span class="math inline">\(S_8\)</span>, por exemplo, <span class="math display">\[
-\sigma_2=\left[\begin{array}{cccccccc}
-1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8\\
-4 &amp; 6 &amp; 1 &amp; 3 &amp; 5 &amp; 8 &amp; 7 &amp; 2
-\end{array}\right],
-\]</span> então, lembrando que <span class="math inline">\(\sigma_1\sigma_2\)</span> significa “<span class="math inline">\(\sigma_1\)</span> primeiro e depois <span class="math inline">\(\sigma_2\)</span>”, <span class="math display">\[
-\sigma_1\sigma_2=\left[\begin{array}{cccccccc}
-1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8\\
-6 &amp; 1 &amp; 3 &amp; 2 &amp; 7 &amp; 8 &amp; 4 &amp; 5
-\end{array}\right].
-\]</span></p>
-<p>A <em>notação cíclica</em> nos permite usar uma notação mais compacta para permutações.</p>
-<div id="def-cycle" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.5</strong></span> Seja <span class="math inline">\(\Omega\)</span> um conjunto e <span class="math inline">\(a_1,\ldots,a_k\in\Omega\)</span> elementos dois a dois distintos. O cíclo <span class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> é a permutação de <span class="math inline">\(\sym\Omega\)</span> que leva <span class="math display">\[
-a_1\mapsto a_2,\ a_2\mapsto a_3,\ldots, a_{k-1}\mapsto a_k,\ a_k\mapsto a_1
-\]</span> e deixa todo outro elemento de <span class="math inline">\(\Omega\)</span> fixado.</p>
-</div>
-<div class="{exm-cycle}">
-<p>Por exemplo, o cíclo <span class="math inline">\((1,2,3,4,8,5,7)\in S_8\)</span> é a permutação de <span class="math inline">\(\Omega=\{1,\ldots,8\}\)</span> que leva <span class="math display">\[
-\left[\begin{array}{cccccccc}
-1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8\\
-2 &amp; 3 &amp; 4 &amp; 8 &amp; 7 &amp; 6 &amp; 1 &amp; 5
-\end{array}\right].
-\]</span> Ou seja, este ciclo coincide com a permutação <span class="math inline">\(\sigma_1\)</span> em cima. Este mesmo ciclo pode ser também escrito como <span class="math inline">\((1,2,3,4,8,5,7)(6)\)</span> para indicar que o número <span class="math inline">\(6\)</span> está fixado. O mesmo ciclo pode ser escrito também como <span class="math inline">\((3,4,8,5,7,1,2)\)</span>; ou seja, começando com um outro elemento de <span class="math inline">\(\Omega\)</span>. Os ciclos <span class="math inline">\((1,2,3,4,8,5,7)\)</span> e <span class="math inline">\((3,4,8,5,7,1,2)\)</span> são iguais como permutações.</p>
-</div>
-<div id="def-distinct-cycle" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 89.6</strong></span> Sejam <span class="math inline">\(a_1,\ldots,a_k\in \Omega\)</span> dois a dois distintos e <span class="math inline">\(b_1,\ldots,b_m\in \Omega\)</span> também dois a dois distintos. Os ciclos <span class="math inline">\((a_1,\ldots,a_k)\)</span> e <span class="math inline">\((b_1,\ldots,b_m)\)</span> são <em>disjuntos</em> se <span class="math display">\[
-\{a_1,\ldots,a_k\}\cap\{b_1,\ldots,b_m\}=\emptyset.
-\]</span></p>
-</div>
-<div id="lem-distinct-commute" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 89.3</strong></span> Ciclos disjuntos comutam. Ou seja, se <span class="math inline">\(\sigma_1,\sigma_2\in\sym\Omega\)</span> são ciclos disjuntos, então <span class="math inline">\(\sigma_1\sigma_2=\sigma_2\sigma_1\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Exercício.</p>
-</div>
-<div id="exm-prod-cycle" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.5</strong></span> A permutação <span class="math inline">\(\sigma_2\)</span> em cima não é um ciclo, mas pode ser escrita como um produto de ciclos disjuntos: <span class="math display">\[
-\sigma_2=(1,4,3)(2,6,8)=(1,4,3)(2,6,8)(5)(7).
-\]</span></p>
-<p>A permutação <span class="math inline">\(\sigma_1\sigma_2\)</span> pode ser escrita como <span class="math display">\[
-\sigma_1\sigma_2=(1,6,8,5,7,4,2)=(1,6,8,5,7,4,2)(3).
-\]</span> Portanto, a equação a multiplicação (composição) de <span class="math inline">\(\sigma_1\)</span> e <span class="math inline">\(\sigma_2\)</span> pode ser escrita como <span class="math display">\[
-\sigma_1\sigma_2=(1,2,3,4,8,5,7)(1,4,3)(2,6,8)=(1,6,8,5,7,4,2).
-\]</span></p>
-</div>
-<p>Enunciamos o seguinte teorema sem demonstração. A demonstração não é difícil, convidamos o leitor para prová-lo.</p>
-<div id="thm-cycle-decomp" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 89.1</strong></span> Todo elemento de <span class="math inline">\(S_n\)</span> pode ser escrito como produto de ciclos disjuntos. Além disso, esta decomposição é única a menos da ordem dos ciclos.</p>
-</div>
-<div id="exm-veritassium" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 89.6</strong></span> O seguinte vídeo apresenta um puzzle que pode ser resolvido usando a notação cíclica de permutações.</p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/iSNsgj1OCLA" width="560" height="315" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Suponha, para fins de contradição, que exista uma função sobrejetora <span class="math inline">\(f: A \to \mathcal P(A)\)</span>. Isso significa que para cada subconjunto <span class="math inline">\(B\)</span> de <span class="math inline">\(A\)</span>, existe um elemento <span class="math inline">\(a \in A\)</span> tal que <span class="math inline">\(f(a) = B\)</span>. Agora, vamos construir um subconjunto especial de <span class="math inline">\(A\)</span>, chamado de conjunto diagonal <span class="math inline">\(D\)</span>, definido da seguinte forma: <span class="math display">\[
+D = \{a \in A \mid a \notin f(a)\}.
+\]</span> Ou seja, o conjunto <span class="math inline">\(D\)</span> contém todos os elementos de <span class="math inline">\(A\)</span> que não pertencem ao subconjunto que lhes é associado pela função <span class="math inline">\(f\)</span>. Agora, como <span class="math inline">\(f\)</span> é sobrejetora, deve existir um elemento <span class="math inline">\(d \in A\)</span> tal que <span class="math inline">\(f(d) = D\)</span>. Agora, vamos analisar se o elemento <span class="math inline">\(d\)</span> pertence ao conjunto <span class="math inline">\(D\)</span> ou não.</p>
+<ul>
+<li>Se <span class="math inline">\(d \in D\)</span>, então, pela definição de <span class="math inline">\(D\)</span>, temos que <span class="math inline">\(d \notin f(d)\)</span>. Mas como <span class="math inline">\(f(d) = D\)</span>, isso implica que <span class="math inline">\(d \notin D\)</span>, o que é uma contradição.</li>
+<li>Se <span class="math inline">\(d \notin D\)</span>, então, novamente pela definição de <span class="math inline">\(D\)</span>, temos que <span class="math inline">\(d \in f(d)\)</span>. Mas como <span class="math inline">\(f(d) = D\)</span>, isso implica que <span class="math inline">\(d \in D\)</span>, o que também é uma contradição.</li>
+</ul>
+<p>Logo, em ambos os casos, chegamos a uma contradição. Portanto, nossa suposição inicial de que existe uma função sobrejetora de <span class="math inline">\(A\)</span> para <span class="math inline">\(\mathcal P(A)\)</span> é falsa. Isso implica que a cardinalidade de <span class="math inline">\(\mathcal P(A)\)</span> é estritamente maior que a cardinalidade de <span class="math inline">\(A\)</span>.</p>
 </div>
 
 
@@ -2015,13 +1965,13 @@ a_1\mapsto a_2,\ a_2\mapsto a_3,\ldots, a_{k-1}\mapsto a_k,\ a_k\mapsto a_1
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../GruposECorpos/index.html" class="pagination-link" aria-label="Grupos e Corpos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Grupos e Corpos</span>
+      <a href="../IniciacaoAMatematica/ex5.html" class="pagination-link" aria-label="Lista de Exercícios">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lista de Exercícios</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../GruposECorpos/lagrange.html" class="pagination-link" aria-label="Subgrupos e classes laterais">
-        <span class="nav-page-text"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">Subgrupos e classes laterais</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../IniciacaoAMatematica/ex6.html" class="pagination-link" aria-label="ex6.html">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">ex6.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
