@@ -214,3 +214,89 @@ Seja $a=[a_n\cdots a_1a_0]_b$ um número natural escrito na base $b\geq 2$.
 :::
 
 
+:::{#exr-}
+Caclule a soma e o produto dos seguintes números complexos: 
+
+1. $z_1=2+i$ e $z_2=3+4i$;
+2. $z_1=1-i$ e $z_2=5+2i$;
+3. $z_1=4+3i$ e $z_2=2-5i$.
+:::
+
+:::{#exr-}
+Calcule o módulo, o argumento, o conjugado e o inverso dos seguintes números complexos:
+
+1. $z=3+4i$;
+2. $z=1-\sqrt{3}i$;
+3. $z=-2+\sqrt{2}i$;
+4. $z=-1- i$.
+:::
+
+:::{#exr-polar}
+Escreva os seguintes números complexos na forma polar:
+
+1. $z=1+i$;
+2. $z=1-\sqrt{3}i$;
+3. $z=-\sqrt{3}+i$;
+4. $z=-1-1i$.
+:::
+
+:::{#exr-}
+Utilizando a forma polar, calcule o produto e o quociente dos números complexos 
+no @exr-polar. 
+:::
+
+:::{#exr-}
+Utilizando a forma polar, calcule $z^k$ com $k=2,3,4$ dos números complexos no @exr-polar.
+:::
+
+:::{#exr-}
+Utilizando a forma polar, calcule as raízes $n$-ésimas dos seguintes números complexos:
+
+1. $z=1+i$, com $n=3$;
+2. $z=1-\sqrt{3}i$, com $n=4$;
+3. $z=-\sqrt{3}+i$, com $n=6$;
+4. $z=-1-1i$, com $n=5$.
+:::
+
+:::{#exr-}
+Seja $k\geq 2$ um inteiro e sejam $\xi_1,\ldots,\xi_k$ as raízes $k$-ésimas da unidade. Mostre que
+
+1. $\xi_1+\xi_2+\cdots+\xi_k=0$;
+2. $\xi_1\xi_2\cdots \xi_k=(-1)^{k+1}$.
+:::
+
+:::{#exr-}
+Resolva os seguintes polinômios no conjunto dos números complexos:
+
+1. $z^2+2z+5=0$;
+2. $z^2-4z+8=0$;
+3. $z^3-3z^2+4=0$;
+4. $z^3+1=0$.
+:::
+
+:::{#exr-}
+Considere a matriz 
+$$
+A=\begin{bmatrix}0 & 1\\-1 & 0\end{bmatrix}.
+$$
+
+1. Seguindo as técnicas que você aprendeu em GAAL, mostre que $A$ não possui autovalores reais.
+2. Mostre que $A$ possui dois autovalores complexos e determine os autovetores associados 
+em $\C^2$. 
+3. Ache uma matriz invertível $P\in M_2(\C)$ tal que $P^{-1}AP$ é uma matriz diagonal.
+:::
+
+:::{#exr-}
+Considere o conjunto das matrizes de ordem $2$ com entradas em $\R$ definido por
+$$
+G=\left\{\begin{bmatrix}a & -b\\b & a\end{bmatrix}\mid a,b\in\R\right\}.
+$$
+Seja 
+$$
+\psi:\C\to G,\quad \psi(a+bi)=\begin{bmatrix}a & -b\\b & a\end{bmatrix}.
+$$
+
+1. Mostre que $\psi$ é uma bijeção.
+2. Mostre que $\psi(z_1+z_2)=\psi(z_1)+\psi(z_2)$ e $\psi(z_1z_2)=\psi(z_1)\psi(z_2)$ para todos $z_1,z_2\in\C$.
+3. Conclua que os números complexos podem ser realizados como certas matrizes $2\times 2$ com entradas reais.
+:::
