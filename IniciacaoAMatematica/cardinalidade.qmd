@@ -43,7 +43,7 @@ então é possível que a cardinalidade de $A$ seja igual à cardinalidade de um
 Isso vale porque, por exemplo, a função $f: \mathbb{N} \to \{0, 2, 4, 6, \ldots\}$ dada por $f(n) = 2n$ é uma bijeção entre esses dois conjuntos.
 
 
-Estes tipos de fenômenos são ilustrados pelo paradoxo do Hotel de [Hilbert]{https://pt.wikipedia.org/wiki/David_Hilbert}, 
+Estes tipos de fenômenos são ilustrados pelo paradoxo do Hotel de [Hilbert](https://pt.wikipedia.org/wiki/David_Hilbert), 
 que pode ser assistido nos vídeos a seguir:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WK47hxmVdv4?si=LKB_ZLkehaCdVNHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
