@@ -103,7 +103,7 @@ escolhemos o dígito $c_2$ diferente de $b_{22}$ e diferente de 9, e assim por d
 não possui uma sequência infinita de 9s. Isso contradiz nossa suposição inicial de que todos os números reais no intervalo $(0,1)$ foram enumerados. Portanto, concluímos que o conjunto dos números reais $\mathbb{R}$ é não enumerável.
 :::
 
-:::{#lem-}
+:::{#lem-continuun-sets}
 Os seguintes conjuntos tem a mesma cardinalidade dos números reais $\mathbb{R}$:
 
 1. O intervalo aberto $(0,1)$.

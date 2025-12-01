@@ -318,3 +318,33 @@ z_j&=z_0\xi_j=\sqrt[k]r(\cos{(\vartheta/k)}+i\sen{(\vartheta/k)})\left(\cos{\fra
 \end{align*}
 :::
 
+:::{#exm-}
+Vamos resolver a seguinte equação no conjunto dos números complexos:
+$$
+x^6-2x^3+2=0. 
+$$
+Primeiro, fazemos a substituição $y=x^3$ e obtemos a equação quadrática
+$$
+y^2-2y+2=0.
+$$
+Usando a fórmula de Bhaskara, encontramos as soluções
+$$
+y=1\pm i.
+$$
+Agora, precisamos encontrar as raízes cúbicas de $1+i$ e $1-i$. Note que
+\begin{align*}
+1+i&=\sqrt{2}\left(\cos{\frac{\pi}{4}}+i\operatorname{sen}{\frac{\pi}{4}}\right);\\
+1-i&=\sqrt{2}\left(\cos{\frac{7\pi}{4}}+i\operatorname{sen}{\frac{7\pi}{4}}\right).
+\end{align*}
+As raízes cúbicas de $1+i$ são
+\begin{align*}
+z_j&=\sqrt[6]{2}\left(\cos{\frac{\pi+8j\pi}{12}}+i\operatorname{sen}{\frac{\pi+8j\pi}{12}}\right)\\
+&=\sqrt[6]{2}\left(\cos{\frac{(1+8j)\pi}{12}}+i\operatorname{sen}{\frac{(1+8j)\pi}{12}}\right)
+\end{align*}
+com $j=0,1,2$. As raízes cúbicas de $1-i$ são
+\begin{align*}
+w_j&=\sqrt[6]{2}\left(\cos{\frac{7\pi+8j\pi}{12}}+i\operatorname{sen}{\frac{7\pi+8    j\pi}{12}}\right)\\
+&=\sqrt[6]{2}\left(\cos{\frac{(7+8j)\pi}{12}}+i\operatorname{sen}{\frac{(7+8j)\pi}{12}}\right)
+\end{align*}
+com $j=0,1,2$. Portanto, as seis soluções da equação original são $z_0,z_1,z_2,w_0,w_1,w_2$.
+:::

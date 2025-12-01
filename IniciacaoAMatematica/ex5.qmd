@@ -277,13 +277,13 @@ Resolva os seguintes polinômios no conjunto dos números complexos:
 :::{#exr-}
 Considere a matriz 
 $$
-A=\begin{bmatrix}0 & 1\\-1 & 0\end{bmatrix}.
+J=\begin{bmatrix}0 & 1\\-1 & 0\end{bmatrix}.
 $$
 
-1. Seguindo as técnicas que você aprendeu em GAAL, mostre que $A$ não possui autovalores reais.
-2. Mostre que $A$ possui dois autovalores complexos e determine os autovetores associados 
+1. Seguindo as técnicas que você aprendeu em GAAL, mostre que $J$ não possui autovalores reais.
+2. Mostre que $J$ possui dois autovalores complexos e determine os autovetores associados 
 em $\C^2$. 
-3. Ache uma matriz invertível $P\in M_2(\C)$ tal que $P^{-1}AP$ é uma matriz diagonal.
+3. Ache uma matriz invertível $P\in M_2(\C)$ tal que $P^{-1}JP$ é uma matriz diagonal.
 :::
 
 :::{#exr-}
@@ -299,4 +299,19 @@ $$
 1. Mostre que $\psi$ é uma bijeção.
 2. Mostre que $\psi(z_1+z_2)=\psi(z_1)+\psi(z_2)$ e $\psi(z_1z_2)=\psi(z_1)\psi(z_2)$ para todos $z_1,z_2\in\C$.
 3. Conclua que os números complexos podem ser realizados como certas matrizes $2\times 2$ com entradas reais.
+4. Identifique a matriz que corresponde ao número complexo $i$ e calcule sua potência $n$-ésima para $n\in\N$.
 :::
+
+:::{#exr-}
+Demonstre a identidade de Euler que 
+$$
+e^{i\theta}=\cos(\theta)+i\sin(\theta)
+$$ 
+usando as seguintes séries de Taylor das funções exponencial, cosseno e seno:
+\begin{align*}
+e^x&=\sum_{n=0}^\infty \frac{x^n}{n!},\\
+\cos(x)&=\sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}x^{2n},\\
+\sin(x)&=\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}.
+\end{align*}
+:::
+
