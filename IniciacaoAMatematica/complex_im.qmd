@@ -348,3 +348,15 @@ w_j&=\sqrt[6]{2}\left(\cos{\frac{7\pi+8j\pi}{12}}+i\operatorname{sen}{\frac{7\pi
 \end{align*}
 com $j=0,1,2$. Portanto, as seis soluções da equação original são $z_0,z_1,z_2,w_0,w_1,w_2$.
 :::
+
+## O Teorema fundamental da Álgebra
+
+Os números complexos foram introduzidos para resolver equações polinomiais que não possuem soluções reais. De fato, o [Teorema Fundamental da Álgebra](https://pt.wikipedia.org/wiki/Teorema_fundamental_da_%C3%A1lgebra) afirma que todo polinômio não constante com coeficientes complexos possui pelo menos uma raiz complexa.
+
+:::{#thm-fundamental-algebra}
+Seja $p(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots+a_1z+a_0$ um polinômio com coeficientes em $\C$ 
+(ou em $\R$) com $n\geq 1$ e $a_n\neq 0$. Então existe $z_0\in\C$ tal que $p(z_0)=0$.
+:::
+
+A demonstração do Teorema Fundamental da Álgebra está fora do escopo desta disciplina e será 
+provada na disciplina Variável Complexa.  
