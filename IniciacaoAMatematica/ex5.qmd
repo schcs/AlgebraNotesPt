@@ -220,6 +220,8 @@ Caclule a soma e o produto dos seguintes números complexos:
 1. $z_1=2+i$ e $z_2=3+4i$;
 2. $z_1=1-i$ e $z_2=5+2i$;
 3. $z_1=4+3i$ e $z_2=2-5i$.
+
+Esboçe os números e as suas somas e produtos no plano complexo.
 :::
 
 :::{#exr-}
@@ -229,6 +231,8 @@ Calcule o módulo, o argumento, o conjugado e o inverso dos seguintes números c
 2. $z=1-\sqrt{3}i$;
 3. $z=-2+\sqrt{2}i$;
 4. $z=-1- i$.
+
+Esboçe os números no plano complexo.
 :::
 
 :::{#exr-polar}
@@ -238,24 +242,31 @@ Escreva os seguintes números complexos na forma polar:
 2. $z=1-\sqrt{3}i$;
 3. $z=-\sqrt{3}+i$;
 4. $z=-1-1i$.
+
+Esboçe os números no plano complexo.
 :::
 
 :::{#exr-}
 Utilizando a forma polar, calcule o produto e o quociente dos números complexos 
-no @exr-polar. 
+no @exr-polar. Esboçe os números obtidos no plano complexo.
 :::
 
 :::{#exr-}
-Utilizando a forma polar, calcule $z^k$ com $k=2,3,4$ dos números complexos no @exr-polar.
+Utilizando a forma polar, calcule $z^k$ com $k=2,3,4,5$ dos números complexos no @exr-polar.
+Esboçe os números obtidos no plano complexo.
 :::
 
 :::{#exr-}
 Utilizando a forma polar, calcule as raízes $n$-ésimas dos seguintes números complexos:
 
-1. $z=1+i$, com $n=3$;
-2. $z=1-\sqrt{3}i$, com $n=4$;
-3. $z=-\sqrt{3}+i$, com $n=6$;
-4. $z=-1-1i$, com $n=5$.
+1. $z=1$, $n=1,2,3,4,5,6$;
+2. $z=2$, $n=1,2,3,4,5,6$;
+3. $z=1+i$, com $n=3$;
+4. $z=1-\sqrt{3}i$, com $n=4$;
+5. $z=-\sqrt{3}+i$, com $n=6$;
+6. $z=-1-1i$, com $n=5$.
+
+Esboçe os números obtidos no plano complexo.
 :::
 
 :::{#exr-}
@@ -272,6 +283,9 @@ Resolva os seguintes polinômios no conjunto dos números complexos:
 2. $z^2-4z+8=0$;
 3. $z^3-3z^2+4=0$;
 4. $z^3+1=0$.
+5. $z^{6}-z^3+1=0$. 
+
+Esboçe as raízes no plano complexo.
 :::
 
 :::{#exr-}
@@ -287,7 +301,7 @@ em $\C^2$.
 :::
 
 :::{#exr-}
-Considere o conjunto das matrizes de ordem $2$ com entradas em $\R$ definido por
+Considere o conjunto das matrizes $2\times 2$ com entradas em $\R$ definido por
 $$
 G=\left\{\begin{bmatrix}a & -b\\b & a\end{bmatrix}\mid a,b\in\R\right\}.
 $$
@@ -300,6 +314,18 @@ $$
 2. Mostre que $\psi(z_1+z_2)=\psi(z_1)+\psi(z_2)$ e $\psi(z_1z_2)=\psi(z_1)\psi(z_2)$ para todos $z_1,z_2\in\C$.
 3. Conclua que os números complexos podem ser realizados como certas matrizes $2\times 2$ com entradas reais.
 4. Identifique a matriz que corresponde ao número complexo $i$ e calcule sua potência $n$-ésima para $n\in\N$.
+4. Identifique as matrizes que correspondem aos números reais e aos números puramente imaginários. 
+:::
+
+:::{#exr-}
+Seja 
+$$
+A=\begin{bmatrix}1 & i\\i & -1\end{bmatrix}.
+$$
+
+1. Mostre que o único autovalor complexo de $A$ é $0$ e os autovetores associados são todos os múltiplos escalares de
+um vetor específico que você deve encontrar. 
+2. Deduza que $A$ não é diagonalizável sobre $\C$ mesmo sendo simétrica. Reflita sobre a diferença entre matrizes simétricas com entradas reais e com entradas complexas considerando o que você aprendeu em GAAL.
 :::
 
 :::{#exr-}
@@ -314,4 +340,38 @@ e^x&=\sum_{n=0}^\infty \frac{x^n}{n!},\\
 \sin(x)&=\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}.
 \end{align*}
 :::
+
+
+:::{#exr-}
+Usando a fórmula quadrática, resolva a equação $z^{2}+z+1=0$ para números complexos $z$. Demonstre que as soluções são terceiras raízes da unidade. Consegue explicar porque?
+:::
+
+
+:::{#exr-}
+Esboce os seguintes conjuntos no plano complexo.
+
+1. $\{z \in \mathbb{C}||z| \leq 1\}$;
+2. $\{z \in \mathbb{C}||z-i| \leq 1\}$;
+3. $\{z \in \mathbb{C} \mid \operatorname{Im}(z) \in[-1,1]\}$;
+4. $\left\{z \in \mathbb{C} \mid \operatorname{Im}\left(z^{2}\right)=1\right\}$.
+:::
+
+
+:::{#exr-}
+Encontre um valor $\vartheta$ tal que a $|\exp (i \vartheta)-1|=2$.
+:::
+
+:::{#exr-}
+[Vestibular ITA 2023] Calcule a soma de todos os coeficientes das potências com expoentes múltiplas de 3 na expansão de
+$$
+p(x)=\left(1+x^{2}-x^{3}+x^{4}\right)^{10}
+$$
+
+[Dica: Sejam $1, \omega, \omega^{2}$ as três terceiras raízes da unidade. Calcule $p(1)+p(\omega)+p\left(\omega^{2}\right)$. Para mais detalhes consute o vídeo do Professor Engenheiro no youtu.be/FIwrxWT9Qr0.]
+:::
+
+:::{#exr-}
+Usando as regras usuais da função logaritmo e exponencial, atribua um valor à expressão $i^{i}$.
+:::
+
 
