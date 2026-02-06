@@ -8,6 +8,8 @@ lang: pt-BR
 
 ## A definição dos números complexos
 
+mudança
+
 :::{#def-complex-number}
 Um **número complexo** é uma expressão na forma $a+bi$ onde $a,b\in \R$ e $i$ é uma quantidade  com a propriedade que
 $$
