@@ -323,8 +323,17 @@ $$
 Mas $a_1<a$ e isso contradiz a escolha de $a,b$, sendo $a$ mínimo possível. Portanto, não existe nenhum número racional $x$ tal que $x^2=2$.
 :::
 
+:::{#exm-sqrt2_triang}
+Um problema imediato que surge trabalhando apenas com números racionais é que em um triângulo retângulo com catetos de comprimento $1$, o comprimento da hipotenusa não é um número racional. De fato, pelo Teorema de Pitágoras, o comprimento $c$ da hipotenusa satisfaz a equação
+$$
+c^2=1^2+1^2=2.
+$$
+Pelo @lem-sqrt2-not-rat, não existe nenhum número racional que satisfaz essa equação. Portanto, o comprimento da hipotenusa não é um número racional.
+:::
+
+
 :::{#exm-sqrt2}
-Considere por exemplo a função 
+Para explicar um outro problema mais sútil com racionais, considere por exemplo a função 
 $$
 f:\Q\to\Q,\quad f(x)=x^2-2.
 $$
@@ -338,6 +347,7 @@ que diz que se uma função contínua $f:[a,b]\to\R$ satisfaz $f(a)<0$ e $f(b)>0
 O Teorema do Valor Intermediário é uma das propriedades fundamentais das funções reais e é está amplamente usado no 
 estudo de funções nas áreas de Cálculo e Análise. 
 :::
+
 
 Os problemas acima são causadas pelos "buracos" nos números racionais. O termo técnico que descreve essa propriedade 
 é que os números racionais não são completos. A completude dos números reais é uma 

@@ -103,7 +103,7 @@ escolhemos o dígito $c_2$ diferente de $b_{22}$ e diferente de 9, e assim por d
 não possui uma sequência infinita de 9s. Isso contradiz nossa suposição inicial de que todos os números reais no intervalo $(0,1)$ foram enumerados. Portanto, concluímos que o conjunto dos números reais $\mathbb{R}$ é não enumerável.
 :::
 
-:::{#lem-}
+:::{#lem-continuun-sets}
 Os seguintes conjuntos tem a mesma cardinalidade dos números reais $\mathbb{R}$:
 
 1. O intervalo aberto $(0,1)$.
@@ -157,10 +157,13 @@ $$
 $$
 
 :::{#thm-cardenalidade-conjunto-das-partes}
-Sendo $A$ um conjunto qualquer (possívelmente infinito), não existe uma função sobrejetora de $A$ para $\mathcal P(A)$.
+Sendo $A$ um conjunto qualquer (possívelmente infinito), existe uma função injetora 
+$A\to \mathcal P(A)$, mas não existe uma função sobrejetora de $A$ para $\mathcal P(A)$.
 Em particular, a cardinalidade de $\mathcal P(A)$ é estritamente maior que a cardinalidade de $A$. 
 :::
 :::{.proof}
+Primeiro, observe que a aplicação $f: A \to \mathcal P(A)$ dada por $f(a) = \{a\}$ é uma função injetora. Portanto, a cardinalidade de $|\mathcal P(A)|$ é pelo menos $|A|$.
+
 Suponha, para fins de contradição, que exista uma função sobrejetora $f: A \to \mathcal P(A)$. Isso significa que para cada subconjunto $B$ de $A$, existe um elemento $a \in A$ tal que $f(a) = B$. Agora, vamos construir um subconjunto especial de $A$, chamado de conjunto diagonal $D$, definido da seguinte forma:
 $$
 D = \{a \in A \mid a \notin f(a)\}.

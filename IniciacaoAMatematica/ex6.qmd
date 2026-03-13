@@ -1,0 +1,96 @@
+---
+number-sections: true
+lang: pt-BR
+format: 
+    pdf:
+        number-sections: true
+        include-in-header:
+            text: |
+                \setcounter{section}{4}
+---
+
+# Lista de Exercícios
+
+:::{#exr-}
+Seja $A=\{1,2,\ldots,n\}$. Mostre que o conjunto 
+$$
+\mathcal P(A)=\{ X \mid X\subseteq A\}
+$$
+está em bijeção com o conjunto das seqências 
+$$
+\{(a_1,a_2,\ldots,a_n) \mid a_i\in \{0,1\} \text{ para } i=1,2,\ldots,n \}
+$$
+Deduza que $\mathcal P(A)$ tem $2^n$ elementos.
+::: 
+
+
+:::{#exr-}
+Seja $A$ um conjunto de cardinalidade qualquer. 
+
+1. Construa uma bijeção entre $\mathcal P(A)$ e o conjunto das funções de $A$ em $\{0,1\}$.
+2. Deduza que $|\mathcal P(\N)|=|\R|$.
+:::
+
+:::{#exr-}
+Seja $A$ um conjunto enumerável e seja $B$ um subconjunto de $A$. Mostre que $B$ é enumerável ou finito.
+:::
+
+
+:::{#exr-}
+Seja $A$ um conjunto infinito e seja $a$ um elemento qualquer. Mostre que $A$ está em bijeção com $A\cup \{a\}$. Deduza que $|A|=|A\cup \{a\}|$.
+::: 
+
+:::{#exr-}
+Seja $A$ um conjunto infinito e seja $B$ um conjunto finito. Mostre que $|A\cup B|=|A|$.
+:::
+
+:::{#exr-}
+Sejam $A$ e $B$ conjuntos finitos e assuma que $|A|=m$ e $|B|=n$. Mostre que 
+$|A\cup B|=m+n-|A\cap B|$.
+:::
+
+
+:::{#exr-}
+Sejam $A$ e $B$ conjuntos finitos e assuma que $|A|=m$ e $|B|=n$.
+
+1. Construa uma bijeção entre $A\times B$ e o conjunto $\{1,2,\ldots,m\cdot n\}$.
+2. Deduza que $|A\times B|=m\cdot n$
+:::
+
+:::{#exr-}
+Sejam $A$ e $B$ conjuntos finitos e assuma que $|A|=m$ e $|B|=n$. Mostre que 
+$$
+|\{f:A\to B \mid f \text{ é uma função}\}|=n^m.
+$$
+::: 
+
+
+
+:::{#exr-}
+Sejam $A$ e $B$ conjuntos infinitos enumeráveis. Mostre que $A\cup B$ e $A\times B$ são conjuntos infinitos enumeráveis.
+:::
+
+:::{#exr-}
+Quais dos seguintes conjuntos são infinitos enumeráveis? Justifique sua resposta.
+
+1. $\{n\in \N \mid n\mbox{ é primo}\}$
+2. $\{r\in \Q\mid r\geq 0\}$
+3. $\{r\in \R\mid 0 < r < 1/10^{12}\}$
+4. $\C$
+5. $\{x\in\R\mid x^2=2^a3^b\mbox{ para alguns }a,b\in\N\}$
+:::
+
+:::{#exr-} 
+Construa bijeções entre os conjuntos no Lema @lem-continuun-sets para os quais não há uma bijeção explícita na prova do lema.
+::: 
+
+:::{#exr-}
+Um número $x\in \C$ chama-se algébrico se existem inteiros $a_0,a_1,\ldots,a_n$, não todos nulos, tais que
+$$
+a_nx^n+a_{n-1}x^{n-1}+\cdots + a_1x+a_0=0.
+$$
+Caso contrário, $x$ chama-se transcendental.
+
+1. Mostre que o conjunto dos números algébricos é enumerável.
+2. Deduza que o conjunto dos números transcendentais é não enumerável.
+::: 
