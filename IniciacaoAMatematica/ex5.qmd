@@ -214,3 +214,4 @@ Seja $a=[a_n\cdots a_1a_0]_b$ um número natural escrito na base $b\geq 2$.
 :::
 
 
+
