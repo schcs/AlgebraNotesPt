@@ -59,6 +59,8 @@ Para gerar o arquivo PDF, execute o `Quarto` da seguinte forma:
 quarto render --profile pdf --to pdf
 ```
 
+O arquivo `Álgebra.pdf` vai aparecer na pasta `_book`. **Como o conteúdo foi otimizado para o formato `html`, a formatação do `pdf` pode não ser ideal, especialmente 
+próximo às imagens. 
 
 
 
