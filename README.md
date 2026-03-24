@@ -4,7 +4,58 @@ Este repositório contem [apostilas para várias disciplinas](https://schcs.gith
 
 ## Compilação
 
-Instruções vão aparecer aqui.
+Para compilar os documentos no seu próprio computador, siga as instruções abaixo. Elas foram 
+testadas em Linux Mint 22.3 ou superior; em sistemas baseados em Debian (por exemplo, Ubuntu), 
+o procedimento deve ser o mesmo, e em outras distribuições Linux deve ser semelhante. 
+Infelizmente, não sei dizer como fazer isso no Windows ou no macOS. Se alguém conseguir 
+instalar e compilar o projeto nesses sistemas, avise-me para que eu possa acrescentar 
+instruções correspondentes.
+
+Primeiro, instale o software necessário para criar os documentos.
+
+```
+sudo apt install git
+```
+
+Depois, faça o download do `Quarto` na página `https://quarto.org/docs/download/`, escolhendo a 
+versão apropriada para a sua distribuição. Instale o `Quarto` com o seguinte comando 
+(ajustando a versão, se necessário).  
+
+```
+sudo dpkg -i ~/Download/quarto-1.9-36-linux-amd64.deb
+```
+
+Em seguida, instale uma versão mínima de TeX para uso com o `Quarto` (isso é desnecessário se 
+você já tiver uma instalação completa de TeX no seu computador).
+
+```
+quarto install tinytex
+```
+
+Para clonar o repositório, execute:
+
+```
+git clone https://github.com/schcs/AlgebraNotesPt.git
+```
+
+Para gerar as páginas `html`, basta entrar na pasta `AlgebraNotesPt` e executar o `Quarto`: 
+
+```
+cd AlgebraNotesPt
+quarto render
+```
+
+As páginas `html` podem ser acessadas por meio do arquivo `_book/index.html`, na pasta do 
+repositório. 
+
+Para gerar o arquivo PDF, execute o `Quarto` da seguinte forma:
+
+```
+quarto render --profile pdf --to pdf
+```
+
+
+
 
 ## Licença
 
