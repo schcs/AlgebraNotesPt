@@ -27,7 +27,7 @@ versão apropriada para a sua distribuição. Instale o `Quarto` com o seguinte 
 (ajustando a versão, se necessário).  
 
 ```
-sudo dpkg -i ~/Download/quarto-1.9-36-linux-amd64.deb
+sudo dpkg -i ~/Downloads/quarto-1.9.36-linux-amd64.deb
 ```
 
 Em seguida, instale uma versão mínima de TeX para uso com o `Quarto` (isso é desnecessário se 
