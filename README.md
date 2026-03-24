@@ -2,6 +2,11 @@
 
 Este repositório contem [apostilas para várias disciplinas](https://schcs.github.io/AlgebraNotesPt/) na Programa de Graduação de Matemática na UFMG. As apostilas foram preparadas por [Csaba Schneider](https://schcs.github.io/WP/), exceto a apostila para Álgebra Linear I que foi originalmente escrita por [John McQuarrie](https://johnmacquarrie.github.io/).
 
+
+Estas notas foram criadas com o intuito de serem lidas no formato `html` no browser do seu computador, 
+tablet, ou no celular. No entanto, se alguém precisar, 
+um arquivo PDF destas notas pode ser encontrado [neste link](https://github.com/schcs/AlgebraNotesPt/blob/main/_book/%C3%81lgebra.pdf).
+
 ## Compilação
 
 Para compilar os documentos no seu próprio computador, siga as instruções abaixo. Elas foram 
@@ -17,7 +22,7 @@ Primeiro, instale o software necessário para criar os documentos.
 sudo apt install git
 ```
 
-Depois, faça o download do `Quarto` na página `https://quarto.org/docs/download/`, escolhendo a 
+Depois, faça o download do `Quarto` [na página do sistema](https://quarto.org/docs/download/), escolhendo a 
 versão apropriada para a sua distribuição. Instale o `Quarto` com o seguinte comando 
 (ajustando a versão, se necessário).  
 
