@@ -350,14 +350,17 @@ A função $\rho$ é
     dizer que $T_{A+B} = T_A + T_B$ como funções $V\to W$. Mas essas
     funções são iguais se, e somente se,
     $T_{A+B}(\ul{v}) = (T_A+T_B)(\ul{v})\,\forall \ul{v}\in V$. Vamos
-    lá: 
-\begin{align*}
-        T_{A+B}(\ul{v}) & = (A+B)\cdot \ul{v} \\
-                & = A\ul{v} + B\ul{v} \\
-                & = T_A(\ul{v}) + T_B(\ul{v}) \\
-                & = (T_A + T_B)(\ul{v}).\qquad\checkmark
-      
-    \end{align*}
+    lá:
+
+    $$
+    \begin{aligned}
+    T_{A+B}(\ul{v}) & = (A+B)\cdot \ul{v} \\
+                    & = A\ul{v} + B\ul{v} \\
+                    & = T_A(\ul{v}) + T_B(\ul{v}) \\
+                    & = (T_A + T_B)(\ul{v}).\qquad\checkmark
+    \end{aligned}
+    $$
+
  [Exercício]{.underline}: Mostre que
     $\rho(\lambda A) = \lambda\rho(A)$.
 

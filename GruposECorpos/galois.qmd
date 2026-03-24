@@ -47,7 +47,7 @@ $$
 ghg^{-1}g(\alpha)=gh(\alpha)=g(\alpha).
 $$
 Logo $g(\fix H)\subseteq \fix{gHg^{-1}}$. A outra inclusão pode ser verificada por argumento similar. Ora temos pelo @lem-normal-invariant que $\K:\F$ 
-é normal se e somente se $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$ que vale se e somente se $\sigma(\fix H)=\fix H$ que vale pela afirmação anterior é equivalente a $\fix{\sigma H\sigma^{-1}}=\fix{H}$ (@thm-gg-fix-normal); essa última afirmação é equivalente a $\sigma H\sigma^{-1}=H$ para todo $\sigma\in G$ que ocorre se e somente se $H\unlhd G$ (@exr-normal-conj). Assuma que $\K:\F$ é normal e seja $r:\gal\E\F\to\gal\K\F$ a restrição para $\K$ (usamos que $\K:\F$ é normal e assim $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$). Em outras palavras, $r(\sigma)=\sigma|_\K$ para todo $\sigma\in\gal\E\F$. A aplicação $r$ é um homomorfismo com núcleo $\gal\E\K$. A sobrejetividade de $r$ segue do @lem-lifting-isom. 
+é normal se e somente se $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$ que vale se e somente se $\sigma(\fix H)=\fix H$ que vale pela afirmação anterior é equivalente a $\fix{\sigma H\sigma^{-1}}=\fix{H}$ (@thm-gg-fix-normal); essa última afirmação é equivalente a $\sigma H\sigma^{-1}=H$ para todo $\sigma\in G$ que ocorre se e somente se $H\unlhd G$ (@exr-normal-conj). Assuma que $\K:\F$ é normal e seja $r:\gal\E\F\to\gal\K\F$ a restrição para $\K$ (usamos que $\K:\F$ é normal e assim $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$). Em outras palavras, $r(\sigma)=\sigma|_{\K}$ para todo $\sigma\in\gal\E\F$. A aplicação $r$ é um homomorfismo com núcleo $\gal\E\K$. A sobrejetividade de $r$ segue do @lem-lifting-isom. 
 Portanto, usando o Teorema de Isomorfismo (@thm-ker-im), obtemos que
 $$ 
 \gal\K\F\cong \gal\E\F/\gal\E\K.
@@ -64,7 +64,7 @@ $$
 $$
 Além disso, $m_{\sqrt[3]2}(x)=x^3-2$ e $m_{\xi}(x)=x^2+x+1$ e temos que
 $$
-\dim_\Q\E=\dim_\Q\Q(\sqrt[3]2)\cdot\dim_{\Q(\sqrt[3]2)}\E=3\cdot 2=6.
+\dim_{\Q}\E=\dim_{\Q}\Q(\sqrt[3]2)\cdot\dim_{\Q(\sqrt[3]2)}\E=3\cdot 2=6.
 $$
 Pelo @thm-gg-order, $|\gal\E\F|=6$.
 Se $\varphi\in\gal\E\Q$, então $\varphi$ está determinado pelas imagens $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$. Note que $\sqrt[3]2$ e $\xi$ são raízes dos polinômios irredutíveis $x^3-2$ e $x^2+x+1$ (respetivamente), então $\varphi(\sqrt[3]2)$ e $\varphi(\xi)$ precisam ser raízes do  mesmo polinômio. Temos então que
@@ -95,7 +95,7 @@ $$
 $$
 e
 $$
-\dim_\Q\E=\dim_\Q\Q(\sqrt[4]2)\cdot\dim_{\Q(\sqrt[4]2)}\E=4\cdot 2=8
+\dim_{\Q}\E=\dim_{\Q}\Q(\sqrt[4]2)\cdot\dim_{\Q(\sqrt[4]2)}\E=4\cdot 2=8
 $$
 que implica que $|\gal\E\Q|=8$. Além disso, um elemento $\varphi\in\gal\E\Q$ é determinado pelas imagens
 $$
@@ -104,7 +104,7 @@ $$
 $$
 Há oito opções na linha anterior, e o fato que $|\gal\E\Q|=8$ implica que todas destas opções resultam em um automorfismo de $\gal\E\Q$. Como no exemplo anterior, convêm considerar os elementos de $\gal\E\Q$ como permutações do conjunto $R=\{\sqrt[4]2,-\sqrt[4]2,i\sqrt[4]2,-i\sqrt[4]2\}$ das raízes de $x^4-2$. Os automorfismos
 $$
-\varphi_1:\sqrt[4]2\mapsto i\sqrt[4]2,\  i\mapsto i\quad\mbox{e}\quad\varphi_2:\sqrt[4]2\mapsto \sqrt[4]2,\ i\mapsto -i
+\varphi_1:\sqrt[4]2\mapsto i\sqrt[4]2,\ i\mapsto i\quad\mbox{e}\quad\varphi_2:\sqrt[4]2\mapsto \sqrt[4]2,\ i\mapsto -i
 $$
 correspondem às permutações
 $$

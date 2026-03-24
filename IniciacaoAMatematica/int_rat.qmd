@@ -75,7 +75,7 @@ As operações $+$ e $\cdot$ são bem definidas; ou seja, o resultado não depen
 5. $0\cdot x=0$; 
 6. $(xy)z=x(yz)$;
 7. $xy=yx$;
-8. Existe elemento neutro para o produto. Nomeadamente, denotando $1_\Z=[2,1]$, temos que $1_\Z x=x1_\Z=x$;
+8. Existe elemento neutro para o produto. Nomeadamente, denotando $1_{\Z}=[2,1]$, temos que $1_{\Z}x=x1_{\Z}=x$;
 9. $x(y+z)=xy+xz$;
 10. se $x+z=y+z$, então $x=y$;
 11. se $xz=yz$ e $z\neq 0$, então $x=y$.
@@ -149,33 +149,33 @@ A mesma observação vale para o produto; os detalhes ficam ao leitor.
 
 
 :::{#lem-pre-ordering}
-Denote por $P_\Z$ o conjunto 
+Denote por $P_{\Z}$ o conjunto 
 $$
-P_\Z=\{[a,b]\in\Z\mid a\geq b\}
+P_{\Z}=\{[a,b]\in\Z\mid a\geq b\}
 $$ 
 e ponha 
 $$
--P_\Z=\{z\in\Z\mid -z\in P_\Z\}.
+-P_{\Z}=\{z\in\Z\mid -z\in P_{\Z}\}.
 $$
 
-1. $\Z=P_\Z\cup -P_\Z$ e $P_\Z\cap -P_\Z=\{0\}$;
-2. se $a,b\in P_\Z$, então $a+b,ab\in P_\Z$;
-3. se $a\in \Z$, então $a^2\in P_\Z$;
-4. $-1\not\in P_\Z$.
+1. $\Z=P_{\Z}\cup -P_{\Z}$ e $P_{\Z}\cap -P_{\Z}=\{0\}$;
+2. se $a,b\in P_{\Z}$, então $a+b,ab\in P_{\Z}$;
+3. se $a\in \Z$, então $a^2\in P_{\Z}$;
+4. $-1\not\in P_{\Z}$.
 :::
 
 :::{.proof}
-1. Se $z=[a,b]\in \Z$ com $a\geq b$, então $z\in P_\Z$. Se $z=[a,b]\in\Z$ com $a<b$, 
-então $-z=[b,a]\in \Z$. Portanto $\Z=P_\Z\cup -P_\Z$.  Claramente, $0=[1,1]\in P_\Z\cap -P_\Z$. 
-Se $z=[a,b]\in P_\Z\cap -P_\Z$, então $[a,b]\in P_\Z$ e $-[a,b]=[b,a]\in P_\Z$ e $a\geq b$ e $b\geq a$. 
-A antissimetria da relação $\geq$ implica que $a=b$ e $z=[a,b]=[a,a]=0$. Portanto $P_\Z\cap -P_\Z=\{0\}$. 
+1. Se $z=[a,b]\in \Z$ com $a\geq b$, então $z\in P_{\Z}$. Se $z=[a,b]\in\Z$ com $a<b$, 
+então $-z=[b,a]\in \Z$. Portanto $\Z=P_{\Z}\cup -P_{\Z}$.  Claramente, $0=[1,1]\in P_{\Z}\cap -P_{\Z}$. 
+Se $z=[a,b]\in P_{\Z}\cap -P_{\Z}$, então $[a,b]\in P_{\Z}$ e $-[a,b]=[b,a]\in P_{\Z}$ e $a\geq b$ e $b\geq a$. 
+A antissimetria da relação $\geq$ implica que $a=b$ e $z=[a,b]=[a,a]=0$. Portanto $P_{\Z}\cap -P_{\Z}=\{0\}$. 
 
 Os demais itens ficam para exercício. 
 :::
 
 :::{#def-Z-ord}
-Se $x,y\in\Z$, dizemos que $x\leq y$ se $y-x=y+(-x)\in P_\Z$. Em particular, se $x\in P_\Z$, então 
-$0\leq x$ e se $x\in -P_\Z$, então $x\leq 0$. 
+Se $x,y\in\Z$, dizemos que $x\leq y$ se $y-x=y+(-x)\in P_{\Z}$. Em particular, se $x\in P_{\Z}$, então 
+$0\leq x$ e se $x\in -P_{\Z}$, então $x\leq 0$. 
 :::
 
 :::{#lem-int-pos}
@@ -192,9 +192,9 @@ Sejam $x,y,z\in\Z$ As seguinte propriedades estão válidas.
 :::{.proof}
 Estas afirmações seguem das afirmações do @lem-pre-ordering. 
 
-1. Como $0=x-x\in P_\Z$, temos $x\leq x$. 
-2. Se $x\leq y$ e $y\leq x$, então $y-x\in P_\Z$ e $x-y\in P_\Z$. A segunda afirmação implica que 
-$-(x-y)=y-x\in -P_\Z$ e assim $y-x\in P_\Z\cap -P_\Z=\{0\}$. Portanto $y-x\in P_\Z$ e $y-x$. 
+1. Como $0=x-x\in P_{\Z}$, temos $x\leq x$. 
+2. Se $x\leq y$ e $y\leq x$, então $y-x\in P_{\Z}$ e $x-y\in P_{\Z}$. A segunda afirmação implica que 
+$-(x-y)=y-x\in -P_{\Z}$ e assim $y-x\in P_{\Z}\cap -P_{\Z}=\{0\}$. Portanto $y-x\in P_{\Z}$ e $y-x$. 
 :::
 
 O @lem-int-pos diz que a relação $\leq$ é uma relação de ordem total no conjunto $\Z$ que é compatível com  as operações.
@@ -240,41 +240,41 @@ As operações na @def-rat-ops são bem definidas; ou seja, o resultado não dep
 
 1.  $(a+b)+c=a+(b+c)$;
 2.  $a+b=b+a$;
-3.  existe $0_\Q\in\Q$ tal que $a+0_\Q=0_\Q+a=a$; 
-4.  para todo $a\in\Q$ existe $-a\in\Q$ tal que $a+(-a)=0_\Q$;
+3.  existe $0_{\Q}\in\Q$ tal que $a+0_{\Q}=0_{\Q}+a=a$; 
+4.  para todo $a\in\Q$ existe $-a\in\Q$ tal que $a+(-a)=0_{\Q}$;
 5.  $(ab)c=a(bc)$;
 6.  $ab=ba$;
-7.  existe $1_\Q\in\Q$ tal que $a1_\Q=1_\Q a=a$; 
-8.  para todo $a\in\Q\setminus\{0_\Q\}$ existe $a^{-1}\in\Q$ tal que $aa^{-1}=1_\Q$;
+7.  existe $1_{\Q}\in\Q$ tal que $a1_{\Q}=1_{\Q}a=a$; 
+8.  para todo $a\in\Q\setminus\{0_{\Q}\}$ existe $a^{-1}\in\Q$ tal que $aa^{-1}=1_{\Q}$;
 9.  $(a+b)c=ac+bc$.
 10. $0a=0$.
 :::
 :::{.proof}
-É tarefa do leitor. Só vamos comentar que $0_\Q=[0,1]$, $1_\Q=[1,1]$, se $a=[x,y]$, então $-a=[-x,y]$ e se $a\neq [0,1]$, então $a^{-1}=[y,x]$.
+É tarefa do leitor. Só vamos comentar que $0_{\Q}=[0,1]$, $1_{\Q}=[1,1]$, se $a=[x,y]$, então $-a=[-x,y]$ e se $a\neq [0,1]$, então $a^{-1}=[y,x]$.
 :::
 
-Nós escrevemos o número racional $[x,y]$ como $x/y$. Os números $0_\Q$ e $1_\Q$ serão escritos simplesmente como $0$ e $1$. Note, para $k\in \Z$ que o número $[k,1]=k/1$ pode ser identificado com o inteiro $k$. Assim, podemos pensar os inteiros como números racionais e escrever que $\Z\subseteq\Q$. Se $a,b\in\Q$, então $a+(-b)$ será escrito como $a-b$ e $ab^{-1}$ será escrito como $a/b$.  
+Nós escrevemos o número racional $[x,y]$ como $x/y$. Os números $0_{\Q}$ e $1_{\Q}$ serão escritos simplesmente como $0$ e $1$. Note, para $k\in \Z$ que o número $[k,1]=k/1$ pode ser identificado com o inteiro $k$. Assim, podemos pensar os inteiros como números racionais e escrever que $\Z\subseteq\Q$. Se $a,b\in\Q$, então $a+(-b)$ será escrito como $a-b$ e $ab^{-1}$ será escrito como $a/b$.  
 
 Entre os números racionais, podemos definir os números não negativos como 
 $$
-P_\Q=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
+P_{\Q}=\{a/b\in \Q\mid a,b\geq 0\mbox{ e }b\neq 0\}
 $$
 e defina 
 $$
--P_\Q=\{-x\mid x\in P_\Q\}.
+-P_{\Q}=\{-x\mid x\in P_{\Q}\}.
 $$
 
 :::{#lem-qplus}
-Temos que $P_\Q$ satisfaz as seguintes propriedades.
+Temos que $P_{\Q}$ satisfaz as seguintes propriedades.
 
-1. $\Q=P_\Q\cup -P_\Q$ e $P_\Q\cap -P_\Q=\{0\}$;
-2. se $a,b\in P_\Q$, então $a+b,ab\in P_\Q$;
-3. se $a\in \Q$, então $a^2\in P_\Q$;
-4. $-1\not\in P_\Q$.
+1. $\Q=P_{\Q}\cup -P_{\Q}$ e $P_{\Q}\cap -P_{\Q}=\{0\}$;
+2. se $a,b\in P_{\Q}$, então $a+b,ab\in P_{\Q}$;
+3. se $a\in \Q$, então $a^2\in P_{\Q}$;
+4. $-1\not\in P_{\Q}$.
 :::
 
 :::{#def-order-q}
-Defina para $a,b\in\Q$ a relação $a\leq b$ para significar que $b-a\in P_\Q$. 
+Defina para $a,b\in\Q$ a relação $a\leq b$ para significar que $b-a\in P_{\Q}$. 
 :::
 
 :::{#lem-order-q}

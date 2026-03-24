@@ -4,7 +4,6 @@ number-sections: true
 lang: pt-BR
 --- 
 
-$\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}$
 Nesta página $V$ é um espaço vetorial com produto interno $\left<-,-\right>$ sobre $\R$ ou $\C$. Os espaços $\R^n$ e $\C^n$ serão considerados 
 com seus produtos internos usuais. 
 

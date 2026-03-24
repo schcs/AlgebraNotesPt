@@ -213,8 +213,6 @@ Seja $a=[a_n\cdots a_1a_0]_b$ um número natural escrito na base $b\geq 2$.
 3. Mostre que $b+1\mid a$ se e somente se a soma dos dígitos de $a$ com sinais alternados (começando com sinal positivo) é múltiplo de $b+1$.
 :::
 
-
-=======
 :::{#exr-}
 Caclule a soma e o produto dos seguintes números complexos: 
 

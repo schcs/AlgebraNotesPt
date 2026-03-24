@@ -35,7 +35,7 @@ inner_product( 1, x**2, x, -1, 1 )
 inner_product( cos(x), sin(x), x, -pi, pi )
 0
 inner_product( cos(x), cos(x), x, -pi, pi )
-𝜋
+pi
 ```
 :::
 
@@ -48,7 +48,7 @@ orthogonal_projection( x, x**2, x, -1, 1 )
 orthogonal_projection( 1, x**2, x, -1, 1 )
 5x^2/3
 orthogonal_projection( x**2, cos(x), x, -pi, pi )
-−4cos(𝑥)
+-4*cos(x)
 ```
 ::: 
 
@@ -96,11 +96,11 @@ Para calcular as séries de Fourier de algumas funções como no @thm-fourier, v
 integrate( cos(x)*sin(x), (x, -2, 1))
 -sin^2(2)/2+sin(1)/2
 integrate( cos(x)*sin(x), (x, -2, 1)).evalf()
-−0.0593741960791174
+-0.0593741960791174
 Integral(cos(x)*sin(x),(x,-2,1))
 ...integral object...
 Integral( cos(x)*sin(x), (x, -2, 1)).evalf()
-−0.0593741960791174
+-0.0593741960791174
 ```
 Consulte o [manual](https://docs.sympy.org/latest/modules/evalf.html#sums-and-integrals) para mais informações.
 
@@ -113,11 +113,11 @@ aproximações numéricas em vez de valores exatos.
 Escreva uma função `fourier(f)` em Python que dada uma função $f\in C^\infty[a,b]$, calcula a aproximação de Fourier para a função $f$ até grau $5$. Use a função `orthogonal_projection` modificada no @exr-in-prod-num. A sua função deve verificar as seguintes computações.
 ```python
 fourier(x)
-2.0sin(𝑥)−1.0sin(2𝑥)+0.666666666666667sin(3𝑥)−0.5sin(4𝑥)+0.4sin(5𝑥)
+2.0*sin(x)-1.0*sin(2*x)+0.666666666666667*sin(3*x)-0.5*sin(4*x)+0.4*sin(5*x)
 fourier(x**2)
-−4.0cos(𝑥)+1.0cos(2𝑥)−0.444444444444444cos(3𝑥)+0.25cos(4𝑥)−0.16cos(5𝑥)+3.28986813369645
+-4.0*cos(x)+1.0*cos(2*x)-0.444444444444444*cos(3*x)+0.25*cos(4*x)-0.16*cos(5*x)+3.28986813369645
 fourier(abs(x))
-−1.27323954473516cos(𝑥)−0.141471060526129cos(3𝑥)−0.0509295817894065cos(5𝑥)+1.5707963267949
+-1.27323954473516*cos(x)-0.141471060526129*cos(3*x)-0.0509295817894065*cos(5*x)+1.5707963267949
 ```
 :::
 

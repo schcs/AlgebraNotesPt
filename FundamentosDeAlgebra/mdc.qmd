@@ -129,7 +129,7 @@ def MDC_recursivo( a, b ):
 ```
 Para melhor analisarmos o algoritmo, nós escrevemos o processo em uma maneira linear (não recursiva). O processo descrito abaixo é chamado Algoritmo de Euclides. Sejam $a,b$ como acima.
 $$
-\begin{align*}
+\begin{aligned}
 r_{-1}&=a\\
 r_0&=b\\
 a=r_{-1}&=q_1b+r_1\quad 0<r_1<b\\
@@ -141,7 +141,7 @@ r_{i}&=q_{i+2}r_{i+1}+r_{i+2}\quad 0<r_{i+2}<r_{i+1}\\
 &\vdots\\
 r_{d-2}&=q_{d}r_{d-1}+r_{d}\quad 0<r_{d}<r_{d-1}\\
 r_{d-1}&=q_{d+1}r_d+0
-\end{align*}
+\end{aligned}
 $$
 
 A sequência dos restos calculados satisfaz as desigualdades

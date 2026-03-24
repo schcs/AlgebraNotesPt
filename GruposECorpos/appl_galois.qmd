@@ -113,7 +113,7 @@ tal que
 
 Para isso, assuma que $\K_{i}=\K_{i-1}(b_i)$ onde $b_i^{k_i}=a_i$ e ponha $k=k_1\cdots k_s$. Seja $\E$ o corpo de decomposição do polinômio
 $$
-h(x)=(x^k-1)m^\F_{b_1}(x)\cdots m^\F_{b_s}(x).
+h(x)=(x^k-1)m^{\F}_{b_1}(x)\cdots m^{\F}_{b_s}(x).
 $$
 A extensão $\F:\E$ é de Galois finita. Seja $G$ o grupo de Galois $\gal\F\E$. Note que $G$ é um grupo finito e assuma que 
 $G=\{1,g_2,\ldots,g_m\}$. Seja $\xi$ uma raiz $k$-ésima primitiva da unidade e considere a seguinte sequência de elementos de $\E$:
@@ -128,8 +128,8 @@ a torre obtida por estender cada $\E_i$ pelo seguinte elemento na sequência. Em
 
 1. Note que $\K_s=\F(b_1,\ldots,b_s)\subseteq \E_r$, então esta afirmação está certa. 
 2. Afirmamos que $\E=\E_r$. Note que $\E$ é gerado (sobre $\F$) pelas raízes de $h(x)$ que são as raízes dos fatores individuais de $h(x)$.
-As raízes de $(x^k-1)$ são as potências de $\xi$. Note que $b_i$  é uma raíz de $m^\F_{b_i}(x)$. Se $g\in G$, então $g(b_i)$ também é raiz de $m^\F_{b_i}(x)$. 
-Isso mostra que $\E_r\subseteq \E$. Além disso, o @lem-lifting-isom implica que se $\gamma\in\E$ é raiz de $m_{\beta_i}^\F(x)$, então existe $g\in\gal\E\F$ tal que $g(\beta_i)=\gamma$. Ou seja, as raízes de $m^\F_{b_i}(x)$ são precisamente os elementos $b_i,g_2(b_i),\ldots,g_m(b_i)$. Em outras palavras, os elementos na sequência são precisamente as raízes de $h(x)$ e $\E_r$ está gerado por extes elementos. Em particular $\E\subseteq \E_r$ e $\E_r=\E$. 
+As raízes de $(x^k-1)$ são as potências de $\xi$. Note que $b_i$  é uma raíz de $m^{\F}_{b_i}(x)$. Se $g\in G$, então $g(b_i)$ também é raiz de $m^{\F}_{b_i}(x)$. 
+Isso mostra que $\E_r\subseteq \E$. Além disso, o @lem-lifting-isom implica que se $\gamma\in\E$ é raiz de $m_{\beta_i}^{\F}(x)$, então existe $g\in\gal\E\F$ tal que $g(\beta_i)=\gamma$. Ou seja, as raízes de $m^{\F}_{b_i}(x)$ são precisamente os elementos $b_i,g_2(b_i),\ldots,g_m(b_i)$. Em outras palavras, os elementos na sequência são precisamente as raízes de $h(x)$ e $\E_r$ está gerado por extes elementos. Em particular $\E\subseteq \E_r$ e $\E_r=\E$. 
 3. Note que $\E_1=\E_0(\xi)$ e $\E_{i+1}=\E_i(g(b_j))$ com algum $g\in G$ e $b_j\in \E$.  Como 
 $$
 b_j^{k_j}\in \K_{j-1}=\F(b_1,\ldots,b_{j-1}),

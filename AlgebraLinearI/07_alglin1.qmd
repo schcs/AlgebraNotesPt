@@ -203,8 +203,8 @@ Seja $$A = \begin{pmatrix}
 0 & 1 & 1 \\
 1 & 0 & 1
 \end{pmatrix}.$$ Já vimos que
-${\rm dim}({\rm Col}(A) ) = {\rm dim}({\rm Lin}(A)) = 2$, portanto
-${\rm Rk}(A) = 2$.
+${\textrm{dim}}({\textrm{Col}}(A) ) = {\textrm{dim}}({\textrm{Lin}}(A)) = 2$, portanto
+${\textrm{Rk}}(A) = 2$.
 :::
 
 :::{#exm-}
@@ -234,15 +234,15 @@ resolvendo os sistemas, obtemos $$[T]^{B}_{B'} =
     2 & 4 \\ 
     0& 6 \\
     0 & -4
-\end{pmatrix}.$$ Note que ${\rm dim}({\rm Col}([T]^{B}_{B'})) = 2$, logo
-${\rm Rk}([T]^{B}_{B'}) = 2$.
+\end{pmatrix}.$$ Note que ${\textrm{dim}}({\textrm{Col}}([T]^{B}_{B'})) = 2$, logo
+${\textrm{Rk}}([T]^{B}_{B'}) = 2$.
 
 Como $$\begin{array}{ccc}
 (2x,x-y,2y) &= & (2x,x,0) + (0,-y,2y) \\
 &=& x(2,1,0) + y(0,-1,2)
 \end{array},$$ segue que $\{ (2,1,0), (0,-1,2)\}$ é uma base para
-${\rm Im}(T)$, logo
-${\rm dim(}{\rm Im}(T)) = 2 = {\rm Rk}([T]^{B}_{B'})$.
+${\textrm{Im}}(T)$, logo
+$\textrm{dim}({\textrm{Im}}(T)) = 2 = {\textrm{Rk}}([T]^{B}_{B'})$.
 :::
 
 De fato, esta igualdade sempre vale:
@@ -252,7 +252,7 @@ Sejam $V$ e $W$ espaços vetoriais de dimensão finita,
 $T: V \rightarrow W$ uma transformação linear e
 $B = \{\ul{b_1},\ldots,\ul{b_m}\}$ e $C$ bases de $V$ e $W$,
 respetivamente. Então
-$${\rm dim}({\rm Im}(T)) = {\rm Rk}([T]^{B}_{C}).$$
+$${\textrm{dim}}({\textrm{Im}}(T)) = {\textrm{Rk}}([T]^{B}_{C}).$$
 :::
 
 :::{.proof}
@@ -281,7 +281,7 @@ $$[T]_X^X = A\,,\, [T]_Y^Y = B$$ em que $X,Y$ são duas bases de $V$.
 
 :::{#cor-}
 Sejam $A$ e $B$ matrizes semelhantes. Então
-$${\rm Rk}(A) = {\rm Rk}(B).$$
+$${\textrm{Rk}}(A) = {\textrm{Rk}}(B).$$
 :::
 
 :::{.proof}

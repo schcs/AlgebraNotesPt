@@ -10,7 +10,7 @@ $$
 \newcommand{\C}{\mathbb C}
 \newcommand{\F}{\mathbb F}
 \newcommand{\K}{\mathbb K}
-\newcommand{\L}{\mathbb L}
+\newcommand{\LL}{\mathbb L}
 \newcommand{\N}{\mathbb N}
 \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
 \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
@@ -34,5 +34,7 @@ $$
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\tn}[1]{\textnormal{#1}}
+\newcommand{\rot}[1]{\mbox{Rot}(#1)}
+\newcommand{\refl}[1]{\mbox{Ref}(#1)}
 $$
 :::

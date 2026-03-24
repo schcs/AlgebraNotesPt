@@ -212,10 +212,10 @@ como $\Omega$ é o conjunto de todos os conjuntos, temos que $\Omega\in\Omega$ e
 Ora, $\Delta$ é um subconjunto de $\Omega$, ele é um conjunto e assim $\Delta\in\Omega$. Agora podemos perguntar se $\Delta\in\Delta$? Mas 
 considerando a definição de $\Delta$, nós temos que 
 $$
-\begin{align*}
+\begin{aligned}
 \Delta\in\Delta&\Rightarrow \Delta\not\in\Delta\\
 \Delta\not\in\Delta&\Rightarrow \Delta\in\Delta.
-\end{align*}
+\end{aligned}
 $$
 Portanto as duas alternativas $\Delta\in\Delta$ e $\Delta\not\in\Delta$ nos leva a uma contradição. 
 

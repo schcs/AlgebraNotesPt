@@ -76,21 +76,21 @@ Seja $\sigma\in\mbox{Aut}(\R)$. Mostre que
 1. se $x$ é positivo, então $x^\sigma$ é positivo;
 2. $\sigma$ é não decrescente;
 3. $\sigma$ é contínua;
-4. sabendo que $\Q\subseteq \mbox{Fix}(\sigma)$, deduza que $\sigma=\mbox{id}_\R$.
+4. sabendo que $\Q\subseteq \mbox{Fix}(\sigma)$, deduza que $\sigma=\mbox{id}_{\R}$.
 
 [Dica: consulte a [discussão](https://math.stackexchange.com/q/449404) na página de StackExchange.]
 :::
 
 
 :::{#exr-}
-Seja $\sigma\in\mbox{Aut}(\C)$ tal que $\sigma$ é contínuo. Mostre que $\sigma=\mbox{id}_\C$ ou $\sigma$ é o conjugado complexo. [Dica: considere as raízes do polinômio $t^2+1$.] Tem uma boa [discussão](https://math.stackexchange.com/q/412010) dos automorfismos de $\C$ que não são contínuos no StackExchange.
+Seja $\sigma\in\mbox{Aut}(\C)$ tal que $\sigma$ é contínuo. Mostre que $\sigma=\mbox{id}_{\C}$ ou $\sigma$ é o conjugado complexo. [Dica: considere as raízes do polinômio $t^2+1$.] Tem uma boa [discussão](https://math.stackexchange.com/q/412010) dos automorfismos de $\C$ que não são contínuos no StackExchange.
 :::
 
 
 :::{#cor-}
 Assuma que $V$ e $B$ são como no @thm-orth-basis e assuma que $B$ é não-degenerada.
 
-1.  Se $\F=\C$ e $\sigma=\mbox{id}_\C$, então $V$ possui uma base ortonornal.
+1.  Se $\F=\C$ e $\sigma=\mbox{id}_{\C}$, então $V$ possui uma base ortonornal.
 2.  Se $\F=\R$ ou $\F=\C$ e $\sigma$ é o conjugado complexo, então $V$ possui uma base ortogonal $\{b_1,\ldots,b_n\}$ tal que $B(b_i,b_i)=\pm 1$. Além disso, o número $p$ de $b_i$ com $B(b_i,b_i)=-1$ é independente a base escolhida.
 :::
 
@@ -168,9 +168,9 @@ Isso mostra que $v$ é tipo-tempo, $w$ é tipo-espaço, e eles são ortogonais e
 :::{#cor-}
 Seja $V$ um $\F$-espaço vetorial de dimensão $n$ com uma forma $\sigma$-hermitiana $B$ não degenerada.
 
-1. Se $\F=\R$, então $\sigma=\mbox{id}_\R$ e $(V,B)$ é isométrico ao espaço $\R^{p+q}$ com alguns $q,p$ tais que $p+q=n$.
+1. Se $\F=\R$, então $\sigma=\mbox{id}_{\R}$ e $(V,B)$ é isométrico ao espaço $\R^{p+q}$ com alguns $q,p$ tais que $p+q=n$.
 2. Se $\F=\C$ e $\sigma$ é o conjugado complexo, então $(V,B)$ é isométrico ao espaço $\C^{p+q}$ com alguns $q,p$ tais que $p+q=n$.
-3. Se $\F=\C$ e $\sigma=\mbox{id}_\C$, então $V$ é isométrico ao espaço $\C^n$ com forma $B_0$ onde
+3. Se $\F=\C$ e $\sigma=\mbox{id}_{\C}$, então $V$ é isométrico ao espaço $\C^n$ com forma $B_0$ onde
 $$
 B_0(v,w)=v_1w_1+\cdots+v_nw_n.
 $$

@@ -16,7 +16,7 @@ Se $\F$ é um corpo, uma aplicação bijetiva $\sigma:\F\to \F$, $a\mapsto a^\si
 
 
 :::{#exm-}
-1. A bijeção $\mbox{id}_\F$ é automorfismo para todo corpo $\F$. Este automorfismo chama-se **automorfismo trivial**. Os corpos $\Q$, $\Z_p$ não têm automorfismos não triviais (consegue demonstrar?).
+1. A bijeção $\mbox{id}_{\F}$ é automorfismo para todo corpo $\F$. Este automorfismo chama-se **automorfismo trivial**. Os corpos $\Q$, $\Z_p$ não têm automorfismos não triviais (consegue demonstrar?).
 
 2. Se $\F=\C$, então $\sigma:\C\to \C$, $z^\sigma=\bar z$ (conjugado complexo) é um automorfismo de $\C$.
 
@@ -59,10 +59,10 @@ Seja $B$ uma forma $\sigma$-sesquilinear.
 :::{#lem-}
 As seguintes são verdadeiras para uma forma $\sigma$-sesquilinear não nula:
 
-1.  Se $B$ é $\sigma$-Hermitiana, então $\sigma^2=\mbox{id}_\F$.
-2.  Se $B$ é alternada, então $\sigma=\mbox{id}_\F$ e $B(u,v)=-B(v,u)$ para todo $u,v\in V$.
+1.  Se $B$ é $\sigma$-Hermitiana, então $\sigma^2=\mbox{id}_{\F}$.
+2.  Se $B$ é alternada, então $\sigma=\mbox{id}_{\F}$ e $B(u,v)=-B(v,u)$ para todo $u,v\in V$.
 3.  Se $\mbox{car}(\F)\neq 2$, e $B(u,v)=-B(v,u)$ para todo $u,v\in V$, então $B$ é alternada.
-4.  Se $B$ é simétrica, então $\sigma=\mbox{id}_\F$. 
+4.  Se $B$ é simétrica, então $\sigma=\mbox{id}_{\F}$. 
 :::
 
 
@@ -71,13 +71,13 @@ As seguintes são verdadeiras para uma forma $\sigma$-sesquilinear não nula:
 $$
 \alpha=B(u,v)=B(v,u)^\sigma=B(u,v)^{\sigma^2}=\alpha^{\sigma^2}.
 $$
-Logo $\alpha^{\sigma^2}=\alpha$ e $\sigma^2=\mbox{id}_\F$.
+Logo $\alpha^{\sigma^2}=\alpha$ e $\sigma^2=\mbox{id}_{\F}$.
 
 2. Escolhe $u,v\in V$ tal que $B(u,v)=-B(v,u)=1$ (é possível trocando $u$ por um múltiplo escalar) e seja $\alpha\in \F$. Agora
 $$
 \alpha^\sigma=B(u,\alpha v)=-B(\alpha v,u)=-\alpha B(v,u)=\alpha.
 $$
-Ou seja $\alpha^\sigma=\alpha$ para todo $\alpha\in\F$ e $\sigma=\mbox{id}_\F$.  Com $u,v\in V$, calculemos que
+Ou seja $\alpha^\sigma=\alpha$ para todo $\alpha\in\F$ e $\sigma=\mbox{id}_{\F}$.  Com $u,v\in V$, calculemos que
 \begin{align*}
 0&=B(u+v,u+v)=B(u,u)+B(u,v)+B(v,u)+B(v,v)\\&=B(u,v)+B(v,u).
 \end{align*}
@@ -89,10 +89,10 @@ Logo $B(u,v)=-B(v,u)$.
    $$
    \alpha=B(\alpha u,v)=B(v,\alpha u)=\alpha^\sigma B(v,u)=\alpha^\sigma B(u,v)=\alpha^\sigma.
    $$
-   Logo, $\alpha^\sigma=\alpha$ para todo $\alpha\in \F$ e $\sigma=\mbox{id}_\F$. 
+   Logo, $\alpha^\sigma=\alpha$ para todo $\alpha\in \F$ e $\sigma=\mbox{id}_{\F}$. 
 :::
 
-No futuro, uma forma simétrica vai ser vista como caso particular de forma $\sigma$-sesquilinear com $\sigma=\mbox{id}_\F$. 
+No futuro, uma forma simétrica vai ser vista como caso particular de forma $\sigma$-sesquilinear com $\sigma=\mbox{id}_{\F}$. 
 
 ## Formas sesquilineares e matrizes
 
@@ -214,7 +214,7 @@ Seja $B$ uma forma $\sigma$-sesquilinear reflexiva com $\dim (V/\mbox{Rad}(B))\g
 
 1.  $B$ é alternada; ou
 2.  $B$ é simétrica; ou
-3.  $B$ é múltiplo escalar de uma forma $\sigma$-Hermitiana com $\sigma\neq \sigma^2=\mbox{id}_\F$
+3.  $B$ é múltiplo escalar de uma forma $\sigma$-Hermitiana com $\sigma\neq \sigma^2=\mbox{id}_{\F}$
 :::
 
 

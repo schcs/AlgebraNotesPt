@@ -3,7 +3,7 @@ title: "SO<sub>2</sub> e SO<sub>3</sub>"
 number-sections: true
 lang: pt-BR
 --- 
-$\newcommand{\rot}[1]{\mbox{Rot}(#1)}\newcommand{\refl}[1]{\mbox{Ref}(#1)}\newcommand{\sen}{\textrm{sen}\,}$
+
 Vamos estudar com mais detalhes os grupos $SO_2$ e $SO_3$. Seja $f:\R^2\to \R^2$ uma transformação ortogonal e seja $A$ a sua matriz na base canônica. Assuma que
 $$
 A=\begin{pmatrix} a & b \\ c & d\end{pmatrix}

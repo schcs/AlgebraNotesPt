@@ -791,7 +791,7 @@ As possibilidades para os blocos são:
 :::
 
 :::{#exr-}
-Usando a notação introduzida na @sec-cconjugado, seja $V$ um $\R$-espaço vetorial e considere a complexificação $V_\C=\C\otimes V$. Seja $W\leq \C\otimes V$ e ponha 
+Usando a notação introduzida na @sec-cconjugado, seja $V$ um $\R$-espaço vetorial e considere a complexificação $V_{\C}=\C\otimes V$. Seja $W\leq \C\otimes V$ e ponha 
 $$
 \mbox{Re}(W)=\{\mbox{Re}(w)\mid w\in W\}\quad\mbox{e}\quad \mbox{Im}(W)=\{\mbox{Im}(w)\mid w\in W\}.
 $$

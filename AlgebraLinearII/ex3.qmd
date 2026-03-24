@@ -65,7 +65,7 @@ Seja $\F$ um corpo e $\sigma$ um automorfismo de $\F$. Mostre que
 :::
 
 :::{#exr-}
-Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_\F$. 
+Seja $\F=\Q$ ou $\F=\Z_p$ com $p$ primo. Mostre que o único automorfismo de $\F$ é $\mbox{id}_{\F}$. 
 :::
 
 :::{.sol .callout-tip collapse="true"}
@@ -130,7 +130,7 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
 2. $\sigma$ é crescente;
 3. $\sigma$ é contínua;
 4. $\Q\subseteq\mbox{Fix}(\sigma)$;
-5. usando que $\Q$ é denso em $\R$, deduza que $\sigma=\mbox{id}_\R$.
+5. usando que $\Q$ é denso em $\R$, deduza que $\sigma=\mbox{id}_{\R}$.
 :::
 
 :::{.sol .callout-tip collapse="true"}
@@ -166,7 +166,7 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
    - Para qualquer $q \in \mathbb{Q}$, temos $q^\sigma = q$
    - Portanto, $\mathbb{Q}$ está contido no conjunto dos pontos fixos de $\sigma$
 
-5. **Concluir que $\sigma = \text{id}_\mathbb{R}$**
+5. **Concluir que $\sigma = \text{id}_{\mathbb{R}}$**
 
    Seja $x \in \mathbb{R}$ arbitrário:
    - Como $\mathbb{Q}$ é denso em $\mathbb{R}$, existe $(q_n) \subseteq \mathbb{Q}$ com $q_n \to x$
@@ -174,7 +174,7 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
      $$
      x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
      $$
-   - Logo, $\sigma$ fixa todos os reais e portanto $\sigma = \text{id}_\mathbb{R}$
+   - Logo, $\sigma$ fixa todos os reais e portanto $\sigma = \text{id}_{\mathbb{R}}$
 
 (Caio Monteiro)
 
@@ -184,7 +184,7 @@ Seja $\sigma$ um automorfismo de $\R$. Mostre que
 Seja $\sigma$ um automorfismo contínuo de $\C$. Mostre que
 
 1. $\R\subseteq \mbox{Fix}(\sigma)$;
-2. $\sigma=\mbox{id}_\C$ ou $\sigma$ é o conjugado complexo.
+2. $\sigma=\mbox{id}_{\C}$ ou $\sigma$ é o conjugado complexo.
 
 [Obs: $\C$ tem automorfismos que não são contínuos; veja a [discussão no StackExchange](https://math.stackexchange.com/q/412010).
 :::
@@ -526,12 +526,12 @@ Sejam $\K$ e $\F$ corpos tais que $\K\subseteq \F$. Assuma que $V$ é um $\F$-es
 
 1. Mostre que $\F$ é um $\K$-espaço vetorial.
 2. Mostre que $V$ é um $\K$-espaço vetorial.
-3. Seja $B_\F$ uma base de $\F$ sobre $\K$ e seja $B_V$ uma base de $V$ sobre $\F$. Mostre que 
+3. Seja $B_{\F}$ uma base de $\F$ sobre $\K$ e seja $B_V$ uma base de $V$ sobre $\F$. Mostre que 
 $$
-    \{\alpha b\mid \alpha \in B_\F\mbox{ e }b\in B_V\}
+    \{\alpha b\mid \alpha \in B_{\F}\mbox{ e }b\in B_V\}
 $$
 é uma base de $V$ sobre $\K$. 
-4. Deduza que $\dim_\K V=\dim_\K \F\cdot \dim_\F V$.
+4. Deduza que $\dim_{\K} V=\dim_{\K} \F\cdot \dim_{\F} V$.
 :::
 :::{.sol .callout-tip collapse="true"}
 ### Solução
@@ -543,32 +543,32 @@ A soma e a multiplicação por escalares de $\K$ em $\F$ são herdadas da estrut
 Como $V$ é um $\F$-espaço vetorial e $\K\subseteq \F$, o múltiplo escalar com os elementos de $\K$ satisfaz
 os axiomas na definição de espaços vetoriais.  Logo $V$ é um $\K$-espaço vetorial.
 
-3. **A família $\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}$ é base de $V$ sobre $\K$:**
-Seja $B_\F$ uma base de $\F$ sobre $\K$ e $B_V$ uma base de $V$ sobre $\F$.  
-- **Gerador:** Todo $v \in V$ pode ser escrito como $v = \sum_{i=1}^n \lambda_i b_i$ com $\lambda_i \in \F$, $b_i \in B_V$. Cada $\lambda_i$ pode ser escrito como combinação linear de elementos de $B_\F$ com coeficientes em $\K$, ou seja, $\lambda_i = \sum_{j=1}^m \alpha_{ij} \alpha_j$ com $\alpha_{ij} \in \K$, $\alpha_j \in B_\F$. Assim,
+3. **A família $\{\alpha b \mid \alpha \in B_{\F},\, b \in B_V\}$ é base de $V$ sobre $\K$:**
+Seja $B_{\F}$ uma base de $\F$ sobre $\K$ e $B_V$ uma base de $V$ sobre $\F$.  
+- **Gerador:** Todo $v \in V$ pode ser escrito como $v = \sum_{i=1}^n \lambda_i b_i$ com $\lambda_i \in \F$, $b_i \in B_V$. Cada $\lambda_i$ pode ser escrito como combinação linear de elementos de $B_{\F}$ com coeficientes em $\K$, ou seja, $\lambda_i = \sum_{j=1}^m \alpha_{ij} \alpha_j$ com $\alpha_{ij} \in \K$, $\alpha_j \in B_{\F}$. Assim,
   $$
   v = \sum_{i=1}^n \sum_{j=1}^m \alpha_{ij} (\alpha_j b_i),
   $$
   ou seja, $v$ é combinação linear sobre $\K$ dos elementos $\alpha_j b_i$.
-- **Linearmente independente:** Suponha $\sum_{i,j} \beta_{ij} (\alpha_j b_i) = 0$ com $\beta_{ij} \in \K$. Reescreva como $\sum_{i} \left( \sum_j \beta_{ij} \alpha_j \right) b_i = 0$. Como $B_V$ é base sobre $\F$, cada coeficiente $\sum_j \beta_{ij} \alpha_j = 0$ em $\F$. Como $B_\F$ é base de $\F$ sobre $\K$, segue que todos os $\beta_{ij} = 0$. Portanto, $\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}$ é base de $V$ sobre $\K$.
+- **Linearmente independente:** Suponha $\sum_{i,j} \beta_{ij} (\alpha_j b_i) = 0$ com $\beta_{ij} \in \K$. Reescreva como $\sum_{i} \left( \sum_j \beta_{ij} \alpha_j \right) b_i = 0$. Como $B_V$ é base sobre $\F$, cada coeficiente $\sum_j \beta_{ij} \alpha_j = 0$ em $\F$. Como $B_{\F}$ é base de $\F$ sobre $\K$, segue que todos os $\beta_{ij} = 0$. Portanto, $\{\alpha b \mid \alpha \in B_{\F},\, b \in B_V\}$ é base de $V$ sobre $\K$.
 
 4. **Fórmula das dimensões:**  
-Se $m = \dim_\K \F$ e $n = \dim_\F V$, então
+Se $m = \dim_{\K} \F$ e $n = \dim_{\F} V$, então
 $$
-\dim_\K V = m \cdot n = \dim_\K \F \cdot \dim_\F V.
+\dim_{\K} V = m \cdot n = \dim_{\K} \F \cdot \dim_{\F} V.
 $$
 :::
 
 
 :::{#exr-}
-Seja $f:V\to W$ uma aplicação $\sigma$-semilinear e assuma que $\dim_\F V=\dim_\F W$ e $\dim_{\textrm{Fix}(\sigma)}\F$ são todas finitas. Mostre que 
+Seja $f:V\to W$ uma aplicação $\sigma$-semilinear e assuma que $\dim_{\F} V=\dim_{\F} W$ e $\dim_{\textrm{Fix}(\sigma)}\F$ são todas finitas. Mostre que 
 $f$ é sobrejetiva se e somente se $f$ é injetiva.
 :::
 :::{.sol .callout-tip collapse="true"}
 ### Solução
 
-Seja $\K=\textrm{Fix}(\sigma)$. A aplicação $f$ é $\K$-linear. Além disso $\dim_{\K}V=\dim_\K\F\cdot 
-\dim_\F V$ é finita. Ora, a afirmação segue pelo Teorema de Núcleo e Imagem para aplicações $\K$-lineares. 
+Seja $\K=\textrm{Fix}(\sigma)$. A aplicação $f$ é $\K$-linear. Além disso $\dim_{\K}V=\dim_{\K}\F\cdot 
+\dim_{\F} V$ é finita. Ora, a afirmação segue pelo Teorema de Núcleo e Imagem para aplicações $\K$-lineares. 
 :::
 
 :::{#exr-}
@@ -604,20 +604,16 @@ $$
 **Demonstração:**
 
 Para $w \in W$ e $v \in V$,
-$$
 \begin{align*}
 (\alpha^* \circ \Phi_W)(w)(v) &= \alpha^*(\Phi_W(w))(v) \\
 &= \Phi_W(w)(\alpha(v)) \\
 &= B_W(\alpha(v), w)
 \end{align*}
-$$
 Por outro lado,
-$$
 \begin{align*}
 (\Phi_V \circ \alpha^\#)(w)(v) &= \Phi_V(\alpha^\#(w))(v) \\
 &= B_V(v, \alpha^\#(w))
 \end{align*}
-$$
 Mas, pela definição de adjunto, $B_W(\alpha(v), w) = B_V(v, \alpha^\#(w))$ para todo $v \in V$, $w \in W$.
 
 Portanto,
@@ -805,7 +801,7 @@ Portanto, $V$ possui vetor isotrópico não nulo.
 :::{#exr-}
 Seja $\F$ um corpo de caraterística diferente de 2, denote por $I_{p+q+r}$ a matriz diagonal sobre $\F$ que tem $p$
 entradas $−1$, $q$ entradas $1$ e $r$ entradas zero (nesta ordem) na diagonal principal. Seja $\sigma$ um automorfismo
-de $\F$ com $\sigma^2=\mbox{id}_\F$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as seguintes afirmações:
+de $\F$ com $\sigma^2=\mbox{id}_{\F}$; no caso de $\F = \C$, seja $\bar z$ o conjugado complexo. Demonstre as seguintes afirmações:
 
 1. Se $A \in M_{n\times n}(\F)$ com $A^t = A^\sigma$ , então existe uma matriz $X \in M_{n\times n}(\F)$ tal que 
    $X^{σt}AX$ é diagonal.
@@ -826,7 +822,7 @@ B(w,v)=w^tAv^\sigma=(w^tAv^\sigma)^t=v^{\sigma t}A^tw=v^{\sigma t}A^\sigma w=(v^
 $$
 ou seja $B$ é $\sigma$-hermitiana. 
 Pelo @thm-orth-basis,  existe uma base ortogonal $\{e_1, \ldots, e_n\}$ de $V$ tal que $B(e_i, e_j) = 0$ para $i \neq j$. Seja $\overline X$ a matriz cujas colunas são os vetores da base ortogonal. Então, na nova base, a matriz de $B$ é diagonal e por @lem-basechange-sesqui, $\overline X^{t} A \overline X^\sigma$ é diagonal. Ora, tome 
-$X=X^\sigma$ e lembre que $\sigma^2=\mbox{id}_\F$. 
+$X=X^\sigma$ e lembre que $\sigma^2=\mbox{id}_{\F}$. 
 
 A solução dos outros itens é similar.
 :::

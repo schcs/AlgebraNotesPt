@@ -131,13 +131,16 @@ base de $\tn{Im}(T)$.
 
 -   *$B$ é sistema gerador:* Dado $T(\ul{v})\in \tn{Im}(T)$, escreva
     $$\ul{v} = \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}.$$
-    Temos 
+    Temos
+
+    $$
     \begin{aligned}
-        T(\ul{v}) & = T( \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) \\
-        & = \mu_1T(\ul{n_1}) + \cdots + \mu_aT(\ul{n_a}) + \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) \\
-        & = \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b})\qquad\qquad (\hbox{pois }T(\ul{n_i}) = 0\,\forall i).
-      
+    T(\ul{v}) & = T( \mu_1\ul{n_1} + \cdots + \mu_a\ul{n_a} + \lambda_1\ul{v_1} + \cdots + \lambda_b\ul{v_b}) \\
+               & = \mu_1T(\ul{n_1}) + \cdots + \mu_aT(\ul{n_a}) + \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b}) \\
+               & = \lambda_1T(\ul{v_1}) + \cdots + \lambda_bT(\ul{v_b})\qquad\qquad (\hbox{pois }T(\ul{n_i}) = 0\,\forall i).
     \end{aligned}
+    $$
+
     Logo $T(\ul{v})$ é uma combinação linear de
     elementos de $B.\quad\checkmark$
 
