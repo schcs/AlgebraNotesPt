@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>88&nbsp; Exercícios: Bloco 3 – Álgebra</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../AlgebraLinearII/normed.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-71236775942e99b6bf157a0bc0679510.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -101,10 +103,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="macros_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="macros_files/libs/quarto-html/anchor.min.js"></script>
 <link href="macros_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="macros_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="macros_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="macros_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="macros_files/libs/bootstrap/bootstrap-14bff666a035411f7f521af9a9213071.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -142,7 +144,7 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex3.html"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 3</span></a></li></ol></nav></header>
 
 
 
@@ -155,7 +157,7 @@ window.Quarto = {
 \newcommand{\C}{\mathbb C}
 \newcommand{\F}{\mathbb F}
 \newcommand{\K}{\mathbb K}
-\newcommand{\L}{\mathbb L}
+\newcommand{\LL}{\mathbb L}
 \newcommand{\N}{\mathbb N}
 \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
 \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
@@ -179,6 +181,8 @@ window.Quarto = {
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\tn}[1]{\textnormal{#1}}
+\newcommand{\rot}[1]{\mbox{Rot}(#1)}
+\newcommand{\refl}[1]{\mbox{Ref}(#1)}
 \]</span></p>
 </div>
 
@@ -266,8 +270,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -378,7 +380,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -612,7 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -1398,7 +1399,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex3.html"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 3</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 3</span></h1>
 </div>
@@ -1481,7 +1482,7 @@ Portanto, <span class="math inline">\((b^{-1})^\sigma\)</span> é o inverso mult
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 88.2</strong></span> Seja <span class="math inline">\(\F=\Q\)</span> ou <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\)</span> primo. Mostre que o único automorfismo de <span class="math inline">\(\F\)</span> é <span class="math inline">\(\mbox{id}_\F\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 88.2</strong></span> Seja <span class="math inline">\(\F=\Q\)</span> ou <span class="math inline">\(\F=\Z_p\)</span> com <span class="math inline">\(p\)</span> primo. Mostre que o único automorfismo de <span class="math inline">\(\F\)</span> é <span class="math inline">\(\mbox{id}_{\F}\)</span>.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -1536,7 +1537,7 @@ k^\sigma = (\underbrace{1 + \cdots + 1}_{k \text{ vezes}})^\sigma = \underbrace{
 <li><span class="math inline">\(\sigma\)</span> é crescente;</li>
 <li><span class="math inline">\(\sigma\)</span> é contínua;</li>
 <li><span class="math inline">\(\Q\subseteq\mbox{Fix}(\sigma)\)</span>;</li>
-<li>usando que <span class="math inline">\(\Q\)</span> é denso em <span class="math inline">\(\R\)</span>, deduza que <span class="math inline">\(\sigma=\mbox{id}_\R\)</span>.</li>
+<li>usando que <span class="math inline">\(\Q\)</span> é denso em <span class="math inline">\(\R\)</span>, deduza que <span class="math inline">\(\sigma=\mbox{id}_{\R}\)</span>.</li>
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1580,14 +1581,14 @@ x^\sigma = (y^2)^\sigma = (y^\sigma)^2 \geq 0
 <li>Para qualquer <span class="math inline">\(q \in \mathbb{Q}\)</span>, temos <span class="math inline">\(q^\sigma = q\)</span></li>
 <li>Portanto, <span class="math inline">\(\mathbb{Q}\)</span> está contido no conjunto dos pontos fixos de <span class="math inline">\(\sigma\)</span></li>
 </ul></li>
-<li><p><strong>Concluir que <span class="math inline">\(\sigma = \text{id}_\mathbb{R}\)</span></strong></p>
+<li><p><strong>Concluir que <span class="math inline">\(\sigma = \text{id}_{\mathbb{R}}\)</span></strong></p>
 <p>Seja <span class="math inline">\(x \in \mathbb{R}\)</span> arbitrário:</p>
 <ul>
 <li>Como <span class="math inline">\(\mathbb{Q}\)</span> é denso em <span class="math inline">\(\mathbb{R}\)</span>, existe <span class="math inline">\((q_n) \subseteq \mathbb{Q}\)</span> com <span class="math inline">\(q_n \to x\)</span></li>
 <li>Pela continuidade de <span class="math inline">\(\sigma\)</span>: <span class="math display">\[
 x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n^\sigma = \lim_{n \to \infty} q_n = x
 \]</span></li>
-<li>Logo, <span class="math inline">\(\sigma\)</span> fixa todos os reais e portanto <span class="math inline">\(\sigma = \text{id}_\mathbb{R}\)</span></li>
+<li>Logo, <span class="math inline">\(\sigma\)</span> fixa todos os reais e portanto <span class="math inline">\(\sigma = \text{id}_{\mathbb{R}}\)</span></li>
 </ul></li>
 </ol>
 <p>(Caio Monteiro)</p>
@@ -1598,7 +1599,7 @@ x^\sigma = \left(\lim_{n \to \infty} q_n\right)^\sigma = \lim_{n \to \infty} q_n
 <p><span class="theorem-title"><strong>Exercício 88.4</strong></span> Seja <span class="math inline">\(\sigma\)</span> um automorfismo contínuo de <span class="math inline">\(\C\)</span>. Mostre que</p>
 <ol type="1">
 <li><span class="math inline">\(\R\subseteq \mbox{Fix}(\sigma)\)</span>;</li>
-<li><span class="math inline">\(\sigma=\mbox{id}_\C\)</span> ou <span class="math inline">\(\sigma\)</span> é o conjugado complexo.</li>
+<li><span class="math inline">\(\sigma=\mbox{id}_{\C}\)</span> ou <span class="math inline">\(\sigma\)</span> é o conjugado complexo.</li>
 </ol>
 <p>[Obs: <span class="math inline">\(\C\)</span> tem automorfismos que não são contínuos; veja a <a href="https://math.stackexchange.com/q/412010">discussão no StackExchange</a>.</p>
 </div>
@@ -1965,10 +1966,10 @@ Segue do item anterior, pois <span class="math display">\[
 <ol type="1">
 <li>Mostre que <span class="math inline">\(\F\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial.</li>
 <li>Mostre que <span class="math inline">\(V\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial.</li>
-<li>Seja <span class="math inline">\(B_\F\)</span> uma base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span> e seja <span class="math inline">\(B_V\)</span> uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
-\{\alpha b\mid \alpha \in B_\F\mbox{ e }b\in B_V\}
+<li>Seja <span class="math inline">\(B_{\F}\)</span> uma base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span> e seja <span class="math inline">\(B_V\)</span> uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>. Mostre que <span class="math display">\[
+\{\alpha b\mid \alpha \in B_{\F}\mbox{ e }b\in B_V\}
 \]</span> é uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>.</li>
-<li>Deduza que <span class="math inline">\(\dim_\K V=\dim_\K \F\cdot \dim_\F V\)</span>.</li>
+<li>Deduza que <span class="math inline">\(\dim_{\K} V=\dim_{\K} \F\cdot \dim_{\F} V\)</span>.</li>
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1988,26 +1989,26 @@ Segue do item anterior, pois <span class="math display">\[
 A soma e a multiplicação por escalares de <span class="math inline">\(\K\)</span> em <span class="math inline">\(\F\)</span> são herdadas da estrutura de corpo, e <span class="math inline">\(\K \subseteq \F\)</span>. Assim, <span class="math inline">\(\F\)</span> é um espaço vetorial sobre <span class="math inline">\(\K\)</span>.</p></li>
 <li><p><strong><span class="math inline">\(V\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial:</strong><br>
 Como <span class="math inline">\(V\)</span> é um <span class="math inline">\(\F\)</span>-espaço vetorial e <span class="math inline">\(\K\subseteq \F\)</span>, o múltiplo escalar com os elementos de <span class="math inline">\(\K\)</span> satisfaz os axiomas na definição de espaços vetoriais. Logo <span class="math inline">\(V\)</span> é um <span class="math inline">\(\K\)</span>-espaço vetorial.</p></li>
-<li><p><strong>A família <span class="math inline">\(\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}\)</span> é base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>:</strong> Seja <span class="math inline">\(B_\F\)</span> uma base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span> e <span class="math inline">\(B_V\)</span> uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>.<br>
+<li><p><strong>A família <span class="math inline">\(\{\alpha b \mid \alpha \in B_{\F},\, b \in B_V\}\)</span> é base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>:</strong> Seja <span class="math inline">\(B_{\F}\)</span> uma base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span> e <span class="math inline">\(B_V\)</span> uma base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\F\)</span>.<br>
 </p></li>
 </ol>
 <ul>
-<li><strong>Gerador:</strong> Todo <span class="math inline">\(v \in V\)</span> pode ser escrito como <span class="math inline">\(v = \sum_{i=1}^n \lambda_i b_i\)</span> com <span class="math inline">\(\lambda_i \in \F\)</span>, <span class="math inline">\(b_i \in B_V\)</span>. Cada <span class="math inline">\(\lambda_i\)</span> pode ser escrito como combinação linear de elementos de <span class="math inline">\(B_\F\)</span> com coeficientes em <span class="math inline">\(\K\)</span>, ou seja, <span class="math inline">\(\lambda_i = \sum_{j=1}^m \alpha_{ij} \alpha_j\)</span> com <span class="math inline">\(\alpha_{ij} \in \K\)</span>, <span class="math inline">\(\alpha_j \in B_\F\)</span>. Assim, <span class="math display">\[
+<li><strong>Gerador:</strong> Todo <span class="math inline">\(v \in V\)</span> pode ser escrito como <span class="math inline">\(v = \sum_{i=1}^n \lambda_i b_i\)</span> com <span class="math inline">\(\lambda_i \in \F\)</span>, <span class="math inline">\(b_i \in B_V\)</span>. Cada <span class="math inline">\(\lambda_i\)</span> pode ser escrito como combinação linear de elementos de <span class="math inline">\(B_{\F}\)</span> com coeficientes em <span class="math inline">\(\K\)</span>, ou seja, <span class="math inline">\(\lambda_i = \sum_{j=1}^m \alpha_{ij} \alpha_j\)</span> com <span class="math inline">\(\alpha_{ij} \in \K\)</span>, <span class="math inline">\(\alpha_j \in B_{\F}\)</span>. Assim, <span class="math display">\[
 v = \sum_{i=1}^n \sum_{j=1}^m \alpha_{ij} (\alpha_j b_i),
 \]</span> ou seja, <span class="math inline">\(v\)</span> é combinação linear sobre <span class="math inline">\(\K\)</span> dos elementos <span class="math inline">\(\alpha_j b_i\)</span>.</li>
-<li><strong>Linearmente independente:</strong> Suponha <span class="math inline">\(\sum_{i,j} \beta_{ij} (\alpha_j b_i) = 0\)</span> com <span class="math inline">\(\beta_{ij} \in \K\)</span>. Reescreva como <span class="math inline">\(\sum_{i} \left( \sum_j \beta_{ij} \alpha_j \right) b_i = 0\)</span>. Como <span class="math inline">\(B_V\)</span> é base sobre <span class="math inline">\(\F\)</span>, cada coeficiente <span class="math inline">\(\sum_j \beta_{ij} \alpha_j = 0\)</span> em <span class="math inline">\(\F\)</span>. Como <span class="math inline">\(B_\F\)</span> é base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span>, segue que todos os <span class="math inline">\(\beta_{ij} = 0\)</span>. Portanto, <span class="math inline">\(\{\alpha b \mid \alpha \in B_\F,\, b \in B_V\}\)</span> é base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>.</li>
+<li><strong>Linearmente independente:</strong> Suponha <span class="math inline">\(\sum_{i,j} \beta_{ij} (\alpha_j b_i) = 0\)</span> com <span class="math inline">\(\beta_{ij} \in \K\)</span>. Reescreva como <span class="math inline">\(\sum_{i} \left( \sum_j \beta_{ij} \alpha_j \right) b_i = 0\)</span>. Como <span class="math inline">\(B_V\)</span> é base sobre <span class="math inline">\(\F\)</span>, cada coeficiente <span class="math inline">\(\sum_j \beta_{ij} \alpha_j = 0\)</span> em <span class="math inline">\(\F\)</span>. Como <span class="math inline">\(B_{\F}\)</span> é base de <span class="math inline">\(\F\)</span> sobre <span class="math inline">\(\K\)</span>, segue que todos os <span class="math inline">\(\beta_{ij} = 0\)</span>. Portanto, <span class="math inline">\(\{\alpha b \mid \alpha \in B_{\F},\, b \in B_V\}\)</span> é base de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(\K\)</span>.</li>
 </ul>
 <ol start="4" type="1">
 <li><strong>Fórmula das dimensões:</strong><br>
-Se <span class="math inline">\(m = \dim_\K \F\)</span> e <span class="math inline">\(n = \dim_\F V\)</span>, então <span class="math display">\[
-\dim_\K V = m \cdot n = \dim_\K \F \cdot \dim_\F V.
+Se <span class="math inline">\(m = \dim_{\K} \F\)</span> e <span class="math inline">\(n = \dim_{\F} V\)</span>, então <span class="math display">\[
+\dim_{\K} V = m \cdot n = \dim_{\K} \F \cdot \dim_{\F} V.
 \]</span></li>
 </ol>
 </div>
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 88.14</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e assuma que <span class="math inline">\(\dim_\F V=\dim_\F W\)</span> e <span class="math inline">\(\dim_{\textrm{Fix}(\sigma)}\F\)</span> são todas finitas. Mostre que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f\)</span> é injetiva.</p>
+<p><span class="theorem-title"><strong>Exercício 88.14</strong></span> Seja <span class="math inline">\(f:V\to W\)</span> uma aplicação <span class="math inline">\(\sigma\)</span>-semilinear e assuma que <span class="math inline">\(\dim_{\F} V=\dim_{\F} W\)</span> e <span class="math inline">\(\dim_{\textrm{Fix}(\sigma)}\F\)</span> são todas finitas. Mostre que <span class="math inline">\(f\)</span> é sobrejetiva se e somente se <span class="math inline">\(f\)</span> é injetiva.</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -2021,8 +2022,8 @@ Se <span class="math inline">\(m = \dim_\K \F\)</span> e <span class="math inlin
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Seja <span class="math inline">\(\K=\textrm{Fix}(\sigma)\)</span>. A aplicação <span class="math inline">\(f\)</span> é <span class="math inline">\(\K\)</span>-linear. Além disso <span class="math inline">\(\dim_{\K}V=\dim_\K\F\cdot
-\dim_\F V\)</span> é finita. Ora, a afirmação segue pelo Teorema de Núcleo e Imagem para aplicações <span class="math inline">\(\K\)</span>-lineares.</p>
+<p>Seja <span class="math inline">\(\K=\textrm{Fix}(\sigma)\)</span>. A aplicação <span class="math inline">\(f\)</span> é <span class="math inline">\(\K\)</span>-linear. Além disso <span class="math inline">\(\dim_{\K}V=\dim_{\K}\F\cdot
+\dim_{\F} V\)</span> é finita. Ora, a afirmação segue pelo Teorema de Núcleo e Imagem para aplicações <span class="math inline">\(\K\)</span>-lineares.</p>
 </div>
 </div>
 </div>
@@ -2061,18 +2062,14 @@ V &amp; \xrightarrow{\Phi_V} &amp; V^*
 \alpha^* \circ \Phi_W = \Phi_V \circ \alpha^\#.
 \]</span></p>
 <p><strong>Demonstração:</strong></p>
-<p>Para <span class="math inline">\(w \in W\)</span> e <span class="math inline">\(v \in V\)</span>, <span class="math display">\[
-\begin{align*}
+<p>Para <span class="math inline">\(w \in W\)</span> e <span class="math inline">\(v \in V\)</span>, <span class="math display">\[\begin{align*}
 (\alpha^* \circ \Phi_W)(w)(v) &amp;= \alpha^*(\Phi_W(w))(v) \\
 &amp;= \Phi_W(w)(\alpha(v)) \\
 &amp;= B_W(\alpha(v), w)
-\end{align*}
-\]</span> Por outro lado, <span class="math display">\[
-\begin{align*}
+\end{align*}\]</span> Por outro lado, <span class="math display">\[\begin{align*}
 (\Phi_V \circ \alpha^\#)(w)(v) &amp;= \Phi_V(\alpha^\#(w))(v) \\
 &amp;= B_V(v, \alpha^\#(w))
-\end{align*}
-\]</span> Mas, pela definição de adjunto, <span class="math inline">\(B_W(\alpha(v), w) = B_V(v, \alpha^\#(w))\)</span> para todo <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(w \in W\)</span>.</p>
+\end{align*}\]</span> Mas, pela definição de adjunto, <span class="math inline">\(B_W(\alpha(v), w) = B_V(v, \alpha^\#(w))\)</span> para todo <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(w \in W\)</span>.</p>
 <p>Portanto, <span class="math display">\[
 (\alpha^* \circ \Phi_W)(w) = (\Phi_V \circ \alpha^\#)(w)
 \]</span> para todo <span class="math inline">\(w \in W\)</span>, ou seja, o diagrama comuta.</p>
@@ -2242,7 +2239,7 @@ B(v, v) = \alpha^2 a_1 + \beta^2 a_2.
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 88.22</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística diferente de 2, denote por <span class="math inline">\(I_{p+q+r}\)</span> a matriz diagonal sobre <span class="math inline">\(\F\)</span> que tem <span class="math inline">\(p\)</span> entradas <span class="math inline">\(−1\)</span>, <span class="math inline">\(q\)</span> entradas <span class="math inline">\(1\)</span> e <span class="math inline">\(r\)</span> entradas zero (nesta ordem) na diagonal principal. Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\F\)</span> com <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>; no caso de <span class="math inline">\(\F = \C\)</span>, seja <span class="math inline">\(\bar z\)</span> o conjugado complexo. Demonstre as seguintes afirmações:</p>
+<p><span class="theorem-title"><strong>Exercício 88.22</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo de caraterística diferente de 2, denote por <span class="math inline">\(I_{p+q+r}\)</span> a matriz diagonal sobre <span class="math inline">\(\F\)</span> que tem <span class="math inline">\(p\)</span> entradas <span class="math inline">\(−1\)</span>, <span class="math inline">\(q\)</span> entradas <span class="math inline">\(1\)</span> e <span class="math inline">\(r\)</span> entradas zero (nesta ordem) na diagonal principal. Seja <span class="math inline">\(\sigma\)</span> um automorfismo de <span class="math inline">\(\F\)</span> com <span class="math inline">\(\sigma^2=\mbox{id}_{\F}\)</span>; no caso de <span class="math inline">\(\F = \C\)</span>, seja <span class="math inline">\(\bar z\)</span> o conjugado complexo. Demonstre as seguintes afirmações:</p>
 <ol type="1">
 <li>Se <span class="math inline">\(A \in M_{n\times n}(\F)\)</span> com <span class="math inline">\(A^t = A^\sigma\)</span> , então existe uma matriz <span class="math inline">\(X \in M_{n\times n}(\F)\)</span> tal que <span class="math inline">\(X^{σt}AX\)</span> é diagonal.</li>
 <li>Se <span class="math inline">\(A \in M_{n\times n}(\F)\)</span> com <span class="math inline">\(A^t = A\)</span>, então existe uma matriz <span class="math inline">\(X \in M_{n×n}(\F)\)</span> tal que <span class="math inline">\(X^tAX\)</span> é diagonal.</li>
@@ -2267,7 +2264,7 @@ B(v, v) = \alpha^2 a_1 + \beta^2 a_2.
 <p>Seja <span class="math inline">\(A \in M_{n \times n}(\F)\)</span> com <span class="math inline">\(A^t = A^\sigma\)</span>. Considere <span class="math inline">\(V = \F^n\)</span> com a forma <span class="math inline">\(\sigma\)</span>-sesquilinear <span class="math inline">\(B\)</span> dada por <span class="math inline">\(B(v, w) = v^t A w^\sigma\)</span>. Ora, <span class="math display">\[
 B(w,v)=w^tAv^\sigma=(w^tAv^\sigma)^t=v^{\sigma t}A^tw=v^{\sigma t}A^\sigma w=(v^t A^\sigma w^\sigma)^\sigma
 =B(v,w)^\sigma;
-\]</span> ou seja <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-hermitiana. Pelo <a href="isometrias.html#thm-orth-basis" class="quarto-xref">Teorema&nbsp;<span>81.1</span></a>, existe uma base ortogonal <span class="math inline">\(\{e_1, \ldots, e_n\}\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(B(e_i, e_j) = 0\)</span> para <span class="math inline">\(i \neq j\)</span>. Seja <span class="math inline">\(\overline X\)</span> a matriz cujas colunas são os vetores da base ortogonal. Então, na nova base, a matriz de <span class="math inline">\(B\)</span> é diagonal e por <a href="sesqui.html#lem-basechange-sesqui" class="quarto-xref">Lema&nbsp;<span>80.3</span></a>, <span class="math inline">\(\overline X^{t} A \overline X^\sigma\)</span> é diagonal. Ora, tome <span class="math inline">\(X=X^\sigma\)</span> e lembre que <span class="math inline">\(\sigma^2=\mbox{id}_\F\)</span>.</p>
+\]</span> ou seja <span class="math inline">\(B\)</span> é <span class="math inline">\(\sigma\)</span>-hermitiana. Pelo <a href="isometrias.html#thm-orth-basis" class="quarto-xref">Teorema&nbsp;<span>81.1</span></a>, existe uma base ortogonal <span class="math inline">\(\{e_1, \ldots, e_n\}\)</span> de <span class="math inline">\(V\)</span> tal que <span class="math inline">\(B(e_i, e_j) = 0\)</span> para <span class="math inline">\(i \neq j\)</span>. Seja <span class="math inline">\(\overline X\)</span> a matriz cujas colunas são os vetores da base ortogonal. Então, na nova base, a matriz de <span class="math inline">\(B\)</span> é diagonal e por <a href="sesqui.html#lem-basechange-sesqui" class="quarto-xref">Lema&nbsp;<span>80.3</span></a>, <span class="math inline">\(\overline X^{t} A \overline X^\sigma\)</span> é diagonal. Ora, tome <span class="math inline">\(X=X^\sigma\)</span> e lembre que <span class="math inline">\(\sigma^2=\mbox{id}_{\F}\)</span>.</p>
 <p>A solução dos outros itens é similar.</p>
 </div>
 </div>

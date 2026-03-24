@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>52&nbsp; Diagonalização – Álgebra</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../AlgebraLinearI/07_alglin1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-71236775942e99b6bf157a0bc0679510.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -101,10 +103,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="macros_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="macros_files/libs/quarto-html/anchor.min.js"></script>
 <link href="macros_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="macros_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="macros_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="macros_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="macros_files/libs/bootstrap/bootstrap-14bff666a035411f7f521af9a9213071.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -142,7 +144,7 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/08_alglin1.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização</span></a></li></ol></nav></header>
 
 
 
@@ -155,7 +157,7 @@ window.Quarto = {
 \newcommand{\C}{\mathbb C}
 \newcommand{\F}{\mathbb F}
 \newcommand{\K}{\mathbb K}
-\newcommand{\L}{\mathbb L}
+\newcommand{\LL}{\mathbb L}
 \newcommand{\N}{\mathbb N}
 \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
 \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
@@ -179,6 +181,8 @@ window.Quarto = {
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\tn}[1]{\textnormal{#1}}
+\newcommand{\rot}[1]{\mbox{Rot}(#1)}
+\newcommand{\refl}[1]{\mbox{Ref}(#1)}
 \]</span></p>
 </div>
 
@@ -266,8 +270,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -378,7 +380,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -612,7 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -1408,7 +1409,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearI/index.html">Álgebra Linear I</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearI/08_alglin1.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Diagonalização</span></h1>
 </div>
@@ -1431,7 +1432,7 @@ window.Quarto = {
 <h1 data-number="53"><span class="header-section-number">53</span> O polinômio caraterístico</h1>
 <p>Diagonalização de uma TL <span class="math inline">\(T:V\to V\)</span> é o processo de achar uma base de <span class="math inline">\(V\)</span> com respeito a qual <span class="math inline">\(T\)</span> é muito fácil entender. As noções de autovalor, autovetor e autoespaço vão ser fundamentais. Antes de definir essas coisas, vamos colocar mais um item em nossa lista de invariantes de matrizes semelhantes. Esta vez, o invariante vai ser um polinômio:</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 53.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span>. O polinômio <span class="math display">\[p_{A}(t) = {\rm Det}(A- tI)\]</span> é chamado de <em>polinômio característico</em> de <span class="math inline">\(A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definição 53.1</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n\times n\)</span>. O polinômio <span class="math display">\[p_{A}(t) = {\textrm{Det}}(A- tI)\]</span> é chamado de <em>polinômio característico</em> de <span class="math inline">\(A\)</span>.</p>
 </div>
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 53.2</strong></span> Seja <span class="math inline">\(f\)</span> um polinômio sobre <span class="math inline">\(\R\)</span>.</p>
@@ -1445,9 +1446,9 @@ window.Quarto = {
     4 &amp; 2 &amp; 0 \\
     -1&amp; 1&amp; 0 \\
     0 &amp; 1 &amp; 1
-    \end{pmatrix}.\]</span> Vamos calcular o polinômio caraterístico de <span class="math inline">\(A\)</span>:</p>
-<span class="math display">\[\begin{aligned}
-    p_A(t) &amp; = {\rm Det}(A-tI) \\
+    \end{pmatrix}.\]</span> Vamos calcular o polinômio caraterístico de <span class="math inline">\(A\)</span>: <span class="math display">\[
+\begin{aligned}
+    p_A(t) &amp; = {\textrm{Det}}(A-tI) \\
     &amp; = \tn{Det}\begin{pmatrix}
     4-t &amp; 2 &amp; 0 \\
     -1&amp; 1-t &amp; 0 \\
@@ -1460,20 +1461,20 @@ window.Quarto = {
     &amp; = (1-t)((4-t)(1-t)+2)\\
     &amp;= (1-t)(t^2 - 5t+ 6) \\
     &amp; = (1-t)(2-t)(3-t).
-\end{aligned}\]</span>
-<p>Temos que <span class="math inline">\(1, 2\)</span> e <span class="math inline">\(3\)</span> são as raízes do polinômio caraterístico de <span class="math inline">\(A\)</span>, todas com multiplicidade <span class="math inline">\(1\)</span>.</p>
+\end{aligned}
+\]</span> Temos que <span class="math inline">\(1, 2\)</span> e <span class="math inline">\(3\)</span> são as raízes do polinômio caraterístico de <span class="math inline">\(A\)</span>, todas com multiplicidade <span class="math inline">\(1\)</span>.</p>
 </div>
 <div id="prp-" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposição 53.1</strong></span> Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> matrizes semelhantes. Os polinômios característicos de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são iguais.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span><span class="math inline">\(B = P^{-1}AP\)</span>. Portanto <span class="math display">\[\begin{array}{ccc}
-p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
-&amp;= &amp; {\rm Det}(P^{-1}AP - t I) \\
-&amp;= &amp; {\rm Det}(P^{-1}AP - t P^{-1}P)\\
-&amp;= &amp; {\rm Det}(P^{-1}(A-t I)P) \\
-&amp;= &amp; {\rm Det}(P^{-1}){\rm Det}(A-t I){\rm Det}(P) \\
-&amp; = &amp; {\rm Det}(A - t I) \\
+p_B(t) &amp; = &amp; {\textrm{Det}}(B - t I) \\
+&amp;= &amp; {\textrm{Det}}(P^{-1}AP - t I) \\
+&amp;= &amp; {\textrm{Det}}(P^{-1}AP - t P^{-1}P)\\
+&amp;= &amp; {\textrm{Det}}(P^{-1}(A-t I)P) \\
+&amp;= &amp; {\textrm{Det}}(P^{-1}){\textrm{Det}}(A-t I){\textrm{Det}}(P) \\
+&amp; = &amp; {\textrm{Det}}(A - t I) \\
 &amp; = &amp; p_A(t).
 \end{array}\]</span>&nbsp;◻</p>
 </div>
@@ -1481,8 +1482,8 @@ p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
 <div id="def-" class="theorem definition">
 <p><span class="theorem-title"><strong>Definição 53.3</strong></span> Seja <span class="math inline">\(T:V \rightarrow V\)</span> um operador linear (isto é, endomorfismo) sobre um espaço de dimensão finita <span class="math inline">\(V\)</span> com base <span class="math inline">\(B\)</span>.</p>
 <ul>
-<li><p>O <em>determinante</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[{\rm Det}(T) := {\rm Det}([T]^{B}_{B}).\]</span></p></li>
-<li><p>O <em>polinômio característico</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[p_{T}(t) = {\rm Det}(T- tI) = \tn{Det}([T]_B^B - tI).\]</span></p></li>
+<li><p>O <em>determinante</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[{\textrm{Det}}(T) := {\textrm{Det}}([T]^{B}_{B}).\]</span></p></li>
+<li><p>O <em>polinômio característico</em> de <span class="math inline">\(T\)</span> é <span class="math display">\[p_{T}(t) = {\textrm{Det}}(T- tI) = \tn{Det}([T]_B^B - tI).\]</span></p></li>
 </ul>
 </div>
 <p>Observe que a definição <em>não depende</em> da escolha de base, pois determinantes e polinômios característicos são preservados por semelhança.</p>
@@ -1491,7 +1492,7 @@ p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
     4 &amp; 2 &amp; 0 \\
     -1&amp; 1&amp; 0 \\
     0 &amp; 1 &amp; 1
-    \end{pmatrix}.\]</span> Podemos calcular que <span class="math inline">\({\rm Det}(T) = \tn{Det}([T]_B^B) = 6\)</span>. A matriz <span class="math inline">\([T]_B^B\)</span> é a matriz <span class="math inline">\(A\)</span> do <a href="#exm-matA" class="quarto-xref">Exemplo&nbsp;<span>53.1</span></a>, logo <span class="math display">\[p_T(t) = p_A(t) = (1-t)(2-t)(3-t).\]</span></p>
+    \end{pmatrix}.\]</span> Podemos calcular que <span class="math inline">\({\textrm{Det}}(T) = \tn{Det}([T]_B^B) = 6\)</span>. A matriz <span class="math inline">\([T]_B^B\)</span> é a matriz <span class="math inline">\(A\)</span> do <a href="#exm-matA" class="quarto-xref">Exemplo&nbsp;<span>53.1</span></a>, logo <span class="math display">\[p_T(t) = p_A(t) = (1-t)(2-t)(3-t).\]</span></p>
 </div>
 <section id="autovalores-e-autovetores" class="level2" data-number="53.1">
 <h2 data-number="53.1" data-anchor-id="autovalores-e-autovetores"><span class="header-section-number">53.1</span> Autovalores e autovetores</h2>
@@ -1509,11 +1510,11 @@ p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
 </div>
 <p>O próximo resultado vai nos dar uma condição para encontrarmos autovalores de uma transformação linear <span class="math inline">\(T\)</span>.</p>
 <div id="prp-" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposição 53.2</strong></span> Seja <span class="math inline">\(T: V \rightarrow V\)</span> um endomorfismo linear sobre um espaço de dimensão finita. Um escalar <span class="math inline">\(\alpha \in \R\)</span> é autovalor de <span class="math inline">\(T\)</span> se, e somente se, <span class="math inline">\(\alpha\)</span> é raiz do polinômio característico de <span class="math inline">\(T\)</span>, ou seja, se <span class="math display">\[p_T(\alpha) = {\rm Det}(T-\alpha I) = 0.\]</span></p>
+<p><span class="theorem-title"><strong>Proposição 53.2</strong></span> Seja <span class="math inline">\(T: V \rightarrow V\)</span> um endomorfismo linear sobre um espaço de dimensão finita. Um escalar <span class="math inline">\(\alpha \in \R\)</span> é autovalor de <span class="math inline">\(T\)</span> se, e somente se, <span class="math inline">\(\alpha\)</span> é raiz do polinômio característico de <span class="math inline">\(T\)</span>, ou seja, se <span class="math display">\[p_T(\alpha) = {\textrm{Det}}(T-\alpha I) = 0.\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(\alpha\in\R\)</span> um autovalor de <span class="math inline">\(T\)</span>. Então existe um vetor não nulo, <span class="math inline">\(\ul{v}\)</span>, tal que <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mas isso é a mesma coisa de dizer que <span class="math inline">\((T-\alpha I)v = \ul{0}\)</span>; ou seja <span class="math inline">\(v\in\ker(T-\alpha I)\)</span>, logo <span class="math inline">\({\rm Det}(T-\alpha I)= 0\)</span>.</p>
-<p>Supondo que <span class="math inline">\(\alpha\)</span> é raiz do polinômio caraterístico, então <span class="math inline">\({\rm Det(}T-\alpha I)= 0\)</span>, ou seja, existe <span class="math inline">\(\ul{v}\)</span> não-nulo tal que <span class="math inline">\((T-\alpha I)\ul{v} = \ul{0}\)</span>, então <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mostrando que <span class="math inline">\(\alpha\)</span> é um autovalor de <span class="math inline">\(T\)</span>.&nbsp;◻</p>
+<p><span class="proof-title"><em>Comprovação</em>. </span>Seja <span class="math inline">\(\alpha\in\R\)</span> um autovalor de <span class="math inline">\(T\)</span>. Então existe um vetor não nulo, <span class="math inline">\(\ul{v}\)</span>, tal que <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mas isso é a mesma coisa de dizer que <span class="math inline">\((T-\alpha I)v = \ul{0}\)</span>; ou seja <span class="math inline">\(v\in\ker(T-\alpha I)\)</span>, logo <span class="math inline">\({\textrm{Det}}(T-\alpha I)= 0\)</span>.</p>
+<p>Supondo que <span class="math inline">\(\alpha\)</span> é raiz do polinômio caraterístico, então <span class="math inline">\({\textrm{Det}}(T-\alpha I)= 0\)</span>, ou seja, existe <span class="math inline">\(\ul{v}\)</span> não-nulo tal que <span class="math inline">\((T-\alpha I)\ul{v} = \ul{0}\)</span>, então <span class="math inline">\(T(\ul{v}) = \alpha \ul{v}\)</span>, mostrando que <span class="math inline">\(\alpha\)</span> é um autovalor de <span class="math inline">\(T\)</span>.&nbsp;◻</p>
 </div>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 53.4</strong></span> Para a transformação linear <span class="math inline">\(T:\R^3\to \R^3\)</span> no <a href="#exm-tl-r3-r3" class="quarto-xref">Exemplo&nbsp;<span>53.2</span></a>, os autovalores de <span class="math inline">\(T\)</span> são exatamente os números <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span>.</p>
@@ -1523,33 +1524,32 @@ p_B(t) &amp; = &amp; {\rm Det}(B - t I) \\
 </div>
 <p>O nome faz sentido, pois <span class="math inline">\(S_\lambda\)</span> é de fato um subespaço de <span class="math inline">\(V\)</span>:</p>
 <div id="prp-" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposição 53.3</strong></span> Seja <span class="math inline">\(\lambda \in \R\)</span> um autovalor de <span class="math inline">\(T:V \rightarrow V\)</span>. Então <span class="math inline">\(S_{\lambda} = {\rm Ker}(T-\lambda I)\)</span>. Em particular, o autoespaço <span class="math inline">\(S_\lambda\)</span> é sempre um subespaço de <span class="math inline">\(V\)</span>.</p>
+<p><span class="theorem-title"><strong>Proposição 53.3</strong></span> Seja <span class="math inline">\(\lambda \in \R\)</span> um autovalor de <span class="math inline">\(T:V \rightarrow V\)</span>. Então <span class="math inline">\(S_{\lambda} = {\textrm{Ker}}(T-\lambda I)\)</span>. Em particular, o autoespaço <span class="math inline">\(S_\lambda\)</span> é sempre um subespaço de <span class="math inline">\(V\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span><span class="math display">\[\begin{array}{ccc}
     \ul{x} \in S_{\lambda} &amp; \Longleftrightarrow &amp; T(\ul{x}) = \lambda \ul{x} \\
      &amp;\Longleftrightarrow &amp; (T-\lambda I)\ul{x} = \ul{0} \\
-     &amp;\Longleftrightarrow &amp; \ul{x} \in {\rm Ker}(T-\lambda I).
+     &amp;\Longleftrightarrow &amp; \ul{x} \in {\textrm{Ker}}(T-\lambda I).
 \end{array}\]</span> Segue que <span class="math inline">\(S_\lambda\)</span> é subespaço de <span class="math inline">\(V\)</span>, pois o núcleo de uma TL sempre o é.&nbsp;◻</p>
 </div>
 <p>Observe que os elementos de <span class="math inline">\(S_\lambda\)</span> são exatamente os autovetores associados a <span class="math inline">\(\lambda\)</span>, mais o vetor <span class="math inline">\(\ul{0}\)</span>.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Exemplo 53.5</strong></span> Voltando ao nosso exemplo <span class="math inline">\(T(x,y,z) = (4x+2y,-x+y,y+z)\)</span>. Temos que <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span> são os autovalores de <span class="math inline">\(T\)</span>. Vamos calcular os autoespaços <span class="math inline">\(S_1, S_2\)</span> e <span class="math inline">\(S_3\)</span>.</p>
+<p><span class="theorem-title"><strong>Exemplo 53.5</strong></span> Voltando ao nosso exemplo <span class="math inline">\(T(x,y,z) = (4x+2y,-x+y,y+z)\)</span>. Temos que <span class="math inline">\(1,2\)</span> e <span class="math inline">\(3\)</span> são os autovalores de <span class="math inline">\(T\)</span>. Vamos calcular os autoespaços <span class="math inline">\(S_1, S_2\)</span> e <span class="math inline">\(S_3\)</span>. <span class="math display">\[
+\begin{aligned}
+                T(x,y,z) = 1(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (x,y,z) \\
+                &amp; \Longleftrightarrow (3x+2y,-x,y) = (0,0,0) \\
+                &amp; \Longleftrightarrow x=y=0,
+    \end{aligned}
+\]</span> portanto <span class="math inline">\(S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = \langle(0,0,1)\rangle.\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+                T(x,y,z) = 2(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (2x,2y,2z) \\
+                &amp; \Longleftrightarrow (2x+2y,-x-y,y-z) = (0,0,0) \\
+                &amp; \Longleftrightarrow x=-y \ {\textrm{e }} \ y=z,
+    \end{aligned}
+\]</span> portanto <span class="math inline">\(S_2 = \{ (-y,y,y) \,|\, y\in \R \} = \langle(-1,1,1)\rangle.\)</span></p>
 <ul>
-<li><span class="math display">\[\begin{aligned}
-            T(x,y,z) = 1(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (x,y,z) \\
-            &amp; \Longleftrightarrow (3x+2y,-x,y) = (0,0,0) \\
-            &amp; \Longleftrightarrow x=y=0,
-
-\end{aligned}\]</span>
-<p>portanto <span class="math inline">\(S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = \langle(0,0,1)\rangle.\)</span></p></li>
-<li><span class="math display">\[\begin{aligned}
-            T(x,y,z) = 2(x,y,z) &amp; \Longleftrightarrow (4x+2y,-x+y,y+z) = (2x,2y,2z) \\
-            &amp; \Longleftrightarrow (2x+2y,-x-y,y-z) = (0,0,0) \\
-            &amp; \Longleftrightarrow x=-y \ {\rm e } \ y=z,
-
-\end{aligned}\]</span>
-<p>portanto <span class="math inline">\(S_2 = \{ (-y,y,y) \,|\, y\in \R \} = \langle(-1,1,1)\rangle.\)</span></p></li>
 <li><p>Contas similares dão</p>
 <p><span class="math inline">\(S_3 = \langle(-2,1,1/2)\rangle\)</span> [Exercício: confirme!]</p></li>
 </ul>
@@ -1691,14 +1691,14 @@ D=[T]^{C}_{C} = [I]^{B}_{C}[T]^{B}_{B}[I]^{C}_{B}
 \vdots \\
 0
 \end{pmatrix} = \lambda_i\ul{b_i}_B,\]</span> segue que <span class="math inline">\(T(\ul{b_i}) = \lambda_i\ul{b_i}\)</span>, ou seja, que <span class="math inline">\(\ul{b_i}\)</span> é um autovetor de <span class="math inline">\(T\)</span> com autovalor correspondente <span class="math inline">\(\lambda_i\)</span>. Logo <span class="math inline">\(B\)</span> é uma base de <span class="math inline">\(V\)</span> composta de autovetores.</p>
-Agora supondo que exista uma base de autovetores <span class="math inline">\(B = \{ \ul{b_1},\ldots,\ul{b_n}\}\)</span> (com <span class="math inline">\(\ul{b_i}\)</span> associado ao autovalor <span class="math inline">\(\lambda_i\)</span>), temos
-<span class="math display">\[\begin{aligned}
+<p>Agora supondo que exista uma base de autovetores <span class="math inline">\(B = \{ \ul{b_1},\ldots,\ul{b_n}\}\)</span> (com <span class="math inline">\(\ul{b_i}\)</span> associado ao autovalor <span class="math inline">\(\lambda_i\)</span>), temos <span class="math display">\[
+\begin{aligned}
     T(\ul{b_1}) &amp; = \lambda_1\ul{b_1} + 0\ul{b_2} + \cdots + 0\ul{b_n},\\
 T(\ul{b_2}) &amp; = 0\ul{b_1} + \lambda_2\ul{b_2} + \cdots + 0\ul{b_n}, \\
 &amp; \vdots \\
 T(\ul{b_n}) &amp; =  0\ul{b_1} + 0\ul{b_2} + \cdots + \lambda_n\ul{b_n}
-\end{aligned}\]</span>
-<p>então a matriz de <span class="math inline">\(T\)</span> com respeito à base <span class="math inline">\(B\)</span> é <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
+\end{aligned}
+\]</span> então a matriz de <span class="math inline">\(T\)</span> com respeito à base <span class="math inline">\(B\)</span> é <span class="math display">\[[T]^{B}_{B} = \begin{pmatrix}
 \lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
 0 &amp; \lambda_2 &amp;  &amp; 0 \\
 \vdots &amp;&amp;\ddots&amp; \\

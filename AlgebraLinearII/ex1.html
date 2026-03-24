@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>70&nbsp; Exercícios: Bloco 1 – Álgebra</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../AlgebraLinearII/formas.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d8e0d6d96a3fcd8b09b2890aff334b77.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-71236775942e99b6bf157a0bc0679510.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -101,10 +103,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="macros_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="macros_files/libs/quarto-html/anchor.min.js"></script>
 <link href="macros_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="macros_files/libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="macros_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="macros_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="macros_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="macros_files/libs/bootstrap/bootstrap-14bff666a035411f7f521af9a9213071.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -142,7 +144,7 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></a></li></ol></nav></header>
 
 
 
@@ -155,7 +157,7 @@ window.Quarto = {
 \newcommand{\C}{\mathbb C}
 \newcommand{\F}{\mathbb F}
 \newcommand{\K}{\mathbb K}
-\newcommand{\L}{\mathbb L}
+\newcommand{\LL}{\mathbb L}
 \newcommand{\N}{\mathbb N}
 \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
 \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
@@ -179,6 +181,8 @@ window.Quarto = {
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\tn}[1]{\textnormal{#1}}
+\newcommand{\rot}[1]{\mbox{Rot}(#1)}
+\newcommand{\refl}[1]{\mbox{Ref}(#1)}
 \]</span></p>
 </div>
 
@@ -266,8 +270,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -378,7 +380,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -612,7 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -1398,7 +1399,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../AlgebraLinearII/index.html">Álgebra Linear II</a></li><li class="breadcrumb-item"><a href="../AlgebraLinearII/ex1.html"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Exercícios: Bloco 1</span></h1>
 </div>
@@ -1421,10 +1422,10 @@ window.Quarto = {
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 70.1</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo. Mostre que</p>
 <ol type="1">
-<li>O elemento neutro aditivo <span class="math inline">\(0_\F\)</span> é único.</li>
-<li>O elemento neutro multiplicativo <span class="math inline">\(1_\F\)</span> é único.</li>
+<li>O elemento neutro aditivo <span class="math inline">\(0_{\F}\)</span> é único.</li>
+<li>O elemento neutro multiplicativo <span class="math inline">\(1_{\F}\)</span> é único.</li>
 <li>Se <span class="math inline">\(a\in\F\)</span>, então o negativo <span class="math inline">\(-a\)</span> é único.</li>
-<li>Se <span class="math inline">\(a\in\F\setminus\{0_\F\}\)</span>, então o inverso <span class="math inline">\(a^{-1}\)</span> é único.</li>
+<li>Se <span class="math inline">\(a\in\F\setminus\{0_{\F}\}\)</span>, então o inverso <span class="math inline">\(a^{-1}\)</span> é único.</li>
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1441,7 +1442,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>Apresentamos a solução dos itens 1. e 3. O leitor poderá fazer itens 2. e 4.</p>
 <ol type="1">
-<li><p>O elemento neutro aditivo <span class="math inline">\(0_\F\)</span> é único. Suponha que existam dois elementos neutros aditivos <span class="math inline">\(0_\F\)</span> e <span class="math inline">\(0'_\F\)</span>. Então, por definição de elemento neutro aditivo, temos que <span class="math inline">\(0_\F + 0'_\F = 0'_\F\)</span> e <span class="math inline">\(0_\F + 0'_\F = 0_\F\)</span>. Portanto, <span class="math inline">\(0_\F = 0'_\F\)</span>, mostrando que o elemento neutro aditivo é único.</p></li>
+<li><p>O elemento neutro aditivo <span class="math inline">\(0_{\F}\)</span> é único. Suponha que existam dois elementos neutros aditivos <span class="math inline">\(0_{\F}\)</span> e <span class="math inline">\(0'_{\F}\)</span>. Então, por definição de elemento neutro aditivo, temos que <span class="math inline">\(0_{\F} + 0'_{\F} = 0'_{\F}\)</span> e <span class="math inline">\(0_{\F} + 0'_{\F} = 0_{\F}\)</span>. Portanto, <span class="math inline">\(0_{\F} = 0'_{\F}\)</span>, mostrando que o elemento neutro aditivo é único.</p></li>
 <li></li>
 <li><p>Se <span class="math inline">\(a\in\F\)</span>, então o negativo <span class="math inline">\(-a\)</span> é único. Suponha que existam dois negativos de <span class="math inline">\(a\)</span>, denotados por <span class="math inline">\(-a\)</span> e <span class="math inline">\(-a'\)</span>. Então, usando a definição do negativo e a associatividade, <span class="math display">\[
 -a = -a+(a+(-a'))=(-a+a)+(-a')=-a'.
@@ -1455,7 +1456,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Exercício 70.2</strong></span> Seja <span class="math inline">\(\F\)</span> um corpo. Demonstre as seguintes leis cancelativas.</p>
 <ol type="1">
 <li>Se <span class="math inline">\(a+b=a+c\)</span>, então <span class="math inline">\(b=c\)</span> para todo <span class="math inline">\(a,b,c\in\F\)</span>.</li>
-<li>Se <span class="math inline">\(ab=ac\)</span>, então <span class="math inline">\(b=c\)</span> para todo <span class="math inline">\(a,b,c\in\F\)</span> com <span class="math inline">\(a\neq 0_\F\)</span>.</li>
+<li>Se <span class="math inline">\(ab=ac\)</span>, então <span class="math inline">\(b=c\)</span> para todo <span class="math inline">\(a,b,c\in\F\)</span> com <span class="math inline">\(a\neq 0_{\F}\)</span>.</li>
 </ol>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1475,15 +1476,15 @@ window.Quarto = {
 -a + (a + b) = -a + (a + c).
 \]</span> Pela associatividade da adição, temos: <span class="math display">\[
 (-a + a) + b = (-a + a) + c.
-\]</span> Como <span class="math inline">\(-a + a = 0_\F\)</span>, obtemos: <span class="math display">\[
-0_\F + b = 0_\F + c.
+\]</span> Como <span class="math inline">\(-a + a = 0_{\F}\)</span>, obtemos: <span class="math display">\[
+0_{\F} + b = 0_{\F} + c.
 \]</span> E, pela propriedade do elemento neutro aditivo, concluímos que <span class="math inline">\(b = c\)</span>.</p></li>
-<li><p>Suponha que <span class="math inline">\(ab = ac\)</span> com <span class="math inline">\(a \neq 0_\F\)</span>. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de <span class="math inline">\(a\)</span>, denotado por <span class="math inline">\(a^{-1}\)</span>: <span class="math display">\[
+<li><p>Suponha que <span class="math inline">\(ab = ac\)</span> com <span class="math inline">\(a \neq 0_{\F}\)</span>. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de <span class="math inline">\(a\)</span>, denotado por <span class="math inline">\(a^{-1}\)</span>: <span class="math display">\[
 a^{-1}(ab) = a^{-1}(ac).
 \]</span> Pela associatividade da multiplicação, temos: <span class="math display">\[
 (a^{-1}a)b = (a^{-1}a)c.
-\]</span> Como <span class="math inline">\(a^{-1}a = 1_\F\)</span>, obtemos: <span class="math display">\[
-1_\F b = 1_\F c.
+\]</span> Como <span class="math inline">\(a^{-1}a = 1_{\F}\)</span>, obtemos: <span class="math display">\[
+1_{\F} b = 1_{\F} c.
 \]</span> E, pela propriedade do elemento neutro multiplicativo, concluímos que <span class="math inline">\(b = c\)</span>.</p></li>
 </ol>
 </div>
@@ -1564,8 +1565,8 @@ a^{-1}(ab) = a^{-1}(ac).
 <ol type="1">
 <li>Mostre que o vetor nulo <span class="math inline">\(0_V\)</span> é único.</li>
 <li>Mostre que o negativo <span class="math inline">\(-v\)</span> é único para todo <span class="math inline">\(v\in V\)</span>.</li>
-<li>Mostre que <span class="math inline">\(\alpha v=0_V\)</span> se e somente se <span class="math inline">\(\alpha=0_\F\)</span> ou <span class="math inline">\(v=0_V\)</span>.</li>
-<li>Mostre que <span class="math inline">\((-1_\F)\cdot v=-v\)</span> para todo <span class="math inline">\(v\in V\)</span>.</li>
+<li>Mostre que <span class="math inline">\(\alpha v=0_V\)</span> se e somente se <span class="math inline">\(\alpha=0_{\F}\)</span> ou <span class="math inline">\(v=0_V\)</span>.</li>
+<li>Mostre que <span class="math inline">\((-1_{\F})\cdot v=-v\)</span> para todo <span class="math inline">\(v\in V\)</span>.</li>
 </ol>
 </div>
 <div id="exr-func-fin" class="theorem exercise">
@@ -1747,7 +1748,7 @@ U_2&amp;=\{A\in V\mid A^t=-A\}.
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções limitadas é limitada, e o produto de uma função limitada por um escalar também é limitado.</p></li>
-<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado superiormente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>. Por exemplo se <span class="math inline">\(f(0)=0\)</span> e f(x)=x$ para <span class="math inline">\(x\in (0,1)\)</span> então, <span class="math inline">\(f\)</span> é limitado superiormente, mas <span class="math inline">\(-f\)</span> não é limitado superiormente.</p></li>
+<li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado superiormente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>. Por exemplo se <span class="math inline">\(f(0)=0\)</span> e <span class="math inline">\(f(x)=\log x\)</span> para <span class="math inline">\(x\in (0,1)\)</span> então, <span class="math inline">\(f\)</span> é limitado superiormente, mas <span class="math inline">\(-f\)</span> não é limitado superiormente.</p></li>
 <li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é limitado inferiormente}\}\)</span> não é um subespaço de <span class="math inline">\(V\)</span>. O mesmo argumento do item anterior se aplica.</p></li>
 <li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é diferenciável}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções diferenciáveis é diferenciável, e o produto de uma função diferenciável por um escalar também é diferenciável.</p></li>
 <li><p><span class="math inline">\(\{f\in V\mid f\mbox{ é contínua}\}\)</span> é um subespaço de <span class="math inline">\(V\)</span>. A soma de funções contínuas é contínua, e o produto de uma função contínua por um escalar também é contínua.</p></li>
@@ -1913,7 +1914,7 @@ v_B=v-\sum_{i=1}^kv_{p_i}b_i.
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 70.24</strong></span> Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> espaços vetoriais de dimensão finita sobre <span class="math inline">\(\F\)</span> com bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>, respetivamente. Denote por <span class="math inline">\(B^∗\)</span> e <span class="math inline">\(C^∗\)</span> as bases duais de <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> em <span class="math inline">\(V^∗\)</span> e <span class="math inline">\(W^∗\)</span>, respetivamente. Seja <span class="math inline">\(f : V \to W\)</span> linear e considere o dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span>. Mostre que <span class="math display">\[
-[f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+[f^\ast]^{C^\ast}_{B^\ast} = ([f]^B_C)^t.
 \]</span> Dica:</p>
 </div>
 <div class="sol callout callout-style-default callout-tip callout-titled">
@@ -1934,38 +1935,38 @@ v_B=v-\sum_{i=1}^kv_{p_i}b_i.
 <ol type="1">
 <li><strong>Definição do dual</strong>:
 <ul>
-<li>O dual <span class="math inline">\(f^∗ : W^∗ \to V^∗\)</span> é definido por <span class="math inline">\(f^∗(\varphi) = \varphi \circ f\)</span> para todo <span class="math inline">\(\varphi \in W^∗\)</span>.</li>
-<li>Isso significa que <span class="math inline">\(f^∗\)</span> “puxa para trás” os funcionais lineares de <span class="math inline">\(W^∗\)</span> para <span class="math inline">\(V^∗\)</span>.</li>
+<li>O dual <span class="math inline">\(f^\ast : W^\ast \to V^\ast\)</span> é definido por <span class="math inline">\(f^\ast(\varphi) = \varphi \circ f\)</span> para todo <span class="math inline">\(\varphi \in W^\ast\)</span>.</li>
+<li>Isso significa que <span class="math inline">\(f^\ast\)</span> “puxa para trás” os funcionais lineares de <span class="math inline">\(W^\ast\)</span> para <span class="math inline">\(V^\ast\)</span>.</li>
 </ul></li>
 <li><strong>Representação matricial</strong>:
 <ul>
 <li>Seja <span class="math inline">\([f]^B_C\)</span> a matriz que representa <span class="math inline">\(f\)</span> em relação às bases <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>.</li>
-<li>Seja <span class="math inline">\([f^∗]^{C^∗}_{B^*}\)</span> a matriz que representa <span class="math inline">\(f^∗\)</span> em relação às bases duais <span class="math inline">\(C^∗\)</span> e <span class="math inline">\(B^∗\)</span>.</li>
+<li>Seja <span class="math inline">\([f^\ast]^{C^\ast}_{B^\ast}\)</span> a matriz que representa <span class="math inline">\(f^\ast\)</span> em relação às bases duais <span class="math inline">\(C^\ast\)</span> e <span class="math inline">\(B^\ast\)</span>.</li>
 </ul></li>
 <li><strong>Propriedade das bases duais</strong>:
 <ul>
-<li>Por definição, as bases duais <span class="math inline">\(B^∗ = \{\beta_1^∗, \ldots, \beta_n^∗\}\)</span> e <span class="math inline">\(C^∗ = \{\gamma_1^∗, \ldots, \gamma_m^∗\}\)</span> satisfazem: <span class="math display">\[
-\beta_i^∗(b_j) = \delta_{ij}, \quad \gamma_i^∗(c_j) = \delta_{ij},
-\]</span> onde <span class="math inline">\(\delta_{ij}\)</span> é o delta de Kronecker.</li>
+<li>Por definição, as bases duais <span class="math inline">\(B^\ast = \{\beta_1^\ast, \ldots, \beta_n^\ast\}\)</span> e <span class="math inline">\(C^\ast = \{\gamma_1^\ast, \ldots, \gamma_m^\ast\}\)</span> satisfazem: <span class="math display">\[
+\beta_i^\ast(b_j) = \delta_{ij}, \quad \gamma_i^\ast(c_j) = \delta_{ij},
+  \]</span> onde <span class="math inline">\(\delta_{ij}\)</span> é o delta de Kronecker.</li>
 </ul></li>
-<li><strong>Cálculo de <span class="math inline">\([f^∗]^{C^∗}_{B^*}\)</span></strong>:
+<li><strong>Cálculo de <span class="math inline">\([f^\ast]^{C^\ast}_{B^\ast}\)</span></strong>:
 <ul>
-<li>Para calcular <span class="math inline">\([f^∗]^{C^∗}_{B^*}\)</span>, precisamos determinar as coordenadas de <span class="math inline">\(f^∗(\gamma_j^∗)\)</span> em relação à base <span class="math inline">\(B^∗\)</span>.</li>
-<li>Por definição de <span class="math inline">\(f^∗\)</span>, temos: <span class="math display">\[
-f^∗(\gamma_j^∗)(b_i) = \gamma_j^∗(f(b_i)).
-\]</span></li>
-<li>Isso significa que a entrada <span class="math inline">\((i, j)\)</span> de <span class="math inline">\([f^∗]^{C^∗}_{B^*}\)</span> é dada por <span class="math inline">\(\gamma_j^∗(f(b_i))\)</span>.</li>
+<li>Para calcular <span class="math inline">\([f^\ast]^{C^\ast}_{B^\ast}\)</span>, precisamos determinar as coordenadas de <span class="math inline">\(f^\ast(\gamma_j^\ast)\)</span> em relação à base <span class="math inline">\(B^\ast\)</span>.</li>
+<li>Por definição de <span class="math inline">\(f^\ast\)</span>, temos: <span class="math display">\[
+f^\ast(\gamma_j^\ast)(b_i) = \gamma_j^\ast(f(b_i)).
+  \]</span></li>
+<li>Isso significa que a entrada <span class="math inline">\((i, j)\)</span> de <span class="math inline">\([f^\ast]^{C^\ast}_{B^\ast}\)</span> é dada por <span class="math inline">\(\gamma_j^\ast(f(b_i))\)</span>.</li>
 </ul></li>
 <li><strong>Relação com <span class="math inline">\([f]^B_C\)</span></strong>:
 <ul>
 <li>A matriz <span class="math inline">\([f]^B_C\)</span> é definida por <span class="math inline">\(f(b_i) = \sum_{j=1}^m a_{ji} c_j\)</span>, onde <span class="math inline">\(a_{ji}\)</span> são as entradas de <span class="math inline">\([f]^B_C\)</span>.</li>
-<li>Portanto, <span class="math inline">\(\gamma_j^∗(f(b_i)) = a_{ji}\)</span>.</li>
+<li>Portanto, <span class="math inline">\(\gamma_j^\ast(f(b_i)) = a_{ji}\)</span>.</li>
 </ul></li>
 <li><strong>Conclusão</strong>:
 <ul>
-<li>As entradas de <span class="math inline">\([f^∗]^{C^∗}_{B^*}\)</span> são dadas por <span class="math inline">\(a_{ji}\)</span>, que são as entradas transpostas de <span class="math inline">\([f]^B_C\)</span>.</li>
+<li>As entradas de <span class="math inline">\([f^\ast]^{C^\ast}_{B^\ast}\)</span> são dadas por <span class="math inline">\(a_{ji}\)</span>, que são as entradas transpostas de <span class="math inline">\([f]^B_C\)</span>.</li>
 <li>Assim, temos: <span class="math display">\[
-[f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+  [f^\ast]^{C^\ast}_{B^\ast} = ([f]^B_C)^t.
 \]</span></li>
 </ul></li>
 </ol>
@@ -2034,7 +2035,7 @@ U^0 =\{\varphi\in V^∗ \mid \varphi(u)=0\mbox{ para todo }u\in U\}.
 <li>Para <span class="math inline">\(\psi \in V^*\)</span>, temos <span class="math inline">\(\psi \in \mbox{Im}\,f^*\)</span> se e somente se existe <span class="math inline">\(\varphi \in W^*\)</span> tal que <span class="math inline">\(\psi(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span>.</li>
 <li>Isso significa que <span class="math inline">\(\psi\)</span> anula todos os vetores de <span class="math inline">\(\ker f\)</span>, pois se <span class="math inline">\(v \in \ker f\)</span>, então <span class="math inline">\(f(v) = 0\)</span> e <span class="math inline">\(\psi(v) = \varphi(0) = 0\)</span>.</li>
 <li>Assim, <span class="math inline">\(\mbox{Im}\,f^* \subseteq (\ker f)^0\)</span>.</li>
-<li>Por outro lado, se <span class="math inline">\(\psi \in (\ker f)^0\)</span>, então <span class="math inline">\(\psi\)</span> anula todos os vetores de <span class="math inline">\(\ker f\)</span>, e podemos definimos <span class="math inline">\(\varphi \in W^*\)</span> na seguinte forma. Seja <span class="math inline">\(Z\)</span> um complemento de <span class="math inline">\(\mbox{Im}(f)\)</span> em <span class="math inline">\(W\)</span>; ou seja <span class="math inline">\(W=\mbox{Im}(f)\oplus Z\)</span>. Defina <span class="math inline">\(\varphi\)</span> em <span class="math inline">\(\mbox{Im}(f)\)</span> tal que <span class="math inline">\(\psi(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span> e defina <span class="math inline">\(\vaphi\)</span> em <span class="math inline">\(Z\)</span> tal que <span class="math inline">\(\varphi(z)=0\)</span> para todo <span class="math inline">\(z\in Z\)</span>. Note que <span class="math inline">\(\varphi\)</span> está bem definida e <span class="math inline">\(\psi=f^*(\varphi)\)</span>.</li>
+<li>Por outro lado, se <span class="math inline">\(\psi \in (\ker f)^0\)</span>, então <span class="math inline">\(\psi\)</span> anula todos os vetores de <span class="math inline">\(\ker f\)</span>, e podemos definimos <span class="math inline">\(\varphi \in W^*\)</span> na seguinte forma. Seja <span class="math inline">\(Z\)</span> um complemento de <span class="math inline">\(\mbox{Im}(f)\)</span> em <span class="math inline">\(W\)</span>; ou seja <span class="math inline">\(W=\mbox{Im}(f)\oplus Z\)</span>. Defina <span class="math inline">\(\varphi\)</span> em <span class="math inline">\(\mbox{Im}(f)\)</span> tal que <span class="math inline">\(\psi(v) = \varphi(f(v))\)</span> para todo <span class="math inline">\(v \in V\)</span> e defina <span class="math inline">\(\varphi\)</span> em <span class="math inline">\(Z\)</span> tal que <span class="math inline">\(\varphi(z)=0\)</span> para todo <span class="math inline">\(z\in Z\)</span>. Note que <span class="math inline">\(\varphi\)</span> está bem definida e <span class="math inline">\(\psi=f^*(\varphi)\)</span>.</li>
 <li>Portanto, <span class="math inline">\(\mbox{Im}\,f^* = (\ker f)^0\)</span>.</li>
 </ul></li>
 </ol>
