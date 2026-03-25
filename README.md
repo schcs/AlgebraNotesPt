@@ -1,6 +1,6 @@
 ## Descrição 
 
-Este repositório contem [apostilas para várias disciplinas](https://schcs.github.io/AlgebraNotesPt/) na Programa de Graduação de Matemática na UFMG. As apostilas foram preparadas por [Csaba Schneider](https://schcs.github.io/WP/), exceto a apostila para Álgebra Linear I que foi originalmente escrita por [John McQuarrie](https://johnmacquarrie.github.io/).
+Este repositório contem [apostilas para várias disciplinas](https://schcs.github.io/AlgebraNotesPt/) na Programa de Graduação de Matemática na UFMG. As apostilas foram preparadas por [Csaba Schneider](https://schcs.github.io/WP/), exceto a apostila para Álgebra Linear I que foi originalmente escrita por [John MacQuarrie](https://johnmacquarrie.github.io/).
 
 
 Estas notas foram criadas com o intuito de serem lidas no formato `html` no browser do seu computador, 
