@@ -1,6 +1,6 @@
 ## Descrição 
 
-Este repositório contem [apostilas para várias disciplinas](https://schcs.github.io/AlgebraNotesPt/) na Programa de Graduação de Matemática na UFMG. As apostilas foram preparadas por [Csaba Schneider](https://schcs.github.io/WP/), exceto a apostila para Álgebra Linear I que foi originalmente escrita por [John McQuarrie](https://johnmacquarrie.github.io/).
+Este repositório contem [apostilas para várias disciplinas](https://schcs.github.io/AlgebraNotesPt/) na Programa de Graduação de Matemática na UFMG. As apostilas foram preparadas por [Csaba Schneider](https://schcs.github.io/WP/), exceto a apostila para Álgebra Linear I que foi originalmente escrita por [John MacQuarrie](https://johnmacquarrie.github.io/).
 
 
 Estas notas foram criadas com o intuito de serem lidas no formato `html` no browser do seu computador, 
@@ -27,7 +27,7 @@ versão apropriada para a sua distribuição. Instale o `Quarto` com o seguinte 
 (ajustando a versão, se necessário).  
 
 ```
-sudo dpkg -i ~/Download/quarto-1.9-36-linux-amd64.deb
+sudo dpkg -i ~/Downloads/quarto-1.9.36-linux-amd64.deb
 ```
 
 Em seguida, instale uma versão mínima de TeX para uso com o `Quarto` (isso é desnecessário se 
@@ -59,6 +59,8 @@ Para gerar o arquivo PDF, execute o `Quarto` da seguinte forma:
 quarto render --profile pdf --to pdf
 ```
 
+O arquivo `Álgebra.pdf` vai aparecer na pasta `_book`. **Como o conteúdo foi otimizado para o formato `html`, a formatação do `pdf` pode não ser ideal, especialmente 
+próximo às imagens**. 
 
 
 
