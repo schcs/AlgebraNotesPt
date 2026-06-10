@@ -78,3 +78,17 @@ Para mais informação, veja o arquivo LICENCE.txt no repositório.
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 
+obmep
+2025 prata
+2024 prata
+2023 prata
+2022 ouro
+2021 prata
+2019 bronze
+
+obm 
+2025 ouro
+2024 prata
+2023 bronze
+2022 prata
+2021 bronze
