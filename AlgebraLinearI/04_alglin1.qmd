@@ -7,7 +7,7 @@ lang: pt-BR
 ## A definição de transformações lineares {#transformações-lineares .unnumbered}
 
 
-Sejam $V,W$ dois espaços vetoriais. Já que $V,W$ são conjuntos, faz
+Sejam $V$, $W$ dois espaços vetoriais. Já que $V,W$ são conjuntos, faz
 sentido considerar uma função $f:V\to W$ (logo $f$ leva cada vetor de
 $V$ em um vetor de $W$). Mas uma função qualquer vai geralmente fazer
 uma bagunça total. As funções melhores $V\to W$ são aquelas que
