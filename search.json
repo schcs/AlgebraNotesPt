@@ -2002,7 +2002,7 @@
     "href": "AlgebraLinearI/04_alglin1.html",
     "title": "48  Transformações lineares",
     "section": "",
-    "text": "A definição de transformações lineares\nSejam \\(V,W\\) dois espaços vetoriais. Já que \\(V,W\\) são conjuntos, faz sentido considerar uma função \\(f:V\\to W\\) (logo \\(f\\) leva cada vetor de \\(V\\) em um vetor de \\(W\\)). Mas uma função qualquer vai geralmente fazer uma bagunça total. As funções melhores \\(V\\to W\\) são aquelas que “respeitam as estruturas de \\(V\\) e \\(W\\) como espaços vetoriais”. Tais funções são as seguintes:\nSejam \\(V,W\\) espaços vetoriais. Podemos considerar o conjunto de todas as transformações lineares de \\(V\\) a \\(W\\): \\[\\mathcal{L}(V,W) := \\{T: V\\to W\\,|\\,T\\hbox{ uma transformação linear}\\}.\\]",
+    "text": "A definição de transformações lineares\nSejam \\(V\\), \\(W\\) dois espaços vetoriais. Já que \\(V,W\\) são conjuntos, faz sentido considerar uma função \\(f:V\\to W\\) (logo \\(f\\) leva cada vetor de \\(V\\) em um vetor de \\(W\\)). Mas uma função qualquer vai geralmente fazer uma bagunça total. As funções melhores \\(V\\to W\\) são aquelas que “respeitam as estruturas de \\(V\\) e \\(W\\) como espaços vetoriais”. Tais funções são as seguintes:\nSejam \\(V,W\\) espaços vetoriais. Podemos considerar o conjunto de todas as transformações lineares de \\(V\\) a \\(W\\): \\[\\mathcal{L}(V,W) := \\{T: V\\to W\\,|\\,T\\hbox{ uma transformação linear}\\}.\\]",
     "crumbs": [
       "Álgebra Linear I",
       "<span class='chapter-number'>48</span>  <span class='chapter-title'>Transformações lineares</span>"
