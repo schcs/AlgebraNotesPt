@@ -37,13 +37,13 @@ Note que se $G_i$ é uma série central, então os quocientes $G_i/G_{i+1}$ são
 :::
 
 :::{#def-}
-Em um grupo $G$, definimos a série $\gamma_i(G)$  recursivamente como $\gamma_1(G)=G$, e $\gamma_{i+1}(G)=[G,\gamma_i(G)]$ para $i\geq 1$. Note que $\gamma_2(G)=G'$. A série $\gamma_i(G)$ é chamada de série central descendente.
+Em um grupo $G$, definimos a série $\gamma_i(G)$  recursivamente como $\gamma_1(G)=G$, e $\gamma_{i+1}(G)=[G,\gamma_i(G)]$ para $i\geq 1$. Note que $\gamma_2(G)=G'$. A série $\gamma_i(G)$ é chamada de série central inferior.
 
 Similarmente, definimos $\zeta_0(G)=1$ e recursivamente $\zeta_{i+1}(G)$ é definido como o subgrupo de $G$ que contém $\zeta_{i}(G)$ e satisfaz que
 $$
 Z(G/\zeta_{i}(G))=\zeta_{i+1}(G)/\zeta_i(G).
 $$
-A série $\zeta_i(G)$ é chamada de série central ascendente de $G$. O termo $\zeta_i(G)$ é dito $i$-ésimo centro de $G$.
+A série $\zeta_i(G)$ é chamada de série central superior de $G$. O termo $\zeta_i(G)$ é dito $i$-ésimo centro de $G$.
 :::
 
 :::{#lem-}
