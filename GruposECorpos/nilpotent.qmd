@@ -2,7 +2,7 @@
 number-sections: true
 lang: pt-BR
 ---
-
+ 
 # Grupos nilpotentes {#sec-nilpotent}
 
 :::{#def-}
