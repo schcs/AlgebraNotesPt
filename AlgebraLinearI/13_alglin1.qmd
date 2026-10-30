@@ -203,6 +203,7 @@ Já que $P$ age como isomorfismo do espaço $V$, escreva
 $\ul{v} = P\ul{w}$ para algum vetor $\ul{w} = \begin{pmatrix}
  w_1 \\ \vdots \\ w_n
  \end{pmatrix}\in V$. Temos 
+ $$
  \begin{aligned}
    \langle \ul{v},\ul{v}\rangle_A 
    & = \ul{v}^tA\ul{v} \\
@@ -220,9 +221,8 @@ $\ul{v} = P\ul{w}$ para algum vetor $\ul{w} = \begin{pmatrix}
  w_1 \\ \vdots \\ w_n
  \end{pmatrix} \\
  & = \lambda_1 {w_1}^2 + \cdots + \lambda_n {w_n}^2.
- 
-\end{aligned} 
-
+ \end{aligned} 
+$$
 Resumindo:
 
 :::{#thm-}

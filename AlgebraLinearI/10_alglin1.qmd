@@ -163,13 +163,15 @@ projeção ortogonal assim:
     $\{\ul{u},\ul{w_1},\ldots,\ul{w_s}\}$, logo
     $\ul{w_{s+1}}\neq \ul{0}$.
 
-    Para cada $i$, temos \begin{aligned}
+    Para cada $i$, temos 
+    $$\begin{aligned}
       \langle \ul{w_{s+1}},\ul{w_i}\rangle & = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_1}}(\ul{u}),\ul{w_i}\rangle - \cdots - \langle \tn{proj}_{\ul{w_s}}(\ul{u}),\ul{w_i}\rangle \\  
       & = \langle \ul{u},\ul{w_i}\rangle - 0 - \cdots - 0 - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle - 0 - \cdots - 0 \\
       & = \langle \ul{u},\ul{w_i}\rangle - \langle \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
       & = \langle \ul{u} - \tn{proj}_{\ul{w_i}}(\ul{u}),\ul{w_i}\rangle \\
       & = 0.\qquad\checkmark
-    \end{aligned} 
+    \end{aligned}
+    $$ 
 Agora, o subespaço com base ortogonal
     $B\cup\{\ul{w_{s+1}}\}$ satisfaz as condições do teorema e tem
     dimensão $s+1$. Já que $n-(s+1) < n-s$, pela hipótese de indução,

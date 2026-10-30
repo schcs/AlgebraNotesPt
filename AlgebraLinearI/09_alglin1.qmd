@@ -46,10 +46,13 @@ $$V\times W = \{(\ul{v},\ul{w})\,|\,\ul{v}\in V,\,\ul{w}\in W\}.$$
 
 :::{#def-inner-prod}
 Seja $V$ um espaço vetorial. Um *produto interno sobre $V$* é uma função
+$$
 \begin{aligned}
   \langle-,-\rangle : V\times V & \to \,\,\,\,\R \\
   (\ul{u},\ul{v}) & \mapsto \langle\ul{u},\ul{v}\rangle
-\end{aligned} que satisfaz as seguintes propriedades:
+\end{aligned} 
+$$
+que satisfaz as seguintes propriedades:
 
 - **(SIM):**   $\langle \ul{u},\ul{v}\rangle = \langle \ul{v},\ul{u}\rangle\quad\forall\,\ul{u},\ul{v}\in V$,
 - **(LIN1):**   $\langle \ul{u},\ul{v}+\ul{w}\rangle = \langle \ul{u},\ul{v}\rangle + \langle \ul{u},\ul{w}\rangle\quad\forall \ul{u},\ul{v},\ul{w}\in V$,
@@ -84,14 +87,15 @@ vetores em $\R^n$ e $\lambda\in \R$:
 
 1.  $\ul{u}\cdot \ul{v} = \sum_{i=1}^n a_ib_i = \sum_{i=1}^n b_ia_i = \ul{v}\cdot \ul{u}\quad\checkmark$
 
-2.  \begin{aligned}
+2.  
+$$\begin{aligned}
         \ul{u}\cdot (\ul{v}+\ul{w}) & = (a_1,\ldots,a_n)\cdot (b_1+c_1,\ldots,b_n+c_n) \\
         & = \sum_{i=1}^n a_i(b_i+c_i) \\
         & = \sum_{i=1}^n a_ib_i + a_ic_i \\
         & = \sum_{i=1}^n a_ib_i + \sum_{i=1}^n a_ic_i \\
-        & = \ul{u}\cdot \ul{v} + \ul{u}\cdot \ul{w}.
-      
+        & = \ul{u}\cdot \ul{v} + \ul{u}\cdot \ul{w}.    
     \end{aligned}
+$$
 
 3.  Exercício.
 
@@ -116,11 +120,14 @@ Seja $\langle-,-\rangle:V\times V \to \R$ um produto interno. Então
 :::{.proof}
 
 
--   Temos \begin{aligned}
+-   Temos 
+$$
+\begin{aligned}
       \langle \ul{u}+\ul{v},\ul{w}\rangle & = \langle\ul{w},\ul{u}+\ul{v}\rangle\qquad\qquad (\hbox{por \textit{SIM}}) \\
       & = \langle\ul{w},\ul{u}\rangle + \langle \ul{w},\ul{v}\rangle\qquad (\hbox{por \textit{LIN1}}) \\
       & = \langle\ul{u},\ul{w}\rangle + \langle \ul{v},\ul{w}\rangle\qquad (\hbox{por \textit{SIM}})\,\,\checkmark
     \end{aligned}
+$$
 
 -   Exercício.
 
@@ -133,36 +140,48 @@ As condições *LIN1*, *LIN2*, *LIN1'*, *LIN2'* dizem que um produto
 interno é *bilinear*. Isto é:
 
 :::{#prp-}
-Fixa $\ul{u}_0\in V$. As funções \begin{aligned}
+Fixa $\ul{u}_0\in V$. As funções 
+$$\begin{aligned}
   \langle -,\ul{u}_0\rangle : V &\to\,\,\,\, \R \\
   \ul{v}\, & \mapsto \langle \ul{v},\ul{u}_0\rangle
 \end{aligned}
+$$
+e
+$$
 \begin{aligned}
   \langle \ul{u}_0,-\rangle : V &\to\,\,\,\, \R \\
   \ul{v}\, & \mapsto \langle\ul{u}_0,\ul{v}\rangle
-\end{aligned} são transformações lineares.
+\end{aligned} 
+$$são transformações lineares.
 :::
 
 :::{.proof}
-
+$$
 \begin{aligned}
   \langle\ul{u}_0,-\rangle (\ul{v}+\ul{w}) & = \langle\ul{u}_0,\ul{v}+\ul{w}\rangle \\
   & = \langle\ul{u}_0,\ul{v}\rangle + \langle\ul{u}_0,\ul{w}\rangle\qquad\qquad (\hbox{por \textit{LIN1}}) \\ 
   & = \langle\ul{u}_0,-\rangle(\ul{v}) + \langle\ul{u}_0,-\rangle(\ul{w})\quad\checkmark
-\end{aligned} e similarmente 
+\end{aligned}
+$$ 
+e similarmente 
+$$
 \begin{aligned}
   \langle\ul{u}_0,-\rangle (\lambda\ul{v}) & = \langle\ul{u}_0,\lambda\ul{v}\rangle \\
   & = \lambda\langle\ul{u}_0,\ul{v}\rangle\qquad\quad (\hbox{por \textit{LIN2}}) \\ 
   & = \lambda\langle\ul{u}_0,-\rangle(\ul{v}).\quad\checkmark
-\end{aligned} ◻
+\end{aligned}$$
+ ◻
 :::
 
 :::{#def-bilin}
 Seja $V$ um espaço vetorial. Uma *forma bilinear* sobre $V$ é uma função
+$$
 \begin{aligned}
   \langle-,-\rangle : V\times V & \to \,\,\,\,\R \\
   (\ul{u},\ul{v}) & \mapsto \langle\ul{u},\ul{v}\rangle
-\end{aligned} que satisfaz as propriedades LIN1, e LIN2, LIN1' e
+\end{aligned} 
+$$
+que satisfaz as propriedades LIN1, e LIN2, LIN1' e
 LIN2'. Uma forma bilinear é dita *simétrica* se ela satisfaz a
 propriedade SIM.
 :::
@@ -176,19 +195,23 @@ $n$ com base $B = \{\ul{b_1},\ldots,\ul{b_n}\}$. Se lembre que para
 $v\in V$, $[v]_B$ denota o vetor (coluna) das coordenadas de $v$ na base
 $B$. A função $\langle-,-\rangle_A : V\times V \to \R$ dada por
 $$\langle \ul{u},\ul{v}\rangle_A = {[\ul{u}]_B}^tA[\ul{v}]_B$$ é uma
-forma bilinear: \begin{aligned}
+forma bilinear: 
+$$\begin{aligned}
   \langle \ul{u},\ul{v}+\ul{w}\rangle_A & = {[\ul{u}]_B}^tA[\ul{v}+\ul{w}]_B \\
-  & = {[\ul{u}]_B}^tA([\ul{v}]_B+[\ul{w}]_B)\qquad \mbox{($v\mapsto [v]_B$ é linear)}\\
+  & = {[\ul{u}]_B}^tA([\ul{v}]_B+[\ul{w}]_B)\qquad (v\mapsto [v]_B \mbox{ é linear)}\\
   & = {[\ul{u}]_B}^tA[\ul{v}]_B + {[\ul{u}]_B}^tA[\ul{w}]_B \qquad (\hbox{propriedades de matrizes}) \\
   & = \langle \ul{u},\ul{v}\rangle_A + \langle \ul{u},\ul{w}\rangle_A\qquad\checkmark
 \end{aligned}
-
+$$
+$$
 \begin{aligned}
   \langle \ul{u},\lambda\ul{v}\rangle_A & = {[\ul{u}]_B}^tA[\lambda\ul{v}]_B \\
   & = {[\ul{u}]_B}^tA(\lambda[\ul{v}]_B)\qquad \mbox{($v\mapsto [v]_B$ é linear)}\\
   & = {\lambda[\ul{u}]_B}^tA[\ul{v}]_B\qquad (\hbox{propriedades de matrizes}) \\
   & = \lambda\langle \ul{u},\ul{v}\rangle_A\qquad\checkmark
-\end{aligned} [Exercício]{.underline}: Confirme que a função é linear
+\end{aligned} 
+$$
+[Exercício]{.underline}: Confirme que a função é linear
 no primeiro componente também.
 :::
 
@@ -407,12 +430,15 @@ número $\lambda$, temos
 $$0\leqslant\|\ul{u} - \lambda\ul{v}\|^2 = \langle\ul{u}-\lambda\ul{v},\ul{u}-\lambda\ul{v}\rangle = \langle \ul{u},\ul{u}\rangle - 2\lambda\langle\ul{u},\ul{v}\rangle + \lambda^2\langle\ul{v},\ul{v}\rangle.$$
 Escolhemos um $\lambda$ espertamente. Pegue
 $$\lambda = \frac{\langle \ul{u},\ul{v}\rangle}{\|\ul{v}\|^2}.$$ Obtemos
+$$
 \begin{aligned}
   0 & \leqslant \langle \ul{u},\ul{u}\rangle - 2\lambda\langle\ul{u},\ul{v}\rangle + \lambda^2\langle\ul{v},\ul{v}\rangle \\
    & = \|\ul{u}\|^2 - 2\lambda\langle\ul{u},\ul{v}\rangle + \lambda^2\|\ul{v}\|^2 \\
    & = \|\ul{u}\|^2 - 2\frac{\langle\ul{u},\ul{v}\rangle^2}{\|\ul{v}\|^2} + \frac{\langle\ul{u},\ul{v}\rangle^2}{\|\ul{v}\|^2} \\
    & = \|\ul{u}\|^2 - \frac{\langle\ul{u},\ul{v}\rangle^2}{\|\ul{v}\|^2}.
-\end{aligned} Rearranjando, obtemos
+\end{aligned} 
+$$
+Rearranjando, obtemos
 $$\langle\ul{u},\ul{v}\rangle^2 \leqslant \|\ul{u}\|^2\cdot \|\ul{v}\|^2,$$
 e finalmente pegando raiz quadradas,
 $$|\langle\ul{u},\ul{v}\rangle| \leqslant \|\ul{u}\|\cdot \|\ul{v}\|.$$ ◻
@@ -433,7 +459,9 @@ $$|\langle\ul{u},\ul{v}\rangle| = \left|\begin{pmatrix}
 1 & -4
 \end{pmatrix}\begin{pmatrix}
 1 \\ 4
-\end{pmatrix}\right| = |-15| = 15,$$ enquanto \begin{aligned}
+\end{pmatrix}\right| = |-15| = 15,$$ enquanto 
+$$
+\begin{aligned}
 \|\ul{u}\|\cdot\|\ul{v}\| & = \sqrt{\begin{pmatrix}
 1 & -4 
 \end{pmatrix}\begin{pmatrix}
@@ -449,6 +477,7 @@ $$|\langle\ul{u},\ul{v}\rangle| = \left|\begin{pmatrix}
 \end{pmatrix}} \\
 & = \sqrt{42}\cdot \sqrt{14} = 14\sqrt{3}\approx 24 \geqslant 15.\quad\checkmark 
 \end{aligned}
+$$
 :::
 
 ## A desigualdade triangular
@@ -480,13 +509,14 @@ interno. Então $$\|\ul{u}+\ul{v}\| \leqslant \|\ul{u}\| + \|\ul{v}\|.$$
 :::{.proof}
 
 $$\|\ul{u}+\ul{v}\|^2 \leqslant \left(\|\ul{u}\| + \|\ul{v}\|\right)^2.$$
-Temos \begin{aligned}
+Temos 
+$$\begin{aligned}
   \|\ul{u}+\ul{v}\|^2 & = \langle \ul{u}+\ul{v},\ul{u}+\ul{v}\rangle \\
   & = \langle \ul{u},\ul{u}\rangle + 2\langle \ul{u},\ul{v}\rangle + \langle \ul{v},\ul{v}\rangle \\
   & = \|\ul{u}\|^2 + 2\langle \ul{u},\ul{v}\rangle + \|\ul{v}\|^2 \\
   & \leqslant \|\ul{u}\|^2 + 2\|\ul{u}\|\cdot\|\ul{v}\| + \|\ul{v}\|^2 \qquad (\hbox{Cauchy-Schwarz}) \\
   & = \left(\|\ul{u}\| + \|\ul{v}\|\right)^2.\qquad\checkmark
-\end{aligned} ◻
+\end{aligned}$$ ◻
 :::
 
 Mais uma definição. A *distância* entre dois vetores $\ul{u}, \ul{v}$ do

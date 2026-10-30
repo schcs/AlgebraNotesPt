@@ -96,7 +96,7 @@ $$
 2. Decida se $F$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
 :::
 
-:::{#exr-}
+:::{#exr-IM-matrix}
 Considere a matriz 
 $$
 B=\begin{pmatrix}
@@ -113,7 +113,6 @@ $$
     c. $G$ é bijetiva.
 2. Decida se $G$ possui inversa à direita ou inversa à esquerda. Construa a inversa caso ela existe. 
 :::
-
 
 :::{#exr-}
 Sejam $f:A\to B$ e $g:B\to C$ funções. Decide quais das seguintes afirmações são verdadeiras. Se uma afirmação for verdadeira, dê uma prova; caso contrário, exiba um contra-exemplo.

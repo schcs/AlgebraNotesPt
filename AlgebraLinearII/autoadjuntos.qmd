@@ -6,7 +6,7 @@ lang: pt-BR
 
 ## Operadores autoadjuntos
 
-Nesta página $V$ é um $\F$-espaço vetorial, $\sigma\in\mbox{Aut}(\F)$ com $\sigma^2=\mbox{id}_\F$ e $B$ é uma forma $\sigma$-hermitiana não degenerada sobre $V$.
+Nesta página $V$ é um $\F$-espaço vetorial, $\sigma\in\mbox{Aut}(\F)$ com $\sigma^2=\mbox{id}_{\F}$ e $B$ é uma forma $\sigma$-hermitiana não degenerada sobre $V$.
 
 :::{#def-}
 Um operador $f:V\to V$ é **autoadjunto** se existe $f^*$ e $f^*=f$. Em outras palavras,
@@ -43,7 +43,7 @@ Como $\lambda_1\neq \lambda_2^\sigma$, nos resta que $B(v_1,v_2)=0$.
 ## Produto interno
 
 :::{#def-}
-Seja $V$ um espaço vetorial sobre $\F$ onde $\F=\R$ ou $\F=\C$ e seja $\sigma=\mbox{id}_\R$ se $\F=\R$ e $\sigma$ o conjugado complexo se $\F=\C$. Um **produto interno** sobre $V$ é uma forma $\sigma$-hermitiana que satisfaz a propriedade de positividade; ou seja,
+Seja $V$ um espaço vetorial sobre $\F$ onde $\F=\R$ ou $\F=\C$ e seja $\sigma=\mbox{id}_{\R}$ se $\F=\R$ e $\sigma$ o conjugado complexo se $\F=\C$. Um **produto interno** sobre $V$ é uma forma $\sigma$-hermitiana que satisfaz a propriedade de positividade; ou seja,
 $$
 Q(v)=B(v,v)\geq 0\quad\mbox{para todo}\quad v\in V
 $$

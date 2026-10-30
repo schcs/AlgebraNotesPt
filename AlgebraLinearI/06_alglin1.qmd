@@ -247,12 +247,17 @@ temos que calcular $[I]_E^B$ e $[I]_C^F$.
       1 & 2 \\ 1 & 1
       \end{pmatrix}.$$
 
--   Temos \begin{aligned}
-        (1,0,0) & = (1,1,1) - (0,1,1) \\
-        (0,1,0) & = (0,1,1) - (0,0,1) \\
-        (0,0,1) & = (0,0,1).
-      
-    \end{aligned} Então $$(1,0,0)_C = \begin{pmatrix}
+-   Temos
+
+  $$
+  \begin{aligned}
+  (1,0,0) & = (1,1,1) - (0,1,1) \\
+  (0,1,0) & = (0,1,1) - (0,0,1) \\
+  (0,0,1) & = (0,0,1).
+  \end{aligned}
+  $$
+
+  Então $$(1,0,0)_C = \begin{pmatrix}
       1 \\ -1 \\ 0 
       \end{pmatrix}\quad,\quad(0,1,0)_C = \begin{pmatrix}
       0 \\ 1 \\ -1 

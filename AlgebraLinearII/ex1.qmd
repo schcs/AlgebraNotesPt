@@ -12,17 +12,17 @@ no [código fonte](https://github.com/schcs/AlgebraNotesPt/blob/main/AlgebraLine
 :::{#exr-}
 Seja $\F$ um corpo. Mostre que
 
-1. O elemento neutro aditivo $0_\F$ é único.
-2. O elemento neutro multiplicativo $1_\F$ é único.
+1. O elemento neutro aditivo $0_{\F}$ é único.
+2. O elemento neutro multiplicativo $1_{\F}$ é único.
 3. Se $a\in\F$, então o negativo $-a$ é único.
-4. Se $a\in\F\setminus\{0_\F\}$, então o inverso $a^{-1}$ é único.
+4. Se $a\in\F\setminus\{0_{\F}\}$, então o inverso $a^{-1}$ é único.
 :::
 
 :::{.sol .callout-tip collapse="true"}
 ### Solução: 
 Apresentamos a solução dos itens 1. e 3. O leitor poderá fazer itens 2. e 4. 
 
-1. O elemento neutro aditivo $0_\F$ é único. Suponha que existam dois elementos neutros aditivos $0_\F$ e $0'_\F$. Então, por definição de elemento neutro aditivo, temos que $0_\F + 0'_\F = 0'_\F$ e $0_\F + 0'_\F = 0_\F$. Portanto, $0_\F = 0'_\F$, mostrando que o elemento neutro aditivo é único.
+1. O elemento neutro aditivo $0_{\F}$ é único. Suponha que existam dois elementos neutros aditivos $0_{\F}$ e $0'_{\F}$. Então, por definição de elemento neutro aditivo, temos que $0_{\F} + 0'_{\F} = 0'_{\F}$ e $0_{\F} + 0'_{\F} = 0_{\F}$. Portanto, $0_{\F} = 0'_{\F}$, mostrando que o elemento neutro aditivo é único.
 
 2.  
 
@@ -38,7 +38,7 @@ Apresentamos a solução dos itens 1. e 3. O leitor poderá fazer itens 2. e 4.
 Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
 
 1. Se $a+b=a+c$, então $b=c$ para todo $a,b,c\in\F$.
-2. Se $ab=ac$, então $b=c$ para todo $a,b,c\in\F$ com $a\neq 0_\F$.
+2. Se $ab=ac$, então $b=c$ para todo $a,b,c\in\F$ com $a\neq 0_{\F}$.
 :::
 
 :::{.sol .callout-tip collapse="true"}
@@ -51,13 +51,13 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
     $$
     (-a + a) + b = (-a + a) + c.
     $$
-    Como $-a + a = 0_\F$, obtemos:
+    Como $-a + a = 0_{\F}$, obtemos:
     $$
-    0_\F + b = 0_\F + c.
+    0_{\F} + b = 0_{\F} + c.
     $$
     E, pela propriedade do elemento neutro aditivo, concluímos que $b = c$.
 
-2. Suponha que $ab = ac$ com $a \neq 0_\F$. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de $a$, denotado por $a^{-1}$:
+2. Suponha que $ab = ac$ com $a \neq 0_{\F}$. Podemos multiplicar ambos os lados da equação pelo inverso multiplicativo de $a$, denotado por $a^{-1}$:
     $$
     a^{-1}(ab) = a^{-1}(ac).
     $$
@@ -65,9 +65,9 @@ Seja $\F$ um corpo. Demonstre as seguintes leis cancelativas.
     $$
     (a^{-1}a)b = (a^{-1}a)c.
     $$
-    Como $a^{-1}a = 1_\F$, obtemos:
+    Como $a^{-1}a = 1_{\F}$, obtemos:
     $$
-    1_\F b = 1_\F c.
+    1_{\F} b = 1_{\F} c.
     $$
     E, pela propriedade do elemento neutro multiplicativo, concluímos que $b = c$.
 :::
@@ -148,8 +148,8 @@ Seja $V$ um espaço vetorial sobre um corpo $\F$.
 
 1. Mostre que o vetor nulo $0_V$ é único.
 2. Mostre que o negativo $-v$ é único para todo $v\in V$. 
-3. Mostre que $\alpha v=0_V$ se e somente se $\alpha=0_\F$ ou $v=0_V$.
-4. Mostre que $(-1_\F)\cdot v=-v$ para todo $v\in V$. 
+3. Mostre que $\alpha v=0_V$ se e somente se $\alpha=0_{\F}$ ou $v=0_V$.
+4. Mostre que $(-1_{\F})\cdot v=-v$ para todo $v\in V$. 
 :::
 
 
@@ -332,7 +332,7 @@ Decide quais dos seguintes conjuntos são subespaços de $V=\mbox{Func}([0,1],\R
 1. $\{f\in V\mid f\mbox{ é limitado}\}$ é um subespaço de $V$. A soma de funções limitadas é limitada, e o produto de uma função limitada por um escalar também é limitado.
 
 2. $\{f\in V\mid f\mbox{ é limitado superiormente}\}$ não é um subespaço de $V$. 
-Por exemplo se $f(0)=0$ e f(x)=\log x$ para $x\in (0,1)$ então, $f$ é limitado superiormente, mas $-f$ não é limitado superiormente. 
+Por exemplo se $f(0)=0$ e $f(x)=\log x$ para $x\in (0,1)$ então, $f$ é limitado superiormente, mas $-f$ não é limitado superiormente. 
 
 
 3. $\{f\in V\mid f\mbox{ é limitado inferiormente}\}$ não é um subespaço de $V$. O mesmo argumento do item anterior se aplica.
@@ -489,7 +489,7 @@ Sejam $V$ e $W$ espaços vetoriais de dimensão finita sobre $\F$ com bases $B$ 
 por $B^∗$ e $C^∗$ as bases duais de $B$ e $C$ em $V^∗$ e $W^∗$, respetivamente. Seja $f : V \to W$ linear e considere o
 dual $f^∗ : W^∗ \to V^∗$. Mostre que
 $$
-[f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+[f^\ast]^{C^\ast}_{B^\ast} = ([f]^B_C)^t.
 $$
 Dica: 
 :::
@@ -502,37 +502,37 @@ $$
 $$
 
 1. **Definição do dual**:
-   - O dual $f^∗ : W^∗ \to V^∗$ é definido por $f^∗(\varphi) = \varphi \circ f$ para todo $\varphi \in W^∗$.
-   - Isso significa que $f^∗$ "puxa para trás" os funcionais lineares de $W^∗$ para $V^∗$.
+   - O dual $f^\ast : W^\ast \to V^\ast$ é definido por $f^\ast(\varphi) = \varphi \circ f$ para todo $\varphi \in W^\ast$.
+   - Isso significa que $f^\ast$ "puxa para trás" os funcionais lineares de $W^\ast$ para $V^\ast$.
 
 2. **Representação matricial**:
    - Seja $[f]^B_C$ a matriz que representa $f$ em relação às bases $B$ e $C$.
-   - Seja $[f^∗]^{C^∗}_{B^*}$ a matriz que representa $f^∗$ em relação às bases duais $C^∗$ e $B^∗$.
+   - Seja $[f^\ast]^{C^\ast}_{B^\ast}$ a matriz que representa $f^\ast$ em relação às bases duais $C^\ast$ e $B^\ast$.
 
 3. **Propriedade das bases duais**:
-   - Por definição, as bases duais $B^∗ = \{\beta_1^∗, \ldots, \beta_n^∗\}$ e $C^∗ = \{\gamma_1^∗, \ldots, \gamma_m^∗\}$ satisfazem:
+    - Por definição, as bases duais $B^\ast = \{\beta_1^\ast, \ldots, \beta_n^\ast\}$ e $C^\ast = \{\gamma_1^\ast, \ldots, \gamma_m^\ast\}$ satisfazem:
      $$
-     \beta_i^∗(b_j) = \delta_{ij}, \quad \gamma_i^∗(c_j) = \delta_{ij},
+       \beta_i^\ast(b_j) = \delta_{ij}, \quad \gamma_i^\ast(c_j) = \delta_{ij},
      $$
      onde $\delta_{ij}$ é o delta de Kronecker.
 
-4. **Cálculo de $[f^∗]^{C^∗}_{B^*}$**:
-   - Para calcular $[f^∗]^{C^∗}_{B^*}$, precisamos determinar as coordenadas de $f^∗(\gamma_j^∗)$ em relação à base $B^∗$.
-   - Por definição de $f^∗$, temos:
+4. **Cálculo de $[f^\ast]^{C^\ast}_{B^\ast}$**:
+    - Para calcular $[f^\ast]^{C^\ast}_{B^\ast}$, precisamos determinar as coordenadas de $f^\ast(\gamma_j^\ast)$ em relação à base $B^\ast$.
+    - Por definição de $f^\ast$, temos:
      $$
-     f^∗(\gamma_j^∗)(b_i) = \gamma_j^∗(f(b_i)).
+       f^\ast(\gamma_j^\ast)(b_i) = \gamma_j^\ast(f(b_i)).
      $$
-   - Isso significa que a entrada $(i, j)$ de $[f^∗]^{C^∗}_{B^*}$ é dada por $\gamma_j^∗(f(b_i))$.
+    - Isso significa que a entrada $(i, j)$ de $[f^\ast]^{C^\ast}_{B^\ast}$ é dada por $\gamma_j^\ast(f(b_i))$.
 
 5. **Relação com $[f]^B_C$**:
    - A matriz $[f]^B_C$ é definida por $f(b_i) = \sum_{j=1}^m a_{ji} c_j$, onde $a_{ji}$ são as entradas de $[f]^B_C$.
-   - Portanto, $\gamma_j^∗(f(b_i)) = a_{ji}$.
+   - Portanto, $\gamma_j^\ast(f(b_i)) = a_{ji}$.
 
 6. **Conclusão**:
-   - As entradas de $[f^∗]^{C^∗}_{B^*}$ são dadas por $a_{ji}$, que são as entradas transpostas de $[f]^B_C$.
+    - As entradas de $[f^\ast]^{C^\ast}_{B^\ast}$ são dadas por $a_{ji}$, que são as entradas transpostas de $[f]^B_C$.
    - Assim, temos:
      $$
-     [f^∗]^{C^∗}_{B^*} = ([f]^B_C)^t.
+       [f^\ast]^{C^\ast}_{B^\ast} = ([f]^B_C)^t.
      $$
 :::
 
@@ -592,7 +592,7 @@ Seja $f : V \to W$ uma aplicação linear e considere o dual $f^∗ : W^∗ \to 
    - Isso significa que $\psi$ anula todos os vetores de $\ker f$, pois se $v \in \ker f$, então $f(v) = 0$ e $\psi(v) = \varphi(0) = 0$.
    - Assim, $\mbox{Im}\,f^* \subseteq (\ker f)^0$.
    - Por outro lado, se $\psi \in (\ker f)^0$, então $\psi$ anula todos os vetores de $\ker f$, e podemos definimos $\varphi \in W^*$ na seguinte forma. Seja $Z$ um complemento 
-   de $\mbox{Im}(f)$ em $W$; ou seja $W=\mbox{Im}(f)\oplus Z$. Defina $\varphi$ em $\mbox{Im}(f)$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$ e defina $\vaphi$ em $Z$ tal que $\varphi(z)=0$ para todo $z\in Z$. Note que $\varphi$ está bem definida e $\psi=f^*(\varphi)$. 
+   de $\mbox{Im}(f)$ em $W$; ou seja $W=\mbox{Im}(f)\oplus Z$. Defina $\varphi$ em $\mbox{Im}(f)$ tal que $\psi(v) = \varphi(f(v))$ para todo $v \in V$ e defina $\varphi$ em $Z$ tal que $\varphi(z)=0$ para todo $z\in Z$. Note que $\varphi$ está bem definida e $\psi=f^*(\varphi)$. 
    - Portanto, $\mbox{Im}\,f^* = (\ker f)^0$.
 :::
 

@@ -51,11 +51,13 @@ O fato que $f$ está bem definida, ela é linear e que ela é única é exercíc
 :::
 
 A relação entre as aplicações no lema anterior pode ser expressa na forma de um diagrama comutativo:
+$$
 \begin{array}{ccc}
 U & \stackrel{f}{\longrightarrow} & V\\
 i\uparrow &\nearrow f_0&\\
 X &  &
 \end{array}
+$$
 A aplicação $i:X\to U$ é a inclusão $i(x)=x$ para todo $x\in X$. O resultado diz que para todo $f_0:X\to V$ existe unicamente $f:U\to V$. Denotando por $\mbox{Hom}(U,V)$ o conjunto de aplicações lineares de $U$ para $V$, temos que a corresponência $f_0\mapsto f$  determina uma bijeção
 $$
 \mbox{Func}(X,V)\to \mbox{Hom}(U,V).

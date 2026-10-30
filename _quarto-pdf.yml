@@ -1,0 +1,4 @@
+format:
+  pdf:
+    include-in-header:
+      - file: macros.tex

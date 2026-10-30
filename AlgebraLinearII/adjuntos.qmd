@@ -4,7 +4,7 @@ number-sections: true
 lang: pt-BR
 --- 
 
-Nesta página, $V$ é um $\F$-espaço vetorial com $\mbox{car}(\F)\neq 2$ e $B$ é uma forma $\sigma$-hermitiana ou alternada não degenerada sobre $V$. Note que no caso de $\sigma$-hermitiana, $\sigma^2=\mbox{id}_\F$. Quando $\sigma=\mbox{id}_\F$, então $B$ é uma forma simétrica. Quando $B$ é alternada, então $\sigma=\mbox{id}_\F$.
+Nesta página, $V$ é um $\F$-espaço vetorial com $\mbox{car}(\F)\neq 2$ e $B$ é uma forma $\sigma$-hermitiana ou alternada não degenerada sobre $V$. Note que no caso de $\sigma$-hermitiana, $\sigma^2=\mbox{id}_{\F}$. Quando $\sigma=\mbox{id}_{\F}$, então $B$ é uma forma simétrica. Quando $B$ é alternada, então $\sigma=\mbox{id}_{\F}$.
 
 Lembre que $V^*$ é o espaço dual de $V$ (@sec-dual-def); ou seja,
 $$

@@ -58,13 +58,13 @@ Exercício. Revise a demonstração do fato bem conhecido que se um número comp
 :::
 
 :::{#exm-gal}
-Determinemos $\gal\C\R$. Seja $\varphi\in\gal\C\R$. Como $\varphi$ é uma transformação $\R$-linear, as imagens $\varphi(1)$ e $\varphi(i)$ determinam $\varphi$. Como $1\in\R$, temos que $\varphi(1)=1$. Note que $i$ é raiz do polinômio $x^2+1$, então $\varphi(i)$ será raiz do mesmo polinômio que implica que $\varphi(i)=\pm i$. Escolhendo $\varphi(i)=i$, obtemos que $\varphi=\mbox{id}_\C$, enquanto escolhendo $\varphi(i)=-i$, obtemos a conjugação complexa. Obtivemos então que $\gal\C\R$ é um grupo de ordem 2.
+Determinemos $\gal\C\R$. Seja $\varphi\in\gal\C\R$. Como $\varphi$ é uma transformação $\R$-linear, as imagens $\varphi(1)$ e $\varphi(i)$ determinam $\varphi$. Como $1\in\R$, temos que $\varphi(1)=1$. Note que $i$ é raiz do polinômio $x^2+1$, então $\varphi(i)$ será raiz do mesmo polinômio que implica que $\varphi(i)=\pm i$. Escolhendo $\varphi(i)=i$, obtemos que $\varphi=\mbox{id}_{\C}$, enquanto escolhendo $\varphi(i)=-i$, obtemos a conjugação complexa. Obtivemos então que $\gal\C\R$ é um grupo de ordem 2.
 :::
 
 :::{#exm-gal2}
 Seja $\xi=\exp(2\pi i/3)$ (terceira raiz da unidade) e considere a extensão $\E=\Q(\xi)$ de $\Q$. Note que $\xi$ é raiz do polinômio $x^3-1=(x-1)(x^2+x+1)$ e que o polinômio $x^2+x+1$ é irredutível sobre $\Q$. Em particular, $m_\xi(x)=x^2+x+1$ e $\E$ é um espaço vetorial de dimensão $2$ sobre $\Q$. Além disso,
 $$
-\E=\left<1,\xi\right>_\Q=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
+\E=\left<1,\xi\right>_{\Q}=\{\alpha+\beta\xi\mid \alpha,\beta\in\Q\}
 $$
 e para determinar os automorfismos $\varphi\in\gal\E\Q$, é suficiente saber $\varphi(1)$ e $\varphi(\xi)$. Como no exemplo, anterior, $\varphi(1)=1$ e $\varphi(\xi)$ é raiz de $x^2+x+1$; consequentemente $\varphi(\xi)=\xi$ ou $\varphi(\xi)=\xi^2=\bar\xi$ (conjugado complexo). O primeiro caso dá o automorfismo identidade, enquanto o segundo dá o automorfismo
 $$
@@ -115,20 +115,20 @@ $$
 :::
 
 :::{#lem-gal-ff}
-Seja $\E:\F$ uma extensão finita. Então $|\gal\E\F|\leq \dim_\F\E$.
+Seja $\E:\F$ uma extensão finita. Então $|\gal\E\F|\leq \dim_{\F}\E$.
 :::
 
 :::{.proof}
-Os elementos de $\gal\E\F$ são elementos do $\E$-espaço $\mbox{Hom}_\F(\E,\E)$ (@exr-gal-group). Dada uma base $B$ de $\E$ sobre $\F$, $\mbox{Hom}_\F(\E,\E)$ é isomorfo como 
+Os elementos de $\gal\E\F$ são elementos do $\E$-espaço $\mbox{Hom}_{\F}(\E,\E)$ (@exr-gal-group). Dada uma base $B$ de $\E$ sobre $\F$, $\mbox{Hom}_{\F}(\E,\E)$ é isomorfo como 
 $\E$-espaço com 
 $$
 \mbox{Func}(B,\E)=\{f:B\to \E\mid f\mbox{ é função}\}.
 $$
-Note que $\dim_\E\mbox{Func}(B,\E)=|X|=\dim_\F\E$. Portanto, $n+1$ elementos distintos $\varphi_1,\ldots,\varphi_{n+1}\in\gal\E\F$ 
-são linearmente dependentes em $\mbox{Func}(B,\E)$ e eles são também linearmente dependentes em $\mbox{Hom}_\F(\E,\E)$. 
+Note que $\dim_{\E}\mbox{Func}(B,\E)=|X|=\dim_{\F}\E$. Portanto, $n+1$ elementos distintos $\varphi_1,\ldots,\varphi_{n+1}\in\gal\E\F$ 
+são linearmente dependentes em $\mbox{Func}(B,\E)$ e eles são também linearmente dependentes em $\mbox{Hom}_{\F}(\E,\E)$. 
 Ora, @exr-auts-li implica que 
 $$
-|\gal\E\F|leq\dim_\E\mbox{Hom}_\F(\E,\E)=\dim_{\E}\mbox{Func}(B,\E)=|B|=\dim_\F\E.
+|\gal\E\F|leq\dim_{\E}\mbox{Hom}_{\F}(\E,\E)=\dim_{\E}\mbox{Func}(B,\E)=|B|=\dim_{\F}\E.
 $$
 <!--são elementos distintos de $\gal\E\F$. Vamos obter uma contradição. Seja $e_1,\ldots,e_n$ uma base de $\E$ sobre $\F$. Considere o sistema de equações lineares sobre $\E$:
 \begin{eqnarray*}
@@ -145,7 +145,7 @@ Isso implica que $\alpha_1\varphi_1+\cdots,\alpha_{n+1}\varphi_{n+1}=0$, mas iss
 :::
 
 :::{exm-gal-ff}
-Nos @exm-gal e @exm-gal2, $|\gal\E\F|= \dim_\F\E$. No entanto, no @exm-sqroot-3 temos desigualdade própria $|\gal\E\F|< \dim_\F\E$. O motivo disso 
+Nos @exm-gal e @exm-gal2, $|\gal\E\F|= \dim_{\F}\E$. No entanto, no @exm-sqroot-3 temos desigualdade própria $|\gal\E\F|< \dim_{\F}\E$. O motivo disso 
 vai ser explicado pelo conceito de extensões normais a ser discutido na seção seguinte.
 :::
 
@@ -178,18 +178,18 @@ As extensões $\F(\alpha):\F$ e $\F(\beta):\F$ são isomorfas, pois $m_\alpha(x)
 $\E(\alpha)$ é corpo de decomposição de $f(x)$ sobre $\F(\alpha)$ e $\E(\beta)$ é corpo de decomposição de $f(x)$ sobre $\F(\beta)$. Portanto, 
 as extensões $\E(\alpha):\F(\alpha)$ e $\E(\beta):\F(\beta)$ são também isomorfas. Em particular, 
 $$
-\dim_{\F}\E(\alpha)=\dim_\F\F(\alpha)\cdot\dim_{\F(\alpha)}\E(\alpha)=\dim_\F\F(\beta)\cdot\dim_{\F(\beta)}\E(\beta)=\dim_\F \E(\beta).
+\dim_{\F}\E(\alpha)=\dim_{\F}\F(\alpha)\cdot\dim_{\F(\alpha)}\E(\alpha)=\dim_{\F}\F(\beta)\cdot\dim_{\F(\beta)}\E(\beta)=\dim_{\F} \E(\beta).
 $$
 Por outro lado, $\alpha\in\E$ e $\E(\alpha)=\E$ e obtemos que 
 $$
-\dim_{\F}\E=\dim_\F \E(\beta).
+\dim_{\F}\E=\dim_{\F} \E(\beta).
 $$
 que (considerando que as dimensões são finitas) implica que $\E(\beta)=\E$; ou seja, $\beta\in\E$ com foi o objetivo deste argumento.
 :::
 
 :::{#lem-lifting-isom}
 [Lema da Extensão]
-Seja $\E:\F$ uma extensão normal e finita e $\K_1,\K_2\subseteq \E$ corpos tais que $\F\subseteq \K_1,\K_2$. Assuma que $\psi:\K_1\to \K_2$ um isomorfismo tal que $\psi|_\F=\mbox{id}_\F$. Então existe $\bar\psi\in\gal\E\F$ tal que $\bar\psi|_{\K_1}=\psi$. Em outras palavras, o isomorfismo $\psi$ pode ser extendido a um elemento de $\gal\E\F$.    
+Seja $\E:\F$ uma extensão normal e finita e $\K_1,\K_2\subseteq \E$ corpos tais que $\F\subseteq \K_1,\K_2$. Assuma que $\psi:\K_1\to \K_2$ um isomorfismo tal que $\psi|_{\F}=\mbox{id}_{\F}$. Então existe $\bar\psi\in\gal\E\F$ tal que $\bar\psi|_{\K_1}=\psi$. Em outras palavras, o isomorfismo $\psi$ pode ser extendido a um elemento de $\gal\E\F$.    
 :::
 :::{.proof}
 Por @lem-normal-splitting, $\E$ é corpo de decomposição de $f(x)\in\F[x]$. Pela definição do corpo de decomposição (@def-decompfield), $\E$ é corpo de decomposição de $f(x)$ sobre $\K_1$ e sobre $\K_2$. O resto segue do @thm-decompfield-unique.
@@ -226,9 +226,9 @@ Seja $\F$ um corpo. Assuma que $\E$ é um corpo de decomposição de um polinôm
 :::
 
 :::{.proof}
-Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\beta$. Pelo @lem-lifting-isom, existe $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
+Sejam $\alpha,\beta\in\E$ duas raízes de $f(x)$. Note que $m_\alpha(x)=m_\beta(x)=f(x)$. O @cor-simple implica que existe um isomorfismo $\psi:\F(\alpha)\to\F(\beta)$ tal que $\psi|_{\F}=\mbox{id}_{\F}$ e $\psi(\alpha)=\beta$. Pelo @lem-lifting-isom, existe $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\gal\E\F$ permuta transitivamente as raízes de $f(x)$.
 
-Ora assuma que $f(x)$ é separável. Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $f(x)$ é separável) e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_\E$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do Teorema Órbita-Estabilizador (@cor-orbit-stab).
+Ora assuma que $f(x)$ é separável. Para mostrar que $\gal\E\F$ pode ser considerado como um subgrupo de $S_k$, observe que $f(x)$ não possui raízes múltiplas em $\E$ (pois $f(x)$ é separável) e isso significa que $f(x)$ tem precisamente $k$ raízes, nomeadamente $\alpha_1,\ldots,\alpha_k$ mutualmente distintas. Se um elemento $\sigma$ de $\gal\E\F$ está no núcleo da ação em $\{ \alpha_1,\ldots,\alpha_k\}$, então $\sigma$ fixa todas as raízes. Mas como $\E$ é gerado por estas raízes (sendo corpo de decomposição), $\sigma=\mbox{id}_{\E}$. Então $\gal\E\F$ pode ser visto como um subgrupo do grupo simétrico do conjunto  $\{ \alpha_1,\ldots,\alpha_k\}$ e este grupo simétrico é claramente isomorfo a $S_k$. Finalmente, o fato que $k\mid |\gal\E\F|$ segue do Teorema Órbita-Estabilizador (@cor-orbit-stab).
 :::
 
 
@@ -240,9 +240,9 @@ Seja $\E:\F$ uma extensão finita e separável. Então existe um elemento $\gamm
 :::{.proof}
 Primeiro, se $\F$ é um corpo finito, então $\E$ (extensão finita de $\F$) é também finito e $\E=\F(\alpha)$ onde $\alpha\in\E$ é um gerador de $\E^*=\E\setminus\{0\}$ (@thm-field-cyclic). Ou seja, $\E$ é extensão simples e podemos assumir no resto do argumento que $\F$ é corpo infinito. 
 
-É suficiente provar que quando $\E=\F(\alpha,\beta)$, existe $\gamma\in\E$ tal que $\E=\F(\gamma)$. Afirmamos que existe algum $c\in\F$ tal que $\E=\F(\alpha,\beta)=\F(\alpha+c\beta)$. Seja $c\in\F$ tal que $\F(\alpha,\beta)\neq\F(\alpha+c\beta)$ e ponha $\K=\F(\alpha+c\beta)$. Por suposição, $\K\subset \F(\alpha,\beta)$ e $\alpha,\beta\not\in\K$. Seja $\L$ um corpo de decomposição de 
-$m_\beta(x)\in\K[x]$ sobre $\K$. Note que $m_\beta(x)$ é divisor do polinômio minimal $m_\beta^\F(x)$ de $\beta$ sobre $\F$. Por suposição $m_\beta^\F(x)$ é um polinômio separável, então $m_\alpha(x)$ também é separável. Além disso, $\alpha=(\alpha+c\beta)-c\beta\in\L$ e portanto $\E\subseteq \L$. 
-Como $\mbox{grau}\,m_\beta(x)$ é maior que dois e $m_\beta(x)$ é separável, existe $\beta'\in\L\setminus\{\beta\}$ tais que $m_\beta(\beta')=0$. Pelo @thm-transitive, existe $\sigma$ um automorfismo em $\gal{\L}{\K}$ tal que $\sigma(\beta)=\beta'$ e $\sigma(\alpha+c\beta)=\alpha+c\beta$. Portanto 
+É suficiente provar que quando $\E=\F(\alpha,\beta)$, existe $\gamma\in\E$ tal que $\E=\F(\gamma)$. Afirmamos que existe algum $c\in\F$ tal que $\E=\F(\alpha,\beta)=\F(\alpha+c\beta)$. Seja $c\in\F$ tal que $\F(\alpha,\beta)\neq\F(\alpha+c\beta)$ e ponha $\K=\F(\alpha+c\beta)$. Por suposição, $\K\subset \F(\alpha,\beta)$ e $\alpha,\beta\not\in\K$. Seja $\LL$ um corpo de decomposição de 
+$m_\beta(x)\in\K[x]$ sobre $\K$. Note que $m_\beta(x)$ é divisor do polinômio minimal $m_\beta^{\F}(x)$ de $\beta$ sobre $\F$. Por suposição $m_\beta^{\F}(x)$ é um polinômio separável, então $m_\alpha(x)$ também é separável. Além disso, $\alpha=(\alpha+c\beta)-c\beta\in\LL$ e portanto $\E\subseteq \LL$. 
+Como $\mbox{grau}\,m_\beta(x)$ é maior que dois e $m_\beta(x)$ é separável, existe $\beta'\in\LL\setminus\{\beta\}$ tais que $m_\beta(\beta')=0$. Pelo @thm-transitive, existe $\sigma$ um automorfismo em $\gal{\LL}{\K}$ tal que $\sigma(\beta)=\beta'$ e $\sigma(\alpha+c\beta)=\alpha+c\beta$. Portanto 
 $$
 \alpha+c\beta=\sigma(\alpha+c\beta)=\sigma(\alpha)+c\sigma(\beta)=\sigma(\alpha)+c\beta'.
 $$ 
@@ -250,7 +250,7 @@ e
 $$
 c = \frac{\alpha-\sigma(\alpha)}{\beta'-\beta}.
 $$
-Como $\sigma\in \gal{\L}{\K}$, temos por @lem-gal-ff, temos um número finito de possibilidades para a expressão no lado direito da equação anterior. Isso quer dizer que temos apenas um número finito de possibilidades para $c\in\F$ tal $c$ satisfaz a equação anterior. Seja $c\in\F$ tal que $c$ não satisfaz esta 
+Como $\sigma\in \gal{\LL}{\K}$, temos por @lem-gal-ff, temos um número finito de possibilidades para a expressão no lado direito da equação anterior. Isso quer dizer que temos apenas um número finito de possibilidades para $c\in\F$ tal $c$ satisfaz a equação anterior. Seja $c\in\F$ tal que $c$ não satisfaz esta 
 equação. Temos com este $c$ que $\F(\alpha+c\beta)= \F(\alpha,\beta)$.
 :::
 
@@ -270,7 +270,7 @@ $$
 Claramente $\F\subseteq \fix{\gal\E\F}$ então precisa provar a outra inclusão. Assuma que $\K=\fix{\gal\E\F}$ e seja $\alpha\in \E\setminus\F$. 
 Vamos provar que $\alpha\not\in\K$. Seja $m_\alpha(x)$ o polinômio mínimo de $\alpha$ sobre $\F$ e note que o grau de $m_\alpha(x)$ é maior ou igual a $2$. Como a extensão 
 $\E:\F$ é  normal e separável, $m_\alpha(x)$ é produto de fatores do primeiro grau em $\E$ e existe $\beta\in\E$ diferente de $\alpha$ tal que 
-$m_\alpha(\beta)=0$. Ora, existe um isomorfismo $\psi:\F(\alpha)\to \F(\beta)$ tal que $\psi|_\F=\mbox{id}_\F$. Pelo @lem-lifting-isom, existe um automorfismo $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\alpha\not\in\fix{\gal\E\F}$. 
+$m_\alpha(\beta)=0$. Ora, existe um isomorfismo $\psi:\F(\alpha)\to \F(\beta)$ tal que $\psi|_{\F}=\mbox{id}_{\F}$. Pelo @lem-lifting-isom, existe um automorfismo $\varphi\in\gal\E\F$ tal que $\varphi(\alpha)=\beta$. Isso implica que $\alpha\not\in\fix{\gal\E\F}$. 
 :::
 
 :::{#lem-H-pol}
@@ -295,13 +295,13 @@ Exercício.
 :::
 
 :::{#thm-gg-order}
-Seja $\E:\F$ uma extensão de Galois finita. Então $|\gal\E\F|=\dim_\F\E$. 
+Seja $\E:\F$ uma extensão de Galois finita. Então $|\gal\E\F|=\dim_{\F}\E$. 
 :::
 :::{.proof}
-Seja $n=|\gal\E\F|$. Pelo  @lem-gal-ff, $n\leq\dim_\F\E$, então basta provar a outra desigualdade. Pelo @lem-simple-ext, temos que $\E=\F(\alpha)$ com algum $\alpha\in\E$. Afirmamos que $\mbox{grau}\,m_\alpha(x)\leq n$ e isso vai implicar que $\dim_\F\E\leq n$. Considere o polinômio $f_{H,\alpha}(x)$ no @lem-H-pol. Temos que $f_{H,\alpha}(x)\in\fix H[x]=\F[x]$, 
+Seja $n=|\gal\E\F|$. Pelo  @lem-gal-ff, $n\leq\dim_{\F}\E$, então basta provar a outra desigualdade. Pelo @lem-simple-ext, temos que $\E=\F(\alpha)$ com algum $\alpha\in\E$. Afirmamos que $\mbox{grau}\,m_\alpha(x)\leq n$ e isso vai implicar que $\dim_{\F}\E\leq n$. Considere o polinômio $f_{H,\alpha}(x)$ no @lem-H-pol. Temos que $f_{H,\alpha}(x)\in\fix H[x]=\F[x]$, 
 $f_{H,\alpha}(\alpha)=0$ e  $\mbox{grau}f_{H,\alpha}(x)=|H|$. Portanto, 
 $$
-\dim_\F\E=\mbox{grau}\,m_\alpha(x)\leq \mbox{grau} f_{H,\alpha}(x)=n=|H|.
+\dim_{\F}\E=\mbox{grau}\,m_\alpha(x)\leq \mbox{grau} f_{H,\alpha}(x)=n=|H|.
 $$
 :::
 
@@ -320,7 +320,7 @@ Seja $\E:\K:\F$ uma cadeia de extensões e assuma que $\E:\F$ é extensão de Ga
 Note que $m_\alpha(x)$ é divisor do polinômio minimal $p(x)\in\F[x]$ de $\alpha$ sobre $\F$. Como $\E:\F$ é separável, $p(x)$ não possui raízes múltiplas em nenhuma extensão e assim $m_\alpha(x)$ também não possui raízes múltiplas em nenhuma extensão.
 
 2. Assuma que $\K:\F$ é normal. Seja $\sigma\in\gal\E\F$ e $\alpha\in\K$. Seja $m_\alpha(x)\in\F[x]$ o polinômio minimal de $\alpha$. Por @lem-aut-pol, 
-$\sigma(\alpha)$ é raiz de $m_\alpha(x)$. Como $\K:\F$ é normal, temos que $\sigma(\alpha)\in \K$ e assim $\K\subseteq \sigma(\K)$. Como $\sigma$ é um $\F$ isomorfismo e $\dim_\F\K$ é finita, obtemos que  $\K= \sigma(\K)$. Ora assuma que $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$. Seja $q(x)\in\F[x]$ 
+$\sigma(\alpha)$ é raiz de $m_\alpha(x)$. Como $\K:\F$ é normal, temos que $\sigma(\alpha)\in \K$ e assim $\K\subseteq \sigma(\K)$. Como $\sigma$ é um $\F$ isomorfismo e $\dim_{\F}\K$ é finita, obtemos que  $\K= \sigma(\K)$. Ora assuma que $\sigma(\K)=\K$ para todo $\sigma\in\gal\E\F$. Seja $q(x)\in\F[x]$ 
 um polinômio irredutível que possui raiz $\alpha\in\K$. Seja $\beta\in\E$ outra raiz de $q(x)$. Por @lem-Fa, existe $\psi:\F(\alpha)\to \F(\beta)$ 
-isomorfismo tal que $\psi|_\F=\mbox{id}_\F$ e $\psi(\alpha)=\psi(\beta)$. Pelo @lem-lifting-isom, existe um $\sigma\in\gal\E\F$ tal que $\sigma|_{\F(\alpha)}=\psi$. Portanto, $\beta\in\sigma(\K)=\K$, e temos que toda raiz de $p(x)$ está contida em $\K$. Logo $\K$ é extensão normal. 
+isomorfismo tal que $\psi|_{\F}=\mbox{id}_{\F}$ e $\psi(\alpha)=\psi(\beta)$. Pelo @lem-lifting-isom, existe um $\sigma\in\gal\E\F$ tal que $\sigma|_{\F(\alpha)}=\psi$. Portanto, $\beta\in\sigma(\K)=\K$, e temos que toda raiz de $p(x)$ está contida em $\K$. Logo $\K$ é extensão normal. 
 :::

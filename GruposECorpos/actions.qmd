@@ -48,7 +48,7 @@ Ou seja, $G$ é isomorfo a um grupo de permutação sobre o conjunto $G$.
 
 Assim obtemos o famoso [Teorema de Cayley](https://pt.wikipedia.org/wiki/Teorema_de_Cayley).
 
-![Arthur Cayley (1821-1895)](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/317px-Arthur_Cayley.jpg).
+![Arthur Cayley (1821-1895)](img/arthur-cayley.jpg).
 
 :::{#thm-cayley}
 (O Teorema de Cayley)

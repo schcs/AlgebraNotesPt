@@ -50,7 +50,7 @@ f^*(\varphi)=\varphi\circ f.
 $$
 Usando diagramas
 $$
-\begin{array}{cc}
+\begin{array}{ccc}
 W & \stackrel{\varphi}{\longrightarrow} & \F\\
 f\uparrow & \nearrow \\
 V &&
@@ -124,7 +124,7 @@ f^{**}(\gamma)=\gamma \circ f^*\quad\mbox{para todo}\quad \gamma\in V^{**}.
 $$
 Usando diagramas
 $$
-\begin{array}{cc}
+\begin{array}{ccc}
 V^* & \stackrel{\gamma}{\longrightarrow} & \F\\
 f^*\uparrow & \nearrow \\
 W^* &&

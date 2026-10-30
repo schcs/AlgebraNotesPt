@@ -232,7 +232,7 @@ Isso acontece frequentamente com $\R$-espaços. Por exemplo, Para garantir que u
 um $\R$-espaço  $V$ possui autovalor, consideramos $V$ como um $\C$-espaço.
 
 :::{#def-base-field-extension}
-Seja $V$ um espaço vetorial sobre um corpo $\F$, e seja $\K$ um corpo tal que $\F\subseteq \K$. Considere $\K$ como um $\F$-espaço vetorial. Definimos o $\K$-espaço $V_\K$ como $V_\K=\K\otimes V$. A soma neste espaço é a soma no produto 
+Seja $V$ um espaço vetorial sobre um corpo $\F$, e seja $\K$ um corpo tal que $\F\subseteq \K$. Considere $\K$ como um $\F$-espaço vetorial. Definimos o $\K$-espaço $V_{\K}$ como $V_{\K}=\K\otimes V$. A soma neste espaço é a soma no produto 
 tensorial $\K\otimes V$ e o múltiplo escalar é definido como 
 $$
 \lambda(\alpha\otimes v)=(\lambda\alpha)\otimes v.
@@ -241,34 +241,34 @@ para $\lambda,\alpha\in\K$ e $v\in V$.
 :::
 
 :::{#def-base-field-extension}
-Demonstre que o múltiplo escalar em $V_\K$ está bem definido e $V_\K$ é um espaço vetorial sobre
+Demonstre que o múltiplo escalar em $V_{\K}$ está bem definido e $V_{\K}$ é um espaço vetorial sobre
 $\K$. 
 :::
 
 
 
 :::{#thm-base-extension-basis}
-Sejam $\F$, $\K$ e $V$ como na @def-base-field-extension. Se $B$ é uma base de $V$ sobre $\F$, então o conjunto $\{1 \otimes b \mid b \in B\}$ é uma base de $V_\K = \K \otimes V$ sobre $\K$.
+Sejam $\F$, $\K$ e $V$ como na @def-base-field-extension. Se $B$ é uma base de $V$ sobre $\F$, então o conjunto $\{1 \otimes b \mid b \in B\}$ é uma base de $V_{\K} = \K \otimes V$ sobre $\K$.
 :::
 
 :::{.proof}
-1. **Geração**: Seja $x \in V_\K$. Por definição do produto tensorial, $x$ pode ser escrito como uma combinação linear de elementos da forma $k \otimes v$, onde $k \in \K$ e $v \in V$. Como $B$ é uma base de $V$, podemos escrever $v = \sum_{i=1}^n \alpha_i b_i$ com $\alpha_i \in \F$ e $b_i\in B$. Assim, 
+1. **Geração**: Seja $x \in V_{\K}$. Por definição do produto tensorial, $x$ pode ser escrito como uma combinação linear de elementos da forma $k \otimes v$, onde $k \in \K$ e $v \in V$. Como $B$ é uma base de $V$, podemos escrever $v = \sum_{i=1}^n \alpha_i b_i$ com $\alpha_i \in \F$ e $b_i\in B$. Assim, 
 $$
 k \otimes v = k \otimes \left(\sum_{i=1}^n \alpha_i b_i\right) = \sum_{i=1}^n k \alpha_i \otimes b_i=\sum_{i=1}^n k \alpha_i (1\otimes b_i).
 $$
 Note que $k \alpha_i \in \K$, pois $\F\subseteq \K$. Portanto, $x$ pode ser escrito como uma combinação linear de $\{1 \otimes b\mid b\in B\}$ com coeficientes em $\K$.
 
 2. **Independência linear**: Suponha que $\sum_{i=1}^n k_i (1 \otimes b_i) = 0$ para alguns $k_i \in \K$ com $b_i\in B$. Isso implica que $\sum_{i=1}^n (k_i \otimes b_i) = 0$. Segue do @exr-unique-ubi que
-isso é possível apenas quando $k_i=0$ para todo $i$.  Assim, $\{1 \otimes b\mid b\in B\}$ é linearmente independente e o mesmo conjunto é uma base de $V_\K$. 
+isso é possível apenas quando $k_i=0$ para todo $i$.  Assim, $\{1 \otimes b\mid b\in B\}$ é linearmente independente e o mesmo conjunto é uma base de $V_{\K}$. 
 :::
 
 :::{#exm-complexificação}
-Se $V$ é um $\R$-espaço vetorial, então $V_\C=\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
+Se $V$ é um $\R$-espaço vetorial, então $V_{\C}=\C\otimes V$ é um $\C$-espaço. Este espaço chama-se de
 **complexificação** de $V$. Por exemplo, os seguintes isomorfismos são válidos:
 \begin{align*}
 (\R^n)_{\C}&\cong\C^n;\\
-\mbox{Mat}_{m\times n}(\R)_\C&\cong\mbox{Mat}_{m\times n}(\C);\\
-\R[x]_\C&\cong\C[x].
+\mbox{Mat}_{m\times n}(\R)_{\C}&\cong\mbox{Mat}_{m\times n}(\C);\\
+\R[x]_{\C}&\cong\C[x].
 \end{align*}
 :::
 

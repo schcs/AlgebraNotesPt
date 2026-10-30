@@ -16,7 +16,7 @@ $\R$ é uma extensão de $\Q$ e $\C$ é uma extensão de $\R$.  Se $f(x)$ é u
 :::
 
 :::{#def-degree-ext}
-Assuma que $\E$ é uma extensão de $\F$. Neste caso $\E$ é um espaço vetorial sobre $\F$ e podemos considerar a dimensão $\dim_\F\E$. Esta quantidade será referida como o <em>grau da extensão</em> de $\E$ sobre $\F$.
+Assuma que $\E$ é uma extensão de $\F$. Neste caso $\E$ é um espaço vetorial sobre $\F$ e podemos considerar a dimensão $\dim_{\F}\E$. Esta quantidade será referida como o <em>grau da extensão</em> de $\E$ sobre $\F$.
 :::
 
 :::{#exm-degree-ext}
@@ -24,7 +24,7 @@ $\R:\Q$ é uma extensão de grau infinita, o grau da extensão $\C:\R$ é igual 
 :::
 
 :::{#def-ext2}
-Uma extensão $\E:\F$ é dita <em>finita</em> se $\dim_\F\E$ é finita. Se $\E:\F$ é uma extensão e $\alpha\in\E$, então $\alpha$ é dito <em>algébrico</em> (sobre $\F$) se existe um polinômio $f(x)\in\F[x]$ não nulo tal que $f(\alpha)=0$. Caso contrário, $\alpha$ é dito <em>transcendental </em>(sobre $\F$). Uma extensão $\E:\F$ é dita <em>algébrica </em>se todos os elementos de $\E$ são algébricos sobre $\F$. Caso contrário $\E$ é dito <em>transcendental</em> sobre $\F$.
+Uma extensão $\E:\F$ é dita <em>finita</em> se $\dim_{\F}\E$ é finita. Se $\E:\F$ é uma extensão e $\alpha\in\E$, então $\alpha$ é dito <em>algébrico</em> (sobre $\F$) se existe um polinômio $f(x)\in\F[x]$ não nulo tal que $f(\alpha)=0$. Caso contrário, $\alpha$ é dito <em>transcendental </em>(sobre $\F$). Uma extensão $\E:\F$ é dita <em>algébrica </em>se todos os elementos de $\E$ são algébricos sobre $\F$. Caso contrário $\E$ é dito <em>transcendental</em> sobre $\F$.
 :::
 
 :::{#exm-ext-alg}
@@ -52,7 +52,7 @@ Se $\E:\F$ é uma extensão finita, então ela é algébrica.
 :::
 
 :::{.proof}
-Seja $\alpha\in\E$. Como $\dim_\F\E$ é finita, a sequência $\alpha^0,\alpha,\alpha^2,\ldots$ é linearmente dependente; ou seja existe algum $k\geq 0$ tal que $\alpha^0,\alpha,\alpha^2,\ldots,\alpha^{k}$ são linearmente dependetes. Em outras palavras, existem coeficientes $\beta_0,\ldots,\beta_{k}$ tal que
+Seja $\alpha\in\E$. Como $\dim_{\F}\E$ é finita, a sequência $\alpha^0,\alpha,\alpha^2,\ldots$ é linearmente dependente; ou seja existe algum $k\geq 0$ tal que $\alpha^0,\alpha,\alpha^2,\ldots,\alpha^{k}$ são linearmente dependetes. Em outras palavras, existem coeficientes $\beta_0,\ldots,\beta_{k}$ tal que
 $$
 \beta_0\alpha^0+\beta_1\alpha+\beta_2\alpha^2+\cdots+\beta_k\alpha^k=0.
 $$

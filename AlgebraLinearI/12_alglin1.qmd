@@ -114,13 +114,15 @@ para $\ul{u}$. Temos que confirmar umas coisas:
     representa o funcional $f_{\ul{w}}$ para todo $\ul{w}\in W$.
 
 -   $T$ é TL. Dados $\ul{w_1}, \ul{w_2}\in W$ e $\ul{v}\in V$,
+$$
     \begin{aligned}
       \langle \ul{v}, T(\ul{w_1})+T(\ul{w_2})\rangle & = \langle \ul{v}, T(\ul{w_1})\rangle + \langle \ul{v},T(\ul{w_2})\rangle \\ 
       & = \langle S(\ul{v}), \ul{w_1}\rangle + \langle S(\ul{v}),\ul{w_2}\rangle \\ 
       & = \langle S(\ul{v}), \ul{w_1}+\ul{w_2}\rangle  \\
-      & = \langle \ul{v}, T(\ul{w_1}+\ul{w_2})\rangle.
-      
-    \end{aligned} Segue que ambos $T(\ul{w_1})+T(\ul{w_2})$ e
+      & = \langle \ul{v}, T(\ul{w_1}+\ul{w_2})\rangle.   
+    \end{aligned} 
+    $$
+    Segue que ambos $T(\ul{w_1})+T(\ul{w_2})$ e
     $T(\ul{w_1}+\ul{w_2})$ representam o mesmo funcional, então pelo
     teorema anterior de novo, eles são iguais.
 

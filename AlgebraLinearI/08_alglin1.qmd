@@ -15,7 +15,7 @@ de matrizes semelhantes. Esta vez, o invariante vai ser um polinômio:
 
 :::{#def-}
 Seja $A$ uma matriz $n\times n$. O polinômio
-$$p_{A}(t) = {\rm Det}(A- tI)$$ é chamado de *polinômio característico*
+$$p_{A}(t) = {\textrm{Det}}(A- tI)$$ é chamado de *polinômio característico*
 de $A$.
 :::
 
@@ -34,10 +34,11 @@ Seja $$A = \begin{pmatrix}
     4 & 2 & 0 \\ 
     -1& 1& 0 \\
     0 & 1 & 1 
-    \end{pmatrix}.$$ Vamos calcular o polinômio caraterístico de $A$:
-
+    \end{pmatrix}.$$ 
+    Vamos calcular o polinômio caraterístico de $A$:
+$$
 \begin{aligned}
-    p_A(t) & = {\rm Det}(A-tI) \\ 
+    p_A(t) & = {\textrm{Det}}(A-tI) \\ 
     & = \tn{Det}\begin{pmatrix}
     4-t & 2 & 0 \\ 
     -1& 1-t & 0 \\
@@ -50,7 +51,8 @@ Seja $$A = \begin{pmatrix}
     & = (1-t)((4-t)(1-t)+2)\\
     &= (1-t)(t^2 - 5t+ 6) \\
     & = (1-t)(2-t)(3-t).
-\end{aligned} 
+\end{aligned}
+$$ 
 Temos que $1, 2$ e $3$ são as raízes do polinômio
 caraterístico de $A$, todas com multiplicidade $1$.
 :::
@@ -63,12 +65,12 @@ $A$ e $B$ são iguais.
 :::{.proof}
 
 $B = P^{-1}AP$. Portanto $$\begin{array}{ccc}
-p_B(t) & = & {\rm Det}(B - t I) \\
-&= & {\rm Det}(P^{-1}AP - t I) \\
-&= & {\rm Det}(P^{-1}AP - t P^{-1}P)\\
-&= & {\rm Det}(P^{-1}(A-t I)P) \\
-&= & {\rm Det}(P^{-1}){\rm Det}(A-t I){\rm Det}(P) \\
-& = & {\rm Det}(A - t I) \\
+p_B(t) & = & {\textrm{Det}}(B - t I) \\
+&= & {\textrm{Det}}(P^{-1}AP - t I) \\
+&= & {\textrm{Det}}(P^{-1}AP - t P^{-1}P)\\
+&= & {\textrm{Det}}(P^{-1}(A-t I)P) \\
+&= & {\textrm{Det}}(P^{-1}){\textrm{Det}}(A-t I){\textrm{Det}}(P) \\
+& = & {\textrm{Det}}(A - t I) \\
 & = & p_A(t).
 \end{array}$$ ◻
 :::
@@ -82,10 +84,10 @@ Seja $T:V \rightarrow V$ um operador linear (isto é, endomorfismo) sobre
 um espaço de dimensão finita $V$ com base $B$.
 
 -   O *determinante* de $T$ é
-    $${\rm Det}(T) := {\rm Det}([T]^{B}_{B}).$$
+    $${\textrm{Det}}(T) := {\textrm{Det}}([T]^{B}_{B}).$$
 
 -   O *polinômio característico* de $T$ é
-    $$p_{T}(t) = {\rm Det}(T- tI) = \tn{Det}([T]_B^B - tI).$$
+    $$p_{T}(t) = {\textrm{Det}}(T- tI) = \tn{Det}([T]_B^B - tI).$$
 :::
 
 Observe que a definição *não depende* da escolha de base, pois
@@ -100,7 +102,7 @@ canônica $B$ de $\R^3$ é $$[T]^{B}_{B} = \begin{pmatrix}
     -1& 1& 0 \\
     0 & 1 & 1 
     \end{pmatrix}.$$ Podemos calcular que
-${\rm Det}(T) = \tn{Det}([T]_B^B) = 6$. A matriz $[T]_B^B$ é a matriz
+${\textrm{Det}}(T) = \tn{Det}([T]_B^B) = 6$. A matriz $[T]_B^B$ é a matriz
 $A$ do @exm-matA, logo $$p_T(t) = p_A(t) = (1-t)(2-t)(3-t).$$
 :::
 
@@ -139,15 +141,15 @@ autovalores de uma transformação linear $T$.
 Seja $T: V \rightarrow V$ um endomorfismo linear sobre um espaço de
 dimensão finita. Um escalar $\alpha \in \R$ é autovalor de $T$ se, e
 somente se, $\alpha$ é raiz do polinômio característico de $T$, ou seja,
-se $$p_T(\alpha) = {\rm Det}(T-\alpha I) = 0.$$
+se $$p_T(\alpha) = {\textrm{Det}}(T-\alpha I) = 0.$$
 :::
 
 :::{.proof}
 Seja $\alpha\in\R$ um autovalor de $T$. Então existe um vetor não nulo, $\ul{v}$, tal que $T(\ul{v}) = \alpha \ul{v}$, mas isso é a mesma
-coisa de dizer que $(T-\alpha I)v = \ul{0}$; ou seja $v\in\ker(T-\alpha I)$, logo ${\rm Det}(T-\alpha I)= 0$.
+coisa de dizer que $(T-\alpha I)v = \ul{0}$; ou seja $v\in\ker(T-\alpha I)$, logo ${\textrm{Det}}(T-\alpha I)= 0$.
 
 Supondo que $\alpha$ é raiz do polinômio caraterístico, então
-${\rm Det(}T-\alpha I)= 0$, ou seja, existe $\ul{v}$ não-nulo tal que
+${\textrm{Det}}(T-\alpha I)= 0$, ou seja, existe $\ul{v}$ não-nulo tal que
 $(T-\alpha I)\ul{v} = \ul{0}$, então $T(\ul{v}) = \alpha \ul{v}$,
 mostrando que $\alpha$ é um autovalor de $T$. ◻
 :::
@@ -167,7 +169,7 @@ O nome faz sentido, pois $S_\lambda$ é de fato um subespaço de $V$:
 
 :::{#prp-}
 Seja $\lambda \in \R$ um autovalor de $T:V \rightarrow V$. Então
-$S_{\lambda} = {\rm Ker}(T-\lambda I)$. Em particular, o autoespaço
+$S_{\lambda} = {\textrm{Ker}}(T-\lambda I)$. Em particular, o autoespaço
 $S_\lambda$ é sempre um subespaço de $V$.
 :::
 
@@ -176,7 +178,7 @@ $S_\lambda$ é sempre um subespaço de $V$.
 $$\begin{array}{ccc}
     \ul{x} \in S_{\lambda} & \Longleftrightarrow & T(\ul{x}) = \lambda \ul{x} \\
      &\Longleftrightarrow & (T-\lambda I)\ul{x} = \ul{0} \\
-     &\Longleftrightarrow & \ul{x} \in {\rm Ker}(T-\lambda I).
+     &\Longleftrightarrow & \ul{x} \in {\textrm{Ker}}(T-\lambda I).
 \end{array}$$ Segue que $S_\lambda$ é subespaço de $V$, pois o núcleo de
 uma TL sempre o é. ◻
 :::
@@ -188,21 +190,24 @@ associados a $\lambda$, mais o vetor $\ul{0}$.
 Voltando ao nosso exemplo $T(x,y,z) = (4x+2y,-x+y,y+z)$. Temos que $1,2$
 e $3$ são os autovalores de $T$. Vamos calcular os autoespaços
 $S_1, S_2$ e $S_3$.
-
--   \begin{aligned}
+$$
+\begin{aligned}
                 T(x,y,z) = 1(x,y,z) & \Longleftrightarrow (4x+2y,-x+y,y+z) = (x,y,z) \\
                 & \Longleftrightarrow (3x+2y,-x,y) = (0,0,0) \\
                 & \Longleftrightarrow x=y=0,
-            
-    \end{aligned} portanto
+    \end{aligned} 
+$$
+portanto
     $S_1 = \{ (x,y.z) \in \mathbb{R}^3\,|\, x=y=0 \} = \{ (0,0,z) \in \mathbb{R}^3 : z \in \mathbb{R} \} = \langle(0,0,1)\rangle.$
 
--   \begin{aligned}
+$$
+\begin{aligned}
                 T(x,y,z) = 2(x,y,z) & \Longleftrightarrow (4x+2y,-x+y,y+z) = (2x,2y,2z) \\
                 & \Longleftrightarrow (2x+2y,-x-y,y-z) = (0,0,0) \\
-                & \Longleftrightarrow x=-y \ {\rm e } \ y=z,
-            
-    \end{aligned} portanto
+                & \Longleftrightarrow x=-y \ {\textrm{e }} \ y=z,
+    \end{aligned} 
+$$
+portanto
     $S_2 = \{ (-y,y,y) \,|\, y\in \R \} = \langle(-1,1,1)\rangle.$
 
 -   Contas similares dão
@@ -449,12 +454,16 @@ uma base de $V$ composta de autovetores.
 
 Agora supondo que exista uma base de autovetores
 $B = \{ \ul{b_1},\ldots,\ul{b_n}\}$ (com $\ul{b_i}$ associado ao
-autovalor $\lambda_i$), temos \begin{aligned}
+autovalor $\lambda_i$), temos
+ $$
+ \begin{aligned}
     T(\ul{b_1}) & = \lambda_1\ul{b_1} + 0\ul{b_2} + \cdots + 0\ul{b_n},\\
 T(\ul{b_2}) & = 0\ul{b_1} + \lambda_2\ul{b_2} + \cdots + 0\ul{b_n}, \\
 & \vdots \\
 T(\ul{b_n}) & =  0\ul{b_1} + 0\ul{b_2} + \cdots + \lambda_n\ul{b_n}
-\end{aligned} então a matriz de $T$ com respeito à base $B$ é
+\end{aligned}
+$$
+ então a matriz de $T$ com respeito à base $B$ é
 $$[T]^{B}_{B} = \begin{pmatrix}
 \lambda_1 & 0 & \cdots & 0 \\
 0 & \lambda_2 &  & 0 \\

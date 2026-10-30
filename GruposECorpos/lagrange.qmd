@@ -102,7 +102,7 @@ Demonstração: Itens 1., 2., e 4. serão exercícios.
 
 ## O Teorema de Lagrange
 
-![Joseph-Louis Lagrange (1736-1813)](https://upload.wikimedia.org/wikipedia/commons/1/19/Lagrange_portrait.jpg)
+![Joseph-Louis Lagrange (1736-1813)](img/lagrange-portrait.jpg)
 
 Se  $H\leq G$, então o lema anterior implica que as classes laterais $Hg$ à direita (ou à esquerda) formam uma partição do conjunto $G$. Além disso, cada classe lateral tem a mesma cardinalidade (igual à cardinalidade de $H$). Assuma $G$ é finito e que $Hg_1,\ldots,Hg_k$ são as classes laterais distintas de $H$. Temos que
 $$
